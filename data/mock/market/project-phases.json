@@ -1,0 +1,56 @@
+{
+  "schema_version": 1,
+  "build_id": "demo-step3-20261003",
+  "generated_at": "2026-10-03T12:00:00+07:00",
+  "record_count": 4,
+  "data": [
+    {
+      "id": "izumi-p1",
+      "project_id": "izumi-city",
+      "name": "Phase 1",
+      "phase_type": "development-phase",
+      "segment_ids": [
+        "landed"
+      ],
+      "planned_units": 275,
+      "launch_date": "2021-11-01",
+      "status": "handover"
+    },
+    {
+      "id": "izumi-p2",
+      "project_id": "izumi-city",
+      "name": "Phase 2",
+      "phase_type": "development-phase",
+      "segment_ids": [
+        "landed"
+      ],
+      "planned_units": 420,
+      "launch_date": "2025-06-01",
+      "status": "selling"
+    },
+    {
+      "id": "waterpoint-p1",
+      "project_id": "waterpoint",
+      "name": "Southgate",
+      "phase_type": "subdivision",
+      "segment_ids": [
+        "landed"
+      ],
+      "planned_units": 900,
+      "launch_date": "2020-01-01",
+      "status": "handover"
+    },
+    {
+      "id": "akari-p2",
+      "project_id": "akari-city",
+      "name": "Phase 2",
+      "phase_type": "development-phase",
+      "segment_ids": [
+        "apartment"
+      ],
+      "planned_units": 1700,
+      "launch_date": "2024-03-01",
+      "status": "construction"
+    }
+  ]
+}

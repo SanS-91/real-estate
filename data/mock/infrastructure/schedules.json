@@ -1,0 +1,18 @@
+{
+  "schema_version": 1,
+  "build_id": "demo-step5-20261003",
+  "generated_at": "2026-10-03T16:15:00+07:00",
+  "record_count": 10,
+  "data": [
+    {"id":"schedule-lta-001","infrastructure_project_id":"long-thanh-airport","schedule_type":"expected-completion","target_period":"2026-Q2","date_precision":"quarter","status":"superseded","announced_date":"2025-06-15","source_id":"demo-official"},
+    {"id":"schedule-lta-002","infrastructure_project_id":"long-thanh-airport","schedule_type":"expected-completion","target_period":"2026-Q4","date_precision":"quarter","status":"current","announced_date":"2026-08-20","source_id":"demo-official"},
+    {"id":"schedule-rr3-001","infrastructure_project_id":"hcmc-ring-road-3","schedule_type":"expected-completion","target_period":"2026-Q3","date_precision":"quarter","status":"superseded","announced_date":"2025-11-10","source_id":"demo-official"},
+    {"id":"schedule-rr3-002","infrastructure_project_id":"hcmc-ring-road-3","schedule_type":"expected-completion","target_period":"2026-Q4","date_precision":"quarter","status":"current","announced_date":"2026-07-12","source_id":"demo-official"},
+    {"id":"schedule-blt-001","infrastructure_project_id":"ben-luc-long-thanh-expressway","schedule_type":"expected-completion","target_period":"2026-Q4","date_precision":"quarter","status":"superseded","announced_date":"2025-10-05","source_id":"demo-official"},
+    {"id":"schedule-blt-002","infrastructure_project_id":"ben-luc-long-thanh-expressway","schedule_type":"expected-completion","target_period":"2027-Q2","date_precision":"quarter","status":"current","announced_date":"2026-09-18","source_id":"demo-official"},
+    {"id":"schedule-metro1-001","infrastructure_project_id":"hcmc-metro-line-1","schedule_type":"operation-start","target_period":"2025","date_precision":"year","status":"current","announced_date":"2025-01-10","source_id":"demo-official"},
+    {"id":"schedule-mocbai-001","infrastructure_project_id":"hcmc-moc-bai-expressway","schedule_type":"expected-completion","target_period":"2028","date_precision":"year","status":"current","announced_date":"2026-04-22","source_id":"demo-official"},
+    {"id":"schedule-rr4-001","infrastructure_project_id":"hcmc-ring-road-4","schedule_type":"construction-start","target_period":"2027","date_precision":"year","status":"current","announced_date":"2026-06-30","source_id":"demo-official"},
+    {"id":"schedule-rr4-002","infrastructure_project_id":"hcmc-ring-road-4","schedule_type":"expected-completion","target_period":"2029","date_precision":"year","status":"current","announced_date":"2026-06-30","source_id":"demo-official"}
+  ]
+}

@@ -1,0 +1,50 @@
+{
+  "schema_version": 1,
+  "version": "7.1.1",
+  "scope": "Vietnam-first display standards",
+  "language": "en",
+  "canonical_values_unchanged": true,
+  "display_rules": {
+    "real_estate_asp": {
+      "canonical_unit": "vnd-per-m2",
+      "display_unit_en": "mn VND/m²",
+      "display_unit_vi_future": "triệu VND/m²"
+    },
+    "large_vnd_amount": {
+      "canonical_unit": "vnd-bn",
+      "display_unit_en": "VND bn / VND tn",
+      "display_unit_vi_future": "tỷ VND / nghìn tỷ VND"
+    },
+    "domestic_gold": {
+      "canonical_unit": "vnd-per-tael",
+      "display_unit_en": "mn VND/tael",
+      "display_unit_vi_future": "triệu VND/lượng"
+    },
+    "fx": {
+      "canonical_unit": "vnd-per-usd",
+      "display_unit_en": "VND/USD",
+      "display_unit_vi_future": "VND/USD"
+    },
+    "interest_rate": {
+      "canonical_unit": "percent-per-year",
+      "display_unit_en": "% p.a.",
+      "display_unit_vi_future": "%/năm"
+    },
+    "area": {
+      "canonical_unit": "sqm",
+      "display_unit_en": "m² / ha",
+      "display_unit_vi_future": "m² / ha"
+    },
+    "distance": {
+      "canonical_unit": "km",
+      "display_unit_en": "km",
+      "display_unit_vi_future": "km"
+    }
+  },
+  "principles": [
+    "Display formatting must not overwrite canonical numeric values.",
+    "Missing values remain null/— and are never converted to zero.",
+    "Conversion is presentation-only and reproducible from value plus unit metadata.",
+    "International indicators retain their natural unit when used as benchmark context."
+  ]
+}

@@ -1,0 +1,90 @@
+{
+  "schema_version": 1,
+  "build_id": "demo-step3-20261003",
+  "generated_at": "2026-10-03T12:00:00+07:00",
+  "record_count": 5,
+  "data": [
+    {
+      "id": "nam-long",
+      "name": "Nam Long",
+      "aliases": [
+        "NLG"
+      ],
+      "region_ids": [
+        "hcmc",
+        "dong-nai",
+        "long-an"
+      ],
+      "segment_ids": [
+        "apartment",
+        "landed",
+        "township"
+      ],
+      "status": "active",
+      "summary": "Illustrative developer profile for the Market module demo."
+    },
+    {
+      "id": "masterise",
+      "name": "Masterise Homes",
+      "aliases": [
+        "Masterise"
+      ],
+      "region_ids": [
+        "hcmc"
+      ],
+      "segment_ids": [
+        "apartment",
+        "landed"
+      ],
+      "status": "active",
+      "summary": "Illustrative developer profile for the Market module demo."
+    },
+    {
+      "id": "gamuda-land",
+      "name": "Gamuda Land",
+      "aliases": [
+        "Gamuda"
+      ],
+      "region_ids": [
+        "hcmc",
+        "binh-duong"
+      ],
+      "segment_ids": [
+        "apartment",
+        "township"
+      ],
+      "status": "active",
+      "summary": "Illustrative developer profile for the Market module demo."
+    },
+    {
+      "id": "ecopark",
+      "name": "Ecopark",
+      "aliases": [],
+      "region_ids": [
+        "dong-nai"
+      ],
+      "segment_ids": [
+        "township",
+        "landed"
+      ],
+      "status": "active",
+      "summary": "Illustrative developer profile for the Market module demo."
+    },
+    {
+      "id": "khang-dien",
+      "name": "Khang Điền",
+      "aliases": [
+        "KDH"
+      ],
+      "region_ids": [
+        "hcmc"
+      ],
+      "segment_ids": [
+        "apartment",
+        "landed"
+      ],
+      "status": "active",
+      "summary": "Illustrative developer profile for the Market module demo."
+    }
+  ]
+}

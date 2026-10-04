@@ -1,0 +1,47 @@
+{
+  "schema_version": 1,
+  "generated_at": "2026-10-03T14:15:00+07:00",
+  "is_mock": true,
+  "data": [
+    {
+      "category": "market",
+      "label": "Market",
+      "count": 7,
+      "href": "market.html?view=news",
+      "items": [
+        { "title": "Sample township launch activity updated", "meta": "Dong Nai · Demo", "href": "market.html?view=projects" },
+        { "title": "Illustrative pricing snapshot refreshed", "meta": "Primary market · Demo", "href": "market.html?view=pricing" }
+      ]
+    },
+    {
+      "category": "legal",
+      "label": "Legal",
+      "count": 2,
+      "href": "legal.html?view=documents",
+      "items": [
+        { "title": "Sample land regulation record added", "meta": "Official document · Demo", "href": "legal.html?view=documents" },
+        { "title": "Illustrative effective-date tracker updated", "meta": "Next 90 days · Demo", "href": "legal.html?view=effective-soon" }
+      ]
+    },
+    {
+      "category": "infrastructure",
+      "label": "Infrastructure",
+      "count": 3,
+      "href": "infrastructure.html?view=timeline",
+      "items": [
+        { "title": "Sample ring-road construction milestone", "meta": "Regional connectivity · Demo", "href": "infrastructure.html?view=projects" },
+        { "title": "Illustrative completion target revised", "meta": "Schedule update · Demo", "href": "infrastructure.html?view=timeline" }
+      ]
+    },
+    {
+      "category": "macro",
+      "label": "Macro",
+      "count": 4,
+      "href": "macro.html?view=overview",
+      "items": [
+        { "title": "Benchmark market indicators refreshed", "meta": "Rates / FX / Gold · Demo", "href": "macro.html?view=overview" },
+        { "title": "Illustrative inflation observation added", "meta": "Monthly series · Demo", "href": "macro.html?view=inflation" }
+      ]
+    }
+  ]
+}

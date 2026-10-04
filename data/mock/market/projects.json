@@ -1,0 +1,184 @@
+{
+  "schema_version": 1,
+  "build_id": "demo-step3-20261003",
+  "generated_at": "2026-10-03T12:00:00+07:00",
+  "record_count": 8,
+  "data": [
+    {
+      "id": "izumi-city",
+      "name": "Izumi City",
+      "developer_ids": [
+        "nam-long"
+      ],
+      "lead_developer_id": "nam-long",
+      "region_ids": [
+        "dong-nai"
+      ],
+      "segment_ids": [
+        "township",
+        "landed"
+      ],
+      "status": "selling",
+      "location_text": "Biên Hòa, Đồng Nai",
+      "total_area_sqm": 1700000,
+      "planned_units": 6800,
+      "launch_date": "2021-11-01",
+      "summary": "Large-scale township project used as an illustrative research record.",
+      "related_infrastructure_ids": [
+        "long-thanh-airport"
+      ]
+    },
+    {
+      "id": "waterpoint",
+      "name": "Waterpoint",
+      "developer_ids": [
+        "nam-long"
+      ],
+      "lead_developer_id": "nam-long",
+      "region_ids": [
+        "long-an"
+      ],
+      "segment_ids": [
+        "township",
+        "landed"
+      ],
+      "status": "selling",
+      "location_text": "Bến Lức, Long An",
+      "total_area_sqm": 3550000,
+      "planned_units": 8200,
+      "launch_date": "2019-06-01",
+      "summary": "Illustrative township project record.",
+      "related_infrastructure_ids": []
+    },
+    {
+      "id": "akari-city",
+      "name": "Akari City",
+      "developer_ids": [
+        "nam-long"
+      ],
+      "lead_developer_id": "nam-long",
+      "region_ids": [
+        "hcmc"
+      ],
+      "segment_ids": [
+        "apartment"
+      ],
+      "status": "construction",
+      "location_text": "Bình Tân, HCMC",
+      "total_area_sqm": 85000,
+      "planned_units": 5000,
+      "launch_date": "2020-01-01",
+      "summary": "Illustrative apartment project record.",
+      "related_infrastructure_ids": []
+    },
+    {
+      "id": "mizuki-park",
+      "name": "Mizuki Park",
+      "developer_ids": [
+        "nam-long"
+      ],
+      "lead_developer_id": "nam-long",
+      "region_ids": [
+        "hcmc"
+      ],
+      "segment_ids": [
+        "township",
+        "apartment"
+      ],
+      "status": "handover",
+      "location_text": "Bình Chánh, HCMC",
+      "total_area_sqm": 260000,
+      "planned_units": 4600,
+      "launch_date": "2017-12-01",
+      "summary": "Illustrative integrated residential project record.",
+      "related_infrastructure_ids": []
+    },
+    {
+      "id": "the-global-city",
+      "name": "The Global City",
+      "developer_ids": [
+        "masterise"
+      ],
+      "lead_developer_id": "masterise",
+      "region_ids": [
+        "hcmc"
+      ],
+      "segment_ids": [
+        "township",
+        "landed",
+        "apartment"
+      ],
+      "status": "selling",
+      "location_text": "Thu Duc City, HCMC",
+      "total_area_sqm": 1170000,
+      "planned_units": 9000,
+      "launch_date": "2022-03-01",
+      "summary": "Illustrative premium township research record.",
+      "related_infrastructure_ids": []
+    },
+    {
+      "id": "eaton-park",
+      "name": "Eaton Park",
+      "developer_ids": [
+        "gamuda-land"
+      ],
+      "lead_developer_id": "gamuda-land",
+      "region_ids": [
+        "hcmc"
+      ],
+      "segment_ids": [
+        "apartment"
+      ],
+      "status": "selling",
+      "location_text": "Thu Duc City, HCMC",
+      "total_area_sqm": 37000,
+      "planned_units": 2000,
+      "launch_date": "2024-05-01",
+      "summary": "Illustrative apartment project record.",
+      "related_infrastructure_ids": []
+    },
+    {
+      "id": "eco-retreat",
+      "name": "Eco Retreat",
+      "developer_ids": [
+        "ecopark"
+      ],
+      "lead_developer_id": "ecopark",
+      "region_ids": [
+        "long-an"
+      ],
+      "segment_ids": [
+        "township",
+        "landed"
+      ],
+      "status": "pre-launch",
+      "location_text": "Bến Lức, Long An",
+      "total_area_sqm": 2200000,
+      "planned_units": 10000,
+      "launch_date": null,
+      "summary": "Illustrative future township research record.",
+      "related_infrastructure_ids": []
+    },
+    {
+      "id": "the-privia",
+      "name": "The Privia",
+      "developer_ids": [
+        "khang-dien"
+      ],
+      "lead_developer_id": "khang-dien",
+      "region_ids": [
+        "hcmc"
+      ],
+      "segment_ids": [
+        "apartment"
+      ],
+      "status": "handover",
+      "location_text": "Bình Tân, HCMC",
+      "total_area_sqm": 18400,
+      "planned_units": 1043,
+      "launch_date": "2023-11-01",
+      "summary": "Illustrative completed apartment project record.",
+      "related_infrastructure_ids": []
+    }
+  ]
+}

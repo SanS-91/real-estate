@@ -1,0 +1,486 @@
+{
+  "schema_version": 1,
+  "build_id": "demo-step6-20261003",
+  "generated_at": "2026-10-03T16:45:00+07:00",
+  "record_count": 19,
+  "data": [
+    {
+      "id": "article-market-001",
+      "title": "Illustrative township launch activity strengthens in the eastern corridor",
+      "url": "#",
+      "category": "market",
+      "subcategory": "launch",
+      "content_type": "news",
+      "published_at": "2026-10-03T08:30:00+07:00",
+      "source_id": "demo-news",
+      "region_ids": [
+        "dong-nai"
+      ],
+      "project_ids": [
+        "izumi-city"
+      ],
+      "developer_ids": [
+        "nam-long"
+      ],
+      "tags": [
+        "township",
+        "launch"
+      ],
+      "importance": 4,
+      "summary": "Demo article showing how project, developer and region relationships will appear in Market News."
+    },
+    {
+      "id": "article-market-002",
+      "title": "Apartment primary pricing remains firm across selected HCMC submarkets",
+      "url": "#",
+      "category": "market",
+      "subcategory": "pricing",
+      "content_type": "research",
+      "published_at": "2026-10-02T09:00:00+07:00",
+      "source_id": "demo-research",
+      "region_ids": [
+        "hcmc"
+      ],
+      "project_ids": [
+        "eaton-park",
+        "the-global-city"
+      ],
+      "developer_ids": [
+        "gamuda-land",
+        "masterise"
+      ],
+      "tags": [
+        "pricing",
+        "apartment"
+      ],
+      "importance": 3,
+      "summary": "Illustrative research update for the Pricing view."
+    },
+    {
+      "id": "article-market-003",
+      "title": "Sales absorption improves in the latest quarterly demo dataset",
+      "url": "#",
+      "category": "market",
+      "subcategory": "sales",
+      "content_type": "analysis",
+      "published_at": "2026-09-30T14:00:00+07:00",
+      "source_id": "demo-research",
+      "region_ids": [
+        "hcmc",
+        "dong-nai"
+      ],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [
+        "absorption",
+        "sales"
+      ],
+      "importance": 3,
+      "summary": "Demo market-level commentary linked to supply and sales observations."
+    },
+    {
+      "id": "article-market-004",
+      "title": "Developer activity tracker adds new project-phase records",
+      "url": "#",
+      "category": "market",
+      "subcategory": "developer",
+      "content_type": "announcement",
+      "published_at": "2026-09-28T10:15:00+07:00",
+      "source_id": "demo-news",
+      "region_ids": [
+        "hcmc",
+        "long-an"
+      ],
+      "project_ids": [
+        "waterpoint",
+        "akari-city"
+      ],
+      "developer_ids": [
+        "nam-long"
+      ],
+      "tags": [
+        "developer",
+        "phase"
+      ],
+      "importance": 2,
+      "summary": "Illustrative update used to test related-project and developer filters."
+    },
+    {
+      "id": "article-market-005",
+      "title": "Long An township pipeline expands in illustrative market view",
+      "url": "#",
+      "category": "market",
+      "subcategory": "supply",
+      "content_type": "news",
+      "published_at": "2026-09-26T11:20:00+07:00",
+      "source_id": "demo-news",
+      "region_ids": [
+        "long-an"
+      ],
+      "project_ids": [
+        "waterpoint",
+        "eco-retreat"
+      ],
+      "developer_ids": [
+        "nam-long",
+        "ecopark"
+      ],
+      "tags": [
+        "supply",
+        "township"
+      ],
+      "importance": 3,
+      "summary": "Demo supply update for testing regional research links."
+    },
+    {
+      "id": "article-market-006",
+      "title": "Handover-stage projects remain visible in the database after active selling ends",
+      "url": "#",
+      "category": "market",
+      "subcategory": "handover",
+      "content_type": "analysis",
+      "published_at": "2026-09-24T16:00:00+07:00",
+      "source_id": "demo-research",
+      "region_ids": [
+        "hcmc"
+      ],
+      "project_ids": [
+        "mizuki-park",
+        "the-privia"
+      ],
+      "developer_ids": [
+        "nam-long",
+        "khang-dien"
+      ],
+      "tags": [
+        "handover"
+      ],
+      "importance": 2,
+      "summary": "Demonstrates why completed or handover records remain useful for historical research."
+    },
+    {
+      "id": "article-legal-001",
+      "title": "Illustrative briefing: housing decree approaches late-October effective date",
+      "url": "#",
+      "category": "legal",
+      "subcategory": "effective-soon",
+      "content_type": "analysis",
+      "published_at": "2026-10-03T09:15:00+07:00",
+      "source_id": "demo-analysis",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "legal_document_ids": [
+        "demo-housing-decree-2026"
+      ],
+      "tags": [
+        "housing",
+        "effective-date"
+      ],
+      "importance": 4,
+      "summary": "Demo analysis explaining how an upcoming effective date is surfaced without replacing the official document as the source of truth."
+    },
+    {
+      "id": "article-legal-002",
+      "title": "Draft construction circular enters illustrative consultation workflow",
+      "url": "#",
+      "category": "legal",
+      "subcategory": "draft",
+      "content_type": "news",
+      "published_at": "2026-10-02T11:00:00+07:00",
+      "source_id": "demo-news",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "legal_document_ids": [
+        "demo-draft-construction-circular-2026"
+      ],
+      "tags": [
+        "construction",
+        "draft"
+      ],
+      "importance": 3,
+      "summary": "Demo news item linked to a draft document to test draft-vs-issued separation."
+    },
+    {
+      "id": "article-legal-003",
+      "title": "Reading the illustrative land-pricing guidance alongside its parent framework",
+      "url": "#",
+      "category": "legal",
+      "subcategory": "guidance",
+      "content_type": "research",
+      "published_at": "2026-10-01T15:30:00+07:00",
+      "source_id": "demo-research",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "legal_document_ids": [
+        "demo-land-pricing-guidance-2026",
+        "demo-land-framework-law-2026"
+      ],
+      "tags": [
+        "land",
+        "finance"
+      ],
+      "importance": 3,
+      "summary": "Illustrative research note demonstrating related-document navigation and recently-effective status."
+    },
+    {
+      "id": "article-legal-004",
+      "title": "Illustrative planning pilot highlights multi-region legal tracking",
+      "url": "#",
+      "category": "legal",
+      "subcategory": "planning",
+      "content_type": "analysis",
+      "published_at": "2026-09-30T17:20:00+07:00",
+      "source_id": "demo-analysis",
+      "region_ids": [
+        "hcmc",
+        "dong-nai"
+      ],
+      "project_ids": [],
+      "developer_ids": [],
+      "legal_document_ids": [
+        "demo-pilot-planning-resolution-2026"
+      ],
+      "tags": [
+        "planning",
+        "investment"
+      ],
+      "importance": 3,
+      "summary": "Demo article used to test region, topic and related-document context in Legal News."
+    },
+    {
+      "id": "article-infra-001",
+      "title": "Illustrative Long Thanh airport progress update enters infrastructure tracker",
+      "url": "#",
+      "category": "infrastructure",
+      "subcategory": "progress",
+      "content_type": "news",
+      "published_at": "2026-10-02T08:40:00+07:00",
+      "source_id": "demo-official",
+      "region_ids": [
+        "dong-nai"
+      ],
+      "project_ids": [
+        "izumi-city"
+      ],
+      "developer_ids": [],
+      "infrastructure_project_ids": [
+        "long-thanh-airport"
+      ],
+      "tags": [
+        "airport",
+        "progress"
+      ],
+      "importance": 4,
+      "summary": "Demo article linked to an infrastructure project, a region and a related real-estate project."
+    },
+    {
+      "id": "article-infra-002",
+      "title": "Illustrative completion target revised for Ben Luc–Long Thanh expressway",
+      "url": "#",
+      "category": "infrastructure",
+      "subcategory": "schedule",
+      "content_type": "analysis",
+      "published_at": "2026-09-19T09:10:00+07:00",
+      "source_id": "demo-analysis",
+      "region_ids": [
+        "long-an",
+        "hcmc",
+        "dong-nai"
+      ],
+      "project_ids": [
+        "waterpoint",
+        "izumi-city"
+      ],
+      "developer_ids": [],
+      "infrastructure_project_ids": [
+        "ben-luc-long-thanh-expressway"
+      ],
+      "tags": [
+        "expressway",
+        "schedule"
+      ],
+      "importance": 4,
+      "summary": "Demo evidence item showing how schedule revisions remain separate from canonical schedule history."
+    },
+    {
+      "id": "article-infra-003",
+      "title": "Ring Road 3 illustrative progress milestone highlights cross-region connectivity",
+      "url": "#",
+      "category": "infrastructure",
+      "subcategory": "progress",
+      "content_type": "research",
+      "published_at": "2026-09-13T14:30:00+07:00",
+      "source_id": "demo-research",
+      "region_ids": [
+        "hcmc",
+        "binh-duong",
+        "dong-nai"
+      ],
+      "project_ids": [
+        "the-global-city",
+        "eaton-park"
+      ],
+      "developer_ids": [],
+      "infrastructure_project_ids": [
+        "hcmc-ring-road-3"
+      ],
+      "tags": [
+        "ring-road",
+        "progress"
+      ],
+      "importance": 4,
+      "summary": "Demo research note for testing multi-region infrastructure links."
+    },
+    {
+      "id": "article-infra-004",
+      "title": "Illustrative Ring Road 4 approval expands the long-horizon infrastructure pipeline",
+      "url": "#",
+      "category": "infrastructure",
+      "subcategory": "approval",
+      "content_type": "news",
+      "published_at": "2026-07-01T10:00:00+07:00",
+      "source_id": "demo-news",
+      "region_ids": [
+        "hcmc",
+        "binh-duong",
+        "dong-nai",
+        "long-an"
+      ],
+      "project_ids": [
+        "waterpoint",
+        "eco-retreat"
+      ],
+      "developer_ids": [],
+      "infrastructure_project_ids": [
+        "hcmc-ring-road-4"
+      ],
+      "tags": [
+        "ring-road",
+        "approval"
+      ],
+      "importance": 4,
+      "summary": "Demo approval-stage article used to test future projects and multi-region filtering."
+    },
+    {
+      "id": "article-macro-001",
+      "title": "Illustrative September CPI release enters the macro monitor",
+      "url": "#",
+      "category": "macro",
+      "subcategory": "inflation",
+      "content_type": "data-release",
+      "published_at": "2026-10-02T09:00:00+07:00",
+      "source_id": "demo-statistics",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "indicator_ids": [
+        "cpi-yoy",
+        "cpi-mom",
+        "core-cpi-yoy"
+      ],
+      "tags": [
+        "inflation",
+        "cpi"
+      ],
+      "importance": 4,
+      "summary": "Demo release used to separate the September data period from its October publication date."
+    },
+    {
+      "id": "article-macro-002",
+      "title": "Illustrative USD/VND reference rate moves higher in the latest daily series",
+      "url": "#",
+      "category": "macro",
+      "subcategory": "fx",
+      "content_type": "analysis",
+      "published_at": "2026-10-02T12:00:00+07:00",
+      "source_id": "demo-analysis",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "indicator_ids": [
+        "usd-vnd-central-rate",
+        "usd-vnd-bank-sell"
+      ],
+      "tags": [
+        "fx",
+        "usd-vnd"
+      ],
+      "importance": 3,
+      "summary": "Demo FX note linked to structured daily observations rather than hard-coded chart values."
+    },
+    {
+      "id": "article-macro-003",
+      "title": "Domestic gold demo series extends its late-September rise",
+      "url": "#",
+      "category": "macro",
+      "subcategory": "gold",
+      "content_type": "news",
+      "published_at": "2026-10-01T16:30:00+07:00",
+      "source_id": "demo-news",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "indicator_ids": [
+        "sjc-gold-sell",
+        "global-gold-usd-oz"
+      ],
+      "tags": [
+        "gold"
+      ],
+      "importance": 3,
+      "summary": "Illustrative evidence item for domestic and global gold monitoring."
+    },
+    {
+      "id": "article-macro-004",
+      "title": "Illustrative liquidity dashboard shows interbank rate and credit growth together",
+      "url": "#",
+      "category": "macro",
+      "subcategory": "liquidity",
+      "content_type": "research",
+      "published_at": "2026-09-30T15:00:00+07:00",
+      "source_id": "demo-research",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "indicator_ids": [
+        "interbank-on",
+        "credit-growth-ytd",
+        "m2-growth-yoy"
+      ],
+      "tags": [
+        "liquidity",
+        "credit",
+        "m2"
+      ],
+      "importance": 4,
+      "summary": "Demo research note testing multiple related macro indicators with different frequencies."
+    },
+    {
+      "id": "article-macro-005",
+      "title": "Illustrative bank-rate monitor records a higher 12-month deposit average",
+      "url": "#",
+      "category": "macro",
+      "subcategory": "rates",
+      "content_type": "analysis",
+      "published_at": "2026-09-29T10:30:00+07:00",
+      "source_id": "demo-analysis",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "indicator_ids": [
+        "deposit-rate-12m-average",
+        "lending-rate-average"
+      ],
+      "tags": [
+        "rates",
+        "deposit",
+        "lending"
+      ],
+      "importance": 3,
+      "summary": "Demo rate commentary tied to monthly observations and source dates."
+    }
+  ]
+}

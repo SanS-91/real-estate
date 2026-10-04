@@ -1,0 +1,48 @@
+{
+  "schema_version": 1,
+  "build_id": "demo-step4-20261003",
+  "generated_at": "2026-10-03T15:45:00+07:00",
+  "record_count": 5,
+  "data": [
+    {
+      "id": "national-assembly",
+      "name": "National Assembly",
+      "aliases": [
+        "NA"
+      ],
+      "scope": "national"
+    },
+    {
+      "id": "government",
+      "name": "Government",
+      "aliases": [
+        "Gov"
+      ],
+      "scope": "national"
+    },
+    {
+      "id": "ministry-construction",
+      "name": "Ministry of Construction",
+      "aliases": [
+        "MOC"
+      ],
+      "scope": "national"
+    },
+    {
+      "id": "ministry-finance",
+      "name": "Ministry of Finance",
+      "aliases": [
+        "MOF"
+      ],
+      "scope": "national"
+    },
+    {
+      "id": "hcmc-peoples-committee",
+      "name": "HCMC People’s Committee",
+      "aliases": [
+        "HCMC PC"
+      ],
+      "scope": "local"
+    }
+  ]
+}

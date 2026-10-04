@@ -1,0 +1,40 @@
+{
+  "schema_version": 1,
+  "build_id": "demo-step3-20261003",
+  "generated_at": "2026-10-03T12:00:00+07:00",
+  "record_count": 4,
+  "data": [
+    {
+      "id": "hcmc",
+      "name": "Ho Chi Minh City",
+      "short_name": "HCMC",
+      "aliases": [
+        "TP HCM",
+        "Ho Chi Minh",
+        "Saigon"
+      ]
+    },
+    {
+      "id": "dong-nai",
+      "name": "Đồng Nai",
+      "short_name": "Dong Nai",
+      "aliases": [
+        "Dong Nai"
+      ]
+    },
+    {
+      "id": "long-an",
+      "name": "Long An",
+      "short_name": "Long An",
+      "aliases": []
+    },
+    {
+      "id": "binh-duong",
+      "name": "Bình Dương",
+      "short_name": "Binh Duong",
+      "aliases": [
+        "Binh Duong"
+      ]
+    }
+  ]
+}

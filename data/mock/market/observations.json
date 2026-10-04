@@ -1,0 +1,493 @@
+{
+  "schema_version": 1,
+  "build_id": "demo-step3-20261003",
+  "generated_at": "2026-10-03T12:00:00+07:00",
+  "record_count": 21,
+  "data": [
+    {
+      "id": "obs-hcmc-apartment-2025-q4",
+      "scope_type": "region-segment",
+      "region_ids": [
+        "hcmc"
+      ],
+      "segment_ids": [
+        "apartment"
+      ],
+      "period": "2025-Q4",
+      "period_type": "quarter",
+      "new_supply": 3100,
+      "sales_units": 2450,
+      "absorption_rate": 0.79,
+      "average_asp": 72000000,
+      "asp_unit": "vnd-per-m2",
+      "currency": "VND",
+      "price_basis": "primary-asking",
+      "source_id": "demo-market-source",
+      "source_date": "2026-01-01",
+      "methodology_note": "Illustrative data only."
+    },
+    {
+      "id": "obs-hcmc-apartment-2026-q1",
+      "scope_type": "region-segment",
+      "region_ids": [
+        "hcmc"
+      ],
+      "segment_ids": [
+        "apartment"
+      ],
+      "period": "2026-Q1",
+      "period_type": "quarter",
+      "new_supply": 2800,
+      "sales_units": 2200,
+      "absorption_rate": 0.79,
+      "average_asp": 73500000,
+      "asp_unit": "vnd-per-m2",
+      "currency": "VND",
+      "price_basis": "primary-asking",
+      "source_id": "demo-market-source",
+      "source_date": "2026-04-01",
+      "methodology_note": "Illustrative data only."
+    },
+    {
+      "id": "obs-hcmc-apartment-2026-q2",
+      "scope_type": "region-segment",
+      "region_ids": [
+        "hcmc"
+      ],
+      "segment_ids": [
+        "apartment"
+      ],
+      "period": "2026-Q2",
+      "period_type": "quarter",
+      "new_supply": 3600,
+      "sales_units": 2920,
+      "absorption_rate": 0.81,
+      "average_asp": 75500000,
+      "asp_unit": "vnd-per-m2",
+      "currency": "VND",
+      "price_basis": "primary-asking",
+      "source_id": "demo-market-source",
+      "source_date": "2026-07-01",
+      "methodology_note": "Illustrative data only."
+    },
+    {
+      "id": "obs-hcmc-apartment-2026-q3",
+      "scope_type": "region-segment",
+      "region_ids": [
+        "hcmc"
+      ],
+      "segment_ids": [
+        "apartment"
+      ],
+      "period": "2026-Q3",
+      "period_type": "quarter",
+      "new_supply": 4100,
+      "sales_units": 3440,
+      "absorption_rate": 0.84,
+      "average_asp": 78000000,
+      "asp_unit": "vnd-per-m2",
+      "currency": "VND",
+      "price_basis": "primary-asking",
+      "source_id": "demo-market-source",
+      "source_date": "2026-10-01",
+      "methodology_note": "Illustrative data only."
+    },
+    {
+      "id": "obs-dn-resi-2025-q4",
+      "scope_type": "region-segment",
+      "region_ids": [
+        "dong-nai"
+      ],
+      "segment_ids": [
+        "landed"
+      ],
+      "period": "2025-Q4",
+      "period_type": "quarter",
+      "new_supply": 1150,
+      "sales_units": 780,
+      "absorption_rate": 0.68,
+      "average_asp": 45500000,
+      "asp_unit": "vnd-per-m2",
+      "currency": "VND",
+      "price_basis": "primary-asking",
+      "source_id": "demo-market-source",
+      "source_date": "2026-01-01",
+      "methodology_note": "Illustrative data only."
+    },
+    {
+      "id": "obs-dn-resi-2026-q1",
+      "scope_type": "region-segment",
+      "region_ids": [
+        "dong-nai"
+      ],
+      "segment_ids": [
+        "landed"
+      ],
+      "period": "2026-Q1",
+      "period_type": "quarter",
+      "new_supply": 900,
+      "sales_units": 610,
+      "absorption_rate": 0.68,
+      "average_asp": 46500000,
+      "asp_unit": "vnd-per-m2",
+      "currency": "VND",
+      "price_basis": "primary-asking",
+      "source_id": "demo-market-source",
+      "source_date": "2026-04-01",
+      "methodology_note": "Illustrative data only."
+    },
+    {
+      "id": "obs-dn-resi-2026-q2",
+      "scope_type": "region-segment",
+      "region_ids": [
+        "dong-nai"
+      ],
+      "segment_ids": [
+        "landed"
+      ],
+      "period": "2026-Q2",
+      "period_type": "quarter",
+      "new_supply": 1380,
+      "sales_units": 920,
+      "absorption_rate": 0.67,
+      "average_asp": 48200000,
+      "asp_unit": "vnd-per-m2",
+      "currency": "VND",
+      "price_basis": "primary-asking",
+      "source_id": "demo-market-source",
+      "source_date": "2026-07-01",
+      "methodology_note": "Illustrative data only."
+    },
+    {
+      "id": "obs-dn-resi-2026-q3",
+      "scope_type": "region-segment",
+      "region_ids": [
+        "dong-nai"
+      ],
+      "segment_ids": [
+        "landed"
+      ],
+      "period": "2026-Q3",
+      "period_type": "quarter",
+      "new_supply": 1520,
+      "sales_units": 1060,
+      "absorption_rate": 0.7,
+      "average_asp": 49800000,
+      "asp_unit": "vnd-per-m2",
+      "currency": "VND",
+      "price_basis": "primary-asking",
+      "source_id": "demo-market-source",
+      "source_date": "2026-10-01",
+      "methodology_note": "Illustrative data only."
+    },
+    {
+      "id": "obs-izumi-city-2026-q3",
+      "scope_type": "project",
+      "project_id": "izumi-city",
+      "region_ids": [
+        "dong-nai"
+      ],
+      "segment_ids": [
+        "township",
+        "landed"
+      ],
+      "period": "2026-Q3",
+      "period_type": "quarter",
+      "new_supply": 220,
+      "sales_units": 145,
+      "absorption_rate": 0.67,
+      "average_asp": 70000000,
+      "asp_unit": "vnd-per-m2",
+      "currency": "VND",
+      "price_basis": "primary-asking",
+      "source_id": "demo-project-source",
+      "source_date": "2026-10-01",
+      "methodology_note": "Illustrative data only."
+    },
+    {
+      "id": "obs-waterpoint-2026-q3",
+      "scope_type": "project",
+      "project_id": "waterpoint",
+      "region_ids": [
+        "long-an"
+      ],
+      "segment_ids": [
+        "township",
+        "landed"
+      ],
+      "period": "2026-Q3",
+      "period_type": "quarter",
+      "new_supply": 240,
+      "sales_units": 180,
+      "absorption_rate": 0.74,
+      "average_asp": 52000000,
+      "asp_unit": "vnd-per-m2",
+      "currency": "VND",
+      "price_basis": "primary-asking",
+      "source_id": "demo-project-source",
+      "source_date": "2026-10-01",
+      "methodology_note": "Illustrative data only."
+    },
+    {
+      "id": "obs-akari-city-2026-q3",
+      "scope_type": "project",
+      "project_id": "akari-city",
+      "region_ids": [
+        "hcmc"
+      ],
+      "segment_ids": [
+        "apartment"
+      ],
+      "period": "2026-Q3",
+      "period_type": "quarter",
+      "new_supply": 390,
+      "sales_units": 320,
+      "absorption_rate": 0.82,
+      "average_asp": 61000000,
+      "asp_unit": "vnd-per-m2",
+      "currency": "VND",
+      "price_basis": "primary-asking",
+      "source_id": "demo-project-source",
+      "source_date": "2026-10-01",
+      "methodology_note": "Illustrative data only."
+    },
+    {
+      "id": "obs-mizuki-park-2026-q2",
+      "scope_type": "project",
+      "project_id": "mizuki-park",
+      "region_ids": [
+        "hcmc"
+      ],
+      "segment_ids": [
+        "township",
+        "apartment"
+      ],
+      "period": "2026-Q2",
+      "period_type": "quarter",
+      "new_supply": 93,
+      "sales_units": 85,
+      "absorption_rate": 0.91,
+      "average_asp": 58000000,
+      "asp_unit": "vnd-per-m2",
+      "currency": "VND",
+      "price_basis": "primary-asking",
+      "source_id": "demo-project-source",
+      "source_date": "2026-10-01",
+      "methodology_note": "Illustrative data only."
+    },
+    {
+      "id": "obs-the-global-city-2026-q3",
+      "scope_type": "project",
+      "project_id": "the-global-city",
+      "region_ids": [
+        "hcmc"
+      ],
+      "segment_ids": [
+        "township",
+        "landed",
+        "apartment"
+      ],
+      "period": "2026-Q3",
+      "period_type": "quarter",
+      "new_supply": 198,
+      "sales_units": 120,
+      "absorption_rate": 0.61,
+      "average_asp": 165000000,
+      "asp_unit": "vnd-per-m2",
+      "currency": "VND",
+      "price_basis": "primary-asking",
+      "source_id": "demo-project-source",
+      "source_date": "2026-10-01",
+      "methodology_note": "Illustrative data only."
+    },
+    {
+      "id": "obs-eaton-park-2026-q3",
+      "scope_type": "project",
+      "project_id": "eaton-park",
+      "region_ids": [
+        "hcmc"
+      ],
+      "segment_ids": [
+        "apartment"
+      ],
+      "period": "2026-Q3",
+      "period_type": "quarter",
+      "new_supply": 276,
+      "sales_units": 210,
+      "absorption_rate": 0.76,
+      "average_asp": 145000000,
+      "asp_unit": "vnd-per-m2",
+      "currency": "VND",
+      "price_basis": "primary-asking",
+      "source_id": "demo-project-source",
+      "source_date": "2026-10-01",
+      "methodology_note": "Illustrative data only."
+    },
+    {
+      "id": "obs-eco-retreat-2026-q2",
+      "scope_type": "project",
+      "project_id": "eco-retreat",
+      "region_ids": [
+        "long-an"
+      ],
+      "segment_ids": [
+        "township",
+        "landed"
+      ],
+      "period": "2026-Q2",
+      "period_type": "quarter",
+      "new_supply": null,
+      "sales_units": null,
+      "absorption_rate": null,
+      "average_asp": null,
+      "asp_unit": "vnd-per-m2",
+      "currency": "VND",
+      "price_basis": "primary-asking",
+      "source_id": "demo-project-source",
+      "source_date": "2026-10-01",
+      "methodology_note": "Illustrative data only."
+    },
+    {
+      "id": "obs-the-privia-2026-q2",
+      "scope_type": "project",
+      "project_id": "the-privia",
+      "region_ids": [
+        "hcmc"
+      ],
+      "segment_ids": [
+        "apartment"
+      ],
+      "period": "2026-Q2",
+      "period_type": "quarter",
+      "new_supply": 57,
+      "sales_units": 55,
+      "absorption_rate": 0.96,
+      "average_asp": 69000000,
+      "asp_unit": "vnd-per-m2",
+      "currency": "VND",
+      "price_basis": "primary-asking",
+      "source_id": "demo-project-source",
+      "source_date": "2026-10-01",
+      "methodology_note": "Illustrative data only."
+    },
+    {
+      "id": "obs-izumi-city-2026-q2",
+      "scope_type": "project",
+      "project_id": "izumi-city",
+      "region_ids": [
+        "dong-nai"
+      ],
+      "segment_ids": [
+        "township",
+        "landed"
+      ],
+      "period": "2026-Q2",
+      "period_type": "quarter",
+      "new_supply": null,
+      "sales_units": null,
+      "absorption_rate": null,
+      "average_asp": 66500000,
+      "asp_unit": "vnd-per-m2",
+      "currency": "VND",
+      "price_basis": "primary-asking",
+      "source_id": "demo-project-source",
+      "source_date": "2026-07-01",
+      "methodology_note": "Illustrative data only."
+    },
+    {
+      "id": "obs-waterpoint-2026-q2",
+      "scope_type": "project",
+      "project_id": "waterpoint",
+      "region_ids": [
+        "long-an"
+      ],
+      "segment_ids": [
+        "township",
+        "landed"
+      ],
+      "period": "2026-Q2",
+      "period_type": "quarter",
+      "new_supply": null,
+      "sales_units": null,
+      "absorption_rate": null,
+      "average_asp": 50500000,
+      "asp_unit": "vnd-per-m2",
+      "currency": "VND",
+      "price_basis": "primary-asking",
+      "source_id": "demo-project-source",
+      "source_date": "2026-07-01",
+      "methodology_note": "Illustrative data only."
+    },
+    {
+      "id": "obs-akari-city-2026-q2",
+      "scope_type": "project",
+      "project_id": "akari-city",
+      "region_ids": [
+        "hcmc"
+      ],
+      "segment_ids": [
+        "apartment"
+      ],
+      "period": "2026-Q2",
+      "period_type": "quarter",
+      "new_supply": null,
+      "sales_units": null,
+      "absorption_rate": null,
+      "average_asp": 59000000,
+      "asp_unit": "vnd-per-m2",
+      "currency": "VND",
+      "price_basis": "primary-asking",
+      "source_id": "demo-project-source",
+      "source_date": "2026-07-01",
+      "methodology_note": "Illustrative data only."
+    },
+    {
+      "id": "obs-the-global-city-2026-q2",
+      "scope_type": "project",
+      "project_id": "the-global-city",
+      "region_ids": [
+        "hcmc"
+      ],
+      "segment_ids": [
+        "township",
+        "landed",
+        "apartment"
+      ],
+      "period": "2026-Q2",
+      "period_type": "quarter",
+      "new_supply": null,
+      "sales_units": null,
+      "absorption_rate": null,
+      "average_asp": 158000000,
+      "asp_unit": "vnd-per-m2",
+      "currency": "VND",
+      "price_basis": "primary-asking",
+      "source_id": "demo-project-source",
+      "source_date": "2026-07-01",
+      "methodology_note": "Illustrative data only."
+    },
+    {
+      "id": "obs-eaton-park-2026-q2",
+      "scope_type": "project",
+      "project_id": "eaton-park",
+      "region_ids": [
+        "hcmc"
+      ],
+      "segment_ids": [
+        "apartment"
+      ],
+      "period": "2026-Q2",
+      "period_type": "quarter",
+      "new_supply": null,
+      "sales_units": null,
+      "absorption_rate": null,
+      "average_asp": 138000000,
+      "asp_unit": "vnd-per-m2",
+      "currency": "VND",
+      "price_basis": "primary-asking",
+      "source_id": "demo-project-source",
+      "source_date": "2026-07-01",
+      "methodology_note": "Illustrative data only."
+    }
+  ]
+}

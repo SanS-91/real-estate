@@ -1,0 +1,117 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="A structured research dashboard for real estate market, legal, infrastructure and macro developments.">
+  <title>Market Intelligence · Vietnam Real Estate</title>
+  <link rel="stylesheet" href="assets/css/main.css">
+  <link rel="stylesheet" href="assets/css/localization.css?v=7.2.0">
+</head>
+<body data-page="home">
+  <div data-site-header></div>
+
+  <main class="page-shell">
+    <div class="container">
+      <header class="page-header page-header--home">
+        <div>
+          <p class="page-kicker">Vietnam Real Estate</p>
+          <h1 class="page-title">Market Intelligence</h1>
+          <p class="page-description">Monitor what changed today, review the week, and move quickly into structured project, legal, infrastructure and macro research.</p>
+        </div>
+        <div class="updated-label" data-home-updated>Demo data</div>
+      </header>
+
+      <div class="demo-banner" role="note">
+        <strong>Implementation demo.</strong>
+        <span>All values and updates on this page are illustrative mock data. Real sources and automated refresh will be connected in later implementation phases.</span>
+      </div>
+
+      <section class="home-snapshot" aria-labelledby="snapshot-title">
+        <div>
+          <span class="eyebrow">Market snapshot</span>
+          <h2 id="snapshot-title">One screen for what matters now</h2>
+          <p>Use the dashboard for fast monitoring, then move into each module for structured historical research.</p>
+        </div>
+        <button class="button button-primary" type="button" data-search-open>Search research</button>
+      </section>
+
+      <section class="home-block" aria-labelledby="today-title">
+        <div class="home-block__header">
+          <div>
+            <span class="eyebrow">Latest activity</span>
+            <h2 id="today-title">Today</h2>
+          </div>
+          <span class="home-block__note">Newest items by category</span>
+        </div>
+        <div class="today-grid" data-home-today>
+          <div class="state-box">Loading Today…</div>
+        </div>
+      </section>
+
+      <section class="home-block" aria-labelledby="indicators-title">
+        <div class="home-block__header">
+          <div>
+            <span class="eyebrow">Macro snapshot</span>
+            <h2 id="indicators-title">Key Indicators</h2>
+          </div>
+          <a class="text-link" href="macro.html">Open Macro</a>
+        </div>
+        <div class="metric-grid" data-home-indicators>
+          <div class="state-box">Loading indicators…</div>
+        </div>
+      </section>
+
+      <section class="home-block" aria-labelledby="changes-title">
+        <div class="home-block__header">
+          <div>
+            <span class="eyebrow">Meaningful developments</span>
+            <h2 id="changes-title">What Changed</h2>
+          </div>
+          <span class="home-block__note">Events, not just headlines</span>
+        </div>
+        <div class="change-grid" data-home-changes>
+          <div class="state-box">Loading changes…</div>
+        </div>
+      </section>
+
+      <section class="home-block" aria-labelledby="weekly-title">
+        <div class="home-block__header">
+          <div>
+            <span class="eyebrow">7-day recap</span>
+            <h2 id="weekly-title">This Week</h2>
+          </div>
+          <span class="home-block__note">Important developments ranked above pure recency</span>
+        </div>
+        <div class="weekly-list" data-home-weekly>
+          <div class="state-box">Loading weekly highlights…</div>
+        </div>
+      </section>
+
+      <section class="home-block" aria-labelledby="research-title">
+        <div class="home-block__header">
+          <div>
+            <span class="eyebrow">Research shortcuts</span>
+            <h2 id="research-title">Quick Research</h2>
+          </div>
+          <button class="button" type="button" data-search-open>Global search</button>
+        </div>
+        <div class="quick-research-grid" data-home-quick-research></div>
+      </section>
+    </div>
+  </main>
+
+  <div data-site-footer></div>
+  <div data-site-overlays></div>
+
+  <script src="assets/js/common.js"></script>
+  <script src="assets/js/formatters.js"></script>
+  <script src="assets/js/data-store.js"></script>
+  <script src="assets/js/provenance.js"></script>
+  <script src="assets/js/components.js"></script>
+  <script src="assets/js/search.js"></script>
+  <script src="assets/js/home.js"></script>
+  <script src="assets/js/localization-static.js?v=7.2.0"></script>
+  <script src="assets/js/localization-dynamic.js?v=7.2.1"></script>
+</body>
+</html>

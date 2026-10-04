@@ -1,0 +1,544 @@
+(() => {
+  'use strict';
+
+  // v7.2.1 additive dynamic localization overlay.
+  // It never participates in data loading, routing, filtering, search indexing,
+  // chart construction or domain rendering. If it fails, v7.2.0/v7.1.1 stays usable.
+
+  const EN_VI = new Map(Object.entries({
+    // Common controls / actions
+    'Search': 'Tìm kiếm',
+    'Reset': 'Đặt lại',
+    'Region': 'Khu vực',
+    'Developer': 'Chủ đầu tư',
+    'Segment': 'Phân khúc',
+    'Status': 'Trạng thái',
+    'Type': 'Loại',
+    'Agency': 'Cơ quan',
+    'Topic': 'Chủ đề',
+    'Scope': 'Phạm vi',
+    'Completion': 'Hoàn thành',
+    'Project': 'Dự án',
+    'Event': 'Sự kiện',
+    'Indicator': 'Chỉ số',
+    'Source': 'Nguồn',
+    'Current': 'Hiện tại',
+    'Previous': 'Trước đó',
+    'Change': 'Thay đổi',
+    'Data Period': 'Kỳ dữ liệu',
+    'Published': 'Công bố',
+    'Open': 'Mở',
+    'Open view': 'Mở mục',
+    'View all': 'Xem tất cả',
+    'Open database': 'Mở cơ sở dữ liệu',
+    'Open Pricing': 'Mở Giá bán',
+    'Open FX': 'Mở Tỷ giá',
+    'View news': 'Xem tin tức',
+    'View projects': 'Xem dự án',
+    'Open documents': 'Mở văn bản',
+    'Indicator details': 'Chi tiết chỉ số',
+    'Open historical series': 'Mở chuỗi lịch sử',
+    'View related market news': 'Xem tin thị trường liên quan',
+    'Close source details': 'Đóng chi tiết nguồn',
+    'Open original source ↗': 'Mở nguồn gốc ↗',
+    'Open official document ↗': 'Mở văn bản chính thức ↗',
+
+    // Generic options
+    'All regions': 'Tất cả khu vực',
+    'All developers': 'Tất cả chủ đầu tư',
+    'All segments': 'Tất cả phân khúc',
+    'All statuses': 'Tất cả trạng thái',
+    'All types': 'Tất cả loại',
+    'All agencies': 'Tất cả cơ quan',
+    'All topics': 'Tất cả chủ đề',
+    'All scopes': 'Tất cả phạm vi',
+    'All horizons': 'Tất cả mốc thời gian',
+    'All projects': 'Tất cả dự án',
+    'All events': 'Tất cả sự kiện',
+    'All indicators': 'Tất cả chỉ số',
+
+    // Shared source/provenance UI
+    'Data Sources': 'Nguồn dữ liệu',
+    'Source ID': 'Mã nguồn',
+    'Priority': 'Ưu tiên',
+    'Language': 'Ngôn ngữ',
+    'Collection': 'Thu thập',
+    'Update frequency': 'Tần suất cập nhật',
+    'Data / source date': 'Ngày dữ liệu / nguồn',
+    'Data period': 'Kỳ dữ liệu',
+    'Methodology note': 'Ghi chú phương pháp',
+    'Priority is a sourcing preference, not a quality score. P1 is used for primary official sources; lower-priority evidence is retained rather than discarded.': 'Mức ưu tiên thể hiện thứ tự ưu tiên nguồn, không phải điểm chất lượng. P1 dành cho nguồn chính thức gốc; các nguồn ưu tiên thấp hơn vẫn được lưu làm bằng chứng bổ sung.',
+    'Source registry unavailable; continuing with source IDs only.': 'Không tải được danh mục nguồn; hệ thống tiếp tục sử dụng mã nguồn.',
+    'Source Registry is unavailable. Existing records will continue to display their source IDs.': 'Không tải được Danh mục nguồn. Các bản ghi hiện có vẫn tiếp tục hiển thị mã nguồn.',
+    'No live source URL in the illustrative demo registry. Real URLs will be connected in Phase 4.': 'Danh mục nguồn mô phỏng chưa có URL trực tiếp. URL thực sẽ được kết nối trong Phase 4.',
+    'View ›': 'Xem ›',
+    'Official': 'Chính thức',
+    'Operator': 'Đơn vị vận hành',
+    'Research': 'Nghiên cứu',
+    'Brokerage': 'Môi giới',
+    'Financial Institution': 'Tổ chức tài chính',
+    'Media': 'Truyền thông',
+    'Other': 'Khác',
+    'Manual': 'Thủ công',
+    'Html': 'HTML',
+    'Api': 'API',
+    'Rss': 'RSS',
+    'Scraper': 'Thu thập tự động',
+
+    // Search overlay
+    'Projects': 'Dự án',
+    'Developers': 'Chủ đầu tư',
+    'Legal Documents': 'Văn bản pháp lý',
+    'Infrastructure': 'Hạ tầng',
+    'Macro Indicators': 'Chỉ số vĩ mô',
+    'Events': 'Sự kiện',
+    'Articles & Research': 'Bài viết & Nghiên cứu',
+    'Type at least 2 characters. Vietnamese accents are optional.': 'Nhập ít nhất 2 ký tự. Có thể tìm không dấu tiếng Việt.',
+    'Searching structured datasets…': 'Đang tìm trong dữ liệu có cấu trúc…',
+    'Loading research index…': 'Đang tải chỉ mục nghiên cứu…',
+    'Search index could not be loaded.': 'Không thể tải chỉ mục tìm kiếm.',
+    'Unable to load the demo search datasets. Refresh the page and try again.': 'Không thể tải dữ liệu tìm kiếm mô phỏng. Hãy tải lại trang và thử lại.',
+
+    // Home dynamic component labels
+    'Market': 'Thị trường',
+    'Legal': 'Pháp lý',
+    'Macro': 'Vĩ mô',
+    'View context': 'Xem chi tiết',
+    'No updates.': 'Không có cập nhật.',
+    'High relevance': 'Mức liên quan cao',
+    'Important': 'Quan trọng',
+    'Watch': 'Theo dõi',
+    'Region': 'Khu vực',
+    'Legal topic': 'Chủ đề pháp lý',
+    'Interest Rates': 'Lãi suất',
+    'Projects, infrastructure and recent developments.': 'Dự án, hạ tầng và các diễn biến gần đây.',
+    'Developer profile, projects and recent activity.': 'Hồ sơ chủ đầu tư, dự án và hoạt động gần đây.',
+    'Official documents, effective dates and analysis.': 'Văn bản chính thức, ngày hiệu lực và phân tích.',
+    'Deposit, lending and interbank rate views.': 'Theo dõi lãi suất tiền gửi, cho vay và liên ngân hàng.',
+    'Domestic Gold': 'Vàng trong nước',
+    '12M Deposit Rate': 'Lãi suất tiền gửi 12T',
+    'Lending Rate': 'Lãi suất cho vay',
+    'Credit Growth': 'Tăng trưởng tín dụng',
+    'CPI YoY': 'CPI so với cùng kỳ',
+    'Stable': 'Ổn định',
+    'Illustrative average': 'Bình quân minh họa',
+    'Monthly · Demo': 'Theo tháng · Mô phỏng',
+    'VND/USD · Demo snapshot': 'VND/USD · Ảnh chụp mô phỏng',
+    'VND/tael · Demo': 'VND/lượng · Mô phỏng',
+    'YTD · Demo': 'Từ đầu năm · Mô phỏng',
+    'Demo': 'Mô phỏng',
+    'Demo data': 'Dữ liệu mô phỏng',
+    'Meta unavailable': 'Không có metadata',
+
+    // Market UI
+    'Tracked Projects': 'Dự án theo dõi',
+    'Demo database': 'Cơ sở dữ liệu mô phỏng',
+    'Currently Selling': 'Đang bán',
+    'Current master status': 'Trạng thái hiện tại',
+    'Planned Units': 'Số căn dự kiến',
+    'Across tracked projects': 'Trên các dự án đang theo dõi',
+    'Avg. Project ASP': 'Giá bán TB dự án',
+    'Latest available demo observations': 'Quan sát mô phỏng mới nhất hiện có',
+    'HCMC apartment': 'Căn hộ TP.HCM',
+    'Supply & Sales': 'Nguồn cung & Bán hàng',
+    'Latest activity': 'Hoạt động mới nhất',
+    'Market Developments': 'Diễn biến thị trường',
+    'Tracked projects': 'Dự án theo dõi',
+    'Key Projects': 'Dự án chính',
+    'Selected projects': 'Dự án được chọn',
+    'ASP Trend': 'Xu hướng giá bán',
+    'Project database': 'Cơ sở dữ liệu dự án',
+    'Filter structured project records, then open a project for metrics, phases and related market updates.': 'Lọc hồ sơ dự án có cấu trúc, sau đó mở từng dự án để xem chỉ số, phân kỳ và cập nhật thị trường liên quan.',
+    'Historical observations': 'Quan sát lịch sử',
+    'Quarterly demo observations by region. Missing values remain null rather than being converted to zero.': 'Quan sát mô phỏng theo quý và khu vực. Giá trị thiếu được giữ là null thay vì chuyển thành 0.',
+    'Observation History': 'Lịch sử quan sát',
+    'Comparable price observations': 'Quan sát giá có thể so sánh',
+    'Primary asking prices are kept separate from other price bases; the demo chart only compares compatible mn VND/m² display observations.': 'Giá chào bán sơ cấp được tách khỏi các cơ sở giá khác; biểu đồ mô phỏng chỉ so sánh các quan sát tương thích theo triệu VND/m².',
+    'Selected Project ASP Trend': 'Xu hướng giá bán dự án được chọn',
+    'Latest Pricing Snapshot': 'Ảnh chụp giá mới nhất',
+    'Developer registry': 'Danh mục chủ đầu tư',
+    'Developer records resolve to project relationships instead of storing duplicate project lists.': 'Hồ sơ chủ đầu tư liên kết tới dự án thay vì lưu trùng danh sách dự án.',
+    'Evidence layer': 'Lớp bằng chứng',
+    'Market News & Research': 'Tin tức & Nghiên cứu thị trường',
+    'Articles are evidence linked to projects, developers and regions; they are not treated as the same thing as market events.': 'Bài viết là bằng chứng liên kết với dự án, chủ đầu tư và khu vực; không được xem là cùng một loại dữ liệu với sự kiện thị trường.',
+    'Project': 'Dự án',
+    'Units': 'Số căn',
+    'Latest ASP': 'Giá bán mới nhất',
+    'Absorption': 'Hấp thụ',
+    'New Supply': 'Nguồn cung mới',
+    'Sales': 'Bán hàng',
+    'Average ASP': 'Giá bán TB',
+    'Basis': 'Cơ sở giá',
+    'Planned units': 'Số căn dự kiến',
+    'Area': 'Diện tích',
+    'Overview': 'Tổng quan',
+    'Segments': 'Phân khúc',
+    'Phases': 'Phân kỳ',
+    'Related Infrastructure': 'Hạ tầng liên quan',
+    'Data Provenance': 'Nguồn gốc dữ liệu',
+    'Recent Evidence': 'Bằng chứng gần đây',
+    'No phase records yet.': 'Chưa có dữ liệu phân kỳ.',
+    'No direct infrastructure links in the demo dataset.': 'Không có liên kết hạ tầng trực tiếp trong bộ dữ liệu mô phỏng.',
+    'No market observation source available.': 'Không có nguồn cho quan sát thị trường.',
+    'No related articles.': 'Không có bài viết liên quan.',
+    'No projects match the selected filters.': 'Không có dự án phù hợp với bộ lọc.',
+    'No observations for this region.': 'Không có quan sát cho khu vực này.',
+    'No comparable pricing records.': 'Không có dữ liệu giá có thể so sánh.',
+    'No articles match the selected filters.': 'Không có bài viết phù hợp với bộ lọc.',
+    'selling': 'đang bán',
+    'construction': 'đang xây dựng',
+    'handover': 'bàn giao',
+    'pre launch': 'chuẩn bị mở bán',
+    'apartment': 'căn hộ',
+    'landed': 'nhà thấp tầng',
+    'township': 'đô thị tích hợp',
+    'industrial': 'BĐS công nghiệp',
+    'hospitality': 'nghỉ dưỡng',
+    'development phase': 'giai đoạn phát triển',
+    'tower': 'tòa',
+    'block': 'khối',
+    'parcel': 'lô',
+    'subdivision': 'phân khu',
+    'cluster': 'cụm',
+
+    // Legal UI
+    'Tracked Documents': 'Văn bản theo dõi',
+    'Illustrative legal database': 'Cơ sở dữ liệu pháp lý minh họa',
+    'Currently Effective': 'Đang có hiệu lực',
+    'Derived from status + effective date': 'Suy ra từ trạng thái + ngày hiệu lực',
+    'Drafts': 'Dự thảo',
+    'Draft is a status, not a document type': 'Dự thảo là trạng thái, không phải loại văn bản',
+    'Effective ≤ 90 Days': 'Có hiệu lực ≤ 90 ngày',
+    'Upcoming effective dates': 'Ngày hiệu lực sắp tới',
+    'Number': 'Số hiệu',
+    'Document': 'Văn bản',
+    'Issued / Draft': 'Ban hành / Dự thảo',
+    'Effective': 'Hiệu lực',
+    'Official document database': 'Cơ sở dữ liệu văn bản chính thức',
+    'Filter structured legal records by type, status, issuing agency, topic and scope. Media analysis remains a separate evidence layer.': 'Lọc hồ sơ pháp lý có cấu trúc theo loại, trạng thái, cơ quan ban hành, chủ đề và phạm vi. Phân tích truyền thông vẫn là một lớp bằng chứng riêng.',
+    'Effective-date monitor': 'Theo dõi ngày hiệu lực',
+    'Effective Soon': 'Sắp có hiệu lực',
+    'Upcoming dates are derived from canonical effective dates; “effective soon” is never stored as source-of-truth.': 'Các mốc sắp tới được suy ra từ ngày hiệu lực chuẩn; “sắp có hiệu lực” không được lưu như dữ liệu nguồn gốc.',
+    'Next 30 Days': '30 ngày tới',
+    'Near term': 'Ngắn hạn',
+    '31–90 Days': '31–90 ngày',
+    'Upcoming': 'Sắp tới',
+    'Later': 'Sau đó',
+    'Longer horizon': 'Dài hạn hơn',
+    'Controlled taxonomy': 'Danh mục phân loại kiểm soát',
+    'Topics are controlled categories used for document filters and research links, rather than free-text tags invented by the crawler.': 'Chủ đề là danh mục kiểm soát dùng cho bộ lọc và liên kết nghiên cứu, thay vì thẻ văn bản tự do do bộ thu thập tự tạo.',
+    'Legal News & Analysis': 'Tin tức & Phân tích pháp lý',
+    'Analysis helps interpret a document, but the official legal record remains the source of truth. Related documents are shown explicitly on each item.': 'Phân tích hỗ trợ diễn giải văn bản, nhưng hồ sơ pháp lý chính thức vẫn là nguồn chuẩn. Văn bản liên quan được hiển thị rõ trên từng mục.',
+    'Lifecycle': 'Vòng đời văn bản',
+    'Key Changes': 'Thay đổi chính',
+    'Topics': 'Chủ đề',
+    'Related Regulations': 'Quy định liên quan',
+    'Related Analysis / News': 'Phân tích / Tin liên quan',
+    'Official Source': 'Nguồn chính thức',
+    'Issued': 'Ban hành',
+    'Draft published': 'Công bố dự thảo',
+    'Replaced': 'Bị thay thế',
+    'Implements': 'Thi hành',
+    'Guides': 'Hướng dẫn',
+    'Amends': 'Sửa đổi',
+    'Replaces': 'Thay thế',
+    'References': 'Tham chiếu',
+    'Implemented by': 'Được thi hành bởi',
+    'Guided by': 'Được hướng dẫn bởi',
+    'Amended by': 'Được sửa đổi bởi',
+    'Replaced by': 'Được thay thế bởi',
+    'Referenced by': 'Được tham chiếu bởi',
+    'No documents match the selected filters.': 'Không có văn bản phù hợp với bộ lọc.',
+    'No documents in this window.': 'Không có văn bản trong khoảng thời gian này.',
+    'No documents became effective in the last 30 days.': 'Không có văn bản có hiệu lực trong 30 ngày gần đây.',
+    'No lifecycle dates available.': 'Không có dữ liệu ngày trong vòng đời văn bản.',
+    'No structured change notes.': 'Không có ghi chú thay đổi có cấu trúc.',
+    'No related-document records.': 'Không có dữ liệu văn bản liên quan.',
+    'No related analysis.': 'Không có phân tích liên quan.',
+    'No legal articles match the selected filters.': 'Không có bài viết pháp lý phù hợp với bộ lọc.',
+    'Official URL is intentionally not connected in this illustrative demo dataset. Source metadata remains visible through the registry.': 'URL chính thức chưa được kết nối trong bộ dữ liệu mô phỏng. Metadata nguồn vẫn được hiển thị qua danh mục nguồn.',
+    'draft': 'dự thảo',
+    'issued': 'đã ban hành',
+    'effective': 'có hiệu lực',
+    'expired': 'hết hiệu lực',
+    'replaced': 'bị thay thế',
+    'withdrawn': 'đã rút',
+    'Law': 'Luật',
+    'Resolution': 'Nghị quyết',
+    'Decree': 'Nghị định',
+    'Circular': 'Thông tư',
+    'Decision': 'Quyết định',
+    'Guidance': 'Hướng dẫn',
+    'National': 'Toàn quốc',
+    'Local': 'Địa phương',
+    'Multi Region': 'Nhiều khu vực',
+
+    // Infrastructure UI
+    'Illustrative infrastructure database': 'Cơ sở dữ liệu hạ tầng minh họa',
+    'Under Construction': 'Đang thi công',
+    'Operational': 'Đang vận hành',
+    'Historical records remain searchable': 'Dữ liệu lịch sử vẫn có thể tra cứu',
+    'Regions Covered': 'Khu vực được theo dõi',
+    'No numeric progress': 'Không có % tiến độ',
+    'Infrastructure Project': 'Dự án hạ tầng',
+    'Progress': 'Tiến độ',
+    'Current Target': 'Mốc hiện tại',
+    'Related RE': 'BĐS liên quan',
+    'Current target': 'Mốc hiện tại',
+    'Investment': 'Vốn đầu tư',
+    'Research links': 'Liên kết nghiên cứu',
+    'Schedule History': 'Lịch sử tiến độ',
+    'Recent Milestones': 'Mốc gần đây',
+    'Related Real Estate Projects': 'Dự án BĐS liên quan',
+    'Related Evidence': 'Bằng chứng liên quan',
+    'No schedule records yet.': 'Chưa có dữ liệu tiến độ.',
+    'No milestone records.': 'Không có dữ liệu mốc tiến độ.',
+    'No direct project links in the demo dataset.': 'Không có liên kết dự án trực tiếp trong bộ dữ liệu mô phỏng.',
+    'No infrastructure projects match the selected filters.': 'Không có dự án hạ tầng phù hợp với bộ lọc.',
+    'No infrastructure articles match the selected filters.': 'Không có bài viết hạ tầng phù hợp với bộ lọc.',
+    'Infrastructure News & Research': 'Tin tức & Nghiên cứu hạ tầng',
+    'Articles support project records and milestones; they do not replace schedule history or current master status.': 'Bài viết hỗ trợ hồ sơ dự án và mốc tiến độ; không thay thế lịch sử tiến độ hay trạng thái hiện tại.',
+    'Expressway': 'Cao tốc',
+    'Ring Road': 'Đường vành đai',
+    'Major Road': 'Đường trục chính',
+    'Bridge': 'Cầu',
+    'Metro': 'Metro',
+    'Railway': 'Đường sắt',
+    'Airport': 'Sân bay',
+    'Port': 'Cảng',
+    'Urban Infrastructure': 'Hạ tầng đô thị',
+    'Proposed': 'Đề xuất',
+    'Planning': 'Lập kế hoạch',
+    'Approved': 'Đã phê duyệt',
+    'Land Clearance': 'Giải phóng mặt bằng',
+    'Partially Operational': 'Vận hành một phần',
+    'Completed': 'Hoàn thành',
+    'under construction': 'đang thi công',
+    'operational': 'đang vận hành',
+    'current': 'hiện tại',
+    'superseded': 'đã thay thế',
+    'Expected Completion': 'Dự kiến hoàn thành',
+    'Approval': 'Phê duyệt',
+    'Funding': 'Nguồn vốn',
+    'Construction Start': 'Khởi công',
+    'Schedule Change': 'Điều chỉnh tiến độ',
+    'Delay': 'Chậm tiến độ',
+    'Partial Opening': 'Mở một phần',
+    'Operation Start': 'Bắt đầu vận hành',
+
+    // Macro UI
+    'Daily monitor': 'Theo dõi hằng ngày',
+    'USD/VND Central Rate': 'Tỷ giá trung tâm USD/VND',
+    'Latest releases': 'Công bố mới nhất',
+    'Macro Developments': 'Diễn biến vĩ mô',
+    'Comparable series': 'Chuỗi có thể so sánh',
+    'Key Indicators': 'Chỉ số chính',
+    'Foreign Exchange': 'Tỷ giá',
+    'Gold': 'Vàng',
+    'Liquidity, Credit & Money Supply': 'Thanh khoản, Tín dụng & Cung tiền',
+    'Inflation': 'Lạm phát',
+    'Observation history': 'Lịch sử quan sát',
+    'Recent Data': 'Dữ liệu gần đây',
+    'Macro News & Research': 'Tin tức & Nghiên cứu vĩ mô',
+    'Articles explain or contextualize series; they do not replace the underlying observations.': 'Bài viết giải thích hoặc bổ sung bối cảnh cho chuỗi dữ liệu; không thay thế các quan sát gốc.',
+    'Macro Indicator': 'Chỉ số vĩ mô',
+    'Definition': 'Định nghĩa',
+    'Methodology': 'Phương pháp',
+    'Recent Observations': 'Quan sát gần đây',
+    'Previous available observation': 'Quan sát khả dụng trước đó',
+    'Current displayed observation': 'Quan sát hiện đang hiển thị',
+    'No current observation source available.': 'Không có nguồn cho quan sát hiện tại.',
+    'No related articles.': 'Không có bài viết liên quan.',
+    'No macro articles match the selected filters.': 'Không có bài viết vĩ mô phù hợp với bộ lọc.',
+    'Interest Rate': 'Lãi suất',
+    'Banking Liquidity': 'Thanh khoản ngân hàng',
+    'Credit': 'Tín dụng',
+    'Money Supply': 'Cung tiền',
+    'Fx': 'Tỷ giá',
+    'Daily': 'Hằng ngày',
+    'Weekly': 'Hằng tuần',
+    'Monthly': 'Hằng tháng',
+    'Quarterly': 'Hằng quý',
+    'Annual': 'Hằng năm',
+    'Event Driven': 'Theo sự kiện',
+    'Preliminary': 'Sơ bộ',
+    'Final': 'Chính thức',
+    'Revised': 'Điều chỉnh',
+
+    // Article/content type badges (only exact badge text is changed)
+    'news': 'tin tức',
+    'research': 'nghiên cứu',
+    'report': 'báo cáo',
+    'analysis': 'phân tích',
+    'announcement': 'thông báo',
+    'press release': 'thông cáo báo chí',
+    'press-release': 'thông cáo báo chí'
+  }));
+
+  const PLACEHOLDERS = new Map(Object.entries({
+    'Project or location…': 'Dự án hoặc vị trí…',
+    'Number, title or topic…': 'Số hiệu, tiêu đề hoặc chủ đề…',
+    'Analysis, document or topic…': 'Phân tích, văn bản hoặc chủ đề…',
+    'Project, region or related market…': 'Dự án, khu vực hoặc thị trường liên quan…',
+    'Infrastructure news…': 'Tin hạ tầng…',
+    'Rates, FX, gold, CPI…': 'Lãi suất, tỷ giá, vàng, CPI…'
+  }));
+
+
+  const originalText = new WeakMap();
+  const originalPlaceholder = new WeakMap();
+
+  function language() {
+    return window.AppLocalization?.getLanguage?.() || document.documentElement.lang || 'vi';
+  }
+
+  function withWhitespace(raw, core) {
+    const lead = String(raw).match(/^\s*/)?.[0] || '';
+    const tail = String(raw).match(/\s*$/)?.[0] || '';
+    return `${lead}${core}${tail}`;
+  }
+
+  function translatePattern(core) {
+    let match;
+    if ((match = core.match(/^(\d+) updates$/))) return `${match[1]} cập nhật`;
+    if ((match = core.match(/^(\d+) projects$/))) return `${match[1]} dự án`;
+    if ((match = core.match(/^(\d+) tracked projects$/))) return `${match[1]} dự án theo dõi`;
+    if ((match = core.match(/^(\d+) selling$/))) return `${match[1]} đang bán`;
+    if ((match = core.match(/^(\d+) developers$/))) return `${match[1]} chủ đầu tư`;
+    if ((match = core.match(/^(\d+) documents$/))) return `${match[1]} văn bản`;
+    if ((match = core.match(/^(\d+) legal topics$/))) return `${match[1]} chủ đề pháp lý`;
+    if ((match = core.match(/^(\d+) upcoming$/))) return `${match[1]} sắp tới`;
+    if ((match = core.match(/^(\d+) drafts$/))) return `${match[1]} dự thảo`;
+    if ((match = core.match(/^In (\d+) days$/))) return `Còn ${match[1]} ngày`;
+    if ((match = core.match(/^(\d+) days ago$/))) return `${match[1]} ngày trước`;
+    if ((match = core.match(/^Demo data · (.+)$/))) return `Dữ liệu mô phỏng · ${match[1]}`;
+    if ((match = core.match(/^Published (.+)$/))) return `Công bố ${match[1]}`;
+    if ((match = core.match(/^Announced (.+)$/))) return `Công bố ${match[1]}`;
+    if ((match = core.match(/^Source: (.+)$/))) return `Nguồn: ${match[1]}`;
+    if ((match = core.match(/^Related RE: (.+)$/))) return `BĐS liên quan: ${match[1]}`;
+    if ((match = core.match(/^Official context: (.+)$/))) return `Ngữ cảnh chính thức: ${match[1]}`;
+    if ((match = core.match(/^(\d+) targets through 2027$/))) return `${match[1]} mốc đến hết 2027`;
+    if ((match = core.match(/^(\d+) source definitions$/))) return `${match[1]} định nghĩa nguồn`;
+    if ((match = core.match(/^P(\d+) · lower number = higher sourcing priority$/))) return `P${match[1]} · số nhỏ hơn = mức ưu tiên nguồn cao hơn`;
+    if ((match = core.match(/^Latest displayed market observation · (.+)$/))) return `Quan sát thị trường mới nhất đang hiển thị · ${match[1]}`;
+    if ((match = core.match(/^Current displayed observation · (.+)$/))) return `Quan sát hiện đang hiển thị · ${match[1]}`;
+    return null;
+  }
+
+  function translatedCore(core) {
+    return EN_VI.get(core) || translatePattern(core) || core;
+  }
+
+  function translateTextNode(node) {
+    if (!node || node.nodeType !== Node.TEXT_NODE || !node.parentElement) return;
+    const tag = node.parentElement.tagName;
+    if (['SCRIPT', 'STYLE', 'CODE', 'PRE', 'CANVAS'].includes(tag)) return;
+    const raw = node.nodeValue;
+    const core = String(raw || '').trim();
+    if (!core) return;
+    const translated = translatedCore(core);
+    if (translated !== core) {
+      if (!originalText.has(node)) originalText.set(node, raw);
+      node.nodeValue = withWhitespace(raw, translated);
+    }
+  }
+
+  function restoreTextNode(node) {
+    if (originalText.has(node)) {
+      node.nodeValue = originalText.get(node);
+      originalText.delete(node);
+    }
+  }
+
+  function translateAttributes(element) {
+    if (!(element instanceof Element)) return;
+    if (element.hasAttribute('placeholder')) {
+      const current = element.getAttribute('placeholder') || '';
+      if (PLACEHOLDERS.has(current)) {
+        if (!originalPlaceholder.has(element)) originalPlaceholder.set(element, current);
+        element.setAttribute('placeholder', PLACEHOLDERS.get(current));
+      }
+    }
+  }
+
+  function restoreAttributes(element) {
+    if (!(element instanceof Element)) return;
+    if (originalPlaceholder.has(element)) {
+      element.setAttribute('placeholder', originalPlaceholder.get(element));
+      originalPlaceholder.delete(element);
+    }
+  }
+
+  function walk(root, callback) {
+    if (!root) return;
+    if (root.nodeType === Node.TEXT_NODE) {
+      callback(root);
+      return;
+    }
+    if (!(root instanceof Element) && root !== document) return;
+    const walker = document.createTreeWalker(root, NodeFilter.SHOW_TEXT);
+    let node;
+    while ((node = walker.nextNode())) callback(node);
+  }
+
+  function translateTree(root) {
+    if (!root) return;
+    if (root instanceof Element) translateAttributes(root);
+    walk(root, translateTextNode);
+    if (root.querySelectorAll) root.querySelectorAll('[placeholder]').forEach(translateAttributes);
+  }
+
+  function restoreTree(root) {
+    if (!root) return;
+    if (root instanceof Element) restoreAttributes(root);
+    walk(root, restoreTextNode);
+    if (root.querySelectorAll) root.querySelectorAll('[placeholder]').forEach(restoreAttributes);
+  }
+
+  let observer = null;
+  let applying = false;
+
+  function apply(lang = language()) {
+    if (applying || !document.body) return;
+    applying = true;
+    try {
+      if (lang === 'vi') translateTree(document.body);
+      else restoreTree(document.body);
+    } catch (error) {
+      console.warn('[localization-dynamic] non-fatal translation error:', error);
+    } finally {
+      applying = false;
+    }
+  }
+
+  function observe() {
+    if (observer || !document.body) return;
+    observer = new MutationObserver(mutations => {
+      if (applying || language() !== 'vi') return;
+      for (const mutation of mutations) {
+        mutation.addedNodes.forEach(node => {
+          try { translateTree(node); } catch (_) {}
+        });
+      }
+    });
+    observer.observe(document.body, { childList: true, subtree: true });
+  }
+
+  function init() {
+    try {
+      apply(language());
+      observe();
+      document.addEventListener('app:language-changed', event => apply(event.detail?.language || language()));
+    } catch (error) {
+      console.warn('[localization-dynamic] disabled after non-fatal error:', error);
+    }
+  }
+
+  window.AppDynamicLocalization = { apply };
+
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', init, { once: true });
+  } else {
+    init();
+  }
+})();

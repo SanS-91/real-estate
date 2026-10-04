@@ -1,0 +1,271 @@
+{
+  "schema_version": 1,
+  "build_id": "demo-step4-20261003",
+  "generated_at": "2026-10-03T15:45:00+07:00",
+  "record_count": 8,
+  "data": [
+    {
+      "id": "demo-land-framework-law-2026",
+      "document_number": "DEMO 01/2026/QH",
+      "title": "Illustrative Land Framework Amendment Law",
+      "document_type": "law",
+      "status": "issued",
+      "agency_ids": [
+        "national-assembly"
+      ],
+      "scope_type": "national",
+      "region_ids": [],
+      "topic_ids": [
+        "land",
+        "investment"
+      ],
+      "issued_date": "2026-08-18",
+      "effective_date": "2027-02-01",
+      "official_url": null,
+      "summary": "Illustrative master document used to demonstrate how national land-related legal records, dates and relationships are displayed. It is not a real legal instrument.",
+      "key_changes": [
+        "Demonstrates structured tracking of land-related provisions.",
+        "Shows a future effective date and downstream implementing documents.",
+        "Provides a parent record for related-document navigation."
+      ],
+      "related_documents": [],
+      "primary_source_id": "demo-official",
+      "created_at": "2026-10-03T15:45:00+07:00",
+      "updated_at": "2026-10-03T15:45:00+07:00"
+    },
+    {
+      "id": "demo-housing-decree-2026",
+      "document_number": "DEMO 88/2026/ND-CP",
+      "title": "Illustrative Housing & Project Sales Decree",
+      "document_type": "decree",
+      "status": "issued",
+      "agency_ids": [
+        "government"
+      ],
+      "scope_type": "national",
+      "region_ids": [],
+      "topic_ids": [
+        "housing",
+        "real-estate-business"
+      ],
+      "issued_date": "2026-09-20",
+      "effective_date": "2026-10-25",
+      "official_url": null,
+      "summary": "Demo decree record used to test the Effective Soon workflow, document lifecycle and links between official documents and analysis articles.",
+      "key_changes": [
+        "Illustrates project-sales eligibility tracking.",
+        "Demonstrates effective-date monitoring within 30 days.",
+        "Shows replacement and implementation relationships."
+      ],
+      "related_documents": [
+        {
+          "document_id": "demo-land-framework-law-2026",
+          "relation_type": "implements"
+        },
+        {
+          "document_id": "demo-old-housing-decree-2025",
+          "relation_type": "replaces"
+        }
+      ],
+      "primary_source_id": "demo-official",
+      "created_at": "2026-10-03T15:45:00+07:00",
+      "updated_at": "2026-10-03T15:45:00+07:00"
+    },
+    {
+      "id": "demo-business-circular-2026",
+      "document_number": "DEMO 17/2026/TT-BXD",
+      "title": "Illustrative Real Estate Business Disclosure Circular",
+      "document_type": "circular",
+      "status": "issued",
+      "agency_ids": [
+        "ministry-construction"
+      ],
+      "scope_type": "national",
+      "region_ids": [],
+      "topic_ids": [
+        "real-estate-business",
+        "finance"
+      ],
+      "issued_date": "2026-09-28",
+      "effective_date": "2026-12-15",
+      "official_url": null,
+      "summary": "Illustrative circular demonstrating disclosure, payment and developer-reporting topics in a structured legal database.",
+      "key_changes": [
+        "Demonstrates standardized disclosure fields.",
+        "Shows a 31–90 day effective window.",
+        "Links a circular to its parent implementing decree."
+      ],
+      "related_documents": [
+        {
+          "document_id": "demo-housing-decree-2026",
+          "relation_type": "guides"
+        }
+      ],
+      "primary_source_id": "demo-official",
+      "created_at": "2026-10-03T15:45:00+07:00",
+      "updated_at": "2026-10-03T15:45:00+07:00"
+    },
+    {
+      "id": "demo-hcmc-planning-decision-2026",
+      "document_number": "DEMO 2450/QD-UBND",
+      "title": "Illustrative HCMC Planning Implementation Decision",
+      "document_type": "decision",
+      "status": "effective",
+      "agency_ids": [
+        "hcmc-peoples-committee"
+      ],
+      "scope_type": "local",
+      "region_ids": [
+        "hcmc"
+      ],
+      "topic_ids": [
+        "planning",
+        "investment"
+      ],
+      "issued_date": "2026-08-25",
+      "effective_date": "2026-09-15",
+      "official_url": null,
+      "summary": "Demo local decision showing how region-specific planning documents are separated from national legal instruments.",
+      "key_changes": [
+        "Demonstrates local-scope filtering.",
+        "Links planning and investment topics.",
+        "Shows a document already in effect."
+      ],
+      "related_documents": [],
+      "primary_source_id": "demo-official",
+      "created_at": "2026-10-03T15:45:00+07:00",
+      "updated_at": "2026-10-03T15:45:00+07:00"
+    },
+    {
+      "id": "demo-land-pricing-guidance-2026",
+      "document_number": "DEMO 4200/HD-BTC",
+      "title": "Illustrative Land Pricing & Financial Guidance",
+      "document_type": "guidance",
+      "status": "effective",
+      "agency_ids": [
+        "ministry-finance"
+      ],
+      "scope_type": "national",
+      "region_ids": [],
+      "topic_ids": [
+        "land",
+        "finance",
+        "tax"
+      ],
+      "issued_date": "2026-09-12",
+      "effective_date": "2026-10-01",
+      "official_url": null,
+      "summary": "Illustrative guidance used to test recently-effective status, multi-topic classification and evidence links.",
+      "key_changes": [
+        "Demonstrates a recently effective legal record.",
+        "Shows multiple financial and land topics on one document.",
+        "Provides a test case for source-vs-analysis separation."
+      ],
+      "related_documents": [
+        {
+          "document_id": "demo-land-framework-law-2026",
+          "relation_type": "references"
+        }
+      ],
+      "primary_source_id": "demo-official",
+      "created_at": "2026-10-03T15:45:00+07:00",
+      "updated_at": "2026-10-03T15:45:00+07:00"
+    },
+    {
+      "id": "demo-draft-construction-circular-2026",
+      "document_number": "DRAFT DEMO/BXD",
+      "title": "Illustrative Draft Construction Acceptance Circular",
+      "document_type": "circular",
+      "status": "draft",
+      "agency_ids": [
+        "ministry-construction"
+      ],
+      "scope_type": "national",
+      "region_ids": [],
+      "topic_ids": [
+        "construction",
+        "housing"
+      ],
+      "issued_date": null,
+      "effective_date": null,
+      "draft_published_date": "2026-09-29",
+      "consultation_end_date": "2026-10-29",
+      "official_url": null,
+      "summary": "Illustrative draft record showing that draft status is separate from document type and has no effective date yet.",
+      "key_changes": [
+        "Demonstrates draft consultation tracking.",
+        "Keeps issued and effective dates null until formally issued.",
+        "Tests draft filtering and lifecycle display."
+      ],
+      "related_documents": [],
+      "primary_source_id": "demo-official",
+      "created_at": "2026-10-03T15:45:00+07:00",
+      "updated_at": "2026-10-03T15:45:00+07:00"
+    },
+    {
+      "id": "demo-old-housing-decree-2025",
+      "document_number": "DEMO 41/2025/ND-CP",
+      "title": "Illustrative Previous Housing Sales Decree",
+      "document_type": "decree",
+      "status": "replaced",
+      "agency_ids": [
+        "government"
+      ],
+      "scope_type": "national",
+      "region_ids": [],
+      "topic_ids": [
+        "housing",
+        "real-estate-business"
+      ],
+      "issued_date": "2025-04-10",
+      "effective_date": "2025-07-01",
+      "official_url": null,
+      "summary": "Historical demo record retained to demonstrate replaced-document research and reverse legal relationships.",
+      "key_changes": [
+        "Historical reference retained after replacement.",
+        "Demonstrates reverse relation “replaced by”."
+      ],
+      "related_documents": [],
+      "primary_source_id": "demo-official",
+      "created_at": "2026-10-03T15:45:00+07:00",
+      "updated_at": "2026-10-03T15:45:00+07:00"
+    },
+    {
+      "id": "demo-pilot-planning-resolution-2026",
+      "document_number": "DEMO 12/2026/NQ-CP",
+      "title": "Illustrative Pilot Resolution for Selected Urban Development Procedures",
+      "document_type": "resolution",
+      "status": "issued",
+      "agency_ids": [
+        "government"
+      ],
+      "scope_type": "multi-region",
+      "region_ids": [
+        "hcmc",
+        "dong-nai"
+      ],
+      "topic_ids": [
+        "planning",
+        "investment"
+      ],
+      "issued_date": "2026-09-30",
+      "effective_date": "2026-11-20",
+      "official_url": null,
+      "summary": "Illustrative multi-region resolution used to demonstrate an upcoming effective date and regional legal filtering.",
+      "key_changes": [
+        "Demonstrates multi-region legal scope.",
+        "Shows a 31–90 day effective window.",
+        "Links planning and investment research topics."
+      ],
+      "related_documents": [
+        {
+          "document_id": "demo-land-framework-law-2026",
+          "relation_type": "references"
+        }
+      ],
+      "primary_source_id": "demo-official",
+      "created_at": "2026-10-03T15:45:00+07:00",
+      "updated_at": "2026-10-03T15:45:00+07:00"
+    }
+  ]
+}

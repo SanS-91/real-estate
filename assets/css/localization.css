@@ -1,0 +1,23 @@
+/* v7.2.0 additive localization layer. Removing this file leaves v7.1.1 layout intact. */
+.language-toggle {
+  min-width: 70px;
+  padding: 0 10px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+  color: var(--color-text-secondary);
+  font-size: 12px;
+  font-weight: 700;
+}
+.language-toggle [data-lang-option] { opacity: .55; }
+.language-toggle [data-lang-option].is-active {
+  opacity: 1;
+  color: var(--color-primary-dark);
+  font-weight: 850;
+}
+.language-toggle__sep { color: var(--color-border-strong, #98a2b3); }
+
+@media (max-width: 767px) {
+  .language-toggle { min-width: 62px; padding: 0 8px; }
+}

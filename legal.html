@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Monitor real-estate-related legal documents, effective dates, drafts and supporting analysis.">
+  <title>Legal · Market Intelligence</title>
+  <link rel="stylesheet" href="assets/css/main.css">
+  <link rel="stylesheet" href="assets/css/localization.css?v=7.2.0">
+</head>
+<body data-page="legal">
+  <div data-site-header></div>
+
+  <main class="page-shell">
+    <div class="container">
+      <header class="page-header">
+        <div>
+          <p class="page-kicker">Official Documents &amp; Changes</p>
+          <h1 class="page-title">Legal</h1>
+          <p class="page-description">Monitor real-estate-related laws, decrees, circulars, effective dates, drafts and supporting analysis.</p>
+        </div>
+        <div class="updated-label" data-legal-updated>Demo data</div>
+      </header>
+
+      <div class="demo-banner" role="note">
+        <strong>Implementation demo.</strong>
+        <span>All legal document numbers, titles, dates and change notes in this build are illustrative mock records for testing the research workflow. They are not legal advice or authoritative regulations.</span>
+      </div>
+
+      <nav class="tabs" aria-label="Legal views" data-legal-tabs>
+        <a class="tab-link" data-view="overview" href="legal.html?view=overview">Overview</a>
+        <a class="tab-link" data-view="documents" href="legal.html?view=documents">Documents</a>
+        <a class="tab-link" data-view="effective-soon" href="legal.html?view=effective-soon">Effective Soon</a>
+        <a class="tab-link" data-view="topics" href="legal.html?view=topics">Topics</a>
+        <a class="tab-link" data-view="news" href="legal.html?view=news">News</a>
+      </nav>
+
+      <section data-legal-view aria-live="polite">
+        <div class="state-box">Loading Legal data…</div>
+      </section>
+    </div>
+  </main>
+
+  <div data-site-footer></div>
+  <div data-site-overlays></div>
+
+  <script src="assets/js/common.js"></script>
+  <script src="assets/js/formatters.js"></script>
+  <script src="assets/js/data-store.js"></script>
+  <script src="assets/js/provenance.js"></script>
+  <script src="assets/js/components.js"></script>
+  <script src="assets/js/search.js"></script>
+  <script src="assets/js/resolver.js"></script>
+  <script src="assets/js/filters.js"></script>
+  <script src="assets/js/legal.js"></script>
+  <script src="assets/js/localization-static.js?v=7.2.0"></script>
+  <script src="assets/js/localization-dynamic.js?v=7.2.1"></script>
+</body>
+</html>

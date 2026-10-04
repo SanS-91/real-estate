@@ -1,0 +1,333 @@
+{
+  "schema_version": 1,
+  "build_id": "demo-step6-20261003",
+  "generated_at": "2026-10-03T16:45:00+07:00",
+  "record_count": 15,
+  "data": [
+    {
+      "id": "infra-event-001",
+      "category": "infrastructure",
+      "event_type": "progress",
+      "entity_type": "infrastructure-project",
+      "entity_id": "long-thanh-airport",
+      "event_date": "2026-10-01",
+      "title": "Illustrative airport construction progress update",
+      "summary": "Demo milestone used to test latest-progress display.",
+      "importance": 4,
+      "region_ids": [
+        "dong-nai"
+      ],
+      "source_ids": [
+        "demo-official"
+      ],
+      "article_ids": [
+        "article-infra-001"
+      ],
+      "event_data": {
+        "progress_percent": 72
+      }
+    },
+    {
+      "id": "infra-event-002",
+      "category": "infrastructure",
+      "event_type": "schedule-change",
+      "entity_type": "infrastructure-project",
+      "entity_id": "ben-luc-long-thanh-expressway",
+      "event_date": "2026-09-18",
+      "title": "Illustrative expressway completion target revised",
+      "summary": "Demo schedule revision from Q4 2026 to Q2 2027.",
+      "importance": 4,
+      "region_ids": [
+        "long-an",
+        "hcmc",
+        "dong-nai"
+      ],
+      "source_ids": [
+        "demo-official"
+      ],
+      "article_ids": [
+        "article-infra-002"
+      ],
+      "event_data": {
+        "previous_target": "2026-Q4",
+        "new_target": "2027-Q2"
+      }
+    },
+    {
+      "id": "infra-event-003",
+      "category": "infrastructure",
+      "event_type": "progress",
+      "entity_type": "infrastructure-project",
+      "entity_id": "hcmc-ring-road-3",
+      "event_date": "2026-09-12",
+      "title": "Illustrative Ring Road 3 progress reaches new milestone",
+      "summary": "Demo progress event for the metropolitan ring road.",
+      "importance": 4,
+      "region_ids": [
+        "hcmc",
+        "binh-duong",
+        "dong-nai"
+      ],
+      "source_ids": [
+        "demo-official"
+      ],
+      "article_ids": [
+        "article-infra-003"
+      ],
+      "event_data": {
+        "progress_percent": 64
+      }
+    },
+    {
+      "id": "infra-event-004",
+      "category": "infrastructure",
+      "event_type": "schedule-change",
+      "entity_type": "infrastructure-project",
+      "entity_id": "long-thanh-airport",
+      "event_date": "2026-08-20",
+      "title": "Illustrative airport target moves to Q4 2026",
+      "summary": "Demo schedule-history event preserving the prior target.",
+      "importance": 4,
+      "region_ids": [
+        "dong-nai"
+      ],
+      "source_ids": [
+        "demo-official"
+      ],
+      "article_ids": [],
+      "event_data": {
+        "previous_target": "2026-Q2",
+        "new_target": "2026-Q4"
+      }
+    },
+    {
+      "id": "infra-event-005",
+      "category": "infrastructure",
+      "event_type": "progress",
+      "entity_type": "infrastructure-project",
+      "entity_id": "ben-luc-long-thanh-expressway",
+      "event_date": "2026-08-05",
+      "title": "Illustrative expressway progress update",
+      "summary": "Demo construction-progress milestone.",
+      "importance": 3,
+      "region_ids": [
+        "long-an",
+        "hcmc",
+        "dong-nai"
+      ],
+      "source_ids": [
+        "demo-official"
+      ],
+      "article_ids": [],
+      "event_data": {
+        "progress_percent": 81
+      }
+    },
+    {
+      "id": "infra-event-006",
+      "category": "infrastructure",
+      "event_type": "approval",
+      "entity_type": "infrastructure-project",
+      "entity_id": "hcmc-ring-road-4",
+      "event_date": "2026-06-30",
+      "title": "Illustrative Ring Road 4 approval milestone",
+      "summary": "Demo approval-stage event used for long-horizon research.",
+      "importance": 4,
+      "region_ids": [
+        "hcmc",
+        "binh-duong",
+        "dong-nai",
+        "long-an"
+      ],
+      "source_ids": [
+        "demo-official"
+      ],
+      "article_ids": [
+        "article-infra-004"
+      ],
+      "event_data": {}
+    },
+    {
+      "id": "infra-event-007",
+      "category": "infrastructure",
+      "event_type": "land-clearance",
+      "entity_type": "infrastructure-project",
+      "entity_id": "hcmc-moc-bai-expressway",
+      "event_date": "2026-05-16",
+      "title": "Illustrative land-clearance milestone",
+      "summary": "Demo preparation-stage update without a numeric progress percentage.",
+      "importance": 3,
+      "region_ids": [
+        "hcmc"
+      ],
+      "source_ids": [
+        "demo-official"
+      ],
+      "article_ids": [],
+      "event_data": {}
+    },
+    {
+      "id": "infra-event-008",
+      "category": "infrastructure",
+      "event_type": "operation-start",
+      "entity_type": "infrastructure-project",
+      "entity_id": "hcmc-metro-line-1",
+      "event_date": "2025-01-10",
+      "title": "Illustrative metro operation milestone",
+      "summary": "Historical demo event retained to test operational-project timelines.",
+      "importance": 5,
+      "region_ids": [
+        "hcmc"
+      ],
+      "source_ids": [
+        "demo-official"
+      ],
+      "article_ids": [],
+      "event_data": {
+        "progress_percent": 100
+      }
+    },
+    {
+      "id": "infra-event-009",
+      "category": "infrastructure",
+      "event_type": "construction-start",
+      "entity_type": "infrastructure-project",
+      "entity_id": "hcmc-ring-road-3",
+      "event_date": "2024-06-01",
+      "title": "Illustrative construction-start milestone",
+      "summary": "Historical demo event.",
+      "importance": 4,
+      "region_ids": [
+        "hcmc",
+        "binh-duong",
+        "dong-nai"
+      ],
+      "source_ids": [
+        "demo-official"
+      ],
+      "article_ids": [],
+      "event_data": {}
+    },
+    {
+      "id": "infra-event-010",
+      "category": "infrastructure",
+      "event_type": "construction-start",
+      "entity_type": "infrastructure-project",
+      "entity_id": "long-thanh-airport",
+      "event_date": "2023-08-31",
+      "title": "Illustrative construction-start milestone",
+      "summary": "Historical demo event.",
+      "importance": 5,
+      "region_ids": [
+        "dong-nai"
+      ],
+      "source_ids": [
+        "demo-official"
+      ],
+      "article_ids": [],
+      "event_data": {}
+    },
+    {
+      "id": "macro-event-001",
+      "category": "macro",
+      "event_type": "data-release",
+      "entity_type": "macro-indicator",
+      "entity_id": "cpi-yoy",
+      "event_date": "2026-10-02",
+      "title": "Illustrative September inflation data released",
+      "summary": "Demo release event retaining September as the data period.",
+      "importance": 4,
+      "region_ids": [],
+      "source_ids": [
+        "demo-statistics"
+      ],
+      "article_ids": [
+        "article-macro-001"
+      ],
+      "event_data": {
+        "period": "2026-09",
+        "value": 3.8
+      }
+    },
+    {
+      "id": "macro-event-002",
+      "category": "macro",
+      "event_type": "fx-movement",
+      "entity_type": "macro-indicator",
+      "entity_id": "usd-vnd-central-rate",
+      "event_date": "2026-10-02",
+      "title": "Illustrative USD/VND daily move enters macro event layer",
+      "summary": "Demo event linked to the daily FX series.",
+      "importance": 3,
+      "region_ids": [],
+      "source_ids": [
+        "demo-central-bank"
+      ],
+      "article_ids": [
+        "article-macro-002"
+      ],
+      "event_data": {}
+    },
+    {
+      "id": "macro-event-003",
+      "category": "macro",
+      "event_type": "credit-update",
+      "entity_type": "macro-indicator",
+      "entity_id": "credit-growth-ytd",
+      "event_date": "2026-09-30",
+      "title": "Illustrative credit growth update reaches 10.2% YTD",
+      "summary": "Demo monthly update for the liquidity view.",
+      "importance": 4,
+      "region_ids": [],
+      "source_ids": [
+        "demo-central-bank"
+      ],
+      "article_ids": [
+        "article-macro-004"
+      ],
+      "event_data": {
+        "period": "2026-09",
+        "value": 10.2
+      }
+    },
+    {
+      "id": "macro-event-004",
+      "category": "macro",
+      "event_type": "gold-movement",
+      "entity_type": "macro-indicator",
+      "entity_id": "sjc-gold-sell",
+      "event_date": "2026-09-25",
+      "title": "Illustrative domestic gold series records a notable move",
+      "summary": "Demo market movement event.",
+      "importance": 3,
+      "region_ids": [],
+      "source_ids": [
+        "demo-gold-source"
+      ],
+      "article_ids": [
+        "article-macro-003"
+      ],
+      "event_data": {}
+    },
+    {
+      "id": "macro-event-005",
+      "category": "macro",
+      "event_type": "rate-change",
+      "entity_type": "macro-indicator",
+      "entity_id": "policy-refinancing-rate",
+      "event_date": "2026-06-15",
+      "title": "Illustrative policy refinancing rate changes to 4.0%",
+      "summary": "Fictional rate-change event used to demonstrate stepped event-driven charts.",
+      "importance": 5,
+      "region_ids": [],
+      "source_ids": [
+        "demo-central-bank"
+      ],
+      "article_ids": [],
+      "event_data": {
+        "previous_value": 4.5,
+        "new_value": 4.0
+      }
+    }
+  ]
+}

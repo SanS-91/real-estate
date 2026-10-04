@@ -1,0 +1,19 @@
+{
+  "schema_version": 1,
+  "last_successful_build": "2026-10-03T16:45:00+07:00",
+  "is_mock": true,
+  "categories": {
+    "market": {
+      "updated_at": "2026-10-03T14:00:00+07:00"
+    },
+    "legal": {
+      "updated_at": "2026-10-03T13:45:00+07:00"
+    },
+    "infrastructure": {
+      "updated_at": "2026-10-03T13:30:00+07:00"
+    },
+    "macro": {
+      "updated_at": "2026-10-03T16:45:00+07:00"
+    }
+  }
+}

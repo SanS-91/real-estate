@@ -1,0 +1,47 @@
+{
+  "schema_version": 1,
+  "generated_at": "2026-10-03T14:15:00+07:00",
+  "is_mock": true,
+  "data": [
+    {
+      "id": "weekly-demo-001",
+      "category": "market",
+      "category_label": "Market",
+      "date_label": "03 Oct",
+      "importance_label": "High relevance",
+      "title": "Sample township activity and pricing update",
+      "summary": "Illustrative weekly highlight combining structured project activity with the latest comparable market metrics.",
+      "href": "market.html"
+    },
+    {
+      "id": "weekly-demo-002",
+      "category": "infrastructure",
+      "category_label": "Infrastructure",
+      "date_label": "02 Oct",
+      "importance_label": "High relevance",
+      "title": "Regional infrastructure schedule changed",
+      "summary": "Illustrative milestone demonstrating how schedule history and related real-estate projects will be connected.",
+      "href": "infrastructure.html"
+    },
+    {
+      "id": "weekly-demo-003",
+      "category": "legal",
+      "category_label": "Legal",
+      "date_label": "01 Oct",
+      "importance_label": "Important",
+      "title": "New official-document lifecycle milestone",
+      "summary": "Illustrative legal update separated from media analysis and linked to its effective-date timeline.",
+      "href": "legal.html"
+    },
+    {
+      "id": "weekly-demo-004",
+      "category": "macro",
+      "category_label": "Macro",
+      "date_label": "30 Sep",
+      "importance_label": "Watch",
+      "title": "Macro dashboard series refreshed",
+      "summary": "Illustrative rates, FX, credit and inflation observations prepared for historical comparison.",
+      "href": "macro.html"
+    }
+  ]
+}

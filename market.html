@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Track projects, developers, supply, sales, absorption and pricing with structured historical data.">
+  <title>Market · Market Intelligence</title>
+  <link rel="stylesheet" href="assets/css/main.css">
+  <link rel="stylesheet" href="assets/css/localization.css?v=7.2.0">
+</head>
+<body data-page="market">
+  <div data-site-header></div>
+
+  <main class="page-shell">
+    <div class="container">
+      <header class="page-header">
+        <div>
+          <p class="page-kicker">Research Database</p>
+          <h1 class="page-title">Market</h1>
+          <p class="page-description">Track projects, developers, supply, sales, absorption and pricing with structured historical data.</p>
+        </div>
+        <div class="updated-label" data-market-updated>Demo data</div>
+      </header>
+
+      <div class="demo-banner" role="note">
+        <strong>Implementation demo.</strong>
+        <span>Project names are used only to demonstrate the research workflow. All metrics, dates, status labels and market observations in this build are illustrative mock data.</span>
+      </div>
+
+      <nav class="tabs" aria-label="Market views" data-market-tabs>
+        <a class="tab-link" data-view="overview" href="market.html?view=overview">Overview</a>
+        <a class="tab-link" data-view="projects" href="market.html?view=projects">Projects</a>
+        <a class="tab-link" data-view="supply-sales" href="market.html?view=supply-sales">Supply &amp; Sales</a>
+        <a class="tab-link" data-view="pricing" href="market.html?view=pricing">Pricing</a>
+        <a class="tab-link" data-view="developers" href="market.html?view=developers">Developers</a>
+        <a class="tab-link" data-view="news" href="market.html?view=news">News</a>
+      </nav>
+
+      <section data-market-view aria-live="polite">
+        <div class="state-box">Loading Market data…</div>
+      </section>
+    </div>
+  </main>
+
+  <div data-site-footer></div>
+  <div data-site-overlays></div>
+
+  <script src="assets/js/common.js"></script>
+  <script src="assets/js/formatters.js"></script>
+  <script src="assets/js/data-store.js"></script>
+  <script src="assets/js/provenance.js"></script>
+  <script src="assets/js/components.js"></script>
+  <script src="assets/js/search.js"></script>
+  <script src="assets/js/resolver.js"></script>
+  <script src="assets/js/filters.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.7/dist/chart.umd.min.js"></script>
+  <script src="assets/js/charts.js"></script>
+  <script src="assets/js/market.js"></script>
+  <script src="assets/js/localization-static.js?v=7.2.0"></script>
+  <script src="assets/js/localization-dynamic.js?v=7.2.1"></script>
+</body>
+</html>

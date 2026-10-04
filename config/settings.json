@@ -1,0 +1,7 @@
+{
+  "environment": "development",
+  "data_root": "./data/mock/",
+  "default_region": "vietnam",
+  "items_per_load": 20,
+  "timezone": "Asia/Ho_Chi_Minh"
+}
