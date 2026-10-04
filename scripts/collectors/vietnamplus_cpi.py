@@ -5,6 +5,8 @@ from bs4 import BeautifulSoup
 
 SOURCE_ID = "vna-vietnamplus"
 
+MONTHS_EN = {"january":1,"february":2,"march":3,"april":4,"may":5,"june":6,"july":7,"august":8,"september":9,"october":10,"november":11,"december":12}
+
 MONTHS_VI = {
     "một": 1, "hai": 2, "ba": 3, "tư": 4, "bốn": 4, "năm": 5, "sáu": 6,
     "bảy": 7, "tám": 8, "chín": 9, "mười": 10, "mười một": 11, "mười hai": 12,
@@ -45,6 +47,21 @@ def _period(text: str, published_at: str | None):
         for key in sorted(MONTHS_VI, key=len, reverse=True):
             if name.startswith(key):
                 return f"{m.group(2)}-{MONTHS_VI[key]:02d}"
+    m = re.search(r"(?:CPI\s+(?:in|for)|(?:September|October|August|July|June|May|April|March|February|January|November|December)(?:[’\']s)?\s+CPI)\s+([A-Za-z]+)?\s*(20\d{2})?", text, re.I)
+    if m:
+        token = (m.group(1) or "").lower()
+        if token in MONTHS_EN:
+            year = m.group(2)
+            if year:
+                return f"{year}-{MONTHS_EN[token]:02d}"
+    # More common VNA wording: "CPI in September rose ..." and year appears elsewhere.
+    m = re.search(r"CPI\s+in\s+([A-Za-z]+)", text, re.I)
+    y = re.search(r"\b(20\d{2})\b", text)
+    if m and y and m.group(1).lower() in MONTHS_EN:
+        return f"{y.group(1)}-{MONTHS_EN[m.group(1).lower()]:02d}"
+    m = re.search(r"([A-Za-z]+)(?:[’\']s)?\s+CPI", text, re.I)
+    if m and y and m.group(1).lower() in MONTHS_EN:
+        return f"{y.group(1)}-{MONTHS_EN[m.group(1).lower()]:02d}"
     # VNA CPI articles are normally published in the following month. Do not infer period
     # unless the article body/title states it explicitly.
     return None
@@ -60,6 +77,7 @@ def parse_vietnamplus_cpi(html: str, source_url: str, fetched_at: str):
     for pat in [
         r"CPI\s+tháng[^.]{0,80}?tăng\s+([\d,.]+)%\s+so\s+với\s+tháng\s+(?:trước|8)",
         r"consumer\s+price\s+index\s*\(CPI\)[^.]{0,100}?rose\s+([\d.]+)\s*per\s+cent[^.]{0,40}?from\s+the\s+previous\s+month",
+        r"CPI\s+in\s+[A-Za-z]+[^.]{0,60}?rose\s+([\d.]+)%?\s+from\s+the\s+previous\s+month",
         r"CPI[^.]{0,80}?rose\s+([\d.]+)%\s+in\s+September\s+from\s+the\s+previous\s+month",
     ]:
         m = re.search(pat, text, re.I)
@@ -69,7 +87,8 @@ def parse_vietnamplus_cpi(html: str, source_url: str, fetched_at: str):
     yoy = None
     for pat in [
         r"CPI\s+tháng[^.]{0,140}?tăng\s+([\d,.]+)%\s+so\s+với\s+cùng\s+kỳ",
-        r"September(?:'s)?\s+CPI[^.]{0,100}?up\s+([\d.]+)%\s+year[- ]on[- ]year",
+        r"[A-Za-z]+(?:[’']s)?\s+CPI[^.]{0,120}?up\s+([\d.]+)%\s+year[- ]on[- ]year",
+        r"CPI\s+in\s+[A-Za-z]+[^.]{0,120}?(?:up|rose)\s+([\d.]+)%?\s+(?:year[- ]on[- ]year|from\s+a\s+year\s+earlier)",
         r"CPI[^.]{0,100}?([\d.]+)%\s+(?:above|higher than)[^.]{0,40}?a\s+year\s+earlier",
     ]:
         m = re.search(pat, text, re.I)
