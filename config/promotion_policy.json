@@ -1,0 +1,13 @@
+{
+  "schema_version": 1,
+  "mode": "dry-run-only",
+  "production_write": false,
+  "canonical_readiness_statuses": ["ready-canonical", "ready-corroborated"],
+  "evidence_readiness_statuses": ["evidence-only"],
+  "missing_readiness_statuses": ["missing"],
+  "preserve_candidate_ids_as_source_record_id": true,
+  "canonical_observation_status": "final",
+  "conflict_rule": "never-average-never-overwrite-silently",
+  "evidence_rule": "retain-with-source-and-status; never-enter-canonical-series-without-promotion-rule",
+  "atomic_preview_write": true
+}
