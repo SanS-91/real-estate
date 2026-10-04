@@ -29,6 +29,15 @@ def main():
     states={x['indicator_id']:x for x in r['data']}
     assert states['usd-vnd-central-rate']['status']=='ready-corroborated'
 
+    # VietnamPlus + Thoi Bao Ngan Hang can independently corroborate the same SBV rate.
+    r=build_publish_readiness([
+        row('usd-vnd-central-rate',25636,'vna-vietnamplus'),
+        row('usd-vnd-central-rate',25636,'banking-times-vn'),
+    ], NOW)
+    states={x['indicator_id']:x for x in r['data']}
+    assert states['usd-vnd-central-rate']['status']=='ready-corroborated'
+    assert set(states['usd-vnd-central-rate']['independent_sources'])=={'vna-vietnamplus','banking-times-vn'}
+
     # Preferred direct verified source always wins.
     r=build_publish_readiness([
         row('usd-vnd-central-rate',25636,'vna-vietnamplus'),
@@ -43,6 +52,17 @@ def main():
         row('sjc-gold-bar-sell',147_600_000,'doji-gold','2026-10-04',status='corroborated'),
     ], NOW)
     states={x['indicator_id']:x for x in r['data']}
+    assert states['sjc-gold-bar-sell']['status']=='ready-corroborated'
+
+    # Two independent media trackers agreeing on the same SJC quote can corroborate it.
+    r=build_publish_readiness([
+        row('sjc-gold-bar-buy',140_500_000,'baonghean-gold','2026-10-04'),
+        row('sjc-gold-bar-buy',140_500_000,'vietnamnet-gold','2026-10-04'),
+        row('sjc-gold-bar-sell',143_500_000,'baonghean-gold','2026-10-04'),
+        row('sjc-gold-bar-sell',143_500_000,'vietnamnet-gold','2026-10-04'),
+    ], NOW)
+    states={x['indicator_id']:x for x in r['data']}
+    assert states['sjc-gold-bar-buy']['status']=='ready-corroborated'
     assert states['sjc-gold-bar-sell']['status']=='ready-corroborated'
 
     # A trusted-media gold tracker is usable evidence but not canonical by itself.

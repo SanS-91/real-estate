@@ -12,6 +12,8 @@ from collectors.vietnamplus_central_rate import parse_vietnamplus_central_rate, 
 from collectors.pnj_gold import parse_pnj_gold
 from collectors.doji_gold import parse_doji_gold
 from collectors.baonghean_gold import parse_baonghean_gold
+from collectors.thoibaonganhang_central_rate import parse_thoibaonganhang_central_rate, discover_thoibaonganhang_central_rate_url
+from collectors.vietnamnet_gold import parse_vietnamnet_gold
 
 FIX = ROOT / 'tests/fixtures'
 NOW = '2026-10-04T00:00:00+00:00'
@@ -80,6 +82,24 @@ def test_baonghean_gold():
     assert d['sjc-gold-bar-sell']['value'] == 143_500_000
     assert d['sjc-gold-bar-sell']['data_date'] == '2026-10-04'
 
+
+
+def test_thoibaonganhang_central_rate():
+    x = parse_thoibaonganhang_central_rate(read('thoibaonganhang_central_rate_sample.html'), 'https://thoibaonganhang.vn/example', NOW)
+    assert x[0]['value'] == 25636
+    assert x[0]['data_date'] == '2026-10-02'
+    assert x[0]['source_id'] == 'banking-times-vn'
+    assert x[0]['evidence_status'] == 'reported'
+
+
+def test_vietnamnet_gold():
+    x = parse_vietnamnet_gold(read('vietnamnet_gold_sample.html'), 'https://dantocphattrien.vietnamnet.vn/gia-vang', NOW)
+    d = {i['indicator_id']: i for i in x}
+    assert d['sjc-gold-bar-buy']['value'] == 140_500_000
+    assert d['sjc-gold-bar-sell']['value'] == 143_500_000
+    assert d['sjc-gold-bar-sell']['data_date'] == '2026-10-04'
+    assert d['sjc-gold-bar-sell']['source_id'] == 'vietnamnet-gold'
+
 def test_discovery_helpers():
     nso = '<a href="/du-lieu-va-so-lieu-thong-ke/2026/10/chi-so-gia-tieu-dung-thang-chin/">Chỉ số giá tiêu dùng tháng Chín 2026</a>'
     assert discover_nso_cpi_url(nso, 'https://www.nso.gov.vn/cpi-vi/').startswith('https://www.nso.gov.vn/')
@@ -91,9 +111,11 @@ def test_discovery_helpers():
     assert discover_vietnamplus_cpi_url(vp_cpi, 'https://www.vietnamplus.vn/cpi-tag1091331.vnp').startswith('https://www.vietnamplus.vn/')
     vp_fx = '<a href="/reference-exchange-rate-bounces-back-post352944.vnp">Reference exchange rate bounces back on October 2</a>'
     assert discover_vietnamplus_central_rate_url(vp_fx, 'https://en.vietnamplus.vn/daily-reference-exchange-rate-tag9131.vnp').startswith('https://en.vietnamplus.vn/')
+    bt = '<a href="/sang-210-nhnn-niem-yet-ty-gia-trung-tam-o-muc-25636-dong-188382.html">Sáng 2/10: NHNN niêm yết tỷ giá trung tâm ở mức 25.636 đồng</a>'
+    assert discover_thoibaonganhang_central_rate_url(bt, 'https://thoibaonganhang.vn/ngan-hang/thi-truong-tien-te').startswith('https://thoibaonganhang.vn/')
 
 if __name__ == '__main__':
-    test_nso(); test_sjc(); test_sbv(); test_vov(); test_vietcap(); test_vietnamplus_cpi(); test_vietnamplus_central_rate(); test_pnj_gold(); test_doji_gold(); test_baonghean_gold(); test_discovery_helpers()
+    test_nso(); test_sjc(); test_sbv(); test_vov(); test_vietcap(); test_vietnamplus_cpi(); test_vietnamplus_central_rate(); test_pnj_gold(); test_doji_gold(); test_baonghean_gold(); test_thoibaonganhang_central_rate(); test_vietnamnet_gold(); test_discovery_helpers()
     print('All parser/discovery tests passed')
 
 # Regression cases based on current public page shapes observed in Oct-2026.
@@ -124,6 +146,15 @@ def test_live_page_shapes_v2():
     assert vals['cpi-mom']['value'] == 0.62
     assert vals['cpi-yoy']['value'] == 5.08
     assert vals['cpi-yoy']['period'] == '2026-09'
+
+    bt_live = '<html><body><h1>Sáng 2/10: NHNN niêm yết tỷ giá trung tâm ở mức 25.636 đồng</h1><div>09:26 | 02/10/2026</div><p>Ngày 2/10, NHNN niêm yết tỷ giá trung tâm ở mức 25.636 đồng.</p></body></html>'
+    bx = parse_thoibaonganhang_central_rate(bt_live, 'https://thoibaonganhang.vn/example', NOW)
+    assert bx[0]['value'] == 25636 and bx[0]['data_date'] == '2026-10-02'
+
+    vnn_live = '<html><body>Cập nhật lúc 22:38 ngày 04/10/2026 <table><tr><td>SJC</td><td>TP. Hồ Chí Minh Vàng SJC 1L, 10L, 1KG</td><td>140.500.000</td><td>143.500.000</td></tr></table></body></html>'
+    gv = {x['indicator_id']:x for x in parse_vietnamnet_gold(vnn_live, 'https://dantocphattrien.vietnamnet.vn/gia-vang', NOW)}
+    assert gv['sjc-gold-bar-buy']['value'] == 140_500_000
+    assert gv['sjc-gold-bar-sell']['value'] == 143_500_000
 
 # Run the additional regression cases when executed directly.
 if __name__ == '__main__':
