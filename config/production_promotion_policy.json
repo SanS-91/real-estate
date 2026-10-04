@@ -1,0 +1,36 @@
+{
+  "schema_version": 1,
+  "mode": "controlled-production-v1",
+  "production_write": true,
+  "repository_publish": false,
+  "frontend_publish": false,
+  "allowed_readiness_statuses": ["ready-canonical"],
+  "allowed_indicators": {
+    "cpi-yoy": {
+      "allowed_sources": ["nso-vietnam"],
+      "required_evidence_status": "verified",
+      "required_period_type": "month"
+    },
+    "cpi-mom": {
+      "allowed_sources": ["nso-vietnam"],
+      "required_evidence_status": "verified",
+      "required_period_type": "month"
+    },
+    "core-cpi-yoy": {
+      "allowed_sources": ["nso-vietnam"],
+      "required_evidence_status": "verified",
+      "required_period_type": "month"
+    }
+  },
+  "logical_key_fields": ["indicator_id", "period_type", "period"],
+  "conflict_rule": "fail-on-existing-logical-key-change",
+  "record_drop_rule": "forbid",
+  "atomic_write": true,
+  "rollback_snapshot": true,
+  "max_snapshots": 10,
+  "notes": [
+    "Phase 4.2E v1 intentionally promotes only verified NSO CPI observations.",
+    "FX and Gold remain outside the production allowlist even if future candidate readiness changes.",
+    "This phase writes data/processed inside the workflow workspace/cache only; it does not commit to the repository and the frontend does not read it."
+  ]
+}
