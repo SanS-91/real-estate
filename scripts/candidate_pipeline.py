@@ -306,15 +306,15 @@ def main():
         "candidate_research_total": len(merged_res),
         "prior_observation_count": prior_count, "record_drop_pct": round(drop_pct, 2),
         "hard_source_failures": hard_failures,
+        "source_errors": [
+            {"source": x.get("source"), "status": x.get("status"), "error": x.get("error")}
+            for x in health if x.get("error")
+        ],
         "validation_errors": validation_errors, "gate_errors": gate_errors,
     }
 
-    # Build into a repository-local temp directory, then atomically replace candidate files
-    # only when schema/safety gates pass. GitHub runners start from a clean checkout, so
-    # the parent directory must be created explicitly before tempfile.mkdtemp(..., dir=...).
-    dist_root = ROOT / "dist"
-    dist_root.mkdir(parents=True, exist_ok=True)
-    build_dir = Path(tempfile.mkdtemp(prefix="macro-candidate-", dir=str(dist_root)))
+    # Build into temp dir, then atomically replace candidate files only when schema/safety gates pass.
+    build_dir = Path(tempfile.mkdtemp(prefix="macro-candidate-", dir=str(ROOT / "dist")))
     try:
         write_json(build_dir / "observations.json", obs_payload)
         write_json(build_dir / "research-evidence.json", res_payload)
@@ -328,8 +328,24 @@ def main():
             reject.mkdir(parents=True, exist_ok=True)
             for p in build_dir.iterdir():
                 shutil.copy2(p, reject / p.name)
+
+            # Blocked live runs remain reviewable in candidate mode. Never replace
+            # observation/research history when safety gates fail. Only update run
+            # metadata so GitHub Actions can finish and upload the diagnostics.
+            for name in ["run-report.json", "source-health.json", "publish-readiness.json", "candidate-summary.csv"]:
+                srcp = build_dir / name
+                if srcp.exists():
+                    tmp_target = output_root / (name + ".tmp")
+                    shutil.copy2(srcp, tmp_target)
+                    os.replace(tmp_target, output_root / name)
+
             print(json.dumps(report, ensure_ascii=False, indent=2))
-            raise SystemExit(2)
+            # Schema errors indicate an implementation defect and still fail CI.
+            # Missing/unavailable live sources are recorded as status=blocked without
+            # any production/candidate-history mutation.
+            if validation_errors:
+                raise SystemExit(2)
+            return
 
         # Atomic per-file replacement; production files are intentionally not present in this package.
         for p in build_dir.iterdir():
