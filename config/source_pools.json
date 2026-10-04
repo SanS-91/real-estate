@@ -32,7 +32,8 @@
       ],
       "fallback_source_ids": [
         "vna-vietnamplus",
-        "vov"
+        "vov",
+        "banking-times-vn"
       ],
       "canonical_evidence_status": [
         "verified"
@@ -53,7 +54,8 @@
       "fallback_source_ids": [
         "pnj-gold",
         "doji-gold",
-        "baonghean-gold"
+        "baonghean-gold",
+        "vietnamnet-gold"
       ],
       "canonical_evidence_status": [
         "verified"

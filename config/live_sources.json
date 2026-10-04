@@ -197,6 +197,45 @@
       "pool_ids": [
         "gold"
       ]
+    },
+    {
+      "key": "banking-times-central-rate",
+      "source_id": "banking-times-vn",
+      "module": "collectors.thoibaonganhang_central_rate",
+      "parser": "parse_thoibaonganhang_central_rate",
+      "discoverer": "discover_thoibaonganhang_central_rate_url",
+      "landing_url": "https://thoibaonganhang.vn/ngan-hang/thi-truong-tien-te",
+      "enabled": true,
+      "optional": true,
+      "min_records": 1,
+      "max_records": 1,
+      "timeout_seconds": 30,
+      "max_bytes": 5000000,
+      "freshness_hours": 96,
+      "schedule_class": "business-daily-corroboration",
+      "canonical_eligible": false,
+      "pool_ids": [
+        "central-rate"
+      ]
+    },
+    {
+      "key": "vietnamnet-gold",
+      "source_id": "vietnamnet-gold",
+      "module": "collectors.vietnamnet_gold",
+      "parser": "parse_vietnamnet_gold",
+      "fetch_url": "https://dantocphattrien.vietnamnet.vn/gia-vang",
+      "enabled": true,
+      "optional": true,
+      "min_records": 2,
+      "max_records": 2,
+      "timeout_seconds": 30,
+      "max_bytes": 5000000,
+      "freshness_hours": 48,
+      "schedule_class": "daily-intraday-media-corroboration",
+      "canonical_eligible": false,
+      "pool_ids": [
+        "gold"
+      ]
     }
   ]
 }

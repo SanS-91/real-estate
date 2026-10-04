@@ -205,6 +205,53 @@
         "methodology_transparency": 4
       },
       "publish_policy": "Trusted media fallback for SJC buy/sell quotes. Keep as reported evidence unless independently corroborated or directly verified from issuer."
+    },
+    {
+      "id": "banking-times-vn",
+      "name": "Thời Báo Ngân Hàng",
+      "tier": "T5-trusted-specialist-media",
+      "role": [
+        "banking-sector-update",
+        "official-corroboration",
+        "fx"
+      ],
+      "base_url": "https://thoibaonganhang.vn/",
+      "collection_method": "html",
+      "frequency": "business-daily",
+      "trust": {
+        "authority": 4,
+        "freshness": 5,
+        "granularity": 4,
+        "independence": 4,
+        "consistency": 5,
+        "accessibility": 4,
+        "methodology_transparency": 4
+      },
+      "publish_policy": "Use as independent corroboration of SBV central-rate reporting. Preserve reported status unless direct SBV verification is captured."
+    },
+    {
+      "id": "vietnamnet-gold",
+      "name": "VietnamNet — Gold Price Tracker",
+      "tier": "T5-trusted-media",
+      "role": [
+        "gold",
+        "fast-update",
+        "corroboration",
+        "aggregated-market-quote"
+      ],
+      "base_url": "https://dantocphattrien.vietnamnet.vn/gia-vang",
+      "collection_method": "html",
+      "frequency": "daily-intraday",
+      "trust": {
+        "authority": 3,
+        "freshness": 5,
+        "granularity": 5,
+        "independence": 4,
+        "consistency": 4,
+        "accessibility": 5,
+        "methodology_transparency": 4
+      },
+      "publish_policy": "Independent media corroboration for HCMC SJC 1L/10L/1KG buy/sell quotes. Keep as reported evidence unless corroboration/direct verification threshold is met."
     }
   ]
 }
