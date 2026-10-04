@@ -22,7 +22,7 @@ def parse_sjc_gold(html: str, source_url: str, fetched_at: str):
             break
     if not row:
         # Text fallback for fixture/simple extraction.
-        m = re.search(r"Vàng\s+SJC\s+1L,\s*10L,\s*1KG\s*[|:]\s*([\d,.]+)\s*[|]\s*([\d,.]+)", text, re.I)
+        m = re.search(r"Vàng\s+SJC\s+1L,\s*10L,\s*1KG\s*(?:[|:]\s*)?([\d,.]+)\s*(?:[|]\s*)?([\d,.]+)", text, re.I)
         if not m: return []
         buy_raw, sell_raw = m.group(1), m.group(2)
     else:
