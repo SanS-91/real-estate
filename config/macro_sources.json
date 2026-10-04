@@ -181,6 +181,30 @@
         "methodology_transparency": 4
       },
       "publish_policy": "Primary issuer for DOJI quotes and secondary corroboration for SJC product quotes shown on DOJI public board."
+    },
+    {
+      "id": "baonghean-gold",
+      "name": "Báo Nghệ An — Gold Price Tracker",
+      "tier": "T5-trusted-media",
+      "role": [
+        "gold",
+        "fast-update",
+        "corroboration",
+        "aggregated-market-quote"
+      ],
+      "base_url": "https://baonghean.vn/gia-vang-hom-nay/",
+      "collection_method": "html",
+      "frequency": "daily-intraday",
+      "trust": {
+        "authority": 3,
+        "freshness": 5,
+        "granularity": 5,
+        "independence": 3,
+        "consistency": 4,
+        "accessibility": 5,
+        "methodology_transparency": 4
+      },
+      "publish_policy": "Trusted media fallback for SJC buy/sell quotes. Keep as reported evidence unless independently corroborated or directly verified from issuer."
     }
   ]
 }

@@ -9,7 +9,7 @@
       "module": "collectors.nso_cpi",
       "parser": "parse_nso_cpi",
       "discoverer": "discover_nso_cpi_url",
-      "landing_url": "https://www.nso.gov.vn/cpi-vi/",
+      "landing_url": "https://www.nso.gov.vn/tin-tuc-thong-ke/",
       "enabled": true,
       "optional": true,
       "min_records": 2,
@@ -107,7 +107,7 @@
       "module": "collectors.vietnamplus_cpi",
       "parser": "parse_vietnamplus_cpi",
       "discoverer": "discover_vietnamplus_cpi_url",
-      "landing_url": "https://www.vietnamplus.vn/cpi-tag1091331.vnp",
+      "landing_url": "https://en.vietnamplus.vn/tags/cpi.vnp",
       "enabled": true,
       "optional": true,
       "min_records": 1,
@@ -174,6 +174,25 @@
       "max_bytes": 5000000,
       "freshness_hours": 72,
       "schedule_class": "daily-intraday-fallback",
+      "canonical_eligible": false,
+      "pool_ids": [
+        "gold"
+      ]
+    },
+    {
+      "key": "baonghean-gold",
+      "source_id": "baonghean-gold",
+      "module": "collectors.baonghean_gold",
+      "parser": "parse_baonghean_gold",
+      "fetch_url": "https://baonghean.vn/gia-vang-hom-nay/gia-vang-sjc",
+      "enabled": true,
+      "optional": true,
+      "min_records": 2,
+      "max_records": 2,
+      "timeout_seconds": 30,
+      "max_bytes": 5000000,
+      "freshness_hours": 48,
+      "schedule_class": "daily-intraday-media-fallback",
       "canonical_eligible": false,
       "pool_ids": [
         "gold"

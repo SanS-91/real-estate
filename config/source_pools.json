@@ -52,7 +52,8 @@
       ],
       "fallback_source_ids": [
         "pnj-gold",
-        "doji-gold"
+        "doji-gold",
+        "baonghean-gold"
       ],
       "canonical_evidence_status": [
         "verified"
