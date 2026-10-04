@@ -26,6 +26,8 @@ FIXTURE_MAP = {
     "pnj-gold": "pnj_gold_sample.html",
     "doji-gold": "doji_gold_sample.html",
     "baonghean-gold": "baonghean_gold_sample.html",
+    "banking-times-central-rate": "thoibaonganhang_central_rate_sample.html",
+    "vietnamnet-gold": "vietnamnet_gold_sample.html",
 }
 
 
