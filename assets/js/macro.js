@@ -188,6 +188,33 @@
     document.querySelectorAll('[data-macro-tabs] [data-view]').forEach(link => link.classList.toggle('is-active', link.dataset.view === state.view));
   }
 
+  function bindMacroTabs() {
+    const tabs = document.querySelector('[data-macro-tabs]');
+    if (!tabs || tabs.dataset.bound === 'true') return;
+    tabs.dataset.bound = 'true';
+    tabs.addEventListener('click', event => {
+      const link = event.target.closest('[data-view]');
+      if (!link || !tabs.contains(link)) return;
+      const nextView = link.dataset.view;
+      if (!VALID_VIEWS.includes(nextView)) return;
+
+      // Keep Macro navigation inside the already-loaded runtime. This avoids a full
+      // document reload (and any stale cached demo HTML) when moving between tabs.
+      event.preventDefault();
+      state.view = nextView;
+      state.series = '';
+      state.q = '';
+      state.indicatorFilter = '';
+      App.setQueryParam('view', nextView, { push: true });
+      App.removeQueryParam('series');
+      App.removeQueryParam('q');
+      App.removeQueryParam('indicator-filter');
+      App.removeQueryParam('indicator');
+      App.closeDrawer();
+      render();
+    });
+  }
+
   function setView(html) {
     const node = document.querySelector('[data-macro-view]');
     if (node) node.innerHTML = html;
@@ -395,5 +422,5 @@
     }
   }
 
-  document.addEventListener('DOMContentLoaded',()=>{ bindDelegatedEvents(); load(); });
+  document.addEventListener('DOMContentLoaded',()=>{ bindDelegatedEvents(); bindMacroTabs(); load(); });
 })();
