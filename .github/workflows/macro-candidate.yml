@@ -20,6 +20,10 @@ on:
           - sjc-gold
           - vov-central-rate
           - vietcap-macro
+          - vietnamplus-cpi
+          - vietnamplus-central-rate
+          - pnj-gold
+          - doji-gold
 
 permissions:
   contents: read
@@ -62,6 +66,9 @@ jobs:
       - name: Candidate pipeline fixture E2E
         run: python tests/test_candidate_pipeline.py
 
+      - name: Promotion preview fixture tests
+        run: python tests/test_promotion_preview.py
+
       - name: Run live candidate collectors
         shell: bash
         run: |
@@ -75,9 +82,19 @@ jobs:
       - name: Validate candidate output
         run: python scripts/validate.py --candidate-dir data/candidate/macro
 
+      - name: Build dry-run promotion preview
+        run: python scripts/promotion_preview.py --candidate-dir data/candidate/macro --output-dir data/staging/macro-preview
+
+      - name: Validate promotion preview
+        run: python scripts/validate_promotion_preview.py --preview-dir data/staging/macro-preview
+
       - name: Write workflow summary
         if: always()
         run: python scripts/write_ci_summary.py >> "$GITHUB_STEP_SUMMARY"
+
+      - name: Write promotion preview summary
+        if: always()
+        run: python scripts/write_promotion_summary.py >> "$GITHUB_STEP_SUMMARY"
 
       - name: Upload candidate review artifact
         if: always()
@@ -91,3 +108,16 @@ jobs:
             data/rejected/macro/
             data/state/source-state.json
           # Raw fetched HTML is intentionally excluded.
+      - name: Upload promotion preview artifact
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: macro-promotion-preview-${{ github.run_number }}
+          retention-days: 30
+          if-no-files-found: warn
+          path: |
+            data/staging/macro-preview/
+            data/candidate/macro/publish-readiness.json
+            data/candidate/macro/run-report.json
+          # Staging preview only. data/processed is never included or written.
+
