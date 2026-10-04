@@ -1,0 +1,93 @@
+name: Macro Candidate Collector
+
+on:
+  schedule:
+    # GitHub cron is UTC. 00:15 UTC = 07:15 ICT every day.
+    - cron: '15 0 * * *'
+    # 09:15 UTC = 16:15 ICT on business days.
+    - cron: '15 9 * * 1-5'
+  workflow_dispatch:
+    inputs:
+      source:
+        description: 'Run one source only, or all'
+        required: true
+        default: all
+        type: choice
+        options:
+          - all
+          - nso-cpi
+          - sbv-central-rate
+          - sjc-gold
+          - vov-central-rate
+          - vietcap-macro
+
+permissions:
+  contents: read
+
+concurrency:
+  group: macro-candidate-${{ github.ref }}
+  cancel-in-progress: false
+
+jobs:
+  collect-candidate:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+          cache: 'pip'
+
+      - name: Install dependencies
+        run: pip install -r requirements.txt
+
+      - name: Restore prior candidate/state cache
+        uses: actions/cache@v4
+        with:
+          path: |
+            data/candidate/macro
+            data/state
+          key: macro-candidate-${{ github.ref_name }}-${{ github.run_id }}
+          restore-keys: |
+            macro-candidate-${{ github.ref_name }}-
+
+      - name: Parser and discovery tests
+        run: python tests/test_parsers.py
+
+      - name: Candidate pipeline fixture E2E
+        run: python tests/test_candidate_pipeline.py
+
+      - name: Run live candidate collectors
+        shell: bash
+        run: |
+          SOURCE='${{ github.event.inputs.source }}'
+          if [ -n "$SOURCE" ] && [ "$SOURCE" != "all" ]; then
+            python scripts/candidate_pipeline.py --mode candidate --source "$SOURCE"
+          else
+            python scripts/candidate_pipeline.py --mode candidate
+          fi
+
+      - name: Validate candidate output
+        run: python scripts/validate.py --candidate-dir data/candidate/macro
+
+      - name: Write workflow summary
+        if: always()
+        run: python scripts/write_ci_summary.py >> "$GITHUB_STEP_SUMMARY"
+
+      - name: Upload candidate review artifact
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: macro-candidate-${{ github.run_number }}
+          retention-days: 30
+          if-no-files-found: warn
+          path: |
+            data/candidate/macro/
+            data/rejected/macro/
+            data/state/source-state.json
+          # Raw fetched HTML is intentionally excluded.
