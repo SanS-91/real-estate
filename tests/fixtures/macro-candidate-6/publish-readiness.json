@@ -1,0 +1,101 @@
+{
+  "generated_at": "2026-10-04T13:52:06.301372+00:00",
+  "production_publish": false,
+  "data": [
+    {
+      "indicator_id": "cpi-yoy",
+      "status": "ready-canonical",
+      "selected_observation_id": "9f5a75f0450a9aded2d6",
+      "evidence_observation_ids": [
+        "9f5a75f0450a9aded2d6"
+      ],
+      "reason": "Verified preferred-source observation from nso-vietnam."
+    },
+    {
+      "indicator_id": "cpi-mom",
+      "status": "ready-canonical",
+      "selected_observation_id": "2fce0929109877039e73",
+      "evidence_observation_ids": [
+        "2fce0929109877039e73"
+      ],
+      "reason": "Verified preferred-source observation from nso-vietnam."
+    },
+    {
+      "indicator_id": "core-cpi-yoy",
+      "status": "ready-canonical",
+      "selected_observation_id": "8c068f8526d7c5277c5c",
+      "evidence_observation_ids": [
+        "8c068f8526d7c5277c5c"
+      ],
+      "reason": "Verified preferred-source observation from nso-vietnam."
+    },
+    {
+      "indicator_id": "usd-vnd-central-rate",
+      "status": "evidence-only",
+      "selected_observation_id": null,
+      "evidence_observation_ids": [
+        "d29aa389552ea5b21dfe"
+      ],
+      "independent_sources": [
+        "vna-vietnamplus"
+      ],
+      "reason": "Fallback evidence exists but direct verification or independent corroboration threshold is not met."
+    },
+    {
+      "indicator_id": "sjc-gold-bar-buy",
+      "status": "evidence-only",
+      "selected_observation_id": null,
+      "evidence_observation_ids": [
+        "44740455684c166c9b54"
+      ],
+      "independent_sources": [
+        "baonghean-gold"
+      ],
+      "reason": "Fallback evidence exists but direct verification or independent corroboration threshold is not met."
+    },
+    {
+      "indicator_id": "sjc-gold-bar-sell",
+      "status": "evidence-only",
+      "selected_observation_id": null,
+      "evidence_observation_ids": [
+        "074d9d6ba4ffb7a7527f"
+      ],
+      "independent_sources": [
+        "baonghean-gold"
+      ],
+      "reason": "Fallback evidence exists but direct verification or independent corroboration threshold is not met."
+    }
+  ],
+  "pools": [
+    {
+      "pool_id": "cpi",
+      "indicator_count": 3,
+      "available_indicator_count": 3,
+      "coverage_status": "available",
+      "indicator_statuses": {
+        "cpi-yoy": "ready-canonical",
+        "cpi-mom": "ready-canonical",
+        "core-cpi-yoy": "ready-canonical"
+      }
+    },
+    {
+      "pool_id": "central-rate",
+      "indicator_count": 1,
+      "available_indicator_count": 1,
+      "coverage_status": "available",
+      "indicator_statuses": {
+        "usd-vnd-central-rate": "evidence-only"
+      }
+    },
+    {
+      "pool_id": "gold",
+      "indicator_count": 2,
+      "available_indicator_count": 2,
+      "coverage_status": "available",
+      "indicator_statuses": {
+        "sjc-gold-bar-buy": "evidence-only",
+        "sjc-gold-bar-sell": "evidence-only"
+      }
+    }
+  ]
+}

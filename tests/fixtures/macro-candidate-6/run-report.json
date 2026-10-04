@@ -1,0 +1,109 @@
+{
+  "schema_version": 1,
+  "run_id": "20261004T135206Z",
+  "generated_at": "2026-10-04T13:52:06.301372+00:00",
+  "mode": "candidate",
+  "fixture_mode": false,
+  "production_publish": false,
+  "status": "pass",
+  "selected_sources": [
+    "nso-cpi",
+    "sbv-central-rate",
+    "sjc-gold",
+    "vov-central-rate",
+    "vietcap-macro",
+    "vietnamplus-cpi",
+    "vietnamplus-central-rate",
+    "pnj-gold",
+    "doji-gold",
+    "baonghean-gold"
+  ],
+  "new_observations": 6,
+  "new_research_evidence": 0,
+  "candidate_observations_total": 6,
+  "candidate_research_total": 0,
+  "prior_observation_count": 1,
+  "record_drop_pct": 0.0,
+  "hard_source_failures": [],
+  "unavailable_sources": [
+    "sbv-central-rate",
+    "sjc-gold",
+    "vov-central-rate",
+    "vietcap-macro",
+    "vietnamplus-cpi",
+    "pnj-gold",
+    "doji-gold"
+  ],
+  "unavailable_pools": [],
+  "pool_coverage": [
+    {
+      "pool_id": "cpi",
+      "indicator_count": 3,
+      "available_indicator_count": 3,
+      "coverage_status": "available",
+      "indicator_statuses": {
+        "cpi-yoy": "ready-canonical",
+        "cpi-mom": "ready-canonical",
+        "core-cpi-yoy": "ready-canonical"
+      }
+    },
+    {
+      "pool_id": "central-rate",
+      "indicator_count": 1,
+      "available_indicator_count": 1,
+      "coverage_status": "available",
+      "indicator_statuses": {
+        "usd-vnd-central-rate": "evidence-only"
+      }
+    },
+    {
+      "pool_id": "gold",
+      "indicator_count": 2,
+      "available_indicator_count": 2,
+      "coverage_status": "available",
+      "indicator_statuses": {
+        "sjc-gold-bar-buy": "evidence-only",
+        "sjc-gold-bar-sell": "evidence-only"
+      }
+    }
+  ],
+  "source_errors": [
+    {
+      "source": "sbv-central-rate",
+      "status": "degraded",
+      "error": "ConnectTimeout: HTTPSConnectionPool(host='dttktt.sbv.gov.vn', port=443): Max retries exceeded with url: /TyGia/faces/TyGia.jspx (Caused by ConnectTimeoutError(<HTTPSConnection(host='dttktt.sbv.gov.vn', port=443) at 0x7fa2cf752870>, 'Connection to dttktt.sbv.gov.vn timed out. (connect timeout=10)'))"
+    },
+    {
+      "source": "sjc-gold",
+      "status": "degraded",
+      "error": "HTTPError: 403 Client Error: Forbidden for url: https://sjc.com.vn/"
+    },
+    {
+      "source": "vov-central-rate",
+      "status": "degraded",
+      "error": "HTTPError: 403 Client Error: Forbidden for url: https://vov.vn/thi-truong/"
+    },
+    {
+      "source": "vietcap-macro",
+      "status": "degraded",
+      "error": "ValueError: Discovery returned no detail URL from https://www.vietcap.com.vn/en/research-center/macroeconomics"
+    },
+    {
+      "source": "vietnamplus-cpi",
+      "status": "degraded",
+      "error": "ValueError: Discovery returned no detail URL from https://en.vietnamplus.vn/search.vnp?q=cpi"
+    },
+    {
+      "source": "pnj-gold",
+      "status": "degraded",
+      "error": "ValueError: Parsed 0 records; expected at least 2"
+    },
+    {
+      "source": "doji-gold",
+      "status": "degraded",
+      "error": "ValueError: Parsed 0 records; expected at least 2"
+    }
+  ],
+  "validation_errors": [],
+  "gate_errors": []
+}
