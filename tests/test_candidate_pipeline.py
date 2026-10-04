@@ -23,9 +23,9 @@ def main():
         assert rep['production_publish'] is False
         assert rep['status'] == 'pass'
         states = {x['indicator_id']: x['status'] for x in ready['data']}
-        assert states['cpi-yoy'] == 'ready'
-        assert states['usd-vnd-central-rate'] == 'ready'
-        assert states['sjc-gold-bar-sell'] == 'ready'
+        assert states['cpi-yoy'] == 'ready-canonical'
+        assert states['usd-vnd-central-rate'] == 'ready-canonical'
+        assert states['sjc-gold-bar-sell'] == 'ready-canonical'
     print('Candidate pipeline fixture E2E passed')
 
 if __name__ == '__main__': main()

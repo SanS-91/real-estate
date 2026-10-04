@@ -7,6 +7,10 @@ from collectors.sjc_gold import parse_sjc_gold
 from collectors.sbv_central_rate import parse_sbv_central_rate
 from collectors.vov_central_rate import parse_vov_central_rate, discover_vov_central_rate_url
 from collectors.vietcap_macro import parse_vietcap_macro, discover_vietcap_macro_url
+from collectors.vietnamplus_cpi import parse_vietnamplus_cpi, discover_vietnamplus_cpi_url
+from collectors.vietnamplus_central_rate import parse_vietnamplus_central_rate, discover_vietnamplus_central_rate_url
+from collectors.pnj_gold import parse_pnj_gold
+from collectors.doji_gold import parse_doji_gold
 
 FIX = ROOT / 'tests/fixtures'
 NOW = '2026-10-04T00:00:00+00:00'
@@ -41,6 +45,32 @@ def test_vietcap():
     assert facts['cpi-yoy'] == 4.69
     assert facts['usd-vnd-market-close'] == 26310
 
+
+def test_vietnamplus_cpi():
+    x = parse_vietnamplus_cpi(read('vietnamplus_cpi_sample.html'), 'https://vietnamplus.example/cpi', NOW)
+    d = {i['indicator_id']: i for i in x}
+    assert d['cpi-mom']['value'] == 0.62
+    assert d['cpi-yoy']['value'] == 5.08
+    assert d['core-cpi-yoy']['value'] == 4.45
+    assert d['cpi-yoy']['period'] == '2026-09'
+
+def test_vietnamplus_central_rate():
+    x = parse_vietnamplus_central_rate(read('vietnamplus_central_rate_sample.html'), 'https://vietnamplus.example/fx', NOW)
+    assert x[0]['value'] == 25636
+    assert x[0]['source_id'] == 'vna-vietnamplus'
+
+def test_pnj_gold():
+    x = parse_pnj_gold(read('pnj_gold_sample.html'), 'https://pnj.example', NOW)
+    d = {i['indicator_id']: i for i in x}
+    assert d['sjc-gold-bar-buy']['value'] == 144_600_000
+    assert d['sjc-gold-bar-sell']['value'] == 147_600_000
+
+def test_doji_gold():
+    x = parse_doji_gold(read('doji_gold_sample.html'), 'https://doji.example', NOW)
+    d = {i['indicator_id']: i for i in x}
+    assert d['sjc-gold-bar-buy']['value'] == 144_600_000
+    assert d['sjc-gold-bar-sell']['value'] == 147_600_000
+
 def test_discovery_helpers():
     nso = '<a href="/du-lieu-va-so-lieu-thong-ke/2026/10/chi-so-gia-tieu-dung-thang-chin/">Chỉ số giá tiêu dùng tháng Chín 2026</a>'
     assert discover_nso_cpi_url(nso, 'https://www.nso.gov.vn/cpi-vi/').startswith('https://www.nso.gov.vn/')
@@ -48,9 +78,13 @@ def test_discovery_helpers():
     assert discover_vov_central_rate_url(vov, 'https://vov.vn/thi-truong/').startswith('https://vov.vn/')
     vietcap = '<a href="/en/research-center/macro-update-q3-2026">Macro Update Q3 2026</a>'
     assert discover_vietcap_macro_url(vietcap, 'https://www.vietcap.com.vn/en/research-center/').endswith('/macro-update-q3-2026')
+    vp_cpi = '<a href="/nguon-cung-hang-hoa-cpi-post1139783.vnp">CPI tháng 9 tăng 0,62%</a>'
+    assert discover_vietnamplus_cpi_url(vp_cpi, 'https://www.vietnamplus.vn/cpi-tag1091331.vnp').startswith('https://www.vietnamplus.vn/')
+    vp_fx = '<a href="/reference-exchange-rate-bounces-back-post352944.vnp">Reference exchange rate bounces back on October 2</a>'
+    assert discover_vietnamplus_central_rate_url(vp_fx, 'https://en.vietnamplus.vn/daily-reference-exchange-rate-tag9131.vnp').startswith('https://en.vietnamplus.vn/')
 
 if __name__ == '__main__':
-    test_nso(); test_sjc(); test_sbv(); test_vov(); test_vietcap(); test_discovery_helpers()
+    test_nso(); test_sjc(); test_sbv(); test_vov(); test_vietcap(); test_vietnamplus_cpi(); test_vietnamplus_central_rate(); test_pnj_gold(); test_doji_gold(); test_discovery_helpers()
     print('All parser/discovery tests passed')
 
 # Regression cases based on current public page shapes observed in Oct-2026.
