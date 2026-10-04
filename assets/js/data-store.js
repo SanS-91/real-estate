@@ -24,12 +24,15 @@
     const settings = await getSettings();
     const root = normalizeRoot(settings.data_root);
     const path = `${root}${relativePath}`;
+    return loadDirectJSON(path, relativePath);
+  }
 
+  function loadDirectJSON(path, label = path) {
     if (memoryCache.has(path)) return memoryCache.get(path);
 
     const request = fetch(path, { cache: 'no-cache' })
       .then(response => {
-        if (!response.ok) throw new Error(`Unable to load ${relativePath} (${response.status})`);
+        if (!response.ok) throw new Error(`Unable to load ${label} (${response.status})`);
         return response.json();
       })
       .catch(error => {
@@ -67,6 +70,8 @@
     getInfrastructureSchedules: () => loadJSON('infrastructure/schedules.json'),
     getMacroIndicators: () => loadJSON('macro/indicators.json'),
     getMacroObservations: () => loadJSON('macro/observations.json'),
+    getProcessedMacroObservations: () => loadDirectJSON('./data/processed/macro/observations.json', 'processed macro observations'),
+    getProcessedMacroPublishMeta: () => loadDirectJSON('./data/processed/macro/repository-publish.json', 'processed macro publish metadata'),
     getEvents: () => loadJSON('events/events.json'),
     getArticles: () => loadJSON('articles/articles.json')
   };

@@ -128,6 +128,8 @@
     'YTD · Demo': 'Từ đầu năm · Mô phỏng',
     'Demo': 'Mô phỏng',
     'Demo data': 'Dữ liệu mô phỏng',
+    'Canonical': 'Chính thức',
+    'Loading data status…': 'Đang tải trạng thái dữ liệu…',
     'Meta unavailable': 'Không có metadata',
 
     // Market UI
@@ -412,6 +414,7 @@
     if ((match = core.match(/^In (\d+) days$/))) return `Còn ${match[1]} ngày`;
     if ((match = core.match(/^(\d+) days ago$/))) return `${match[1]} ngày trước`;
     if ((match = core.match(/^Demo data · (.+)$/))) return `Dữ liệu mô phỏng · ${match[1]}`;
+    if ((match = core.match(/^Canonical CPI · (\d+) verified records$/))) return `CPI chính thức · ${match[1]} bản ghi đã xác minh`;
     if ((match = core.match(/^Published (.+)$/))) return `Công bố ${match[1]}`;
     if ((match = core.match(/^Announced (.+)$/))) return `Công bố ${match[1]}`;
     if ((match = core.match(/^Source: (.+)$/))) return `Nguồn: ${match[1]}`;

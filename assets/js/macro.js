@@ -17,11 +17,75 @@
     'interest-rate': 'rates', 'banking-liquidity': 'liquidity', credit: 'liquidity', 'money-supply': 'liquidity',
     fx: 'fx', gold: 'gold', inflation: 'inflation'
   };
+  const PRODUCTION_INDICATORS = new Map([
+    ['cpi-yoy', 'percent'],
+    ['cpi-mom', 'percent'],
+    ['core-cpi-yoy', 'percent']
+  ]);
+  const PRODUCTION_INDICATOR_OVERRIDES = {
+    'cpi-yoy': {
+      default_source_id: 'nso-vietnam',
+      description: 'Year-on-year change in Vietnam Consumer Price Index (CPI).',
+      methodology_note: 'Canonical observations are promoted only from verified official NSO releases. Historical periods appear only after they pass the controlled production gate.'
+    },
+    'cpi-mom': {
+      default_source_id: 'nso-vietnam',
+      description: 'Month-on-month change in Vietnam Consumer Price Index (CPI).',
+      methodology_note: 'Canonical observations are promoted only from verified official NSO releases. Historical periods appear only after they pass the controlled production gate.'
+    },
+    'core-cpi-yoy': {
+      default_source_id: 'nso-vietnam',
+      description: 'Year-on-year change in Vietnam core consumer-price inflation.',
+      methodology_note: 'Canonical observations are promoted only from verified official NSO releases. Historical periods appear only after they pass the controlled production gate.'
+    }
+  };
 
   let state = { view: 'overview', range: '1Y', series: '', q: '', indicatorFilter: '' };
   let data = { indicators: [], observations: [], articles: [], events: [] };
+  let productionState = { active: false, recordCount: 0, indicatorIds: new Set(), publishMeta: null };
 
   function payloadData(payload) { return payload?.data || []; }
+
+  function validProductionRows(payload, publishMeta) {
+    if (!payload || !publishMeta) return [];
+    if (payload.repository_publish !== true || payload.production_write !== true || publishMeta.repository_publish !== true) return [];
+    if (!Array.isArray(payload.data)) return [];
+    if (Number.isFinite(Number(publishMeta.final_record_count)) && Number(publishMeta.final_record_count) !== payload.data.length) return [];
+
+    return payload.data.filter(row => {
+      const expectedUnit = PRODUCTION_INDICATORS.get(row?.indicator_id);
+      return expectedUnit
+        && row.unit === expectedUnit
+        && row.source_id === 'nso-vietnam'
+        && row.evidence_status === 'verified'
+        && row.observation_status === 'final'
+        && typeof row.period === 'string'
+        && row.period.length > 0
+        && Number.isFinite(Number(row.value));
+    });
+  }
+
+  function integrateMacroObservations(mockPayload, productionPayload, publishMeta) {
+    const mockRows = payloadData(mockPayload).map(row => ({ ...row, _data_layer: 'demo' }));
+    const productionRows = validProductionRows(productionPayload, publishMeta).map(row => ({ ...row, _data_layer: 'production' }));
+    const productionIndicatorIds = new Set(productionRows.map(row => row.indicator_id));
+
+    // Never mix illustrative and canonical history inside the same indicator series.
+    // Once an indicator has at least one approved production record, its demo series
+    // is removed entirely and only controlled production observations are rendered.
+    const retainedMockRows = mockRows.filter(row => !productionIndicatorIds.has(row.indicator_id));
+    return {
+      rows: [...retainedMockRows, ...productionRows],
+      productionRows,
+      productionIndicatorIds
+    };
+  }
+
+  function applyProductionIndicatorMetadata(indicators, productionIndicatorIds) {
+    return indicators.map(item => productionIndicatorIds.has(item.id)
+      ? { ...item, ...(PRODUCTION_INDICATOR_OVERRIDES[item.id] || {}) }
+      : item);
+  }
   function esc(value) { return Components.escapeHTML(value); }
   function sourceRef(sourceId, context = {}) {
     return window.Provenance?.sourceButton?.(sourceId, context) || `<span class="source-tag">${esc(labelize(sourceId))}</span>`;
@@ -70,15 +134,23 @@
     return { label: pct === null ? abs : `${abs} (${pct > 0 ? '+' : ''}${pct.toFixed(2)}%)`, direction: delta > 0 ? 'up' : delta < 0 ? 'down' : 'neutral' };
   }
 
+  function observationDate(row) {
+    const raw = row?.data_date || row?.period || '';
+    const normalized = /^\d{4}-\d{2}$/.test(raw) ? `${raw}-01` : raw;
+    const date = new Date(`${normalized}T00:00:00`);
+    return Number.isNaN(date.getTime()) ? null : date;
+  }
+
   function rangeRows(id, range = state.range) {
     const rows = observationsFor(id);
     if (!rows.length || range === 'ALL') return rows;
-    const latest = new Date(`${rows.at(-1).data_date || rows.at(-1).period}T00:00:00`);
+    const latest = observationDate(rows.at(-1));
+    if (!latest) return rows;
     const days = range === '1M' ? 31 : range === '3M' ? 93 : 366;
     const start = new Date(latest); start.setDate(start.getDate() - days);
     return rows.filter(row => {
-      const date = new Date(`${row.data_date || row.period}T00:00:00`);
-      return !Number.isNaN(date.getTime()) && date >= start;
+      const date = observationDate(row);
+      return date && date >= start;
     });
   }
 
@@ -86,7 +158,7 @@
     const ind = indicator(id); if (!ind) return '';
     const { current } = latestPair(id); const delta = deltaInfo(id);
     return `<button class="macro-metric-card" type="button" data-macro-indicator-id="${esc(id)}">
-      <div class="macro-metric-card__top"><span>${esc(ind.name)}</span><span class="source-tag">${esc(ind.frequency)}</span></div>
+      <div class="macro-metric-card__top"><span>${esc(ind.name)}</span><span class="source-tag">${esc(current?._data_layer === 'production' ? 'Canonical' : ind.frequency)}</span></div>
       <strong>${esc(formatValue(ind, current?.value, true))}</strong>
       <div class="macro-metric-card__foot"><span class="macro-delta">${esc(delta.label)}</span><span>${esc(formatPeriod(current))}</span></div>
     </button>`;
@@ -286,21 +358,40 @@
   async function load() {
     try {
       await window.Provenance?.load?.();
-      const [indicators, observations, articles, events, meta] = await Promise.all([
-        DataStore.getMacroIndicators(), DataStore.getMacroObservations(), DataStore.getArticles(), DataStore.getEvents(), DataStore.getMeta()
+      const productionObservationsPromise = DataStore.getProcessedMacroObservations()
+        .catch(error => { console.warn('[macro] processed observations unavailable; using demo fallback.', error); return null; });
+      const productionMetaPromise = DataStore.getProcessedMacroPublishMeta()
+        .catch(error => { console.warn('[macro] processed publish metadata unavailable; using demo fallback.', error); return null; });
+
+      const [indicators, observations, articles, events, meta, productionObservations, productionMeta] = await Promise.all([
+        DataStore.getMacroIndicators(), DataStore.getMacroObservations(), DataStore.getArticles(), DataStore.getEvents(), DataStore.getMeta(),
+        productionObservationsPromise, productionMetaPromise
       ]);
+
+      const integrated = integrateMacroObservations(observations, productionObservations, productionMeta);
+      productionState = {
+        active: integrated.productionRows.length > 0,
+        recordCount: integrated.productionRows.length,
+        indicatorIds: integrated.productionIndicatorIds,
+        publishMeta: productionMeta
+      };
       data = {
-        indicators:payloadData(indicators), observations:payloadData(observations),
+        indicators: applyProductionIndicatorMetadata(payloadData(indicators), integrated.productionIndicatorIds),
+        observations: integrated.rows,
         articles:payloadData(articles).filter(item=>item.category==='macro'), events:payloadData(events).filter(item=>item.category==='macro')
       };
       Resolver.setData('macro-indicator',data.indicators);
       parseState(); adjustViewFromDeepLink();
-      if (updatedLabel()) updatedLabel().textContent = meta?.last_successful_build ? `Demo data · ${App.formatDate(meta.last_successful_build)}` : 'Demo data';
+      if (updatedLabel()) {
+        updatedLabel().textContent = productionState.active
+          ? `Canonical CPI · ${productionState.recordCount} verified records`
+          : (meta?.last_successful_build ? `Demo data · ${App.formatDate(meta.last_successful_build)}` : 'Demo data');
+      }
       render();
       const deep=App.getQueryParam('indicator'); if (deep) openIndicator(deep,{push:false});
     } catch (error) {
       console.error(error);
-      setView(Components.stateBox('Unable to load Macro demo data. Check that all Step 6 files were uploaded.', 'error'));
+      setView(Components.stateBox('Unable to load Macro data. Check the frontend data files and try again.', 'error'));
     }
   }
 
