@@ -309,8 +309,12 @@ def main():
         "validation_errors": validation_errors, "gate_errors": gate_errors,
     }
 
-    # Build into temp dir, then atomically replace candidate files only when schema/safety gates pass.
-    build_dir = Path(tempfile.mkdtemp(prefix="macro-candidate-", dir=str(ROOT / "dist")))
+    # Build into a repository-local temp directory, then atomically replace candidate files
+    # only when schema/safety gates pass. GitHub runners start from a clean checkout, so
+    # the parent directory must be created explicitly before tempfile.mkdtemp(..., dir=...).
+    dist_root = ROOT / "dist"
+    dist_root.mkdir(parents=True, exist_ok=True)
+    build_dir = Path(tempfile.mkdtemp(prefix="macro-candidate-", dir=str(dist_root)))
     try:
         write_json(build_dir / "observations.json", obs_payload)
         write_json(build_dir / "research-evidence.json", res_payload)
