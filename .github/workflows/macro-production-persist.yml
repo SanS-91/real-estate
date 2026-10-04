@@ -1,0 +1,184 @@
+name: Macro Production Persistence
+
+on:
+  workflow_dispatch:
+    inputs:
+      source_run_number:
+        description: 'Successful Macro Candidate Collector run number, e.g. 9'
+        required: true
+        type: string
+      confirmation:
+        description: 'Type PERSIST to commit approved macro production data to main'
+        required: true
+        type: string
+
+permissions:
+  contents: write
+  actions: read
+
+concurrency:
+  group: macro-production-persistence-main
+  cancel-in-progress: false
+
+jobs:
+  persist-production:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+
+    steps:
+      - name: Checkout main
+        uses: actions/checkout@v4
+        with:
+          ref: main
+          fetch-depth: 0
+
+      - name: Capture repository baseline
+        id: baseline
+        shell: bash
+        run: echo "sha=$(git rev-parse HEAD)" >> "$GITHUB_OUTPUT"
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+          cache: 'pip'
+
+      - name: Install dependencies
+        run: pip install -r requirements.txt
+
+      - name: Repository persistence fixture tests
+        run: python tests/test_repository_persistence.py
+
+      - name: Validate manual gate inputs
+        shell: bash
+        env:
+          SOURCE_RUN_NUMBER: ${{ inputs.source_run_number }}
+          CONFIRMATION: ${{ inputs.confirmation }}
+        run: |
+          if [ "$GITHUB_REF_NAME" != "main" ]; then
+            echo "Safety stop: run this workflow from the main branch."
+            exit 1
+          fi
+          if ! [[ "$SOURCE_RUN_NUMBER" =~ ^[0-9]+$ ]]; then
+            echo "Safety stop: source_run_number must contain digits only."
+            exit 1
+          fi
+          if [ "$CONFIRMATION" != "PERSIST" ]; then
+            echo "Safety stop: confirmation must be exactly PERSIST."
+            exit 1
+          fi
+
+      - name: Resolve successful collector run
+        id: resolve
+        shell: bash
+        env:
+          GH_TOKEN: ${{ github.token }}
+          SOURCE_RUN_NUMBER: ${{ inputs.source_run_number }}
+        run: |
+          gh run list \
+            --workflow macro-candidate.yml \
+            --branch main \
+            --limit 100 \
+            --json databaseId,number,conclusion,status,headBranch \
+            > "$RUNNER_TEMP/macro-runs.json"
+          python - <<'PY'
+          import json, os
+          from pathlib import Path
+
+          runs = json.loads(Path(os.environ["RUNNER_TEMP"]).joinpath("macro-runs.json").read_text())
+          target = int(os.environ["SOURCE_RUN_NUMBER"])
+          matches = [r for r in runs if int(r.get("number", -1)) == target]
+          if not matches:
+              raise SystemExit(f"No Macro Candidate Collector run #{target} was found on main within the latest 100 runs.")
+          run = matches[0]
+          if run.get("status") != "completed" or run.get("conclusion") != "success" or run.get("headBranch") != "main":
+              raise SystemExit(f"Collector run #{target} is not a completed successful main-branch run: {run}")
+          with open(os.environ["GITHUB_OUTPUT"], "a", encoding="utf-8") as f:
+              f.write(f"run_id={run['databaseId']}\n")
+          print(f"Resolved collector run #{target} -> database id {run['databaseId']}")
+          PY
+
+      - name: Download approved macro production artifact
+        shell: bash
+        env:
+          GH_TOKEN: ${{ github.token }}
+          SOURCE_RUN_NUMBER: ${{ inputs.source_run_number }}
+          SOURCE_RUN_ID: ${{ steps.resolve.outputs.run_id }}
+        run: |
+          rm -rf incoming/macro-production
+          mkdir -p incoming/macro-production
+          gh run download "$SOURCE_RUN_ID" \
+            -n "macro-production-$SOURCE_RUN_NUMBER" \
+            -D incoming/macro-production
+          test -f incoming/macro-production/observations.json
+          test -f incoming/macro-production/promotion-run.json
+
+      - name: Validate imported controlled production artifact
+        run: python scripts/validate_production.py --processed-dir incoming/macro-production
+
+      - name: Prepare controlled repository persistence
+        env:
+          SOURCE_RUN_NUMBER: ${{ inputs.source_run_number }}
+          SOURCE_RUN_ID: ${{ steps.resolve.outputs.run_id }}
+        run: |
+          rm -rf data/staging/repository-persistence
+          python scripts/persist_repository.py \
+            --incoming-dir incoming/macro-production \
+            --repo-processed-dir data/processed/macro \
+            --report-dir data/staging/repository-persistence \
+            --source-run-number "$SOURCE_RUN_NUMBER" \
+            --source-run-database-id "$SOURCE_RUN_ID"
+
+      - name: Validate repository production output
+        shell: bash
+        run: |
+          if [ -f data/processed/macro/repository-publish.json ]; then
+            python scripts/validate_repository_processed.py --processed-dir data/processed/macro
+          else
+            echo "No repository production file exists; expected only for a no-change run before first persistence."
+          fi
+
+      - name: Commit approved repository data
+        id: commit
+        shell: bash
+        env:
+          SOURCE_RUN_NUMBER: ${{ inputs.source_run_number }}
+          BASE_SHA: ${{ steps.baseline.outputs.sha }}
+        run: |
+          git add data/processed/macro/observations.json data/processed/macro/repository-publish.json
+          if git diff --cached --quiet; then
+            echo "No canonical data change; no commit is needed."
+            echo "committed=false" >> "$GITHUB_OUTPUT"
+            exit 0
+          fi
+          git fetch origin main
+          REMOTE_SHA="$(git rev-parse origin/main)"
+          if [ "$REMOTE_SHA" != "$BASE_SHA" ]; then
+            echo "Safety stop: main changed while this persistence workflow was running. Re-run from the new main head."
+            echo "Baseline: $BASE_SHA"
+            echo "Current origin/main: $REMOTE_SHA"
+            exit 1
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git commit -m "data(macro): persist production from collector run #$SOURCE_RUN_NUMBER"
+          git push origin HEAD:main
+          echo "committed=true" >> "$GITHUB_OUTPUT"
+          echo "commit_sha=$(git rev-parse HEAD)" >> "$GITHUB_OUTPUT"
+
+      - name: Write repository persistence summary
+        if: always()
+        run: python scripts/write_repository_persistence_summary.py >> "$GITHUB_STEP_SUMMARY"
+
+      - name: Upload repository persistence review artifact
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: macro-repository-persistence-${{ github.run_number }}
+          retention-days: 30
+          if-no-files-found: warn
+          path: |
+            data/staging/repository-persistence/
+            data/processed/macro/observations.json
+            data/processed/macro/repository-publish.json
+          # Review artifact only. The canonical repository copy is committed explicitly above.
