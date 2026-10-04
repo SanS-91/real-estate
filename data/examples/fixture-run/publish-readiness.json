@@ -1,0 +1,42 @@
+{
+  "generated_at": "2026-10-04T12:06:37.081012+00:00",
+  "production_publish": false,
+  "data": [
+    {
+      "indicator_id": "cpi-yoy",
+      "status": "ready",
+      "selected_observation_id": "9f5a75f0450a9aded2d6",
+      "reason": "Verified primary-source observation from nso-vietnam."
+    },
+    {
+      "indicator_id": "cpi-mom",
+      "status": "ready",
+      "selected_observation_id": "2fce0929109877039e73",
+      "reason": "Verified primary-source observation from nso-vietnam."
+    },
+    {
+      "indicator_id": "core-cpi-yoy",
+      "status": "ready",
+      "selected_observation_id": "8c068f8526d7c5277c5c",
+      "reason": "Verified primary-source observation from nso-vietnam."
+    },
+    {
+      "indicator_id": "usd-vnd-central-rate",
+      "status": "ready",
+      "selected_observation_id": "1f486615a5cbab5f9109",
+      "reason": "Verified primary-source observation from sbv-vietnam."
+    },
+    {
+      "indicator_id": "sjc-gold-bar-buy",
+      "status": "ready",
+      "selected_observation_id": "9bb9a514c38f1d5de94f",
+      "reason": "Verified primary-source observation from sjc."
+    },
+    {
+      "indicator_id": "sjc-gold-bar-sell",
+      "status": "ready",
+      "selected_observation_id": "eb2ecb80c033df740bc6",
+      "reason": "Verified primary-source observation from sjc."
+    }
+  ]
+}

@@ -1,0 +1,43 @@
+{
+  "schema_version": 1,
+  "generated_at": "2026-10-04T00:00:00Z",
+  "record_count": 1,
+  "candidate_only": true,
+  "data": [
+    {
+      "id": "sample-vietcap-q2-2026",
+      "source_id": "vietcap-research",
+      "title": "Macro Update - Q2 2026 GDP growth reaches 8.4%",
+      "published_at": "2026-07-07",
+      "source_url": "https://www.vietcap.com.vn/en/research-center/macro-update-q2-2026-gdp-growth-reaches-8-4",
+      "fetched_at": "2026-10-04T00:00:00Z",
+      "evidence_status": "reported",
+      "related_indicator_ids": [
+        "cpi-yoy",
+        "usd-vnd-market-close",
+        "gdp-yoy"
+      ],
+      "facts": [
+        {
+          "metric": "gdp-yoy",
+          "value": 8.39,
+          "unit": "percent",
+          "period": "2026-Q2"
+        },
+        {
+          "metric": "cpi-yoy",
+          "value": 4.69,
+          "unit": "percent",
+          "period": "2026-06"
+        },
+        {
+          "metric": "usd-vnd-market-close",
+          "value": 26310,
+          "unit": "vnd-per-usd",
+          "period": "2026-06"
+        }
+      ],
+      "summary": "Secondary professional-research evidence for interpretation/corroboration; not canonical actual replacement."
+    }
+  ]
+}

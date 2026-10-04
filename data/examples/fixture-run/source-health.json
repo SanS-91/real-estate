@@ -1,0 +1,76 @@
+{
+  "schema_version": 1,
+  "generated_at": "2026-10-04T12:06:37.081012+00:00",
+  "run_id": "20261004T120637Z",
+  "candidate_only": true,
+  "sources": [
+    {
+      "source": "nso-cpi",
+      "status": "healthy",
+      "fixture_mode": true,
+      "records": 3,
+      "parsed_observations": 3,
+      "parsed_research": 0,
+      "target_url": "https://fixture.local/nso-cpi",
+      "final_url": "https://fixture.local/nso-cpi",
+      "content_hash": "a696272976e659f1e5c15754cc34b105f2c213a823a1fc2eb126928e96a65c2a",
+      "fetched_at": "2026-10-04T12:06:37.125976+00:00",
+      "elapsed_ms": 0
+    },
+    {
+      "source": "sbv-central-rate",
+      "status": "healthy",
+      "fixture_mode": true,
+      "records": 1,
+      "parsed_observations": 1,
+      "parsed_research": 0,
+      "target_url": "https://fixture.local/sbv-central-rate",
+      "final_url": "https://fixture.local/sbv-central-rate",
+      "content_hash": "36374bd3e622186a48931ba4e6077731deff8c1202eed4cc3225b7d060bdc1f6",
+      "fetched_at": "2026-10-04T12:06:37.127220+00:00",
+      "elapsed_ms": 0
+    },
+    {
+      "source": "sjc-gold",
+      "status": "healthy",
+      "fixture_mode": true,
+      "records": 2,
+      "parsed_observations": 2,
+      "parsed_research": 0,
+      "target_url": "https://fixture.local/sjc-gold",
+      "final_url": "https://fixture.local/sjc-gold",
+      "content_hash": "256f4339961fa8c13dfe9b63e0e176586458a91875f759e3928e4c698c3de3d3",
+      "fetched_at": "2026-10-04T12:06:37.127946+00:00",
+      "elapsed_ms": 0
+    },
+    {
+      "source": "vov-central-rate",
+      "status": "healthy",
+      "fixture_mode": true,
+      "records": 1,
+      "parsed_observations": 1,
+      "parsed_research": 0,
+      "target_url": "https://fixture.local/vov-central-rate",
+      "final_url": "https://fixture.local/vov-central-rate",
+      "content_hash": "59897388fa2a35e45d9becabb06b10f4dc3d088f80220ae4cc39c37cc5677a04",
+      "fetched_at": "2026-10-04T12:06:37.128988+00:00",
+      "elapsed_ms": 0
+    },
+    {
+      "source": "vietcap-macro",
+      "status": "healthy",
+      "fixture_mode": true,
+      "records": 1,
+      "parsed_observations": 0,
+      "parsed_research": 1,
+      "target_url": "https://fixture.local/vietcap-macro",
+      "final_url": "https://fixture.local/vietcap-macro",
+      "content_hash": "be9cf482bb3c5e549b361a47f3ab2f28f3afdcb2c89387c7d89d8ef63b8c9b14",
+      "fetched_at": "2026-10-04T12:06:37.129553+00:00",
+      "elapsed_ms": 0
+    }
+  ],
+  "healthy": 5,
+  "degraded": 0,
+  "failed": 0
+}

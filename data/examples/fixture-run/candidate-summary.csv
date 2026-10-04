@@ -1,0 +1,8 @@
+﻿indicator_id,period,data_date,value,unit,source_id,evidence_status,published_at,source_url
+core-cpi-yoy,2026-09,,4.45,percent,nso-vietnam,verified,2026-10-03,https://fixture.local/nso-cpi
+cpi-mom,2026-09,,0.62,percent,nso-vietnam,verified,2026-10-03,https://fixture.local/nso-cpi
+cpi-yoy,2026-09,,5.08,percent,nso-vietnam,verified,2026-10-03,https://fixture.local/nso-cpi
+sjc-gold-bar-buy,2026-10-03,2026-10-03,140500000.0,vnd-per-tael,sjc,verified,2026-10-03T13:44:00+07:00,https://fixture.local/sjc-gold
+sjc-gold-bar-sell,2026-10-03,2026-10-03,143500000.0,vnd-per-tael,sjc,verified,2026-10-03T13:44:00+07:00,https://fixture.local/sjc-gold
+usd-vnd-central-rate,2026-10-02,2026-10-02,25636.0,vnd-per-usd,sbv-vietnam,verified,2026-10-02,https://fixture.local/sbv-central-rate
+usd-vnd-central-rate,2026-10-04,2026-10-04,25636.0,vnd-per-usd,vov,reported,2026-10-04,https://fixture.local/vov-central-rate

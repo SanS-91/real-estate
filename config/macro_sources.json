@@ -1,0 +1,117 @@
+{
+  "schema_version": 1,
+  "sources": [
+    {
+      "id": "nso-vietnam",
+      "name": "National Statistics Office of Vietnam (NSO)",
+      "tier": "T1-canonical",
+      "role": [
+        "official-actual",
+        "statistical-release"
+      ],
+      "base_url": "https://www.nso.gov.vn/",
+      "collection_method": "html",
+      "frequency": "monthly",
+      "trust": {
+        "authority": 5,
+        "freshness": 4,
+        "granularity": 4,
+        "independence": 5,
+        "consistency": 5,
+        "accessibility": 4,
+        "methodology_transparency": 5
+      },
+      "publish_policy": "May publish official statistical observations after parser + validation pass."
+    },
+    {
+      "id": "sbv-vietnam",
+      "name": "State Bank of Vietnam (SBV)",
+      "tier": "T1-canonical",
+      "role": [
+        "official-actual",
+        "policy",
+        "fx"
+      ],
+      "base_url": "https://www.sbv.gov.vn/",
+      "collection_method": "html",
+      "frequency": "daily-event-driven",
+      "trust": {
+        "authority": 5,
+        "freshness": 5,
+        "granularity": 5,
+        "independence": 5,
+        "consistency": 4,
+        "accessibility": 2,
+        "methodology_transparency": 5
+      },
+      "publish_policy": "Canonical for central rate and policy rates when direct official record is captured."
+    },
+    {
+      "id": "sjc",
+      "name": "Saigon Jewelry Company (SJC)",
+      "tier": "T2-primary-issuer",
+      "role": [
+        "primary-market-quote",
+        "gold"
+      ],
+      "base_url": "https://sjc.com.vn/",
+      "collection_method": "html",
+      "frequency": "daily-intraday",
+      "trust": {
+        "authority": 5,
+        "freshness": 5,
+        "granularity": 5,
+        "independence": 4,
+        "consistency": 4,
+        "accessibility": 4,
+        "methodology_transparency": 4
+      },
+      "publish_policy": "Primary source for SJC quoted buy/sell prices; preserve timestamp and location/product."
+    },
+    {
+      "id": "vov",
+      "name": "Voice of Vietnam (VOV)",
+      "tier": "T5-trusted-media",
+      "role": [
+        "fast-update",
+        "corroboration"
+      ],
+      "base_url": "https://vov.vn/",
+      "collection_method": "html",
+      "frequency": "daily",
+      "trust": {
+        "authority": 3,
+        "freshness": 5,
+        "granularity": 4,
+        "independence": 4,
+        "consistency": 4,
+        "accessibility": 5,
+        "methodology_transparency": 3
+      },
+      "publish_policy": "Use as corroboration/fast evidence; do not silently replace missing SBV canonical observations."
+    },
+    {
+      "id": "vietcap-research",
+      "name": "Vietcap Research",
+      "tier": "T4-financial-research",
+      "role": [
+        "forecast",
+        "interpretation",
+        "corroboration"
+      ],
+      "base_url": "https://www.vietcap.com.vn/en/research-center/",
+      "collection_method": "html",
+      "frequency": "event-driven",
+      "trust": {
+        "authority": 3,
+        "freshness": 4,
+        "granularity": 4,
+        "independence": 4,
+        "consistency": 4,
+        "accessibility": 4,
+        "methodology_transparency": 4
+      },
+      "publish_policy": "Research/forecast evidence only. Never overwrite official actual series."
+    }
+  ]
+}

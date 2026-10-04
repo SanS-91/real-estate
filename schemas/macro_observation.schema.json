@@ -1,0 +1,88 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "required": [
+    "id",
+    "indicator_id",
+    "value",
+    "unit",
+    "source_id",
+    "evidence_status",
+    "fetched_at"
+  ],
+  "properties": {
+    "id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "indicator_id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "period": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "period_type": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "data_date": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "format": "date"
+    },
+    "value": {
+      "type": "number"
+    },
+    "unit": {
+      "type": "string"
+    },
+    "source_id": {
+      "type": "string"
+    },
+    "source_url": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "published_at": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "fetched_at": {
+      "type": "string"
+    },
+    "evidence_status": {
+      "enum": [
+        "reported",
+        "corroborated",
+        "verified",
+        "disputed",
+        "superseded"
+      ]
+    },
+    "methodology_note": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "source_record_id": {
+      "type": [
+        "string",
+        "null"
+      ]
+    }
+  },
+  "additionalProperties": true
+}

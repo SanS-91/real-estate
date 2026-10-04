@@ -1,0 +1,15 @@
+{
+  "schema_version": 1,
+  "production_publish": false,
+  "allow_empty_candidate": false,
+  "max_total_record_drop_pct": 60,
+  "require_schema_validation": true,
+  "require_parser_tests_in_ci": true,
+  "raw_html_retention": "workflow-temp-only",
+  "artifact_retention_days": 30,
+  "candidate_branch_write": false,
+  "source_failure_policy": "continue-healthy-sources-and-mark-degraded",
+  "canonical_rule": "only verified observations from each indicator's configured primary source may be marked ready",
+  "research_rule": "research evidence never overwrites official actual observations",
+  "conflict_rule": "preserve conflicting source records; never average automatically"
+}

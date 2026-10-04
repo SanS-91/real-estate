@@ -1,0 +1,21 @@
+{
+  "schema_version": 1,
+  "timezone": "Asia/Ho_Chi_Minh",
+  "production_publish": false,
+  "evidence_states": [
+    "reported",
+    "corroborated",
+    "verified",
+    "disputed",
+    "superseded"
+  ],
+  "rules": {
+    "official_actual": "verified after direct official source parser and validation pass",
+    "primary_issuer_quote": "verified for that issuer's own quote after direct source parser and validation pass",
+    "media_only": "reported; may become corroborated with 2+ independent credible sources; cannot become official canonical without official source",
+    "research_forecast": "store as research evidence/forecast, never overwrite actual observations",
+    "conflict": "preserve both records with source/methodology and flag disputed; never average automatically"
+  },
+  "atomic_publish": true,
+  "on_source_failure": "retain prior good production data; write run error; do not publish empty replacement"
+}

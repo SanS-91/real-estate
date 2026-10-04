@@ -1,0 +1,53 @@
+{
+  "schema_version": 1,
+  "indicators": [
+    {
+      "id": "cpi-yoy",
+      "name": "CPI YoY",
+      "category": "inflation",
+      "unit": "percent",
+      "frequency": "monthly",
+      "primary_source_id": "nso-vietnam"
+    },
+    {
+      "id": "cpi-mom",
+      "name": "CPI MoM",
+      "category": "inflation",
+      "unit": "percent",
+      "frequency": "monthly",
+      "primary_source_id": "nso-vietnam"
+    },
+    {
+      "id": "core-cpi-yoy",
+      "name": "Core CPI YoY",
+      "category": "inflation",
+      "unit": "percent",
+      "frequency": "monthly",
+      "primary_source_id": "nso-vietnam"
+    },
+    {
+      "id": "usd-vnd-central-rate",
+      "name": "SBV Central USD/VND Rate",
+      "category": "fx",
+      "unit": "vnd-per-usd",
+      "frequency": "daily",
+      "primary_source_id": "sbv-vietnam"
+    },
+    {
+      "id": "sjc-gold-bar-buy",
+      "name": "SJC Gold Bar Buy",
+      "category": "gold",
+      "unit": "vnd-per-tael",
+      "frequency": "daily",
+      "primary_source_id": "sjc"
+    },
+    {
+      "id": "sjc-gold-bar-sell",
+      "name": "SJC Gold Bar Sell",
+      "category": "gold",
+      "unit": "vnd-per-tael",
+      "frequency": "daily",
+      "primary_source_id": "sjc"
+    }
+  ]
+}
