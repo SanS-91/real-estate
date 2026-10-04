@@ -19,7 +19,10 @@
       "type": "string"
     },
     "published_at": {
-      "type": "string"
+      "type": [
+        "string",
+        "null"
+      ]
     },
     "source_url": {
       "type": [
@@ -49,6 +52,12 @@
       }
     },
     "summary": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "fetched_at": {
       "type": [
         "string",
         "null"
