@@ -1,0 +1,46 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "required": [
+    "id",
+    "indicator_id",
+    "period",
+    "period_type",
+    "value",
+    "unit",
+    "source_id",
+    "source_record_id",
+    "evidence_status",
+    "observation_status",
+    "fetched_at",
+    "promoted_at",
+    "promotion_run_id"
+  ],
+  "properties": {
+    "id": {"type": "string", "minLength": 1},
+    "indicator_id": {"type": "string", "minLength": 1},
+    "period": {"type": "string", "minLength": 1},
+    "period_type": {"type": "string", "minLength": 1},
+    "data_date": {"type": ["string", "null"], "format": "date"},
+    "value": {"type": "number"},
+    "unit": {"type": "string", "minLength": 1},
+    "source_id": {"type": "string", "minLength": 1},
+    "source_url": {"type": ["string", "null"]},
+    "published_at": {"type": ["string", "null"]},
+    "fetched_at": {"type": "string", "minLength": 1},
+    "evidence_status": {"const": "verified"},
+    "methodology_note": {"type": ["string", "null"]},
+    "source_record_id": {"type": "string", "minLength": 1},
+    "observation_status": {"const": "final"},
+    "promoted_at": {"type": "string", "minLength": 1},
+    "promotion_run_id": {"type": "string", "minLength": 1}
+  },
+  "not": {
+    "anyOf": [
+      {"required": ["preview_only"]},
+      {"required": ["preview_promoted_at"]},
+      {"required": ["preview_reviewed_at"]}
+    ]
+  },
+  "additionalProperties": true
+}
