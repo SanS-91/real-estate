@@ -2,7 +2,7 @@
   "schema_version": 1,
   "build_id": "demo-v7.1.0-20261003",
   "generated_at": "2026-10-03T19:15:00+07:00",
-  "record_count": 13,
+  "record_count": 14,
   "data": [
     {
       "id": "demo-official",
@@ -159,6 +159,18 @@
       "source_priority": 4,
       "active": true,
       "notes": "Illustrative analysis source. Legal analysis is kept separate from official legal records."
+    },
+    {
+      "id": "nso-vietnam",
+      "name": "National Statistics Office of Vietnam (NSO)",
+      "source_type": "official",
+      "base_url": "https://www.nso.gov.vn/",
+      "language": "vi",
+      "collection_method": "html",
+      "fetch_frequency": "monthly",
+      "source_priority": 1,
+      "active": true,
+      "notes": "Official Vietnam statistical source used for verified CPI observations promoted through the controlled production pipeline."
     }
   ]
 }
