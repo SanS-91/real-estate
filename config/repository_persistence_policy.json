@@ -1,0 +1,28 @@
+{
+  "schema_version": 1,
+  "mode": "controlled-repository-persistence-v1",
+  "manual_only": true,
+  "target_branch": "main",
+  "source_workflow": "macro-candidate.yml",
+  "source_artifact_prefix": "macro-production-",
+  "required_confirmation": "PERSIST",
+  "allowed_source_production_mode": "controlled-production-v1",
+  "expected_source_repository_publish": false,
+  "repository_publish": true,
+  "frontend_publish": false,
+  "logical_key_fields": ["indicator_id", "period_type", "period"],
+  "forbid_record_drop": true,
+  "forbid_historical_mutation": true,
+  "require_prior_count_match_for_changes": true,
+  "require_monotonic_source_run_number": true,
+  "tracked_repository_files": [
+    "data/processed/macro/observations.json",
+    "data/processed/macro/repository-publish.json"
+  ],
+  "notes": [
+    "Phase 4.2F is a separate manual persistence gate. Scheduled collector runs still cannot push to the repository.",
+    "Only a successful macro-production artifact from the main branch may be persisted.",
+    "The frontend remains disconnected from data/processed in this phase.",
+    "Git history is the repository-level rollback mechanism; workflow-only _snapshots are not committed."
+  ]
+}
