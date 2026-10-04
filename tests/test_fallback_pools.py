@@ -44,6 +44,14 @@ def main():
     ], NOW)
     states={x['indicator_id']:x for x in r['data']}
     assert states['sjc-gold-bar-sell']['status']=='ready-corroborated'
+
+    # A trusted-media gold tracker is usable evidence but not canonical by itself.
+    r=build_publish_readiness([
+        row('sjc-gold-bar-sell',143_500_000,'baonghean-gold','2026-10-04',status='reported'),
+    ], NOW)
+    states={x['indicator_id']:x for x in r['data']}
+    assert states['sjc-gold-bar-sell']['status']=='evidence-only'
+
     print('Fallback pool tests passed')
 
 if __name__=='__main__':

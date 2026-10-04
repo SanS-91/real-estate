@@ -11,6 +11,7 @@ from collectors.vietnamplus_cpi import parse_vietnamplus_cpi, discover_vietnampl
 from collectors.vietnamplus_central_rate import parse_vietnamplus_central_rate, discover_vietnamplus_central_rate_url
 from collectors.pnj_gold import parse_pnj_gold
 from collectors.doji_gold import parse_doji_gold
+from collectors.baonghean_gold import parse_baonghean_gold
 
 FIX = ROOT / 'tests/fixtures'
 NOW = '2026-10-04T00:00:00+00:00'
@@ -71,6 +72,14 @@ def test_doji_gold():
     assert d['sjc-gold-bar-buy']['value'] == 144_600_000
     assert d['sjc-gold-bar-sell']['value'] == 147_600_000
 
+
+def test_baonghean_gold():
+    x = parse_baonghean_gold(read('baonghean_gold_sample.html'), 'https://baonghean.vn/gia-vang-hom-nay/gia-vang-sjc', NOW)
+    d = {i['indicator_id']: i for i in x}
+    assert d['sjc-gold-bar-buy']['value'] == 140_500_000
+    assert d['sjc-gold-bar-sell']['value'] == 143_500_000
+    assert d['sjc-gold-bar-sell']['data_date'] == '2026-10-04'
+
 def test_discovery_helpers():
     nso = '<a href="/du-lieu-va-so-lieu-thong-ke/2026/10/chi-so-gia-tieu-dung-thang-chin/">Chỉ số giá tiêu dùng tháng Chín 2026</a>'
     assert discover_nso_cpi_url(nso, 'https://www.nso.gov.vn/cpi-vi/').startswith('https://www.nso.gov.vn/')
@@ -84,7 +93,7 @@ def test_discovery_helpers():
     assert discover_vietnamplus_central_rate_url(vp_fx, 'https://en.vietnamplus.vn/daily-reference-exchange-rate-tag9131.vnp').startswith('https://en.vietnamplus.vn/')
 
 if __name__ == '__main__':
-    test_nso(); test_sjc(); test_sbv(); test_vov(); test_vietcap(); test_vietnamplus_cpi(); test_vietnamplus_central_rate(); test_pnj_gold(); test_doji_gold(); test_discovery_helpers()
+    test_nso(); test_sjc(); test_sbv(); test_vov(); test_vietcap(); test_vietnamplus_cpi(); test_vietnamplus_central_rate(); test_pnj_gold(); test_doji_gold(); test_baonghean_gold(); test_discovery_helpers()
     print('All parser/discovery tests passed')
 
 # Regression cases based on current public page shapes observed in Oct-2026.
@@ -109,6 +118,12 @@ def test_live_page_shapes_v2():
     vietcap_detail = '<html><head><meta property="article:published_time" content="2026-07-07T08:00:00+07:00"></head><body><h1>Macro Update - Q2 2026 GDP growth reaches 8.4%</h1>GDP expanded 8.39% YoY. CPI rose 4.69% YoY. USD/VND closed at 26,310.</body></html>'
     x = parse_vietcap_macro(vietcap_detail, 'https://vietcap.example', NOW)
     assert x['published_at'] == '2026-07-07'
+
+    vp_live = """<html><head><meta property='article:published_time' content='2026-10-04T12:03:00+07:00'></head><body><h1>Vietnam’s CPI rises 4.52% in first nine months of 2026</h1>CPI in September rose 0.62% from the previous month. September’s CPI was up 5.08% year-on-year.</body></html>"""
+    vals = {x['indicator_id']: x for x in parse_vietnamplus_cpi(vp_live, 'https://en.vietnamplus.vn/example.vnp', NOW)}
+    assert vals['cpi-mom']['value'] == 0.62
+    assert vals['cpi-yoy']['value'] == 5.08
+    assert vals['cpi-yoy']['period'] == '2026-09'
 
 # Run the additional regression cases when executed directly.
 if __name__ == '__main__':
