@@ -8,8 +8,11 @@ import sys
 ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(ROOT / "scripts"))
 from promote_production import build_production  # noqa: E402
+from promotion_preview import build_preview  # noqa: E402
 
-SRC_PREVIEW = ROOT / "data/staging/macro-preview"
+FIXTURE = ROOT / "tests/fixtures/macro-candidate-6"
+PREVIEW_POLICY = ROOT / "config/promotion_policy.json"
+FRONTEND_MAPPING = ROOT / "config/frontend_indicator_map.json"
 POLICY = ROOT / "config/production_promotion_policy.json"
 
 
@@ -23,10 +26,24 @@ def dump(path, obj):
 
 
 def make_preview(dst: Path):
-    dst.mkdir(parents=True, exist_ok=True)
-    # Use the fixture preview already produced by prior tests/repo package.
-    for name in ["canonical-observations.preview.json", "promotion-manifest.json", "preview-meta.json"]:
-        shutil.copy2(SRC_PREVIEW / name, dst / name)
+    """Build this test's preview from the candidate fixture.
+
+    Do not depend on data/staging/macro-preview already existing in the repository:
+    GitHub runners start from a clean checkout and the live preview step runs only
+    after fixture tests. build_preview enforces a repository-local staging path, so
+    create a temporary staging directory under data/staging and then copy only the
+    files this production test needs into its private temp directory.
+    """
+    staging_root = ROOT / "data/staging"
+    staging_root.mkdir(parents=True, exist_ok=True)
+    generated = Path(tempfile.mkdtemp(prefix="test-production-preview-", dir=str(staging_root)))
+    try:
+        build_preview(FIXTURE, generated, PREVIEW_POLICY, FRONTEND_MAPPING)
+        dst.mkdir(parents=True, exist_ok=True)
+        for name in ["canonical-observations.preview.json", "promotion-manifest.json", "preview-meta.json"]:
+            shutil.copy2(generated / name, dst / name)
+    finally:
+        shutil.rmtree(generated, ignore_errors=True)
 
 
 def main():
