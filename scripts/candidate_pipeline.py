@@ -21,6 +21,10 @@ FIXTURE_MAP = {
     "sjc-gold": "sjc_sample.html",
     "vov-central-rate": "vov_sample.html",
     "vietcap-macro": "vietcap_sample.html",
+    "vietnamplus-cpi": "vietnamplus_cpi_sample.html",
+    "vietnamplus-central-rate": "vietnamplus_central_rate_sample.html",
+    "pnj-gold": "pnj_gold_sample.html",
+    "doji-gold": "doji_gold_sample.html",
 }
 
 
@@ -185,42 +189,115 @@ def validate_records(obs_payload: dict, research_payload: dict):
     return problems
 
 
+def _latest_key(r: dict):
+    return (
+        r.get("data_date") or r.get("period") or "",
+        r.get("published_at") or "",
+        r.get("fetched_at") or "",
+    )
+
+
+def _same_observation(a: dict, b: dict, tolerance: float) -> bool:
+    if a.get("indicator_id") != b.get("indicator_id"):
+        return False
+    # Compare the same business period/date when both are available.
+    da = a.get("data_date") or a.get("period")
+    db = b.get("data_date") or b.get("period")
+    if da and db and da != db:
+        return False
+    try:
+        return abs(float(a.get("value")) - float(b.get("value"))) <= tolerance
+    except Exception:
+        return False
+
+
 def build_publish_readiness(observations: list[dict], generated_at: str):
     indicators = {x["id"]: x for x in read_json(ROOT / "config/macro_indicators_live.json")["indicators"]}
+    pool_cfg = read_json(ROOT / "config/source_pools.json", {"pools": []})
+    pool_by_indicator = {}
+    for pool in pool_cfg.get("pools", []):
+        for iid in pool.get("indicator_ids", []):
+            pool_by_indicator[iid] = pool
+
     by_ind = {}
     for x in observations:
         by_ind.setdefault(x.get("indicator_id"), []).append(x)
+
     results = []
+    pool_summaries = []
     for iid, meta in indicators.items():
         rows = by_ind.get(iid, [])
-        primary = meta["primary_source_id"]
-        canonical = [r for r in rows if r.get("source_id") == primary and r.get("evidence_status") == "verified"]
+        pool = pool_by_indicator.get(iid, {})
+        preferred = pool.get("preferred_source_ids") or [meta.get("primary_source_id")]
+        fallback = pool.get("fallback_source_ids", [])
+        canonical_statuses = set(pool.get("canonical_evidence_status", ["verified"]))
+        tolerance = float(pool.get("corroboration_tolerance_abs", 0))
+        min_sources = int(pool.get("min_independent_sources_for_corroborated", 2))
+
+        canonical = [r for r in rows if r.get("source_id") in preferred and r.get("evidence_status") in canonical_statuses]
         if canonical:
-            selected = sorted(canonical, key=lambda r: (
-                r.get("data_date") or r.get("period") or "",
-                r.get("published_at") or "",
-                r.get("fetched_at") or "",
-            ))[-1]
+            selected = sorted(canonical, key=_latest_key)[-1]
             results.append({
-                "indicator_id": iid, "status": "ready",
+                "indicator_id": iid, "status": "ready-canonical",
                 "selected_observation_id": selected["id"],
-                "reason": f"Verified primary-source observation from {primary}."
+                "evidence_observation_ids": [r["id"] for r in rows],
+                "reason": f"Verified preferred-source observation from {selected.get('source_id')}.",
+            })
+            continue
+
+        eligible = [r for r in rows if r.get("source_id") in fallback and r.get("evidence_status") not in {"disputed", "superseded"}]
+        corroborated_group = []
+        if eligible:
+            latest = sorted(eligible, key=_latest_key)[-1]
+            corroborated_group = [r for r in eligible if _same_observation(latest, r, tolerance)]
+            independent_sources = sorted({r.get("source_id") for r in corroborated_group if r.get("source_id")})
+            if len(independent_sources) >= min_sources:
+                results.append({
+                    "indicator_id": iid, "status": "ready-corroborated",
+                    "selected_observation_id": latest["id"],
+                    "evidence_observation_ids": [r["id"] for r in corroborated_group],
+                    "independent_sources": independent_sources,
+                    "reason": f"{len(independent_sources)} independent fallback sources agree within tolerance {tolerance}.",
+                })
+                continue
+            results.append({
+                "indicator_id": iid, "status": "evidence-only",
+                "selected_observation_id": None,
+                "evidence_observation_ids": [r["id"] for r in eligible],
+                "independent_sources": sorted({r.get("source_id") for r in eligible if r.get("source_id")}),
+                "reason": "Fallback evidence exists but direct verification or independent corroboration threshold is not met.",
             })
         elif rows:
             results.append({
                 "indicator_id": iid, "status": "evidence-only",
                 "selected_observation_id": None,
                 "evidence_observation_ids": [r["id"] for r in rows],
-                "reason": f"No verified primary-source observation from {primary}; retain evidence only."
+                "reason": "Candidate observations exist outside configured preferred/fallback source pool.",
             })
         else:
             results.append({
                 "indicator_id": iid, "status": "missing",
                 "selected_observation_id": None,
-                "reason": "No candidate observation available."
+                "reason": "No candidate observation available.",
             })
-    return {"generated_at": generated_at, "production_publish": False, "data": results}
 
+    for pool in pool_cfg.get("pools", []):
+        statuses = [x for x in results if x["indicator_id"] in pool.get("indicator_ids", [])]
+        available = [x for x in statuses if x["status"] != "missing"]
+        pool_summaries.append({
+            "pool_id": pool["id"],
+            "indicator_count": len(statuses),
+            "available_indicator_count": len(available),
+            "coverage_status": "available" if available else "unavailable",
+            "indicator_statuses": {x["indicator_id"]: x["status"] for x in statuses},
+        })
+
+    return {
+        "generated_at": generated_at,
+        "production_publish": False,
+        "data": results,
+        "pools": pool_summaries,
+    }
 
 def write_summary_csv(path: Path, observations: list[dict]):
     path.parent.mkdir(parents=True, exist_ok=True)
@@ -289,6 +366,10 @@ def main():
         run_status = "degraded"
 
     readiness = build_publish_readiness(merged_obs, generated_at)
+    pool_coverage = readiness.get("pools", [])
+    unavailable_pools = [x["pool_id"] for x in pool_coverage if x.get("coverage_status") == "unavailable"]
+    if unavailable_pools and run_status == "pass":
+        run_status = "degraded"
     source_health = {
         "schema_version": 1, "generated_at": generated_at, "run_id": run_id,
         "candidate_only": True, "sources": health,
@@ -306,6 +387,9 @@ def main():
         "candidate_research_total": len(merged_res),
         "prior_observation_count": prior_count, "record_drop_pct": round(drop_pct, 2),
         "hard_source_failures": hard_failures,
+        "unavailable_sources": [x.get("source") for x in health if x.get("status") in {"failed", "degraded", "unavailable"}],
+        "unavailable_pools": unavailable_pools,
+        "pool_coverage": pool_coverage,
         "source_errors": [
             {"source": x.get("source"), "status": x.get("status"), "error": x.get("error")}
             for x in health if x.get("error")

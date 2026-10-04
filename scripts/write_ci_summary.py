@@ -13,7 +13,15 @@ print(f"- Candidate only: **yes**")
 print(f"- Production publish: **{str(r.get('production_publish')).lower()}**")
 print(f"- New observations: **{r.get('new_observations',0)}**")
 print(f"- Candidate observations total: **{r.get('candidate_observations_total',0)}**")
-print(f"- Hard source failures: **{', '.join(r.get('hard_source_failures',[])) or 'none'}**")
+print(f"- Unavailable/degraded sources: **{', '.join(r.get('unavailable_sources',[])) or 'none'}**")
+if r.get('unavailable_pools'):
+    print(f"- Unavailable indicator pools: **{', '.join(r.get('unavailable_pools', []))}**")
+if r.get('pool_coverage'):
+    print('\n## Indicator pool coverage')
+    print('| Pool | Coverage | Available indicators |')
+    print('|---|---|---:|')
+    for x in r.get('pool_coverage', []):
+        print(f"| {x.get('pool_id','')} | {x.get('coverage_status','')} | {x.get('available_indicator_count',0)}/{x.get('indicator_count',0)} |")
 if r.get('gate_errors'):
     print(f"- Gate errors: **{' | '.join(r.get('gate_errors', []))}**")
 if health_path.exists():
