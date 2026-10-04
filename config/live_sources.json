@@ -75,7 +75,7 @@
       "module": "collectors.vietcap_macro",
       "parser": "parse_vietcap_macro",
       "discoverer": "discover_vietcap_macro_url",
-      "landing_url": "https://www.vietcap.com.vn/en/research-center/",
+      "landing_url": "https://www.vietcap.com.vn/en/research-center/macroeconomics",
       "enabled": true,
       "optional": true,
       "min_records": 0,
