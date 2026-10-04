@@ -11,14 +11,17 @@
       "discoverer": "discover_nso_cpi_url",
       "landing_url": "https://www.nso.gov.vn/cpi-vi/",
       "enabled": true,
-      "optional": false,
+      "optional": true,
       "min_records": 2,
       "max_records": 5,
       "timeout_seconds": 30,
       "max_bytes": 5000000,
       "freshness_hours": 900,
       "schedule_class": "monthly-release",
-      "canonical_eligible": true
+      "canonical_eligible": true,
+      "pool_ids": [
+        "cpi"
+      ]
     },
     {
       "key": "sbv-central-rate",
@@ -27,14 +30,17 @@
       "parser": "parse_sbv_central_rate",
       "fetch_url": "https://dttktt.sbv.gov.vn/TyGia/faces/TyGia.jspx",
       "enabled": true,
-      "optional": false,
+      "optional": true,
       "min_records": 1,
       "max_records": 2,
       "timeout_seconds": 30,
       "max_bytes": 5000000,
       "freshness_hours": 72,
       "schedule_class": "business-daily",
-      "canonical_eligible": true
+      "canonical_eligible": true,
+      "pool_ids": [
+        "central-rate"
+      ]
     },
     {
       "key": "sjc-gold",
@@ -43,14 +49,17 @@
       "parser": "parse_sjc_gold",
       "fetch_url": "https://sjc.com.vn/",
       "enabled": true,
-      "optional": false,
+      "optional": true,
       "min_records": 2,
       "max_records": 4,
       "timeout_seconds": 30,
       "max_bytes": 5000000,
       "freshness_hours": 72,
       "schedule_class": "daily-intraday",
-      "canonical_eligible": true
+      "canonical_eligible": true,
+      "pool_ids": [
+        "gold"
+      ]
     },
     {
       "key": "vov-central-rate",
@@ -67,7 +76,10 @@
       "max_bytes": 5000000,
       "freshness_hours": 96,
       "schedule_class": "fast-evidence",
-      "canonical_eligible": false
+      "canonical_eligible": false,
+      "pool_ids": [
+        "central-rate"
+      ]
     },
     {
       "key": "vietcap-macro",
@@ -84,7 +96,88 @@
       "max_bytes": 5000000,
       "freshness_hours": 2160,
       "schedule_class": "event-driven-research",
-      "canonical_eligible": false
+      "canonical_eligible": false,
+      "pool_ids": [
+        "research"
+      ]
+    },
+    {
+      "key": "vietnamplus-cpi",
+      "source_id": "vna-vietnamplus",
+      "module": "collectors.vietnamplus_cpi",
+      "parser": "parse_vietnamplus_cpi",
+      "discoverer": "discover_vietnamplus_cpi_url",
+      "landing_url": "https://www.vietnamplus.vn/cpi-tag1091331.vnp",
+      "enabled": true,
+      "optional": true,
+      "min_records": 1,
+      "max_records": 3,
+      "timeout_seconds": 30,
+      "max_bytes": 5000000,
+      "freshness_hours": 900,
+      "schedule_class": "monthly-release-fallback",
+      "canonical_eligible": false,
+      "pool_ids": [
+        "cpi"
+      ]
+    },
+    {
+      "key": "vietnamplus-central-rate",
+      "source_id": "vna-vietnamplus",
+      "module": "collectors.vietnamplus_central_rate",
+      "parser": "parse_vietnamplus_central_rate",
+      "discoverer": "discover_vietnamplus_central_rate_url",
+      "landing_url": "https://en.vietnamplus.vn/daily-reference-exchange-rate-tag9131.vnp",
+      "enabled": true,
+      "optional": true,
+      "min_records": 1,
+      "max_records": 1,
+      "timeout_seconds": 30,
+      "max_bytes": 5000000,
+      "freshness_hours": 96,
+      "schedule_class": "business-daily-fallback",
+      "canonical_eligible": false,
+      "pool_ids": [
+        "central-rate"
+      ]
+    },
+    {
+      "key": "pnj-gold",
+      "source_id": "pnj-gold",
+      "module": "collectors.pnj_gold",
+      "parser": "parse_pnj_gold",
+      "fetch_url": "https://giavang.pnj.com.vn/",
+      "enabled": true,
+      "optional": true,
+      "min_records": 2,
+      "max_records": 2,
+      "timeout_seconds": 30,
+      "max_bytes": 5000000,
+      "freshness_hours": 72,
+      "schedule_class": "daily-intraday-fallback",
+      "canonical_eligible": false,
+      "pool_ids": [
+        "gold"
+      ]
+    },
+    {
+      "key": "doji-gold",
+      "source_id": "doji-gold",
+      "module": "collectors.doji_gold",
+      "parser": "parse_doji_gold",
+      "fetch_url": "https://banggia.doji.vn/",
+      "enabled": true,
+      "optional": true,
+      "min_records": 2,
+      "max_records": 2,
+      "timeout_seconds": 30,
+      "max_bytes": 5000000,
+      "freshness_hours": 72,
+      "schedule_class": "daily-intraday-fallback",
+      "canonical_eligible": false,
+      "pool_ids": [
+        "gold"
+      ]
     }
   ]
 }

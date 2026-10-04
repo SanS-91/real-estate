@@ -112,6 +112,75 @@
         "methodology_transparency": 4
       },
       "publish_policy": "Research/forecast evidence only. Never overwrite official actual series."
+    },
+    {
+      "id": "vna-vietnamplus",
+      "name": "Vietnam News Agency / VietnamPlus",
+      "tier": "T5-trusted-media",
+      "role": [
+        "fast-update",
+        "official-corroboration",
+        "macro-fallback"
+      ],
+      "base_url": "https://www.vietnamplus.vn/",
+      "collection_method": "html",
+      "frequency": "daily-event-driven",
+      "trust": {
+        "authority": 4,
+        "freshness": 5,
+        "granularity": 4,
+        "independence": 4,
+        "consistency": 5,
+        "accessibility": 4,
+        "methodology_transparency": 4
+      },
+      "publish_policy": "Trusted VNA reporting may be used as fallback evidence for official macro releases. Preserve reported status until direct official verification or independent corroboration."
+    },
+    {
+      "id": "pnj-gold",
+      "name": "Phu Nhuan Jewelry (PNJ) Gold Price Board",
+      "tier": "T2-primary-issuer",
+      "role": [
+        "gold",
+        "market-quote",
+        "fallback-quote"
+      ],
+      "base_url": "https://giavang.pnj.com.vn/",
+      "collection_method": "html",
+      "frequency": "daily-intraday",
+      "trust": {
+        "authority": 4,
+        "freshness": 5,
+        "granularity": 5,
+        "independence": 4,
+        "consistency": 4,
+        "accessibility": 4,
+        "methodology_transparency": 4
+      },
+      "publish_policy": "Primary issuer for PNJ quotes and acceptable fallback/corroboration for SJC product quotes displayed on PNJ price board."
+    },
+    {
+      "id": "doji-gold",
+      "name": "DOJI Gold Price Board",
+      "tier": "T2-primary-issuer",
+      "role": [
+        "gold",
+        "market-quote",
+        "fallback-quote"
+      ],
+      "base_url": "https://banggia.doji.vn/",
+      "collection_method": "html",
+      "frequency": "daily-intraday",
+      "trust": {
+        "authority": 4,
+        "freshness": 5,
+        "granularity": 5,
+        "independence": 4,
+        "consistency": 4,
+        "accessibility": 3,
+        "methodology_transparency": 4
+      },
+      "publish_policy": "Primary issuer for DOJI quotes and secondary corroboration for SJC product quotes shown on DOJI public board."
     }
   ]
 }

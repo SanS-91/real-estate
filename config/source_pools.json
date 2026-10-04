@@ -1,0 +1,65 @@
+{
+  "schema_version": 1,
+  "candidate_only": true,
+  "pools": [
+    {
+      "id": "cpi",
+      "indicator_ids": [
+        "cpi-mom",
+        "cpi-yoy",
+        "core-cpi-yoy"
+      ],
+      "preferred_source_ids": [
+        "nso-vietnam"
+      ],
+      "fallback_source_ids": [
+        "vna-vietnamplus"
+      ],
+      "canonical_evidence_status": [
+        "verified"
+      ],
+      "corroboration_tolerance_abs": 0.02,
+      "min_independent_sources_for_corroborated": 2,
+      "minimum_records_for_pool": 1
+    },
+    {
+      "id": "central-rate",
+      "indicator_ids": [
+        "usd-vnd-central-rate"
+      ],
+      "preferred_source_ids": [
+        "sbv-vietnam"
+      ],
+      "fallback_source_ids": [
+        "vna-vietnamplus",
+        "vov"
+      ],
+      "canonical_evidence_status": [
+        "verified"
+      ],
+      "corroboration_tolerance_abs": 1.0,
+      "min_independent_sources_for_corroborated": 2,
+      "minimum_records_for_pool": 1
+    },
+    {
+      "id": "gold",
+      "indicator_ids": [
+        "sjc-gold-bar-buy",
+        "sjc-gold-bar-sell"
+      ],
+      "preferred_source_ids": [
+        "sjc"
+      ],
+      "fallback_source_ids": [
+        "pnj-gold",
+        "doji-gold"
+      ],
+      "canonical_evidence_status": [
+        "verified"
+      ],
+      "corroboration_tolerance_abs": 500000.0,
+      "min_independent_sources_for_corroborated": 2,
+      "minimum_records_for_pool": 1
+    }
+  ]
+}
