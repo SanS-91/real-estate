@@ -24,6 +24,7 @@ on:
           - vietnamplus-central-rate
           - pnj-gold
           - doji-gold
+          - baonghean-gold
 
 permissions:
   contents: read
@@ -56,6 +57,7 @@ jobs:
           path: |
             data/candidate/macro
             data/state
+            data/processed/macro
           key: macro-candidate-${{ github.ref_name }}-${{ github.run_id }}
           restore-keys: |
             macro-candidate-${{ github.ref_name }}-
@@ -68,6 +70,9 @@ jobs:
 
       - name: Promotion preview fixture tests
         run: python tests/test_promotion_preview.py
+
+      - name: Controlled production promotion fixture tests
+        run: python tests/test_production_promotion.py
 
       - name: Run live candidate collectors
         shell: bash
@@ -88,6 +93,14 @@ jobs:
       - name: Validate promotion preview
         run: python scripts/validate_promotion_preview.py --preview-dir data/staging/macro-preview
 
+      - name: Controlled production promotion
+        if: ${{ github.event_name == 'schedule' || github.event.inputs.source == 'all' || github.event.inputs.source == '' }}
+        run: python scripts/promote_production.py --preview-dir data/staging/macro-preview --processed-dir data/processed/macro
+
+      - name: Validate controlled production output
+        if: ${{ github.event_name == 'schedule' || github.event.inputs.source == 'all' || github.event.inputs.source == '' }}
+        run: python scripts/validate_production.py --processed-dir data/processed/macro
+
       - name: Write workflow summary
         if: always()
         run: python scripts/write_ci_summary.py >> "$GITHUB_STEP_SUMMARY"
@@ -95,6 +108,10 @@ jobs:
       - name: Write promotion preview summary
         if: always()
         run: python scripts/write_promotion_summary.py >> "$GITHUB_STEP_SUMMARY"
+
+      - name: Write controlled production summary
+        if: always()
+        run: python scripts/write_production_summary.py >> "$GITHUB_STEP_SUMMARY"
 
       - name: Upload candidate review artifact
         if: always()
@@ -119,5 +136,15 @@ jobs:
             data/staging/macro-preview/
             data/candidate/macro/publish-readiness.json
             data/candidate/macro/run-report.json
-          # Staging preview only. data/processed is never included or written.
+          # Staging preview artifact only; processed production is uploaded separately for review.
+      - name: Upload controlled production artifact
+        if: ${{ always() && (github.event_name == 'schedule' || github.event.inputs.source == 'all' || github.event.inputs.source == '') }}
+        uses: actions/upload-artifact@v4
+        with:
+          name: macro-production-${{ github.run_number }}
+          retention-days: 30
+          if-no-files-found: warn
+          path: |
+            data/processed/macro/
+          # Phase 4.2E: canonical processed data is reviewable as an artifact only. No repository push and no frontend publish.
 
