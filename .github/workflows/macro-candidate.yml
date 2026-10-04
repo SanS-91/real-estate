@@ -25,6 +25,8 @@ on:
           - pnj-gold
           - doji-gold
           - baonghean-gold
+          - banking-times-central-rate
+          - vietnamnet-gold
 
 permissions:
   contents: read
@@ -66,6 +68,11 @@ jobs:
 
       - name: Candidate pipeline fixture E2E
         run: python tests/test_candidate_pipeline.py
+
+      - name: Fallback and corroboration policy tests
+        run: |
+          python tests/test_fallback_pools.py
+          python tests/test_phase4_2h1_safety.py
 
       - name: Promotion preview fixture tests
         run: python tests/test_promotion_preview.py
