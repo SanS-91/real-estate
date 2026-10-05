@@ -253,6 +253,29 @@
         "methodology_transparency": 4
       },
       "publish_policy": "Independent media corroboration for HCMC SJC 1L/10L/1KG buy/sell quotes. Keep as reported evidence unless corroboration/direct verification threshold is met."
+    },
+    {
+      "id": "vnba",
+      "name": "Vietnam Banks Association (VNBA)",
+      "tier": "T4-sector-association",
+      "role": [
+        "banking-sector-update",
+        "customer-rates",
+        "official-reporting-fallback"
+      ],
+      "base_url": "https://vnba.org.vn/",
+      "collection_method": "html",
+      "frequency": "monthly-release",
+      "trust": {
+        "authority": 4,
+        "freshness": 5,
+        "granularity": 5,
+        "independence": 3,
+        "consistency": 5,
+        "accessibility": 5,
+        "methodology_transparency": 4
+      },
+      "publish_policy": "Fallback evidence for monthly customer-rate ranges explicitly reported as released by SBV. Keep as reported evidence; do not treat as direct SBV verification."
     }
   ]
 }

@@ -93,7 +93,9 @@
       "preferred_source_ids": [
         "sbv-vietnam"
       ],
-      "fallback_source_ids": [],
+      "fallback_source_ids": [
+        "vnba"
+      ],
       "canonical_evidence_status": [
         "verified"
       ],
