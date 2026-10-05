@@ -380,7 +380,10 @@
       "canonical_eligible": false,
       "pool_ids": [
         "policy-rates"
-      ]
+      ],
+      "fetch_strategy": "segmented-range",
+      "segment_bytes": 750000,
+      "segment_retries": 4
     },
     {
       "key": "vietnamplus-interbank-rates",

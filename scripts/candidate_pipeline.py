@@ -12,7 +12,7 @@ import sys
 import tempfile
 from typing import Any
 
-from collectors.base import build_session, fetch_html
+from collectors.base import build_session, fetch_html, fetch_html_segmented
 
 ROOT = Path(__file__).resolve().parents[1]
 FIXTURE_MAP = {
@@ -188,12 +188,18 @@ def fetch_source(source_cfg: dict, run_id: str, fixture_mode: bool):
     if not target_url:
         raise ValueError("No fetch_url or discovered target URL configured")
 
-    fr = fetch_html(
-        target_url,
-        timeout=source_cfg.get("timeout_seconds", 30),
-        max_bytes=source_cfg.get("max_bytes", 5_000_000),
-        session=session,
-    )
+    fetcher = fetch_html_segmented if source_cfg.get("fetch_strategy") == "segmented-range" else fetch_html
+    fetch_kwargs = {
+        "timeout": source_cfg.get("timeout_seconds", 30),
+        "max_bytes": source_cfg.get("max_bytes", 5_000_000),
+        "session": session,
+    }
+    if fetcher is fetch_html_segmented:
+        fetch_kwargs.update({
+            "segment_bytes": source_cfg.get("segment_bytes", 1_000_000),
+            "segment_retries": source_cfg.get("segment_retries", 3),
+        })
+    fr = fetcher(target_url, **fetch_kwargs)
     (raw_root / "detail.html").write_text(fr.text, encoding="utf-8")
 
     # Some official releases expose the data in an attached PDF rather than the
