@@ -1,12 +1,38 @@
 {
-  "schema_version": 1,
-  "frontend_baseline": "v7.2.1",
+  "schema_version": 2,
+  "frontend_baseline": "v7.2.1+4.2G1",
   "mappings": {
-    "cpi-yoy": {"frontend_indicator_id": "cpi-yoy", "status": "compatible"},
-    "cpi-mom": {"frontend_indicator_id": "cpi-mom", "status": "compatible"},
-    "core-cpi-yoy": {"frontend_indicator_id": "core-cpi-yoy", "status": "compatible"},
-    "usd-vnd-central-rate": {"frontend_indicator_id": "usd-vnd-central-rate", "status": "compatible"},
-    "sjc-gold-bar-sell": {"frontend_indicator_id": "sjc-gold-sell", "status": "mapping-required"},
-    "sjc-gold-bar-buy": {"frontend_indicator_id": null, "status": "frontend-indicator-missing"}
+    "cpi-yoy": {
+      "frontend_indicator_id": "cpi-yoy",
+      "status": "compatible"
+    },
+    "cpi-mom": {
+      "frontend_indicator_id": "cpi-mom",
+      "status": "compatible"
+    },
+    "core-cpi-yoy": {
+      "frontend_indicator_id": "core-cpi-yoy",
+      "status": "compatible"
+    },
+    "usd-vnd-central-rate": {
+      "frontend_indicator_id": "usd-vnd-central-rate",
+      "status": "compatible"
+    },
+    "sjc-gold-buy": {
+      "frontend_indicator_id": "sjc-gold-buy",
+      "status": "compatible"
+    },
+    "sjc-gold-sell": {
+      "frontend_indicator_id": "sjc-gold-sell",
+      "status": "compatible"
+    },
+    "sjc-gold-bar-buy": {
+      "frontend_indicator_id": "sjc-gold-buy",
+      "status": "source-alias-normalized"
+    },
+    "sjc-gold-bar-sell": {
+      "frontend_indicator_id": "sjc-gold-sell",
+      "status": "source-alias-normalized"
+    }
   }
 }

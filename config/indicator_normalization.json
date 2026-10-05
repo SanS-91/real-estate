@@ -1,0 +1,28 @@
+{
+  "schema_version": 1,
+  "mappings": {
+    "cpi-yoy": {
+      "canonical_indicator_id": "cpi-yoy"
+    },
+    "cpi-mom": {
+      "canonical_indicator_id": "cpi-mom"
+    },
+    "core-cpi-yoy": {
+      "canonical_indicator_id": "core-cpi-yoy"
+    },
+    "usd-vnd-central-rate": {
+      "canonical_indicator_id": "usd-vnd-central-rate"
+    },
+    "sjc-gold-bar-buy": {
+      "canonical_indicator_id": "sjc-gold-buy"
+    },
+    "sjc-gold-bar-sell": {
+      "canonical_indicator_id": "sjc-gold-sell"
+    }
+  },
+  "notes": [
+    "Collector/source-layer IDs are preserved upstream for backward compatibility.",
+    "Promotion preview normalizes source-layer IDs into canonical production/frontend IDs.",
+    "source_indicator_id is retained on normalized preview/production records for provenance."
+  ]
+}
