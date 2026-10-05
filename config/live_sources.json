@@ -127,7 +127,7 @@
       "module": "collectors.vietnamplus_central_rate",
       "parser": "parse_vietnamplus_central_rate",
       "discoverer": "discover_vietnamplus_central_rate_url",
-      "landing_url": "https://en.vietnamplus.vn/daily-reference-exchange-rate-tag9131.vnp",
+      "landing_url": "https://en.vietnamplus.vn/state-bank-of-vietnam-tag62.vnp",
       "enabled": true,
       "optional": true,
       "min_records": 1,
