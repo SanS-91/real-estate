@@ -16,6 +16,7 @@ on:
         options:
           - all
           - nso-cpi
+          - nso-banking-activity
           - sbv-central-rate
           - sjc-gold
           - vov-central-rate
@@ -77,6 +78,7 @@ jobs:
           python tests/test_phase4_2h2_frontend_contract.py
           python tests/test_phase4_2h3_latest_period.py
           python tests/test_phase4_2h4_vietnamplus_latest.py
+          python tests/test_phase4_2i1_banking_activity.py
 
       - name: Promotion preview fixture tests
         run: python tests/test_promotion_preview.py
