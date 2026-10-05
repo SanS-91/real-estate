@@ -324,6 +324,44 @@
         "https://www.nso.gov.vn/du-lieu-va-so-lieu-thong-ke/",
         "https://www.nso.gov.vn/tin-tuc-thong-ke/"
       ]
+    },
+    {
+      "key": "sbv-policy-rates",
+      "source_id": "sbv-vietnam",
+      "module": "collectors.sbv_policy_rates",
+      "parser": "parse_sbv_policy_rates",
+      "fetch_url": "https://dttktt.sbv.gov.vn/webcenter/portal/vi/menu/rm/ls/bls",
+      "enabled": true,
+      "optional": true,
+      "min_records": 3,
+      "max_records": 3,
+      "timeout_seconds": 30,
+      "max_bytes": 5000000,
+      "freshness_hours": 8760,
+      "schedule_class": "event-driven-policy",
+      "canonical_eligible": true,
+      "pool_ids": [
+        "policy-rates"
+      ]
+    },
+    {
+      "key": "sbv-interbank-rates",
+      "source_id": "sbv-vietnam",
+      "module": "collectors.sbv_interbank_rates",
+      "parser": "parse_sbv_interbank_rates",
+      "fetch_url": "https://dttktt.sbv.gov.vn/webcenter/portal/vi/menu/rm/ls/lsttlnh",
+      "enabled": true,
+      "optional": true,
+      "min_records": 1,
+      "max_records": 1,
+      "timeout_seconds": 30,
+      "max_bytes": 5000000,
+      "freshness_hours": 168,
+      "schedule_class": "business-daily",
+      "canonical_eligible": true,
+      "pool_ids": [
+        "interbank-market"
+      ]
     }
   ]
 }

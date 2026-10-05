@@ -103,6 +103,40 @@
       "corroboration_tolerance_abs": 0.01,
       "min_independent_sources_for_corroborated": 2,
       "minimum_records_for_pool": 5
+    },
+    {
+      "id": "policy-rates",
+      "indicator_ids": [
+        "policy-refinancing-rate",
+        "policy-rediscount-rate",
+        "policy-overnight-lending-rate"
+      ],
+      "preferred_source_ids": [
+        "sbv-vietnam"
+      ],
+      "fallback_source_ids": [],
+      "canonical_evidence_status": [
+        "verified"
+      ],
+      "corroboration_tolerance_abs": 0.01,
+      "min_independent_sources_for_corroborated": 2,
+      "minimum_records_for_pool": 3
+    },
+    {
+      "id": "interbank-market",
+      "indicator_ids": [
+        "interbank-on"
+      ],
+      "preferred_source_ids": [
+        "sbv-vietnam"
+      ],
+      "fallback_source_ids": [],
+      "canonical_evidence_status": [
+        "verified"
+      ],
+      "corroboration_tolerance_abs": 0.01,
+      "min_independent_sources_for_corroborated": 2,
+      "minimum_records_for_pool": 1
     }
   ]
 }

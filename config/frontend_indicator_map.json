@@ -1,6 +1,6 @@
 {
   "schema_version": 2,
-  "frontend_baseline": "v7.2.1+4.2J3",
+  "frontend_baseline": "v7.2.1+4.2J3.2+4.2K1",
   "mappings": {
     "cpi-yoy": {
       "frontend_indicator_id": "cpi-yoy",
@@ -61,6 +61,22 @@
     "priority-short-term-lending-rate-vnd": {
       "frontend_indicator_id": null,
       "status": "evidence-only-not-published"
+    },
+    "policy-refinancing-rate": {
+      "frontend_indicator_id": "policy-refinancing-rate",
+      "status": "compatible-candidate-only"
+    },
+    "interbank-on": {
+      "frontend_indicator_id": "interbank-on",
+      "status": "compatible-candidate-only"
+    },
+    "policy-rediscount-rate": {
+      "frontend_indicator_id": null,
+      "status": "candidate-only-not-published"
+    },
+    "policy-overnight-lending-rate": {
+      "frontend_indicator_id": null,
+      "status": "candidate-only-not-published"
     }
   }
 }

@@ -104,6 +104,38 @@
       "unit": "percent-per-year",
       "frequency": "monthly",
       "primary_source_id": "sbv-vietnam"
+    },
+    {
+      "id": "policy-refinancing-rate",
+      "name": "SBV Refinancing Rate",
+      "category": "interest-rate",
+      "unit": "percent-per-year",
+      "frequency": "event-driven",
+      "primary_source_id": "sbv-vietnam"
+    },
+    {
+      "id": "policy-rediscount-rate",
+      "name": "SBV Rediscount Rate",
+      "category": "interest-rate",
+      "unit": "percent-per-year",
+      "frequency": "event-driven",
+      "primary_source_id": "sbv-vietnam"
+    },
+    {
+      "id": "policy-overnight-lending-rate",
+      "name": "SBV Overnight Lending Facility Rate",
+      "category": "interest-rate",
+      "unit": "percent-per-year",
+      "frequency": "event-driven",
+      "primary_source_id": "sbv-vietnam"
+    },
+    {
+      "id": "interbank-on",
+      "name": "VND Interbank Overnight Rate",
+      "category": "banking-liquidity",
+      "unit": "percent-per-year",
+      "frequency": "daily",
+      "primary_source_id": "sbv-vietnam"
     }
   ]
 }
