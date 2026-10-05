@@ -115,14 +115,17 @@
         "sbv-vietnam"
       ],
       "fallback_source_ids": [
-        "sbv-vietnam-archive"
+        "gov-vietnam-baochinhphu",
+        "vna-vietnamplus",
+        "banking-times-vn"
       ],
       "canonical_evidence_status": [
         "verified"
       ],
       "corroboration_tolerance_abs": 0.01,
       "min_independent_sources_for_corroborated": 2,
-      "minimum_records_for_pool": 3
+      "minimum_records_for_pool": 3,
+      "notes": "Event-driven policy state. Trusted news sources must agree on effective date and all three administered rates. Heavy SBV archive is excluded from routine fallback."
     },
     {
       "id": "interbank-market",

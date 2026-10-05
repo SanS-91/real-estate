@@ -12,7 +12,7 @@ import sys
 import tempfile
 from typing import Any
 
-from collectors.base import build_session, fetch_html, fetch_html_segmented
+from collectors.base import build_session, fetch_html
 
 ROOT = Path(__file__).resolve().parents[1]
 FIXTURE_MAP = {
@@ -36,6 +36,9 @@ FIXTURE_MAP = {
     "sbv-interbank-rates": "sbv_interbank_rates_sample.html",
     "sbv-policy-archive": "sbv_policy_archive_sample.html",
     "vietnamplus-interbank-rates": "vietnamplus_interbank_rates_sample.html",
+    "baochinhphu-policy-rates": "baochinhphu_policy_rates_sample.html",
+    "vietnamplus-policy-rates": "vietnamplus_policy_rates_sample.html",
+    "banking-times-policy-rates": "thoibaonganhang_policy_rates_sample.html",
 }
 
 
@@ -132,7 +135,8 @@ def fetch_source(source_cfg: dict, run_id: str, fixture_mode: bool):
         }
 
     session = build_session()
-    target_url = source_cfg.get("fetch_url")
+    configured_fetch_url = source_cfg.get("fetch_url")
+    target_url = configured_fetch_url
     landing_meta = None
     if source_cfg.get("discoverer"):
         discover = getattr(module, source_cfg["discoverer"])
@@ -188,18 +192,12 @@ def fetch_source(source_cfg: dict, run_id: str, fixture_mode: bool):
     if not target_url:
         raise ValueError("No fetch_url or discovered target URL configured")
 
-    fetcher = fetch_html_segmented if source_cfg.get("fetch_strategy") == "segmented-range" else fetch_html
-    fetch_kwargs = {
-        "timeout": source_cfg.get("timeout_seconds", 30),
-        "max_bytes": source_cfg.get("max_bytes", 5_000_000),
-        "session": session,
-    }
-    if fetcher is fetch_html_segmented:
-        fetch_kwargs.update({
-            "segment_bytes": source_cfg.get("segment_bytes", 1_000_000),
-            "segment_retries": source_cfg.get("segment_retries", 3),
-        })
-    fr = fetcher(target_url, **fetch_kwargs)
+    fr = fetch_html(
+        target_url,
+        timeout=source_cfg.get("timeout_seconds", 30),
+        max_bytes=source_cfg.get("max_bytes", 5_000_000),
+        session=session,
+    )
     (raw_root / "detail.html").write_text(fr.text, encoding="utf-8")
 
     # Some official releases expose the data in an attached PDF rather than the
@@ -236,6 +234,43 @@ def fetch_source(source_cfg: dict, run_id: str, fixture_mode: bool):
     total = len(obs) + len(res)
     min_records = int(source_cfg.get("min_records", 0))
     max_records = int(source_cfg.get("max_records", 999999))
+
+    # Event-search sources may discover a recent article that discusses policy
+    # but does not contain the complete machine-readable policy-rate trio. If a
+    # known current-state seed URL is configured, fall back to it rather than
+    # treating commentary/forecast text as a new policy event.
+    if (
+        total < min_records
+        and source_cfg.get("fallback_on_parse_shortfall")
+        and configured_fetch_url
+        and configured_fetch_url != fr.url
+    ):
+        fallback = fetch_html(
+            configured_fetch_url,
+            timeout=source_cfg.get("timeout_seconds", 30),
+            max_bytes=source_cfg.get("max_bytes", 5_000_000),
+            session=session,
+        )
+        (raw_root / "detail-fallback.html").write_text(fallback.text, encoding="utf-8")
+        fallback_result = parser(fallback.text, fallback.url, fallback.fetched_at)
+        fallback_obs, fallback_res = parse_result(
+            fallback_result, source_cfg, fallback.url, fallback.fetched_at
+        )
+        fallback_total = len(fallback_obs) + len(fallback_res)
+        if fallback_total >= min_records:
+            if landing_meta is None:
+                landing_meta = {}
+            landing_meta = dict(landing_meta)
+            landing_meta["discovered_detail_parse_shortfall"] = {
+                "url": fr.url,
+                "parsed_records": total,
+            }
+            landing_meta["detail_fallback_url"] = fallback.url
+            landing_meta["detail_fallback_used"] = True
+            fr = fallback
+            target_url = configured_fetch_url
+            obs, res, total = fallback_obs, fallback_res, fallback_total
+
     if total < min_records:
         raise ValueError(f"Parsed {total} records; expected at least {min_records}")
     if total > max_records:

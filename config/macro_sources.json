@@ -124,7 +124,9 @@
         "macro-fallback",
         "customer-rates",
         "interbank-market",
-        "liquidity-fallback"
+        "liquidity-fallback",
+        "policy-rates",
+        "policy-event-search"
       ],
       "base_url": "https://www.vietnamplus.vn/",
       "collection_method": "html",
@@ -217,7 +219,9 @@
       "role": [
         "banking-sector-update",
         "official-corroboration",
-        "fx"
+        "fx",
+        "policy-rates",
+        "policy-event-search"
       ],
       "base_url": "https://thoibaonganhang.vn/",
       "collection_method": "html",
@@ -231,7 +235,7 @@
         "accessibility": 4,
         "methodology_transparency": 4
       },
-      "publish_policy": "Use as independent corroboration of SBV central-rate reporting. Preserve reported status unless direct SBV verification is captured."
+      "publish_policy": "Trusted specialist banking media for event-driven SBV policy-rate discovery and independent corroboration. Keep observations reported until direct SBV verification or multi-source agreement."
     },
     {
       "id": "vietnamnet-gold",
@@ -291,7 +295,7 @@
       ],
       "base_url": "https://www.sbv.gov.vn/",
       "collection_method": "document/pdf",
-      "frequency": "event-driven-archive",
+      "frequency": "historical-reference-only",
       "trust": {
         "authority": 5,
         "freshness": 2,
@@ -301,7 +305,31 @@
         "accessibility": 3,
         "methodology_transparency": 5
       },
-      "publish_policy": "Official historical SBV evidence only. Do not treat an archive snapshot as a fresh current-policy verification without newer direct capture or independent current corroboration."
+      "publish_policy": "Historical SBV archive retained for manual/reference use only. Excluded from routine collection because the document is large and transport-unreliable; never poll it for current policy state."
+    },
+    {
+      "id": "gov-vietnam-baochinhphu",
+      "name": "Báo Điện tử Chính phủ",
+      "tier": "T2-government-media",
+      "role": [
+        "government-policy",
+        "policy-rates",
+        "policy-event-search",
+        "official-corroboration"
+      ],
+      "base_url": "https://baochinhphu.vn/",
+      "collection_method": "html-search-discovery",
+      "frequency": "event-driven",
+      "trust": {
+        "authority": 5,
+        "freshness": 5,
+        "granularity": 5,
+        "independence": 4,
+        "consistency": 5,
+        "accessibility": 5,
+        "methodology_transparency": 4
+      },
+      "publish_policy": "Government-media reporting of SBV decisions may serve as high-quality independent policy-event evidence. Keep reported until direct SBV verification or corroboration threshold is met."
     }
   ]
 }
