@@ -66,12 +66,12 @@ def main():
     assert '.metric-grid--controlled { grid-template-columns: repeat(4, minmax(0, 1fr)); }' in css
 
     index = (ROOT / 'index.html').read_text(encoding='utf-8')
-    assert 'home.js?v=4.2I5' in index
+    assert 'home.js?v=4.2I5.1' in index
     assert 'main.css?v=4.2I5' in index
-    assert 'localization-dynamic.js?v=4.2I5' in index
+    assert 'localization-dynamic.js?v=4.2I5.1' in index
 
     mapping = json.loads((ROOT / 'config/frontend_indicator_map.json').read_text(encoding='utf-8'))
-    assert mapping['frontend_baseline'] == 'v7.2.1+4.2I5'
+    assert mapping['frontend_baseline'] == 'v7.2.1+4.2I5.1'
     for iid in EXPECTED:
         assert iid in mapping['mappings']
 
