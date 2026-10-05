@@ -30,7 +30,8 @@
       "role": [
         "official-actual",
         "policy",
-        "fx"
+        "fx",
+        "banking-rates"
       ],
       "base_url": "https://www.sbv.gov.vn/",
       "collection_method": "html",
@@ -44,7 +45,7 @@
         "accessibility": 2,
         "methodology_transparency": 5
       },
-      "publish_policy": "Canonical for central rate and policy rates when direct official record is captured."
+      "publish_policy": "Canonical for central rate, policy rates, and official customer-rate bulletins when the direct SBV record is captured and validated."
     },
     {
       "id": "sjc",

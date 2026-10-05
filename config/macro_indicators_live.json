@@ -64,6 +64,46 @@
       "unit": "percent",
       "frequency": "monthly",
       "primary_source_id": "nso-vietnam"
+    },
+    {
+      "id": "deposit-rate-vnd-6-12m-low",
+      "name": "VND Deposit Rate 6–12M Low",
+      "category": "interest-rate",
+      "unit": "percent-per-year",
+      "frequency": "monthly",
+      "primary_source_id": "sbv-vietnam"
+    },
+    {
+      "id": "deposit-rate-vnd-6-12m-high",
+      "name": "VND Deposit Rate 6–12M High",
+      "category": "interest-rate",
+      "unit": "percent-per-year",
+      "frequency": "monthly",
+      "primary_source_id": "sbv-vietnam"
+    },
+    {
+      "id": "lending-rate-vnd-average-low",
+      "name": "Average VND Lending Rate Low",
+      "category": "interest-rate",
+      "unit": "percent-per-year",
+      "frequency": "monthly",
+      "primary_source_id": "sbv-vietnam"
+    },
+    {
+      "id": "lending-rate-vnd-average-high",
+      "name": "Average VND Lending Rate High",
+      "category": "interest-rate",
+      "unit": "percent-per-year",
+      "frequency": "monthly",
+      "primary_source_id": "sbv-vietnam"
+    },
+    {
+      "id": "priority-short-term-lending-rate-vnd",
+      "name": "Priority Short-term VND Lending Rate",
+      "category": "interest-rate",
+      "unit": "percent-per-year",
+      "frequency": "monthly",
+      "primary_source_id": "sbv-vietnam"
     }
   ]
 }

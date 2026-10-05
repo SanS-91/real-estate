@@ -80,6 +80,26 @@
       "corroboration_tolerance_abs": 0.02,
       "min_independent_sources_for_corroborated": 2,
       "minimum_records_for_pool": 1
+    },
+    {
+      "id": "customer-rates",
+      "indicator_ids": [
+        "deposit-rate-vnd-6-12m-low",
+        "deposit-rate-vnd-6-12m-high",
+        "lending-rate-vnd-average-low",
+        "lending-rate-vnd-average-high",
+        "priority-short-term-lending-rate-vnd"
+      ],
+      "preferred_source_ids": [
+        "sbv-vietnam"
+      ],
+      "fallback_source_ids": [],
+      "canonical_evidence_status": [
+        "verified"
+      ],
+      "corroboration_tolerance_abs": 0.01,
+      "min_independent_sources_for_corroborated": 2,
+      "minimum_records_for_pool": 5
     }
   ]
 }

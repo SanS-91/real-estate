@@ -43,6 +43,30 @@
       ]
     },
     {
+      "key": "sbv-customer-rates",
+      "source_id": "sbv-vietnam",
+      "module": "collectors.sbv_customer_rates",
+      "parser": "parse_sbv_customer_rates",
+      "discoverer": "discover_sbv_customer_rates_url",
+      "attachment_discoverer": "discover_sbv_customer_rates_attachment",
+      "landing_urls": [
+        "https://www.sbv.gov.vn/webcenter/portal/vi/menu/trangchu/ttsk",
+        "https://www.sbv.gov.vn/"
+      ],
+      "enabled": true,
+      "optional": true,
+      "min_records": 5,
+      "max_records": 5,
+      "timeout_seconds": 30,
+      "max_bytes": 5000000,
+      "freshness_hours": 1200,
+      "schedule_class": "monthly-release",
+      "canonical_eligible": true,
+      "pool_ids": [
+        "customer-rates"
+      ]
+    },
+    {
       "key": "sjc-gold",
       "source_id": "sjc",
       "module": "collectors.sjc_gold",

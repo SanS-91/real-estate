@@ -41,6 +41,26 @@
     "bank-funding-growth-ytd": {
       "frontend_indicator_id": "bank-funding-growth-ytd",
       "status": "compatible"
+    },
+    "deposit-rate-vnd-6-12m-low": {
+      "frontend_indicator_id": null,
+      "status": "range-component-not-published"
+    },
+    "deposit-rate-vnd-6-12m-high": {
+      "frontend_indicator_id": null,
+      "status": "range-component-not-published"
+    },
+    "lending-rate-vnd-average-low": {
+      "frontend_indicator_id": null,
+      "status": "range-component-not-published"
+    },
+    "lending-rate-vnd-average-high": {
+      "frontend_indicator_id": null,
+      "status": "range-component-not-published"
+    },
+    "priority-short-term-lending-rate-vnd": {
+      "frontend_indicator_id": null,
+      "status": "range-component-not-published"
     }
   }
 }
