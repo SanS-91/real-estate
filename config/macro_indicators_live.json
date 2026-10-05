@@ -48,6 +48,22 @@
       "unit": "vnd-per-tael",
       "frequency": "daily",
       "primary_source_id": "sjc"
+    },
+    {
+      "id": "credit-growth-ytd",
+      "name": "Credit Growth YTD",
+      "category": "credit",
+      "unit": "percent",
+      "frequency": "monthly",
+      "primary_source_id": "nso-vietnam"
+    },
+    {
+      "id": "bank-funding-growth-ytd",
+      "name": "Bank Funding Growth YTD",
+      "category": "banking-liquidity",
+      "unit": "percent",
+      "frequency": "monthly",
+      "primary_source_id": "nso-vietnam"
     }
   ]
 }

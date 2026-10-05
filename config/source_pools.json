@@ -63,6 +63,23 @@
       "corroboration_tolerance_abs": 500000.0,
       "min_independent_sources_for_corroborated": 2,
       "minimum_records_for_pool": 1
+    },
+    {
+      "id": "banking-liquidity",
+      "indicator_ids": [
+        "credit-growth-ytd",
+        "bank-funding-growth-ytd"
+      ],
+      "preferred_source_ids": [
+        "nso-vietnam"
+      ],
+      "fallback_source_ids": [],
+      "canonical_evidence_status": [
+        "verified"
+      ],
+      "corroboration_tolerance_abs": 0.02,
+      "min_independent_sources_for_corroborated": 2,
+      "minimum_records_for_pool": 1
     }
   ]
 }

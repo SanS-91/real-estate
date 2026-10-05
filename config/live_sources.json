@@ -236,6 +236,26 @@
       "pool_ids": [
         "gold"
       ]
+    },
+    {
+      "key": "nso-banking-activity",
+      "source_id": "nso-vietnam",
+      "module": "collectors.nso_banking_activity",
+      "parser": "parse_nso_banking_activity",
+      "discoverer": "discover_nso_banking_activity_url",
+      "landing_url": "https://www.nso.gov.vn/tin-tuc-thong-ke/",
+      "enabled": true,
+      "optional": true,
+      "min_records": 2,
+      "max_records": 2,
+      "timeout_seconds": 30,
+      "max_bytes": 5000000,
+      "freshness_hours": 1100,
+      "schedule_class": "monthly-release",
+      "canonical_eligible": true,
+      "pool_ids": [
+        "banking-liquidity"
+      ]
     }
   ]
 }

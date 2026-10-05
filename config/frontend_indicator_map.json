@@ -33,6 +33,14 @@
     "sjc-gold-bar-sell": {
       "frontend_indicator_id": "sjc-gold-sell",
       "status": "source-alias-normalized"
+    },
+    "credit-growth-ytd": {
+      "frontend_indicator_id": "credit-growth-ytd",
+      "status": "compatible"
+    },
+    "bank-funding-growth-ytd": {
+      "frontend_indicator_id": null,
+      "status": "frontend-indicator-missing"
     }
   }
 }
