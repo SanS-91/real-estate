@@ -22,6 +22,9 @@ on:
           - vnba-customer-rates
           - vietnamplus-customer-rates
           - customer-rates-production
+          - sbv-policy-rates
+          - sbv-interbank-rates
+          - policy-liquidity-discovery
           - sjc-gold
           - vov-central-rate
           - vietcap-macro
@@ -89,6 +92,7 @@ jobs:
           python tests/test_phase4_2j1_1_vnba_fallback.py
           python tests/test_phase4_2j2_vietnamplus_corroboration.py
           python tests/test_phase4_2j3_rate_range_production.py
+          python tests/test_phase4_2k1_policy_interbank_discovery.py
 
       - name: Promotion preview fixture tests
         run: python tests/test_promotion_preview.py
@@ -100,7 +104,12 @@ jobs:
         shell: bash
         run: |
           SOURCE='${{ github.event.inputs.source }}'
-          if [ "$SOURCE" = "customer-rates-production" ]; then
+          if [ "$SOURCE" = "policy-liquidity-discovery" ]; then
+            # Candidate-only discovery gate for SBV administered policy rates
+            # and the market overnight interbank rate. No production write.
+            python scripts/candidate_pipeline.py --mode candidate --source sbv-policy-rates
+            python scripts/candidate_pipeline.py --mode candidate --source sbv-interbank-rates
+          elif [ "$SOURCE" = "customer-rates-production" ]; then
             # Targeted production-gate run: refresh only the two independent
             # customer-rate fallback sources. Avoid refreshing volatile daily
             # FX/gold series merely to promote monthly customer-rate ranges.
