@@ -31,6 +31,7 @@ FIXTURE_MAP = {
     "nso-banking-activity": "nso_banking_activity_sample.html",
     "sbv-customer-rates": "sbv_customer_rates_sample.html",
     "vnba-customer-rates": "vnba_customer_rates_sample.html",
+    "vietnamplus-customer-rates": "vietnamplus_customer_rates_sample.html",
 }
 
 
