@@ -21,6 +21,7 @@ on:
           - sbv-customer-rates
           - vnba-customer-rates
           - vietnamplus-customer-rates
+          - customer-rates-production
           - sjc-gold
           - vov-central-rate
           - vietcap-macro
@@ -87,6 +88,7 @@ jobs:
           python tests/test_phase4_2j1_customer_rates.py
           python tests/test_phase4_2j1_1_vnba_fallback.py
           python tests/test_phase4_2j2_vietnamplus_corroboration.py
+          python tests/test_phase4_2j3_rate_range_production.py
 
       - name: Promotion preview fixture tests
         run: python tests/test_promotion_preview.py
@@ -98,7 +100,13 @@ jobs:
         shell: bash
         run: |
           SOURCE='${{ github.event.inputs.source }}'
-          if [ -n "$SOURCE" ] && [ "$SOURCE" != "all" ]; then
+          if [ "$SOURCE" = "customer-rates-production" ]; then
+            # Targeted production-gate run: refresh only the two independent
+            # customer-rate fallback sources. Avoid refreshing volatile daily
+            # FX/gold series merely to promote monthly customer-rate ranges.
+            python scripts/candidate_pipeline.py --mode candidate --source vnba-customer-rates
+            python scripts/candidate_pipeline.py --mode candidate --source vietnamplus-customer-rates
+          elif [ -n "$SOURCE" ] && [ "$SOURCE" != "all" ]; then
             python scripts/candidate_pipeline.py --mode candidate --source "$SOURCE"
           else
             python scripts/candidate_pipeline.py --mode candidate
@@ -114,11 +122,11 @@ jobs:
         run: python scripts/validate_promotion_preview.py --preview-dir data/staging/macro-preview
 
       - name: Controlled production promotion
-        if: ${{ github.event_name == 'schedule' || github.event.inputs.source == 'all' || github.event.inputs.source == '' }}
+        if: ${{ github.event_name == 'schedule' || github.event.inputs.source == 'all' || github.event.inputs.source == 'customer-rates-production' || github.event.inputs.source == '' }}
         run: python scripts/promote_production.py --preview-dir data/staging/macro-preview --processed-dir data/processed/macro
 
       - name: Validate controlled production output
-        if: ${{ github.event_name == 'schedule' || github.event.inputs.source == 'all' || github.event.inputs.source == '' }}
+        if: ${{ github.event_name == 'schedule' || github.event.inputs.source == 'all' || github.event.inputs.source == 'customer-rates-production' || github.event.inputs.source == '' }}
         run: python scripts/validate_production.py --processed-dir data/processed/macro
 
       - name: Write workflow summary
@@ -158,7 +166,7 @@ jobs:
             data/candidate/macro/run-report.json
           # Staging preview artifact only; processed production is uploaded separately for review.
       - name: Upload controlled production artifact
-        if: ${{ always() && (github.event_name == 'schedule' || github.event.inputs.source == 'all' || github.event.inputs.source == '') }}
+        if: ${{ always() && (github.event_name == 'schedule' || github.event.inputs.source == 'all' || github.event.inputs.source == 'customer-rates-production' || github.event.inputs.source == '') }}
         uses: actions/upload-artifact@v4
         with:
           name: macro-production-${{ github.run_number }}
