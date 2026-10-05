@@ -80,6 +80,7 @@ jobs:
           python tests/test_phase4_2h4_vietnamplus_latest.py
           python tests/test_phase4_2i1_banking_activity.py
           python tests/test_phase4_2i2_nso_discovery.py
+          python tests/test_phase4_2i3_banking_policy.py
 
       - name: Promotion preview fixture tests
         run: python tests/test_promotion_preview.py
