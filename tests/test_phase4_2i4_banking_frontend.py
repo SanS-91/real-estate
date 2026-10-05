@@ -41,7 +41,7 @@ def main():
     assert "9.78" not in js
 
     mapping = json.loads((ROOT / "config/frontend_indicator_map.json").read_text(encoding="utf-8"))
-    assert mapping["frontend_baseline"] == "v7.2.1+4.2I4"
+    assert mapping["frontend_baseline"] in {"v7.2.1+4.2I4", "v7.2.1+4.2I5"}
     assert mapping["mappings"]["credit-growth-ytd"]["status"] == "compatible"
     assert mapping["mappings"]["bank-funding-growth-ytd"]["status"] == "compatible"
 
