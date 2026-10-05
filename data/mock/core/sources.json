@@ -219,6 +219,30 @@
       "source_priority": 4,
       "active": true,
       "notes": "Public gold-price tracker used as one corroborating source for SJC buy/sell observations."
+    },
+    {
+      "id": "vnba",
+      "name": "Vietnam Banks Association (VNBA)",
+      "source_type": "industry-association",
+      "base_url": "https://vnba.org.vn/",
+      "language": "en",
+      "collection_method": "html",
+      "fetch_frequency": "monthly",
+      "source_priority": 3,
+      "active": true,
+      "notes": "Fallback reporting source for SBV customer-rate bulletins; used only with independent corroboration."
+    },
+    {
+      "id": "sbv-vietnam",
+      "name": "State Bank of Vietnam (SBV)",
+      "source_type": "government",
+      "base_url": "https://sbv.gov.vn/",
+      "language": "vi",
+      "collection_method": "html/pdf",
+      "fetch_frequency": "monthly",
+      "source_priority": 1,
+      "active": true,
+      "notes": "Preferred official source for monetary and customer-rate bulletins."
     }
   ]
 }
