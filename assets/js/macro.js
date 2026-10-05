@@ -210,6 +210,11 @@
     return 'Production';
   }
 
+  function observationStatusLabel(row) {
+    const evidence = productionEvidenceLabel(row);
+    return evidence || labelize(row?.observation_status);
+  }
+
   function dataLayerBadge(ind, row) {
     return row?._data_layer === 'production' ? productionEvidenceLabel(row) : labelize(ind?.frequency);
   }
@@ -229,7 +234,7 @@
     const customerRatesSynced = productionState.indicatorIds.has('deposit-rate-vnd-6-12m-range')
       && productionState.indicatorIds.has('lending-rate-vnd-average-range');
     text.textContent = customerRatesSynced
-      ? 'Controlled production includes verified NSO banking indicators plus independently corroborated SBV customer-rate ranges. Rate ranges remain low–high ranges; no scalar average is fabricated.'
+      ? 'Controlled production includes verified NSO banking indicators plus customer-rate ranges published by the State Bank of Vietnam and independently corroborated through secondary sources. Rate ranges remain low–high ranges; no scalar average is fabricated.'
       : bankingSynced
         ? 'Controlled production now includes verified NSO banking indicators: Credit Growth YTD and Bank Funding Growth YTD. Canonical and Corroborated labels remain evidence-based; unpromoted indicators remain illustrative demo data.'
         : 'Production observations are labeled by evidence status: verified official data as Canonical and independently matched data as Corroborated. Unpromoted indicators remain illustrative demo data.';
@@ -492,7 +497,7 @@
 
   function recentObservationTable(id, limit = 12) {
     const ind = indicator(id);
-    const rows = [...observationsFor(id)].reverse().slice(0,limit).map(row => `<tr><td>${esc(formatPeriod(row))}<span class="table-subtext">${esc(row.period)}</span></td><td class="numeric">${esc(formatObservationValue(ind,row))}</td><td>${esc(labelize(row.observation_status))}</td><td>${esc(App.formatDate(row.published_at))}</td><td>${sourceRef(row.source_id,{publishedAt:row.published_at,period:row.period,sourceUrl:row.source_url})}</td></tr>`).join('');
+    const rows = [...observationsFor(id)].reverse().slice(0,limit).map(row => `<tr><td>${esc(formatPeriod(row))}<span class="table-subtext">${esc(row.period)}</span></td><td class="numeric">${esc(formatObservationValue(ind,row))}</td><td>${esc(observationStatusLabel(row))}</td><td>${esc(App.formatDate(row.published_at))}</td><td>${sourceRef(row.source_id,{publishedAt:row.published_at,period:row.period,sourceUrl:row.source_url})}</td></tr>`).join('');
     return `<div class="table-wrap"><table class="data-table data-table--macro-history"><thead><tr><th>Data Period</th><th class="numeric">Value</th><th>Status</th><th>Published</th><th>Source</th></tr></thead><tbody>${rows}</tbody></table></div>`;
   }
 
@@ -585,7 +590,7 @@
       <div class="drawer-section"><h3>Definition</h3><p>${esc(ind.description)}</p></div>
       <div class="drawer-section"><h3>Methodology</h3><p>${esc(ind.methodology_note)}</p></div>
       <div class="drawer-section"><h3>Data Provenance</h3>${current ? `<div class="provenance-inline-row"><span class="source-tag">${esc(dataLayerBadge(ind,current))}</span>${sourceRef(current.source_id,{publishedAt:current.published_at,period:current.period,sourceUrl:current.source_url,methodology:ind.methodology_note})}<span class="muted-text">Current displayed observation · ${esc(formatPeriod(current))}</span></div>${corroborationProvenance(current)}` : '<p class="muted-text">No current observation source available.</p>'}</div>
-      <div class="drawer-section"><h3>Recent Observations</h3>${recent.map(row=>`<div class="drawer-list-row"><div><strong>${esc(formatPeriod(row))}</strong><span>${esc(row.period)} · ${esc(labelize(row.observation_status))}</span></div><div><strong>${esc(formatObservationValue(ind,row))}</strong><span>${sourceRef(row.source_id,{publishedAt:row.published_at,period:row.period,sourceUrl:row.source_url})}</span></div></div>`).join('')}</div>
+      <div class="drawer-section"><h3>Recent Observations</h3>${recent.map(row=>`<div class="drawer-list-row"><div><strong>${esc(formatPeriod(row))}</strong><span>${esc(row.period)} · ${esc(observationStatusLabel(row))}</span></div><div><strong>${esc(formatObservationValue(ind,row))}</strong><span>${sourceRef(row.source_id,{publishedAt:row.published_at,period:row.period,sourceUrl:row.source_url})}</span></div></div>`).join('')}</div>
       <div class="drawer-section"><h3>Related Evidence</h3>${articles.length ? articles.map(item=>`<div class="drawer-list-row drawer-list-row--stack"><span>DEMO · ${esc(App.formatDate(item.published_at))} · ${esc(item.content_type)}</span><strong>${esc(item.title)}</strong></div>`).join('') : `<p class="muted-text">${current?._data_layer === 'production' ? 'No promoted evidence articles yet.' : 'No related articles.'}</p>`}</div>
       <div class="drawer-section"><a class="text-link" href="macro.html?view=${encodeURIComponent(view)}&series=${encodeURIComponent(id)}&range=1Y">Open historical series</a></div>`;
   }
