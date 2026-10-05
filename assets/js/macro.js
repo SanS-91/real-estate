@@ -6,7 +6,7 @@
     rates: ['deposit-rate-12m-average', 'lending-rate-average', 'interbank-on', 'policy-refinancing-rate'],
     fx: ['usd-vnd-central-rate', 'usd-vnd-bank-sell'],
     gold: ['sjc-gold-sell', 'sjc-gold-buy', 'global-gold-usd-oz'],
-    liquidity: ['interbank-on', 'credit-growth-ytd', 'm2-growth-yoy'],
+    liquidity: ['interbank-on', 'credit-growth-ytd', 'bank-funding-growth-ytd', 'm2-growth-yoy'],
     inflation: ['cpi-yoy', 'cpi-mom', 'core-cpi-yoy']
   };
   const DEFAULT_SERIES = {
@@ -23,7 +23,9 @@
     ['core-cpi-yoy', { unit: 'percent', evidenceStatus: 'verified', sources: ['nso-vietnam'] }],
     ['usd-vnd-central-rate', { unit: 'vnd-per-usd', evidenceStatus: 'corroborated', sources: ['banking-times-vn', 'vna-vietnamplus'] }],
     ['sjc-gold-buy', { unit: 'vnd-per-tael', evidenceStatus: 'corroborated', sources: ['baonghean-gold', 'vietnamnet-gold'] }],
-    ['sjc-gold-sell', { unit: 'vnd-per-tael', evidenceStatus: 'corroborated', sources: ['baonghean-gold', 'vietnamnet-gold'] }]
+    ['sjc-gold-sell', { unit: 'vnd-per-tael', evidenceStatus: 'corroborated', sources: ['baonghean-gold', 'vietnamnet-gold'] }],
+    ['credit-growth-ytd', { unit: 'percent', evidenceStatus: 'verified', sources: ['nso-vietnam'] }],
+    ['bank-funding-growth-ytd', { unit: 'percent', evidenceStatus: 'verified', sources: ['nso-vietnam'] }]
   ]);
   const PRODUCTION_INDICATOR_OVERRIDES = {
     'cpi-yoy': {
@@ -52,6 +54,16 @@
     'sjc-gold-sell': {
       description: 'Domestic SJC gold-bar selling price in VND per tael.',
       methodology_note: 'Controlled production observations require at least two independent public price sources to agree within the configured tolerance.'
+    },
+    'credit-growth-ytd': {
+      default_source_id: 'nso-vietnam',
+      description: 'Year-to-date growth in economy-wide credit as reported in the official NSO socio-economic release.',
+      methodology_note: 'Canonical observations are promoted only from verified official NSO releases. Missing historical periods are never backfilled with illustrative demo values.'
+    },
+    'bank-funding-growth-ytd': {
+      default_source_id: 'nso-vietnam',
+      description: 'Year-to-date growth in capital mobilization by Vietnamese credit institutions.',
+      methodology_note: 'Canonical observations are promoted only from verified official NSO releases. Missing historical periods are never backfilled with illustrative demo values.'
     }
   };
 
@@ -129,7 +141,11 @@
       return;
     }
     title.textContent = 'Controlled production mode.';
-    text.textContent = 'Production observations are labeled by evidence status: verified official data as Canonical and independently matched data as Corroborated. Unpromoted indicators remain illustrative demo data.';
+    const bankingSynced = productionState.indicatorIds.has('credit-growth-ytd')
+      && productionState.indicatorIds.has('bank-funding-growth-ytd');
+    text.textContent = bankingSynced
+      ? 'Controlled production now includes verified NSO banking indicators: Credit Growth YTD and Bank Funding Growth YTD. Canonical and Corroborated labels remain evidence-based; unpromoted indicators remain illustrative demo data.'
+      : 'Production observations are labeled by evidence status: verified official data as Canonical and independently matched data as Corroborated. Unpromoted indicators remain illustrative demo data.';
   }
 
   function overviewChartNote(id) {
@@ -140,6 +156,18 @@
         : 'Canonical production series · demo points are not mixed into this indicator. Historical coverage will build as new approved observations are persisted.';
     }
     return 'Illustrative demo series · data date and publication date are stored separately.';
+  }
+
+  function seriesCoverageNote(id) {
+    const rows = observationsFor(id);
+    const current = rows.at(-1) || null;
+    if (current?._data_layer === 'production' && rows.length === 1) {
+      return 'Latest observation only · no synthetic history is created.';
+    }
+    if (current?._data_layer === 'production') {
+      return 'Controlled production history · demo points are not mixed into this series.';
+    }
+    return 'Illustrative demo history.';
   }
 
   function corroborationProvenance(row) {
@@ -179,7 +207,12 @@
   function deltaInfo(id) {
     const ind = indicator(id);
     const { current, previous } = latestPair(id);
-    if (!current || !previous) return { label:'—', direction:'neutral' };
+    if (!current) return { label:'—', direction:'neutral' };
+    if (!previous) {
+      return current?._data_layer === 'production'
+        ? { label:'Latest only', direction:'neutral' }
+        : { label:'—', direction:'neutral' };
+    }
     const delta = Number(current.value) - Number(previous.value);
     if (ind?.unit === 'percent' || ind?.unit === 'percent-per-year') {
       return { label:`${delta > 0 ? '+' : ''}${delta.toFixed(2)} ppt`, direction: delta > 0 ? 'up' : delta < 0 ? 'down' : 'neutral' };
@@ -276,7 +309,7 @@
   }
 
   function keyIndicators() {
-    return ['usd-vnd-central-rate','sjc-gold-sell','deposit-rate-12m-average','lending-rate-average','credit-growth-ytd','cpi-yoy'];
+    return ['usd-vnd-central-rate','sjc-gold-sell','deposit-rate-12m-average','lending-rate-average','credit-growth-ytd','bank-funding-growth-ytd','cpi-yoy'];
   }
 
   function latestEventList(limit = 5) {
@@ -303,7 +336,7 @@
     const ids = keyIndicators();
     const fxRows = rangeRows('usd-vnd-central-rate','1M');
     setView(`
-      <div class="macro-metric-grid">${ids.map(metricCard).join('')}</div>
+      <div class="macro-metric-grid macro-metric-grid--overview">${ids.map(metricCard).join('')}</div>
       <div class="market-layout market-layout--overview">
         <section class="section market-panel market-panel--wide">
           <div class="section-header"><div><span class="eyebrow">Daily monitor</span><h2 class="section-title">USD/VND Central Rate</h2></div><a class="text-link" href="macro.html?view=fx&series=usd-vnd-central-rate&range=1M">Open FX</a></div>
@@ -352,7 +385,7 @@
     setView(`
       <div class="view-intro"><div><span class="eyebrow">Historical series</span><h2>${esc(viewTitle(view))}</h2><p>${esc(viewDescription(view))}</p></div></div>
       <div class="macro-metric-grid macro-metric-grid--section">${ids.map(metricCard).join('')}</div>
-      <section class="section"><div class="section-header"><div><span class="eyebrow">${esc(labelize(ind?.frequency))}</span><h2 class="section-title">${esc(ind?.name || '')}</h2></div>${seriesControls(view,selected)}</div><div class="section-body"><div class="chart-frame chart-frame--large"><canvas id="macro-series-chart"></canvas></div><p class="chart-note">${currentSourceRow ? sourceRef(currentSourceRow.source_id,{publishedAt:currentSourceRow.published_at,period:currentSourceRow.period,sourceUrl:currentSourceRow.source_url}) : "—"} · ${esc(ind?.methodology_note || '')}</p></div></section>
+      <section class="section"><div class="section-header"><div><span class="eyebrow">${esc(labelize(ind?.frequency))}</span><h2 class="section-title">${esc(ind?.name || '')}</h2></div>${seriesControls(view,selected)}</div><div class="section-body"><div class="chart-frame chart-frame--large"><canvas id="macro-series-chart"></canvas></div><p class="chart-note">${currentSourceRow ? sourceRef(currentSourceRow.source_id,{publishedAt:currentSourceRow.published_at,period:currentSourceRow.period,sourceUrl:currentSourceRow.source_url}) : "—"} · ${esc(seriesCoverageNote(selected))} · ${esc(ind?.methodology_note || '')}</p></div></section>
       <section class="section"><div class="section-header"><div><span class="eyebrow">Observation history</span><h2 class="section-title">Recent Data</h2></div><button class="button macro-detail-button" type="button" data-macro-indicator-id="${esc(selected)}">Indicator details</button></div><div class="section-body section-body--table">${recentObservationTable(selected)}</div></section>`);
     bindSeriesControls(view,selected);
     requestAnimationFrame(() => renderChart('macro-series-chart',selected,rows));
