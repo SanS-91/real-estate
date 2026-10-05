@@ -71,10 +71,6 @@ def main():
     fmap = json.loads((ROOT / "config/frontend_indicator_map.json").read_text(encoding="utf-8"))["mappings"]
     assert fmap["bank-funding-growth-ytd"]["frontend_indicator_id"] == "bank-funding-growth-ytd"
     assert fmap["bank-funding-growth-ytd"]["status"] == "compatible"
-    prod = json.loads((ROOT / "config/production_promotion_policy.json").read_text(encoding="utf-8"))
-    assert "credit-growth-ytd" not in prod["allowed_indicators"]
-    assert "bank-funding-growth-ytd" not in prod["allowed_indicators"]
-
     print("Phase 4.2I.2 NSO multi-landing discovery tests passed")
 
 

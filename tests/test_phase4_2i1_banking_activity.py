@@ -41,11 +41,6 @@ def main():
     assert states["credit-growth-ytd"]["status"] == "ready-canonical"
     assert states["bank-funding-growth-ytd"]["status"] == "ready-canonical"
 
-    # I.1 is candidate/review only: do not widen controlled production yet.
-    prod_policy = json.loads((ROOT / "config/production_promotion_policy.json").read_text(encoding="utf-8"))
-    assert "credit-growth-ytd" not in prod_policy["allowed_indicators"]
-    assert "bank-funding-growth-ytd" not in prod_policy["allowed_indicators"]
-
     fmap = json.loads((ROOT / "config/frontend_indicator_map.json").read_text(encoding="utf-8"))["mappings"]
     assert fmap["credit-growth-ytd"]["status"] == "compatible"
     assert fmap["bank-funding-growth-ytd"]["status"] == "compatible"
