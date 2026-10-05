@@ -6,8 +6,26 @@
     ['sjc-gold-sell', { unit: 'vnd-per-tael', evidenceStatus: 'corroborated', sources: ['baonghean-gold', 'vietnamnet-gold'] }],
     ['credit-growth-ytd', { unit: 'percent', evidenceStatus: 'verified', sources: ['nso-vietnam'] }],
     ['bank-funding-growth-ytd', { unit: 'percent', evidenceStatus: 'verified', sources: ['nso-vietnam'] }],
-    ['cpi-yoy', { unit: 'percent', evidenceStatus: 'verified', sources: ['nso-vietnam'] }]
+    ['cpi-yoy', { unit: 'percent', evidenceStatus: 'verified', sources: ['nso-vietnam'] }],
+    ['deposit-rate-vnd-6-12m-low', { unit: 'percent-per-year', evidenceStatus: 'corroborated', sources: ['vnba', 'vna-vietnamplus'] }],
+    ['deposit-rate-vnd-6-12m-high', { unit: 'percent-per-year', evidenceStatus: 'corroborated', sources: ['vnba', 'vna-vietnamplus'] }],
+    ['lending-rate-vnd-average-low', { unit: 'percent-per-year', evidenceStatus: 'corroborated', sources: ['vnba', 'vna-vietnamplus'] }],
+    ['lending-rate-vnd-average-high', { unit: 'percent-per-year', evidenceStatus: 'corroborated', sources: ['vnba', 'vna-vietnamplus'] }]
   ]);
+  const HOME_RATE_RANGES = [
+    {
+      lowId: 'deposit-rate-vnd-6-12m-low',
+      highId: 'deposit-rate-vnd-6-12m-high',
+      targetCardId: 'deposit-demo',
+      label: 'VND Deposit Rate 6–12M'
+    },
+    {
+      lowId: 'lending-rate-vnd-average-low',
+      highId: 'lending-rate-vnd-average-high',
+      targetCardId: 'lending-demo',
+      label: 'Average VND Lending Rate Range'
+    }
+  ];
   const HOME_CARD_TARGETS = {
     'usd-vnd-demo': 'usd-vnd-central-rate',
     'gold-demo': 'sjc-gold-sell',
@@ -117,8 +135,33 @@
     };
   }
 
+  function productionRangeCard(lowRow, highRow, cfg) {
+    const low = Formatters.number(lowRow.value, { min: 1, max: 1 });
+    const high = Formatters.number(highRow.value, { min: 1, max: 1 });
+    return {
+      id: cfg.targetCardId.replace('-demo', '-range'),
+      label: cfg.label,
+      display_value: `${low}–${high}% p.a.`,
+      change_label: 'Latest range',
+      change_direction: 'neutral',
+      period_label: formatProductionPeriod(lowRow),
+      source: 'CORROBORATED'
+    };
+  }
+
   function mergeHomeIndicatorCards(mockCards, production) {
+    const rangesByTarget = new Map();
+    HOME_RATE_RANGES.forEach(cfg => {
+      const low = production.latest.get(cfg.lowId);
+      const high = production.latest.get(cfg.highId);
+      if (low && high && low.period === high.period) {
+        rangesByTarget.set(cfg.targetCardId, productionRangeCard(low, high, cfg));
+      }
+    });
+
     const cards = mockCards.map(card => {
+      const rangeCard = rangesByTarget.get(card.id);
+      if (rangeCard) return rangeCard;
       const indicatorId = HOME_CARD_TARGETS[card.id];
       const row = indicatorId ? production.latest.get(indicatorId) : null;
       return row ? productionCard(row) : card;

@@ -106,5 +106,40 @@
     });
   }
 
-  window.ChartTools = { render, destroy, renderSupplySales, renderPriceTrend, renderTimeSeries };
+
+  function renderRangeSeries(id, { labels = [], lowValues = [], highValues = [], lowLabel = 'Lower bound', highLabel = 'Upper bound', yFormatter = compactNumber } = {}) {
+    return render(id, {
+      type: 'line',
+      data: {
+        labels,
+        datasets: [
+          {
+            label: lowLabel,
+            data: lowValues,
+            borderColor: '#667085',
+            backgroundColor: '#667085',
+            tension: .22,
+            spanGaps: false,
+            pointRadius: lowValues.length > 40 ? 0 : 2.5,
+            pointHoverRadius: 4,
+            borderWidth: 2
+          },
+          {
+            label: highLabel,
+            data: highValues,
+            borderColor: '#8b1e2d',
+            backgroundColor: '#8b1e2d',
+            tension: .22,
+            spanGaps: false,
+            pointRadius: highValues.length > 40 ? 0 : 2.5,
+            pointHoverRadius: 4,
+            borderWidth: 2
+          }
+        ]
+      },
+      options: baseOptions({ yFormatter })
+    });
+  }
+
+  window.ChartTools = { render, destroy, renderSupplySales, renderPriceTrend, renderTimeSeries, renderRangeSeries };
 })();

@@ -9,6 +9,7 @@
     liquidity: ['interbank-on', 'credit-growth-ytd', 'bank-funding-growth-ytd', 'm2-growth-yoy'],
     inflation: ['cpi-yoy', 'cpi-mom', 'core-cpi-yoy']
   };
+  const PRODUCTION_RATE_SERIES = ['deposit-rate-vnd-6-12m-range', 'lending-rate-vnd-average-range', 'interbank-on', 'policy-refinancing-rate'];
   const DEFAULT_SERIES = {
     rates: 'deposit-rate-12m-average', fx: 'usd-vnd-central-rate', gold: 'sjc-gold-sell',
     liquidity: 'credit-growth-ytd', inflation: 'cpi-yoy'
@@ -25,8 +26,26 @@
     ['sjc-gold-buy', { unit: 'vnd-per-tael', evidenceStatus: 'corroborated', sources: ['baonghean-gold', 'vietnamnet-gold'] }],
     ['sjc-gold-sell', { unit: 'vnd-per-tael', evidenceStatus: 'corroborated', sources: ['baonghean-gold', 'vietnamnet-gold'] }],
     ['credit-growth-ytd', { unit: 'percent', evidenceStatus: 'verified', sources: ['nso-vietnam'] }],
-    ['bank-funding-growth-ytd', { unit: 'percent', evidenceStatus: 'verified', sources: ['nso-vietnam'] }]
+    ['bank-funding-growth-ytd', { unit: 'percent', evidenceStatus: 'verified', sources: ['nso-vietnam'] }],
+    ['deposit-rate-vnd-6-12m-low', { unit: 'percent-per-year', evidenceStatus: 'corroborated', sources: ['vnba', 'vna-vietnamplus'] }],
+    ['deposit-rate-vnd-6-12m-high', { unit: 'percent-per-year', evidenceStatus: 'corroborated', sources: ['vnba', 'vna-vietnamplus'] }],
+    ['lending-rate-vnd-average-low', { unit: 'percent-per-year', evidenceStatus: 'corroborated', sources: ['vnba', 'vna-vietnamplus'] }],
+    ['lending-rate-vnd-average-high', { unit: 'percent-per-year', evidenceStatus: 'corroborated', sources: ['vnba', 'vna-vietnamplus'] }]
   ]);
+  const PRODUCTION_RATE_RANGES = [
+    {
+      id: 'deposit-rate-vnd-6-12m-range',
+      lowId: 'deposit-rate-vnd-6-12m-low',
+      highId: 'deposit-rate-vnd-6-12m-high',
+      fallbackId: 'deposit-rate-12m-average'
+    },
+    {
+      id: 'lending-rate-vnd-average-range',
+      lowId: 'lending-rate-vnd-average-low',
+      highId: 'lending-rate-vnd-average-high',
+      fallbackId: 'lending-rate-average'
+    }
+  ];
   const PRODUCTION_INDICATOR_OVERRIDES = {
     'cpi-yoy': {
       default_source_id: 'nso-vietnam',
@@ -64,6 +83,16 @@
       default_source_id: 'nso-vietnam',
       description: 'Year-to-date growth in capital mobilization by Vietnamese credit institutions.',
       methodology_note: 'Canonical observations are promoted only from verified official NSO releases. Missing historical periods are never backfilled with illustrative demo values.'
+    },
+    'deposit-rate-vnd-6-12m-range': {
+      default_source_id: 'vnba',
+      description: 'Monthly VND deposit-rate range for 6–12 month tenors, reported from the SBV customer-rate bulletin.',
+      methodology_note: 'Corroborated production is displayed as the official low–high range. The frontend pairs separately promoted range components and never fabricates a scalar average.'
+    },
+    'lending-rate-vnd-average-range': {
+      default_source_id: 'vnba',
+      description: 'Monthly range of average VND lending rates reported from the SBV customer-rate bulletin.',
+      methodology_note: 'Corroborated production is displayed as the official low–high range. The frontend pairs separately promoted range components and never collapses the range into a single average.'
     }
   };
 
@@ -92,17 +121,67 @@
     });
   }
 
+  function buildProductionRateRanges(productionRows) {
+    const syntheticRows = [];
+    const virtualIds = new Set();
+    PRODUCTION_RATE_RANGES.forEach(cfg => {
+      const lows = productionRows.filter(row => row.indicator_id === cfg.lowId);
+      const highs = productionRows.filter(row => row.indicator_id === cfg.highId);
+      const highsByPeriod = new Map(highs.map(row => [row.period, row]));
+      lows.forEach(low => {
+        const high = highsByPeriod.get(low.period);
+        if (!high || low.period_type !== high.period_type) return;
+        const sourceIds = [...new Set([
+          ...(low.corroboration_source_ids || [low.source_id]),
+          ...(high.corroboration_source_ids || [high.source_id])
+        ])];
+        syntheticRows.push({
+          id: `range:${cfg.id}:${low.period}`,
+          indicator_id: cfg.id,
+          period: low.period,
+          period_type: low.period_type,
+          data_date: low.data_date || high.data_date || low.period,
+          value: (Number(low.value) + Number(high.value)) / 2,
+          range_low: Number(low.value),
+          range_high: Number(high.value),
+          unit: 'percent-per-year',
+          source_id: low.source_id,
+          source_url: low.source_url,
+          published_at: [low.published_at, high.published_at].filter(Boolean).sort().at(-1),
+          evidence_status: 'corroborated',
+          observation_status: 'final',
+          corroboration_source_ids: sourceIds,
+          corroboration_observation_ids: [...new Set([
+            ...(low.corroboration_observation_ids || [low.id]),
+            ...(high.corroboration_observation_ids || [high.id])
+          ])],
+          methodology_note: 'Paired low/high production components for the same monthly bulletin period.',
+          _data_layer: 'production',
+          _range: true
+        });
+        virtualIds.add(cfg.id);
+      });
+    });
+    return { syntheticRows, virtualIds };
+  }
+
   function integrateMacroObservations(mockPayload, productionPayload, publishMeta) {
     const mockRows = payloadData(mockPayload).map(row => ({ ...row, _data_layer: 'demo' }));
     const productionRows = validProductionRows(productionPayload, publishMeta).map(row => ({ ...row, _data_layer: 'production' }));
-    const productionIndicatorIds = new Set(productionRows.map(row => row.indicator_id));
+    const rawProductionIndicatorIds = new Set(productionRows.map(row => row.indicator_id));
+    const ranges = buildProductionRateRanges(productionRows);
+    const productionIndicatorIds = new Set([...rawProductionIndicatorIds, ...ranges.virtualIds]);
 
-    // Never mix illustrative and canonical history inside the same indicator series.
-    // Once an indicator has at least one approved production record, its demo series
-    // is removed entirely and only controlled production observations are rendered.
-    const retainedMockRows = mockRows.filter(row => !productionIndicatorIds.has(row.indicator_id));
+    // Never mix illustrative and controlled history for an indicator that has production.
+    // When a complete rate range is available, suppress the old illustrative scalar card/series.
+    const replacedFallbackIds = new Set(
+      PRODUCTION_RATE_RANGES.filter(cfg => ranges.virtualIds.has(cfg.id)).map(cfg => cfg.fallbackId)
+    );
+    const retainedMockRows = mockRows.filter(row =>
+      !productionIndicatorIds.has(row.indicator_id) && !replacedFallbackIds.has(row.indicator_id)
+    );
     return {
-      rows: [...retainedMockRows, ...productionRows],
+      rows: [...retainedMockRows, ...productionRows, ...ranges.syntheticRows],
       productionRows,
       productionIndicatorIds
     };
@@ -147,9 +226,13 @@
     title.textContent = 'Controlled production mode.';
     const bankingSynced = productionState.indicatorIds.has('credit-growth-ytd')
       && productionState.indicatorIds.has('bank-funding-growth-ytd');
-    text.textContent = bankingSynced
-      ? 'Controlled production now includes verified NSO banking indicators: Credit Growth YTD and Bank Funding Growth YTD. Canonical and Corroborated labels remain evidence-based; unpromoted indicators remain illustrative demo data.'
-      : 'Production observations are labeled by evidence status: verified official data as Canonical and independently matched data as Corroborated. Unpromoted indicators remain illustrative demo data.';
+    const customerRatesSynced = productionState.indicatorIds.has('deposit-rate-vnd-6-12m-range')
+      && productionState.indicatorIds.has('lending-rate-vnd-average-range');
+    text.textContent = customerRatesSynced
+      ? 'Controlled production includes verified NSO banking indicators plus independently corroborated SBV customer-rate ranges. Rate ranges remain low–high ranges; no scalar average is fabricated.'
+      : bankingSynced
+        ? 'Controlled production now includes verified NSO banking indicators: Credit Growth YTD and Bank Funding Growth YTD. Canonical and Corroborated labels remain evidence-based; unpromoted indicators remain illustrative demo data.'
+        : 'Production observations are labeled by evidence status: verified official data as Canonical and independently matched data as Corroborated. Unpromoted indicators remain illustrative demo data.';
   }
 
   function overviewChartNote(id) {
@@ -199,6 +282,16 @@
     return window.Formatters?.unitValue?.(ind.unit, value, { compact }) ?? formatNumber(value, 2);
   }
 
+  function formatObservationValue(ind, row, compact = false) {
+    if (!row) return '—';
+    if (row._range && Number.isFinite(Number(row.range_low)) && Number.isFinite(Number(row.range_high))) {
+      const low = formatNumber(row.range_low, 1);
+      const high = formatNumber(row.range_high, 1);
+      return `${low}–${high}%${compact ? '' : ' p.a.'}`;
+    }
+    return formatValue(ind, row.value, compact);
+  }
+
   function formatPeriod(obs) {
     if (!obs) return '—';
     if (obs.period_type === 'month' && /^\d{4}-\d{2}$/.test(obs.period || '')) {
@@ -212,6 +305,12 @@
     const ind = indicator(id);
     const { current, previous } = latestPair(id);
     if (!current) return { label:'—', direction:'neutral' };
+    if (current._range) {
+      if (!previous) return { label:'Latest range', direction:'neutral' };
+      const changed = Number(current.range_low) !== Number(previous.range_low)
+        || Number(current.range_high) !== Number(previous.range_high);
+      return { label: changed ? 'Range updated' : 'No range change', direction:'neutral' };
+    }
     if (!previous) {
       return current?._data_layer === 'production'
         ? { label:'Latest only', direction:'neutral' }
@@ -251,7 +350,7 @@
     const { current } = latestPair(id); const delta = deltaInfo(id);
     return `<button class="macro-metric-card" type="button" data-macro-indicator-id="${esc(id)}">
       <div class="macro-metric-card__top"><span>${esc(ind.name)}</span><span class="source-tag">${esc(dataLayerBadge(ind, current))}</span></div>
-      <strong>${esc(formatValue(ind, current?.value, true))}</strong>
+      <strong>${esc(formatObservationValue(ind, current, true))}</strong>
       <div class="macro-metric-card__foot"><span class="macro-delta">${esc(delta.label)}</span><span>${esc(formatPeriod(current))}</span></div>
     </button>`;
   }
@@ -312,8 +411,25 @@
     if (node) node.innerHTML = html;
   }
 
+  function ratesSeries() {
+    const hasProductionRanges = productionState.indicatorIds.has('deposit-rate-vnd-6-12m-range')
+      && productionState.indicatorIds.has('lending-rate-vnd-average-range');
+    return hasProductionRanges ? PRODUCTION_RATE_SERIES : VIEW_SERIES.rates;
+  }
+
+  function seriesForView(view) {
+    return view === 'rates' ? ratesSeries() : (VIEW_SERIES[view] || []);
+  }
+
+  function defaultSeriesForView(view) {
+    return view === 'rates'
+      ? ratesSeries()[0]
+      : DEFAULT_SERIES[view];
+  }
+
   function keyIndicators() {
-    return ['usd-vnd-central-rate','sjc-gold-sell','deposit-rate-12m-average','lending-rate-average','credit-growth-ytd','bank-funding-growth-ytd','cpi-yoy'];
+    const rateIds = ratesSeries().slice(0, 2);
+    return ['usd-vnd-central-rate','sjc-gold-sell',...rateIds,'credit-growth-ytd','bank-funding-growth-ytd','cpi-yoy'];
   }
 
   function latestEventList(limit = 5) {
@@ -331,7 +447,7 @@
   function indicatorTable(ids) {
     const rows = ids.map(id => {
       const ind = indicator(id); const {current} = latestPair(id); const delta = deltaInfo(id);
-      return `<tr><td><button class="table-link" type="button" data-macro-indicator-id="${esc(id)}">${esc(ind?.name || id)}</button><span class="table-subtext">${esc(labelize(ind?.indicator_category))}</span></td><td class="numeric">${esc(formatValue(ind,current?.value))}</td><td class="numeric">${esc(delta.label)}</td><td>${esc(formatPeriod(current))}<span class="table-subtext">Published ${esc(App.formatDate(current?.published_at))}</span></td><td>${current ? sourceRef(current.source_id,{publishedAt:current.published_at,period:current.period,sourceUrl:current.source_url}) : '—'}</td></tr>`;
+      return `<tr><td><button class="table-link" type="button" data-macro-indicator-id="${esc(id)}">${esc(ind?.name || id)}</button><span class="table-subtext">${esc(labelize(ind?.indicator_category))}</span></td><td class="numeric">${esc(formatObservationValue(ind,current))}</td><td class="numeric">${esc(delta.label)}</td><td>${esc(formatPeriod(current))}<span class="table-subtext">Published ${esc(App.formatDate(current?.published_at))}</span></td><td>${current ? sourceRef(current.source_id,{publishedAt:current.published_at,period:current.period,sourceUrl:current.source_url}) : '—'}</td></tr>`;
     }).join('');
     return `<div class="table-wrap"><table class="data-table data-table--macro"><thead><tr><th>Indicator</th><th class="numeric">Current</th><th class="numeric">Change</th><th>Data Period</th><th>Source</th></tr></thead><tbody>${rows}</tbody></table></div>`;
   }
@@ -370,19 +486,19 @@
   }
 
   function seriesControls(view, selected) {
-    const ids = VIEW_SERIES[view] || [];
+    const ids = seriesForView(view);
     return `<div class="macro-series-toolbar"><label class="filter-field"><span>Indicator</span><select data-series-select>${ids.map(id=>`<option value="${esc(id)}"${id===selected?' selected':''}>${esc(indicator(id)?.name || id)}</option>`).join('')}</select></label><div class="macro-range-group" aria-label="Chart range">${['1M','3M','1Y','ALL'].map(range=>`<button class="macro-range-button${state.range===range?' is-active':''}" type="button" data-range="${range}">${range}</button>`).join('')}</div></div>`;
   }
 
   function recentObservationTable(id, limit = 12) {
     const ind = indicator(id);
-    const rows = [...observationsFor(id)].reverse().slice(0,limit).map(row => `<tr><td>${esc(formatPeriod(row))}<span class="table-subtext">${esc(row.period)}</span></td><td class="numeric">${esc(formatValue(ind,row.value))}</td><td>${esc(labelize(row.observation_status))}</td><td>${esc(App.formatDate(row.published_at))}</td><td>${sourceRef(row.source_id,{publishedAt:row.published_at,period:row.period,sourceUrl:row.source_url})}</td></tr>`).join('');
+    const rows = [...observationsFor(id)].reverse().slice(0,limit).map(row => `<tr><td>${esc(formatPeriod(row))}<span class="table-subtext">${esc(row.period)}</span></td><td class="numeric">${esc(formatObservationValue(ind,row))}</td><td>${esc(labelize(row.observation_status))}</td><td>${esc(App.formatDate(row.published_at))}</td><td>${sourceRef(row.source_id,{publishedAt:row.published_at,period:row.period,sourceUrl:row.source_url})}</td></tr>`).join('');
     return `<div class="table-wrap"><table class="data-table data-table--macro-history"><thead><tr><th>Data Period</th><th class="numeric">Value</th><th>Status</th><th>Published</th><th>Source</th></tr></thead><tbody>${rows}</tbody></table></div>`;
   }
 
   function renderSeriesView(view) {
-    const ids = VIEW_SERIES[view] || [];
-    let selected = ids.includes(state.series) ? state.series : DEFAULT_SERIES[view];
+    const ids = seriesForView(view);
+    let selected = ids.includes(state.series) ? state.series : defaultSeriesForView(view);
     if (!selected) selected = ids[0];
     const ind = indicator(selected); const rows = rangeRows(selected);
     const currentSourceRow = latestPair(selected).current;
@@ -402,6 +518,17 @@
 
   function renderChart(canvasId,id,rows) {
     const ind = indicator(id); if (!ind) return;
+    if (rows.some(row => row._range)) {
+      ChartTools.renderRangeSeries(canvasId, {
+        labels: rows.map(formatPeriod),
+        lowValues: rows.map(row => row.range_low),
+        highValues: rows.map(row => row.range_high),
+        lowLabel: localizedText('Lower bound'),
+        highLabel: localizedText('Upper bound'),
+        yFormatter: axisFormatter(ind)
+      });
+      return;
+    }
     ChartTools.renderTimeSeries(canvasId, {
       label: localizedText(ind.name),
       labels: rows.map(formatPeriod),
@@ -454,11 +581,11 @@
     const recent=[...observationsFor(id)].reverse().slice(0,6);
     const view=CATEGORY_VIEW[ind.indicator_category] || 'overview';
     return `<div class="drawer-entity-head"><span class="eyebrow">Macro Indicator</span><h2>${esc(ind.name)}</h2><p>${esc(labelize(ind.indicator_category))} · ${esc(labelize(ind.frequency))}</p></div>
-      <div class="drawer-metrics">${Components.compactMetric({label:'Current',value:formatValue(ind,current?.value),note:formatPeriod(current)})}${Components.compactMetric({label:'Previous',value:formatValue(ind,previous?.value),note:formatPeriod(previous)})}${Components.compactMetric({label:'Change',value:delta.label,note:'Previous available observation'})}${Components.compactMetric({label:'Source',value:window.Provenance?.label?.(current?.source_id) || labelize(current?.source_id),note:current ? `Published ${App.formatDate(current.published_at)}` : ''})}</div>
+      <div class="drawer-metrics">${Components.compactMetric({label:'Current',value:formatObservationValue(ind,current),note:formatPeriod(current)})}${Components.compactMetric({label:'Previous',value:formatObservationValue(ind,previous),note:formatPeriod(previous)})}${Components.compactMetric({label:'Change',value:delta.label,note:'Previous available observation'})}${Components.compactMetric({label:'Source',value:window.Provenance?.label?.(current?.source_id) || labelize(current?.source_id),note:current ? `Published ${App.formatDate(current.published_at)}` : ''})}</div>
       <div class="drawer-section"><h3>Definition</h3><p>${esc(ind.description)}</p></div>
       <div class="drawer-section"><h3>Methodology</h3><p>${esc(ind.methodology_note)}</p></div>
       <div class="drawer-section"><h3>Data Provenance</h3>${current ? `<div class="provenance-inline-row"><span class="source-tag">${esc(dataLayerBadge(ind,current))}</span>${sourceRef(current.source_id,{publishedAt:current.published_at,period:current.period,sourceUrl:current.source_url,methodology:ind.methodology_note})}<span class="muted-text">Current displayed observation · ${esc(formatPeriod(current))}</span></div>${corroborationProvenance(current)}` : '<p class="muted-text">No current observation source available.</p>'}</div>
-      <div class="drawer-section"><h3>Recent Observations</h3>${recent.map(row=>`<div class="drawer-list-row"><div><strong>${esc(formatPeriod(row))}</strong><span>${esc(row.period)} · ${esc(labelize(row.observation_status))}</span></div><div><strong>${esc(formatValue(ind,row.value))}</strong><span>${sourceRef(row.source_id,{publishedAt:row.published_at,period:row.period,sourceUrl:row.source_url})}</span></div></div>`).join('')}</div>
+      <div class="drawer-section"><h3>Recent Observations</h3>${recent.map(row=>`<div class="drawer-list-row"><div><strong>${esc(formatPeriod(row))}</strong><span>${esc(row.period)} · ${esc(labelize(row.observation_status))}</span></div><div><strong>${esc(formatObservationValue(ind,row))}</strong><span>${sourceRef(row.source_id,{publishedAt:row.published_at,period:row.period,sourceUrl:row.source_url})}</span></div></div>`).join('')}</div>
       <div class="drawer-section"><h3>Related Evidence</h3>${articles.length ? articles.map(item=>`<div class="drawer-list-row drawer-list-row--stack"><span>DEMO · ${esc(App.formatDate(item.published_at))} · ${esc(item.content_type)}</span><strong>${esc(item.title)}</strong></div>`).join('') : `<p class="muted-text">${current?._data_layer === 'production' ? 'No promoted evidence articles yet.' : 'No related articles.'}</p>`}</div>
       <div class="drawer-section"><a class="text-link" href="macro.html?view=${encodeURIComponent(view)}&series=${encodeURIComponent(id)}&range=1Y">Open historical series</a></div>`;
   }
