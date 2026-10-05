@@ -34,12 +34,19 @@ def logical_key(record: dict, fields: list[str]) -> tuple:
 
 
 def semantic_payload(record: dict) -> dict:
-    """Fields that define the canonical fact; fetch/promote timestamps are deliberately ignored."""
+    """Fields that define the canonical fact; fetch/promote timestamps are deliberately ignored.
+
+    For corroborated pool-level facts, the selected representative source is provenance,
+    not the fact itself. A later run may select another member of the same agreeing pool;
+    that must not create a false historical conflict when indicator/period/value are unchanged.
+    Verified direct-source observations keep source identity in the semantic comparison.
+    """
     keep = [
         "indicator_id", "period", "period_type", "data_date", "value", "unit",
-        "source_id", "source_url", "published_at", "evidence_status",
-        "methodology_note", "source_record_id", "observation_status"
+        "evidence_status", "observation_status"
     ]
+    if record.get("evidence_status") != "corroborated":
+        keep += ["source_id", "source_url", "published_at", "methodology_note", "source_record_id"]
     return {k: record.get(k) for k in keep}
 
 
@@ -136,12 +143,22 @@ def build_production(preview_dir: Path, processed_dir: Path, policy_path: Path):
                 "reason": "Indicator is outside Phase 4.2E production allowlist."
             })
             continue
-        if m.get("readiness_status") not in allowed_readiness or m.get("action") != "promote-canonical-preview":
+        readiness_status = m.get("readiness_status")
+        required_readiness = set(cfg.get("required_readiness_statuses", []))
+        if readiness_status not in allowed_readiness or m.get("action") != "promote-canonical-preview":
             held.append({
                 "indicator_id": indicator_id,
                 "period": preview.get("period"),
                 "action": "hold-readiness",
-                "reason": f"Readiness/action not allowed: {m.get('readiness_status')} / {m.get('action')}"
+                "reason": f"Readiness/action not allowed: {readiness_status} / {m.get('action')}"
+            })
+            continue
+        if required_readiness and readiness_status not in required_readiness:
+            held.append({
+                "indicator_id": indicator_id,
+                "period": preview.get("period"),
+                "action": "hold-indicator-readiness",
+                "reason": f"Indicator requires readiness in {sorted(required_readiness)}; got {readiness_status}."
             })
             continue
         if preview.get("source_id") not in set(cfg.get("allowed_sources", [])):
@@ -168,6 +185,18 @@ def build_production(preview_dir: Path, processed_dir: Path, policy_path: Path):
                 "reason": f"Expected period_type={cfg.get('required_period_type')}."
             })
             continue
+        min_sources = int(cfg.get("required_min_independent_sources", 0) or 0)
+        if min_sources:
+            corroboration_sources = list(dict.fromkeys(preview.get("corroboration_source_ids", []) or []))
+            corroboration_ids = list(dict.fromkeys(preview.get("corroboration_observation_ids", []) or []))
+            if len(corroboration_sources) < min_sources or len(corroboration_ids) < min_sources:
+                held.append({
+                    "indicator_id": indicator_id,
+                    "period": preview.get("period"),
+                    "action": "hold-corroboration-depth",
+                    "reason": f"Expected at least {min_sources} independent corroborating sources and observations."
+                })
+                continue
 
         prod = production_record(preview, promoted_at, run_id)
         key = logical_key(prod, key_fields)
@@ -277,7 +306,7 @@ def build_production(preview_dir: Path, processed_dir: Path, policy_path: Path):
         "unchanged": unchanged,
         "held": held,
         "notes": [
-            "Production output exists only in the workflow workspace/cache and review artifact in Phase 4.2E.",
+            "Production output remains a workflow artifact until it passes the separate manual repository persistence gate.",
             "No git commit/push occurs and the frontend remains disconnected from data/processed."
         ]
     }

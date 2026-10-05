@@ -251,14 +251,36 @@ def build_publish_readiness(observations: list[dict], generated_at: str):
         eligible = [r for r in rows if r.get("source_id") in fallback and r.get("evidence_status") not in {"disputed", "superseded"}]
         corroborated_group = []
         if eligible:
-            latest = sorted(eligible, key=_latest_key)[-1]
-            corroborated_group = [r for r in eligible if _same_observation(latest, r, tolerance)]
-            independent_sources = sorted({r.get("source_id") for r in corroborated_group if r.get("source_id")})
+            # Evaluate only the latest business period/date, then choose the largest
+            # agreement cluster. This prevents a single newly-fetched outlier from
+            # overriding two independent sources that agree with each other.
+            latest_business_period = max((r.get("data_date") or r.get("period") or "") for r in eligible)
+            latest_rows = [r for r in eligible if (r.get("data_date") or r.get("period") or "") == latest_business_period]
+            groups = []
+            for anchor in latest_rows:
+                group = [r for r in latest_rows if _same_observation(anchor, r, tolerance)]
+                sources = {r.get("source_id") for r in group if r.get("source_id")}
+                groups.append((len(sources), group))
+            groups.sort(key=lambda item: item[0], reverse=True)
+            corroborated_group = groups[0][1] if groups else []
+
+            source_rank = {sid: idx for idx, sid in enumerate(fallback)}
+            independent_sources = sorted(
+                {r.get("source_id") for r in corroborated_group if r.get("source_id")},
+                key=lambda sid: (source_rank.get(sid, 10_000), sid),
+            )
             if len(independent_sources) >= min_sources:
+                selected_source = independent_sources[0]
+                source_rows = [r for r in corroborated_group if r.get("source_id") == selected_source]
+                selected = sorted(source_rows, key=_latest_key)[-1]
+                ordered_evidence = sorted(
+                    corroborated_group,
+                    key=lambda r: (source_rank.get(r.get("source_id"), 10_000), r.get("source_id") or "", _latest_key(r)),
+                )
                 results.append({
                     "indicator_id": iid, "status": "ready-corroborated",
-                    "selected_observation_id": latest["id"],
-                    "evidence_observation_ids": [r["id"] for r in corroborated_group],
+                    "selected_observation_id": selected["id"],
+                    "evidence_observation_ids": [r["id"] for r in ordered_evidence],
                     "independent_sources": independent_sources,
                     "reason": f"{len(independent_sources)} independent fallback sources agree within tolerance {tolerance}.",
                 })

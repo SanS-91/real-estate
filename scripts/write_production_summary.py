@@ -16,7 +16,7 @@ print(f"- Source run: `{r.get('source_run_id')}`")
 print(f"- Prior records: **{r.get('prior_record_count', 0)}**")
 print(f"- Added: **{r.get('added_record_count', 0)}**")
 print(f"- Unchanged: **{r.get('unchanged_record_count', 0)}**")
-print(f"- Held by v1 policy: **{r.get('held_record_count', 0)}**")
+print(f"- Held by controlled policy: **{r.get('held_record_count', 0)}**")
 print(f"- Conflicts: **{r.get('conflict_count', 0)}**")
 print(f"- Final production records: **{r.get('final_record_count', 0)}**")
 print("- Repository publish: **false**")
@@ -30,7 +30,7 @@ if r.get("added"):
         print(f"| {x.get('indicator_id')} | {x.get('period')} | {x.get('value')} | {x.get('unit')} | {x.get('source_id')} |")
     print()
 if r.get("held"):
-    print("### Held by production v1 policy")
+    print("### Held by controlled production policy")
     print("| Indicator | Period | Action | Reason |")
     print("|---|---:|---|---|")
     for x in r["held"]:

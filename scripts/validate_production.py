@@ -37,7 +37,7 @@ def main():
     if payload.get("production_write") is not True:
         errors.append("observations.json production_write must be true")
     if payload.get("repository_publish") is not False or payload.get("frontend_publish") is not False:
-        errors.append("Phase 4.2E must keep repository_publish=false and frontend_publish=false")
+        errors.append("Controlled production must keep repository_publish=false and frontend_publish=false")
     if report.get("conflict_count") != 0:
         errors.append("promotion-run conflict_count must be zero")
     if report.get("final_record_count") != len(records):
@@ -69,6 +69,12 @@ def main():
                 errors.append(f"record {idx}: evidence status mismatch")
             if r.get("period_type") != cfg.get("required_period_type"):
                 errors.append(f"record {idx}: period type mismatch")
+            min_sources = int(cfg.get("required_min_independent_sources", 0) or 0)
+            if min_sources:
+                source_ids = list(dict.fromkeys(r.get("corroboration_source_ids", []) or []))
+                observation_ids = list(dict.fromkeys(r.get("corroboration_observation_ids", []) or []))
+                if len(source_ids) < min_sources or len(observation_ids) < min_sources:
+                    errors.append(f"record {idx}: insufficient corroboration provenance")
         if any(k.startswith("preview_") for k in r.keys()) or "preview_only" in r:
             errors.append(f"record {idx}: preview-only field leaked into production")
 

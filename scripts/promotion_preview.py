@@ -38,28 +38,59 @@ def index_by_id(records):
     return out
 
 
-def canonicalize(candidate: dict, preview_generated_at: str, policy: dict) -> dict:
+def canonical_indicator_id(source_indicator_id: str, normalization_cfg: dict) -> str:
+    entry = normalization_cfg.get("mappings", {}).get(source_indicator_id)
+    if not entry:
+        return source_indicator_id
+    if isinstance(entry, str):
+        return entry
+    return entry.get("canonical_indicator_id") or source_indicator_id
+
+
+def normalize_record(candidate: dict, source_indicator_id: str, canonical_id: str) -> dict:
     out = dict(candidate)
-    source_id = candidate["id"]
-    # Stable provenance: production ID remains the candidate/source record ID for this MVP.
-    # Future migration can introduce a separate warehouse ID without losing this link.
+    out["indicator_id"] = canonical_id
+    if source_indicator_id != canonical_id:
+        out["source_indicator_id"] = source_indicator_id
+    return out
+
+
+def canonicalize(candidate: dict, preview_generated_at: str, policy: dict, readiness_item: dict,
+                 source_indicator_id: str, canonical_id: str) -> dict:
+    out = normalize_record(candidate, source_indicator_id, canonical_id)
+    source_record_id = candidate["id"]
     if policy.get("preserve_candidate_ids_as_source_record_id", True):
-        out["source_record_id"] = source_id
+        out["source_record_id"] = source_record_id
+
+    readiness_status = readiness_item.get("status")
+    if readiness_status == "ready-corroborated":
+        independent_sources = list(dict.fromkeys(readiness_item.get("independent_sources", []) or []))
+        evidence_ids = list(dict.fromkeys(readiness_item.get("evidence_observation_ids", []) or []))
+        if len(independent_sources) < 2 or len(evidence_ids) < 2:
+            raise ValueError(f"{source_indicator_id}: ready-corroborated requires at least two independent sources/evidence records")
+        # The selected source observation may itself be marked 'reported'. The promoted
+        # preview represents the pool-level evidence conclusion, so its evidence status
+        # is upgraded to 'corroborated' while preserving all source-level provenance.
+        out["evidence_status"] = "corroborated"
+        out["corroboration_source_ids"] = independent_sources
+        out["corroboration_observation_ids"] = evidence_ids
+        out["corroboration_reason"] = readiness_item.get("reason")
+
     out["observation_status"] = policy.get("canonical_observation_status", "final")
     out["preview_promoted_at"] = preview_generated_at
     out["preview_only"] = True
     return out
 
 
-def evidence_copy(candidate: dict, preview_generated_at: str) -> dict:
-    out = dict(candidate)
+def evidence_copy(candidate: dict, preview_generated_at: str, source_indicator_id: str, canonical_id: str) -> dict:
+    out = normalize_record(candidate, source_indicator_id, canonical_id)
     out["source_record_id"] = candidate["id"]
     out["preview_reviewed_at"] = preview_generated_at
     out["preview_only"] = True
     return out
 
 
-def build_preview(candidate_dir: Path, output_dir: Path, policy_path: Path, mapping_path: Path):
+def build_preview(candidate_dir: Path, output_dir: Path, policy_path: Path, mapping_path: Path, normalization_path: Path):
     policy = read_json(policy_path)
     if policy.get("mode") != "dry-run-only" or policy.get("production_write") is not False:
         raise ValueError("Safety violation: promotion preview must remain dry-run-only with production_write=false")
@@ -68,6 +99,7 @@ def build_preview(candidate_dir: Path, output_dir: Path, policy_path: Path, mapp
     readiness_payload = read_json(candidate_dir / "publish-readiness.json")
     run_report = read_json(candidate_dir / "run-report.json")
     mapping_cfg = read_json(mapping_path)
+    normalization_cfg = read_json(normalization_path)
 
     observations = observations_payload.get("data", [])
     by_id = index_by_id(observations)
@@ -84,30 +116,31 @@ def build_preview(candidate_dir: Path, output_dir: Path, policy_path: Path, mapp
     seen_selected = set()
 
     for item in readiness:
-        iid = item.get("indicator_id")
+        source_iid = item.get("indicator_id")
+        iid = canonical_indicator_id(source_iid, normalization_cfg)
         status = item.get("status")
         selected_id = item.get("selected_observation_id")
         evidence_ids = item.get("evidence_observation_ids", []) or []
 
         if status in canonical_statuses:
             if not selected_id:
-                raise ValueError(f"{iid}: {status} without selected_observation_id")
+                raise ValueError(f"{source_iid}: {status} without selected_observation_id")
             if selected_id not in by_id:
-                raise ValueError(f"{iid}: selected observation {selected_id} not found in candidate observations")
+                raise ValueError(f"{source_iid}: selected observation {selected_id} not found in candidate observations")
             if selected_id in seen_selected:
                 raise ValueError(f"Observation selected more than once: {selected_id}")
             seen_selected.add(selected_id)
-            row = canonicalize(by_id[selected_id], preview_generated_at, policy)
+            row = canonicalize(by_id[selected_id], preview_generated_at, policy, item, source_iid, iid)
             canonical.append(row)
             action = "promote-canonical-preview"
-            selected = by_id[selected_id]
+            selected = row
         elif status in evidence_statuses:
             for eid in evidence_ids:
                 if eid not in by_id:
-                    raise ValueError(f"{iid}: evidence observation {eid} not found")
-                evidence.append(evidence_copy(by_id[eid], preview_generated_at))
+                    raise ValueError(f"{source_iid}: evidence observation {eid} not found")
+                evidence.append(evidence_copy(by_id[eid], preview_generated_at, source_iid, iid))
             action = "hold-evidence"
-            selected = by_id[evidence_ids[0]] if evidence_ids else None
+            selected = normalize_record(by_id[evidence_ids[0]], source_iid, iid) if evidence_ids else None
         elif status in missing_statuses:
             action = "hold-missing"
             selected = None
@@ -118,30 +151,31 @@ def build_preview(candidate_dir: Path, output_dir: Path, policy_path: Path, mapp
         mapping = mapping_cfg.get("mappings", {}).get(iid, {"frontend_indicator_id": None, "status": "unmapped"})
         manifest_rows.append({
             "indicator_id": iid,
+            "source_indicator_id": source_iid if source_iid != iid else None,
             "readiness_status": status,
             "action": action,
             "selected_observation_id": selected_id,
             "evidence_observation_ids": evidence_ids,
+            "independent_sources": item.get("independent_sources", []) or [],
             "reason": item.get("reason"),
             "value": selected.get("value") if selected else None,
             "unit": selected.get("unit") if selected else None,
             "period": selected.get("period") if selected else None,
             "source_id": selected.get("source_id") if selected else None,
+            "evidence_status": selected.get("evidence_status") if selected else None,
             "frontend_indicator_id": mapping.get("frontend_indicator_id"),
             "frontend_compatibility": mapping.get("status", "unmapped")
         })
 
-    # Ensure no evidence record sneaks into canonical lane unless explicitly selected by readiness.
     canonical_ids = {x["id"] for x in canonical}
     evidence = [x for x in evidence if x["id"] not in canonical_ids]
 
-    # Deterministic ordering for clean diffs.
     canonical.sort(key=lambda r: (r.get("indicator_id", ""), r.get("period") or "", r.get("id", "")))
     evidence.sort(key=lambda r: (r.get("indicator_id", ""), r.get("period") or "", r.get("id", "")))
     manifest_rows.sort(key=lambda r: r.get("indicator_id", ""))
 
     meta = {
-        "schema_version": 1,
+        "schema_version": 2,
         "mode": "dry-run-promotion-preview",
         "production_write": False,
         "source_run_id": run_report.get("run_id"),
@@ -151,15 +185,18 @@ def build_preview(candidate_dir: Path, output_dir: Path, policy_path: Path, mapp
         "canonical_preview_count": len(canonical),
         "evidence_preview_count": len(evidence),
         "frontend_baseline": mapping_cfg.get("frontend_baseline"),
+        "indicator_normalization_schema_version": normalization_cfg.get("schema_version"),
         "notes": [
             "candidate_generated_at is inherited from the collector run metadata and is not treated as completion time.",
             "preview_generated_at is the completion time for this dry-run preview.",
+            "Source-layer indicator IDs may be normalized before production; source_indicator_id preserves the original collector ID.",
+            "ready-corroborated observations carry pool-level evidence_status=corroborated plus independent source provenance.",
             "No data/processed production path is read or written by this tool."
         ]
     }
 
     canonical_payload = {
-        "schema_version": 1,
+        "schema_version": 2,
         "generated_at": preview_generated_at,
         "record_count": len(canonical),
         "preview_only": True,
@@ -167,7 +204,7 @@ def build_preview(candidate_dir: Path, output_dir: Path, policy_path: Path, mapp
         "data": canonical,
     }
     evidence_payload = {
-        "schema_version": 1,
+        "schema_version": 2,
         "generated_at": preview_generated_at,
         "record_count": len(evidence),
         "preview_only": True,
@@ -175,14 +212,13 @@ def build_preview(candidate_dir: Path, output_dir: Path, policy_path: Path, mapp
         "data": evidence,
     }
     manifest = {
-        "schema_version": 1,
+        "schema_version": 2,
         "generated_at": preview_generated_at,
         "production_write": False,
         "source_run_id": run_report.get("run_id"),
         "data": manifest_rows,
     }
 
-    # Atomic write into staging only.
     output_dir.parent.mkdir(parents=True, exist_ok=True)
     tmp_parent = output_dir.parent / ".preview-tmp"
     tmp_parent.mkdir(parents=True, exist_ok=True)
@@ -194,8 +230,8 @@ def build_preview(candidate_dir: Path, output_dir: Path, policy_path: Path, mapp
         write_json(build_dir / "preview-meta.json", meta)
         with (build_dir / "promotion-summary.csv").open("w", encoding="utf-8-sig", newline="") as f:
             fields = [
-                "indicator_id", "readiness_status", "action", "value", "unit", "period", "source_id",
-                "frontend_indicator_id", "frontend_compatibility", "reason"
+                "indicator_id", "source_indicator_id", "readiness_status", "action", "value", "unit", "period", "source_id",
+                "evidence_status", "frontend_indicator_id", "frontend_compatibility", "reason"
             ]
             w = csv.DictWriter(f, fieldnames=fields)
             w.writeheader()
@@ -222,6 +258,7 @@ def main():
     ap.add_argument("--output-dir", default="data/staging/macro-preview")
     ap.add_argument("--policy", default="config/promotion_policy.json")
     ap.add_argument("--frontend-map", default="config/frontend_indicator_map.json")
+    ap.add_argument("--indicator-normalization", default="config/indicator_normalization.json")
     args = ap.parse_args()
 
     def resolve_arg(value: str) -> Path:
@@ -232,8 +269,8 @@ def main():
     output_dir = resolve_arg(args.output_dir)
     policy_path = resolve_arg(args.policy)
     mapping_path = resolve_arg(args.frontend_map)
+    normalization_path = resolve_arg(args.indicator_normalization)
 
-    # Hard safety: default/relative output must stay in data/staging and production processed is forbidden.
     resolved_out = output_dir.resolve()
     allowed_root = (ROOT / "data/staging").resolve()
     processed_root = (ROOT / "data/processed").resolve()
@@ -242,7 +279,7 @@ def main():
     if allowed_root != resolved_out and allowed_root not in resolved_out.parents:
         raise SystemExit(f"Safety violation: output must remain under {allowed_root}")
 
-    meta, manifest = build_preview(candidate_dir, output_dir, policy_path, mapping_path)
+    meta, manifest = build_preview(candidate_dir, output_dir, policy_path, mapping_path, normalization_path)
     print(json.dumps({"meta": meta, "manifest": manifest}, ensure_ascii=False, indent=2))
 
 

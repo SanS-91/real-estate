@@ -42,7 +42,7 @@ def main():
     if payload.get("repository_publish") is not True:
         errors.append("repository observations must set repository_publish=true")
     if payload.get("frontend_publish") is not False:
-        errors.append("Phase 4.2F must keep frontend_publish=false")
+        errors.append("Repository persistence must keep frontend_publish=false")
     if payload.get("repository_persistence_mode") != persistence_policy.get("mode"):
         errors.append("repository_persistence_mode mismatch")
     if meta.get("repository_publish") is not True or meta.get("frontend_publish") is not False:
@@ -81,6 +81,12 @@ def main():
                 errors.append(f"record {idx}: evidence status mismatch")
             if r.get("period_type") != cfg.get("required_period_type"):
                 errors.append(f"record {idx}: period type mismatch")
+            min_sources = int(cfg.get("required_min_independent_sources", 0) or 0)
+            if min_sources:
+                source_ids = list(dict.fromkeys(r.get("corroboration_source_ids", []) or []))
+                observation_ids = list(dict.fromkeys(r.get("corroboration_observation_ids", []) or []))
+                if len(source_ids) < min_sources or len(observation_ids) < min_sources:
+                    errors.append(f"record {idx}: insufficient corroboration provenance")
         if r.get("observation_status") != "final":
             errors.append(f"record {idx}: observation_status must be final")
         if any(k.startswith("preview_") for k in r) or "preview_only" in r:
