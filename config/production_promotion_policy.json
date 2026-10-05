@@ -74,6 +74,26 @@
       "required_evidence_status": "corroborated",
       "required_period_type": "day",
       "required_min_independent_sources": 2
+    },
+    "credit-growth-ytd": {
+      "allowed_sources": [
+        "nso-vietnam"
+      ],
+      "required_readiness_statuses": [
+        "ready-canonical"
+      ],
+      "required_evidence_status": "verified",
+      "required_period_type": "month"
+    },
+    "bank-funding-growth-ytd": {
+      "allowed_sources": [
+        "nso-vietnam"
+      ],
+      "required_readiness_statuses": [
+        "ready-canonical"
+      ],
+      "required_evidence_status": "verified",
+      "required_period_type": "month"
     }
   },
   "logical_key_fields": [
@@ -87,9 +107,9 @@
   "rollback_snapshot": true,
   "max_snapshots": 10,
   "notes": [
-    "Phase 4.2H.2 expands the controlled production allowlist to corroborated FX and SJC gold observations.",
-    "CPI still requires ready-canonical + verified NSO evidence.",
-    "FX and Gold require ready-corroborated + at least two independent agreeing sources.",
+    "Phase 4.2I.3 expands the controlled production allowlist to verified official NSO banking-liquidity observations.",
+    "CPI, credit growth, and bank funding require ready-canonical + verified NSO evidence.",
+    "FX and Gold continue to require ready-corroborated + at least two independent agreeing sources.",
     "Repository persistence remains a separate manual gate; no scheduled collector can push to main."
   ]
 }
