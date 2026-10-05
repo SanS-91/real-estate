@@ -511,6 +511,7 @@ button, a, input, select { outline-offset: 3px; }
   grid-template-columns: repeat(6, minmax(0, 1fr));
   gap: 12px;
 }
+.metric-grid--controlled { grid-template-columns: repeat(4, minmax(0, 1fr)); }
 .metric-card { padding: 15px; min-width: 0; }
 .metric-card__topline,
 .metric-card__footer {
