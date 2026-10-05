@@ -114,7 +114,9 @@
       "preferred_source_ids": [
         "sbv-vietnam"
       ],
-      "fallback_source_ids": [],
+      "fallback_source_ids": [
+        "sbv-vietnam-archive"
+      ],
       "canonical_evidence_status": [
         "verified"
       ],
@@ -130,7 +132,9 @@
       "preferred_source_ids": [
         "sbv-vietnam"
       ],
-      "fallback_source_ids": [],
+      "fallback_source_ids": [
+        "vna-vietnamplus"
+      ],
       "canonical_evidence_status": [
         "verified"
       ],

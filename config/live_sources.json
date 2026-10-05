@@ -362,6 +362,45 @@
       "pool_ids": [
         "interbank-market"
       ]
+    },
+    {
+      "key": "sbv-policy-archive",
+      "source_id": "sbv-vietnam-archive",
+      "module": "collectors.sbv_policy_archive",
+      "parser": "parse_sbv_policy_archive",
+      "fetch_url": "https://www.sbv.gov.vn/documents/d/sbv_portal/590044",
+      "enabled": true,
+      "optional": true,
+      "min_records": 3,
+      "max_records": 3,
+      "timeout_seconds": 45,
+      "max_bytes": 15000000,
+      "freshness_hours": 50000,
+      "schedule_class": "event-driven-policy-archive-fallback",
+      "canonical_eligible": false,
+      "pool_ids": [
+        "policy-rates"
+      ]
+    },
+    {
+      "key": "vietnamplus-interbank-rates",
+      "source_id": "vna-vietnamplus",
+      "module": "collectors.vietnamplus_interbank_rates",
+      "parser": "parse_vietnamplus_interbank_rates",
+      "discoverer": "discover_vietnamplus_interbank_rates_url",
+      "landing_url": "https://www.vietnamplus.vn/ngan-hang-tag708050.vnp",
+      "enabled": true,
+      "optional": true,
+      "min_records": 1,
+      "max_records": 1,
+      "timeout_seconds": 30,
+      "max_bytes": 5000000,
+      "freshness_hours": 2000,
+      "schedule_class": "business-daily-fallback",
+      "canonical_eligible": false,
+      "pool_ids": [
+        "interbank-market"
+      ]
     }
   ]
 }

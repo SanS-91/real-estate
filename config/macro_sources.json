@@ -122,7 +122,9 @@
         "fast-update",
         "official-corroboration",
         "macro-fallback",
-        "customer-rates"
+        "customer-rates",
+        "interbank-market",
+        "liquidity-fallback"
       ],
       "base_url": "https://www.vietnamplus.vn/",
       "collection_method": "html",
@@ -277,6 +279,29 @@
         "methodology_transparency": 4
       },
       "publish_policy": "Fallback evidence for monthly customer-rate ranges explicitly reported as released by SBV. Keep as reported evidence; do not treat as direct SBV verification."
+    },
+    {
+      "id": "sbv-vietnam-archive",
+      "name": "State Bank of Vietnam (SBV) Archive",
+      "tier": "T1-official-archive",
+      "role": [
+        "official-archive",
+        "policy-history",
+        "fallback-evidence"
+      ],
+      "base_url": "https://www.sbv.gov.vn/",
+      "collection_method": "document/pdf",
+      "frequency": "event-driven-archive",
+      "trust": {
+        "authority": 5,
+        "freshness": 2,
+        "granularity": 5,
+        "independence": 5,
+        "consistency": 5,
+        "accessibility": 3,
+        "methodology_transparency": 5
+      },
+      "publish_policy": "Official historical SBV evidence only. Do not treat an archive snapshot as a fresh current-policy verification without newer direct capture or independent current corroboration."
     }
   ]
 }
