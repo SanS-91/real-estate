@@ -30,6 +30,7 @@ FIXTURE_MAP = {
     "vietnamnet-gold": "vietnamnet_gold_sample.html",
     "nso-banking-activity": "nso_banking_activity_sample.html",
     "sbv-customer-rates": "sbv_customer_rates_sample.html",
+    "vnba-customer-rates": "vnba_customer_rates_sample.html",
 }
 
 
