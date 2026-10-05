@@ -1,6 +1,6 @@
 {
   "schema_version": 2,
-  "frontend_baseline": "v7.2.1+4.2I4",
+  "frontend_baseline": "v7.2.1+4.2I5",
   "mappings": {
     "cpi-yoy": {
       "frontend_indicator_id": "cpi-yoy",
