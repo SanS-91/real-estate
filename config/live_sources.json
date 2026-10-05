@@ -243,7 +243,6 @@
       "module": "collectors.nso_banking_activity",
       "parser": "parse_nso_banking_activity",
       "discoverer": "discover_nso_banking_activity_url",
-      "landing_url": "https://www.nso.gov.vn/tin-tuc-thong-ke/",
       "enabled": true,
       "optional": true,
       "min_records": 2,
@@ -255,6 +254,11 @@
       "canonical_eligible": true,
       "pool_ids": [
         "banking-liquidity"
+      ],
+      "landing_urls": [
+        "https://www.nso.gov.vn/bai-top/",
+        "https://www.nso.gov.vn/du-lieu-va-so-lieu-thong-ke/",
+        "https://www.nso.gov.vn/tin-tuc-thong-ke/"
       ]
     }
   ]

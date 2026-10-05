@@ -39,8 +39,8 @@
       "status": "compatible"
     },
     "bank-funding-growth-ytd": {
-      "frontend_indicator_id": null,
-      "status": "frontend-indicator-missing"
+      "frontend_indicator_id": "bank-funding-growth-ytd",
+      "status": "compatible"
     }
   }
 }
