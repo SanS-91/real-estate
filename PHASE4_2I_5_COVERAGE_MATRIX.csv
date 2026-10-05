@@ -1,0 +1,9 @@
+﻿Indicator,Value,Unit,Period,Evidence UI,Primary source,Macro Overview,Macro Detail,Home Snapshot,History policy,Status
+usd-vnd-central-rate,25643.0,vnd-per-usd,2026-10-05,Corroborated,VietnamPlus / Vietnam News Agency,Overview,FX,Yes,Production only; no synthetic demo backfill,PASS
+sjc-gold-buy,140500000.0,vnd-per-tael,2026-10-05,Corroborated,Báo Nghệ An Gold Tracker,No — detail only,Gold,No — intentional,Production only; no synthetic demo backfill,PASS
+sjc-gold-sell,143500000.0,vnd-per-tael,2026-10-05,Corroborated,Báo Nghệ An Gold Tracker,Overview,Gold,Yes,Production only; no synthetic demo backfill,PASS
+credit-growth-ytd,10.89,percent,2026-09,Canonical,National Statistics Office of Vietnam (NSO),Overview,Liquidity,Yes,Production only; no synthetic demo backfill,PASS
+bank-funding-growth-ytd,9.78,percent,2026-09,Canonical,National Statistics Office of Vietnam (NSO),Overview,Liquidity,Yes,Production only; no synthetic demo backfill,PASS
+cpi-yoy,5.08,percent,2026-09,Canonical,National Statistics Office of Vietnam (NSO),Overview,Inflation,Yes,Production only; no synthetic demo backfill,PASS
+cpi-mom,0.62,percent,2026-09,Canonical,National Statistics Office of Vietnam (NSO),No — detail only,Inflation,No — intentional,Production only; no synthetic demo backfill,PASS
+core-cpi-yoy,4.45,percent,2026-09,Canonical,National Statistics Office of Vietnam (NSO),No — detail only,Inflation,No — intentional,Production only; no synthetic demo backfill,PASS
