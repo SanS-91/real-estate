@@ -25,16 +25,16 @@
       "id": "deposit-demo",
       "label": "12M Deposit Rate",
       "display_value": "5.3% p.a.",
-      "change_label": "+0.1 ppt",
+      "change_label": "+0.05 ppt",
       "change_direction": "up",
       "period_label": "Illustrative average",
       "source": "Demo"
     },
     {
       "id": "lending-demo",
-      "label": "Lending Rate",
+      "label": "Average Lending Rate",
       "display_value": "8.1% p.a.",
-      "change_label": "Stable",
+      "change_label": "0.00 ppt",
       "change_direction": "neutral",
       "period_label": "Illustrative average",
       "source": "Demo"
