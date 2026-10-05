@@ -48,7 +48,7 @@ def main():
 
     fmap = json.loads((ROOT / "config/frontend_indicator_map.json").read_text(encoding="utf-8"))["mappings"]
     assert fmap["credit-growth-ytd"]["status"] == "compatible"
-    assert fmap["bank-funding-growth-ytd"]["status"] == "frontend-indicator-missing"
+    assert fmap["bank-funding-growth-ytd"]["status"] == "compatible"
 
     print("Phase 4.2I.1 NSO banking-activity tests passed")
 
