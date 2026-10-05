@@ -71,7 +71,7 @@ def main():
     assert 'localization-dynamic.js?v=4.2J3' in index
 
     mapping = json.loads((ROOT / 'config/frontend_indicator_map.json').read_text(encoding='utf-8'))
-    assert mapping['frontend_baseline'] == 'v7.2.1+4.2J3'
+    assert mapping['frontend_baseline'] == 'v7.2.1+4.2J3.2+4.2K1'
     for iid in EXPECTED:
         assert iid in mapping['mappings']
 

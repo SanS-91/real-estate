@@ -171,6 +171,16 @@ def fetch_source(source_cfg: dict, run_id: str, fixture_mode: bool):
         if landing_meta is not None:
             landing_meta = dict(landing_meta)
             landing_meta["attempts"] = attempts
+        elif target_url:
+            # Some modern listing/tag pages render article links client-side or
+            # vary their server HTML by bot/browser. If the source explicitly
+            # configures a known detail fetch_url, preserve discovery attempts
+            # for diagnostics and use that URL as a controlled fallback.
+            landing_meta = {
+                "attempts": attempts,
+                "discovery_fallback_url": target_url,
+                "discovery_fallback_used": True,
+            }
         else:
             attempted = ", ".join(x.get("url", "") for x in attempts) or ", ".join(landing_urls)
             raise ValueError(f"Discovery returned no detail URL from configured landing pages: {attempted}")

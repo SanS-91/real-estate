@@ -46,6 +46,20 @@ def test_workflow_has_fallback_gate():
     assert 'policy-liquidity-fallback' in wf
     assert '--source sbv-policy-archive' in wf
     assert '--source vietnamplus-interbank-rates' in wf
+    # Both sources must be passed to one candidate_pipeline invocation so the
+    # second run cannot overwrite source-health/run-report from the first.
+    block=wf.split('if [ "$SOURCE" = "policy-liquidity-fallback" ]; then',1)[1].split('elif [ "$SOURCE" = "policy-liquidity-discovery" ]; then',1)[0]
+    assert block.count('python scripts/candidate_pipeline.py') == 1
+
+
+def test_vietnamplus_has_controlled_detail_fallback():
+    live=json.loads((ROOT/'config/live_sources.json').read_text(encoding='utf-8'))['sources']
+    cfg=next(x for x in live if x['key']=='vietnamplus-interbank-rates')
+    assert cfg['discoverer']=='discover_vietnamplus_interbank_rates_url'
+    assert cfg['landing_url'].startswith('https://www.vietnamplus.vn/')
+    assert cfg['fetch_url'].endswith('post1133237.vnp')
+    pipeline=(ROOT/'scripts/candidate_pipeline.py').read_text(encoding='utf-8')
+    assert '"discovery_fallback_used": True' in pipeline
 
 if __name__=='__main__':
-    test_policy_archive_parser(); test_vietnamplus_interbank_parser_and_discovery(); test_pool_fallback_policy(); test_workflow_has_fallback_gate(); print('Phase 4.2K.1.1 fallback tests passed.')
+    test_policy_archive_parser(); test_vietnamplus_interbank_parser_and_discovery(); test_pool_fallback_policy(); test_workflow_has_fallback_gate(); test_vietnamplus_has_controlled_detail_fallback(); print('Phase 4.2K.1.1 fallback tests passed.')

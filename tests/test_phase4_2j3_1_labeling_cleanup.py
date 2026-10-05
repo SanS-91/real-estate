@@ -13,8 +13,8 @@ def main():
     assert "'Historical series': 'Chuỗi lịch sử'" in loc
     assert "'Value': 'Giá trị'" in loc
     assert "các biên lãi suất khách hàng do NHNN công bố được đối chiếu qua các nguồn độc lập" in loc
-    assert "macro.js?v=4.2J3.1" in html
-    assert "localization-dynamic.js?v=4.2J3.1" in html
+    assert "macro.js?v=4.2J3.2" in html
+    assert "localization-dynamic.js?v=4.2J3.2" in html
 
     print("Phase 4.2J.3.1 labeling/localization cleanup tests PASS")
 

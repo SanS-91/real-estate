@@ -400,7 +400,9 @@
       "canonical_eligible": false,
       "pool_ids": [
         "interbank-market"
-      ]
+      ],
+      "fetch_url": "https://www.vietnamplus.vn/lai-suat-lien-ngan-hang-giam-manh-thanh-khoan-tiep-tuc-doi-dao-post1133237.vnp",
+      "discovery_fallback_reason": "Use the latest known accessible VietnamPlus/VNA interbank detail URL when tag-page discovery exposes no usable anchor to the non-browser collector."
     }
   ]
 }
