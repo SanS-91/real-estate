@@ -28,6 +28,7 @@ FIXTURE_MAP = {
     "baonghean-gold": "baonghean_gold_sample.html",
     "banking-times-central-rate": "thoibaonganhang_central_rate_sample.html",
     "vietnamnet-gold": "vietnamnet_gold_sample.html",
+    "nso-banking-activity": "nso_banking_activity_sample.html",
 }
 
 
