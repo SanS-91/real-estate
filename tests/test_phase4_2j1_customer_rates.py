@@ -50,14 +50,23 @@ def main():
     assert src['min_records'] == 5 and src['max_records'] == 5
 
     prod = json.loads((ROOT/'config/production_promotion_policy.json').read_text(encoding='utf-8'))
-    # Phase 4.2J.1 is discovery/candidate only. Production remains a separate gate.
-    for iid in pool['indicator_ids']:
-        assert iid not in prod['allowed_indicators']
+    range_ids = [
+        'deposit-rate-vnd-6-12m-low',
+        'deposit-rate-vnd-6-12m-high',
+        'lending-rate-vnd-average-low',
+        'lending-rate-vnd-average-high',
+    ]
+    for iid in range_ids:
+        assert prod['allowed_indicators'][iid]['required_readiness_statuses'] == ['ready-corroborated']
+        assert prod['allowed_indicators'][iid]['required_evidence_status'] == 'corroborated'
+    assert 'priority-short-term-lending-rate-vnd' not in prod['allowed_indicators']
 
     fmap = json.loads((ROOT/'config/frontend_indicator_map.json').read_text(encoding='utf-8'))
-    for iid in pool['indicator_ids']:
-        assert fmap['mappings'][iid]['frontend_indicator_id'] is None
-        assert fmap['mappings'][iid]['status'] == 'range-component-not-published'
+    assert fmap['mappings']['deposit-rate-vnd-6-12m-low']['frontend_indicator_id'] == 'deposit-rate-vnd-6-12m-range'
+    assert fmap['mappings']['deposit-rate-vnd-6-12m-high']['frontend_indicator_id'] == 'deposit-rate-vnd-6-12m-range'
+    assert fmap['mappings']['lending-rate-vnd-average-low']['frontend_indicator_id'] == 'lending-rate-vnd-average-range'
+    assert fmap['mappings']['lending-rate-vnd-average-high']['frontend_indicator_id'] == 'lending-rate-vnd-average-range'
+    assert fmap['mappings']['priority-short-term-lending-rate-vnd']['frontend_indicator_id'] is None
 
     # Critical methodology guardrail: do not alias the official range to old demo scalars.
     assert 'deposit-rate-12m-average' not in pool['indicator_ids']

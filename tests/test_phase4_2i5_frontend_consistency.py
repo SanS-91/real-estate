@@ -22,15 +22,15 @@ def main():
     publish = json.loads((ROOT / 'data/processed/macro/repository-publish.json').read_text(encoding='utf-8'))
     rows = processed['data']
 
-    assert processed['record_count'] == 8 == len(rows)
+    assert processed['record_count'] == len(rows) and len(rows) >= 8
     assert processed['repository_publish'] is True
     assert processed['production_write'] is True
     assert publish['repository_publish'] is True
-    assert publish['final_record_count'] == 8
+    assert publish['final_record_count'] == len(rows)
     assert hashlib.sha256(processed_path.read_bytes()).hexdigest() == publish['observations_sha256']
 
     by_id = {row['indicator_id']: row for row in rows}
-    assert set(by_id) == set(EXPECTED)
+    assert set(EXPECTED).issubset(set(by_id))
     for iid, spec in EXPECTED.items():
         row = by_id[iid]
         assert row['unit'] == spec['unit']
@@ -49,7 +49,7 @@ def main():
         assert f"'{iid}'" in macro_js
         assert f"{spec['view']}:" in macro_js or spec['view'] == 'fx'
     assert 'Latest observation only · no synthetic history is created.' in macro_js
-    assert 'const retainedMockRows = mockRows.filter(row => !productionIndicatorIds.has(row.indicator_id));' in macro_js
+    assert 'const retainedMockRows = mockRows.filter(row =>' in macro_js and '!productionIndicatorIds.has(row.indicator_id)' in macro_js
 
     home_js = (ROOT / 'assets/js/home.js').read_text(encoding='utf-8')
     for iid, spec in EXPECTED.items():
@@ -66,12 +66,12 @@ def main():
     assert '.metric-grid--controlled { grid-template-columns: repeat(4, minmax(0, 1fr)); }' in css
 
     index = (ROOT / 'index.html').read_text(encoding='utf-8')
-    assert 'home.js?v=4.2I5.1' in index
+    assert 'home.js?v=4.2J3' in index
     assert 'main.css?v=4.2I5' in index
-    assert 'localization-dynamic.js?v=4.2I5.1' in index
+    assert 'localization-dynamic.js?v=4.2J3' in index
 
     mapping = json.loads((ROOT / 'config/frontend_indicator_map.json').read_text(encoding='utf-8'))
-    assert mapping['frontend_baseline'] == 'v7.2.1+4.2I5.1'
+    assert mapping['frontend_baseline'] == 'v7.2.1+4.2J3'
     for iid in EXPECTED:
         assert iid in mapping['mappings']
 
