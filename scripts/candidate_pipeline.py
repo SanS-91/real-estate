@@ -29,6 +29,7 @@ FIXTURE_MAP = {
     "banking-times-central-rate": "thoibaonganhang_central_rate_sample.html",
     "vietnamnet-gold": "vietnamnet_gold_sample.html",
     "nso-banking-activity": "nso_banking_activity_sample.html",
+    "sbv-customer-rates": "sbv_customer_rates_sample.html",
 }
 
 
@@ -178,6 +179,36 @@ def fetch_source(source_cfg: dict, run_id: str, fixture_mode: bool):
         session=session,
     )
     (raw_root / "detail.html").write_text(fr.text, encoding="utf-8")
+
+    # Some official releases expose the data in an attached PDF rather than the
+    # landing/detail HTML. Follow one explicitly configured attachment hop while
+    # keeping the same source provenance and raw-review trail.
+    if source_cfg.get("attachment_discoverer"):
+        attachment_discover = getattr(module, source_cfg["attachment_discoverer"])
+        attachment_url = attachment_discover(fr.text, fr.url)
+        if not attachment_url:
+            raise ValueError(f"Attachment discovery returned no document URL from {fr.url}")
+        detail_meta = {
+            "url": fr.url,
+            "content_hash": fr.content_hash,
+            "fetched_at": fr.fetched_at,
+            "elapsed_ms": fr.elapsed_ms,
+            "content_type": fr.content_type,
+        }
+        attachment = fetch_html(
+            attachment_url,
+            timeout=source_cfg.get("timeout_seconds", 30),
+            max_bytes=source_cfg.get("max_bytes", 5_000_000),
+            session=session,
+        )
+        (raw_root / "attachment.txt").write_text(attachment.text, encoding="utf-8")
+        fr = attachment
+        if landing_meta is None:
+            landing_meta = {}
+        landing_meta = dict(landing_meta)
+        landing_meta["detail_document"] = detail_meta
+        landing_meta["attachment_url"] = attachment.url
+
     result = parser(fr.text, fr.url, fr.fetched_at)
     obs, res = parse_result(result, source_cfg, fr.url, fr.fetched_at)
     total = len(obs) + len(res)
