@@ -2,7 +2,7 @@
   "schema_version": 1,
   "build_id": "demo-step6-20261003",
   "generated_at": "2026-10-03T16:45:00+07:00",
-  "record_count": 13,
+  "record_count": 14,
   "data": [
     {
       "id": "usd-vnd-central-rate",
@@ -26,6 +26,18 @@
       "default_source_id": "demo-bank",
       "description": "Illustrative commercial-bank USD sell-rate series.",
       "methodology_note": "Demo values only; no actual bank quote is represented.",
+      "active": true
+    },
+    {
+      "id": "sjc-gold-buy",
+      "name": "Domestic Gold Buy",
+      "indicator_category": "gold",
+      "indicator_subcategory": "domestic-gold",
+      "unit": "vnd-per-tael",
+      "frequency": "daily",
+      "default_source_id": "demo-gold-source",
+      "description": "Domestic SJC gold-bar buying price in VND per tael.",
+      "methodology_note": "Demo until a controlled production observation is persisted; production observations require corroborated evidence.",
       "active": true
     },
     {
