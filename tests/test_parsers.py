@@ -5,6 +5,7 @@ sys.path.insert(0, str(ROOT / 'scripts'))
 from collectors.nso_cpi import parse_nso_cpi, discover_nso_cpi_url
 from collectors.sjc_gold import parse_sjc_gold
 from collectors.sbv_central_rate import parse_sbv_central_rate
+from collectors.sbv_customer_rates import parse_sbv_customer_rates, discover_sbv_customer_rates_url, discover_sbv_customer_rates_attachment
 from collectors.vov_central_rate import parse_vov_central_rate, discover_vov_central_rate_url
 from collectors.vietcap_macro import parse_vietcap_macro, discover_vietcap_macro_url
 from collectors.vietnamplus_cpi import parse_vietnamplus_cpi, discover_vietnamplus_cpi_url
@@ -33,6 +34,24 @@ def test_sjc():
     d = {i['indicator_id']: i for i in x}
     assert d['sjc-gold-bar-buy']['value'] == 140_500_000
     assert d['sjc-gold-bar-sell']['value'] == 143_500_000
+
+
+def test_sbv_customer_rates():
+    rows = parse_sbv_customer_rates(read('sbv_customer_rates_sample.html'), 'https://sbv.example/rates.pdf', NOW)
+    by = {x['indicator_id']: x for x in rows}
+    assert len(rows) == 5
+    assert by['deposit-rate-vnd-6-12m-low']['value'] == 6.5
+    assert by['deposit-rate-vnd-6-12m-high']['value'] == 8.0
+    assert by['lending-rate-vnd-average-low']['value'] == 8.4
+    assert by['lending-rate-vnd-average-high']['value'] == 10.7
+    assert by['priority-short-term-lending-rate-vnd']['value'] == 4.0
+    assert {x['period'] for x in rows} == {'2026-08'}
+    listing = read('sbv_customer_rates_listing_sample.html')
+    url = discover_sbv_customer_rates_url(listing, 'https://www.sbv.gov.vn/')
+    assert 'NEW' in url
+    detail = read('sbv_customer_rates_detail_sample.html')
+    pdf = discover_sbv_customer_rates_attachment(detail, url)
+    assert 'lai-suat-thang-8-2026.pdf' in pdf
 
 def test_sbv():
     x = parse_sbv_central_rate(read('sbv_sample.html'), 'https://sbv.example', NOW)
@@ -115,7 +134,7 @@ def test_discovery_helpers():
     assert discover_thoibaonganhang_central_rate_url(bt, 'https://thoibaonganhang.vn/ngan-hang/thi-truong-tien-te').startswith('https://thoibaonganhang.vn/')
 
 if __name__ == '__main__':
-    test_nso(); test_sjc(); test_sbv(); test_vov(); test_vietcap(); test_vietnamplus_cpi(); test_vietnamplus_central_rate(); test_pnj_gold(); test_doji_gold(); test_baonghean_gold(); test_thoibaonganhang_central_rate(); test_vietnamnet_gold(); test_discovery_helpers()
+    test_nso(); test_sjc(); test_sbv(); test_sbv_customer_rates(); test_vov(); test_vietcap(); test_vietnamplus_cpi(); test_vietnamplus_central_rate(); test_pnj_gold(); test_doji_gold(); test_baonghean_gold(); test_thoibaonganhang_central_rate(); test_vietnamnet_gold(); test_discovery_helpers()
     print('All parser/discovery tests passed')
 
 # Regression cases based on current public page shapes observed in Oct-2026.
