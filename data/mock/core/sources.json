@@ -2,7 +2,7 @@
   "schema_version": 1,
   "build_id": "demo-v7.1.0-20261003",
   "generated_at": "2026-10-03T19:15:00+07:00",
-  "record_count": 14,
+  "record_count": 18,
   "data": [
     {
       "id": "demo-official",
@@ -171,6 +171,54 @@
       "source_priority": 1,
       "active": true,
       "notes": "Official Vietnam statistical source used for verified CPI observations promoted through the controlled production pipeline."
+    },
+    {
+      "id": "vna-vietnamplus",
+      "name": "VietnamPlus / Vietnam News Agency",
+      "source_type": "media",
+      "base_url": "https://en.vietnamplus.vn/",
+      "language": "en",
+      "collection_method": "html",
+      "fetch_frequency": "daily",
+      "source_priority": 3,
+      "active": true,
+      "notes": "Trusted VNA/VietnamPlus reporting used as corroborating evidence for Vietnam macro observations; not treated as an official regulator source."
+    },
+    {
+      "id": "banking-times-vn",
+      "name": "Thời Báo Ngân Hàng",
+      "source_type": "specialist-media",
+      "base_url": "https://thoibaonganhang.vn/",
+      "language": "vi",
+      "collection_method": "html",
+      "fetch_frequency": "daily",
+      "source_priority": 3,
+      "active": true,
+      "notes": "Specialist banking publication used as an independent corroborating source for SBV central-rate observations."
+    },
+    {
+      "id": "baonghean-gold",
+      "name": "Báo Nghệ An Gold Tracker",
+      "source_type": "media",
+      "base_url": "https://baonghean.vn/",
+      "language": "vi",
+      "collection_method": "html",
+      "fetch_frequency": "daily",
+      "source_priority": 4,
+      "active": true,
+      "notes": "Public gold-price tracker used as one corroborating source for SJC buy/sell observations."
+    },
+    {
+      "id": "vietnamnet-gold",
+      "name": "VietnamNet Gold Tracker",
+      "source_type": "media",
+      "base_url": "https://vietnamnet.vn/",
+      "language": "vi",
+      "collection_method": "html",
+      "fetch_frequency": "daily",
+      "source_priority": 4,
+      "active": true,
+      "notes": "Public gold-price tracker used as one corroborating source for SJC buy/sell observations."
     }
   ]
 }
