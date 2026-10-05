@@ -127,9 +127,8 @@
     'VND/tael · Demo': 'VND/lượng · Mô phỏng',
     'YTD · Demo': 'Từ đầu năm · Mô phỏng',
     'Demo': 'Mô phỏng',
+    'DEMO': 'MÔ PHỎNG',
     'Demo data': 'Dữ liệu mô phỏng',
-    'Canonical': 'Chính thức',
-    'Loading data status…': 'Đang tải trạng thái dữ liệu…',
     'Meta unavailable': 'Không có metadata',
 
     // Market UI
@@ -329,6 +328,24 @@
     'Operation Start': 'Bắt đầu vận hành',
 
     // Macro UI
+    'Canonical': 'Chính thức',
+    'Corroborated': 'Đã đối chiếu',
+    'Production': 'Production',
+    'Controlled production mode.': 'Chế độ production có kiểm soát.',
+    'Production observations are labeled by evidence status: verified official data as Canonical and independently matched data as Corroborated. Unpromoted indicators remain illustrative demo data.': 'Quan sát production được gắn nhãn theo mức độ bằng chứng: dữ liệu chính thức đã xác minh là Chính thức, dữ liệu được đối chiếu độc lập là Đã đối chiếu. Các chỉ số chưa được promote vẫn là dữ liệu mô phỏng minh họa.',
+    'No controlled production observations are available. All displayed macro series are illustrative demo data.': 'Chưa có quan sát production có kiểm soát. Toàn bộ chuỗi vĩ mô đang hiển thị là dữ liệu mô phỏng minh họa.',
+    'Canonical production series · demo points are not mixed into this indicator. Historical coverage will build as new approved observations are persisted.': 'Chuỗi production chính thức · không trộn điểm dữ liệu mô phỏng vào chỉ số này. Lịch sử sẽ được tích lũy khi các quan sát mới được phê duyệt và lưu.',
+    'Corroborated production series · demo points are not mixed into this indicator. Historical coverage will build as new approved observations are persisted.': 'Chuỗi production đã đối chiếu · không trộn điểm dữ liệu mô phỏng vào chỉ số này. Lịch sử sẽ được tích lũy khi các quan sát mới được phê duyệt và lưu.',
+    'Illustrative demo series · data date and publication date are stored separately.': 'Chuỗi mô phỏng minh họa · ngày dữ liệu và ngày công bố được lưu riêng.',
+    'Demo context': 'Bối cảnh mô phỏng',
+    'Illustrative Developments': 'Diễn biến minh họa',
+    'View demo news': 'Xem tin mô phỏng',
+    'No demo developments remain for unpromoted macro indicators.': 'Không còn diễn biến mô phỏng cho các chỉ số vĩ mô chưa được promote.',
+    'Illustrative Macro News & Research': 'Tin tức & Nghiên cứu vĩ mô minh họa',
+    'This article layer remains demo-only. Demo articles linked to production indicators are hidden to avoid mixing illustrative evidence with controlled observations.': 'Lớp bài viết này vẫn chỉ là dữ liệu mô phỏng. Các bài mô phỏng liên quan đến chỉ số production được ẩn để tránh trộn bằng chứng minh họa với quan sát có kiểm soát.',
+    'No demo macro articles match the selected filters.': 'Không có bài viết vĩ mô mô phỏng phù hợp với bộ lọc.',
+    'No promoted evidence articles yet.': 'Chưa có bài viết bằng chứng nào được promote.',
+    'Matched across independent sources': 'Khớp giữa các nguồn độc lập',
     'Daily monitor': 'Theo dõi hằng ngày',
     'USD/VND Central Rate': 'Tỷ giá trung tâm USD/VND',
     'Latest releases': 'Công bố mới nhất',
@@ -414,7 +431,7 @@
     if ((match = core.match(/^In (\d+) days$/))) return `Còn ${match[1]} ngày`;
     if ((match = core.match(/^(\d+) days ago$/))) return `${match[1]} ngày trước`;
     if ((match = core.match(/^Demo data · (.+)$/))) return `Dữ liệu mô phỏng · ${match[1]}`;
-    if ((match = core.match(/^Canonical CPI · (\d+) verified records$/))) return `CPI chính thức · ${match[1]} bản ghi đã xác minh`;
+    if ((match = core.match(/^Controlled macro · (\d+) production records$/))) return `Vĩ mô kiểm soát · ${match[1]} bản ghi production`;
     if ((match = core.match(/^Published (.+)$/))) return `Công bố ${match[1]}`;
     if ((match = core.match(/^Announced (.+)$/))) return `Công bố ${match[1]}`;
     if ((match = core.match(/^Source: (.+)$/))) return `Nguồn: ${match[1]}`;

@@ -57,7 +57,7 @@
 
   let state = { view: 'overview', range: '1Y', series: '', q: '', indicatorFilter: '' };
   let data = { indicators: [], observations: [], articles: [], events: [] };
-  let productionState = { active: false, recordCount: 0, indicatorIds: new Set(), publishMeta: null };
+  let productionState = { active: false, recordCount: 0, indicatorIds: new Set(), rows: [], publishMeta: null };
 
   function payloadData(payload) { return payload?.data || []; }
 
@@ -107,6 +107,46 @@
   }
   function indicator(id) { return Resolver.getEntity('macro-indicator', id); }
   function labelize(value) { return String(value || '—').replaceAll('-', ' ').replace(/\b\w/g, c => c.toUpperCase()); }
+
+  function productionEvidenceLabel(row) {
+    if (row?._data_layer !== 'production') return '';
+    if (row.evidence_status === 'verified') return 'Canonical';
+    if (row.evidence_status === 'corroborated') return 'Corroborated';
+    return 'Production';
+  }
+
+  function dataLayerBadge(ind, row) {
+    return row?._data_layer === 'production' ? productionEvidenceLabel(row) : labelize(ind?.frequency);
+  }
+
+  function updateStatusBanner() {
+    const title = document.querySelector('[data-macro-status-title]');
+    const text = document.querySelector('[data-macro-status-text]');
+    if (!title || !text) return;
+    if (!productionState.active) {
+      title.textContent = 'Implementation demo.';
+      text.textContent = 'No controlled production observations are available. All displayed macro series are illustrative demo data.';
+      return;
+    }
+    title.textContent = 'Controlled production mode.';
+    text.textContent = 'Production observations are labeled by evidence status: verified official data as Canonical and independently matched data as Corroborated. Unpromoted indicators remain illustrative demo data.';
+  }
+
+  function overviewChartNote(id) {
+    const { current } = latestPair(id);
+    if (current?._data_layer === 'production') {
+      return current.evidence_status === 'corroborated'
+        ? 'Corroborated production series · demo points are not mixed into this indicator. Historical coverage will build as new approved observations are persisted.'
+        : 'Canonical production series · demo points are not mixed into this indicator. Historical coverage will build as new approved observations are persisted.';
+    }
+    return 'Illustrative demo series · data date and publication date are stored separately.';
+  }
+
+  function corroborationProvenance(row) {
+    const ids = Array.isArray(row?.corroboration_source_ids) ? [...new Set(row.corroboration_source_ids)] : [];
+    if (row?._data_layer !== 'production' || row.evidence_status !== 'corroborated' || ids.length < 2) return '';
+    return `<div class="provenance-inline-row provenance-inline-row--wrap"><span class="source-tag">Corroborated</span>${ids.map(id => sourceRef(id, { period: row.period })).join('')}<span class="muted-text">Matched across independent sources</span></div>`;
+  }
 
   function obsKey(item) { return item.data_date || item.period || ''; }
   function observationsFor(id) {
@@ -173,7 +213,7 @@
     const ind = indicator(id); if (!ind) return '';
     const { current } = latestPair(id); const delta = deltaInfo(id);
     return `<button class="macro-metric-card" type="button" data-macro-indicator-id="${esc(id)}">
-      <div class="macro-metric-card__top"><span>${esc(ind.name)}</span><span class="source-tag">${esc(current?._data_layer === 'production' ? 'Canonical' : ind.frequency)}</span></div>
+      <div class="macro-metric-card__top"><span>${esc(ind.name)}</span><span class="source-tag">${esc(dataLayerBadge(ind, current))}</span></div>
       <strong>${esc(formatValue(ind, current?.value, true))}</strong>
       <div class="macro-metric-card__foot"><span class="macro-delta">${esc(delta.label)}</span><span>${esc(formatPeriod(current))}</span></div>
     </button>`;
@@ -240,9 +280,14 @@
   }
 
   function latestEventList(limit = 5) {
-    return [...data.events].sort((a,b)=>String(b.event_date).localeCompare(String(a.event_date))).slice(0,limit).map(event => {
+    const rows = [...data.events]
+      .filter(event => !productionState.indicatorIds.has(event.entity_id))
+      .sort((a,b)=>String(b.event_date).localeCompare(String(a.event_date)))
+      .slice(0,limit);
+    if (!rows.length) return Components.stateBox('No demo developments remain for unpromoted macro indicators.');
+    return rows.map(event => {
       const ind = indicator(event.entity_id);
-      return `<button class="macro-release-row" type="button" data-macro-indicator-id="${esc(event.entity_id)}"><span>${esc(App.formatDate(event.event_date))}</span><div><span class="source-tag">${esc(labelize(event.event_type))}</span><strong>${esc(event.title)}</strong><small>${esc(ind?.name || '')}</small></div></button>`;
+      return `<button class="macro-release-row" type="button" data-macro-indicator-id="${esc(event.entity_id)}"><span>${esc(App.formatDate(event.event_date))}</span><div><span class="source-tag">DEMO</span><span class="source-tag">${esc(labelize(event.event_type))}</span><strong>${esc(event.title)}</strong><small>${esc(ind?.name || '')}</small></div></button>`;
     }).join('');
   }
 
@@ -262,10 +307,10 @@
       <div class="market-layout market-layout--overview">
         <section class="section market-panel market-panel--wide">
           <div class="section-header"><div><span class="eyebrow">Daily monitor</span><h2 class="section-title">USD/VND Central Rate</h2></div><a class="text-link" href="macro.html?view=fx&series=usd-vnd-central-rate&range=1M">Open FX</a></div>
-          <div class="section-body"><div class="chart-frame"><canvas id="macro-overview-chart"></canvas></div><p class="chart-note">Illustrative daily series · data date and publication date are stored separately.</p></div>
+          <div class="section-body"><div class="chart-frame"><canvas id="macro-overview-chart"></canvas></div><p class="chart-note">${esc(overviewChartNote('usd-vnd-central-rate'))}</p></div>
         </section>
         <section class="section market-panel">
-          <div class="section-header"><div><span class="eyebrow">Latest releases</span><h2 class="section-title">Macro Developments</h2></div><a class="text-link" href="macro.html?view=news">View news</a></div>
+          <div class="section-header"><div><span class="eyebrow">Demo context</span><h2 class="section-title">Illustrative Developments</h2></div><a class="text-link" href="macro.html?view=news">View demo news</a></div>
           <div class="section-body macro-release-list">${latestEventList(5)}</div>
         </section>
       </div>
@@ -339,13 +384,15 @@
   }
 
   function renderNews() {
-    let articles = [...data.articles].sort((a,b)=>String(b.published_at).localeCompare(String(a.published_at)));
+    let articles = [...data.articles]
+      .filter(item => !(item.indicator_ids || []).some(id => productionState.indicatorIds.has(id)))
+      .sort((a,b)=>String(b.published_at).localeCompare(String(a.published_at)));
     if (state.indicatorFilter) articles = articles.filter(item => (item.indicator_ids || []).includes(state.indicatorFilter));
     if (state.q) articles = articles.filter(item => FilterEngine.textMatch(item,state.q,['title','summary','tags']));
     const opts = data.indicators.map(ind=>`<option value="${esc(ind.id)}"${state.indicatorFilter===ind.id?' selected':''}>${esc(ind.name)}</option>`).join('');
-    setView(`<div class="view-intro"><div><span class="eyebrow">Evidence layer</span><h2>Macro News &amp; Research</h2><p>Articles explain or contextualize series; they do not replace the underlying observations.</p></div></div>
+    setView(`<div class="view-intro"><div><span class="eyebrow">Demo context</span><h2>Illustrative Macro News &amp; Research</h2><p>This article layer remains demo-only. Demo articles linked to production indicators are hidden to avoid mixing illustrative evidence with controlled observations.</p></div></div>
       <div class="filter-bar filter-bar--macro-news"><label class="filter-field filter-field--search"><span>Search</span><input type="search" data-macro-news-q value="${esc(state.q)}" placeholder="Rates, FX, gold, CPI…"></label><label class="filter-field"><span>Indicator</span><select data-macro-news-indicator><option value="">All indicators</option>${opts}</select></label><button class="button filter-reset" type="button" data-macro-news-reset>Reset</button></div>
-      <div class="article-list">${articles.map(article => `<article class="article-row"><div class="article-row__date">${esc(App.formatDate(article.published_at))}</div><div><div class="article-row__meta"><span class="source-tag">${esc(article.content_type)}</span>${sourceRef(article.source_id,{publishedAt:article.published_at,sourceUrl:article.url})}<span>${esc((article.indicator_ids||[]).map(id=>indicator(id)?.name).filter(Boolean).join(' · '))}</span></div><h3>${esc(article.title)}</h3><p>${esc(article.summary)}</p><div class="article-relations">${(article.indicator_ids||[]).map(id=>`<button class="relation-button" type="button" data-macro-indicator-id="${esc(id)}">${esc(indicator(id)?.name || id)}</button>`).join('')}</div></div></article>`).join('') || Components.stateBox('No macro articles match the selected filters.')}</div>`);
+      <div class="article-list">${articles.map(article => `<article class="article-row"><div class="article-row__date">${esc(App.formatDate(article.published_at))}</div><div><div class="article-row__meta"><span class="source-tag">DEMO</span><span class="source-tag">${esc(article.content_type)}</span>${sourceRef(article.source_id,{publishedAt:article.published_at,sourceUrl:article.url})}<span>${esc((article.indicator_ids||[]).map(id=>indicator(id)?.name).filter(Boolean).join(' · '))}</span></div><h3>${esc(article.title)}</h3><p>${esc(article.summary)}</p><div class="article-relations">${(article.indicator_ids||[]).map(id=>`<button class="relation-button" type="button" data-macro-indicator-id="${esc(id)}">${esc(indicator(id)?.name || id)}</button>`).join('')}</div></div></article>`).join('') || Components.stateBox('No demo macro articles match the selected filters.')}</div>`);
     bindNewsFilters();
   }
 
@@ -366,16 +413,16 @@
   function indicatorDrawerHTML(id) {
     const ind = indicator(id); if (!ind) return '';
     const {current,previous}=latestPair(id); const delta=deltaInfo(id);
-    const articles=data.articles.filter(item=>(item.indicator_ids||[]).includes(id)).sort((a,b)=>String(b.published_at).localeCompare(String(a.published_at))).slice(0,4);
+    const articles=(current?._data_layer === 'production' ? [] : data.articles.filter(item=>(item.indicator_ids||[]).includes(id))).sort((a,b)=>String(b.published_at).localeCompare(String(a.published_at))).slice(0,4);
     const recent=[...observationsFor(id)].reverse().slice(0,6);
     const view=CATEGORY_VIEW[ind.indicator_category] || 'overview';
     return `<div class="drawer-entity-head"><span class="eyebrow">Macro Indicator</span><h2>${esc(ind.name)}</h2><p>${esc(labelize(ind.indicator_category))} · ${esc(labelize(ind.frequency))}</p></div>
       <div class="drawer-metrics">${Components.compactMetric({label:'Current',value:formatValue(ind,current?.value),note:formatPeriod(current)})}${Components.compactMetric({label:'Previous',value:formatValue(ind,previous?.value),note:formatPeriod(previous)})}${Components.compactMetric({label:'Change',value:delta.label,note:'Previous available observation'})}${Components.compactMetric({label:'Source',value:window.Provenance?.label?.(current?.source_id) || labelize(current?.source_id),note:current ? `Published ${App.formatDate(current.published_at)}` : ''})}</div>
       <div class="drawer-section"><h3>Definition</h3><p>${esc(ind.description)}</p></div>
       <div class="drawer-section"><h3>Methodology</h3><p>${esc(ind.methodology_note)}</p></div>
-      <div class="drawer-section"><h3>Data Provenance</h3>${current ? `<div class="provenance-inline-row">${sourceRef(current.source_id,{publishedAt:current.published_at,period:current.period,sourceUrl:current.source_url,methodology:ind.methodology_note})}<span class="muted-text">Current displayed observation · ${esc(formatPeriod(current))}</span></div>` : '<p class="muted-text">No current observation source available.</p>'}</div>
+      <div class="drawer-section"><h3>Data Provenance</h3>${current ? `<div class="provenance-inline-row"><span class="source-tag">${esc(dataLayerBadge(ind,current))}</span>${sourceRef(current.source_id,{publishedAt:current.published_at,period:current.period,sourceUrl:current.source_url,methodology:ind.methodology_note})}<span class="muted-text">Current displayed observation · ${esc(formatPeriod(current))}</span></div>${corroborationProvenance(current)}` : '<p class="muted-text">No current observation source available.</p>'}</div>
       <div class="drawer-section"><h3>Recent Observations</h3>${recent.map(row=>`<div class="drawer-list-row"><div><strong>${esc(formatPeriod(row))}</strong><span>${esc(row.period)} · ${esc(labelize(row.observation_status))}</span></div><div><strong>${esc(formatValue(ind,row.value))}</strong><span>${sourceRef(row.source_id,{publishedAt:row.published_at,period:row.period,sourceUrl:row.source_url})}</span></div></div>`).join('')}</div>
-      <div class="drawer-section"><h3>Related Evidence</h3>${articles.length ? articles.map(item=>`<div class="drawer-list-row drawer-list-row--stack"><span>${esc(App.formatDate(item.published_at))} · ${esc(item.content_type)}</span><strong>${esc(item.title)}</strong></div>`).join('') : '<p class="muted-text">No related articles.</p>'}</div>
+      <div class="drawer-section"><h3>Related Evidence</h3>${articles.length ? articles.map(item=>`<div class="drawer-list-row drawer-list-row--stack"><span>DEMO · ${esc(App.formatDate(item.published_at))} · ${esc(item.content_type)}</span><strong>${esc(item.title)}</strong></div>`).join('') : `<p class="muted-text">${current?._data_layer === 'production' ? 'No promoted evidence articles yet.' : 'No related articles.'}</p>`}</div>
       <div class="drawer-section"><a class="text-link" href="macro.html?view=${encodeURIComponent(view)}&series=${encodeURIComponent(id)}&range=1Y">Open historical series</a></div>`;
   }
 
@@ -415,12 +462,14 @@
         active: integrated.productionRows.length > 0,
         recordCount: integrated.productionRows.length,
         indicatorIds: integrated.productionIndicatorIds,
+        rows: integrated.productionRows,
         publishMeta: productionMeta
       };
       data = {
         indicators: applyProductionIndicatorMetadata(payloadData(indicators), integrated.productionIndicatorIds),
         observations: integrated.rows,
-        articles:payloadData(articles).filter(item=>item.category==='macro'), events:payloadData(events).filter(item=>item.category==='macro')
+        articles:payloadData(articles).filter(item=>item.category==='macro').map(item=>({ ...item, _data_layer:'demo' })),
+        events:payloadData(events).filter(item=>item.category==='macro').map(item=>({ ...item, _data_layer:'demo' }))
       };
       Resolver.setData('macro-indicator',data.indicators);
       parseState(); adjustViewFromDeepLink();
@@ -429,6 +478,7 @@
           ? `Controlled macro · ${productionState.recordCount} production records`
           : (meta?.last_successful_build ? `Demo data · ${App.formatDate(meta.last_successful_build)}` : 'Demo data');
       }
+      updateStatusBanner();
       render();
       const deep=App.getQueryParam('indicator'); if (deep) openIndicator(deep,{push:false});
     } catch (error) {
