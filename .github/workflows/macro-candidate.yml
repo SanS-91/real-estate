@@ -69,10 +69,12 @@ jobs:
       - name: Candidate pipeline fixture E2E
         run: python tests/test_candidate_pipeline.py
 
-      - name: Fallback and corroboration policy tests
+      - name: Fallback, corroboration and normalization policy tests
         run: |
           python tests/test_fallback_pools.py
           python tests/test_phase4_2h1_safety.py
+          python tests/test_phase4_2h2_safety.py
+          python tests/test_phase4_2h2_frontend_contract.py
 
       - name: Promotion preview fixture tests
         run: python tests/test_promotion_preview.py
@@ -152,5 +154,5 @@ jobs:
           if-no-files-found: warn
           path: |
             data/processed/macro/
-          # Phase 4.2E: canonical processed data is reviewable as an artifact only. No repository push and no frontend publish.
+          # Controlled production remains reviewable as an artifact only. Repository persistence is a separate manual workflow.
 
