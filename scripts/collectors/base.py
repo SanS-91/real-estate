@@ -1,10 +1,12 @@
 from __future__ import annotations
 from dataclasses import dataclass
+from io import BytesIO
 from datetime import datetime, timezone
 import hashlib
 import time
 from typing import Optional
 import requests
+from pypdf import PdfReader
 from requests.adapters import HTTPAdapter
 from urllib3.util.retry import Retry
 
@@ -66,8 +68,19 @@ def fetch_html(
                 raise ValueError(f"Response exceeds max_bytes={max_bytes} for {url}")
             chunks.append(chunk)
         raw = b"".join(chunks)
-        enc = r.encoding or r.apparent_encoding or "utf-8"
-        text = raw.decode(enc, errors="replace")
+        content_type = (r.headers.get("Content-Type") or "").lower()
+        is_pdf = "application/pdf" in content_type or r.url.lower().split("?", 1)[0].endswith(".pdf")
+        if is_pdf:
+            try:
+                reader = PdfReader(BytesIO(raw))
+                text = "\n".join((page.extract_text() or "") for page in reader.pages)
+                if not text.strip():
+                    raise ValueError("PDF text extraction returned empty content")
+            except Exception as exc:
+                raise ValueError(f"Unable to extract PDF text from {r.url}: {exc}") from exc
+        else:
+            enc = r.encoding or r.apparent_encoding or "utf-8"
+            text = raw.decode(enc, errors="replace")
         elapsed_ms = int((time.monotonic() - started) * 1000)
         return FetchResult(
             url=r.url,
