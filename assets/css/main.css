@@ -939,6 +939,7 @@ button, a, input, select { outline-offset: 3px; }
 
 /* Implementation Step 6 · Macro module */
 .macro-metric-grid { display:grid; grid-template-columns:repeat(6,minmax(0,1fr)); gap:12px; margin-top:22px; }
+.macro-metric-grid--overview { grid-template-columns:repeat(4,minmax(0,1fr)); }
 .macro-metric-grid--section { grid-template-columns:repeat(4,minmax(0,1fr)); margin-top:14px; }
 .macro-metric-card { min-width:0; min-height:126px; padding:14px 15px; border:1px solid var(--color-border); border-radius:var(--radius-md); background:#fff; box-shadow:var(--shadow-sm); text-align:left; cursor:pointer; }
 .macro-metric-card:hover { border-color:#c9aeb4; }
