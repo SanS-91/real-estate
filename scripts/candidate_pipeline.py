@@ -128,24 +128,45 @@ def fetch_source(source_cfg: dict, run_id: str, fixture_mode: bool):
     target_url = source_cfg.get("fetch_url")
     landing_meta = None
     if source_cfg.get("discoverer"):
-        landing_url = source_cfg["landing_url"]
-        landing = fetch_html(
-            landing_url,
-            timeout=source_cfg.get("timeout_seconds", 30),
-            max_bytes=source_cfg.get("max_bytes", 5_000_000),
-            session=session,
-        )
-        (raw_root / "landing.html").write_text(landing.text, encoding="utf-8")
         discover = getattr(module, source_cfg["discoverer"])
-        target_url = discover(landing.text, landing.url)
-        landing_meta = {
-            "url": landing.url,
-            "content_hash": landing.content_hash,
-            "fetched_at": landing.fetched_at,
-            "elapsed_ms": landing.elapsed_ms,
-        }
-        if not target_url:
-            raise ValueError(f"Discovery returned no detail URL from {landing.url}")
+        landing_urls = source_cfg.get("landing_urls") or [source_cfg.get("landing_url")]
+        landing_urls = [u for u in landing_urls if u]
+        if not landing_urls:
+            raise ValueError("Discoverer configured without landing_url or landing_urls")
+
+        attempts = []
+        for idx, landing_url in enumerate(landing_urls, start=1):
+            try:
+                landing = fetch_html(
+                    landing_url,
+                    timeout=source_cfg.get("timeout_seconds", 30),
+                    max_bytes=source_cfg.get("max_bytes", 5_000_000),
+                    session=session,
+                )
+                raw_name = "landing.html" if idx == 1 else f"landing-{idx}.html"
+                (raw_root / raw_name).write_text(landing.text, encoding="utf-8")
+                discovered = discover(landing.text, landing.url)
+                attempt = {
+                    "url": landing.url,
+                    "content_hash": landing.content_hash,
+                    "fetched_at": landing.fetched_at,
+                    "elapsed_ms": landing.elapsed_ms,
+                    "discovered_target_url": discovered,
+                }
+                attempts.append(attempt)
+                if discovered:
+                    target_url = discovered
+                    landing_meta = attempt
+                    break
+            except Exception as exc:
+                attempts.append({"url": landing_url, "error": f"{type(exc).__name__}: {exc}"})
+
+        if landing_meta is not None:
+            landing_meta = dict(landing_meta)
+            landing_meta["attempts"] = attempts
+        else:
+            attempted = ", ".join(x.get("url", "") for x in attempts) or ", ".join(landing_urls)
+            raise ValueError(f"Discovery returned no detail URL from configured landing pages: {attempted}")
 
     if not target_url:
         raise ValueError("No fetch_url or discovered target URL configured")
