@@ -5,7 +5,7 @@
   const VIEW_SERIES = {
     rates: ['deposit-rate-12m-average', 'lending-rate-average', 'interbank-on', 'policy-refinancing-rate'],
     fx: ['usd-vnd-central-rate', 'usd-vnd-bank-sell'],
-    gold: ['sjc-gold-sell', 'global-gold-usd-oz'],
+    gold: ['sjc-gold-sell', 'sjc-gold-buy', 'global-gold-usd-oz'],
     liquidity: ['interbank-on', 'credit-growth-ytd', 'm2-growth-yoy'],
     inflation: ['cpi-yoy', 'cpi-mom', 'core-cpi-yoy']
   };
@@ -18,9 +18,12 @@
     fx: 'fx', gold: 'gold', inflation: 'inflation'
   };
   const PRODUCTION_INDICATORS = new Map([
-    ['cpi-yoy', 'percent'],
-    ['cpi-mom', 'percent'],
-    ['core-cpi-yoy', 'percent']
+    ['cpi-yoy', { unit: 'percent', evidenceStatus: 'verified', sources: ['nso-vietnam'] }],
+    ['cpi-mom', { unit: 'percent', evidenceStatus: 'verified', sources: ['nso-vietnam'] }],
+    ['core-cpi-yoy', { unit: 'percent', evidenceStatus: 'verified', sources: ['nso-vietnam'] }],
+    ['usd-vnd-central-rate', { unit: 'vnd-per-usd', evidenceStatus: 'corroborated', sources: ['banking-times-vn', 'vna-vietnamplus'] }],
+    ['sjc-gold-buy', { unit: 'vnd-per-tael', evidenceStatus: 'corroborated', sources: ['baonghean-gold', 'vietnamnet-gold'] }],
+    ['sjc-gold-sell', { unit: 'vnd-per-tael', evidenceStatus: 'corroborated', sources: ['baonghean-gold', 'vietnamnet-gold'] }]
   ]);
   const PRODUCTION_INDICATOR_OVERRIDES = {
     'cpi-yoy': {
@@ -37,6 +40,18 @@
       default_source_id: 'nso-vietnam',
       description: 'Year-on-year change in Vietnam core consumer-price inflation.',
       methodology_note: 'Canonical observations are promoted only from verified official NSO releases. Historical periods appear only after they pass the controlled production gate.'
+    },
+    'usd-vnd-central-rate': {
+      description: 'State Bank of Vietnam central USD/VND reference rate.',
+      methodology_note: 'Controlled production observations require at least two independent trusted sources to agree within the configured tolerance when the direct SBV endpoint is unavailable.'
+    },
+    'sjc-gold-buy': {
+      description: 'Domestic SJC gold-bar buying price in VND per tael.',
+      methodology_note: 'Controlled production observations require at least two independent public price sources to agree within the configured tolerance.'
+    },
+    'sjc-gold-sell': {
+      description: 'Domestic SJC gold-bar selling price in VND per tael.',
+      methodology_note: 'Controlled production observations require at least two independent public price sources to agree within the configured tolerance.'
     }
   };
 
@@ -53,11 +68,11 @@
     if (Number.isFinite(Number(publishMeta.final_record_count)) && Number(publishMeta.final_record_count) !== payload.data.length) return [];
 
     return payload.data.filter(row => {
-      const expectedUnit = PRODUCTION_INDICATORS.get(row?.indicator_id);
-      return expectedUnit
-        && row.unit === expectedUnit
-        && row.source_id === 'nso-vietnam'
-        && row.evidence_status === 'verified'
+      const rule = PRODUCTION_INDICATORS.get(row?.indicator_id);
+      return rule
+        && row.unit === rule.unit
+        && rule.sources.includes(row.source_id)
+        && row.evidence_status === rule.evidenceStatus
         && row.observation_status === 'final'
         && typeof row.period === 'string'
         && row.period.length > 0
@@ -411,7 +426,7 @@
       parseState(); adjustViewFromDeepLink();
       if (updatedLabel()) {
         updatedLabel().textContent = productionState.active
-          ? `Canonical CPI · ${productionState.recordCount} verified records`
+          ? `Controlled macro · ${productionState.recordCount} production records`
           : (meta?.last_successful_build ? `Demo data · ${App.formatDate(meta.last_successful_build)}` : 'Demo data');
       }
       render();
