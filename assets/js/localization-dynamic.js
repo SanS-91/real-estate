@@ -119,6 +119,7 @@
     'Domestic Gold Sell': 'Giá bán vàng trong nước',
     '12M Deposit Rate': 'Lãi suất tiền gửi 12T',
     'Lending Rate': 'Lãi suất cho vay',
+    'Average Lending Rate': 'Lãi suất cho vay bình quân',
     'Credit Growth': 'Tăng trưởng tín dụng',
     'Credit Growth YTD': 'Tăng trưởng tín dụng YTD',
     'Bank Funding Growth YTD': 'Tăng trưởng huy động vốn YTD',
@@ -565,7 +566,10 @@
     }
   }
 
-  window.AppDynamicLocalization = { apply };
+  window.AppDynamicLocalization = {
+    apply,
+    translate: (text, lang = language()) => lang === 'vi' ? translatedCore(String(text ?? '')) : String(text ?? '')
+  };
 
   if (document.readyState === 'loading') {
     document.addEventListener('DOMContentLoaded', init, { once: true });

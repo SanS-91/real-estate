@@ -119,6 +119,10 @@
   }
   function indicator(id) { return Resolver.getEntity('macro-indicator', id); }
   function labelize(value) { return String(value || '—').replaceAll('-', ' ').replace(/\b\w/g, c => c.toUpperCase()); }
+  function localizedText(value) {
+    const text = String(value ?? '');
+    return window.AppDynamicLocalization?.translate?.(text) || text;
+  }
 
   function productionEvidenceLabel(row) {
     if (row?._data_layer !== 'production') return '';
@@ -399,7 +403,7 @@
   function renderChart(canvasId,id,rows) {
     const ind = indicator(id); if (!ind) return;
     ChartTools.renderTimeSeries(canvasId, {
-      label: ind.name,
+      label: localizedText(ind.name),
       labels: rows.map(formatPeriod),
       values: rows.map(row => row.value),
       yFormatter: axisFormatter(ind),
@@ -466,6 +470,9 @@
   }
 
   function bindDelegatedEvents() {
+    document.addEventListener('app:language-changed', () => {
+      if (data.indicators.length) render();
+    });
     document.addEventListener('click', event => {
       const trigger=event.target.closest('[data-macro-indicator-id]');
       if (!trigger) return; openIndicator(trigger.dataset.macroIndicatorId);
