@@ -32,6 +32,8 @@ FIXTURE_MAP = {
     "sbv-customer-rates": "sbv_customer_rates_sample.html",
     "vnba-customer-rates": "vnba_customer_rates_sample.html",
     "vietnamplus-customer-rates": "vietnamplus_customer_rates_sample.html",
+    "sbv-policy-rates": "sbv_policy_rates_sample.html",
+    "sbv-interbank-rates": "sbv_interbank_rates_sample.html",
 }
 
 
