@@ -13,6 +13,7 @@ from promotion_preview import build_preview  # noqa: E402
 FIXTURE = ROOT / "tests/fixtures/macro-candidate-6"
 PREVIEW_POLICY = ROOT / "config/promotion_policy.json"
 FRONTEND_MAPPING = ROOT / "config/frontend_indicator_map.json"
+NORMALIZATION = ROOT / "config/indicator_normalization.json"
 POLICY = ROOT / "config/production_promotion_policy.json"
 
 
@@ -38,7 +39,7 @@ def make_preview(dst: Path):
     staging_root.mkdir(parents=True, exist_ok=True)
     generated = Path(tempfile.mkdtemp(prefix="test-production-preview-", dir=str(staging_root)))
     try:
-        build_preview(FIXTURE, generated, PREVIEW_POLICY, FRONTEND_MAPPING)
+        build_preview(FIXTURE, generated, PREVIEW_POLICY, FRONTEND_MAPPING, NORMALIZATION)
         dst.mkdir(parents=True, exist_ok=True)
         for name in ["canonical-observations.preview.json", "promotion-manifest.json", "preview-meta.json"]:
             shutil.copy2(generated / name, dst / name)
@@ -86,7 +87,7 @@ def main():
         after = load(processed / "observations.json")
         assert before == after, "Conflict must not mutate canonical observations.json"
 
-        # Allowlist safety: an extra canonical FX record must be held, not promoted.
+        # Per-indicator readiness safety: FX is allowlisted only when ready-corroborated.
         dump(preview / "canonical-observations.preview.json", cp)
         extra = load(preview / "canonical-observations.preview.json")
         extra_record = copy.deepcopy(extra["data"][0])
@@ -96,10 +97,14 @@ def main():
             "indicator_id": "usd-vnd-central-rate",
             "period": "2026-10-04",
             "period_type": "day",
+            "data_date": "2026-10-04",
             "value": 25636,
             "unit": "vnd-per-usd",
             "source_id": "vna-vietnamplus",
-            "evidence_status": "verified"
+            "evidence_status": "corroborated",
+            "corroboration_source_ids": ["vna-vietnamplus", "banking-times-vn"],
+            "corroboration_observation_ids": ["fx-test-id", "fx-peer-id"],
+            "corroboration_reason": "fixture agreement"
         })
         extra["data"].append(extra_record)
         dump(preview / "canonical-observations.preview.json", extra)
@@ -113,7 +118,7 @@ def main():
         dump(preview / "promotion-manifest.json", mani)
         out3, report3 = build_production(preview, processed, POLICY)
         assert out3["record_count"] == 3
-        assert any(x["indicator_id"] == "usd-vnd-central-rate" and x["action"] == "hold-not-allowlisted" for x in report3["held"])
+        assert any(x["indicator_id"] == "usd-vnd-central-rate" and x["action"] == "hold-indicator-readiness" for x in report3["held"])
 
         print("Controlled production promotion tests passed")
     finally:

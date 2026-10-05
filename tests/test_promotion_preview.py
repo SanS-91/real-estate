@@ -35,15 +35,15 @@ def main():
         assert canon["record_count"] == 3, canon["record_count"]
         assert evidence["record_count"] == 3, evidence["record_count"]
         assert {x["indicator_id"] for x in canon["data"]} == {"cpi-yoy", "cpi-mom", "core-cpi-yoy"}
-        assert {x["indicator_id"] for x in evidence["data"]} == {"usd-vnd-central-rate", "sjc-gold-bar-buy", "sjc-gold-bar-sell"}
+        assert {x["indicator_id"] for x in evidence["data"]} == {"usd-vnd-central-rate", "sjc-gold-buy", "sjc-gold-sell"}
         assert all(x["evidence_status"] == "verified" for x in canon["data"])
         assert all(x["evidence_status"] == "reported" for x in evidence["data"])
         actions = {x["indicator_id"]: x["action"] for x in manifest["data"]}
         assert actions["cpi-yoy"] == "promote-canonical-preview"
         assert actions["usd-vnd-central-rate"] == "hold-evidence"
         compat = {x["indicator_id"]: x["frontend_compatibility"] for x in manifest["data"]}
-        assert compat["sjc-gold-bar-buy"] == "frontend-indicator-missing"
-        assert compat["sjc-gold-bar-sell"] == "mapping-required"
+        assert compat["sjc-gold-buy"] == "compatible"
+        assert compat["sjc-gold-sell"] == "compatible"
         shutil.rmtree(out, ignore_errors=True)
 
         # Ensure production path is explicitly rejected.
