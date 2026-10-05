@@ -109,12 +109,13 @@ jobs:
         run: |
           SOURCE='${{ github.event.inputs.source }}'
           if [ "$SOURCE" = "policy-liquidity-fallback" ]; then
-            # Fallback discovery when the dynamic SBV statistics host is unreachable:
-            # official SBV archive for policy-rate history + VietnamPlus/VNA for
-            # the latest accessible market overnight interbank observation.
+            # Fallback discovery when the dynamic SBV statistics host is unreachable.
+            # Run both fallback sources in ONE candidate-pipeline invocation so
+            # source-health/run-report preserve diagnostics for both sources.
             # Candidate-only: no production write.
-            python scripts/candidate_pipeline.py --mode candidate --source sbv-policy-archive
-            python scripts/candidate_pipeline.py --mode candidate --source vietnamplus-interbank-rates
+            python scripts/candidate_pipeline.py --mode candidate \
+              --source sbv-policy-archive \
+              --source vietnamplus-interbank-rates
           elif [ "$SOURCE" = "policy-liquidity-discovery" ]; then
             # Candidate-only discovery gate for SBV administered policy rates
             # and the market overnight interbank rate. No production write.
