@@ -282,15 +282,26 @@ def build_publish_readiness(observations: list[dict], generated_at: str):
                     "selected_observation_id": selected["id"],
                     "evidence_observation_ids": [r["id"] for r in ordered_evidence],
                     "independent_sources": independent_sources,
-                    "reason": f"{len(independent_sources)} independent fallback sources agree within tolerance {tolerance}.",
+                    "latest_business_period": latest_business_period,
+                    "reason": f"{len(independent_sources)} independent fallback sources agree for latest period {latest_business_period} within tolerance {tolerance}.",
                 })
                 continue
+            # Stay on the latest business period even when corroboration is not yet deep enough.
+            # Older, better-corroborated dates remain in candidate history but must not become
+            # the current evidence selection for a daily indicator.
+            latest_source_rank = {sid: idx for idx, sid in enumerate(fallback)}
+            ordered_latest = sorted(
+                latest_rows,
+                key=lambda r: (latest_source_rank.get(r.get("source_id"), 10_000), r.get("source_id") or "", _latest_key(r)),
+            )
+            selected = ordered_latest[0] if ordered_latest else None
             results.append({
                 "indicator_id": iid, "status": "evidence-only",
-                "selected_observation_id": None,
-                "evidence_observation_ids": [r["id"] for r in eligible],
-                "independent_sources": sorted({r.get("source_id") for r in eligible if r.get("source_id")}),
-                "reason": "Fallback evidence exists but direct verification or independent corroboration threshold is not met.",
+                "selected_observation_id": selected["id"] if selected else None,
+                "evidence_observation_ids": [r["id"] for r in ordered_latest],
+                "independent_sources": sorted({r.get("source_id") for r in latest_rows if r.get("source_id")}),
+                "latest_business_period": latest_business_period,
+                "reason": f"Latest period {latest_business_period} has fallback evidence, but direct verification or independent corroboration threshold is not met.",
             })
         elif rows:
             results.append({

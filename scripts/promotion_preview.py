@@ -140,7 +140,12 @@ def build_preview(candidate_dir: Path, output_dir: Path, policy_path: Path, mapp
                     raise ValueError(f"{source_iid}: evidence observation {eid} not found")
                 evidence.append(evidence_copy(by_id[eid], preview_generated_at, source_iid, iid))
             action = "hold-evidence"
-            selected = normalize_record(by_id[evidence_ids[0]], source_iid, iid) if evidence_ids else None
+            if selected_id:
+                if selected_id not in by_id:
+                    raise ValueError(f"{source_iid}: selected evidence observation {selected_id} not found")
+                selected = normalize_record(by_id[selected_id], source_iid, iid)
+            else:
+                selected = normalize_record(by_id[evidence_ids[0]], source_iid, iid) if evidence_ids else None
         elif status in missing_statuses:
             action = "hold-missing"
             selected = None
@@ -158,6 +163,7 @@ def build_preview(candidate_dir: Path, output_dir: Path, policy_path: Path, mapp
             "evidence_observation_ids": evidence_ids,
             "independent_sources": item.get("independent_sources", []) or [],
             "reason": item.get("reason"),
+            "latest_business_period": item.get("latest_business_period"),
             "value": selected.get("value") if selected else None,
             "unit": selected.get("unit") if selected else None,
             "period": selected.get("period") if selected else None,
