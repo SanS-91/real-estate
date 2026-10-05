@@ -183,6 +183,30 @@
       "description": "Illustrative year-on-year core-inflation series.",
       "methodology_note": "Demo monthly series.",
       "active": true
+    },
+    {
+      "id": "deposit-rate-vnd-6-12m-range",
+      "name": "VND Deposit Rate 6–12M",
+      "indicator_category": "interest-rate",
+      "indicator_subcategory": "deposit",
+      "unit": "percent-per-year",
+      "frequency": "monthly",
+      "default_source_id": "vnba",
+      "description": "Monthly VND deposit-rate range for 6–12 month tenors, reported from the SBV customer-rate bulletin.",
+      "methodology_note": "Displayed as a low–high range. The frontend pairs separately promoted low/high production components; it never replaces the official range with a scalar average.",
+      "active": true
+    },
+    {
+      "id": "lending-rate-vnd-average-range",
+      "name": "Average VND Lending Rate Range",
+      "indicator_category": "interest-rate",
+      "indicator_subcategory": "lending",
+      "unit": "percent-per-year",
+      "frequency": "monthly",
+      "default_source_id": "vnba",
+      "description": "Monthly range of average VND lending rates reported from the SBV customer-rate bulletin.",
+      "methodology_note": "Displayed as a low–high range. The frontend pairs separately promoted low/high production components; it never collapses the official range into a single average.",
+      "active": true
     }
   ]
 }
