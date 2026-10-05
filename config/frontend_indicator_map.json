@@ -1,6 +1,6 @@
 {
   "schema_version": 2,
-  "frontend_baseline": "v7.2.1+4.2I5.1",
+  "frontend_baseline": "v7.2.1+4.2J3",
   "mappings": {
     "cpi-yoy": {
       "frontend_indicator_id": "cpi-yoy",
@@ -43,24 +43,24 @@
       "status": "compatible"
     },
     "deposit-rate-vnd-6-12m-low": {
-      "frontend_indicator_id": null,
-      "status": "range-component-not-published"
+      "frontend_indicator_id": "deposit-rate-vnd-6-12m-range",
+      "status": "range-component-compatible"
     },
     "deposit-rate-vnd-6-12m-high": {
-      "frontend_indicator_id": null,
-      "status": "range-component-not-published"
+      "frontend_indicator_id": "deposit-rate-vnd-6-12m-range",
+      "status": "range-component-compatible"
     },
     "lending-rate-vnd-average-low": {
-      "frontend_indicator_id": null,
-      "status": "range-component-not-published"
+      "frontend_indicator_id": "lending-rate-vnd-average-range",
+      "status": "range-component-compatible"
     },
     "lending-rate-vnd-average-high": {
-      "frontend_indicator_id": null,
-      "status": "range-component-not-published"
+      "frontend_indicator_id": "lending-rate-vnd-average-range",
+      "status": "range-component-compatible"
     },
     "priority-short-term-lending-rate-vnd": {
       "frontend_indicator_id": null,
-      "status": "range-component-not-published"
+      "status": "evidence-only-not-published"
     }
   }
 }

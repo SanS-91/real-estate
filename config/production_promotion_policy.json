@@ -94,6 +94,54 @@
       ],
       "required_evidence_status": "verified",
       "required_period_type": "month"
+    },
+    "deposit-rate-vnd-6-12m-low": {
+      "allowed_sources": [
+        "vnba",
+        "vna-vietnamplus"
+      ],
+      "required_readiness_statuses": [
+        "ready-corroborated"
+      ],
+      "required_evidence_status": "corroborated",
+      "required_period_type": "month",
+      "required_min_independent_sources": 2
+    },
+    "deposit-rate-vnd-6-12m-high": {
+      "allowed_sources": [
+        "vnba",
+        "vna-vietnamplus"
+      ],
+      "required_readiness_statuses": [
+        "ready-corroborated"
+      ],
+      "required_evidence_status": "corroborated",
+      "required_period_type": "month",
+      "required_min_independent_sources": 2
+    },
+    "lending-rate-vnd-average-low": {
+      "allowed_sources": [
+        "vnba",
+        "vna-vietnamplus"
+      ],
+      "required_readiness_statuses": [
+        "ready-corroborated"
+      ],
+      "required_evidence_status": "corroborated",
+      "required_period_type": "month",
+      "required_min_independent_sources": 2
+    },
+    "lending-rate-vnd-average-high": {
+      "allowed_sources": [
+        "vnba",
+        "vna-vietnamplus"
+      ],
+      "required_readiness_statuses": [
+        "ready-corroborated"
+      ],
+      "required_evidence_status": "corroborated",
+      "required_period_type": "month",
+      "required_min_independent_sources": 2
     }
   },
   "logical_key_fields": [
@@ -107,9 +155,11 @@
   "rollback_snapshot": true,
   "max_snapshots": 10,
   "notes": [
-    "Phase 4.2I.3 expands the controlled production allowlist to verified official NSO banking-liquidity observations.",
+    "Phase 4.2J.3 extends controlled production to four independently corroborated SBV customer-rate range components.",
+    "The production facts remain the low/high components; the frontend pairs them into two displayed ranges and never converts them into scalar averages.",
+    "Priority short-term lending remains outside the production allowlist while independent fallback sources differ (3.9% vs approximately 4.0%).",
     "CPI, credit growth, and bank funding require ready-canonical + verified NSO evidence.",
-    "FX and Gold continue to require ready-corroborated + at least two independent agreeing sources.",
+    "FX, Gold, and customer-rate ranges require ready-corroborated + at least two independent agreeing sources.",
     "Repository persistence remains a separate manual gate; no scheduled collector can push to main."
   ]
 }
