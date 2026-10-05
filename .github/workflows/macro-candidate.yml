@@ -19,6 +19,7 @@ on:
           - nso-banking-activity
           - sbv-central-rate
           - sbv-customer-rates
+          - vnba-customer-rates
           - sjc-gold
           - vov-central-rate
           - vietcap-macro
@@ -83,6 +84,7 @@ jobs:
           python tests/test_phase4_2i2_nso_discovery.py
           python tests/test_phase4_2i3_banking_policy.py
           python tests/test_phase4_2j1_customer_rates.py
+          python tests/test_phase4_2j1_1_vnba_fallback.py
 
       - name: Promotion preview fixture tests
         run: python tests/test_promotion_preview.py
