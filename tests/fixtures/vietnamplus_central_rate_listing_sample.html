@@ -1,0 +1,21 @@
+<html><body>
+  <!-- Older article intentionally appears first to reproduce run #11's failure mode. -->
+  <article class="story-item">
+    <h2><a href="/reference-exchange-rate-bounces-back-on-october-2-post352944.vnp">Reference exchange rate bounces back on October 2</a></h2>
+    <time>02/10/2026 08:49</time>
+    <p>The State Bank of Vietnam set the daily reference exchange rate at 25,636 VND/USD.</p>
+  </article>
+
+  <!-- Unrelated State Bank story is newer and must be ignored. -->
+  <article class="story-item">
+    <h2><a href="/state-bank-announces-policy-update-post999999.vnp">State Bank announces policy update</a></h2>
+    <time>06/10/2026 08:00</time>
+  </article>
+
+  <!-- Latest relevant article appears later in the DOM. -->
+  <article class="story-item">
+    <h2><a href="/reference-exchange-rate-up-7-vnd-at-weeks-begining-post353066.vnp">Reference exchange rate up 7 VND at week’s begining</a></h2>
+    <time>05/10/2026 09:08</time>
+    <p>The State Bank of Vietnam sets the daily reference exchange rate at 25,643 VND/USD.</p>
+  </article>
+</body></html>
