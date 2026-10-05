@@ -25,7 +25,10 @@ on:
           - sbv-policy-rates
           - sbv-interbank-rates
           - policy-liquidity-discovery
-          - sbv-policy-archive
+          - policy-news-search
+          - baochinhphu-policy-rates
+          - vietnamplus-policy-rates
+          - banking-times-policy-rates
           - vietnamplus-interbank-rates
           - policy-liquidity-fallback
           - sjc-gold
@@ -97,6 +100,7 @@ jobs:
           python tests/test_phase4_2j3_rate_range_production.py
           python tests/test_phase4_2k1_policy_interbank_discovery.py
           python tests/test_phase4_2k1_1_policy_liquidity_fallback.py
+          python tests/test_phase4_2k2_policy_news_search.py
 
       - name: Promotion preview fixture tests
         run: python tests/test_promotion_preview.py
@@ -109,13 +113,22 @@ jobs:
         run: |
           SOURCE='${{ github.event.inputs.source }}'
           if [ "$SOURCE" = "policy-liquidity-fallback" ]; then
-            # Fallback discovery when the dynamic SBV statistics host is unreachable.
-            # Run both fallback sources in ONE candidate-pipeline invocation so
-            # source-health/run-report preserve diagnostics for both sources.
-            # Candidate-only: no production write.
+            # Lightweight fallback: event-driven trusted-news search for SBV
+            # administered policy rates + one market-interbank fallback source.
+            # No large SBV archive download; candidate-only, no production write.
             python scripts/candidate_pipeline.py --mode candidate \
-              --source sbv-policy-archive \
+              --source baochinhphu-policy-rates \
+              --source vietnamplus-policy-rates \
+              --source banking-times-policy-rates \
               --source vietnamplus-interbank-rates
+          elif [ "$SOURCE" = "policy-news-search" ]; then
+            # Policy-rate event discovery across three independent trusted news
+            # sources. New events need at least two agreeing sources before they
+            # can become ready-corroborated. Candidate-only.
+            python scripts/candidate_pipeline.py --mode candidate \
+              --source baochinhphu-policy-rates \
+              --source vietnamplus-policy-rates \
+              --source banking-times-policy-rates
           elif [ "$SOURCE" = "policy-liquidity-discovery" ]; then
             # Candidate-only discovery gate for SBV administered policy rates
             # and the market overnight interbank rate. No production write.
