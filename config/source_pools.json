@@ -94,7 +94,8 @@
         "sbv-vietnam"
       ],
       "fallback_source_ids": [
-        "vnba"
+        "vnba",
+        "vna-vietnamplus"
       ],
       "canonical_evidence_status": [
         "verified"

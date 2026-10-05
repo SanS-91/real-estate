@@ -121,7 +121,8 @@
       "role": [
         "fast-update",
         "official-corroboration",
-        "macro-fallback"
+        "macro-fallback",
+        "customer-rates"
       ],
       "base_url": "https://www.vietnamplus.vn/",
       "collection_method": "html",

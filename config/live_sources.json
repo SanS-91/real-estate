@@ -87,6 +87,26 @@
       ]
     },
     {
+      "key": "vietnamplus-customer-rates",
+      "source_id": "vna-vietnamplus",
+      "module": "collectors.vietnamplus_customer_rates",
+      "parser": "parse_vietnamplus_customer_rates",
+      "discoverer": "discover_vietnamplus_customer_rates_url",
+      "landing_url": "https://www.vietnamplus.vn/tag/ngan-hang-tag3047.vnp",
+      "enabled": true,
+      "optional": true,
+      "min_records": 5,
+      "max_records": 5,
+      "timeout_seconds": 30,
+      "max_bytes": 5000000,
+      "freshness_hours": 1200,
+      "schedule_class": "monthly-release-fallback",
+      "canonical_eligible": false,
+      "pool_ids": [
+        "customer-rates"
+      ]
+    },
+    {
       "key": "sjc-gold",
       "source_id": "sjc",
       "module": "collectors.sjc_gold",
