@@ -13,6 +13,6 @@ assert by["lending-rate-vnd-average-low"]["value"]==8.4 and by["lending-rate-vnd
 assert by["priority-short-term-lending-rate-vnd"]["value"]==3.9
 assert all(x["source_id"]=="vnba" and x["evidence_status"]=="reported" and x["period"]=="2026-08" for x in rows)
 live=json.loads((ROOT/"config/live_sources.json").read_text()); src=next(x for x in live["sources"] if x["key"]=="vnba-customer-rates"); assert src["canonical_eligible"] is False
-pools=json.loads((ROOT/"config/source_pools.json").read_text()); pool=next(x for x in pools["pools"] if x["id"]=="customer-rates"); assert pool["preferred_source_ids"]==["sbv-vietnam"] and pool["fallback_source_ids"]==["vnba"] and pool["min_independent_sources_for_corroborated"]==2
+pools=json.loads((ROOT/"config/source_pools.json").read_text()); pool=next(x for x in pools["pools"] if x["id"]=="customer-rates"); assert pool["preferred_source_ids"]==["sbv-vietnam"] and pool["fallback_source_ids"]==["vnba","vna-vietnamplus"] and pool["min_independent_sources_for_corroborated"]==2
 prod=json.loads((ROOT/"config/production_promotion_policy.json").read_text()); assert all(i not in prod["allowed_indicators"] for i in pool["indicator_ids"])
 print("Phase 4.2J.1.1 VNBA fallback discovery tests passed")
