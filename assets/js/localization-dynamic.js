@@ -116,12 +116,15 @@
     'Official documents, effective dates and analysis.': 'Văn bản chính thức, ngày hiệu lực và phân tích.',
     'Deposit, lending and interbank rate views.': 'Theo dõi lãi suất tiền gửi, cho vay và liên ngân hàng.',
     'Domestic Gold': 'Vàng trong nước',
+    'Domestic Gold Sell': 'Giá bán vàng trong nước',
     '12M Deposit Rate': 'Lãi suất tiền gửi 12T',
     'Lending Rate': 'Lãi suất cho vay',
     'Credit Growth': 'Tăng trưởng tín dụng',
     'Credit Growth YTD': 'Tăng trưởng tín dụng YTD',
     'Bank Funding Growth YTD': 'Tăng trưởng huy động vốn YTD',
     'CPI YoY': 'CPI so với cùng kỳ',
+    'CANONICAL': 'CHÍNH THỨC',
+    'CORROBORATED': 'ĐÃ ĐỐI CHIẾU',
     'Stable': 'Ổn định',
     'Illustrative average': 'Bình quân minh họa',
     'Monthly · Demo': 'Theo tháng · Mô phỏng',
@@ -439,6 +442,7 @@
     if ((match = core.match(/^(\d+) days ago$/))) return `${match[1]} ngày trước`;
     if ((match = core.match(/^Demo data · (.+)$/))) return `Dữ liệu mô phỏng · ${match[1]}`;
     if ((match = core.match(/^Controlled macro · (\d+) production records$/))) return `Vĩ mô kiểm soát · ${match[1]} bản ghi production`;
+    if ((match = core.match(/^Mixed data · (\d+) controlled macro records$/))) return `Dữ liệu hỗn hợp · ${match[1]} bản ghi vĩ mô có kiểm soát`;
     if ((match = core.match(/^Published (.+)$/))) return `Công bố ${match[1]}`;
     if ((match = core.match(/^Announced (.+)$/))) return `Công bố ${match[1]}`;
     if ((match = core.match(/^Source: (.+)$/))) return `Nguồn: ${match[1]}`;
