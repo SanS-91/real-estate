@@ -795,6 +795,48 @@ button, a, input, select { outline-offset: 3px; }
 .status-badge--withdrawn { border-color: #ddd7da; background: #f6f4f5; color: #6b5960; }
 .document-number { color: #475467; font-size: 10.5px; font-weight: 750; letter-spacing: .01em; }
 .data-table--legal { min-width: 1120px; }
+
+/* Phase 4.3A.2 · Legal Overview compact table
+   Keep the 5-row overview preview fully visible without horizontal scrolling.
+   The full Documents view continues to use the normal wide legal table. */
+.table-wrap--legal-overview { overflow-x: hidden; }
+.data-table--legal-overview {
+  width: 100%;
+  min-width: 0;
+  table-layout: fixed;
+  font-size: 10.5px;
+}
+.data-table--legal-overview th,
+.data-table--legal-overview td {
+  padding: 10px 7px;
+  white-space: normal;
+  overflow-wrap: anywhere;
+  line-height: 1.35;
+}
+.data-table--legal-overview th { font-size: 9px; }
+.data-table--legal-overview th:nth-child(1),
+.data-table--legal-overview td:nth-child(1) { width: 11%; }
+.data-table--legal-overview th:nth-child(2),
+.data-table--legal-overview td:nth-child(2) { width: 43%; }
+.data-table--legal-overview th:nth-child(3),
+.data-table--legal-overview td:nth-child(3) { width: 7%; }
+.data-table--legal-overview th:nth-child(4),
+.data-table--legal-overview td:nth-child(4) { width: 9%; }
+.data-table--legal-overview th:nth-child(5),
+.data-table--legal-overview td:nth-child(5) { width: 10%; }
+.data-table--legal-overview th:nth-child(6),
+.data-table--legal-overview td:nth-child(6) { width: 10%; }
+.data-table--legal-overview th:nth-child(7),
+.data-table--legal-overview td:nth-child(7) { width: 10%; }
+.data-table--legal-overview .document-number { font-size: 9.5px; }
+.data-table--legal-overview .table-link { line-height: 1.35; }
+.data-table--legal-overview .table-subtext { font-size: 9px; }
+.data-table--legal-overview .status-badge {
+  padding-left: 5px;
+  padding-right: 5px;
+  font-size: 8.5px;
+  white-space: nowrap;
+}
 .filter-bar--legal { grid-template-columns: minmax(210px,1.5fr) repeat(5,minmax(120px,.7fr)) auto; }
 .filter-bar--legal-compact { grid-template-columns: minmax(240px,1.5fr) repeat(2,minmax(160px,.8fr)) auto; }
 .filter-bar--news { grid-template-columns: minmax(260px,1.6fr) minmax(180px,.8fr) minmax(180px,.8fr) auto; }

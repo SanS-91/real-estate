@@ -221,7 +221,7 @@
     ];
   }
 
-  function documentTable(records, { limit = null } = {}) {
+  function documentTable(records, { limit = null, compact = false } = {}) {
     const rows = (limit ? records.slice(0, limit) : records).map(document => `
       <tr>
         <td><span class="document-number">${esc(document.document_number || '—')}</span></td>
@@ -234,8 +234,8 @@
       </tr>
     `).join('');
     return `
-      <div class="table-wrap">
-        <table class="data-table data-table--legal">
+      <div class="table-wrap${compact ? ' table-wrap--legal-overview' : ''}">
+        <table class="data-table data-table--legal${compact ? ' data-table--legal-overview' : ''}">
           <thead><tr><th>Number</th><th>Document</th><th>Type</th><th>Agency</th><th>Status</th><th>Issued / Draft</th><th>Effective</th></tr></thead>
           <tbody>${rows || '<tr><td colspan="7" class="table-empty">No documents match the selected filters.</td></tr>'}</tbody>
         </table>
@@ -261,7 +261,7 @@
       <div class="market-layout market-layout--overview">
         <section class="section market-panel market-panel--wide">
           <div class="section-header"><div><span class="eyebrow">Official document layer</span><h2 class="section-title">Latest Documents</h2></div><a class="text-link" href="legal.html?view=documents">Open database</a></div>
-          <div class="section-body section-body--table">${documentTable(latest)}</div>
+          <div class="section-body section-body--table">${documentTable(latest, { compact: true })}</div>
         </section>
         <section class="section market-panel">
           <div class="section-header"><div><span class="eyebrow">Upcoming</span><h2 class="section-title">Effective Timeline</h2></div><a class="text-link" href="legal.html?view=effective-soon">View all</a></div>
