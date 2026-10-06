@@ -32,6 +32,8 @@ def _iso_date(y: int, m: int, d: int) -> str:
 
 
 def published_at(soup: BeautifulSoup, text: str):
+    # Prefer structured article metadata. Generic full-page text can contain
+    # current sidebar dates that are unrelated to an older policy-event article.
     for attrs in (
         {"property": "article:published_time"},
         {"name": "date"},
@@ -43,45 +45,69 @@ def published_at(soup: BeautifulSoup, text: str):
             m = re.search(r"(20\d{2})-(\d{2})-(\d{2})", tag["content"])
             if m:
                 return f"{m.group(1)}-{m.group(2)}-{m.group(3)}"
+
+    # JSON-LD is common on modern news sites even when article:published_time
+    # is omitted from the server-rendered HTML seen by a bot.
+    for script in soup.find_all("script", attrs={"type": "application/ld+json"}):
+        raw = script.string or script.get_text(" ", strip=True)
+        m = re.search(r'"datePublished"\s*:\s*"(20\d{2})-(\d{2})-(\d{2})', raw or "")
+        if m:
+            return f"{m.group(1)}-{m.group(2)}-{m.group(3)}"
+
+    # Prefer explicit <time datetime=...> before scanning arbitrary page text.
+    for tag in soup.find_all("time"):
+        raw = tag.get("datetime") or compact(" ".join(tag.stripped_strings))
+        m = re.search(r"(20\d{2})-(\d{2})-(\d{2})", raw or "")
+        if m:
+            return f"{m.group(1)}-{m.group(2)}-{m.group(3)}"
+        m = re.search(r"\b(\d{1,2})/(\d{1,2})/(20\d{2})\b", raw or "")
+        if m:
+            return _iso_date(int(m.group(3)), int(m.group(2)), int(m.group(1)))
+
+    # Last resort: choose the first full date only from the beginning of the
+    # article text, reducing the chance of picking a recent-news/sidebar date.
+    article_head = text[:2500]
     for pat in [
         r"\b(\d{1,2})/(\d{1,2})/(20\d{2})\b",
         r"\b(\d{1,2})-(\d{1,2})-(20\d{2})\b",
     ]:
-        m = re.search(pat, text)
+        m = re.search(pat, article_head)
         if m:
             return _iso_date(int(m.group(3)), int(m.group(2)), int(m.group(1)))
     return None
 
 
 def effective_date(text: str, pub: str | None):
-    # Fully-qualified numeric dates first.
-    patterns = [
-        r"(?:có\s+hiệu\s+lực|hiệu\s+lực)[^.]{0,80}?(\d{1,2})[/-](\d{1,2})[/-](20\d{2})",
-        r"(?:áp\s+dụng|thực\s+hiện)[^.]{0,80}?(?:từ\s+ngày\s+)?(\d{1,2})[/-](\d{1,2})[/-](20\d{2})",
-    ]
-    for pat in patterns:
-        m = re.search(pat, text, re.I)
-        if m:
-            return _iso_date(int(m.group(3)), int(m.group(2)), int(m.group(1)))
-
-    # Vietnamese long-form date.
+    # Resolve a fully-qualified effective/application date first. Allow wording
+    # such as "có hiệu lực từ hôm nay 19/6/2023" and "áp dụng từ ngày ...".
+    event_prefix = r"(?:có\s+hiệu\s+lực|hiệu\s+lực|áp\s+dụng|thực\s+hiện)"
     m = re.search(
-        r"(?:có\s+hiệu\s+lực|hiệu\s+lực)[^.]{0,100}?ngày\s+(\d{1,2})\s+tháng\s+(\d{1,2})\s+năm\s+(20\d{2})",
+        rf"{event_prefix}[^.;]{{0,120}}?(?:từ\s+)?(?:hôm\s+nay\s+)?(?:ngày\s+)?(\d{{1,2}})[/-](\d{{1,2}})[/-](20\d{{2}})",
         text,
         re.I,
     )
     if m:
         return _iso_date(int(m.group(3)), int(m.group(2)), int(m.group(1)))
 
-    # Day/month without year: infer year from article publication.
-    m = re.search(r"(?:có\s+hiệu\s+lực|hiệu\s+lực)[^.]{0,80}?(\d{1,2})/(\d{1,2})(?!/\d)", text, re.I)
+    # Vietnamese long-form date.
+    m = re.search(
+        rf"{event_prefix}[^.;]{{0,140}}?(?:từ\s+)?(?:ngày\s+)?(\d{{1,2}})\s+tháng\s+(\d{{1,2}})\s+năm\s+(20\d{{2}})",
+        text,
+        re.I,
+    )
+    if m:
+        return _iso_date(int(m.group(3)), int(m.group(2)), int(m.group(1)))
+
+    # Day/month without year: infer the year from the article publication. This
+    # covers headlines/body text such as "áp dụng từ ngày 19/6 tới đây".
+    m = re.search(
+        rf"{event_prefix}[^.;]{{0,120}}?(?:từ\s+)?(?:hôm\s+nay\s+)?(?:ngày\s+)?(\d{{1,2}})/(\d{{1,2}})(?!/\d)",
+        text,
+        re.I,
+    )
     if m and pub:
         return _iso_date(int(pub[:4]), int(m.group(2)), int(m.group(1)))
 
-    # "hôm nay 19/6/2023" wording used in weekly market recaps.
-    m = re.search(r"(?:hôm\s+nay|từ\s+ngày)\s+(\d{1,2})/(\d{1,2})/(20\d{2})", text, re.I)
-    if m:
-        return _iso_date(int(m.group(3)), int(m.group(2)), int(m.group(1)))
     return pub
 
 

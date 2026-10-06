@@ -412,10 +412,10 @@
       "parser": "parse_baochinhphu_policy_rates",
       "discoverer": "discover_baochinhphu_policy_rates_url",
       "landing_urls": [
-        "https://baochinhphu.vn/",
-        "https://baochinhphu.vn/kinh-te.htm"
+        "https://xaydungchinhsach.chinhphu.vn/",
+        "https://xaydungchinhsach.chinhphu.vn/ngan-hang.htm"
       ],
-      "fetch_url": "https://cms.baochinhphu.vn/ngan-hang-nha-nuoc-tiep-tuc-dieu-chinh-lai-suat-dieu-hanh-102230616132756661.htm",
+      "fetch_url": "https://xaydungchinhsach.chinhphu.vn/nhnn-tiep-tuc-dieu-chinh-lai-suat-dieu-hanh-119230616150218505.htm",
       "enabled": true,
       "optional": true,
       "min_records": 3,
@@ -428,7 +428,7 @@
       "pool_ids": [
         "policy-rates"
       ],
-      "discovery_fallback_reason": "If no newer SBV policy-change event is visible on the lightweight landing pages, re-read the latest known effective policy event as the current-state seed.",
+      "discovery_fallback_reason": "Use the latest known Government policy-event detail on xaydungchinhsach.chinhphu.vn when no newer qualifying SBV policy-change event is visible.",
       "fallback_on_parse_shortfall": true
     },
     {

@@ -9,4 +9,4 @@ def parse_baochinhphu_policy_rates(html: str, source_url: str, fetched_at: str):
 
 
 def discover_baochinhphu_policy_rates_url(html: str, landing_url: str):
-    return discover_policy_news_url(html, landing_url, "baochinhphu.vn")
+    return discover_policy_news_url(html, landing_url, "chinhphu.vn")
