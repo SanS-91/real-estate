@@ -101,6 +101,8 @@ jobs:
           python tests/test_phase4_2k1_policy_interbank_discovery.py
           python tests/test_phase4_2k1_1_policy_liquidity_fallback.py
           python tests/test_phase4_2k2_policy_news_search.py
+          python tests/test_phase4_2k2_1_policy_event_date_alignment.py
+          python tests/test_phase4_2k2_2_event_identity_repair.py
 
       - name: Promotion preview fixture tests
         run: python tests/test_promotion_preview.py
