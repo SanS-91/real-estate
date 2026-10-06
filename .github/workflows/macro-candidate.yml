@@ -26,6 +26,7 @@ on:
           - sbv-interbank-rates
           - policy-liquidity-discovery
           - policy-news-search
+          - policy-rates-production
           - baochinhphu-policy-rates
           - vietnamplus-policy-rates
           - banking-times-policy-rates
@@ -102,6 +103,7 @@ jobs:
           python tests/test_phase4_2k2_policy_news_search.py
           python tests/test_phase4_2k2_1_policy_event_date_alignment.py
           python tests/test_phase4_2k2_2_event_identity_repair.py
+          python tests/test_phase4_2k3_policy_production.py
 
       - name: Promotion preview fixture tests
         run: python tests/test_promotion_preview.py
@@ -121,8 +123,12 @@ jobs:
               --source vietnamplus-interbank-rates
           elif [ "$SOURCE" = "policy-news-search" ]; then
             # Simple two-source policy event model.
-            # Both trusted sources must agree before policy rates can become
-            # ready-corroborated. Government/SBV references are manual only.
+            python scripts/candidate_pipeline.py --mode candidate \
+              --source vietnamplus-policy-rates \
+              --source banking-times-policy-rates
+          elif [ "$SOURCE" = "policy-rates-production" ]; then
+            # Same two trusted sources as policy-news-search; controlled
+            # production later uses the narrow policy-rate-only gate.
             python scripts/candidate_pipeline.py --mode candidate \
               --source vietnamplus-policy-rates \
               --source banking-times-policy-rates
@@ -153,11 +159,23 @@ jobs:
         run: python scripts/validate_promotion_preview.py --preview-dir data/staging/macro-preview
 
       - name: Controlled production promotion
-        if: ${{ github.event_name == 'schedule' || github.event.inputs.source == 'all' || github.event.inputs.source == 'customer-rates-production' || github.event.inputs.source == '' }}
-        run: python scripts/promote_production.py --preview-dir data/staging/macro-preview --processed-dir data/processed/macro
+        if: ${{ github.event_name == 'schedule' || github.event.inputs.source == 'all' || github.event.inputs.source == 'customer-rates-production' || github.event.inputs.source == 'policy-rates-production' || github.event.inputs.source == '' }}
+        shell: bash
+        run: |
+          SOURCE='${{ github.event.inputs.source }}'
+          if [ "$SOURCE" = "policy-rates-production" ]; then
+            python scripts/promote_production.py \
+              --preview-dir data/staging/macro-preview \
+              --processed-dir data/processed/macro \
+              --policy config/policy_rates_production_gate.json
+          else
+            python scripts/promote_production.py \
+              --preview-dir data/staging/macro-preview \
+              --processed-dir data/processed/macro
+          fi
 
       - name: Validate controlled production output
-        if: ${{ github.event_name == 'schedule' || github.event.inputs.source == 'all' || github.event.inputs.source == 'customer-rates-production' || github.event.inputs.source == '' }}
+        if: ${{ github.event_name == 'schedule' || github.event.inputs.source == 'all' || github.event.inputs.source == 'customer-rates-production' || github.event.inputs.source == 'policy-rates-production' || github.event.inputs.source == '' }}
         run: python scripts/validate_production.py --processed-dir data/processed/macro
 
       - name: Write workflow summary
@@ -197,7 +215,7 @@ jobs:
             data/candidate/macro/run-report.json
           # Staging preview artifact only; processed production is uploaded separately for review.
       - name: Upload controlled production artifact
-        if: ${{ always() && (github.event_name == 'schedule' || github.event.inputs.source == 'all' || github.event.inputs.source == 'customer-rates-production' || github.event.inputs.source == '') }}
+        if: ${{ always() && (github.event_name == 'schedule' || github.event.inputs.source == 'all' || github.event.inputs.source == 'customer-rates-production' || github.event.inputs.source == 'policy-rates-production' || github.event.inputs.source == '') }}
         uses: actions/upload-artifact@v4
         with:
           name: macro-production-${{ github.run_number }}
