@@ -1,6 +1,10 @@
-from bs4 import BeautifulSoup
+from pathlib import Path
+import sys
 
-from scripts.collectors.policy_news_common import published_at, effective_date, parse_policy_news
+ROOT = Path(__file__).resolve().parents[1]
+sys.path.insert(0, str(ROOT / "scripts"))
+
+from collectors.policy_news_common import parse_policy_news
 
 
 def test_vietnamplus_effective_date_uses_article_year_not_current_sidebar_dates():
@@ -29,3 +33,9 @@ def test_banking_times_hom_nay_effective_date():
     rows = parse_policy_news(html, 'https://thoibaonganhang.vn/example.html', '2026-10-05T00:00:00Z', 'banking-times-vn')
     assert len(rows) == 3
     assert {r['period'] for r in rows} == {'2023-06-19'}
+
+
+if __name__ == "__main__":
+    test_vietnamplus_effective_date_uses_article_year_not_current_sidebar_dates()
+    test_banking_times_hom_nay_effective_date()
+    print("Phase 4.2K.2.1 policy event date alignment tests PASS")
