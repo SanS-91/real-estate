@@ -139,10 +139,13 @@ def main():
         processed.mkdir(parents=True, exist_ok=True)
         shutil.copy2(BASE_PROCESSED / "observations.json", processed / "observations.json")
         out, report = build_production(preview_dir, processed, GATE_POLICY)
-        assert report["prior_record_count"] == 12, report
-        assert report["added_record_count"] == 3, report
+        # Repository baseline is post-K3 persistence: the three policy records already exist.
+        # Re-running the narrow gate must be idempotent and must still hold unrelated FX.
+        assert report["prior_record_count"] == 15, report
+        assert report["added_record_count"] == 0, report
+        assert report["unchanged_record_count"] == 3, report
         assert report["final_record_count"] == 15, report
-        assert {r["indicator_id"] for r in report["added"]} == set(POLICY_VALUES)
+        assert {r["indicator_id"] for r in report["unchanged"]} == set(POLICY_VALUES)
         assert any(h["indicator_id"] == "usd-vnd-central-rate" and h["action"] == "hold-not-allowlisted" for h in report["held"])
         assert all(r["indicator_id"] != "interbank-on" for r in out["data"])
 
@@ -158,7 +161,7 @@ def main():
         if cp.returncode != 0:
             raise AssertionError(cp.stdout + "\n" + cp.stderr)
 
-        # Persistence simulation: append exactly those three records to the current 12-record repo state.
+        # Persistence simulation is idempotent against the current 15-record repository state.
         repo_copy = temp / "repo-processed"
         repo_copy.mkdir(parents=True, exist_ok=True)
         shutil.copy2(BASE_PROCESSED / "observations.json", repo_copy / "observations.json")
@@ -172,11 +175,10 @@ def main():
             PERSIST_POLICY,
             MAIN_POLICY,
         )
-        assert persist_report["status"] == "ready-to-commit", persist_report
-        assert persist_report["prior_record_count"] == 12
-        assert persist_report["added_record_count"] == 3
+        assert persist_report["status"] == "no-change", persist_report
+        assert persist_report["prior_record_count"] == 15
+        assert persist_report["added_record_count"] == 0
         assert persist_report["final_record_count"] == 15
-        assert {x["indicator_id"] for x in persist_report["added"]} == set(POLICY_VALUES)
 
         print("Phase 4.2K.3 policy production gate tests PASS")
     finally:

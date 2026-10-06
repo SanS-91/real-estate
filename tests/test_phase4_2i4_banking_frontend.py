@@ -41,13 +41,13 @@ def main():
     assert "9.78" not in js
 
     mapping = json.loads((ROOT / "config/frontend_indicator_map.json").read_text(encoding="utf-8"))
-    assert mapping["frontend_baseline"] == "v7.2.1+4.2J3.2+4.2K1"
+    assert mapping["frontend_baseline"] == "v7.2.1+4.2J3.2+4.2K4"
     assert mapping["mappings"]["credit-growth-ytd"]["status"] == "compatible"
     assert mapping["mappings"]["bank-funding-growth-ytd"]["status"] == "compatible"
 
     html = (ROOT / "macro.html").read_text(encoding="utf-8")
-    assert "macro.js?v=4.2J3.2" in html
-    assert "localization-dynamic.js?v=4.2J3.2" in html
+    assert "macro.js?v=4.2K4" in html
+    assert "localization-dynamic.js?v=4.2K4" in html
     assert "main.css?v=4.2I4" in html
 
     print("Phase 4.2I.4 banking frontend sync tests passed")

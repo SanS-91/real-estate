@@ -38,12 +38,12 @@ def main():
     macro_html = (ROOT / 'macro.html').read_text(encoding='utf-8')
     assert 'home.js?v=4.2J3' in index
     assert 'localization-dynamic.js?v=4.2J3' in index
-    assert 'macro.js?v=4.2J3.2' in macro_html
-    assert 'localization-dynamic.js?v=4.2J3.2' in macro_html
+    assert 'macro.js?v=4.2K4' in macro_html
+    assert 'localization-dynamic.js?v=4.2K4' in macro_html
     assert 'ui=4.2J3.2' in macro_html
 
     mapping = json.loads((ROOT / 'config/frontend_indicator_map.json').read_text(encoding='utf-8'))
-    assert mapping['frontend_baseline'] == 'v7.2.1+4.2J3.2+4.2K1'
+    assert mapping['frontend_baseline'] == 'v7.2.1+4.2J3.2+4.2K4'
 
     # This cleanup must not alter controlled production observations.
     processed = json.loads((ROOT / 'data/processed/macro/observations.json').read_text(encoding='utf-8'))

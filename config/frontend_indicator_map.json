@@ -1,6 +1,6 @@
 {
   "schema_version": 2,
-  "frontend_baseline": "v7.2.1+4.2J3.2+4.2K1",
+  "frontend_baseline": "v7.2.1+4.2J3.2+4.2K4",
   "mappings": {
     "cpi-yoy": {
       "frontend_indicator_id": "cpi-yoy",
@@ -64,19 +64,19 @@
     },
     "policy-refinancing-rate": {
       "frontend_indicator_id": "policy-refinancing-rate",
-      "status": "compatible-candidate-only"
+      "status": "compatible"
     },
     "interbank-on": {
       "frontend_indicator_id": "interbank-on",
       "status": "compatible-candidate-only"
     },
     "policy-rediscount-rate": {
-      "frontend_indicator_id": null,
-      "status": "candidate-only-not-published"
+      "frontend_indicator_id": "policy-rediscount-rate",
+      "status": "compatible"
     },
     "policy-overnight-lending-rate": {
-      "frontend_indicator_id": null,
-      "status": "candidate-only-not-published"
+      "frontend_indicator_id": "policy-overnight-lending-rate",
+      "status": "compatible"
     }
   }
 }

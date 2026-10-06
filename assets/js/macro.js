@@ -9,7 +9,7 @@
     liquidity: ['interbank-on', 'credit-growth-ytd', 'bank-funding-growth-ytd', 'm2-growth-yoy'],
     inflation: ['cpi-yoy', 'cpi-mom', 'core-cpi-yoy']
   };
-  const PRODUCTION_RATE_SERIES = ['deposit-rate-vnd-6-12m-range', 'lending-rate-vnd-average-range', 'interbank-on', 'policy-refinancing-rate'];
+  const PRODUCTION_POLICY_RATE_SERIES = ['policy-refinancing-rate', 'policy-rediscount-rate', 'policy-overnight-lending-rate'];
   const DEFAULT_SERIES = {
     rates: 'deposit-rate-12m-average', fx: 'usd-vnd-central-rate', gold: 'sjc-gold-sell',
     liquidity: 'credit-growth-ytd', inflation: 'cpi-yoy'
@@ -30,7 +30,10 @@
     ['deposit-rate-vnd-6-12m-low', { unit: 'percent-per-year', evidenceStatus: 'corroborated', sources: ['vnba', 'vna-vietnamplus'] }],
     ['deposit-rate-vnd-6-12m-high', { unit: 'percent-per-year', evidenceStatus: 'corroborated', sources: ['vnba', 'vna-vietnamplus'] }],
     ['lending-rate-vnd-average-low', { unit: 'percent-per-year', evidenceStatus: 'corroborated', sources: ['vnba', 'vna-vietnamplus'] }],
-    ['lending-rate-vnd-average-high', { unit: 'percent-per-year', evidenceStatus: 'corroborated', sources: ['vnba', 'vna-vietnamplus'] }]
+    ['lending-rate-vnd-average-high', { unit: 'percent-per-year', evidenceStatus: 'corroborated', sources: ['vnba', 'vna-vietnamplus'] }],
+    ['policy-refinancing-rate', { unit: 'percent-per-year', evidenceStatus: 'corroborated', sources: ['vna-vietnamplus', 'banking-times-vn'] }],
+    ['policy-rediscount-rate', { unit: 'percent-per-year', evidenceStatus: 'corroborated', sources: ['vna-vietnamplus', 'banking-times-vn'] }],
+    ['policy-overnight-lending-rate', { unit: 'percent-per-year', evidenceStatus: 'corroborated', sources: ['vna-vietnamplus', 'banking-times-vn'] }]
   ]);
   const PRODUCTION_RATE_RANGES = [
     {
@@ -93,6 +96,21 @@
       default_source_id: 'vnba',
       description: 'Monthly range of average VND lending rates reported from the SBV customer-rate bulletin.',
       methodology_note: 'Corroborated production is displayed as the official low–high range. The frontend pairs separately promoted range components and never collapses the range into a single average.'
+    },
+    'policy-refinancing-rate': {
+      default_source_id: 'vna-vietnamplus',
+      description: 'State Bank of Vietnam refinancing policy rate.',
+      methodology_note: 'Event-driven policy rate. Controlled production requires two independent trusted sources to agree on the decision, effective date and value. No synthetic history is created.'
+    },
+    'policy-rediscount-rate': {
+      default_source_id: 'vna-vietnamplus',
+      description: 'State Bank of Vietnam rediscount policy rate.',
+      methodology_note: 'Event-driven policy rate. Controlled production requires two independent trusted sources to agree on the decision, effective date and value. No synthetic history is created.'
+    },
+    'policy-overnight-lending-rate': {
+      default_source_id: 'vna-vietnamplus',
+      description: 'State Bank of Vietnam overnight lending / clearing-deficit facility rate.',
+      methodology_note: 'Event-driven administered policy rate. It is distinct from the market interbank overnight rate. Controlled production requires two independent trusted sources to agree on the decision, effective date and value.'
     }
   };
 
@@ -233,8 +251,11 @@
       && productionState.indicatorIds.has('bank-funding-growth-ytd');
     const customerRatesSynced = productionState.indicatorIds.has('deposit-rate-vnd-6-12m-range')
       && productionState.indicatorIds.has('lending-rate-vnd-average-range');
-    text.textContent = customerRatesSynced
-      ? 'Controlled production includes verified NSO banking indicators plus customer-rate ranges published by the State Bank of Vietnam and independently corroborated through secondary sources. Rate ranges remain low–high ranges; no scalar average is fabricated.'
+    const policyRatesSynced = PRODUCTION_POLICY_RATE_SERIES.every(id => productionState.indicatorIds.has(id));
+    text.textContent = customerRatesSynced && policyRatesSynced
+      ? 'Controlled production includes verified NSO banking indicators, independently corroborated customer-rate ranges, and independently corroborated SBV policy rates. Rate ranges remain low–high ranges; no scalar average is fabricated.'
+      : customerRatesSynced
+        ? 'Controlled production includes verified NSO banking indicators plus customer-rate ranges published by the State Bank of Vietnam and independently corroborated through secondary sources. Rate ranges remain low–high ranges; no scalar average is fabricated.'
       : bankingSynced
         ? 'Controlled production now includes verified NSO banking indicators: Credit Growth YTD and Bank Funding Growth YTD. Canonical and Corroborated labels remain evidence-based; unpromoted indicators remain illustrative demo data.'
         : 'Production observations are labeled by evidence status: verified official data as Canonical and independently matched data as Corroborated. Unpromoted indicators remain illustrative demo data.';
@@ -254,7 +275,9 @@
     const rows = observationsFor(id);
     const current = rows.at(-1) || null;
     if (current?._data_layer === 'production' && rows.length === 1) {
-      return 'Latest observation only · no synthetic history is created.';
+      return indicator(id)?.frequency === 'event-driven'
+        ? 'Current effective event only · no synthetic history is created.'
+        : 'Latest observation only · no synthetic history is created.';
     }
     if (current?._data_layer === 'production') {
       return 'Controlled production history · demo points are not mixed into this series.';
@@ -419,7 +442,11 @@
   function ratesSeries() {
     const hasProductionRanges = productionState.indicatorIds.has('deposit-rate-vnd-6-12m-range')
       && productionState.indicatorIds.has('lending-rate-vnd-average-range');
-    return hasProductionRanges ? PRODUCTION_RATE_SERIES : VIEW_SERIES.rates;
+    const base = hasProductionRanges
+      ? ['deposit-rate-vnd-6-12m-range', 'lending-rate-vnd-average-range', 'interbank-on']
+      : ['deposit-rate-12m-average', 'lending-rate-average', 'interbank-on'];
+    const policyProduction = PRODUCTION_POLICY_RATE_SERIES.filter(id => productionState.indicatorIds.has(id));
+    return policyProduction.length ? [...base, ...policyProduction] : [...base, 'policy-refinancing-rate'];
   }
 
   function seriesForView(view) {
@@ -434,7 +461,8 @@
 
   function keyIndicators() {
     const rateIds = ratesSeries().slice(0, 2);
-    return ['usd-vnd-central-rate','sjc-gold-sell',...rateIds,'credit-growth-ytd','bank-funding-growth-ytd','cpi-yoy'];
+    const policyRate = productionState.indicatorIds.has('policy-refinancing-rate') ? ['policy-refinancing-rate'] : [];
+    return ['usd-vnd-central-rate','sjc-gold-sell',...rateIds,...policyRate,'credit-growth-ytd','bank-funding-growth-ytd','cpi-yoy'];
   }
 
   function latestEventList(limit = 5) {

@@ -2,7 +2,7 @@
   "schema_version": 1,
   "build_id": "demo-step6-20261003",
   "generated_at": "2026-10-03T16:45:00+07:00",
-  "record_count": 15,
+  "record_count": 19,
   "data": [
     {
       "id": "usd-vnd-central-rate",
@@ -108,8 +108,32 @@
       "unit": "percent-per-year",
       "frequency": "event-driven",
       "default_source_id": "demo-central-bank",
-      "description": "Illustrative policy-rate series used to demonstrate event-driven stepped charts.",
-      "methodology_note": "Values are fictional and only demonstrate event-driven series behavior.",
+      "description": "State Bank of Vietnam refinancing policy rate. Demo values are used only until a controlled production observation is available.",
+      "methodology_note": "Event-driven policy rate. Controlled production is displayed only after independent corroboration of the decision, effective date and rate.",
+      "active": true
+    },
+    {
+      "id": "policy-rediscount-rate",
+      "name": "Policy Rediscount Rate",
+      "indicator_category": "interest-rate",
+      "indicator_subcategory": "policy-rate",
+      "unit": "percent-per-year",
+      "frequency": "event-driven",
+      "default_source_id": "demo-central-bank",
+      "description": "State Bank of Vietnam rediscount policy rate.",
+      "methodology_note": "Event-driven policy rate. Controlled production is displayed only after independent corroboration of the decision, effective date and rate.",
+      "active": true
+    },
+    {
+      "id": "policy-overnight-lending-rate",
+      "name": "SBV Overnight Lending Facility Rate",
+      "indicator_category": "interest-rate",
+      "indicator_subcategory": "policy-rate",
+      "unit": "percent-per-year",
+      "frequency": "event-driven",
+      "default_source_id": "demo-central-bank",
+      "description": "State Bank of Vietnam overnight lending / clearing-deficit facility rate. This is distinct from the market interbank overnight rate.",
+      "methodology_note": "Event-driven administered policy rate. Controlled production requires independent corroboration of the decision, effective date and rate; it is never merged with the market interbank overnight series.",
       "active": true
     },
     {

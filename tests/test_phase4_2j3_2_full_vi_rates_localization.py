@@ -16,5 +16,5 @@ def test_rates_vi_localization_contract():
     assert '<span>${esc(seriesCoverageNote(selected))}</span>' in macro
     assert '<span>${esc(ind?.methodology_note || \'\')}</span>' in macro
 
-    assert "assets/js/macro.js?v=4.2J3.2" in html
-    assert "assets/js/localization-dynamic.js?v=4.2J3.2" in html
+    assert "assets/js/macro.js?v=4.2K4" in html
+    assert "assets/js/localization-dynamic.js?v=4.2K4" in html
