@@ -67,7 +67,6 @@ def test_policy_pool_uses_lightweight_news_sources_not_large_archive():
     pools = json.loads((ROOT / "config/source_pools.json").read_text(encoding="utf-8"))["pools"]
     policy = next(p for p in pools if p["id"] == "policy-rates")
     assert policy["fallback_source_ids"] == [
-        "gov-vietnam-baochinhphu",
         "vna-vietnamplus",
         "banking-times-vn",
     ]
@@ -76,7 +75,11 @@ def test_policy_pool_uses_lightweight_news_sources_not_large_archive():
     live = json.loads((ROOT / "config/live_sources.json").read_text(encoding="utf-8"))["sources"]
     archive = next(x for x in live if x["key"] == "sbv-policy-archive")
     assert archive["enabled"] is False
-    for key in ["baochinhphu-policy-rates", "vietnamplus-policy-rates", "banking-times-policy-rates"]:
+    gov = next(x for x in live if x["key"] == "baochinhphu-policy-rates")
+    assert gov["enabled"] is False
+    assert gov["optional"] is True
+
+    for key in ["vietnamplus-policy-rates", "banking-times-policy-rates"]:
         src = next(x for x in live if x["key"] == key)
         assert src["enabled"] is True
         assert src["max_bytes"] <= 3_000_000
@@ -84,7 +87,7 @@ def test_policy_pool_uses_lightweight_news_sources_not_large_archive():
         assert src["fallback_on_parse_shortfall"] is True
 
 
-def test_three_source_fixture_run_is_ready_corroborated():
+def test_two_source_fixture_run_is_ready_corroborated():
     with tempfile.TemporaryDirectory() as td:
         out = Path(td) / "candidate"
         cmd = [
@@ -94,8 +97,6 @@ def test_three_source_fixture_run_is_ready_corroborated():
             "--replace-history",
             "--output-root",
             str(out),
-            "--source",
-            "baochinhphu-policy-rates",
             "--source",
             "vietnamplus-policy-rates",
             "--source",
@@ -108,11 +109,11 @@ def test_three_source_fixture_run_is_ready_corroborated():
             raise SystemExit(cp.returncode)
         report = json.loads((out / "run-report.json").read_text(encoding="utf-8"))
         readiness = json.loads((out / "publish-readiness.json").read_text(encoding="utf-8"))
-        assert report["new_observations"] == 9
+        assert report["new_observations"] == 6
         by = {x["indicator_id"]: x for x in readiness["data"]}
         for iid in ["policy-refinancing-rate", "policy-rediscount-rate", "policy-overnight-lending-rate"]:
             assert by[iid]["status"] == "ready-corroborated"
-            assert len(by[iid]["independent_sources"]) == 3
+            assert len(by[iid]["independent_sources"]) == 2
             assert by[iid]["latest_business_period"] == "2023-06-19"
 
 
@@ -120,7 +121,7 @@ def test_workflow_exposes_news_search_gate():
     wf = (ROOT / ".github/workflows/macro-candidate.yml").read_text(encoding="utf-8")
     assert "policy-news-search" in wf
     block = wf.split('elif [ "$SOURCE" = "policy-news-search" ]; then', 1)[1].split('elif [ "$SOURCE" = "policy-liquidity-discovery" ]; then', 1)[0]
-    assert "--source baochinhphu-policy-rates" in block
+    assert "--source baochinhphu-policy-rates" not in block
     assert "--source vietnamplus-policy-rates" in block
     assert "--source banking-times-policy-rates" in block
     assert "sbv-policy-archive" not in block
@@ -132,6 +133,6 @@ if __name__ == "__main__":
     test_policy_news_parsers_and_discovery()
     test_forecast_is_not_mistaken_for_policy_event()
     test_policy_pool_uses_lightweight_news_sources_not_large_archive()
-    test_three_source_fixture_run_is_ready_corroborated()
+    test_two_source_fixture_run_is_ready_corroborated()
     test_workflow_exposes_news_search_gate()
     print("Phase 4.2K.2 policy news search tests passed")

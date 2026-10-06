@@ -32,13 +32,13 @@ def test_segmented_fetch_reassembles_document():
     assert len(s.calls) > 2
     assert all(c.get('Accept-Encoding')=='identity' for c in s.calls)
 
-def test_sbv_archive_uses_segmented_strategy():
+def test_sbv_archive_is_disabled_reference_only():
     import json
     cfg=json.loads((ROOT/'config/live_sources.json').read_text(encoding='utf-8'))['sources']
     s=next(x for x in cfg if x['key']=='sbv-policy-archive')
-    assert s['fetch_strategy']=='segmented-range'
-    assert s['segment_bytes'] <= 1_000_000
-    assert s['max_bytes'] >= 8_000_000
+    assert s['enabled'] is False
+    assert s['optional'] is True
+    assert 'fetch_strategy' not in s
 
 if __name__=='__main__':
-    test_segmented_fetch_reassembles_document(); test_sbv_archive_uses_segmented_strategy(); print('Phase 4.2K.1.3 segmented fetch tests passed')
+    test_segmented_fetch_reassembles_document(); test_sbv_archive_is_disabled_reference_only(); print('Phase 4.2K.1.3 segmented fetch tests passed')

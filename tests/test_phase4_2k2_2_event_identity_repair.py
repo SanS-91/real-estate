@@ -58,7 +58,7 @@ def test_corrected_event_then_corroborates_across_independent_sources():
         for iid in POLICY_IDS
     ]
     fresh = []
-    for source in ['vna-vietnamplus', 'gov-vietnam-baochinhphu', 'banking-times-vn']:
+    for source in ['vna-vietnamplus', 'banking-times-vn']:
         fresh.extend([
             row(iid, source, '2023-06-19', '1123/QĐ-NHNN', source)
             for iid in POLICY_IDS
@@ -69,7 +69,7 @@ def test_corrected_event_then_corroborates_across_independent_sources():
     for iid in POLICY_IDS:
         assert by[iid]['status'] == 'ready-corroborated'
         assert by[iid]['latest_business_period'] == '2023-06-19'
-        assert len(by[iid]['independent_sources']) == 3
+        assert len(by[iid]['independent_sources']) == 2
 
 
 def test_genuinely_new_event_with_different_record_id_is_not_silently_removed():

@@ -35,7 +35,7 @@ def test_vietnamplus_interbank_parser_and_discovery():
 def test_pool_fallback_policy():
     pools=json.loads((ROOT/'config/source_pools.json').read_text(encoding='utf-8'))['pools']
     by={p['id']:p for p in pools}
-    assert by['policy-rates']['fallback_source_ids']==['gov-vietnam-baochinhphu','vna-vietnamplus','banking-times-vn']
+    assert by['policy-rates']['fallback_source_ids']==['vna-vietnamplus','banking-times-vn']
     assert by['interbank-market']['fallback_source_ids']==['vna-vietnamplus']
     assert by['policy-rates']['min_independent_sources_for_corroborated']==2
     assert by['interbank-market']['min_independent_sources_for_corroborated']==2
@@ -44,7 +44,7 @@ def test_pool_fallback_policy():
 def test_workflow_has_fallback_gate():
     wf=(ROOT/'.github/workflows/macro-candidate.yml').read_text(encoding='utf-8')
     assert 'policy-liquidity-fallback' in wf
-    assert '--source baochinhphu-policy-rates' in wf
+    assert '--source baochinhphu-policy-rates' not in wf.split('if [ "$SOURCE" = "policy-liquidity-fallback" ]; then',1)[1].split('elif [ "$SOURCE" = "policy-news-search" ]; then',1)[0]
     assert '--source vietnamplus-policy-rates' in wf
     assert '--source banking-times-policy-rates' in wf
     assert '--source vietnamplus-interbank-rates' in wf
