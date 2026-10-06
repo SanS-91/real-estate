@@ -331,7 +331,7 @@
       "module": "collectors.sbv_policy_rates",
       "parser": "parse_sbv_policy_rates",
       "fetch_url": "https://dttktt.sbv.gov.vn/webcenter/portal/vi/menu/rm/ls/bls",
-      "enabled": true,
+      "enabled": false,
       "optional": true,
       "min_records": 3,
       "max_records": 3,
@@ -342,7 +342,8 @@
       "canonical_eligible": true,
       "pool_ids": [
         "policy-rates"
-      ]
+      ],
+      "notes": "Reference/manual official source only. Disabled from routine polling because the current SBV statistics host has been unreliable from GitHub Actions. Re-enable only when a lightweight stable official endpoint is available."
     },
     {
       "key": "sbv-interbank-rates",
@@ -416,7 +417,7 @@
         "https://xaydungchinhsach.chinhphu.vn/ngan-hang.htm"
       ],
       "fetch_url": "https://xaydungchinhsach.chinhphu.vn/nhnn-tiep-tuc-dieu-chinh-lai-suat-dieu-hanh-119230616150218505.htm",
-      "enabled": true,
+      "enabled": false,
       "optional": true,
       "min_records": 3,
       "max_records": 3,
@@ -429,7 +430,8 @@
         "policy-rates"
       ],
       "discovery_fallback_reason": "Use the latest known Government policy-event detail on xaydungchinhsach.chinhphu.vn when no newer qualifying SBV policy-change event is visible.",
-      "fallback_on_parse_shortfall": true
+      "fallback_on_parse_shortfall": true,
+      "notes": "Optional Government reference source. Routine policy corroboration uses VietnamPlus/VNA + Thời Báo Ngân Hàng so one third-party access issue cannot degrade the regular run."
     },
     {
       "key": "vietnamplus-policy-rates",
