@@ -430,7 +430,7 @@
       <div class="drawer-section"><h3>Topics</h3><div class="chip-row">${(document.topic_ids || []).map(id => `<a class="relation-chip" href="legal.html?view=documents&topic=${encodeURIComponent(id)}">${esc(Resolver.getLabel('legal-topic', id, labelize(id)))}</a>`).join('')}</div></div>
       <div class="drawer-section"><h3>Related Regulations</h3>${relations.length ? relations.map(item => `<button type="button" class="drawer-list-row drawer-relation-row" data-document-id="${esc(item.document.id)}"><div><span>${esc(item.label)}</span><strong>${esc(item.document.document_number)} · ${esc(item.document.title)}</strong></div><span>›</span></button>`).join('') : '<p class="muted-text">No related-document records.</p>'}</div>
       <div class="drawer-section"><h3>Related Analysis / News</h3>${relatedArticles.length ? relatedArticles.map(article => `<div class="drawer-list-row drawer-list-row--stack"><span>${esc(App.formatDate(article.published_at))} · ${esc(article.content_type)} · ${sourceRef(article.source_id,{publishedAt:article.published_at,sourceUrl:article.url})}</span><strong>${esc(article.title)}</strong></div>`).join('') : '<p class="muted-text">No related analysis.</p>'}</div>
-      <div class="drawer-section official-source-box"><h3>Official Source</h3><div class="provenance-inline-row">${sourceRef(document.primary_source_id,{sourceDate:document.issued_date,sourceUrl:document.official_url})}</div>${document.official_url ? `<p><a class="text-link" href="${esc(document.official_url)}" target="_blank" rel="noopener noreferrer">Open official document ↗</a></p>` : '<p>Official URL is intentionally not connected in this illustrative demo dataset. Source metadata remains visible through the registry.</p>'}</div>
+      <div class="drawer-section official-source-box"><h3>Official Source</h3><div class="provenance-inline-row">${sourceRef(document.primary_source_id,{sourceDate:document.issued_date,sourceUrl:document.official_url})}</div>${document.official_url ? `<p><a class="text-link" href="${esc(document.official_url)}" target="_blank" rel="noopener noreferrer">Open official document ↗</a></p>` : '<p>Official URL is not available for this record. Source metadata remains visible through the registry.</p>'}</div>
     `;
   }
 
@@ -514,13 +514,13 @@
       Resolver.setData('region', data.regions);
       parseState();
       const updated = document.querySelector('[data-legal-updated]');
-      if (updated) updated.textContent = meta?.last_successful_build ? `Demo data · ${App.formatDate(meta.last_successful_build)}` : 'Demo data';
+      if (updated) updated.textContent = `Official registry · ${data.documents.length} documents`;
       render();
       const documentId = App.getQueryParam('document');
       if (documentId) openDocument(documentId, { push: false });
     } catch (error) {
       console.error(error);
-      setView(Components.stateBox('Unable to load Legal demo data. Check that the site is running through a web server.', 'error'));
+      setView(Components.stateBox('Unable to load Legal registry data. Check that the site is running through a web server.', 'error'));
     }
   }
 

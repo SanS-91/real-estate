@@ -1,15 +1,15 @@
 {
   "schema_version": 1,
-  "build_id": "demo-step4-20261003",
-  "generated_at": "2026-10-03T15:45:00+07:00",
-  "record_count": 8,
+  "build_id": "phase4.3a-legal-registry-20261006",
+  "generated_at": "2026-10-06T20:00:00+07:00",
+  "record_count": 9,
   "data": [
     {
-      "id": "demo-land-framework-law-2026",
-      "document_number": "DEMO 01/2026/QH",
-      "title": "Illustrative Land Framework Amendment Law",
+      "id": "law-31-2024-qh15-land",
+      "document_number": "31/2024/QH15",
+      "title": "Luật Đất đai",
       "document_type": "law",
-      "status": "issued",
+      "status": "effective",
       "agency_ids": [
         "national-assembly"
       ],
@@ -17,30 +17,44 @@
       "region_ids": [],
       "topic_ids": [
         "land",
-        "investment"
+        "investment",
+        "planning"
       ],
-      "issued_date": "2026-08-18",
-      "effective_date": "2027-02-01",
-      "official_url": null,
-      "summary": "Illustrative master document used to demonstrate how national land-related legal records, dates and relationships are displayed. It is not a real legal instrument.",
+      "issued_date": "2024-01-18",
+      "effective_date": "2024-08-01",
+      "official_url": "https://vanban.chinhphu.vn/?classid=1&docid=211189&pageid=27160&typegroupid=3",
+      "summary": "Khung pháp lý nền tảng về quản lý và sử dụng đất, quyền và nghĩa vụ của người sử dụng đất, thu hồi đất, giao/cho thuê đất và các cơ chế liên quan đến dự án đầu tư.",
       "key_changes": [
-        "Demonstrates structured tracking of land-related provisions.",
-        "Shows a future effective date and downstream implementing documents.",
-        "Provides a parent record for related-document navigation."
+        "Ngày hiệu lực chung được đưa lên 01/08/2024 theo Luật 43/2024/QH15.",
+        "Là văn bản nền tảng cho các nghị định hướng dẫn về đất đai và giá đất.",
+        "Một số nội dung có thời điểm áp dụng riêng; cần kiểm tra điều khoản cụ thể khi sử dụng."
       ],
-      "related_documents": [],
-      "primary_source_id": "demo-official",
-      "created_at": "2026-10-03T15:45:00+07:00",
-      "updated_at": "2026-10-03T15:45:00+07:00"
+      "related_documents": [
+        {
+          "document_id": "law-43-2024-qh15-effective-date",
+          "relation_type": "amended-by"
+        },
+        {
+          "document_id": "decree-102-2024-land",
+          "relation_type": "implemented-by"
+        },
+        {
+          "document_id": "decree-71-2024-land-price",
+          "relation_type": "implemented-by"
+        }
+      ],
+      "primary_source_id": "gov-vietnam-legal-documents",
+      "created_at": "2026-10-06T20:00:00+07:00",
+      "updated_at": "2026-10-06T20:00:00+07:00"
     },
     {
-      "id": "demo-housing-decree-2026",
-      "document_number": "DEMO 88/2026/ND-CP",
-      "title": "Illustrative Housing & Project Sales Decree",
-      "document_type": "decree",
-      "status": "issued",
+      "id": "law-27-2023-qh15-housing",
+      "document_number": "27/2023/QH15",
+      "title": "Luật Nhà ở",
+      "document_type": "law",
+      "status": "effective",
       "agency_ids": [
-        "government"
+        "national-assembly"
       ],
       "scope_type": "national",
       "region_ids": [],
@@ -48,37 +62,151 @@
         "housing",
         "real-estate-business"
       ],
-      "issued_date": "2026-09-20",
-      "effective_date": "2026-10-25",
-      "official_url": null,
-      "summary": "Demo decree record used to test the Effective Soon workflow, document lifecycle and links between official documents and analysis articles.",
+      "issued_date": "2023-11-27",
+      "effective_date": "2024-08-01",
+      "official_url": "https://vanban.chinhphu.vn/?classid=1&docid=209627&pageid=27160",
+      "summary": "Quy định về phát triển, sở hữu, quản lý và sử dụng nhà ở, chính sách nhà ở và các yêu cầu liên quan đến dự án nhà ở.",
       "key_changes": [
-        "Illustrates project-sales eligibility tracking.",
-        "Demonstrates effective-date monitoring within 30 days.",
-        "Shows replacement and implementation relationships."
+        "Ngày hiệu lực chung được đưa lên 01/08/2024 theo Luật 43/2024/QH15.",
+        "Tạo khung pháp lý mới cho phát triển và quản lý nhà ở.",
+        "Được hướng dẫn chi tiết bởi Nghị định 95/2024/NĐ-CP."
       ],
       "related_documents": [
         {
-          "document_id": "demo-land-framework-law-2026",
-          "relation_type": "implements"
+          "document_id": "law-43-2024-qh15-effective-date",
+          "relation_type": "amended-by"
         },
         {
-          "document_id": "demo-old-housing-decree-2025",
-          "relation_type": "replaces"
+          "document_id": "decree-95-2024-housing",
+          "relation_type": "implemented-by"
         }
       ],
-      "primary_source_id": "demo-official",
-      "created_at": "2026-10-03T15:45:00+07:00",
-      "updated_at": "2026-10-03T15:45:00+07:00"
+      "primary_source_id": "gov-vietnam-legal-documents",
+      "created_at": "2026-10-06T20:00:00+07:00",
+      "updated_at": "2026-10-06T20:00:00+07:00"
     },
     {
-      "id": "demo-business-circular-2026",
-      "document_number": "DEMO 17/2026/TT-BXD",
-      "title": "Illustrative Real Estate Business Disclosure Circular",
-      "document_type": "circular",
-      "status": "issued",
+      "id": "law-29-2023-qh15-real-estate-business",
+      "document_number": "29/2023/QH15",
+      "title": "Luật Kinh doanh bất động sản",
+      "document_type": "law",
+      "status": "effective",
       "agency_ids": [
-        "ministry-construction"
+        "national-assembly"
+      ],
+      "scope_type": "national",
+      "region_ids": [],
+      "topic_ids": [
+        "real-estate-business",
+        "housing",
+        "finance"
+      ],
+      "issued_date": "2023-11-28",
+      "effective_date": "2024-08-01",
+      "official_url": "https://vanban.chinhphu.vn/?classid=1&docid=209624&pageid=27160&typegroupid=3",
+      "summary": "Khung pháp lý về kinh doanh bất động sản, dự án bất động sản, nhà ở/công trình hình thành trong tương lai, chuyển nhượng và hoạt động môi giới.",
+      "key_changes": [
+        "Ngày hiệu lực chung được đưa lên 01/08/2024 theo Luật 43/2024/QH15.",
+        "Quy định lại điều kiện và nghĩa vụ trong hoạt động kinh doanh bất động sản.",
+        "Được hướng dẫn chi tiết bởi Nghị định 96/2024/NĐ-CP."
+      ],
+      "related_documents": [
+        {
+          "document_id": "law-43-2024-qh15-effective-date",
+          "relation_type": "amended-by"
+        },
+        {
+          "document_id": "decree-96-2024-real-estate-business",
+          "relation_type": "implemented-by"
+        }
+      ],
+      "primary_source_id": "gov-vietnam-legal-documents",
+      "created_at": "2026-10-06T20:00:00+07:00",
+      "updated_at": "2026-10-06T20:00:00+07:00"
+    },
+    {
+      "id": "law-43-2024-qh15-effective-date",
+      "document_number": "43/2024/QH15",
+      "title": "Luật sửa đổi Luật Đất đai, Luật Nhà ở, Luật Kinh doanh bất động sản và Luật Các tổ chức tín dụng",
+      "document_type": "law",
+      "status": "effective",
+      "agency_ids": [
+        "national-assembly"
+      ],
+      "scope_type": "national",
+      "region_ids": [],
+      "topic_ids": [
+        "land",
+        "housing",
+        "real-estate-business",
+        "finance"
+      ],
+      "issued_date": "2024-06-29",
+      "effective_date": "2024-08-01",
+      "official_url": "https://vanban.chinhphu.vn/?docid=211201&pageid=27160",
+      "summary": "Luật sửa đổi một số điều và điều chỉnh thời điểm có hiệu lực của các luật lớn liên quan đến đất đai, nhà ở, kinh doanh bất động sản và tổ chức tín dụng.",
+      "key_changes": [
+        "Đưa thời điểm có hiệu lực chung của Luật Đất đai 2024, Luật Nhà ở 2023 và Luật Kinh doanh bất động sản 2023 lên 01/08/2024.",
+        "Sửa đổi một số điều khoản liên quan trong bốn luật được nêu tại tên văn bản."
+      ],
+      "related_documents": [
+        {
+          "document_id": "law-31-2024-qh15-land",
+          "relation_type": "amends"
+        },
+        {
+          "document_id": "law-27-2023-qh15-housing",
+          "relation_type": "amends"
+        },
+        {
+          "document_id": "law-29-2023-qh15-real-estate-business",
+          "relation_type": "amends"
+        }
+      ],
+      "primary_source_id": "gov-vietnam-legal-documents",
+      "created_at": "2026-10-06T20:00:00+07:00",
+      "updated_at": "2026-10-06T20:00:00+07:00"
+    },
+    {
+      "id": "decree-95-2024-housing",
+      "document_number": "95/2024/NĐ-CP",
+      "title": "Nghị định quy định chi tiết một số điều của Luật Nhà ở",
+      "document_type": "decree",
+      "status": "effective",
+      "agency_ids": [
+        "government"
+      ],
+      "scope_type": "national",
+      "region_ids": [],
+      "topic_ids": [
+        "housing"
+      ],
+      "issued_date": "2024-07-24",
+      "effective_date": "2024-08-01",
+      "official_url": "https://vanban.chinhphu.vn/?classid=0&docid=210761&pageid=27160",
+      "summary": "Nghị định hướng dẫn chi tiết một số nội dung của Luật Nhà ở 2023.",
+      "key_changes": [
+        "Hướng dẫn thực thi các nhóm nội dung được Luật Nhà ở giao Chính phủ quy định chi tiết.",
+        "Có hiệu lực từ 01/08/2024."
+      ],
+      "related_documents": [
+        {
+          "document_id": "law-27-2023-qh15-housing",
+          "relation_type": "implements"
+        }
+      ],
+      "primary_source_id": "gov-vietnam-legal-documents",
+      "created_at": "2026-10-06T20:00:00+07:00",
+      "updated_at": "2026-10-06T20:00:00+07:00"
+    },
+    {
+      "id": "decree-96-2024-real-estate-business",
+      "document_number": "96/2024/NĐ-CP",
+      "title": "Nghị định quy định chi tiết một số điều của Luật Kinh doanh bất động sản",
+      "document_type": "decree",
+      "status": "effective",
+      "agency_ids": [
+        "government"
       ],
       "scope_type": "national",
       "region_ids": [],
@@ -86,186 +214,138 @@
         "real-estate-business",
         "finance"
       ],
-      "issued_date": "2026-09-28",
-      "effective_date": "2026-12-15",
-      "official_url": null,
-      "summary": "Illustrative circular demonstrating disclosure, payment and developer-reporting topics in a structured legal database.",
+      "issued_date": "2024-07-24",
+      "effective_date": "2024-08-01",
+      "official_url": "https://vanban.chinhphu.vn/?classid=1&docid=210798&orggroupid=2&pageid=27160",
+      "summary": "Nghị định hướng dẫn chi tiết một số nội dung của Luật Kinh doanh bất động sản 2023.",
       "key_changes": [
-        "Demonstrates standardized disclosure fields.",
-        "Shows a 31–90 day effective window.",
-        "Links a circular to its parent implementing decree."
+        "Hướng dẫn thực thi các nội dung được Luật Kinh doanh bất động sản giao Chính phủ quy định.",
+        "Có hiệu lực từ 01/08/2024."
       ],
       "related_documents": [
         {
-          "document_id": "demo-housing-decree-2026",
-          "relation_type": "guides"
+          "document_id": "law-29-2023-qh15-real-estate-business",
+          "relation_type": "implements"
         }
       ],
-      "primary_source_id": "demo-official",
-      "created_at": "2026-10-03T15:45:00+07:00",
-      "updated_at": "2026-10-03T15:45:00+07:00"
+      "primary_source_id": "gov-vietnam-legal-documents",
+      "created_at": "2026-10-06T20:00:00+07:00",
+      "updated_at": "2026-10-06T20:00:00+07:00"
     },
     {
-      "id": "demo-hcmc-planning-decision-2026",
-      "document_number": "DEMO 2450/QD-UBND",
-      "title": "Illustrative HCMC Planning Implementation Decision",
-      "document_type": "decision",
+      "id": "decree-102-2024-land",
+      "document_number": "102/2024/NĐ-CP",
+      "title": "Nghị định quy định chi tiết thi hành một số điều của Luật Đất đai",
+      "document_type": "decree",
       "status": "effective",
       "agency_ids": [
-        "hcmc-peoples-committee"
-      ],
-      "scope_type": "local",
-      "region_ids": [
-        "hcmc"
-      ],
-      "topic_ids": [
-        "planning",
-        "investment"
-      ],
-      "issued_date": "2026-08-25",
-      "effective_date": "2026-09-15",
-      "official_url": null,
-      "summary": "Demo local decision showing how region-specific planning documents are separated from national legal instruments.",
-      "key_changes": [
-        "Demonstrates local-scope filtering.",
-        "Links planning and investment topics.",
-        "Shows a document already in effect."
-      ],
-      "related_documents": [],
-      "primary_source_id": "demo-official",
-      "created_at": "2026-10-03T15:45:00+07:00",
-      "updated_at": "2026-10-03T15:45:00+07:00"
-    },
-    {
-      "id": "demo-land-pricing-guidance-2026",
-      "document_number": "DEMO 4200/HD-BTC",
-      "title": "Illustrative Land Pricing & Financial Guidance",
-      "document_type": "guidance",
-      "status": "effective",
-      "agency_ids": [
-        "ministry-finance"
+        "government"
       ],
       "scope_type": "national",
       "region_ids": [],
       "topic_ids": [
         "land",
-        "finance",
-        "tax"
+        "investment",
+        "planning"
       ],
-      "issued_date": "2026-09-12",
-      "effective_date": "2026-10-01",
-      "official_url": null,
-      "summary": "Illustrative guidance used to test recently-effective status, multi-topic classification and evidence links.",
+      "issued_date": "2024-07-30",
+      "effective_date": "2024-08-01",
+      "official_url": "https://vanban.chinhphu.vn/?docid=210795&pageid=27160",
+      "summary": "Nghị định hướng dẫn chi tiết thi hành một số điều của Luật Đất đai 2024.",
       "key_changes": [
-        "Demonstrates a recently effective legal record.",
-        "Shows multiple financial and land topics on one document.",
-        "Provides a test case for source-vs-analysis separation."
+        "Hướng dẫn nhiều thủ tục và cơ chế thi hành Luật Đất đai 2024.",
+        "Có hiệu lực từ 01/08/2024.",
+        "Một số nội dung sau đó được sửa đổi, bổ sung bởi Nghị định 226/2025/NĐ-CP."
       ],
       "related_documents": [
         {
-          "document_id": "demo-land-framework-law-2026",
-          "relation_type": "references"
+          "document_id": "law-31-2024-qh15-land",
+          "relation_type": "implements"
+        },
+        {
+          "document_id": "decree-226-2025-land-amendments",
+          "relation_type": "amended-by"
         }
       ],
-      "primary_source_id": "demo-official",
-      "created_at": "2026-10-03T15:45:00+07:00",
-      "updated_at": "2026-10-03T15:45:00+07:00"
+      "primary_source_id": "gov-vietnam-legal-documents",
+      "created_at": "2026-10-06T20:00:00+07:00",
+      "updated_at": "2026-10-06T20:00:00+07:00"
     },
     {
-      "id": "demo-draft-construction-circular-2026",
-      "document_number": "DRAFT DEMO/BXD",
-      "title": "Illustrative Draft Construction Acceptance Circular",
-      "document_type": "circular",
-      "status": "draft",
-      "agency_ids": [
-        "ministry-construction"
-      ],
-      "scope_type": "national",
-      "region_ids": [],
-      "topic_ids": [
-        "construction",
-        "housing"
-      ],
-      "issued_date": null,
-      "effective_date": null,
-      "draft_published_date": "2026-09-29",
-      "consultation_end_date": "2026-10-29",
-      "official_url": null,
-      "summary": "Illustrative draft record showing that draft status is separate from document type and has no effective date yet.",
-      "key_changes": [
-        "Demonstrates draft consultation tracking.",
-        "Keeps issued and effective dates null until formally issued.",
-        "Tests draft filtering and lifecycle display."
-      ],
-      "related_documents": [],
-      "primary_source_id": "demo-official",
-      "created_at": "2026-10-03T15:45:00+07:00",
-      "updated_at": "2026-10-03T15:45:00+07:00"
-    },
-    {
-      "id": "demo-old-housing-decree-2025",
-      "document_number": "DEMO 41/2025/ND-CP",
-      "title": "Illustrative Previous Housing Sales Decree",
+      "id": "decree-71-2024-land-price",
+      "document_number": "71/2024/NĐ-CP",
+      "title": "Nghị định quy định về giá đất",
       "document_type": "decree",
-      "status": "replaced",
+      "status": "effective",
       "agency_ids": [
         "government"
       ],
       "scope_type": "national",
       "region_ids": [],
       "topic_ids": [
-        "housing",
-        "real-estate-business"
+        "land",
+        "finance"
       ],
-      "issued_date": "2025-04-10",
-      "effective_date": "2025-07-01",
-      "official_url": null,
-      "summary": "Historical demo record retained to demonstrate replaced-document research and reverse legal relationships.",
+      "issued_date": "2024-06-27",
+      "effective_date": "2024-08-01",
+      "official_url": "https://vanban.chinhphu.vn/?classid=1&docid=210523&orggroupid=2&pageid=27160",
+      "summary": "Nghị định quy định về phương pháp, trình tự và các nội dung liên quan đến giá đất theo khuôn khổ Luật Đất đai 2024.",
       "key_changes": [
-        "Historical reference retained after replacement.",
-        "Demonstrates reverse relation “replaced by”."
-      ],
-      "related_documents": [],
-      "primary_source_id": "demo-official",
-      "created_at": "2026-10-03T15:45:00+07:00",
-      "updated_at": "2026-10-03T15:45:00+07:00"
-    },
-    {
-      "id": "demo-pilot-planning-resolution-2026",
-      "document_number": "DEMO 12/2026/NQ-CP",
-      "title": "Illustrative Pilot Resolution for Selected Urban Development Procedures",
-      "document_type": "resolution",
-      "status": "issued",
-      "agency_ids": [
-        "government"
-      ],
-      "scope_type": "multi-region",
-      "region_ids": [
-        "hcmc",
-        "dong-nai"
-      ],
-      "topic_ids": [
-        "planning",
-        "investment"
-      ],
-      "issued_date": "2026-09-30",
-      "effective_date": "2026-11-20",
-      "official_url": null,
-      "summary": "Illustrative multi-region resolution used to demonstrate an upcoming effective date and regional legal filtering.",
-      "key_changes": [
-        "Demonstrates multi-region legal scope.",
-        "Shows a 31–90 day effective window.",
-        "Links planning and investment research topics."
+        "Có hiệu lực từ 01/08/2024.",
+        "Một số nội dung được sửa đổi, bổ sung bởi Nghị định 226/2025/NĐ-CP."
       ],
       "related_documents": [
         {
-          "document_id": "demo-land-framework-law-2026",
-          "relation_type": "references"
+          "document_id": "law-31-2024-qh15-land",
+          "relation_type": "implements"
+        },
+        {
+          "document_id": "decree-226-2025-land-amendments",
+          "relation_type": "amended-by"
         }
       ],
-      "primary_source_id": "demo-official",
-      "created_at": "2026-10-03T15:45:00+07:00",
-      "updated_at": "2026-10-03T15:45:00+07:00"
+      "primary_source_id": "gov-vietnam-legal-documents",
+      "created_at": "2026-10-06T20:00:00+07:00",
+      "updated_at": "2026-10-06T20:00:00+07:00"
+    },
+    {
+      "id": "decree-226-2025-land-amendments",
+      "document_number": "226/2025/NĐ-CP",
+      "title": "Nghị định sửa đổi, bổ sung một số điều của các nghị định quy định chi tiết thi hành Luật Đất đai",
+      "document_type": "decree",
+      "status": "effective",
+      "agency_ids": [
+        "government"
+      ],
+      "scope_type": "national",
+      "region_ids": [],
+      "topic_ids": [
+        "land",
+        "investment",
+        "finance"
+      ],
+      "issued_date": "2025-08-15",
+      "effective_date": "2025-08-15",
+      "official_url": "https://vanban.chinhphu.vn/?classid=1&docid=214955&pageid=27160",
+      "summary": "Nghị định sửa đổi, bổ sung một số quy định tại các nghị định hướng dẫn thi hành Luật Đất đai.",
+      "key_changes": [
+        "Sửa đổi, bổ sung một số nội dung trong hệ thống nghị định hướng dẫn Luật Đất đai.",
+        "Có hiệu lực ngay từ ngày 15/08/2025.",
+        "Cần đọc cùng văn bản gốc được sửa đổi khi áp dụng cho tình huống cụ thể."
+      ],
+      "related_documents": [
+        {
+          "document_id": "decree-102-2024-land",
+          "relation_type": "amends"
+        },
+        {
+          "document_id": "decree-71-2024-land-price",
+          "relation_type": "amends"
+        }
+      ],
+      "primary_source_id": "gov-vietnam-legal-documents",
+      "created_at": "2026-10-06T20:00:00+07:00",
+      "updated_at": "2026-10-06T20:00:00+07:00"
     }
   ]
 }
