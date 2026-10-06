@@ -258,12 +258,12 @@
 
     setView(`
       <div class="market-metric-grid">${metrics}</div>
-      <div class="market-layout market-layout--overview">
-        <section class="section market-panel market-panel--wide">
+      <div class="market-layout market-layout--overview market-layout--legal-overview">
+        <section class="section market-panel market-panel--wide market-panel--legal-documents">
           <div class="section-header"><div><span class="eyebrow">Official document layer</span><h2 class="section-title">Latest Documents</h2></div><a class="text-link" href="legal.html?view=documents">Open database</a></div>
           <div class="section-body section-body--table">${documentTable(latest, { compact: true })}</div>
         </section>
-        <section class="section market-panel">
+        <section class="section market-panel market-panel--legal-timeline">
           <div class="section-header"><div><span class="eyebrow">Upcoming</span><h2 class="section-title">Effective Timeline</h2></div><a class="text-link" href="legal.html?view=effective-soon">View all</a></div>
           <div class="section-body legal-timeline-list">${upcoming.map(document => `
             <button class="legal-timeline-item" type="button" data-document-id="${esc(document.id)}">
