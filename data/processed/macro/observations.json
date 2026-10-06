@@ -1,11 +1,11 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-10-05T12:12:33.978692+00:00",
-  "record_count": 12,
+  "generated_at": "2026-10-06T15:24:18.534814+00:00",
+  "record_count": 15,
   "production_write": true,
   "repository_publish": true,
   "frontend_publish": false,
-  "source_run_id": "20261005T121231Z",
+  "source_run_id": "20261006T152408Z",
   "data": [
     {
       "indicator_id": "bank-funding-growth-ytd",
@@ -211,6 +211,90 @@
       "promotion_run_id": "20261005T121231Z"
     },
     {
+      "period": "2023-06-19",
+      "period_type": "date",
+      "data_date": "2023-06-19",
+      "unit": "percent-per-year",
+      "source_id": "vna-vietnamplus",
+      "source_url": "https://www.vietnamplus.vn/ngan-hang-nha-nuoc-giam-lai-suat-dieu-hanh-lan-thu-4-lien-tiep-post868589.vnp",
+      "published_at": "2023-06-16",
+      "fetched_at": "2026-10-06T15:24:14.531427+00:00",
+      "evidence_status": "corroborated",
+      "source_record_id": "36e759dde5391801ee02",
+      "indicator_id": "policy-overnight-lending-rate",
+      "value": 5.0,
+      "methodology_note": "Trusted news report of SBV policy event 1123/QĐ-NHNN; effective 2023-06-19. SBV overnight lending/clearing-deficit facility rate; distinct from the market interbank overnight rate.",
+      "id": "36e759dde5391801ee02",
+      "corroboration_source_ids": [
+        "vna-vietnamplus",
+        "banking-times-vn"
+      ],
+      "corroboration_observation_ids": [
+        "36e759dde5391801ee02",
+        "8b6d4e36c75e94e37582"
+      ],
+      "corroboration_reason": "2 independent fallback sources agree for latest period 2023-06-19 within tolerance 0.01.",
+      "observation_status": "final",
+      "promoted_at": "2026-10-06T15:24:18.534814+00:00",
+      "promotion_run_id": "20261006T152408Z"
+    },
+    {
+      "period": "2023-06-19",
+      "period_type": "date",
+      "data_date": "2023-06-19",
+      "unit": "percent-per-year",
+      "source_id": "vna-vietnamplus",
+      "source_url": "https://www.vietnamplus.vn/ngan-hang-nha-nuoc-giam-lai-suat-dieu-hanh-lan-thu-4-lien-tiep-post868589.vnp",
+      "published_at": "2023-06-16",
+      "fetched_at": "2026-10-06T15:24:14.531427+00:00",
+      "evidence_status": "corroborated",
+      "source_record_id": "85d267c77df8cc411f27",
+      "indicator_id": "policy-rediscount-rate",
+      "value": 3.0,
+      "methodology_note": "Trusted news report of SBV policy event 1123/QĐ-NHNN; effective 2023-06-19. Rediscount rate. Event-driven fallback evidence.",
+      "id": "85d267c77df8cc411f27",
+      "corroboration_source_ids": [
+        "vna-vietnamplus",
+        "banking-times-vn"
+      ],
+      "corroboration_observation_ids": [
+        "85d267c77df8cc411f27",
+        "6f3b9c7309831553e614"
+      ],
+      "corroboration_reason": "2 independent fallback sources agree for latest period 2023-06-19 within tolerance 0.01.",
+      "observation_status": "final",
+      "promoted_at": "2026-10-06T15:24:18.534814+00:00",
+      "promotion_run_id": "20261006T152408Z"
+    },
+    {
+      "period": "2023-06-19",
+      "period_type": "date",
+      "data_date": "2023-06-19",
+      "unit": "percent-per-year",
+      "source_id": "vna-vietnamplus",
+      "source_url": "https://www.vietnamplus.vn/ngan-hang-nha-nuoc-giam-lai-suat-dieu-hanh-lan-thu-4-lien-tiep-post868589.vnp",
+      "published_at": "2023-06-16",
+      "fetched_at": "2026-10-06T15:24:14.531427+00:00",
+      "evidence_status": "corroborated",
+      "source_record_id": "7af413826ae9cd3f4ec3",
+      "indicator_id": "policy-refinancing-rate",
+      "value": 4.5,
+      "methodology_note": "Trusted news report of SBV policy event 1123/QĐ-NHNN; effective 2023-06-19. Refinancing rate. Event-driven fallback evidence; no scalar inference.",
+      "id": "7af413826ae9cd3f4ec3",
+      "corroboration_source_ids": [
+        "vna-vietnamplus",
+        "banking-times-vn"
+      ],
+      "corroboration_observation_ids": [
+        "7af413826ae9cd3f4ec3",
+        "f24942683bb3d59fb1f5"
+      ],
+      "corroboration_reason": "2 independent fallback sources agree for latest period 2023-06-19 within tolerance 0.01.",
+      "observation_status": "final",
+      "promoted_at": "2026-10-06T15:24:18.534814+00:00",
+      "promotion_run_id": "20261006T152408Z"
+    },
+    {
       "period": "2026-10-05",
       "period_type": "day",
       "data_date": "2026-10-05",
@@ -297,8 +381,8 @@
       "promotion_run_id": "20261005T041622Z"
     }
   ],
-  "repository_published_at": "2026-10-05T12:15:38.915927+00:00",
-  "repository_source_run_number": 21,
-  "repository_source_run_database_id": "37307903919",
+  "repository_published_at": "2026-10-06T15:29:23.848488+00:00",
+  "repository_source_run_number": 35,
+  "repository_source_run_database_id": "37487149281",
   "repository_persistence_mode": "controlled-repository-persistence-v1"
 }
