@@ -214,7 +214,7 @@
     const drafts = data.documents.filter(item => item.status === 'draft').length;
     const next90 = data.documents.filter(item => ['30','90'].includes(effectiveBucket(item))).length;
     return [
-      { label: 'Tracked Documents', value: String(data.documents.length), note: 'Illustrative legal database' },
+      { label: 'Tracked Documents', value: String(data.documents.length), note: 'Official Government document registry' },
       { label: 'Currently Effective', value: String(current), note: 'Derived from status + effective date' },
       { label: 'Drafts', value: String(drafts), note: 'Draft is a status, not a document type' },
       { label: 'Effective ≤ 90 Days', value: String(next90), note: 'Upcoming effective dates' }

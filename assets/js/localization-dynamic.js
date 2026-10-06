@@ -215,6 +215,27 @@
     'subdivision': 'phân khu',
     'cluster': 'cụm',
 
+    // Legal official-registry cleanup
+    'Official registry': 'Cơ sở dữ liệu chính thức',
+    'Curated official registry.': 'Cơ sở dữ liệu văn bản chính thức.',
+    'Core real-estate legal documents are linked to official Government sources. Summaries are research notes for navigation only and are not legal advice; always open the official document for interpretation and application.': 'Các văn bản pháp lý bất động sản cốt lõi được liên kết tới nguồn chính thức của Chính phủ. Phần tóm tắt chỉ phục vụ tra cứu nghiên cứu, không phải tư vấn pháp lý; khi áp dụng cần mở văn bản gốc.',
+    'Official Government document registry': 'Danh mục văn bản chính thức từ nguồn Chính phủ',
+    'Official document layer': 'Lớp văn bản chính thức',
+    'Latest Documents': 'Văn bản mới nhất',
+    'Effective Timeline': 'Lịch hiệu lực',
+    'No upcoming effective dates.': 'Không có văn bản sắp có hiệu lực.',
+    'Research shortcuts': 'Lối tắt nghiên cứu',
+    'Legal Topics': 'Chủ đề pháp lý',
+    'Recently active': 'Có hiệu lực gần đây',
+    'Recently Effective': 'Mới có hiệu lực',
+    'Government': 'Chính phủ',
+    'National Assembly': 'Quốc hội',
+    'Ministry of Construction': 'Bộ Xây dựng',
+    'Ministry of Finance': 'Bộ Tài chính',
+    'HCMC People’s Committee': 'UBND TP.HCM',
+    'Effective today': 'Có hiệu lực hôm nay',
+    'Official URL is not available for this record. Source metadata remains visible through the registry.': 'Chưa có URL chính thức cho bản ghi này. Metadata nguồn vẫn được hiển thị trong danh mục.',
+
     // Legal UI
     'Tracked Documents': 'Văn bản theo dõi',
     'Illustrative legal database': 'Cơ sở dữ liệu pháp lý minh họa',
@@ -460,6 +481,7 @@
     if ((match = core.match(/^(\d+) selling$/))) return `${match[1]} đang bán`;
     if ((match = core.match(/^(\d+) developers$/))) return `${match[1]} chủ đầu tư`;
     if ((match = core.match(/^(\d+) documents$/))) return `${match[1]} văn bản`;
+    if ((match = core.match(/^Official registry · (\d+) documents$/))) return `Cơ sở dữ liệu chính thức · ${match[1]} văn bản`;
     if ((match = core.match(/^(\d+) legal topics$/))) return `${match[1]} chủ đề pháp lý`;
     if ((match = core.match(/^(\d+) upcoming$/))) return `${match[1]} sắp tới`;
     if ((match = core.match(/^(\d+) drafts$/))) return `${match[1]} dự thảo`;
