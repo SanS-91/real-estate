@@ -1,0 +1,64 @@
+{
+  "schema_version": 2,
+  "mode": "controlled-production-v1",
+  "production_write": true,
+  "repository_publish": false,
+  "frontend_publish": false,
+  "allowed_readiness_statuses": [
+    "ready-canonical",
+    "ready-corroborated"
+  ],
+  "logical_key_fields": [
+    "indicator_id",
+    "period_type",
+    "period"
+  ],
+  "conflict_rule": "fail-on-existing-logical-key-change",
+  "record_drop_rule": "forbid",
+  "atomic_write": true,
+  "rollback_snapshot": true,
+  "max_snapshots": 10,
+  "notes": [
+    "Phase 4.2K.3 targeted production gate: only the three corroborated administered policy-rate indicators are eligible in this run.",
+    "This narrow gate prevents unrelated cached daily FX/gold candidates from being appended during a policy-only production run.",
+    "Repository persistence still validates the resulting full artifact against config/production_promotion_policy.json."
+  ],
+  "allowed_indicators": {
+    "policy-overnight-lending-rate": {
+      "allowed_sources": [
+        "vna-vietnamplus",
+        "banking-times-vn"
+      ],
+      "required_readiness_statuses": [
+        "ready-corroborated"
+      ],
+      "required_evidence_status": "corroborated",
+      "required_period_type": "date",
+      "required_min_independent_sources": 2
+    },
+    "policy-rediscount-rate": {
+      "allowed_sources": [
+        "vna-vietnamplus",
+        "banking-times-vn"
+      ],
+      "required_readiness_statuses": [
+        "ready-corroborated"
+      ],
+      "required_evidence_status": "corroborated",
+      "required_period_type": "date",
+      "required_min_independent_sources": 2
+    },
+    "policy-refinancing-rate": {
+      "allowed_sources": [
+        "vna-vietnamplus",
+        "banking-times-vn"
+      ],
+      "required_readiness_statuses": [
+        "ready-corroborated"
+      ],
+      "required_evidence_status": "corroborated",
+      "required_period_type": "date",
+      "required_min_independent_sources": 2
+    }
+  }
+}

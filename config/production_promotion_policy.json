@@ -142,6 +142,42 @@
       "required_evidence_status": "corroborated",
       "required_period_type": "month",
       "required_min_independent_sources": 2
+    },
+    "policy-overnight-lending-rate": {
+      "allowed_sources": [
+        "vna-vietnamplus",
+        "banking-times-vn"
+      ],
+      "required_readiness_statuses": [
+        "ready-corroborated"
+      ],
+      "required_evidence_status": "corroborated",
+      "required_period_type": "date",
+      "required_min_independent_sources": 2
+    },
+    "policy-rediscount-rate": {
+      "allowed_sources": [
+        "vna-vietnamplus",
+        "banking-times-vn"
+      ],
+      "required_readiness_statuses": [
+        "ready-corroborated"
+      ],
+      "required_evidence_status": "corroborated",
+      "required_period_type": "date",
+      "required_min_independent_sources": 2
+    },
+    "policy-refinancing-rate": {
+      "allowed_sources": [
+        "vna-vietnamplus",
+        "banking-times-vn"
+      ],
+      "required_readiness_statuses": [
+        "ready-corroborated"
+      ],
+      "required_evidence_status": "corroborated",
+      "required_period_type": "date",
+      "required_min_independent_sources": 2
     }
   },
   "logical_key_fields": [
@@ -160,6 +196,8 @@
     "Priority short-term lending remains outside the production allowlist while independent fallback sources differ (3.9% vs approximately 4.0%).",
     "CPI, credit growth, and bank funding require ready-canonical + verified NSO evidence.",
     "FX, Gold, and customer-rate ranges require ready-corroborated + at least two independent agreeing sources.",
-    "Repository persistence remains a separate manual gate; no scheduled collector can push to main."
+    "Repository persistence remains a separate manual gate; no scheduled collector can push to main.",
+    "Phase 4.2K.3 extends controlled production to the three administered policy rates only after VietnamPlus/VNA and Thời Báo Ngân Hàng independently agree on the same effective-date event and values.",
+    "Interbank overnight remains outside the production allowlist while it has only one independent source."
   ]
 }
