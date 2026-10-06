@@ -99,11 +99,50 @@ def parse_result(result, source_cfg, source_url, fetched_at):
     return observations, research
 
 
+def _semantic_source_record_key(row: dict):
+    """Return a source-scoped semantic event key when the source provides one.
+
+    A stable ``source_record_id`` means the source is identifying the same
+    underlying event/document across parser revisions.  If a later parser run
+    corrects period/date normalization for that same event, the corrected row
+    should supersede the stale cached row instead of co-existing with it.
+    """
+    source_record_id = str(row.get("source_record_id") or "").strip().upper()
+    indicator_id = str(row.get("indicator_id") or "").strip()
+    source_id = str(row.get("source_id") or "").strip()
+    if not source_record_id or not indicator_id or not source_id:
+        return None
+    return (indicator_id, source_id, source_record_id)
+
+
 def merge_records(existing: list[dict], incoming: list[dict]) -> list[dict]:
-    """Merge by stable ID. Incoming replaces same ID; historical IDs remain."""
-    out = {x["id"]: x for x in existing if isinstance(x, dict) and x.get("id")}
+    """Merge by stable ID and repair stale parses of the same source event.
+
+    Incoming still replaces the same stable row ID.  Additionally, when an
+    incoming observation carries ``source_record_id``, any cached observation
+    from the same source + indicator + source record is superseded.  This is
+    important for event-driven policy data: parser improvements can correct an
+    effective date without changing the underlying decision/article identity.
+    """
+    incoming_semantic_keys = {
+        key for x in incoming
+        if isinstance(x, dict) and (key := _semantic_source_record_key(x))
+    }
+
+    out = {}
+    for x in existing:
+        if not isinstance(x, dict) or not x.get("id"):
+            continue
+        key = _semantic_source_record_key(x)
+        if key and key in incoming_semantic_keys:
+            # A fresh parse of the same source event/document supersedes the
+            # cached version, even if a previous parser assigned a wrong period.
+            continue
+        out[x["id"]] = x
+
     for x in incoming:
         out[x["id"]] = x
+
     return sorted(out.values(), key=lambda r: (
         r.get("indicator_id") or "",
         r.get("period") or r.get("data_date") or r.get("published_at") or "",
