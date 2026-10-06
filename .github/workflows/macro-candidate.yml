@@ -114,20 +114,16 @@ jobs:
         run: |
           SOURCE='${{ github.event.inputs.source }}'
           if [ "$SOURCE" = "policy-liquidity-fallback" ]; then
-            # Lightweight fallback: event-driven trusted-news search for SBV
-            # administered policy rates + one market-interbank fallback source.
-            # No large SBV archive download; candidate-only, no production write.
+            # Simple policy corroboration plus the separate interbank fallback.
             python scripts/candidate_pipeline.py --mode candidate \
-              --source baochinhphu-policy-rates \
               --source vietnamplus-policy-rates \
               --source banking-times-policy-rates \
               --source vietnamplus-interbank-rates
           elif [ "$SOURCE" = "policy-news-search" ]; then
-            # Policy-rate event discovery across three independent trusted news
-            # sources. New events need at least two agreeing sources before they
-            # can become ready-corroborated. Candidate-only.
+            # Simple two-source policy event model.
+            # Both trusted sources must agree before policy rates can become
+            # ready-corroborated. Government/SBV references are manual only.
             python scripts/candidate_pipeline.py --mode candidate \
-              --source baochinhphu-policy-rates \
               --source vietnamplus-policy-rates \
               --source banking-times-policy-rates
           elif [ "$SOURCE" = "policy-liquidity-discovery" ]; then
