@@ -550,4 +550,155 @@ jobs:
         env:
           BASE_SHA: ${{ steps.baseline.outputs.sha }}
         run: |
-          git add data/processed/m
+          git add data/processed/macro/observations.json data/processed/macro/repository-publish.json
+          if git diff --cached --quiet; then
+            echo "No new complete customer-rate bundle; no commit is needed."
+            echo "committed=false" >> "$GITHUB_OUTPUT"
+            exit 0
+          fi
+          git fetch origin main
+          REMOTE_SHA="$(git rev-parse origin/main)"
+          if [ "$REMOTE_SHA" != "$BASE_SHA" ]; then
+            echo "Safety stop: main changed while customer-rate auto-persistence was running."
+            exit 1
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git commit -m "data(macro): auto-publish corroborated customer rates"
+          git push origin HEAD:main
+          echo "committed=true" >> "$GITHUB_OUTPUT"
+
+      - name: Write customer-rate auto-persistence summary
+        if: always()
+        shell: bash
+        run: |
+          if [ -f data/staging/customer-rates-auto-persistence/customer-rates-auto-persistence.json ]; then
+            echo "# Customer Rates Auto-Publish" >> "$GITHUB_STEP_SUMMARY"
+            echo >> "$GITHUB_STEP_SUMMARY"
+            python - <<'PY' >> "$GITHUB_STEP_SUMMARY"
+          import json
+          from pathlib import Path
+          p=json.loads(Path('data/staging/customer-rates-auto-persistence/customer-rates-auto-persistence.json').read_text())
+          print(f"**Status:** `{p.get('status')}` · Added {p.get('added_record_count', 0)} · Final {p.get('final_record_count', 0)}")
+          if p.get('period'): print(f"- Period: {p.get('period')}")
+          if not p.get('added'): print("- No new complete corroborated customer-rate bundle; repository retained last good data.")
+          PY
+          fi
+
+      - name: Upload customer-rate persistence review artifact
+        if: always()
+        uses: actions/upload-artifact@v7
+        with:
+          name: macro-customer-rates-persistence-${{ github.run_number }}
+          retention-days: 30
+          if-no-files-found: warn
+          path: |
+            data/staging/customer-rates-auto-persistence/
+            data/processed/macro/observations.json
+            data/processed/macro/repository-publish.json
+
+  persist-policy-rates-production:
+    name: Auto-persist corroborated policy rates
+    needs: collect-candidate
+    if: ${{ needs.collect-candidate.result == 'success' && ((github.event_name == 'schedule' && github.event.schedule == '30 4 * * 4') || github.event.inputs.source == 'policy-rates-production') }}
+    runs-on: ubuntu-24.04
+    timeout-minutes: 8
+    permissions:
+      contents: write
+      actions: read
+
+    steps:
+      - name: Checkout current main
+        uses: actions/checkout@v7
+        with:
+          ref: main
+          fetch-depth: 0
+
+      - name: Capture repository baseline
+        id: baseline
+        shell: bash
+        run: echo "sha=$(git rev-parse HEAD)" >> "$GITHUB_OUTPUT"
+
+      - name: Set up Python
+        uses: actions/setup-python@v7
+        with:
+          python-version: '3.12'
+          cache: 'pip'
+
+      - name: Install dependencies
+        run: pip install -r requirements.txt
+
+      - name: Download this run controlled production artifact
+        uses: actions/download-artifact@v7
+        with:
+          name: macro-production-${{ github.run_number }}
+          path: incoming/macro-production
+
+      - name: Validate controlled production artifact
+        run: python scripts/validate_production.py --processed-dir incoming/macro-production
+
+      - name: Apply narrow policy-rate repository gate
+        run: |
+          rm -rf data/staging/policy-rates-auto-persistence
+          python scripts/persist_policy_rates.py \
+            --incoming-dir incoming/macro-production \
+            --repo-processed-dir data/processed/macro \
+            --report-dir data/staging/policy-rates-auto-persistence \
+            --source-run-number "${{ github.run_number }}" \
+            --source-run-database-id "${{ github.run_id }}"
+
+      - name: Validate repository production output
+        run: python scripts/validate_repository_processed.py --processed-dir data/processed/macro
+
+      - name: Commit verified policy-rate additions
+        id: commit
+        shell: bash
+        env:
+          BASE_SHA: ${{ steps.baseline.outputs.sha }}
+        run: |
+          git add data/processed/macro/observations.json data/processed/macro/repository-publish.json
+          if git diff --cached --quiet; then
+            echo "No new complete policy-rate event; no commit is needed."
+            echo "committed=false" >> "$GITHUB_OUTPUT"
+            exit 0
+          fi
+          git fetch origin main
+          REMOTE_SHA="$(git rev-parse origin/main)"
+          if [ "$REMOTE_SHA" != "$BASE_SHA" ]; then
+            echo "Safety stop: main changed while policy-rate auto-persistence was running."
+            exit 1
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git commit -m "data(macro): auto-publish corroborated policy rates"
+          git push origin HEAD:main
+          echo "committed=true" >> "$GITHUB_OUTPUT"
+
+      - name: Write policy-rate auto-persistence summary
+        if: always()
+        shell: bash
+        run: |
+          if [ -f data/staging/policy-rates-auto-persistence/policy-rates-auto-persistence.json ]; then
+            echo "# Policy Rates Auto-Publish" >> "$GITHUB_STEP_SUMMARY"
+            echo >> "$GITHUB_STEP_SUMMARY"
+            python - <<'PY' >> "$GITHUB_STEP_SUMMARY"
+          import json
+          from pathlib import Path
+          p=json.loads(Path('data/staging/policy-rates-auto-persistence/policy-rates-auto-persistence.json').read_text())
+          print(f"**Status:** `{p.get('status')}` · Added {p.get('added_record_count', 0)} · Final {p.get('final_record_count', 0)}")
+          if p.get('period'): print(f"- Effective date: {p.get('period')}")
+          if not p.get('added'): print("- No new complete corroborated policy-rate event; repository retained last good data.")
+          PY
+          fi
+
+      - name: Upload policy-rate persistence review artifact
+        if: always()
+        uses: actions/upload-artifact@v7
+        with:
+          name: macro-policy-rates-persistence-${{ github.run_number }}
+          retention-days: 30
+          if-no-files-found: warn
+          path: |
+            data/staging/policy-rates-auto-persistence/
+            data/processed/macro/observations.json
+            data/processed/macro/repository-publish.json
