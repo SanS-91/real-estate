@@ -353,4 +353,201 @@ jobs:
         shell: bash
         run: |
           if [ -f data/staging/daily-auto-persistence/daily-auto-persistence.json ]; then
-            echo 
+            echo "# Daily FX & Gold Auto-Publish" >> "$GITHUB_STEP_SUMMARY"
+            echo >> "$GITHUB_STEP_SUMMARY"
+            python - <<'PY' >> "$GITHUB_STEP_SUMMARY"
+          import json
+          from pathlib import Path
+          p=json.loads(Path('data/staging/daily-auto-persistence/daily-auto-persistence.json').read_text())
+          print(f"**Status:** `{p.get('status')}` · Added {p.get('added_record_count', 0)} · Final {p.get('final_record_count', 0)}")
+          for r in p.get('added', []):
+              print(f"- {r.get('indicator_id')} · {r.get('period')} · {r.get('value')} · sources: {', '.join(r.get('corroboration_source_ids', []))}")
+          if not p.get('added'):
+              print("- No new corroborated daily fact; repository retained the last good data.")
+          PY
+          fi
+
+      - name: Upload daily persistence review artifact
+        if: always()
+        uses: actions/upload-artifact@v7
+        with:
+          name: macro-daily-persistence-${{ github.run_number }}
+          retention-days: 30
+          if-no-files-found: warn
+          path: |
+            data/staging/daily-auto-persistence/
+            data/processed/macro/observations.json
+            data/processed/macro/repository-publish.json
+
+
+  persist-monthly-production:
+    name: Auto-persist verified monthly CPI & banking growth
+    needs: collect-candidate
+    if: ${{ needs.collect-candidate.result == 'success' && ((github.event_name == 'schedule' && github.event.schedule == '45 3 1-10 * *') || github.event.inputs.source == 'monthly-macro-production') }}
+    runs-on: ubuntu-24.04
+    timeout-minutes: 8
+    permissions:
+      contents: write
+      actions: read
+
+    steps:
+      - name: Checkout current main
+        uses: actions/checkout@v7
+        with:
+          ref: main
+          fetch-depth: 0
+
+      - name: Capture repository baseline
+        id: baseline
+        shell: bash
+        run: echo "sha=$(git rev-parse HEAD)" >> "$GITHUB_OUTPUT"
+
+      - name: Set up Python
+        uses: actions/setup-python@v7
+        with:
+          python-version: '3.12'
+          cache: 'pip'
+
+      - name: Install dependencies
+        run: pip install -r requirements.txt
+
+      - name: Download this run controlled production artifact
+        uses: actions/download-artifact@v7
+        with:
+          name: macro-production-${{ github.run_number }}
+          path: incoming/macro-production
+
+      - name: Validate controlled production artifact
+        run: python scripts/validate_production.py --processed-dir incoming/macro-production
+
+      - name: Apply narrow monthly repository gate
+        run: |
+          rm -rf data/staging/monthly-auto-persistence
+          python scripts/persist_monthly_macro.py \
+            --incoming-dir incoming/macro-production \
+            --repo-processed-dir data/processed/macro \
+            --report-dir data/staging/monthly-auto-persistence \
+            --source-run-number "${{ github.run_number }}" \
+            --source-run-database-id "${{ github.run_id }}"
+
+      - name: Validate repository production output
+        run: python scripts/validate_repository_processed.py --processed-dir data/processed/macro
+
+      - name: Commit verified monthly additions
+        id: commit
+        shell: bash
+        env:
+          BASE_SHA: ${{ steps.baseline.outputs.sha }}
+        run: |
+          git add data/processed/macro/observations.json data/processed/macro/repository-publish.json
+          if git diff --cached --quiet; then
+            echo "No new verified official monthly Macro fact; no commit is needed."
+            echo "committed=false" >> "$GITHUB_OUTPUT"
+            exit 0
+          fi
+          git fetch origin main
+          REMOTE_SHA="$(git rev-parse origin/main)"
+          if [ "$REMOTE_SHA" != "$BASE_SHA" ]; then
+            echo "Safety stop: main changed while monthly auto-persistence was running."
+            echo "Baseline: $BASE_SHA"
+            echo "Current origin/main: $REMOTE_SHA"
+            exit 1
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git commit -m "data(macro): auto-publish verified monthly CPI and banking growth"
+          git push origin HEAD:main
+          echo "committed=true" >> "$GITHUB_OUTPUT"
+          echo "commit_sha=$(git rev-parse HEAD)" >> "$GITHUB_OUTPUT"
+
+      - name: Write monthly auto-persistence summary
+        if: always()
+        shell: bash
+        run: |
+          if [ -f data/staging/monthly-auto-persistence/monthly-auto-persistence.json ]; then
+            echo "# Monthly Macro Auto-Publish" >> "$GITHUB_STEP_SUMMARY"
+            echo >> "$GITHUB_STEP_SUMMARY"
+            python - <<'PY' >> "$GITHUB_STEP_SUMMARY"
+          import json
+          from pathlib import Path
+          p=json.loads(Path('data/staging/monthly-auto-persistence/monthly-auto-persistence.json').read_text())
+          print(f"**Status:** `{p.get('status')}` · Added {p.get('added_record_count', 0)} · Final {p.get('final_record_count', 0)}")
+          for r in p.get('added', []):
+              print(f"- {r.get('indicator_id')} · {r.get('period')} · {r.get('value')} · source: {r.get('source_id')}")
+          if not p.get('added'):
+              print("- No new verified official monthly Macro fact; repository retained the last good data.")
+          PY
+          fi
+
+      - name: Upload monthly persistence review artifact
+        if: always()
+        uses: actions/upload-artifact@v7
+        with:
+          name: macro-monthly-persistence-${{ github.run_number }}
+          retention-days: 30
+          if-no-files-found: warn
+          path: |
+            data/staging/monthly-auto-persistence/
+            data/processed/macro/observations.json
+            data/processed/macro/repository-publish.json
+
+  persist-customer-rates-production:
+    name: Auto-persist corroborated customer rates
+    needs: collect-candidate
+    if: ${{ needs.collect-candidate.result == 'success' && ((github.event_name == 'schedule' && github.event.schedule == '15 4 * * 2') || github.event.inputs.source == 'customer-rates-production') }}
+    runs-on: ubuntu-24.04
+    timeout-minutes: 8
+    permissions:
+      contents: write
+      actions: read
+
+    steps:
+      - name: Checkout current main
+        uses: actions/checkout@v7
+        with:
+          ref: main
+          fetch-depth: 0
+
+      - name: Capture repository baseline
+        id: baseline
+        shell: bash
+        run: echo "sha=$(git rev-parse HEAD)" >> "$GITHUB_OUTPUT"
+
+      - name: Set up Python
+        uses: actions/setup-python@v7
+        with:
+          python-version: '3.12'
+          cache: 'pip'
+
+      - name: Install dependencies
+        run: pip install -r requirements.txt
+
+      - name: Download this run controlled production artifact
+        uses: actions/download-artifact@v7
+        with:
+          name: macro-production-${{ github.run_number }}
+          path: incoming/macro-production
+
+      - name: Validate controlled production artifact
+        run: python scripts/validate_production.py --processed-dir incoming/macro-production
+
+      - name: Apply narrow customer-rate repository gate
+        run: |
+          rm -rf data/staging/customer-rates-auto-persistence
+          python scripts/persist_customer_rates.py \
+            --incoming-dir incoming/macro-production \
+            --repo-processed-dir data/processed/macro \
+            --report-dir data/staging/customer-rates-auto-persistence \
+            --source-run-number "${{ github.run_number }}" \
+            --source-run-database-id "${{ github.run_id }}"
+
+      - name: Validate repository production output
+        run: python scripts/validate_repository_processed.py --processed-dir data/processed/macro
+
+      - name: Commit verified customer-rate additions
+        id: commit
+        shell: bash
+        env:
+          BASE_SHA: ${{ steps.baseline.outputs.sha }}
+        run: |
+          git add data/processed/m
