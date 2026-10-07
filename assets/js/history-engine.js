@@ -92,7 +92,7 @@
         if (!relationDate) return;
         events.push({
           id: `${document.id}:incoming:${rel.relation_type}:${other.id}`,
-          type: rel.relation_type,
+          type: rel.relation_type === 'amends' ? 'amended-by' : 'supplemented-by',
           date: relationDate,
           title: rel.relation_type === 'amends' ? 'Amended by' : 'Supplemented by',
           detail: `${other.document_number} · ${other.title}`,
@@ -105,8 +105,9 @@
 
     const seen = new Set();
     return sortAsc(events, row => row.date).filter(row => {
-      if (seen.has(row.id)) return false;
-      seen.add(row.id);
+      const semanticKey = [row.type, row.related_document_id || '', row.date, row.detail].join('|');
+      if (seen.has(semanticKey)) return false;
+      seen.add(semanticKey);
       return true;
     });
   }
