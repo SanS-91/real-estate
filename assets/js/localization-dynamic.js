@@ -24,6 +24,8 @@
     'Source': 'Nguồn',
     'Current': 'Hiện tại',
     'Project History': 'Lịch sử dự án',
+    'No dated project history is available yet.': 'Chưa có lịch sử dự án có mốc thời gian.',
+    'No schedule or milestone records yet.': 'Chưa có lịch sử tiến độ hoặc cột mốc.',
     'Schedule & Milestone History': 'Lịch sử tiến độ & cột mốc',
     'Schedule change': 'Thay đổi tiến độ',
     'Issued': 'Ban hành',
@@ -580,6 +582,14 @@
     if ((match = core.match(/^(.+) · CANONICAL$/))) return `${match[1]} · Chính thức`;
     if ((match = core.match(/^USD\/VND central rate at (.+)$/))) return `Tỷ giá trung tâm USD/VND ở mức ${match[1]}`;
     if ((match = core.match(/^Domestic gold selling price at (.+)$/))) return `Giá bán vàng trong nước ở mức ${match[1]}`;
+    if ((match = core.match(/^([+-].+) vs prior$/))) return `${match[1]} so với kỳ trước`;
+    if ((match = core.match(/^(.+) versus (.+)\.$/))) return `${match[1]} so với ${match[2]}.`;
+    if ((match = core.match(/^HCMC apartment new supply at (.+) units$/))) return `Nguồn cung căn hộ mới tại TPHCM ở mức ${match[1]} căn`;
+    if ((match = core.match(/^Comparable CBRE series moved from (.+) to (.+) units \((.+)%\)\.$/))) return `Chuỗi CBRE có thể so sánh thay đổi từ ${match[1]} xuống/còn ${match[2]} căn (${match[3]}%).`;
+    if ((match = core.match(/^Schedule revised from (.+) to (.+); prior target remains preserved in history\.$/))) return `Tiến độ được điều chỉnh từ ${match[1]} sang ${match[2]}; mốc cũ vẫn được lưu trong lịch sử.`;
+    if ((match = core.match(/^Updated (.+) · prior target retained in history$/))) return `Cập nhật ${match[1]} · mốc trước được giữ trong lịch sử`;
+    if ((match = core.match(/^(.+) amends (.+); both records remain linked in the legal lifecycle\.$/))) return `${match[1]} sửa đổi ${match[2]}; hai văn bản tiếp tục được liên kết trong lịch sử pháp lý.`;
+    if ((match = core.match(/^(.+) supplements (.+); both records remain linked in the legal lifecycle\.$/))) return `${match[1]} bổ sung ${match[2]}; hai văn bản tiếp tục được liên kết trong lịch sử pháp lý.`;
     if ((match = core.match(/^Published (.+)$/))) return `Công bố ${match[1]}`;
     if ((match = core.match(/^Announced (.+)$/))) return `Công bố ${match[1]}`;
     if ((match = core.match(/^Source: (.+)$/))) return `Nguồn: ${match[1]}`;
