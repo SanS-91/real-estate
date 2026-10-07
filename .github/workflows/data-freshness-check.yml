@@ -15,15 +15,15 @@ concurrency:
 
 jobs:
   freshness:
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-24.04
     timeout-minutes: 5
 
     steps:
       - name: Checkout
-        uses: actions/checkout@v4
+        uses: actions/checkout@v7
 
       - name: Set up Python
-        uses: actions/setup-python@v5
+        uses: actions/setup-python@v7
         with:
           python-version: '3.12'
 
@@ -41,10 +41,18 @@ jobs:
             --input data/state/update-status-runtime.json \
             >> "$GITHUB_STEP_SUMMARY"
 
+      - name: Phase 4.5 operational safety QA
+        run: |
+          python scripts/phase45_operational_qa.py \
+            --output data/state/phase45-operational-qa.json \
+            >> "$GITHUB_STEP_SUMMARY"
+
       - name: Upload freshness snapshot
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-artifact@v7
         with:
           name: data-freshness-${{ github.run_number }}
           retention-days: 14
-          path: data/state/update-status-runtime.json
+          path: |
+            data/state/update-status-runtime.json
+            data/state/phase45-operational-qa.json
           if-no-files-found: error
