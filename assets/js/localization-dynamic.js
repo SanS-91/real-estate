@@ -548,6 +548,10 @@
     let match;
     if ((match = core.match(/^(\d+) updates$/))) return `${match[1]} cập nhật`;
     if ((match = core.match(/^(\d+) projects$/))) return `${match[1]} dự án`;
+    if ((match = core.match(/^(\d+) curated projects$/))) return `${match[1]} dự án tuyển chọn`;
+    if ((match = core.match(/^(\d+) official documents$/))) return `${match[1]} văn bản chính thức`;
+    if ((match = core.match(/^(\d+) infrastructure projects$/))) return `${match[1]} dự án hạ tầng`;
+    if ((match = core.match(/^(\d+) production records$/))) return `${match[1]} bản ghi production`;
     if ((match = core.match(/^(\d+) tracked projects$/))) return `${match[1]} dự án theo dõi`;
     if ((match = core.match(/^(\d+) selling$/))) return `${match[1]} đang bán`;
     if ((match = core.match(/^(\d+) developers$/))) return `${match[1]} chủ đầu tư`;
@@ -564,6 +568,11 @@
     if ((match = core.match(/^Integrated data · 4 curated modules · (\d+) macro records$/))) return `Dữ liệu tích hợp · 4 module thực · ${match[1]} bản ghi vĩ mô`;
     if ((match = core.match(/^Curated registries · (.+)$/))) return `Cơ sở dữ liệu tuyển chọn · ${match[1]}`;
     if ((match = core.match(/^Mixed data · (\d+) controlled macro records$/))) return `Dữ liệu hỗn hợp · ${match[1]} bản ghi vĩ mô có kiểm soát`;
+    if ((match = core.match(/^Effective (.+) · Government$/))) return `Hiệu lực ${match[1]} · Chính phủ`;
+    if ((match = core.match(/^(.+) · CORROBORATED$/))) return `${match[1]} · Đã đối chiếu`;
+    if ((match = core.match(/^(.+) · CANONICAL$/))) return `${match[1]} · Chính thức`;
+    if ((match = core.match(/^USD\/VND central rate at (.+)$/))) return `Tỷ giá trung tâm USD/VND ở mức ${match[1]}`;
+    if ((match = core.match(/^Domestic gold selling price at (.+)$/))) return `Giá bán vàng trong nước ở mức ${match[1]}`;
     if ((match = core.match(/^Published (.+)$/))) return `Công bố ${match[1]}`;
     if ((match = core.match(/^Announced (.+)$/))) return `Công bố ${match[1]}`;
     if ((match = core.match(/^Source: (.+)$/))) return `Nguồn: ${match[1]}`;

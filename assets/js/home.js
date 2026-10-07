@@ -43,6 +43,7 @@
   };
 
   let productionPromise = null;
+  let canonicalHomePromise = null;
 
   function setHTML(selector, html) {
     const node = document.querySelector(selector);
@@ -115,6 +116,271 @@
     return productionPromise;
   }
 
+  function payloadData(payload) {
+    return Array.isArray(payload?.data) ? payload.data : [];
+  }
+
+  function dateKey(value) {
+    return String(value || '').slice(0, 10);
+  }
+
+  function sortDateDesc(rows, selector) {
+    return [...rows].sort((a, b) => dateKey(selector(b)).localeCompare(dateKey(selector(a))));
+  }
+
+  function sourceName(sourceMap, sourceId) {
+    return sourceMap.get(sourceId)?.name || sourceId || 'Source';
+  }
+
+  function nonDemoSource(sourceId) {
+    return sourceId && !String(sourceId).startsWith('demo-');
+  }
+
+  async function loadCanonicalHomeData() {
+    if (canonicalHomePromise) return canonicalHomePromise;
+    canonicalHomePromise = Promise.all([
+      DataStore.getProjects(),
+      DataStore.getLegalDocuments(),
+      DataStore.getInfrastructureProjects(),
+      DataStore.getArticles(),
+      DataStore.getEvents(),
+      DataStore.getSources(),
+      loadHomeProduction()
+    ]).then(([projects, legal, infrastructure, articles, events, sources, production]) => {
+      const sourceRows = payloadData(sources);
+      return {
+        projects: payloadData(projects),
+        legal: payloadData(legal),
+        infrastructure: payloadData(infrastructure),
+        articles: payloadData(articles),
+        events: payloadData(events),
+        sources: new Map(sourceRows.map(row => [row.id, row])),
+        production
+      };
+    });
+    return canonicalHomePromise;
+  }
+
+  function productionTodayTitle(row) {
+    if (row.indicator_id === 'usd-vnd-central-rate') {
+      return `USD/VND central rate at ${Formatters.number(row.value, { min: 0, max: 0 })}`;
+    }
+    if (row.indicator_id === 'sjc-gold-sell') {
+      return `Domestic gold selling price at ${Formatters.unitValue(row.unit, row.value, { compact: true })}`;
+    }
+    return `${HOME_LABELS[row.indicator_id] || row.indicator_id} · ${Formatters.unitValue(row.unit, row.value, { compact: true })}`;
+  }
+
+  function buildTodayGroups(data) {
+    const marketArticles = sortDateDesc(
+      data.articles.filter(row => row.category === 'market' && nonDemoSource(row.source_id)),
+      row => row.published_at
+    );
+    const infraArticles = sortDateDesc(
+      data.articles.filter(row => row.category === 'infrastructure' && nonDemoSource(row.source_id)),
+      row => row.published_at
+    );
+    const legalRows = sortDateDesc(data.legal, row => row.issued_date || row.effective_date);
+    const macroRows = ['usd-vnd-central-rate', 'sjc-gold-sell']
+      .map(id => data.production.latest.get(id))
+      .filter(Boolean);
+
+    return [
+      {
+        category: 'market',
+        label: 'Market',
+        count: data.projects.length,
+        count_label: `${data.projects.length} curated projects`,
+        href: 'market.html?view=projects',
+        items: marketArticles.slice(0, 2).map(row => ({
+          title: row.title,
+          meta: `${App.formatDate(row.published_at)} · ${sourceName(data.sources, row.source_id)}`,
+          href: row.subcategory === 'supply' ? 'market.html?view=supply-sales' : 'market.html?view=news'
+        }))
+      },
+      {
+        category: 'legal',
+        label: 'Legal',
+        count: data.legal.length,
+        count_label: `${data.legal.length} official documents`,
+        href: 'legal.html?view=documents',
+        items: legalRows.slice(0, 2).map(row => ({
+          title: `${row.document_number} · ${row.title}`,
+          meta: `Effective ${App.formatDate(row.effective_date)} · Government`,
+          href: 'legal.html?view=documents'
+        }))
+      },
+      {
+        category: 'infrastructure',
+        label: 'Infrastructure',
+        count: data.infrastructure.length,
+        count_label: `${data.infrastructure.length} infrastructure projects`,
+        href: 'infrastructure.html?view=projects',
+        items: infraArticles.slice(0, 2).map(row => ({
+          title: row.title,
+          meta: `${App.formatDate(row.published_at)} · ${sourceName(data.sources, row.source_id)}`,
+          href: 'infrastructure.html?view=timeline'
+        }))
+      },
+      {
+        category: 'macro',
+        label: 'Macro',
+        count: data.production.totalRecordCount,
+        count_label: `${data.production.totalRecordCount} production records`,
+        href: 'macro.html?view=overview',
+        items: macroRows.map(row => ({
+          title: productionTodayTitle(row),
+          meta: `${formatProductionPeriod(row)} · ${productionEvidenceLabel(row)}`,
+          href: row.indicator_id === 'usd-vnd-central-rate' ? 'macro.html?view=fx' : 'macro.html?view=gold'
+        }))
+      }
+    ];
+  }
+
+  function rowsForIndicator(production, indicatorId) {
+    return production.rows
+      .filter(row => row.indicator_id === indicatorId)
+      .sort((a, b) => observationKey(b).localeCompare(observationKey(a)));
+  }
+
+  function macroChange(data, indicatorId, href) {
+    const rows = rowsForIndicator(data.production, indicatorId);
+    if (!rows.length) return null;
+    const latest = rows[0];
+    const prior = rows[1];
+    const current = Formatters.unitValue(latest.unit, latest.value, { compact: true });
+    const previous = prior ? Formatters.unitValue(prior.unit, prior.value, { compact: true }) : null;
+    return {
+      id: `live-change-${indicatorId}-${latest.period}`,
+      category: 'macro',
+      category_label: 'Macro',
+      date_label: formatProductionPeriod(latest),
+      sort_date: observationKey(latest),
+      title: productionTodayTitle(latest),
+      summary: previous
+        ? `Latest controlled production observation; previous available observation was ${previous} on ${formatProductionPeriod(prior)}.`
+        : 'Latest controlled production observation; no earlier comparable production observation is stored.',
+      href
+    };
+  }
+
+  function buildChanges(data) {
+    const candidates = [];
+    const fx = macroChange(data, 'usd-vnd-central-rate', 'macro.html?view=fx');
+    if (fx) candidates.push(fx);
+
+    const infra = sortDateDesc(
+      data.events.filter(row => row.category === 'infrastructure' && (row.source_ids || []).some(nonDemoSource)),
+      row => row.event_date
+    )[0];
+    if (infra) candidates.push({
+      id: `live-change-${infra.id}`,
+      category: 'infrastructure',
+      category_label: 'Infrastructure',
+      date_label: App.formatDate(infra.event_date),
+      sort_date: infra.event_date,
+      title: infra.title,
+      summary: infra.summary,
+      href: 'infrastructure.html?view=timeline'
+    });
+
+    const market = sortDateDesc(
+      data.articles.filter(row => row.category === 'market' && nonDemoSource(row.source_id)),
+      row => row.published_at
+    )[0];
+    if (market) candidates.push({
+      id: `live-change-${market.id}`,
+      category: 'market',
+      category_label: 'Market',
+      date_label: App.formatDate(market.published_at),
+      sort_date: market.published_at,
+      title: market.title,
+      summary: market.summary,
+      href: market.subcategory === 'supply' ? 'market.html?view=supply-sales' : 'market.html?view=news'
+    });
+
+    const legal = sortDateDesc(data.legal, row => row.issued_date || row.effective_date)[0];
+    if (legal) candidates.push({
+      id: `live-change-${legal.id}`,
+      category: 'legal',
+      category_label: 'Legal',
+      date_label: App.formatDate(legal.effective_date || legal.issued_date),
+      sort_date: legal.issued_date || legal.effective_date,
+      title: `${legal.document_number} · ${legal.title}`,
+      summary: legal.summary,
+      href: 'legal.html?view=documents'
+    });
+
+    return candidates.sort((a, b) => dateKey(b.sort_date).localeCompare(dateKey(a.sort_date)));
+  }
+
+  function importanceLabel(value) {
+    if (Number(value) >= 5) return 'High relevance';
+    if (Number(value) >= 4) return 'Important';
+    return 'Watch';
+  }
+
+  function buildWeekly(data) {
+    const candidates = [];
+
+    data.production.rows.forEach(row => {
+      const published = dateKey(row.published_at || row.data_date || row.period);
+      if (!published) return;
+      candidates.push({
+        id: `weekly-live-${row.id}`,
+        category: 'macro',
+        category_label: 'Macro',
+        date_label: App.formatDate(published).replace(/ \d{4}$/, ''),
+        importance_label: ['cpi-yoy', 'credit-growth-ytd', 'bank-funding-growth-ytd'].includes(row.indicator_id) ? 'Important' : 'Watch',
+        title: productionTodayTitle(row),
+        summary: row.evidence_status === 'verified'
+          ? 'Verified production observation from the approved official source.'
+          : 'Corroborated production observation from the approved source set.',
+        href: row.indicator_id === 'usd-vnd-central-rate' ? 'macro.html?view=fx'
+          : row.indicator_id.startsWith('sjc-gold') ? 'macro.html?view=gold'
+          : row.indicator_id.includes('cpi') ? 'macro.html?view=inflation'
+          : row.indicator_id.includes('rate') ? 'macro.html?view=rates'
+          : 'macro.html?view=liquidity',
+        sort_date: published
+      });
+    });
+
+    data.events
+      .filter(row => row.category === 'infrastructure' && (row.source_ids || []).some(nonDemoSource))
+      .forEach(row => candidates.push({
+        id: `weekly-live-${row.id}`,
+        category: 'infrastructure',
+        category_label: 'Infrastructure',
+        date_label: App.formatDate(row.event_date).replace(/ \d{4}$/, ''),
+        importance_label: importanceLabel(row.importance),
+        title: row.title,
+        summary: row.summary,
+        href: 'infrastructure.html?view=timeline',
+        sort_date: row.event_date
+      }));
+
+    const dated = candidates.filter(row => dateKey(row.sort_date));
+    if (!dated.length) return [];
+    const latest = dateKey(dated.reduce((max, row) => dateKey(row.sort_date) > max ? dateKey(row.sort_date) : max, ''));
+    const latestDate = new Date(`${latest}T00:00:00Z`);
+    const floor = new Date(latestDate);
+    floor.setUTCDate(floor.getUTCDate() - 6);
+    const floorKey = floor.toISOString().slice(0, 10);
+
+    return dated
+      .filter(row => {
+        const key = dateKey(row.sort_date);
+        return key >= floorKey && key <= latest;
+      })
+      .sort((a, b) => {
+        const byDate = dateKey(b.sort_date).localeCompare(dateKey(a.sort_date));
+        if (byDate) return byDate;
+        const rank = { 'High relevance': 3, 'Important': 2, 'Watch': 1 };
+        return (rank[b.importance_label] || 0) - (rank[a.importance_label] || 0);
+      })
+      .slice(0, 6);
+  }
+
   function formatProductionPeriod(row) {
     if (!row) return '';
     if (row.period_type === 'month' && /^\d{4}-\d{2}$/.test(row.period || '')) {
@@ -185,11 +451,17 @@
 
   async function renderToday() {
     try {
-      const payload = await DataStore.getHomeToday();
-      setHTML('[data-home-today]', (payload.data || []).map(Components.todayCard).join(''));
+      const data = await loadCanonicalHomeData();
+      setHTML('[data-home-today]', buildTodayGroups(data).map(Components.todayCard).join(''));
     } catch (error) {
-      console.error(error);
-      setHTML('[data-home-today]', Components.stateBox('Unable to load Today data.', 'error'));
+      console.warn('[home] live Latest derivation failed; using snapshot fallback.', error);
+      try {
+        const payload = await DataStore.getHomeToday();
+        setHTML('[data-home-today]', (payload.data || []).map(Components.todayCard).join(''));
+      } catch (fallbackError) {
+        console.error(fallbackError);
+        setHTML('[data-home-today]', Components.stateBox('Unable to load Today data.', 'error'));
+      }
     }
   }
 
@@ -208,21 +480,33 @@
 
   async function renderChanges() {
     try {
-      const payload = await DataStore.getHomeChanges();
-      setHTML('[data-home-changes]', (payload.data || []).map(Components.changeCard).join(''));
+      const data = await loadCanonicalHomeData();
+      setHTML('[data-home-changes]', buildChanges(data).map(Components.changeCard).join(''));
     } catch (error) {
-      console.error(error);
-      setHTML('[data-home-changes]', Components.stateBox('Unable to load change events.', 'error'));
+      console.warn('[home] live What Changed derivation failed; using snapshot fallback.', error);
+      try {
+        const payload = await DataStore.getHomeChanges();
+        setHTML('[data-home-changes]', (payload.data || []).map(Components.changeCard).join(''));
+      } catch (fallbackError) {
+        console.error(fallbackError);
+        setHTML('[data-home-changes]', Components.stateBox('Unable to load change events.', 'error'));
+      }
     }
   }
 
   async function renderWeekly() {
     try {
-      const payload = await DataStore.getHomeWeekly();
-      setHTML('[data-home-weekly]', (payload.data || []).map(Components.weeklyItem).join(''));
+      const data = await loadCanonicalHomeData();
+      setHTML('[data-home-weekly]', buildWeekly(data).map(Components.weeklyItem).join(''));
     } catch (error) {
-      console.error(error);
-      setHTML('[data-home-weekly]', Components.stateBox('Unable to load weekly highlights.', 'error'));
+      console.warn('[home] live weekly derivation failed; using snapshot fallback.', error);
+      try {
+        const payload = await DataStore.getHomeWeekly();
+        setHTML('[data-home-weekly]', (payload.data || []).map(Components.weeklyItem).join(''));
+      } catch (fallbackError) {
+        console.error(fallbackError);
+        setHTML('[data-home-weekly]', Components.stateBox('Unable to load weekly highlights.', 'error'));
+      }
     }
   }
 
@@ -258,5 +542,10 @@
     renderIndicators();
     renderChanges();
     renderWeekly();
+    document.addEventListener('app:language-changed', () => {
+      renderToday();
+      renderChanges();
+      renderWeekly();
+    });
   });
 })();

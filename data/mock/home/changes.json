@@ -1,9 +1,19 @@
 {
   "schema_version": 2,
-  "build_id": "phase4.3d-home-sync-20261007",
-  "generated_at": "2026-10-07T13:30:00+07:00",
+  "build_id": "home-live-derived-sync-20261007",
+  "generated_at": "2026-10-07T22:39:00+07:00",
   "is_mock": false,
+  "fallback_only": true,
   "data": [
+    {
+      "id": "change-macro-fx-20261007",
+      "category": "macro",
+      "category_label": "Macro",
+      "date_label": "07 Oct 2026",
+      "title": "USD/VND central rate at 25,638",
+      "summary": "Latest controlled production observation; previous available observation was 25,643 VND/USD on 05 Oct 2026.",
+      "href": "macro.html?view=fx"
+    },
     {
       "id": "change-infra-ben-luc-long-thanh-20261001",
       "category": "infrastructure",
@@ -14,21 +24,21 @@
       "href": "infrastructure.html?view=timeline"
     },
     {
-      "id": "change-market-cbre-q2-2026-supply",
+      "id": "change-market-nlg-20260907",
       "category": "market",
       "category_label": "Market",
-      "date_label": "Q2 2026",
-      "title": "HCMC apartment new supply falls to 850 units",
-      "summary": "CBRE reports 850 new condominium units in Q2/2026, down from 1,642 units in Q1/2026. Sales remain blank where the source does not publish a comparable figure.",
-      "href": "market.html?view=supply-sales"
+      "date_label": "07 Sep 2026",
+      "title": "Nam Long Experience 2026 showcases Waterpoint, Mizuki Park and Izumi City",
+      "summary": "Nam Long presented current township inventory and launched/introduced new components across Waterpoint, Mizuki Park and Izumi City during its September 2026 expo.",
+      "href": "market.html?view=news"
     },
     {
-      "id": "change-legal-decree-226-2025",
+      "id": "change-legal-decree-136-2026",
       "category": "legal",
       "category_label": "Legal",
-      "date_label": "15 Aug 2025",
-      "title": "Decree 226/2025/NĐ-CP amends Land Law implementation decrees",
-      "summary": "The official Government document updates parts of the detailed Land Law implementation framework and is tracked together with the original decrees.",
+      "date_label": "07 Apr 2026",
+      "title": "136/2026/NĐ-CP · Nghị định sửa đổi Nghị định 100/2024/NĐ-CP về phát triển và quản lý nhà ở xã hội",
+      "summary": "Nghị định tiếp tục sửa đổi, bổ sung các quy định về phát triển và quản lý nhà ở xã hội trong Nghị định 100/2024/NĐ-CP.",
       "href": "legal.html?view=documents"
     }
   ]

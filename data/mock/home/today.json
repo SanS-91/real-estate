@@ -1,14 +1,15 @@
 {
   "schema_version": 2,
-  "build_id": "phase4.3d-home-sync-20261007",
-  "generated_at": "2026-10-07T13:30:00+07:00",
+  "build_id": "home-live-derived-sync-20261007",
+  "generated_at": "2026-10-07T22:39:00+07:00",
   "is_mock": false,
+  "fallback_only": true,
   "data": [
     {
       "category": "market",
       "label": "Market",
-      "count": 8,
-      "count_label": "8 curated projects",
+      "count": 12,
+      "count_label": "12 curated projects",
       "href": "market.html?view=projects",
       "items": [
         {
@@ -26,18 +27,18 @@
     {
       "category": "legal",
       "label": "Legal",
-      "count": 9,
-      "count_label": "9 official documents",
+      "count": 16,
+      "count_label": "16 official documents",
       "href": "legal.html?view=documents",
       "items": [
         {
-          "title": "226/2025/NĐ-CP · Amendments to Land Law implementation decrees",
-          "meta": "Effective 15 Aug 2025 · Government",
+          "title": "136/2026/NĐ-CP · Nghị định sửa đổi Nghị định 100/2024/NĐ-CP về phát triển và quản lý nhà ở xã hội",
+          "meta": "Effective 07 Apr 2026 · Government",
           "href": "legal.html?view=documents"
         },
         {
-          "title": "102/2024/NĐ-CP · Detailed implementation of the Land Law",
-          "meta": "Effective 01 Aug 2024 · Government",
+          "title": "54/2026/NĐ-CP · Nghị định sửa đổi, bổ sung một số điều của các nghị định trong lĩnh vực nhà ở, kinh doanh bất động sản",
+          "meta": "Effective 09 Feb 2026 · Government",
           "href": "legal.html?view=documents"
         }
       ]
@@ -64,18 +65,18 @@
     {
       "category": "macro",
       "label": "Macro",
-      "count": 15,
-      "count_label": "15 production records",
+      "count": 18,
+      "count_label": "18 production records",
       "href": "macro.html?view=overview",
       "items": [
         {
-          "title": "USD/VND central rate at 25,643",
-          "meta": "05 Oct 2026 · Corroborated",
+          "title": "USD/VND central rate at 25,638",
+          "meta": "07 Oct 2026 · CORROBORATED",
           "href": "macro.html?view=fx"
         },
         {
-          "title": "Domestic gold selling price at VND 143.5 mn/tael",
-          "meta": "05 Oct 2026 · Corroborated",
+          "title": "Domestic gold selling price at 143 mn VND/tael",
+          "meta": "07 Oct 2026 · CORROBORATED",
           "href": "macro.html?view=gold"
         }
       ]
