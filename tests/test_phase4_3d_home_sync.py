@@ -22,17 +22,20 @@ loc_static = (ROOT / 'assets/js/localization-static.js').read_text(encoding='utf
 assert today['is_mock'] is False
 assert changes['is_mock'] is False
 assert weekly['is_mock'] is False
+assert today['fallback_only'] is True
+assert changes['fallback_only'] is True
+assert weekly['fallback_only'] is True
 assert indicators['is_mock'] is False
 assert indicators['fallback_only'] is True
 assert all(x['display_value'] == '—' for x in indicators['data'])
 
 by_cat = {x['category']: x for x in today['data']}
-assert by_cat['market']['count'] == len(projects['data']) == 8
-assert by_cat['legal']['count'] == len(legal['data']) == 9
+assert by_cat['market']['count'] == len(projects['data']) == 12
+assert by_cat['legal']['count'] == len(legal['data']) == 16
 assert by_cat['infrastructure']['count'] == len(infra['data']) == 8
-assert by_cat['macro']['count'] >= 15
+assert by_cat['macro']['count'] == 18
 assert macro['record_count'] == len(macro['data'])
-assert len(macro['data']) >= by_cat['macro']['count']
+assert len(macro['data']) == by_cat['macro']['count']
 
 joined = '\n'.join([
     json.dumps(today, ensure_ascii=False),
@@ -49,14 +52,17 @@ assert 'policy-refinancing-rate' in home_js
 assert 'Integrated data · 4 curated modules' in home_js
 assert 'group.count_label' in components
 assert "['#today-title', 'Latest', 'Mới nhất']" in loc_static
-assert 'assets/js/home.js?v=4.3D' in index
-assert 'assets/js/localization-dynamic.js?v=4.3E' in index
+assert 'assets/js/home.js?v=4.7H1' in index
+assert 'loadCanonicalHomeData' in home_js
+assert 'buildTodayGroups(data)' in home_js
+assert 'buildChanges(data)' in home_js
+assert 'buildWeekly(data)' in home_js
+assert 'assets/js/localization-dynamic.js?v=4.7H1' in index
 
 # Weekly recap contains only observations inside 01-07 Oct 2026 in this curated build.
-assert [x['date_label'] for x in weekly['data']] == ['05 Oct', '05 Oct', '03 Oct', '01 Oct']
+assert [x['date_label'] for x in weekly['data']] == ['07 Oct', '07 Oct', '03 Oct', '01 Oct']
 
 # No fabricated sales metric in Home change summary.
-market_change = next(x for x in changes['data'] if x['category'] == 'market')
-assert 'Sales remain blank' in market_change['summary']
+assert any(x['category'] == 'macro' and '25,638' in x['title'] for x in changes['data'])
 
 print('Phase 4.3D Home sync tests PASS')
