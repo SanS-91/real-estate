@@ -401,16 +401,19 @@
   }
 
   function lifecycleHTML(document) {
-    const items = [];
-    if (document.draft_published_date) items.push({ label: 'Draft published', date: document.draft_published_date, state: document.status === 'draft' ? 'current' : 'done' });
-    if (document.issued_date) items.push({ label: 'Issued', date: document.issued_date, state: ['issued'].includes(document.status) ? 'current' : 'done' });
-    if (document.effective_date) {
-      const future = (daysUntil(document.effective_date) ?? 0) > 0;
-      items.push({ label: 'Effective', date: document.effective_date, state: future ? 'upcoming' : (statusForDisplay(document) === 'effective' ? 'current' : 'done') });
-    }
-    if (document.status === 'replaced') items.push({ label: 'Replaced', date: null, state: 'current' });
-    if (!items.length) return '<p class="muted-text">No lifecycle dates available.</p>';
-    return `<div class="legal-lifecycle">${items.map(item => `<div class="legal-lifecycle__item is-${esc(item.state)}"><span class="legal-lifecycle__dot"></span><div><strong>${esc(item.label)}</strong><span>${esc(App.formatDate(item.date))}</span></div></div>`).join('')}</div>`;
+    const timeline = window.HistoryEngine?.legalTimeline?.(document, data.documents) || [];
+    if (!timeline.length) return '<p class="muted-text">No lifecycle dates available.</p>';
+    const today = new Date();
+    const lastPastIndex = timeline.reduce((idx, item, i) => {
+      const dt = item.date ? new Date(`${item.date}T00:00:00`) : null;
+      return dt && dt <= today ? i : idx;
+    }, -1);
+    return `<div class="legal-lifecycle">${timeline.map((item, index) => {
+      const future = item.date ? new Date(`${item.date}T00:00:00`) > today : false;
+      const state = future ? 'upcoming' : (index === lastPastIndex ? 'current' : 'done');
+      const detail = item.detail ? `<span>${esc(App.formatDate(item.date))} · ${esc(item.detail)}</span>` : `<span>${esc(App.formatDate(item.date))}</span>`;
+      return `<div class="legal-lifecycle__item is-${esc(state)}"><span class="legal-lifecycle__dot"></span><div><strong>${esc(item.title)}</strong>${detail}</div></div>`;
+    }).join('')}</div>`;
   }
 
   function documentDrawerHTML(document) {

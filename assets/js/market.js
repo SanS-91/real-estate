@@ -337,6 +337,15 @@
     });
   }
 
+  function projectHistoryHTML(project) {
+    const rows = window.HistoryEngine?.marketProjectHistory?.(project, data.observations, data.phases) || [];
+    if (!rows.length) return '<p class="muted-text">No dated project history is available yet.</p>';
+    return rows.slice(0, 8).map(item => {
+      const source = item.source_id ? ` · ${sourceRef(item.source_id,{sourceDate:item.date,sourceUrl:item.source_url})}` : '';
+      return `<div class="drawer-list-row drawer-list-row--stack"><span>${esc(App.formatDate(item.date))} · ${esc(String(item.type || '').replaceAll('-',' '))}${source}</span><strong>${esc(item.title)}</strong>${item.detail ? `<span>${esc(item.detail)}</span>` : ''}</div>`;
+    }).join('');
+  }
+
   function projectDrawerHTML(project) {
     const obs = latestProjectObservation(project.id);
     const phases = data.phases.filter(item => item.project_id === project.id);
@@ -360,6 +369,7 @@
         ${Components.compactMetric({label:'Absorption',value:formatPercent(obs?.absorption_rate),note:obs?.period || ''})}
       </div>
       <div class="drawer-section"><h3>Overview</h3><p>${esc(project.summary)}</p></div>
+      <div class="drawer-section"><h3>Project History</h3>${projectHistoryHTML(project)}</div>
       ${leadDeveloper(project) ? `<div class="drawer-section"><h3>Developer</h3><div class="drawer-list-row"><div><strong>${esc(leadDeveloper(project).name)}</strong><span>${esc(leadDeveloper(project).summary || '')}</span></div><a class="text-link" href="market.html?view=projects&developer=${encodeURIComponent(leadDeveloper(project).id)}">Open portfolio</a></div></div>` : ''}
       <div class="drawer-section"><h3>Segments</h3><div class="chip-row">${(project.segment_ids || []).map(id=>`<span class="relation-chip">${esc(id.replaceAll('-',' '))}</span>`).join('')}</div></div>
       <div class="drawer-section"><h3>Legal Research Topics</h3>${legalTopicLinks(project).length ? `<div class="chip-row">${legalTopicLinks(project).map(item=>`<a class="relation-chip" href="legal.html?view=documents&topic=${encodeURIComponent(item.id)}">${esc(item.name)}</a>`).join('')}</div><p class="muted-text">Research shortcuts by topic only; they do not determine whether a specific regulation applies to this project.</p>` : '<p class="muted-text">No curated legal-topic links.</p>'}</div>

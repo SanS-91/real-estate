@@ -1,0 +1,54 @@
+name: Phase 4.8 + 4.9 History Intelligence Validation
+
+on:
+  pull_request:
+    paths:
+      - 'assets/js/history-engine.js'
+      - 'assets/js/home.js'
+      - 'assets/js/macro.js'
+      - 'assets/js/legal.js'
+      - 'assets/js/infrastructure.js'
+      - 'assets/js/market.js'
+      - 'assets/css/main.css'
+      - 'index.html'
+      - 'macro.html'
+      - 'legal.html'
+      - 'infrastructure.html'
+      - 'market.html'
+      - 'tests/test_phase4_8_9_history_engine.js'
+      - 'tests/test_phase4_8_9_integration.py'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  validate:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 8
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v7
+      - name: Set up Python
+        uses: actions/setup-python@v7
+        with:
+          python-version: '3.12'
+      - name: JavaScript syntax
+        run: |
+          node --check assets/js/history-engine.js
+          node --check assets/js/home.js
+          node --check assets/js/macro.js
+          node --check assets/js/legal.js
+          node --check assets/js/infrastructure.js
+          node --check assets/js/market.js
+      - name: History and intelligence behavior
+        run: node tests/test_phase4_8_9_history_engine.js
+      - name: Frontend integration contract
+        run: python tests/test_phase4_8_9_integration.py
+      - name: Existing module regressions
+        run: |
+          python tests/test_phase4_3a_legal_official_registry.py
+          python tests/test_phase4_3b_infrastructure_official_registry.py
+          python tests/test_phase4_3c_market_registry.py
+          python tests/test_phase4_3d_home_sync.py
+          python tests/test_phase4_4f_production_hardening.py

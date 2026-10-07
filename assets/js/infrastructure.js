@@ -369,10 +369,21 @@
     });
   }
 
+  function scheduleChangeSummaryHTML(project) {
+    const change = window.HistoryEngine?.infrastructureScheduleChange?.(project.id, data.schedules);
+    if (!change) return '';
+    return `<div class="history-change-callout"><span class="eyebrow">Schedule change</span><strong>${esc(formatTarget(change.from))} → ${esc(formatTarget(change.to))}</strong><small>Updated ${esc(App.formatDate(change.date))} · prior target retained in history</small></div>`;
+  }
+
   function scheduleHistoryHTML(project) {
-    const records = schedulesFor(project.id);
-    if (!records.length) return '<p class="muted-text">No schedule records yet.</p>';
-    return records.map(item => `<div class="drawer-list-row"><div><strong>${esc(labelize(item.schedule_type))}: ${esc(formatTarget(item.target_period))}</strong><span>Announced ${esc(App.formatDate(item.announced_date))} · ${esc(item.date_precision)}</span><div class="provenance-inline-row">${sourceRef(item.source_id,{sourceDate:item.announced_date,period:item.target_period,sourceUrl:item.source_url})}</div></div>${Components.statusBadge(item.status)}</div>`).join('');
+    const records = window.HistoryEngine?.infrastructureTimeline?.(project.id, data.schedules, data.events) || [];
+    if (!records.length) return '<p class="muted-text">No schedule or milestone records yet.</p>';
+    return records.slice(0, 10).map(item => {
+      if (item.type === 'schedule') {
+        return `<div class="drawer-list-row"><div><strong>${esc(labelize(item.title))}: ${esc(formatTarget(item.detail))}</strong><span>Announced ${esc(App.formatDate(item.date))}</span><div class="provenance-inline-row">${sourceRef(item.source_id,{sourceDate:item.date,period:item.detail,sourceUrl:item.source_url})}</div></div>${Components.statusBadge(item.status)}</div>`;
+      }
+      return `<div class="drawer-list-row drawer-list-row--stack"><span>${esc(App.formatDate(item.date))} · ${esc(labelize(item.detail))}</span><strong>${esc(item.title)}</strong></div>`;
+    }).join('');
   }
 
   function drawerHTML(project) {
@@ -390,7 +401,8 @@
         ${Components.compactMetric({label:'Related RE',value:String(related.length),note:'Research links'})}
       </div>
       <div class="drawer-section"><h3>Overview</h3><p>${esc(project.summary)}</p></div>
-      <div class="drawer-section"><h3>Schedule History</h3>${scheduleHistoryHTML(project)}</div>
+      ${scheduleChangeSummaryHTML(project)}
+      <div class="drawer-section"><h3>Schedule & Milestone History</h3>${scheduleHistoryHTML(project)}</div>
       <div class="drawer-section"><h3>Recent Milestones</h3>${events.length ? events.map(event => `<div class="drawer-list-row drawer-list-row--stack"><span>${esc(App.formatDate(event.event_date))} · ${esc(labelize(event.event_type))} · ${sourceRef((event.source_ids || [])[0],{sourceDate:event.event_date})}</span><strong>${esc(event.title)}</strong></div>`).join('') : '<p class="muted-text">No milestone records.</p>'}</div>
       <div class="drawer-section"><h3>Related Real Estate Projects</h3>${related.length ? related.map(item => `<div class="drawer-list-row"><div><strong>${esc(item.name)}</strong><span>${esc(item.location_text || '')}</span></div><a class="text-link" href="market.html?view=projects&project=${encodeURIComponent(item.id)}">Open</a></div>`).join('') : '<p class="muted-text">No direct real-estate project links in the current registry.</p>'}</div>
       <div class="drawer-section"><h3>Related Evidence</h3>${articles.length ? articles.map(item => `<div class="drawer-list-row drawer-list-row--stack"><span>${esc(App.formatDate(item.published_at))} · ${esc(item.content_type)} · ${sourceRef(item.source_id,{publishedAt:item.published_at,sourceUrl:item.url})}</span><strong>${esc(item.title)}</strong></div>`).join('') : '<p class="muted-text">No related articles.</p>'}</div>`;

@@ -52,12 +52,12 @@ assert 'policy-refinancing-rate' in home_js
 assert 'Integrated data · 4 curated modules' in home_js
 assert 'group.count_label' in components
 assert "['#today-title', 'Latest', 'Mới nhất']" in loc_static
-assert 'assets/js/home.js?v=4.7H1' in index
+assert 'assets/js/home.js?v=4.9I1' in index
 assert 'loadCanonicalHomeData' in home_js
 assert 'buildTodayGroups(data)' in home_js
 assert 'buildChanges(data)' in home_js
 assert 'buildWeekly(data)' in home_js
-assert 'assets/js/localization-dynamic.js?v=4.7H1' in index
+assert 'assets/js/localization-dynamic.js?v=4.9I1' in index
 
 # Weekly recap contains only observations inside 01-07 Oct 2026 in this curated build.
 assert [x['date_label'] for x in weekly['data']] == ['07 Oct', '07 Oct', '03 Oct', '01 Oct']

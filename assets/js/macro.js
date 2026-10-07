@@ -293,6 +293,7 @@
 
   function obsKey(item) { return item.data_date || item.period || ''; }
   function observationsFor(id) {
+    if (window.HistoryEngine?.macroSeries) return HistoryEngine.macroSeries(data.observations, id);
     return data.observations.filter(item => item.indicator_id === id).sort((a,b) => obsKey(a).localeCompare(obsKey(b)));
   }
   function latestPair(id) {

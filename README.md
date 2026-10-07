@@ -211,3 +211,12 @@ Legal and Infrastructure now have a read-only weekly assisted source-watch workf
 Market coverage expands to 12 curated projects and 9 developers with first-party project sourcing. The additional projects are Vinhomes Grand Park, The 9 Stellars, Celesta Gold and Essensia Parkway. Quantitative observations remain separate from project masters: missing ASP, sales, supply or absorption stays blank.
 
 See `docs/PHASE4_6_7_REGISTRY_MARKET.md`.
+
+
+## Phase 4.8 + 4.9 — Historical Series & Change Intelligence
+
+Historical analysis now derives from the existing canonical records rather than a second history database. Macro uses append-only production observations; Legal uses issued/effective dates and amendment relations; Infrastructure uses current/superseded schedules plus milestones; Market uses dated project and comparable research observations.
+
+A shared `HistoryEngine` powers prior-observation deltas and Home “What Changed” cards. Missing history is never fabricated: one-point series remain one-point series until sourced observations are available, and incompatible Market sources are not mechanically combined.
+
+See `docs/PHASE4_8_9_HISTORY_INTELLIGENCE.md`.
