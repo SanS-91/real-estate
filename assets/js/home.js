@@ -140,18 +140,24 @@
     if (canonicalHomePromise) return canonicalHomePromise;
     canonicalHomePromise = Promise.all([
       DataStore.getProjects(),
+      DataStore.getProjectPhases(),
+      DataStore.getMarketObservations(),
       DataStore.getLegalDocuments(),
       DataStore.getInfrastructureProjects(),
+      DataStore.getInfrastructureSchedules(),
       DataStore.getArticles(),
       DataStore.getEvents(),
       DataStore.getSources(),
       loadHomeProduction()
-    ]).then(([projects, legal, infrastructure, articles, events, sources, production]) => {
+    ]).then(([projects, phases, marketObservations, legal, infrastructure, schedules, articles, events, sources, production]) => {
       const sourceRows = payloadData(sources);
       return {
         projects: payloadData(projects),
+        phases: payloadData(phases),
+        marketObservations: payloadData(marketObservations),
         legal: payloadData(legal),
         infrastructure: payloadData(infrastructure),
+        schedules: payloadData(schedules),
         articles: payloadData(articles),
         events: payloadData(events),
         sources: new Map(sourceRows.map(row => [row.id, row])),
@@ -265,53 +271,96 @@
   }
 
   function buildChanges(data) {
-    const candidates = [];
-    const fx = macroChange(data, 'usd-vnd-central-rate', 'macro.html?view=fx');
-    if (fx) candidates.push(fx);
-
-    const infra = sortDateDesc(
-      data.events.filter(row => row.category === 'infrastructure' && (row.source_ids || []).some(nonDemoSource)),
-      row => row.event_date
-    )[0];
-    if (infra) candidates.push({
-      id: `live-change-${infra.id}`,
-      category: 'infrastructure',
-      category_label: 'Infrastructure',
-      date_label: App.formatDate(infra.event_date),
-      sort_date: infra.event_date,
-      title: infra.title,
-      summary: infra.summary,
-      href: 'infrastructure.html?view=timeline'
+    if (!window.HistoryEngine) return [];
+    const intelligence = HistoryEngine.buildIntelligence({
+      macroRows: data.production.rows,
+      legalDocuments: data.legal,
+      infrastructureProjects: data.infrastructure,
+      schedules: data.schedules,
+      events: data.events,
+      marketObservations: data.marketObservations
     });
 
-    const market = sortDateDesc(
-      data.articles.filter(row => row.category === 'market' && nonDemoSource(row.source_id)),
-      row => row.published_at
-    )[0];
-    if (market) candidates.push({
-      id: `live-change-${market.id}`,
-      category: 'market',
-      category_label: 'Market',
-      date_label: App.formatDate(market.published_at),
-      sort_date: market.published_at,
-      title: market.title,
-      summary: market.summary,
-      href: market.subcategory === 'supply' ? 'market.html?view=supply-sales' : 'market.html?view=news'
+    const latestByCategory = [];
+    ['macro', 'infrastructure', 'market', 'legal'].forEach(category => {
+      const item = intelligence.find(row => row.category === category);
+      if (item) latestByCategory.push(item);
     });
 
-    const legal = sortDateDesc(data.legal, row => row.issued_date || row.effective_date)[0];
-    if (legal) candidates.push({
-      id: `live-change-${legal.id}`,
-      category: 'legal',
-      category_label: 'Legal',
-      date_label: App.formatDate(legal.effective_date || legal.issued_date),
-      sort_date: legal.issued_date || legal.effective_date,
-      title: `${legal.document_number} · ${legal.title}`,
-      summary: legal.summary,
-      href: 'legal.html?view=documents'
-    });
+    return latestByCategory.map(item => {
+      if (item.category === 'macro') {
+        const current = item.current;
+        const previous = item.previous;
+        const deltaLabel = current.unit === 'vnd-per-tael'
+          ? `${item.delta > 0 ? '+' : ''}${Formatters.number(item.delta / 1_000_000, { min: 1, max: 1 })} mn VND/tael`
+          : `${item.delta > 0 ? '+' : ''}${Formatters.number(item.delta, { min: 0, max: 0 })} VND/USD`;
+        return {
+          id: item.id,
+          category: 'macro',
+          category_label: 'Macro',
+          date_label: formatProductionPeriod(current),
+          sort_date: item.date,
+          title: productionTodayTitle(current),
+          summary: `${deltaLabel} versus ${formatProductionPeriod(previous)}.`,
+          href: current.indicator_id === 'usd-vnd-central-rate' ? 'macro.html?view=fx' : 'macro.html?view=gold'
+        };
+      }
 
-    return candidates.sort((a, b) => dateKey(b.sort_date).localeCompare(dateKey(a.sort_date)));
+      if (item.category === 'infrastructure') {
+        if (item.type === 'schedule-change') {
+          return {
+            id: item.id,
+            category: 'infrastructure',
+            category_label: 'Infrastructure',
+            date_label: App.formatDate(item.date),
+            sort_date: item.date,
+            title: item.title,
+            summary: `Schedule revised from ${item.from} to ${item.to}; prior target remains preserved in history.`,
+            href: `infrastructure.html?view=projects&project=${encodeURIComponent(item.entity_id)}`
+          };
+        }
+        return {
+          id: item.id,
+          category: 'infrastructure',
+          category_label: 'Infrastructure',
+          date_label: App.formatDate(item.date),
+          sort_date: item.date,
+          title: item.title,
+          summary: item.summary || 'Source-backed infrastructure milestone recorded in the curated timeline.',
+          href: `infrastructure.html?view=projects&project=${encodeURIComponent(item.entity_id)}`
+        };
+      }
+
+      if (item.category === 'market') {
+        const current = item.current;
+        const previous = item.previous;
+        return {
+          id: item.id,
+          category: 'market',
+          category_label: 'Market',
+          date_label: current.period,
+          sort_date: item.date,
+          title: `HCMC apartment new supply at ${Formatters.number(current.new_supply, { min: 0, max: 0 })} units`,
+          summary: `Comparable CBRE series moved from ${Formatters.number(previous.new_supply, { min: 0, max: 0 })} to ${Formatters.number(current.new_supply, { min: 0, max: 0 })} units (${item.pct > 0 ? '+' : ''}${Formatters.number(item.pct, { min: 1, max: 1 })}%).`,
+          href: 'market.html?view=supply-sales'
+        };
+      }
+
+      const doc = data.legal.find(row => row.id === item.entity_id);
+      const target = data.legal.find(row => row.id === item.target_id);
+      return {
+        id: item.id,
+        category: 'legal',
+        category_label: 'Legal',
+        date_label: App.formatDate(item.date),
+        sort_date: item.date,
+        title: doc ? `${doc.document_number} · ${doc.title}` : item.title,
+        summary: target
+          ? `${doc?.document_number || 'Document'} ${item.type === 'amends' ? 'amends' : 'supplements'} ${target.document_number}; both records remain linked in the legal lifecycle.`
+          : item.summary,
+        href: doc ? `legal.html?view=documents&document=${encodeURIComponent(doc.id)}` : 'legal.html?view=documents'
+      };
+    }).sort((a, b) => dateKey(b.sort_date).localeCompare(dateKey(a.sort_date)));
   }
 
   function importanceLabel(value) {
