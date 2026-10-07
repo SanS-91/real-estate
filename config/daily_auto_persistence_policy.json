@@ -1,0 +1,32 @@
+{
+  "schema_version": 1,
+  "mode": "controlled-daily-auto-persistence-v1",
+  "repository_publish": true,
+  "frontend_publish": false,
+  "source_workflow": "macro-candidate.yml",
+  "source_artifact_prefix": "macro-production-",
+  "logical_key_fields": [
+    "indicator_id",
+    "period_type",
+    "period"
+  ],
+  "allowed_indicator_ids": [
+    "usd-vnd-central-rate",
+    "sjc-gold-buy",
+    "sjc-gold-sell"
+  ],
+  "max_additions_per_run": 3,
+  "max_period_age_days": 4,
+  "timezone": "Asia/Ho_Chi_Minh",
+  "require_append_only": true,
+  "require_prior_count_match": true,
+  "require_monotonic_source_run_number": true,
+  "on_no_change": "no-commit",
+  "on_source_failure": "retain-last-good",
+  "notes": [
+    "Automatic repository persistence is restricted to the three daily FX/gold indicators.",
+    "All records must already have passed the controlled production gate and two-source corroboration.",
+    "Historical mutation, record drops, stale-baseline writes, future-dated records and unrelated indicators are blocked.",
+    "If sources fail or do not agree, the repository remains unchanged."
+  ]
+}

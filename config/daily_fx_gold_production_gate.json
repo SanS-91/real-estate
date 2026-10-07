@@ -1,0 +1,64 @@
+{
+  "schema_version": 1,
+  "mode": "controlled-production-v1",
+  "production_write": true,
+  "repository_publish": false,
+  "frontend_publish": false,
+  "allowed_readiness_statuses": [
+    "ready-corroborated"
+  ],
+  "logical_key_fields": [
+    "indicator_id",
+    "period_type",
+    "period"
+  ],
+  "conflict_rule": "fail-on-existing-logical-key-change",
+  "record_drop_rule": "forbid",
+  "atomic_write": true,
+  "rollback_snapshot": true,
+  "max_snapshots": 10,
+  "notes": [
+    "Phase 4.4E narrow daily gate for repository auto-publishing.",
+    "Only USD/VND central rate and SJC gold buy/sell are eligible.",
+    "Each daily fact must be corroborated by at least two independent approved sources.",
+    "All non-daily indicators remain outside this automatic gate."
+  ],
+  "allowed_indicators": {
+    "usd-vnd-central-rate": {
+      "allowed_sources": [
+        "banking-times-vn",
+        "vna-vietnamplus"
+      ],
+      "required_readiness_statuses": [
+        "ready-corroborated"
+      ],
+      "required_evidence_status": "corroborated",
+      "required_period_type": "day",
+      "required_min_independent_sources": 2
+    },
+    "sjc-gold-buy": {
+      "allowed_sources": [
+        "baonghean-gold",
+        "vietnamnet-gold"
+      ],
+      "required_readiness_statuses": [
+        "ready-corroborated"
+      ],
+      "required_evidence_status": "corroborated",
+      "required_period_type": "day",
+      "required_min_independent_sources": 2
+    },
+    "sjc-gold-sell": {
+      "allowed_sources": [
+        "baonghean-gold",
+        "vietnamnet-gold"
+      ],
+      "required_readiness_statuses": [
+        "ready-corroborated"
+      ],
+      "required_evidence_status": "corroborated",
+      "required_period_type": "day",
+      "required_min_independent_sources": 2
+    }
+  }
+}

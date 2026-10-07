@@ -20,6 +20,7 @@ def main():
     ap.add_argument("--schema", default="schemas/processed_macro_observation.schema.json")
     ap.add_argument("--production-policy", default="config/production_promotion_policy.json")
     ap.add_argument("--persistence-policy", default="config/repository_persistence_policy.json")
+    ap.add_argument("--auto-persistence-policy", default="config/daily_auto_persistence_policy.json")
     args = ap.parse_args()
 
     def resolve(value: str) -> Path:
@@ -32,6 +33,7 @@ def main():
     schema = read_json(resolve(args.schema))
     production_policy = read_json(resolve(args.production_policy))
     persistence_policy = read_json(resolve(args.persistence_policy))
+    auto_persistence_policy = read_json(resolve(args.auto_persistence_policy))
 
     errors = []
     records = payload.get("data", [])
@@ -43,8 +45,13 @@ def main():
         errors.append("repository observations must set repository_publish=true")
     if payload.get("frontend_publish") is not False:
         errors.append("Repository persistence must keep frontend_publish=false")
-    if payload.get("repository_persistence_mode") != persistence_policy.get("mode"):
+    allowed_persistence_modes = {persistence_policy.get("mode"), auto_persistence_policy.get("mode")}
+    payload_mode = payload.get("repository_persistence_mode")
+    meta_mode = meta.get("mode")
+    if payload_mode not in allowed_persistence_modes:
         errors.append("repository_persistence_mode mismatch")
+    if meta_mode != payload_mode:
+        errors.append("repository persistence mode mismatch between observations and metadata")
     if meta.get("repository_publish") is not True or meta.get("frontend_publish") is not False:
         errors.append("repository-publish.json flags are invalid")
     if meta.get("final_record_count") != len(records):
