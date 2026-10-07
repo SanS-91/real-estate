@@ -1,0 +1,50 @@
+name: Data Freshness Check
+
+on:
+  schedule:
+    # GitHub cron is UTC. 00:45 UTC = 07:45 ICT every day.
+    - cron: '45 0 * * *'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: data-freshness-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  freshness:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Build current update-status snapshot
+        run: |
+          python scripts/build_update_status.py \
+            --output data/state/update-status-runtime.json
+
+      - name: Validate snapshot JSON
+        run: python -m json.tool data/state/update-status-runtime.json > /dev/null
+
+      - name: Write maintenance summary
+        run: |
+          python scripts/write_update_status_summary.py \
+            --input data/state/update-status-runtime.json \
+            >> "$GITHUB_STEP_SUMMARY"
+
+      - name: Upload freshness snapshot
+        uses: actions/upload-artifact@v4
+        with:
+          name: data-freshness-${{ github.run_number }}
+          retention-days: 14
+          path: data/state/update-status-runtime.json
+          if-no-files-found: error
