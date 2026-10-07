@@ -1,27 +1,28 @@
 {
   "schema_version": 2,
-  "build_id": "phase4.3d-home-sync-20261007",
-  "generated_at": "2026-10-07T13:30:00+07:00",
+  "build_id": "home-live-derived-sync-20261007",
+  "generated_at": "2026-10-07T22:39:00+07:00",
   "is_mock": false,
+  "fallback_only": true,
   "data": [
     {
-      "id": "weekly-macro-fx-20261005",
+      "id": "weekly-macro-fx-20261007",
       "category": "macro",
       "category_label": "Macro",
-      "date_label": "05 Oct",
+      "date_label": "07 Oct",
       "importance_label": "Watch",
-      "title": "USD/VND central rate recorded at 25,643",
-      "summary": "Latest controlled production observation, corroborated by the approved source set.",
+      "title": "USD/VND central rate at 25,638",
+      "summary": "Latest corroborated production observation from the approved source set.",
       "href": "macro.html?view=fx"
     },
     {
-      "id": "weekly-macro-gold-20261005",
+      "id": "weekly-macro-gold-20261007",
       "category": "macro",
       "category_label": "Macro",
-      "date_label": "05 Oct",
+      "date_label": "07 Oct",
       "importance_label": "Watch",
-      "title": "Domestic gold selling price recorded at VND 143.5 mn/tael",
-      "summary": "Latest corroborated gold observation in the controlled production repository.",
+      "title": "Domestic gold selling price at 143 mn VND/tael",
+      "summary": "Latest corroborated production observation from the approved source set.",
       "href": "macro.html?view=gold"
     },
     {
@@ -30,8 +31,8 @@
       "category_label": "Macro",
       "date_label": "03 Oct",
       "importance_label": "Important",
-      "title": "September CPI YoY recorded at 5.08%",
-      "summary": "NSO September 2026 CPI observation is stored as a verified production record.",
+      "title": "CPI YoY at 5.08%",
+      "summary": "Verified production observation from the approved official source.",
       "href": "macro.html?view=inflation"
     },
     {
