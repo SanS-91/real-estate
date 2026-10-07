@@ -31,7 +31,9 @@
         "16:15 Monday-Friday"
       ],
       "auto_publish_requires": "two-source-corroborated",
-      "notes": "Only USD/VND central rate and SJC gold buy/sell auto-persist. Source failure or disagreement retains the last good repository value."
+      "notes": "Only USD/VND central rate and SJC gold buy/sell auto-persist. Source failure or disagreement retains the last good repository value.",
+      "history_strategy": "append-only-production-observations",
+      "intelligence_mode": "previous-observation-delta-when-available"
     },
     {
       "id": "macro-monthly-statistics",
@@ -56,7 +58,9 @@
         "10:45 daily on days 1-10 of each month"
       ],
       "auto_publish_requires": "verified-official-nso",
-      "notes": "Only verified official NSO CPI/Core CPI and credit/funding growth facts auto-persist. Existing logical keys are immutable; source failure, missing data, stale periods or conflicts retain the last good repository state."
+      "notes": "Only verified official NSO CPI/Core CPI and credit/funding growth facts auto-persist. Existing logical keys are immutable; source failure, missing data, stale periods or conflicts retain the last good repository state.",
+      "history_strategy": "append-only-production-observations",
+      "intelligence_mode": "previous-observation-delta-when-available"
     },
     {
       "id": "macro-customer-rates",
@@ -80,7 +84,9 @@
         "11:15 every Tuesday"
       ],
       "auto_publish_requires": "complete-four-component-two-source-corroboration",
-      "notes": "Auto-persist only when all four customer-rate range components share one month and are corroborated by VNBA + VietnamPlus/VNA. Partial bundles and priority short-term lending remain blocked."
+      "notes": "Auto-persist only when all four customer-rate range components share one month and are corroborated by VNBA + VietnamPlus/VNA. Partial bundles and priority short-term lending remain blocked.",
+      "history_strategy": "append-only-production-observations",
+      "intelligence_mode": "previous-observation-delta-when-available"
     },
     {
       "id": "macro-policy-rates",
@@ -103,7 +109,9 @@
       "schedule_ict": [
         "11:30 every Thursday"
       ],
-      "auto_publish_requires": "complete-three-rate-two-source-event-corroboration"
+      "auto_publish_requires": "complete-three-rate-two-source-event-corroboration",
+      "history_strategy": "append-only-production-observations",
+      "intelligence_mode": "previous-observation-delta-when-available"
     },
     {
       "id": "legal-registry",
@@ -117,7 +125,9 @@
       "source_health_mode": "automated-source-watch",
       "failure_behavior": "retain-last-good",
       "watch_behavior": "candidate-review-only",
-      "notes": "Weekly official-source fingerprint/discovery watch creates a review queue only; canonical legal facts remain curated and require reviewed changes."
+      "notes": "Weekly official-source fingerprint/discovery watch creates a review queue only; canonical legal facts remain curated and require reviewed changes.",
+      "history_strategy": "issued-effective-amendment-relations",
+      "intelligence_mode": "live-derived-change-detection"
     },
     {
       "id": "infrastructure-registry",
@@ -131,7 +141,9 @@
       "source_health_mode": "automated-source-watch",
       "failure_behavior": "retain-last-good",
       "watch_behavior": "candidate-review-only",
-      "notes": "Weekly source watch flags changed/unavailable source pages and discovery links. Schedule revisions are append/supersede, never destructive overwrite."
+      "notes": "Weekly source watch flags changed/unavailable source pages and discovery links. Schedule revisions are append/supersede, never destructive overwrite.",
+      "history_strategy": "append-supersede-schedules-plus-milestones",
+      "intelligence_mode": "live-derived-schedule-and-milestone-change"
     },
     {
       "id": "market-project-registry",
@@ -150,7 +162,9 @@
         "regions": 3,
         "segments": 3
       },
-      "notes": "Project/developer coverage is QA-checked against first-party sourcing. Missing project metrics stay blank and are not inferred."
+      "notes": "Project/developer coverage is QA-checked against first-party sourcing. Missing project metrics stay blank and are not inferred.",
+      "history_strategy": "dated-project-and-market-observations",
+      "intelligence_mode": "source-compatible-delta-only"
     },
     {
       "id": "market-benchmarks",
