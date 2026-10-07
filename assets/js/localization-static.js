@@ -27,6 +27,10 @@
     macro: {
       en: 'Macro & Monetary · Market Intelligence',
       vi: 'Vĩ mô & Tiền tệ · Market Intelligence'
+    },
+    maintenance: {
+      en: 'Data Status · Market Intelligence',
+      vi: 'Trạng thái Dữ liệu · Market Intelligence'
     }
   };
 
@@ -127,12 +131,36 @@
     ['[data-macro-tabs] [data-view="news"]', 'News', 'Tin tức']
   ];
 
+  const MAINTENANCE = [
+    ['.page-kicker', 'Update Operations', 'Vận hành cập nhật'],
+    ['.page-title', 'Data Status', 'Trạng thái Dữ liệu'],
+    ['.page-description', 'Review freshness, update cadence and maintenance status across the integrated research datasets.', 'Theo dõi độ mới, tần suất cập nhật và trạng thái bảo trì của các bộ dữ liệu nghiên cứu tích hợp.'],
+    ['.demo-banner strong', 'Read-only maintenance dashboard.', 'Dashboard bảo trì chỉ đọc.'],
+    ['.demo-banner span', 'Freshness is recalculated from the metadata of the currently deployed repository. This page does not fetch external sources, promote candidates or change production data.', 'Freshness được tính lại từ metadata của dữ liệu đang triển khai. Trang này không gọi nguồn bên ngoài, không promote candidate và không thay đổi dữ liệu production.'],
+    ['#maintenance-summary-title', 'Update Health', 'Tình trạng Cập nhật'],
+    ['.home-block[aria-labelledby="maintenance-summary-title"] .eyebrow', 'Current state', 'Trạng thái hiện tại'],
+    ['#maintenance-attention-title', 'Needs Attention', 'Cần chú ý'],
+    ['.maintenance-attention .eyebrow', 'Maintenance queue', 'Danh sách cần rà soát'],
+    ['#maintenance-datasets-title', 'Dataset Freshness', 'Độ mới Dữ liệu'],
+    ['.section[aria-labelledby="maintenance-datasets-title"] .eyebrow', '10 tracked datasets', '10 bộ dữ liệu theo dõi'],
+    ['.maintenance-flow span:nth-child(1)', 'Repository data', 'Dữ liệu repository'],
+    ['.maintenance-flow span:nth-child(3)', 'Freshness check', 'Kiểm tra freshness'],
+    ['.maintenance-flow span:nth-child(5)', 'Summary + artifact', 'Tổng hợp + artifact'],
+    ['#maintenance-rules-title', 'Update Rules', 'Nguyên tắc Cập nhật'],
+    ['.section[aria-labelledby="maintenance-rules-title"] .eyebrow', 'Guardrails', 'Nguyên tắc kiểm soát'],
+    ['#maintenance-check-title', 'Daily Freshness Check', 'Kiểm tra Freshness Hằng ngày'],
+    ['.section[aria-labelledby="maintenance-check-title"] .eyebrow', 'Scheduled check', 'Kiểm tra theo lịch'],
+    ['.maintenance-workflow-note > strong', '07:45 ICT · Daily', '07:45 ICT · Hằng ngày'],
+    ['.maintenance-workflow-note p', 'GitHub Actions rebuilds a read-only status snapshot and keeps the artifact for 14 days. It does not fetch external sources or write production data.', 'GitHub Actions tạo lại snapshot trạng thái chỉ đọc và lưu artifact trong 14 ngày. Workflow không gọi nguồn bên ngoài và không ghi dữ liệu production.']
+  ];
+
   const PAGE_TRANSLATIONS = {
     home: HOME,
     market: MARKET,
     legal: LEGAL,
     infrastructure: INFRASTRUCTURE,
-    macro: MACRO
+    macro: MACRO,
+    maintenance: MAINTENANCE
   };
 
   function readLanguage() {

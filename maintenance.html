@@ -1,0 +1,111 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Read-only maintenance dashboard for dataset freshness and update operations.">
+  <title>Data Status · Market Intelligence</title>
+  <link rel="stylesheet" href="assets/css/main.css?v=4.4D">
+  <link rel="stylesheet" href="assets/css/localization.css?v=7.2.0">
+</head>
+<body data-page="maintenance">
+  <div data-site-header></div>
+
+  <main class="page-shell">
+    <div class="container">
+      <header class="page-header">
+        <div>
+          <p class="page-kicker">Update Operations</p>
+          <h1 class="page-title">Data Status</h1>
+          <p class="page-description">Review freshness, update cadence and maintenance status across the integrated research datasets.</p>
+        </div>
+        <div class="updated-label" data-maintenance-updated>Checking deployed data…</div>
+      </header>
+
+      <div class="demo-banner" role="note">
+        <strong>Read-only maintenance dashboard.</strong>
+        <span>Freshness is recalculated from the metadata of the currently deployed repository. This page does not fetch external sources, promote candidates or change production data.</span>
+      </div>
+
+      <section class="home-block" aria-labelledby="maintenance-summary-title">
+        <div class="home-block__header">
+          <div>
+            <span class="eyebrow">Current state</span>
+            <h2 id="maintenance-summary-title">Update Health</h2>
+          </div>
+          <span class="home-block__note" data-maintenance-asof>As of now</span>
+        </div>
+        <div class="maintenance-summary-grid" data-maintenance-summary>
+          <div class="state-box">Loading status…</div>
+        </div>
+      </section>
+
+      <section class="section maintenance-attention" aria-labelledby="maintenance-attention-title">
+        <div class="section-header">
+          <div>
+            <span class="eyebrow">Maintenance queue</span>
+            <h2 class="section-title" id="maintenance-attention-title">Needs Attention</h2>
+          </div>
+        </div>
+        <div class="section-body" data-maintenance-attention>
+          <div class="state-box">Checking maintenance queue…</div>
+        </div>
+      </section>
+
+      <section class="section" aria-labelledby="maintenance-datasets-title">
+        <div class="section-header">
+          <div>
+            <span class="eyebrow">10 tracked datasets</span>
+            <h2 class="section-title" id="maintenance-datasets-title">Dataset Freshness</h2>
+          </div>
+          <span class="maintenance-legend" data-maintenance-legend><span class="maintenance-dot is-healthy"></span> Healthy <span class="maintenance-dot is-due"></span> Due <span class="maintenance-dot is-stale"></span> Stale</span>
+        </div>
+        <div class="section-body section-body--table" data-maintenance-table>
+          <div class="state-box">Loading dataset status…</div>
+        </div>
+      </section>
+
+      <div class="maintenance-bottom-grid">
+        <section class="section" aria-labelledby="maintenance-rules-title">
+          <div class="section-header">
+            <div>
+              <span class="eyebrow">Guardrails</span>
+              <h2 class="section-title" id="maintenance-rules-title">Update Rules</h2>
+            </div>
+          </div>
+          <div class="section-body" data-maintenance-rules></div>
+        </section>
+
+        <section class="section" aria-labelledby="maintenance-check-title">
+          <div class="section-header">
+            <div>
+              <span class="eyebrow">Scheduled check</span>
+              <h2 class="section-title" id="maintenance-check-title">Daily Freshness Check</h2>
+            </div>
+          </div>
+          <div class="section-body maintenance-workflow-note">
+            <strong>07:45 ICT · Daily</strong>
+            <p>GitHub Actions rebuilds a read-only status snapshot and keeps the artifact for 14 days. It does not fetch external sources or write production data.</p>
+            <div class="maintenance-flow">
+              <span>Repository data</span><span>→</span><span>Freshness check</span><span>→</span><span>Summary + artifact</span>
+            </div>
+          </div>
+        </section>
+      </div>
+    </div>
+  </main>
+
+  <div data-site-footer></div>
+  <div data-site-overlays></div>
+
+  <script src="assets/js/common.js?v=4.3E"></script>
+  <script src="assets/js/formatters.js"></script>
+  <script src="assets/js/data-store.js?v=4.3D"></script>
+  <script src="assets/js/provenance.js"></script>
+  <script src="assets/js/components.js"></script>
+  <script src="assets/js/search.js?v=4.3E"></script>
+  <script src="assets/js/maintenance.js?v=4.4D"></script>
+  <script src="assets/js/localization-static.js?v=4.4D"></script>
+  <script src="assets/js/localization-dynamic.js?v=4.3E"></script>
+</body>
+</html>
