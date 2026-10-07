@@ -1,0 +1,39 @@
+name: Phase 4.5 Macro Automation Validation
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  validate-phase45:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 10
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v7
+      - name: Set up Python
+        uses: actions/setup-python@v7
+        with:
+          python-version: '3.12'
+          cache: 'pip'
+      - name: Install dependencies
+        run: pip install -r requirements.txt
+      - name: Validate Phase 4.5 A-D
+        run: |
+          python tests/test_phase4_5a_monthly_macro_auto_update.py
+          python tests/test_phase4_5b_customer_rates_auto_update.py
+          python tests/test_phase4_5c_policy_rates_auto_update.py
+          python tests/test_phase4_5d_operational_qa.py
+      - name: Validate canonical repository baseline
+        run: python scripts/validate_repository_processed.py --processed-dir data/processed/macro
+      - name: Write operational QA summary
+        run: python scripts/phase45_operational_qa.py --output data/state/phase45-operational-qa.json >> "$GITHUB_STEP_SUMMARY"
+      - name: Upload validation report
+        uses: actions/upload-artifact@v7
+        with:
+          name: phase45-validation-${{ github.run_number }}
+          retention-days: 30
+          path: data/state/phase45-operational-qa.json
+          if-no-files-found: error

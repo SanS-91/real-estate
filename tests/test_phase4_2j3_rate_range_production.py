@@ -128,8 +128,8 @@ def main():
         charts_js = (ROOT / "assets/js/charts.js").read_text(encoding="utf-8")
         workflow = (ROOT / ".github/workflows/macro-candidate.yml").read_text(encoding="utf-8")
         assert "customer-rates-production" in workflow
-        assert "python scripts/candidate_pipeline.py --mode candidate --source vnba-customer-rates" in workflow
-        assert "python scripts/candidate_pipeline.py --mode candidate --source vietnamplus-customer-rates" in workflow
+        assert "--source vnba-customer-rates" in workflow
+        assert "--source vietnamplus-customer-rates" in workflow
         assert "buildProductionRateRanges" in macro_js
         assert "deposit-rate-vnd-6-12m-range" in macro_js
         assert "Average VND Lending Rate Range" in home_js

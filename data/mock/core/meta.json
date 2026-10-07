@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
-  "last_successful_build": "2026-10-07T13:30:00+07:00",
-  "is_mock": true,
+  "last_successful_build": "2026-10-07T15:46:51.704825+07:00",
+  "is_mock": false,
   "categories": {
     "market": {
       "updated_at": "2026-10-07T10:30:00+07:00",
@@ -16,8 +16,11 @@
       "mode": "curated-official-registry"
     },
     "macro": {
-      "updated_at": "2026-10-03T16:45:00+07:00"
+      "updated_at": "2026-10-07T15:46:51.704825+07:00",
+      "mode": "controlled-production-overlay"
     }
   },
-  "home_mode": "integrated-curated-real-data"
+  "home_mode": "integrated-curated-real-data",
+  "data_mode": "hybrid-curated-production",
+  "legacy_root_name": "data/mock"
 }

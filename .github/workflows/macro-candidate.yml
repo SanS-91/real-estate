@@ -8,6 +8,10 @@ on:
     - cron: '15 9 * * 1-5'
     # Phase 4.5A monthly release watch: 03:45 UTC = 10:45 ICT on days 1-10.
     - cron: '45 3 1-10 * *'
+    # Phase 4.5B customer-rate watch: Tuesday 04:15 UTC = 11:15 ICT.
+    - cron: '15 4 * * 2'
+    # Phase 4.5C policy-rate event watch: Thursday 04:30 UTC = 11:30 ICT.
+    - cron: '30 4 * * 4'
   workflow_dispatch:
     inputs:
       source:
@@ -111,6 +115,9 @@ jobs:
           python tests/test_phase4_4e_daily_macro_auto_publish.py
           python tests/test_phase4_4f_production_hardening.py
           python tests/test_phase4_5a_monthly_macro_auto_update.py
+          python tests/test_phase4_5b_customer_rates_auto_update.py
+          python tests/test_phase4_5c_policy_rates_auto_update.py
+          python tests/test_phase4_5d_operational_qa.py
 
       - name: Promotion preview fixture tests
         run: python tests/test_promotion_preview.py
@@ -125,13 +132,22 @@ jobs:
           EVENT='${{ github.event_name }}'
           SCHEDULE='${{ github.event.schedule }}'
           if [ "$SCHEDULE" = "45 3 1-10 * *" ] || [ "$SOURCE" = "monthly-macro-production" ]; then
-            # Phase 4.5A monthly path: official NSO CPI and banking-activity releases only.
+            # Phase 4.5A: official NSO CPI and banking-activity releases only.
             python scripts/candidate_pipeline.py --mode candidate \
               --source nso-cpi \
               --source nso-banking-activity
-          elif [ "$EVENT" = "schedule" ] || [ "$SOURCE" = "daily-markets-production" ]; then
+          elif [ "$SCHEDULE" = "15 4 * * 2" ] || [ "$SOURCE" = "customer-rates-production" ]; then
+            # Phase 4.5B: two-source monthly customer-rate ranges.
+            python scripts/candidate_pipeline.py --mode candidate \
+              --source vnba-customer-rates \
+              --source vietnamplus-customer-rates
+          elif [ "$SCHEDULE" = "30 4 * * 4" ] || [ "$SOURCE" = "policy-rates-production" ]; then
+            # Phase 4.5C: two-source administered policy-rate event model.
+            python scripts/candidate_pipeline.py --mode candidate \
+              --source vietnamplus-policy-rates \
+              --source banking-times-policy-rates
+          elif [ "$SCHEDULE" = "15 3 * * *" ] || [ "$SCHEDULE" = "15 9 * * 1-5" ] || [ "$SOURCE" = "daily-markets-production" ]; then
             # Phase 4.4E daily path: fetch only the two-source FX/gold pools.
-            # Monthly/event-driven indicators remain on their separate controlled paths.
             python scripts/candidate_pipeline.py --mode candidate \
               --source vietnamplus-central-rate \
               --source banking-times-central-rate \
@@ -148,23 +164,11 @@ jobs:
             python scripts/candidate_pipeline.py --mode candidate \
               --source vietnamplus-policy-rates \
               --source banking-times-policy-rates
-          elif [ "$SOURCE" = "policy-rates-production" ]; then
-            # Same two trusted sources as policy-news-search; controlled
-            # production later uses the narrow policy-rate-only gate.
-            python scripts/candidate_pipeline.py --mode candidate \
-              --source vietnamplus-policy-rates \
-              --source banking-times-policy-rates
           elif [ "$SOURCE" = "policy-liquidity-discovery" ]; then
             # Candidate-only discovery gate for SBV administered policy rates
             # and the market overnight interbank rate. No production write.
             python scripts/candidate_pipeline.py --mode candidate --source sbv-policy-rates
             python scripts/candidate_pipeline.py --mode candidate --source sbv-interbank-rates
-          elif [ "$SOURCE" = "customer-rates-production" ]; then
-            # Targeted production-gate run: refresh only the two independent
-            # customer-rate fallback sources. Avoid refreshing volatile daily
-            # FX/gold series merely to promote monthly customer-rate ranges.
-            python scripts/candidate_pipeline.py --mode candidate --source vnba-customer-rates
-            python scripts/candidate_pipeline.py --mode candidate --source vietnamplus-customer-rates
           elif [ -n "$SOURCE" ] && [ "$SOURCE" != "all" ]; then
             python scripts/candidate_pipeline.py --mode candidate --source "$SOURCE"
           else
@@ -192,16 +196,21 @@ jobs:
               --preview-dir data/staging/macro-preview \
               --processed-dir data/processed/macro \
               --policy config/monthly_macro_production_gate.json
-          elif [ "$EVENT" = "schedule" ] || [ "$SOURCE" = "daily-markets-production" ]; then
+          elif [ "$SCHEDULE" = "15 4 * * 2" ] || [ "$SOURCE" = "customer-rates-production" ]; then
             python scripts/promote_production.py \
               --preview-dir data/staging/macro-preview \
               --processed-dir data/processed/macro \
-              --policy config/daily_fx_gold_production_gate.json
-          elif [ "$SOURCE" = "policy-rates-production" ]; then
+              --policy config/customer_rates_production_gate.json
+          elif [ "$SCHEDULE" = "30 4 * * 4" ] || [ "$SOURCE" = "policy-rates-production" ]; then
             python scripts/promote_production.py \
               --preview-dir data/staging/macro-preview \
               --processed-dir data/processed/macro \
               --policy config/policy_rates_production_gate.json
+          elif [ "$SCHEDULE" = "15 3 * * *" ] || [ "$SCHEDULE" = "15 9 * * 1-5" ] || [ "$SOURCE" = "daily-markets-production" ]; then
+            python scripts/promote_production.py \
+              --preview-dir data/staging/macro-preview \
+              --processed-dir data/processed/macro \
+              --policy config/daily_fx_gold_production_gate.json
           else
             python scripts/promote_production.py \
               --preview-dir data/staging/macro-preview \
@@ -257,12 +266,12 @@ jobs:
           if-no-files-found: warn
           path: |
             data/processed/macro/
-          # Daily FX/gold and Phase 4.5A monthly NSO runs may pass their separate narrow auto-persistence jobs below; all other production remains manually persisted.
+          # Daily FX/gold plus Phase 4.5A/4.5B/4.5C safe Macro groups may pass their separate narrow auto-persistence jobs below; other production remains manual.
 
   persist-daily-production:
     name: Auto-persist corroborated daily FX & gold
     needs: collect-candidate
-    if: ${{ needs.collect-candidate.result == 'success' && ((github.event_name == 'schedule' && github.event.schedule != '45 3 1-10 * *') || github.event.inputs.source == 'daily-markets-production') }}
+    if: ${{ needs.collect-candidate.result == 'success' && ((github.event_name == 'schedule' && (github.event.schedule == '15 3 * * *' || github.event.schedule == '15 9 * * 1-5')) || github.event.inputs.source == 'daily-markets-production') }}
     runs-on: ubuntu-24.04
     timeout-minutes: 8
     permissions:
@@ -479,5 +488,217 @@ jobs:
           if-no-files-found: warn
           path: |
             data/staging/monthly-auto-persistence/
+            data/processed/macro/observations.json
+            data/processed/macro/repository-publish.json
+
+  persist-customer-rates-production:
+    name: Auto-persist corroborated customer rates
+    needs: collect-candidate
+    if: ${{ needs.collect-candidate.result == 'success' && ((github.event_name == 'schedule' && github.event.schedule == '15 4 * * 2') || github.event.inputs.source == 'customer-rates-production') }}
+    runs-on: ubuntu-24.04
+    timeout-minutes: 8
+    permissions:
+      contents: write
+      actions: read
+
+    steps:
+      - name: Checkout current main
+        uses: actions/checkout@v7
+        with:
+          ref: main
+          fetch-depth: 0
+
+      - name: Capture repository baseline
+        id: baseline
+        shell: bash
+        run: echo "sha=$(git rev-parse HEAD)" >> "$GITHUB_OUTPUT"
+
+      - name: Set up Python
+        uses: actions/setup-python@v7
+        with:
+          python-version: '3.12'
+          cache: 'pip'
+
+      - name: Install dependencies
+        run: pip install -r requirements.txt
+
+      - name: Download this run controlled production artifact
+        uses: actions/download-artifact@v7
+        with:
+          name: macro-production-${{ github.run_number }}
+          path: incoming/macro-production
+
+      - name: Validate controlled production artifact
+        run: python scripts/validate_production.py --processed-dir incoming/macro-production
+
+      - name: Apply narrow customer-rate repository gate
+        run: |
+          rm -rf data/staging/customer-rates-auto-persistence
+          python scripts/persist_customer_rates.py \
+            --incoming-dir incoming/macro-production \
+            --repo-processed-dir data/processed/macro \
+            --report-dir data/staging/customer-rates-auto-persistence \
+            --source-run-number "${{ github.run_number }}" \
+            --source-run-database-id "${{ github.run_id }}"
+
+      - name: Validate repository production output
+        run: python scripts/validate_repository_processed.py --processed-dir data/processed/macro
+
+      - name: Commit verified customer-rate additions
+        id: commit
+        shell: bash
+        env:
+          BASE_SHA: ${{ steps.baseline.outputs.sha }}
+        run: |
+          git add data/processed/macro/observations.json data/processed/macro/repository-publish.json
+          if git diff --cached --quiet; then
+            echo "No new complete customer-rate bundle; no commit is needed."
+            echo "committed=false" >> "$GITHUB_OUTPUT"
+            exit 0
+          fi
+          git fetch origin main
+          REMOTE_SHA="$(git rev-parse origin/main)"
+          if [ "$REMOTE_SHA" != "$BASE_SHA" ]; then
+            echo "Safety stop: main changed while customer-rate auto-persistence was running."
+            exit 1
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git commit -m "data(macro): auto-publish corroborated customer rates"
+          git push origin HEAD:main
+          echo "committed=true" >> "$GITHUB_OUTPUT"
+
+      - name: Write customer-rate auto-persistence summary
+        if: always()
+        shell: bash
+        run: |
+          if [ -f data/staging/customer-rates-auto-persistence/customer-rates-auto-persistence.json ]; then
+            echo "# Customer Rates Auto-Publish" >> "$GITHUB_STEP_SUMMARY"
+            echo >> "$GITHUB_STEP_SUMMARY"
+            python - <<'PY' >> "$GITHUB_STEP_SUMMARY"
+          import json
+          from pathlib import Path
+          p=json.loads(Path('data/staging/customer-rates-auto-persistence/customer-rates-auto-persistence.json').read_text())
+          print(f"**Status:** `{p.get('status')}` · Added {p.get('added_record_count', 0)} · Final {p.get('final_record_count', 0)}")
+          if p.get('period'): print(f"- Period: {p.get('period')}")
+          if not p.get('added'): print("- No new complete corroborated customer-rate bundle; repository retained last good data.")
+          PY
+          fi
+
+      - name: Upload customer-rate persistence review artifact
+        if: always()
+        uses: actions/upload-artifact@v7
+        with:
+          name: macro-customer-rates-persistence-${{ github.run_number }}
+          retention-days: 30
+          if-no-files-found: warn
+          path: |
+            data/staging/customer-rates-auto-persistence/
+            data/processed/macro/observations.json
+            data/processed/macro/repository-publish.json
+
+  persist-policy-rates-production:
+    name: Auto-persist corroborated policy rates
+    needs: collect-candidate
+    if: ${{ needs.collect-candidate.result == 'success' && ((github.event_name == 'schedule' && github.event.schedule == '30 4 * * 4') || github.event.inputs.source == 'policy-rates-production') }}
+    runs-on: ubuntu-24.04
+    timeout-minutes: 8
+    permissions:
+      contents: write
+      actions: read
+
+    steps:
+      - name: Checkout current main
+        uses: actions/checkout@v7
+        with:
+          ref: main
+          fetch-depth: 0
+
+      - name: Capture repository baseline
+        id: baseline
+        shell: bash
+        run: echo "sha=$(git rev-parse HEAD)" >> "$GITHUB_OUTPUT"
+
+      - name: Set up Python
+        uses: actions/setup-python@v7
+        with:
+          python-version: '3.12'
+          cache: 'pip'
+
+      - name: Install dependencies
+        run: pip install -r requirements.txt
+
+      - name: Download this run controlled production artifact
+        uses: actions/download-artifact@v7
+        with:
+          name: macro-production-${{ github.run_number }}
+          path: incoming/macro-production
+
+      - name: Validate controlled production artifact
+        run: python scripts/validate_production.py --processed-dir incoming/macro-production
+
+      - name: Apply narrow policy-rate repository gate
+        run: |
+          rm -rf data/staging/policy-rates-auto-persistence
+          python scripts/persist_policy_rates.py \
+            --incoming-dir incoming/macro-production \
+            --repo-processed-dir data/processed/macro \
+            --report-dir data/staging/policy-rates-auto-persistence \
+            --source-run-number "${{ github.run_number }}" \
+            --source-run-database-id "${{ github.run_id }}"
+
+      - name: Validate repository production output
+        run: python scripts/validate_repository_processed.py --processed-dir data/processed/macro
+
+      - name: Commit verified policy-rate additions
+        id: commit
+        shell: bash
+        env:
+          BASE_SHA: ${{ steps.baseline.outputs.sha }}
+        run: |
+          git add data/processed/macro/observations.json data/processed/macro/repository-publish.json
+          if git diff --cached --quiet; then
+            echo "No new complete policy-rate event; no commit is needed."
+            echo "committed=false" >> "$GITHUB_OUTPUT"
+            exit 0
+          fi
+          git fetch origin main
+          REMOTE_SHA="$(git rev-parse origin/main)"
+          if [ "$REMOTE_SHA" != "$BASE_SHA" ]; then
+            echo "Safety stop: main changed while policy-rate auto-persistence was running."
+            exit 1
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git commit -m "data(macro): auto-publish corroborated policy rates"
+          git push origin HEAD:main
+          echo "committed=true" >> "$GITHUB_OUTPUT"
+
+      - name: Write policy-rate auto-persistence summary
+        if: always()
+        shell: bash
+        run: |
+          if [ -f data/staging/policy-rates-auto-persistence/policy-rates-auto-persistence.json ]; then
+            echo "# Policy Rates Auto-Publish" >> "$GITHUB_STEP_SUMMARY"
+            echo >> "$GITHUB_STEP_SUMMARY"
+            python - <<'PY' >> "$GITHUB_STEP_SUMMARY"
+          import json
+          from pathlib import Path
+          p=json.loads(Path('data/staging/policy-rates-auto-persistence/policy-rates-auto-persistence.json').read_text())
+          print(f"**Status:** `{p.get('status')}` · Added {p.get('added_record_count', 0)} · Final {p.get('final_record_count', 0)}")
+          if p.get('period'): print(f"- Effective date: {p.get('period')}")
+          if not p.get('added'): print("- No new complete corroborated policy-rate event; repository retained last good data.")
+          PY
+          fi
+
+      - name: Upload policy-rate persistence review artifact
+        if: always()
+        uses: actions/upload-artifact@v7
+        with:
+          name: macro-policy-rates-persistence-${{ github.run_number }}
+          retention-days: 30
+          if-no-files-found: warn
+          path: |
+            data/staging/policy-rates-auto-persistence/
             data/processed/macro/observations.json
             data/processed/macro/repository-publish.json

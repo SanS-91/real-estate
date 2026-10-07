@@ -1,0 +1,28 @@
+{
+  "schema_version": 1,
+  "mode": "controlled-policy-rates-auto-persistence-v1",
+  "repository_publish": true,
+  "frontend_publish": false,
+  "timezone": "Asia/Ho_Chi_Minh",
+  "source_workflow": "macro-candidate.yml",
+  "source_artifact_prefix": "macro-production-",
+  "logical_key_fields": ["indicator_id", "period_type", "period"],
+  "allowed_indicator_ids": [
+    "policy-overnight-lending-rate",
+    "policy-rediscount-rate",
+    "policy-refinancing-rate"
+  ],
+  "required_bundle_size": 3,
+  "required_corroboration_source_ids": ["vna-vietnamplus", "banking-times-vn"],
+  "max_additions_per_run": 3,
+  "max_future_days": 0,
+  "require_prior_count_match": true,
+  "require_monotonic_source_run_number": true,
+  "on_no_change": "no-commit",
+  "on_source_failure": "retain-last-good",
+  "notes": [
+    "Phase 4.5C automated persistence is restricted to a complete three-rate SBV administered policy event.",
+    "VietnamPlus/VNA and Thoi Bao Ngan Hang must corroborate the same effective date and all three rates.",
+    "Historical mutation, partial events, future dates, interbank rates and unrelated indicators are blocked."
+  ]
+}

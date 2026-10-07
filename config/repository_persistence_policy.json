@@ -25,7 +25,7 @@
   ],
   "notes": [
     "Phase 4.2F remains the generic manual persistence gate for production artifacts that are not covered by a later narrow automatic gate.",
-    "Phase 4.4E daily FX/gold and Phase 4.5A verified NSO monthly statistics use separate append-only auto-persistence policies; this manual policy is unchanged for all other indicators.",
+    "Phase 4.4E daily FX/gold and Phase 4.5A–4.5C safe Macro groups use separate append-only auto-persistence policies; this manual policy remains the fallback for all other indicators.",
     "Only a successful macro-production artifact from the main branch may be persisted.",
     "The frontend remains disconnected from direct workflow writes; it reads committed repository data.",
     "Git history is the repository-level rollback mechanism; workflow-only _snapshots are not committed."

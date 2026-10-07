@@ -196,7 +196,7 @@
     "Priority short-term lending remains outside the production allowlist while independent fallback sources differ (3.9% vs approximately 4.0%).",
     "CPI, credit growth, and bank funding require ready-canonical + verified NSO evidence.",
     "FX, Gold, and customer-rate ranges require ready-corroborated + at least two independent agreeing sources.",
-    "Repository persistence remains a separate manual gate; no scheduled collector can push to main.",
+    "Repository persistence uses narrow automatic append-only gates for daily FX/gold, official monthly NSO statistics, corroborated customer-rate bundles, and corroborated policy-rate events; all unrelated indicators remain manual.",
     "Phase 4.2K.3 extends controlled production to the three administered policy rates only after VietnamPlus/VNA and Thời Báo Ngân Hàng independently agree on the same effective-date event and values.",
     "Interbank overnight remains outside the production allowlist while it has only one independent source."
   ]

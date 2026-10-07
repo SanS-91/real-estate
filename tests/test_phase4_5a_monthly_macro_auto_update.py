@@ -141,7 +141,8 @@ def main():
     assert "persist-monthly-production:" in wf
     assert "python scripts/persist_monthly_macro.py" in wf
     assert "data(macro): auto-publish verified monthly CPI and banking growth" in wf
-    assert "github.event.schedule != '45 3 1-10 * *'" in wf
+    assert "github.event.schedule == '15 3 * * *'" in wf
+    assert "github.event.schedule == '15 9 * * 1-5'" in wf
 
     current = load(ROOT / "data/processed/macro/observations.json")
     current_meta = load(ROOT / "data/processed/macro/repository-publish.json")

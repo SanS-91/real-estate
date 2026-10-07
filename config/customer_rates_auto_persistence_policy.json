@@ -1,0 +1,29 @@
+{
+  "schema_version": 1,
+  "mode": "controlled-customer-rates-auto-persistence-v1",
+  "repository_publish": true,
+  "frontend_publish": false,
+  "timezone": "Asia/Ho_Chi_Minh",
+  "source_workflow": "macro-candidate.yml",
+  "source_artifact_prefix": "macro-production-",
+  "logical_key_fields": ["indicator_id", "period_type", "period"],
+  "allowed_indicator_ids": [
+    "deposit-rate-vnd-6-12m-low",
+    "deposit-rate-vnd-6-12m-high",
+    "lending-rate-vnd-average-low",
+    "lending-rate-vnd-average-high"
+  ],
+  "required_bundle_size": 4,
+  "required_corroboration_source_ids": ["vnba", "vna-vietnamplus"],
+  "max_additions_per_run": 4,
+  "max_period_lag_months": 3,
+  "require_prior_count_match": true,
+  "require_monotonic_source_run_number": true,
+  "on_no_change": "no-commit",
+  "on_source_failure": "retain-last-good",
+  "notes": [
+    "Phase 4.5B automated persistence is restricted to the complete four-component customer-rate range bundle.",
+    "Both VN Banking Association and VietnamPlus/VNA must corroborate every component for one common month.",
+    "Partial bundles, priority lending, stale months, historical mutation and unrelated indicators are blocked."
+  ]
+}

@@ -62,7 +62,7 @@
       "id": "macro-customer-rates",
       "module": "macro",
       "label": "Customer Deposit & Lending Rates",
-      "update_mode": "corroborated-controlled",
+      "update_mode": "automated-controlled",
       "check_frequency": "monthly",
       "update_trigger": "periodic-release",
       "stale_after_hours": 1080,
@@ -74,13 +74,19 @@
         "lending-rate-vnd-average-high"
       ],
       "source_health_mode": "controlled-production",
-      "failure_behavior": "retain-last-good"
+      "failure_behavior": "retain-last-good",
+      "repository_persistence": "automatic-complete-bundle-gate",
+      "schedule_ict": [
+        "11:15 every Tuesday"
+      ],
+      "auto_publish_requires": "complete-four-component-two-source-corroboration",
+      "notes": "Auto-persist only when all four customer-rate range components share one month and are corroborated by VNBA + VietnamPlus/VNA. Partial bundles and priority short-term lending remain blocked."
     },
     {
       "id": "macro-policy-rates",
       "module": "macro",
       "label": "SBV Policy Rates",
-      "update_mode": "two-source-corroborated",
+      "update_mode": "automated-controlled",
       "check_frequency": "weekly",
       "update_trigger": "event-driven",
       "stale_after_hours": 192,
@@ -92,7 +98,12 @@
       ],
       "source_health_mode": "controlled-production",
       "failure_behavior": "retain-last-good",
-      "notes": "Observation period may be old while the current policy state remains valid; freshness is based on registry/publish refresh, not the effective date."
+      "notes": "Auto-persist only a complete three-rate administered policy event when VietnamPlus/VNA + Thoi Bao Ngan Hang agree on the same effective date and values. Interbank rates remain outside this gate.",
+      "repository_persistence": "automatic-complete-event-gate",
+      "schedule_ict": [
+        "11:30 every Thursday"
+      ],
+      "auto_publish_requires": "complete-three-rate-two-source-event-corroboration"
     },
     {
       "id": "legal-registry",
