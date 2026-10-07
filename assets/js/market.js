@@ -122,25 +122,31 @@
 
   function summaryMetrics() {
     const projects = data.projects;
-    const selling = projects.filter(item => item.status === 'selling').length;
-    const latestObs = data.observations.filter(item => item.scope_type === 'project' && item.average_asp);
-    const avgAsp = latestObs.length ? latestObs.reduce((sum, item) => sum + item.average_asp, 0) / latestObs.length : null;
-    const totalUnits = projects.reduce((sum, item) => sum + (item.planned_units || 0), 0);
+    const active = projects.filter(item => ['selling','ongoing','construction'].includes(item.status)).length;
+    const knownUnitProjects = projects.filter(item => Number.isFinite(item.planned_units));
+    const totalKnownUnits = knownUnitProjects.reduce((sum, item) => sum + item.planned_units, 0);
+    const verifiedPriceObs = data.observations.filter(item => item.scope_type === 'project' && Number.isFinite(item.average_asp));
     return [
-      { label: 'Tracked Projects', value: String(projects.length), note: 'Demo database' },
-      { label: 'Currently Selling', value: String(selling), note: 'Current master status' },
-      { label: 'Planned Units', value: formatCompact(totalUnits), note: 'Across tracked projects' },
-      { label: 'Avg. Project ASP', value: formatAsp(avgAsp), note: 'Latest available demo observations' }
+      { label: 'Tracked Projects', value: String(projects.length), note: 'Curated first-party entities' },
+      { label: 'Active / Selling', value: String(active), note: 'Current disclosed status' },
+      { label: 'Known Product Units', value: formatCompact(totalKnownUnits), note: `${knownUnitProjects.length}/${projects.length} projects disclose comparable counts` },
+      { label: 'Verified Price Snapshots', value: String(verifiedPriceObs.length), note: 'No estimated project pricing' }
     ];
   }
 
-  function hcmcSeries() {
+  function hcmcSeries(segment = 'apartment') {
     return data.observations
-      .filter(item => item.scope_type === 'region-segment' && (item.region_ids || []).includes('hcmc') && (item.segment_ids || []).includes('apartment'))
+      .filter(item => item.scope_type === 'region-segment' && item.period_type === 'quarter' && (item.region_ids || []).includes('hcmc') && (item.segment_ids || []).includes(segment))
       .sort((a,b) => String(a.period).localeCompare(String(b.period)));
   }
 
-  function priceSeries(projectIds = ['izumi-city','waterpoint','akari-city']) {
+  function marketBenchmarks(segment = 'apartment') {
+    return data.observations
+      .filter(item => item.scope_type === 'region-segment-benchmark' && (item.region_ids || []).includes('hcmc') && (item.segment_ids || []).includes(segment))
+      .sort((a,b) => String(b.period).localeCompare(String(a.period)));
+  }
+
+  function priceSeries(projectIds = ['elysian']) {
     return projectIds.map(projectId => {
       const project = Resolver.getEntity('project', projectId);
       return {
@@ -162,7 +168,7 @@
           <td>${esc(developerName(project))}</td>
           <td>${esc(regionNames(project))}</td>
           <td>${Components.statusBadge(project.status)}</td>
-          <td class="numeric">${esc(formatCompact(project.planned_units))}</td>
+          <td class="numeric">${Number.isFinite(project.planned_units) ? esc(formatCompact(project.planned_units)) : '<span class="table-muted">Disclosed qualitatively</span>'}</td>
           <td class="numeric">${esc(formatAsp(obs?.average_asp))}<span class="table-subtext">${esc(obs?.period || '')}</span></td>
           <td class="numeric">${esc(formatPercent(obs?.absorption_rate))}</td>
         </tr>`;
@@ -186,7 +192,7 @@
       <div class="market-layout market-layout--overview">
         <section class="section market-panel market-panel--wide">
           <div class="section-header"><div><span class="eyebrow">HCMC apartment</span><h2 class="section-title">Supply &amp; Sales</h2></div><a class="text-link" href="market.html?view=supply-sales">Open view</a></div>
-          <div class="section-body"><div class="chart-frame"><canvas id="market-overview-supply"></canvas></div><p class="chart-note">Illustrative quarterly units · ${sourceRef(overviewMarketSource?.source_id,{sourceDate:overviewMarketSource?.source_date,period:overviewMarketSource?.period})}</p></div>
+          <div class="section-body"><div class="chart-frame"><canvas id="market-overview-supply"></canvas></div><p class="chart-note">Published quarterly new-supply observations; missing sales figures remain blank · ${sourceRef(overviewMarketSource?.source_id,{sourceDate:overviewMarketSource?.source_date,period:overviewMarketSource?.period,sourceUrl:overviewMarketSource?.source_url})}</p></div>
         </section>
         <section class="section market-panel">
           <div class="section-header"><div><span class="eyebrow">Latest activity</span><h2 class="section-title">Market Developments</h2></div><a class="text-link" href="market.html?view=news">View all</a></div>
@@ -198,8 +204,8 @@
         <div class="section-body section-body--table">${projectTable(data.projects, 6)}</div>
       </section>
       <section class="section">
-        <div class="section-header"><div><span class="eyebrow">Selected projects</span><h2 class="section-title">ASP Trend</h2></div><a class="text-link" href="market.html?view=pricing">Open Pricing</a></div>
-        <div class="section-body"><div class="chart-frame"><canvas id="market-overview-price"></canvas></div><p class="chart-note">Primary asking price · mn VND/m² · illustrative values only · ${sourceRef(overviewPriceSource?.source_id,{sourceDate:overviewPriceSource?.source_date,period:overviewPriceSource?.period})}</p></div>
+        <div class="section-header"><div><span class="eyebrow">Verified project pricing</span><h2 class="section-title">Pricing Snapshot</h2></div><a class="text-link" href="market.html?view=pricing">Open Pricing</a></div>
+        <div class="section-body"><div class="chart-frame"><canvas id="market-overview-price"></canvas></div><p class="chart-note">Only source-stated project pricing is shown; no synthetic history · ${sourceRef(overviewPriceSource?.source_id,{sourceDate:overviewPriceSource?.source_date,period:overviewPriceSource?.period,sourceUrl:overviewPriceSource?.source_url})}</p></div>
       </section>`;
     setView(html);
     requestAnimationFrame(() => {
@@ -219,37 +225,39 @@
   }
 
   function renderSupplySales() {
-    if (!state.region) {
-      state.region = 'hcmc';
-      App.setQueryParam('region', 'hcmc');
-    }
+    if (!state.region) { state.region = 'hcmc'; App.setQueryParam('region', 'hcmc'); }
+    if (!state.segment) { state.segment = 'apartment'; App.setQueryParam('segment', 'apartment'); }
     const region = state.region;
+    const segment = state.segment;
     const regionObj = Resolver.getEntity('region', region);
     const rows = data.observations
-      .filter(item => item.scope_type === 'region-segment' && (item.region_ids || []).includes(region))
+      .filter(item => item.scope_type === 'region-segment' && (item.region_ids || []).includes(region) && (item.segment_ids || []).includes(segment))
       .sort((a,b) => String(a.period).localeCompare(String(b.period)));
     const html = `
-      <div class="view-intro"><div><span class="eyebrow">Historical observations</span><h2>Supply &amp; Sales</h2><p>Quarterly demo observations by region. Missing values remain null rather than being converted to zero.</p></div></div>
-      ${filterToolbar({ includeDeveloper:false, includeSegment:false, includeStatus:false })}
-      <section class="section"><div class="section-header"><h2 class="section-title">${esc(regionObj?.name || 'Selected Region')} · Supply vs Sales</h2></div><div class="section-body"><div class="chart-frame chart-frame--large"><canvas id="market-supply-sales"></canvas></div><p class="chart-note">Source: ${rows.length ? sourceRef(rows[rows.length-1].source_id,{sourceDate:rows[rows.length-1].source_date,period:rows[rows.length-1].period}) : '—'}</p></div></section>
-      <section class="section"><div class="section-header"><h2 class="section-title">Observation History</h2></div><div class="section-body section-body--table"><div class="table-wrap"><table class="data-table"><thead><tr><th>Period</th><th class="numeric">New Supply</th><th class="numeric">Sales</th><th class="numeric">Absorption</th><th class="numeric">Average ASP</th><th>Source</th></tr></thead><tbody>${rows.map(row=>`<tr><td>${esc(row.period)}</td><td class="numeric">${esc(formatCompact(row.new_supply))}</td><td class="numeric">${esc(formatCompact(row.sales_units))}</td><td class="numeric">${esc(formatPercent(row.absorption_rate))}</td><td class="numeric">${esc(formatAsp(row.average_asp))}</td><td>${sourceRef(row.source_id,{sourceDate:row.source_date,period:row.period,methodology:row.methodology_note})}</td></tr>`).join('') || '<tr><td colspan="6" class="table-empty">No observations for this region.</td></tr>'}</tbody></table></div></div></section>`;
+      <div class="view-intro"><div><span class="eyebrow">Published observations</span><h2>Supply &amp; Sales</h2><p>Only source-published metrics are stored. Missing sales, absorption or price values remain blank rather than being inferred.</p></div></div>
+      ${filterToolbar({ includeDeveloper:false, includeSegment:true, includeStatus:false })}
+      <section class="section"><div class="section-header"><h2 class="section-title">${esc(regionObj?.name || 'Selected Region')} · ${esc(segment.replaceAll('-',' '))}</h2></div><div class="section-body"><div class="chart-frame chart-frame--large"><canvas id="market-supply-sales"></canvas></div><p class="chart-note">Latest source: ${rows.length ? sourceRef(rows[rows.length-1].source_id,{sourceDate:rows[rows.length-1].source_date,period:rows[rows.length-1].period,sourceUrl:rows[rows.length-1].source_url}) : '—'}</p></div></section>
+      <section class="section"><div class="section-header"><h2 class="section-title">Observation History</h2></div><div class="section-body section-body--table"><div class="table-wrap"><table class="data-table"><thead><tr><th>Period</th><th class="numeric">New Supply</th><th class="numeric">Sales</th><th class="numeric">Absorption</th><th class="numeric">Average ASP</th><th>Source</th></tr></thead><tbody>${rows.map(row=>`<tr><td>${esc(row.period)}</td><td class="numeric">${esc(formatCompact(row.new_supply))}</td><td class="numeric">${esc(formatCompact(row.sales_units))}</td><td class="numeric">${esc(formatPercent(row.absorption_rate))}</td><td class="numeric">${esc(formatAsp(row.average_asp))}</td><td>${sourceRef(row.source_id,{sourceDate:row.source_date,period:row.period,methodology:row.methodology_note,sourceUrl:row.source_url})}</td></tr>`).join('') || '<tr><td colspan="6" class="table-empty">No observations for this region.</td></tr>'}</tbody></table></div></div></section>`;
     setView(html);
     bindFilters();
     requestAnimationFrame(() => ChartTools.renderSupplySales('market-supply-sales', rows));
   }
 
   function renderPricing() {
-    const selectedProjects = projectFilter(data.projects).filter(item => latestProjectObservation(item.id)?.average_asp).slice(0,5);
-    const series = priceSeries(selectedProjects.map(item => item.id));
-    const latestRows = selectedProjects.map(project => ({ project, obs: latestProjectObservation(project.id) }));
+    const projectRows = projectFilter(data.projects)
+      .map(project => ({ project, obs: latestProjectObservation(project.id) }))
+      .filter(item => Number.isFinite(item.obs?.average_asp));
+    const benchmarkRows = marketBenchmarks('apartment');
+    const series = priceSeries(projectRows.map(item => item.project.id));
     const html = `
-      <div class="view-intro"><div><span class="eyebrow">Comparable price observations</span><h2>Pricing</h2><p>Primary asking prices are kept separate from other price bases; the demo chart only compares compatible mn VND/m² display observations.</p></div></div>
+      <div class="view-intro"><div><span class="eyebrow">Evidence-backed price observations</span><h2>Pricing</h2><p>Developer-stated project prices and independent market benchmarks are kept separate. No missing project price is estimated.</p></div></div>
       ${filterToolbar({ includeStatus:false })}
-      <section class="section"><div class="section-header"><h2 class="section-title">Selected Project ASP Trend</h2></div><div class="section-body"><div class="chart-frame chart-frame--large"><canvas id="market-pricing"></canvas></div><p class="chart-note">Up to five filtered projects · primary asking price · illustrative values · ${latestRows[0]?.obs ? sourceRef(latestRows[0].obs.source_id,{sourceDate:latestRows[0].obs.source_date,period:latestRows[0].obs.period}) : "—"}</p></div></section>
-      <section class="section"><div class="section-header"><h2 class="section-title">Latest Pricing Snapshot</h2></div><div class="section-body section-body--table"><div class="table-wrap"><table class="data-table"><thead><tr><th>Project</th><th>Region</th><th>Period</th><th class="numeric">ASP</th><th>Basis</th><th>Source</th></tr></thead><tbody>${latestRows.map(({project,obs})=>`<tr><td><button class="table-link" data-project-id="${esc(project.id)}" type="button">${esc(project.name)}</button></td><td>${esc(regionNames(project))}</td><td>${esc(obs?.period || '—')}</td><td class="numeric">${esc(formatAsp(obs?.average_asp))}</td><td>${esc(obs?.price_basis?.replaceAll('-',' ') || '—')}</td><td>${obs ? sourceRef(obs.source_id,{sourceDate:obs.source_date,period:obs.period,methodology:obs.methodology_note}) : '—'}</td></tr>`).join('') || '<tr><td colspan="6" class="table-empty">No comparable pricing records.</td></tr>'}</tbody></table></div></div></section>`;
+      <section class="section"><div class="section-header"><h2 class="section-title">Verified Project Pricing</h2></div><div class="section-body">${series.length ? '<div class="chart-frame chart-frame--large"><canvas id="market-pricing"></canvas></div><p class="chart-note">Sparse source-stated snapshots; a single point is not a synthetic trend.</p>' : '<div class="state-box">No verified project price observations for the selected filters.</div>'}</div></section>
+      <section class="section"><div class="section-header"><h2 class="section-title">Latest Pricing Snapshot</h2></div><div class="section-body section-body--table"><div class="table-wrap"><table class="data-table"><thead><tr><th>Project</th><th>Region</th><th>Period</th><th class="numeric">ASP</th><th>Basis</th><th>Source</th></tr></thead><tbody>${projectRows.map(({project,obs})=>`<tr><td><button class="table-link" data-project-id="${esc(project.id)}" type="button">${esc(project.name)}</button></td><td>${esc(regionNames(project))}</td><td>${esc(obs.period)}</td><td class="numeric">${esc(formatAsp(obs.average_asp))}</td><td>${esc(obs.price_basis?.replaceAll('-',' ') || '—')}</td><td>${sourceRef(obs.source_id,{sourceDate:obs.source_date,period:obs.period,methodology:obs.methodology_note,sourceUrl:obs.source_url})}</td></tr>`).join('') || '<tr><td colspan="6" class="table-empty">No comparable pricing records.</td></tr>'}</tbody></table></div></div></section>
+      <section class="section"><div class="section-header"><h2 class="section-title">Market Benchmarks</h2></div><div class="section-body section-body--table"><div class="table-wrap"><table class="data-table"><thead><tr><th>Market</th><th>Period</th><th class="numeric">New Supply</th><th class="numeric">Transactions</th><th class="numeric">Absorption</th><th class="numeric">Average ASP</th><th>Source</th></tr></thead><tbody>${benchmarkRows.map(row=>`<tr><td>HCMC · Apartment</td><td>${esc(row.period)}</td><td class="numeric">${esc(formatCompact(row.new_supply))}</td><td class="numeric">${esc(formatCompact(row.sales_units))}</td><td class="numeric">${esc(formatPercent(row.absorption_rate))}</td><td class="numeric">${esc(formatAsp(row.average_asp))}</td><td>${sourceRef(row.source_id,{sourceDate:row.source_date,period:row.period,methodology:row.methodology_note,sourceUrl:row.source_url})}</td></tr>`).join('') || '<tr><td colspan="7" class="table-empty">No market benchmark records.</td></tr>'}</tbody></table></div></div></section>`;
     setView(html);
     bindFilters();
-    requestAnimationFrame(() => ChartTools.renderPriceTrend('market-pricing', series));
+    if (series.length) requestAnimationFrame(() => ChartTools.renderPriceTrend('market-pricing', series));
   }
 
   function renderDevelopers() {
@@ -257,7 +265,7 @@
       const projects = data.projects.filter(project => (project.developer_ids || []).includes(dev.id));
       const selling = projects.filter(project => project.status === 'selling').length;
       return `<article class="developer-card">
-        <div><span class="eyebrow">Developer</span><h3>${esc(dev.name)}</h3><p>${esc(dev.summary)}</p></div>
+        <div><span class="eyebrow">Developer</span><h3>${esc(dev.name)}</h3><p>${esc(dev.summary)}</p><div>${sourceRef(dev.primary_source_id,{sourceUrl:dev.official_url})}</div></div>
         <div class="developer-card__stats"><span><strong>${projects.length}</strong> tracked projects</span><span><strong>${selling}</strong> selling</span></div>
         <a class="text-link" href="market.html?view=projects&developer=${encodeURIComponent(dev.id)}">View projects</a>
       </article>`;
@@ -338,16 +346,16 @@
         ${Components.statusBadge(project.status)}
       </div>
       <div class="drawer-metrics">
-        ${Components.compactMetric({label:'Planned units',value:formatCompact(project.planned_units)})}
+        ${Components.compactMetric({label:'Planned units',value:Number.isFinite(project.planned_units) ? formatCompact(project.planned_units) : '—',note:project.known_units_note || 'No exact comparable count published'})}
         ${Components.compactMetric({label:'Area',value:formatArea(project.total_area_sqm)})}
         ${Components.compactMetric({label:'Latest ASP',value:formatAsp(obs?.average_asp),note:obs?.period || ''})}
         ${Components.compactMetric({label:'Absorption',value:formatPercent(obs?.absorption_rate),note:obs?.period || ''})}
       </div>
       <div class="drawer-section"><h3>Overview</h3><p>${esc(project.summary)}</p></div>
       <div class="drawer-section"><h3>Segments</h3><div class="chip-row">${(project.segment_ids || []).map(id=>`<span class="relation-chip">${esc(id.replaceAll('-',' '))}</span>`).join('')}</div></div>
-      <div class="drawer-section"><h3>Phases</h3>${phases.length ? phases.map(item=>`<div class="drawer-list-row"><div><strong>${esc(item.name)}</strong><span>${esc(item.phase_type.replaceAll('-',' '))}</span></div>${Components.statusBadge(item.status)}</div>`).join('') : '<p class="muted-text">No phase records yet.</p>'}</div>
-      <div class="drawer-section"><h3>Related Infrastructure</h3>${relatedInfrastructure.length ? relatedInfrastructure.map(item=>`<div class="drawer-list-row"><div><strong>${esc(item.name)}</strong><span>${esc(item.location_text || '')}</span></div><a class="text-link" href="infrastructure.html?view=projects&project=${encodeURIComponent(item.id)}">Open</a></div>`).join('') : '<p class="muted-text">No direct infrastructure links in the demo dataset.</p>'}</div>
-      <div class="drawer-section"><h3>Data Provenance</h3>${obs ? `<div class="provenance-inline-row">${sourceRef(obs.source_id,{sourceDate:obs.source_date,period:obs.period,methodology:obs.methodology_note})}<span class="muted-text">Latest displayed market observation · ${esc(obs.period || '')}</span></div>` : '<p class="muted-text">No market observation source available.</p>'}</div>
+      <div class="drawer-section"><h3>Phases</h3>${phases.length ? phases.map(item=>`<div class="drawer-list-row"><div><strong>${esc(item.name)}</strong><span>${esc(item.phase_type.replaceAll('-',' '))}${item.known_units_note ? ` · ${esc(item.known_units_note)}` : ''}</span></div>${Components.statusBadge(item.status)}</div>`).join('') : '<p class="muted-text">No phase records yet.</p>'}</div>
+      <div class="drawer-section"><h3>Related Infrastructure</h3>${relatedInfrastructure.length ? relatedInfrastructure.map(item=>`<div class="drawer-list-row"><div><strong>${esc(item.name)}</strong><span>${esc(item.location_text || '')}</span></div><a class="text-link" href="infrastructure.html?view=projects&project=${encodeURIComponent(item.id)}">Open</a></div>`).join('') : '<p class="muted-text">No direct infrastructure links in the curated dataset.</p>'}</div>
+      <div class="drawer-section"><h3>Data Provenance</h3><div class="provenance-inline-row">${sourceRef(project.primary_source_id,{sourceUrl:project.official_url,sourceDate:project.source_date})}<span class="muted-text">Project entity source</span></div>${obs ? `<div class="provenance-inline-row">${sourceRef(obs.source_id,{sourceDate:obs.source_date,period:obs.period,methodology:obs.methodology_note,sourceUrl:obs.source_url})}<span class="muted-text">Latest displayed market observation · ${esc(obs.period || '')}</span></div>` : '<p class="muted-text">No quantitative market observation is published for this project in the curated dataset.</p>'}</div>
       <div class="drawer-section"><h3>Recent Evidence</h3>${relatedArticles.length ? relatedArticles.map(item=>`<div class="drawer-list-row drawer-list-row--stack"><span>${esc(App.formatDate(item.published_at))} · ${sourceRef(item.source_id,{publishedAt:item.published_at,sourceUrl:item.url})}</span><strong>${esc(item.title)}</strong></div>`).join('') : '<p class="muted-text">No related articles.</p>'}</div>
       <div class="drawer-section"><a class="text-link" href="market.html?view=news&q=${encodeURIComponent(project.name)}">View related market news</a></div>`;
   }
@@ -400,13 +408,13 @@
       Resolver.setData('infrastructure-project', data.infrastructureProjects);
       parseState();
       const updated = document.querySelector('[data-market-updated]');
-      if (updated) updated.textContent = meta?.last_successful_build ? `Demo data · ${App.formatDate(meta.last_successful_build)}` : 'Demo data';
+      if (updated) updated.textContent = `Curated registry · ${data.projects.length} projects`;
       render();
       const projectId = App.getQueryParam('project');
       if (projectId) openProject(projectId, { push:false });
     } catch (error) {
       console.error(error);
-      setView(Components.stateBox('Unable to load Market demo data. Check that the site is running through a web server.', 'error'));
+      setView(Components.stateBox('Unable to load Market registry data. Check that the site is running through a web server.', 'error'));
     }
   }
 

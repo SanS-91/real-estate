@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
-  "build_id": "demo-step3-20261003",
-  "generated_at": "2026-10-03T12:00:00+07:00",
+  "build_id": "phase4.3c-market-registry-20261007",
+  "generated_at": "2026-10-07T10:30:00+07:00",
   "record_count": 8,
   "data": [
     {
@@ -18,15 +18,20 @@
         "township",
         "landed"
       ],
-      "status": "selling",
+      "status": "ongoing",
       "location_text": "Biên Hòa, Đồng Nai",
       "total_area_sqm": 1700000,
-      "planned_units": 6800,
+      "planned_units": null,
       "launch_date": "2021-11-01",
-      "summary": "Large-scale township project used as an illustrative research record.",
+      "summary": "Khu đô thị tích hợp 170 ha ven sông Đồng Nai, đang được Nam Long tiếp tục triển khai và giới thiệu sản phẩm mới trong năm 2026.",
       "related_infrastructure_ids": [
-        "long-thanh-airport"
-      ]
+        "long-thanh-airport",
+        "bien-hoa-vung-tau-expressway",
+        "ben-luc-long-thanh-expressway"
+      ],
+      "official_url": "https://www.namlongvn.com/en/township-residential/izumi-city-township/",
+      "primary_source_id": "nam-long-official",
+      "source_date": "2026-09-07"
     },
     {
       "id": "waterpoint",
@@ -40,15 +45,23 @@
       ],
       "segment_ids": [
         "township",
-        "landed"
+        "landed",
+        "apartment"
       ],
-      "status": "selling",
-      "location_text": "Bến Lức, Long An",
+      "status": "ongoing",
+      "location_text": "Bến Lức, Long An (khu vực cũ)",
       "total_area_sqm": 3550000,
-      "planned_units": 8200,
+      "planned_units": null,
       "launch_date": "2019-06-01",
-      "summary": "Illustrative township project record.",
-      "related_infrastructure_ids": []
+      "summary": "Khu đô thị tích hợp ven sông quy mô 355 ha; nhiều tiện ích đã vận hành và các phân khu/sản phẩm mới tiếp tục được giới thiệu trong năm 2026.",
+      "related_infrastructure_ids": [
+        "ben-luc-long-thanh-expressway",
+        "hcmc-ring-road-3",
+        "hcmc-ring-road-4"
+      ],
+      "official_url": "https://www.namlongvn.com/en/township-residential/waterpoint-township/",
+      "primary_source_id": "nam-long-official",
+      "source_date": "2026-09-07"
     },
     {
       "id": "akari-city",
@@ -63,13 +76,17 @@
       "segment_ids": [
         "apartment"
       ],
-      "status": "construction",
-      "location_text": "Bình Tân, HCMC",
+      "status": "ongoing",
+      "location_text": "An Lạc, TPHCM",
       "total_area_sqm": 85000,
-      "planned_units": 5000,
+      "planned_units": null,
       "launch_date": "2020-01-01",
-      "summary": "Illustrative apartment project record.",
-      "related_infrastructure_ids": []
+      "summary": "Khu căn hộ 8,5 ha trên trục Võ Văn Kiệt, quy hoạch hơn 5.000 căn hộ Flora qua ba giai đoạn.",
+      "related_infrastructure_ids": [],
+      "official_url": "https://www.namlongvn.com/en/township-residential/akari-city/",
+      "primary_source_id": "nam-long-official",
+      "source_date": "2026-10-07",
+      "known_units_note": "More than 5,000 apartments across the township."
     },
     {
       "id": "mizuki-park",
@@ -83,15 +100,23 @@
       ],
       "segment_ids": [
         "township",
-        "apartment"
+        "apartment",
+        "landed"
       ],
-      "status": "handover",
-      "location_text": "Bình Chánh, HCMC",
+      "status": "ongoing",
+      "location_text": "Nguyễn Văn Linh, TPHCM",
       "total_area_sqm": 260000,
-      "planned_units": 4600,
+      "planned_units": null,
       "launch_date": "2017-12-01",
-      "summary": "Illustrative integrated residential project record.",
-      "related_infrastructure_ids": []
+      "summary": "Khu đô thị tích hợp 26 ha; các phân khu đã lần lượt bàn giao và Trellia Cove tiếp tục được triển khai, mở bán trong 2026.",
+      "related_infrastructure_ids": [
+        "ben-luc-long-thanh-expressway",
+        "hcmc-ring-road-3"
+      ],
+      "official_url": "https://www.namlongvn.com/en/township-residential/mizuki-park/",
+      "primary_source_id": "nam-long-official",
+      "source_date": "2026-09-07",
+      "known_units_note": "More than 4,600 apartments plus 170 townhouses and 44 villas at completion."
     },
     {
       "id": "the-global-city",
@@ -109,12 +134,19 @@
         "apartment"
       ],
       "status": "selling",
-      "location_text": "Thu Duc City, HCMC",
-      "total_area_sqm": 1170000,
-      "planned_units": 9000,
+      "location_text": "Bình Trưng, TPHCM",
+      "total_area_sqm": 1174000,
+      "planned_units": null,
       "launch_date": "2022-03-01",
-      "summary": "Illustrative premium township research record.",
-      "related_infrastructure_ids": []
+      "summary": "Khu đô thị phức hợp 117,4 ha do Masterise Homes phát triển; SOHO và các phân khu nhà ở tiếp tục có hoạt động bán hàng trong 2026.",
+      "related_infrastructure_ids": [
+        "hcmc-long-thanh-expansion",
+        "long-thanh-airport",
+        "hcmc-metro-line-1"
+      ],
+      "official_url": "https://masterisehomes.com/the-global-city/vi",
+      "primary_source_id": "masterise-homes-official",
+      "source_date": "2026-08-10"
     },
     {
       "id": "eaton-park",
@@ -130,34 +162,45 @@
         "apartment"
       ],
       "status": "selling",
-      "location_text": "Thu Duc City, HCMC",
-      "total_area_sqm": 37000,
-      "planned_units": 2000,
+      "location_text": "Mai Chí Thọ, TPHCM",
+      "total_area_sqm": 37700,
+      "planned_units": 2052,
       "launch_date": "2024-05-01",
-      "summary": "Illustrative apartment project record.",
-      "related_infrastructure_ids": []
+      "summary": "Khu căn hộ cao cấp 3,77 ha gồm 6 tháp, với 2.052 sản phẩm theo công bố của Gamuda Land.",
+      "related_infrastructure_ids": [
+        "hcmc-long-thanh-expansion",
+        "hcmc-metro-line-1"
+      ],
+      "official_url": "https://gamudaland.com.vn/en/developments",
+      "primary_source_id": "gamuda-land-official",
+      "source_date": "2026-10-07"
     },
     {
-      "id": "eco-retreat",
-      "name": "Eco Retreat",
+      "id": "elysian",
+      "name": "Elysian",
       "developer_ids": [
-        "ecopark"
+        "gamuda-land"
       ],
-      "lead_developer_id": "ecopark",
+      "lead_developer_id": "gamuda-land",
       "region_ids": [
-        "long-an"
+        "hcmc"
       ],
       "segment_ids": [
-        "township",
-        "landed"
+        "apartment"
       ],
-      "status": "pre-launch",
-      "location_text": "Bến Lức, Long An",
-      "total_area_sqm": 2200000,
-      "planned_units": 10000,
-      "launch_date": null,
-      "summary": "Illustrative future township research record.",
-      "related_infrastructure_ids": []
+      "status": "selling",
+      "location_text": "Long Phước, TPHCM",
+      "total_area_sqm": 28000,
+      "planned_units": 1398,
+      "launch_date": "2025-07-01",
+      "summary": "Khu căn hộ 2,8 ha gồm 4 tháp 21 tầng với 1.398 căn hộ; Gamuda Land mở bán dự án từ quý III/2025.",
+      "related_infrastructure_ids": [
+        "hcmc-long-thanh-expansion",
+        "long-thanh-airport"
+      ],
+      "official_url": "https://gamudaland.com.vn/vn/developments/township/elysian",
+      "primary_source_id": "gamuda-land-official",
+      "source_date": "2026-10-07"
     },
     {
       "id": "the-privia",
@@ -173,12 +216,15 @@
         "apartment"
       ],
       "status": "handover",
-      "location_text": "Bình Tân, HCMC",
-      "total_area_sqm": 18400,
+      "location_text": "An Lạc, TPHCM",
+      "total_area_sqm": 18000,
       "planned_units": 1043,
       "launch_date": "2023-11-01",
-      "summary": "Illustrative completed apartment project record.",
-      "related_infrastructure_ids": []
+      "summary": "Dự án 1.043 căn hộ của Khang Điền; doanh nghiệp công bố đã bán 100% trong năm 2024 và triển khai bàn giao/cấp giấy chứng nhận.",
+      "related_infrastructure_ids": [],
+      "official_url": "https://www.khangdien.com.vn/the-privia",
+      "primary_source_id": "khang-dien-official",
+      "source_date": "2024-11-14"
     }
   ]
 }

@@ -1,8 +1,8 @@
 {
   "schema_version": 1,
-  "build_id": "phase4.3b-infrastructure-registry-20261007",
-  "generated_at": "2026-10-07T00:20:00+07:00",
-  "record_count": 24,
+  "build_id": "phase4.3c-market-registry-20261007",
+  "generated_at": "2026-10-07T10:30:00+07:00",
+  "record_count": 30,
   "data": [
     {
       "id": "demo-official",
@@ -291,6 +291,78 @@
       "source_priority": 1,
       "active": true,
       "notes": "Official Đồng Nai public source used for regional infrastructure operation and construction milestones."
+    },
+    {
+      "id": "nam-long-official",
+      "name": "Nam Long Group",
+      "source_type": "developer",
+      "base_url": "https://www.namlongvn.com/",
+      "language": "vi/en",
+      "collection_method": "manual-curated",
+      "fetch_frequency": "event-driven",
+      "source_priority": 2,
+      "active": true,
+      "notes": "First-party Nam Long project/developer disclosures used for curated Market project records and project activity."
+    },
+    {
+      "id": "masterise-homes-official",
+      "name": "Masterise Homes",
+      "source_type": "developer",
+      "base_url": "https://masterisehomes.com/",
+      "language": "vi/en",
+      "collection_method": "manual-curated",
+      "fetch_frequency": "event-driven",
+      "source_priority": 2,
+      "active": true,
+      "notes": "First-party Masterise Homes project disclosures used for The Global City entity and project activity."
+    },
+    {
+      "id": "gamuda-land-official",
+      "name": "Gamuda Land Vietnam",
+      "source_type": "developer",
+      "base_url": "https://gamudaland.com.vn/",
+      "language": "vi/en",
+      "collection_method": "manual-curated",
+      "fetch_frequency": "event-driven",
+      "source_priority": 2,
+      "active": true,
+      "notes": "First-party Gamuda Land project disclosures used for Eaton Park and Elysian entity/pricing records."
+    },
+    {
+      "id": "khang-dien-official",
+      "name": "Khang Điền Group",
+      "source_type": "developer",
+      "base_url": "https://www.khangdien.com.vn/",
+      "language": "vi/en",
+      "collection_method": "manual-curated",
+      "fetch_frequency": "event-driven",
+      "source_priority": 2,
+      "active": true,
+      "notes": "First-party Khang Điền project disclosures used for The Privia entity, sales completion and handover status."
+    },
+    {
+      "id": "cbre-vietnam-market",
+      "name": "CBRE Vietnam Research",
+      "source_type": "research",
+      "base_url": "https://www.cbrevietnam.com/",
+      "language": "vi/en",
+      "collection_method": "manual-curated",
+      "fetch_frequency": "quarterly",
+      "source_priority": 3,
+      "active": true,
+      "notes": "Public CBRE Vietnam market figures used only for explicitly published market-level supply observations."
+    },
+    {
+      "id": "savills-vietnam-market",
+      "name": "Savills Vietnam Research",
+      "source_type": "research",
+      "base_url": "https://www.savills.com.vn/",
+      "language": "vi/en",
+      "collection_method": "manual-curated",
+      "fetch_frequency": "quarterly",
+      "source_priority": 3,
+      "active": true,
+      "notes": "Public Savills Vietnam research used for explicitly published annual residential market benchmarks."
     }
   ]
 }

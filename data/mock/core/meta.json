@@ -1,10 +1,11 @@
 {
   "schema_version": 1,
-  "last_successful_build": "2026-10-07T00:20:00+07:00",
+  "last_successful_build": "2026-10-07T10:30:00+07:00",
   "is_mock": true,
   "categories": {
     "market": {
-      "updated_at": "2026-10-03T14:00:00+07:00"
+      "updated_at": "2026-10-07T10:30:00+07:00",
+      "mode": "curated-evidence-registry"
     },
     "legal": {
       "updated_at": "2026-10-06T20:00:00+07:00",

@@ -1,8 +1,8 @@
 {
   "schema_version": 1,
-  "build_id": "demo-step3-20261003",
-  "generated_at": "2026-10-03T12:00:00+07:00",
-  "record_count": 5,
+  "build_id": "phase4.3c-market-registry-20261007",
+  "generated_at": "2026-10-07T10:30:00+07:00",
+  "record_count": 4,
   "data": [
     {
       "id": "nam-long",
@@ -21,7 +21,9 @@
         "township"
       ],
       "status": "active",
-      "summary": "Illustrative developer profile for the Market module demo."
+      "summary": "Nhà phát triển đô thị tích hợp với các dự án đang triển khai như Waterpoint, Izumi City, Mizuki Park và Akari City.",
+      "official_url": "https://www.namlongvn.com/en/township-residential-development/",
+      "primary_source_id": "nam-long-official"
     },
     {
       "id": "masterise",
@@ -34,10 +36,13 @@
       ],
       "segment_ids": [
         "apartment",
-        "landed"
+        "landed",
+        "township"
       ],
       "status": "active",
-      "summary": "Illustrative developer profile for the Market module demo."
+      "summary": "Nhà phát triển The Global City và các dự án nhà ở cao cấp tại TPHCM.",
+      "official_url": "https://masterisehomes.com/en/du-an/bat-dong-san-khu-do-thi",
+      "primary_source_id": "masterise-homes-official"
     },
     {
       "id": "gamuda-land",
@@ -47,28 +52,18 @@
       ],
       "region_ids": [
         "hcmc",
+        "dong-nai",
         "binh-duong"
       ],
       "segment_ids": [
         "apartment",
-        "township"
-      ],
-      "status": "active",
-      "summary": "Illustrative developer profile for the Market module demo."
-    },
-    {
-      "id": "ecopark",
-      "name": "Ecopark",
-      "aliases": [],
-      "region_ids": [
-        "dong-nai"
-      ],
-      "segment_ids": [
         "township",
         "landed"
       ],
       "status": "active",
-      "summary": "Illustrative developer profile for the Market module demo."
+      "summary": "Nhà phát triển bất động sản với các dự án tại miền Nam như Eaton Park, Elysian, Springville và Celadon City.",
+      "official_url": "https://gamudaland.com.vn/vn/developments",
+      "primary_source_id": "gamuda-land-official"
     },
     {
       "id": "khang-dien",
@@ -84,7 +79,9 @@
         "landed"
       ],
       "status": "active",
-      "summary": "Illustrative developer profile for the Market module demo."
+      "summary": "Nhà phát triển tập trung tại TPHCM; The Privia đã hoàn tất bán hàng và bước vào giai đoạn bàn giao/cấp giấy chứng nhận.",
+      "official_url": "https://www.khangdien.com.vn/",
+      "primary_source_id": "khang-dien-official"
     }
   ]
 }

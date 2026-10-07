@@ -1,11 +1,11 @@
 {
   "schema_version": 1,
-  "build_id": "demo-step3-20261003",
-  "generated_at": "2026-10-03T12:00:00+07:00",
-  "record_count": 21,
+  "build_id": "phase4.3c-market-registry-20261007",
+  "generated_at": "2026-10-07T10:30:00+07:00",
+  "record_count": 7,
   "data": [
     {
-      "id": "obs-hcmc-apartment-2025-q4",
+      "id": "obs-hcmc-apartment-2025-q4-cbre",
       "scope_type": "region-segment",
       "region_ids": [
         "hcmc"
@@ -15,340 +15,136 @@
       ],
       "period": "2025-Q4",
       "period_type": "quarter",
-      "new_supply": 3100,
-      "sales_units": 2450,
-      "absorption_rate": 0.79,
-      "average_asp": 72000000,
-      "asp_unit": "vnd-per-m2",
-      "currency": "VND",
-      "price_basis": "primary-asking",
-      "source_id": "demo-market-source",
-      "source_date": "2026-01-01",
-      "methodology_note": "Illustrative data only."
-    },
-    {
-      "id": "obs-hcmc-apartment-2026-q1",
-      "scope_type": "region-segment",
-      "region_ids": [
-        "hcmc"
-      ],
-      "segment_ids": [
-        "apartment"
-      ],
-      "period": "2026-Q1",
-      "period_type": "quarter",
-      "new_supply": 2800,
-      "sales_units": 2200,
-      "absorption_rate": 0.79,
-      "average_asp": 73500000,
-      "asp_unit": "vnd-per-m2",
-      "currency": "VND",
-      "price_basis": "primary-asking",
-      "source_id": "demo-market-source",
-      "source_date": "2026-04-01",
-      "methodology_note": "Illustrative data only."
-    },
-    {
-      "id": "obs-hcmc-apartment-2026-q2",
-      "scope_type": "region-segment",
-      "region_ids": [
-        "hcmc"
-      ],
-      "segment_ids": [
-        "apartment"
-      ],
-      "period": "2026-Q2",
-      "period_type": "quarter",
-      "new_supply": 3600,
-      "sales_units": 2920,
-      "absorption_rate": 0.81,
-      "average_asp": 75500000,
-      "asp_unit": "vnd-per-m2",
-      "currency": "VND",
-      "price_basis": "primary-asking",
-      "source_id": "demo-market-source",
-      "source_date": "2026-07-01",
-      "methodology_note": "Illustrative data only."
-    },
-    {
-      "id": "obs-hcmc-apartment-2026-q3",
-      "scope_type": "region-segment",
-      "region_ids": [
-        "hcmc"
-      ],
-      "segment_ids": [
-        "apartment"
-      ],
-      "period": "2026-Q3",
-      "period_type": "quarter",
-      "new_supply": 4100,
-      "sales_units": 3440,
-      "absorption_rate": 0.84,
-      "average_asp": 78000000,
-      "asp_unit": "vnd-per-m2",
-      "currency": "VND",
-      "price_basis": "primary-asking",
-      "source_id": "demo-market-source",
-      "source_date": "2026-10-01",
-      "methodology_note": "Illustrative data only."
-    },
-    {
-      "id": "obs-dn-resi-2025-q4",
-      "scope_type": "region-segment",
-      "region_ids": [
-        "dong-nai"
-      ],
-      "segment_ids": [
-        "landed"
-      ],
-      "period": "2025-Q4",
-      "period_type": "quarter",
-      "new_supply": 1150,
-      "sales_units": 780,
-      "absorption_rate": 0.68,
-      "average_asp": 45500000,
-      "asp_unit": "vnd-per-m2",
-      "currency": "VND",
-      "price_basis": "primary-asking",
-      "source_id": "demo-market-source",
-      "source_date": "2026-01-01",
-      "methodology_note": "Illustrative data only."
-    },
-    {
-      "id": "obs-dn-resi-2026-q1",
-      "scope_type": "region-segment",
-      "region_ids": [
-        "dong-nai"
-      ],
-      "segment_ids": [
-        "landed"
-      ],
-      "period": "2026-Q1",
-      "period_type": "quarter",
-      "new_supply": 900,
-      "sales_units": 610,
-      "absorption_rate": 0.68,
-      "average_asp": 46500000,
-      "asp_unit": "vnd-per-m2",
-      "currency": "VND",
-      "price_basis": "primary-asking",
-      "source_id": "demo-market-source",
-      "source_date": "2026-04-01",
-      "methodology_note": "Illustrative data only."
-    },
-    {
-      "id": "obs-dn-resi-2026-q2",
-      "scope_type": "region-segment",
-      "region_ids": [
-        "dong-nai"
-      ],
-      "segment_ids": [
-        "landed"
-      ],
-      "period": "2026-Q2",
-      "period_type": "quarter",
-      "new_supply": 1380,
-      "sales_units": 920,
-      "absorption_rate": 0.67,
-      "average_asp": 48200000,
-      "asp_unit": "vnd-per-m2",
-      "currency": "VND",
-      "price_basis": "primary-asking",
-      "source_id": "demo-market-source",
-      "source_date": "2026-07-01",
-      "methodology_note": "Illustrative data only."
-    },
-    {
-      "id": "obs-dn-resi-2026-q3",
-      "scope_type": "region-segment",
-      "region_ids": [
-        "dong-nai"
-      ],
-      "segment_ids": [
-        "landed"
-      ],
-      "period": "2026-Q3",
-      "period_type": "quarter",
-      "new_supply": 1520,
-      "sales_units": 1060,
-      "absorption_rate": 0.7,
-      "average_asp": 49800000,
-      "asp_unit": "vnd-per-m2",
-      "currency": "VND",
-      "price_basis": "primary-asking",
-      "source_id": "demo-market-source",
-      "source_date": "2026-10-01",
-      "methodology_note": "Illustrative data only."
-    },
-    {
-      "id": "obs-izumi-city-2026-q3",
-      "scope_type": "project",
-      "project_id": "izumi-city",
-      "region_ids": [
-        "dong-nai"
-      ],
-      "segment_ids": [
-        "township",
-        "landed"
-      ],
-      "period": "2026-Q3",
-      "period_type": "quarter",
-      "new_supply": 220,
-      "sales_units": 145,
-      "absorption_rate": 0.67,
-      "average_asp": 70000000,
-      "asp_unit": "vnd-per-m2",
-      "currency": "VND",
-      "price_basis": "primary-asking",
-      "source_id": "demo-project-source",
-      "source_date": "2026-10-01",
-      "methodology_note": "Illustrative data only."
-    },
-    {
-      "id": "obs-waterpoint-2026-q3",
-      "scope_type": "project",
-      "project_id": "waterpoint",
-      "region_ids": [
-        "long-an"
-      ],
-      "segment_ids": [
-        "township",
-        "landed"
-      ],
-      "period": "2026-Q3",
-      "period_type": "quarter",
-      "new_supply": 240,
-      "sales_units": 180,
-      "absorption_rate": 0.74,
-      "average_asp": 52000000,
-      "asp_unit": "vnd-per-m2",
-      "currency": "VND",
-      "price_basis": "primary-asking",
-      "source_id": "demo-project-source",
-      "source_date": "2026-10-01",
-      "methodology_note": "Illustrative data only."
-    },
-    {
-      "id": "obs-akari-city-2026-q3",
-      "scope_type": "project",
-      "project_id": "akari-city",
-      "region_ids": [
-        "hcmc"
-      ],
-      "segment_ids": [
-        "apartment"
-      ],
-      "period": "2026-Q3",
-      "period_type": "quarter",
-      "new_supply": 390,
-      "sales_units": 320,
-      "absorption_rate": 0.82,
-      "average_asp": 61000000,
-      "asp_unit": "vnd-per-m2",
-      "currency": "VND",
-      "price_basis": "primary-asking",
-      "source_id": "demo-project-source",
-      "source_date": "2026-10-01",
-      "methodology_note": "Illustrative data only."
-    },
-    {
-      "id": "obs-mizuki-park-2026-q2",
-      "scope_type": "project",
-      "project_id": "mizuki-park",
-      "region_ids": [
-        "hcmc"
-      ],
-      "segment_ids": [
-        "township",
-        "apartment"
-      ],
-      "period": "2026-Q2",
-      "period_type": "quarter",
-      "new_supply": 93,
-      "sales_units": 85,
-      "absorption_rate": 0.91,
-      "average_asp": 58000000,
-      "asp_unit": "vnd-per-m2",
-      "currency": "VND",
-      "price_basis": "primary-asking",
-      "source_id": "demo-project-source",
-      "source_date": "2026-10-01",
-      "methodology_note": "Illustrative data only."
-    },
-    {
-      "id": "obs-the-global-city-2026-q3",
-      "scope_type": "project",
-      "project_id": "the-global-city",
-      "region_ids": [
-        "hcmc"
-      ],
-      "segment_ids": [
-        "township",
-        "landed",
-        "apartment"
-      ],
-      "period": "2026-Q3",
-      "period_type": "quarter",
-      "new_supply": 198,
-      "sales_units": 120,
-      "absorption_rate": 0.61,
-      "average_asp": 165000000,
-      "asp_unit": "vnd-per-m2",
-      "currency": "VND",
-      "price_basis": "primary-asking",
-      "source_id": "demo-project-source",
-      "source_date": "2026-10-01",
-      "methodology_note": "Illustrative data only."
-    },
-    {
-      "id": "obs-eaton-park-2026-q3",
-      "scope_type": "project",
-      "project_id": "eaton-park",
-      "region_ids": [
-        "hcmc"
-      ],
-      "segment_ids": [
-        "apartment"
-      ],
-      "period": "2026-Q3",
-      "period_type": "quarter",
-      "new_supply": 276,
-      "sales_units": 210,
-      "absorption_rate": 0.76,
-      "average_asp": 145000000,
-      "asp_unit": "vnd-per-m2",
-      "currency": "VND",
-      "price_basis": "primary-asking",
-      "source_id": "demo-project-source",
-      "source_date": "2026-10-01",
-      "methodology_note": "Illustrative data only."
-    },
-    {
-      "id": "obs-eco-retreat-2026-q2",
-      "scope_type": "project",
-      "project_id": "eco-retreat",
-      "region_ids": [
-        "long-an"
-      ],
-      "segment_ids": [
-        "township",
-        "landed"
-      ],
-      "period": "2026-Q2",
-      "period_type": "quarter",
-      "new_supply": null,
+      "new_supply": 3135,
       "sales_units": null,
       "absorption_rate": null,
       "average_asp": null,
       "asp_unit": "vnd-per-m2",
       "currency": "VND",
-      "price_basis": "primary-asking",
-      "source_id": "demo-project-source",
-      "source_date": "2026-10-01",
-      "methodology_note": "Illustrative data only."
+      "price_basis": null,
+      "source_id": "cbre-vietnam-market",
+      "source_date": "2026-02-05",
+      "source_url": "https://www.cbrevietnam.com/vi-vn/insights/figures/c%E1%BA%ADp-nh%E1%BA%ADt-th%E1%BB%8B-tr%C6%B0%E1%BB%9Dng-b%C4%91s-tp-hcm-q4-2025",
+      "methodology_note": "CBRE public Q4/2025 figure: 3,135 newly launched condominium units in former HCMC. Public extract does not publish a directly comparable sales figure."
     },
     {
-      "id": "obs-the-privia-2026-q2",
+      "id": "obs-hcmc-apartment-2026-q1-cbre",
+      "scope_type": "region-segment",
+      "region_ids": [
+        "hcmc"
+      ],
+      "segment_ids": [
+        "apartment"
+      ],
+      "period": "2026-Q1",
+      "period_type": "quarter",
+      "new_supply": 1642,
+      "sales_units": null,
+      "absorption_rate": null,
+      "average_asp": null,
+      "asp_unit": "vnd-per-m2",
+      "currency": "VND",
+      "price_basis": null,
+      "source_id": "cbre-vietnam-market",
+      "source_date": "2026-05-18",
+      "source_url": "https://www.cbrevietnam.com/vi-vn/insights/figures/ho-chi-minh-city-figures-",
+      "methodology_note": "CBRE public Q1/2026 figure: 1,642 newly launched condominium units. Missing sales/absorption/price fields are intentionally left null."
+    },
+    {
+      "id": "obs-hcmc-apartment-2026-q2-cbre",
+      "scope_type": "region-segment",
+      "region_ids": [
+        "hcmc"
+      ],
+      "segment_ids": [
+        "apartment"
+      ],
+      "period": "2026-Q2",
+      "period_type": "quarter",
+      "new_supply": 850,
+      "sales_units": null,
+      "absorption_rate": null,
+      "average_asp": null,
+      "asp_unit": "vnd-per-m2",
+      "currency": "VND",
+      "price_basis": null,
+      "source_id": "cbre-vietnam-market",
+      "source_date": "2026-08-12",
+      "source_url": "https://www.cbrevietnam.com/vi-vn/insights/figures/c%E1%BA%ADp-nh%E1%BA%ADt-th%E1%BB%8B-tr%C6%B0%E1%BB%9Dng-b%C4%91s-h%E1%BB%93-ch%C3%AD-minh-qu%C3%BD-2-2026",
+      "methodology_note": "CBRE public Q2/2026 figure: 850 newly launched condominium units, down 48% q-o-q. Missing sales/absorption/price fields are intentionally left null."
+    },
+    {
+      "id": "obs-hcmc-apartment-2025-savills-benchmark",
+      "scope_type": "region-segment-benchmark",
+      "region_ids": [
+        "hcmc"
+      ],
+      "segment_ids": [
+        "apartment"
+      ],
+      "period": "2025",
+      "period_type": "year",
+      "new_supply": 8600,
+      "sales_units": 11500,
+      "absorption_rate": 0.82,
+      "average_asp": 102000000,
+      "asp_unit": "vnd-per-m2",
+      "currency": "VND",
+      "price_basis": "primary-average",
+      "source_id": "savills-vietnam-market",
+      "source_date": "2026-04-21",
+      "source_url": "https://www.savills.com.vn/blog/article/235335/vietnam-viet/nha-o-la-mot-phan-cua-ha-tang-quoc-gia.aspx",
+      "methodology_note": "Savills public 2025 HCMC benchmark: about 8,600 new units, 11,500 transactions, 82% absorption and average primary price around VND 102m/m². Definitions are source-specific and should not be mechanically combined with CBRE quarterly launch figures."
+    },
+    {
+      "id": "obs-hcmc-landed-2025-savills-benchmark",
+      "scope_type": "region-segment-benchmark",
+      "region_ids": [
+        "hcmc"
+      ],
+      "segment_ids": [
+        "landed"
+      ],
+      "period": "2025",
+      "period_type": "year",
+      "new_supply": 4100,
+      "sales_units": 2000,
+      "absorption_rate": null,
+      "average_asp": 233000000,
+      "asp_unit": "vnd-per-m2-land",
+      "currency": "VND",
+      "price_basis": "primary-average-land",
+      "source_id": "savills-vietnam-market",
+      "source_date": "2026-03-28",
+      "source_url": "https://vn.savills.com.vn/blog/article/234705/vietnam-eng/hcmc-real-estate-q4-2025.aspx",
+      "methodology_note": "Savills public 2025 villa/townhouse benchmark: about 4,100 new units, 2,000 transactions and average primary price VND 233m/m² of land."
+    },
+    {
+      "id": "obs-elysian-2025-07",
+      "scope_type": "project",
+      "project_id": "elysian",
+      "region_ids": [
+        "hcmc"
+      ],
+      "segment_ids": [
+        "apartment"
+      ],
+      "period": "2025-07",
+      "period_type": "month",
+      "new_supply": null,
+      "sales_units": null,
+      "absorption_rate": null,
+      "average_asp": 68000000,
+      "asp_unit": "vnd-per-m2",
+      "currency": "VND",
+      "price_basis": "developer-stated-average",
+      "source_id": "gamuda-land-official",
+      "source_date": "2025-07-31",
+      "source_url": "https://gamudaland.com.vn/vn/news/news-and-story-34",
+      "methodology_note": "Gamuda Land stated an average price of VND 68m/m² in a July 2025 project-sales article. Developer-stated pricing is kept distinct from independent market research."
+    },
+    {
+      "id": "obs-the-privia-2024",
       "scope_type": "project",
       "project_id": "the-privia",
       "region_ids": [
@@ -357,137 +153,19 @@
       "segment_ids": [
         "apartment"
       ],
-      "period": "2026-Q2",
-      "period_type": "quarter",
-      "new_supply": 57,
-      "sales_units": 55,
-      "absorption_rate": 0.96,
-      "average_asp": 69000000,
+      "period": "2024",
+      "period_type": "year",
+      "new_supply": 1043,
+      "sales_units": 1043,
+      "absorption_rate": 1.0,
+      "average_asp": null,
       "asp_unit": "vnd-per-m2",
       "currency": "VND",
-      "price_basis": "primary-asking",
-      "source_id": "demo-project-source",
-      "source_date": "2026-10-01",
-      "methodology_note": "Illustrative data only."
-    },
-    {
-      "id": "obs-izumi-city-2026-q2",
-      "scope_type": "project",
-      "project_id": "izumi-city",
-      "region_ids": [
-        "dong-nai"
-      ],
-      "segment_ids": [
-        "township",
-        "landed"
-      ],
-      "period": "2026-Q2",
-      "period_type": "quarter",
-      "new_supply": null,
-      "sales_units": null,
-      "absorption_rate": null,
-      "average_asp": 66500000,
-      "asp_unit": "vnd-per-m2",
-      "currency": "VND",
-      "price_basis": "primary-asking",
-      "source_id": "demo-project-source",
-      "source_date": "2026-07-01",
-      "methodology_note": "Illustrative data only."
-    },
-    {
-      "id": "obs-waterpoint-2026-q2",
-      "scope_type": "project",
-      "project_id": "waterpoint",
-      "region_ids": [
-        "long-an"
-      ],
-      "segment_ids": [
-        "township",
-        "landed"
-      ],
-      "period": "2026-Q2",
-      "period_type": "quarter",
-      "new_supply": null,
-      "sales_units": null,
-      "absorption_rate": null,
-      "average_asp": 50500000,
-      "asp_unit": "vnd-per-m2",
-      "currency": "VND",
-      "price_basis": "primary-asking",
-      "source_id": "demo-project-source",
-      "source_date": "2026-07-01",
-      "methodology_note": "Illustrative data only."
-    },
-    {
-      "id": "obs-akari-city-2026-q2",
-      "scope_type": "project",
-      "project_id": "akari-city",
-      "region_ids": [
-        "hcmc"
-      ],
-      "segment_ids": [
-        "apartment"
-      ],
-      "period": "2026-Q2",
-      "period_type": "quarter",
-      "new_supply": null,
-      "sales_units": null,
-      "absorption_rate": null,
-      "average_asp": 59000000,
-      "asp_unit": "vnd-per-m2",
-      "currency": "VND",
-      "price_basis": "primary-asking",
-      "source_id": "demo-project-source",
-      "source_date": "2026-07-01",
-      "methodology_note": "Illustrative data only."
-    },
-    {
-      "id": "obs-the-global-city-2026-q2",
-      "scope_type": "project",
-      "project_id": "the-global-city",
-      "region_ids": [
-        "hcmc"
-      ],
-      "segment_ids": [
-        "township",
-        "landed",
-        "apartment"
-      ],
-      "period": "2026-Q2",
-      "period_type": "quarter",
-      "new_supply": null,
-      "sales_units": null,
-      "absorption_rate": null,
-      "average_asp": 158000000,
-      "asp_unit": "vnd-per-m2",
-      "currency": "VND",
-      "price_basis": "primary-asking",
-      "source_id": "demo-project-source",
-      "source_date": "2026-07-01",
-      "methodology_note": "Illustrative data only."
-    },
-    {
-      "id": "obs-eaton-park-2026-q2",
-      "scope_type": "project",
-      "project_id": "eaton-park",
-      "region_ids": [
-        "hcmc"
-      ],
-      "segment_ids": [
-        "apartment"
-      ],
-      "period": "2026-Q2",
-      "period_type": "quarter",
-      "new_supply": null,
-      "sales_units": null,
-      "absorption_rate": null,
-      "average_asp": 138000000,
-      "asp_unit": "vnd-per-m2",
-      "currency": "VND",
-      "price_basis": "primary-asking",
-      "source_id": "demo-project-source",
-      "source_date": "2026-07-01",
-      "methodology_note": "Illustrative data only."
+      "price_basis": null,
+      "source_id": "khang-dien-official",
+      "source_date": "2024-11-18",
+      "source_url": "https://www.khangdien.com.vn/tap-doan-khang-dien-kdh-duoc-vinh-danh-chu-dau-tu-cua-thap-ky-tai-giai-thuong-propertyguru-vietnam-property-awards-2024",
+      "methodology_note": "Khang Điền stated that 100% of The Privia apartments were sold within three months of launch in 2024; project has 1,043 apartments."
     }
   ]
 }

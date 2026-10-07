@@ -1,22 +1,26 @@
 {
   "schema_version": 1,
-  "build_id": "phase4.3b-infrastructure-registry-20261007",
-  "generated_at": "2026-10-07T00:20:00+07:00",
+  "build_id": "phase4.3c-market-registry-20261007",
+  "generated_at": "2026-10-07T10:30:00+07:00",
   "record_count": 23,
   "data": [
     {
-      "id": "article-market-001",
-      "title": "Illustrative township launch activity strengthens in the eastern corridor",
-      "url": "#",
+      "id": "article-market-nlg-experience-2026",
+      "title": "Nam Long Experience 2026 showcases Waterpoint, Mizuki Park and Izumi City",
+      "url": "https://www.namlongvn.com/en/news/nam-long-announces-nam-long-experience-2026-real-value-real-estate-expo-a-multi-experiential-destination-for-families-homebuyers-and-the-community/",
       "category": "market",
-      "subcategory": "launch",
-      "content_type": "news",
-      "published_at": "2026-10-03T08:30:00+07:00",
-      "source_id": "demo-news",
+      "subcategory": "developer",
+      "content_type": "developer-update",
+      "published_at": "2026-09-07T09:00:00+07:00",
+      "source_id": "nam-long-official",
       "region_ids": [
-        "dong-nai"
+        "hcmc",
+        "dong-nai",
+        "long-an"
       ],
       "project_ids": [
+        "waterpoint",
+        "mizuki-park",
         "izumi-city"
       ],
       "developer_ids": [
@@ -24,139 +28,133 @@
       ],
       "tags": [
         "township",
-        "launch"
+        "launch",
+        "inventory"
       ],
       "importance": 4,
-      "summary": "Demo article showing how project, developer and region relationships will appear in Market News."
+      "summary": "Nam Long presented current township inventory and launched/introduced new components across Waterpoint, Mizuki Park and Izumi City during its September 2026 expo."
     },
     {
-      "id": "article-market-002",
-      "title": "Apartment primary pricing remains firm across selected HCMC submarkets",
-      "url": "#",
+      "id": "article-market-soho-2026",
+      "title": "SOHO at The Global City continues active sales and commercial positioning",
+      "url": "https://masterisehomes.com/the-global-city/vi/soho/tin-tuc/khu-pho-thuong-mai-soho-tai-the-global-city-noi-ban-sac-giao-thuong-song-hanh-nhip-song-toan-cau",
       "category": "market",
-      "subcategory": "pricing",
-      "content_type": "research",
-      "published_at": "2026-10-02T09:00:00+07:00",
-      "source_id": "demo-research",
+      "subcategory": "project",
+      "content_type": "developer-update",
+      "published_at": "2026-08-10T09:00:00+07:00",
+      "source_id": "masterise-homes-official",
       "region_ids": [
         "hcmc"
       ],
       "project_ids": [
-        "eaton-park",
         "the-global-city"
       ],
       "developer_ids": [
-        "gamuda-land",
         "masterise"
       ],
       "tags": [
-        "pricing",
-        "apartment"
+        "township",
+        "shophouse",
+        "sales"
       ],
       "importance": 3,
-      "summary": "Illustrative research update for the Pricing view."
+      "summary": "Masterise Homes continued marketing and operating the SOHO commercial-townhouse district within the 117.4-ha The Global City."
     },
     {
-      "id": "article-market-003",
-      "title": "Sales absorption improves in the latest quarterly demo dataset",
-      "url": "#",
+      "id": "article-market-cbre-q2-2026",
+      "title": "CBRE: HCMC Q2/2026 condominium launches fall to 850 units",
+      "url": "https://www.cbrevietnam.com/vi-vn/insights/figures/c%E1%BA%ADp-nh%E1%BA%ADt-th%E1%BB%8B-tr%C6%B0%E1%BB%9Dng-b%C4%91s-h%E1%BB%93-ch%C3%AD-minh-qu%C3%BD-2-2026",
       "category": "market",
-      "subcategory": "sales",
-      "content_type": "analysis",
-      "published_at": "2026-09-30T14:00:00+07:00",
-      "source_id": "demo-research",
+      "subcategory": "supply",
+      "content_type": "research",
+      "published_at": "2026-08-12T09:00:00+07:00",
+      "source_id": "cbre-vietnam-market",
       "region_ids": [
-        "hcmc",
-        "dong-nai"
+        "hcmc"
       ],
       "project_ids": [],
       "developer_ids": [],
       "tags": [
-        "absorption",
-        "sales"
-      ],
-      "importance": 3,
-      "summary": "Demo market-level commentary linked to supply and sales observations."
-    },
-    {
-      "id": "article-market-004",
-      "title": "Developer activity tracker adds new project-phase records",
-      "url": "#",
-      "category": "market",
-      "subcategory": "developer",
-      "content_type": "announcement",
-      "published_at": "2026-09-28T10:15:00+07:00",
-      "source_id": "demo-news",
-      "region_ids": [
-        "hcmc",
-        "long-an"
-      ],
-      "project_ids": [
-        "waterpoint",
-        "akari-city"
-      ],
-      "developer_ids": [
-        "nam-long"
-      ],
-      "tags": [
-        "developer",
-        "phase"
-      ],
-      "importance": 2,
-      "summary": "Illustrative update used to test related-project and developer filters."
-    },
-    {
-      "id": "article-market-005",
-      "title": "Long An township pipeline expands in illustrative market view",
-      "url": "#",
-      "category": "market",
-      "subcategory": "supply",
-      "content_type": "news",
-      "published_at": "2026-09-26T11:20:00+07:00",
-      "source_id": "demo-news",
-      "region_ids": [
-        "long-an"
-      ],
-      "project_ids": [
-        "waterpoint",
-        "eco-retreat"
-      ],
-      "developer_ids": [
-        "nam-long",
-        "ecopark"
-      ],
-      "tags": [
+        "apartment",
         "supply",
-        "township"
+        "q2-2026"
       ],
-      "importance": 3,
-      "summary": "Demo supply update for testing regional research links."
+      "importance": 4,
+      "summary": "CBRE reported 850 condominium units launched in Q2/2026, down 48% quarter-on-quarter, while landed supply rebounded."
     },
     {
-      "id": "article-market-006",
-      "title": "Handover-stage projects remain visible in the database after active selling ends",
-      "url": "#",
+      "id": "article-market-elysian-2025",
+      "title": "Gamuda Land launches Elysian with developer-stated average pricing of VND 68m/m²",
+      "url": "https://gamudaland.com.vn/vn/news/news-and-story-34",
       "category": "market",
-      "subcategory": "handover",
-      "content_type": "analysis",
-      "published_at": "2026-09-24T16:00:00+07:00",
-      "source_id": "demo-research",
+      "subcategory": "pricing",
+      "content_type": "developer-update",
+      "published_at": "2025-07-31T09:00:00+07:00",
+      "source_id": "gamuda-land-official",
       "region_ids": [
         "hcmc"
       ],
       "project_ids": [
-        "mizuki-park",
+        "elysian"
+      ],
+      "developer_ids": [
+        "gamuda-land"
+      ],
+      "tags": [
+        "apartment",
+        "pricing",
+        "launch"
+      ],
+      "importance": 3,
+      "summary": "Gamuda Land stated an average selling price of VND 68m/m² for Elysian in a July 2025 project-sales update; the figure is treated as developer-stated pricing."
+    },
+    {
+      "id": "article-market-privia-2024",
+      "title": "Khang Điền says The Privia sold 100% of apartments and moved into handover",
+      "url": "https://www.khangdien.com.vn/tap-doan-khang-dien-kdh-duoc-vinh-danh-chu-dau-tu-cua-thap-ky-tai-giai-thuong-propertyguru-vietnam-property-awards-2024",
+      "category": "market",
+      "subcategory": "sales",
+      "content_type": "developer-update",
+      "published_at": "2024-11-18T09:00:00+07:00",
+      "source_id": "khang-dien-official",
+      "region_ids": [
+        "hcmc"
+      ],
+      "project_ids": [
         "the-privia"
       ],
       "developer_ids": [
-        "nam-long",
         "khang-dien"
       ],
       "tags": [
+        "apartment",
+        "sold-out",
         "handover"
       ],
-      "importance": 2,
-      "summary": "Demonstrates why completed or handover records remain useful for historical research."
+      "importance": 3,
+      "summary": "Khang Điền reported that The Privia sold 100% of its apartments within three months and was entering handover/certificate procedures."
+    },
+    {
+      "id": "article-market-savills-2025",
+      "title": "Savills: HCMC 2025 apartment liquidity improves while affordability remains constrained",
+      "url": "https://www.savills.com.vn/blog/article/235335/vietnam-viet/nha-o-la-mot-phan-cua-ha-tang-quoc-gia.aspx",
+      "category": "market",
+      "subcategory": "research",
+      "content_type": "research",
+      "published_at": "2026-04-21T09:00:00+07:00",
+      "source_id": "savills-vietnam-market",
+      "region_ids": [
+        "hcmc"
+      ],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [
+        "apartment",
+        "absorption",
+        "pricing"
+      ],
+      "importance": 4,
+      "summary": "Savills cited about 8,600 new apartments, 11,500 transactions, 82% absorption and an average primary price around VND 102m/m² for HCMC in 2025."
     },
     {
       "id": "article-legal-001",
