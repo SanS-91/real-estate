@@ -30,7 +30,9 @@ by_cat = {x['category']: x for x in today['data']}
 assert by_cat['market']['count'] == len(projects['data']) == 8
 assert by_cat['legal']['count'] == len(legal['data']) == 9
 assert by_cat['infrastructure']['count'] == len(infra['data']) == 8
-assert by_cat['macro']['count'] == len(macro['data']) == 15
+assert by_cat['macro']['count'] >= 15
+assert macro['record_count'] == len(macro['data'])
+assert len(macro['data']) >= by_cat['macro']['count']
 
 joined = '\n'.join([
     json.dumps(today, ensure_ascii=False),

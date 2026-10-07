@@ -20,8 +20,11 @@ assert status["dataset_count"] == 10
 assert status["overall_status"] == "healthy"
 by_id = {x["id"]: x for x in status["datasets"]}
 
-assert by_id["macro-daily-markets"]["record_count"] == 3
-assert by_id["macro-daily-markets"]["latest_observation_period"] == "2026-10-05"
+production = json.loads((ROOT / "data/processed/macro/observations.json").read_text(encoding="utf-8"))
+daily_ids = {"usd-vnd-central-rate", "sjc-gold-buy", "sjc-gold-sell"}
+daily_rows = [row for row in production["data"] if row.get("indicator_id") in daily_ids]
+assert by_id["macro-daily-markets"]["record_count"] == len(daily_rows)
+assert by_id["macro-daily-markets"]["latest_observation_period"] == max(row["period"] for row in daily_rows)
 assert by_id["macro-monthly-statistics"]["record_count"] == 5
 assert by_id["macro-customer-rates"]["record_count"] == 4
 assert by_id["macro-policy-rates"]["record_count"] == 3

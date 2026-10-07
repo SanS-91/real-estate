@@ -12,7 +12,8 @@ for iid in ["policy-refinancing-rate","policy-rediscount-rate","policy-overnight
     assert mapping["mappings"][iid] == {"frontend_indicator_id": iid, "status": "compatible"}
 
 processed = load("data/processed/macro/observations.json")
-assert processed["record_count"] == 15
+assert processed["record_count"] == len(processed["data"])
+assert processed["record_count"] >= 15
 rows = processed["data"]
 policy = {r["indicator_id"]: r for r in rows if r["indicator_id"].startswith("policy-")}
 assert set(policy) == {"policy-refinancing-rate","policy-rediscount-rate","policy-overnight-lending-rate"}

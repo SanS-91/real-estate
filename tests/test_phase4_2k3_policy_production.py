@@ -135,21 +135,26 @@ def main():
         })
         dump(manifest_path, manifest)
 
+        base_production = load(BASE_PROCESSED / "observations.json")
+        baseline_count = base_production["record_count"]
+        assert baseline_count == len(base_production["data"])
+        assert baseline_count >= 15
+
         processed = temp / "processed"
         processed.mkdir(parents=True, exist_ok=True)
         shutil.copy2(BASE_PROCESSED / "observations.json", processed / "observations.json")
         out, report = build_production(preview_dir, processed, GATE_POLICY)
-        # Repository baseline is post-K3 persistence: the three policy records already exist.
-        # Re-running the narrow gate must be idempotent and must still hold unrelated FX.
-        assert report["prior_record_count"] == 15, report
+        # Repository production may grow after K3 as approved daily observations are appended.
+        # Re-running the narrow policy gate must remain idempotent at any later baseline.
+        assert report["prior_record_count"] == baseline_count, report
         assert report["added_record_count"] == 0, report
         assert report["unchanged_record_count"] == 3, report
-        assert report["final_record_count"] == 15, report
+        assert report["final_record_count"] == baseline_count, report
         assert {r["indicator_id"] for r in report["unchanged"]} == set(POLICY_VALUES)
         assert any(h["indicator_id"] == "usd-vnd-central-rate" and h["action"] == "hold-not-allowlisted" for h in report["held"])
         assert all(r["indicator_id"] != "interbank-on" for r in out["data"])
 
-        # Validate the full 15-record artifact against the normal production policy.
+        # Validate the full current production artifact against the normal production policy.
         cp = subprocess.run([
             sys.executable,
             str(ROOT / "scripts/validate_production.py"),
@@ -161,7 +166,7 @@ def main():
         if cp.returncode != 0:
             raise AssertionError(cp.stdout + "\n" + cp.stderr)
 
-        # Persistence simulation is idempotent against the current 15-record repository state.
+        # Persistence simulation is idempotent against the current repository state.
         repo_copy = temp / "repo-processed"
         repo_copy.mkdir(parents=True, exist_ok=True)
         shutil.copy2(BASE_PROCESSED / "observations.json", repo_copy / "observations.json")
@@ -176,9 +181,9 @@ def main():
             MAIN_POLICY,
         )
         assert persist_report["status"] == "no-change", persist_report
-        assert persist_report["prior_record_count"] == 15
+        assert persist_report["prior_record_count"] == baseline_count
         assert persist_report["added_record_count"] == 0
-        assert persist_report["final_record_count"] == 15
+        assert persist_report["final_record_count"] == baseline_count
 
         print("Phase 4.2K.3 policy production gate tests PASS")
     finally:

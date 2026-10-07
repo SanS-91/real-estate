@@ -26,7 +26,7 @@ assert 'related_real_estate_project_ids' in search
 assert 'Unable to load the integrated search datasets.' in search
 assert 'demo search datasets' not in search
 assert 'structured demo research database' not in common
-assert len(production) == 15
+assert len(production) >= 15
 
 assert 'Legal Research Topics' in market
 assert 'Open portfolio' in market

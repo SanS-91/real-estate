@@ -45,7 +45,8 @@ def main():
 
     # Home sync must not alter controlled production observations.
     processed = json.loads((ROOT / 'data/processed/macro/observations.json').read_text(encoding='utf-8'))
-    assert processed['record_count'] == 15
+    assert processed['record_count'] == len(processed['data'])
+    assert processed['record_count'] >= 15
 
     print('Phase 4.2I.5.1 UI consistency cleanup tests passed')
 
