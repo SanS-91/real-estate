@@ -23,6 +23,31 @@
     return String(value || '—').replaceAll('-', ' ').replace(/\b\w/g, char => char.toUpperCase());
   }
 
+  function isVietnamese() {
+    return String(document.documentElement.lang || 'en').toLowerCase().startsWith('vi');
+  }
+
+  function infrastructureStatusLabel(status) {
+    const key = String(status || 'unknown');
+    if (!isVietnamese()) return labelize(key);
+    const labels = {
+      'under-construction': 'Đang thi công',
+      'operational': 'Đang vận hành',
+      'land-clearance': 'Giải phóng mặt bằng',
+      'partially-operational': 'Vận hành một phần',
+      'approved': 'Đã phê duyệt',
+      'planning': 'Lập kế hoạch',
+      'proposed': 'Đề xuất',
+      'completed': 'Hoàn thành'
+    };
+    return labels[key] || labelize(key);
+  }
+
+  function infrastructureStatusBadge(status) {
+    const key = String(status || 'unknown');
+    return `<span class="status-badge status-badge--${esc(key)}">${esc(infrastructureStatusLabel(key))}</span>`;
+  }
+
   function formatCompact(value) {
     return window.Formatters?.compact?.(value) ?? (value === null || value === undefined ? '—' : String(value));
   }
@@ -48,7 +73,15 @@
   }
 
   function regionNames(project) {
-    return Resolver.getEntities('region', project.region_ids || []).map(item => item.short_name || item.name).join(', ') || '—';
+    const viNames = {
+      'hcmc': 'TPHCM',
+      'dong-nai': 'Đồng Nai',
+      'long-an': 'Long An',
+      'binh-duong': 'Bình Dương'
+    };
+    return Resolver.getEntities('region', project.region_ids || [])
+      .map(item => isVietnamese() ? (viNames[item.id] || item.name || item.short_name) : (item.short_name || item.name))
+      .join(', ') || '—';
   }
 
   function relatedRealEstate(project) {
@@ -177,18 +210,19 @@
   }
 
   function projectTable(records, limit = null) {
+    const compact = Number.isInteger(limit) && limit > 0;
     const items = limit ? records.slice(0, limit) : records;
     const rows = items.map(project => `
       <tr>
         <td><button class="table-link" type="button" data-infra-project-id="${esc(project.id)}">${esc(project.name)}</button><span class="table-subtext">${esc(project.location_text)}</span></td>
         <td>${esc(labelize(project.infrastructure_type))}</td>
         <td>${esc(regionNames(project))}</td>
-        <td>${Components.statusBadge(project.status)}</td>
+        <td>${infrastructureStatusBadge(project.status)}</td>
         <td>${progressHTML(project)}</td>
         <td>${esc(formatTarget(project.current_expected_completion))}<span class="table-subtext">${esc(project.completion_date_precision || '')}</span></td>
         <td class="numeric">${esc(String(relatedRealEstate(project).length))}</td>
       </tr>`).join('');
-    return `<div class="table-wrap"><table class="data-table data-table--infra"><thead><tr><th>Infrastructure Project</th><th>Type</th><th>Region</th><th>Status</th><th>Progress</th><th>Current Target</th><th class="numeric">Related RE</th></tr></thead><tbody>${rows || '<tr><td colspan="7" class="table-empty">No infrastructure projects match the selected filters.</td></tr>'}</tbody></table></div>`;
+    return `<div class="table-wrap${compact ? ' table-wrap--infra-overview' : ''}"><table class="data-table data-table--infra${compact ? ' data-table--infra-overview' : ''}"><thead><tr><th>Infrastructure Project</th><th>Type</th><th>Region</th><th>Status</th><th>Progress</th><th>Current Target</th><th class="numeric">Related RE</th></tr></thead><tbody>${rows || '<tr><td colspan="7" class="table-empty">No infrastructure projects match the selected filters.</td></tr>'}</tbody></table></div>`;
   }
 
   function milestoneList(records, limit = 5) {
@@ -209,9 +243,9 @@
 
     setView(`
       <div class="market-metric-grid">${metrics}</div>
-      <div class="market-layout market-layout--overview">
+      <div class="market-layout market-layout--overview market-layout--infra-overview">
         <section class="section market-panel market-panel--wide">
-          <div class="section-header"><div><span class="eyebrow">Current snapshot</span><h2 class="section-title">Key Infrastructure Projects</h2></div><a class="text-link" href="infrastructure.html?view=projects">Open database</a></div>
+          <div class="section-header"><div><span class="eyebrow">Current situation</span><h2 class="section-title">Key Infrastructure Projects</h2></div><a class="text-link" href="infrastructure.html?view=projects">Open database</a></div>
           <div class="section-body section-body--table">${projectTable([...data.infrastructureProjects].sort((a,b) => String(latestActivityDate(b.id)).localeCompare(String(latestActivityDate(a.id)))), 5)}</div>
         </section>
         <section class="section market-panel">
@@ -221,7 +255,7 @@
       </div>
       <section class="section">
         <div class="section-header"><div><span class="eyebrow">Schedule monitor</span><h2 class="section-title">Upcoming Targets</h2></div></div>
-        <div class="section-body"><div class="infra-target-grid">${upcoming.map(project => `<button class="infra-target-card" type="button" data-infra-project-id="${esc(project.id)}"><span>${esc(formatTarget(project.current_expected_completion))}</span><strong>${esc(project.name)}</strong><small>${esc(regionNames(project))} · ${esc(labelize(project.status))}</small></button>`).join('')}</div></div>
+        <div class="section-body"><div class="infra-target-grid">${upcoming.map(project => `<button class="infra-target-card" type="button" data-infra-project-id="${esc(project.id)}"><span>${esc(formatTarget(project.current_expected_completion))}</span><strong>${esc(project.name)}</strong><small>${esc(regionNames(project))} · ${esc(infrastructureStatusLabel(project.status))}</small></button>`).join('')}</div></div>
       </section>
       <section class="section">
         <div class="section-header"><div><span class="eyebrow">Evidence layer</span><h2 class="section-title">Latest Infrastructure News</h2></div><a class="text-link" href="infrastructure.html?view=news">View all</a></div>
@@ -417,6 +451,10 @@
       setView(Components.stateBox('Unable to load Infrastructure registry data. Check that the site is running through a web server.', 'error'));
     }
   }
+
+  document.addEventListener('app:language-changed', () => {
+    if (data.infrastructureProjects.length) render();
+  });
 
   document.addEventListener('DOMContentLoaded', () => {
     bindDelegatedEvents();

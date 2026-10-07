@@ -147,7 +147,8 @@
     // Market UI
     'Tracked Projects': 'Dự án theo dõi',
     'Official registry': 'Cơ sở dữ liệu chính thức',
-    'Current snapshot': 'Ảnh chụp hiện tại',
+    'Current snapshot': 'Tình hình hiện tại',
+    'Current situation': 'Tình hình hiện tại',
     'Key Infrastructure Projects': 'Dự án hạ tầng trọng điểm',
     'Open database': 'Mở cơ sở dữ liệu',
     'Recent milestones': 'Mốc gần đây',
@@ -357,6 +358,9 @@
     'Planning': 'Lập kế hoạch',
     'Approved': 'Đã phê duyệt',
     'Land Clearance': 'Giải phóng mặt bằng',
+    'land clearance': 'giải phóng mặt bằng',
+    'partially operational': 'vận hành một phần',
+    'quarter': 'quý',
     'Partially Operational': 'Vận hành một phần',
     'Completed': 'Hoàn thành',
     'under construction': 'đang thi công',
@@ -495,6 +499,7 @@
     if ((match = core.match(/^(\d+) developers$/))) return `${match[1]} chủ đầu tư`;
     if ((match = core.match(/^(\d+) documents$/))) return `${match[1]} văn bản`;
     if ((match = core.match(/^Official registry · (\d+) documents$/))) return `Cơ sở dữ liệu chính thức · ${match[1]} văn bản`;
+    if ((match = core.match(/^Official registry · (\d+) projects$/))) return `Cơ sở dữ liệu chính thức · ${match[1]} dự án`;
     if ((match = core.match(/^(\d+) legal topics$/))) return `${match[1]} chủ đề pháp lý`;
     if ((match = core.match(/^(\d+) upcoming$/))) return `${match[1]} sắp tới`;
     if ((match = core.match(/^(\d+) drafts$/))) return `${match[1]} dự thảo`;
