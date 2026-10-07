@@ -48,7 +48,7 @@ assert 'Integrated data · 4 curated modules' in home_js
 assert 'group.count_label' in components
 assert "['#today-title', 'Latest', 'Mới nhất']" in loc_static
 assert 'assets/js/home.js?v=4.3D' in index
-assert 'assets/js/localization-dynamic.js?v=4.3D' in index
+assert 'assets/js/localization-dynamic.js?v=4.3E' in index
 
 # Weekly recap contains only observations inside 01-07 Oct 2026 in this curated build.
 assert [x['date_label'] for x in weekly['data']] == ['05 Oct', '05 Oct', '03 Oct', '01 Oct']

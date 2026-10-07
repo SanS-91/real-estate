@@ -1,0 +1,137 @@
+{
+  "schema_version": 1,
+  "timezone": "Asia/Ho_Chi_Minh",
+  "principles": {
+    "on_source_failure": "retain-last-good",
+    "on_insufficient_evidence": "do-not-promote",
+    "on_missing_value": "leave-blank",
+    "synthetic_history": false,
+    "derived_layers_create_new_facts": false
+  },
+  "datasets": [
+    {
+      "id": "macro-daily-markets",
+      "module": "macro",
+      "label": "FX & Gold",
+      "update_mode": "automated-controlled",
+      "check_frequency": "daily",
+      "update_trigger": "periodic",
+      "stale_after_hours": 36,
+      "data_path": "data/processed/macro/observations.json",
+      "indicator_ids": ["usd-vnd-central-rate", "sjc-gold-buy", "sjc-gold-sell"],
+      "source_health_mode": "controlled-production",
+      "failure_behavior": "retain-last-good"
+    },
+    {
+      "id": "macro-monthly-statistics",
+      "module": "macro",
+      "label": "CPI & Banking Growth",
+      "update_mode": "automated-controlled",
+      "check_frequency": "monthly",
+      "update_trigger": "periodic-release",
+      "stale_after_hours": 1080,
+      "data_path": "data/processed/macro/observations.json",
+      "indicator_ids": ["cpi-yoy", "cpi-mom", "core-cpi-yoy", "credit-growth-ytd", "bank-funding-growth-ytd"],
+      "source_health_mode": "controlled-production",
+      "failure_behavior": "retain-last-good"
+    },
+    {
+      "id": "macro-customer-rates",
+      "module": "macro",
+      "label": "Customer Deposit & Lending Rates",
+      "update_mode": "corroborated-controlled",
+      "check_frequency": "monthly",
+      "update_trigger": "periodic-release",
+      "stale_after_hours": 1080,
+      "data_path": "data/processed/macro/observations.json",
+      "indicator_ids": ["deposit-rate-vnd-6-12m-low", "deposit-rate-vnd-6-12m-high", "lending-rate-vnd-average-low", "lending-rate-vnd-average-high"],
+      "source_health_mode": "controlled-production",
+      "failure_behavior": "retain-last-good"
+    },
+    {
+      "id": "macro-policy-rates",
+      "module": "macro",
+      "label": "SBV Policy Rates",
+      "update_mode": "two-source-corroborated",
+      "check_frequency": "weekly",
+      "update_trigger": "event-driven",
+      "stale_after_hours": 192,
+      "data_path": "data/processed/macro/observations.json",
+      "indicator_ids": ["policy-refinancing-rate", "policy-rediscount-rate", "policy-overnight-lending-rate"],
+      "source_health_mode": "controlled-production",
+      "failure_behavior": "retain-last-good",
+      "notes": "Observation period may be old while the current policy state remains valid; freshness is based on registry/publish refresh, not the effective date."
+    },
+    {
+      "id": "legal-registry",
+      "module": "legal",
+      "label": "Official Legal Registry",
+      "update_mode": "curated-manual",
+      "check_frequency": "weekly",
+      "update_trigger": "event-driven",
+      "stale_after_hours": 192,
+      "data_path": "data/mock/legal/documents.json",
+      "source_health_mode": "manual-curated",
+      "failure_behavior": "retain-last-good"
+    },
+    {
+      "id": "infrastructure-registry",
+      "module": "infrastructure",
+      "label": "Infrastructure Project Registry",
+      "update_mode": "curated-manual",
+      "check_frequency": "weekly",
+      "update_trigger": "milestone-driven",
+      "stale_after_hours": 192,
+      "data_path": "data/mock/infrastructure/projects.json",
+      "source_health_mode": "manual-curated",
+      "failure_behavior": "retain-last-good"
+    },
+    {
+      "id": "market-project-registry",
+      "module": "market",
+      "label": "Market Projects & Developers",
+      "update_mode": "curated-manual",
+      "check_frequency": "weekly",
+      "update_trigger": "project-driven",
+      "stale_after_hours": 192,
+      "data_path": "data/mock/market/projects.json",
+      "source_health_mode": "manual-curated",
+      "failure_behavior": "retain-last-good"
+    },
+    {
+      "id": "market-benchmarks",
+      "module": "market",
+      "label": "Supply, Sales & Pricing Benchmarks",
+      "update_mode": "curated-research",
+      "check_frequency": "monthly",
+      "update_trigger": "research-release",
+      "stale_after_hours": 1080,
+      "data_path": "data/mock/market/observations.json",
+      "source_health_mode": "manual-curated",
+      "failure_behavior": "retain-last-good",
+      "notes": "Keep market benchmarks separate from developer-stated project observations; do not infer unpublished sales."
+    },
+    {
+      "id": "home-derived",
+      "module": "home",
+      "label": "Home Integrated Snapshot",
+      "update_mode": "derived",
+      "check_frequency": "on-data-change",
+      "update_trigger": "derived",
+      "depends_on": ["macro-daily-markets", "macro-monthly-statistics", "macro-customer-rates", "macro-policy-rates", "legal-registry", "infrastructure-registry", "market-project-registry", "market-benchmarks"],
+      "source_health_mode": "derived",
+      "failure_behavior": "retain-last-good"
+    },
+    {
+      "id": "search-index",
+      "module": "search",
+      "label": "Integrated Search & Cross-links",
+      "update_mode": "derived-runtime",
+      "check_frequency": "on-data-change",
+      "update_trigger": "derived",
+      "depends_on": ["macro-daily-markets", "macro-monthly-statistics", "macro-customer-rates", "macro-policy-rates", "legal-registry", "infrastructure-registry", "market-project-registry", "market-benchmarks"],
+      "source_health_mode": "derived",
+      "failure_behavior": "retain-last-good"
+    }
+  ]
+}
