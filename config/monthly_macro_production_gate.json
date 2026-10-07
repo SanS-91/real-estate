@@ -1,0 +1,27 @@
+{
+  "schema_version": 1,
+  "mode": "controlled-production-v1",
+  "production_write": true,
+  "repository_publish": false,
+  "frontend_publish": false,
+  "allowed_readiness_statuses": ["ready-canonical"],
+  "logical_key_fields": ["indicator_id", "period_type", "period"],
+  "conflict_rule": "fail-on-existing-logical-key-change",
+  "record_drop_rule": "forbid",
+  "atomic_write": true,
+  "rollback_snapshot": true,
+  "max_snapshots": 10,
+  "notes": [
+    "Phase 4.5A narrow monthly gate for official NSO macro statistics.",
+    "Only CPI YoY, CPI MoM, core CPI YoY, credit growth YTD, and bank funding growth YTD are eligible.",
+    "Each fact must be verified from the preferred official NSO source and use a monthly observation period.",
+    "All customer rates, policy rates, interbank rates, daily FX and gold remain outside this automatic monthly gate."
+  ],
+  "allowed_indicators": {
+    "cpi-yoy": {"allowed_sources": ["nso-vietnam"], "required_readiness_statuses": ["ready-canonical"], "required_evidence_status": "verified", "required_period_type": "month"},
+    "cpi-mom": {"allowed_sources": ["nso-vietnam"], "required_readiness_statuses": ["ready-canonical"], "required_evidence_status": "verified", "required_period_type": "month"},
+    "core-cpi-yoy": {"allowed_sources": ["nso-vietnam"], "required_readiness_statuses": ["ready-canonical"], "required_evidence_status": "verified", "required_period_type": "month"},
+    "credit-growth-ytd": {"allowed_sources": ["nso-vietnam"], "required_readiness_statuses": ["ready-canonical"], "required_evidence_status": "verified", "required_period_type": "month"},
+    "bank-funding-growth-ytd": {"allowed_sources": ["nso-vietnam"], "required_readiness_statuses": ["ready-canonical"], "required_evidence_status": "verified", "required_period_type": "month"}
+  }
+}

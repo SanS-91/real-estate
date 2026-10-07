@@ -1,0 +1,24 @@
+{
+  "schema_version": 1,
+  "mode": "controlled-monthly-auto-persistence-v1",
+  "repository_publish": true,
+  "frontend_publish": false,
+  "timezone": "Asia/Ho_Chi_Minh",
+  "source_workflow": "macro-candidate.yml",
+  "source_artifact_prefix": "macro-production-",
+  "logical_key_fields": ["indicator_id", "period_type", "period"],
+  "allowed_indicator_ids": ["cpi-yoy", "cpi-mom", "core-cpi-yoy", "credit-growth-ytd", "bank-funding-growth-ytd"],
+  "allowed_source_hosts": ["nso.gov.vn", "www.nso.gov.vn"],
+  "max_additions_per_run": 5,
+  "max_period_lag_months": 2,
+  "require_prior_count_match": true,
+  "require_monotonic_source_run_number": true,
+  "on_source_failure": "retain-last-good",
+  "notes": [
+    "Phase 4.5A auto-persistence is intentionally narrower than the full production allowlist.",
+    "Only verified official NSO monthly statistics can be appended automatically.",
+    "Existing logical keys are immutable; revised/conflicting values stop the run instead of overwriting history.",
+    "Partial official release bundles are allowed: verified CPI or banking-growth facts may append independently when available.",
+    "Customer rates, policy rates, daily FX/gold and interbank rates remain governed by their separate paths."
+  ]
+}

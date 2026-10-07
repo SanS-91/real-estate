@@ -50,7 +50,13 @@
         "bank-funding-growth-ytd"
       ],
       "source_health_mode": "controlled-production",
-      "failure_behavior": "retain-last-good"
+      "failure_behavior": "retain-last-good",
+      "repository_persistence": "automatic-narrow-gate",
+      "schedule_ict": [
+        "10:45 daily on days 1-10 of each month"
+      ],
+      "auto_publish_requires": "verified-official-nso",
+      "notes": "Only verified official NSO CPI/Core CPI and credit/funding growth facts auto-persist. Existing logical keys are immutable; source failure, missing data, stale periods or conflicts retain the last good repository state."
     },
     {
       "id": "macro-customer-rates",

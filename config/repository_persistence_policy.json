@@ -10,7 +10,11 @@
   "expected_source_repository_publish": false,
   "repository_publish": true,
   "frontend_publish": false,
-  "logical_key_fields": ["indicator_id", "period_type", "period"],
+  "logical_key_fields": [
+    "indicator_id",
+    "period_type",
+    "period"
+  ],
   "forbid_record_drop": true,
   "forbid_historical_mutation": true,
   "require_prior_count_match_for_changes": true,
@@ -20,9 +24,10 @@
     "data/processed/macro/repository-publish.json"
   ],
   "notes": [
-    "Phase 4.2F is a separate manual persistence gate. Scheduled collector runs still cannot push to the repository.",
+    "Phase 4.2F remains the generic manual persistence gate for production artifacts that are not covered by a later narrow automatic gate.",
+    "Phase 4.4E daily FX/gold and Phase 4.5A verified NSO monthly statistics use separate append-only auto-persistence policies; this manual policy is unchanged for all other indicators.",
     "Only a successful macro-production artifact from the main branch may be persisted.",
-    "The frontend remains disconnected from data/processed in this phase.",
+    "The frontend remains disconnected from direct workflow writes; it reads committed repository data.",
     "Git history is the repository-level rollback mechanism; workflow-only _snapshots are not committed."
   ]
 }
