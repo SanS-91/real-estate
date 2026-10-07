@@ -11,7 +11,7 @@ assert "cron: '45 0 * * *'" in workflow
 assert "permissions:\n  contents: read" in workflow
 assert "build_update_status.py" in workflow
 assert "write_update_status_summary.py" in workflow
-assert "upload-artifact@v4" in workflow
+assert "upload-artifact@v7" in workflow
 
 for forbidden in [
     "git push", "git commit", "contents: write", "candidate_pipeline.py",
