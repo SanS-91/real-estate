@@ -36,7 +36,7 @@ assert all(x.get('source_url','').startswith('https://') for x in schedules['dat
 assert 'Curated official registry.' in html
 assert 'Implementation demo.' not in html
 assert 'assets/js/infrastructure.js?v=4.3B1' in html
-assert 'assets/css/main.css?v=4.3B1' in html
+assert 'assets/css/main.css?v=4.3STACK1' in html
 assert 'Official registry · ${data.infrastructureProjects.length} projects' in js
 assert 'Infrastructure demo data' not in js
 loc=(ROOT/'assets/js/localization-dynamic.js').read_text(encoding='utf-8')

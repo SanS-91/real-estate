@@ -12,7 +12,7 @@ assert ".table-wrap--legal-overview { overflow-x: hidden; }" in css
 assert "min-width: 0;" in css
 assert "table-layout: fixed;" in css
 assert "td:nth-child(2) { width: 40%; }" in css
-assert 'assets/css/main.css?v=4.3A4' in html
+assert 'assets/css/main.css?v=4.3STACK1' in html
 assert 'assets/js/legal.js?v=4.3A4' in html
 
 # Normal legal table must remain wide for the full Documents view.

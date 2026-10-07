@@ -1348,3 +1348,17 @@ button, a, input, select { outline-offset: 3px; }
 @media (max-width: 1199px) {
   .market-layout--infra-overview { grid-template-columns: 1fr; }
 }
+
+/* Phase 4.3 UI rule · Overview primary/secondary content stacks vertically */
+.market-layout--legal-overview,
+.market-layout--infra-overview {
+  grid-template-columns: minmax(0, 1fr);
+  gap: 18px;
+}
+.market-layout--legal-overview > .market-panel,
+.market-layout--infra-overview > .market-panel {
+  width: 100%;
+  min-width: 0;
+}
+.market-panel--legal-timeline .section-header .eyebrow { font-size: 11px; }
+.market-panel--legal-timeline .section-header .section-title { font-size: 18px; }
