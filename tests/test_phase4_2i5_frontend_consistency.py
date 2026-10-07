@@ -66,9 +66,9 @@ def main():
     assert '.metric-grid--controlled { grid-template-columns: repeat(4, minmax(0, 1fr)); }' in css
 
     index = (ROOT / 'index.html').read_text(encoding='utf-8')
-    assert 'home.js?v=4.2J3' in index
-    assert 'main.css?v=4.2I5' in index
-    assert 'localization-dynamic.js?v=4.2J3' in index
+    assert 'home.js?v=4.3D' in index
+    assert 'main.css?v=4.3D' in index
+    assert 'localization-dynamic.js?v=4.3D' in index
 
     mapping = json.loads((ROOT / 'config/frontend_indicator_map.json').read_text(encoding='utf-8'))
     assert mapping['frontend_baseline'] == 'v7.2.1+4.2J3.2+4.2K4'

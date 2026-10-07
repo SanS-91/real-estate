@@ -43,7 +43,7 @@
         <div class="today-card__header">
           <div>
             <div class="eyebrow">${escapeHTML(group.label)}</div>
-            <div class="today-card__count">${escapeHTML(group.count)} updates</div>
+            <div class="today-card__count">${escapeHTML(group.count_label || `${group.count} updates`)}</div>
           </div>
           <a class="text-link" href="${escapeHTML(group.href || '#')}">View all</a>
         </div>

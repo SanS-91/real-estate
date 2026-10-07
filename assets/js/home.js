@@ -10,7 +10,8 @@
     ['deposit-rate-vnd-6-12m-low', { unit: 'percent-per-year', evidenceStatus: 'corroborated', sources: ['vnba', 'vna-vietnamplus'] }],
     ['deposit-rate-vnd-6-12m-high', { unit: 'percent-per-year', evidenceStatus: 'corroborated', sources: ['vnba', 'vna-vietnamplus'] }],
     ['lending-rate-vnd-average-low', { unit: 'percent-per-year', evidenceStatus: 'corroborated', sources: ['vnba', 'vna-vietnamplus'] }],
-    ['lending-rate-vnd-average-high', { unit: 'percent-per-year', evidenceStatus: 'corroborated', sources: ['vnba', 'vna-vietnamplus'] }]
+    ['lending-rate-vnd-average-high', { unit: 'percent-per-year', evidenceStatus: 'corroborated', sources: ['vnba', 'vna-vietnamplus'] }],
+    ['policy-refinancing-rate', { unit: 'percent-per-year', evidenceStatus: 'corroborated', sources: ['vna-vietnamplus', 'banking-times-vn'] }]
   ]);
   const HOME_RATE_RANGES = [
     {
@@ -37,7 +38,8 @@
     'sjc-gold-sell': 'Domestic Gold Sell',
     'credit-growth-ytd': 'Credit Growth YTD',
     'bank-funding-growth-ytd': 'Bank Funding Growth YTD',
-    'cpi-yoy': 'CPI YoY'
+    'cpi-yoy': 'CPI YoY',
+    'policy-refinancing-rate': 'Policy Refinancing Rate'
   };
 
   let productionPromise = null;
@@ -94,11 +96,11 @@
     if (productionPromise) return productionPromise;
     productionPromise = Promise.all([
       DataStore.getProcessedMacroObservations().catch(error => {
-        console.warn('[home] processed macro observations unavailable; keeping demo macro snapshot.', error);
+        console.warn('[home] processed macro observations unavailable; using blank macro fallback.', error);
         return null;
       }),
       DataStore.getProcessedMacroPublishMeta().catch(error => {
-        console.warn('[home] processed macro publish metadata unavailable; keeping demo macro snapshot.', error);
+        console.warn('[home] processed macro publish metadata unavailable; using blank macro fallback.', error);
         return null;
       })
     ]).then(([payload, publishMeta]) => {
@@ -167,6 +169,12 @@
       return row ? productionCard(row) : card;
     });
 
+    const policyRefi = production.latest.get('policy-refinancing-rate');
+    if (policyRefi) {
+      const lendingIndex = cards.findIndex(card => card.id === 'lending-range' || card.id === 'lending-demo');
+      cards.splice(lendingIndex >= 0 ? lendingIndex + 1 : cards.length, 0, productionCard(policyRefi));
+    }
+
     const bankFunding = production.latest.get('bank-funding-growth-ytd');
     if (bankFunding) {
       const creditIndex = cards.findIndex(card => card.id === 'credit-growth-ytd' || card.id === 'credit-demo');
@@ -232,14 +240,14 @@
     try {
       const [payload, production] = await Promise.all([DataStore.getMeta(), loadHomeProduction()]);
       if (production.active) {
-        setText('[data-home-updated]', `Mixed data · ${production.totalRecordCount} controlled macro records`);
+        setText('[data-home-updated]', `Integrated data · 4 curated modules · ${production.totalRecordCount} macro records`);
         return;
       }
       const date = payload?.last_successful_build;
-      setText('[data-home-updated]', date ? `Demo data · ${App.formatDate(date)}` : 'Demo data');
+      setText('[data-home-updated]', date ? `Curated registries · ${App.formatDate(date)}` : 'Curated registries');
     } catch (error) {
       console.warn('Meta unavailable', error);
-      setText('[data-home-updated]', 'Demo data');
+      setText('[data-home-updated]', 'Curated registries');
     }
   }
 

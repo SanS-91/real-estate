@@ -1,61 +1,63 @@
 {
-  "schema_version": 1,
-  "generated_at": "2026-10-03T16:45:00+07:00",
-  "is_mock": true,
+  "schema_version": 2,
+  "build_id": "phase4.3d-home-sync-20261007",
+  "generated_at": "2026-10-07T13:30:00+07:00",
+  "is_mock": false,
+  "fallback_only": true,
   "data": [
     {
       "id": "usd-vnd-demo",
-      "label": "USD/VND",
-      "display_value": "26,240",
-      "change_label": "+0.2%",
-      "change_direction": "up",
-      "period_label": "VND/USD · Demo snapshot",
-      "source": "Demo"
+      "label": "USD/VND Central Rate",
+      "display_value": "—",
+      "change_label": "Unavailable",
+      "change_direction": "neutral",
+      "period_label": "No production data",
+      "source": "Unavailable"
     },
     {
       "id": "gold-demo",
-      "label": "Domestic Gold",
-      "display_value": "145.1 mn",
-      "change_label": "+0.6%",
-      "change_direction": "up",
-      "period_label": "VND/tael · Demo",
-      "source": "Demo"
+      "label": "Domestic Gold Sell",
+      "display_value": "—",
+      "change_label": "Unavailable",
+      "change_direction": "neutral",
+      "period_label": "No production data",
+      "source": "Unavailable"
     },
     {
       "id": "deposit-demo",
-      "label": "12M Deposit Rate",
-      "display_value": "5.3% p.a.",
-      "change_label": "+0.05 ppt",
-      "change_direction": "up",
-      "period_label": "Illustrative average",
-      "source": "Demo"
+      "label": "VND Deposit Rate 6–12M",
+      "display_value": "—",
+      "change_label": "Unavailable",
+      "change_direction": "neutral",
+      "period_label": "No production data",
+      "source": "Unavailable"
     },
     {
       "id": "lending-demo",
-      "label": "Average Lending Rate",
-      "display_value": "8.1% p.a.",
-      "change_label": "0.00 ppt",
+      "label": "Average VND Lending Rate Range",
+      "display_value": "—",
+      "change_label": "Unavailable",
       "change_direction": "neutral",
-      "period_label": "Illustrative average",
-      "source": "Demo"
+      "period_label": "No production data",
+      "source": "Unavailable"
     },
     {
       "id": "credit-demo",
-      "label": "Credit Growth",
-      "display_value": "10.2%",
-      "change_label": "+0.8 ppt",
-      "change_direction": "up",
-      "period_label": "YTD · Demo",
-      "source": "Demo"
+      "label": "Credit Growth YTD",
+      "display_value": "—",
+      "change_label": "Unavailable",
+      "change_direction": "neutral",
+      "period_label": "No production data",
+      "source": "Unavailable"
     },
     {
       "id": "cpi-demo",
       "label": "CPI YoY",
-      "display_value": "3.8%",
-      "change_label": "-0.1 ppt",
-      "change_direction": "down",
-      "period_label": "Monthly · Demo",
-      "source": "Demo"
+      "display_value": "—",
+      "change_label": "Unavailable",
+      "change_direction": "neutral",
+      "period_label": "No production data",
+      "source": "Unavailable"
     }
   ]
 }

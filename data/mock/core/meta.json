@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "last_successful_build": "2026-10-07T10:30:00+07:00",
+  "last_successful_build": "2026-10-07T13:30:00+07:00",
   "is_mock": true,
   "categories": {
     "market": {
@@ -18,5 +18,6 @@
     "macro": {
       "updated_at": "2026-10-03T16:45:00+07:00"
     }
-  }
+  },
+  "home_mode": "integrated-curated-real-data"
 }

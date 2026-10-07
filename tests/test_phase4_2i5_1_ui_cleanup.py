@@ -13,18 +13,16 @@ def latest_pair(rows, indicator_id):
 
 
 def main():
-    home = json.loads((ROOT / 'data/mock/home/indicators.json').read_text(encoding='utf-8'))['data']
+    home_payload = json.loads((ROOT / 'data/mock/home/indicators.json').read_text(encoding='utf-8'))
+    home = home_payload['data']
     home_by_id = {row['id']: row for row in home}
-    macro = json.loads((ROOT / 'data/mock/macro/observations.json').read_text(encoding='utf-8'))['data']
 
-    deposit_current, deposit_previous = latest_pair(macro, 'deposit-rate-12m-average')
-    lending_current, lending_previous = latest_pair(macro, 'lending-rate-average')
-
-    assert home_by_id['deposit-demo']['display_value'] == f"{deposit_current['value']:.1f}% p.a."
-    assert home_by_id['deposit-demo']['change_label'] == f"{deposit_current['value'] - deposit_previous['value']:+.2f} ppt"
-    assert home_by_id['lending-demo']['label'] == 'Average Lending Rate'
-    assert home_by_id['lending-demo']['display_value'] == f"{lending_current['value']:.1f}% p.a."
-    assert home_by_id['lending-demo']['change_label'] == f"{lending_current['value'] - lending_previous['value']:.2f} ppt"
+    # Phase 4.3D removes fabricated Home fallback values. If controlled Macro
+    # production cannot load, the cards stay blank instead of reverting to demo data.
+    assert home_payload.get('fallback_only') is True
+    for key in ['deposit-demo', 'lending-demo', 'usd-vnd-demo', 'gold-demo', 'credit-demo', 'cpi-demo']:
+        assert home_by_id[key]['display_value'] == '—'
+        assert home_by_id[key]['source'] == 'Unavailable'
 
     dynamic = (ROOT / 'assets/js/localization-dynamic.js').read_text(encoding='utf-8')
     assert "'Average Lending Rate': 'Lãi suất cho vay bình quân'" in dynamic
@@ -36,8 +34,8 @@ def main():
 
     index = (ROOT / 'index.html').read_text(encoding='utf-8')
     macro_html = (ROOT / 'macro.html').read_text(encoding='utf-8')
-    assert 'home.js?v=4.2J3' in index
-    assert 'localization-dynamic.js?v=4.2J3' in index
+    assert 'home.js?v=4.3D' in index
+    assert 'localization-dynamic.js?v=4.3D' in index
     assert 'macro.js?v=4.2K4' in macro_html
     assert 'localization-dynamic.js?v=4.2K4' in macro_html
     assert 'ui=4.2J3.2' in macro_html
@@ -45,9 +43,9 @@ def main():
     mapping = json.loads((ROOT / 'config/frontend_indicator_map.json').read_text(encoding='utf-8'))
     assert mapping['frontend_baseline'] == 'v7.2.1+4.2J3.2+4.2K4'
 
-    # This cleanup must not alter controlled production observations.
+    # Home sync must not alter controlled production observations.
     processed = json.loads((ROOT / 'data/processed/macro/observations.json').read_text(encoding='utf-8'))
-    assert processed['record_count'] >= 8
+    assert processed['record_count'] == 15
 
     print('Phase 4.2I.5.1 UI consistency cleanup tests passed')
 

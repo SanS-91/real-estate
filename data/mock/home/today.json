@@ -1,46 +1,83 @@
 {
-  "schema_version": 1,
-  "generated_at": "2026-10-03T14:15:00+07:00",
-  "is_mock": true,
+  "schema_version": 2,
+  "build_id": "phase4.3d-home-sync-20261007",
+  "generated_at": "2026-10-07T13:30:00+07:00",
+  "is_mock": false,
   "data": [
     {
       "category": "market",
       "label": "Market",
-      "count": 7,
-      "href": "market.html?view=news",
+      "count": 8,
+      "count_label": "8 curated projects",
+      "href": "market.html?view=projects",
       "items": [
-        { "title": "Sample township launch activity updated", "meta": "Dong Nai · Demo", "href": "market.html?view=projects" },
-        { "title": "Illustrative pricing snapshot refreshed", "meta": "Primary market · Demo", "href": "market.html?view=pricing" }
+        {
+          "title": "Nam Long Experience 2026 showcases Waterpoint, Mizuki Park and Izumi City",
+          "meta": "07 Sep 2026 · Nam Long",
+          "href": "market.html?view=news"
+        },
+        {
+          "title": "CBRE: HCMC Q2/2026 condominium launches fall to 850 units",
+          "meta": "12 Aug 2026 · CBRE Vietnam",
+          "href": "market.html?view=supply-sales"
+        }
       ]
     },
     {
       "category": "legal",
       "label": "Legal",
-      "count": 2,
+      "count": 9,
+      "count_label": "9 official documents",
       "href": "legal.html?view=documents",
       "items": [
-        { "title": "Sample land regulation record added", "meta": "Official document · Demo", "href": "legal.html?view=documents" },
-        { "title": "Illustrative effective-date tracker updated", "meta": "Next 90 days · Demo", "href": "legal.html?view=effective-soon" }
+        {
+          "title": "226/2025/NĐ-CP · Amendments to Land Law implementation decrees",
+          "meta": "Effective 15 Aug 2025 · Government",
+          "href": "legal.html?view=documents"
+        },
+        {
+          "title": "102/2024/NĐ-CP · Detailed implementation of the Land Law",
+          "meta": "Effective 01 Aug 2024 · Government",
+          "href": "legal.html?view=documents"
+        }
       ]
     },
     {
       "category": "infrastructure",
       "label": "Infrastructure",
-      "count": 3,
-      "href": "infrastructure.html?view=timeline",
+      "count": 8,
+      "count_label": "8 infrastructure projects",
+      "href": "infrastructure.html?view=projects",
       "items": [
-        { "title": "Sample ring-road construction milestone", "meta": "Regional connectivity · Demo", "href": "infrastructure.html?view=projects" },
-        { "title": "Illustrative completion target revised", "meta": "Schedule update · Demo", "href": "infrastructure.html?view=timeline" }
+        {
+          "title": "Bến Lức – Long Thành expressway opens along the full route",
+          "meta": "01 Oct 2026 · Government",
+          "href": "infrastructure.html?view=timeline"
+        },
+        {
+          "title": "Government calls for Ring Road 4 land-clearance and funding bottlenecks to be resolved",
+          "meta": "28 Aug 2026 · Government",
+          "href": "infrastructure.html?view=timeline"
+        }
       ]
     },
     {
       "category": "macro",
       "label": "Macro",
-      "count": 4,
+      "count": 15,
+      "count_label": "15 production records",
       "href": "macro.html?view=overview",
       "items": [
-        { "title": "Benchmark market indicators refreshed", "meta": "Rates / FX / Gold · Demo", "href": "macro.html?view=overview" },
-        { "title": "Illustrative inflation observation added", "meta": "Monthly series · Demo", "href": "macro.html?view=inflation" }
+        {
+          "title": "USD/VND central rate at 25,643",
+          "meta": "05 Oct 2026 · Corroborated",
+          "href": "macro.html?view=fx"
+        },
+        {
+          "title": "Domestic gold selling price at VND 143.5 mn/tael",
+          "meta": "05 Oct 2026 · Corroborated",
+          "href": "macro.html?view=gold"
+        }
       ]
     }
   ]

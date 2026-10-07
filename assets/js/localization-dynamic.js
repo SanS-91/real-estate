@@ -142,6 +142,39 @@
     'Demo': 'Mô phỏng',
     'DEMO': 'MÔ PHỎNG',
     'Demo data': 'Dữ liệu mô phỏng',
+    'Integrated data': 'Dữ liệu tích hợp',
+    'Curated registries': 'Cơ sở dữ liệu tuyển chọn',
+    'Unavailable': 'Chưa khả dụng',
+    'No production data': 'Chưa có dữ liệu production',
+    '8 curated projects': '8 dự án tuyển chọn',
+    '9 official documents': '9 văn bản chính thức',
+    '8 infrastructure projects': '8 dự án hạ tầng',
+    '15 production records': '15 bản ghi production',
+    'Nam Long Experience 2026 showcases Waterpoint, Mizuki Park and Izumi City': 'Nam Long Experience 2026 giới thiệu Waterpoint, Mizuki Park và Izumi City',
+    'CBRE: HCMC Q2/2026 condominium launches fall to 850 units': 'CBRE: Nguồn cung căn hộ mở bán mới tại TPHCM Q2/2026 giảm còn 850 căn',
+    '226/2025/NĐ-CP · Amendments to Land Law implementation decrees': '226/2025/NĐ-CP · Sửa đổi các nghị định hướng dẫn thi hành Luật Đất đai',
+    '102/2024/NĐ-CP · Detailed implementation of the Land Law': '102/2024/NĐ-CP · Quy định chi tiết thi hành Luật Đất đai',
+    'Bến Lức – Long Thành expressway opens along the full route': 'Cao tốc Bến Lức – Long Thành thông xe toàn tuyến',
+    'Government calls for Ring Road 4 land-clearance and funding bottlenecks to be resolved': 'Chính phủ yêu cầu gỡ vướng mặt bằng và nguồn vốn cho Vành đai 4 TPHCM',
+    'USD/VND central rate at 25,643': 'Tỷ giá trung tâm USD/VND ở mức 25.643',
+    'Domestic gold selling price at VND 143.5 mn/tael': 'Giá bán vàng trong nước ở mức 143,5 triệu đồng/lượng',
+    'The expressway moved to operational status after the full-route opening reported by the Government source.': 'Tuyến cao tốc chuyển sang trạng thái vận hành sau khi nguồn Chính phủ xác nhận thông xe toàn tuyến.',
+    'HCMC apartment new supply falls to 850 units': 'Nguồn cung căn hộ mới tại TPHCM giảm còn 850 căn',
+    'CBRE reports 850 new condominium units in Q2/2026, down from 1,642 units in Q1/2026. Sales remain blank where the source does not publish a comparable figure.': 'CBRE ghi nhận 850 căn hộ mở bán mới trong Q2/2026, giảm từ 1.642 căn trong Q1/2026. Doanh số được để trống khi nguồn không công bố số liệu có thể so sánh.',
+    'Decree 226/2025/NĐ-CP amends Land Law implementation decrees': 'Nghị định 226/2025/NĐ-CP sửa đổi các nghị định hướng dẫn Luật Đất đai',
+    'The official Government document updates parts of the detailed Land Law implementation framework and is tracked together with the original decrees.': 'Văn bản chính thức của Chính phủ cập nhật một số nội dung trong hệ thống nghị định hướng dẫn Luật Đất đai và được theo dõi cùng các nghị định gốc.',
+    'USD/VND central rate recorded at 25,643': 'Tỷ giá trung tâm USD/VND ghi nhận 25.643',
+    'Latest controlled production observation, corroborated by the approved source set.': 'Quan sát production có kiểm soát mới nhất, đã được đối chiếu theo bộ nguồn được phê duyệt.',
+    'Domestic gold selling price recorded at VND 143.5 mn/tael': 'Giá bán vàng trong nước ghi nhận 143,5 triệu đồng/lượng',
+    'Latest corroborated gold observation in the controlled production repository.': 'Quan sát giá vàng mới nhất đã được đối chiếu trong kho production có kiểm soát.',
+    'September CPI YoY recorded at 5.08%': 'CPI tháng 9 so với cùng kỳ ghi nhận 5,08%',
+    'NSO September 2026 CPI observation is stored as a verified production record.': 'Quan sát CPI tháng 9/2026 của NSO được lưu dưới dạng bản ghi production đã xác minh.',
+    'The latest infrastructure milestone changes the project status to operational in the curated registry.': 'Mốc hạ tầng mới nhất chuyển trạng thái dự án sang vận hành trong cơ sở dữ liệu tuyển chọn.',
+    'Effective 15 Aug 2025 · Government': 'Hiệu lực 15 Aug 2025 · Chính phủ',
+    'Effective 01 Aug 2024 · Government': 'Hiệu lực 01 Aug 2024 · Chính phủ',
+    '01 Oct 2026 · Government': '01 Oct 2026 · Chính phủ',
+    '28 Aug 2026 · Government': '28 Aug 2026 · Chính phủ',
+    '05 Oct 2026 · Corroborated': '05 Oct 2026 · Đã đối chiếu',
     'Meta unavailable': 'Không có metadata',
 
     // Market UI
@@ -520,6 +553,8 @@
     if ((match = core.match(/^(\d+) days ago$/))) return `${match[1]} ngày trước`;
     if ((match = core.match(/^Demo data · (.+)$/))) return `Dữ liệu mô phỏng · ${match[1]}`;
     if ((match = core.match(/^Controlled macro · (\d+) production records$/))) return `Vĩ mô kiểm soát · ${match[1]} bản ghi production`;
+    if ((match = core.match(/^Integrated data · 4 curated modules · (\d+) macro records$/))) return `Dữ liệu tích hợp · 4 module thực · ${match[1]} bản ghi vĩ mô`;
+    if ((match = core.match(/^Curated registries · (.+)$/))) return `Cơ sở dữ liệu tuyển chọn · ${match[1]}`;
     if ((match = core.match(/^Mixed data · (\d+) controlled macro records$/))) return `Dữ liệu hỗn hợp · ${match[1]} bản ghi vĩ mô có kiểm soát`;
     if ((match = core.match(/^Published (.+)$/))) return `Công bố ${match[1]}`;
     if ((match = core.match(/^Announced (.+)$/))) return `Công bố ${match[1]}`;
