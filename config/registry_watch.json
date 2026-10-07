@@ -1,0 +1,30 @@
+{
+  "schema_version": 1,
+  "mode": "assisted-registry-watch-v1",
+  "timeout_seconds": 12,
+  "max_workers": 6,
+  "user_agent": "VietnamRealEstateMarketIntelligence/1.0 (+GitHub Actions source watch)",
+  "failure_behavior": "retain-last-good",
+  "auto_publish": false,
+  "modules": {
+    "legal": {
+      "canonical_path": "data/mock/legal/documents.json",
+      "url_field": "official_url",
+      "entity_id_field": "id",
+      "discovery_pages": ["https://vanban.chinhphu.vn/"],
+      "discovery_keywords": ["đất đai","nhà ở","bất động sản","giá đất","tiền sử dụng đất","tiền thuê đất"]
+    },
+    "infrastructure": {
+      "canonical_path": "data/mock/infrastructure/schedules.json",
+      "url_field": "source_url",
+      "entity_id_field": "project_id",
+      "discovery_pages": ["https://baochinhphu.vn/","https://tphcm.baochinhphu.vn/"],
+      "discovery_keywords": ["vành đai","cao tốc","sân bay","metro","cầu","đường sắt","giao thông","long thành"]
+    }
+  },
+  "notes": [
+    "Candidate/review only. The watcher never edits curated registries.",
+    "Source fingerprints are stored in GitHub Actions cache.",
+    "Discovery links require human review before any canonical update."
+  ]
+}
