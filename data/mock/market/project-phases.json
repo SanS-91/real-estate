@@ -1,8 +1,8 @@
 {
   "schema_version": 1,
   "build_id": "phase4.3c-market-registry-20261007",
-  "generated_at": "2026-10-07T10:30:00+07:00",
-  "record_count": 5,
+  "generated_at": "2026-10-07T21:55:00+07:00",
+  "record_count": 8,
   "data": [
     {
       "id": "izumi-gardenia",
@@ -77,6 +77,50 @@
       "status": "selling",
       "official_url": "https://masterisehomes.com/the-global-city/vi/soho",
       "primary_source_id": "masterise-homes-official"
+    },
+    {
+      "id": "the-9-stellars-phase-1",
+      "project_id": "the-9-stellars",
+      "name": "Phase 1",
+      "phase_type": "development-phase",
+      "segment_ids": [
+        "apartment",
+        "landed"
+      ],
+      "planned_units": 295,
+      "launch_date": null,
+      "status": "ongoing",
+      "known_units_note": "216 apartments + 79 villas per SonKim Land official project page.",
+      "official_url": "https://sonkimland.vn/vi/chi-tiet-ve-du-an/the-9-stellars-1",
+      "primary_source_id": "sonkim-land-official"
+    },
+    {
+      "id": "celesta-gold-phase-3",
+      "project_id": "celesta-gold",
+      "name": "Celesta Gold – Phase 3",
+      "phase_type": "development-phase",
+      "segment_ids": [
+        "apartment"
+      ],
+      "planned_units": 420,
+      "launch_date": "2026-05-07",
+      "status": "construction",
+      "official_url": "https://phulong.com/celesta-gold-khoi-cong-tren-truc-nguyen-huu-tho-tiep-noi-hanh-trinh-kien-tao-chuan-song-cao-cap-tai-nam-sai-gon/",
+      "primary_source_id": "phu-long-official"
+    },
+    {
+      "id": "vinhomes-grand-park-opus-one",
+      "project_id": "vinhomes-grand-park",
+      "name": "The Opus One",
+      "phase_type": "subdivision",
+      "segment_ids": [
+        "apartment"
+      ],
+      "planned_units": null,
+      "launch_date": null,
+      "status": "selling",
+      "official_url": "https://grandpark.vinhomes.vn/",
+      "primary_source_id": "vinhomes-official"
     }
   ]
 }

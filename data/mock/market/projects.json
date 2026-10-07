@@ -1,8 +1,8 @@
 {
   "schema_version": 1,
-  "build_id": "phase4.3e-cross-links-20261007",
-  "generated_at": "2026-10-07T13:30:00+07:00",
-  "record_count": 8,
+  "build_id": "phase4.7-market-registry-20261007",
+  "generated_at": "2026-10-07T21:55:00+07:00",
+  "record_count": 12,
   "data": [
     {
       "id": "izumi-city",
@@ -267,6 +267,155 @@
         "housing",
         "real-estate-business",
         "construction"
+      ]
+    },
+    {
+      "id": "vinhomes-grand-park",
+      "name": "Vinhomes Grand Park",
+      "developer_ids": [
+        "vinhomes"
+      ],
+      "lead_developer_id": "vinhomes",
+      "region_ids": [
+        "hcmc"
+      ],
+      "segment_ids": [
+        "township",
+        "apartment",
+        "landed"
+      ],
+      "status": "selling",
+      "location_text": "Khu vực Long Bình – Long Thạnh Mỹ, TPHCM",
+      "total_area_sqm": 2710000,
+      "planned_units": null,
+      "known_units_note": "Official project/legal pages state a 271 ha masterplan and 71 apartment towers; a comparable total housing-unit count is not published on the cited page.",
+      "launch_date": null,
+      "summary": "Đại đô thị 271 ha tại khu Đông TPHCM với căn hộ, thấp tầng và hệ tiện ích tích hợp; tiếp tục có các phân khu/sản phẩm được giới thiệu trên website chính thức.",
+      "related_infrastructure_ids": [
+        "hcmc-ring-road-3",
+        "hcmc-metro-line-1",
+        "long-thanh-airport"
+      ],
+      "official_url": "https://vinhomes.vn/vi/vinhomes-grand-park",
+      "primary_source_id": "vinhomes-official",
+      "source_date": "2026-10-07",
+      "related_legal_topic_ids": [
+        "land",
+        "housing",
+        "real-estate-business",
+        "planning",
+        "investment"
+      ]
+    },
+    {
+      "id": "the-9-stellars",
+      "name": "The 9 Stellars",
+      "developer_ids": [
+        "sonkim-land"
+      ],
+      "lead_developer_id": "sonkim-land",
+      "region_ids": [
+        "hcmc"
+      ],
+      "segment_ids": [
+        "township",
+        "apartment",
+        "landed"
+      ],
+      "status": "ongoing",
+      "location_text": "Hoàng Hữu Nam, Long Bình, TPHCM",
+      "total_area_sqm": null,
+      "planned_units": null,
+      "known_units_note": "Official SonKim Land page states Phase 1 comprises 216 apartments and 79 villas; the total project unit count is not stated.",
+      "launch_date": null,
+      "summary": "Dự án nhà ở cao cấp và nhà phố tại khu Đông TPHCM, liền kề Metro số 1 và Bến xe Miền Đông mới; Phase 1 được công bố với 216 căn hộ và 79 biệt thự.",
+      "related_infrastructure_ids": [
+        "hcmc-metro-line-1",
+        "hcmc-ring-road-3",
+        "long-thanh-airport"
+      ],
+      "official_url": "https://sonkimland.vn/vi/chi-tiet-ve-du-an/the-9-stellars-1",
+      "primary_source_id": "sonkim-land-official",
+      "source_date": "2026-10-07",
+      "related_legal_topic_ids": [
+        "land",
+        "housing",
+        "real-estate-business",
+        "planning"
+      ]
+    },
+    {
+      "id": "celesta-gold",
+      "name": "Celesta Gold",
+      "developer_ids": [
+        "keppel",
+        "phu-long",
+        "nomura-real-estate-vietnam"
+      ],
+      "lead_developer_id": null,
+      "region_ids": [
+        "hcmc"
+      ],
+      "segment_ids": [
+        "apartment"
+      ],
+      "status": "ongoing",
+      "location_text": "Nguyễn Hữu Thọ, Nam Sài Gòn, TPHCM",
+      "total_area_sqm": 12800,
+      "planned_units": 420,
+      "launch_date": null,
+      "construction_start_date": "2026-05-07",
+      "summary": "Giai đoạn 3 của khu đô thị CELESTA, được Keppel, Phú Long và Nomura Real Estate Vietnam hợp tác phát triển; khởi công tháng 5/2026 với 420 căn hộ cao cấp.",
+      "related_infrastructure_ids": [
+        "ben-luc-long-thanh-expressway",
+        "hcmc-ring-road-3"
+      ],
+      "official_url": "https://phulong.com/celesta-gold-khoi-cong-tren-truc-nguyen-huu-tho-tiep-noi-hanh-trinh-kien-tao-chuan-song-cao-cap-tai-nam-sai-gon/",
+      "primary_source_id": "phu-long-official",
+      "source_date": "2026-05-08",
+      "related_legal_topic_ids": [
+        "land",
+        "housing",
+        "real-estate-business",
+        "construction",
+        "investment"
+      ]
+    },
+    {
+      "id": "essensia-parkway",
+      "name": "Essensia Parkway",
+      "developer_ids": [
+        "phu-long"
+      ],
+      "lead_developer_id": "phu-long",
+      "region_ids": [
+        "hcmc"
+      ],
+      "segment_ids": [
+        "landed"
+      ],
+      "status": "selling",
+      "location_text": "Nguyễn Hữu Thọ, Nhà Bè, TPHCM",
+      "total_area_sqm": 16499.18,
+      "planned_units": null,
+      "known_units_note": "The official project page lists 74 units in the scale section, while its legal-document section cites 75 low-rise homes eligible for sale; exact comparable project total is held blank pending reconciliation.",
+      "launch_date": null,
+      "summary": "Dự án thấp tầng tại Nam Sài Gòn gồm biệt thự và nhà phố thương mại. Registry preserves an official-source unit-count discrepancy instead of forcing a single figure.",
+      "related_infrastructure_ids": [
+        "ben-luc-long-thanh-expressway",
+        "hcmc-ring-road-3"
+      ],
+      "official_url": "https://phulong.com/du-an/essensia-parkway/",
+      "primary_source_id": "phu-long-official",
+      "source_date": "2026-10-07",
+      "source_discrepancy_note": "Scale section: 74 units; legal disclosure on the same official page: 75 low-rise homes eligible for sale.",
+      "related_legal_topic_ids": [
+        "land",
+        "housing",
+        "real-estate-business",
+        "construction",
+        "investment",
+        "finance"
       ]
     }
   ]

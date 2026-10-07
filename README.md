@@ -202,3 +202,12 @@ Customer rates require a complete four-component monthly range bundle corroborat
 Operational QA runs with the daily freshness check, and `.github/workflows/phase45-validation.yml` provides a single manual validation action for Phase 4.5A–4.5D.
 
 See `docs/PHASE4_5_COMPLETE_MACRO_AUTOMATION.md` for the consolidated contract.
+
+
+## Phase 4.6 + 4.7 — Registry Watch & Market Coverage
+
+Legal and Infrastructure now have a read-only weekly assisted source-watch workflow. It fingerprints canonical source pages, discovers keyword-matched official links and produces a human review queue; it never writes canonical registry or frontend data automatically. Infrastructure schedule revisions remain append/supersede history rather than overwrite.
+
+Market coverage expands to 12 curated projects and 9 developers with first-party project sourcing. The additional projects are Vinhomes Grand Park, The 9 Stellars, Celesta Gold and Essensia Parkway. Quantitative observations remain separate from project masters: missing ASP, sales, supply or absorption stays blank.
+
+See `docs/PHASE4_6_7_REGISTRY_MARKET.md`.

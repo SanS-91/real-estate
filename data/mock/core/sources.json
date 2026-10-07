@@ -1,8 +1,8 @@
 {
   "schema_version": 1,
   "build_id": "phase4.3c-market-registry-20261007",
-  "generated_at": "2026-10-07T10:30:00+07:00",
-  "record_count": 30,
+  "generated_at": "2026-10-07T21:55:00+07:00",
+  "record_count": 35,
   "data": [
     {
       "id": "demo-official",
@@ -363,6 +363,66 @@
       "source_priority": 3,
       "active": true,
       "notes": "Public Savills Vietnam research used for explicitly published annual residential market benchmarks."
+    },
+    {
+      "id": "vinhomes-official",
+      "name": "Vinhomes",
+      "source_type": "developer",
+      "base_url": "https://vinhomes.vn/",
+      "language": "vi/en",
+      "collection_method": "manual-curated",
+      "fetch_frequency": "event-driven",
+      "source_priority": 2,
+      "active": true,
+      "notes": "First-party Vinhomes project disclosures used for Vinhomes Grand Park coverage."
+    },
+    {
+      "id": "sonkim-land-official",
+      "name": "SonKim Land",
+      "source_type": "developer",
+      "base_url": "https://sonkimland.vn/",
+      "language": "vi/en",
+      "collection_method": "manual-curated",
+      "fetch_frequency": "event-driven",
+      "source_priority": 2,
+      "active": true,
+      "notes": "First-party SonKim Land project disclosures used for The 9 Stellars coverage."
+    },
+    {
+      "id": "keppel-real-estate-vietnam",
+      "name": "Keppel Real Estate Vietnam",
+      "source_type": "developer",
+      "base_url": "https://www.keppel.com/realestate/vn/",
+      "language": "vi/en",
+      "collection_method": "manual-curated",
+      "fetch_frequency": "event-driven",
+      "source_priority": 2,
+      "active": true,
+      "notes": "First-party Keppel Vietnam real-estate disclosures used for CELESTA developments."
+    },
+    {
+      "id": "phu-long-official",
+      "name": "Phú Long",
+      "source_type": "developer",
+      "base_url": "https://phulong.com/",
+      "language": "vi/en",
+      "collection_method": "manual-curated",
+      "fetch_frequency": "event-driven",
+      "source_priority": 2,
+      "active": true,
+      "notes": "First-party Phú Long project disclosures used for South HCMC residential project coverage."
+    },
+    {
+      "id": "nomura-real-estate-vietnam",
+      "name": "Nomura Real Estate Vietnam",
+      "source_type": "developer",
+      "base_url": "https://nomura-re-vn.com/",
+      "language": "vi/en",
+      "collection_method": "manual-curated",
+      "fetch_frequency": "event-driven",
+      "source_priority": 2,
+      "active": true,
+      "notes": "First-party Nomura Real Estate Vietnam corporate/project disclosures."
     }
   ]
 }

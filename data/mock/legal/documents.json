@@ -1,52 +1,9 @@
 {
   "schema_version": 1,
-  "build_id": "phase4.3a-legal-registry-20261006",
-  "generated_at": "2026-10-06T20:00:00+07:00",
-  "record_count": 9,
+  "build_id": "phase4.6-legal-registry-20261007",
+  "generated_at": "2026-10-07T21:55:00+07:00",
+  "record_count": 16,
   "data": [
-    {
-      "id": "law-31-2024-qh15-land",
-      "document_number": "31/2024/QH15",
-      "title": "Luật Đất đai",
-      "document_type": "law",
-      "status": "effective",
-      "agency_ids": [
-        "national-assembly"
-      ],
-      "scope_type": "national",
-      "region_ids": [],
-      "topic_ids": [
-        "land",
-        "investment",
-        "planning"
-      ],
-      "issued_date": "2024-01-18",
-      "effective_date": "2024-08-01",
-      "official_url": "https://vanban.chinhphu.vn/?classid=1&docid=211189&pageid=27160&typegroupid=3",
-      "summary": "Khung pháp lý nền tảng về quản lý và sử dụng đất, quyền và nghĩa vụ của người sử dụng đất, thu hồi đất, giao/cho thuê đất và các cơ chế liên quan đến dự án đầu tư.",
-      "key_changes": [
-        "Ngày hiệu lực chung được đưa lên 01/08/2024 theo Luật 43/2024/QH15.",
-        "Là văn bản nền tảng cho các nghị định hướng dẫn về đất đai và giá đất.",
-        "Một số nội dung có thời điểm áp dụng riêng; cần kiểm tra điều khoản cụ thể khi sử dụng."
-      ],
-      "related_documents": [
-        {
-          "document_id": "law-43-2024-qh15-effective-date",
-          "relation_type": "amended-by"
-        },
-        {
-          "document_id": "decree-102-2024-land",
-          "relation_type": "implemented-by"
-        },
-        {
-          "document_id": "decree-71-2024-land-price",
-          "relation_type": "implemented-by"
-        }
-      ],
-      "primary_source_id": "gov-vietnam-legal-documents",
-      "created_at": "2026-10-06T20:00:00+07:00",
-      "updated_at": "2026-10-06T20:00:00+07:00"
-    },
     {
       "id": "law-27-2023-qh15-housing",
       "document_number": "27/2023/QH15",
@@ -118,6 +75,86 @@
         {
           "document_id": "decree-96-2024-real-estate-business",
           "relation_type": "implemented-by"
+        }
+      ],
+      "primary_source_id": "gov-vietnam-legal-documents",
+      "created_at": "2026-10-06T20:00:00+07:00",
+      "updated_at": "2026-10-06T20:00:00+07:00"
+    },
+    {
+      "id": "law-31-2024-qh15-land",
+      "document_number": "31/2024/QH15",
+      "title": "Luật Đất đai",
+      "document_type": "law",
+      "status": "effective",
+      "agency_ids": [
+        "national-assembly"
+      ],
+      "scope_type": "national",
+      "region_ids": [],
+      "topic_ids": [
+        "land",
+        "investment",
+        "planning"
+      ],
+      "issued_date": "2024-01-18",
+      "effective_date": "2024-08-01",
+      "official_url": "https://vanban.chinhphu.vn/?classid=1&docid=211189&pageid=27160&typegroupid=3",
+      "summary": "Khung pháp lý nền tảng về quản lý và sử dụng đất, quyền và nghĩa vụ của người sử dụng đất, thu hồi đất, giao/cho thuê đất và các cơ chế liên quan đến dự án đầu tư.",
+      "key_changes": [
+        "Ngày hiệu lực chung được đưa lên 01/08/2024 theo Luật 43/2024/QH15.",
+        "Là văn bản nền tảng cho các nghị định hướng dẫn về đất đai và giá đất.",
+        "Một số nội dung có thời điểm áp dụng riêng; cần kiểm tra điều khoản cụ thể khi sử dụng."
+      ],
+      "related_documents": [
+        {
+          "document_id": "law-43-2024-qh15-effective-date",
+          "relation_type": "amended-by"
+        },
+        {
+          "document_id": "decree-102-2024-land",
+          "relation_type": "implemented-by"
+        },
+        {
+          "document_id": "decree-71-2024-land-price",
+          "relation_type": "implemented-by"
+        }
+      ],
+      "primary_source_id": "gov-vietnam-legal-documents",
+      "created_at": "2026-10-06T20:00:00+07:00",
+      "updated_at": "2026-10-06T20:00:00+07:00"
+    },
+    {
+      "id": "decree-71-2024-land-price",
+      "document_number": "71/2024/NĐ-CP",
+      "title": "Nghị định quy định về giá đất",
+      "document_type": "decree",
+      "status": "effective",
+      "agency_ids": [
+        "government"
+      ],
+      "scope_type": "national",
+      "region_ids": [],
+      "topic_ids": [
+        "land",
+        "finance"
+      ],
+      "issued_date": "2024-06-27",
+      "effective_date": "2024-08-01",
+      "official_url": "https://vanban.chinhphu.vn/?classid=1&docid=210523&orggroupid=2&pageid=27160",
+      "summary": "Nghị định quy định về phương pháp, trình tự và các nội dung liên quan đến giá đất theo khuôn khổ Luật Đất đai 2024.",
+      "key_changes": [
+        "Có hiệu lực từ 01/08/2024.",
+        "Một số nội dung được sửa đổi, bổ sung bởi Nghị định 226/2025/NĐ-CP."
+      ],
+      "related_documents": [
+        {
+          "document_id": "law-31-2024-qh15-land",
+          "relation_type": "implements"
+        },
+        {
+          "document_id": "decree-226-2025-land-amendments",
+          "relation_type": "amended-by"
         }
       ],
       "primary_source_id": "gov-vietnam-legal-documents",
@@ -233,6 +270,40 @@
       "updated_at": "2026-10-06T20:00:00+07:00"
     },
     {
+      "id": "decree-100-2024-social-housing",
+      "document_number": "100/2024/NĐ-CP",
+      "title": "Nghị định quy định chi tiết một số điều của Luật Nhà ở về phát triển và quản lý nhà ở xã hội",
+      "document_type": "decree",
+      "status": "effective",
+      "agency_ids": [
+        "government"
+      ],
+      "scope_type": "national",
+      "region_ids": [],
+      "topic_ids": [
+        "housing",
+        "investment",
+        "finance"
+      ],
+      "issued_date": "2024-07-26",
+      "effective_date": "2024-08-01",
+      "official_url": "https://vanban.chinhphu.vn/?docid=210760&lead=misa&pageid=27160",
+      "summary": "Nghị định quy định chi tiết một số nội dung của Luật Nhà ở về phát triển và quản lý nhà ở xã hội.",
+      "key_changes": [
+        "Có hiệu lực từ 01/08/2024.",
+        "Là văn bản nền cho các sửa đổi về nhà ở xã hội ban hành trong 2025–2026."
+      ],
+      "related_documents": [
+        {
+          "document_id": "law-27-2023-qh15-housing",
+          "relation_type": "implements"
+        }
+      ],
+      "primary_source_id": "gov-vietnam-legal-documents",
+      "created_at": "2026-10-07T21:55:00+07:00",
+      "updated_at": "2026-10-07T21:55:00+07:00"
+    },
+    {
       "id": "decree-102-2024-land",
       "document_number": "102/2024/NĐ-CP",
       "title": "Nghị định quy định chi tiết thi hành một số điều của Luật Đất đai",
@@ -272,9 +343,9 @@
       "updated_at": "2026-10-06T20:00:00+07:00"
     },
     {
-      "id": "decree-71-2024-land-price",
-      "document_number": "71/2024/NĐ-CP",
-      "title": "Nghị định quy định về giá đất",
+      "id": "decree-192-2025-social-housing-pilot",
+      "document_number": "192/2025/NĐ-CP",
+      "title": "Nghị định quy định chi tiết một số điều và biện pháp thi hành Nghị quyết 201/2025/QH15 về cơ chế, chính sách đặc thù phát triển nhà ở xã hội",
       "document_type": "decree",
       "status": "effective",
       "agency_ids": [
@@ -283,30 +354,27 @@
       "scope_type": "national",
       "region_ids": [],
       "topic_ids": [
-        "land",
+        "housing",
+        "investment",
         "finance"
       ],
-      "issued_date": "2024-06-27",
-      "effective_date": "2024-08-01",
-      "official_url": "https://vanban.chinhphu.vn/?classid=1&docid=210523&orggroupid=2&pageid=27160",
-      "summary": "Nghị định quy định về phương pháp, trình tự và các nội dung liên quan đến giá đất theo khuôn khổ Luật Đất đai 2024.",
+      "issued_date": "2025-07-01",
+      "effective_date": "2025-07-01",
+      "official_url": "https://vanban.chinhphu.vn/?classid=0&docid=214376&pageid=27160",
+      "summary": "Nghị định hướng dẫn cơ chế thí điểm đặc thù về phát triển nhà ở xã hội theo Nghị quyết 201/2025/QH15.",
       "key_changes": [
-        "Có hiệu lực từ 01/08/2024.",
-        "Một số nội dung được sửa đổi, bổ sung bởi Nghị định 226/2025/NĐ-CP."
+        "Có hiệu lực từ 01/07/2025.",
+        "Thiết lập khung thực hiện cho cơ chế thí điểm phát triển nhà ở xã hội."
       ],
       "related_documents": [
         {
-          "document_id": "law-31-2024-qh15-land",
-          "relation_type": "implements"
-        },
-        {
-          "document_id": "decree-226-2025-land-amendments",
-          "relation_type": "amended-by"
+          "document_id": "law-27-2023-qh15-housing",
+          "relation_type": "supplements"
         }
       ],
       "primary_source_id": "gov-vietnam-legal-documents",
-      "created_at": "2026-10-06T20:00:00+07:00",
-      "updated_at": "2026-10-06T20:00:00+07:00"
+      "created_at": "2026-10-07T21:55:00+07:00",
+      "updated_at": "2026-10-07T21:55:00+07:00"
     },
     {
       "id": "decree-226-2025-land-amendments",
@@ -346,6 +414,196 @@
       "primary_source_id": "gov-vietnam-legal-documents",
       "created_at": "2026-10-06T20:00:00+07:00",
       "updated_at": "2026-10-06T20:00:00+07:00"
+    },
+    {
+      "id": "decree-261-2025-social-housing-amendments",
+      "document_number": "261/2025/NĐ-CP",
+      "title": "Nghị định sửa đổi Nghị định 100/2024/NĐ-CP và Nghị định 192/2025/NĐ-CP về nhà ở xã hội",
+      "document_type": "decree",
+      "status": "effective",
+      "agency_ids": [
+        "government"
+      ],
+      "scope_type": "national",
+      "region_ids": [],
+      "topic_ids": [
+        "housing",
+        "investment",
+        "finance"
+      ],
+      "issued_date": "2025-10-10",
+      "effective_date": "2025-10-10",
+      "official_url": "https://vanban.chinhphu.vn/?classid=0&docid=215594&pageid=27160",
+      "summary": "Nghị định sửa đổi, bổ sung khung pháp lý về phát triển, quản lý nhà ở xã hội và cơ chế thí điểm liên quan.",
+      "key_changes": [
+        "Có hiệu lực từ 10/10/2025.",
+        "Sửa đổi, bổ sung Nghị định 100/2024/NĐ-CP và Nghị định 192/2025/NĐ-CP."
+      ],
+      "related_documents": [
+        {
+          "document_id": "decree-100-2024-social-housing",
+          "relation_type": "amends"
+        },
+        {
+          "document_id": "decree-192-2025-social-housing-pilot",
+          "relation_type": "amends"
+        }
+      ],
+      "primary_source_id": "gov-vietnam-legal-documents",
+      "created_at": "2026-10-07T21:55:00+07:00",
+      "updated_at": "2026-10-07T21:55:00+07:00"
+    },
+    {
+      "id": "decree-49-2026-land-implementation",
+      "document_number": "49/2026/NĐ-CP",
+      "title": "Nghị định hướng dẫn cơ chế, chính sách tháo gỡ khó khăn, vướng mắc trong tổ chức thi hành Luật Đất đai",
+      "document_type": "decree",
+      "status": "effective",
+      "agency_ids": [
+        "government"
+      ],
+      "scope_type": "national",
+      "region_ids": [],
+      "topic_ids": [
+        "land",
+        "investment",
+        "planning"
+      ],
+      "issued_date": "2026-01-31",
+      "effective_date": "2026-01-31",
+      "official_url": "https://vanban.chinhphu.vn/?classid=1&docid=216860&pageid=27160",
+      "summary": "Nghị định quy định chi tiết và hướng dẫn một số cơ chế, chính sách theo Nghị quyết 254/2025/QH15 nhằm tháo gỡ khó khăn trong tổ chức thi hành Luật Đất đai.",
+      "key_changes": [
+        "Có hiệu lực từ 31/01/2026.",
+        "Tập trung vào cơ chế triển khai và xử lý vướng mắc trong tổ chức thi hành Luật Đất đai."
+      ],
+      "related_documents": [
+        {
+          "document_id": "law-31-2024-qh15-land",
+          "relation_type": "supplements"
+        }
+      ],
+      "primary_source_id": "gov-vietnam-legal-documents",
+      "created_at": "2026-10-07T21:55:00+07:00",
+      "updated_at": "2026-10-07T21:55:00+07:00"
+    },
+    {
+      "id": "decree-50-2026-land-use-rent",
+      "document_number": "50/2026/NĐ-CP",
+      "title": "Nghị định về tiền sử dụng đất, tiền thuê đất theo cơ chế tháo gỡ vướng mắc thi hành Luật Đất đai",
+      "document_type": "decree",
+      "status": "effective",
+      "agency_ids": [
+        "government"
+      ],
+      "scope_type": "national",
+      "region_ids": [],
+      "topic_ids": [
+        "land",
+        "finance",
+        "investment"
+      ],
+      "issued_date": "2026-01-31",
+      "effective_date": "2026-01-31",
+      "official_url": "https://vanban.chinhphu.vn/?classid=1&docid=216861&orggroupid=2&pageid=27160",
+      "summary": "Nghị định quy định chi tiết một số nội dung của Nghị quyết 254/2025/QH15 về tiền sử dụng đất và tiền thuê đất.",
+      "key_changes": [
+        "Có hiệu lực từ 31/01/2026.",
+        "Bổ sung hướng dẫn thực hiện các cơ chế liên quan đến nghĩa vụ tài chính về đất."
+      ],
+      "related_documents": [
+        {
+          "document_id": "law-31-2024-qh15-land",
+          "relation_type": "supplements"
+        }
+      ],
+      "primary_source_id": "gov-vietnam-legal-documents",
+      "created_at": "2026-10-07T21:55:00+07:00",
+      "updated_at": "2026-10-07T21:55:00+07:00"
+    },
+    {
+      "id": "decree-54-2026-housing-reb-amendments",
+      "document_number": "54/2026/NĐ-CP",
+      "title": "Nghị định sửa đổi, bổ sung một số điều của các nghị định trong lĩnh vực nhà ở, kinh doanh bất động sản",
+      "document_type": "decree",
+      "status": "effective",
+      "agency_ids": [
+        "government"
+      ],
+      "scope_type": "national",
+      "region_ids": [],
+      "topic_ids": [
+        "housing",
+        "real-estate-business",
+        "finance"
+      ],
+      "issued_date": "2026-02-09",
+      "effective_date": "2026-02-09",
+      "official_url": "https://vanban.chinhphu.vn/?docid=216924&pageid=27160&typegroupid=4",
+      "summary": "Nghị định sửa đổi, bổ sung một số quy định trong hệ thống nghị định về nhà ở và kinh doanh bất động sản.",
+      "key_changes": [
+        "Có hiệu lực từ 09/02/2026.",
+        "Cần đọc cùng các nghị định gốc trong lĩnh vực nhà ở và kinh doanh bất động sản khi áp dụng."
+      ],
+      "related_documents": [
+        {
+          "document_id": "decree-95-2024-housing",
+          "relation_type": "amends"
+        },
+        {
+          "document_id": "decree-96-2024-real-estate-business",
+          "relation_type": "amends"
+        },
+        {
+          "document_id": "decree-100-2024-social-housing",
+          "relation_type": "amends"
+        }
+      ],
+      "primary_source_id": "gov-vietnam-legal-documents",
+      "created_at": "2026-10-07T21:55:00+07:00",
+      "updated_at": "2026-10-07T21:55:00+07:00"
+    },
+    {
+      "id": "decree-136-2026-social-housing-amendments",
+      "document_number": "136/2026/NĐ-CP",
+      "title": "Nghị định sửa đổi Nghị định 100/2024/NĐ-CP về phát triển và quản lý nhà ở xã hội",
+      "document_type": "decree",
+      "status": "effective",
+      "agency_ids": [
+        "government"
+      ],
+      "scope_type": "national",
+      "region_ids": [],
+      "topic_ids": [
+        "housing",
+        "investment",
+        "finance"
+      ],
+      "issued_date": "2026-04-07",
+      "effective_date": "2026-04-07",
+      "official_url": "https://vanban.chinhphu.vn/?docid=217605&pageid=27160",
+      "summary": "Nghị định tiếp tục sửa đổi, bổ sung các quy định về phát triển và quản lý nhà ở xã hội trong Nghị định 100/2024/NĐ-CP.",
+      "key_changes": [
+        "Có hiệu lực từ 07/04/2026.",
+        "Tiếp tục cập nhật Nghị định 100/2024/NĐ-CP sau các sửa đổi năm 2025–2026."
+      ],
+      "related_documents": [
+        {
+          "document_id": "decree-100-2024-social-housing",
+          "relation_type": "amends"
+        },
+        {
+          "document_id": "decree-261-2025-social-housing-amendments",
+          "relation_type": "related-to"
+        },
+        {
+          "document_id": "decree-54-2026-housing-reb-amendments",
+          "relation_type": "related-to"
+        }
+      ],
+      "primary_source_id": "gov-vietnam-legal-documents",
+      "created_at": "2026-10-07T21:55:00+07:00",
+      "updated_at": "2026-10-07T21:55:00+07:00"
     }
   ]
 }

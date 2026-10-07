@@ -1,8 +1,8 @@
 {
   "schema_version": 1,
   "build_id": "phase4.3c-market-registry-20261007",
-  "generated_at": "2026-10-07T10:30:00+07:00",
-  "record_count": 4,
+  "generated_at": "2026-10-07T21:55:00+07:00",
+  "record_count": 9,
   "data": [
     {
       "id": "nam-long",
@@ -82,6 +82,99 @@
       "summary": "Nhà phát triển tập trung tại TPHCM; The Privia đã hoàn tất bán hàng và bước vào giai đoạn bàn giao/cấp giấy chứng nhận.",
       "official_url": "https://www.khangdien.com.vn/",
       "primary_source_id": "khang-dien-official"
+    },
+    {
+      "id": "vinhomes",
+      "name": "Vinhomes",
+      "aliases": [
+        "VHM"
+      ],
+      "region_ids": [
+        "hcmc"
+      ],
+      "segment_ids": [
+        "apartment",
+        "landed",
+        "township"
+      ],
+      "status": "active",
+      "summary": "Nhà phát triển đại đô thị và nhà ở thuộc Vingroup; registry hiện theo dõi Vinhomes Grand Park tại khu Đông TPHCM.",
+      "official_url": "https://vinhomes.vn/vi",
+      "primary_source_id": "vinhomes-official"
+    },
+    {
+      "id": "sonkim-land",
+      "name": "SonKim Land",
+      "aliases": [
+        "SonKim"
+      ],
+      "region_ids": [
+        "hcmc"
+      ],
+      "segment_ids": [
+        "apartment",
+        "landed",
+        "township"
+      ],
+      "status": "active",
+      "summary": "Nhà phát triển bất động sản với các dự án nhà ở cao cấp tại TPHCM; registry hiện theo dõi The 9 Stellars.",
+      "official_url": "https://sonkimland.vn/",
+      "primary_source_id": "sonkim-land-official"
+    },
+    {
+      "id": "keppel",
+      "name": "Keppel",
+      "aliases": [
+        "Keppel Land"
+      ],
+      "region_ids": [
+        "hcmc"
+      ],
+      "segment_ids": [
+        "apartment",
+        "township"
+      ],
+      "status": "active",
+      "summary": "Nhà phát triển và quản lý tài sản quốc tế có hoạt động bất động sản tại Việt Nam; đồng phát triển các dự án CELESTA.",
+      "official_url": "https://www.keppel.com/realestate/vn/en/",
+      "primary_source_id": "keppel-real-estate-vietnam"
+    },
+    {
+      "id": "phu-long",
+      "name": "Phú Long",
+      "aliases": [
+        "Phu Long"
+      ],
+      "region_ids": [
+        "hcmc"
+      ],
+      "segment_ids": [
+        "apartment",
+        "landed",
+        "township"
+      ],
+      "status": "active",
+      "summary": "Nhà phát triển bất động sản với danh mục dự án nhà ở tại Nam Sài Gòn và các khu vực khác; registry theo dõi Essensia Parkway và CELESTA.",
+      "official_url": "https://phulong.com/",
+      "primary_source_id": "phu-long-official"
+    },
+    {
+      "id": "nomura-real-estate-vietnam",
+      "name": "Nomura Real Estate Vietnam",
+      "aliases": [
+        "NREV",
+        "Nomura"
+      ],
+      "region_ids": [
+        "hcmc"
+      ],
+      "segment_ids": [
+        "apartment"
+      ],
+      "status": "active",
+      "summary": "Công ty thuộc Nomura Real Estate Group hoạt động tại Việt Nam và tham gia các dự án nhà ở, trong đó có Celesta Gold.",
+      "official_url": "https://nomura-re-vn.com/",
+      "primary_source_id": "nomura-real-estate-vietnam"
     }
   ]
 }

@@ -1,0 +1,111 @@
+name: Registry & Market Validation
+
+on:
+  pull_request:
+    paths:
+      - 'data/mock/legal/**'
+      - 'data/mock/infrastructure/**'
+      - 'data/mock/market/**'
+      - 'data/mock/core/developers.json'
+      - 'data/mock/core/sources.json'
+      - 'config/registry_watch.json'
+      - 'config/market_coverage_targets.json'
+      - 'scripts/watch_registries.py'
+      - 'scripts/build_registry_review.py'
+      - 'scripts/build_market_coverage.py'
+      - 'tests/test_phase4_6_registry_assisted_update.py'
+      - 'tests/test_phase4_7_market_coverage.py'
+  schedule:
+    # Monday 01:30 UTC = 08:30 ICT. Candidate/review only; never publishes.
+    - cron: '30 1 * * 1'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: registry-market-${{ github.ref }}
+  cancel-in-progress: false
+
+jobs:
+  validate:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 8
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v7
+      - name: Set up Python
+        uses: actions/setup-python@v7
+        with:
+          python-version: '3.12'
+          cache: 'pip'
+      - name: Install dependencies
+        run: pip install -r requirements.txt
+      - name: Existing registry regression
+        run: |
+          python tests/test_phase4_3a_legal_official_registry.py
+          python tests/test_phase4_3b_infrastructure_official_registry.py
+          python tests/test_phase4_3c_market_registry.py
+      - name: Phase 4.6 assisted update contract
+        run: python tests/test_phase4_6_registry_assisted_update.py
+      - name: Phase 4.7 coverage QA
+        run: python tests/test_phase4_7_market_coverage.py
+      - name: Build market coverage artifact
+        run: python scripts/build_market_coverage.py --output data/state/market-coverage.json
+      - name: Upload coverage artifact
+        uses: actions/upload-artifact@v7
+        with:
+          name: market-coverage-${{ github.run_number }}
+          retention-days: 30
+          path: data/state/market-coverage.json
+          if-no-files-found: error
+
+  watch:
+    if: ${{ github.event_name == 'schedule' || github.event_name == 'workflow_dispatch' }}
+    runs-on: ubuntu-24.04
+    timeout-minutes: 10
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v7
+      - name: Set up Python
+        uses: actions/setup-python@v7
+        with:
+          python-version: '3.12'
+          cache: 'pip'
+      - name: Install dependencies
+        run: pip install -r requirements.txt
+      - name: Restore registry watch cache
+        uses: actions/cache@v6
+        with:
+          path: data/state/registry-watch-cache.json
+          key: registry-watch-${{ github.ref_name }}-${{ github.run_id }}
+          restore-keys: |
+            registry-watch-${{ github.ref_name }}-
+      - name: Watch canonical official sources
+        run: python scripts/watch_registries.py
+      - name: Build human review queue
+        run: python scripts/build_registry_review.py
+      - name: Write watch summary
+        shell: bash
+        run: |
+          python - <<'PY' >> "$GITHUB_STEP_SUMMARY"
+          import json
+          from pathlib import Path
+          w=json.loads(Path('data/candidate/registry/watch-report.json').read_text())
+          q=json.loads(Path('data/candidate/registry/review-queue.json').read_text())
+          print("# Legal & Infrastructure Assisted Watch")
+          print()
+          print(f"**Status:** `{w['status']}` · Sources {w['healthy_count']}/{w['target_count']} healthy · Review items {q['item_count']}")
+          print(f"- Source pages changed since prior check: {w['changed_target_count']}")
+          print(f"- New keyword-matched official links: {w['new_discovery_link_count']}")
+          print("- Candidate/review only. No registry or frontend file is modified.")
+          PY
+      - name: Upload assisted-review artifact
+        uses: actions/upload-artifact@v7
+        with:
+          name: registry-review-${{ github.run_number }}
+          retention-days: 30
+          path: |
+            data/candidate/registry/watch-report.json
+            data/candidate/registry/review-queue.json
+          if-no-files-found: error

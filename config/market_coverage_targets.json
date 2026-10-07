@@ -1,0 +1,17 @@
+{
+  "schema_version": 1,
+  "mode": "market-coverage-qa-v1",
+  "minimums": {
+    "projects": 12,
+    "developers": 8,
+    "first_party_project_share": 1.0,
+    "regions_with_projects": 3,
+    "segments_with_projects": 3
+  },
+  "principles": {
+    "missing_numeric_facts": "leave-blank",
+    "developer_claims": "label-first-party",
+    "research_benchmarks": "keep-separate-from-project-claims",
+    "synthetic_history": false
+  }
+}
