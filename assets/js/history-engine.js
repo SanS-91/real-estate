@@ -261,20 +261,39 @@
 
     infrastructureProjects.forEach(project => {
       const change = infrastructureScheduleChange(project.id, schedules);
-      if (!change) return;
-      changes.push({
-        id: `infrastructure:${project.id}:${change.date}`,
-        category: 'infrastructure',
-        date: change.date,
-        entity_id: project.id,
-        type: 'schedule-change',
-        title: project.name,
-        from: change.from,
-        to: change.to,
-        source_id: change.current.source_id,
-        source_url: change.current.source_url
-      });
+      if (change) {
+        changes.push({
+          id: `infrastructure:${project.id}:${change.date}`,
+          category: 'infrastructure',
+          date: change.date,
+          entity_id: project.id,
+          type: 'schedule-change',
+          title: project.name,
+          from: change.from,
+          to: change.to,
+          source_id: change.current.source_id,
+          source_url: change.current.source_url
+        });
+      }
     });
+
+    (events || [])
+      .filter(row => row.category === 'infrastructure'
+        && row.entity_type === 'infrastructure-project'
+        && (row.source_ids || []).some(id => id && !String(id).startsWith('demo-')))
+      .forEach(row => {
+        changes.push({
+          id: `infrastructure-event:${row.id}`,
+          category: 'infrastructure',
+          date: row.event_date,
+          entity_id: row.entity_id,
+          type: row.event_type || 'milestone',
+          title: row.title,
+          summary: row.summary,
+          importance: row.importance,
+          source_id: (row.source_ids || [])[0]
+        });
+      });
 
     legalAmendmentChanges(legalDocuments).forEach(row => changes.push(row));
 
