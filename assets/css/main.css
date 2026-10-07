@@ -1575,3 +1575,26 @@ button, a, input, select { outline-offset: 3px; }
     line-height: 1.35;
   }
 }
+
+
+/* Phase 4.8/4.9 · history intelligence */
+.history-change-callout {
+  margin: 14px 0;
+  padding: 13px 14px;
+  border: 1px solid #ead4d8;
+  border-radius: var(--radius-md);
+  background: #fbf5f6;
+}
+.history-change-callout strong {
+  display: block;
+  margin-top: 4px;
+  color: var(--color-primary-dark);
+  font-size: 14px;
+}
+.history-change-callout small {
+  display: block;
+  margin-top: 4px;
+  color: var(--color-text-secondary);
+  font-size: 10.5px;
+  line-height: 1.4;
+}
