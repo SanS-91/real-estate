@@ -109,37 +109,48 @@
       "id": "legal-registry",
       "module": "legal",
       "label": "Official Legal Registry",
-      "update_mode": "curated-manual",
+      "update_mode": "assisted-watch",
       "check_frequency": "weekly",
       "update_trigger": "event-driven",
       "stale_after_hours": 192,
       "data_path": "data/mock/legal/documents.json",
-      "source_health_mode": "manual-curated",
-      "failure_behavior": "retain-last-good"
+      "source_health_mode": "automated-source-watch",
+      "failure_behavior": "retain-last-good",
+      "watch_behavior": "candidate-review-only",
+      "notes": "Weekly official-source fingerprint/discovery watch creates a review queue only; canonical legal facts remain curated and require reviewed changes."
     },
     {
       "id": "infrastructure-registry",
       "module": "infrastructure",
       "label": "Infrastructure Project Registry",
-      "update_mode": "curated-manual",
+      "update_mode": "assisted-watch",
       "check_frequency": "weekly",
       "update_trigger": "milestone-driven",
       "stale_after_hours": 192,
       "data_path": "data/mock/infrastructure/projects.json",
-      "source_health_mode": "manual-curated",
-      "failure_behavior": "retain-last-good"
+      "source_health_mode": "automated-source-watch",
+      "failure_behavior": "retain-last-good",
+      "watch_behavior": "candidate-review-only",
+      "notes": "Weekly source watch flags changed/unavailable source pages and discovery links. Schedule revisions are append/supersede, never destructive overwrite."
     },
     {
       "id": "market-project-registry",
       "module": "market",
       "label": "Market Projects & Developers",
-      "update_mode": "curated-manual",
+      "update_mode": "curated-assisted",
       "check_frequency": "weekly",
       "update_trigger": "project-driven",
       "stale_after_hours": 192,
       "data_path": "data/mock/market/projects.json",
-      "source_health_mode": "manual-curated",
-      "failure_behavior": "retain-last-good"
+      "source_health_mode": "coverage-qa",
+      "failure_behavior": "retain-last-good",
+      "coverage_target": {
+        "projects": 12,
+        "developers": 8,
+        "regions": 3,
+        "segments": 3
+      },
+      "notes": "Project/developer coverage is QA-checked against first-party sourcing. Missing project metrics stay blank and are not inferred."
     },
     {
       "id": "market-benchmarks",
