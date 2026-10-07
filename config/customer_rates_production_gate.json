@@ -1,0 +1,26 @@
+{
+  "schema_version": 1,
+  "mode": "controlled-production-v1",
+  "production_write": true,
+  "repository_publish": false,
+  "frontend_publish": false,
+  "allowed_readiness_statuses": ["ready-corroborated"],
+  "logical_key_fields": ["indicator_id", "period_type", "period"],
+  "conflict_rule": "fail-on-existing-logical-key-change",
+  "record_drop_rule": "forbid",
+  "atomic_write": true,
+  "rollback_snapshot": true,
+  "max_snapshots": 10,
+  "notes": [
+    "Phase 4.5B narrow customer-rate gate.",
+    "Only the four deposit/lending range components are eligible.",
+    "Each component requires VN Banking Association and VietnamPlus/VNA corroboration for the same monthly period.",
+    "Priority short-term lending remains evidence-only and is never auto-published."
+  ],
+  "allowed_indicators": {
+    "deposit-rate-vnd-6-12m-low": {"allowed_sources": ["vnba", "vna-vietnamplus"],"required_readiness_statuses": ["ready-corroborated"],"required_evidence_status": "corroborated","required_period_type": "month","required_min_independent_sources": 2},
+    "deposit-rate-vnd-6-12m-high": {"allowed_sources": ["vnba", "vna-vietnamplus"],"required_readiness_statuses": ["ready-corroborated"],"required_evidence_status": "corroborated","required_period_type": "month","required_min_independent_sources": 2},
+    "lending-rate-vnd-average-low": {"allowed_sources": ["vnba", "vna-vietnamplus"],"required_readiness_statuses": ["ready-corroborated"],"required_evidence_status": "corroborated","required_period_type": "month","required_min_independent_sources": 2},
+    "lending-rate-vnd-average-high": {"allowed_sources": ["vnba", "vna-vietnamplus"],"required_readiness_statuses": ["ready-corroborated"],"required_evidence_status": "corroborated","required_period_type": "month","required_min_independent_sources": 2}
+  }
+}
