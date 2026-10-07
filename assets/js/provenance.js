@@ -147,7 +147,7 @@
     const sourceUrl = context.sourceUrl || source.base_url;
     const link = sourceUrl && sourceUrl !== '#'
       ? `<a class="text-link" href="${escapeHTML(sourceUrl)}" target="_blank" rel="noopener noreferrer">Open original source ↗</a>`
-      : '<span class="muted-text">No live source URL in the illustrative demo registry. Real URLs will be connected in Phase 4.</span>';
+      : '<span class="muted-text">No public source URL is attached to this source definition.</span>';
 
     return `
       <div class="provenance-source-head">
@@ -186,7 +186,7 @@
 
     return `
       <div class="provenance-registry-intro">
-        <p><strong>${sourceRecords.length} source definitions</strong> resolve the source IDs already used by the v7 demo records. This registry is provenance metadata only; the existing v7 demo datasets and rendering logic remain the baseline.</p>
+        <p><strong>${sourceRecords.length} source definitions</strong> resolve source IDs used across demo, curated and controlled-production records. The registry is provenance metadata; canonical status is determined by each dataset and its production gate.</p>
         <p class="muted-text">Priority is a sourcing preference, not a quality score. P1 is used for primary official sources; lower-priority evidence is retained rather than discarded.</p>
       </div>
       ${[...groups.entries()].map(([type, sources]) => `
