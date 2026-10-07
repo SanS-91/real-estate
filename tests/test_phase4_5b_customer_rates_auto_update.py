@@ -47,7 +47,7 @@ def main():
   result=build_customer_rates_persistence(inc,repo,report,source_run,'p45b-db',ROOT/'config/customer_rates_auto_persistence_policy.json',ROOT/'config/customer_rates_production_gate.json',datetime(2026,10,7,11,15,tzinfo=ZoneInfo('Asia/Ho_Chi_Minh')))
   assert result['status']=='ready-to-commit' and result['added_record_count']==4 and result['period']==period
   out=load(repo/'observations.json'); assert out['record_count']==current['record_count']+4 and out['repository_persistence_mode']=='controlled-customer-rates-auto-persistence-v1'
-  bad=deepcopy(incoming); bad['data']=[r for r in bad['data'] if not str(r.get('id','')).startswith('p45b-4-')]; bad['record_count']-=1; badrun=deepcopy(run); badrun['added_record_count']=3; badrun['final_record_count']-=1
+  # Partial bundle must fail.\n  bad=deepcopy(incoming); bad['data']=[r for r in bad['data'] if not str(r.get('id','')).startswith('p45b-4-')]; bad['record_count']-=1; badrun=deepcopy(run); badrun['added_record_count']=3; badrun['final_record_count']-=1
   repo2=tmp/'repo2'; inc2=tmp/'inc2'; dump(repo2/'observations.json',current); dump(repo2/'repository-publish.json',meta); dump(inc2/'observations.json',bad); dump(inc2/'promotion-run.json',badrun)
   try: build_customer_rates_persistence(inc2,repo2,tmp/'report2',source_run+1,'p45b-bad',ROOT/'config/customer_rates_auto_persistence_policy.json',ROOT/'config/customer_rates_production_gate.json',datetime(2026,10,7,11,15,tzinfo=ZoneInfo('Asia/Ho_Chi_Minh')))
   except ValueError as exc: assert 'complete four-component bundle' in str(exc)
