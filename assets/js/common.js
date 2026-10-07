@@ -87,7 +87,7 @@
             <button class="icon-button" type="button" aria-label="Close search" data-search-close>×</button>
           </div>
           <div class="search-hint-row">
-            <span data-global-search-status>Search across the structured demo research database.</span>
+            <span data-global-search-status>Search across Market, Legal, Infrastructure and controlled Macro data.</span>
             <span class="search-shortcut">Ctrl / ⌘ K</span>
           </div>
           <div class="search-results" data-global-search-results aria-live="polite"></div>

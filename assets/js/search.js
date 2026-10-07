@@ -112,7 +112,8 @@
         ['infrastructure', DataStore.getInfrastructureProjects],
         ['indicators', DataStore.getMacroIndicators],
         ['articles', DataStore.getArticles],
-        ['events', DataStore.getEvents]
+        ['events', DataStore.getEvents],
+        ['productionMacro', DataStore.getProcessedMacroObservations]
       ];
 
       const settled = await Promise.allSettled(loaders.map(([, loader]) => loader()));
@@ -131,15 +132,37 @@
       const legalMap = byId(datasets.legal);
       const infraMap = byId(datasets.infrastructure);
       const indicatorMap = byId(datasets.indicators);
+      const productionMacroRows = datasets.productionMacro || [];
+      const latestMacroMap = new Map();
+      productionMacroRows.forEach(row => {
+        const key = row.indicator_id;
+        const current = latestMacroMap.get(key);
+        const rowKey = `${row.period || ''}|${row.data_date || ''}|${row.published_at || ''}`;
+        const currentKey = current ? `${current.period || ''}|${current.data_date || ''}|${current.published_at || ''}` : '';
+        if (!current || rowKey > currentKey) latestMacroMap.set(key, row);
+      });
+
+      function macroValue(row) {
+        if (!row || row.value === null || row.value === undefined) return '';
+        const value = Number(row.value);
+        const formatted = Number.isFinite(value) ? value.toLocaleString('en-US', { maximumFractionDigits: 2 }) : String(row.value);
+        if (row.unit === 'percent') return `${formatted}%`;
+        if (row.unit === 'percent-per-year') return `${formatted}% p.a.`;
+        if (row.unit === 'vnd-per-usd') return `${formatted} VND/USD`;
+        if (row.unit === 'vnd-per-tael') return `${formatted} VND/tael`;
+        return `${formatted} ${row.unit || ''}`.trim();
+      }
 
       const result = [];
 
       datasets.projects.forEach(project => {
+        const relatedInfrastructure = labels(project.related_infrastructure_ids, infraMap);
+        const legalTopics = labels(project.related_legal_topic_ids, topicMap);
         result.push(makeItem({
           type: 'project', id: project.id, title: project.name,
           subtitle: `${project.location_text || ''}${project.lead_developer_id ? ` · ${developerMap.get(project.lead_developer_id)?.name || ''}` : ''}`,
           meta: `${labels(project.region_ids, regionMap)} · ${arrayText(project.segment_ids)} · ${project.status || ''}`,
-          extra: project.summary || ''
+          extra: `${project.summary || ''} ${relatedInfrastructure} ${legalTopics}`
         }));
       });
 
@@ -165,20 +188,23 @@
       });
 
       datasets.infrastructure.forEach(project => {
+        const relatedProjects = labels(project.related_real_estate_project_ids, projectMap);
         result.push(makeItem({
           type: 'infrastructure-project', id: project.id, title: project.name,
           subtitle: project.location_text || labels(project.region_ids, regionMap),
           meta: `${project.infrastructure_type || ''} · ${project.status || ''} · ${labels(project.region_ids, regionMap)}`,
-          extra: project.summary || ''
+          extra: `${project.summary || ''} ${relatedProjects}`
         }));
       });
 
       datasets.indicators.forEach(indicator => {
+        const latest = latestMacroMap.get(indicator.id);
+        const latestLabel = latest ? `${macroValue(latest)} · ${latest.period || latest.data_date || ''}` : '';
         result.push(makeItem({
           type: 'macro-indicator', id: indicator.id, title: indicator.name,
-          subtitle: `${indicator.indicator_category || ''} · ${indicator.frequency || ''}`,
-          meta: `${indicator.indicator_subcategory || ''} · ${indicator.unit || ''}`,
-          extra: `${indicator.description || ''} ${indicator.methodology_note || ''}`
+          subtitle: latestLabel || `${indicator.indicator_category || ''} · ${indicator.frequency || ''}`,
+          meta: `${indicator.indicator_category || ''} · ${indicator.indicator_subcategory || ''} · ${indicator.frequency || ''} · ${indicator.unit || ''}`,
+          extra: `${indicator.description || ''} ${indicator.methodology_note || ''} ${latest?.evidence_status || ''}`
         }));
       });
 
@@ -310,7 +336,7 @@
       return;
     }
 
-    status.textContent = `${results.length} best matches · project/entity matches rank above related articles.`;
+    status.textContent = `${results.length} best matches across the integrated research registry.`;
     const grouped = new Map();
     results.forEach(item => {
       if (!grouped.has(item.type)) grouped.set(item.type, []);
@@ -338,7 +364,7 @@
     } catch (error) {
       console.error(error);
       status.textContent = 'Search index could not be loaded.';
-      container.innerHTML = '<div class="search-empty-state search-empty-state--error">Unable to load the demo search datasets. Refresh the page and try again.</div>';
+      container.innerHTML = '<div class="search-empty-state search-empty-state--error">Unable to load the integrated search datasets. Refresh the page and try again.</div>';
     }
   }
 

@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
-  "build_id": "phase4.3c-market-registry-20261007",
-  "generated_at": "2026-10-07T10:30:00+07:00",
+  "build_id": "phase4.3e-cross-links-20261007",
+  "generated_at": "2026-10-07T13:30:00+07:00",
   "record_count": 8,
   "data": [
     {
@@ -31,7 +31,13 @@
       ],
       "official_url": "https://www.namlongvn.com/en/township-residential/izumi-city-township/",
       "primary_source_id": "nam-long-official",
-      "source_date": "2026-09-07"
+      "source_date": "2026-09-07",
+      "related_legal_topic_ids": [
+        "land",
+        "real-estate-business",
+        "planning",
+        "investment"
+      ]
     },
     {
       "id": "waterpoint",
@@ -61,7 +67,13 @@
       ],
       "official_url": "https://www.namlongvn.com/en/township-residential/waterpoint-township/",
       "primary_source_id": "nam-long-official",
-      "source_date": "2026-09-07"
+      "source_date": "2026-09-07",
+      "related_legal_topic_ids": [
+        "land",
+        "real-estate-business",
+        "planning",
+        "investment"
+      ]
     },
     {
       "id": "akari-city",
@@ -86,7 +98,12 @@
       "official_url": "https://www.namlongvn.com/en/township-residential/akari-city/",
       "primary_source_id": "nam-long-official",
       "source_date": "2026-10-07",
-      "known_units_note": "More than 5,000 apartments across the township."
+      "known_units_note": "More than 5,000 apartments across the township.",
+      "related_legal_topic_ids": [
+        "housing",
+        "real-estate-business",
+        "planning"
+      ]
     },
     {
       "id": "mizuki-park",
@@ -116,7 +133,12 @@
       "official_url": "https://www.namlongvn.com/en/township-residential/mizuki-park/",
       "primary_source_id": "nam-long-official",
       "source_date": "2026-09-07",
-      "known_units_note": "More than 4,600 apartments plus 170 townhouses and 44 villas at completion."
+      "known_units_note": "More than 4,600 apartments plus 170 townhouses and 44 villas at completion.",
+      "related_legal_topic_ids": [
+        "housing",
+        "real-estate-business",
+        "planning"
+      ]
     },
     {
       "id": "the-global-city",
@@ -146,7 +168,13 @@
       ],
       "official_url": "https://masterisehomes.com/the-global-city/vi",
       "primary_source_id": "masterise-homes-official",
-      "source_date": "2026-08-10"
+      "source_date": "2026-08-10",
+      "related_legal_topic_ids": [
+        "land",
+        "real-estate-business",
+        "planning",
+        "investment"
+      ]
     },
     {
       "id": "eaton-park",
@@ -173,7 +201,12 @@
       ],
       "official_url": "https://gamudaland.com.vn/en/developments",
       "primary_source_id": "gamuda-land-official",
-      "source_date": "2026-10-07"
+      "source_date": "2026-10-07",
+      "related_legal_topic_ids": [
+        "housing",
+        "real-estate-business",
+        "construction"
+      ]
     },
     {
       "id": "elysian",
@@ -200,7 +233,12 @@
       ],
       "official_url": "https://gamudaland.com.vn/vn/developments/township/elysian",
       "primary_source_id": "gamuda-land-official",
-      "source_date": "2026-10-07"
+      "source_date": "2026-10-07",
+      "related_legal_topic_ids": [
+        "housing",
+        "real-estate-business",
+        "construction"
+      ]
     },
     {
       "id": "the-privia",
@@ -224,7 +262,12 @@
       "related_infrastructure_ids": [],
       "official_url": "https://www.khangdien.com.vn/the-privia",
       "primary_source_id": "khang-dien-official",
-      "source_date": "2024-11-14"
+      "source_date": "2024-11-14",
+      "related_legal_topic_ids": [
+        "housing",
+        "real-estate-business",
+        "construction"
+      ]
     }
   ]
 }

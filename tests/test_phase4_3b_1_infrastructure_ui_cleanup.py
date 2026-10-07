@@ -8,7 +8,7 @@ loc = (ROOT / "assets/js/localization-dynamic.js").read_text(encoding="utf-8")
 
 assert "assets/css/main.css?v=4.3STACK1" in html
 assert "assets/js/infrastructure.js?v=4.3B1" in html
-assert "assets/js/localization-dynamic.js?v=4.3B1" in html
+assert "assets/js/localization-dynamic.js?v=4.3E" in html
 
 assert "market-layout--infra-overview" in js
 assert "table-wrap--infra-overview" in js

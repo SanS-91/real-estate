@@ -37,7 +37,7 @@
     ['.main-nav a[href="infrastructure.html"], .mobile-nav-panel a[href="infrastructure.html"]', 'Infrastructure', 'Hạ tầng'],
     ['.main-nav a[href="macro.html"], .mobile-nav-panel a[href="macro.html"]', 'Macro', 'Vĩ mô'],
     ['.global-search-trigger span:first-child', 'Search research...', 'Tìm kiếm nghiên cứu...'],
-    ['[data-global-search-status]', 'Search across the structured demo research database.', 'Tìm kiếm trên toàn bộ cơ sở dữ liệu nghiên cứu có cấu trúc.'],
+    ['[data-global-search-status]', 'Search across Market, Legal, Infrastructure and controlled Macro data.', 'Tìm kiếm trên dữ liệu Thị trường, Pháp lý, Hạ tầng và Vĩ mô production có kiểm soát.'],
     ['[data-drawer-title]', 'Details', 'Chi tiết'],
     ['[data-drawer-body] .state-box', 'Select an item to inspect its details.', 'Chọn một mục để xem thông tin chi tiết.'],
     ['[data-source-registry-open]', 'Data Sources', 'Nguồn dữ liệu'],

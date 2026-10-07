@@ -11,7 +11,7 @@
     status: '',
     sort: 'latest'
   };
-  let data = { regions: [], developers: [], projects: [], phases: [], observations: [], articles: [], infrastructureProjects: [] };
+  let data = { regions: [], developers: [], projects: [], phases: [], observations: [], articles: [], infrastructureProjects: [], legalTopics: [] };
 
   function payloadData(payload) { return payload?.data || []; }
   function byId(records) { return new Map(records.map(item => [item.id, item])); }
@@ -52,6 +52,14 @@
 
   function developerName(project) {
     return Resolver.getLabel('developer', project.lead_developer_id);
+  }
+
+  function leadDeveloper(project) {
+    return Resolver.getEntity('developer', project.lead_developer_id);
+  }
+
+  function legalTopicLinks(project) {
+    return Resolver.getEntities('legal-topic', project.related_legal_topic_ids || []);
   }
 
   function regionNames(project) {
@@ -352,7 +360,9 @@
         ${Components.compactMetric({label:'Absorption',value:formatPercent(obs?.absorption_rate),note:obs?.period || ''})}
       </div>
       <div class="drawer-section"><h3>Overview</h3><p>${esc(project.summary)}</p></div>
+      ${leadDeveloper(project) ? `<div class="drawer-section"><h3>Developer</h3><div class="drawer-list-row"><div><strong>${esc(leadDeveloper(project).name)}</strong><span>${esc(leadDeveloper(project).summary || '')}</span></div><a class="text-link" href="market.html?view=projects&developer=${encodeURIComponent(leadDeveloper(project).id)}">Open portfolio</a></div></div>` : ''}
       <div class="drawer-section"><h3>Segments</h3><div class="chip-row">${(project.segment_ids || []).map(id=>`<span class="relation-chip">${esc(id.replaceAll('-',' '))}</span>`).join('')}</div></div>
+      <div class="drawer-section"><h3>Legal Research Topics</h3>${legalTopicLinks(project).length ? `<div class="chip-row">${legalTopicLinks(project).map(item=>`<a class="relation-chip" href="legal.html?view=documents&topic=${encodeURIComponent(item.id)}">${esc(item.name)}</a>`).join('')}</div><p class="muted-text">Research shortcuts by topic only; they do not determine whether a specific regulation applies to this project.</p>` : '<p class="muted-text">No curated legal-topic links.</p>'}</div>
       <div class="drawer-section"><h3>Phases</h3>${phases.length ? phases.map(item=>`<div class="drawer-list-row"><div><strong>${esc(item.name)}</strong><span>${esc(item.phase_type.replaceAll('-',' '))}${item.known_units_note ? ` · ${esc(item.known_units_note)}` : ''}</span></div>${Components.statusBadge(item.status)}</div>`).join('') : '<p class="muted-text">No phase records yet.</p>'}</div>
       <div class="drawer-section"><h3>Related Infrastructure</h3>${relatedInfrastructure.length ? relatedInfrastructure.map(item=>`<div class="drawer-list-row"><div><strong>${esc(item.name)}</strong><span>${esc(item.location_text || '')}</span></div><a class="text-link" href="infrastructure.html?view=projects&project=${encodeURIComponent(item.id)}">Open</a></div>`).join('') : '<p class="muted-text">No direct infrastructure links in the curated dataset.</p>'}</div>
       <div class="drawer-section"><h3>Data Provenance</h3><div class="provenance-inline-row">${sourceRef(project.primary_source_id,{sourceUrl:project.official_url,sourceDate:project.source_date})}<span class="muted-text">Project entity source</span></div>${obs ? `<div class="provenance-inline-row">${sourceRef(obs.source_id,{sourceDate:obs.source_date,period:obs.period,methodology:obs.methodology_note,sourceUrl:obs.source_url})}<span class="muted-text">Latest displayed market observation · ${esc(obs.period || '')}</span></div>` : '<p class="muted-text">No quantitative market observation is published for this project in the curated dataset.</p>'}</div>
@@ -396,16 +406,17 @@
   async function load() {
     try {
       await window.Provenance?.load?.();
-      const [regions, developers, projects, phases, observations, articles, infrastructureProjects, meta] = await Promise.all([
-        DataStore.getRegions(), DataStore.getDevelopers(), DataStore.getProjects(), DataStore.getProjectPhases(), DataStore.getMarketObservations(), DataStore.getArticles(), DataStore.getInfrastructureProjects(), DataStore.getMeta()
+      const [regions, developers, projects, phases, observations, articles, infrastructureProjects, legalTopics, meta] = await Promise.all([
+        DataStore.getRegions(), DataStore.getDevelopers(), DataStore.getProjects(), DataStore.getProjectPhases(), DataStore.getMarketObservations(), DataStore.getArticles(), DataStore.getInfrastructureProjects(), DataStore.getLegalTopics(), DataStore.getMeta()
       ]);
       data = {
-        regions: payloadData(regions), developers: payloadData(developers), projects: payloadData(projects), phases: payloadData(phases), observations: payloadData(observations), articles: payloadData(articles).filter(item => item.category === 'market'), infrastructureProjects: payloadData(infrastructureProjects)
+        regions: payloadData(regions), developers: payloadData(developers), projects: payloadData(projects), phases: payloadData(phases), observations: payloadData(observations), articles: payloadData(articles).filter(item => item.category === 'market'), infrastructureProjects: payloadData(infrastructureProjects), legalTopics: payloadData(legalTopics)
       };
       Resolver.setData('region', data.regions);
       Resolver.setData('developer', data.developers);
       Resolver.setData('project', data.projects);
       Resolver.setData('infrastructure-project', data.infrastructureProjects);
+      Resolver.setData('legal-topic', data.legalTopics);
       parseState();
       const updated = document.querySelector('[data-market-updated]');
       if (updated) updated.textContent = `Curated registry · ${data.projects.length} projects`;

@@ -14,7 +14,7 @@ def main():
     assert "'Value': 'Giá trị'" in loc
     assert "các biên lãi suất khách hàng do NHNN công bố được đối chiếu qua các nguồn độc lập" in loc
     assert "macro.js?v=4.2K4" in html
-    assert "localization-dynamic.js?v=4.2K4" in html
+    assert "localization-dynamic.js?v=4.3E" in html
 
     print("Phase 4.2J.3.1 labeling/localization cleanup tests PASS")
 

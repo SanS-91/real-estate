@@ -47,7 +47,7 @@ def main():
 
     html = (ROOT / "macro.html").read_text(encoding="utf-8")
     assert "macro.js?v=4.2K4" in html
-    assert "localization-dynamic.js?v=4.2K4" in html
+    assert "localization-dynamic.js?v=4.3E" in html
     assert "main.css?v=4.2I4" in html
 
     print("Phase 4.2I.4 banking frontend sync tests passed")

@@ -35,9 +35,9 @@ def main():
     index = (ROOT / 'index.html').read_text(encoding='utf-8')
     macro_html = (ROOT / 'macro.html').read_text(encoding='utf-8')
     assert 'home.js?v=4.3D' in index
-    assert 'localization-dynamic.js?v=4.3D' in index
+    assert 'localization-dynamic.js?v=4.3E' in index
     assert 'macro.js?v=4.2K4' in macro_html
-    assert 'localization-dynamic.js?v=4.2K4' in macro_html
+    assert 'localization-dynamic.js?v=4.3E' in macro_html
     assert 'ui=4.2J3.2' in macro_html
 
     mapping = json.loads((ROOT / 'config/frontend_indicator_map.json').read_text(encoding='utf-8'))

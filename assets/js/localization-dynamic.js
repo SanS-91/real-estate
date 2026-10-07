@@ -93,11 +93,19 @@
     'Macro Indicators': 'Chỉ số vĩ mô',
     'Events': 'Sự kiện',
     'Articles & Research': 'Bài viết & Nghiên cứu',
+    'Developer': 'Chủ đầu tư',
+    'Open portfolio': 'Mở danh mục dự án',
+    'Legal Research Topics': 'Chủ đề pháp lý liên quan',
+    'Related Market Research': 'Nghiên cứu thị trường liên quan',
+    'Research shortcuts by topic only; they do not determine whether a specific regulation applies to this project.': 'Các liên kết chỉ là lối tắt nghiên cứu theo chủ đề; không xác định một quy định cụ thể có áp dụng cho dự án hay không.',
+    'Links are based on shared research topics only and do not determine legal applicability to a specific project.': 'Liên kết dựa trên chủ đề nghiên cứu chung và không xác định khả năng áp dụng pháp lý đối với một dự án cụ thể.',
+    'No project research links for the current topics.': 'Chưa có liên kết dự án cho các chủ đề hiện tại.',
+    'No curated legal-topic links.': 'Chưa có liên kết chủ đề pháp lý được tuyển chọn.',
     'Type at least 2 characters. Vietnamese accents are optional.': 'Nhập ít nhất 2 ký tự. Có thể tìm không dấu tiếng Việt.',
     'Searching structured datasets…': 'Đang tìm trong dữ liệu có cấu trúc…',
     'Loading research index…': 'Đang tải chỉ mục nghiên cứu…',
     'Search index could not be loaded.': 'Không thể tải chỉ mục tìm kiếm.',
-    'Unable to load the demo search datasets. Refresh the page and try again.': 'Không thể tải dữ liệu tìm kiếm mô phỏng. Hãy tải lại trang và thử lại.',
+    'Unable to load the integrated search datasets. Refresh the page and try again.': 'Không thể tải dữ liệu tìm kiếm tích hợp. Hãy tải lại trang và thử lại.',
 
     // Home dynamic component labels
     'Market': 'Thị trường',
@@ -563,6 +571,8 @@
     if ((match = core.match(/^Official context: (.+)$/))) return `Ngữ cảnh chính thức: ${match[1]}`;
     if ((match = core.match(/^(\d+) targets through 2027$/))) return `${match[1]} mốc đến hết 2027`;
     if ((match = core.match(/^(\d+) source definitions$/))) return `${match[1]} định nghĩa nguồn`;
+    if ((match = core.match(/^(\d+) best matches across the integrated research registry\.$/))) return `${match[1]} kết quả phù hợp nhất trong hệ thống dữ liệu tích hợp.`;
+    if ((match = core.match(/^No matches for “(.+)”\.$/))) return `Không có kết quả cho “${match[1]}”.`;
     if ((match = core.match(/^P(\d+) · lower number = higher sourcing priority$/))) return `P${match[1]} · số nhỏ hơn = mức ưu tiên nguồn cao hơn`;
     if ((match = core.match(/^Latest displayed market observation · (.+)$/))) return `Quan sát thị trường mới nhất đang hiển thị · ${match[1]}`;
     if ((match = core.match(/^Current displayed observation · (.+)$/))) return `Quan sát hiện đang hiển thị · ${match[1]}`;

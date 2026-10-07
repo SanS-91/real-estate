@@ -44,7 +44,7 @@ assert "'Current effective event only · no synthetic history is created.'" in l
 
 html=(ROOT/"macro.html").read_text(encoding="utf-8")
 assert "assets/js/macro.js?v=4.2K4" in html
-assert "assets/js/localization-dynamic.js?v=4.2K4" in html
+assert "assets/js/localization-dynamic.js?v=4.3E" in html
 
 # Home does not need more cards, but it must count all persisted macro records.
 home=(ROOT/"assets/js/home.js").read_text(encoding="utf-8")

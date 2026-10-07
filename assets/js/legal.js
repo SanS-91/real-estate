@@ -33,7 +33,8 @@
     topics: [],
     documents: [],
     articles: [],
-    regions: []
+    regions: [],
+    projects: []
   };
 
   function payloadData(payload) { return payload?.data || []; }
@@ -81,6 +82,12 @@
 
   function topicNames(document) {
     return Resolver.getEntities('legal-topic', document.topic_ids || []).map(item => item.name).join(', ') || '—';
+  }
+
+  function relatedMarketProjects(document) {
+    const topicIds = new Set(document.topic_ids || []);
+    if (!topicIds.size) return [];
+    return data.projects.filter(project => (project.related_legal_topic_ids || []).some(id => topicIds.has(id)));
   }
 
   function regionNames(document) {
@@ -429,6 +436,7 @@
       <div class="drawer-section"><h3>Key Changes</h3><ul class="drawer-bullet-list">${(document.key_changes || []).map(item => `<li>${esc(item)}</li>`).join('') || '<li>No structured change notes.</li>'}</ul></div>
       <div class="drawer-section"><h3>Topics</h3><div class="chip-row">${(document.topic_ids || []).map(id => `<a class="relation-chip" href="legal.html?view=documents&topic=${encodeURIComponent(id)}">${esc(Resolver.getLabel('legal-topic', id, labelize(id)))}</a>`).join('')}</div></div>
       <div class="drawer-section"><h3>Related Regulations</h3>${relations.length ? relations.map(item => `<button type="button" class="drawer-list-row drawer-relation-row" data-document-id="${esc(item.document.id)}"><div><span>${esc(item.label)}</span><strong>${esc(item.document.document_number)} · ${esc(item.document.title)}</strong></div><span>›</span></button>`).join('') : '<p class="muted-text">No related-document records.</p>'}</div>
+      <div class="drawer-section"><h3>Related Market Research</h3>${relatedMarketProjects(document).length ? `${relatedMarketProjects(document).map(project => `<div class="drawer-list-row"><div><strong>${esc(project.name)}</strong><span>${esc(project.location_text || '')}</span></div><a class="text-link" href="market.html?view=projects&project=${encodeURIComponent(project.id)}">Open</a></div>`).join('')}<p class="muted-text">Links are based on shared research topics only and do not determine legal applicability to a specific project.</p>` : '<p class="muted-text">No project research links for the current topics.</p>'}</div>
       <div class="drawer-section"><h3>Related Analysis / News</h3>${relatedArticles.length ? relatedArticles.map(article => `<div class="drawer-list-row drawer-list-row--stack"><span>${esc(App.formatDate(article.published_at))} · ${esc(article.content_type)} · ${sourceRef(article.source_id,{publishedAt:article.published_at,sourceUrl:article.url})}</span><strong>${esc(article.title)}</strong></div>`).join('') : '<p class="muted-text">No related analysis.</p>'}</div>
       <div class="drawer-section official-source-box"><h3>Official Source</h3><div class="provenance-inline-row">${sourceRef(document.primary_source_id,{sourceDate:document.issued_date,sourceUrl:document.official_url})}</div>${document.official_url ? `<p><a class="text-link" href="${esc(document.official_url)}" target="_blank" rel="noopener noreferrer">Open official document ↗</a></p>` : '<p>Official URL is not available for this record. Source metadata remains visible through the registry.</p>'}</div>
     `;
@@ -498,20 +506,22 @@
   async function load() {
     try {
       await window.Provenance?.load?.();
-      const [agencies, topics, documents, articles, regions, meta] = await Promise.all([
-        DataStore.getAgencies(), DataStore.getLegalTopics(), DataStore.getLegalDocuments(), DataStore.getArticles(), DataStore.getRegions(), DataStore.getMeta()
+      const [agencies, topics, documents, articles, regions, projects, meta] = await Promise.all([
+        DataStore.getAgencies(), DataStore.getLegalTopics(), DataStore.getLegalDocuments(), DataStore.getArticles(), DataStore.getRegions(), DataStore.getProjects(), DataStore.getMeta()
       ]);
       data = {
         agencies: payloadData(agencies),
         topics: payloadData(topics),
         documents: payloadData(documents),
         articles: payloadData(articles).filter(item => item.category === 'legal'),
-        regions: payloadData(regions)
+        regions: payloadData(regions),
+        projects: payloadData(projects)
       };
       Resolver.setData('agency', data.agencies);
       Resolver.setData('legal-topic', data.topics);
       Resolver.setData('legal-document', data.documents);
       Resolver.setData('region', data.regions);
+      Resolver.setData('real-estate-project', data.projects);
       parseState();
       const updated = document.querySelector('[data-legal-updated]');
       if (updated) updated.textContent = `Official registry · ${data.documents.length} documents`;

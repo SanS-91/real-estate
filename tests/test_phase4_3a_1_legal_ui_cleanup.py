@@ -7,9 +7,9 @@ static = (ROOT / "assets/js/localization-static.js").read_text(encoding="utf-8")
 dynamic = (ROOT / "assets/js/localization-dynamic.js").read_text(encoding="utf-8")
 
 # Cache busting must force the browser to pick up the legal cleanup.
-assert 'assets/js/legal.js?v=4.3A4' in html
-assert 'assets/js/localization-static.js?v=4.3A1' in html
-assert 'assets/js/localization-dynamic.js?v=4.3A1' in html
+assert 'assets/js/legal.js?v=4.3E' in html
+assert 'assets/js/localization-static.js?v=4.3E' in html
+assert 'assets/js/localization-dynamic.js?v=4.3E' in html
 
 # Legal static banner is official, not demo.
 assert "Curated official registry." in html
