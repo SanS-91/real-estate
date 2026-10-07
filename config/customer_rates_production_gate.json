@@ -18,9 +18,33 @@
     "Priority short-term lending remains evidence-only and is never auto-published."
   ],
   "allowed_indicators": {
-    "deposit-rate-vnd-6-12m-low": {"allowed_sources": ["vnba", "vna-vietnamplus"],"required_readiness_statuses": ["ready-corroborated"],"required_evidence_status": "corroborated","required_period_type": "month","required_min_independent_sources": 2},
-    "deposit-rate-vnd-6-12m-high": {"allowed_sources": ["vnba", "vna-vietnamplus"],"required_readiness_statuses": ["ready-corroborated"],"required_evidence_status": "corroborated","required_period_type": "month","required_min_independent_sources": 2},
-    "lending-rate-vnd-average-low": {"allowed_sources": ["vnba", "vna-vietnamplus"],"required_readiness_statuses": ["ready-corroborated"],"required_evidence_status": "corroborated","required_period_type": "month","required_min_independent_sources": 2},
-    "lending-rate-vnd-average-high": {"allowed_sources": ["vnba", "vna-vietnamplus"],"required_readiness_statuses": ["ready-corroborated"],"required_evidence_status": "corroborated","required_period_type": "month","required_min_independent_sources": 2}
+    "deposit-rate-vnd-6-12m-low": {
+      "allowed_sources": ["vnba", "vna-vietnamplus"],
+      "required_readiness_statuses": ["ready-corroborated"],
+      "required_evidence_status": "corroborated",
+      "required_period_type": "month",
+      "required_min_independent_sources": 2
+    },
+    "deposit-rate-vnd-6-12m-high": {
+      "allowed_sources": ["vnba", "vna-vietnamplus"],
+      "required_readiness_statuses": ["ready-corroborated"],
+      "required_evidence_status": "corroborated",
+      "required_period_type": "month",
+      "required_min_independent_sources": 2
+    },
+    "lending-rate-vnd-average-low": {
+      "allowed_sources": ["vnba", "vna-vietnamplus"],
+      "required_readiness_statuses": ["ready-corroborated"],
+      "required_evidence_status": "corroborated",
+      "required_period_type": "month",
+      "required_min_independent_sources": 2
+    },
+    "lending-rate-vnd-average-high": {
+      "allowed_sources": ["vnba", "vna-vietnamplus"],
+      "required_readiness_statuses": ["ready-corroborated"],
+      "required_evidence_status": "corroborated",
+      "required_period_type": "month",
+      "required_min_independent_sources": 2
+    }
   }
 }
