@@ -1,7 +1,7 @@
 from __future__ import annotations
 
 from copy import deepcopy
-from datetime import datetime
+from datetime import datetime, timedelta
 from pathlib import Path
 from zoneinfo import ZoneInfo
 import json
@@ -26,9 +26,30 @@ def dump(path: Path, payload):
     path.write_text(json.dumps(payload, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
 
 
-def make_incoming(current: dict, period: str = "2026-10-07") -> tuple[dict, dict]:
+def next_test_period(current: dict) -> str:
+    periods = [
+        datetime.strptime(r["period"], "%Y-%m-%d").date()
+        for r in current["data"]
+        if r.get("indicator_id") in DAILY_IDS
+        and r.get("period_type") == "day"
+        and r.get("period")
+    ]
+    if not periods:
+        raise AssertionError("Daily FX/gold baseline is missing")
+    return (max(periods) + timedelta(days=1)).isoformat()
+
+
+def make_incoming(current: dict, period: str | None = None) -> tuple[dict, dict]:
+    period = period or next_test_period(current)
     rows = deepcopy(current["data"])
-    by = {r["indicator_id"]: r for r in rows if r["indicator_id"] in DAILY_IDS}
+    by = {}
+    for r in rows:
+        iid = r.get("indicator_id")
+        if iid not in DAILY_IDS or r.get("period_type") != "day":
+            continue
+        if iid not in by or r.get("period", "") > by[iid].get("period", ""):
+            by[iid] = r
+    assert set(by) == DAILY_IDS, by
     values = {
         "usd-vnd-central-rate": 25638.0,
         "sjc-gold-buy": 140500000.0,
@@ -108,7 +129,13 @@ def main():
 
     current = load(ROOT / "data/processed/macro/observations.json")
     current_meta = load(ROOT / "data/processed/macro/repository-publish.json")
-    incoming, run = make_incoming(current)
+    test_period = next_test_period(current)
+    incoming, run = make_incoming(current, test_period)
+    test_day = datetime.strptime(test_period, "%Y-%m-%d")
+    test_as_of = datetime(
+        test_day.year, test_day.month, test_day.day, 15, 0,
+        tzinfo=ZoneInfo("Asia/Ho_Chi_Minh"),
+    )
 
     tmp = Path(tempfile.mkdtemp(prefix="phase44e-"))
     try:
@@ -128,7 +155,7 @@ def main():
             source_run_database_id="99999",
             auto_policy_path=ROOT / "config/daily_auto_persistence_policy.json",
             daily_gate_path=ROOT / "config/daily_fx_gold_production_gate.json",
-            as_of=datetime(2026, 10, 7, 15, 0, tzinfo=ZoneInfo("Asia/Ho_Chi_Minh")),
+            as_of=test_as_of,
         )
         assert result["status"] == "ready-to-commit"
         assert result["added_record_count"] == 3
@@ -164,7 +191,7 @@ def main():
                 source_run_database_id="100000",
                 auto_policy_path=ROOT / "config/daily_auto_persistence_policy.json",
                 daily_gate_path=ROOT / "config/daily_fx_gold_production_gate.json",
-                as_of=datetime(2026, 10, 7, 15, 0, tzinfo=ZoneInfo("Asia/Ho_Chi_Minh")),
+                as_of=test_as_of,
             )
         except ValueError as exc:
             assert "exceed max" in str(exc) or "Non-daily indicator" in str(exc)
