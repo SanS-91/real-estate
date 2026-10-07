@@ -26,5 +26,5 @@ assert 'HistoryEngine?.legalTimeline' in legal
 assert 'HistoryEngine?.infrastructureTimeline' in infra
 assert 'HistoryEngine?.marketProjectHistory' in market
 assert 'HistoryEngine.macroSeries' in macro
-assert 'HistoryEngine' not in ''  # engine loaded and checked by Node behavior test
+assert 'window.HistoryEngine' in engine
 print('Phase 4.8/4.9 frontend integration tests PASS')
