@@ -440,13 +440,26 @@
     return App.formatDate(row.data_date || row.period);
   }
 
-  function productionCard(row) {
+  function productionCard(row, production) {
+    const delta = window.HistoryEngine?.macroDelta?.(production?.rows || [], row.indicator_id);
+    let changeLabel = 'Latest only';
+    let changeDirection = 'neutral';
+    if (delta?.previous && delta.delta !== null) {
+      if (row.unit === 'vnd-per-tael') {
+        changeLabel = `${delta.delta > 0 ? '+' : ''}${Formatters.number(delta.delta / 1_000_000, { min: 1, max: 1 })} mn vs prior`;
+      } else if (row.unit === 'vnd-per-usd') {
+        changeLabel = `${delta.delta > 0 ? '+' : ''}${Formatters.number(delta.delta, { min: 0, max: 0 })} vs prior`;
+      } else if (row.unit === 'percent' || row.unit === 'percent-per-year') {
+        changeLabel = `${delta.delta > 0 ? '+' : ''}${Formatters.number(delta.delta, { min: 2, max: 2 })} ppt vs prior`;
+      }
+      changeDirection = delta.direction;
+    }
     return {
       id: row.indicator_id,
       label: HOME_LABELS[row.indicator_id] || row.indicator_id,
       display_value: Formatters.unitValue(row.unit, row.value, { compact: true }),
-      change_label: 'Latest only',
-      change_direction: 'neutral',
+      change_label: changeLabel,
+      change_direction: changeDirection,
       period_label: formatProductionPeriod(row),
       source: productionEvidenceLabel(row)
     };
@@ -481,19 +494,19 @@
       if (rangeCard) return rangeCard;
       const indicatorId = HOME_CARD_TARGETS[card.id];
       const row = indicatorId ? production.latest.get(indicatorId) : null;
-      return row ? productionCard(row) : card;
+      return row ? productionCard(row, production) : card;
     });
 
     const policyRefi = production.latest.get('policy-refinancing-rate');
     if (policyRefi) {
       const lendingIndex = cards.findIndex(card => card.id === 'lending-range' || card.id === 'lending-demo');
-      cards.splice(lendingIndex >= 0 ? lendingIndex + 1 : cards.length, 0, productionCard(policyRefi));
+      cards.splice(lendingIndex >= 0 ? lendingIndex + 1 : cards.length, 0, productionCard(policyRefi, production));
     }
 
     const bankFunding = production.latest.get('bank-funding-growth-ytd');
     if (bankFunding) {
       const creditIndex = cards.findIndex(card => card.id === 'credit-growth-ytd' || card.id === 'credit-demo');
-      cards.splice(creditIndex >= 0 ? creditIndex + 1 : cards.length, 0, productionCard(bankFunding));
+      cards.splice(creditIndex >= 0 ? creditIndex + 1 : cards.length, 0, productionCard(bankFunding, production));
     }
     return cards;
   }
