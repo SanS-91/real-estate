@@ -8,6 +8,10 @@ on:
     - cron: '15 9 * * 1-5'
     # Phase 4.5A monthly release watch: 03:45 UTC = 10:45 ICT on days 1-10.
     - cron: '45 3 1-10 * *'
+    # Phase 4.5B customer-rate watch: Tuesday 04:15 UTC = 11:15 ICT.
+    - cron: '15 4 * * 2'
+    # Phase 4.5C policy-rate event watch: Thursday 04:30 UTC = 11:30 ICT.
+    - cron: '30 4 * * 4'
   workflow_dispatch:
     inputs:
       source:
@@ -111,6 +115,9 @@ jobs:
           python tests/test_phase4_4e_daily_macro_auto_publish.py
           python tests/test_phase4_4f_production_hardening.py
           python tests/test_phase4_5a_monthly_macro_auto_update.py
+          python tests/test_phase4_5b_customer_rates_auto_update.py
+          python tests/test_phase4_5c_policy_rates_auto_update.py
+          python tests/test_phase4_5d_operational_qa.py
 
       - name: Promotion preview fixture tests
         run: python tests/test_promotion_preview.py
@@ -125,13 +132,22 @@ jobs:
           EVENT='${{ github.event_name }}'
           SCHEDULE='${{ github.event.schedule }}'
           if [ "$SCHEDULE" = "45 3 1-10 * *" ] || [ "$SOURCE" = "monthly-macro-production" ]; then
-            # Phase 4.5A monthly path: official NSO CPI and banking-activity releases only.
+            # Phase 4.5A: official NSO CPI and banking-activity releases only.
             python scripts/candidate_pipeline.py --mode candidate \
               --source nso-cpi \
               --source nso-banking-activity
-          elif [ "$EVENT" = "schedule" ] || [ "$SOURCE" = "daily-markets-production" ]; then
+          elif [ "$SCHEDULE" = "15 4 * * 2" ] || [ "$SOURCE" = "customer-rates-production" ]; then
+            # Phase 4.5B: two-source monthly customer-rate ranges.
+            python scripts/candidate_pipeline.py --mode candidate \
+              --source vnba-customer-rates \
+              --source vietnamplus-customer-rates
+          elif [ "$SCHEDULE" = "30 4 * * 4" ] || [ "$SOURCE" = "policy-rates-production" ]; then
+            # Phase 4.5C: two-source administered policy-rate event model.
+            python scripts/candidate_pipeline.py --mode candidate \
+              --source vietnamplus-policy-rates \
+              --source banking-times-policy-rates
+          elif [ "$SCHEDULE" = "15 3 * * *" ] || [ "$SCHEDULE" = "15 9 * * 1-5" ] || [ "$SOURCE" = "daily-markets-production" ]; then
             # Phase 4.4E daily path: fetch only the two-source FX/gold pools.
-            # Monthly/event-driven indicators remain on their separate controlled paths.
             python scripts/candidate_pipeline.py --mode candidate \
               --source vietnamplus-central-rate \
               --source banking-times-central-rate \
@@ -148,23 +164,11 @@ jobs:
             python scripts/candidate_pipeline.py --mode candidate \
               --source vietnamplus-policy-rates \
               --source banking-times-policy-rates
-          elif [ "$SOURCE" = "policy-rates-production" ]; then
-            # Same two trusted sources as policy-news-search; controlled
-            # production later uses the narrow policy-rate-only gate.
-            python scripts/candidate_pipeline.py --mode candidate \
-              --source vietnamplus-policy-rates \
-              --source banking-times-policy-rates
           elif [ "$SOURCE" = "policy-liquidity-discovery" ]; then
             # Candidate-only discovery gate for SBV administered policy rates
             # and the market overnight interbank rate. No production write.
             python scripts/candidate_pipeline.py --mode candidate --source sbv-policy-rates
             python scripts/candidate_pipeline.py --mode candidate --source sbv-interbank-rates
-          elif [ "$SOURCE" = "customer-rates-production" ]; then
-            # Targeted production-gate run: refresh only the two independent
-            # customer-rate fallback sources. Avoid refreshing volatile daily
-            # FX/gold series merely to promote monthly customer-rate ranges.
-            python scripts/candidate_pipeline.py --mode candidate --source vnba-customer-rates
-            python scripts/candidate_pipeline.py --mode candidate --source vietnamplus-customer-rates
           elif [ -n "$SOURCE" ] && [ "$SOURCE" != "all" ]; then
             python scripts/candidate_pipeline.py --mode candidate --source "$SOURCE"
           else
@@ -181,303 +185,4 @@ jobs:
         run: python scripts/validate_promotion_preview.py --preview-dir data/staging/macro-preview
 
       - name: Controlled production promotion
-        if: ${{ github.event_name == 'schedule' || github.event.inputs.source == 'all' || github.event.inputs.source == 'customer-rates-production' || github.event.inputs.source == 'policy-rates-production' || github.event.inputs.source == 'daily-markets-production' || github.event.inputs.source == 'monthly-macro-production' || github.event.inputs.source == '' }}
-        shell: bash
-        run: |
-          SOURCE='${{ github.event.inputs.source }}'
-          EVENT='${{ github.event_name }}'
-          SCHEDULE='${{ github.event.schedule }}'
-          if [ "$SCHEDULE" = "45 3 1-10 * *" ] || [ "$SOURCE" = "monthly-macro-production" ]; then
-            python scripts/promote_production.py \
-              --preview-dir data/staging/macro-preview \
-              --processed-dir data/processed/macro \
-              --policy config/monthly_macro_production_gate.json
-          elif [ "$EVENT" = "schedule" ] || [ "$SOURCE" = "daily-markets-production" ]; then
-            python scripts/promote_production.py \
-              --preview-dir data/staging/macro-preview \
-              --processed-dir data/processed/macro \
-              --policy config/daily_fx_gold_production_gate.json
-          elif [ "$SOURCE" = "policy-rates-production" ]; then
-            python scripts/promote_production.py \
-              --preview-dir data/staging/macro-preview \
-              --processed-dir data/processed/macro \
-              --policy config/policy_rates_production_gate.json
-          else
-            python scripts/promote_production.py \
-              --preview-dir data/staging/macro-preview \
-              --processed-dir data/processed/macro
-          fi
-
-      - name: Validate controlled production output
-        if: ${{ github.event_name == 'schedule' || github.event.inputs.source == 'all' || github.event.inputs.source == 'customer-rates-production' || github.event.inputs.source == 'policy-rates-production' || github.event.inputs.source == 'daily-markets-production' || github.event.inputs.source == 'monthly-macro-production' || github.event.inputs.source == '' }}
-        run: python scripts/validate_production.py --processed-dir data/processed/macro
-
-      - name: Write workflow summary
-        if: always()
-        run: python scripts/write_ci_summary.py >> "$GITHUB_STEP_SUMMARY"
-
-      - name: Write promotion preview summary
-        if: always()
-        run: python scripts/write_promotion_summary.py >> "$GITHUB_STEP_SUMMARY"
-
-      - name: Write controlled production summary
-        if: always()
-        run: python scripts/write_production_summary.py >> "$GITHUB_STEP_SUMMARY"
-
-      - name: Upload candidate review artifact
-        if: always()
-        uses: actions/upload-artifact@v7
-        with:
-          name: macro-candidate-${{ github.run_number }}
-          retention-days: 30
-          if-no-files-found: warn
-          path: |
-            data/candidate/macro/
-            data/rejected/macro/
-            data/state/source-state.json
-          # Raw fetched HTML is intentionally excluded.
-      - name: Upload promotion preview artifact
-        if: always()
-        uses: actions/upload-artifact@v7
-        with:
-          name: macro-promotion-preview-${{ github.run_number }}
-          retention-days: 30
-          if-no-files-found: warn
-          path: |
-            data/staging/macro-preview/
-            data/candidate/macro/publish-readiness.json
-            data/candidate/macro/run-report.json
-          # Staging preview artifact only; processed production is uploaded separately for review.
-      - name: Upload controlled production artifact
-        if: ${{ always() && (github.event_name == 'schedule' || github.event.inputs.source == 'all' || github.event.inputs.source == 'customer-rates-production' || github.event.inputs.source == 'policy-rates-production' || github.event.inputs.source == 'daily-markets-production' || github.event.inputs.source == 'monthly-macro-production' || github.event.inputs.source == '') }}
-        uses: actions/upload-artifact@v7
-        with:
-          name: macro-production-${{ github.run_number }}
-          retention-days: 30
-          if-no-files-found: warn
-          path: |
-            data/processed/macro/
-          # Daily FX/gold and Phase 4.5A monthly NSO runs may pass their separate narrow auto-persistence jobs below; all other production remains manually persisted.
-
-  persist-daily-production:
-    name: Auto-persist corroborated daily FX & gold
-    needs: collect-candidate
-    if: ${{ needs.collect-candidate.result == 'success' && ((github.event_name == 'schedule' && github.event.schedule != '45 3 1-10 * *') || github.event.inputs.source == 'daily-markets-production') }}
-    runs-on: ubuntu-24.04
-    timeout-minutes: 8
-    permissions:
-      contents: write
-      actions: read
-
-    steps:
-      - name: Checkout current main
-        uses: actions/checkout@v7
-        with:
-          ref: main
-          fetch-depth: 0
-
-      - name: Capture repository baseline
-        id: baseline
-        shell: bash
-        run: echo "sha=$(git rev-parse HEAD)" >> "$GITHUB_OUTPUT"
-
-      - name: Set up Python
-        uses: actions/setup-python@v7
-        with:
-          python-version: '3.12'
-          cache: 'pip'
-
-      - name: Install dependencies
-        run: pip install -r requirements.txt
-
-      - name: Download this run controlled production artifact
-        uses: actions/download-artifact@v7
-        with:
-          name: macro-production-${{ github.run_number }}
-          path: incoming/macro-production
-
-      - name: Validate controlled production artifact
-        run: python scripts/validate_production.py --processed-dir incoming/macro-production
-
-      - name: Apply narrow daily repository gate
-        run: |
-          rm -rf data/staging/daily-auto-persistence
-          python scripts/persist_daily_markets.py \
-            --incoming-dir incoming/macro-production \
-            --repo-processed-dir data/processed/macro \
-            --report-dir data/staging/daily-auto-persistence \
-            --source-run-number "${{ github.run_number }}" \
-            --source-run-database-id "${{ github.run_id }}"
-
-      - name: Validate repository production output
-        run: python scripts/validate_repository_processed.py --processed-dir data/processed/macro
-
-      - name: Commit verified daily additions
-        id: commit
-        shell: bash
-        env:
-          BASE_SHA: ${{ steps.baseline.outputs.sha }}
-        run: |
-          git add data/processed/macro/observations.json data/processed/macro/repository-publish.json
-          if git diff --cached --quiet; then
-            echo "No new corroborated daily fact; no commit is needed."
-            echo "committed=false" >> "$GITHUB_OUTPUT"
-            exit 0
-          fi
-          git fetch origin main
-          REMOTE_SHA="$(git rev-parse origin/main)"
-          if [ "$REMOTE_SHA" != "$BASE_SHA" ]; then
-            echo "Safety stop: main changed while daily auto-persistence was running."
-            echo "Baseline: $BASE_SHA"
-            echo "Current origin/main: $REMOTE_SHA"
-            exit 1
-          fi
-          git config user.name "github-actions[bot]"
-          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git commit -m "data(macro): auto-publish verified daily FX and gold"
-          git push origin HEAD:main
-          echo "committed=true" >> "$GITHUB_OUTPUT"
-          echo "commit_sha=$(git rev-parse HEAD)" >> "$GITHUB_OUTPUT"
-
-      - name: Write daily auto-persistence summary
-        if: always()
-        shell: bash
-        run: |
-          if [ -f data/staging/daily-auto-persistence/daily-auto-persistence.json ]; then
-            echo "# Daily FX & Gold Auto-Publish" >> "$GITHUB_STEP_SUMMARY"
-            echo >> "$GITHUB_STEP_SUMMARY"
-            python - <<'PY' >> "$GITHUB_STEP_SUMMARY"
-          import json
-          from pathlib import Path
-          p=json.loads(Path('data/staging/daily-auto-persistence/daily-auto-persistence.json').read_text())
-          print(f"**Status:** `{p.get('status')}` · Added {p.get('added_record_count', 0)} · Final {p.get('final_record_count', 0)}")
-          for r in p.get('added', []):
-              print(f"- {r.get('indicator_id')} · {r.get('period')} · {r.get('value')} · sources: {', '.join(r.get('corroboration_source_ids', []))}")
-          if not p.get('added'):
-              print("- No new corroborated daily fact; repository retained the last good data.")
-          PY
-          fi
-
-      - name: Upload daily persistence review artifact
-        if: always()
-        uses: actions/upload-artifact@v7
-        with:
-          name: macro-daily-persistence-${{ github.run_number }}
-          retention-days: 30
-          if-no-files-found: warn
-          path: |
-            data/staging/daily-auto-persistence/
-            data/processed/macro/observations.json
-            data/processed/macro/repository-publish.json
-
-
-  persist-monthly-production:
-    name: Auto-persist verified monthly CPI & banking growth
-    needs: collect-candidate
-    if: ${{ needs.collect-candidate.result == 'success' && ((github.event_name == 'schedule' && github.event.schedule == '45 3 1-10 * *') || github.event.inputs.source == 'monthly-macro-production') }}
-    runs-on: ubuntu-24.04
-    timeout-minutes: 8
-    permissions:
-      contents: write
-      actions: read
-
-    steps:
-      - name: Checkout current main
-        uses: actions/checkout@v7
-        with:
-          ref: main
-          fetch-depth: 0
-
-      - name: Capture repository baseline
-        id: baseline
-        shell: bash
-        run: echo "sha=$(git rev-parse HEAD)" >> "$GITHUB_OUTPUT"
-
-      - name: Set up Python
-        uses: actions/setup-python@v7
-        with:
-          python-version: '3.12'
-          cache: 'pip'
-
-      - name: Install dependencies
-        run: pip install -r requirements.txt
-
-      - name: Download this run controlled production artifact
-        uses: actions/download-artifact@v7
-        with:
-          name: macro-production-${{ github.run_number }}
-          path: incoming/macro-production
-
-      - name: Validate controlled production artifact
-        run: python scripts/validate_production.py --processed-dir incoming/macro-production
-
-      - name: Apply narrow monthly repository gate
-        run: |
-          rm -rf data/staging/monthly-auto-persistence
-          python scripts/persist_monthly_macro.py \
-            --incoming-dir incoming/macro-production \
-            --repo-processed-dir data/processed/macro \
-            --report-dir data/staging/monthly-auto-persistence \
-            --source-run-number "${{ github.run_number }}" \
-            --source-run-database-id "${{ github.run_id }}"
-
-      - name: Validate repository production output
-        run: python scripts/validate_repository_processed.py --processed-dir data/processed/macro
-
-      - name: Commit verified monthly additions
-        id: commit
-        shell: bash
-        env:
-          BASE_SHA: ${{ steps.baseline.outputs.sha }}
-        run: |
-          git add data/processed/macro/observations.json data/processed/macro/repository-publish.json
-          if git diff --cached --quiet; then
-            echo "No new verified official monthly Macro fact; no commit is needed."
-            echo "committed=false" >> "$GITHUB_OUTPUT"
-            exit 0
-          fi
-          git fetch origin main
-          REMOTE_SHA="$(git rev-parse origin/main)"
-          if [ "$REMOTE_SHA" != "$BASE_SHA" ]; then
-            echo "Safety stop: main changed while monthly auto-persistence was running."
-            echo "Baseline: $BASE_SHA"
-            echo "Current origin/main: $REMOTE_SHA"
-            exit 1
-          fi
-          git config user.name "github-actions[bot]"
-          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git commit -m "data(macro): auto-publish verified monthly CPI and banking growth"
-          git push origin HEAD:main
-          echo "committed=true" >> "$GITHUB_OUTPUT"
-          echo "commit_sha=$(git rev-parse HEAD)" >> "$GITHUB_OUTPUT"
-
-      - name: Write monthly auto-persistence summary
-        if: always()
-        shell: bash
-        run: |
-          if [ -f data/staging/monthly-auto-persistence/monthly-auto-persistence.json ]; then
-            echo "# Monthly Macro Auto-Publish" >> "$GITHUB_STEP_SUMMARY"
-            echo >> "$GITHUB_STEP_SUMMARY"
-            python - <<'PY' >> "$GITHUB_STEP_SUMMARY"
-          import json
-          from pathlib import Path
-          p=json.loads(Path('data/staging/monthly-auto-persistence/monthly-auto-persistence.json').read_text())
-          print(f"**Status:** `{p.get('status')}` · Added {p.get('added_record_count', 0)} · Final {p.get('final_record_count', 0)}")
-          for r in p.get('added', []):
-              print(f"- {r.get('indicator_id')} · {r.get('period')} · {r.get('value')} · source: {r.get('source_id')}")
-          if not p.get('added'):
-              print("- No new verified official monthly Macro fact; repository retained the last good data.")
-          PY
-          fi
-
-      - name: Upload monthly persistence review artifact
-        if: always()
-        uses: actions/upload-artifact@v7
-        with:
-          name: macro-monthly-persistence-${{ github.run_number }}
-          retention-days: 30
-          if-no-files-found: warn
-          path: |
-            data/staging/monthly-auto-persistence/
-            data/processed/macro/observations.json
-            data/processed/macro/repository-publish.json
+        if: ${{ github.event_name == 'schedule' || github.event.inputs.source == 'all' || github.event.inputs.source == 'customer-rates-produc
