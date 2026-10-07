@@ -11,7 +11,8 @@ Implementation v1 is being built sequentially as a static-first research webapp 
 - Step 5 — Infrastructure module: complete.
 - Step 6 — Macro module: complete.
 - Step 7 — Global structured search and final frontend integration: complete.
-- All current values, dates and developments are illustrative mock data only.
+- Current data is hybrid: Market / Legal / Infrastructure registries are curated source-backed datasets; Macro overlays controlled production observations on the legacy static frontend dataset.
+- Illustrative/demo records are retained only where a module or evidence layer has not yet been promoted to curated/production status. Missing facts are not inferred.
 
 ## Run locally
 
@@ -35,13 +36,21 @@ The repository is compatible with GitHub Pages using the `main` branch and `/ (r
 
 ## Data mode
 
-`config/settings.json` currently points to:
+`config/settings.json` still points to the historical static root:
 
 ```text
 ./data/mock/
 ```
 
-Later implementation steps will switch the same frontend interface to structured processed data without changing the page layout.
+The folder name is retained for frontend compatibility and no longer means that every record inside it is mock data. Current classification is:
+
+- Market: curated project/developer registry and curated research benchmarks.
+- Legal: curated official-document registry.
+- Infrastructure: curated official/project-source registry with schedule history.
+- Macro: hybrid; indicator definitions and fallback/demo context remain under the static root, while controlled production observations are read from `data/processed/macro/observations.json`.
+- Articles/news/evidence that are explicitly labelled demo remain illustrative and are not treated as canonical facts.
+
+Do not move or rename `data/mock/` during Phase 4.4F; path cleanup is deferred until the production contracts are stable.
 
 ## Implementation Step 3 — Market Module
 
@@ -107,7 +116,19 @@ Global header search is now connected to the structured demo datasets across all
 - Search is loaded lazily and uses the shared DataStore cache; no AI, backend or database is required
 - Keyboard shortcut `Ctrl/Cmd + K`, arrow-key navigation and Enter-to-open are supported
 
-This completes the frontend implementation layer. All current datasets remain illustrative mock data. The next phase is source registry + collectors for real data ingestion.
+This completed the original frontend implementation layer. Subsequent Phase 4 work added source registries, curated real datasets, collectors, controlled production promotion and repository persistence. Historical v7 demo fixtures are retained only as explicitly labelled fallback/context data.
+
+## Phase 4.4F — Production Hardening Baseline
+
+Phase 4.4F locks the accepted Phase 4.4E/4.4E.2 production behavior before broader automation is added.
+
+- Daily USD/VND central rate and SJC buy/sell observations use the narrow two-source corroborated auto-persistence gate.
+- Re-running the same production facts is idempotent: no duplicate logical key is appended and the last good repository state is retained.
+- `data/state/update-status.json` is a repository snapshot; scheduled freshness checks rebuild a runtime snapshot from current data.
+- GitHub Actions are pinned to Ubuntu 24.04 and Node.js-24-compatible official action majors to avoid runner/runtime migration surprises.
+- The legacy `data/mock/` path is kept for compatibility, while metadata and documentation explicitly distinguish demo, curated and controlled-production data.
+
+See `docs/PHASE4_4F_PRODUCTION_HARDENING.md` for the baseline contract and deferred items.
 
 ## v7.1.0 — Source Registry & Provenance Foundation
 
@@ -170,3 +191,14 @@ Added in this release:
 - Dynamic localization remains non-fatal and is never called by DataStore, Search, Resolver, FilterEngine, ChartTools or page-domain modules
 
 Chart canvas legends/series labels and source-authored content are intentionally not rewritten in this release.
+
+
+## Phase 4.5 — Macro Automation Complete
+
+Phase 4.5 now covers four controlled automatic groups: daily FX/gold, official monthly NSO statistics, corroborated customer deposit/lending ranges, and corroborated SBV administered policy-rate events. Each group has its own narrow production and persistence gate; unrelated indicators cannot leak into an automatic run.
+
+Customer rates require a complete four-component monthly range bundle corroborated by VNBA and VietnamPlus/VNA. Policy rates require a complete three-rate event corroborated by VietnamPlus/VNA and Thoi Bao Ngan Hang. Partial bundles retain the last good repository state.
+
+Operational QA runs with the daily freshness check, and `.github/workflows/phase45-validation.yml` provides a single manual validation action for Phase 4.5A–4.5D.
+
+See `docs/PHASE4_5_COMPLETE_MACRO_AUTOMATION.md` for the consolidated contract.
