@@ -1,122 +1,206 @@
 {
   "schema_version": 1,
-  "build_id": "demo-step5-20261003",
-  "generated_at": "2026-10-03T16:15:00+07:00",
-  "record_count": 6,
+  "build_id": "phase4.3b-infrastructure-registry-20261007",
+  "generated_at": "2026-10-07T00:20:00+07:00",
+  "record_count": 8,
   "data": [
     {
       "id": "long-thanh-airport",
-      "name": "Long Thanh International Airport",
+      "name": "Cảng HKQT Long Thành – Giai đoạn 1",
       "infrastructure_type": "airport",
-      "region_ids": ["dong-nai"],
+      "region_ids": [
+        "dong-nai"
+      ],
       "status": "under-construction",
       "location_text": "Long Thành, Đồng Nai",
-      "current_total_investment": 109000,
+      "current_total_investment": 109111,
       "investment_currency": "VND",
       "investment_unit": "bn",
-      "scale_text": "Illustrative airport megaproject record used for research workflow testing.",
+      "scale_text": "Giai đoạn 1: 1 đường cất hạ cánh, 1 nhà ga hành khách; công suất thiết kế 25 triệu khách/năm.",
       "current_expected_completion": "2026-Q4",
       "completion_date_precision": "quarter",
-      "current_progress_percent": 72,
-      "current_progress_note": "Illustrative progress value only.",
-      "related_real_estate_project_ids": ["izumi-city"],
-      "summary": "Demo infrastructure master record linked to Đồng Nai market research. Dates, investment and progress are illustrative in this build."
+      "current_progress_percent": 77,
+      "current_progress_note": "ACV báo cáo giá trị sản lượng thực hiện đạt khoảng 77% vào 29/06/2026; vận hành thử dự kiến trong Sep–Nov 2026 và mục tiêu khai thác chính thức từ 01/12/2026.",
+      "related_real_estate_project_ids": [
+        "izumi-city"
+      ],
+      "summary": "Dự án sân bay trọng điểm quốc gia tại Đồng Nai. Registry lưu riêng tiến độ xây dựng và mốc chuẩn bị khai thác; số % tiến độ luôn gắn ngày nguồn, không được hiểu là số liệu thời gian thực."
     },
     {
       "id": "hcmc-ring-road-3",
-      "name": "HCMC Ring Road 3",
+      "name": "Đường Vành đai 3 TPHCM",
       "infrastructure_type": "ring-road",
-      "region_ids": ["hcmc", "binh-duong", "dong-nai"],
+      "region_ids": [
+        "hcmc",
+        "binh-duong",
+        "dong-nai"
+      ],
       "status": "under-construction",
-      "location_text": "HCMC metropolitan region",
-      "current_total_investment": 75400,
+      "location_text": "TPHCM – Đồng Nai – khu vực Bình Dương cũ",
+      "current_total_investment": 75300,
       "investment_currency": "VND",
       "investment_unit": "bn",
-      "scale_text": "Illustrative metropolitan ring-road record.",
-      "length_km": 76,
+      "scale_text": "Tuyến liên vùng dài hơn 76 km; giai đoạn phân kỳ 4 làn cao tốc cùng các đoạn đường song hành.",
+      "length_km": 76.3,
       "current_expected_completion": "2026-Q4",
       "completion_date_precision": "quarter",
-      "current_progress_percent": 64,
-      "current_progress_note": "Illustrative progress value only.",
-      "related_real_estate_project_ids": ["the-global-city", "eaton-park"],
-      "summary": "Demo cross-region road project used to test region, schedule and real-estate relationships."
+      "current_progress_percent": 80,
+      "current_progress_note": "Cập nhật chính thức giữa Aug 2026 cho biết khối lượng thực hiện đã trên 80%; mục tiêu hoàn thành toàn bộ dự án trong năm 2026.",
+      "related_real_estate_project_ids": [
+        "the-global-city",
+        "eaton-park",
+        "izumi-city"
+      ],
+      "summary": "Trục vành đai chiến lược của vùng TPHCM. Dự án đã điều chỉnh lộ trình so với các mốc thông xe sớm trước đây; registry giữ lịch sử mục tiêu thay vì ghi đè."
     },
     {
       "id": "ben-luc-long-thanh-expressway",
-      "name": "Ben Luc–Long Thanh Expressway",
+      "name": "Cao tốc Bến Lức – Long Thành",
       "infrastructure_type": "expressway",
-      "region_ids": ["long-an", "hcmc", "dong-nai"],
-      "status": "under-construction",
-      "location_text": "Long An – HCMC – Đồng Nai",
+      "region_ids": [
+        "long-an",
+        "hcmc",
+        "dong-nai"
+      ],
+      "status": "operational",
+      "location_text": "Long An – TPHCM – Đồng Nai",
       "current_total_investment": 31400,
       "investment_currency": "VND",
       "investment_unit": "bn",
-      "scale_text": "Illustrative inter-regional expressway record.",
+      "scale_text": "Tuyến cao tốc dài gần 58 km, 4 làn xe cùng làn dừng khẩn cấp, kết nối phía tây TPHCM với Đông Nam Bộ.",
       "length_km": 58,
-      "current_expected_completion": "2027-Q2",
+      "current_expected_completion": "2026-Q4",
       "completion_date_precision": "quarter",
-      "current_progress_percent": 81,
-      "current_progress_note": "Illustrative progress value only.",
-      "related_real_estate_project_ids": ["waterpoint", "izumi-city"],
-      "summary": "Demo project showing how one infrastructure asset can relate to multiple property markets."
+      "current_progress_percent": 100,
+      "current_progress_note": "Toàn tuyến chính thức thông xe, đưa vào khai thác từ 0h ngày 01/10/2026.",
+      "related_real_estate_project_ids": [
+        "waterpoint",
+        "izumi-city"
+      ],
+      "summary": "Tuyến liên vùng kết nối cao tốc TPHCM–Trung Lương/Vành đai 3 với khu vực Đồng Nai, tạo thêm hướng tiếp cận quan trọng tới vùng Long Thành."
     },
     {
       "id": "hcmc-metro-line-1",
-      "name": "HCMC Metro Line 1",
+      "name": "Metro số 1 Bến Thành – Suối Tiên",
       "infrastructure_type": "metro",
-      "region_ids": ["hcmc"],
+      "region_ids": [
+        "hcmc"
+      ],
       "status": "operational",
-      "location_text": "HCMC",
+      "location_text": "TPHCM",
       "current_total_investment": 43700,
       "investment_currency": "VND",
       "investment_unit": "bn",
-      "scale_text": "Illustrative urban rail record.",
+      "scale_text": "Dài 19,7 km, 14 nhà ga; tuyến đường sắt đô thị đầu tiên của TPHCM.",
       "length_km": 19.7,
       "station_count": 14,
-      "current_expected_completion": "2025",
-      "completion_date_precision": "year",
+      "current_expected_completion": "2024-Q4",
+      "completion_date_precision": "quarter",
       "current_progress_percent": 100,
-      "current_progress_note": "Illustrative operational snapshot.",
-      "related_real_estate_project_ids": ["the-global-city", "eaton-park"],
-      "summary": "Demo operational infrastructure record retained for historical and regional research."
+      "current_progress_note": "Vận hành chính thức từ 22/12/2024.",
+      "related_real_estate_project_ids": [
+        "the-global-city",
+        "eaton-park"
+      ],
+      "summary": "Tuyến metro vận hành kết nối trung tâm TPHCM với hành lang phía Đông, tạo nền tảng cho mạng lưới đường sắt đô thị mở rộng."
     },
     {
       "id": "hcmc-moc-bai-expressway",
-      "name": "HCMC–Moc Bai Expressway",
+      "name": "Cao tốc TPHCM – Mộc Bài",
       "infrastructure_type": "expressway",
-      "region_ids": ["hcmc"],
-      "status": "land-clearance",
-      "location_text": "HCMC – western gateway",
-      "current_total_investment": 19800,
+      "region_ids": [
+        "hcmc"
+      ],
+      "status": "under-construction",
+      "location_text": "TPHCM – Tây Ninh / cửa khẩu Mộc Bài",
+      "current_total_investment": 19617,
       "investment_currency": "VND",
       "investment_unit": "bn",
-      "scale_text": "Illustrative expressway preparation-stage record.",
+      "scale_text": "Dài khoảng 51 km, giai đoạn 1 quy mô 4 làn xe; dự án PPP/BOT kết nối Vành đai 3 với khu vực Mộc Bài.",
       "length_km": 51,
-      "current_expected_completion": "2028",
-      "completion_date_precision": "year",
+      "current_expected_completion": "2027-Q4",
+      "completion_date_precision": "quarter",
       "current_progress_percent": null,
-      "current_progress_note": "No numeric progress stored for this illustrative stage.",
+      "current_progress_note": "Tuyến chính được khởi công trong Jul 2026; mục tiêu hoàn thành, thông xe cuối năm 2027.",
       "related_real_estate_project_ids": [],
-      "summary": "Demo record used to show non-construction stages and year-level schedule precision."
+      "summary": "Cao tốc cửa ngõ Tây Bắc TPHCM, chia sẻ lưu lượng Quốc lộ 22 và tăng năng lực kết nối logistics với Tây Ninh và cửa khẩu Mộc Bài."
     },
     {
       "id": "hcmc-ring-road-4",
-      "name": "HCMC Ring Road 4",
+      "name": "Đường Vành đai 4 TPHCM",
       "infrastructure_type": "ring-road",
-      "region_ids": ["hcmc", "binh-duong", "dong-nai", "long-an"],
-      "status": "approved",
-      "location_text": "HCMC extended metropolitan region",
-      "current_total_investment": 120000,
+      "region_ids": [
+        "hcmc",
+        "dong-nai",
+        "long-an",
+        "binh-duong"
+      ],
+      "status": "land-clearance",
+      "location_text": "Vùng TPHCM mở rộng – Đồng Nai – Tây Ninh",
+      "current_total_investment": 120413,
       "investment_currency": "VND",
       "investment_unit": "bn",
-      "scale_text": "Illustrative future ring-road record.",
-      "length_km": 159,
-      "current_expected_completion": "2029",
-      "completion_date_precision": "year",
+      "scale_text": "Toàn tuyến khoảng 207,26 km; phạm vi đầu tư theo Nghị quyết 220/2025/QH15 và các dự án thành phần địa phương.",
+      "length_km": 207.26,
+      "current_expected_completion": "2028-Q4",
+      "completion_date_precision": "quarter",
       "current_progress_percent": null,
-      "current_progress_note": "Progress percentage intentionally omitted at approval stage.",
-      "related_real_estate_project_ids": ["waterpoint", "eco-retreat"],
-      "summary": "Demo future-project record used to test multi-region filtering and long-horizon schedule display."
+      "current_progress_note": "Dự án đang triển khai thủ tục, GPMB và chuẩn bị đầu tư; Chính phủ đặt mục tiêu phấn đấu hoàn thành cuối 2028, trong khi khung triển khai dự án kéo đến 2029.",
+      "related_real_estate_project_ids": [
+        "waterpoint",
+        "eco-retreat",
+        "izumi-city"
+      ],
+      "summary": "Vành đai liên vùng quy mô lớn của vùng TPHCM. Registry tách mục tiêu tăng tốc cuối 2028 khỏi khung tiến độ dự án đến 2029 để tránh mất lịch sử."
+    },
+    {
+      "id": "bien-hoa-vung-tau-expressway",
+      "name": "Cao tốc Biên Hòa – Vũng Tàu",
+      "infrastructure_type": "expressway",
+      "region_ids": [
+        "dong-nai",
+        "hcmc"
+      ],
+      "status": "operational",
+      "location_text": "Đồng Nai – khu vực Bà Rịa cũ (TPHCM)",
+      "current_total_investment": 17837,
+      "investment_currency": "VND",
+      "investment_unit": "bn",
+      "scale_text": "Tuyến chính dài hơn 54 km ở giai đoạn 1; kết nối với cao tốc TPHCM–Long Thành–Dầu Giây tại nút giao Long Thành.",
+      "length_km": 54,
+      "current_expected_completion": "2026-Q2",
+      "completion_date_precision": "quarter",
+      "current_progress_percent": 100,
+      "current_progress_note": "Tuyến chính hơn 54 km được đưa vào khai thác đồng bộ từ 18/05/2026; một số phương án tổ chức giao thông tiếp tục được hoàn thiện sau đó.",
+      "related_real_estate_project_ids": [
+        "izumi-city"
+      ],
+      "summary": "Tuyến cao tốc kết nối Đồng Nai với khu vực Bà Rịa/Vũng Tàu, đồng thời tạo mạng lưới kết nối trực tiếp quanh nút giao Long Thành và sân bay."
+    },
+    {
+      "id": "hcmc-long-thanh-expansion",
+      "name": "Mở rộng cao tốc TPHCM – Long Thành",
+      "infrastructure_type": "expressway",
+      "region_ids": [
+        "hcmc",
+        "dong-nai"
+      ],
+      "status": "under-construction",
+      "location_text": "TPHCM – Đồng Nai",
+      "current_total_investment": 15000,
+      "investment_currency": "VND",
+      "investment_unit": "bn",
+      "scale_text": "Mở rộng đoạn Vành đai 2 – nút giao cao tốc Biên Hòa–Vũng Tàu lên 8–10 làn; xây thêm đơn nguyên cầu Long Thành 5 làn.",
+      "current_expected_completion": "2027-Q1",
+      "completion_date_precision": "quarter",
+      "current_progress_percent": 10,
+      "current_progress_note": "Cập nhật 27/06/2026: khối lượng toàn dự án khoảng 10%; mục tiêu phần lớn dự án hoàn thành năm 2026, riêng cầu Long Thành dự kiến Q1/2027.",
+      "related_real_estate_project_ids": [
+        "the-global-city",
+        "eaton-park",
+        "izumi-city"
+      ],
+      "summary": "Dự án mở rộng tuyến kết nối chính giữa TPHCM và sân bay Long Thành. Registry sử dụng Q1/2027 làm mốc hoàn tất tổng thể do cầu Long Thành là hạng mục kết thúc sau phần đường."
     }
   ]
 }

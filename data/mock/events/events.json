@@ -1,232 +1,9 @@
 {
   "schema_version": 1,
-  "build_id": "demo-step6-20261003",
-  "generated_at": "2026-10-03T16:45:00+07:00",
-  "record_count": 15,
+  "build_id": "phase4.3b-infrastructure-registry-20261007",
+  "generated_at": "2026-10-07T00:20:00+07:00",
+  "record_count": 14,
   "data": [
-    {
-      "id": "infra-event-001",
-      "category": "infrastructure",
-      "event_type": "progress",
-      "entity_type": "infrastructure-project",
-      "entity_id": "long-thanh-airport",
-      "event_date": "2026-10-01",
-      "title": "Illustrative airport construction progress update",
-      "summary": "Demo milestone used to test latest-progress display.",
-      "importance": 4,
-      "region_ids": [
-        "dong-nai"
-      ],
-      "source_ids": [
-        "demo-official"
-      ],
-      "article_ids": [
-        "article-infra-001"
-      ],
-      "event_data": {
-        "progress_percent": 72
-      }
-    },
-    {
-      "id": "infra-event-002",
-      "category": "infrastructure",
-      "event_type": "schedule-change",
-      "entity_type": "infrastructure-project",
-      "entity_id": "ben-luc-long-thanh-expressway",
-      "event_date": "2026-09-18",
-      "title": "Illustrative expressway completion target revised",
-      "summary": "Demo schedule revision from Q4 2026 to Q2 2027.",
-      "importance": 4,
-      "region_ids": [
-        "long-an",
-        "hcmc",
-        "dong-nai"
-      ],
-      "source_ids": [
-        "demo-official"
-      ],
-      "article_ids": [
-        "article-infra-002"
-      ],
-      "event_data": {
-        "previous_target": "2026-Q4",
-        "new_target": "2027-Q2"
-      }
-    },
-    {
-      "id": "infra-event-003",
-      "category": "infrastructure",
-      "event_type": "progress",
-      "entity_type": "infrastructure-project",
-      "entity_id": "hcmc-ring-road-3",
-      "event_date": "2026-09-12",
-      "title": "Illustrative Ring Road 3 progress reaches new milestone",
-      "summary": "Demo progress event for the metropolitan ring road.",
-      "importance": 4,
-      "region_ids": [
-        "hcmc",
-        "binh-duong",
-        "dong-nai"
-      ],
-      "source_ids": [
-        "demo-official"
-      ],
-      "article_ids": [
-        "article-infra-003"
-      ],
-      "event_data": {
-        "progress_percent": 64
-      }
-    },
-    {
-      "id": "infra-event-004",
-      "category": "infrastructure",
-      "event_type": "schedule-change",
-      "entity_type": "infrastructure-project",
-      "entity_id": "long-thanh-airport",
-      "event_date": "2026-08-20",
-      "title": "Illustrative airport target moves to Q4 2026",
-      "summary": "Demo schedule-history event preserving the prior target.",
-      "importance": 4,
-      "region_ids": [
-        "dong-nai"
-      ],
-      "source_ids": [
-        "demo-official"
-      ],
-      "article_ids": [],
-      "event_data": {
-        "previous_target": "2026-Q2",
-        "new_target": "2026-Q4"
-      }
-    },
-    {
-      "id": "infra-event-005",
-      "category": "infrastructure",
-      "event_type": "progress",
-      "entity_type": "infrastructure-project",
-      "entity_id": "ben-luc-long-thanh-expressway",
-      "event_date": "2026-08-05",
-      "title": "Illustrative expressway progress update",
-      "summary": "Demo construction-progress milestone.",
-      "importance": 3,
-      "region_ids": [
-        "long-an",
-        "hcmc",
-        "dong-nai"
-      ],
-      "source_ids": [
-        "demo-official"
-      ],
-      "article_ids": [],
-      "event_data": {
-        "progress_percent": 81
-      }
-    },
-    {
-      "id": "infra-event-006",
-      "category": "infrastructure",
-      "event_type": "approval",
-      "entity_type": "infrastructure-project",
-      "entity_id": "hcmc-ring-road-4",
-      "event_date": "2026-06-30",
-      "title": "Illustrative Ring Road 4 approval milestone",
-      "summary": "Demo approval-stage event used for long-horizon research.",
-      "importance": 4,
-      "region_ids": [
-        "hcmc",
-        "binh-duong",
-        "dong-nai",
-        "long-an"
-      ],
-      "source_ids": [
-        "demo-official"
-      ],
-      "article_ids": [
-        "article-infra-004"
-      ],
-      "event_data": {}
-    },
-    {
-      "id": "infra-event-007",
-      "category": "infrastructure",
-      "event_type": "land-clearance",
-      "entity_type": "infrastructure-project",
-      "entity_id": "hcmc-moc-bai-expressway",
-      "event_date": "2026-05-16",
-      "title": "Illustrative land-clearance milestone",
-      "summary": "Demo preparation-stage update without a numeric progress percentage.",
-      "importance": 3,
-      "region_ids": [
-        "hcmc"
-      ],
-      "source_ids": [
-        "demo-official"
-      ],
-      "article_ids": [],
-      "event_data": {}
-    },
-    {
-      "id": "infra-event-008",
-      "category": "infrastructure",
-      "event_type": "operation-start",
-      "entity_type": "infrastructure-project",
-      "entity_id": "hcmc-metro-line-1",
-      "event_date": "2025-01-10",
-      "title": "Illustrative metro operation milestone",
-      "summary": "Historical demo event retained to test operational-project timelines.",
-      "importance": 5,
-      "region_ids": [
-        "hcmc"
-      ],
-      "source_ids": [
-        "demo-official"
-      ],
-      "article_ids": [],
-      "event_data": {
-        "progress_percent": 100
-      }
-    },
-    {
-      "id": "infra-event-009",
-      "category": "infrastructure",
-      "event_type": "construction-start",
-      "entity_type": "infrastructure-project",
-      "entity_id": "hcmc-ring-road-3",
-      "event_date": "2024-06-01",
-      "title": "Illustrative construction-start milestone",
-      "summary": "Historical demo event.",
-      "importance": 4,
-      "region_ids": [
-        "hcmc",
-        "binh-duong",
-        "dong-nai"
-      ],
-      "source_ids": [
-        "demo-official"
-      ],
-      "article_ids": [],
-      "event_data": {}
-    },
-    {
-      "id": "infra-event-010",
-      "category": "infrastructure",
-      "event_type": "construction-start",
-      "entity_type": "infrastructure-project",
-      "entity_id": "long-thanh-airport",
-      "event_date": "2023-08-31",
-      "title": "Illustrative construction-start milestone",
-      "summary": "Historical demo event.",
-      "importance": 5,
-      "region_ids": [
-        "dong-nai"
-      ],
-      "source_ids": [
-        "demo-official"
-      ],
-      "article_ids": [],
-      "event_data": {}
-    },
     {
       "id": "macro-event-001",
       "category": "macro",
@@ -327,6 +104,214 @@
       "event_data": {
         "previous_value": 4.5,
         "new_value": 4.0
+      }
+    },
+    {
+      "id": "infra-event-lta-testing",
+      "category": "infrastructure",
+      "event_type": "operation-preparation",
+      "entity_type": "infrastructure-project",
+      "entity_id": "long-thanh-airport",
+      "event_date": "2026-07-28",
+      "title": "Sân bay Long Thành lên kế hoạch vận hành thử từ tháng 9/2026",
+      "summary": "ACV dự kiến vận hành thử trong Sep–Nov 2026 để phục vụ mục tiêu khai thác chính thức từ 01/12/2026.",
+      "importance": 5,
+      "region_ids": [
+        "dong-nai"
+      ],
+      "source_ids": [
+        "gov-vietnam-infrastructure"
+      ],
+      "article_ids": [
+        "article-infra-lta"
+      ],
+      "event_data": {}
+    },
+    {
+      "id": "infra-event-lta-progress",
+      "category": "infrastructure",
+      "event_type": "progress",
+      "entity_type": "infrastructure-project",
+      "entity_id": "long-thanh-airport",
+      "event_date": "2026-06-29",
+      "title": "Giá trị sản lượng sân bay Long Thành đạt khoảng 77%",
+      "summary": "Cập nhật của ACV về tiến độ thực hiện các hợp đồng đã ký tại dự án.",
+      "importance": 4,
+      "region_ids": [
+        "dong-nai"
+      ],
+      "source_ids": [
+        "gov-vietnam-infrastructure"
+      ],
+      "article_ids": [],
+      "event_data": {
+        "progress_percent": 77
+      }
+    },
+    {
+      "id": "infra-event-rr3-progress",
+      "category": "infrastructure",
+      "event_type": "progress",
+      "entity_type": "infrastructure-project",
+      "entity_id": "hcmc-ring-road-3",
+      "event_date": "2026-08-16",
+      "title": "Vành đai 3 TPHCM vượt mốc 80% khối lượng",
+      "summary": "Các gói thầu bước vào giai đoạn nước rút, mục tiêu hoàn thành dự án trong năm 2026.",
+      "importance": 5,
+      "region_ids": [
+        "hcmc",
+        "binh-duong",
+        "dong-nai"
+      ],
+      "source_ids": [
+        "hcmc-public-infrastructure"
+      ],
+      "article_ids": [
+        "article-infra-rr3"
+      ],
+      "event_data": {
+        "progress_percent": 80
+      }
+    },
+    {
+      "id": "infra-event-blt-operation",
+      "category": "infrastructure",
+      "event_type": "operation-start",
+      "entity_type": "infrastructure-project",
+      "entity_id": "ben-luc-long-thanh-expressway",
+      "event_date": "2026-10-01",
+      "title": "Cao tốc Bến Lức – Long Thành thông xe toàn tuyến",
+      "summary": "Toàn tuyến chính thức đưa vào khai thác từ 0h ngày 01/10/2026.",
+      "importance": 5,
+      "region_ids": [
+        "long-an",
+        "hcmc",
+        "dong-nai"
+      ],
+      "source_ids": [
+        "gov-vietnam-infrastructure"
+      ],
+      "article_ids": [
+        "article-infra-blt"
+      ],
+      "event_data": {
+        "progress_percent": 100
+      }
+    },
+    {
+      "id": "infra-event-metro1-operation",
+      "category": "infrastructure",
+      "event_type": "operation-start",
+      "entity_type": "infrastructure-project",
+      "entity_id": "hcmc-metro-line-1",
+      "event_date": "2024-12-22",
+      "title": "Metro số 1 Bến Thành – Suối Tiên vận hành chính thức",
+      "summary": "TPHCM công bố vận hành chính thức tuyến metro số 1.",
+      "importance": 5,
+      "region_ids": [
+        "hcmc"
+      ],
+      "source_ids": [
+        "gov-vietnam-infrastructure"
+      ],
+      "article_ids": [
+        "article-infra-metro1"
+      ],
+      "event_data": {
+        "progress_percent": 100
+      }
+    },
+    {
+      "id": "infra-event-mocbai-start",
+      "category": "infrastructure",
+      "event_type": "construction-start",
+      "entity_type": "infrastructure-project",
+      "entity_id": "hcmc-moc-bai-expressway",
+      "event_date": "2026-07-02",
+      "title": "Khởi công tuyến chính cao tốc TPHCM – Mộc Bài",
+      "summary": "TPHCM triển khai tuyến chính trong Jul 2026; mục tiêu hoàn thành, thông xe cuối 2027.",
+      "importance": 5,
+      "region_ids": [
+        "hcmc"
+      ],
+      "source_ids": [
+        "gov-vietnam-infrastructure"
+      ],
+      "article_ids": [
+        "article-infra-mocbai"
+      ],
+      "event_data": {}
+    },
+    {
+      "id": "infra-event-rr4-directive",
+      "category": "infrastructure",
+      "event_type": "land-clearance",
+      "entity_type": "infrastructure-project",
+      "entity_id": "hcmc-ring-road-4",
+      "event_date": "2026-08-28",
+      "title": "Chính phủ yêu cầu gỡ vướng mặt bằng, vật liệu và vốn cho Vành đai 4 TPHCM",
+      "summary": "Dự án tiếp tục hoàn thiện thủ tục và giải phóng mặt bằng; mục tiêu tăng tốc hướng tới hoàn thành cuối 2028.",
+      "importance": 5,
+      "region_ids": [
+        "hcmc",
+        "dong-nai",
+        "long-an",
+        "binh-duong"
+      ],
+      "source_ids": [
+        "gov-vietnam-infrastructure"
+      ],
+      "article_ids": [
+        "article-infra-rr4"
+      ],
+      "event_data": {}
+    },
+    {
+      "id": "infra-event-bhvt-operation",
+      "category": "infrastructure",
+      "event_type": "operation-start",
+      "entity_type": "infrastructure-project",
+      "entity_id": "bien-hoa-vung-tau-expressway",
+      "event_date": "2026-05-18",
+      "title": "Tuyến chính cao tốc Biên Hòa – Vũng Tàu khai thác đồng bộ",
+      "summary": "Hơn 54 km tuyến chính được đưa vào khai thác đồng bộ, kết nối xuyên suốt từ Đồng Nai tới khu vực Bà Rịa cũ.",
+      "importance": 5,
+      "region_ids": [
+        "dong-nai",
+        "hcmc"
+      ],
+      "source_ids": [
+        "gov-vietnam-infrastructure"
+      ],
+      "article_ids": [
+        "article-infra-bhvt"
+      ],
+      "event_data": {
+        "progress_percent": 100
+      }
+    },
+    {
+      "id": "infra-event-hlt-progress",
+      "category": "infrastructure",
+      "event_type": "progress",
+      "entity_type": "infrastructure-project",
+      "entity_id": "hcmc-long-thanh-expansion",
+      "event_date": "2026-06-27",
+      "title": "Mở rộng cao tốc TPHCM – Long Thành đạt khoảng 10% khối lượng",
+      "summary": "TPHCM tập trung GPMB và thi công; phần lớn dự án đặt mục tiêu hoàn thành năm 2026, cầu Long Thành dự kiến Q1/2027.",
+      "importance": 5,
+      "region_ids": [
+        "hcmc",
+        "dong-nai"
+      ],
+      "source_ids": [
+        "gov-vietnam-infrastructure"
+      ],
+      "article_ids": [
+        "article-infra-hlt"
+      ],
+      "event_data": {
+        "progress_percent": 10
       }
     }
   ]

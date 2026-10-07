@@ -146,6 +146,17 @@
 
     // Market UI
     'Tracked Projects': 'Dự án theo dõi',
+    'Official registry': 'Cơ sở dữ liệu chính thức',
+    'Current snapshot': 'Ảnh chụp hiện tại',
+    'Key Infrastructure Projects': 'Dự án hạ tầng trọng điểm',
+    'Open database': 'Mở cơ sở dữ liệu',
+    'Recent milestones': 'Mốc gần đây',
+    'What Changed': 'Điểm thay đổi',
+    'View timeline': 'Xem tiến độ',
+    'Schedule monitor': 'Theo dõi tiến độ',
+    'Upcoming Targets': 'Mốc sắp tới',
+    'Latest Infrastructure News': 'Tin hạ tầng mới nhất',
+    'View all': 'Xem tất cả',
     'Demo database': 'Cơ sở dữ liệu mô phỏng',
     'Currently Selling': 'Đang bán',
     'Current master status': 'Trạng thái hiện tại',
@@ -309,7 +320,7 @@
     'Multi Region': 'Nhiều khu vực',
 
     // Infrastructure UI
-    'Illustrative infrastructure database': 'Cơ sở dữ liệu hạ tầng minh họa',
+    'Curated official infrastructure registry': 'Cơ sở dữ liệu hạ tầng chính thức được tuyển chọn',
     'Under Construction': 'Đang thi công',
     'Operational': 'Đang vận hành',
     'Historical records remain searchable': 'Dữ liệu lịch sử vẫn có thể tra cứu',
@@ -328,7 +339,7 @@
     'Related Evidence': 'Bằng chứng liên quan',
     'No schedule records yet.': 'Chưa có dữ liệu tiến độ.',
     'No milestone records.': 'Không có dữ liệu mốc tiến độ.',
-    'No direct project links in the demo dataset.': 'Không có liên kết dự án trực tiếp trong bộ dữ liệu mô phỏng.',
+    'No direct real-estate project links in the current registry.': 'Chưa có liên kết trực tiếp tới dự án BĐS trong cơ sở dữ liệu hiện tại.',
     'No infrastructure projects match the selected filters.': 'Không có dự án hạ tầng phù hợp với bộ lọc.',
     'No infrastructure articles match the selected filters.': 'Không có bài viết hạ tầng phù hợp với bộ lọc.',
     'Infrastructure News & Research': 'Tin tức & Nghiên cứu hạ tầng',
@@ -360,6 +371,8 @@
     'Delay': 'Chậm tiến độ',
     'Partial Opening': 'Mở một phần',
     'Operation Start': 'Bắt đầu vận hành',
+    'Operation Preparation': 'Chuẩn bị vận hành',
+    'Official Update': 'Cập nhật chính thức',
 
     // Macro UI
     'Canonical': 'Chính thức',

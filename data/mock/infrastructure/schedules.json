@@ -1,18 +1,129 @@
 {
   "schema_version": 1,
-  "build_id": "demo-step5-20261003",
-  "generated_at": "2026-10-03T16:15:00+07:00",
-  "record_count": 10,
+  "build_id": "phase4.3b-infrastructure-registry-20261007",
+  "generated_at": "2026-10-07T00:20:00+07:00",
+  "record_count": 11,
   "data": [
-    {"id":"schedule-lta-001","infrastructure_project_id":"long-thanh-airport","schedule_type":"expected-completion","target_period":"2026-Q2","date_precision":"quarter","status":"superseded","announced_date":"2025-06-15","source_id":"demo-official"},
-    {"id":"schedule-lta-002","infrastructure_project_id":"long-thanh-airport","schedule_type":"expected-completion","target_period":"2026-Q4","date_precision":"quarter","status":"current","announced_date":"2026-08-20","source_id":"demo-official"},
-    {"id":"schedule-rr3-001","infrastructure_project_id":"hcmc-ring-road-3","schedule_type":"expected-completion","target_period":"2026-Q3","date_precision":"quarter","status":"superseded","announced_date":"2025-11-10","source_id":"demo-official"},
-    {"id":"schedule-rr3-002","infrastructure_project_id":"hcmc-ring-road-3","schedule_type":"expected-completion","target_period":"2026-Q4","date_precision":"quarter","status":"current","announced_date":"2026-07-12","source_id":"demo-official"},
-    {"id":"schedule-blt-001","infrastructure_project_id":"ben-luc-long-thanh-expressway","schedule_type":"expected-completion","target_period":"2026-Q4","date_precision":"quarter","status":"superseded","announced_date":"2025-10-05","source_id":"demo-official"},
-    {"id":"schedule-blt-002","infrastructure_project_id":"ben-luc-long-thanh-expressway","schedule_type":"expected-completion","target_period":"2027-Q2","date_precision":"quarter","status":"current","announced_date":"2026-09-18","source_id":"demo-official"},
-    {"id":"schedule-metro1-001","infrastructure_project_id":"hcmc-metro-line-1","schedule_type":"operation-start","target_period":"2025","date_precision":"year","status":"current","announced_date":"2025-01-10","source_id":"demo-official"},
-    {"id":"schedule-mocbai-001","infrastructure_project_id":"hcmc-moc-bai-expressway","schedule_type":"expected-completion","target_period":"2028","date_precision":"year","status":"current","announced_date":"2026-04-22","source_id":"demo-official"},
-    {"id":"schedule-rr4-001","infrastructure_project_id":"hcmc-ring-road-4","schedule_type":"construction-start","target_period":"2027","date_precision":"year","status":"current","announced_date":"2026-06-30","source_id":"demo-official"},
-    {"id":"schedule-rr4-002","infrastructure_project_id":"hcmc-ring-road-4","schedule_type":"expected-completion","target_period":"2029","date_precision":"year","status":"current","announced_date":"2026-06-30","source_id":"demo-official"}
+    {
+      "id": "schedule-lta-op-2026",
+      "infrastructure_project_id": "long-thanh-airport",
+      "schedule_type": "operation-start",
+      "target_period": "2026-Q4",
+      "date_precision": "quarter",
+      "status": "current",
+      "announced_date": "2026-07-28",
+      "source_id": "gov-vietnam-infrastructure",
+      "source_url": "https://baochinhphu.vn/van-hanh-thu-nghiem-san-bay-long-thanh-tu-thang-9-2026-102260728154207159.htm"
+    },
+    {
+      "id": "schedule-rr3-prior",
+      "infrastructure_project_id": "hcmc-ring-road-3",
+      "schedule_type": "expected-completion",
+      "target_period": "2026-Q2",
+      "date_precision": "quarter",
+      "status": "superseded",
+      "announced_date": "2025-08-25",
+      "source_id": "gov-vietnam-infrastructure",
+      "source_url": "https://tphcm.baochinhphu.vn/doan-cong-tac-quoc-hoi-khao-sat-mot-so-cong-trinh-trong-diem-tren-dia-ban-tphcm-101250825163626784.htm"
+    },
+    {
+      "id": "schedule-rr3-current",
+      "infrastructure_project_id": "hcmc-ring-road-3",
+      "schedule_type": "expected-completion",
+      "target_period": "2026-Q4",
+      "date_precision": "quarter",
+      "status": "current",
+      "announced_date": "2026-08-16",
+      "source_id": "hcmc-public-infrastructure",
+      "source_url": "https://hdnd.hochiminhcity.gov.vn/tin-tuc/tin-tong-hop/tp-ho-chi-minh-nhieu-du-an-giao-thong-trong-diem-tien-gan-dich"
+    },
+    {
+      "id": "schedule-blt-operation",
+      "infrastructure_project_id": "ben-luc-long-thanh-expressway",
+      "schedule_type": "operation-start",
+      "target_period": "2026-Q4",
+      "date_precision": "quarter",
+      "status": "current",
+      "announced_date": "2026-10-01",
+      "source_id": "gov-vietnam-infrastructure",
+      "source_url": "https://www2.en.baochinhphu.vn/cao-toc-ben-luc-long-thanh-chinh-thuc-thong-xe-toan-tuyen-102261001024813814.htm"
+    },
+    {
+      "id": "schedule-metro1-operation",
+      "infrastructure_project_id": "hcmc-metro-line-1",
+      "schedule_type": "operation-start",
+      "target_period": "2024-Q4",
+      "date_precision": "quarter",
+      "status": "current",
+      "announced_date": "2024-12-22",
+      "source_id": "gov-vietnam-infrastructure",
+      "source_url": "https://baochinhphu.vn/tphcm-chinh-thuc-van-hanh-tuyen-metro-so-1-102241223170908205.htm"
+    },
+    {
+      "id": "schedule-mocbai-completion",
+      "infrastructure_project_id": "hcmc-moc-bai-expressway",
+      "schedule_type": "expected-completion",
+      "target_period": "2027-Q4",
+      "date_precision": "quarter",
+      "status": "current",
+      "announced_date": "2026-08-06",
+      "source_id": "gov-vietnam-infrastructure",
+      "source_url": "https://tphcm.baochinhphu.vn/thanh-pho-tang-toc-giai-ngan-von-dau-tu-cong-tao-dong-luc-cho-tang-truong-hai-con-so-101260806114331283.htm"
+    },
+    {
+      "id": "schedule-rr4-statutory",
+      "infrastructure_project_id": "hcmc-ring-road-4",
+      "schedule_type": "expected-completion",
+      "target_period": "2029",
+      "date_precision": "year",
+      "status": "superseded",
+      "announced_date": "2025-09-26",
+      "source_id": "gov-vietnam-infrastructure",
+      "source_url": "https://baochinhphu.vn/trien-khai-chu-truong-xay-dung-duong-vanh-dai-4-thanh-pho-ho-chi-minh-102250926151914834.htm"
+    },
+    {
+      "id": "schedule-rr4-accelerated",
+      "infrastructure_project_id": "hcmc-ring-road-4",
+      "schedule_type": "expected-completion",
+      "target_period": "2028-Q4",
+      "date_precision": "quarter",
+      "status": "current",
+      "announced_date": "2026-08-28",
+      "source_id": "gov-vietnam-infrastructure",
+      "source_url": "https://baochinhphu.vn/khan-truong-go-vuong-mat-bang-vat-lieu-von-cho-du-an-vanh-dai-4-thanh-pho-ho-chi-minh-102260828182759702.htm"
+    },
+    {
+      "id": "schedule-bhvt-operation",
+      "infrastructure_project_id": "bien-hoa-vung-tau-expressway",
+      "schedule_type": "operation-start",
+      "target_period": "2026-Q2",
+      "date_precision": "quarter",
+      "status": "current",
+      "announced_date": "2026-05-17",
+      "source_id": "gov-vietnam-infrastructure",
+      "source_url": "https://baochinhphu.vn/phuong-an-luu-thong-tren-cao-toc-bien-hoa-vung-tau-tu-17h-ngay-18-5-102260517135952968.htm"
+    },
+    {
+      "id": "schedule-hlt-main",
+      "infrastructure_project_id": "hcmc-long-thanh-expansion",
+      "schedule_type": "expected-completion",
+      "target_period": "2026-Q4",
+      "date_precision": "quarter",
+      "status": "superseded",
+      "announced_date": "2025-08-18",
+      "source_id": "gov-vietnam-infrastructure",
+      "source_url": "https://tphcm.baochinhphu.vn/tphcm-dua-vao-su-dung-va-khoi-cong-nhieu-cong-trinh-ha-tang-quy-mo-lon-101250818182112007.htm"
+    },
+    {
+      "id": "schedule-hlt-current",
+      "infrastructure_project_id": "hcmc-long-thanh-expansion",
+      "schedule_type": "expected-completion",
+      "target_period": "2027-Q1",
+      "date_precision": "quarter",
+      "status": "current",
+      "announced_date": "2026-05-25",
+      "source_id": "gov-vietnam-infrastructure",
+      "source_url": "https://baochinhphu.vn/cao-toc-tphcm-long-thanh-dau-giay.html"
+    }
   ]
 }

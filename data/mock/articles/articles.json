@@ -1,8 +1,8 @@
 {
   "schema_version": 1,
-  "build_id": "demo-step6-20261003",
-  "generated_at": "2026-10-03T16:45:00+07:00",
-  "record_count": 19,
+  "build_id": "phase4.3b-infrastructure-registry-20261007",
+  "generated_at": "2026-10-07T00:20:00+07:00",
+  "record_count": 23,
   "data": [
     {
       "id": "article-market-001",
@@ -251,120 +251,6 @@
       "summary": "Demo article used to test region, topic and related-document context in Legal News."
     },
     {
-      "id": "article-infra-001",
-      "title": "Illustrative Long Thanh airport progress update enters infrastructure tracker",
-      "url": "#",
-      "category": "infrastructure",
-      "subcategory": "progress",
-      "content_type": "news",
-      "published_at": "2026-10-02T08:40:00+07:00",
-      "source_id": "demo-official",
-      "region_ids": [
-        "dong-nai"
-      ],
-      "project_ids": [
-        "izumi-city"
-      ],
-      "developer_ids": [],
-      "infrastructure_project_ids": [
-        "long-thanh-airport"
-      ],
-      "tags": [
-        "airport",
-        "progress"
-      ],
-      "importance": 4,
-      "summary": "Demo article linked to an infrastructure project, a region and a related real-estate project."
-    },
-    {
-      "id": "article-infra-002",
-      "title": "Illustrative completion target revised for Ben Luc–Long Thanh expressway",
-      "url": "#",
-      "category": "infrastructure",
-      "subcategory": "schedule",
-      "content_type": "analysis",
-      "published_at": "2026-09-19T09:10:00+07:00",
-      "source_id": "demo-analysis",
-      "region_ids": [
-        "long-an",
-        "hcmc",
-        "dong-nai"
-      ],
-      "project_ids": [
-        "waterpoint",
-        "izumi-city"
-      ],
-      "developer_ids": [],
-      "infrastructure_project_ids": [
-        "ben-luc-long-thanh-expressway"
-      ],
-      "tags": [
-        "expressway",
-        "schedule"
-      ],
-      "importance": 4,
-      "summary": "Demo evidence item showing how schedule revisions remain separate from canonical schedule history."
-    },
-    {
-      "id": "article-infra-003",
-      "title": "Ring Road 3 illustrative progress milestone highlights cross-region connectivity",
-      "url": "#",
-      "category": "infrastructure",
-      "subcategory": "progress",
-      "content_type": "research",
-      "published_at": "2026-09-13T14:30:00+07:00",
-      "source_id": "demo-research",
-      "region_ids": [
-        "hcmc",
-        "binh-duong",
-        "dong-nai"
-      ],
-      "project_ids": [
-        "the-global-city",
-        "eaton-park"
-      ],
-      "developer_ids": [],
-      "infrastructure_project_ids": [
-        "hcmc-ring-road-3"
-      ],
-      "tags": [
-        "ring-road",
-        "progress"
-      ],
-      "importance": 4,
-      "summary": "Demo research note for testing multi-region infrastructure links."
-    },
-    {
-      "id": "article-infra-004",
-      "title": "Illustrative Ring Road 4 approval expands the long-horizon infrastructure pipeline",
-      "url": "#",
-      "category": "infrastructure",
-      "subcategory": "approval",
-      "content_type": "news",
-      "published_at": "2026-07-01T10:00:00+07:00",
-      "source_id": "demo-news",
-      "region_ids": [
-        "hcmc",
-        "binh-duong",
-        "dong-nai",
-        "long-an"
-      ],
-      "project_ids": [
-        "waterpoint",
-        "eco-retreat"
-      ],
-      "developer_ids": [],
-      "infrastructure_project_ids": [
-        "hcmc-ring-road-4"
-      ],
-      "tags": [
-        "ring-road",
-        "approval"
-      ],
-      "importance": 4,
-      "summary": "Demo approval-stage article used to test future projects and multi-region filtering."
-    },
-    {
       "id": "article-macro-001",
       "title": "Illustrative September CPI release enters the macro monitor",
       "url": "#",
@@ -481,6 +367,231 @@
       ],
       "importance": 3,
       "summary": "Demo rate commentary tied to monthly observations and source dates."
+    },
+    {
+      "id": "article-infra-blt",
+      "title": "Cao tốc Bến Lức – Long Thành chính thức thông xe toàn tuyến",
+      "url": "https://www2.en.baochinhphu.vn/cao-toc-ben-luc-long-thanh-chinh-thuc-thong-xe-toan-tuyen-102261001024813814.htm",
+      "category": "infrastructure",
+      "subcategory": "operation",
+      "content_type": "official-update",
+      "published_at": "2026-10-01T06:28:00+07:00",
+      "source_id": "gov-vietnam-infrastructure",
+      "region_ids": [
+        "long-an",
+        "hcmc",
+        "dong-nai"
+      ],
+      "project_ids": [
+        "waterpoint",
+        "izumi-city"
+      ],
+      "developer_ids": [],
+      "infrastructure_project_ids": [
+        "ben-luc-long-thanh-expressway"
+      ],
+      "tags": [
+        "expressway",
+        "operation"
+      ],
+      "importance": 5,
+      "summary": "Thông tin Chính phủ xác nhận toàn tuyến Bến Lức – Long Thành đưa vào khai thác từ 01/10/2026."
+    },
+    {
+      "id": "article-infra-rr4",
+      "title": "Khẩn trương gỡ vướng mặt bằng, vật liệu, vốn cho Vành đai 4 TPHCM",
+      "url": "https://baochinhphu.vn/khan-truong-go-vuong-mat-bang-vat-lieu-von-cho-du-an-vanh-dai-4-thanh-pho-ho-chi-minh-102260828182759702.htm",
+      "category": "infrastructure",
+      "subcategory": "implementation",
+      "content_type": "official-update",
+      "published_at": "2026-08-28T18:39:00+07:00",
+      "source_id": "gov-vietnam-infrastructure",
+      "region_ids": [
+        "hcmc",
+        "dong-nai",
+        "long-an",
+        "binh-duong"
+      ],
+      "project_ids": [
+        "waterpoint",
+        "eco-retreat",
+        "izumi-city"
+      ],
+      "developer_ids": [],
+      "infrastructure_project_ids": [
+        "hcmc-ring-road-4"
+      ],
+      "tags": [
+        "ring-road",
+        "land-clearance",
+        "funding"
+      ],
+      "importance": 5,
+      "summary": "Chỉ đạo Chính phủ về việc thực hiện Nghị quyết 220/2025/QH15 và tháo gỡ các vướng mắc triển khai Vành đai 4."
+    },
+    {
+      "id": "article-infra-rr3",
+      "title": "TPHCM: Nhiều dự án giao thông trọng điểm tiến gần đích",
+      "url": "https://hdnd.hochiminhcity.gov.vn/tin-tuc/tin-tong-hop/tp-ho-chi-minh-nhieu-du-an-giao-thong-trong-diem-tien-gan-dich",
+      "category": "infrastructure",
+      "subcategory": "progress",
+      "content_type": "official-update",
+      "published_at": "2026-08-16T08:00:00+07:00",
+      "source_id": "hcmc-public-infrastructure",
+      "region_ids": [
+        "hcmc",
+        "binh-duong",
+        "dong-nai"
+      ],
+      "project_ids": [
+        "the-global-city",
+        "eaton-park",
+        "izumi-city"
+      ],
+      "developer_ids": [],
+      "infrastructure_project_ids": [
+        "hcmc-ring-road-3"
+      ],
+      "tags": [
+        "ring-road",
+        "progress"
+      ],
+      "importance": 5,
+      "summary": "Cổng HĐND TPHCM cho biết Vành đai 3 đã thực hiện trên 80% khối lượng và đang tăng tốc để hoàn thành trong năm 2026."
+    },
+    {
+      "id": "article-infra-mocbai",
+      "title": "TPHCM tăng tốc giải ngân vốn đầu tư công, tạo động lực cho tăng trưởng hai con số",
+      "url": "https://tphcm.baochinhphu.vn/thanh-pho-tang-toc-giai-ngan-von-dau-tu-cong-tao-dong-luc-cho-tang-truong-hai-con-so-101260806114331283.htm",
+      "category": "infrastructure",
+      "subcategory": "construction",
+      "content_type": "official-update",
+      "published_at": "2026-08-06T11:43:00+07:00",
+      "source_id": "gov-vietnam-infrastructure",
+      "region_ids": [
+        "hcmc"
+      ],
+      "project_ids": [],
+      "developer_ids": [],
+      "infrastructure_project_ids": [
+        "hcmc-moc-bai-expressway"
+      ],
+      "tags": [
+        "expressway",
+        "construction"
+      ],
+      "importance": 4,
+      "summary": "Cập nhật xác nhận tuyến chính cao tốc TPHCM – Mộc Bài đã khởi công trong Jul 2026 và dự kiến thông xe cuối 2027."
+    },
+    {
+      "id": "article-infra-lta",
+      "title": "Vận hành thử nghiệm sân bay Long Thành từ tháng 9/2026",
+      "url": "https://baochinhphu.vn/van-hanh-thu-nghiem-san-bay-long-thanh-tu-thang-9-2026-102260728154207159.htm",
+      "category": "infrastructure",
+      "subcategory": "operation-preparation",
+      "content_type": "official-update",
+      "published_at": "2026-07-28T17:24:00+07:00",
+      "source_id": "gov-vietnam-infrastructure",
+      "region_ids": [
+        "dong-nai"
+      ],
+      "project_ids": [
+        "izumi-city"
+      ],
+      "developer_ids": [],
+      "infrastructure_project_ids": [
+        "long-thanh-airport"
+      ],
+      "tags": [
+        "airport",
+        "testing",
+        "operation"
+      ],
+      "importance": 5,
+      "summary": "Cục Hàng không và ACV chuẩn bị vận hành thử Sep–Nov 2026, hướng tới khai thác chính thức từ 01/12/2026."
+    },
+    {
+      "id": "article-infra-hlt",
+      "title": "Quyết tâm đưa các dự án giao thông trọng điểm về đích đúng hẹn",
+      "url": "https://baochinhphu.vn/quyet-tam-dua-cac-du-an-giao-thong-trong-diem-ve-dich-dung-hen-102260627230041314.htm",
+      "category": "infrastructure",
+      "subcategory": "progress",
+      "content_type": "official-update",
+      "published_at": "2026-06-27T23:00:00+07:00",
+      "source_id": "gov-vietnam-infrastructure",
+      "region_ids": [
+        "hcmc",
+        "dong-nai"
+      ],
+      "project_ids": [
+        "the-global-city",
+        "eaton-park",
+        "izumi-city"
+      ],
+      "developer_ids": [],
+      "infrastructure_project_ids": [
+        "hcmc-long-thanh-expansion"
+      ],
+      "tags": [
+        "expressway",
+        "progress"
+      ],
+      "importance": 5,
+      "summary": "Cập nhật tiến độ dự án mở rộng cao tốc TPHCM – Long Thành: khối lượng khoảng 10% vào cuối Jun 2026."
+    },
+    {
+      "id": "article-infra-bhvt",
+      "title": "Phương án lưu thông trên cao tốc Biên Hòa – Vũng Tàu từ 17h ngày 18/5",
+      "url": "https://baochinhphu.vn/phuong-an-luu-thong-tren-cao-toc-bien-hoa-vung-tau-tu-17h-ngay-18-5-102260517135952968.htm",
+      "category": "infrastructure",
+      "subcategory": "operation",
+      "content_type": "official-update",
+      "published_at": "2026-05-17T14:03:00+07:00",
+      "source_id": "gov-vietnam-infrastructure",
+      "region_ids": [
+        "dong-nai",
+        "hcmc"
+      ],
+      "project_ids": [
+        "izumi-city"
+      ],
+      "developer_ids": [],
+      "infrastructure_project_ids": [
+        "bien-hoa-vung-tau-expressway"
+      ],
+      "tags": [
+        "expressway",
+        "operation"
+      ],
+      "importance": 5,
+      "summary": "Thông tin khai thác đồng bộ hơn 54 km tuyến chính cao tốc Biên Hòa – Vũng Tàu từ 18/05/2026."
+    },
+    {
+      "id": "article-infra-metro1",
+      "title": "TPHCM chính thức vận hành tuyến Metro số 1",
+      "url": "https://baochinhphu.vn/tphcm-chinh-thuc-van-hanh-tuyen-metro-so-1-102241223170908205.htm",
+      "category": "infrastructure",
+      "subcategory": "operation",
+      "content_type": "official-update",
+      "published_at": "2024-12-22T10:08:00+07:00",
+      "source_id": "gov-vietnam-infrastructure",
+      "region_ids": [
+        "hcmc"
+      ],
+      "project_ids": [
+        "the-global-city",
+        "eaton-park"
+      ],
+      "developer_ids": [],
+      "infrastructure_project_ids": [
+        "hcmc-metro-line-1"
+      ],
+      "tags": [
+        "metro",
+        "operation"
+      ],
+      "importance": 5,
+      "summary": "Thông tin Chính phủ về lễ vận hành chính thức Metro số 1 Bến Thành – Suối Tiên ngày 22/12/2024."
     }
   ]
 }

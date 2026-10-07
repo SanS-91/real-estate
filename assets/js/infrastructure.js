@@ -163,7 +163,7 @@
     }).length;
     const regionCount = new Set(data.infrastructureProjects.flatMap(item => item.region_ids || [])).size;
     return [
-      { label: 'Tracked Projects', value: String(data.infrastructureProjects.length), note: 'Illustrative infrastructure database' },
+      { label: 'Tracked Projects', value: String(data.infrastructureProjects.length), note: 'Curated official infrastructure registry' },
       { label: 'Under Construction', value: String(underConstruction), note: 'Current master status' },
       { label: 'Operational', value: String(operational), note: 'Historical records remain searchable' },
       { label: 'Regions Covered', value: String(regionCount), note: `${nextTargets} targets through 2027` }
@@ -358,7 +358,7 @@
       <div class="drawer-section"><h3>Overview</h3><p>${esc(project.summary)}</p></div>
       <div class="drawer-section"><h3>Schedule History</h3>${scheduleHistoryHTML(project)}</div>
       <div class="drawer-section"><h3>Recent Milestones</h3>${events.length ? events.map(event => `<div class="drawer-list-row drawer-list-row--stack"><span>${esc(App.formatDate(event.event_date))} · ${esc(labelize(event.event_type))} · ${sourceRef((event.source_ids || [])[0],{sourceDate:event.event_date})}</span><strong>${esc(event.title)}</strong></div>`).join('') : '<p class="muted-text">No milestone records.</p>'}</div>
-      <div class="drawer-section"><h3>Related Real Estate Projects</h3>${related.length ? related.map(item => `<div class="drawer-list-row"><div><strong>${esc(item.name)}</strong><span>${esc(item.location_text || '')}</span></div><a class="text-link" href="market.html?view=projects&project=${encodeURIComponent(item.id)}">Open</a></div>`).join('') : '<p class="muted-text">No direct project links in the demo dataset.</p>'}</div>
+      <div class="drawer-section"><h3>Related Real Estate Projects</h3>${related.length ? related.map(item => `<div class="drawer-list-row"><div><strong>${esc(item.name)}</strong><span>${esc(item.location_text || '')}</span></div><a class="text-link" href="market.html?view=projects&project=${encodeURIComponent(item.id)}">Open</a></div>`).join('') : '<p class="muted-text">No direct real-estate project links in the current registry.</p>'}</div>
       <div class="drawer-section"><h3>Related Evidence</h3>${articles.length ? articles.map(item => `<div class="drawer-list-row drawer-list-row--stack"><span>${esc(App.formatDate(item.published_at))} · ${esc(item.content_type)} · ${sourceRef(item.source_id,{publishedAt:item.published_at,sourceUrl:item.url})}</span><strong>${esc(item.title)}</strong></div>`).join('') : '<p class="muted-text">No related articles.</p>'}</div>`;
   }
 
@@ -408,13 +408,13 @@
       Resolver.setData('real-estate-project',data.realEstateProjects);
       parseState();
       const updated = document.querySelector('[data-infrastructure-updated]');
-      if (updated) updated.textContent = meta?.last_successful_build ? `Demo data · ${App.formatDate(meta.last_successful_build)}` : 'Demo data';
+      if (updated) updated.textContent = `Official registry · ${data.infrastructureProjects.length} projects`;
       render();
       const projectId = App.getQueryParam('project');
       if (projectId) openInfrastructureProject(projectId,{push:false});
     } catch (error) {
       console.error(error);
-      setView(Components.stateBox('Unable to load Infrastructure demo data. Check that all Step 5 files were uploaded.', 'error'));
+      setView(Components.stateBox('Unable to load Infrastructure registry data. Check that the site is running through a web server.', 'error'));
     }
   }
 
