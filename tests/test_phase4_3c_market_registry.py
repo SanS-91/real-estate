@@ -11,12 +11,12 @@ sources=json.loads((ROOT/'data/mock/core/sources.json').read_text(encoding='utf-
 html=(ROOT/'market.html').read_text(encoding='utf-8')
 js=(ROOT/'assets/js/market.js').read_text(encoding='utf-8')
 
-assert projects['record_count']==8
-assert {x['id'] for x in projects['data']} == {'izumi-city','waterpoint','akari-city','mizuki-park','the-global-city','eaton-park','elysian','the-privia'}
+assert projects['record_count']==12
+assert {x['id'] for x in projects['data']} == {'izumi-city','waterpoint','akari-city','mizuki-park','the-global-city','eaton-park','elysian','the-privia','vinhomes-grand-park','the-9-stellars','celesta-gold','essensia-parkway'}
 assert all('Illustrative' not in x.get('summary','') for x in projects['data'])
 assert all(x.get('primary_source_id') for x in projects['data'])
 assert all(x.get('official_url','').startswith('http') for x in projects['data'])
-assert devs['record_count']==4
+assert devs['record_count']==9
 assert 'ecopark' not in {x['id'] for x in devs['data']}
 assert all(x.get('primary_source_id') for x in devs['data'])
 assert obs['record_count']==7
@@ -28,7 +28,7 @@ market_articles=[x for x in arts['data'] if x.get('category')=='market']
 assert len(market_articles)==6
 assert not any(x.get('source_id','').startswith('demo-') for x in market_articles)
 source_ids={x['id'] for x in sources['data']}
-for sid in ['nam-long-official','masterise-homes-official','gamuda-land-official','khang-dien-official','cbre-vietnam-market','savills-vietnam-market']:
+for sid in ['nam-long-official','masterise-homes-official','gamuda-land-official','khang-dien-official','vinhomes-official','sonkim-land-official','keppel-real-estate-vietnam','phu-long-official','nomura-real-estate-vietnam','cbre-vietnam-market','savills-vietnam-market']:
     assert sid in source_ids
 assert 'Implementation demo.' not in html
 assert 'Curated market registry.' in html
@@ -50,6 +50,9 @@ project_by_id = {x["id"]: x for x in projects['data']}
 assert project_by_id["akari-city"]["planned_units"] is None
 assert "More than 5,000" in project_by_id["akari-city"]["known_units_note"]
 assert project_by_id["mizuki-park"]["planned_units"] is None
+assert project_by_id["essensia-parkway"]["planned_units"] is None
+assert "74 units" in project_by_id["essensia-parkway"]["source_discrepancy_note"]
+assert "75 low-rise" in project_by_id["essensia-parkway"]["source_discrepancy_note"]
 
 phase_by_id = {x["id"]: x for x in phases['data']}
 assert phase_by_id["waterpoint-solaria-rise"]["planned_units"] is None
