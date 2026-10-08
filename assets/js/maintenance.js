@@ -7,7 +7,7 @@
   const COPY = {
     en: {
       modules: { macro: 'Macro', legal: 'Legal', infrastructure: 'Infrastructure', market: 'Market', home: 'Home', search: 'Search' },
-      statuses: { healthy: 'Healthy', due: 'Due', review: 'Review', stale: 'Stale' },
+      statuses: { healthy: 'Healthy', running: 'Running', due: 'Due', review: 'Review', degraded: 'Degraded', stale: 'Stale' },
       freshness: { fresh: 'Fresh', due: 'Due', stale: 'Stale', unknown: 'Unknown', derived: 'Derived', current: 'Current' },
       cadence: { daily: 'Daily', weekly: 'Weekly', monthly: 'Monthly', 'on-data-change': 'On data change' },
       modes: {
@@ -16,6 +16,8 @@
         'two-source-corroborated': 'Two-source corroborated',
         'curated-manual': 'Curated · manual',
         'curated-research': 'Curated · research',
+        'automated-candidate-review': 'Automated candidate · review',
+        'assisted-browser': 'Assisted browser',
         derived: 'Derived',
         'derived-runtime': 'Derived · runtime'
       },
@@ -35,7 +37,7 @@
     },
     vi: {
       modules: { macro: 'Vĩ mô', legal: 'Pháp lý', infrastructure: 'Hạ tầng', market: 'Thị trường', home: 'Trang chủ', search: 'Tìm kiếm' },
-      statuses: { healthy: 'Tốt', due: 'Đến hạn', review: 'Cần xem', stale: 'Quá hạn' },
+      statuses: { healthy: 'Tốt', running: 'Đang chạy', due: 'Đến hạn', review: 'Cần xem', degraded: 'Suy giảm', stale: 'Quá hạn' },
       freshness: { fresh: 'Mới', due: 'Đến hạn', stale: 'Quá hạn', unknown: 'Chưa rõ', derived: 'Theo dữ liệu nguồn', current: 'Hiện tại' },
       cadence: { daily: 'Hằng ngày', weekly: 'Hằng tuần', monthly: 'Hằng tháng', 'on-data-change': 'Khi dữ liệu thay đổi' },
       modes: {
@@ -44,6 +46,8 @@
         'two-source-corroborated': 'Đối chiếu 2 nguồn',
         'curated-manual': 'Tuyển chọn · thủ công',
         'curated-research': 'Tuyển chọn · nghiên cứu',
+        'automated-candidate-review': 'Candidate tự động · cần duyệt',
+        'assisted-browser': 'Hỗ trợ qua trình duyệt',
         derived: 'Dẫn xuất',
         'derived-runtime': 'Dẫn xuất · runtime'
       },
@@ -239,6 +243,41 @@
     </table></div>`;
   }
 
+  async function renderOperations() {
+    const node = document.querySelector('[data-maintenance-operations]');
+    if (!node) return;
+    try {
+      const payload = await DataStore.getDataHealth();
+      const datasets = payload?.datasets || [];
+      const c = copy();
+      node.innerHTML = (payload?.modules || []).map(module => {
+        const rows = datasets.filter(row => row.module === module.module);
+        const access = [...new Set(rows.map(row => row.source_access).filter(Boolean))].join(' · ') || '—';
+        const workflows = [...new Set(rows.map(row => row.workflow_status).filter(Boolean))];
+        const workflow = workflows.includes('degraded') ? 'degraded'
+          : workflows.includes('running') ? 'running'
+          : workflows.includes('healthy') ? 'healthy'
+          : 'unknown';
+        const lastSuccess = module.last_successful_run_at ? formatDateTime(module.last_successful_run_at) : '—';
+        return `<article class="maintenance-operation-card">
+          <div class="data-health-card__top">
+            <h3>${esc(c.modules[module.module] || module.module)}</h3>
+            <span class="data-health-status">${esc(c.statuses[module.status] || module.status)}</span>
+          </div>
+          <dl>
+            <div><dt>Workflow</dt><dd>${esc(c.statuses[workflow] || workflow)}</dd></div>
+            <div><dt>Source mode</dt><dd>${esc(access)}</dd></div>
+            <div><dt>Candidate backlog</dt><dd>${esc(module.candidate_backlog || 0)}</dd></div>
+            <div><dt>Last success</dt><dd>${esc(lastSuccess)}</dd></div>
+          </dl>
+        </article>`;
+      }).join('') || '<div class="state-box">Operational health is not available yet.</div>';
+    } catch (error) {
+      console.warn('[maintenance] unified operational health unavailable', error);
+      node.innerHTML = '<div class="state-box">Operational health is not available yet.</div>';
+    }
+  }
+
   function renderRules() {
     const c = copy();
     document.querySelector('[data-maintenance-rules]').innerHTML = `<div class="maintenance-rules">${c.rules.map(([title, text]) => `<div class="maintenance-rule"><strong>${esc(title)}</strong><span>${esc(text)}</span></div>`).join('')}</div>`;
@@ -272,12 +311,14 @@
   async function init() {
     try {
       render(await buildModel());
+      await renderOperations();
     } catch (error) {
       renderError(error);
     }
     document.addEventListener('app:language-changed', () => {
       if (lastModel) render(lastModel);
       else renderRules();
+      renderOperations();
     });
   }
 
