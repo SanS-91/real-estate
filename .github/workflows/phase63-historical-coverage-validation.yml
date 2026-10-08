@@ -10,6 +10,9 @@ on:
       - 'tests/test_phase6_3_historical_coverage_expansion.py'
       - '.github/workflows/phase63-historical-coverage-validation.yml'
       - 'docs/PHASE6_3_HISTORICAL_COVERAGE_EXPANSION.md'
+      - 'data/mock/market/observations.json'
+      - 'data/state/history-coverage.json'
+      - 'config/master-roadmap.json'
   workflow_dispatch:
 
 permissions:
