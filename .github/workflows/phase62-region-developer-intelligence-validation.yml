@@ -1,0 +1,50 @@
+name: Phase 6.2 Region Developer Intelligence Validation
+
+on:
+  pull_request:
+    paths:
+      - 'assets/js/research.js'
+      - 'assets/js/intelligence-context.js'
+      - 'assets/css/main.css'
+      - 'research.html'
+      - 'config/master-roadmap.json'
+      - 'tests/test_phase6_2_region_developer_intelligence.py'
+      - 'tests/test_phase6_2_region_developer_intelligence.js'
+      - '.github/workflows/phase62-region-developer-intelligence-validation.yml'
+      - 'docs/PHASE6_2_REGION_DEVELOPER_INTELLIGENCE.md'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  validate:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v7
+      - uses: actions/setup-python@v7
+        with:
+          python-version: '3.12'
+      - name: JavaScript syntax
+        run: |
+          node --check assets/js/research.js
+          node --check assets/js/intelligence-context.js
+      - name: Phase 6.2 UI contract
+        run: python tests/test_phase6_2_region_developer_intelligence.py
+      - name: Phase 6.2 data contract
+        run: node tests/test_phase6_2_region_developer_intelligence.js
+      - name: Intelligence regressions
+        run: |
+          python tests/test_phase6_0_intelligence_model.py
+          node tests/test_phase6_0_intelligence_context.js
+          python tests/test_phase6_1_project_intelligence_deepening.py
+      - name: Research regressions
+        run: |
+          python tests/test_phase5_0_cross_module_research.py
+          python tests/test_phase5_1_research_compare.py
+          python tests/test_phase5_2_research_brief.py
+          python tests/test_phase5_3_research_watchlist.py
+          python tests/test_phase5_4_market_first_research.py
+      - name: Roadmap regression
+        run: python tests/test_phase5_6b_master_roadmap_alignment.py
