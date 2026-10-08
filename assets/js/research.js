@@ -425,6 +425,83 @@
     return { projects: projectCount, observations: observations.length, price: countWith('average_asp'), sales: countWith('sales_units'), absorption: countWith('absorption_rate') };
   }
 
+  function projectObservation(projectId) {
+    return data.marketObservations
+      .filter(row => row.project_id === projectId && isRealSource(row.source_id))
+      .sort((a,b) => String(b.source_date || b.period || '').localeCompare(String(a.source_date || a.period || '')))[0] || null;
+  }
+
+  function marketBenchmarkRows(ctx) {
+    const segmentIds = unique(ctx.projects.flatMap(project => project.segment_ids || []));
+    return data.marketObservations
+      .filter(row => !row.project_id && isRealSource(row.source_id)
+        && (row.region_ids || []).some(id => ctx.regionIds.includes(id))
+        && (row.segment_ids || []).some(id => segmentIds.includes(id)))
+      .sort((a,b) => String(b.source_date || b.period || '').localeCompare(String(a.source_date || a.period || '')));
+  }
+
+  function fmtMarketValue(value, kind) {
+    if (value === null || value === undefined) return '—';
+    if (kind === 'asp') return Formatters.unitValue('vnd-per-sqm', value, { compact:true });
+    if (kind === 'absorption') return Formatters.number(Number(value) * 100, { min:0, max:1 }) + '%';
+    return Formatters.number(value, { min:0, max:0 });
+  }
+
+  function projectMarketRow(project) {
+    const obs = projectObservation(project.id);
+    const developer = (project.developer_ids || []).map(id => data.developerMap.get(id)?.name).filter(Boolean).join(', ')
+      || (project.lead_developer_id ? data.developerMap.get(project.lead_developer_id)?.name : '') || '—';
+    const segments = (project.segment_ids || []).map(id => String(id).replaceAll('-', ' ')).join(', ') || '—';
+    return {
+      project, developer, segments, obs,
+      units: project.planned_units ?? null,
+      asp: obs?.average_asp ?? null,
+      sales: obs?.sales_units ?? null,
+      absorption: obs?.absorption_rate ?? null,
+      period: obs?.period || obs?.source_date || '—'
+    };
+  }
+
+  function marketCoverageLine(ctx) {
+    const cov = marketCoverage(ctx);
+    return tr(
+      'Coverage: Giá ' + cov.price + '/' + cov.projects + ' · Bán hàng ' + cov.sales + '/' + cov.projects + ' · Hấp thụ ' + cov.absorption + '/' + cov.projects,
+      'Coverage: Price ' + cov.price + '/' + cov.projects + ' · Sales ' + cov.sales + '/' + cov.projects + ' · Absorption ' + cov.absorption + '/' + cov.projects
+    );
+  }
+
+  function marketSingleHTML(ctx) {
+    const rows = ctx.projects.map(projectMarketRow);
+    const benchmarks = marketBenchmarkRows(ctx).slice(0,4);
+    const table = '<div class="table-wrap"><table class="data-table data-table--market-first"><thead><tr>' +
+      '<th>' + esc(tr('Dự án','Project')) + '</th><th>' + esc(tr('Chủ đầu tư','Developer')) + '</th><th>' + esc(tr('Phân khúc','Segment')) + '</th><th>' + esc(tr('Trạng thái','Status')) + '</th><th>' + esc(tr('Quy mô căn','Units')) + '</th><th>' + esc(tr('ASP mới nhất','Latest ASP')) + '</th><th>' + esc(tr('Bán hàng','Sales')) + '</th><th>' + esc(tr('Hấp thụ','Absorption')) + '</th></tr></thead><tbody>' +
+      rows.map(row => '<tr><td><a class="table-link" href="market.html?view=projects&project=' + encodeURIComponent(row.project.id) + '">' + esc(row.project.name) + '</a><span class="table-subtext">' + esc(row.project.location_text || '') + '</span></td><td>' + esc(row.developer) + '</td><td>' + esc(row.segments) + '</td><td>' + esc(String(row.project.status || '—').replaceAll('-',' ')) + '</td><td class="numeric">' + esc(row.units === null ? '—' : Formatters.number(row.units,{min:0,max:0})) + '</td><td class="numeric">' + esc(fmtMarketValue(row.asp,'asp')) + '</td><td class="numeric">' + esc(fmtMarketValue(row.sales,'sales')) + '</td><td class="numeric">' + esc(fmtMarketValue(row.absorption,'absorption')) + '</td></tr>').join('') +
+      '</tbody></table></div>';
+    const bench = benchmarks.length ? '<div class="research-market-benchmarks">' + benchmarks.map(row =>
+      '<div class="research-market-benchmark"><strong>' + esc(row.period) + '</strong><span>' + esc((row.segment_ids || []).join(', ')) + '</span><small>' +
+      [row.new_supply != null ? tr('Nguồn cung ','Supply ') + Formatters.number(row.new_supply,{min:0,max:0}) : '', row.sales_units != null ? tr('Bán ','Sales ') + Formatters.number(row.sales_units,{min:0,max:0}) : '', row.average_asp != null ? 'ASP ' + fmtMarketValue(row.average_asp,'asp') : '', row.absorption_rate != null ? tr('Hấp thụ ','Absorption ') + fmtMarketValue(row.absorption_rate,'absorption') : ''].filter(Boolean).join(' · ') +
+      '</small><em>' + esc(sourceName(row.source_id)) + '</em></div>').join('') + '</div>' : '<div class="state-box">' + esc(tr('Chưa có benchmark thị trường tương thích cho đối tượng này.','No compatible market benchmark is available for this subject.')) + '</div>';
+    return '<section class="section research-market-primary"><div class="section-header"><div><span class="eyebrow">Market first</span><h2 class="section-title">' + esc(tr('Hiệu quả & vị thế thị trường','Market Performance & Positioning')) + '</h2><p class="section-note">' + esc(marketCoverageLine(ctx)) + '</p></div><a class="text-link" href="market.html">' + esc(tr('Mở Thị trường','Open Market')) + '</a></div><div class="section-body">' + table + '<div class="research-market-benchmark-head"><strong>' + esc(tr('Benchmark thị trường','Market benchmarks')) + '</strong></div>' + bench + '</div></section>';
+  }
+
+  function marketCompareHTML(contexts) {
+    const rows = [
+      [tr('Số dự án','Projects'), ctx => ctx.projects.length],
+      [tr('Dự án đang bán/triển khai','Selling / ongoing'), ctx => ctx.projects.filter(p => ['selling','ongoing','construction','active'].includes(p.status)).length],
+      [tr('Coverage giá','Price coverage'), ctx => marketCoverage(ctx).price + '/' + marketCoverage(ctx).projects],
+      [tr('Coverage bán hàng','Sales coverage'), ctx => marketCoverage(ctx).sales + '/' + marketCoverage(ctx).projects],
+      [tr('Coverage hấp thụ','Absorption coverage'), ctx => marketCoverage(ctx).absorption + '/' + marketCoverage(ctx).projects],
+      [tr('ASP dự án mới nhất','Latest project ASP'), ctx => { const x=ctx.projects.map(projectMarketRow).find(r=>r.asp!=null); return x ? fmtMarketValue(x.asp,'asp') + ' · ' + x.project.name : '—'; }],
+      [tr('Sales dự án mới nhất','Latest project sales'), ctx => { const x=ctx.projects.map(projectMarketRow).find(r=>r.sales!=null); return x ? fmtMarketValue(x.sales,'sales') + ' · ' + x.project.name : '—'; }],
+      [tr('Hấp thụ dự án mới nhất','Latest project absorption'), ctx => { const x=ctx.projects.map(projectMarketRow).find(r=>r.absorption!=null); return x ? fmtMarketValue(x.absorption,'absorption') + ' · ' + x.project.name : '—'; }],
+      [tr('Benchmark gần nhất','Latest benchmark'), ctx => { const x=marketBenchmarkRows(ctx)[0]; return x ? x.period + ' · ' + sourceName(x.source_id) : '—'; }]
+    ];
+    return '<section class="section research-market-primary"><div class="section-header"><div><span class="eyebrow">Market first</span><h2 class="section-title">' + esc(tr('Ma trận so sánh thị trường','Market Comparison Matrix')) + '</h2><p class="section-note">' + esc(tr('Ưu tiên dữ liệu giá, bán hàng, hấp thụ và benchmark có nguồn; phần thiếu giữ trống.','Prioritizes sourced price, sales, absorption and benchmark data; missing fields stay blank.')) + '</p></div></div><div class="section-body"><div class="table-wrap table-wrap--research-compare"><table class="data-table data-table--research-compare data-table--market-first"><thead><tr><th>' + esc(tr('Chỉ tiêu','Metric')) + '</th>' + contexts.map(ctx => '<th>' + esc(subjectLabel(ctx.subject)) + '</th>').join('') + '</tr></thead><tbody>' + rows.map(([label,getter]) => '<tr><td><strong>' + esc(label) + '</strong></td>' + contexts.map(ctx => '<td>' + esc(String(getter(ctx))) + '</td>').join('') + '</tr>').join('') + '</tbody></table></div></div></section>';
+  }
+
+  function supportingContextHTML(ctx) {
+    return '<section class="section research-supporting-context"><div class="section-header"><div><span class="eyebrow">Context</span><h2 class="section-title">' + esc(tr('Bối cảnh hỗ trợ','Supporting Context')) + '</h2></div></div><div class="section-body"><div class="research-context-grid"><article><h3>' + esc(tr('Hạ tầng','Infrastructure')) + '</h3>' + infrastructureCards(ctx) + '</article><article><h3>' + esc(tr('Pháp lý','Legal')) + '</h3>' + legalCards(ctx) + '</article><article><h3>' + esc(tr('Vĩ mô','Macro')) + '</h3><p class="research-disclaimer">' + esc(tr('Bối cảnh chung, không phải quan hệ nhân quả riêng cho dự án.','Common context, not project-specific causality.')) + '</p><div class="research-macro-grid research-macro-grid--compact">' + latestMacroCards() + '</div></article></div></div></section>';
+  }
   function latestEvidence(ctx) {
     const rows = [];
     ctx.articles.forEach(row => rows.push({ date: row.published_at, title: row.title, source: sourceName(row.source_id) }));
