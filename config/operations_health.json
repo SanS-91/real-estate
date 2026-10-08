@@ -15,7 +15,8 @@
       "source_access": "automated",
       "candidate_mode": "artifact-only",
       "candidate_path": null,
-      "operational_note": "Candidate evidence is produced in workflow artifacts; production uses controlled persistence gates."
+      "operational_note": "Candidate evidence is produced in workflow artifacts; production uses controlled persistence gates.",
+      "workflow_file": "macro-candidate.yml"
     },
     {
       "id": "macro-monthly-statistics",
@@ -23,7 +24,8 @@
       "workflow_name": "Macro Candidate Collector",
       "source_access": "automated",
       "candidate_mode": "artifact-only",
-      "candidate_path": null
+      "candidate_path": null,
+      "workflow_file": "macro-candidate.yml"
     },
     {
       "id": "macro-customer-rates",
@@ -31,7 +33,8 @@
       "workflow_name": "Macro Candidate Collector",
       "source_access": "automated",
       "candidate_mode": "artifact-only",
-      "candidate_path": null
+      "candidate_path": null,
+      "workflow_file": "macro-candidate.yml"
     },
     {
       "id": "macro-policy-rates",
@@ -39,7 +42,8 @@
       "workflow_name": "Macro Candidate Collector",
       "source_access": "automated",
       "candidate_mode": "artifact-only",
-      "candidate_path": null
+      "candidate_path": null,
+      "workflow_file": "macro-candidate.yml"
     },
     {
       "id": "market-project-registry",
@@ -47,7 +51,8 @@
       "workflow_name": "Market Source Candidate Collector",
       "source_access": "automated-plus-curated",
       "candidate_mode": "article-evidence",
-      "candidate_path": "data/candidate/market/articles.json"
+      "candidate_path": "data/candidate/market/articles.json",
+      "workflow_file": "market-source-candidate-collector.yml"
     },
     {
       "id": "market-benchmarks",
@@ -55,7 +60,8 @@
       "workflow_name": "Market Source Candidate Collector",
       "source_access": "automated-candidate",
       "candidate_mode": "market-observations",
-      "candidate_path": "data/candidate/market/observations.json"
+      "candidate_path": "data/candidate/market/observations.json",
+      "workflow_file": "market-source-candidate-collector.yml"
     },
     {
       "id": "market-listing",
@@ -66,7 +72,8 @@
       "candidate_mode": "listing-observations",
       "candidate_path": "data/candidate/market/listing-observations.json",
       "production_path": "data/mock/market/listing-observations.json",
-      "stale_after_hours": 336
+      "stale_after_hours": 336,
+      "workflow_file": "listing-market-candidate.yml"
     },
     {
       "id": "legal-registry",
@@ -74,7 +81,8 @@
       "workflow_name": "Legal Candidate Collector",
       "source_access": "automated-candidate-review",
       "candidate_mode": "legal",
-      "candidate_path": "data/candidate/legal/documents.json"
+      "candidate_path": "data/candidate/legal/documents.json",
+      "workflow_file": "legal-candidate-collector.yml"
     },
     {
       "id": "infrastructure-registry",
@@ -82,7 +90,8 @@
       "workflow_name": "Infrastructure Candidate Collector",
       "source_access": "automated-candidate-review",
       "candidate_mode": "infrastructure",
-      "candidate_path": "data/candidate/infrastructure/updates.json"
+      "candidate_path": "data/candidate/infrastructure/updates.json",
+      "workflow_file": "infrastructure-candidate-collector.yml"
     }
   ],
   "status_priority": [
