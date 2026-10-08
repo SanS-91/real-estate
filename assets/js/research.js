@@ -101,62 +101,60 @@
   }
 
   function contextFor(subject) {
-    let projects = [];
-    let regionIds = [];
-    let developerIds = [];
+    if (!window.IntelligenceContext || !subject) return null;
+    const evidence=IntelligenceContext.query({
+      projects:data.projects,
+      regions:data.regions,
+      developers:data.developers,
+      infrastructure:data.infrastructure,
+      infrastructureSchedules:data.schedules,
+      marketObservations:data.marketObservations,
+      listingObservations:data.listingObservations,
+      legal:data.legal,
+      articles:data.articles,
+      events:data.events,
+      macroRows:data.macroRows
+    }, {
+      type:state.type,
+      id:subject.id,
+      includeMacroContext:true,
+      macroIndicatorIds:[
+        'usd-vnd-central-rate',
+        'sjc-gold-sell',
+        'credit-growth-ytd',
+        'cpi-yoy',
+        'deposit-rate-12m',
+        'policy-refinancing-rate'
+      ]
+    });
+    if (!evidence) return null;
 
-    if (state.type === 'project') {
-      projects = [subject];
-      regionIds = subject.region_ids || [];
-      developerIds = subject.developer_ids || (subject.lead_developer_id ? [subject.lead_developer_id] : []);
-    } else if (state.type === 'developer') {
-      developerIds = [subject.id];
-      projects = data.projects.filter(project =>
-        (project.developer_ids || []).includes(subject.id) || project.lead_developer_id === subject.id
-      );
-      regionIds = unique([...(subject.region_ids || []), ...projects.flatMap(project => project.region_ids || [])]);
-    } else {
-      regionIds = [subject.id];
-      projects = data.projects.filter(project => (project.region_ids || []).includes(subject.id));
-      developerIds = unique(projects.flatMap(project =>
-        project.developer_ids || (project.lead_developer_id ? [project.lead_developer_id] : [])
-      ));
-    }
+    const relations=evidence.relations || {};
+    const direct=evidence.direct || {};
+    const contextual=evidence.contextual || {};
+    const infrastructure=direct.infrastructure || [];
+    const articles=(direct.articles || []).filter(row => isRealSource(row.source_id));
+    const events=(direct.events || []).filter(row => (row.source_ids || []).some(isRealSource));
 
-    const projectIds = projects.map(project => project.id);
-    const legalTopicIds = unique(projects.flatMap(project => project.related_legal_topic_ids || []));
-    const infrastructureIds = unique([
-      ...projects.flatMap(project => project.related_infrastructure_ids || []),
-      ...data.infrastructure
-        .filter(infra => projectIds.some(id => (infra.related_real_estate_project_ids || []).includes(id)))
-        .map(infra => infra.id)
-    ]);
-
-    const infrastructure = data.infrastructure.filter(infra =>
-      infrastructureIds.includes(infra.id) ||
-      (state.type === 'region' && (infra.region_ids || []).includes(subject.id))
-    );
-
-    const legalDocuments = data.legal.filter(doc =>
-      (doc.topic_ids || []).some(id => legalTopicIds.includes(id))
-    );
-
-    const articles = data.articles.filter(article =>
-      ((article.project_ids || []).some(id => projectIds.includes(id)) ||
-      (article.developer_ids || []).some(id => developerIds.includes(id)) ||
-      (article.region_ids || []).some(id => regionIds.includes(id)) ||
-      (article.infrastructure_project_ids || []).some(id => infrastructure.map(x => x.id).includes(id))) &&
-      isRealSource(article.source_id)
-    );
-
-    const events = data.events.filter(event =>
-      ((event.entity_type === 'real-estate-project' && projectIds.includes(event.entity_id)) ||
-      (event.entity_type === 'infrastructure-project' && infrastructure.map(x => x.id).includes(event.entity_id)) ||
-      (event.region_ids || []).some(id => regionIds.includes(id))) &&
-      (event.source_ids || []).some(isRealSource)
-    );
-
-    return { subject, projects, projectIds, regionIds, developerIds, legalTopicIds, infrastructure, legalDocuments, articles, events };
+    return {
+      subject,
+      projects:direct.projects || [],
+      projectIds:relations.projectIds || [],
+      regionIds:relations.regionIds || [],
+      developerIds:relations.developerIds || [],
+      legalTopicIds:relations.legalTopicIds || [],
+      infrastructure,
+      infrastructureSchedules:direct.infrastructureSchedules || [],
+      legalDocuments:contextual.legalDocuments || [],
+      regionalMarketObservations:contextual.regionalMarketObservations || [],
+      macroContext:contextual.macroObservations || [],
+      listingObservations:direct.listingObservations || [],
+      marketObservations:direct.marketObservations || [],
+      articles,
+      events,
+      intelligence:evidence,
+      semantics:evidence.semantics || {}
+    };
   }
 
   function watchKey(type, id) {
@@ -691,6 +689,89 @@
     </div>`;
   }
 
+  function activeProjectCount(ctx) {
+    return ctx.projects.filter(project => ['selling','ongoing','construction','active'].includes(project.status)).length;
+  }
+
+  function linkedDeveloperRows(ctx) {
+    return (ctx.developerIds || []).map(id => data.developerMap.get(id)).filter(Boolean);
+  }
+
+  function latestContextDate(ctx) {
+    const dates=[
+      ...ctx.articles.map(x=>x.published_at),
+      ...ctx.events.map(x=>x.event_date),
+      ...ctx.marketObservations.map(x=>x.source_date || x.period),
+      ...ctx.listingObservations.map(x=>x.observation_date),
+      ...ctx.infrastructureSchedules.map(x=>x.announced_date)
+    ].filter(Boolean).sort();
+    return dates.at(-1) || null;
+  }
+
+  function subjectIntelligenceDossierHTML(ctx) {
+    if (!ctx || state.type === 'project') return '';
+    const coverage=marketCoverage(ctx);
+    const listing=listingCoverage(ctx);
+    const latest=latestContextDate(ctx);
+    const commonCounts=[
+      [tr('Dự án','Projects'), ctx.projects.length],
+      [tr('Đang bán / triển khai','Selling / ongoing'), activeProjectCount(ctx)],
+      [tr('Hạ tầng liên quan','Infrastructure links'), ctx.infrastructure.length],
+      [tr('Văn bản pháp lý liên quan chủ đề','Topic-relevant legal docs'), ctx.legalDocuments.length]
+    ];
+
+    if (state.type === 'region') {
+      const developers=linkedDeveloperRows(ctx);
+      const regionalRows=ctx.regionalMarketObservations || [];
+      return `<section class="section research-subject-dossier research-region-dossier">
+        <div class="section-header">
+          <div><span class="eyebrow">Region intelligence</span><h2 class="section-title">${esc(tr('Hồ sơ khu vực','Region Dossier'))}</h2></div>
+          <div class="section-header__actions">
+            <a class="text-link" href="market.html?view=projects&region=${encodeURIComponent(ctx.subject.id)}">${esc(tr('Mở dự án khu vực','Open regional projects'))}</a>
+            <a class="text-link" href="infrastructure.html?view=projects">${esc(tr('Mở Hạ tầng','Open Infrastructure'))}</a>
+          </div>
+        </div>
+        <div class="section-body">
+          <div class="research-dossier-metrics">
+            ${commonCounts.map(([label,value])=>`<div><strong>${esc(String(value))}</strong><span>${esc(label)}</span></div>`).join('')}
+            <div><strong>${esc(String(developers.length))}</strong><span>${esc(tr('Chủ đầu tư có dự án','Developers with projects'))}</span></div>
+            <div><strong>${esc(String(regionalRows.length))}</strong><span>${esc(tr('Quan sát thị trường khu vực','Regional market observations'))}</span></div>
+            <div><strong>${esc(listing.priced + '/' + listing.projects)}</strong><span>${esc(tr('Coverage giá listing','Listing price coverage'))}</span></div>
+            <div><strong>${latest ? esc(App.formatDate(latest)) : '—'}</strong><span>${esc(tr('Evidence mới nhất','Latest linked evidence'))}</span></div>
+          </div>
+          <div class="research-dossier-columns">
+            <div><h3>${esc(tr('Chủ đầu tư hiện diện','Developer Footprint'))}</h3>${developers.length ? '<div class="research-topic-row">'+developers.slice(0,10).map(dev=>'<a class="research-topic-chip" href="research.html?type=developer&ids='+encodeURIComponent(dev.id)+'">'+esc(dev.name)+'</a>').join('')+'</div>' : '<p class="muted-text">No linked developers.</p>'}</div>
+            <div><h3>${esc(tr('Nguyên tắc evidence','Evidence Semantics'))}</h3><p class="research-disclaimer">${esc(tr('Hạ tầng theo khu vực gồm cả liên kết trực tiếp với dự án và bối cảnh địa lý. Pháp lý chỉ thể hiện mức liên quan qua controlled topics.','Region infrastructure includes direct project links and geographic context. Legal evidence reflects controlled topic relevance only.'))}</p></div>
+          </div>
+        </div>
+      </section>`;
+    }
+
+    if (state.type === 'developer') {
+      const regionRows=(ctx.regionIds || []).map(id=>data.regionMap.get(id)).filter(Boolean);
+      return `<section class="section research-subject-dossier research-developer-dossier">
+        <div class="section-header">
+          <div><span class="eyebrow">Developer intelligence</span><h2 class="section-title">${esc(tr('Hồ sơ chủ đầu tư','Developer Dossier'))}</h2></div>
+          <a class="text-link" href="market.html?view=projects&developer=${encodeURIComponent(ctx.subject.id)}">${esc(tr('Mở danh mục dự án','Open project portfolio'))}</a>
+        </div>
+        <div class="section-body">
+          <div class="research-dossier-metrics">
+            ${commonCounts.map(([label,value])=>`<div><strong>${esc(String(value))}</strong><span>${esc(label)}</span></div>`).join('')}
+            <div><strong>${esc(String(regionRows.length))}</strong><span>${esc(tr('Khu vực hoạt động','Regions'))}</span></div>
+            <div><strong>${esc(coverage.price + '/' + coverage.projects)}</strong><span>${esc(tr('Coverage ASP dự án','Project ASP coverage'))}</span></div>
+            <div><strong>${esc(listing.priced + '/' + listing.projects)}</strong><span>${esc(tr('Coverage giá listing','Listing price coverage'))}</span></div>
+            <div><strong>${latest ? esc(App.formatDate(latest)) : '—'}</strong><span>${esc(tr('Evidence mới nhất','Latest linked evidence'))}</span></div>
+          </div>
+          <div class="research-dossier-columns">
+            <div><h3>${esc(tr('Dấu chân địa lý','Geographic Footprint'))}</h3>${regionRows.length ? '<div class="research-topic-row">'+regionRows.map(region=>'<a class="research-topic-chip" href="research.html?type=region&ids='+encodeURIComponent(region.id)+'">'+esc(region.short_name || region.name)+'</a>').join('')+'</div>' : '<p class="muted-text">No linked regions.</p>'}</div>
+            <div><h3>${esc(tr('Nguyên tắc evidence','Evidence Semantics'))}</h3><p class="research-disclaimer">${esc(tr('Các chỉ tiêu tổng hợp phản ánh danh mục dự án được liên kết canonical; không phải chỉ tiêu tài chính hợp nhất của doanh nghiệp.','Portfolio metrics reflect canonically linked projects; they are not consolidated corporate financial metrics.'))}</p></div>
+          </div>
+        </div>
+      </section>`;
+    }
+    return '';
+  }
+
   function renderSingle(ctx) {
     const coverage = marketCoverage(ctx);
     setView(`
@@ -707,6 +788,8 @@
           <span>${coverage.absorption}/${coverage.projects} ${esc(tr('có dữ liệu hấp thụ','with absorption data'))}</span>
         </div>
       </section>
+
+      ${subjectIntelligenceDossierHTML(ctx)}
 
       ${marketSingleHTML(ctx)}
 

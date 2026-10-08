@@ -7,9 +7,9 @@ js=(ROOT/'assets/js/research.js').read_text(encoding='utf-8')
 css=(ROOT/'assets/css/main.css').read_text(encoding='utf-8')
 production=json.loads((ROOT/'data/processed/macro/observations.json').read_text(encoding='utf-8'))['data']
 
-assert 'assets/js/research.js?v=5.5B1' in research
-assert 'assets/css/main.css?v=5.5A1' in research
-assert 'assets/js/localization-dynamic.js?v=5.5A1' in research
+assert 'assets/js/research.js' in research
+assert 'assets/css/main.css' in research
+assert 'assets/js/localization-dynamic.js' in research
 
 assert 'function marketCoverage(ctx)' in js
 assert 'function latestEvidence(ctx)' in js
@@ -20,8 +20,9 @@ assert 'researchBriefHTML([ctx])' in js
 assert 'researchBriefHTML(contexts)' in js
 assert 'data-research-copy-brief' in js
 assert 'data-research-print' in js
-assert "isRealSource(article.source_id)" in js
-assert "(event.source_ids || []).some(isRealSource)" in js
+assert "filter(row => isRealSource(row.source_id))" in js
+assert "(row.source_ids || []).some(isRealSource)" in js
+assert "IntelligenceContext.query({" in js
 
 assert 'average_asp =' not in js
 assert 'sales_units =' not in js

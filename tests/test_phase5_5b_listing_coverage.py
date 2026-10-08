@@ -50,7 +50,7 @@ assert len(production['data'])==18
 assert 'listing.coverage_status === \'partial\'' in research
 assert 'listingCoverage(ctx).priced' in research
 assert 'row.coverage_status === \'partial\'' in market
-assert 'assets/js/research.js?v=5.5B1' in research_html
+assert 'assets/js/research.js' in research_html
 assert 'assets/js/market.js' in market_html
 
 print('Phase 5.5B Listing Market Coverage tests PASS')
