@@ -54,3 +54,26 @@ def parse(html: str, source_url: str, fetched_at: str):
             "evidence_text":"Cushman & Wakefield states apartment new supply was over 1,300 units, so exact new_supply remains blank; absorption is source-published."
         })
     return rows
+
+
+def parse_article(html: str, source_url: str, fetched_at: str):
+    soup=BeautifulSoup(html,"lxml")
+    title=(soup.find("h1").get_text(" ",strip=True) if soup.find("h1") else "Ho Chi Minh City Residential MarketBeat")
+    text=" ".join(soup.stripped_strings)
+    summary_bits=[]
+    if re.search(r"over\s*1,300\s*units",text,re.I):
+        summary_bits.append("Apartment new supply exceeded 1,300 units in Q2 2026")
+    if re.search(r"absorption rate of\s*31%",text,re.I):
+        summary_bits.append("apartment absorption was 31%")
+    if re.search(r"approximately\s*1,700\s*units",text,re.I):
+        summary_bits.append("landed new supply was approximately 1,700 units")
+    if re.search(r"absorption rate of\s*~?\s*36%",text,re.I):
+        summary_bits.append("landed absorption was about 36%")
+    return {
+        "title":title,
+        "published_date":"2026-08-01",
+        "summary":"; ".join(summary_bits) if summary_bits else "Cushman & Wakefield HCMC Residential MarketBeat Q2 2026 research update.",
+        "tags":["residential","hcmc","q2-2026","supply","absorption"],
+        "source_url":source_url,
+        "fetched_at":fetched_at,
+    }
