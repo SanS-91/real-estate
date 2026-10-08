@@ -43,7 +43,8 @@
       },
       "methodology_note": "Secondary portal snapshot. Values represent advertised asking/listing market, not executed transaction price, official developer sales, or absorption.",
       "confidence": "secondary-source-snapshot",
-      "status": "pilot"
+      "status": "pilot",
+      "coverage_status": "full"
     },
     {
       "id": "bdsc-izumi-city-2026-10-08",
