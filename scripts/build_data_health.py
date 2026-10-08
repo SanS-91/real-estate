@@ -76,7 +76,7 @@ def candidate_info(entry):
     else: backlog,conflicts=generic_backlog(path)
     return {"candidate_path":path,"candidate_state":"persisted","candidate_backlog":backlog,"candidate_conflicts":conflicts,"last_candidate_at":payload.get("generated_at")}
 
-def load_runs(args):
+def load_runs(args, ops):
     if args.workflow_runs_fixture:
         return load(Path(args.workflow_runs_fixture),{"workflow_runs":[]}).get("workflow_runs",[])
     repo=os.getenv("GITHUB_REPOSITORY")
@@ -84,9 +84,16 @@ def load_runs(args):
     if not repo: return []
     headers={"Accept":"application/vnd.github+json"}
     if token: headers["Authorization"]=f"Bearer {token}"
-    r=requests.get(f"https://api.github.com/repos/{repo}/actions/runs?per_page=100",headers=headers,timeout=20)
-    r.raise_for_status()
-    return r.json().get("workflow_runs",[])
+    files=sorted({x.get("workflow_file") for x in ops.get("datasets",[]) if x.get("workflow_file")})
+    runs=[]
+    for workflow_file in files:
+        url=f"https://api.github.com/repos/{repo}/actions/workflows/{workflow_file}/runs?per_page=20"
+        r=requests.get(url,headers=headers,timeout=20)
+        if r.status_code==404:
+            continue
+        r.raise_for_status()
+        runs.extend(r.json().get("workflow_runs",[]))
+    return runs
 
 def workflow_info(name,runs):
     matches=[x for x in runs if x.get("name")==name]
@@ -121,7 +128,7 @@ def main():
     as_of=parse_dt(args.as_of) if args.as_of else datetime.now(timezone.utc)
     ops=load(OPS); matrix=load(MATRIX)
     matrix_by={x["id"]:x for x in matrix.get("datasets",[])}
-    runs=load_runs(args)
+    runs=load_runs(args,ops)
     rows=[]
     for entry in ops["datasets"]:
         prod=prod_info(entry,matrix_by,as_of)
