@@ -1,0 +1,38 @@
+{
+  "schema_version": 1,
+  "updated_at": "2026-10-08",
+  "rules": {
+    "listing_market": {
+      "trend_ready_snapshots": 3,
+      "target_cadence": "monthly-or-reviewed-change",
+      "source_constraint": "assisted-browser where automated access is blocked"
+    },
+    "market_research": {
+      "trend_ready_periods": 4,
+      "target_cadence": "quarterly",
+      "series_key": [
+        "scope_type",
+        "region_ids",
+        "segment_ids",
+        "source_id"
+      ]
+    },
+    "legal": {
+      "history_ready_years": 3,
+      "target_cadence": "event-driven",
+      "history_basis": "issued/effective/amendment lifecycle"
+    },
+    "infrastructure": {
+      "history_ready_schedule_records": 2,
+      "target_cadence": "milestone-driven",
+      "history_basis": "append current/superseded schedule records"
+    }
+  },
+  "principles": [
+    "Historical coverage reports depth; it does not fabricate missing periods.",
+    "Blocked listing sources remain assisted and only reviewed snapshots become history.",
+    "Research-house series remain source-specific.",
+    "Approximate source values retain qualifiers.",
+    "Infrastructure schedule revisions append/supersede; they are never destructively overwritten."
+  ]
+}
