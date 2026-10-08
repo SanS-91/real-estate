@@ -1,6 +1,12 @@
 name: Market Source Candidate Collector
 
 on:
+  pull_request:
+    paths:
+      - 'scripts/market_*.py'
+      - 'scripts/test_market_*.py'
+      - 'config/market-automation-targets.json'
+      - '.github/workflows/market-source-candidate-collector.yml'
   push:
     branches:
       - main
