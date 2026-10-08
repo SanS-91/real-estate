@@ -1,0 +1,44 @@
+name: Phase 7.0 Intelligence Ranking Validation
+
+on:
+  pull_request:
+    paths:
+      - 'config/intelligence-ranking.json'
+      - 'assets/js/intelligence-ranking.js'
+      - 'assets/js/history-engine.js'
+      - 'assets/js/data-store.js'
+      - 'config/master-roadmap.json'
+      - 'tests/test_phase7_0_intelligence_ranking.py'
+      - 'tests/test_phase7_0_intelligence_ranking.js'
+      - '.github/workflows/phase70-intelligence-ranking-validation.yml'
+      - 'docs/PHASE7_0_INTELLIGENCE_RANKING.md'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  validate:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v7
+      - uses: actions/setup-python@v7
+        with:
+          python-version: '3.12'
+      - name: JavaScript syntax
+        run: |
+          node --check assets/js/intelligence-ranking.js
+          node --check assets/js/history-engine.js
+          node --check assets/js/data-store.js
+      - name: Phase 7.0 contract
+        run: python tests/test_phase7_0_intelligence_ranking.py
+      - name: Phase 7.0 behavior
+        run: node tests/test_phase7_0_intelligence_ranking.js
+      - name: Intelligence regressions
+        run: |
+          python tests/test_phase6_0_intelligence_model.py
+          node tests/test_phase6_0_intelligence_context.js
+          python tests/test_phase6_3_historical_coverage_expansion.py
+      - name: Roadmap regression
+        run: python tests/test_phase5_6b_master_roadmap_alignment.py
