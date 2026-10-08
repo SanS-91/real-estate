@@ -1,0 +1,6 @@
+{
+  "schema_version": 1,
+  "generated_at": "2026-10-08T13:35:00+07:00",
+  "note": "Assisted refresh staging file. Replace/add rows only with newly reviewed source-backed snapshots. Current seed intentionally mirrors production so preview is a no-op.",
+  "data": []
+}
