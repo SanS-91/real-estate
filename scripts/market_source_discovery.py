@@ -54,3 +54,47 @@ def namlong_target(url: str, index_url: str) -> dict:
         "auto_discovered": True,
         "discovery_url": index_url,
     }
+
+
+def discover_cbre_hcmc_reports(html: str, index_url: str, max_items: int = 8) -> list[dict]:
+    """Find HCMC quarterly Figures reports from CBRE's official insight index."""
+    import re
+    root = urlsplit(index_url)
+    host = (root.hostname or "").lower().removeprefix("www.")
+    soup = BeautifulSoup(html, "lxml")
+    found = []
+    seen = set()
+    for a in soup.select("a[href]"):
+        full = urlsplit(urljoin(index_url, a.get("href", "").strip()))
+        if full.scheme not in ("https", "http") or (full.hostname or "").lower().removeprefix("www.") != host:
+            continue
+        path = full.path.rstrip("/")
+        if not path.startswith("/insights/figures/"):
+            continue
+        slug = path.rsplit("/", 1)[-1].lower()
+        if not slug.startswith("ho-chi-minh-city-figures-"):
+            continue
+        match = re.search(r"(?:^|-)q([1-4])-(20\d{2})(?:$|-)", slug)
+        if not match:
+            continue
+        period = f"{match.group(2)}-Q{match.group(1)}"
+        url = urlunsplit(("https", root.netloc, path, "", ""))
+        if url in seen:
+            continue
+        seen.add(url)
+        found.append({
+            "target_id": "cbre-discovered-" + hashlib.sha256(url.encode()).hexdigest()[:16],
+            "source_id": "cbre-vietnam",
+            "observation_source_id": "cbre-vietnam-market",
+            "url": url,
+            "period": period,
+            "period_type": "quarter",
+            "scope": "hcmc-residential",
+            "collector": "cbre_market",
+            "enabled": True,
+            "auto_discovered": True,
+            "discovery_url": index_url,
+        })
+        if len(found) >= max_items:
+            break
+    return found
