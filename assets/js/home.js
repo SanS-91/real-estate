@@ -180,6 +180,201 @@
     return `${HOME_LABELS[row.indicator_id] || row.indicator_id} · ${Formatters.unitValue(row.unit, row.value, { compact: true })}`;
   }
 
+  function homeReferenceDate() {
+    const parts=new Intl.DateTimeFormat('en-CA',{
+      timeZone:'Asia/Ho_Chi_Minh',year:'numeric',month:'2-digit',day:'2-digit'
+    }).formatToParts(new Date());
+    const map=Object.fromEntries(parts.map(part=>[part.type,part.value]));
+    return `${map.year}-${map.month}-${map.day}`;
+  }
+
+  function categoryLabel(category) {
+    return ({ market:'Market', legal:'Legal', infrastructure:'Infrastructure', macro:'Macro' })[category] || category;
+  }
+
+  function macroHref(row) {
+    const id=row?.indicator_id || row?.current?.indicator_id || row?.entity_id || '';
+    if (id==='usd-vnd-central-rate') return 'macro.html?view=fx';
+    if (id.startsWith('sjc-gold')) return 'macro.html?view=gold';
+    if (id.includes('cpi')) return 'macro.html?view=inflation';
+    if (id.includes('rate')) return 'macro.html?view=rates';
+    return 'macro.html?view=liquidity';
+  }
+
+  function buildRankableCandidates(data) {
+    const rows=[];
+    const intelligence=window.HistoryEngine?.buildIntelligence?.({
+      macroRows:data.production.rows,
+      legalDocuments:data.legal,
+      infrastructureProjects:data.infrastructure,
+      schedules:data.schedules,
+      events:data.events,
+      marketObservations:data.marketObservations
+    }) || [];
+    rows.push(...intelligence);
+
+    data.articles
+      .filter(row=>['market','legal','infrastructure'].includes(row.category) && nonDemoSource(row.source_id))
+      .forEach(row=>rows.push({
+        id:`article:${row.id}`,
+        category:row.category,
+        type:row.category==='market' && row.content_type==='developer-update' ? 'sales-update' : 'default',
+        date:row.published_at,
+        source_id:row.source_id,
+        project_ids:row.project_ids || [],
+        developer_ids:row.developer_ids || [],
+        region_ids:row.region_ids || [],
+        infrastructure_project_ids:row.infrastructure_project_ids || [],
+        legal_document_ids:row.legal_document_ids || [],
+        importance:row.importance,
+        display_title:row.title,
+        display_summary:row.summary,
+        display_href:row.category==='market' ? 'market.html?view=news'
+          : row.category==='legal' ? 'legal.html?view=news'
+          : 'infrastructure.html?view=timeline'
+      }));
+
+    data.legal.forEach(row=>{
+      if (!nonDemoSource(row.primary_source_id)) return;
+      if (row.issued_date) rows.push({
+        id:`legal-issued:${row.id}`,category:'legal',type:'issued',date:row.issued_date,
+        entity_id:row.id,source_id:row.primary_source_id,legal_document_ids:[row.id],
+        display_title:`${row.document_number} · ${row.title}`,
+        display_summary:row.summary || 'Official legal document issued.',
+        display_href:`legal.html?view=documents&document=${encodeURIComponent(row.id)}`
+      });
+      if (row.effective_date && row.effective_date!==row.issued_date) rows.push({
+        id:`legal-effective:${row.id}`,category:'legal',type:'effective',date:row.effective_date,
+        entity_id:row.id,source_id:row.primary_source_id,legal_document_ids:[row.id],
+        display_title:`${row.document_number} becomes effective`,
+        display_summary:row.summary || row.title,
+        display_href:`legal.html?view=documents&document=${encodeURIComponent(row.id)}`
+      });
+    });
+
+    data.production.latest.forEach(row=>{
+      if (!nonDemoSource(row.source_id)) return;
+      const delta=window.HistoryEngine?.macroDelta?.(data.production.rows,row.indicator_id);
+      let type='data-release';
+      if (delta?.previous && delta.delta!==null && delta.delta!==0) {
+        if (row.indicator_id.includes('policy')) type='policy-change';
+        else if (row.indicator_id.includes('rate')) type='rate-change';
+        else if (row.indicator_id.includes('credit')) type='credit-update';
+        else type='value-change';
+      }
+      rows.push({
+        id:`macro-release:${row.indicator_id}:${row.period}`,
+        category:'macro',type,date:row.published_at || row.data_date || row.period,
+        entity_id:row.indicator_id,source_id:row.source_id,
+        current:row,previous:delta?.previous || null,delta:delta?.delta ?? null,pct:delta?.pct ?? null,
+        display_title:productionTodayTitle(row),
+        display_summary:weeklyMacroSummary(row,data.production),
+        display_href:macroHref(row)
+      });
+    });
+
+    const byId=new Map();
+    rows.forEach(row=>{ if (row?.id && !byId.has(row.id)) byId.set(row.id,row); });
+    return [...byId.values()];
+  }
+
+  function rankedCandidates(data) {
+    if (!window.IntelligenceRanking) return [];
+    return IntelligenceRanking.rankAll(buildRankableCandidates(data),{
+      sources:data.sourceRows,
+      rules:data.rankingRules,
+      referenceDate:homeReferenceDate()
+    });
+  }
+
+  function rankedChangeCandidates(data) {
+    if (!window.HistoryEngine || !window.IntelligenceRanking) return [];
+    const rows=HistoryEngine.buildIntelligence({
+      macroRows:data.production.rows,
+      legalDocuments:data.legal,
+      infrastructureProjects:data.infrastructure,
+      schedules:data.schedules,
+      events:data.events,
+      marketObservations:data.marketObservations
+    });
+    return IntelligenceRanking.rankAll(rows,{
+      sources:data.sourceRows,
+      rules:data.rankingRules,
+      referenceDate:homeReferenceDate()
+    });
+  }
+
+  function formatRankedItem(item,data) {
+    if (item.display_title) {
+      return {
+        ...item,
+        category_label:categoryLabel(item.category),
+        date_label:App.formatDate(item.ranking_evidence?.evidence_date || item.date),
+        sort_date:item.ranking_evidence?.evidence_date || item.date,
+        title:item.display_title,
+        summary:item.display_summary || '',
+        href:item.display_href || '#',
+        importance_label:`${item.attention_label} · ${item.attention_score}`
+      };
+    }
+
+    if (item.category==='macro') {
+      const current=item.current, previous=item.previous;
+      let summary='Source-backed macro change.';
+      if (current && previous && item.delta!==null) {
+        if (current.unit==='vnd-per-tael') summary=`${item.delta>0?'+':''}${Formatters.number(item.delta/1_000_000,{min:1,max:1})} mn VND/tael versus ${formatProductionPeriod(previous)}.`;
+        else if (current.unit==='vnd-per-usd') summary=`${item.delta>0?'+':''}${Formatters.number(item.delta,{min:0,max:0})} VND/USD versus ${formatProductionPeriod(previous)}.`;
+        else summary=`Changed versus ${formatProductionPeriod(previous)}.`;
+      }
+      return {
+        ...item,category_label:'Macro',
+        date_label:current ? formatProductionPeriod(current) : App.formatDate(item.date),
+        sort_date:item.date,title:current ? productionTodayTitle(current) : item.title,
+        summary,href:macroHref(current || item),
+        importance_label:`${item.attention_label} · ${item.attention_score}`
+      };
+    }
+
+    if (item.category==='infrastructure') {
+      return {
+        ...item,category_label:'Infrastructure',date_label:App.formatDate(item.date),sort_date:item.date,
+        title:item.title,
+        summary:item.type==='schedule-change'
+          ? `Schedule revised from ${item.from} to ${item.to}; prior target remains preserved in history.`
+          : item.summary || 'Source-backed infrastructure milestone recorded in the curated timeline.',
+        href:`infrastructure.html?view=projects&project=${encodeURIComponent(item.entity_id)}`,
+        importance_label:`${item.attention_label} · ${item.attention_score}`
+      };
+    }
+
+    if (item.category==='market') {
+      const current=item.current, previous=item.previous;
+      return {
+        ...item,category_label:'Market',
+        date_label:current?.period ? formatQuarterPeriod(current.period) : App.formatDate(item.date),
+        sort_date:item.date,
+        title:current?.new_supply!=null ? `HCMC apartment new supply at ${Formatters.number(current.new_supply,{min:0,max:0})} units` : (item.title || 'Market update'),
+        summary:current && previous
+          ? `Comparable source series moved from ${Formatters.number(previous.new_supply,{min:0,max:0})} to ${Formatters.number(current.new_supply,{min:0,max:0})} units (${item.pct>0?'+':''}${Formatters.number(item.pct,{min:1,max:1})}%).`
+          : item.summary || '',
+        href:'market.html?view=supply-sales',
+        importance_label:`${item.attention_label} · ${item.attention_score}`
+      };
+    }
+
+    const doc=data.legal.find(row=>row.id===item.entity_id);
+    const target=data.legal.find(row=>row.id===item.target_id);
+    return {
+      ...item,category_label:'Legal',date_label:App.formatDate(item.date),sort_date:item.date,
+      title:doc ? `${doc.document_number} · ${doc.title}` : item.title,
+      summary:target
+        ? `${doc?.document_number || 'Document'} ${item.type==='amends'?'amends':'supplements'} ${target.document_number}; both records remain linked in the legal lifecycle.`
+        : item.summary || '',
+      href:doc ? `legal.html?view=documents&document=${encodeURIComponent(doc.id)}` : 'legal.html?view=documents',
+      importance_label:`${item.attention_label} · ${item.attention_score}`
+    };
+  }
+
   function buildTodayGroups(data) {
     const marketArticles = sortDateDesc(
       data.articles.filter(row => row.category === 'market' && nonDemoSource(row.source_id)),
