@@ -193,6 +193,42 @@
     return sortDesc(rows.filter(row => row.date), row => row.date);
   }
 
+  function listingMarketSeries(observations, projectId, assetType = null) {
+    const rows = (observations || []).filter(row => {
+      if (row.project_id !== projectId) return false;
+      if (assetType && row.asset_type !== assetType) return false;
+      return row.market_layer === 'listing-asking' && row.observation_date;
+    });
+    return sortAsc(rows, row => row.observation_date);
+  }
+
+  function listingMarketDelta(observations, projectId, assetType = null) {
+    const rows = listingMarketSeries(observations, projectId, assetType);
+    const current = rows.at(-1) || null;
+    const previous = rows.at(-2) || null;
+    if (!current) return { current:null, previous:null, changes:{} };
+    if (!previous) return { current, previous:null, changes:{} };
+    const fields = [
+      'asking_price_low_vnd_per_m2',
+      'asking_price_high_vnd_per_m2',
+      'asking_price_change_1y_pct',
+      'popular_area_low_sqm',
+      'popular_area_high_sqm'
+    ];
+    const changes = {};
+    fields.forEach(field => {
+      if (current[field] !== previous[field]) changes[field] = { from: previous[field], to: current[field] };
+    });
+    const previousVolatile = previous.volatile_metrics || {};
+    const currentVolatile = current.volatile_metrics || {};
+    ['listing_count','project_views_7d'].forEach(field => {
+      if (currentVolatile[field] !== previousVolatile[field]) {
+        changes[`volatile_metrics.${field}`] = { from: previousVolatile[field], to: currentVolatile[field] };
+      }
+    });
+    return { current, previous, changes };
+  }
+
   function compatibleMarketSeries(observations, { regionId, segmentId, metric, sourceId = null }) {
     const rows = (observations || []).filter(row => {
       if (!numeric(row[metric])) return false;
@@ -343,6 +379,8 @@
     infrastructureTimeline,
     infrastructureScheduleChange,
     marketProjectHistory,
+    listingMarketSeries,
+    listingMarketDelta,
     compatibleMarketSeries,
     marketDelta,
     legalAmendmentChanges,

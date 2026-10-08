@@ -468,6 +468,35 @@
     });
   }
 
+  function listingHistoryHTML(project) {
+    const rows = window.HistoryEngine?.listingMarketSeries?.(data.listingObservations, project.id) || [];
+    if (!rows.length) return '<p class="muted-text">No listing snapshot history is available yet.</p>';
+    const latest = rows.at(-1);
+    const delta = window.HistoryEngine?.listingMarketDelta?.(data.listingObservations, project.id) || { previous:null, changes:{} };
+    const chartId = 'listing-history-' + String(project.id).replace(/[^a-z0-9_-]/gi,'-');
+    const changeCount = Object.keys(delta.changes || {}).length;
+    const rowsHtml = [...rows].reverse().slice(0,8).map(row =>
+      '<div class="drawer-list-row drawer-list-row--stack"><span>' + esc(App.formatDate(row.observation_date)) + ' · ' + esc(row.coverage_status || 'full') + '</span><strong>' + esc(formatListingRange(row)) + '</strong><span>' + esc(listingTrendLabel(row)) + ' · ' + sourceRef(row.source_id,{sourceDate:row.observation_date,sourceUrl:row.source_url,methodology:row.methodology_note}) + '</span></div>'
+    ).join('');
+    return '<div class="listing-history-summary"><strong>' + rows.length + ' snapshot' + (rows.length === 1 ? '' : 's') + '</strong><span>' +
+      (delta.previous ? (changeCount ? changeCount + ' tracked field change(s) vs previous snapshot' : 'No tracked field change vs previous snapshot') : 'Baseline snapshot collected') +
+      '</span></div><div class="chart-frame chart-frame--drawer"><canvas id="' + esc(chartId) + '"></canvas></div><div class="drawer-subsection"><h4>Snapshot history</h4>' + rowsHtml + '</div>';
+  }
+
+  function renderListingHistoryChart(projectId) {
+    const rows = window.HistoryEngine?.listingMarketSeries?.(data.listingObservations, projectId) || [];
+    if (!rows.length) return;
+    const chartId = 'listing-history-' + String(projectId).replace(/[^a-z0-9_-]/gi,'-');
+    ChartTools.renderRangeSeries(chartId, {
+      labels: rows.map(row => row.observation_date),
+      lowValues: rows.map(row => row.asking_price_low_vnd_per_m2),
+      highValues: rows.map(row => row.asking_price_high_vnd_per_m2),
+      lowLabel: 'Asking low',
+      highLabel: 'Asking high',
+      yFormatter: value => Formatters.aspVndPerSqm(value, { short:true })
+    });
+  }
+
   function projectHistoryHTML(project) {
     const rows = window.HistoryEngine?.marketProjectHistory?.(project, data.observations, data.phases) || [];
     if (!rows.length) return '<p class="muted-text">No dated project history is available yet.</p>';
@@ -502,6 +531,7 @@
       </div>
       <div class="drawer-section"><h3>Overview</h3><p>${esc(project.summary)}</p></div>
       <div class="drawer-section"><h3>Listing Market</h3>${listingMarketDrawerHTML(project)}</div>
+      <div class="drawer-section"><h3>Listing Price History</h3>${listingHistoryHTML(project)}</div>
       <div class="drawer-section"><h3>Project History</h3>${projectHistoryHTML(project)}</div>
       ${leadDeveloper(project) ? `<div class="drawer-section"><h3>Developer</h3><div class="drawer-list-row"><div><strong>${esc(leadDeveloper(project).name)}</strong><span>${esc(leadDeveloper(project).summary || '')}</span></div><a class="text-link" href="market.html?view=projects&developer=${encodeURIComponent(leadDeveloper(project).id)}">Open portfolio</a></div></div>` : ''}
       <div class="drawer-section"><h3>Segments</h3><div class="chip-row">${(project.segment_ids || []).map(id=>`<span class="relation-chip">${esc(id.replaceAll('-',' '))}</span>`).join('')}</div></div>
@@ -518,6 +548,7 @@
     if (!project) return;
     if (push) App.setQueryParam('project', projectId, { push: true });
     App.openDrawer({ title: project.name, html: projectDrawerHTML(project) });
+    requestAnimationFrame(() => renderListingHistoryChart(project.id));
   }
 
   function syncDrawerFromURL() {
