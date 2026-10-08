@@ -1,6 +1,12 @@
 name: Market Source Candidate Collector
 
 on:
+  pull_request:
+    paths:
+      - 'scripts/market_*.py'
+      - 'scripts/test_market_*.py'
+      - 'config/market-automation-targets.json'
+      - '.github/workflows/market-source-candidate-collector.yml'
   push:
     branches:
       - main
@@ -15,10 +21,10 @@ on:
       - '.github/workflows/market-source-candidate-collector.yml'
   workflow_dispatch:
   schedule:
-    - cron: '30 2 * * 2,5'
+    - cron: '30 2 * * *'
 
 permissions:
-  contents: read
+  contents: write
 
 jobs:
   collect:
@@ -31,6 +37,8 @@ jobs:
           python-version: '3.12'
       - name: Install dependencies
         run: pip install -r requirements.txt
+      - name: Run source-period unit tests
+        run: python -m unittest discover -s scripts -p 'test_market_*.py'
       - name: Collect configured market-source candidates
         run: python scripts/market_source_candidate_collector.py
       - name: Candidate summary
@@ -53,6 +61,54 @@ jobs:
                   decision=", ".join(f"{d['segment']}:{d['status']}" for d in x["decisions"])
               print(f"| {x['target_id']} | {x.get('type','—')} | {x['status']} | {decision or '—'} |")
           PY
+      - name: Validate candidate integrity (preview only)
+        run: |
+          python scripts/market_candidate_promotion.py --mode preview
+          python - <<'PY'
+          import json
+          from pathlib import Path
+          r=json.loads(Path("data/candidate/market/market-promotion-report.json").read_text())
+          print("Market candidate decisions:", r["counts"])
+          print("Production write disabled until period freshness and source verification gates pass.")
+          PY
+      - name: Audit source-period freshness
+        run: python scripts/market_freshness_gate.py
+      - name: Preview strict CBRE quarterly-metric promotion
+        run: python scripts/market_verified_metric_promotion.py --mode preview
+      - name: Preview strict official-news auto-promotion
+        run: python scripts/market_verified_auto_promotion.py --mode preview
+      - name: End-to-end append-only publication test (isolated PR checkout)
+        if: github.event_name == 'pull_request'
+        run: |
+          python scripts/market_verified_auto_promotion.py --mode promote
+          python scripts/market_verified_metric_promotion.py --mode promote
+          python - <<'PY'
+          import json
+          from pathlib import Path
+          prod=json.loads(Path("data/mock/articles/articles.json").read_text())
+          report=json.loads(Path("data/candidate/market/market-verified-auto-promotion-report.json").read_text())
+          assert prod["record_count"] == len(prod["data"])
+          assert report["eligible_new_articles"] == report.get("added_articles", 0) if report["eligible_new_articles"] else True
+          print("PR-only production simulation passed; no remote push or website change.")
+          PY
+      - name: Publish verified publisher news to production JSON
+        if: github.ref == 'refs/heads/main' && github.event_name != 'pull_request'
+        run: python scripts/market_verified_auto_promotion.py --mode promote
+      - name: Promote only verified CBRE quarterly supply on main
+        if: github.ref == 'refs/heads/main' && github.event_name != 'pull_request'
+        run: python scripts/market_verified_metric_promotion.py --mode promote
+      - name: Commit only verified official news to main
+        if: github.ref == 'refs/heads/main' && github.event_name != 'pull_request'
+        run: |
+          if git diff --quiet -- data/mock/articles/articles.json data/mock/market/observations.json; then
+            echo "No eligible verified news."
+            exit 0
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data/mock/articles/articles.json data/mock/market/observations.json
+          git commit -m "data(market): append verified developer news and quarterly supply"
+          git push
       - name: Upload candidates
         uses: actions/upload-artifact@v7
         with:
@@ -61,4 +117,7 @@ jobs:
             data/candidate/market/observations.json
             data/candidate/market/articles.json
             data/candidate/market/market-source-candidate-report.json
+            data/candidate/market/market-freshness-report.json
+            data/candidate/market/market-verified-auto-promotion-report.json
+            data/candidate/market/market-verified-metric-promotion-report.json
           retention-days: 14

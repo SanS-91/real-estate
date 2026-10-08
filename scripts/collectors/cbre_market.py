@@ -13,6 +13,8 @@ def parse(html: str, source_url: str, fetched_at: str):
     text=_text(html)
     apartment=None
     landed=None
+    apartment_evidence=None
+    landed_evidence=None
 
     patterns_apartment=[
         r"(?:Condominium supply|Nguồn cung căn hộ)[^\.]{0,160}?(?:only|chỉ)\s*([\d.,]+)\s*(?:units|căn)",
@@ -26,11 +28,13 @@ def parse(html: str, source_url: str, fetched_at: str):
         m=re.search(p,text,re.I)
         if m:
             apartment=int(re.sub(r"\D","",m.group(1)))
+            apartment_evidence=m.group(0)
             break
     for p in patterns_landed:
         m=re.search(p,text,re.I)
         if m:
             landed=int(re.sub(r"\D","",m.group(1)))
+            landed_evidence=m.group(0)
             break
 
     rows=[]
@@ -38,12 +42,12 @@ def parse(html: str, source_url: str, fetched_at: str):
         rows.append({
             "segment_id":"apartment",
             "new_supply":apartment,
-            "evidence_text":"CBRE residential Q2 figure: condominium units launched.",
+            "evidence_text":"CBRE report condominium supply: "+(apartment_evidence or ""),
         })
     if landed is not None:
         rows.append({
             "segment_id":"landed",
             "new_supply":landed,
-            "evidence_text":"CBRE residential Q2 figure: newly launched landed-property units.",
+            "evidence_text":"CBRE report landed-property supply: "+(landed_evidence or ""),
         })
     return rows

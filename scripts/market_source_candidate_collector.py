@@ -6,6 +6,9 @@ import importlib
 import json
 import re
 from datetime import datetime, timezone
+from market_period_evidence import extract_period_evidence
+from market_publication_evidence import extract_publication_date
+from market_source_discovery import discover_namlong_links, namlong_target, discover_cbre_hcmc_reports
 import requests
 
 ROOT=Path(__file__).resolve().parents[1]
@@ -40,15 +43,16 @@ def existing_article_key(x):
     return (x.get("url"),x.get("source_id"))
 
 def build_cbre_rows(target, parsed, final_url):
+    period=target.get("period") or "2026-Q2"  # legacy fixture compatibility; live targets carry a verified period
     rows=[]
     for item in parsed:
         segment=item["segment_id"]
         rows.append({
-            "id":f"obs-hcmc-{segment}-2026-q2-cbre",
+            "id":f"obs-hcmc-{segment}-{period.lower()}-cbre",
             "scope_type":"region-segment",
             "region_ids":["hcmc"],
             "segment_ids":[segment],
-            "period":"2026-Q2",
+            "period":period,
             "period_type":"quarter",
             "new_supply":item["new_supply"],
             "sales_units":None,
@@ -58,7 +62,7 @@ def build_cbre_rows(target, parsed, final_url):
             "currency":"VND",
             "price_basis":None,
             "source_id":target["observation_source_id"],
-            "source_date":"2026-08-12",
+            "source_date":target.get("verified_source_date"),
             "source_url":final_url,
             "methodology_note":item["evidence_text"]+" Parsed automatically into candidate; requires review before promotion."
         })
@@ -69,7 +73,7 @@ def build_cushman_rows(target, parsed, final_url):
     for item in parsed:
         segment=item["segment_id"]
         rows.append({
-            "id":f"obs-hcmc-{segment}-2026-q2-cushman",
+            "id":f"obs-hcmc-{segment}-{target['period'].lower()}-cushman",
             "scope_type":"region-segment",
             "region_ids":["hcmc"],
             "segment_ids":[segment],
@@ -85,7 +89,7 @@ def build_cushman_rows(target, parsed, final_url):
             "currency":"VND",
             "price_basis":None,
             "source_id":target["observation_source_id"],
-            "source_date":"2026-08-01",
+            "source_date":target.get("verified_source_date"),
             "source_url":final_url,
             "methodology_note":item["evidence_text"]+" Parsed automatically into candidate; requires review before promotion."
         })
@@ -132,7 +136,7 @@ def project_regions(project_ids):
     return out
 
 def build_namlong_article(target, parsed, final_url):
-    date=parsed.get("published_date") or target.get("period")
+    date=parsed.get("published_date")
     project_ids=parsed.get("project_ids") or []
     tags=list(dict.fromkeys(parsed.get("tags") or []))
     summary_bits=[]
@@ -142,7 +146,7 @@ def build_namlong_article(target, parsed, final_url):
         elif f.get("type")=="certificate-progress":
             summary_bits.append(f"Developer states {f.get('household_pct',0)*100:.0f}% of households received ownership certificates.")
     if not summary_bits:
-        summary_bits.append("Nam Long official project update; structured project references extracted automatically for review.")
+        summary_bits.append(parsed.get("excerpt") or "Nam Long official article; see linked original publication.")
     return {
         "id":f"article-market-{slug(target['target_id'])}",
         "title":parsed.get("title") or "Nam Long official project update",
@@ -159,7 +163,8 @@ def build_namlong_article(target, parsed, final_url):
         "importance":4 if len(project_ids)>=2 else 3,
         "summary":" ".join(summary_bits),
         "structured_facts":parsed.get("facts") or [],
-        "candidate_note":"Automatically parsed from official developer page; review before production promotion."
+        "candidate_note":"Official article publication date validated; strict review gate still applies.",
+        "source_verification":{"publication_date_verified":True,"article_page":final_url,"discovery_url":target.get("discovery_url")},
     }
 
 def main():
@@ -168,6 +173,45 @@ def main():
     args=ap.parse_args()
     cfg=read_json(TARGETS,{"targets":[]})
     selected=[x for x in cfg.get("targets",[]) if x.get("enabled") and x.get("collector") in {"cbre_market","namlong_official","cushman_market","jll_research","savills_research"}]
+    discovery_reports=[]
+    if not args.target:
+        for t in cfg.get("targets", []):
+            if t.get("collector") != "metadata_only" or t.get("target_id") != "nam-long-news":
+                continue
+            try:
+                http, final_index, index_html = fetch(t["url"])
+                if http != 200:
+                    discovery_reports.append({"index":t["url"],"status":"http-error","http_status":http})
+                    continue
+                urls=discover_namlong_links(index_html,final_index,max_items=12)
+                existing_urls={v["url"].rstrip("/") for v in selected}
+                added=0
+                for url in urls:
+                    if url.rstrip("/") not in existing_urls:
+                        selected.append(namlong_target(url,final_index))
+                        existing_urls.add(url.rstrip("/"))
+                        added+=1
+                discovery_reports.append({"index":final_index,"status":"discovered","links_found":len(urls),"targets_added":added})
+            except Exception as exc:
+                discovery_reports.append({"index":t["url"],"status":"discovery-error","error":f"{type(exc).__name__}: {exc}"[:300]})
+    if not args.target:
+        index_url="https://www.cbrevietnam.com/insights"
+        try:
+            http, final_index, index_html=fetch(index_url)
+            if http == 200:
+                found=discover_cbre_hcmc_reports(index_html,final_index,max_items=8)
+                existing_urls={v["url"].rstrip("/") for v in selected}
+                added=0
+                for discovered in found:
+                    if discovered["url"].rstrip("/") not in existing_urls:
+                        selected.append(discovered)
+                        existing_urls.add(discovered["url"].rstrip("/"))
+                        added+=1
+                discovery_reports.append({"index":final_index,"status":"discovered","links_found":len(found),"targets_added":added})
+            else:
+                discovery_reports.append({"index":index_url,"status":"http-error","http_status":http})
+        except Exception as exc:
+            discovery_reports.append({"index":index_url,"status":"discovery-error","error":f"{type(exc).__name__}: {exc}"[:300]})
     if args.target:
         wanted=set(args.target)
         selected=[x for x in selected if x.get("target_id") in wanted]
@@ -187,11 +231,37 @@ def main():
             if status!=200:
                 target_reports.append({"target_id":t["target_id"],"status":"http-error","http_status":status,"url":t["url"],"final_url":final_url})
                 continue
+            if t.get("auto_discovered") and final_url.rstrip("/") != t["url"].rstrip("/"):
+                target_reports.append({"target_id":t["target_id"],"status":"manual-review-required","reason":"Official news link redirected away from discovered article","url":t["url"],"final_url":final_url})
+                continue
 
+            evidence=extract_period_evidence(html, final_url)
+            publication_evidence=extract_publication_date(html)
+            t["verified_source_date"]=publication_evidence["date"]
+            if t.get("period_type") == "quarter" and evidence["period"] != t.get("period"):
+                target_reports.append({
+                    "target_id": t["target_id"], "status": "period-review-required",
+                    "configured_period": t.get("period"),
+                    "detected_period": evidence["period"],
+                    "evidence": evidence["evidence"], "url": final_url,
+                })
+                continue
+            if t.get("period_type") == "quarter" and t["collector"] in ("jll_research", "savills_research"):
+                target_reports.append({"target_id":t["target_id"],"status":"manual-review-required","reason":"Research landing page is not a verified individual quarterly report","detected_period":evidence["period"],"url":final_url})
+                continue
             module=importlib.import_module("collectors."+t["collector"])
             if t["collector"] in {"cbre_market","cushman_market"}:
                 parsed=module.parse(html,final_url,datetime.now(timezone.utc).isoformat())
                 built=build_cbre_rows(t,parsed,final_url) if t["collector"]=="cbre_market" else build_cushman_rows(t,parsed,final_url)
+                if t["collector"] == "cbre_market" and t.get("auto_discovered"):
+                    for row in built:
+                        row["source_verification"]={
+                            "period":evidence["period"],
+                            "publication_date_verified":bool(publication_evidence["date"]),
+                            "source_page":final_url,
+                            "discovery_url":t.get("discovery_url"),
+                            "metric_evidence":row.get("methodology_note","")[:400],
+                        }
                 decisions=[]
                 for row in built:
                     prev=obs_by_key.get(existing_obs_key(row))
@@ -205,7 +275,7 @@ def main():
                         else:
                             state="unchanged"
                     decisions.append({"id":row["id"],"status":state,"segment":row["segment_ids"][0],"new_supply":row.get("new_supply"),"absorption_rate":row.get("absorption_rate")})
-                target_reports.append({"target_id":t["target_id"],"status":"parsed","type":"market-observation","records":len(built),"decisions":decisions})
+                target_reports.append({"target_id":t["target_id"],"status":"parsed" if built else "no-data","type":"market-observation","records":len(built),"decisions":decisions,"configured_period":t.get("period"),"verified_source_period":evidence["period"],"verified_source_date":publication_evidence["date"],"source_period_evidence_url":final_url if evidence["period"] else None,"publication_date_method":publication_evidence["method"]})
                 if t["collector"]=="cushman_market" and hasattr(module,"parse_article"):
                     parsed_article=module.parse_article(html,final_url,datetime.now(timezone.utc).isoformat())
                     article=build_research_article(t,parsed_article,final_url)
@@ -216,6 +286,21 @@ def main():
                     target_reports[-1]["article_decision"]=astate
             elif t["collector"]=="namlong_official":
                 parsed=module.parse_article(html,final_url,datetime.now(timezone.utc).isoformat())
+                from datetime import date
+                page_date=parsed.get("published_date")
+                if not page_date:
+                    target_reports.append({"target_id":t["target_id"],"status":"manual-review-required","reason":"No verified article publication date","url":final_url})
+                    continue
+                try:
+                    published=date.fromisoformat(page_date)
+                    if published > datetime.now(timezone.utc).date() or published.year < 2022:
+                        raise ValueError("Publication date outside accepted range")
+                except ValueError:
+                    target_reports.append({"target_id":t["target_id"],"status":"manual-review-required","reason":"Invalid article publication date","url":final_url})
+                    continue
+                if t.get("period") and t["period_type"] == "date" and t["period"] != page_date:
+                    target_reports.append({"target_id":t["target_id"],"status":"manual-review-required","reason":"Source publication date differs from configured date","configured_date":t["period"],"verified_date":page_date,"url":final_url})
+                    continue
                 row=build_namlong_article(t,parsed,final_url)
                 key=existing_article_key(row)
                 state="unchanged" if key in art_keys else "new"
@@ -241,7 +326,7 @@ def main():
     report={
         "schema_version":1,"generated_at":generated,"targets_checked":len(selected),
         "observation_candidates":len(obs_candidates),"article_candidates":len(article_candidates),
-        "production_written":False,"targets":target_reports
+        "production_written":False,"discovery":discovery_reports,"targets":target_reports
     }
     write_json(REPORT,report)
     print(json.dumps(report,ensure_ascii=False,indent=2))
