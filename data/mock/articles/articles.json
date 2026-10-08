@@ -1,8 +1,8 @@
 {
   "schema_version": 1,
-  "build_id": "phase5.5f3-research-evidence-promotion-20261008",
-  "generated_at": "2026-10-08T12:38:45.021Z",
-  "record_count": 28,
+  "build_id": "market-verified-official-news-20261008T172731Z",
+  "generated_at": "2026-10-08T17:27:31.858973+00:00",
+  "record_count": 37,
   "data": [
     {
       "id": "article-legal-001",
@@ -263,6 +263,35 @@
       "summary": "Demo research note testing multiple related macro indicators with different frequencies."
     },
     {
+      "id": "article-market-nam-long-discovered-5be78a5020a6ddb0",
+      "title": "Nam Long cập nhật về thông báo kết luận thanh tra số 3451/TB-TTCP",
+      "url": "https://www.namlongvn.com/tin-tuc/nam-long-cap-nhat-ve-thong-bao-ket-luan-thanh-tra-so-3451-tb-ttcp/",
+      "category": "market",
+      "subcategory": "developer",
+      "content_type": "developer-update",
+      "published_at": "2026-09-30T09:00:00+07:00",
+      "source_id": "nam-long-official",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [
+        "nam-long"
+      ],
+      "tags": [
+        "sales",
+        "handover",
+        "project-update"
+      ],
+      "importance": 3,
+      "summary": "– Nam Long Group Tin tức chung 30/09/2026 Nam Long cập nhật về thông báo kết luận thanh tra số 3451/TB-TTCP Kính gửi: Quý Cổ đông, Quý Khách hàng, Quý Đối tác và các Cơ quan Thông tấn, Báo chí, Ngày 23/9/2026, Thanh tra Chính phủ ban hành Thông báo Kết luận Thanh tra số 3451/TB-TTCP về việc chấp hành pháp luật trong hoạt động",
+      "structured_facts": [],
+      "candidate_note": "Official article publication date validated; strict review gate still applies.",
+      "source_verification": {
+        "publication_date_verified": true,
+        "article_page": "https://www.namlongvn.com/tin-tuc/nam-long-cap-nhat-ve-thong-bao-ket-luan-thanh-tra-so-3451-tb-ttcp/",
+        "discovery_url": "https://www.namlongvn.com/tin-tuc/"
+      }
+    },
+    {
       "id": "article-macro-005",
       "title": "Illustrative bank-rate monitor records a higher 12-month deposit average",
       "url": "#",
@@ -285,6 +314,71 @@
       ],
       "importance": 3,
       "summary": "Demo rate commentary tied to monthly observations and source dates."
+    },
+    {
+      "id": "article-market-nam-long-discovered-6e43c3e611254526",
+      "title": "Dấu ấn giá trị thực tại triển lãm Nam Long Experience 2026",
+      "url": "https://www.namlongvn.com/tin-tuc/dau-an-gia-tri-thuc-tai-trien-lam-nam-long-experience-2026/",
+      "category": "market",
+      "subcategory": "developer",
+      "content_type": "developer-update",
+      "published_at": "2026-09-23T09:00:00+07:00",
+      "source_id": "nam-long-official",
+      "region_ids": [
+        "long-an",
+        "hcmc",
+        "dong-nai"
+      ],
+      "project_ids": [
+        "waterpoint",
+        "mizuki-park",
+        "izumi-city"
+      ],
+      "developer_ids": [
+        "nam-long"
+      ],
+      "tags": [
+        "launch",
+        "sales",
+        "handover",
+        "project-update"
+      ],
+      "importance": 4,
+      "summary": "– Nam Long Group Tin tức chung 23/09/2026 Dấu ấn giá trị thực tại triển lãm Nam Long Experience 2026 Sau ba ngày diễn ra, Nam Long Experience 2026 khắc họa giá trị bất động sản qua sản phẩm, không gian đô thị, hệ đối tác và những cam kết dài hạn. Trong ba ngày 18-20/9, Nam Long Experience 2026 – Triển lãm Bất động sản Giá trị",
+      "structured_facts": [],
+      "candidate_note": "Official article publication date validated; strict review gate still applies.",
+      "source_verification": {
+        "publication_date_verified": true,
+        "article_page": "https://www.namlongvn.com/tin-tuc/dau-an-gia-tri-thuc-tai-trien-lam-nam-long-experience-2026/",
+        "discovery_url": "https://www.namlongvn.com/tin-tuc/"
+      }
+    },
+    {
+      "id": "article-market-nam-long-discovered-6ccc19426ae2f0db",
+      "title": "‘Trạm xanh’ hút khách tại Nam Long Experience 2026",
+      "url": "https://www.namlongvn.com/tin-tuc/tram-xanh-hut-khach-tai-nam-long-experience-2026/",
+      "category": "market",
+      "subcategory": "developer",
+      "content_type": "developer-update",
+      "published_at": "2026-09-22T09:00:00+07:00",
+      "source_id": "nam-long-official",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [
+        "nam-long"
+      ],
+      "tags": [
+        "project-update"
+      ],
+      "importance": 3,
+      "summary": "– Nam Long Group Tin tức chung 22/09/2026 ‘Trạm xanh’ hút khách tại Nam Long Experience 2026 Nam Long Fresh mang câu chuyện sống xanh vào triển lãm Nam Long Experience 2026 qua chuỗi hoạt động tái chế, sáng tạo và vui chơi dành cho khách nhiều độ tuổi. Trong khuôn khổ Nam Long Experience 2026 – Triển lãm Bất động sản Giá trị",
+      "structured_facts": [],
+      "candidate_note": "Official article publication date validated; strict review gate still applies.",
+      "source_verification": {
+        "publication_date_verified": true,
+        "article_page": "https://www.namlongvn.com/tin-tuc/tram-xanh-hut-khach-tai-nam-long-experience-2026/",
+        "discovery_url": "https://www.namlongvn.com/tin-tuc/"
+      }
     },
     {
       "id": "article-market-nam-long-experience-2026-09-21",
@@ -320,6 +414,43 @@
       "candidate_note": "Automatically parsed from official developer page; review before production promotion."
     },
     {
+      "id": "article-market-nam-long-discovered-e6bb8c5a6eeb04e0",
+      "title": "Từ 1,5 tỷ đến 20 tỷ đồng: Câu chuyện bất động sản giá trị thực tại Nam Long Experience 2026",
+      "url": "https://www.namlongvn.com/tin-tuc/tu-15-ty-den-20-ty-dong-cau-chuyen-bat-dong-san-gia-tri-thuc-tai-nam-long-experience-2026/",
+      "category": "market",
+      "subcategory": "developer",
+      "content_type": "developer-update",
+      "published_at": "2026-09-20T09:00:00+07:00",
+      "source_id": "nam-long-official",
+      "region_ids": [
+        "long-an",
+        "hcmc",
+        "dong-nai"
+      ],
+      "project_ids": [
+        "waterpoint",
+        "mizuki-park",
+        "izumi-city"
+      ],
+      "developer_ids": [
+        "nam-long"
+      ],
+      "tags": [
+        "sales",
+        "handover",
+        "project-update"
+      ],
+      "importance": 4,
+      "summary": "– Nam Long Group Tin tức chung 20/09/2026 Từ 1,5 tỷ đến 20 tỷ đồng: Câu chuyện bất động sản giá trị thực tại Nam Long Experience 2026 Bất động sản có thể tiếp tục được tạo thêm giá trị rất lâu sau thời điểm căn nhà được bán. Trong ba ngày từ 18-20/9, Nam Long ( NLG ) tổ chức triển lãm bất động sản có cái tên khá trực diện: Nam",
+      "structured_facts": [],
+      "candidate_note": "Official article publication date validated; strict review gate still applies.",
+      "source_verification": {
+        "publication_date_verified": true,
+        "article_page": "https://www.namlongvn.com/tin-tuc/tu-15-ty-den-20-ty-dong-cau-chuyen-bat-dong-san-gia-tri-thuc-tai-nam-long-experience-2026/",
+        "discovery_url": "https://www.namlongvn.com/tin-tuc/"
+      }
+    },
+    {
       "id": "article-market-nlg-experience-2026",
       "title": "Nam Long Experience 2026 showcases Waterpoint, Mizuki Park and Izumi City",
       "url": "https://www.namlongvn.com/en/news/nam-long-announces-nam-long-experience-2026-real-value-real-estate-expo-a-multi-experiential-destination-for-families-homebuyers-and-the-community/",
@@ -348,6 +479,43 @@
       ],
       "importance": 4,
       "summary": "Nam Long presented current township inventory and launched/introduced new components across Waterpoint, Mizuki Park and Izumi City during its September 2026 expo."
+    },
+    {
+      "id": "article-market-nam-long-discovered-0d7033b0c9075127",
+      "title": "Nam Long công bố triển lãm “Nam Long Experience 2026 – Bất động sản giá trị thực”: Điểm hẹn đa trải nghiệm dành cho các gia đình, khách hàng và cộng đồng",
+      "url": "https://www.namlongvn.com/tin-tuc/nam-long-cong-bo-trien-lam-nam-long-experience-2026-bat-dong-san-gia-tri-thuc-diem-hen-da-trai-nghiem-danh-cho-cac-gia-dinh-khach-hang-va-cong-dong/",
+      "category": "market",
+      "subcategory": "developer",
+      "content_type": "developer-update",
+      "published_at": "2026-09-04T09:00:00+07:00",
+      "source_id": "nam-long-official",
+      "region_ids": [
+        "long-an",
+        "hcmc",
+        "dong-nai"
+      ],
+      "project_ids": [
+        "waterpoint",
+        "mizuki-park",
+        "izumi-city"
+      ],
+      "developer_ids": [
+        "nam-long"
+      ],
+      "tags": [
+        "launch",
+        "sales",
+        "project-update"
+      ],
+      "importance": 4,
+      "summary": "TP.HCM, ngày 4 tháng 9 năm 2026 – Tập đoàn Nam Long (HOSE: NLG) công bố tổ chức Nam Long Experience 2026 – Triển lãm Bất động sản Giá trị Thực , diễn ra từ ngày 18/9 đến 20/9/2026 tại Sảnh B2, Trung tâm Hội chợ và Triển lãm Sài Gòn (SECC), 799 Nguyễn Văn Linh, Tân Mỹ, TP.HCM. Sự kiện mở cửa miễn phí, hướng đến người mua nhà ở",
+      "structured_facts": [],
+      "candidate_note": "Official article publication date validated; strict review gate still applies.",
+      "source_verification": {
+        "publication_date_verified": true,
+        "article_page": "https://www.namlongvn.com/tin-tuc/nam-long-cong-bo-trien-lam-nam-long-experience-2026-bat-dong-san-gia-tri-thuc-diem-hen-da-trai-nghiem-danh-cho-cac-gia-dinh-khach-hang-va-cong-dong/",
+        "discovery_url": "https://www.namlongvn.com/tin-tuc/"
+      }
     },
     {
       "id": "article-infra-rr4",
@@ -405,6 +573,42 @@
       "importance": 4,
       "summary": "High-end apartment demand remains stable in Q2 2026; New supply concentrate in Eastern and Southern precincts from major integrated developments; Developers adopt cautious pricing strategies due to interest rate pressures",
       "candidate_note": "Automatically parsed from research source; review before production promotion."
+    },
+    {
+      "id": "article-market-nam-long-discovered-84c0348bf6a24ce1",
+      "title": "Nam Long phát động cuộc thi ảnh “Sức sống Nam Long”: Lưu giữ những giá trị thực qua từng nhịp sống",
+      "url": "https://www.namlongvn.com/tin-tuc/nam-long-phat-dong-cuoc-thi-anh-suc-song-nam-long-luu-giu-nhung-gia-tri-thuc-qua-tung-nhip-song/",
+      "category": "market",
+      "subcategory": "developer",
+      "content_type": "developer-update",
+      "published_at": "2026-08-21T09:00:00+07:00",
+      "source_id": "nam-long-official",
+      "region_ids": [
+        "long-an",
+        "hcmc",
+        "dong-nai"
+      ],
+      "project_ids": [
+        "waterpoint",
+        "mizuki-park",
+        "izumi-city",
+        "akari-city"
+      ],
+      "developer_ids": [
+        "nam-long"
+      ],
+      "tags": [
+        "project-update"
+      ],
+      "importance": 4,
+      "summary": "– Nam Long Group Tin tức chung 21/08/2026 Nam Long phát động cuộc thi ảnh “Sức sống Nam Long”: Lưu giữ những giá trị thực qua từng nhịp sống Nam Long chính thức phát động cuộc thi ảnh “Sức sống Nam Long” dành riêng cho cộng đồng cư dân tại các khu đô thị, mở ra không gian để mỗi người kể câu chuyện về nơi mình đang sống qua",
+      "structured_facts": [],
+      "candidate_note": "Official article publication date validated; strict review gate still applies.",
+      "source_verification": {
+        "publication_date_verified": true,
+        "article_page": "https://www.namlongvn.com/tin-tuc/nam-long-phat-dong-cuoc-thi-anh-suc-song-nam-long-luu-giu-nhung-gia-tri-thuc-qua-tung-nhip-song/",
+        "discovery_url": "https://www.namlongvn.com/tin-tuc/"
+      }
     },
     {
       "id": "article-infra-rr3",
@@ -508,6 +712,42 @@
       "summary": "Masterise Homes continued marketing and operating the SOHO commercial-townhouse district within the 117.4-ha The Global City."
     },
     {
+      "id": "article-market-nam-long-discovered-7e256837c74f37a0",
+      "title": "Nam Long lần thứ 5 đạt Top 50 Công ty Đại chúng uy tín và hiệu quả",
+      "url": "https://www.namlongvn.com/tin-tuc/nam-long-lan-thu-5-dat-top-50-cong-ty-dai-chung-uy-tin-va-hieu-qua/",
+      "category": "market",
+      "subcategory": "developer",
+      "content_type": "developer-update",
+      "published_at": "2026-08-07T09:00:00+07:00",
+      "source_id": "nam-long-official",
+      "region_ids": [
+        "long-an",
+        "hcmc",
+        "dong-nai"
+      ],
+      "project_ids": [
+        "waterpoint",
+        "mizuki-park",
+        "izumi-city",
+        "akari-city"
+      ],
+      "developer_ids": [
+        "nam-long"
+      ],
+      "tags": [
+        "project-update"
+      ],
+      "importance": 4,
+      "summary": "– Nam Long Group Tin tức chung 07/08/2026 Nam Long lần thứ 5 đạt Top 50 Công ty Đại chúng uy tín và hiệu quả Tập đoàn Nam Long được Vietnam Report vinh danh trong Bảng xếp hạng Top 50 Công ty Đại chúng uy tín và hiệu quả (VIX50) năm 2026. Đây là lần thứ 5 Nam Long góp mặt trong bảng xếp hạng này, ghi nhận hành trình theo đuổi",
+      "structured_facts": [],
+      "candidate_note": "Official article publication date validated; strict review gate still applies.",
+      "source_verification": {
+        "publication_date_verified": true,
+        "article_page": "https://www.namlongvn.com/tin-tuc/nam-long-lan-thu-5-dat-top-50-cong-ty-dai-chung-uy-tin-va-hieu-qua/",
+        "discovery_url": "https://www.namlongvn.com/tin-tuc/"
+      }
+    },
+    {
       "id": "article-infra-mocbai",
       "title": "TPHCM tăng tốc giải ngân vốn đầu tư công, tạo động lực cho tăng trưởng hai con số",
       "url": "https://tphcm.baochinhphu.vn/thanh-pho-tang-toc-giai-ngan-von-dau-tu-cong-tao-dong-luc-cho-tang-truong-hai-con-so-101260806114331283.htm",
@@ -530,6 +770,44 @@
       ],
       "importance": 4,
       "summary": "Cập nhật xác nhận tuyến chính cao tốc TPHCM – Mộc Bài đã khởi công trong Jul 2026 và dự kiến thông xe cuối 2027."
+    },
+    {
+      "id": "article-market-nam-long-discovered-a0b251e364b802b8",
+      "title": "Chiến lược bất động sản giá trị thực của Nam Long",
+      "url": "https://www.namlongvn.com/tin-tuc/chien-luoc-bat-dong-san-gia-tri-thuc-cua-nam-long/",
+      "category": "market",
+      "subcategory": "developer",
+      "content_type": "developer-update",
+      "published_at": "2026-08-04T09:00:00+07:00",
+      "source_id": "nam-long-official",
+      "region_ids": [
+        "long-an",
+        "hcmc",
+        "dong-nai"
+      ],
+      "project_ids": [
+        "waterpoint",
+        "mizuki-park",
+        "izumi-city"
+      ],
+      "developer_ids": [
+        "nam-long"
+      ],
+      "tags": [
+        "launch",
+        "sales",
+        "handover",
+        "project-update"
+      ],
+      "importance": 4,
+      "summary": "– Nam Long Group Tin tức chung 04/08/2026 Chiến lược bất động sản giá trị thực của Nam Long Nam Long phát triển nhà cho chuyên gia khi Việt Nam mới mở cửa FDI, xây nhà ở xã hội rồi đô thị vệ tinh để đón xu hướng giãn dân, phục vụ hơn 30.000 gia đình sau hơn ba thập niên. Thành lập năm 1992, Nam Long đến nay là một trong những",
+      "structured_facts": [],
+      "candidate_note": "Official article publication date validated; strict review gate still applies.",
+      "source_verification": {
+        "publication_date_verified": true,
+        "article_page": "https://www.namlongvn.com/tin-tuc/chien-luoc-bat-dong-san-gia-tri-thuc-cua-nam-long/",
+        "discovery_url": "https://www.namlongvn.com/tin-tuc/"
+      }
     },
     {
       "id": "article-market-cushman-hcmc-residential-q2-2026",
@@ -555,6 +833,41 @@
       "importance": 4,
       "summary": "Apartment new supply exceeded 1,300 units in Q2 2026; apartment absorption was 31%; landed new supply was approximately 1,700 units; landed absorption was about 36%",
       "candidate_note": "Automatically parsed from research source; review before production promotion."
+    },
+    {
+      "id": "article-market-nam-long-discovered-89dcfab242527b52",
+      "title": "Nam Long được vinh danh giải thưởng đặc biệt tại Dot Property Vietnam Awards 2026",
+      "url": "https://www.namlongvn.com/tin-tuc/nam-long-duoc-vinh-danh-giai-thuong-dac-biet-tai-dot-property-vietnam-awards-2026/",
+      "category": "market",
+      "subcategory": "developer",
+      "content_type": "developer-update",
+      "published_at": "2026-07-31T09:00:00+07:00",
+      "source_id": "nam-long-official",
+      "region_ids": [
+        "long-an",
+        "hcmc",
+        "dong-nai"
+      ],
+      "project_ids": [
+        "waterpoint",
+        "mizuki-park",
+        "izumi-city"
+      ],
+      "developer_ids": [
+        "nam-long"
+      ],
+      "tags": [
+        "project-update"
+      ],
+      "importance": 4,
+      "summary": "– Nam Long Group Tin tức chung 31/07/2026 Nam Long được vinh danh giải thưởng đặc biệt tại Dot Property Vietnam Awards 2026 Ghi dấu 34 năm kiến tạo bất động sản giá trị thực, tập đoàn Nam Long nhận giải thưởng đặc biệt Above & Beyond Real Estate Pioneers Vietnam 2026 – Doanh nghiệp tiên phong kiến tạo giá trị vượt trội cho bất",
+      "structured_facts": [],
+      "candidate_note": "Official article publication date validated; strict review gate still applies.",
+      "source_verification": {
+        "publication_date_verified": true,
+        "article_page": "https://www.namlongvn.com/tin-tuc/nam-long-duoc-vinh-danh-giai-thuong-dac-biet-tai-dot-property-vietnam-awards-2026/",
+        "discovery_url": "https://www.namlongvn.com/tin-tuc/"
+      }
     },
     {
       "id": "article-infra-lta",
