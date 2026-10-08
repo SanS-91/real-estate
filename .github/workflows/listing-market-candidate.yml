@@ -1,6 +1,12 @@
 name: Listing Market Candidate Collector
 
 on:
+  push:
+    branches:
+      - main
+    paths:
+      - 'scripts/listing_candidate_collector.py'
+      - '.github/workflows/listing-market-candidate.yml'
   workflow_dispatch:
     inputs:
       project:
@@ -30,7 +36,7 @@ jobs:
         run: pip install -r requirements.txt
       - name: Collect listing candidates
         env:
-          PROJECT_ID: ${{ inputs.project }}
+          PROJECT_ID: ${{ inputs.project || '' }}
         run: |
           if [ -n "$PROJECT_ID" ]; then
             python scripts/listing_candidate_collector.py --project "$PROJECT_ID"
