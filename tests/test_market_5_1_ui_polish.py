@@ -10,8 +10,8 @@ assert '.developer-card__links { display: flex;' in css
 assert "'Open Research': 'Nghiên cứu'" in loc
 assert "'Disclosed qualitatively': 'Chỉ công bố định tính'" in loc
 assert "^(\\d+) tracked projects$" in loc
-assert 'assets/css/main.css?v=5.5B1S1' in html
-assert 'assets/js/localization-dynamic.js?v=5.5B1S1' in html
+assert 'assets/css/main.css?v=5.5C1' in html
+assert 'assets/js/localization-dynamic.js?v=5.5C1' in html
 assert 'developer-card__links' in market
 assert 'research.html?type=developer&ids=' in market
 
