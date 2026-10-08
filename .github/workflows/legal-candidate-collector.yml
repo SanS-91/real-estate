@@ -1,0 +1,49 @@
+name: Legal Candidate Collector
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: '20 3 * * 1'
+
+permissions:
+  contents: read
+
+jobs:
+  collect:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 12
+    steps:
+      - uses: actions/checkout@v7
+      - uses: actions/setup-python@v7
+        with:
+          python-version: '3.12'
+      - name: Install dependencies
+        run: pip install -r requirements.txt
+      - name: Refresh registry watch
+        run: python scripts/watch_registries.py
+      - name: Build legal candidates from new official links
+        run: python scripts/legal_candidate_collector.py --from-watch
+      - name: Summary
+        run: |
+          echo "## Legal Candidate Collector" >> "$GITHUB_STEP_SUMMARY"
+          python - <<'PY' >> "$GITHUB_STEP_SUMMARY"
+          import json
+          from pathlib import Path
+          p=Path("data/candidate/legal/legal-candidate-report.json")
+          r=json.loads(p.read_text())
+          print(f"- Candidates: **{r['candidate_count']}**")
+          print(f"- Production written: **{r['production_written']}**")
+          print("")
+          print("| Document | Decision | Review |")
+          print("|---|---|---|")
+          for x in r.get("results",[]):
+              print(f"| {x.get('document_number') or x.get('url','—')} | {x.get('decision',x.get('status','—'))} | {', '.join(x.get('review_issues') or []) or '—'} |")
+          PY
+      - uses: actions/upload-artifact@v7
+        with:
+          name: legal-candidates
+          path: |
+            data/candidate/legal/documents.json
+            data/candidate/legal/legal-candidate-report.json
+            data/candidate/registry/watch-report.json
+          retention-days: 14
