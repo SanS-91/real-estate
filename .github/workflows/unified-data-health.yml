@@ -1,0 +1,66 @@
+name: Unified Data Health
+
+on:
+  schedule:
+    - cron: '5 1 * * *'
+  push:
+    branches:
+      - main
+    paths:
+      - 'config/operations_health.json'
+      - 'config/update_matrix.json'
+      - 'scripts/build_data_health.py'
+      - 'data/mock/**'
+      - 'data/processed/**'
+      - 'data/candidate/**'
+      - '.github/workflows/unified-data-health.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+  actions: read
+
+concurrency:
+  group: unified-data-health-main
+  cancel-in-progress: true
+
+jobs:
+  build:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v7
+      - uses: actions/setup-python@v7
+        with:
+          python-version: '3.12'
+      - name: Install dependencies
+        run: pip install -r requirements.txt
+      - name: Build unified health snapshot
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: python scripts/build_data_health.py --output data/state/data-health.json
+      - name: Summary
+        run: |
+          echo "## Unified Data Health" >> "$GITHUB_STEP_SUMMARY"
+          python - <<'PY' >> "$GITHUB_STEP_SUMMARY"
+          import json
+          from pathlib import Path
+          r=json.loads(Path("data/state/data-health.json").read_text())
+          print(f"- Overall: **{r['overall_status']}**")
+          print("")
+          print("| Module | Status | Datasets | Backlog | Last success |")
+          print("|---|---|---:|---:|---|")
+          for x in r.get("modules",[]):
+              print(f"| {x['module']} | {x['status']} | {x['dataset_count']} | {x['candidate_backlog']} | {x.get('last_successful_run_at') or '—'} |")
+          PY
+      - name: Commit health snapshot
+        run: |
+          if git diff --quiet -- data/state/data-health.json; then
+            echo "No health snapshot change."
+            exit 0
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data/state/data-health.json
+          git commit -m "ops: refresh unified data health"
+          git push
