@@ -442,7 +442,7 @@
 
   function fmtMarketValue(value, kind) {
     if (value === null || value === undefined) return '—';
-    if (kind === 'asp') return Formatters.unitValue('vnd-per-sqm', value, { compact:true });
+    if (kind === 'asp') return Formatters.unitValue('vnd-per-m2', value, { compact:true });
     if (kind === 'absorption') return Formatters.number(Number(value) * 100, { min:0, max:1 }) + '%';
     return Formatters.number(value, { min:0, max:0 });
   }
