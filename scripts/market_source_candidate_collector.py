@@ -7,7 +7,8 @@ import json
 import re
 from datetime import datetime, timezone
 from market_period_evidence import extract_period_evidence
-from market_source_discovery import discover_namlong_links, namlong_target
+from market_publication_evidence import extract_publication_date
+from market_source_discovery import discover_namlong_links, namlong_target, discover_cbre_hcmc_reports
 import requests
 
 ROOT=Path(__file__).resolve().parents[1]
@@ -46,11 +47,11 @@ def build_cbre_rows(target, parsed, final_url):
     for item in parsed:
         segment=item["segment_id"]
         rows.append({
-            "id":f"obs-hcmc-{segment}-2026-q2-cbre",
+            "id":f"obs-hcmc-{segment}-{target['period'].lower()}-cbre",
             "scope_type":"region-segment",
             "region_ids":["hcmc"],
             "segment_ids":[segment],
-            "period":"2026-Q2",
+            "period":target["period"],
             "period_type":"quarter",
             "new_supply":item["new_supply"],
             "sales_units":None,
@@ -60,7 +61,7 @@ def build_cbre_rows(target, parsed, final_url):
             "currency":"VND",
             "price_basis":None,
             "source_id":target["observation_source_id"],
-            "source_date":"2026-08-12",
+            "source_date":target.get("verified_source_date"),
             "source_url":final_url,
             "methodology_note":item["evidence_text"]+" Parsed automatically into candidate; requires review before promotion."
         })
@@ -71,7 +72,7 @@ def build_cushman_rows(target, parsed, final_url):
     for item in parsed:
         segment=item["segment_id"]
         rows.append({
-            "id":f"obs-hcmc-{segment}-2026-q2-cushman",
+            "id":f"obs-hcmc-{segment}-{target['period'].lower()}-cushman",
             "scope_type":"region-segment",
             "region_ids":["hcmc"],
             "segment_ids":[segment],
@@ -87,7 +88,7 @@ def build_cushman_rows(target, parsed, final_url):
             "currency":"VND",
             "price_basis":None,
             "source_id":target["observation_source_id"],
-            "source_date":"2026-08-01",
+            "source_date":target.get("verified_source_date"),
             "source_url":final_url,
             "methodology_note":item["evidence_text"]+" Parsed automatically into candidate; requires review before promotion."
         })
