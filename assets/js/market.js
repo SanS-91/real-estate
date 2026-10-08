@@ -56,7 +56,7 @@
   }
 
   function formatListingRange(row) {
-    if (!row) return '—';
+    if (!row || row.asking_price_low_vnd_per_m2 == null || row.asking_price_high_vnd_per_m2 == null) return '—';
     return `${Formatters.number(row.asking_price_low_vnd_per_m2 / 1_000_000,{min:0,max:1})}–${Formatters.number(row.asking_price_high_vnd_per_m2 / 1_000_000,{min:0,max:1})} mn VND/m²`;
   }
 
@@ -73,10 +73,10 @@
     return `
       <div class="drawer-metrics">
         ${Components.compactMetric({label:'Asking range',value:formatListingRange(row),note:'Listing portal · not transaction price'})}
-        ${Components.compactMetric({label:'1Y portal trend',value:Formatters.number(row.asking_price_change_1y_pct*100,{min:1,max:1})+'%',note:row.observation_date})}
-        ${Components.compactMetric({label:'Popular area',value:row.popular_area_low_sqm+'–'+row.popular_area_high_sqm+' m²',note:'Portal snapshot'})}
+        ${Components.compactMetric({label:'1Y portal trend',value:row.asking_price_change_1y_pct == null ? '—' : Formatters.number(row.asking_price_change_1y_pct*100,{min:1,max:1})+'%',note:row.observation_date})}
+        ${Components.compactMetric({label:'Popular area',value:row.popular_area_low_sqm == null || row.popular_area_high_sqm == null ? '—' : row.popular_area_low_sqm+'–'+row.popular_area_high_sqm+' m²',note:row.coverage_status === 'partial' ? 'Partial portal snapshot' : 'Portal snapshot'})}
       </div>
-      <p class="muted-text">Secondary listing-market snapshot. Asking prices are not official sales, transaction prices or absorption.</p>
+      <p class="muted-text">${row.coverage_status === 'partial' ? 'Partial listing-market snapshot; unavailable aggregate fields remain blank. ' : ''}Secondary listing-market snapshot. Asking prices are not official sales, transaction prices or absorption.</p>
       ${products ? `<div class="drawer-subsection"><h4>Product asking ranges</h4>${products}</div>` : ''}
       <div class="drawer-subsection"><h4>Nearby map labels</h4>${compHTML}</div>
       <div class="provenance-inline-row">${sourceRef(row.source_id,{sourceDate:row.observation_date,sourceUrl:row.source_url,methodology:row.methodology_note})}<span class="muted-text">Listing-market source</span></div>
