@@ -772,6 +772,80 @@
     return '';
   }
 
+  function analysisPanelHTML(contexts) {
+    const cfg=data.aiConfig || {};
+    const status=window.OptionalAIAnalysis?.status?.(cfg) || { mode:'off',label:'AI off' };
+    const disabled=status.mode==='off';
+    return `
+      <section class="section research-ai-analysis" data-ai-analysis-panel>
+        <div class="section-header">
+          <div>
+            <span class="eyebrow">${esc(tr('Tùy chọn','Optional'))}</span>
+            <h2 class="section-title">${esc(tr('Phân tích AI','AI Analysis'))}</h2>
+          </div>
+          <span class="status-badge status-badge--${disabled ? 'inactive' : 'active'}" data-ai-status>${esc(status.label)}</span>
+        </div>
+        <div class="section-body">
+          <div class="research-ai-policy">
+            <strong>${esc(tr('Canonical data only','Canonical data only'))}</strong>
+            <p>${esc(tr(
+              'AI tắt mặc định. Context chỉ lấy từ dữ liệu canonical/normalized hiện có; không API key ở trình duyệt và không ghi ngược vào production.',
+              'AI is off by default. Context uses existing canonical/normalized data only; no browser API key and no production mutation.'
+            ))}</p>
+          </div>
+          <div class="research-ai-controls">
+            <label><span>${esc(tr('Tác vụ','Action'))}</span>
+              <select data-ai-action>
+                <option value="summarize">${esc(tr('Tóm tắt','Summarize'))}</option>
+                <option value="compare">${esc(tr('So sánh','Compare'))}</option>
+                <option value="explain-legal-context">${esc(tr('Giải thích bối cảnh pháp lý','Explain legal context'))}</option>
+                <option value="weekly-brief">${esc(tr('Tạo weekly brief','Weekly brief'))}</option>
+                <option value="ask-database">${esc(tr('Hỏi dữ liệu','Ask database'))}</option>
+              </select>
+            </label>
+            <label class="research-ai-question"><span>${esc(tr('Câu hỏi tùy chọn','Optional question'))}</span>
+              <input type="text" data-ai-question placeholder="${esc(tr('VD: Điều gì thay đổi đáng chú ý với dự án này?','e.g. What changed materially for this subject?'))}">
+            </label>
+          </div>
+          <div class="research-ai-actions">
+            <button class="button button-primary" type="button" data-ai-build>${esc(tr('Tạo analysis pack','Build analysis pack'))}</button>
+            <button class="button" type="button" data-ai-copy-prompt disabled>${esc(tr('Sao chép prompt','Copy prompt'))}</button>
+            <button class="button" type="button" data-ai-copy-context disabled>${esc(tr('Sao chép context JSON','Copy context JSON'))}</button>
+            ${status.mode==='remote' ? `<button class="button" type="button" data-ai-run>${esc(tr('Chạy AI','Run AI'))}</button>` : ''}
+          </div>
+          <p class="research-disclaimer">${esc(tr(
+            'Legal relevance không đồng nghĩa văn bản áp dụng pháp lý cho dự án. Giá listing được giữ riêng với giá verified/research.',
+            'Legal relevance does not establish applicability. Listing asking remains separate from verified/research pricing.'
+          ))}</p>
+          <pre class="research-ai-preview" data-ai-preview hidden></pre>
+        </div>
+      </section>`;
+  }
+
+  function buildCurrentAnalysis(contexts) {
+    const action=document.querySelector('[data-ai-action]')?.value || 'summarize';
+    const question=document.querySelector('[data-ai-question]')?.value || '';
+    const maxItems=Number(data.aiConfig?.max_context_items_per_section || 12);
+    const pack=window.AnalysisContextPack?.buildContextPack?.(contexts,{
+      type:state.type,action,question,maxItems
+    });
+    const prompt=pack ? AnalysisContextPack.buildPrompt(pack) : '';
+    return {pack,prompt};
+  }
+
+  function setAnalysisPreview(result) {
+    const preview=document.querySelector('[data-ai-preview]');
+    if(!preview) return;
+    preview.hidden=false;
+    preview.textContent=result.prompt || JSON.stringify(result.pack,null,2);
+    const cp=document.querySelector('[data-ai-copy-prompt]');
+    const cc=document.querySelector('[data-ai-copy-context]');
+    if(cp) cp.disabled=!result.prompt;
+    if(cc) cc.disabled=!result.pack;
+    preview.dataset.prompt=result.prompt || '';
+    preview.dataset.context=result.pack ? JSON.stringify(result.pack,null,2) : '';
+  }
+
   function renderSingle(ctx) {
     const coverage = marketCoverage(ctx);
     setView(`
@@ -801,6 +875,8 @@
       ${supportingContextHTML(ctx)}
 
       ${researchBriefHTML([ctx])}
+
+      ${analysisPanelHTML([ctx])}
     `);
   }
   function renderCompare(contexts) {
@@ -841,6 +917,8 @@
       </section>
 
       ${researchBriefHTML(contexts)}
+
+      ${analysisPanelHTML(contexts)}
     `);
   }
   function render() {
@@ -933,6 +1011,44 @@
         }
         return;
       }
+      const aiBuild = event.target.closest('[data-ai-build]');
+      if (aiBuild) {
+        const contexts=selectedSubjects().map(contextFor);
+        setAnalysisPreview(buildCurrentAnalysis(contexts));
+        return;
+      }
+      const aiCopyPrompt = event.target.closest('[data-ai-copy-prompt]');
+      if (aiCopyPrompt) {
+        const value=document.querySelector('[data-ai-preview]')?.dataset.prompt || '';
+        if(value) await navigator.clipboard.writeText(value);
+        return;
+      }
+      const aiCopyContext = event.target.closest('[data-ai-copy-context]');
+      if (aiCopyContext) {
+        const value=document.querySelector('[data-ai-preview]')?.dataset.context || '';
+        if(value) await navigator.clipboard.writeText(value);
+        return;
+      }
+      const aiRun = event.target.closest('[data-ai-run]');
+      if (aiRun) {
+        const contexts=selectedSubjects().map(contextFor);
+        const result=buildCurrentAnalysis(contexts);
+        try {
+          const response=await OptionalAIAnalysis.run({config:data.aiConfig,pack:result.pack,prompt:result.prompt});
+          const preview=document.querySelector('[data-ai-preview]');
+          if(preview) {
+            preview.hidden=false;
+            preview.textContent=response.executed
+              ? JSON.stringify(response.payload,null,2)
+              : response.reason;
+          }
+        } catch (error) {
+          const preview=document.querySelector('[data-ai-preview]');
+          if(preview) { preview.hidden=false; preview.textContent=String(error.message || error); }
+        }
+        return;
+      }
+
       const printButton = event.target.closest('[data-research-print]');
       if (printButton) {
         document.body.classList.add('print-research-brief');
@@ -952,17 +1068,17 @@
 
   async function load() {
     try {
-      const [regions, developers, projects, phases, marketObs, listingObs, listingComps, topics, legal, infra, schedules, indicators, production, events, articles, sources] = await Promise.all([
+      const [regions, developers, projects, phases, marketObs, listingObs, listingComps, topics, legal, infra, schedules, indicators, production, events, articles, sources, aiConfig] = await Promise.all([
         DataStore.getRegions(), DataStore.getDevelopers(), DataStore.getProjects(), DataStore.getProjectPhases(),
         DataStore.getMarketObservations(), DataStore.getListingObservations(), DataStore.getListingComparables(), DataStore.getLegalTopics(), DataStore.getLegalDocuments(),
         DataStore.getInfrastructureProjects(), DataStore.getInfrastructureSchedules(), DataStore.getMacroIndicators(),
-        DataStore.getProcessedMacroObservations(), DataStore.getEvents(), DataStore.getArticles(), DataStore.getSources()
+        DataStore.getProcessedMacroObservations(), DataStore.getEvents(), DataStore.getArticles(), DataStore.getSources(), DataStore.getAIAnalysisConfig()
       ]);
       data = {
         regions: payload(regions), developers: payload(developers), projects: payload(projects), phases: payload(phases),
         marketObservations: payload(marketObs), listingObservations: payload(listingObs), listingComparables: payload(listingComps), topics: payload(topics), legal: payload(legal),
         infrastructure: payload(infra), schedules: payload(schedules), indicators: payload(indicators),
-        macroRows: payload(production), events: payload(events), articles: payload(articles), sources: payload(sources)
+        macroRows: payload(production), events: payload(events), articles: payload(articles), sources: payload(sources), aiConfig: aiConfig || {}
       };
       data.regionMap = byId(data.regions);
       data.developerMap = byId(data.developers);

@@ -78,6 +78,7 @@
     getArticles: () => loadJSON('articles/articles.json'),
     getDataHealth: () => loadDirectJSON('./data/state/data-health.json', 'unified data health'),
     getIntelligenceModel: () => loadDirectJSON('./config/intelligence_model.json', 'intelligence model'),
-    getIntelligenceRankingRules: () => loadDirectJSON('./config/intelligence-ranking.json', 'intelligence ranking rules')
+    getIntelligenceRankingRules: () => loadDirectJSON('./config/intelligence-ranking.json', 'intelligence ranking rules'),
+    getAIAnalysisConfig: () => loadDirectJSON('./config/ai-analysis.json', 'AI analysis policy')
   };
 })();

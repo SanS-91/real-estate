@@ -1,0 +1,50 @@
+name: Phase 7.2 Optional AI Analysis Validation
+
+on:
+  pull_request:
+    paths:
+      - 'config/ai-analysis.json'
+      - 'assets/js/analysis-context-pack.js'
+      - 'assets/js/optional-ai-analysis.js'
+      - 'assets/js/data-store.js'
+      - 'assets/js/research.js'
+      - 'assets/css/main.css'
+      - 'research.html'
+      - 'config/master-roadmap.json'
+      - 'README.md'
+      - 'tests/test_phase7_2_optional_ai_analysis.js'
+      - 'tests/test_phase7_2_optional_ai_analysis.py'
+      - '.github/workflows/phase72-optional-ai-analysis-validation.yml'
+      - 'docs/PHASE7_2_OPTIONAL_AI_ANALYSIS.md'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  validate:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v7
+      - uses: actions/setup-python@v7
+        with:
+          python-version: '3.12'
+      - name: JavaScript syntax
+        run: |
+          node --check assets/js/analysis-context-pack.js
+          node --check assets/js/optional-ai-analysis.js
+          node --check assets/js/data-store.js
+          node --check assets/js/research.js
+      - name: Phase 7.2 behavior
+        run: node tests/test_phase7_2_optional_ai_analysis.js
+      - name: Phase 7.2 integration
+        run: python tests/test_phase7_2_optional_ai_analysis.py
+      - name: Intelligence regressions
+        run: |
+          node tests/test_phase7_0_intelligence_ranking.js
+          node tests/test_phase7_1_intelligence_surfaces.js
+          python tests/test_phase6_2_region_developer_intelligence.py
+          python tests/test_phase6_1_project_intelligence_deepening.py
+      - name: Roadmap regression
+        run: python tests/test_phase5_6b_master_roadmap_alignment.py

@@ -48,7 +48,7 @@
     {
       "id": "7",
       "name": "Intelligence, Ranking & AI optional",
-      "status": "in-progress",
+      "status": "complete",
       "exit_criteria": "Rule-based importance/change ranking powers Today / This Week / What Changed / Top Developments; AI remains an optional analysis layer above canonical data."
     }
   ],
@@ -167,7 +167,7 @@
       "work_package": "7.2",
       "name": "Optional AI Analysis Layer",
       "goal": "Summarize, explain, compare and query normalized canonical data without making AI a data source.",
-      "status": "planned"
+      "status": "complete"
     }
   ]
 }
