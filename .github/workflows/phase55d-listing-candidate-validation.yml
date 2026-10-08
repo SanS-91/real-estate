@@ -1,0 +1,39 @@
+name: Phase 5.5D Listing Candidate Collector Validation
+
+on:
+  pull_request:
+    paths:
+      - 'scripts/listing_candidate_collector.py'
+      - '.github/workflows/listing-market-candidate.yml'
+      - 'tests/test_phase5_5d_listing_candidate_collector.py'
+      - 'docs/PHASE5_5D_LISTING_CANDIDATE_COLLECTOR.md'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  validate:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v7
+      - uses: actions/setup-python@v7
+        with:
+          python-version: '3.12'
+      - name: Install dependencies
+        run: pip install -r requirements.txt
+      - name: Syntax
+        run: python -m py_compile scripts/listing_candidate_collector.py scripts/listing_snapshot_pipeline.py
+      - name: Collector contract
+        run: python tests/test_phase5_5d_listing_candidate_collector.py
+      - name: Empty staging preview must be safe
+        run: python scripts/listing_snapshot_pipeline.py --mode preview
+      - name: Listing regressions
+        run: |
+          python tests/test_phase5_5c_listing_pipeline.py
+          node tests/test_phase5_5c_listing_history.js
+          python tests/test_phase5_5c_frontend.py
+          python tests/test_phase5_5b1_market_surface.py
+          python tests/test_phase5_5b_listing_coverage.py
+          python tests/test_phase4_4f_production_hardening.py
