@@ -407,6 +407,8 @@
         </div>
       </section>
 
+      ${researchBriefHTML([ctx])}
+
       <div class="research-overview-grid">
         ${Components.compactMetric({label:'Projects',value:String(ctx.projects.length),note:developerNames.join(', ') || '—'})}
         ${Components.compactMetric({label:'Regions',value:String(ctx.regionIds.length),note:regionNames.join(', ') || '—'})}
@@ -460,6 +462,8 @@
           <span>No synthetic scoring</span>
         </div>
       </section>
+
+      ${researchBriefHTML(contexts)}
 
       <section class="section">
         <div class="section-header"><div><span class="eyebrow">Comparison</span><h2 class="section-title">Cross-module Coverage</h2></div></div>
@@ -535,11 +539,39 @@
       try {
         await navigator.clipboard.writeText(location.href);
         const prior = button.textContent;
-        button.textContent = 'Link copied';
+        button.textContent = tr('Đã sao chép liên kết', 'Link copied');
         setTimeout(() => { button.textContent = prior; window.AppDynamicLocalization?.apply?.(); }, 1200);
       } catch {
-        button.textContent = 'Copy URL from address bar';
+        button.textContent = tr('Sao chép URL trên thanh địa chỉ', 'Copy URL from address bar');
       }
+    });
+
+    document.addEventListener('click', async event => {
+      const copyButton = event.target.closest('[data-research-copy-brief]');
+      if (copyButton) {
+        const contexts = selectedSubjects().map(contextFor);
+        try {
+          await navigator.clipboard.writeText(briefText(contexts));
+          copyButton.textContent = tr('Đã sao chép brief', 'Brief copied');
+        } catch {
+          copyButton.textContent = tr('Không thể sao chép', 'Unable to copy');
+        }
+        return;
+      }
+      const printButton = event.target.closest('[data-research-print]');
+      if (printButton) {
+        document.body.classList.add('print-research-brief');
+        const clear = () => document.body.classList.remove('print-research-brief');
+        window.addEventListener('afterprint', clear, { once: true });
+        window.print();
+        setTimeout(clear, 1000);
+        return;
+      }
+      if (event.target.closest('[data-search-open]')) App.openSearch?.();
+    });
+
+    document.addEventListener('app:language-changed', () => {
+      if (data) render();
     });
   }
 
