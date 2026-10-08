@@ -259,7 +259,7 @@
           : workflows.includes('healthy') ? 'healthy'
           : 'unknown';
         const lastSuccess = module.last_successful_run_at ? formatDateTime(module.last_successful_run_at) : '—';
-        return `<article class="maintenance-operation-card">
+        return `<article class="maintenance-operation-card is-${esc(module.status || 'review')}">
           <div class="data-health-card__top">
             <h3>${esc(c.modules[module.module] || module.module)}</h3>
             <span class="data-health-status">${esc(c.statuses[module.status] || module.status)}</span>
