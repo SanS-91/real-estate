@@ -1,0 +1,81 @@
+name: Legal Infrastructure Candidate Preview Promote
+
+on:
+  workflow_dispatch:
+    inputs:
+      module:
+        description: Candidate module
+        required: true
+        type: choice
+        options:
+          - legal
+          - infrastructure
+      mode:
+        description: Preview or promote reviewed candidates
+        required: true
+        default: preview
+        type: choice
+        options:
+          - preview
+          - promote
+
+permissions:
+  contents: write
+
+jobs:
+  gate:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v7
+      - uses: actions/setup-python@v7
+        with:
+          python-version: '3.12'
+      - name: Preview or promote reviewed registry candidates
+        run: python scripts/registry_candidate_promotion.py --module ${{ inputs.module }} --mode ${{ inputs.mode }}
+      - name: Summary
+        run: |
+          echo "## Legal / Infrastructure Candidate Gate" >> "$GITHUB_STEP_SUMMARY"
+          python - <<'PY' >> "$GITHUB_STEP_SUMMARY"
+          import json
+          from pathlib import Path
+          r=json.loads(Path("data/candidate/registry/promotion-report.json").read_text())
+          print(f"- Module: **{r['module']}**")
+          print(f"- Mode: **{r['mode']}**")
+          print(f"- Candidates: **{r['candidate_count']}**")
+          print(f"- Production written: **{r['production_written']}**")
+          print("")
+          print("| Candidate | Status | Review issues |")
+          print("|---|---|---|")
+          for x in r.get("decisions",[]):
+              print(f"| {x.get('document_number') or x.get('project_id') or x.get('id','—')} | {x.get('status','—')} | {', '.join(x.get('review_issues') or []) or '—'} |")
+          PY
+      - uses: actions/upload-artifact@v7
+        with:
+          name: registry-promotion-report
+          path: data/candidate/registry/promotion-report.json
+          retention-days: 14
+      - name: Commit promoted Legal production
+        if: inputs.mode == 'promote' && inputs.module == 'legal'
+        run: |
+          if git diff --quiet -- data/mock/legal/documents.json; then
+            echo "No Legal production change."
+            exit 0
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data/mock/legal/documents.json
+          git commit -m "data(legal): promote reviewed candidates"
+          git push
+      - name: Commit promoted Infrastructure production
+        if: inputs.mode == 'promote' && inputs.module == 'infrastructure'
+        run: |
+          if git diff --quiet -- data/mock/infrastructure/projects.json data/mock/infrastructure/schedules.json; then
+            echo "No Infrastructure production change."
+            exit 0
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data/mock/infrastructure/projects.json data/mock/infrastructure/schedules.json
+          git commit -m "data(infrastructure): promote reviewed candidates"
+          git push
