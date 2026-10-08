@@ -1,0 +1,48 @@
+name: Infrastructure Candidate Collector
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: '40 3 * * 1'
+
+permissions:
+  contents: read
+
+jobs:
+  collect:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 12
+    steps:
+      - uses: actions/checkout@v7
+      - uses: actions/setup-python@v7
+        with:
+          python-version: '3.12'
+      - name: Install dependencies
+        run: pip install -r requirements.txt
+      - name: Refresh registry watch
+        run: python scripts/watch_registries.py
+      - name: Build infrastructure candidates from new official links
+        run: python scripts/infrastructure_candidate_collector.py --from-watch
+      - name: Summary
+        run: |
+          echo "## Infrastructure Candidate Collector" >> "$GITHUB_STEP_SUMMARY"
+          python - <<'PY' >> "$GITHUB_STEP_SUMMARY"
+          import json
+          from pathlib import Path
+          r=json.loads(Path("data/candidate/infrastructure/infrastructure-candidate-report.json").read_text())
+          print(f"- Candidates: **{r['candidate_count']}**")
+          print(f"- Production written: **{r['production_written']}**")
+          print("")
+          print("| Project | Schedule | Project patch | Review |")
+          print("|---|---|---|---|")
+          for x in r.get("results",[]):
+              print(f"| {x.get('project_id') or '—'} | {x.get('schedule_decision') or '—'} | {x.get('project_patch_decision') or '—'} | {', '.join(x.get('review_issues') or []) or '—'} |")
+          PY
+      - uses: actions/upload-artifact@v7
+        with:
+          name: infrastructure-candidates
+          path: |
+            data/candidate/infrastructure/updates.json
+            data/candidate/infrastructure/infrastructure-candidate-report.json
+            data/candidate/registry/watch-report.json
+          retention-days: 14
