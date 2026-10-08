@@ -1,0 +1,37 @@
+name: Phase 5.5F2 Market Promotion Validation
+
+on:
+  pull_request:
+    paths:
+      - 'scripts/market_candidate_promotion.py'
+      - 'data/candidate/market/observations.json'
+      - 'data/candidate/market/articles.json'
+      - 'tests/test_phase5_5f2_*'
+      - 'tests/test_phase4_3c_market_registry.py'
+      - '.github/workflows/market-candidate-promote.yml'
+      - '.github/workflows/phase55f2-market-promotion-validation.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  validate:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v7
+      - uses: actions/setup-python@v7
+        with:
+          python-version: '3.12'
+      - name: Syntax
+        run: python -m py_compile scripts/market_candidate_promotion.py
+      - name: Preview staged candidates
+        run: python scripts/market_candidate_promotion.py --mode preview
+      - name: Phase 5.5F2 contracts
+        run: python tests/test_phase5_5f2_market_candidate_promotion.py
+      - name: Market regressions
+        run: |
+          python tests/test_phase5_5f1_cbre_namlong_parsers.py
+          python tests/test_phase5_5f_market_source_connectors.py
+          python tests/test_phase4_3c_market_registry.py
