@@ -4,6 +4,8 @@ on:
   pull_request:
     paths:
       - 'scripts/listing_snapshot_pipeline.py'
+      - 'scripts/listing_assisted_ingest.py'
+      - 'config/market-source-registry.json'
       - 'data/candidate/market/listing-observations.json'
       - 'assets/js/history-engine.js'
       - 'assets/js/market.js'
@@ -13,6 +15,7 @@ on:
       - 'tests/test_phase5_5c_*'
       - '.github/workflows/phase55c-listing-history-validation.yml'
       - '.github/workflows/listing-market-refresh.yml'
+      - '.github/workflows/listing-market-assisted-capture.yml'
   workflow_dispatch:
 
 permissions:
@@ -39,6 +42,7 @@ jobs:
           python tests/test_phase5_5c_listing_pipeline.py
           node tests/test_phase5_5c_listing_history.js
           python tests/test_phase5_5c_frontend.py
+          python tests/test_phase5_5e_source_diversification.py
       - name: Regressions
         run: |
           python tests/test_phase5_5b1_market_surface.py
