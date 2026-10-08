@@ -1,0 +1,45 @@
+name: Phase 6.1 Project Intelligence Validation
+
+on:
+  pull_request:
+    paths:
+      - 'assets/js/market.js'
+      - 'assets/js/data-store.js'
+      - 'assets/js/intelligence-context.js'
+      - 'assets/css/main.css'
+      - 'market.html'
+      - 'config/master-roadmap.json'
+      - 'tests/test_phase6_1_project_intelligence_deepening.py'
+      - '.github/workflows/phase61-project-intelligence-validation.yml'
+      - 'docs/PHASE6_1_PROJECT_INTELLIGENCE_DEEPENING.md'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  validate:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v7
+      - uses: actions/setup-python@v7
+        with:
+          python-version: '3.12'
+      - name: JavaScript syntax
+        run: |
+          node --check assets/js/market.js
+          node --check assets/js/intelligence-context.js
+      - name: Phase 6.1 contract
+        run: python tests/test_phase6_1_project_intelligence_deepening.py
+      - name: Intelligence regression
+        run: |
+          python tests/test_phase6_0_intelligence_model.py
+          node tests/test_phase6_0_intelligence_context.js
+      - name: Market regressions
+        run: |
+          python tests/test_phase5_6_project_detail_view.py
+          python tests/test_phase5_6a_project_detail_navigation.py
+          python tests/test_phase5_5f4_multisource_supply_sales_ui.py
+      - name: Roadmap regression
+        run: python tests/test_phase5_6b_master_roadmap_alignment.py
