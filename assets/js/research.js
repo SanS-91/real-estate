@@ -8,6 +8,15 @@
   const payload = x => Array.isArray(x?.data) ? x.data : [];
   const byId = rows => new Map(rows.map(row => [row.id, row]));
   const unique = values => [...new Set((values || []).filter(Boolean))];
+  const isRealSource = id => Boolean(id) && !String(id).startsWith('demo-');
+
+  function currentLanguage() {
+    return window.AppLocalization?.getLanguage?.() || document.documentElement.lang || 'vi';
+  }
+
+  function tr(vi, en) {
+    return currentLanguage() === 'vi' ? vi : en;
+  }
 
   function setView(html) {
     const node = document.querySelector('[data-research-view]');
@@ -100,16 +109,18 @@
     );
 
     const articles = data.articles.filter(article =>
-      (article.project_ids || []).some(id => projectIds.includes(id)) ||
+      ((article.project_ids || []).some(id => projectIds.includes(id)) ||
       (article.developer_ids || []).some(id => developerIds.includes(id)) ||
       (article.region_ids || []).some(id => regionIds.includes(id)) ||
-      (article.infrastructure_project_ids || []).some(id => infrastructure.map(x => x.id).includes(id))
+      (article.infrastructure_project_ids || []).some(id => infrastructure.map(x => x.id).includes(id))) &&
+      isRealSource(article.source_id)
     );
 
     const events = data.events.filter(event =>
-      (event.entity_type === 'real-estate-project' && projectIds.includes(event.entity_id)) ||
+      ((event.entity_type === 'real-estate-project' && projectIds.includes(event.entity_id)) ||
       (event.entity_type === 'infrastructure-project' && infrastructure.map(x => x.id).includes(event.entity_id)) ||
-      (event.region_ids || []).some(id => regionIds.includes(id))
+      (event.region_ids || []).some(id => regionIds.includes(id))) &&
+      (event.source_ids || []).some(isRealSource)
     );
 
     return { subject, projects, projectIds, regionIds, developerIds, legalTopicIds, infrastructure, legalDocuments, articles, events };
@@ -225,6 +236,107 @@
     };
   }
 
+  function marketCoverage(ctx) {
+    const observations = data.marketObservations.filter(row => row.project_id && ctx.projectIds.includes(row.project_id) && isRealSource(row.source_id));
+    const projectCount = ctx.projects.length;
+    const countWith = field => new Set(observations.filter(row => row[field] !== null && row[field] !== undefined).map(row => row.project_id)).size;
+    return { projects: projectCount, observations: observations.length, price: countWith('average_asp'), sales: countWith('sales_units'), absorption: countWith('absorption_rate') };
+  }
+
+  function latestEvidence(ctx) {
+    const rows = [];
+    ctx.articles.forEach(row => rows.push({ date: row.published_at, title: row.title, source: sourceName(row.source_id) }));
+    ctx.events.forEach(row => rows.push({ date: row.event_date, title: row.title, source: sourceName((row.source_ids || [])[0]) }));
+    ctx.projects.filter(row => row.source_date && isRealSource(row.primary_source_id)).forEach(row => rows.push({
+      date: row.source_date,
+      title: row.name + ' · ' + tr('cập nhật hồ sơ dự án', 'project registry update'),
+      source: sourceName(row.primary_source_id)
+    }));
+    return rows.filter(row => row.date).sort((a,b) => String(b.date).localeCompare(String(a.date)))[0] || null;
+  }
+
+  function commonIds(contexts, getter) {
+    return contexts.reduce((set, ctx, index) => {
+      const ids = new Set(getter(ctx));
+      if (index === 0) return ids;
+      return new Set([...set].filter(id => ids.has(id)));
+    }, new Set());
+  }
+
+  function briefModel(contexts) {
+    if (contexts.length === 1) {
+      const ctx = contexts[0];
+      const coverage = marketCoverage(ctx);
+      const latest = latestEvidence(ctx);
+      const infraNames = ctx.infrastructure.map(x => x.name).slice(0,3);
+      const topicNames = ctx.legalTopicIds.map(id => data.topicMap.get(id)?.name).filter(Boolean).slice(0,5);
+      const scope = [tr(
+        ctx.projects.length + ' dự án · ' + ctx.infrastructure.length + ' liên kết hạ tầng · ' + ctx.legalTopicIds.length + ' chủ đề pháp lý.',
+        ctx.projects.length + ' projects · ' + ctx.infrastructure.length + ' infrastructure links · ' + ctx.legalTopicIds.length + ' legal topics.'
+      )];
+      if (state.type === 'project') {
+        const area = ctx.subject.total_area_sqm ? Formatters.number(ctx.subject.total_area_sqm / 10000, { min: 0, max: 1 }) + ' ha' : '';
+        scope.unshift([subjectLabel(ctx.subject), ctx.subject.location_text, area, String(ctx.subject.status || '').replaceAll('-', ' ')].filter(Boolean).join(' · '));
+      }
+      const evidence = [];
+      evidence.push(latest ? tr(
+        'Evidence gần nhất: ' + App.formatDate(latest.date) + ' · ' + latest.title + ' · ' + latest.source + '.',
+        'Latest evidence: ' + App.formatDate(latest.date) + ' · ' + latest.title + ' · ' + latest.source + '.'
+      ) : tr('Chưa có recent activity có nguồn được liên kết.', 'No recent source-backed activity is linked.'));
+      if (infraNames.length) evidence.push(tr('Hạ tầng liên quan: ' + infraNames.join(', ') + '.', 'Related infrastructure: ' + infraNames.join(', ') + '.'));
+      if (topicNames.length) evidence.push(tr('Chủ đề pháp lý liên quan: ' + topicNames.join(', ') + '.', 'Related legal topics: ' + topicNames.join(', ') + '.'));
+      const gaps = [tr(
+        'Coverage cấp dự án — giá: ' + coverage.price + '/' + coverage.projects + '; bán hàng: ' + coverage.sales + '/' + coverage.projects + '; hấp thụ: ' + coverage.absorption + '/' + coverage.projects + '.',
+        'Project-level coverage — price: ' + coverage.price + '/' + coverage.projects + '; sales: ' + coverage.sales + '/' + coverage.projects + '; absorption: ' + coverage.absorption + '/' + coverage.projects + '.'
+      )];
+      if (coverage.price < coverage.projects || coverage.sales < coverage.projects || coverage.absorption < coverage.projects) gaps.push(tr('Phần thiếu được giữ trống; không tự ước tính ASP, sales hay absorption.', 'Missing fields remain blank; ASP, sales and absorption are not inferred.'));
+      gaps.push(tr(ctx.legalDocuments.length + ' văn bản chính thức được nối qua shared topics; chỉ thể hiện mức liên quan nghiên cứu.', ctx.legalDocuments.length + ' official documents are linked through shared topics; this shows research relevance only.'));
+      return [
+        { title: tr('Tóm tắt phạm vi', 'Scope snapshot'), items: scope },
+        { title: tr('Evidence & liên kết', 'Evidence & links'), items: evidence },
+        { title: tr('Khoảng trống dữ liệu', 'Data gaps'), items: gaps }
+      ];
+    }
+
+    const coverage = contexts.map(ctx => {
+      const cov = marketCoverage(ctx);
+      return tr(
+        subjectLabel(ctx.subject) + ': ' + ctx.projects.length + ' dự án · coverage giá/bán hàng/hấp thụ = ' + cov.price + '/' + cov.sales + '/' + cov.absorption + ' trên ' + cov.projects + ' dự án.',
+        subjectLabel(ctx.subject) + ': ' + ctx.projects.length + ' projects · price/sales/absorption coverage = ' + cov.price + '/' + cov.sales + '/' + cov.absorption + ' across ' + cov.projects + ' projects.'
+      );
+    });
+    const sharedInfra = [...commonIds(contexts, ctx => ctx.infrastructure.map(x => x.id))].map(id => data.infrastructureMap.get(id)?.name).filter(Boolean);
+    const sharedTopics = [...commonIds(contexts, ctx => ctx.legalTopicIds)].map(id => data.topicMap.get(id)?.name).filter(Boolean);
+    const overlap = [
+      sharedInfra.length ? tr('Hạ tầng chung: ' + sharedInfra.join(', ') + '.', 'Shared infrastructure: ' + sharedInfra.join(', ') + '.') : tr('Không có liên kết hạ tầng canonical chung.', 'No canonical infrastructure link is shared.'),
+      sharedTopics.length ? tr('Chủ đề pháp lý chung: ' + sharedTopics.join(', ') + '.', 'Shared legal topics: ' + sharedTopics.join(', ') + '.') : tr('Không có shared legal topic cho toàn bộ đối tượng.', 'No legal topic is shared by all selected subjects.')
+    ];
+    const recent = contexts.map(ctx => {
+      const latest = latestEvidence(ctx);
+      return latest ? tr(subjectLabel(ctx.subject) + ': evidence gần nhất ' + App.formatDate(latest.date) + ' · ' + latest.title + '.', subjectLabel(ctx.subject) + ': latest evidence ' + App.formatDate(latest.date) + ' · ' + latest.title + '.') : tr(subjectLabel(ctx.subject) + ': chưa có recent evidence có nguồn.', subjectLabel(ctx.subject) + ': no recent source-backed evidence.');
+    });
+    recent.push(tr('Không dùng synthetic score hoặc xếp hạng tốt/xấu.', 'No synthetic score or better/worse ranking is used.'));
+    return [
+      { title: tr('Độ phủ dữ liệu', 'Data coverage'), items: coverage },
+      { title: tr('Điểm giao nhau', 'Shared context'), items: overlap },
+      { title: tr('Mốc evidence gần nhất', 'Latest evidence'), items: recent }
+    ];
+  }
+
+  function researchBriefHTML(contexts) {
+    const sections = briefModel(contexts);
+    return '<section class="section research-brief" data-research-brief>' +
+      '<div class="section-header"><div><span class="eyebrow">' + esc(tr('Tóm tắt quyết định', 'Decision summary')) + '</span><h2 class="section-title">Research Brief</h2></div>' +
+      '<div class="research-brief__actions"><button class="button" type="button" data-research-copy-brief>' + esc(tr('Sao chép brief', 'Copy brief')) + '</button><button class="button" type="button" data-research-print>' + esc(tr('In / Lưu PDF', 'Print / Save PDF')) + '</button></div></div>' +
+      '<div class="section-body"><div class="research-brief__grid">' + sections.map(section => '<article class="research-brief__card"><h3>' + esc(section.title) + '</h3><ul>' + section.items.map(item => '<li>' + esc(item) + '</li>').join('') + '</ul></article>').join('') + '</div>' +
+      '<p class="research-disclaimer">' + esc(tr('Brief được tạo theo quy tắc cố định từ dữ liệu canonical hiện có; không phải khuyến nghị đầu tư hay tư vấn pháp lý.', 'The brief is deterministically generated from current canonical data; it is not investment advice or legal advice.')) + '</p></div></section>';
+  }
+
+  function briefText(contexts) {
+    const heading = 'RESEARCH BRIEF — ' + contexts.map(ctx => subjectLabel(ctx.subject)).join(' vs ');
+    const sections = briefModel(contexts).map(section => section.title + '\n' + section.items.map(item => '- ' + item).join('\n')).join('\n\n');
+    return heading + '\n' + location.href + '\n\n' + sections;
+  }
   function compareTable(contexts) {
     const rows = [
       ['Projects', c => contextStats(c).projects],
@@ -295,6 +407,8 @@
         </div>
       </section>
 
+      ${researchBriefHTML([ctx])}
+
       <div class="research-overview-grid">
         ${Components.compactMetric({label:'Projects',value:String(ctx.projects.length),note:developerNames.join(', ') || '—'})}
         ${Components.compactMetric({label:'Regions',value:String(ctx.regionIds.length),note:regionNames.join(', ') || '—'})}
@@ -348,6 +462,8 @@
           <span>No synthetic scoring</span>
         </div>
       </section>
+
+      ${researchBriefHTML(contexts)}
 
       <section class="section">
         <div class="section-header"><div><span class="eyebrow">Comparison</span><h2 class="section-title">Cross-module Coverage</h2></div></div>
@@ -423,11 +539,39 @@
       try {
         await navigator.clipboard.writeText(location.href);
         const prior = button.textContent;
-        button.textContent = 'Link copied';
+        button.textContent = tr('Đã sao chép liên kết', 'Link copied');
         setTimeout(() => { button.textContent = prior; window.AppDynamicLocalization?.apply?.(); }, 1200);
       } catch {
-        button.textContent = 'Copy URL from address bar';
+        button.textContent = tr('Sao chép URL trên thanh địa chỉ', 'Copy URL from address bar');
       }
+    });
+
+    document.addEventListener('click', async event => {
+      const copyButton = event.target.closest('[data-research-copy-brief]');
+      if (copyButton) {
+        const contexts = selectedSubjects().map(contextFor);
+        try {
+          await navigator.clipboard.writeText(briefText(contexts));
+          copyButton.textContent = tr('Đã sao chép brief', 'Brief copied');
+        } catch {
+          copyButton.textContent = tr('Không thể sao chép', 'Unable to copy');
+        }
+        return;
+      }
+      const printButton = event.target.closest('[data-research-print]');
+      if (printButton) {
+        document.body.classList.add('print-research-brief');
+        const clear = () => document.body.classList.remove('print-research-brief');
+        window.addEventListener('afterprint', clear, { once: true });
+        window.print();
+        setTimeout(clear, 1000);
+        return;
+      }
+      if (event.target.closest('[data-search-open]')) App.openSearch?.();
+    });
+
+    document.addEventListener('app:language-changed', () => {
+      if (data) render();
     });
   }
 

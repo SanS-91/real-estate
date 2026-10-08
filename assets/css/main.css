@@ -1750,3 +1750,58 @@ button, a, input, select { outline-offset: 3px; }
   .research-selector--compare { grid-template-columns: 1fr; }
   .research-selector__actions { grid-column: auto; display: grid; }
 }
+
+
+/* Phase 5.2 · Research Brief */
+.research-brief__actions {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+.research-brief__grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0,1fr));
+  gap: 12px;
+}
+.research-brief__card {
+  padding: 14px;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  background: #fff;
+}
+.research-brief__card h3 {
+  margin: 0 0 9px;
+  color: var(--color-primary-dark);
+  font-size: 12.5px;
+}
+.research-brief__card ul {
+  margin: 0;
+  padding-left: 18px;
+}
+.research-brief__card li {
+  margin: 0 0 7px;
+  color: var(--color-text-secondary);
+  font-size: 11px;
+  line-height: 1.5;
+}
+.research-brief__card li:last-child { margin-bottom: 0; }
+
+@media (max-width: 900px) {
+  .research-brief__grid { grid-template-columns: 1fr; }
+}
+
+@media print {
+  body.print-research-brief * { visibility: hidden !important; }
+  body.print-research-brief [data-research-brief],
+  body.print-research-brief [data-research-brief] * { visibility: visible !important; }
+  body.print-research-brief [data-research-brief] {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    margin: 0;
+    border: 0;
+    box-shadow: none;
+  }
+  body.print-research-brief .research-brief__actions { display: none !important; }
+  body.print-research-brief .research-brief__grid { grid-template-columns: 1fr; }
+}
