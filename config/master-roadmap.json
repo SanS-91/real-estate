@@ -48,7 +48,7 @@
     {
       "id": "7",
       "name": "Intelligence, Ranking & AI optional",
-      "status": "partial",
+      "status": "in-progress",
       "exit_criteria": "Rule-based importance/change ranking powers Today / This Week / What Changed / Top Developments; AI remains an optional analysis layer above canonical data."
     }
   ],
@@ -153,7 +153,7 @@
       "work_package": "7.0",
       "name": "Importance & Change Ranking Engine",
       "goal": "Create deterministic rule-based relevance/change scoring.",
-      "status": "planned"
+      "status": "complete"
     },
     {
       "order": 9,
