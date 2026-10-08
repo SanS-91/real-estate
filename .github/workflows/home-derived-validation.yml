@@ -31,5 +31,7 @@ jobs:
           node --check assets/js/localization-dynamic.js
       - name: Home regression
         run: python tests/test_phase4_3d_home_sync.py
+      - name: Phase 4.9.1 UI polish regression
+        run: python tests/test_phase4_9_1_ui_polish.py
       - name: Production baseline guard
         run: python tests/test_phase4_4f_production_hardening.py
