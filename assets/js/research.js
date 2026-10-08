@@ -8,6 +8,15 @@
   const payload = x => Array.isArray(x?.data) ? x.data : [];
   const byId = rows => new Map(rows.map(row => [row.id, row]));
   const unique = values => [...new Set((values || []).filter(Boolean))];
+  const isRealSource = id => Boolean(id) && !String(id).startsWith('demo-');
+
+  function currentLanguage() {
+    return window.AppLocalization?.getLanguage?.() || document.documentElement.lang || 'vi';
+  }
+
+  function tr(vi, en) {
+    return currentLanguage() === 'vi' ? vi : en;
+  }
 
   function setView(html) {
     const node = document.querySelector('[data-research-view]');
@@ -100,16 +109,18 @@
     );
 
     const articles = data.articles.filter(article =>
-      (article.project_ids || []).some(id => projectIds.includes(id)) ||
+      ((article.project_ids || []).some(id => projectIds.includes(id)) ||
       (article.developer_ids || []).some(id => developerIds.includes(id)) ||
       (article.region_ids || []).some(id => regionIds.includes(id)) ||
-      (article.infrastructure_project_ids || []).some(id => infrastructure.map(x => x.id).includes(id))
+      (article.infrastructure_project_ids || []).some(id => infrastructure.map(x => x.id).includes(id))) &&
+      isRealSource(article.source_id)
     );
 
     const events = data.events.filter(event =>
-      (event.entity_type === 'real-estate-project' && projectIds.includes(event.entity_id)) ||
+      ((event.entity_type === 'real-estate-project' && projectIds.includes(event.entity_id)) ||
       (event.entity_type === 'infrastructure-project' && infrastructure.map(x => x.id).includes(event.entity_id)) ||
-      (event.region_ids || []).some(id => regionIds.includes(id))
+      (event.region_ids || []).some(id => regionIds.includes(id))) &&
+      (event.source_ids || []).some(isRealSource)
     );
 
     return { subject, projects, projectIds, regionIds, developerIds, legalTopicIds, infrastructure, legalDocuments, articles, events };
