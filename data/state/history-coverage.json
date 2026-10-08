@@ -1,0 +1,316 @@
+{
+  "schema_version": 1,
+  "generated_at": "2026-10-08T15:34:40.592Z",
+  "listing_market": {
+    "series_count": 12,
+    "trend_ready_series": 0,
+    "threshold_snapshots": 3,
+    "items": [
+      {
+        "project_id": "akari-city",
+        "snapshot_count": 1,
+        "first_snapshot": "2026-10-08",
+        "latest_snapshot": "2026-10-08",
+        "trend_ready": false,
+        "missing_snapshots_to_trend_ready": 2
+      },
+      {
+        "project_id": "celesta-gold",
+        "snapshot_count": 1,
+        "first_snapshot": "2026-10-08",
+        "latest_snapshot": "2026-10-08",
+        "trend_ready": false,
+        "missing_snapshots_to_trend_ready": 2
+      },
+      {
+        "project_id": "eaton-park",
+        "snapshot_count": 1,
+        "first_snapshot": "2026-10-08",
+        "latest_snapshot": "2026-10-08",
+        "trend_ready": false,
+        "missing_snapshots_to_trend_ready": 2
+      },
+      {
+        "project_id": "elysian",
+        "snapshot_count": 1,
+        "first_snapshot": "2026-10-08",
+        "latest_snapshot": "2026-10-08",
+        "trend_ready": false,
+        "missing_snapshots_to_trend_ready": 2
+      },
+      {
+        "project_id": "essensia-parkway",
+        "snapshot_count": 1,
+        "first_snapshot": "2026-10-08",
+        "latest_snapshot": "2026-10-08",
+        "trend_ready": false,
+        "missing_snapshots_to_trend_ready": 2
+      },
+      {
+        "project_id": "izumi-city",
+        "snapshot_count": 1,
+        "first_snapshot": "2026-10-08",
+        "latest_snapshot": "2026-10-08",
+        "trend_ready": false,
+        "missing_snapshots_to_trend_ready": 2
+      },
+      {
+        "project_id": "mizuki-park",
+        "snapshot_count": 1,
+        "first_snapshot": "2026-10-08",
+        "latest_snapshot": "2026-10-08",
+        "trend_ready": false,
+        "missing_snapshots_to_trend_ready": 2
+      },
+      {
+        "project_id": "the-9-stellars",
+        "snapshot_count": 1,
+        "first_snapshot": "2026-10-08",
+        "latest_snapshot": "2026-10-08",
+        "trend_ready": false,
+        "missing_snapshots_to_trend_ready": 2
+      },
+      {
+        "project_id": "the-global-city",
+        "snapshot_count": 1,
+        "first_snapshot": "2026-10-08",
+        "latest_snapshot": "2026-10-08",
+        "trend_ready": false,
+        "missing_snapshots_to_trend_ready": 2
+      },
+      {
+        "project_id": "the-privia",
+        "snapshot_count": 1,
+        "first_snapshot": "2026-10-08",
+        "latest_snapshot": "2026-10-08",
+        "trend_ready": false,
+        "missing_snapshots_to_trend_ready": 2
+      },
+      {
+        "project_id": "vinhomes-grand-park",
+        "snapshot_count": 1,
+        "first_snapshot": "2026-10-08",
+        "latest_snapshot": "2026-10-08",
+        "trend_ready": false,
+        "missing_snapshots_to_trend_ready": 2
+      },
+      {
+        "project_id": "waterpoint",
+        "snapshot_count": 1,
+        "first_snapshot": "2026-10-08",
+        "latest_snapshot": "2026-10-08",
+        "trend_ready": false,
+        "missing_snapshots_to_trend_ready": 2
+      }
+    ]
+  },
+  "market_research": {
+    "series_count": 6,
+    "trend_ready_series": 2,
+    "threshold_periods": 4,
+    "items": [
+      {
+        "scope_type": "region-segment-benchmark",
+        "region_ids": [
+          "hcmc"
+        ],
+        "segment_ids": [
+          "apartment"
+        ],
+        "source_id": "savills-vietnam-market",
+        "period_count": 1,
+        "periods": [
+          "2025"
+        ],
+        "trend_ready": false,
+        "missing_periods_to_trend_ready": 3
+      },
+      {
+        "scope_type": "region-segment-benchmark",
+        "region_ids": [
+          "hcmc"
+        ],
+        "segment_ids": [
+          "landed"
+        ],
+        "source_id": "savills-vietnam-market",
+        "period_count": 1,
+        "periods": [
+          "2025"
+        ],
+        "trend_ready": false,
+        "missing_periods_to_trend_ready": 3
+      },
+      {
+        "scope_type": "region-segment",
+        "region_ids": [
+          "hcmc"
+        ],
+        "segment_ids": [
+          "apartment"
+        ],
+        "source_id": "cbre-vietnam-market",
+        "period_count": 4,
+        "periods": [
+          "2025-Q3",
+          "2025-Q4",
+          "2026-Q1",
+          "2026-Q2"
+        ],
+        "trend_ready": true,
+        "missing_periods_to_trend_ready": 0
+      },
+      {
+        "scope_type": "region-segment",
+        "region_ids": [
+          "hcmc"
+        ],
+        "segment_ids": [
+          "apartment"
+        ],
+        "source_id": "cushman-wakefield-vietnam-market",
+        "period_count": 2,
+        "periods": [
+          "2026-Q1",
+          "2026-Q2"
+        ],
+        "trend_ready": false,
+        "missing_periods_to_trend_ready": 2
+      },
+      {
+        "scope_type": "region-segment",
+        "region_ids": [
+          "hcmc"
+        ],
+        "segment_ids": [
+          "landed"
+        ],
+        "source_id": "cbre-vietnam-market",
+        "period_count": 4,
+        "periods": [
+          "2025-Q3",
+          "2025-Q4",
+          "2026-Q1",
+          "2026-Q2"
+        ],
+        "trend_ready": true,
+        "missing_periods_to_trend_ready": 0
+      },
+      {
+        "scope_type": "region-segment",
+        "region_ids": [
+          "hcmc"
+        ],
+        "segment_ids": [
+          "landed"
+        ],
+        "source_id": "cushman-wakefield-vietnam-market",
+        "period_count": 1,
+        "periods": [
+          "2026-Q2"
+        ],
+        "trend_ready": false,
+        "missing_periods_to_trend_ready": 3
+      }
+    ]
+  },
+  "legal": {
+    "document_count": 16,
+    "years": [
+      "2023",
+      "2024",
+      "2025",
+      "2026"
+    ],
+    "year_count": 4,
+    "history_ready": true,
+    "threshold_years": 3,
+    "relationship_count": 30
+  },
+  "infrastructure": {
+    "series_count": 8,
+    "history_ready_series": 3,
+    "threshold_schedule_records": 2,
+    "items": [
+      {
+        "infrastructure_project_id": "ben-luc-long-thanh-expressway",
+        "schedule_record_count": 1,
+        "history_ready": false,
+        "current_records": 1,
+        "superseded_records": 0,
+        "first_announced_date": "2026-10-01",
+        "latest_announced_date": "2026-10-01"
+      },
+      {
+        "infrastructure_project_id": "bien-hoa-vung-tau-expressway",
+        "schedule_record_count": 1,
+        "history_ready": false,
+        "current_records": 1,
+        "superseded_records": 0,
+        "first_announced_date": "2026-05-17",
+        "latest_announced_date": "2026-05-17"
+      },
+      {
+        "infrastructure_project_id": "hcmc-long-thanh-expansion",
+        "schedule_record_count": 2,
+        "history_ready": true,
+        "current_records": 1,
+        "superseded_records": 1,
+        "first_announced_date": "2025-08-18",
+        "latest_announced_date": "2026-05-25"
+      },
+      {
+        "infrastructure_project_id": "hcmc-metro-line-1",
+        "schedule_record_count": 1,
+        "history_ready": false,
+        "current_records": 1,
+        "superseded_records": 0,
+        "first_announced_date": "2024-12-22",
+        "latest_announced_date": "2024-12-22"
+      },
+      {
+        "infrastructure_project_id": "hcmc-moc-bai-expressway",
+        "schedule_record_count": 1,
+        "history_ready": false,
+        "current_records": 1,
+        "superseded_records": 0,
+        "first_announced_date": "2026-08-06",
+        "latest_announced_date": "2026-08-06"
+      },
+      {
+        "infrastructure_project_id": "hcmc-ring-road-3",
+        "schedule_record_count": 2,
+        "history_ready": true,
+        "current_records": 1,
+        "superseded_records": 1,
+        "first_announced_date": "2025-08-25",
+        "latest_announced_date": "2026-08-16"
+      },
+      {
+        "infrastructure_project_id": "hcmc-ring-road-4",
+        "schedule_record_count": 2,
+        "history_ready": true,
+        "current_records": 1,
+        "superseded_records": 1,
+        "first_announced_date": "2025-09-26",
+        "latest_announced_date": "2026-08-28"
+      },
+      {
+        "infrastructure_project_id": "long-thanh-airport",
+        "schedule_record_count": 1,
+        "history_ready": false,
+        "current_records": 1,
+        "superseded_records": 0,
+        "first_announced_date": "2026-07-28",
+        "latest_announced_date": "2026-07-28"
+      }
+    ]
+  },
+  "principles": [
+    "Historical coverage reports depth; it does not fabricate missing periods.",
+    "Blocked listing sources remain assisted and only reviewed snapshots become history.",
+    "Research-house series remain source-specific.",
+    "Approximate source values retain qualifiers.",
+    "Infrastructure schedule revisions append/supersede; they are never destructively overwritten."
+  ]
+}
