@@ -7,9 +7,9 @@ js=(ROOT/'assets/js/research.js').read_text(encoding='utf-8')
 css=(ROOT/'assets/css/main.css').read_text(encoding='utf-8')
 production=json.loads((ROOT/'data/processed/macro/observations.json').read_text(encoding='utf-8'))['data']
 
-assert 'assets/js/research.js?v=5.3W1' in research
-assert 'assets/css/main.css?v=5.3W1' in research
-assert 'assets/js/localization-dynamic.js?v=5.3W1' in research
+assert 'assets/js/research.js?v=5.4M1' in research
+assert 'assets/css/main.css?v=5.4M1' in research
+assert 'assets/js/localization-dynamic.js?v=5.4M1' in research
 assert 'data-research-watch' in research
 assert 'data-watchlist-saved' in research
 assert 'data-watchlist-inbox' in research

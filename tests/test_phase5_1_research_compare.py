@@ -12,9 +12,9 @@ assert 'data-research-entity="0"' in research
 assert 'data-research-entity="1"' in research
 assert 'data-research-entity="2"' in research
 assert 'data-research-share' in research
-assert 'assets/js/research.js?v=5.3W1' in research
-assert 'assets/css/main.css?v=5.3W1' in research
-assert 'assets/js/localization-dynamic.js?v=5.3W1' in research
+assert 'assets/js/research.js?v=5.4M1' in research
+assert 'assets/css/main.css?v=5.4M1' in research
+assert 'assets/js/localization-dynamic.js?v=5.4M1' in research
 
 assert "const state = { type: 'project', ids: [] };" in js
 assert "url.searchParams.set('ids', state.ids.join(','))" in js
@@ -24,7 +24,7 @@ assert 'function compareTable(contexts)' in js
 assert 'function compareShared(contexts)' in js
 assert 'No synthetic scoring' in js
 assert 'do not establish legal applicability' in js
-assert 'Macro context is common to the comparison and is not used as a project score.' in js
+assert 'Common context, not used to score subjects.' in js
 
 assert 'research.html?type=project&ids=${encodeURIComponent(project.id)}' in market
 assert 'research.html?type=developer&ids=${encodeURIComponent(dev.id)}' in market
