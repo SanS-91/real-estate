@@ -1,0 +1,140 @@
+{
+  "schema_version": 1,
+  "updated_at": "2026-10-08",
+  "purpose": "Rank attention priority of evidence/change events only. Never rank project investment quality.",
+  "max_score": 100,
+  "weights": {
+    "source_quality": 25,
+    "freshness": 20,
+    "event_significance": 25,
+    "entity_relevance": 15,
+    "change_magnitude": 15
+  },
+  "source_priority_points": {
+    "1": 25,
+    "2": 20,
+    "3": 15,
+    "4": 10,
+    "default": 5
+  },
+  "freshness_points": [
+    {
+      "max_age_days": 1,
+      "points": 20
+    },
+    {
+      "max_age_days": 7,
+      "points": 16
+    },
+    {
+      "max_age_days": 30,
+      "points": 10
+    },
+    {
+      "max_age_days": 90,
+      "points": 5
+    },
+    {
+      "max_age_days": null,
+      "points": 0
+    }
+  ],
+  "category_type_points": {
+    "legal": {
+      "replaces": 25,
+      "amends": 23,
+      "supplements": 18,
+      "effective": 20,
+      "issued": 14,
+      "default": 12
+    },
+    "infrastructure": {
+      "schedule-change": 24,
+      "operation-start": 25,
+      "operation-preparation": 18,
+      "progress": 14,
+      "milestone": 16,
+      "default": 12
+    },
+    "market": {
+      "market-delta": 18,
+      "project-launch": 20,
+      "sales-update": 16,
+      "price-update": 14,
+      "default": 12
+    },
+    "macro": {
+      "rate-change": 25,
+      "policy-change": 25,
+      "value-change": 14,
+      "credit-update": 16,
+      "data-release": 12,
+      "default": 10
+    }
+  },
+  "entity_relevance": {
+    "explicit_project": 6,
+    "explicit_developer": 4,
+    "explicit_region": 3,
+    "explicit_infrastructure": 5,
+    "explicit_legal_document": 5,
+    "tracked_entity_cap": 15
+  },
+  "magnitude_rules": {
+    "percent_change": [
+      {
+        "min_abs_pct": 20,
+        "points": 15
+      },
+      {
+        "min_abs_pct": 10,
+        "points": 12
+      },
+      {
+        "min_abs_pct": 5,
+        "points": 8
+      },
+      {
+        "min_abs_pct": 1,
+        "points": 4
+      },
+      {
+        "min_abs_pct": 0,
+        "points": 0
+      }
+    ],
+    "schedule_change_points": 12,
+    "legal_amendment_points": 12,
+    "event_importance_multiplier": 3,
+    "event_importance_cap": 15
+  },
+  "tiers": [
+    {
+      "min_score": 75,
+      "id": "high",
+      "label": "High attention"
+    },
+    {
+      "min_score": 55,
+      "id": "important",
+      "label": "Important"
+    },
+    {
+      "min_score": 35,
+      "id": "watch",
+      "label": "Watch"
+    },
+    {
+      "min_score": 0,
+      "id": "context",
+      "label": "Context"
+    }
+  ],
+  "principles": [
+    "Ranking estimates attention priority, not positive/negative impact.",
+    "No source, category or magnitude can exceed its configured component cap.",
+    "Demo sources are excluded from production ranking.",
+    "Missing evidence yields zero points for that component rather than inferred values.",
+    "Ties are resolved by evidence date, then stable ID."
+  ]
+}
