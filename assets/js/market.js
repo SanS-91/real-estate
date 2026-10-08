@@ -1,7 +1,7 @@
 (() => {
   'use strict';
 
-  const VALID_VIEWS = ['overview', 'projects', 'supply-sales', 'pricing', 'developers', 'news'];
+  const VALID_VIEWS = ['overview', 'projects', 'project-detail', 'supply-sales', 'pricing', 'developers', 'news'];
   let state = {
     view: 'overview',
     q: '',
@@ -340,6 +340,147 @@
     });
   }
 
+  function relatedInfrastructureForProject(project) {
+    const ids = new Set(project.related_infrastructure_ids || []);
+    data.infrastructureProjects.forEach(item => {
+      if ((item.related_real_estate_project_ids || []).includes(project.id)) ids.add(item.id);
+    });
+    return Resolver.getEntities('infrastructure-project', [...ids]);
+  }
+
+  function projectDetailListingHistory(project) {
+    const rows = window.HistoryEngine?.listingMarketSeries?.(data.listingObservations, project.id) || [];
+    if (!rows.length) return '<div class="state-box">No listing-market history is available for this project yet.</div>';
+    return `
+      <div class="chart-frame chart-frame--large"><canvas id="market-project-listing-history"></canvas></div>
+      <div class="table-wrap"><table class="data-table"><thead><tr><th>Snapshot</th><th class="numeric">Asking Low</th><th class="numeric">Asking High</th><th class="numeric">1Y Trend</th><th>Coverage</th><th>Source</th></tr></thead><tbody>
+      ${[...rows].reverse().map(row=>`<tr><td>${esc(row.observation_date)}</td><td class="numeric">${row.asking_price_low_vnd_per_m2 == null ? '—' : esc(formatAsp(row.asking_price_low_vnd_per_m2))}</td><td class="numeric">${row.asking_price_high_vnd_per_m2 == null ? '—' : esc(formatAsp(row.asking_price_high_vnd_per_m2))}</td><td class="numeric">${esc(listingTrendLabel(row))}</td><td>${esc(row.coverage_status || 'full')}</td><td>${sourceRef(row.source_id,{sourceDate:row.observation_date,sourceUrl:row.source_url,methodology:row.methodology_note})}</td></tr>`).join('')}
+      </tbody></table></div>`;
+  }
+
+  function renderProjectDetailListingChart(projectId) {
+    const rows = window.HistoryEngine?.listingMarketSeries?.(data.listingObservations, projectId) || [];
+    if (!rows.length) return;
+    ChartTools.renderRangeSeries('market-project-listing-history', {
+      labels: rows.map(row => row.observation_date),
+      lowValues: rows.map(row => row.asking_price_low_vnd_per_m2),
+      highValues: rows.map(row => row.asking_price_high_vnd_per_m2),
+      lowLabel: 'Asking low',
+      highLabel: 'Asking high',
+      yFormatter: value => Formatters.aspVndPerSqm(value, { short:true })
+    });
+  }
+
+  function renderProjectDetail() {
+    const projectId = App.getQueryParam('id');
+    const project = Resolver.getEntity('project', projectId);
+    if (!project) {
+      setView(`<div class="view-intro"><div><span class="eyebrow">Project detail</span><h2>Project not found</h2><p>Select a project from the project database.</p></div></div><a class="button" href="market.html?view=projects">Back to Projects</a>`);
+      return;
+    }
+
+    const obsRows = data.observations
+      .filter(item => item.project_id === project.id)
+      .sort((a,b)=>String(b.period).localeCompare(String(a.period)));
+    const latestObs = obsRows[0] || null;
+    const listing = latestListingObservation(project.id);
+    const listingRows = window.HistoryEngine?.listingMarketSeries?.(data.listingObservations, project.id) || [];
+    const phases = data.phases.filter(item => item.project_id === project.id);
+    const relatedArticles = data.articles
+      .filter(item => (item.project_ids || []).includes(project.id))
+      .sort((a,b)=>String(b.published_at).localeCompare(String(a.published_at)));
+    const relatedInfrastructure = relatedInfrastructureForProject(project);
+    const legalTopics = legalTopicLinks(project);
+    const dev = leadDeveloper(project);
+
+    const verifiedRows = obsRows.length
+      ? `<div class="table-wrap"><table class="data-table"><thead><tr><th>Period</th><th class="numeric">ASP</th><th class="numeric">Absorption</th><th>Basis</th><th>Source</th></tr></thead><tbody>${obsRows.map(row=>`<tr><td>${esc(row.period)}</td><td class="numeric">${esc(formatAsp(row.average_asp))}</td><td class="numeric">${esc(formatPercent(row.absorption_rate))}</td><td>${esc(row.price_basis?.replaceAll('-',' ') || '—')}</td><td>${sourceRef(row.source_id,{sourceDate:row.source_date,period:row.period,methodology:row.methodology_note,sourceUrl:row.source_url})}</td></tr>`).join('')}</tbody></table></div>`
+      : '<div class="state-box">No verified project-level market observations are available.</div>';
+
+    const html = `
+      <div class="project-detail-head">
+        <div>
+          <div class="project-detail-breadcrumb"><a href="market.html?view=projects">Projects</a><span>›</span><span>${esc(project.name)}</span></div>
+          <span class="eyebrow">Project intelligence</span>
+          <h2>${esc(project.name)}</h2>
+          <p>${esc(project.location_text)} · ${esc(developerName(project))}</p>
+          <div class="chip-row">${Components.statusBadge(project.status)}${(project.segment_ids || []).map(id=>`<span class="relation-chip">${esc(id.replaceAll('-',' '))}</span>`).join('')}</div>
+        </div>
+        <div class="project-detail-actions">
+          ${project.official_url ? `<a class="button" href="${esc(project.official_url)}" target="_blank" rel="noopener noreferrer">Official source</a>` : ''}
+          <a class="button" href="research.html?type=project&ids=${encodeURIComponent(project.id)}">Open Research</a>
+        </div>
+      </div>
+
+      <div class="market-metric-grid project-detail-metrics">
+        ${Components.compactMetric({label:'Planned units',value:Number.isFinite(project.planned_units) ? formatCompact(project.planned_units) : '—',note:project.known_units_note || 'No exact comparable count published'})}
+        ${Components.compactMetric({label:'Area',value:formatArea(project.total_area_sqm)})}
+        ${Components.compactMetric({label:'Verified ASP',value:formatAsp(latestObs?.average_asp),note:latestObs?.period || 'No project-level observation'})}
+        ${Components.compactMetric({label:'Listing asking',value:formatListingRange(listing),note:listing?.observation_date || 'No listing snapshot'})}
+      </div>
+
+      <div class="project-detail-grid">
+        <section class="section project-detail-main">
+          <div class="section-header"><div><span class="eyebrow">Project profile</span><h2 class="section-title">Overview</h2></div></div>
+          <div class="section-body"><p>${esc(project.summary)}</p>
+            <div class="project-detail-facts">
+              <div><span>Developer</span><strong>${esc(dev?.name || '—')}</strong></div>
+              <div><span>Location</span><strong>${esc(project.location_text || '—')}</strong></div>
+              <div><span>Segments</span><strong>${esc((project.segment_ids || []).map(x=>x.replaceAll('-',' ')).join(', ') || '—')}</strong></div>
+              <div><span>Latest linked activity</span><strong>${projectActivityDate(project.id) ? esc(App.formatDate(projectActivityDate(project.id))) : '—'}</strong></div>
+            </div>
+          </div>
+        </section>
+
+        <aside class="section project-detail-side">
+          <div class="section-header"><h2 class="section-title">Data Sources</h2></div>
+          <div class="section-body">
+            <div class="provenance-inline-row">${sourceRef(project.primary_source_id,{sourceUrl:project.official_url,sourceDate:project.source_date})}<span class="muted-text">Project entity</span></div>
+            ${latestObs ? `<div class="provenance-inline-row">${sourceRef(latestObs.source_id,{sourceDate:latestObs.source_date,period:latestObs.period,methodology:latestObs.methodology_note,sourceUrl:latestObs.source_url})}<span class="muted-text">Verified project market data</span></div>` : ''}
+            ${listing ? `<div class="provenance-inline-row">${sourceRef(listing.source_id,{sourceDate:listing.observation_date,sourceUrl:listing.source_url,methodology:listing.methodology_note})}<span class="muted-text">Listing asking market</span></div>` : ''}
+          </div>
+        </aside>
+      </div>
+
+      <section class="section">
+        <div class="section-header"><div><span class="eyebrow">Secondary market</span><h2 class="section-title">Listing Price History</h2></div><span class="section-meta">${listingRows.length} snapshot${listingRows.length===1?'':'s'}</span></div>
+        <div class="section-body">${projectDetailListingHistory(project)}</div>
+      </section>
+
+      <section class="section">
+        <div class="section-header"><div><span class="eyebrow">Source-stated project metrics</span><h2 class="section-title">Verified Pricing &amp; Sales Evidence</h2></div></div>
+        <div class="section-body section-body--table">${verifiedRows}</div>
+      </section>
+
+      <div class="project-detail-grid">
+        <section class="section project-detail-main">
+          <div class="section-header"><div><span class="eyebrow">Evidence timeline</span><h2 class="section-title">Official &amp; Research Updates</h2></div></div>
+          <div class="section-body">
+            <div class="article-list article-list--embedded">${relatedArticles.map(article=>`<article class="article-row"><div class="article-row__date">${esc(App.formatDate(article.published_at))}</div><div><div class="article-row__meta"><span class="source-tag">${esc(article.content_type)}</span>${sourceRef(article.source_id,{publishedAt:article.published_at,sourceUrl:article.url})}</div><h3><a class="article-title-link" href="${esc(article.url)}" target="_blank" rel="noopener noreferrer">${esc(article.title)}</a></h3><p>${esc(article.summary)}</p></div></article>`).join('') || '<div class="state-box">No project-linked market updates yet.</div>'}</div>
+          </div>
+        </section>
+
+        <aside class="project-detail-stack">
+          <section class="section">
+            <div class="section-header"><h2 class="section-title">Legal Research</h2></div>
+            <div class="section-body">${legalTopics.length ? `<div class="project-detail-link-list">${legalTopics.map(item=>`<a href="legal.html?view=documents&topic=${encodeURIComponent(item.id)}"><strong>${esc(item.name)}</strong><span>Open related legal research →</span></a>`).join('')}</div><p class="muted-text">Topic links are research shortcuts and do not determine legal applicability to this project.</p>` : '<p class="muted-text">No curated legal-topic links.</p>'}</div>
+          </section>
+
+          <section class="section">
+            <div class="section-header"><h2 class="section-title">Infrastructure</h2></div>
+            <div class="section-body">${relatedInfrastructure.length ? `<div class="project-detail-link-list">${relatedInfrastructure.map(item=>`<a href="infrastructure.html?view=projects&project=${encodeURIComponent(item.id)}"><strong>${esc(item.name)}</strong><span>${esc(item.location_text || 'Open infrastructure detail')} →</span></a>`).join('')}</div>` : '<p class="muted-text">No direct infrastructure links in the curated dataset.</p>'}</div>
+          </section>
+        </aside>
+      </div>
+
+      <section class="section">
+        <div class="section-header"><div><span class="eyebrow">Development structure</span><h2 class="section-title">Phases</h2></div></div>
+        <div class="section-body"><div class="project-phase-grid">${phases.map(item=>`<article><div><strong>${esc(item.name)}</strong><span>${esc(String(item.phase_type || '').replaceAll('-',' '))}</span></div>${Components.statusBadge(item.status)}${item.known_units_note ? `<p>${esc(item.known_units_note)}</p>` : ''}</article>`).join('') || '<p class="muted-text">No phase records yet.</p>'}</div></div>
+      </section>`;
+    setView(html);
+    requestAnimationFrame(() => renderProjectDetailListingChart(project.id));
+  }
+
   function renderProjects() {
     const records = projectFilter(data.projects);
     const html = `
@@ -493,7 +634,9 @@
     ChartTools.destroy('market-overview-price');
     ChartTools.destroy('market-supply-sales');
     ChartTools.destroy('market-pricing');
+    ChartTools.destroy('market-project-listing-history');
     if (state.view === 'projects') renderProjects();
+    else if (state.view === 'project-detail') renderProjectDetail();
     else if (state.view === 'supply-sales') renderSupplySales();
     else if (state.view === 'pricing') renderPricing();
     else if (state.view === 'developers') renderDevelopers();
@@ -574,7 +717,7 @@
         <h2>${esc(project.name)}</h2>
         <p>${esc(project.location_text)} · ${esc(developerName(project))}</p>
         ${Components.statusBadge(project.status)}
-        <div class="drawer-actions"><a class="button" href="research.html?type=project&ids=${encodeURIComponent(project.id)}">Open Research</a></div>
+        <div class="drawer-actions"><a class="button" href="market.html?view=project-detail&id=${encodeURIComponent(project.id)}">Xem chi tiết dự án</a><a class="button" href="research.html?type=project&ids=${encodeURIComponent(project.id)}">Open Research</a></div>
       </div>
       <div class="drawer-metrics">
         ${Components.compactMetric({label:'Planned units',value:Number.isFinite(project.planned_units) ? formatCompact(project.planned_units) : '—',note:project.known_units_note || 'No exact comparable count published'})}
@@ -632,7 +775,7 @@
       parseState();
       render();
       const projectId = App.getQueryParam('project');
-      if (projectId) openProject(projectId, { push:false });
+      if (state.view !== 'project-detail' && projectId) openProject(projectId, { push:false });
       else App.closeDrawer();
     });
   }
