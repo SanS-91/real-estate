@@ -1,0 +1,55 @@
+name: Phase 6.3 Historical Coverage Validation
+
+on:
+  pull_request:
+    paths:
+      - 'config/history-coverage.json'
+      - 'config/market-historical-backfill.json'
+      - 'scripts/build_history_coverage.py'
+      - 'scripts/market_historical_backfill.py'
+      - 'tests/test_phase6_3_historical_coverage_expansion.py'
+      - '.github/workflows/phase63-historical-coverage-validation.yml'
+      - 'docs/PHASE6_3_HISTORICAL_COVERAGE_EXPANSION.md'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  validate:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v7
+      - uses: actions/setup-python@v7
+        with:
+          python-version: '3.12'
+      - name: Syntax
+        run: |
+          python -m py_compile scripts/build_history_coverage.py
+          python -m py_compile scripts/market_historical_backfill.py
+      - name: Phase 6.3 contract
+        run: python tests/test_phase6_3_historical_coverage_expansion.py
+      - name: Stage historical candidates
+        run: python scripts/market_historical_backfill.py
+      - name: Preview through existing Market gate
+        run: python scripts/market_candidate_promotion.py --mode preview
+      - name: Build current production coverage
+        run: python scripts/build_history_coverage.py
+      - name: Intelligence regressions
+        run: |
+          python tests/test_phase6_0_intelligence_model.py
+          node tests/test_phase6_0_intelligence_context.js
+          python tests/test_phase6_1_project_intelligence_deepening.py
+          python tests/test_phase6_2_region_developer_intelligence.py
+          node tests/test_phase6_2_region_developer_intelligence.js
+      - name: Upload review artifacts
+        uses: actions/upload-artifact@v7
+        with:
+          name: phase63-history-review
+          path: |
+            data/candidate/market/observations.json
+            data/candidate/market/historical-backfill-report.json
+            data/candidate/market/market-promotion-report.json
+            data/state/history-coverage.json
+          retention-days: 14
