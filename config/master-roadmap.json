@@ -42,7 +42,7 @@
     {
       "id": "6",
       "name": "Intelligence Database",
-      "status": "in-progress",
+      "status": "complete",
       "exit_criteria": "Project / Region / Developer / Time views can query and connect Market, Legal, Infrastructure and Macro evidence without fabricating missing data."
     },
     {
@@ -146,7 +146,7 @@
       "work_package": "6.3",
       "name": "Historical Coverage Expansion",
       "goal": "Increase listing/research/legal/infrastructure time-series depth.",
-      "status": "in-progress"
+      "status": "complete"
     },
     {
       "order": 8,
