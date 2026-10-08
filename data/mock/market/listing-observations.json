@@ -1,0 +1,49 @@
+{
+  "schema_version": 1,
+  "build_id": "phase5.5a-listing-market-20261008",
+  "generated_at": "2026-10-08T00:00:00+07:00",
+  "record_count": 1,
+  "data": [
+    {
+      "id": "bdsc-the-global-city-apartment-2026-10-08",
+      "project_id": "the-global-city",
+      "source_id": "batdongsan-com-vn",
+      "source_url": "https://batdongsan.com.vn/ban-can-ho-chung-cu-the-global-city",
+      "observation_date": "2026-10-08",
+      "source_data_as_of": "2026-09-29",
+      "asset_type": "apartment",
+      "market_layer": "listing-asking",
+      "asking_price_low_vnd_per_m2": 112000000,
+      "asking_price_high_vnd_per_m2": 143500000,
+      "asking_price_change_1y_pct": -0.189,
+      "popular_area_low_sqm": 51,
+      "popular_area_high_sqm": 215,
+      "product_price_ranges": [
+        {
+          "product": "1BR",
+          "low_vnd": 6150000000,
+          "high_vnd": 7640000000
+        },
+        {
+          "product": "2BR",
+          "low_vnd": 7490000000,
+          "high_vnd": 11000000000
+        },
+        {
+          "product": "3BR",
+          "low_vnd": 11500000000,
+          "high_vnd": 17910000000
+        }
+      ],
+      "volatile_metrics": {
+        "listing_count": 234,
+        "project_views_7d": 1254,
+        "use_in_primary_kpi": false,
+        "note": "Portal display counts and views can change intraday and may vary by result page. Stored as ancillary snapshot only."
+      },
+      "methodology_note": "Secondary portal snapshot. Values represent advertised asking/listing market, not executed transaction price, official developer sales, or absorption.",
+      "confidence": "secondary-source-snapshot",
+      "status": "pilot"
+    }
+  ]
+}
