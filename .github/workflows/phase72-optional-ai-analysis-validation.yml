@@ -45,6 +45,6 @@ jobs:
           node tests/test_phase7_0_intelligence_ranking.js
           node tests/test_phase7_1_intelligence_surfaces.js
           python tests/test_phase6_2_region_developer_intelligence.py
-          python tests/test_phase6_1_project_intelligence.py
+          python tests/test_phase6_1_project_intelligence_deepening.py
       - name: Roadmap regression
         run: python tests/test_phase5_6b_master_roadmap_alignment.py
