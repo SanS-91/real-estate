@@ -2,6 +2,64 @@
   "schema_version": 1,
   "generated_at": "2026-10-08T12:36:04.335455+00:00",
   "candidate_only": true,
-  "record_count": 0,
-  "data": []
+  "record_count": 2,
+  "data": [
+    {
+      "id": "obs-hcmc-landed-2026-q2-cushman",
+      "scope_type": "region-segment",
+      "region_ids": [
+        "hcmc"
+      ],
+      "segment_ids": [
+        "landed"
+      ],
+      "period": "2026-Q2",
+      "period_type": "quarter",
+      "new_supply": 1700,
+      "new_supply_lower_bound": null,
+      "sales_units": 870,
+      "absorption_rate": 0.36,
+      "average_asp": null,
+      "asp_unit": "vnd-per-m2-land",
+      "currency": "VND",
+      "price_basis": null,
+      "metric_qualifiers": {
+        "new_supply": "approx",
+        "sales_units": "approx",
+        "absorption_rate": "approx"
+      },
+      "source_id": "cushman-wakefield-vietnam-market",
+      "source_date": "2026-08-01",
+      "source_url": "https://www.cushmanwakefield.com/en/vietnam/insights/ho-chi-minh-city-marketbeat/residential-marketbeat",
+      "methodology_note": "Cushman & Wakefield Q2/2026 states landed new supply at approximately 1,700 units, absorption at ~36%, and nearly 870 units. Approximation qualifiers are retained explicitly."
+    },
+    {
+      "id": "obs-hcmc-apartment-2026-q2-cushman",
+      "scope_type": "region-segment",
+      "region_ids": [
+        "hcmc"
+      ],
+      "segment_ids": [
+        "apartment"
+      ],
+      "period": "2026-Q2",
+      "period_type": "quarter",
+      "new_supply": null,
+      "new_supply_lower_bound": 1300,
+      "sales_units": null,
+      "absorption_rate": 0.31,
+      "average_asp": null,
+      "asp_unit": "vnd-per-m2",
+      "currency": "VND",
+      "price_basis": null,
+      "metric_qualifiers": {
+        "new_supply_lower_bound": "greater-than",
+        "absorption_rate": "exact"
+      },
+      "source_id": "cushman-wakefield-vietnam-market",
+      "source_date": "2026-08-01",
+      "source_url": "https://www.cushmanwakefield.com/en/vietnam/insights/ho-chi-minh-city-marketbeat/residential-marketbeat",
+      "methodology_note": "Cushman & Wakefield Q2/2026 states apartment new supply as over 1,300 units and absorption at 31%. The lower-bound wording is retained; exact new_supply remains blank."
+    }
+  ]
 }
