@@ -13,7 +13,7 @@ This document restores the original 8-phase outline as the governing roadmap. Ex
 | 2 — Data Architecture | COMPLETE | Structured entities, source registry, provenance, observations, articles, relationships and schemas exist across modules. | New data has a canonical place to live. |
 | 3 — Simple Data Layer | COMPLETE | Static JSON drives pages, tables, filters, charts, search and history views. | Adding data does not require editing HTML. |
 | 4 — Source Registry & Auto Data Collection | COMPLETE | Market, Macro, Legal and Infrastructure now all have structured collection-to-candidate paths with controlled promotion gates. | All four modules have Source → Fetch/Assist → Parse → Normalize → Deduplicate → Candidate → Review/Promote paths. |
-| 5 — Automation | IN PROGRESS | GitHub Actions, candidate gates, idempotent promotion, source-blocked states and scheduled jobs exist, but operational status is fragmented. | Automatable sources self-refresh; blocked/manual sources are explicit; stale/failure/backlog is visible in one control layer. |
+| 5 — Automation | COMPLETE | Scheduled collectors, controlled promotion gates, blocked/assisted source states and unified operational health are in place across the four pillars. | Automatable sources self-refresh; blocked/manual sources are explicit; stale/failure/backlog is visible in one control layer. |
 | 6 — Intelligence Database | IN PROGRESS | Market is advanced; Macro has strong historical support; Legal/Infrastructure remain shallower. Project Detail is the first strong cross-module entity view. | Project / Region / Developer / Time can be queried across all four pillars. |
 | 7 — Intelligence, Ranking & AI optional | PARTIAL | Research Brief, Watchlist, What Changed and importance fields exist, but no single deterministic ranking engine governs all modules yet. | Rule-based Today / This Week / What Changed / Top Developments exists; AI stays optional and above canonical data. |
 
@@ -61,9 +61,10 @@ The structured collector now parses official project/milestone updates, proposes
    - Goal: close Master Phase 4.
 
 3. **5.8 — Unified Automation & Data Health**
+   - COMPLETE.
    - One consolidated status layer for Market / Legal / Infrastructure / Macro.
-   - Last successful fetch, last candidate, last promotion, source health, freshness, stale threshold, blocked/manual state, backlog, failure behavior.
-   - Goal: close Master Phase 5.
+   - Workflow health, source/access mode, last successful run, production freshness, candidate backlog and failure behavior are visible from one operations surface.
+   - Master Phase 5 is closed.
 
 4. **6.0 — Cross-module Intelligence Model**
    - Define shared entity-centric queries:

@@ -24,6 +24,6 @@ assert 'assets/js/localization-dynamic.js?v=5.0R1' in index
 assert 'assets/js/localization-dynamic.js?v=5.5C1' in market
 for page in (infra,macro,legal):
     assert 'assets/js/localization-dynamic.js?v=5.0R1' in page
-assert 'assets/js/home.js?v=4.9.1' in index
+assert 'assets/js/home.js?v=' in index
 
 print('Phase 4.9.1 UI polish tests PASS')

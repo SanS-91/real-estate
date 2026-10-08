@@ -2244,3 +2244,81 @@ button, a, input, select { outline-offset: 3px; }
   .project-detail-nav { margin-left:-2px; margin-right:-2px; padding:7px; }
   .project-detail-nav a { font-size:10.5px; padding:7px 9px; }
 }
+
+
+/* Phase 5.8 — Unified data health */
+.data-health-grid {
+  display:grid;
+  grid-template-columns:repeat(4,minmax(0,1fr));
+  gap:12px;
+}
+.data-health-card {
+  display:block;
+  padding:14px 15px;
+  border:1px solid var(--color-border);
+  border-radius:var(--radius-md);
+  background:var(--color-surface);
+  box-shadow:var(--shadow-sm);
+}
+.data-health-card:hover { border-color:#c9aeb4; }
+.data-health-card__top {
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:10px;
+}
+.data-health-card__top strong { font-size:13px; }
+.data-health-status {
+  display:inline-flex;
+  align-items:center;
+  min-height:22px;
+  padding:2px 7px;
+  border-radius:999px;
+  font-size:9.5px;
+  font-weight:800;
+  background:#f2f4f7;
+  color:#475467;
+}
+.data-health-card.is-healthy .data-health-status { background:#eff7f2; color:#216e46; }
+.data-health-card.is-running .data-health-status { background:#eef2f6; color:#344b63; }
+.data-health-card.is-review .data-health-status { background:#fff8e8; color:#8a5b00; }
+.data-health-card.is-degraded .data-health-status,
+.data-health-card.is-stale .data-health-status { background:#fff0ee; color:#b42318; }
+.data-health-card__meta {
+  display:flex;
+  justify-content:space-between;
+  gap:10px;
+  margin-top:14px;
+  color:var(--color-text-secondary);
+  font-size:10.5px;
+}
+.maintenance-operations-grid {
+  display:grid;
+  grid-template-columns:repeat(4,minmax(0,1fr));
+  gap:12px;
+}
+.maintenance-operation-card {
+  padding:14px 15px;
+  border:1px solid var(--color-border);
+  border-radius:var(--radius-md);
+  background:#fff;
+}
+.maintenance-operation-card h3 { margin:0 0 8px; font-size:14px; }
+.maintenance-operation-card dl { margin:0; display:grid; gap:7px; }
+.maintenance-operation-card dl div { display:flex; justify-content:space-between; gap:10px; font-size:10.5px; }
+.maintenance-operation-card dt { color:var(--color-text-secondary); }
+.maintenance-operation-card dd { margin:0; font-weight:650; text-align:right; }
+@media (max-width: 900px) {
+  .data-health-grid,
+  .maintenance-operations-grid { grid-template-columns:repeat(2,minmax(0,1fr)); }
+}
+@media (max-width: 560px) {
+  .data-health-grid,
+  .maintenance-operations-grid { grid-template-columns:1fr; }
+}
+
+.maintenance-operation-card.is-healthy .data-health-status { background:#eff7f2; color:#216e46; }
+.maintenance-operation-card.is-running .data-health-status { background:#eef2f6; color:#344b63; }
+.maintenance-operation-card.is-review .data-health-status { background:#fff8e8; color:#8a5b00; }
+.maintenance-operation-card.is-degraded .data-health-status,
+.maintenance-operation-card.is-stale .data-health-status { background:#fff0ee; color:#b42318; }

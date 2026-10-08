@@ -1,0 +1,95 @@
+{
+  "schema_version": 1,
+  "updated_at": "2026-10-08",
+  "modules": [
+    "market",
+    "legal",
+    "infrastructure",
+    "macro"
+  ],
+  "datasets": [
+    {
+      "id": "macro-daily-markets",
+      "module": "macro",
+      "workflow_name": "Macro Candidate Collector",
+      "source_access": "automated",
+      "candidate_mode": "artifact-only",
+      "candidate_path": null,
+      "operational_note": "Candidate evidence is produced in workflow artifacts; production uses controlled persistence gates."
+    },
+    {
+      "id": "macro-monthly-statistics",
+      "module": "macro",
+      "workflow_name": "Macro Candidate Collector",
+      "source_access": "automated",
+      "candidate_mode": "artifact-only",
+      "candidate_path": null
+    },
+    {
+      "id": "macro-customer-rates",
+      "module": "macro",
+      "workflow_name": "Macro Candidate Collector",
+      "source_access": "automated",
+      "candidate_mode": "artifact-only",
+      "candidate_path": null
+    },
+    {
+      "id": "macro-policy-rates",
+      "module": "macro",
+      "workflow_name": "Macro Candidate Collector",
+      "source_access": "automated",
+      "candidate_mode": "artifact-only",
+      "candidate_path": null
+    },
+    {
+      "id": "market-project-registry",
+      "module": "market",
+      "workflow_name": "Market Source Candidate Collector",
+      "source_access": "automated-plus-curated",
+      "candidate_mode": "article-evidence",
+      "candidate_path": "data/candidate/market/articles.json"
+    },
+    {
+      "id": "market-benchmarks",
+      "module": "market",
+      "workflow_name": "Market Source Candidate Collector",
+      "source_access": "automated-candidate",
+      "candidate_mode": "market-observations",
+      "candidate_path": "data/candidate/market/observations.json"
+    },
+    {
+      "id": "market-listing",
+      "module": "market",
+      "workflow_name": "Listing Market Candidate Collector",
+      "source_access": "assisted-browser",
+      "access_note": "Batdongsan.com.vn is blocked on GitHub-hosted runners; assisted browser capture is the approved path.",
+      "candidate_mode": "listing-observations",
+      "candidate_path": "data/candidate/market/listing-observations.json",
+      "production_path": "data/mock/market/listing-observations.json",
+      "stale_after_hours": 336
+    },
+    {
+      "id": "legal-registry",
+      "module": "legal",
+      "workflow_name": "Legal Candidate Collector",
+      "source_access": "automated-candidate-review",
+      "candidate_mode": "legal",
+      "candidate_path": "data/candidate/legal/documents.json"
+    },
+    {
+      "id": "infrastructure-registry",
+      "module": "infrastructure",
+      "workflow_name": "Infrastructure Candidate Collector",
+      "source_access": "automated-candidate-review",
+      "candidate_mode": "infrastructure",
+      "candidate_path": "data/candidate/infrastructure/updates.json"
+    }
+  ],
+  "status_priority": [
+    "healthy",
+    "running",
+    "review",
+    "degraded",
+    "stale"
+  ]
+}

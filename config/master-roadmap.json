@@ -36,7 +36,7 @@
     {
       "id": "5",
       "name": "Automation",
-      "status": "in-progress",
+      "status": "complete",
       "exit_criteria": "Automatable sources refresh on schedule; blocked/manual sources are explicitly classified; failures, stale data, last-good retention and candidate backlog are visible through one operations layer."
     },
     {

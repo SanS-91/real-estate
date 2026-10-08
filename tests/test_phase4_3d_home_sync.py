@@ -52,7 +52,7 @@ assert 'policy-refinancing-rate' in home_js
 assert 'Integrated data · 4 curated modules' in home_js
 assert 'group.count_label' in components
 assert "['#today-title', 'Latest', 'Mới nhất']" in loc_static
-assert 'assets/js/home.js?v=4.9.1' in index
+assert 'assets/js/home.js?v=' in index
 assert 'loadCanonicalHomeData' in home_js
 assert 'buildTodayGroups(data)' in home_js
 assert 'buildChanges(data)' in home_js

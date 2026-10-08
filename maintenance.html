@@ -40,6 +40,21 @@
         </div>
       </section>
 
+      <section class="section" aria-labelledby="maintenance-operations-title">
+        <div class="section-header">
+          <div>
+            <span class="eyebrow">Workflow + source state</span>
+            <h2 class="section-title" id="maintenance-operations-title">Module Operations</h2>
+          </div>
+          <span class="home-block__note">Workflow health · access mode · backlog</span>
+        </div>
+        <div class="section-body">
+          <div class="maintenance-operations-grid" data-maintenance-operations>
+            <div class="state-box">Loading operational health…</div>
+          </div>
+        </div>
+      </section>
+
       <section class="section maintenance-attention" aria-labelledby="maintenance-attention-title">
         <div class="section-header">
           <div>
@@ -55,7 +70,7 @@
       <section class="section" aria-labelledby="maintenance-datasets-title">
         <div class="section-header">
           <div>
-            <span class="eyebrow">10 tracked datasets</span>
+            <span class="eyebrow">Tracked datasets</span>
             <h2 class="section-title" id="maintenance-datasets-title">Dataset Freshness</h2>
           </div>
           <span class="maintenance-legend" data-maintenance-legend><span class="maintenance-dot is-healthy"></span> Healthy <span class="maintenance-dot is-due"></span> Due <span class="maintenance-dot is-stale"></span> Stale</span>
@@ -84,10 +99,10 @@
             </div>
           </div>
           <div class="section-body maintenance-workflow-note">
-            <strong>07:45 ICT · Daily</strong>
-            <p>GitHub Actions rebuilds a read-only status snapshot and keeps the artifact for 14 days. It does not fetch external sources or write production data.</p>
+            <strong>07:45 ICT freshness · 08:05 ICT operations health</strong>
+            <p>GitHub Actions recalculates repository freshness first, then builds the unified workflow/source/backlog health snapshot. The health layer never promotes candidates; production collectors keep their own controlled gates.</p>
             <div class="maintenance-flow">
-              <span>Repository data</span><span>→</span><span>Freshness check</span><span>→</span><span>Summary + artifact</span>
+              <span>Repository + Actions</span><span>→</span><span>Unified health</span><span>→</span><span>Website + snapshot</span>
             </div>
           </div>
         </section>
@@ -100,11 +115,11 @@
 
   <script src="assets/js/common.js?v=5.0R1"></script>
   <script src="assets/js/formatters.js"></script>
-  <script src="assets/js/data-store.js?v=4.3D"></script>
+  <script src="assets/js/data-store.js?v=5.8"></script>
   <script src="assets/js/provenance.js"></script>
   <script src="assets/js/components.js"></script>
   <script src="assets/js/search.js?v=4.3E"></script>
-  <script src="assets/js/maintenance.js?v=4.4D"></script>
+  <script src="assets/js/maintenance.js?v=5.8"></script>
   <script src="assets/js/localization-static.js?v=4.4D"></script>
   <script src="assets/js/localization-dynamic.js?v=5.0R1"></script>
 </body>

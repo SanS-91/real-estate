@@ -1,0 +1,56 @@
+name: Phase 5.8 Unified Data Health Validation
+
+on:
+  pull_request:
+    paths:
+      - 'config/operations_health.json'
+      - 'config/update_matrix.json'
+      - 'scripts/build_data_health.py'
+      - 'data/state/data-health.json'
+      - 'assets/js/data-store.js'
+      - 'assets/js/home.js'
+      - 'assets/js/maintenance.js'
+      - 'assets/css/main.css'
+      - 'index.html'
+      - 'maintenance.html'
+      - 'tests/test_phase5_8_*'
+      - 'tests/fixtures/workflow_runs_health_sample.json'
+      - '.github/workflows/unified-data-health.yml'
+      - '.github/workflows/phase58-unified-data-health-validation.yml'
+      - 'config/master-roadmap.json'
+      - 'docs/MASTER_ROADMAP.md'
+      - 'README.md'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  validate:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 12
+    steps:
+      - uses: actions/checkout@v7
+      - uses: actions/setup-python@v7
+        with:
+          python-version: '3.12'
+      - name: Install dependencies
+        run: pip install -r requirements.txt
+      - name: Syntax
+        run: |
+          python -m py_compile scripts/build_data_health.py
+          node --check assets/js/home.js
+          node --check assets/js/maintenance.js
+          node --check assets/js/data-store.js
+      - name: Phase 5.8 health contracts
+        run: |
+          python tests/test_phase5_8_unified_data_health.py
+          python tests/test_phase5_8_data_health_build.py
+          python tests/test_phase5_8_data_health_ui.py
+      - name: Roadmap regression
+        run: python tests/test_phase5_6b_master_roadmap_alignment.py
+      - name: Core regressions
+        run: |
+          python tests/test_phase5_7c_registry_candidate_promotion.py
+          python tests/test_phase5_5f4_multisource_supply_sales_ui.py
+          python tests/test_market_news_source_links.py

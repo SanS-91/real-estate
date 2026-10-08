@@ -75,6 +75,7 @@
     getProcessedMacroObservations: () => loadDirectJSON('./data/processed/macro/observations.json', 'processed macro observations'),
     getProcessedMacroPublishMeta: () => loadDirectJSON('./data/processed/macro/repository-publish.json', 'processed macro publish metadata'),
     getEvents: () => loadJSON('events/events.json'),
-    getArticles: () => loadJSON('articles/articles.json')
+    getArticles: () => loadJSON('articles/articles.json'),
+    getDataHealth: () => loadDirectJSON('./data/state/data-health.json', 'unified data health')
   };
 })();
