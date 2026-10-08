@@ -20,8 +20,9 @@ assert 'researchBriefHTML([ctx])' in js
 assert 'researchBriefHTML(contexts)' in js
 assert 'data-research-copy-brief' in js
 assert 'data-research-print' in js
-assert "isRealSource(article.source_id)" in js
-assert "(event.source_ids || []).some(isRealSource)" in js
+assert "filter(row => isRealSource(row.source_id))" in js
+assert "(row.source_ids || []).some(isRealSource)" in js
+assert "IntelligenceContext.query({" in js
 
 assert 'average_asp =' not in js
 assert 'sales_units =' not in js
