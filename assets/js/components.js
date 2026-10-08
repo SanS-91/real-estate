@@ -58,6 +58,7 @@
         <div class="change-card__meta">
           <span class="category-pill category-pill--${escapeHTML(item.category)}">${escapeHTML(item.category_label)}</span>
           <span>${escapeHTML(item.date_label)}</span>
+          ${item.importance_label ? `<span class="importance-label">${escapeHTML(item.importance_label)}</span>` : ''}
         </div>
         <h3>${escapeHTML(item.title)}</h3>
         <p>${escapeHTML(item.summary)}</p>

@@ -10,8 +10,8 @@ infra=(ROOT/'infrastructure.html').read_text(encoding='utf-8')
 macro=(ROOT/'macro.html').read_text(encoding='utf-8')
 legal=(ROOT/'legal.html').read_text(encoding='utf-8')
 
-assert 'const latestMacro = new Map();' in home
-assert 'weeklyMacroSummary(row, data.production)' in home
+assert 'data.production.latest.forEach(row=>' in home
+assert 'weeklyMacroSummary(row,data.production)' in home or 'weeklyMacroSummary(row, data.production)' in home
 assert 'formatQuarterPeriod(current.period)' in home
 assert 'Corroborated production observation from the approved source set.' in loc
 assert 'Verified production observation from the approved official source.' in loc
