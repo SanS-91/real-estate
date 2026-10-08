@@ -1,0 +1,87 @@
+name: Listing Market Candidate Collector
+
+on:
+  workflow_dispatch:
+    inputs:
+      project:
+        description: Optional project_id; leave blank to check all mapped projects
+        required: false
+        default: ''
+        type: string
+      persist_candidate:
+        description: Commit candidate staging JSON back to main after collection
+        required: true
+        default: false
+        type: boolean
+
+permissions:
+  contents: write
+
+jobs:
+  collect:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 12
+    steps:
+      - uses: actions/checkout@v7
+      - uses: actions/setup-python@v7
+        with:
+          python-version: '3.12'
+      - name: Install collector dependencies
+        run: pip install -r requirements.txt
+      - name: Collect listing candidates
+        env:
+          PROJECT_ID: ${{ inputs.project }}
+        run: |
+          if [ -n "$PROJECT_ID" ]; then
+            python scripts/listing_candidate_collector.py --project "$PROJECT_ID"
+          else
+            python scripts/listing_candidate_collector.py
+          fi
+      - name: Validate candidate against append-only pipeline
+        run: python scripts/listing_snapshot_pipeline.py --mode preview
+      - name: Job summary
+        run: |
+          echo "## Listing Market Candidate Collector" >> "$GITHUB_STEP_SUMMARY"
+          python - <<'PY' >> "$GITHUB_STEP_SUMMARY"
+          import json
+          from pathlib import Path
+          r=json.loads(Path("data/candidate/market/listing-collector-report.json").read_text())
+          p=json.loads(Path("data/candidate/market/listing-refresh-report.json").read_text())
+          print(f"- Projects checked: **{r['projects_checked']}**")
+          print(f"- Candidate records: **{r['candidate_records']}**")
+          for k,v in r.get('counts',{}).items():
+              print(f"- Collector {k}: **{v}**")
+          print(f"- Pipeline changed candidates: **{p.get('counts',{}).get('new-changed',0)}**")
+          print(f"- Pipeline conflicts: **{p.get('counts',{}).get('conflict',0)}**")
+          print("")
+          print("| Project | Collector status | Range | 1Y trend |")
+          print("|---|---|---:|---:|")
+          for row in r.get("projects",[]):
+              lo=row.get("asking_price_low_vnd_per_m2")
+              hi=row.get("asking_price_high_vnd_per_m2")
+              rng="—" if lo is None or hi is None else f"{lo/1e6:.1f}–{hi/1e6:.1f} mn/m²"
+              trend=row.get("asking_price_change_1y_pct")
+              trend_text="—" if trend is None else f"{trend*100:.1f}%"
+              print(f"| {row['project_id']} | {row['status']} | {rng} | {trend_text} |")
+          PY
+      - name: Upload collector artifact
+        uses: actions/upload-artifact@v7
+        with:
+          name: listing-market-candidate
+          path: |
+            data/candidate/market/listing-observations.json
+            data/candidate/market/listing-collector-report.json
+            data/candidate/market/listing-refresh-report.json
+          retention-days: 14
+      - name: Persist reviewed staging candidate
+        if: inputs.persist_candidate == true
+        run: |
+          if git diff --quiet -- data/candidate/market/listing-observations.json data/candidate/market/listing-collector-report.json; then
+            echo "No candidate staging changes to commit."
+            exit 0
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data/candidate/market/listing-observations.json data/candidate/market/listing-collector-report.json
+          git commit -m "data(market): refresh listing candidate staging"
+          git push
