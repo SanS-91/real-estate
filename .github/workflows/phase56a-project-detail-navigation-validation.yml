@@ -1,0 +1,33 @@
+name: Phase 5.6A Project Detail Navigation Validation
+
+on:
+  pull_request:
+    paths:
+      - 'assets/js/market.js'
+      - 'assets/css/main.css'
+      - 'tests/test_phase5_6a_project_detail_navigation.py'
+      - '.github/workflows/phase56a-project-detail-navigation-validation.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  validate:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v7
+      - uses: actions/setup-python@v7
+        with:
+          python-version: '3.12'
+      - name: JavaScript syntax
+        run: node --check assets/js/market.js
+      - name: Phase 5.6A contract
+        run: python tests/test_phase5_6a_project_detail_navigation.py
+      - name: Regressions
+        run: |
+          python tests/test_phase5_6_project_detail_view.py
+          python tests/test_phase5_5f4_multisource_supply_sales_ui.py
+          python tests/test_market_news_source_links.py
+          python tests/test_market_5_1_ui_polish.py
