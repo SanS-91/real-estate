@@ -2,7 +2,7 @@ from pathlib import Path
 ROOT=Path(__file__).resolve().parents[1]
 
 pages={
- 'index.html':'assets/js/home.js?v=4.9I1',
+ 'index.html':'assets/js/home.js?v=4.9.1',
  'macro.html':'assets/js/macro.js?v=4.9I1',
  'legal.html':'assets/js/legal.js?v=4.9I1',
  'infrastructure.html':'assets/js/infrastructure.js?v=4.9I1',

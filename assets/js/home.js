@@ -270,6 +270,11 @@
     };
   }
 
+  function formatQuarterPeriod(value) {
+    const match = String(value || '').match(/^(\d{4})-Q([1-4])$/);
+    return match ? `Q${match[2]}/${match[1]}` : String(value || '');
+  }
+
   function buildChanges(data) {
     if (!window.HistoryEngine) return [];
     const intelligence = HistoryEngine.buildIntelligence({
@@ -338,7 +343,7 @@
           id: item.id,
           category: 'market',
           category_label: 'Market',
-          date_label: current.period,
+          date_label: formatQuarterPeriod(current.period),
           sort_date: item.date,
           title: `HCMC apartment new supply at ${Formatters.number(current.new_supply, { min: 0, max: 0 })} units`,
           summary: `Comparable CBRE series moved from ${Formatters.number(previous.new_supply, { min: 0, max: 0 })} to ${Formatters.number(current.new_supply, { min: 0, max: 0 })} units (${item.pct > 0 ? '+' : ''}${Formatters.number(item.pct, { min: 1, max: 1 })}%).`,
@@ -369,22 +374,47 @@
     return 'Watch';
   }
 
+  function weeklyMacroSummary(row, production) {
+    const delta = window.HistoryEngine?.macroDelta?.(production.rows || [], row.indicator_id);
+    if (delta?.previous && delta.delta !== null) {
+      if (row.unit === 'vnd-per-usd') {
+        return `Changed from ${Formatters.number(delta.previous.value, { min: 0, max: 0 })} to ${Formatters.number(delta.current.value, { min: 0, max: 0 })} VND/USD (${delta.delta > 0 ? '+' : ''}${Formatters.number(delta.delta, { min: 0, max: 0 })}).`;
+      }
+      if (row.unit === 'vnd-per-tael') {
+        return `Changed from ${Formatters.number(delta.previous.value / 1_000_000, { min: 1, max: 1 })} to ${Formatters.number(delta.current.value / 1_000_000, { min: 1, max: 1 })} mn VND/tael (${delta.delta > 0 ? '+' : ''}${Formatters.number(delta.delta / 1_000_000, { min: 1, max: 1 })} mn).`;
+      }
+      if (row.unit === 'percent' || row.unit === 'percent-per-year') {
+        return `Changed from ${Formatters.number(delta.previous.value, { min: 2, max: 2 })}% to ${Formatters.number(delta.current.value, { min: 2, max: 2 })}% (${delta.delta > 0 ? '+' : ''}${Formatters.number(delta.delta, { min: 2, max: 2 })} ppt).`;
+      }
+    }
+    return row.evidence_status === 'verified'
+      ? 'Verified production observation from the approved official source.'
+      : 'Corroborated production observation from the approved source set.';
+  }
+
   function buildWeekly(data) {
     const candidates = [];
 
+    // Keep only the latest observation of each Macro indicator in the recap.
+    // HistoryEngine still provides the prior stored observation for the delta summary.
+    const latestMacro = new Map();
     data.production.rows.forEach(row => {
+      const key = observationKey(row);
+      const prior = latestMacro.get(row.indicator_id);
+      if (!prior || key.localeCompare(observationKey(prior)) > 0) latestMacro.set(row.indicator_id, row);
+    });
+
+    latestMacro.forEach(row => {
       const published = dateKey(row.published_at || row.data_date || row.period);
       if (!published) return;
       candidates.push({
-        id: `weekly-live-${row.id}`,
+        id: `weekly-live-${row.indicator_id}-${row.period}`,
         category: 'macro',
         category_label: 'Macro',
         date_label: App.formatDate(published).replace(/ \d{4}$/, ''),
         importance_label: ['cpi-yoy', 'credit-growth-ytd', 'bank-funding-growth-ytd'].includes(row.indicator_id) ? 'Important' : 'Watch',
         title: productionTodayTitle(row),
-        summary: row.evidence_status === 'verified'
-          ? 'Verified production observation from the approved official source.'
-          : 'Corroborated production observation from the approved source set.',
+        summary: weeklyMacroSummary(row, data.production),
         href: row.indicator_id === 'usd-vnd-central-rate' ? 'macro.html?view=fx'
           : row.indicator_id.startsWith('sjc-gold') ? 'macro.html?view=gold'
           : row.indicator_id.includes('cpi') ? 'macro.html?view=inflation'
