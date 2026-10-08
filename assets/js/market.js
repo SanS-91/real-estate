@@ -371,6 +371,110 @@
     });
   }
 
+  function projectIntelligence(project) {
+    if (!window.IntelligenceContext || !project) return null;
+    return IntelligenceContext.query({
+      projects:data.projects,
+      regions:data.regions,
+      developers:data.developers,
+      infrastructure:data.infrastructureProjects,
+      infrastructureSchedules:data.infrastructureSchedules,
+      marketObservations:data.observations,
+      listingObservations:data.listingObservations,
+      legal:data.legalDocuments,
+      articles:data.articles,
+      events:data.events,
+      macroRows:data.macroRows
+    }, {
+      type:'project',
+      id:project.id,
+      includeMacroContext:true,
+      macroIndicatorIds:[
+        'usd-vnd-central-rate',
+        'credit-growth-ytd',
+        'cpi-yoy',
+        'deposit-rate-12m',
+        'policy-refinancing-rate'
+      ]
+    });
+  }
+
+  function latestMacroContextRows(rows) {
+    const byIndicator=new Map();
+    (rows || []).forEach(row => {
+      const key=row.data_date || row.period || row.published_at || '';
+      const prior=byIndicator.get(row.indicator_id);
+      const priorKey=prior ? (prior.data_date || prior.period || prior.published_at || '') : '';
+      if (!prior || key > priorKey) byIndicator.set(row.indicator_id,row);
+    });
+    return [...byIndicator.values()].sort((a,b)=>String(a.indicator_id).localeCompare(String(b.indicator_id)));
+  }
+
+  function macroIndicatorName(id) {
+    return data.macroIndicators.find(x=>x.id===id)?.name || String(id || '—').replaceAll('-',' ');
+  }
+
+  function projectIntelligenceSummaryHTML(intel) {
+    if (!intel) return '';
+    const direct=intel.direct || {};
+    const contextual=intel.contextual || {};
+    const counts=[
+      ['Verified project observations',(direct.marketObservations || []).length],
+      ['Listing snapshots',(direct.listingObservations || []).length],
+      ['Infrastructure links',(direct.infrastructure || []).length],
+      ['Legal topic-relevant docs',(contextual.legalDocuments || []).length],
+      ['Regional benchmarks',(contextual.regionalMarketObservations || []).length],
+      ['Macro context series',latestMacroContextRows(contextual.macroObservations || []).length]
+    ];
+    return `<section class="section project-intelligence-summary">
+      <div class="section-header"><div><span class="eyebrow">Cross-module dossier</span><h2 class="section-title">Intelligence Coverage</h2></div><a class="text-link" href="research.html?type=project&ids=${encodeURIComponent(intel.subject.id)}">Open Research workspace</a></div>
+      <div class="section-body">
+        <div class="project-intelligence-counts">${counts.map(([label,value])=>`<div><strong>${esc(String(value))}</strong><span>${esc(label)}</span></div>`).join('')}</div>
+        <p class="research-disclaimer">Direct project evidence is separated from contextual evidence. Legal documents are linked by controlled topic relevance only; macro data is broad context and is not a project-specific fact.</p>
+      </div>
+    </section>`;
+  }
+
+  function projectLegalEvidenceHTML(intel, project) {
+    const topics=legalTopicLinks(project);
+    const docs=[...(intel?.contextual?.legalDocuments || [])]
+      .sort((a,b)=>String(b.issued_date || b.effective_date || '').localeCompare(String(a.issued_date || a.effective_date || '')))
+      .slice(0,6);
+    const topicLinks=topics.length ? `<div class="research-topic-row">${topics.map(item=>`<a class="research-topic-chip" href="legal.html?view=documents&topic=${encodeURIComponent(item.id)}">${esc(item.name)}</a>`).join('')}</div>` : '';
+    const docRows=docs.length ? `<div class="project-evidence-list">${docs.map(doc=>`<a href="legal.html?view=documents&document=${encodeURIComponent(doc.id)}"><div><strong>${esc(doc.document_number || doc.title)}</strong><span>${esc(doc.title)}</span></div><small>${esc(App.formatDate(doc.issued_date || doc.effective_date))} · ${esc(String(doc.status || '').replaceAll('-',' '))}</small></a>`).join('')}</div>` : '<p class="muted-text">No topic-relevant Legal documents in the canonical registry.</p>';
+    return `${topicLinks}${docRows}<p class="muted-text">Topic relevance is a research shortcut only. It does not determine whether a document legally applies to this project.</p>`;
+  }
+
+  function projectInfrastructureEvidenceHTML(intel) {
+    const infrastructure=intel?.direct?.infrastructure || [];
+    const schedules=intel?.direct?.infrastructureSchedules || [];
+    if (!infrastructure.length) return '<p class="muted-text">No direct infrastructure links in the curated dataset.</p>';
+    return `<div class="project-evidence-list">${infrastructure.map(item=>{
+      const latest=schedules.filter(x=>x.infrastructure_project_id===item.id)
+        .sort((a,b)=>String(b.announced_date || '').localeCompare(String(a.announced_date || '')))[0];
+      const scheduleText=latest ? `${latest.schedule_type?.replaceAll('-',' ') || 'schedule'} · ${latest.target_period || '—'}` : (item.current_expected_completion || 'No schedule record');
+      return `<a href="infrastructure.html?view=projects&project=${encodeURIComponent(item.id)}"><div><strong>${esc(item.name)}</strong><span>${esc(item.location_text || '')}</span></div><small>${esc(scheduleText)} · ${esc(String(item.status || '').replaceAll('-',' '))}</small></a>`;
+    }).join('')}</div>`;
+  }
+
+  function projectContextHTML(intel) {
+    if (!intel) return '<p class="muted-text">No cross-module context available.</p>';
+    const market=[...(intel.contextual?.regionalMarketObservations || [])]
+      .sort((a,b)=>String(b.period || b.source_date || '').localeCompare(String(a.period || a.source_date || '')))
+      .slice(0,5);
+    const macro=latestMacroContextRows(intel.contextual?.macroObservations || []);
+    return `<div class="project-context-grid">
+      <div>
+        <h3>Regional Market Context</h3>
+        ${market.length ? `<div class="project-evidence-list">${market.map(row=>`<div class="project-evidence-static"><div><strong>${esc((row.segment_ids || []).join(', ') || 'Market benchmark')}</strong><span>${esc(row.period || row.source_date || '—')}</span></div><small>${row.new_supply != null ? 'Supply '+esc(formatMarketMetric(row,'new_supply'))+' · ' : ''}${row.absorption_rate != null ? 'Absorption '+esc(formatMarketMetric(row,'absorption_rate'))+' · ' : ''}${esc(marketSourceLabel(row.source_id))}</small></div>`).join('')}</div>` : '<p class="muted-text">No compatible regional benchmark.</p>'}
+      </div>
+      <div>
+        <h3>Macro Context</h3>
+        ${macro.length ? `<div class="project-evidence-list">${macro.map(row=>`<div class="project-evidence-static"><div><strong>${esc(macroIndicatorName(row.indicator_id))}</strong><span>${esc(row.period || row.data_date || '—')}</span></div><small>${esc(Formatters.unitValue(row.unit,row.value,{compact:true}))}</small></div>`).join('')}</div>` : '<p class="muted-text">No selected macro context available.</p>'}
+      </div>
+    </div><p class="research-disclaimer">Regional market and macro rows are contextual evidence only; they are not attributed to the project itself.</p>`;
+  }
+
   function setupProjectDetailNavigation() {
     const nav = document.querySelector('[data-project-detail-nav]');
     if (!nav) return;
