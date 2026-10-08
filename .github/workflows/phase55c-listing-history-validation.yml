@@ -1,0 +1,48 @@
+name: Phase 5.5C Listing History Validation
+
+on:
+  pull_request:
+    paths:
+      - 'scripts/listing_snapshot_pipeline.py'
+      - 'data/candidate/market/listing-observations.json'
+      - 'assets/js/history-engine.js'
+      - 'assets/js/market.js'
+      - 'assets/css/main.css'
+      - 'assets/js/localization-dynamic.js'
+      - 'market.html'
+      - 'tests/test_phase5_5c_*'
+      - '.github/workflows/phase55c-listing-history-validation.yml'
+      - '.github/workflows/listing-market-refresh.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  validate:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v7
+      - uses: actions/setup-python@v7
+        with:
+          python-version: '3.12'
+      - name: Syntax
+        run: |
+          python -m py_compile scripts/listing_snapshot_pipeline.py
+          node --check assets/js/history-engine.js
+          node --check assets/js/market.js
+      - name: Pipeline preview
+        run: python scripts/listing_snapshot_pipeline.py --mode preview
+      - name: Phase 5.5C contracts
+        run: |
+          python tests/test_phase5_5c_listing_pipeline.py
+          node tests/test_phase5_5c_listing_history.js
+          python tests/test_phase5_5c_frontend.py
+      - name: Regressions
+        run: |
+          python tests/test_phase5_5b1_market_surface.py
+          python tests/test_phase5_5b_listing_coverage.py
+          python tests/test_phase5_5a_listing_market.py
+          python tests/test_phase4_8_9_integration.py
+          python tests/test_phase4_4f_production_hardening.py
