@@ -144,7 +144,7 @@ def build_namlong_article(target, parsed, final_url):
         elif f.get("type")=="certificate-progress":
             summary_bits.append(f"Developer states {f.get('household_pct',0)*100:.0f}% of households received ownership certificates.")
     if not summary_bits:
-        summary_bits.append("Nam Long official project update; structured project references extracted automatically for review.")
+        summary_bits.append(parsed.get("excerpt") or "Nam Long official article; see linked original publication.")
     return {
         "id":f"article-market-{slug(target['target_id'])}",
         "title":parsed.get("title") or "Nam Long official project update",
@@ -210,6 +210,9 @@ def main():
             status,final_url,html=fetch(t["url"])
             if status!=200:
                 target_reports.append({"target_id":t["target_id"],"status":"http-error","http_status":status,"url":t["url"],"final_url":final_url})
+                continue
+            if t.get("auto_discovered") and final_url.rstrip("/") != t["url"].rstrip("/"):
+                target_reports.append({"target_id":t["target_id"],"status":"manual-review-required","reason":"Official news link redirected away from discovered article","url":t["url"],"final_url":final_url})
                 continue
 
             evidence=extract_period_evidence(html, final_url)
