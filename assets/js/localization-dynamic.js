@@ -154,6 +154,7 @@
     'Published quarterly new-supply observations; missing sales figures remain blank': 'Nguồn cung mở bán mới theo quý đã công bố; số liệu bán hàng thiếu nguồn được để trống',
     'Verified production observation from the approved official source.': 'Quan sát production đã xác minh từ nguồn chính thức được phê duyệt.',
     'Corroborated production observation from the approved source set.': 'Quan sát production đã được đối chiếu theo bộ nguồn được phê duyệt.',
+    'Source-backed infrastructure milestone recorded in the curated timeline.': 'Cột mốc hạ tầng có nguồn đã được ghi nhận trong lịch sử tuyển chọn.',
     'CPI YoY': 'CPI so với cùng kỳ',
     'CANONICAL': 'CHÍNH THỨC',
     'CORROBORATED': 'ĐÃ ĐỐI CHIẾU',
@@ -602,6 +603,10 @@
     if ((match = core.match(/^Changed from ([\d.,]+) to ([\d.,]+) mn VND\/tael \(([+-]?[\d.,]+) mn\)\.$/))) return `Thay đổi từ ${match[1]} xuống/còn ${match[2]} triệu đồng/lượng (${match[3]} triệu).`;
     if ((match = core.match(/^Changed from ([\d.,]+)% to ([\d.,]+)% \(([+-]?[\d.,]+) ppt\)\.$/))) return `Thay đổi từ ${match[1]}% xuống/còn ${match[2]}% (${match[3]} điểm %).`;
     if ((match = core.match(/^Q([1-4])\/(\d{4})$/))) return `Q${match[1]}/${match[2]}`;
+    if ((match = core.match(/^Bank Funding Growth YTD · (.+)$/))) return `Tăng trưởng huy động vốn YTD · ${match[1]}`;
+    if ((match = core.match(/^Credit Growth YTD · (.+)$/))) return `Tăng trưởng tín dụng YTD · ${match[1]}`;
+    if ((match = core.match(/^CPI YoY · (.+)$/))) return `CPI so với cùng kỳ · ${match[1]}`;
+    if ((match = core.match(/^Published quarterly new-supply observations; missing sales figures remain blank(?: ·)?$/))) return 'Nguồn cung mở bán mới theo quý đã công bố; số liệu bán hàng thiếu nguồn được để trống';
     if ((match = core.match(/^Published (.+)$/))) return `Công bố ${match[1]}`;
     if ((match = core.match(/^Announced (.+)$/))) return `Công bố ${match[1]}`;
     if ((match = core.match(/^Source: (.+)$/))) return `Nguồn: ${match[1]}`;
