@@ -510,18 +510,17 @@
       return;
     }
 
-    const obsRows = data.observations
-      .filter(item => item.project_id === project.id)
-      .sort((a,b)=>String(b.period).localeCompare(String(a.period)));
+    const intelligence = projectIntelligence(project);
+    const obsRows = [...(intelligence?.direct?.marketObservations || [])]
+      .sort((a,b)=>String(b.period || b.source_date || '').localeCompare(String(a.period || a.source_date || '')));
     const latestObs = obsRows[0] || null;
-    const listing = latestListingObservation(project.id);
-    const listingRows = window.HistoryEngine?.listingMarketSeries?.(data.listingObservations, project.id) || [];
+    const listingRows = [...(intelligence?.direct?.listingObservations || [])]
+      .sort((a,b)=>String(a.observation_date || '').localeCompare(String(b.observation_date || '')));
+    const listing = listingRows.at(-1) || null;
     const phases = data.phases.filter(item => item.project_id === project.id);
-    const relatedArticles = data.articles
+    const relatedArticles = [...(intelligence?.direct?.articles || [])]
       .filter(item => (item.project_ids || []).includes(project.id))
-      .sort((a,b)=>String(b.published_at).localeCompare(String(a.published_at)));
-    const relatedInfrastructure = relatedInfrastructureForProject(project);
-    const legalTopics = legalTopicLinks(project);
+      .sort((a,b)=>String(b.published_at || '').localeCompare(String(a.published_at || '')));
     const dev = leadDeveloper(project);
 
     const verifiedRows = obsRows.length
@@ -556,8 +555,11 @@
         <a href="#project-updates">Tin tức</a>
         <a href="#project-legal">Pháp lý</a>
         <a href="#project-infrastructure">Hạ tầng</a>
+        <a href="#project-context">Bối cảnh</a>
         <a href="#project-phases">Phân kỳ</a>
       </nav>
+
+      ${projectIntelligenceSummaryHTML(intelligence)}
 
       <div class="project-detail-grid" id="project-overview">
         <section class="section project-detail-main">
@@ -602,16 +604,21 @@
 
         <aside class="project-detail-stack">
           <section class="section project-detail-anchor" id="project-legal">
-            <div class="section-header"><h2 class="section-title">Legal Research</h2></div>
-            <div class="section-body">${legalTopics.length ? `<div class="project-detail-link-list">${legalTopics.map(item=>`<a href="legal.html?view=documents&topic=${encodeURIComponent(item.id)}"><strong>${esc(item.name)}</strong><span>Open related legal research →</span></a>`).join('')}</div><p class="muted-text">Topic links are research shortcuts and do not determine legal applicability to this project.</p>` : '<p class="muted-text">No curated legal-topic links.</p>'}</div>
+            <div class="section-header"><div><span class="eyebrow">Contextual evidence</span><h2 class="section-title">Legal Research</h2></div><a class="text-link" href="legal.html?view=documents">Open Legal</a></div>
+            <div class="section-body">${projectLegalEvidenceHTML(intelligence, project)}</div>
           </section>
 
           <section class="section project-detail-anchor" id="project-infrastructure">
-            <div class="section-header"><h2 class="section-title">Infrastructure</h2></div>
-            <div class="section-body">${relatedInfrastructure.length ? `<div class="project-detail-link-list">${relatedInfrastructure.map(item=>`<a href="infrastructure.html?view=projects&project=${encodeURIComponent(item.id)}"><strong>${esc(item.name)}</strong><span>${esc(item.location_text || 'Open infrastructure detail')} →</span></a>`).join('')}</div>` : '<p class="muted-text">No direct infrastructure links in the curated dataset.</p>'}</div>
+            <div class="section-header"><div><span class="eyebrow">Direct project links</span><h2 class="section-title">Infrastructure</h2></div><a class="text-link" href="infrastructure.html?view=projects">Open Infrastructure</a></div>
+            <div class="section-body">${projectInfrastructureEvidenceHTML(intelligence)}</div>
           </section>
         </aside>
       </div>
+
+      <section class="section project-detail-anchor" id="project-context">
+        <div class="section-header"><div><span class="eyebrow">Contextual intelligence</span><h2 class="section-title">Regional Market &amp; Macro Context</h2></div></div>
+        <div class="section-body">${projectContextHTML(intelligence)}</div>
+      </section>
 
       <section class="section project-detail-anchor" id="project-phases">
         <div class="section-header"><div><span class="eyebrow">Development structure</span><h2 class="section-title">Phases</h2></div></div>
