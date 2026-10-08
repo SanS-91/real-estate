@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="description" content="Cross-module research workspace for Vietnam real estate projects, regions and developers.">
   <title>Research · Market Intelligence</title>
-  <link rel="stylesheet" href="assets/css/main.css?v=5.0R1">
+  <link rel="stylesheet" href="assets/css/main.css?v=5.1C1">
   <link rel="stylesheet" href="assets/css/localization.css?v=7.2.0">
 </head>
 <body data-page="research">
@@ -27,7 +27,7 @@
         <span>Legal documents are surfaced through shared canonical topics and relationships. A research link does not by itself establish that a regulation legally applies to a specific project.</span>
       </div>
 
-      <section class="research-selector" aria-label="Research subject">
+      <section class="research-selector research-selector--compare" aria-label="Research subject">
         <label>
           <span>Research type</span>
           <select data-research-type>
@@ -37,10 +37,21 @@
           </select>
         </label>
         <label class="research-selector__entity">
-          <span>Subject</span>
-          <select data-research-entity></select>
+          <span>Subject 1</span>
+          <select data-research-entity="0"></select>
         </label>
-        <button class="button button-primary" type="button" data-research-load>Open research view</button>
+        <label class="research-selector__entity">
+          <span>Compare with</span>
+          <select data-research-entity="1"></select>
+        </label>
+        <label class="research-selector__entity">
+          <span>Compare with</span>
+          <select data-research-entity="2"></select>
+        </label>
+        <div class="research-selector__actions">
+          <button class="button button-primary" type="button" data-research-load>Open research view</button>
+          <button class="button" type="button" data-research-share>Copy share link</button>
+        </div>
       </section>
 
       <section data-research-view aria-live="polite">
@@ -60,8 +71,8 @@
   <script src="assets/js/search.js?v=4.3E"></script>
   <script src="assets/js/resolver.js"></script>
   <script src="assets/js/history-engine.js?v=4.9I1"></script>
-  <script src="assets/js/research.js?v=5.0R1"></script>
+  <script src="assets/js/research.js?v=5.1C1"></script>
   <script src="assets/js/localization-static.js?v=4.3E"></script>
-  <script src="assets/js/localization-dynamic.js?v=5.0R1"></script>
+  <script src="assets/js/localization-dynamic.js?v=5.1C1"></script>
 </body>
 </html>
