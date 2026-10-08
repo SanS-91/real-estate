@@ -9,7 +9,8 @@
     developer: '',
     segment: '',
     status: '',
-    sort: 'latest'
+    sort: 'latest',
+    priceLayer: 'listing'
   };
   let data = { regions: [], developers: [], projects: [], phases: [], observations: [], listingObservations: [], listingComparables: [], articles: [], infrastructureProjects: [], legalTopics: [] };
 
@@ -58,6 +59,22 @@
   function formatListingRange(row) {
     if (!row || row.asking_price_low_vnd_per_m2 == null || row.asking_price_high_vnd_per_m2 == null) return '—';
     return `${Formatters.number(row.asking_price_low_vnd_per_m2 / 1_000_000,{min:0,max:1})}–${Formatters.number(row.asking_price_high_vnd_per_m2 / 1_000_000,{min:0,max:1})} mn VND/m²`;
+  }
+
+  function listingPriceRows(records = data.projects) {
+    return records.map(project => ({ project, row: latestListingObservation(project.id) }))
+      .filter(item => item.row && item.row.asking_price_low_vnd_per_m2 != null && item.row.asking_price_high_vnd_per_m2 != null);
+  }
+
+  function listingTrendLabel(row) {
+    return row?.asking_price_change_1y_pct == null ? '—' : Formatters.number(row.asking_price_change_1y_pct * 100,{min:1,max:1}) + '%';
+  }
+
+  function priceLayerControls() {
+    return `<div class="segmented-control market-price-layer" data-price-layer-control>
+      <button type="button" data-price-layer="verified" class="${state.priceLayer === 'verified' ? 'is-active' : ''}">Verified price</button>
+      <button type="button" data-price-layer="listing" class="${state.priceLayer === 'listing' ? 'is-active' : ''}">Listing market</button>
+    </div>`;
   }
 
   function listingMarketDrawerHTML(project) {
@@ -117,6 +134,8 @@
       const value = App.getQueryParam(key);
       if (value !== null) state[key] = value;
     });
+    const priceLayer = App.getQueryParam('price-layer');
+    state.priceLayer = ['verified','listing'].includes(priceLayer) ? priceLayer : 'listing';
   }
 
   function updateTabs() {
@@ -210,6 +229,7 @@
   function projectTable(records, limit = null) {
     const rows = (limit ? records.slice(0, limit) : records).map(project => {
       const obs = latestProjectObservation(project.id);
+      const listing = latestListingObservation(project.id);
       return `
         <tr>
           <td><button class="table-link" type="button" data-project-id="${esc(project.id)}">${esc(project.name)}</button><span class="table-subtext">${esc(project.location_text)}</span></td>
@@ -218,14 +238,16 @@
           <td>${Components.statusBadge(project.status)}</td>
           <td class="numeric">${Number.isFinite(project.planned_units) ? esc(formatCompact(project.planned_units)) : '<span class="table-muted">Disclosed qualitatively</span>'}</td>
           <td class="numeric">${esc(formatAsp(obs?.average_asp))}<span class="table-subtext">${esc(obs?.period || '')}</span></td>
+          <td class="numeric market-listing-cell">${esc(formatListingRange(listing))}<span class="table-subtext">${listing?.coverage_status === 'partial' ? 'Partial snapshot' : (listing?.observation_date || '')}</span></td>
+          <td class="numeric market-trend-cell">${esc(listingTrendLabel(listing))}</td>
           <td class="numeric">${esc(formatPercent(obs?.absorption_rate))}</td>
         </tr>`;
     }).join('');
     return `
       <div class="table-wrap">
-        <table class="data-table">
-          <thead><tr><th>Project</th><th>Developer</th><th>Region</th><th>Status</th><th class="numeric">Units</th><th class="numeric">Latest ASP</th><th class="numeric">Absorption</th></tr></thead>
-          <tbody>${rows || '<tr><td colspan="7" class="table-empty">No projects match the selected filters.</td></tr>'}</tbody>
+        <table class="data-table data-table--market-projects">
+          <thead><tr><th>Project</th><th>Developer</th><th>Region</th><th>Status</th><th class="numeric">Units</th><th class="numeric">Verified ASP</th><th class="numeric">Asking range</th><th class="numeric">1Y trend</th><th class="numeric">Absorption</th></tr></thead>
+          <tbody>${rows || '<tr><td colspan="9" class="table-empty">No projects match the selected filters.</td></tr>'}</tbody>
         </table>
       </div>`;
   }
