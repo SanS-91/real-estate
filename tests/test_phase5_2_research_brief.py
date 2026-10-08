@@ -7,9 +7,9 @@ js=(ROOT/'assets/js/research.js').read_text(encoding='utf-8')
 css=(ROOT/'assets/css/main.css').read_text(encoding='utf-8')
 production=json.loads((ROOT/'data/processed/macro/observations.json').read_text(encoding='utf-8'))['data']
 
-assert 'assets/js/research.js?v=5.2B1' in research
-assert 'assets/css/main.css?v=5.2B1' in research
-assert 'assets/js/localization-dynamic.js?v=5.2B1' in research
+assert 'assets/js/research.js?v=5.3W1' in research
+assert 'assets/css/main.css?v=5.3W1' in research
+assert 'assets/js/localization-dynamic.js?v=5.3W1' in research
 
 assert 'function marketCoverage(ctx)' in js
 assert 'function latestEvidence(ctx)' in js

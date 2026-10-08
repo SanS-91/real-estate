@@ -1,0 +1,39 @@
+name: Phase 5.3 Research Watchlist Validation
+
+on:
+  pull_request:
+    paths:
+      - 'research.html'
+      - 'assets/js/research.js'
+      - 'assets/js/localization-dynamic.js'
+      - 'assets/css/main.css'
+      - 'tests/test_phase5_3_research_watchlist.py'
+      - '.github/workflows/phase53-research-watchlist-validation.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  validate:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 8
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v7
+      - name: Set up Python
+        uses: actions/setup-python@v7
+        with:
+          python-version: '3.12'
+      - name: JavaScript syntax
+        run: |
+          node --check assets/js/research.js
+          node --check assets/js/localization-dynamic.js
+      - name: Phase 5.3 watchlist contract
+        run: python tests/test_phase5_3_research_watchlist.py
+      - name: Research and production regressions
+        run: |
+          python tests/test_phase5_0_cross_module_research.py
+          python tests/test_phase5_1_research_compare.py
+          python tests/test_phase5_2_research_brief.py
+          python tests/test_phase4_4f_production_hardening.py

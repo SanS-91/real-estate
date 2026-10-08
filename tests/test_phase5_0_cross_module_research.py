@@ -22,9 +22,9 @@ assert 'research.html' in common
 assert "{ key: 'research', label: 'Research'" in common
 assert 'data-research-type' in research
 assert 'data-research-entity' in research
-assert 'assets/js/research.js?v=5.2B1' in research
+assert 'assets/js/research.js?v=5.3W1' in research
 assert 'assets/js/common.js?v=5.0R1' in research
-assert 'assets/js/localization-dynamic.js?v=5.2B1' in research
+assert 'assets/js/localization-dynamic.js?v=5.3W1' in research
 
 for page in ['index.html','market.html','legal.html','infrastructure.html','macro.html','maintenance.html']:
     text=(ROOT/page).read_text(encoding='utf-8')

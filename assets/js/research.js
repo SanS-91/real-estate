@@ -8,6 +8,39 @@
   const payload = x => Array.isArray(x?.data) ? x.data : [];
   const byId = rows => new Map(rows.map(row => [row.id, row]));
   const unique = values => [...new Set((values || []).filter(Boolean))];
+  const WATCHLIST_KEY = 're-mi-research-watchlist-v1';
+  const WATCH_REVIEW_KEY = 're-mi-research-watch-reviewed-v1';
+
+  function readJSONStorage(key, fallback) {
+    try {
+      const raw = localStorage.getItem(key);
+      return raw ? JSON.parse(raw) : fallback;
+    } catch (_) {
+      return fallback;
+    }
+  }
+
+  function writeJSONStorage(key, value) {
+    try { localStorage.setItem(key, JSON.stringify(value)); } catch (_) {}
+  }
+
+  function watchlistItems() {
+    const rows = readJSONStorage(WATCHLIST_KEY, []);
+    return Array.isArray(rows) ? rows : [];
+  }
+
+  function reviewedEvidence() {
+    const rows = readJSONStorage(WATCH_REVIEW_KEY, []);
+    return new Set(Array.isArray(rows) ? rows : []);
+  }
+
+  function saveWatchlist(rows) {
+    writeJSONStorage(WATCHLIST_KEY, rows);
+  }
+
+  function saveReviewed(set) {
+    writeJSONStorage(WATCH_REVIEW_KEY, [...set]);
+  }
   const isRealSource = id => Boolean(id) && !String(id).startsWith('demo-');
 
   function currentLanguage() {
@@ -124,6 +157,155 @@
     );
 
     return { subject, projects, projectIds, regionIds, developerIds, legalTopicIds, infrastructure, legalDocuments, articles, events };
+  }
+
+  function watchKey(type, id) {
+    return type + ':' + id;
+  }
+
+  function evidenceRowsForContext(ctx) {
+    const rows = [];
+    ctx.articles.forEach(row => {
+      if (!isRealSource(row.source_id)) return;
+      rows.push({
+        id: 'article:' + row.id,
+        date: row.published_at,
+        title: row.title,
+        source: sourceName(row.source_id),
+        type: 'article',
+        href: row.category === 'market' ? 'market.html?view=news'
+          : row.category === 'legal' ? 'legal.html?view=news'
+          : row.category === 'infrastructure' ? 'infrastructure.html?view=news'
+          : 'macro.html?view=news'
+      });
+    });
+    ctx.events.forEach(row => {
+      const sourceId = (row.source_ids || []).find(isRealSource);
+      if (!sourceId) return;
+      rows.push({
+        id: 'event:' + row.id,
+        date: row.event_date,
+        title: row.title,
+        source: sourceName(sourceId),
+        type: 'event',
+        href: row.entity_type === 'infrastructure-project'
+          ? 'infrastructure.html?view=projects&project=' + encodeURIComponent(row.entity_id)
+          : row.entity_type === 'real-estate-project'
+            ? 'market.html?view=projects&project=' + encodeURIComponent(row.entity_id)
+            : 'index.html'
+      });
+    });
+    return rows.filter(row => row.date).sort((a,b) => String(b.date).localeCompare(String(a.date)));
+  }
+
+  function watchlistContexts() {
+    const rows = watchlistItems();
+    const projectMap = byId(data.projects);
+    const regionMap = byId(data.regions);
+    const developerMap = byId(data.developers);
+    return rows.map(row => {
+      const map = row.type === 'region' ? regionMap : row.type === 'developer' ? developerMap : projectMap;
+      const subject = map.get(row.id);
+      if (!subject) return null;
+      const priorType = state.type;
+      state.type = row.type;
+      const ctx = contextFor(subject);
+      state.type = priorType;
+      return { row, ctx };
+    }).filter(Boolean);
+  }
+
+  function renderWatchlist() {
+    if (!data) return;
+    const savedNode = document.querySelector('[data-watchlist-saved]');
+    const inboxNode = document.querySelector('[data-watchlist-inbox]');
+    const countNode = document.querySelector('[data-watchlist-new-count]');
+    if (!savedNode || !inboxNode || !countNode) return;
+
+    const watched = watchlistContexts();
+    const reviewed = reviewedEvidence();
+    const allEvidence = [];
+    watched.forEach(({row,ctx}) => {
+      evidenceRowsForContext(ctx).forEach(ev => allEvidence.push({ ...ev, watch: row }));
+    });
+
+    const deduped = [...new Map(allEvidence.map(row => [row.id, row])).values()]
+      .sort((a,b) => String(b.date).localeCompare(String(a.date)));
+    const fresh = deduped.filter(row => !reviewed.has(row.id));
+
+    savedNode.innerHTML = watched.length
+      ? '<div class="research-watchlist__chips">' + watched.map(({row,ctx}) =>
+          '<button class="research-watch-chip" type="button" data-watch-open="' + esc(watchKey(row.type,row.id)) + '">' +
+            '<span>' + esc(subjectLabel(ctx.subject)) + '</span><small>' + esc(row.type) + '</small>' +
+            '<span class="research-watch-chip__remove" data-watch-remove="' + esc(watchKey(row.type,row.id)) + '" aria-label="Remove from watchlist">×</span>' +
+          '</button>'
+        ).join('') + '</div>'
+      : '<div class="state-box">' + esc(tr('Chưa có nghiên cứu đã lưu.', 'No saved research yet.')) + '</div>';
+
+    countNode.textContent = String(fresh.length);
+    inboxNode.innerHTML = fresh.length
+      ? '<div class="research-list research-watchlist__inbox">' + fresh.slice(0,20).map(row =>
+          '<a href="' + esc(row.href) + '" data-watch-evidence="' + esc(row.id) + '">' +
+            '<strong>' + esc(row.title) + '</strong>' +
+            '<span>' + esc(App.formatDate(row.date)) + ' · ' + esc(row.source) + ' · ' + esc(subjectLabel(
+              (row.watch.type === 'project' ? data.projectMap : row.watch.type === 'region' ? data.regionMap : data.developerMap).get(row.watch.id)
+            )) + '</span>' +
+          '</a>'
+        ).join('') + '</div>'
+      : '<div class="state-box">' + esc(tr('Không có cập nhật mới chưa xem.', 'No unseen updates.')) + '</div>';
+
+    window.AppDynamicLocalization?.apply?.();
+  }
+
+  function saveCurrentResearch() {
+    collectSelections();
+    const current = watchlistItems();
+    const existing = new Set(current.map(row => watchKey(row.type,row.id)));
+    const newlySaved = [];
+    state.ids.forEach(id => {
+      const key = watchKey(state.type,id);
+      if (!existing.has(key)) {
+        current.push({ type: state.type, id });
+        newlySaved.push({ type: state.type, id });
+      }
+    });
+    saveWatchlist(current.slice(0,30));
+
+    // Treat currently linked evidence as the baseline at the moment a subject is saved.
+    // The inbox then highlights only evidence IDs that appear later.
+    if (newlySaved.length) {
+      const reviewed = reviewedEvidence();
+      const map = byId(subjectRows());
+      newlySaved.forEach(row => {
+        const subject = map.get(row.id);
+        if (!subject) return;
+        evidenceRowsForContext(contextFor(subject)).forEach(ev => reviewed.add(ev.id));
+      });
+      saveReviewed(reviewed);
+    }
+    renderWatchlist();
+  }
+
+  function removeWatch(key) {
+    saveWatchlist(watchlistItems().filter(row => watchKey(row.type,row.id) !== key));
+    renderWatchlist();
+  }
+
+  function openWatch(key) {
+    const [type,id] = String(key || '').split(':');
+    if (!['project','region','developer'].includes(type) || !id) return;
+    state.type = type;
+    state.ids = [id];
+    renderSelector();
+    updateUrl();
+    render();
+  }
+
+  function markAllReviewed() {
+    const reviewed = reviewedEvidence();
+    watchlistContexts().forEach(({ctx}) => evidenceRowsForContext(ctx).forEach(row => reviewed.add(row.id)));
+    saveReviewed(reviewed);
+    renderWatchlist();
   }
 
   function sourceName(id) {
@@ -546,6 +728,31 @@
       }
     });
 
+    document.querySelector('[data-research-watch]')?.addEventListener('click', event => {
+      saveCurrentResearch();
+      const button = event.currentTarget;
+      const prior = button.textContent;
+      button.textContent = tr('Đã lưu', 'Saved');
+      setTimeout(() => { button.textContent = prior; window.AppDynamicLocalization?.apply?.(); }, 1000);
+    });
+
+    document.querySelector('[data-watchlist-review]')?.addEventListener('click', markAllReviewed);
+
+    document.addEventListener('click', event => {
+      const remove = event.target.closest('[data-watch-remove]');
+      if (remove) {
+        event.preventDefault();
+        event.stopPropagation();
+        removeWatch(remove.getAttribute('data-watch-remove'));
+        return;
+      }
+      const open = event.target.closest('[data-watch-open]');
+      if (open) {
+        event.preventDefault();
+        openWatch(open.getAttribute('data-watch-open'));
+      }
+    });
+
     document.addEventListener('click', async event => {
       const copyButton = event.target.closest('[data-research-copy-brief]');
       if (copyButton) {
@@ -600,6 +807,7 @@
       renderSelector();
       bind();
       render();
+      renderWatchlist();
     } catch (error) {
       console.error(error);
       setView(Components.stateBox('Unable to load the integrated research workspace.','error'));
