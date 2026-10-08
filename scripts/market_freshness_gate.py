@@ -44,7 +44,7 @@ def evaluate(targets, report):
             "reason": "Source period/date evidence not independently verified" if not passed else "Period and date match source; metric auto-publish disabled",
         })
     return {"schema_version": 1, "auto_publish_eligible": False,
-            "reason": "Auto-publish remains disabled pending end-to-end tests and approval",
+            "reason": "Generic quarterly market metrics remain review-only; separately allowlisted CBRE supply and Nam Long news have independent strict promotion checks",
             "targets": results}
 
 def main():
