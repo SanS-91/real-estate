@@ -602,6 +602,44 @@
     }
   }
 
+  function healthStatusLabel(status) {
+    const vi = (window.AppLocalization?.getLanguage?.() || document.documentElement.lang || 'vi') === 'vi';
+    const labels = vi
+      ? { healthy:'Tốt', running:'Đang chạy', review:'Cần xem', degraded:'Suy giảm', stale:'Quá hạn' }
+      : { healthy:'Healthy', running:'Running', review:'Review', degraded:'Degraded', stale:'Stale' };
+    return labels[status] || status || '—';
+  }
+
+  function healthModuleLabel(module) {
+    const vi = (window.AppLocalization?.getLanguage?.() || document.documentElement.lang || 'vi') === 'vi';
+    const labels = vi
+      ? { market:'Thị trường', legal:'Pháp lý', infrastructure:'Hạ tầng', macro:'Vĩ mô' }
+      : { market:'Market', legal:'Legal', infrastructure:'Infrastructure', macro:'Macro' };
+    return labels[module] || module;
+  }
+
+  async function renderDataHealth() {
+    try {
+      const payload = await DataStore.getDataHealth();
+      const rows = payload?.modules || [];
+      setHTML('[data-home-data-health]', rows.map(row => `
+        <a class="data-health-card is-${Components.escapeHTML(row.status || 'review')}" href="maintenance.html">
+          <div class="data-health-card__top">
+            <strong>${Components.escapeHTML(healthModuleLabel(row.module))}</strong>
+            <span class="data-health-status">${Components.escapeHTML(healthStatusLabel(row.status))}</span>
+          </div>
+          <div class="data-health-card__meta">
+            <span>${Components.escapeHTML(String(row.dataset_count || 0))} datasets</span>
+            <span>${Components.escapeHTML(String(row.candidate_backlog || 0))} backlog</span>
+          </div>
+        </a>
+      `).join('') || Components.stateBox('Data health is not available yet.'));
+    } catch (error) {
+      console.warn('[home] unified data health unavailable', error);
+      setHTML('[data-home-data-health]', Components.stateBox('Data health is not available yet.'));
+    }
+  }
+
   function renderQuickResearch() {
     const items = [
       { label: 'Region', title: 'Dong Nai', description: 'Projects, infrastructure and recent developments.', href: 'market.html?region=dong-nai' },
@@ -629,6 +667,7 @@
 
   document.addEventListener('DOMContentLoaded', () => {
     renderQuickResearch();
+    renderDataHealth();
     renderMeta();
     renderToday();
     renderIndicators();
@@ -638,6 +677,7 @@
       renderToday();
       renderChanges();
       renderWeekly();
+      renderDataHealth();
     });
   });
 })();
