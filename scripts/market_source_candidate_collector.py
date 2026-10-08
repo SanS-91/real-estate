@@ -204,6 +204,14 @@ def main():
                             state="unchanged"
                     decisions.append({"id":row["id"],"status":state,"segment":row["segment_ids"][0],"new_supply":row.get("new_supply"),"absorption_rate":row.get("absorption_rate")})
                 target_reports.append({"target_id":t["target_id"],"status":"parsed","type":"market-observation","records":len(built),"decisions":decisions})
+                if t["collector"]=="cushman_market" and hasattr(module,"parse_article"):
+                    parsed_article=module.parse_article(html,final_url,datetime.now(timezone.utc).isoformat())
+                    article=build_research_article(t,parsed_article,final_url)
+                    akey=existing_article_key(article)
+                    astate="unchanged" if akey in art_keys else "new"
+                    if astate=="new":
+                        article_candidates.append(article)
+                    target_reports[-1]["article_decision"]=astate
             elif t["collector"]=="namlong_official":
                 parsed=module.parse_article(html,final_url,datetime.now(timezone.utc).isoformat())
                 row=build_namlong_article(t,parsed,final_url)
