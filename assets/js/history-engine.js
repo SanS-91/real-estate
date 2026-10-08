@@ -270,6 +270,8 @@
           type: rel.relation_type,
           title: `${row.document_number} ${rel.relation_type === 'amends' ? 'amends' : 'supplements'} ${target.document_number}`,
           summary: row.summary || row.title,
+          source_id: row.primary_source_id,
+          source_url: row.official_url,
           href: `legal.html?view=documents&document=${encodeURIComponent(row.id)}`
         });
       });
