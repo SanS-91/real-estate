@@ -6,6 +6,7 @@ import importlib
 import json
 import re
 from datetime import datetime, timezone
+from market_period_evidence import extract_period_evidence
 import requests
 
 ROOT=Path(__file__).resolve().parents[1]
@@ -188,6 +189,15 @@ def main():
                 target_reports.append({"target_id":t["target_id"],"status":"http-error","http_status":status,"url":t["url"],"final_url":final_url})
                 continue
 
+            evidence=extract_period_evidence(html, final_url)
+            if t.get("period_type") == "quarter" and evidence["period"] != t.get("period"):
+                target_reports.append({
+                    "target_id": t["target_id"], "status": "period-review-required",
+                    "configured_period": t.get("period"),
+                    "detected_period": evidence["period"],
+                    "evidence": evidence["evidence"], "url": final_url,
+                })
+                continue
             module=importlib.import_module("collectors."+t["collector"])
             if t["collector"] in {"cbre_market","cushman_market"}:
                 parsed=module.parse(html,final_url,datetime.now(timezone.utc).isoformat())
