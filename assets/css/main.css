@@ -2082,3 +2082,47 @@ button, a, input, select { outline-offset: 3px; }
   .research-listing-kpis,
   .research-listing-comps { grid-template-columns: 1fr; }
 }
+
+
+/* Phase 5.5B.1 · Market Surface Integration */
+.section-header__actions {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+.segmented-control.market-price-layer {
+  display: inline-flex;
+  padding: 3px;
+  border: 1px solid var(--color-border);
+  border-radius: 10px;
+  background: #f7f8fa;
+}
+.segmented-control.market-price-layer button {
+  border: 0;
+  background: transparent;
+  padding: 6px 10px;
+  border-radius: 7px;
+  color: var(--color-text-secondary);
+  font: inherit;
+  font-size: 11px;
+  font-weight: 700;
+  cursor: pointer;
+}
+.segmented-control.market-price-layer button.is-active {
+  background: #fff;
+  color: var(--color-primary-dark);
+  box-shadow: 0 1px 3px rgba(16,24,40,.08);
+}
+.data-table--market-projects .market-listing-cell {
+  min-width: 150px;
+}
+.data-table--market-projects .market-trend-cell {
+  min-width: 84px;
+}
+@media (max-width: 720px) {
+  .section-header__actions { align-items: stretch; }
+  .segmented-control.market-price-layer { width: 100%; }
+  .segmented-control.market-price-layer button { flex: 1; }
+  .data-table--market-projects { min-width: 1120px; }
+}
