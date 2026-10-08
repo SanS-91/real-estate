@@ -376,69 +376,41 @@
   }
 
   function buildTodayGroups(data) {
-    const marketArticles = sortDateDesc(
-      data.articles.filter(row => row.category === 'market' && nonDemoSource(row.source_id)),
-      row => row.published_at
-    );
-    const infraArticles = sortDateDesc(
-      data.articles.filter(row => row.category === 'infrastructure' && nonDemoSource(row.source_id)),
-      row => row.published_at
-    );
-    const legalRows = sortDateDesc(data.legal, row => row.issued_date || row.effective_date);
-    const macroRows = ['usd-vnd-central-rate', 'sjc-gold-sell']
-      .map(id => data.production.latest.get(id))
-      .filter(Boolean);
+    const referenceDate=homeReferenceDate();
+    const ranked=rankedCandidates(data);
+    const today=window.IntelligenceSurfaces?.today?.(ranked,referenceDate) || [];
+    const metaByCategory={
+      market:{ label:'Market',href:'market.html?view=projects' },
+      legal:{ label:'Legal',href:'legal.html?view=documents' },
+      infrastructure:{ label:'Infrastructure',href:'infrastructure.html?view=projects' },
+      macro:{ label:'Macro',href:'macro.html?view=overview' }
+    };
 
-    return [
-      {
-        category: 'market',
-        label: 'Market',
-        count: data.projects.length,
-        count_label: `${data.projects.length} curated projects`,
-        href: 'market.html?view=projects',
-        items: marketArticles.slice(0, 2).map(row => ({
-          title: row.title,
-          meta: `${App.formatDate(row.published_at)} · ${sourceName(data.sources, row.source_id)}`,
-          href: row.subcategory === 'supply' ? 'market.html?view=supply-sales' : 'market.html?view=news'
-        }))
-      },
-      {
-        category: 'legal',
-        label: 'Legal',
-        count: data.legal.length,
-        count_label: `${data.legal.length} official documents`,
-        href: 'legal.html?view=documents',
-        items: legalRows.slice(0, 2).map(row => ({
-          title: `${row.document_number} · ${row.title}`,
-          meta: `Effective ${App.formatDate(row.effective_date)} · Government`,
-          href: 'legal.html?view=documents'
-        }))
-      },
-      {
-        category: 'infrastructure',
-        label: 'Infrastructure',
-        count: data.infrastructure.length,
-        count_label: `${data.infrastructure.length} infrastructure projects`,
-        href: 'infrastructure.html?view=projects',
-        items: infraArticles.slice(0, 2).map(row => ({
-          title: row.title,
-          meta: `${App.formatDate(row.published_at)} · ${sourceName(data.sources, row.source_id)}`,
-          href: 'infrastructure.html?view=timeline'
-        }))
-      },
-      {
-        category: 'macro',
-        label: 'Macro',
-        count: data.production.totalRecordCount,
-        count_label: `${data.production.totalRecordCount} production records`,
-        href: 'macro.html?view=overview',
-        items: macroRows.map(row => ({
-          title: productionTodayTitle(row),
-          meta: `${formatProductionPeriod(row)} · ${productionEvidenceLabel(row)}`,
-          href: row.indicator_id === 'usd-vnd-central-rate' ? 'macro.html?view=fx' : 'macro.html?view=gold'
-        }))
-      }
-    ];
+    return ['market','legal','infrastructure','macro'].map(category=>{
+      const items=today
+        .filter(row=>row.category===category)
+        .slice(0,2)
+        .map(row=>{
+          const item=formatRankedItem(row,data);
+          const sourceIds=row.ranking_evidence?.source_ids || [];
+          const sourceLabel=sourceIds.length ? sourceName(data.sources,sourceIds[0]) : 'Source-backed';
+          return {
+            title:item.title,
+            meta:`${item.importance_label} · ${sourceLabel}`,
+            href:item.href
+          };
+        });
+      return {
+        category,
+        label:metaByCategory[category].label,
+        count:items.length,
+        count_label:items.length
+          ? `${items.length} ranked update${items.length===1?'':'s'} today`
+          : 'No ranked updates today',
+        href:metaByCategory[category].href,
+        items
+      };
+    });
   }
 
   function rowsForIndicator(production, indicatorId) {
