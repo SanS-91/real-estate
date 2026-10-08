@@ -65,3 +65,17 @@ infra=mod.infrastructure_report(coverage_cfg,infra_rows)
 assert infra["history_ready_series"]>=3
 
 print("Phase 6.3 historical coverage expansion tests PASS")
+
+
+roadmap=json.loads((ROOT/"config/master-roadmap.json").read_text(encoding="utf-8"))
+phase6=next(x for x in roadmap["master_phases"] if x["id"]=="6")
+seq={x["work_package"]:x for x in roadmap["next_sequence"]}
+if seq["6.3"].get("status")=="complete":
+    prod_keys={
+      (x.get("scope_type"),tuple(x.get("region_ids") or []),tuple(x.get("segment_ids") or []),x.get("period"),x.get("source_id"))
+      for x in prod
+    }
+    for row in cfg["records"]:
+        key=(row.get("scope_type"),tuple(row.get("region_ids") or []),tuple(row.get("segment_ids") or []),row.get("period"),row.get("source_id"))
+        assert key in prod_keys
+    assert phase6["status"]=="complete"
