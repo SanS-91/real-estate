@@ -51,7 +51,7 @@ assert '<h2 id="today-title">Today</h2>' in index
 assert 'policy-refinancing-rate' in home_js
 assert 'Integrated data · 4 curated modules' in home_js
 assert 'group.count_label' in components
-assert "['#today-title', 'Latest', 'Mới nhất']" in loc_static
+assert "['#today-title', 'Today', 'Hôm nay']" in loc_static
 assert 'assets/js/home.js?v=' in index
 assert 'loadCanonicalHomeData' in home_js
 assert 'buildTodayGroups(data)' in home_js
