@@ -1,0 +1,61 @@
+{
+  "schema_version": 1,
+  "updated_at": "2026-10-08",
+  "targets": [
+    {
+      "target_id": "cbre-hcmc-q2-2026",
+      "source_id": "cbre-vietnam",
+      "observation_source_id": "cbre-vietnam-market",
+      "url": "https://www.cbrevietnam.com/insights/figures/ho-chi-minh-city-figures-q2-2026",
+      "period": "2026-Q2",
+      "period_type": "quarter",
+      "scope": "hcmc-residential",
+      "collector": "cbre_hcmc_figures",
+      "enabled": true
+    },
+    {
+      "target_id": "cushman-hcmc-residential-q2-2026",
+      "source_id": "cushman-wakefield-vietnam",
+      "observation_source_id": "cushman-wakefield-vietnam-market",
+      "url": "https://www.cushmanwakefield.com/en/vietnam/insights/ho-chi-minh-city-marketbeat/residential-marketbeat",
+      "period": "2026-Q2",
+      "period_type": "quarter",
+      "scope": "hcmc-residential",
+      "collector": "cushman_hcmc_residential",
+      "enabled": true
+    },
+    {
+      "target_id": "jll-hcmc-residential-q2-2026",
+      "source_id": "jll-vietnam",
+      "observation_source_id": "jll-vietnam-market",
+      "url": "https://www.jll.com/en-sea/insights/market-dynamics/ho-chi-minh-city-residential",
+      "period": "2026-Q2",
+      "period_type": "quarter",
+      "scope": "hcmc-residential",
+      "collector": "metadata_only",
+      "enabled": true
+    },
+    {
+      "target_id": "savills-vietnam-research-index",
+      "source_id": "savills-vietnam",
+      "observation_source_id": "savills-vietnam-market",
+      "url": "https://www.savills.com.vn/insight-and-opinion/research.aspx?f=date&p=&page=1&q=&rc=Vietnam&t=",
+      "period": null,
+      "period_type": null,
+      "scope": "vietnam-research-index",
+      "collector": "metadata_only",
+      "enabled": true
+    },
+    {
+      "target_id": "nam-long-news",
+      "source_id": "developer-official",
+      "observation_source_id": "nam-long-official",
+      "url": "https://www.namlongvn.com/tin-tuc/",
+      "period": null,
+      "period_type": null,
+      "scope": "developer-project-updates",
+      "collector": "metadata_only",
+      "enabled": true
+    }
+  ]
+}
