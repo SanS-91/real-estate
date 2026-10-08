@@ -12,7 +12,7 @@ Current master status:
 - Phase 2 — Data Architecture: complete.
 - Phase 3 — Simple Data Layer: complete.
 - Phase 4 — Source Registry & Auto Data Collection: complete; all four pillars now have structured collection-to-candidate paths with controlled promotion gates.
-- Phase 5 — Automation: in progress; unified operational health/stale/backlog visibility remains to be completed.
+- Phase 5 — Automation: complete; unified operational health now tracks workflow status, source/access mode, freshness and candidate backlog across all four pillars.
 - Phase 6 — Intelligence Database: in progress; Market is the most mature module and Project Detail is the first deep entity view.
 - Phase 7 — Intelligence / Ranking / optional AI: partial.
 
