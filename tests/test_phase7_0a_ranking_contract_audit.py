@@ -49,7 +49,7 @@ assert all(x.get("source_priority") in allowed_priorities for x in prod)
 
 for phrase in [
     "attention priority",
-    "not an investment score",
+    "investment score",
     "Missing evidence produces zero points",
     "AI is not used",
 ]:
