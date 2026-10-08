@@ -148,8 +148,9 @@
       DataStore.getArticles(),
       DataStore.getEvents(),
       DataStore.getSources(),
+      DataStore.getIntelligenceRankingRules(),
       loadHomeProduction()
-    ]).then(([projects, phases, marketObservations, legal, infrastructure, schedules, articles, events, sources, production]) => {
+    ]).then(([projects, phases, marketObservations, legal, infrastructure, schedules, articles, events, sources, rankingRules, production]) => {
       const sourceRows = payloadData(sources);
       return {
         projects: payloadData(projects),
@@ -161,6 +162,8 @@
         articles: payloadData(articles),
         events: payloadData(events),
         sources: new Map(sourceRows.map(row => [row.id, row])),
+        sourceRows,
+        rankingRules,
         production
       };
     });
