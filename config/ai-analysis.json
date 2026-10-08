@@ -1,0 +1,27 @@
+{
+  "schema_version": 1,
+  "updated_at": "2026-10-08",
+  "enabled": false,
+  "mode": "context-only",
+  "external_requests": false,
+  "endpoint": null,
+  "same_origin_only": true,
+  "max_context_items_per_section": 12,
+  "supported_actions": [
+    "summarize",
+    "compare",
+    "explain-legal-context",
+    "weekly-brief",
+    "ask-database"
+  ],
+  "principles": [
+    "AI is optional; the website must remain fully functional when AI is disabled.",
+    "No API keys, tokens, secrets or provider credentials may be stored in browser-accessible configuration.",
+    "AI may read normalized canonical evidence and provenance only; it is not a data source.",
+    "AI output must distinguish direct evidence from contextual relevance.",
+    "Missing values must remain missing and must not be inferred.",
+    "Legal relevance does not establish legal applicability to a project.",
+    "Listing asking prices must remain distinct from verified developer or research pricing.",
+    "AI output cannot mutate canonical or production datasets."
+  ]
+}
