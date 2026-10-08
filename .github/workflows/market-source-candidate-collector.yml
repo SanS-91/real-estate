@@ -63,6 +63,8 @@ jobs:
           print("Market candidate decisions:", r["counts"])
           print("Production write disabled until period freshness and source verification gates pass.")
           PY
+      - name: Audit source-period freshness
+        run: python scripts/market_freshness_gate.py
       - name: Upload candidates
         uses: actions/upload-artifact@v7
         with:
@@ -71,4 +73,5 @@ jobs:
             data/candidate/market/observations.json
             data/candidate/market/articles.json
             data/candidate/market/market-source-candidate-report.json
+            data/candidate/market/market-freshness-report.json
           retention-days: 14
