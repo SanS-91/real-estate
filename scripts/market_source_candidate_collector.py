@@ -253,6 +253,15 @@ def main():
             if t["collector"] in {"cbre_market","cushman_market"}:
                 parsed=module.parse(html,final_url,datetime.now(timezone.utc).isoformat())
                 built=build_cbre_rows(t,parsed,final_url) if t["collector"]=="cbre_market" else build_cushman_rows(t,parsed,final_url)
+                if t["collector"] == "cbre_market" and t.get("auto_discovered"):
+                    for row in built:
+                        row["source_verification"]={
+                            "period":evidence["period"],
+                            "publication_date_verified":bool(publication_evidence["date"]),
+                            "source_page":final_url,
+                            "discovery_url":t.get("discovery_url"),
+                            "metric_evidence":row.get("methodology_note","")[:400],
+                        }
                 decisions=[]
                 for row in built:
                     prev=obs_by_key.get(existing_obs_key(row))
