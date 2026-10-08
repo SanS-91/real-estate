@@ -47,7 +47,7 @@ for banned in ['Sample township', 'Illustrative pricing', 'Sample land regulatio
     assert banned not in joined
 
 assert 'Integrated curated data.' in index
-assert '<h2 id="today-title">Latest</h2>' in index
+assert '<h2 id="today-title">Today</h2>' in index
 assert 'policy-refinancing-rate' in home_js
 assert 'Integrated data · 4 curated modules' in home_js
 assert 'group.count_label' in components
@@ -57,6 +57,8 @@ assert 'loadCanonicalHomeData' in home_js
 assert 'buildTodayGroups(data)' in home_js
 assert 'buildChanges(data)' in home_js
 assert 'buildWeekly(data)' in home_js
+assert 'buildTopDevelopments(data)' in home_js
+assert 'data-home-top-developments' in index
 assert 'assets/js/localization-dynamic.js?v=5.0R1' in index
 
 # Weekly recap contains only observations inside 01-07 Oct 2026 in this curated build.
