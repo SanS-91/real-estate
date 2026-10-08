@@ -1,0 +1,32 @@
+name: Market Phase 5.1 UI Polish Validation
+
+on:
+  pull_request:
+    paths:
+      - 'market.html'
+      - 'assets/css/main.css'
+      - 'assets/js/localization-dynamic.js'
+      - 'tests/test_market_5_1_ui_polish.py'
+      - '.github/workflows/market51-ui-polish-validation.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  validate:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 6
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v7
+      - name: Set up Python
+        uses: actions/setup-python@v7
+        with:
+          python-version: '3.12'
+      - name: JavaScript syntax
+        run: node --check assets/js/localization-dynamic.js
+      - name: UI polish contract
+        run: python tests/test_market_5_1_ui_polish.py
+      - name: Market regression
+        run: python tests/test_phase4_3c_market_registry.py
