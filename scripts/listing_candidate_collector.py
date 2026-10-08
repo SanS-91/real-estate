@@ -7,6 +7,7 @@ import json
 import re
 import time
 from datetime import datetime, timezone
+from zoneinfo import ZoneInfo
 from urllib.parse import urlparse
 
 import requests
@@ -239,7 +240,7 @@ def collect(observation_date: str, project_filter: set[str] | None = None) -> tu
 
 def main():
     parser = argparse.ArgumentParser()
-    parser.add_argument("--date", default=datetime.now(timezone.utc).date().isoformat())
+    parser.add_argument("--date", default=datetime.now(ZoneInfo("Asia/Ho_Chi_Minh")).date().isoformat())
     parser.add_argument("--project", action="append", default=[])
     parser.add_argument("--html-file")
     parser.add_argument("--base-project")
