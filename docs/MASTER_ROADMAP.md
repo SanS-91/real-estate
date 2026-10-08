@@ -67,12 +67,10 @@ The structured collector now parses official project/milestone updates, proposes
    - Master Phase 5 is closed.
 
 4. **6.0 — Cross-module Intelligence Model**
-   - Define shared entity-centric queries:
-     - Project
-     - Region
-     - Developer
-     - Time
-   - Define cross-module relationship contracts before adding more UI.
+   - COMPLETE.
+   - Shared entity-centric query contract is defined for Project / Region / Developer / Time.
+   - Direct vs contextual evidence semantics are centralized in `IntelligenceContext`.
+   - Next: use the shared engine to deepen Project Intelligence without duplicating relationship logic.
 
 5. **6.1 — Project Intelligence Deepening**
    - Complete project dossiers with Market + Legal + Infrastructure + relevant Macro evidence.
