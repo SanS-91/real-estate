@@ -2316,3 +2316,9 @@ button, a, input, select { outline-offset: 3px; }
   .data-health-grid,
   .maintenance-operations-grid { grid-template-columns:1fr; }
 }
+
+.maintenance-operation-card.is-healthy .data-health-status { background:#eff7f2; color:#216e46; }
+.maintenance-operation-card.is-running .data-health-status { background:#eef2f6; color:#344b63; }
+.maintenance-operation-card.is-review .data-health-status { background:#fff8e8; color:#8a5b00; }
+.maintenance-operation-card.is-degraded .data-health-status,
+.maintenance-operation-card.is-stale .data-health-status { background:#fff0ee; color:#b42318; }
