@@ -21,7 +21,7 @@ assert 'Bank Funding Growth YTD ·' in loc
 assert 'Published quarterly new-supply observations' in loc
 
 for page in (index,market,infra,macro,legal):
-    assert 'assets/js/localization-dynamic.js?v=4.9.1' in page
+    assert 'assets/js/localization-dynamic.js?v=5.0R1' in page
 assert 'assets/js/home.js?v=4.9.1' in index
 
 print('Phase 4.9.1 UI polish tests PASS')
