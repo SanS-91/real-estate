@@ -1,0 +1,33 @@
+name: Phase 5.7B Infrastructure Collector Validation
+
+on:
+  pull_request:
+    paths:
+      - 'scripts/infrastructure_candidate_collector.py'
+      - 'tests/test_phase5_7b_infrastructure_candidate_collector.py'
+      - 'tests/fixtures/infrastructure_official_update_sample.html'
+      - '.github/workflows/infrastructure-candidate-collector.yml'
+      - '.github/workflows/phase57b-infrastructure-collector-validation.yml'
+      - 'docs/PHASE5_7B_INFRASTRUCTURE_CANDIDATE_COLLECTOR.md'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  validate:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v7
+      - uses: actions/setup-python@v7
+        with:
+          python-version: '3.12'
+      - name: Install dependencies
+        run: pip install -r requirements.txt
+      - name: Syntax
+        run: python -m py_compile scripts/infrastructure_candidate_collector.py
+      - name: Phase 5.7B contract
+        run: python tests/test_phase5_7b_infrastructure_candidate_collector.py
+      - name: Fixture smoke
+        run: python scripts/infrastructure_candidate_collector.py --fixture tests/fixtures/infrastructure_official_update_sample.html
