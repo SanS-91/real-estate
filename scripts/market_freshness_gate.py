@@ -22,20 +22,26 @@ def evaluate(targets, report):
         # and evidence URL, rather than trusting configuration period or fetch time.
         source_period = item.get("verified_source_period") or item.get("detected_period")
         source_date = item.get("verified_source_date")
-        expected = target.get("period")
+        expected = target.get("period") or item.get("configured_period")
         passed = bool(
             item.get("status") == "parsed"
             and source_period and source_date
             and source_period == expected
             and item.get("source_period_evidence_url")
         )
+        is_new = any(d.get("status") == "new" for d in item.get("decisions", []))
+        decision = (
+            "verified-new-candidate" if passed and is_new else
+            "verified-existing-source" if passed else
+            "manual-review-required"
+        )
         results.append({
             "target_id": item.get("target_id"),
             "configured_period": expected,
             "verified_source_period": source_period,
             "verified_source_date": source_date,
-            "decision": "freshness-verified" if passed else "manual-review-required",
-            "reason": "Source period/date evidence not independently verified" if not passed else "Source period verified against configured target",
+            "decision": decision,
+            "reason": "Source period/date evidence not independently verified" if not passed else "Period and date match source; metric auto-publish disabled",
         })
     return {"schema_version": 1, "auto_publish_eligible": False,
             "reason": "Auto-publish remains disabled pending end-to-end tests and approval",
