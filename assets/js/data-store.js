@@ -76,6 +76,7 @@
     getProcessedMacroPublishMeta: () => loadDirectJSON('./data/processed/macro/repository-publish.json', 'processed macro publish metadata'),
     getEvents: () => loadJSON('events/events.json'),
     getArticles: () => loadJSON('articles/articles.json'),
-    getDataHealth: () => loadDirectJSON('./data/state/data-health.json', 'unified data health')
+    getDataHealth: () => loadDirectJSON('./data/state/data-health.json', 'unified data health'),
+    getIntelligenceModel: () => loadDirectJSON('./config/intelligence_model.json', 'intelligence model')
   };
 })();

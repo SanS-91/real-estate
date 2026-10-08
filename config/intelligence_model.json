@@ -1,0 +1,139 @@
+{
+  "schema_version": 1,
+  "updated_at": "2026-10-08",
+  "purpose": "Shared cross-module relationship and time-query contract for Project, Region, Developer and Time intelligence.",
+  "subject_types": {
+    "project": {
+      "canonical_dataset": "data/mock/market/projects.json",
+      "direct_relationships": [
+        "region_ids",
+        "developer_ids",
+        "lead_developer_id",
+        "related_legal_topic_ids",
+        "related_infrastructure_ids"
+      ]
+    },
+    "region": {
+      "canonical_dataset": "data/mock/core/regions.json",
+      "relationship_strategy": "resolve projects by project.region_ids, then derive developers/legal topics/project-linked infrastructure; also include infrastructure directly scoped to the region"
+    },
+    "developer": {
+      "canonical_dataset": "data/mock/core/developers.json",
+      "relationship_strategy": "resolve projects by project.developer_ids or lead_developer_id, then derive regions/legal topics/project-linked infrastructure"
+    }
+  },
+  "evidence_contract": {
+    "articles": {
+      "dataset": "data/mock/articles/articles.json",
+      "direct_keys": [
+        "project_ids",
+        "developer_ids",
+        "region_ids",
+        "infrastructure_project_ids"
+      ],
+      "date_fields": [
+        "published_at"
+      ]
+    },
+    "events": {
+      "dataset": "data/mock/events/events.json",
+      "direct_keys": [
+        "entity_type",
+        "entity_id",
+        "region_ids"
+      ],
+      "date_fields": [
+        "event_date"
+      ]
+    },
+    "project_market_observations": {
+      "dataset": "data/mock/market/observations.json",
+      "direct_keys": [
+        "project_id"
+      ],
+      "contextual_keys": [
+        "region_ids"
+      ],
+      "date_fields": [
+        "source_date",
+        "period"
+      ]
+    },
+    "listing_market": {
+      "dataset": "data/mock/market/listing-observations.json",
+      "direct_keys": [
+        "project_id"
+      ],
+      "date_fields": [
+        "observation_date"
+      ]
+    },
+    "legal_documents": {
+      "dataset": "data/mock/legal/documents.json",
+      "relationship_note": "related through controlled legal topics only; topic relevance does not imply legal applicability",
+      "date_fields": [
+        "issued_date",
+        "effective_date"
+      ]
+    },
+    "infrastructure_projects": {
+      "dataset": "data/mock/infrastructure/projects.json",
+      "direct_keys": [
+        "related_real_estate_project_ids"
+      ],
+      "contextual_keys": [
+        "region_ids"
+      ]
+    },
+    "infrastructure_schedules": {
+      "dataset": "data/mock/infrastructure/schedules.json",
+      "relationship_key": "infrastructure_project_id",
+      "date_fields": [
+        "announced_date",
+        "target_period"
+      ]
+    },
+    "macro": {
+      "dataset": "data/processed/macro/observations.json",
+      "relationship_note": "macro is contextual evidence, never a direct project/developer relation",
+      "date_fields": [
+        "data_date",
+        "period",
+        "published_at"
+      ],
+      "contextual_indicator_ids": [
+        "usd-vnd-central-rate",
+        "sjc-gold-sell",
+        "credit-growth-ytd",
+        "cpi-yoy",
+        "deposit-rate-12m",
+        "policy-refinancing-rate"
+      ]
+    }
+  },
+  "time_contract": {
+    "inclusive": true,
+    "query_fields": [
+      "from",
+      "to"
+    ],
+    "accepted_granularity": [
+      "date",
+      "month",
+      "quarter",
+      "year"
+    ],
+    "period_rules": {
+      "YYYY-Qn": "quarter-end",
+      "YYYY-MM": "month-end",
+      "YYYY": "year-end"
+    },
+    "missing_date_behavior": "retain in entity context but exclude from bounded time evidence"
+  },
+  "semantics": {
+    "direct": "Entity is explicitly linked by canonical IDs.",
+    "contextual": "Evidence shares a controlled region/time context but is not a direct entity claim.",
+    "topic_relevance": "Legal topic overlap is a research shortcut only, not applicability.",
+    "macro_context": "Macro observations are broad context and must never be presented as project-specific facts."
+  }
+}

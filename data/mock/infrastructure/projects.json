@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "build_id": "phase4.3b-infrastructure-registry-20261007",
-  "generated_at": "2026-10-07T00:20:00+07:00",
+  "generated_at": "2026-10-08T15:08:55.288Z",
   "record_count": 8,
   "data": [
     {
@@ -148,7 +148,6 @@
       "current_progress_note": "Dự án đang triển khai thủ tục, GPMB và chuẩn bị đầu tư; Chính phủ đặt mục tiêu phấn đấu hoàn thành cuối 2028, trong khi khung triển khai dự án kéo đến 2029.",
       "related_real_estate_project_ids": [
         "waterpoint",
-        "eco-retreat",
         "izumi-city"
       ],
       "summary": "Vành đai liên vùng quy mô lớn của vùng TPHCM. Registry tách mục tiêu tăng tốc cuối 2028 khỏi khung tiến độ dự án đến 2029 để tránh mất lịch sử."
