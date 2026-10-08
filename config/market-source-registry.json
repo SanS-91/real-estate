@@ -1,0 +1,79 @@
+{
+  "schema_version": 1,
+  "updated_at": "2026-10-08",
+  "policy_note": "Source registry for market-data provenance. Automation is enabled only where access is stable and permitted; blocked sources remain assisted/manual. Source roles are kept separate so listing asking prices are not mixed with official/consultancy market benchmarks.",
+  "sources": [
+    {
+      "source_id": "batdongsan-com-vn",
+      "label": "Batdongsan.com.vn",
+      "source_role": "listing-portal",
+      "access_mode": "assisted-browser",
+      "automation_status": "blocked-on-github-hosted-runner",
+      "supported_layers": [
+        "listing-asking"
+      ],
+      "primary_use": "Project-level asking range, 1Y listing trend, popular area; listing counts/views ancillary only."
+    },
+    {
+      "source_id": "developer-official",
+      "label": "Developer official sources",
+      "source_role": "primary-official",
+      "access_mode": "automate-where-stable",
+      "automation_status": "eligible",
+      "supported_layers": [
+        "project-official",
+        "launch-pricing",
+        "sales-update"
+      ],
+      "primary_use": "Project/product/launch/pricing and developer-reported sales updates."
+    },
+    {
+      "source_id": "cbre-vietnam",
+      "label": "CBRE Vietnam",
+      "source_role": "consultancy-research",
+      "access_mode": "automate-where-stable",
+      "automation_status": "eligible",
+      "supported_layers": [
+        "market-benchmark",
+        "market-report"
+      ],
+      "primary_use": "Supply, sales/absorption and benchmark market research."
+    },
+    {
+      "source_id": "savills-vietnam",
+      "label": "Savills Vietnam",
+      "source_role": "consultancy-research",
+      "access_mode": "automate-where-stable",
+      "automation_status": "eligible",
+      "supported_layers": [
+        "market-benchmark",
+        "market-report"
+      ],
+      "primary_use": "Supply, absorption, pricing and segment benchmark research."
+    },
+    {
+      "source_id": "jll-vietnam",
+      "label": "JLL Vietnam",
+      "source_role": "consultancy-research",
+      "access_mode": "automate-where-stable",
+      "automation_status": "eligible",
+      "supported_layers": [
+        "market-benchmark",
+        "market-report"
+      ],
+      "primary_use": "Market supply, demand and benchmark research."
+    },
+    {
+      "source_id": "cushman-wakefield-vietnam",
+      "label": "Cushman & Wakefield Vietnam",
+      "source_role": "consultancy-research",
+      "access_mode": "automate-where-stable",
+      "automation_status": "eligible",
+      "supported_layers": [
+        "market-benchmark",
+        "market-report"
+      ],
+      "primary_use": "Market supply, demand, pricing and outlook research."
+    }
+  ]
+}
