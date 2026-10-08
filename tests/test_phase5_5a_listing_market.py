@@ -62,7 +62,7 @@ assert 'assets/js/data-store.js?v=5.5A1' in research_html
 assert 'assets/js/research.js?v=5.5B1' in research_html
 assert 'assets/css/main.css?v=5.5A1' in research_html
 assert 'assets/js/data-store.js?v=5.5A1' in market_html
-assert 'assets/js/market.js?v=5.5B1S1' in market_html
-assert 'assets/css/main.css?v=5.5B1S1' in market_html
+assert 'assets/js/market.js?v=5.5C1' in market_html
+assert 'assets/css/main.css?v=5.5C1' in market_html
 
 print('Phase 5.5A Listing Market Intelligence tests PASS')
