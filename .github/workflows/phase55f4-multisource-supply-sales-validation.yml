@@ -1,0 +1,33 @@
+name: Phase 5.5F4 Multi-source Supply Sales Validation
+
+on:
+  pull_request:
+    paths:
+      - 'assets/js/market.js'
+      - 'assets/css/main.css'
+      - 'tests/test_phase5_5f4_multisource_supply_sales_ui.py'
+      - '.github/workflows/phase55f4-multisource-supply-sales-validation.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  validate:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v7
+      - uses: actions/setup-python@v7
+        with:
+          python-version: '3.12'
+      - name: JavaScript syntax
+        run: node --check assets/js/market.js
+      - name: Phase 5.5F4 contract
+        run: python tests/test_phase5_5f4_multisource_supply_sales_ui.py
+      - name: Market regressions
+        run: |
+          python tests/test_market_5_1_ui_polish.py
+          python tests/test_phase5_5b1_market_surface.py
+          python tests/test_phase5_5a_listing_market.py
+          python tests/test_phase4_3c_market_registry.py
