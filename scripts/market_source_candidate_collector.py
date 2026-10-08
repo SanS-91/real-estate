@@ -193,6 +193,24 @@ def main():
                 discovery_reports.append({"index":final_index,"status":"discovered","links_found":len(urls),"targets_added":added})
             except Exception as exc:
                 discovery_reports.append({"index":t["url"],"status":"discovery-error","error":f"{type(exc).__name__}: {exc}"[:300]})
+    if not args.target:
+        index_url="https://www.cbrevietnam.com/insights"
+        try:
+            http, final_index, index_html=fetch(index_url)
+            if http == 200:
+                found=discover_cbre_hcmc_reports(index_html,final_index,max_items=8)
+                existing_urls={v["url"].rstrip("/") for v in selected}
+                added=0
+                for discovered in found:
+                    if discovered["url"].rstrip("/") not in existing_urls:
+                        selected.append(discovered)
+                        existing_urls.add(discovered["url"].rstrip("/"))
+                        added+=1
+                discovery_reports.append({"index":final_index,"status":"discovered","links_found":len(found),"targets_added":added})
+            else:
+                discovery_reports.append({"index":index_url,"status":"http-error","http_status":http})
+        except Exception as exc:
+            discovery_reports.append({"index":index_url,"status":"discovery-error","error":f"{type(exc).__name__}: {exc}"[:300]})
     if args.target:
         wanted=set(args.target)
         selected=[x for x in selected if x.get("target_id") in wanted]
@@ -217,6 +235,8 @@ def main():
                 continue
 
             evidence=extract_period_evidence(html, final_url)
+            publication_evidence=extract_publication_date(html)
+            t["verified_source_date"]=publication_evidence["date"]
             if t.get("period_type") == "quarter" and evidence["period"] != t.get("period"):
                 target_reports.append({
                     "target_id": t["target_id"], "status": "period-review-required",
@@ -245,7 +265,7 @@ def main():
                         else:
                             state="unchanged"
                     decisions.append({"id":row["id"],"status":state,"segment":row["segment_ids"][0],"new_supply":row.get("new_supply"),"absorption_rate":row.get("absorption_rate")})
-                target_reports.append({"target_id":t["target_id"],"status":"parsed","type":"market-observation","records":len(built),"decisions":decisions})
+                target_reports.append({"target_id":t["target_id"],"status":"parsed" if built else "no-data","type":"market-observation","records":len(built),"decisions":decisions,"configured_period":t.get("period"),"verified_source_period":evidence["period"],"verified_source_date":publication_evidence["date"],"source_period_evidence_url":final_url if evidence["period"] else None,"publication_date_method":publication_evidence["method"]})
                 if t["collector"]=="cushman_market" and hasattr(module,"parse_article"):
                     parsed_article=module.parse_article(html,final_url,datetime.now(timezone.utc).isoformat())
                     article=build_research_article(t,parsed_article,final_url)
