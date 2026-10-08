@@ -1,27 +1,7 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-10-08T08:42:59.462015+00:00",
+  "generated_at": "2026-10-08T12:36:04.335455+00:00",
   "candidate_only": true,
-  "record_count": 1,
-  "data": [
-    {
-      "id": "obs-hcmc-landed-2026-q2-cbre",
-      "scope_type": "region-segment",
-      "region_ids": ["hcmc"],
-      "segment_ids": ["landed"],
-      "period": "2026-Q2",
-      "period_type": "quarter",
-      "new_supply": 1934,
-      "sales_units": null,
-      "absorption_rate": null,
-      "average_asp": null,
-      "asp_unit": "vnd-per-m2-land",
-      "currency": "VND",
-      "price_basis": null,
-      "source_id": "cbre-vietnam-market",
-      "source_date": "2026-08-12",
-      "source_url": "https://www.cbrevietnam.com/vi-vn/insights/figures/c%E1%BA%ADp-nh%E1%BA%ADt-th%E1%BB%8B-tr%C6%B0%E1%BB%9Dng-b%C4%91s-h%E1%BB%93-ch%C3%AD-minh-qu%C3%BD-2-2026",
-      "methodology_note": "CBRE residential Q2 figure: newly launched landed-property units. Parsed automatically into candidate; requires review before promotion."
-    }
-  ]
+  "record_count": 0,
+  "data": []
 }
