@@ -21,10 +21,10 @@ on:
       - '.github/workflows/market-source-candidate-collector.yml'
   workflow_dispatch:
   schedule:
-    - cron: '30 2 * * 2,5'
+    - cron: '30 2 * * *'
 
 permissions:
-  contents: read
+  contents: write
 
 jobs:
   collect:
@@ -73,6 +73,23 @@ jobs:
           PY
       - name: Audit source-period freshness
         run: python scripts/market_freshness_gate.py
+      - name: Preview strict official-news auto-promotion
+        run: python scripts/market_verified_auto_promotion.py --mode preview
+      - name: Publish verified publisher news to production JSON
+        if: github.ref == 'refs/heads/main' && github.event_name != 'pull_request'
+        run: python scripts/market_verified_auto_promotion.py --mode promote
+      - name: Commit only verified official news to main
+        if: github.ref == 'refs/heads/main' && github.event_name != 'pull_request'
+        run: |
+          if git diff --quiet -- data/mock/articles/articles.json; then
+            echo "No eligible verified news."
+            exit 0
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data/mock/articles/articles.json
+          git commit -m "data(market): append newly verified official developer news"
+          git push
       - name: Upload candidates
         uses: actions/upload-artifact@v7
         with:
@@ -82,4 +99,5 @@ jobs:
             data/candidate/market/articles.json
             data/candidate/market/market-source-candidate-report.json
             data/candidate/market/market-freshness-report.json
+            data/candidate/market/market-verified-auto-promotion-report.json
           retention-days: 14
