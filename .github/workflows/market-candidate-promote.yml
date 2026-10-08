@@ -1,0 +1,65 @@
+name: Market Candidate Preview Promote
+
+on:
+  workflow_dispatch:
+    inputs:
+      mode:
+        description: Preview candidate differences or promote approved records
+        required: true
+        default: preview
+        type: choice
+        options:
+          - preview
+          - promote
+
+permissions:
+  contents: write
+
+jobs:
+  market-candidate:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v7
+      - uses: actions/setup-python@v7
+        with:
+          python-version: '3.12'
+      - name: Preview or promote market candidates
+        run: python scripts/market_candidate_promotion.py --mode ${{ inputs.mode }}
+      - name: Summary
+        run: |
+          echo "## Market Candidate Preview / Promote" >> "$GITHUB_STEP_SUMMARY"
+          python - <<'PY' >> "$GITHUB_STEP_SUMMARY"
+          import json
+          from pathlib import Path
+          r=json.loads(Path("data/candidate/market/market-promotion-report.json").read_text())
+          print(f"- Mode: **{r['mode']}**")
+          print(f"- Candidate observations: **{r['candidate_observations']}**")
+          print(f"- Candidate articles: **{r['candidate_articles']}**")
+          for k,v in r.get("counts",{}).items():
+              print(f"- {k}: **{v}**")
+          print(f"- Production written: **{r['production_written']}**")
+          if r.get("production_written"):
+              print(f"- Added observations: **{r.get('added_observations',0)}**")
+              print(f"- Added articles: **{r.get('added_articles',0)}**")
+              print(f"- Final observations: **{r.get('final_observations')}**")
+              print(f"- Final articles: **{r.get('final_articles')}**")
+          PY
+      - name: Upload review report
+        uses: actions/upload-artifact@v7
+        with:
+          name: market-promotion-report
+          path: data/candidate/market/market-promotion-report.json
+          retention-days: 14
+      - name: Commit promoted production
+        if: inputs.mode == 'promote'
+        run: |
+          if git diff --quiet -- data/mock/market/observations.json data/mock/articles/articles.json; then
+            echo "No new production records to commit."
+            exit 0
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data/mock/market/observations.json data/mock/articles/articles.json
+          git commit -m "data(market): promote approved CBRE and Nam Long candidates"
+          git push
