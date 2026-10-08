@@ -101,62 +101,60 @@
   }
 
   function contextFor(subject) {
-    let projects = [];
-    let regionIds = [];
-    let developerIds = [];
+    if (!window.IntelligenceContext || !subject) return null;
+    const evidence=IntelligenceContext.query({
+      projects:data.projects,
+      regions:data.regions,
+      developers:data.developers,
+      infrastructure:data.infrastructure,
+      infrastructureSchedules:data.schedules,
+      marketObservations:data.marketObservations,
+      listingObservations:data.listingObservations,
+      legal:data.legal,
+      articles:data.articles,
+      events:data.events,
+      macroRows:data.macroRows
+    }, {
+      type:state.type,
+      id:subject.id,
+      includeMacroContext:true,
+      macroIndicatorIds:[
+        'usd-vnd-central-rate',
+        'sjc-gold-sell',
+        'credit-growth-ytd',
+        'cpi-yoy',
+        'deposit-rate-12m',
+        'policy-refinancing-rate'
+      ]
+    });
+    if (!evidence) return null;
 
-    if (state.type === 'project') {
-      projects = [subject];
-      regionIds = subject.region_ids || [];
-      developerIds = subject.developer_ids || (subject.lead_developer_id ? [subject.lead_developer_id] : []);
-    } else if (state.type === 'developer') {
-      developerIds = [subject.id];
-      projects = data.projects.filter(project =>
-        (project.developer_ids || []).includes(subject.id) || project.lead_developer_id === subject.id
-      );
-      regionIds = unique([...(subject.region_ids || []), ...projects.flatMap(project => project.region_ids || [])]);
-    } else {
-      regionIds = [subject.id];
-      projects = data.projects.filter(project => (project.region_ids || []).includes(subject.id));
-      developerIds = unique(projects.flatMap(project =>
-        project.developer_ids || (project.lead_developer_id ? [project.lead_developer_id] : [])
-      ));
-    }
+    const relations=evidence.relations || {};
+    const direct=evidence.direct || {};
+    const contextual=evidence.contextual || {};
+    const infrastructure=direct.infrastructure || [];
+    const articles=(direct.articles || []).filter(row => isRealSource(row.source_id));
+    const events=(direct.events || []).filter(row => (row.source_ids || []).some(isRealSource));
 
-    const projectIds = projects.map(project => project.id);
-    const legalTopicIds = unique(projects.flatMap(project => project.related_legal_topic_ids || []));
-    const infrastructureIds = unique([
-      ...projects.flatMap(project => project.related_infrastructure_ids || []),
-      ...data.infrastructure
-        .filter(infra => projectIds.some(id => (infra.related_real_estate_project_ids || []).includes(id)))
-        .map(infra => infra.id)
-    ]);
-
-    const infrastructure = data.infrastructure.filter(infra =>
-      infrastructureIds.includes(infra.id) ||
-      (state.type === 'region' && (infra.region_ids || []).includes(subject.id))
-    );
-
-    const legalDocuments = data.legal.filter(doc =>
-      (doc.topic_ids || []).some(id => legalTopicIds.includes(id))
-    );
-
-    const articles = data.articles.filter(article =>
-      ((article.project_ids || []).some(id => projectIds.includes(id)) ||
-      (article.developer_ids || []).some(id => developerIds.includes(id)) ||
-      (article.region_ids || []).some(id => regionIds.includes(id)) ||
-      (article.infrastructure_project_ids || []).some(id => infrastructure.map(x => x.id).includes(id))) &&
-      isRealSource(article.source_id)
-    );
-
-    const events = data.events.filter(event =>
-      ((event.entity_type === 'real-estate-project' && projectIds.includes(event.entity_id)) ||
-      (event.entity_type === 'infrastructure-project' && infrastructure.map(x => x.id).includes(event.entity_id)) ||
-      (event.region_ids || []).some(id => regionIds.includes(id))) &&
-      (event.source_ids || []).some(isRealSource)
-    );
-
-    return { subject, projects, projectIds, regionIds, developerIds, legalTopicIds, infrastructure, legalDocuments, articles, events };
+    return {
+      subject,
+      projects:direct.projects || [],
+      projectIds:relations.projectIds || [],
+      regionIds:relations.regionIds || [],
+      developerIds:relations.developerIds || [],
+      legalTopicIds:relations.legalTopicIds || [],
+      infrastructure,
+      infrastructureSchedules:direct.infrastructureSchedules || [],
+      legalDocuments:contextual.legalDocuments || [],
+      regionalMarketObservations:contextual.regionalMarketObservations || [],
+      macroContext:contextual.macroObservations || [],
+      listingObservations:direct.listingObservations || [],
+      marketObservations:direct.marketObservations || [],
+      articles,
+      events,
+      intelligence:evidence,
+      semantics:evidence.semantics || {}
+    };
   }
 
   function watchKey(type, id) {
