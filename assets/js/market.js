@@ -10,6 +10,7 @@
     segment: '',
     status: '',
     sort: 'latest',
+    source: '',
     priceLayer: 'listing'
   };
   let data = { regions: [], developers: [], projects: [], phases: [], observations: [], listingObservations: [], listingComparables: [], articles: [], infrastructureProjects: [], legalTopics: [] };
@@ -139,7 +140,7 @@
 
   function parseState() {
     state.view = getView();
-    ['q','region','developer','segment','status','sort'].forEach(key => {
+    ['q','region','developer','segment','status','sort','source'].forEach(key => {
       const value = App.getQueryParam(key);
       if (value !== null) state[key] = value;
     });
@@ -210,9 +211,28 @@
     ];
   }
 
-  function hcmcSeries(segment = 'apartment') {
-    return data.observations
-      .filter(item => item.scope_type === 'region-segment' && item.period_type === 'quarter' && (item.region_ids || []).includes('hcmc') && (item.segment_ids || []).includes(segment))
+  function marketSourceLabel(sourceId) {
+    const labels = {
+      'cbre-vietnam-market': 'CBRE Vietnam Research',
+      'savills-vietnam-market': 'Savills Vietnam Research',
+      'jll-vietnam-market': 'JLL Vietnam Research',
+      'cushman-wakefield-vietnam-market': 'Cushman & Wakefield Vietnam Research'
+    };
+    return labels[sourceId] || String(sourceId || '—').replaceAll('-', ' ');
+  }
+
+  function preferredMarketSource(rows) {
+    const ids = [...new Set(rows.map(item => item.source_id).filter(Boolean))];
+    if (ids.includes('cbre-vietnam-market')) return 'cbre-vietnam-market';
+    return ids[0] || '';
+  }
+
+  function hcmcSeries(segment = 'apartment', sourceId = null) {
+    const rows = data.observations
+      .filter(item => item.scope_type === 'region-segment' && item.period_type === 'quarter' && (item.region_ids || []).includes('hcmc') && (item.segment_ids || []).includes(segment));
+    const selected = sourceId || preferredMarketSource(rows);
+    return rows
+      .filter(item => !selected || item.source_id === selected)
       .sort((a,b) => String(a.period).localeCompare(String(b.period)));
   }
 
@@ -321,14 +341,31 @@
     const region = state.region;
     const segment = state.segment;
     const regionObj = Resolver.getEntity('region', region);
-    const rows = data.observations
+    const allRows = data.observations
       .filter(item => item.scope_type === 'region-segment' && (item.region_ids || []).includes(region) && (item.segment_ids || []).includes(segment))
-      .sort((a,b) => String(a.period).localeCompare(String(b.period)));
+      .sort((a,b) => String(a.period).localeCompare(String(b.period)) || marketSourceLabel(a.source_id).localeCompare(marketSourceLabel(b.source_id)));
+    const sourceIds = [...new Set(allRows.map(item => item.source_id).filter(Boolean))];
+    if (!state.source || !sourceIds.includes(state.source)) {
+      state.source = preferredMarketSource(allRows);
+      if (state.source) App.setQueryParam('source', state.source);
+      else App.removeQueryParam('source');
+    }
+    const rows = state.source ? allRows.filter(item => item.source_id === state.source) : allRows;
+    const latest = rows[rows.length - 1] || null;
+    const sourceOptions = sourceIds.map(id => option(marketSourceLabel(id), id, state.source)).join('');
+    const sourceControl = `
+      <label class="filter-field market-source-filter">
+        <span>Source</span>
+        <select data-filter="source">${sourceOptions || option('No source','',state.source)}</select>
+      </label>`;
+    const comparisonRows = [...allRows].sort((a,b) => String(b.period).localeCompare(String(a.period)) || marketSourceLabel(a.source_id).localeCompare(marketSourceLabel(b.source_id)));
     const html = `
-      <div class="view-intro"><div><span class="eyebrow">Published observations</span><h2>Supply &amp; Sales</h2><p>Only source-published metrics are stored. Missing sales, absorption or price values remain blank rather than being inferred.</p></div></div>
+      <div class="view-intro"><div><span class="eyebrow">Published observations</span><h2>Supply &amp; Sales</h2><p>Metrics are source-specific. Select one research source for the chart; the comparison table keeps multiple sources for the same period visible without blending them.</p></div></div>
       ${filterToolbar({ includeDeveloper:false, includeSegment:true, includeStatus:false })}
-      <section class="section"><div class="section-header"><h2 class="section-title">${esc(regionObj?.name || 'Selected Region')} · ${esc(segment.replaceAll('-',' '))}</h2></div><div class="section-body"><div class="chart-frame chart-frame--large"><canvas id="market-supply-sales"></canvas></div><p class="chart-note">Latest source: ${rows.length ? sourceRef(rows[rows.length-1].source_id,{sourceDate:rows[rows.length-1].source_date,period:rows[rows.length-1].period,sourceUrl:rows[rows.length-1].source_url}) : '—'}</p></div></section>
-      <section class="section"><div class="section-header"><h2 class="section-title">Observation History</h2></div><div class="section-body section-body--table"><div class="table-wrap"><table class="data-table"><thead><tr><th>Period</th><th class="numeric">New Supply</th><th class="numeric">Sales</th><th class="numeric">Absorption</th><th class="numeric">Average ASP</th><th>Source</th></tr></thead><tbody>${rows.map(row=>`<tr><td>${esc(row.period)}</td><td class="numeric">${esc(formatCompact(row.new_supply))}</td><td class="numeric">${esc(formatCompact(row.sales_units))}</td><td class="numeric">${esc(formatPercent(row.absorption_rate))}</td><td class="numeric">${esc(formatAsp(row.average_asp))}</td><td>${sourceRef(row.source_id,{sourceDate:row.source_date,period:row.period,methodology:row.methodology_note,sourceUrl:row.source_url})}</td></tr>`).join('') || '<tr><td colspan="6" class="table-empty">No observations for this region.</td></tr>'}</tbody></table></div></div></section>`;
+      <div class="market-source-toolbar">${sourceControl}<p>Chart source: <strong>${esc(marketSourceLabel(state.source))}</strong>. Values from different research houses are not averaged or merged.</p></div>
+      <section class="section"><div class="section-header"><h2 class="section-title">${esc(regionObj?.name || 'Selected Region')} · ${esc(segment.replaceAll('-',' '))}</h2></div><div class="section-body"><div class="chart-frame chart-frame--large"><canvas id="market-supply-sales"></canvas></div><p class="chart-note">Selected source: ${latest ? sourceRef(latest.source_id,{sourceDate:latest.source_date,period:latest.period,sourceUrl:latest.source_url,methodology:latest.methodology_note}) : '—'}</p></div></section>
+      <section class="section"><div class="section-header"><h2 class="section-title">Selected Source History</h2></div><div class="section-body section-body--table"><div class="table-wrap"><table class="data-table"><thead><tr><th>Period</th><th class="numeric">New Supply</th><th class="numeric">Sales</th><th class="numeric">Absorption</th><th class="numeric">Average ASP</th><th>Source</th></tr></thead><tbody>${rows.map(row=>`<tr><td>${esc(row.period)}</td><td class="numeric">${esc(formatCompact(row.new_supply))}</td><td class="numeric">${esc(formatCompact(row.sales_units))}</td><td class="numeric">${esc(formatPercent(row.absorption_rate))}</td><td class="numeric">${esc(formatAsp(row.average_asp))}</td><td>${sourceRef(row.source_id,{sourceDate:row.source_date,period:row.period,methodology:row.methodology_note,sourceUrl:row.source_url})}</td></tr>`).join('') || '<tr><td colspan="6" class="table-empty">No observations for this source.</td></tr>'}</tbody></table></div></div></section>
+      <section class="section"><div class="section-header"><div><span class="eyebrow">Cross-source evidence</span><h2 class="section-title">Source Comparison</h2></div></div><div class="section-body section-body--table"><div class="table-wrap"><table class="data-table data-table--market-source-comparison"><thead><tr><th>Period</th><th>Research Source</th><th class="numeric">New Supply</th><th class="numeric">Sales</th><th class="numeric">Absorption</th><th class="numeric">Average ASP</th></tr></thead><tbody>${comparisonRows.map(row=>`<tr class="${row.source_id === state.source ? 'is-selected-source' : ''}"><td>${esc(row.period)}</td><td>${sourceRef(row.source_id,{sourceDate:row.source_date,period:row.period,methodology:row.methodology_note,sourceUrl:row.source_url})}</td><td class="numeric">${esc(formatCompact(row.new_supply))}</td><td class="numeric">${esc(formatCompact(row.sales_units))}</td><td class="numeric">${esc(formatPercent(row.absorption_rate))}</td><td class="numeric">${esc(formatAsp(row.average_asp))}</td></tr>`).join('') || '<tr><td colspan="6" class="table-empty">No comparable source observations for this region and segment.</td></tr>'}</tbody></table></div><p class="chart-note">Source methodologies may differ. Comparison is side-by-side only; no cross-source averaging is performed.</p></div></section>`;
     setView(html);
     bindFilters();
     requestAnimationFrame(() => ChartTools.renderSupplySales('market-supply-sales', rows));
@@ -460,7 +497,7 @@
       control.addEventListener(control.tagName === 'INPUT' ? 'change' : 'change', handler);
     });
     document.querySelector('[data-filter-reset]')?.addEventListener('click', () => {
-      ['q','region','developer','segment','status','sort'].forEach(key => {
+      ['q','region','developer','segment','status','sort','source'].forEach(key => {
         state[key] = '';
         App.removeQueryParam(key);
       });
