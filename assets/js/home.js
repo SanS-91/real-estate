@@ -624,6 +624,16 @@
     }
   }
 
+  async function renderTopDevelopments() {
+    try {
+      const data = await loadCanonicalHomeData();
+      setHTML('[data-home-top-developments]', buildTopDevelopments(data).map(Components.weeklyItem).join(''));
+    } catch (error) {
+      console.warn('[home] ranked Top Developments derivation failed.', error);
+      setHTML('[data-home-top-developments]', Components.stateBox('Unable to load top developments.', 'error'));
+    }
+  }
+
   async function renderWeekly() {
     try {
       const data = await loadCanonicalHomeData();
@@ -710,10 +720,12 @@
     renderToday();
     renderIndicators();
     renderChanges();
+    renderTopDevelopments();
     renderWeekly();
     document.addEventListener('app:language-changed', () => {
       renderToday();
       renderChanges();
+      renderTopDevelopments();
       renderWeekly();
       renderDataHealth();
     });
