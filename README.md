@@ -4,6 +4,20 @@ Implementation v1 is being built sequentially as a static-first research webapp 
 
 ## Current implementation status
 
+The original **8-phase master roadmap (Phase 0 → 7)** remains the governing plan. Decimal phases such as 5.5F or 5.6A are implementation work packages under that master roadmap.
+
+Current master status:
+- Phase 0 — Blueprint: complete.
+- Phase 1 — Skeleton Website: complete.
+- Phase 2 — Data Architecture: complete.
+- Phase 3 — Simple Data Layer: complete.
+- Phase 4 — Source Registry & Auto Data Collection: in progress; Legal and Infrastructure structured collectors remain the main gap.
+- Phase 5 — Automation: in progress; unified operational health/stale/backlog visibility remains to be completed.
+- Phase 6 — Intelligence Database: in progress; Market is the most mature module and Project Detail is the first deep entity view.
+- Phase 7 — Intelligence / Ranking / optional AI: partial.
+
+See `docs/MASTER_ROADMAP.md` and `config/master-roadmap.json` for the authoritative roadmap, module audit, exit criteria and sequential next work packages.
+
 - Step 1 — Repository skeleton, shared shell and responsive design system: complete.
 - Step 2 — Home dashboard skeleton and shared content components: complete.
 - Step 3 — Market module: complete.

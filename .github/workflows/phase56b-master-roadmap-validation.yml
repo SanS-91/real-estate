@@ -1,0 +1,31 @@
+name: Phase 5.6B Master Roadmap Alignment Validation
+
+on:
+  pull_request:
+    paths:
+      - 'config/master-roadmap.json'
+      - 'docs/MASTER_ROADMAP.md'
+      - 'tests/test_phase5_6b_master_roadmap_alignment.py'
+      - '.github/workflows/phase56b-master-roadmap-validation.yml'
+      - 'README.md'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  validate:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v7
+      - uses: actions/setup-python@v7
+        with:
+          python-version: '3.12'
+      - name: Roadmap contract
+        run: python tests/test_phase5_6b_master_roadmap_alignment.py
+      - name: Core regressions
+        run: |
+          python tests/test_phase5_6a_project_detail_navigation.py
+          python tests/test_phase5_5f4_multisource_supply_sales_ui.py
+          python tests/test_phase4_3c_market_registry.py
