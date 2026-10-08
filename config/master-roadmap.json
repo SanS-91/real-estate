@@ -103,61 +103,71 @@
       "order": 1,
       "work_package": "5.6B",
       "name": "Master Roadmap Alignment & Architecture Audit",
-      "goal": "Lock master roadmap, module gap matrix and exit criteria."
+      "goal": "Lock master roadmap, module gap matrix and exit criteria.",
+      "status": "complete"
     },
     {
       "order": 2,
       "work_package": "5.7",
       "name": "Legal & Infrastructure Collection Completion",
-      "goal": "Close Master Phase 4 gaps with structured candidate collectors and review gates."
+      "goal": "Close Master Phase 4 gaps with structured candidate collectors and review gates.",
+      "status": "complete"
     },
     {
       "order": 3,
       "work_package": "5.8",
       "name": "Unified Automation & Data Health",
-      "goal": "Close Master Phase 5 with one operational source/data health layer."
+      "goal": "Close Master Phase 5 with one operational source/data health layer.",
+      "status": "complete"
     },
     {
       "order": 4,
       "work_package": "6.0",
       "name": "Cross-module Intelligence Model",
-      "goal": "Define entity-centric Project / Region / Developer / Time queries across modules."
+      "goal": "Define entity-centric Project / Region / Developer / Time queries across modules.",
+      "status": "complete"
     },
     {
       "order": 5,
       "work_package": "6.1",
       "name": "Project Intelligence Deepening",
-      "goal": "Complete project dossiers with cross-module evidence."
+      "goal": "Complete project dossiers with cross-module evidence.",
+      "status": "planned"
     },
     {
       "order": 6,
       "work_package": "6.2",
       "name": "Region & Developer Intelligence",
-      "goal": "Add cross-module Region and Developer intelligence views."
+      "goal": "Add cross-module Region and Developer intelligence views.",
+      "status": "planned"
     },
     {
       "order": 7,
       "work_package": "6.3",
       "name": "Historical Coverage Expansion",
-      "goal": "Increase listing/research/legal/infrastructure time-series depth."
+      "goal": "Increase listing/research/legal/infrastructure time-series depth.",
+      "status": "planned"
     },
     {
       "order": 8,
       "work_package": "7.0",
       "name": "Importance & Change Ranking Engine",
-      "goal": "Create deterministic rule-based relevance/change scoring."
+      "goal": "Create deterministic rule-based relevance/change scoring.",
+      "status": "planned"
     },
     {
       "order": 9,
       "work_package": "7.1",
       "name": "Today / This Week / Top Developments",
-      "goal": "Publish derived intelligence surfaces from the ranking engine."
+      "goal": "Publish derived intelligence surfaces from the ranking engine.",
+      "status": "planned"
     },
     {
       "order": 10,
       "work_package": "7.2",
       "name": "Optional AI Analysis Layer",
-      "goal": "Summarize, explain, compare and query normalized canonical data without making AI a data source."
+      "goal": "Summarize, explain, compare and query normalized canonical data without making AI a data source.",
+      "status": "planned"
     }
   ]
 }
