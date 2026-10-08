@@ -53,6 +53,7 @@ jobs:
           from pathlib import Path
           r=json.loads(Path("data/candidate/market/listing-collector-report.json").read_text())
           p=json.loads(Path("data/candidate/market/listing-refresh-report.json").read_text())
+          print(f"- Source access: **{r.get('source_access','unknown')}**")
           print(f"- Projects checked: **{r['projects_checked']}**")
           print(f"- Candidate records: **{r['candidate_records']}**")
           for k,v in r.get('counts',{}).items():
@@ -69,6 +70,20 @@ jobs:
               trend=row.get("asking_price_change_1y_pct")
               trend_text="—" if trend is None else f"{trend*100:.1f}%"
               print(f"| {row['project_id']} | {row['status']} | {rng} | {trend_text} |")
+          PY
+      - name: Source access annotation
+        run: |
+          python - <<'PY'
+          import json
+          from pathlib import Path
+          r=json.loads(Path("data/candidate/market/listing-collector-report.json").read_text())
+          status=r.get("source_access")
+          if status == "blocked":
+              print("::warning::Batdongsan.com.vn blocked the GitHub-hosted runner (HTTP 403). No candidate data was collected; production remains unchanged.")
+          elif status == "degraded":
+              print("::warning::Listing source access was partially degraded. Review the collector artifact before any promotion.")
+          else:
+              print("Listing source access healthy.")
           PY
       - name: Upload collector artifact
         uses: actions/upload-artifact@v7
