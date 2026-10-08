@@ -1,0 +1,46 @@
+{
+  "workflow_runs": [
+    {
+      "name": "Macro Candidate Collector",
+      "status": "completed",
+      "conclusion": "success",
+      "created_at": "2026-10-08T01:00:00Z",
+      "updated_at": "2026-10-08T01:05:00Z"
+    },
+    {
+      "name": "Market Source Candidate Collector",
+      "status": "completed",
+      "conclusion": "success",
+      "created_at": "2026-10-08T02:00:00Z",
+      "updated_at": "2026-10-08T02:05:00Z"
+    },
+    {
+      "name": "Listing Market Candidate Collector",
+      "status": "completed",
+      "conclusion": "success",
+      "created_at": "2026-10-08T02:10:00Z",
+      "updated_at": "2026-10-08T02:15:00Z"
+    },
+    {
+      "name": "Legal Candidate Collector",
+      "status": "completed",
+      "conclusion": "success",
+      "created_at": "2026-10-08T03:00:00Z",
+      "updated_at": "2026-10-08T03:05:00Z"
+    },
+    {
+      "name": "Infrastructure Candidate Collector",
+      "status": "completed",
+      "conclusion": "failure",
+      "created_at": "2026-10-08T03:20:00Z",
+      "updated_at": "2026-10-08T03:25:00Z"
+    },
+    {
+      "name": "Infrastructure Candidate Collector",
+      "status": "completed",
+      "conclusion": "success",
+      "created_at": "2026-10-01T03:20:00Z",
+      "updated_at": "2026-10-01T03:25:00Z"
+    }
+  ]
+}
