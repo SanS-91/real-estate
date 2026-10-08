@@ -1,0 +1,33 @@
+name: Phase 5.7A Legal Collector Validation
+
+on:
+  pull_request:
+    paths:
+      - 'scripts/legal_candidate_collector.py'
+      - 'tests/test_phase5_7a_legal_candidate_collector.py'
+      - 'tests/fixtures/legal_official_document_sample.html'
+      - '.github/workflows/legal-candidate-collector.yml'
+      - '.github/workflows/phase57a-legal-collector-validation.yml'
+      - 'docs/PHASE5_7A_LEGAL_CANDIDATE_COLLECTOR.md'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  validate:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v7
+      - uses: actions/setup-python@v7
+        with:
+          python-version: '3.12'
+      - name: Install dependencies
+        run: pip install -r requirements.txt
+      - name: Syntax
+        run: python -m py_compile scripts/legal_candidate_collector.py
+      - name: Phase 5.7A contract
+        run: python tests/test_phase5_7a_legal_candidate_collector.py
+      - name: Fixture smoke
+        run: python scripts/legal_candidate_collector.py --fixture tests/fixtures/legal_official_document_sample.html
