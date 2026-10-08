@@ -642,15 +642,7 @@
   }
 
   function renderSingle(ctx) {
-    const regionNames = ctx.regionIds.map(id => data.regionMap.get(id)?.name).filter(Boolean);
-    const developerNames = ctx.developerIds.map(id => data.developerMap.get(id)?.name).filter(Boolean);
-    const sourceIds = unique([
-      ...ctx.projects.map(x => x.primary_source_id),
-      ...ctx.legalDocuments.map(x => x.primary_source_id),
-      ...ctx.articles.map(x => x.source_id),
-      ...ctx.events.flatMap(x => x.source_ids || [])
-    ]);
-
+    const coverage = marketCoverage(ctx);
     setView(`
       <section class="research-hero">
         <div>
@@ -658,100 +650,66 @@
           <h2>${esc(subjectLabel(ctx.subject))}</h2>
           <p>${esc(ctx.subject.summary || ctx.subject.description || '')}</p>
         </div>
-        <div class="research-meta">
-          <span>${ctx.projects.length} linked projects</span>
-          <span>${ctx.infrastructure.length} infrastructure links</span>
-          <span>${ctx.legalDocuments.length} relevant legal documents</span>
-          <span>${sourceIds.length} source records</span>
+        <div class="research-meta research-meta--market">
+          <span>${ctx.projects.length} ${esc(tr('dự án','projects'))}</span>
+          <span>${coverage.price}/${coverage.projects} ${esc(tr('có dữ liệu giá','with price data'))}</span>
+          <span>${coverage.sales}/${coverage.projects} ${esc(tr('có dữ liệu bán hàng','with sales data'))}</span>
+          <span>${coverage.absorption}/${coverage.projects} ${esc(tr('có dữ liệu hấp thụ','with absorption data'))}</span>
         </div>
       </section>
 
-      ${researchBriefHTML([ctx])}
+      ${marketSingleHTML(ctx)}
 
-      <div class="research-overview-grid">
-        ${Components.compactMetric({label:'Projects',value:String(ctx.projects.length),note:developerNames.join(', ') || '—'})}
-        ${Components.compactMetric({label:'Regions',value:String(ctx.regionIds.length),note:regionNames.join(', ') || '—'})}
-        ${Components.compactMetric({label:'Infrastructure',value:String(ctx.infrastructure.length),note:'Canonical relationships'})}
-        ${Components.compactMetric({label:'Legal topics',value:String(ctx.legalTopicIds.length),note:'Research relevance only'})}
-      </div>
-
-      <section class="section">
-        <div class="section-header"><div><span class="eyebrow">Market</span><h2 class="section-title">Related Projects</h2></div><a class="text-link" href="market.html?view=projects">Open Market</a></div>
-        <div class="section-body">${projectCards(ctx)}</div>
-      </section>
-
-      <div class="research-two-column">
-        <section class="section">
-          <div class="section-header"><div><span class="eyebrow">Infrastructure</span><h2 class="section-title">Connectivity & Milestones</h2></div><a class="text-link" href="infrastructure.html">Open Infrastructure</a></div>
-          <div class="section-body">${infrastructureCards(ctx)}</div>
-        </section>
-        <section class="section">
-          <div class="section-header"><div><span class="eyebrow">Macro</span><h2 class="section-title">Current Macro Context</h2></div><a class="text-link" href="macro.html">Open Macro</a></div>
-          <div class="section-body">
-            <p class="research-disclaimer">Macro indicators provide common market context and are not project-specific causality.</p>
-            <div class="research-macro-grid">${latestMacroCards()}</div>
-          </div>
-        </section>
-      </div>
-
-      <section class="section">
-        <div class="section-header"><div><span class="eyebrow">Legal</span><h2 class="section-title">Legal Research Context</h2></div><a class="text-link" href="legal.html">Open Legal</a></div>
-        <div class="section-body">${legalCards(ctx)}</div>
-      </section>
-
-      <section class="section">
-        <div class="section-header"><div><span class="eyebrow">Cross-module</span><h2 class="section-title">Recent Related Activity</h2></div><button class="button" type="button" data-search-open>Search all data</button></div>
+      <section class="section research-key-changes">
+        <div class="section-header"><div><span class="eyebrow">${esc(tr('Diễn biến','Changes'))}</span><h2 class="section-title">${esc(tr('Cập nhật đáng chú ý','Notable Updates'))}</h2></div><button class="button" type="button" data-search-open>${esc(tr('Tìm toàn bộ dữ liệu','Search all data'))}</button></div>
         <div class="section-body">${recentActivity(ctx)}</div>
       </section>
+
+      ${supportingContextHTML(ctx)}
+
+      ${researchBriefHTML([ctx])}
     `);
   }
-
   function renderCompare(contexts) {
     setView(`
       <section class="research-hero research-hero--compare">
         <div>
-          <span class="eyebrow">Compare · ${esc(state.type)}</span>
+          <span class="eyebrow">${esc(tr('So sánh thị trường','Market comparison'))} · ${esc(state.type)}</span>
           <h2>${contexts.map(c => esc(subjectLabel(c.subject))).join(' vs ')}</h2>
-          <p>Side-by-side comparison derived from the same canonical registries. Blank or missing business facts remain unfilled.</p>
+          <p>${esc(tr('Ưu tiên chỉ tiêu thị trường có nguồn; hạ tầng, pháp lý và vĩ mô là bối cảnh hỗ trợ.','Market evidence comes first; Infrastructure, Legal and Macro are supporting context.'))}</p>
         </div>
-        <div class="research-meta">
-          <span>${contexts.length} subjects</span>
-          <span>Same subject type</span>
-          <span>Shareable URL</span>
-          <span>No synthetic scoring</span>
+        <div class="research-meta research-meta--market">
+          <span>${contexts.length} ${esc(tr('đối tượng','subjects'))}</span>
+          <span>${esc(tr('So sánh cùng loại','Same subject type'))}</span>
+          <span>${esc(tr('URL có thể chia sẻ','Shareable URL'))}</span>
+          <span>${esc(tr('Không chấm điểm giả lập','No synthetic scoring'))}</span>
+        </div>
+      </section>
+
+      ${marketCompareHTML(contexts)}
+
+      <section class="section">
+        <div class="section-header"><div><span class="eyebrow">${esc(tr('Dự án','Projects'))}</span><h2 class="section-title">${esc(tr('Danh mục để đào sâu','Projects to Explore'))}</h2></div><a class="text-link" href="market.html?view=projects">${esc(tr('Mở Thị trường','Open Market'))}</a></div>
+        <div class="section-body"><div class="research-card-grid">${contexts.flatMap(ctx => ctx.projects.map(project => ({ctx,project}))).slice(0,12).map(({project}) => `
+          <a class="research-entity-card" href="market.html?view=projects&project=${encodeURIComponent(project.id)}">
+            <span class="eyebrow">${esc(tr('Dự án','Project'))}</span>
+            <strong>${esc(project.name)}</strong>
+            <span>${esc(project.location_text || '')}</span>
+            <small>${esc(String(project.status || '').replaceAll('-',' '))}</small>
+          </a>`).join('')}</div></div>
+      </section>
+
+      <section class="section research-supporting-context">
+        <div class="section-header"><div><span class="eyebrow">Context</span><h2 class="section-title">${esc(tr('Bối cảnh hỗ trợ','Supporting Context'))}</h2></div></div>
+        <div class="section-body">
+          ${compareShared(contexts)}
+          <div class="research-macro-strip"><strong>${esc(tr('Vĩ mô chung','Common Macro'))}</strong><span>${esc(tr('Bối cảnh chung, không dùng để chấm điểm đối tượng.','Common context, not used to score subjects.'))}</span><div class="research-macro-grid research-macro-grid--compact">${latestMacroCards()}</div></div>
         </div>
       </section>
 
       ${researchBriefHTML(contexts)}
-
-      <section class="section">
-        <div class="section-header"><div><span class="eyebrow">Comparison</span><h2 class="section-title">Cross-module Coverage</h2></div></div>
-        <div class="section-body">${compareTable(contexts)}</div>
-      </section>
-
-      ${compareShared(contexts)}
-
-      <section class="section">
-        <div class="section-header"><div><span class="eyebrow">Subjects</span><h2 class="section-title">Open Individual Research</h2></div></div>
-        <div class="section-body"><div class="research-card-grid">${contexts.map(ctx => `
-          <a class="research-entity-card" href="research.html?type=${encodeURIComponent(state.type)}&ids=${encodeURIComponent(ctx.subject.id)}">
-            <span class="eyebrow">${esc(state.type)}</span>
-            <strong>${esc(subjectLabel(ctx.subject))}</strong>
-            <span>${contextStats(ctx).projects} projects · ${contextStats(ctx).infrastructure} infrastructure links</span>
-            <small>${contextStats(ctx).legalTopics} legal topics · ${contextStats(ctx).recent} recent items</small>
-          </a>`).join('')}</div></div>
-      </section>
-
-      <section class="section">
-        <div class="section-header"><div><span class="eyebrow">Macro</span><h2 class="section-title">Common Macro Context</h2></div><a class="text-link" href="macro.html">Open Macro</a></div>
-        <div class="section-body">
-          <p class="research-disclaimer">Macro context is common to the comparison and is not used as a project score.</p>
-          <div class="research-macro-grid">${latestMacroCards()}</div>
-        </div>
-      </section>
     `);
   }
-
   function render() {
     const subjects = selectedSubjects();
     if (!subjects.length) {
