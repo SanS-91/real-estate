@@ -11,6 +11,7 @@ PRODUCTION = ROOT / "data/mock/market/listing-observations.json"
 CANDIDATE = ROOT / "data/candidate/market/listing-observations.json"
 REPORT = ROOT / "data/candidate/market/listing-refresh-report.json"
 PROJECTS = ROOT / "data/mock/market/projects.json"
+SOURCE_REGISTRY = ROOT / "config/market-source-registry.json"
 
 FIELDS = (
     "asking_price_low_vnd_per_m2",
@@ -58,8 +59,17 @@ def comparable_signature(row: dict):
     )
 
 
+def listing_source_ids():
+    registry = read_json(SOURCE_REGISTRY, {"sources":[]})
+    return {
+        x.get("source_id") for x in registry.get("sources", [])
+        if "listing-asking" in (x.get("supported_layers") or [])
+    }
+
+
 def validate(rows: list[dict]):
     project_ids = {x["id"] for x in read_json(PROJECTS, {"data":[]}).get("data", [])}
+    allowed_sources = listing_source_ids()
     problems = []
     seen = set()
     for i, row in enumerate(rows):
@@ -73,8 +83,8 @@ def validate(rows: list[dict]):
             problems.append(f"row {i}: unknown project_id {row.get('project_id')}")
         if row.get("market_layer") != "listing-asking":
             problems.append(f"row {i}: market_layer must be listing-asking")
-        if row.get("source_id") != "batdongsan-com-vn":
-            problems.append(f"row {i}: unsupported source_id {row.get('source_id')}")
+        if row.get("source_id") not in allowed_sources:
+            problems.append(f"row {i}: source_id {row.get('source_id')} is not registered for listing-asking")
         if row.get("coverage_status") not in {"full", "partial"}:
             problems.append(f"row {i}: coverage_status must be full or partial")
         if row.get("coverage_status") == "partial":

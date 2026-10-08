@@ -1,0 +1,124 @@
+name: Listing Market Assisted Capture
+
+on:
+  workflow_dispatch:
+    inputs:
+      project_id:
+        description: Existing mapped project_id (for example mizuki-park)
+        required: true
+        type: string
+      source_url:
+        description: Exact source page reviewed in browser
+        required: true
+        type: string
+      source_data_as_of:
+        description: Date/period shown by source; blank uses observation date
+        required: false
+        default: ''
+        type: string
+      price_low_mn:
+        description: Asking low, VND mn/m2; blank if unavailable
+        required: false
+        default: ''
+        type: string
+      price_high_mn:
+        description: Asking high, VND mn/m2; blank if unavailable
+        required: false
+        default: ''
+        type: string
+      trend_pct:
+        description: 1Y trend in percent, e.g. 19.1 or -5.2
+        required: false
+        default: ''
+        type: string
+      area_low_sqm:
+        description: Popular area low sqm
+        required: false
+        default: ''
+        type: string
+      area_high_sqm:
+        description: Popular area high sqm
+        required: false
+        default: ''
+        type: string
+      listing_count:
+        description: Ancillary listing count
+        required: false
+        default: ''
+        type: string
+      views_7d:
+        description: Ancillary 7-day views
+        required: false
+        default: ''
+        type: string
+      persist_candidate:
+        description: Commit reviewed candidate staging to main for later Promote
+        required: true
+        default: false
+        type: boolean
+
+permissions:
+  contents: write
+
+jobs:
+  capture:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v7
+      - uses: actions/setup-python@v7
+        with:
+          python-version: '3.12'
+      - name: Build assisted candidate
+        run: |
+          python scripts/listing_assisted_ingest.py \
+            --project-id "${{ inputs.project_id }}" \
+            --source-url "${{ inputs.source_url }}" \
+            --source-data-as-of "${{ inputs.source_data_as_of }}" \
+            --price-low-mn "${{ inputs.price_low_mn }}" \
+            --price-high-mn "${{ inputs.price_high_mn }}" \
+            --trend-pct "${{ inputs.trend_pct }}" \
+            --area-low-sqm "${{ inputs.area_low_sqm }}" \
+            --area-high-sqm "${{ inputs.area_high_sqm }}" \
+            --listing-count "${{ inputs.listing_count }}" \
+            --views-7d "${{ inputs.views_7d }}"
+      - name: Preview through append-only history pipeline
+        run: python scripts/listing_snapshot_pipeline.py --mode preview
+      - name: Job summary
+        run: |
+          echo "## Listing Market Assisted Capture" >> "$GITHUB_STEP_SUMMARY"
+          python - <<'PY' >> "$GITHUB_STEP_SUMMARY"
+          import json
+          from pathlib import Path
+          a=json.loads(Path("data/candidate/market/listing-assisted-report.json").read_text())
+          p=json.loads(Path("data/candidate/market/listing-refresh-report.json").read_text())
+          print(f"- Project: **{a['project_id']}**")
+          print(f"- Source: **{a['source_id']}** / {a['capture_mode']}")
+          print(f"- Coverage: **{a['coverage_status']}**")
+          print(f"- Observation: **{a['observation_date']}**")
+          print(f"- Preview status: **{p['decisions'][0]['status'] if p.get('decisions') else 'no-decision'}**")
+          print(f"- Production written: **{a['production_written']}**")
+          print("")
+          print("Next gate: review this artifact/candidate, then run **Listing Market Assisted Refresh → Promote** only if approved.")
+          PY
+      - name: Upload assisted candidate artifact
+        uses: actions/upload-artifact@v7
+        with:
+          name: listing-assisted-candidate
+          path: |
+            data/candidate/market/listing-observations.json
+            data/candidate/market/listing-assisted-report.json
+            data/candidate/market/listing-refresh-report.json
+          retention-days: 14
+      - name: Persist reviewed candidate staging
+        if: inputs.persist_candidate == true
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data/candidate/market/listing-observations.json data/candidate/market/listing-assisted-report.json
+          if git diff --cached --quiet; then
+            echo "No candidate staging changes to commit."
+            exit 0
+          fi
+          git commit -m "data(market): stage assisted listing snapshot"
+          git push
