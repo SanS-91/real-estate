@@ -38,7 +38,7 @@ jobs:
       - name: Install dependencies
         run: pip install -r requirements.txt
       - name: Run source-period unit tests
-        run: python scripts/test_market_period_evidence.py
+        run: python -m unittest discover -s scripts -p 'test_market_*.py'
       - name: Collect configured market-source candidates
         run: python scripts/market_source_candidate_collector.py
       - name: Candidate summary
