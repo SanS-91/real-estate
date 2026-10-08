@@ -1,0 +1,34 @@
+name: Phase 7.0A Ranking Contract Audit
+
+on:
+  pull_request:
+    paths:
+      - 'config/intelligence-ranking.json'
+      - 'assets/js/intelligence-ranking.js'
+      - 'data/mock/core/sources.json'
+      - 'tests/test_phase7_0a_ranking_contract_audit.py'
+      - 'tests/test_phase7_0a_ranking_runtime.js'
+      - 'docs/PHASE7_0A_RANKING_CONTRACT_AUDIT.md'
+      - '.github/workflows/phase70a-ranking-contract-audit.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  audit:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v7
+      - uses: actions/setup-python@v7
+        with:
+          python-version: '3.12'
+      - name: Static ranking contract audit
+        run: python tests/test_phase7_0a_ranking_contract_audit.py
+      - name: Runtime ranking audit
+        run: node tests/test_phase7_0a_ranking_runtime.js
+      - name: Existing Phase 7 ranking regressions
+        run: |
+          node tests/test_phase7_0_intelligence_ranking.js
+          python tests/test_phase7_0_intelligence_ranking.py
