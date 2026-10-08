@@ -1,0 +1,47 @@
+name: Phase 5.5F3 Research Source Expansion Validation
+
+on:
+  pull_request:
+    paths:
+      - 'data/mock/core/sources.json'
+      - 'config/market-automation-targets.json'
+      - 'scripts/collectors/cushman_market.py'
+      - 'scripts/collectors/jll_research.py'
+      - 'scripts/collectors/savills_research.py'
+      - 'scripts/market_source_candidate_collector.py'
+      - 'tests/test_phase5_5f3_*'
+      - 'tests/fixtures/cushman_hcmc_residential_q2_2026.html'
+      - 'tests/fixtures/jll_hcmc_residential_q2_2026.html'
+      - 'tests/fixtures/savills_vietnam_q2_2026.html'
+      - '.github/workflows/market-source-candidate-collector.yml'
+      - '.github/workflows/phase55f3-research-source-expansion-validation.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  validate:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v7
+      - uses: actions/setup-python@v7
+        with:
+          python-version: '3.12'
+      - name: Install dependencies
+        run: pip install -r requirements.txt
+      - name: Syntax
+        run: |
+          python -m py_compile scripts/collectors/cushman_market.py
+          python -m py_compile scripts/collectors/jll_research.py
+          python -m py_compile scripts/collectors/savills_research.py
+          python -m py_compile scripts/market_source_candidate_collector.py
+      - name: Phase 5.5F3 contracts
+        run: python tests/test_phase5_5f3_research_source_expansion.py
+      - name: Regressions
+        run: |
+          python tests/test_phase5_5f2_market_candidate_promotion.py
+          python tests/test_phase5_5f1_cbre_namlong_parsers.py
+          python tests/test_phase5_5f_market_source_connectors.py
+          python tests/test_phase4_3c_market_registry.py
