@@ -22,14 +22,14 @@ assert 'research.html' in common
 assert "{ key: 'research', label: 'Research'" in common
 assert 'data-research-type' in research
 assert 'data-research-entity' in research
-assert 'assets/js/research.js?v=5.4M1' in research
+assert 'assets/js/research.js?v=5.5A1' in research
 assert 'assets/js/common.js?v=5.0R1' in research
-assert 'assets/js/localization-dynamic.js?v=5.4M1' in research
+assert 'assets/js/localization-dynamic.js?v=5.5A1' in research
 
 for page in ['index.html','market.html','legal.html','infrastructure.html','macro.html','maintenance.html']:
     text=(ROOT/page).read_text(encoding='utf-8')
     assert 'assets/js/common.js?v=5.0R1' in text
-    expected_loc = 'assets/js/localization-dynamic.js?v=5.1P1' if page == 'market.html' else 'assets/js/localization-dynamic.js?v=5.0R1'
+    expected_loc = 'assets/js/localization-dynamic.js?v=5.5A1' if page == 'market.html' else 'assets/js/localization-dynamic.js?v=5.0R1'
     assert expected_loc in text
 
 pmap={x['id']:x for x in projects}

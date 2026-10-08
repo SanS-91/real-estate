@@ -11,7 +11,7 @@
     status: '',
     sort: 'latest'
   };
-  let data = { regions: [], developers: [], projects: [], phases: [], observations: [], articles: [], infrastructureProjects: [], legalTopics: [] };
+  let data = { regions: [], developers: [], projects: [], phases: [], observations: [], listingObservations: [], listingComparables: [], articles: [], infrastructureProjects: [], legalTopics: [] };
 
   function payloadData(payload) { return payload?.data || []; }
   function byId(records) { return new Map(records.map(item => [item.id, item])); }
@@ -41,6 +41,46 @@
     return data.observations
       .filter(item => item.project_id === projectId)
       .sort((a, b) => String(b.period).localeCompare(String(a.period)))[0] || null;
+  }
+
+  function latestListingObservation(projectId) {
+    return data.listingObservations
+      .filter(item => item.project_id === projectId)
+      .sort((a,b) => String(b.observation_date || '').localeCompare(String(a.observation_date || '')))[0] || null;
+  }
+
+  function listingComparables(projectId) {
+    return data.listingComparables
+      .filter(item => item.anchor_project_id === projectId && item.project_id !== projectId)
+      .sort((a,b) => Number(b.asking_price_vnd_per_m2 || 0) - Number(a.asking_price_vnd_per_m2 || 0));
+  }
+
+  function formatListingRange(row) {
+    if (!row) return '—';
+    return `${Formatters.number(row.asking_price_low_vnd_per_m2 / 1_000_000,{min:0,max:1})}–${Formatters.number(row.asking_price_high_vnd_per_m2 / 1_000_000,{min:0,max:1})} mn VND/m²`;
+  }
+
+  function listingMarketDrawerHTML(project) {
+    const row = latestListingObservation(project.id);
+    if (!row) return '<p class="muted-text">No listing-market snapshot is available for this project yet.</p>';
+    const comps = listingComparables(project.id).slice(0,8);
+    const products = (row.product_price_ranges || []).map(item =>
+      `<div class="drawer-list-row"><div><strong>${esc(item.product)}</strong><span>${esc(Formatters.number(item.low_vnd/1_000_000_000,{min:0,max:2}))}–${esc(Formatters.number(item.high_vnd/1_000_000_000,{min:0,max:2}))} bn</span></div></div>`
+    ).join('');
+    const compHTML = comps.length ? comps.map(item =>
+      `<div class="drawer-list-row"><div><strong>${esc(item.comparable_name)}</strong><span>${esc(Formatters.number(item.asking_price_vnd_per_m2/1_000_000,{min:0,max:1}))} mn VND/m²</span></div></div>`
+    ).join('') : '<p class="muted-text">No map comparable snapshot.</p>';
+    return `
+      <div class="drawer-metrics">
+        ${Components.compactMetric({label:'Asking range',value:formatListingRange(row),note:'Listing portal · not transaction price'})}
+        ${Components.compactMetric({label:'1Y portal trend',value:Formatters.number(row.asking_price_change_1y_pct*100,{min:1,max:1})+'%',note:row.observation_date})}
+        ${Components.compactMetric({label:'Popular area',value:row.popular_area_low_sqm+'–'+row.popular_area_high_sqm+' m²',note:'Portal snapshot'})}
+      </div>
+      <p class="muted-text">Secondary listing-market snapshot. Asking prices are not official sales, transaction prices or absorption.</p>
+      ${products ? `<div class="drawer-subsection"><h4>Product asking ranges</h4>${products}</div>` : ''}
+      <div class="drawer-subsection"><h4>Nearby map labels</h4>${compHTML}</div>
+      <div class="provenance-inline-row">${sourceRef(row.source_id,{sourceDate:row.observation_date,sourceUrl:row.source_url,methodology:row.methodology_note})}<span class="muted-text">Listing-market source</span></div>
+    `;
   }
 
   function projectActivityDate(projectId) {
@@ -370,6 +410,7 @@
         ${Components.compactMetric({label:'Absorption',value:formatPercent(obs?.absorption_rate),note:obs?.period || ''})}
       </div>
       <div class="drawer-section"><h3>Overview</h3><p>${esc(project.summary)}</p></div>
+      <div class="drawer-section"><h3>Listing Market</h3>${listingMarketDrawerHTML(project)}</div>
       <div class="drawer-section"><h3>Project History</h3>${projectHistoryHTML(project)}</div>
       ${leadDeveloper(project) ? `<div class="drawer-section"><h3>Developer</h3><div class="drawer-list-row"><div><strong>${esc(leadDeveloper(project).name)}</strong><span>${esc(leadDeveloper(project).summary || '')}</span></div><a class="text-link" href="market.html?view=projects&developer=${encodeURIComponent(leadDeveloper(project).id)}">Open portfolio</a></div></div>` : ''}
       <div class="drawer-section"><h3>Segments</h3><div class="chip-row">${(project.segment_ids || []).map(id=>`<span class="relation-chip">${esc(id.replaceAll('-',' '))}</span>`).join('')}</div></div>
@@ -417,11 +458,11 @@
   async function load() {
     try {
       await window.Provenance?.load?.();
-      const [regions, developers, projects, phases, observations, articles, infrastructureProjects, legalTopics, meta] = await Promise.all([
-        DataStore.getRegions(), DataStore.getDevelopers(), DataStore.getProjects(), DataStore.getProjectPhases(), DataStore.getMarketObservations(), DataStore.getArticles(), DataStore.getInfrastructureProjects(), DataStore.getLegalTopics(), DataStore.getMeta()
+      const [regions, developers, projects, phases, observations, listingObservations, listingComparables, articles, infrastructureProjects, legalTopics, meta] = await Promise.all([
+        DataStore.getRegions(), DataStore.getDevelopers(), DataStore.getProjects(), DataStore.getProjectPhases(), DataStore.getMarketObservations(), DataStore.getListingObservations(), DataStore.getListingComparables(), DataStore.getArticles(), DataStore.getInfrastructureProjects(), DataStore.getLegalTopics(), DataStore.getMeta()
       ]);
       data = {
-        regions: payloadData(regions), developers: payloadData(developers), projects: payloadData(projects), phases: payloadData(phases), observations: payloadData(observations), articles: payloadData(articles).filter(item => item.category === 'market'), infrastructureProjects: payloadData(infrastructureProjects), legalTopics: payloadData(legalTopics)
+        regions: payloadData(regions), developers: payloadData(developers), projects: payloadData(projects), phases: payloadData(phases), observations: payloadData(observations), listingObservations: payloadData(listingObservations), listingComparables: payloadData(listingComparables), articles: payloadData(articles).filter(item => item.category === 'market'), infrastructureProjects: payloadData(infrastructureProjects), legalTopics: payloadData(legalTopics)
       };
       Resolver.setData('region', data.regions);
       Resolver.setData('developer', data.developers);
