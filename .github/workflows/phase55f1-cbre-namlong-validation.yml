@@ -1,0 +1,41 @@
+name: Phase 5.5F1 CBRE Nam Long Parser Validation
+
+on:
+  pull_request:
+    paths:
+      - 'scripts/collectors/cbre_market.py'
+      - 'scripts/collectors/namlong_official.py'
+      - 'scripts/market_source_candidate_collector.py'
+      - 'config/market-automation-targets.json'
+      - 'tests/test_phase5_5f1_*'
+      - 'tests/fixtures/cbre_hcmc_q2_2026.html'
+      - 'tests/fixtures/namlong_project_update_2026.html'
+      - '.github/workflows/market-source-candidate-collector.yml'
+      - '.github/workflows/phase55f1-cbre-namlong-validation.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  validate:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v7
+      - uses: actions/setup-python@v7
+        with:
+          python-version: '3.12'
+      - name: Install dependencies
+        run: pip install -r requirements.txt
+      - name: Syntax
+        run: |
+          python -m py_compile scripts/collectors/cbre_market.py
+          python -m py_compile scripts/collectors/namlong_official.py
+          python -m py_compile scripts/market_source_candidate_collector.py
+      - name: Phase 5.5F1 contracts
+        run: python tests/test_phase5_5f1_cbre_namlong_parsers.py
+      - name: Regression
+        run: |
+          python tests/test_phase5_5f_market_source_connectors.py
+          python tests/test_phase5_5e_source_diversification.py

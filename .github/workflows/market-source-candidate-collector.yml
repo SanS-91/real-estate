@@ -1,0 +1,61 @@
+name: Market Source Candidate Collector
+
+on:
+  push:
+    branches:
+      - main
+    paths:
+      - 'scripts/collectors/cbre_market.py'
+      - 'scripts/collectors/namlong_official.py'
+      - 'scripts/market_source_candidate_collector.py'
+      - 'config/market-automation-targets.json'
+      - '.github/workflows/market-source-candidate-collector.yml'
+  workflow_dispatch:
+  schedule:
+    - cron: '30 2 * * 2,5'
+
+permissions:
+  contents: read
+
+jobs:
+  collect:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 12
+    steps:
+      - uses: actions/checkout@v7
+      - uses: actions/setup-python@v7
+        with:
+          python-version: '3.12'
+      - name: Install dependencies
+        run: pip install -r requirements.txt
+      - name: Collect CBRE + Nam Long candidates
+        run: python scripts/market_source_candidate_collector.py
+      - name: Candidate summary
+        run: |
+          echo "## Market Source Candidate Collector" >> "$GITHUB_STEP_SUMMARY"
+          python - <<'PY' >> "$GITHUB_STEP_SUMMARY"
+          import json
+          from pathlib import Path
+          r=json.loads(Path("data/candidate/market/market-source-candidate-report.json").read_text())
+          print(f"- Targets checked: **{r['targets_checked']}**")
+          print(f"- Market observation candidates: **{r['observation_candidates']}**")
+          print(f"- Developer article candidates: **{r['article_candidates']}**")
+          print(f"- Production written: **{r['production_written']}**")
+          print("")
+          print("| Target | Type | Status | Decision |")
+          print("|---|---|---|---|")
+          for x in r.get("targets",[]):
+              decision=x.get("decision")
+              if not decision and x.get("decisions"):
+                  decision=", ".join(f"{d['segment']}:{d['status']}" for d in x["decisions"])
+              print(f"| {x['target_id']} | {x.get('type','—')} | {x['status']} | {decision or '—'} |")
+          PY
+      - name: Upload candidates
+        uses: actions/upload-artifact@v7
+        with:
+          name: market-source-candidates
+          path: |
+            data/candidate/market/observations.json
+            data/candidate/market/articles.json
+            data/candidate/market/market-source-candidate-report.json
+          retention-days: 14

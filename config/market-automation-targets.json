@@ -6,11 +6,11 @@
       "target_id": "cbre-hcmc-q2-2026",
       "source_id": "cbre-vietnam",
       "observation_source_id": "cbre-vietnam-market",
-      "url": "https://www.cbrevietnam.com/insights/figures/ho-chi-minh-city-figures-q2-2026",
+      "url": "https://www.cbrevietnam.com/vi-vn/insights/figures/c%E1%BA%ADp-nh%E1%BA%ADt-th%E1%BB%8B-tr%C6%B0%E1%BB%9Dng-b%C4%91s-h%E1%BB%93-ch%C3%AD-minh-qu%C3%BD-2-2026",
       "period": "2026-Q2",
       "period_type": "quarter",
       "scope": "hcmc-residential",
-      "collector": "cbre_hcmc_figures",
+      "collector": "cbre_market",
       "enabled": true
     },
     {
@@ -55,6 +55,28 @@
       "period_type": null,
       "scope": "developer-project-updates",
       "collector": "metadata_only",
+      "enabled": false
+    },
+    {
+      "target_id": "nam-long-akari-jv-update-2026-10-02",
+      "source_id": "developer-official",
+      "observation_source_id": "nam-long-official",
+      "url": "https://www.namlongvn.com/tin-tuc/dien-mao-cac-khu-do-thi-dong-kien-tao-giua-nam-long-va-doi-tac-nhat/",
+      "period": "2026-10-02",
+      "period_type": "date",
+      "scope": "developer-project-updates",
+      "collector": "namlong_official",
+      "enabled": true
+    },
+    {
+      "target_id": "nam-long-experience-2026-09-21",
+      "source_id": "developer-official",
+      "observation_source_id": "nam-long-official",
+      "url": "https://www.namlongvn.com/tin-tuc/trien-lam-nam-long-experience-2026-hut-hon-10-000-luot-khach/",
+      "period": "2026-09-21",
+      "period_type": "date",
+      "scope": "developer-project-updates",
+      "collector": "namlong_official",
       "enabled": true
     }
   ]
