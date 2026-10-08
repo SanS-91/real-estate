@@ -15,6 +15,10 @@ assert by["apartment"]["absorption_rate"]==0.31
 assert by["landed"]["new_supply"]==1700
 assert by["landed"]["sales_units"]==870
 assert by["landed"]["absorption_rate"]==0.36
+ca=cushman_market.parse_article(cw,"https://example.com/cw","2026-10-08T00:00:00Z")
+assert ca["published_date"]=="2026-08-01"
+assert "Apartment new supply exceeded 1,300 units" in ca["summary"]
+assert "landed absorption was about 36%" in ca["summary"]
 
 jll=(ROOT/"tests/fixtures/jll_hcmc_residential_q2_2026.html").read_text(encoding="utf-8")
 ja=jll_research.parse_article(jll,"https://example.com/jll","2026-10-08T00:00:00Z")
