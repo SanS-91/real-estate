@@ -13,7 +13,7 @@ assert row["project_id"]=="hcmc-ring-road-3"
 assert row["announced_date"]=="2026-10-08"
 assert row["project_patch"]["current_progress_percent"]==85.0
 assert row["project_patch"]["current_total_investment"]==75300
-assert row["project_patch"]["status"]!="operational"
+assert "status" not in row["project_patch"]
 assert row["schedule_candidate"]["schedule_type"]=="expected-completion"
 assert row["schedule_candidate"]["target_period"]=="2026"
 assert row["schedule_candidate"]["date_precision"]=="year"
