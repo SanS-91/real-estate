@@ -42,6 +42,7 @@ for name in ['index.html','market.html','legal.html','infrastructure.html','macr
     assert 'assets/js/common.js?v=5.0R1' in html
     assert 'assets/js/search.js?v=4.3E' in html
     assert 'assets/js/localization-static.js?v=4.3E' in html
-    assert 'assets/js/localization-dynamic.js?v=5.1P1' in html
+    expected_loc = 'assets/js/localization-dynamic.js?v=5.1P1' if name == 'market.html' else 'assets/js/localization-dynamic.js?v=5.0R1'
+    assert expected_loc in html
 
 print('Phase 4.3E integrated search and cross-link tests PASS')
