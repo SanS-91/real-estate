@@ -70,6 +70,15 @@
     return row?.asking_price_change_1y_pct == null ? '—' : Formatters.number(row.asking_price_change_1y_pct * 100,{min:1,max:1}) + '%';
   }
 
+  function listingRangeChartData(records = data.projects) {
+    const rows = listingPriceRows(records);
+    return {
+      labels: rows.map(item => item.project.name),
+      lowValues: rows.map(item => item.row.asking_price_low_vnd_per_m2),
+      highValues: rows.map(item => item.row.asking_price_high_vnd_per_m2)
+    };
+  }
+
   function priceLayerControls() {
     return `<div class="segmented-control market-price-layer" data-price-layer-control>
       <button type="button" data-price-layer="verified" class="${state.priceLayer === 'verified' ? 'is-active' : ''}">Verified price</button>
@@ -274,13 +283,25 @@
         <div class="section-body section-body--table">${projectTable(data.projects, 6)}</div>
       </section>
       <section class="section">
-        <div class="section-header"><div><span class="eyebrow">Verified project pricing</span><h2 class="section-title">Pricing Snapshot</h2></div><a class="text-link" href="market.html?view=pricing">Open Pricing</a></div>
-        <div class="section-body"><div class="chart-frame"><canvas id="market-overview-price"></canvas></div><p class="chart-note">Only source-stated project pricing is shown; no synthetic history · ${sourceRef(overviewPriceSource?.source_id,{sourceDate:overviewPriceSource?.source_date,period:overviewPriceSource?.period,sourceUrl:overviewPriceSource?.source_url})}</p></div>
+        <div class="section-header"><div><span class="eyebrow">Project pricing</span><h2 class="section-title">Pricing Snapshot</h2></div><div class="section-header__actions">${priceLayerControls()}<a class="text-link" href="market.html?view=pricing">Open Pricing</a></div></div>
+        <div class="section-body"><div class="chart-frame"><canvas id="market-overview-price"></canvas></div><p class="chart-note">${state.priceLayer === 'listing' ? 'Listing-market asking ranges from mapped portal snapshots; not transaction prices.' : 'Only source-stated verified project pricing is shown; no synthetic history · ' + sourceRef(overviewPriceSource?.source_id,{sourceDate:overviewPriceSource?.source_date,period:overviewPriceSource?.period,sourceUrl:overviewPriceSource?.source_url})}</p></div>
       </section>`;
     setView(html);
     requestAnimationFrame(() => {
       ChartTools.renderSupplySales('market-overview-supply', overviewMarketRows);
-      ChartTools.renderPriceTrend('market-overview-price', priceSeries());
+      if (state.priceLayer === 'listing') {
+        const listingChart = listingRangeChartData(data.projects);
+        ChartTools.renderRangeSeries('market-overview-price', {
+          labels: listingChart.labels,
+          lowValues: listingChart.lowValues,
+          highValues: listingChart.highValues,
+          lowLabel: 'Asking low',
+          highLabel: 'Asking high',
+          yFormatter: value => Formatters.aspVndPerSqm(value, { short:true })
+        });
+      } else {
+        ChartTools.renderPriceTrend('market-overview-price', priceSeries());
+      }
     });
   }
 
@@ -314,20 +335,47 @@
   }
 
   function renderPricing() {
-    const projectRows = projectFilter(data.projects)
+    const filteredProjects = projectFilter(data.projects);
+    const projectRows = filteredProjects
       .map(project => ({ project, obs: latestProjectObservation(project.id) }))
       .filter(item => Number.isFinite(item.obs?.average_asp));
+    const listingRows = listingPriceRows(filteredProjects);
     const benchmarkRows = marketBenchmarks('apartment');
     const series = priceSeries(projectRows.map(item => item.project.id));
+    const listingChart = listingRangeChartData(filteredProjects);
     const html = `
-      <div class="view-intro"><div><span class="eyebrow">Evidence-backed price observations</span><h2>Pricing</h2><p>Developer-stated project prices and independent market benchmarks are kept separate. No missing project price is estimated.</p></div></div>
+      <div class="view-intro"><div><span class="eyebrow">Evidence-backed price observations</span><h2>Pricing</h2><p>Verified project prices and listing-market asking ranges are shown as separate layers. Missing fields remain blank.</p></div></div>
       ${filterToolbar({ includeStatus:false })}
-      <section class="section"><div class="section-header"><h2 class="section-title">Verified Project Pricing</h2></div><div class="section-body">${series.length ? '<div class="chart-frame chart-frame--large"><canvas id="market-pricing"></canvas></div><p class="chart-note">Sparse source-stated snapshots; a single point is not a synthetic trend.</p>' : '<div class="state-box">No verified project price observations for the selected filters.</div>'}</div></section>
-      <section class="section"><div class="section-header"><h2 class="section-title">Latest Pricing Snapshot</h2></div><div class="section-body section-body--table"><div class="table-wrap"><table class="data-table"><thead><tr><th>Project</th><th>Region</th><th>Period</th><th class="numeric">ASP</th><th>Basis</th><th>Source</th></tr></thead><tbody>${projectRows.map(({project,obs})=>`<tr><td><button class="table-link" data-project-id="${esc(project.id)}" type="button">${esc(project.name)}</button></td><td>${esc(regionNames(project))}</td><td>${esc(obs.period)}</td><td class="numeric">${esc(formatAsp(obs.average_asp))}</td><td>${esc(obs.price_basis?.replaceAll('-',' ') || '—')}</td><td>${sourceRef(obs.source_id,{sourceDate:obs.source_date,period:obs.period,methodology:obs.methodology_note,sourceUrl:obs.source_url})}</td></tr>`).join('') || '<tr><td colspan="6" class="table-empty">No comparable pricing records.</td></tr>'}</tbody></table></div></div></section>
+      <section class="section">
+        <div class="section-header"><div><h2 class="section-title">${state.priceLayer === 'listing' ? 'Listing Market Asking Ranges' : 'Verified Project Pricing'}</h2></div>${priceLayerControls()}</div>
+        <div class="section-body">${state.priceLayer === 'listing'
+          ? (listingRows.length ? '<div class="chart-frame chart-frame--large"><canvas id="market-pricing"></canvas></div><p class="chart-note">Portal asking-price ranges; not executed transaction prices or official developer sales.</p>' : '<div class="state-box">No priced listing snapshots for the selected filters.</div>')
+          : (series.length ? '<div class="chart-frame chart-frame--large"><canvas id="market-pricing"></canvas></div><p class="chart-note">Sparse source-stated snapshots; a single point is not a synthetic trend.</p>' : '<div class="state-box">No verified project price observations for the selected filters.</div>')}
+        </div>
+      </section>
+      <section class="section">
+        <div class="section-header"><h2 class="section-title">${state.priceLayer === 'listing' ? 'Latest Listing Snapshot' : 'Latest Verified Snapshot'}</h2></div>
+        <div class="section-body section-body--table"><div class="table-wrap"><table class="data-table">
+          ${state.priceLayer === 'listing'
+            ? `<thead><tr><th>Project</th><th>Region</th><th>Snapshot</th><th class="numeric">Asking Range</th><th class="numeric">1Y Trend</th><th>Coverage</th><th>Source</th></tr></thead><tbody>${listingRows.map(({project,row})=>`<tr><td><button class="table-link" data-project-id="${esc(project.id)}" type="button">${esc(project.name)}</button></td><td>${esc(regionNames(project))}</td><td>${esc(row.observation_date || '—')}</td><td class="numeric">${esc(formatListingRange(row))}</td><td class="numeric">${esc(listingTrendLabel(row))}</td><td>${esc(row.coverage_status || 'full')}</td><td>${sourceRef(row.source_id,{sourceDate:row.observation_date,sourceUrl:row.source_url,methodology:row.methodology_note})}</td></tr>`).join('') || '<tr><td colspan="7" class="table-empty">No priced listing snapshots.</td></tr></tbody>`
+            : `<thead><tr><th>Project</th><th>Region</th><th>Period</th><th class="numeric">ASP</th><th>Basis</th><th>Source</th></tr></thead><tbody>${projectRows.map(({project,obs})=>`<tr><td><button class="table-link" data-project-id="${esc(project.id)}" type="button">${esc(project.name)}</button></td><td>${esc(regionNames(project))}</td><td>${esc(obs.period)}</td><td class="numeric">${esc(formatAsp(obs.average_asp))}</td><td>${esc(obs.price_basis?.replaceAll('-',' ') || '—')}</td><td>${sourceRef(obs.source_id,{sourceDate:obs.source_date,period:obs.period,methodology:obs.methodology_note,sourceUrl:obs.source_url})}</td></tr>`).join('') || '<tr><td colspan="6" class="table-empty">No comparable pricing records.</td></tr></tbody>`}
+        </table></div></div>
+      </section>
       <section class="section"><div class="section-header"><h2 class="section-title">Market Benchmarks</h2></div><div class="section-body section-body--table"><div class="table-wrap"><table class="data-table"><thead><tr><th>Market</th><th>Period</th><th class="numeric">New Supply</th><th class="numeric">Transactions</th><th class="numeric">Absorption</th><th class="numeric">Average ASP</th><th>Source</th></tr></thead><tbody>${benchmarkRows.map(row=>`<tr><td>HCMC · Apartment</td><td>${esc(row.period)}</td><td class="numeric">${esc(formatCompact(row.new_supply))}</td><td class="numeric">${esc(formatCompact(row.sales_units))}</td><td class="numeric">${esc(formatPercent(row.absorption_rate))}</td><td class="numeric">${esc(formatAsp(row.average_asp))}</td><td>${sourceRef(row.source_id,{sourceDate:row.source_date,period:row.period,methodology:row.methodology_note,sourceUrl:row.source_url})}</td></tr>`).join('') || '<tr><td colspan="7" class="table-empty">No market benchmark records.</td></tr>'}</tbody></table></div></div></section>`;
     setView(html);
     bindFilters();
-    if (series.length) requestAnimationFrame(() => ChartTools.renderPriceTrend('market-pricing', series));
+    if (state.priceLayer === 'listing') {
+      if (listingRows.length) requestAnimationFrame(() => ChartTools.renderRangeSeries('market-pricing', {
+        labels: listingChart.labels,
+        lowValues: listingChart.lowValues,
+        highValues: listingChart.highValues,
+        lowLabel: 'Asking low',
+        highLabel: 'Asking high',
+        yFormatter: value => Formatters.aspVndPerSqm(value, { short:true })
+      }));
+    } else if (series.length) {
+      requestAnimationFrame(() => ChartTools.renderPriceTrend('market-pricing', series));
+    }
   }
 
   function renderDevelopers() {
@@ -459,6 +507,13 @@
 
   function bindDelegatedEvents() {
     document.addEventListener('click', event => {
+      const priceLayerButton = event.target.closest('[data-price-layer]');
+      if (priceLayerButton) {
+        state.priceLayer = priceLayerButton.dataset.priceLayer;
+        App.setQueryParam('price-layer', state.priceLayer);
+        render();
+        return;
+      }
       const button = event.target.closest('[data-project-id]');
       if (!button) return;
       openProject(button.dataset.projectId);
