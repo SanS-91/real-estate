@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "build_id": "phase5.5a-listing-market-20261008",
-  "generated_at": "2026-10-08T12:29:22.368Z",
+  "generated_at": "2026-10-08T14:32:55.012Z",
   "record_count": 38,
   "data": [
     {
@@ -250,11 +250,11 @@
       "source_type": "official",
       "base_url": "https://vanban.chinhphu.vn/",
       "language": "vi",
-      "collection_method": "manual-curated",
+      "collection_method": "automated-candidate",
       "fetch_frequency": "event-driven",
       "source_priority": 1,
       "active": true,
-      "notes": "Official Government legal-document portal used for the curated real-estate legal registry."
+      "notes": "Official Government legal-document portal used for the curated real-estate legal registry. Structured candidate collection added in Phase 5.7 with review-required Preview → Promote before production."
     },
     {
       "id": "gov-vietnam-infrastructure",
@@ -262,11 +262,11 @@
       "source_type": "official-media",
       "base_url": "https://baochinhphu.vn/",
       "language": "vi",
-      "collection_method": "manual-curated",
+      "collection_method": "automated-candidate",
       "fetch_frequency": "event-driven",
       "source_priority": 1,
       "active": true,
-      "notes": "Government information source used for curated national and regional infrastructure milestones."
+      "notes": "Government information source used for curated national and regional infrastructure milestones. Structured candidate collection added in Phase 5.7 with review-required Preview → Promote before production."
     },
     {
       "id": "hcmc-public-infrastructure",
@@ -274,11 +274,11 @@
       "source_type": "official",
       "base_url": "https://www.hochiminhcity.gov.vn/",
       "language": "vi",
-      "collection_method": "manual-curated",
+      "collection_method": "automated-candidate",
       "fetch_frequency": "event-driven",
       "source_priority": 1,
       "active": true,
-      "notes": "Official HCMC public sources, including HĐND/municipal infrastructure updates."
+      "notes": "Official HCMC public sources, including HĐND/municipal infrastructure updates. Structured candidate collection added in Phase 5.7 with review-required Preview → Promote before production."
     },
     {
       "id": "dongnai-public-infrastructure",
@@ -286,11 +286,11 @@
       "source_type": "official",
       "base_url": "https://dongnai.gov.vn/",
       "language": "vi",
-      "collection_method": "manual-curated",
+      "collection_method": "automated-candidate",
       "fetch_frequency": "event-driven",
       "source_priority": 1,
       "active": true,
-      "notes": "Official Đồng Nai public source used for regional infrastructure operation and construction milestones."
+      "notes": "Official Đồng Nai public source used for regional infrastructure operation and construction milestones. Structured candidate collection added in Phase 5.7 with review-required Preview → Promote before production."
     },
     {
       "id": "nam-long-official",

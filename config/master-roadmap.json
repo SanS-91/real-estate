@@ -30,7 +30,7 @@
     {
       "id": "4",
       "name": "Source Registry & Auto Data Collection",
-      "status": "in-progress",
+      "status": "complete",
       "exit_criteria": "All four modules have a defined Source → Fetch/Assist → Parse → Normalize → Deduplicate → Candidate path. Legal and Infrastructure must move beyond fingerprint/watch-only discovery."
     },
     {
@@ -78,24 +78,24 @@
     {
       "module": "legal",
       "registry": "complete",
-      "collectors": "watch-only",
-      "scheduling": "assisted-watch",
-      "candidate_gate": "partial",
-      "production_promotion": "manual-curated",
+      "collectors": "complete",
+      "scheduling": "complete-assisted-watch",
+      "candidate_gate": "complete",
+      "production_promotion": "complete",
       "history": "complete-framework",
       "intelligence": "partial",
-      "primary_gap": "Structured legal candidate collector and review/promotion flow for newly discovered official documents and amendments."
+      "primary_gap": "Increase source coverage and deepen amendment/effective-date history; core collection path is complete."
     },
     {
       "module": "infrastructure",
       "registry": "complete",
-      "collectors": "watch-only",
-      "scheduling": "assisted-watch",
-      "candidate_gate": "partial",
-      "production_promotion": "manual-curated",
+      "collectors": "complete",
+      "scheduling": "complete-assisted-watch",
+      "candidate_gate": "complete",
+      "production_promotion": "complete",
       "history": "complete-framework",
       "intelligence": "partial",
-      "primary_gap": "Structured infrastructure candidate collector for milestones, schedule revisions, investment/status changes and append-only promotion."
+      "primary_gap": "Increase milestone/source coverage and deepen schedule history; core collection path is complete."
     }
   ],
   "next_sequence": [

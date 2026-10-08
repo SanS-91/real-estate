@@ -1,0 +1,37 @@
+name: Phase 5.7C Registry Promotion Validation
+
+on:
+  pull_request:
+    paths:
+      - 'scripts/registry_candidate_promotion.py'
+      - 'tests/test_phase5_7c_registry_candidate_promotion.py'
+      - '.github/workflows/registry-candidate-promote.yml'
+      - '.github/workflows/phase57c-registry-promotion-validation.yml'
+      - 'config/master-roadmap.json'
+      - 'docs/MASTER_ROADMAP.md'
+      - 'data/mock/core/sources.json'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  validate:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v7
+      - uses: actions/setup-python@v7
+        with:
+          python-version: '3.12'
+      - name: Install dependencies
+        run: pip install -r requirements.txt
+      - name: Syntax
+        run: python -m py_compile scripts/registry_candidate_promotion.py
+      - name: Phase 5.7C contract
+        run: python tests/test_phase5_7c_registry_candidate_promotion.py
+      - name: Collector regressions
+        run: |
+          python tests/test_phase5_7a_legal_candidate_collector.py
+          python tests/test_phase5_7b_infrastructure_candidate_collector.py
+          python tests/test_phase5_6b_master_roadmap_alignment.py
