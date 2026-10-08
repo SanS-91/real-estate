@@ -6,6 +6,8 @@ on:
       - 'scripts/market_candidate_promotion.py'
       - 'data/candidate/market/observations.json'
       - 'data/candidate/market/articles.json'
+      - 'data/mock/market/observations.json'
+      - 'data/mock/articles/articles.json'
       - 'tests/test_phase5_5f2_*'
       - 'tests/test_phase4_3c_market_registry.py'
       - '.github/workflows/market-candidate-promote.yml'
