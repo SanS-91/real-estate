@@ -147,6 +147,13 @@
     'Credit Growth': 'Tăng trưởng tín dụng',
     'Credit Growth YTD': 'Tăng trưởng tín dụng YTD',
     'Bank Funding Growth YTD': 'Tăng trưởng huy động vốn YTD',
+    'Current master status': 'Trạng thái chính hiện tại',
+    'Curated registry': 'Cơ sở dữ liệu tuyển chọn',
+    'Curated official infrastructure registry': 'Cơ sở dữ liệu hạ tầng chính thức được tuyển chọn',
+    'Historical records remain searchable': 'Lịch sử vẫn có thể tra cứu',
+    'Published quarterly new-supply observations; missing sales figures remain blank': 'Nguồn cung mở bán mới theo quý đã công bố; số liệu bán hàng thiếu nguồn được để trống',
+    'Verified production observation from the approved official source.': 'Quan sát production đã xác minh từ nguồn chính thức được phê duyệt.',
+    'Corroborated production observation from the approved source set.': 'Quan sát production đã được đối chiếu theo bộ nguồn được phê duyệt.',
     'CPI YoY': 'CPI so với cùng kỳ',
     'CANONICAL': 'CHÍNH THỨC',
     'CORROBORATED': 'ĐÃ ĐỐI CHIẾU',
@@ -590,6 +597,11 @@
     if ((match = core.match(/^Updated (.+) · prior target retained in history$/))) return `Cập nhật ${match[1]} · mốc trước được giữ trong lịch sử`;
     if ((match = core.match(/^(.+) amends (.+); both records remain linked in the legal lifecycle\.$/))) return `${match[1]} sửa đổi ${match[2]}; hai văn bản tiếp tục được liên kết trong lịch sử pháp lý.`;
     if ((match = core.match(/^(.+) supplements (.+); both records remain linked in the legal lifecycle\.$/))) return `${match[1]} bổ sung ${match[2]}; hai văn bản tiếp tục được liên kết trong lịch sử pháp lý.`;
+    if ((match = core.match(/^Curated registry · (\d+) projects$/))) return `Cơ sở dữ liệu tuyển chọn · ${match[1]} dự án`;
+    if ((match = core.match(/^Changed from ([\d.,]+) to ([\d.,]+) VND\/USD \(([+-]?[\d.,]+)\)\.$/))) return `Thay đổi từ ${match[1]} xuống/còn ${match[2]} VND/USD (${match[3]}).`;
+    if ((match = core.match(/^Changed from ([\d.,]+) to ([\d.,]+) mn VND\/tael \(([+-]?[\d.,]+) mn\)\.$/))) return `Thay đổi từ ${match[1]} xuống/còn ${match[2]} triệu đồng/lượng (${match[3]} triệu).`;
+    if ((match = core.match(/^Changed from ([\d.,]+)% to ([\d.,]+)% \(([+-]?[\d.,]+) ppt\)\.$/))) return `Thay đổi từ ${match[1]}% xuống/còn ${match[2]}% (${match[3]} điểm %).`;
+    if ((match = core.match(/^Q([1-4])\/(\d{4})$/))) return `Q${match[1]}/${match[2]}`;
     if ((match = core.match(/^Published (.+)$/))) return `Công bố ${match[1]}`;
     if ((match = core.match(/^Announced (.+)$/))) return `Công bố ${match[1]}`;
     if ((match = core.match(/^Source: (.+)$/))) return `Nguồn: ${match[1]}`;
