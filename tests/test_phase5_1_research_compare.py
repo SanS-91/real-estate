@@ -24,7 +24,7 @@ assert 'function compareTable(contexts)' in js
 assert 'function compareShared(contexts)' in js
 assert 'No synthetic scoring' in js
 assert 'do not establish legal applicability' in js
-assert 'Macro context is common to the comparison and is not used as a project score.' in js
+assert 'Common context, not used to score subjects.' in js
 
 assert 'research.html?type=project&ids=${encodeURIComponent(project.id)}' in market
 assert 'research.html?type=developer&ids=${encodeURIComponent(dev.id)}' in market
