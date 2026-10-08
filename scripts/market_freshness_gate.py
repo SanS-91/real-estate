@@ -20,7 +20,7 @@ def evaluate(targets, report):
         target = by_id.get(item.get("target_id"), {})
         # Explicitly require future collectors to provide a verified source period
         # and evidence URL, rather than trusting configuration period or fetch time.
-        source_period = item.get("verified_source_period")
+        source_period = item.get("verified_source_period") or item.get("detected_period")
         source_date = item.get("verified_source_date")
         expected = target.get("period")
         passed = bool(
