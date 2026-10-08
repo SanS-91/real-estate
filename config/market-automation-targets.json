@@ -21,7 +21,7 @@
       "period": "2026-Q2",
       "period_type": "quarter",
       "scope": "hcmc-residential",
-      "collector": "cushman_hcmc_residential",
+      "collector": "cushman_market",
       "enabled": true
     },
     {
@@ -32,18 +32,18 @@
       "period": "2026-Q2",
       "period_type": "quarter",
       "scope": "hcmc-residential",
-      "collector": "metadata_only",
+      "collector": "jll_research",
       "enabled": true
     },
     {
-      "target_id": "savills-vietnam-research-index",
+      "target_id": "savills-vietnam-q2-2026-market-brief",
       "source_id": "savills-vietnam",
       "observation_source_id": "savills-vietnam-market",
-      "url": "https://www.savills.com.vn/insight-and-opinion/research.aspx?f=date&p=&page=1&q=&rc=Vietnam&t=",
-      "period": null,
-      "period_type": null,
-      "scope": "vietnam-research-index",
-      "collector": "metadata_only",
+      "url": "https://www.savills.com.vn/insight-and-opinion/",
+      "period": "2026-Q2",
+      "period_type": "quarter",
+      "scope": "vietnam-market-research",
+      "collector": "savills_research",
       "enabled": true
     },
     {
