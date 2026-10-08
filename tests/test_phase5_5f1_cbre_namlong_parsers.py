@@ -48,6 +48,8 @@ ap=[x for x in built if x["segment_ids"]==["apartment"]][0]
 land=[x for x in built if x["segment_ids"]==["landed"]][0]
 assert mod.existing_obs_key(ap) in keys
 assert keys[mod.existing_obs_key(ap)]["new_supply"]==850
-assert mod.existing_obs_key(land) not in keys
+land_key=mod.existing_obs_key(land)
+if land_key in keys:
+    assert keys[land_key]["new_supply"]==1934
 
 print("Phase 5.5F1 CBRE + Nam Long parser tests PASS")

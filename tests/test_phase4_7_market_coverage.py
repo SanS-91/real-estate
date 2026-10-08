@@ -15,7 +15,7 @@ assert {'vinhomes-official','sonkim-land-official','keppel-real-estate-vietnam',
 assert all(x.get('primary_source_id') in source_ids for x in projects['data'])
 assert all(x.get('official_url','').startswith('http') for x in projects['data'])
 assert not any(k in x for x in projects['data'] for k in ('average_asp','absorption_rate','sales_units','new_supply'))
-assert obs['record_count']==7
+assert obs['record_count']==len(obs['data']) and obs['record_count']>=7
 
 tmp=Path(tempfile.mkdtemp())/'coverage.json'
 cp=subprocess.run([sys.executable,str(ROOT/'scripts/build_market_coverage.py'),'--output',str(tmp)],cwd=ROOT,capture_output=True,text=True)

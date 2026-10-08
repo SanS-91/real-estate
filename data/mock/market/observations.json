@@ -1,9 +1,57 @@
 {
   "schema_version": 1,
-  "build_id": "phase4.3c-market-registry-20261007",
-  "generated_at": "2026-10-07T10:30:00+07:00",
-  "record_count": 7,
+  "build_id": "phase5.5f2-market-promotion-20261008",
+  "generated_at": "2026-10-08T09:18:26.584Z",
+  "record_count": 8,
   "data": [
+    {
+      "id": "obs-the-privia-2024",
+      "scope_type": "project",
+      "project_id": "the-privia",
+      "region_ids": [
+        "hcmc"
+      ],
+      "segment_ids": [
+        "apartment"
+      ],
+      "period": "2024",
+      "period_type": "year",
+      "new_supply": 1043,
+      "sales_units": 1043,
+      "absorption_rate": 1,
+      "average_asp": null,
+      "asp_unit": "vnd-per-m2",
+      "currency": "VND",
+      "price_basis": null,
+      "source_id": "khang-dien-official",
+      "source_date": "2024-11-18",
+      "source_url": "https://www.khangdien.com.vn/tap-doan-khang-dien-kdh-duoc-vinh-danh-chu-dau-tu-cua-thap-ky-tai-giai-thuong-propertyguru-vietnam-property-awards-2024",
+      "methodology_note": "Khang Điền stated that 100% of The Privia apartments were sold within three months of launch in 2024; project has 1,043 apartments."
+    },
+    {
+      "id": "obs-elysian-2025-07",
+      "scope_type": "project",
+      "project_id": "elysian",
+      "region_ids": [
+        "hcmc"
+      ],
+      "segment_ids": [
+        "apartment"
+      ],
+      "period": "2025-07",
+      "period_type": "month",
+      "new_supply": null,
+      "sales_units": null,
+      "absorption_rate": null,
+      "average_asp": 68000000,
+      "asp_unit": "vnd-per-m2",
+      "currency": "VND",
+      "price_basis": "developer-stated-average",
+      "source_id": "gamuda-land-official",
+      "source_date": "2025-07-31",
+      "source_url": "https://gamudaland.com.vn/vn/news/news-and-story-34",
+      "methodology_note": "Gamuda Land stated an average price of VND 68m/m² in a July 2025 project-sales article. Developer-stated pricing is kept distinct from independent market research."
+    },
     {
       "id": "obs-hcmc-apartment-2025-q4-cbre",
       "scope_type": "region-segment",
@@ -74,6 +122,29 @@
       "methodology_note": "CBRE public Q2/2026 figure: 850 newly launched condominium units, down 48% q-o-q. Missing sales/absorption/price fields are intentionally left null."
     },
     {
+      "id": "obs-hcmc-landed-2026-q2-cbre",
+      "scope_type": "region-segment",
+      "region_ids": [
+        "hcmc"
+      ],
+      "segment_ids": [
+        "landed"
+      ],
+      "period": "2026-Q2",
+      "period_type": "quarter",
+      "new_supply": 1934,
+      "sales_units": null,
+      "absorption_rate": null,
+      "average_asp": null,
+      "asp_unit": "vnd-per-m2-land",
+      "currency": "VND",
+      "price_basis": null,
+      "source_id": "cbre-vietnam-market",
+      "source_date": "2026-08-12",
+      "source_url": "https://www.cbrevietnam.com/vi-vn/insights/figures/c%E1%BA%ADp-nh%E1%BA%ADt-th%E1%BB%8B-tr%C6%B0%E1%BB%9Dng-b%C4%91s-h%E1%BB%93-ch%C3%AD-minh-qu%C3%BD-2-2026",
+      "methodology_note": "CBRE residential Q2 figure: newly launched landed-property units. Parsed automatically into candidate; requires review before promotion."
+    },
+    {
       "id": "obs-hcmc-apartment-2025-savills-benchmark",
       "scope_type": "region-segment-benchmark",
       "region_ids": [
@@ -118,54 +189,6 @@
       "source_date": "2026-03-28",
       "source_url": "https://vn.savills.com.vn/blog/article/234705/vietnam-eng/hcmc-real-estate-q4-2025.aspx",
       "methodology_note": "Savills public 2025 villa/townhouse benchmark: about 4,100 new units, 2,000 transactions and average primary price VND 233m/m² of land."
-    },
-    {
-      "id": "obs-elysian-2025-07",
-      "scope_type": "project",
-      "project_id": "elysian",
-      "region_ids": [
-        "hcmc"
-      ],
-      "segment_ids": [
-        "apartment"
-      ],
-      "period": "2025-07",
-      "period_type": "month",
-      "new_supply": null,
-      "sales_units": null,
-      "absorption_rate": null,
-      "average_asp": 68000000,
-      "asp_unit": "vnd-per-m2",
-      "currency": "VND",
-      "price_basis": "developer-stated-average",
-      "source_id": "gamuda-land-official",
-      "source_date": "2025-07-31",
-      "source_url": "https://gamudaland.com.vn/vn/news/news-and-story-34",
-      "methodology_note": "Gamuda Land stated an average price of VND 68m/m² in a July 2025 project-sales article. Developer-stated pricing is kept distinct from independent market research."
-    },
-    {
-      "id": "obs-the-privia-2024",
-      "scope_type": "project",
-      "project_id": "the-privia",
-      "region_ids": [
-        "hcmc"
-      ],
-      "segment_ids": [
-        "apartment"
-      ],
-      "period": "2024",
-      "period_type": "year",
-      "new_supply": 1043,
-      "sales_units": 1043,
-      "absorption_rate": 1.0,
-      "average_asp": null,
-      "asp_unit": "vnd-per-m2",
-      "currency": "VND",
-      "price_basis": null,
-      "source_id": "khang-dien-official",
-      "source_date": "2024-11-18",
-      "source_url": "https://www.khangdien.com.vn/tap-doan-khang-dien-kdh-duoc-vinh-danh-chu-dau-tu-cua-thap-ky-tai-giai-thuong-propertyguru-vietnam-property-awards-2024",
-      "methodology_note": "Khang Điền stated that 100% of The Privia apartments were sold within three months of launch in 2024; project has 1,043 apartments."
     }
   ]
 }
