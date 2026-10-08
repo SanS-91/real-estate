@@ -1,0 +1,51 @@
+name: Phase 7.1 Ranked Intelligence Surfaces Validation
+
+on:
+  pull_request:
+    paths:
+      - 'index.html'
+      - 'assets/js/home.js'
+      - 'assets/js/components.js'
+      - 'assets/js/intelligence-ranking.js'
+      - 'assets/js/intelligence-surfaces.js'
+      - 'config/intelligence-ranking.json'
+      - 'config/master-roadmap.json'
+      - 'tests/test_phase7_1_intelligence_surfaces.js'
+      - 'tests/test_phase7_1_ranked_home.py'
+      - '.github/workflows/phase71-ranked-intelligence-validation.yml'
+      - 'docs/PHASE7_1_RANKED_INTELLIGENCE_SURFACES.md'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  validate:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v7
+      - uses: actions/setup-python@v7
+        with:
+          python-version: '3.12'
+      - name: JavaScript syntax
+        run: |
+          node --check assets/js/intelligence-ranking.js
+          node --check assets/js/intelligence-surfaces.js
+          node --check assets/js/home.js
+          node --check assets/js/components.js
+      - name: Phase 7.1 selector behavior
+        run: node tests/test_phase7_1_intelligence_surfaces.js
+      - name: Phase 7.1 Home integration
+        run: python tests/test_phase7_1_ranked_home.py
+      - name: Phase 7.0 ranking regression
+        run: |
+          node tests/test_phase7_0_intelligence_ranking.js
+          python tests/test_phase7_0_intelligence_ranking.py
+      - name: Home and intelligence regressions
+        run: |
+          python tests/test_phase4_3d_home_sync.py
+          python tests/test_phase5_8_data_health_ui.py
+          python tests/test_phase6_3_historical_coverage_expansion.py
+      - name: Roadmap regression
+        run: python tests/test_phase5_6b_master_roadmap_alignment.py
