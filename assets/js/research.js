@@ -261,11 +261,28 @@
     collectSelections();
     const current = watchlistItems();
     const existing = new Set(current.map(row => watchKey(row.type,row.id)));
+    const newlySaved = [];
     state.ids.forEach(id => {
       const key = watchKey(state.type,id);
-      if (!existing.has(key)) current.push({ type: state.type, id });
+      if (!existing.has(key)) {
+        current.push({ type: state.type, id });
+        newlySaved.push({ type: state.type, id });
+      }
     });
     saveWatchlist(current.slice(0,30));
+
+    // Treat currently linked evidence as the baseline at the moment a subject is saved.
+    // The inbox then highlights only evidence IDs that appear later.
+    if (newlySaved.length) {
+      const reviewed = reviewedEvidence();
+      const map = byId(subjectRows());
+      newlySaved.forEach(row => {
+        const subject = map.get(row.id);
+        if (!subject) return;
+        evidenceRowsForContext(contextFor(subject)).forEach(ev => reviewed.add(ev.id));
+      });
+      saveReviewed(reviewed);
+    }
     renderWatchlist();
   }
 
