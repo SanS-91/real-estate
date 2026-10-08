@@ -77,6 +77,20 @@ jobs:
         run: python scripts/market_verified_metric_promotion.py --mode preview
       - name: Preview strict official-news auto-promotion
         run: python scripts/market_verified_auto_promotion.py --mode preview
+      - name: End-to-end append-only publication test (isolated PR checkout)
+        if: github.event_name == 'pull_request'
+        run: |
+          python scripts/market_verified_auto_promotion.py --mode promote
+          python scripts/market_verified_metric_promotion.py --mode promote
+          python - <<'PY'
+          import json
+          from pathlib import Path
+          prod=json.loads(Path("data/mock/articles/articles.json").read_text())
+          report=json.loads(Path("data/candidate/market/market-verified-auto-promotion-report.json").read_text())
+          assert prod["record_count"] == len(prod["data"])
+          assert report["eligible_new_articles"] == report.get("added_articles", 0) if report["eligible_new_articles"] else True
+          print("PR-only production simulation passed; no remote push or website change.")
+          PY
       - name: Publish verified publisher news to production JSON
         if: github.ref == 'refs/heads/main' && github.event_name != 'pull_request'
         run: python scripts/market_verified_auto_promotion.py --mode promote
