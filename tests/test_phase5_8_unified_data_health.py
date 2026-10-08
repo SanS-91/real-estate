@@ -24,6 +24,8 @@ assert conflicts==0
 ops=json.loads((ROOT/"config/operations_health.json").read_text(encoding="utf-8"))
 ids={x["id"] for x in ops["datasets"]}
 assert {"market-listing","legal-registry","infrastructure-registry","macro-daily-markets"} <= ids
+assert all(x.get("workflow_file") for x in ops["datasets"])
+assert next(x for x in ops["datasets"] if x["id"]=="macro-daily-markets")["workflow_file"]=="macro-candidate.yml"
 
 matrix=json.loads((ROOT/"config/update_matrix.json").read_text(encoding="utf-8"))
 m={x["id"]:x for x in matrix["datasets"]}
