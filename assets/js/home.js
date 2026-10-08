@@ -446,96 +446,11 @@
   }
 
   function buildChanges(data) {
-    if (!window.HistoryEngine) return [];
-    const intelligence = HistoryEngine.buildIntelligence({
-      macroRows: data.production.rows,
-      legalDocuments: data.legal,
-      infrastructureProjects: data.infrastructure,
-      schedules: data.schedules,
-      events: data.events,
-      marketObservations: data.marketObservations
-    });
-
-    const latestByCategory = [];
-    ['macro', 'infrastructure', 'market', 'legal'].forEach(category => {
-      const item = intelligence.find(row => row.category === category);
-      if (item) latestByCategory.push(item);
-    });
-
-    return latestByCategory.map(item => {
-      if (item.category === 'macro') {
-        const current = item.current;
-        const previous = item.previous;
-        const deltaLabel = current.unit === 'vnd-per-tael'
-          ? `${item.delta > 0 ? '+' : ''}${Formatters.number(item.delta / 1_000_000, { min: 1, max: 1 })} mn VND/tael`
-          : `${item.delta > 0 ? '+' : ''}${Formatters.number(item.delta, { min: 0, max: 0 })} VND/USD`;
-        return {
-          id: item.id,
-          category: 'macro',
-          category_label: 'Macro',
-          date_label: formatProductionPeriod(current),
-          sort_date: item.date,
-          title: productionTodayTitle(current),
-          summary: `${deltaLabel} versus ${formatProductionPeriod(previous)}.`,
-          href: current.indicator_id === 'usd-vnd-central-rate' ? 'macro.html?view=fx' : 'macro.html?view=gold'
-        };
-      }
-
-      if (item.category === 'infrastructure') {
-        if (item.type === 'schedule-change') {
-          return {
-            id: item.id,
-            category: 'infrastructure',
-            category_label: 'Infrastructure',
-            date_label: App.formatDate(item.date),
-            sort_date: item.date,
-            title: item.title,
-            summary: `Schedule revised from ${item.from} to ${item.to}; prior target remains preserved in history.`,
-            href: `infrastructure.html?view=projects&project=${encodeURIComponent(item.entity_id)}`
-          };
-        }
-        return {
-          id: item.id,
-          category: 'infrastructure',
-          category_label: 'Infrastructure',
-          date_label: App.formatDate(item.date),
-          sort_date: item.date,
-          title: item.title,
-          summary: item.summary || 'Source-backed infrastructure milestone recorded in the curated timeline.',
-          href: `infrastructure.html?view=projects&project=${encodeURIComponent(item.entity_id)}`
-        };
-      }
-
-      if (item.category === 'market') {
-        const current = item.current;
-        const previous = item.previous;
-        return {
-          id: item.id,
-          category: 'market',
-          category_label: 'Market',
-          date_label: formatQuarterPeriod(current.period),
-          sort_date: item.date,
-          title: `HCMC apartment new supply at ${Formatters.number(current.new_supply, { min: 0, max: 0 })} units`,
-          summary: `Comparable CBRE series moved from ${Formatters.number(previous.new_supply, { min: 0, max: 0 })} to ${Formatters.number(current.new_supply, { min: 0, max: 0 })} units (${item.pct > 0 ? '+' : ''}${Formatters.number(item.pct, { min: 1, max: 1 })}%).`,
-          href: 'market.html?view=supply-sales'
-        };
-      }
-
-      const doc = data.legal.find(row => row.id === item.entity_id);
-      const target = data.legal.find(row => row.id === item.target_id);
-      return {
-        id: item.id,
-        category: 'legal',
-        category_label: 'Legal',
-        date_label: App.formatDate(item.date),
-        sort_date: item.date,
-        title: doc ? `${doc.document_number} · ${doc.title}` : item.title,
-        summary: target
-          ? `${doc?.document_number || 'Document'} ${item.type === 'amends' ? 'amends' : 'supplements'} ${target.document_number}; both records remain linked in the legal lifecycle.`
-          : item.summary,
-        href: doc ? `legal.html?view=documents&document=${encodeURIComponent(doc.id)}` : 'legal.html?view=documents'
-      };
-    }).sort((a, b) => dateKey(b.sort_date).localeCompare(dateKey(a.sort_date)));
+    const ranked=rankedChangeCandidates(data);
+    const selected=window.IntelligenceSurfaces?.topPerCategory?.(
+      ranked,['macro','infrastructure','market','legal']
+    ) || [];
+    return selected.map(item=>formatRankedItem(item,data));
   }
 
   function importanceLabel(value) {
@@ -563,71 +478,24 @@
   }
 
   function buildWeekly(data) {
-    const candidates = [];
+    const ranked=rankedCandidates(data);
+    const selected=window.IntelligenceSurfaces?.thisWeek?.(ranked,{
+      referenceDate:homeReferenceDate(),
+      limit:6,
+      maxPerCategory:2
+    }) || [];
+    return selected.map(item=>formatRankedItem(item,data));
+  }
 
-    // Keep only the latest observation of each Macro indicator in the recap.
-    // HistoryEngine still provides the prior stored observation for the delta summary.
-    const latestMacro = new Map();
-    data.production.rows.forEach(row => {
-      const key = observationKey(row);
-      const prior = latestMacro.get(row.indicator_id);
-      if (!prior || key.localeCompare(observationKey(prior)) > 0) latestMacro.set(row.indicator_id, row);
-    });
-
-    latestMacro.forEach(row => {
-      const published = dateKey(row.published_at || row.data_date || row.period);
-      if (!published) return;
-      candidates.push({
-        id: `weekly-live-${row.indicator_id}-${row.period}`,
-        category: 'macro',
-        category_label: 'Macro',
-        date_label: App.formatDate(published).replace(/ \d{4}$/, ''),
-        importance_label: ['cpi-yoy', 'credit-growth-ytd', 'bank-funding-growth-ytd'].includes(row.indicator_id) ? 'Important' : 'Watch',
-        title: productionTodayTitle(row),
-        summary: weeklyMacroSummary(row, data.production),
-        href: row.indicator_id === 'usd-vnd-central-rate' ? 'macro.html?view=fx'
-          : row.indicator_id.startsWith('sjc-gold') ? 'macro.html?view=gold'
-          : row.indicator_id.includes('cpi') ? 'macro.html?view=inflation'
-          : row.indicator_id.includes('rate') ? 'macro.html?view=rates'
-          : 'macro.html?view=liquidity',
-        sort_date: published
-      });
-    });
-
-    data.events
-      .filter(row => row.category === 'infrastructure' && (row.source_ids || []).some(nonDemoSource))
-      .forEach(row => candidates.push({
-        id: `weekly-live-${row.id}`,
-        category: 'infrastructure',
-        category_label: 'Infrastructure',
-        date_label: App.formatDate(row.event_date).replace(/ \d{4}$/, ''),
-        importance_label: importanceLabel(row.importance),
-        title: row.title,
-        summary: row.summary,
-        href: 'infrastructure.html?view=timeline',
-        sort_date: row.event_date
-      }));
-
-    const dated = candidates.filter(row => dateKey(row.sort_date));
-    if (!dated.length) return [];
-    const latest = dateKey(dated.reduce((max, row) => dateKey(row.sort_date) > max ? dateKey(row.sort_date) : max, ''));
-    const latestDate = new Date(`${latest}T00:00:00Z`);
-    const floor = new Date(latestDate);
-    floor.setUTCDate(floor.getUTCDate() - 6);
-    const floorKey = floor.toISOString().slice(0, 10);
-
-    return dated
-      .filter(row => {
-        const key = dateKey(row.sort_date);
-        return key >= floorKey && key <= latest;
-      })
-      .sort((a, b) => {
-        const byDate = dateKey(b.sort_date).localeCompare(dateKey(a.sort_date));
-        if (byDate) return byDate;
-        const rank = { 'High relevance': 3, 'Important': 2, 'Watch': 1 };
-        return (rank[b.importance_label] || 0) - (rank[a.importance_label] || 0);
-      })
-      .slice(0, 6);
+  function buildTopDevelopments(data) {
+    const ranked=rankedCandidates(data);
+    const selected=window.IntelligenceSurfaces?.topDevelopments?.(ranked,{
+      referenceDate:homeReferenceDate(),
+      days:30,
+      limit:6,
+      maxPerCategory:2
+    }) || [];
+    return selected.map(item=>formatRankedItem(item,data));
   }
 
   function formatProductionPeriod(row) {
