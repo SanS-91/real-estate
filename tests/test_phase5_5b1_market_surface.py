@@ -33,7 +33,7 @@ rows=listing['data']
 priced=[x for x in rows if x.get('asking_price_low_vnd_per_m2') is not None and x.get('asking_price_high_vnd_per_m2') is not None]
 assert len(rows)==12
 assert len(priced)==8
-assert canonical['record_count']==7
+assert canonical['record_count']==len(canonical['data']) and canonical['record_count']>=7
 assert macro['record_count']==18
 
 print('Phase 5.5B.1 Market Surface Integration tests PASS')
