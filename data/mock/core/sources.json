@@ -1,8 +1,8 @@
 {
   "schema_version": 1,
   "build_id": "phase5.5a-listing-market-20261008",
-  "generated_at": "2026-10-08T00:00:00+07:00",
-  "record_count": 36,
+  "generated_at": "2026-10-08T12:29:22.368Z",
+  "record_count": 38,
   "data": [
     {
       "id": "demo-official",
@@ -435,6 +435,30 @@
       "source_priority": 4,
       "active": true,
       "notes": "Secondary listing-market source used for asking-price ranges, listing activity and map-based comparable snapshots. Never treated as transaction price, official sales, or absorption."
+    },
+    {
+      "id": "jll-vietnam-market",
+      "name": "JLL Vietnam Research",
+      "source_type": "research",
+      "base_url": "https://www.jll.com/en-sea/",
+      "language": "en",
+      "collection_method": "automated-candidate",
+      "fetch_frequency": "quarterly",
+      "source_priority": 3,
+      "active": true,
+      "notes": "Public JLL Vietnam/Southeast Asia market research. Qualitative takeaways are stored as research evidence unless directly comparable numeric metrics are explicitly published."
+    },
+    {
+      "id": "cushman-wakefield-vietnam-market",
+      "name": "Cushman & Wakefield Vietnam Research",
+      "source_type": "research",
+      "base_url": "https://www.cushmanwakefield.com/en/vietnam/",
+      "language": "en/vi",
+      "collection_method": "automated-candidate",
+      "fetch_frequency": "quarterly",
+      "source_priority": 3,
+      "active": true,
+      "notes": "Public Cushman & Wakefield Vietnam MarketBeat research. Approximate metrics retain methodology notes and require review before promotion."
     }
   ]
 }
