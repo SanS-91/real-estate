@@ -6,13 +6,13 @@ pages={
  'macro.html':'assets/js/macro.js?v=4.9I1',
  'legal.html':'assets/js/legal.js?v=4.9I1',
  'infrastructure.html':'assets/js/infrastructure.js?v=4.9I1',
- 'market.html':'assets/js/market.js?v=5.5B1S1',
+ 'market.html':'assets/js/market.js?v=5.5C1',
 }
 for page,script in pages.items():
     text=(ROOT/page).read_text(encoding='utf-8')
-    assert 'assets/js/history-engine.js?v=4.9I1' in text
+    assert ('assets/js/history-engine.js?v=5.5C1' in text) if page == 'market.html' else ('assets/js/history-engine.js?v=4.9I1' in text)
     assert script in text
-    expected_css = 'assets/css/main.css?v=5.5B1S1' if page == 'market.html' else 'assets/css/main.css?v=4.9I1'
+    expected_css = 'assets/css/main.css?v=5.5C1' if page == 'market.html' else 'assets/css/main.css?v=4.9I1'
     assert expected_css in text
 
 home=(ROOT/'assets/js/home.js').read_text(encoding='utf-8')
