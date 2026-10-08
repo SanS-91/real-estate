@@ -26,7 +26,7 @@ assert dec[0]["status"]=="new"
 out,added=mod.promote_legal(legal_prod,[legal_new],dec)
 assert added==1
 promoted=[x for x in out["data"] if x["document_number"]=="200/2026/NĐ-CP"][0]
-assert promoted["id"]=="legal-200-2026-n-d-cp"
+assert promoted["id"]=="legal-200-2026-nd-cp"
 assert "review_issues" not in promoted
 assert out["record_count"]==2
 
