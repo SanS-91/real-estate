@@ -425,6 +425,51 @@
     return { projects: projectCount, observations: observations.length, price: countWith('average_asp'), sales: countWith('sales_units'), absorption: countWith('absorption_rate') };
   }
 
+  function latestListingObservation(projectId) {
+    return data.listingObservations
+      .filter(row => row.project_id === projectId)
+      .sort((a,b) => String(b.observation_date || '').localeCompare(String(a.observation_date || '')))[0] || null;
+  }
+
+  function listingComparables(projectId) {
+    return data.listingComparables
+      .filter(row => row.anchor_project_id === projectId)
+      .sort((a,b) => Number(b.asking_price_vnd_per_m2 || 0) - Number(a.asking_price_vnd_per_m2 || 0));
+  }
+
+  function fmtMillionPerM2(value) {
+    return value == null ? '—' : Formatters.number(Number(value) / 1_000_000, { min:0, max:1 }) + ' mn VND/m²';
+  }
+
+  function fmtBillion(value) {
+    return value == null ? '—' : Formatters.number(Number(value) / 1_000_000_000, { min:0, max:2 }) + ' bn';
+  }
+
+  function listingRangeLabel(row) {
+    if (!row) return '—';
+    return Formatters.number(row.asking_price_low_vnd_per_m2 / 1_000_000,{min:0,max:1}) + '–' + Formatters.number(row.asking_price_high_vnd_per_m2 / 1_000_000,{min:0,max:1}) + ' mn VND/m²';
+  }
+
+  function listingCoverage(ctx) {
+    const rows = ctx.projects.map(project => ({project,listing:latestListingObservation(project.id)})).filter(x => x.listing);
+    return { count:rows.length, projects:ctx.projects.length, rows };
+  }
+
+  function listingMarketHTML(ctx) {
+    const coverage = listingCoverage(ctx);
+    if (!coverage.count) return '<div class="state-box">' + esc(tr('Chưa có listing-market snapshot cho đối tượng này.','No listing-market snapshot is available for this subject yet.')) + '</div>';
+    return '<div class="research-listing-grid">' + coverage.rows.map(({project,listing}) => {
+      const comps = listingComparables(project.id).filter(row => row.project_id !== project.id).slice(0,8);
+      const productRanges = (listing.product_price_ranges || []).map(row => '<span class="research-listing-product"><strong>' + esc(row.product) + '</strong><small>' + esc(fmtBillion(row.low_vnd)) + '–' + esc(fmtBillion(row.high_vnd)) + '</small></span>').join('');
+      const comparableHTML = comps.length ? '<div class="research-listing-comps">' + comps.map(row => '<span><strong>' + esc(row.comparable_name) + '</strong><small>' + esc(fmtMillionPerM2(row.asking_price_vnd_per_m2)) + '</small></span>').join('') + '</div>' : '';
+      return '<article class="research-listing-card"><div class="research-listing-card__head"><div><span class="eyebrow">Listing market</span><h3>' + esc(project.name) + '</h3></div><span class="source-tag">' + esc(sourceName(listing.source_id)) + '</span></div>' +
+        '<div class="research-listing-kpis"><div><span>' + esc(tr('Giá chào bán','Asking range')) + '</span><strong>' + esc(listingRangeLabel(listing)) + '</strong></div><div><span>' + esc(tr('Biến động 1 năm','1Y portal trend')) + '</span><strong>' + esc(Formatters.number(listing.asking_price_change_1y_pct * 100,{min:1,max:1}) + '%') + '</strong></div><div><span>' + esc(tr('Diện tích phổ biến','Popular area')) + '</span><strong>' + esc(listing.popular_area_low_sqm + '–' + listing.popular_area_high_sqm + ' m²') + '</strong></div></div>' +
+        '<div class="research-listing-products">' + productRanges + '</div>' +
+        '<p class="research-disclaimer">' + esc(tr('Giá chào bán từ portal; không phải giá giao dịch, doanh số hay hấp thụ chính thức.','Portal asking prices; not transaction prices, official sales or absorption.')) + '</p>' +
+        (comparableHTML ? '<div class="research-market-benchmark-head"><strong>' + esc(tr('Comparable map snapshot','Comparable map snapshot')) + '</strong></div>' + comparableHTML : '') +
+      '</article>';
+    }).join('') + '</div>';
+  }
   function projectObservation(projectId) {
     return data.marketObservations
       .filter(row => row.project_id === projectId && isRealSource(row.source_id))
@@ -481,7 +526,7 @@
       '<div class="research-market-benchmark"><strong>' + esc(row.period) + '</strong><span>' + esc((row.segment_ids || []).join(', ')) + '</span><small>' +
       [row.new_supply != null ? tr('Nguồn cung ','Supply ') + Formatters.number(row.new_supply,{min:0,max:0}) : '', row.sales_units != null ? tr('Bán ','Sales ') + Formatters.number(row.sales_units,{min:0,max:0}) : '', row.average_asp != null ? 'ASP ' + fmtMarketValue(row.average_asp,'asp') : '', row.absorption_rate != null ? tr('Hấp thụ ','Absorption ') + fmtMarketValue(row.absorption_rate,'absorption') : ''].filter(Boolean).join(' · ') +
       '</small><em>' + esc(sourceName(row.source_id)) + '</em></div>').join('') + '</div>' : '<div class="state-box">' + esc(tr('Chưa có benchmark thị trường tương thích cho đối tượng này.','No compatible market benchmark is available for this subject.')) + '</div>';
-    return '<section class="section research-market-primary"><div class="section-header"><div><span class="eyebrow">Market first</span><h2 class="section-title">' + esc(tr('Hiệu quả & vị thế thị trường','Market Performance & Positioning')) + '</h2><p class="section-note">' + esc(marketCoverageLine(ctx)) + '</p></div><a class="text-link" href="market.html">' + esc(tr('Mở Thị trường','Open Market')) + '</a></div><div class="section-body">' + table + '<div class="research-market-benchmark-head"><strong>' + esc(tr('Benchmark thị trường','Market benchmarks')) + '</strong></div>' + bench + '</div></section>';
+    return '<section class="section research-market-primary"><div class="section-header"><div><span class="eyebrow">Market first</span><h2 class="section-title">' + esc(tr('Hiệu quả & vị thế thị trường','Market Performance & Positioning')) + '</h2><p class="section-note">' + esc(marketCoverageLine(ctx)) + '</p></div><a class="text-link" href="market.html">' + esc(tr('Mở Thị trường','Open Market')) + '</a></div><div class="section-body">' + table + '<div class="research-market-benchmark-head"><strong>' + esc(tr('Listing Market','Listing Market')) + '</strong></div>' + listingMarketHTML(ctx) + '<div class="research-market-benchmark-head"><strong>' + esc(tr('Benchmark thị trường','Market benchmarks')) + '</strong></div>' + bench + '</div></section>';
   }
 
   function marketCompareHTML(contexts) {
@@ -491,6 +536,9 @@
       [tr('Coverage giá','Price coverage'), ctx => marketCoverage(ctx).price + '/' + marketCoverage(ctx).projects],
       [tr('Coverage bán hàng','Sales coverage'), ctx => marketCoverage(ctx).sales + '/' + marketCoverage(ctx).projects],
       [tr('Coverage hấp thụ','Absorption coverage'), ctx => marketCoverage(ctx).absorption + '/' + marketCoverage(ctx).projects],
+      [tr('Coverage listing market','Listing-market coverage'), ctx => listingCoverage(ctx).count + '/' + listingCoverage(ctx).projects],
+      [tr('Khoảng giá chào bán','Listing asking range'), ctx => { const x=listingCoverage(ctx).rows[0]; return x ? listingRangeLabel(x.listing) + ' · ' + x.project.name : '—'; }],
+      [tr('Biến động giá portal 1 năm','Portal 1Y price trend'), ctx => { const x=listingCoverage(ctx).rows[0]; return x ? Formatters.number(x.listing.asking_price_change_1y_pct*100,{min:1,max:1}) + '% · ' + x.project.name : '—'; }],
       [tr('ASP dự án mới nhất','Latest project ASP'), ctx => { const x=ctx.projects.map(projectMarketRow).find(r=>r.asp!=null); return x ? fmtMarketValue(x.asp,'asp') + ' · ' + x.project.name : '—'; }],
       [tr('Sales dự án mới nhất','Latest project sales'), ctx => { const x=ctx.projects.map(projectMarketRow).find(r=>r.sales!=null); return x ? fmtMarketValue(x.sales,'sales') + ' · ' + x.project.name : '—'; }],
       [tr('Hấp thụ dự án mới nhất','Latest project absorption'), ctx => { const x=ctx.projects.map(projectMarketRow).find(r=>r.absorption!=null); return x ? fmtMarketValue(x.absorption,'absorption') + ' · ' + x.project.name : '—'; }],
@@ -819,15 +867,15 @@
 
   async function load() {
     try {
-      const [regions, developers, projects, phases, marketObs, topics, legal, infra, schedules, indicators, production, events, articles, sources] = await Promise.all([
+      const [regions, developers, projects, phases, marketObs, listingObs, listingComps, topics, legal, infra, schedules, indicators, production, events, articles, sources] = await Promise.all([
         DataStore.getRegions(), DataStore.getDevelopers(), DataStore.getProjects(), DataStore.getProjectPhases(),
-        DataStore.getMarketObservations(), DataStore.getLegalTopics(), DataStore.getLegalDocuments(),
+        DataStore.getMarketObservations(), DataStore.getListingObservations(), DataStore.getListingComparables(), DataStore.getLegalTopics(), DataStore.getLegalDocuments(),
         DataStore.getInfrastructureProjects(), DataStore.getInfrastructureSchedules(), DataStore.getMacroIndicators(),
         DataStore.getProcessedMacroObservations(), DataStore.getEvents(), DataStore.getArticles(), DataStore.getSources()
       ]);
       data = {
         regions: payload(regions), developers: payload(developers), projects: payload(projects), phases: payload(phases),
-        marketObservations: payload(marketObs), topics: payload(topics), legal: payload(legal),
+        marketObservations: payload(marketObs), listingObservations: payload(listingObs), listingComparables: payload(listingComps), topics: payload(topics), legal: payload(legal),
         infrastructure: payload(infra), schedules: payload(schedules), indicators: payload(indicators),
         macroRows: payload(production), events: payload(events), articles: payload(articles), sources: payload(sources)
       };
