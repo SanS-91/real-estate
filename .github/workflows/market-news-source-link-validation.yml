@@ -1,0 +1,29 @@
+name: Market News Source Link Validation
+
+on:
+  pull_request:
+    paths:
+      - 'assets/js/market.js'
+      - 'assets/css/main.css'
+      - 'tests/test_market_news_source_links.py'
+      - '.github/workflows/market-news-source-link-validation.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  validate:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v7
+      - uses: actions/setup-python@v7
+        with:
+          python-version: '3.12'
+      - name: Link regression
+        run: python tests/test_market_news_source_links.py
+      - name: Market UI regression
+        run: |
+          python tests/test_market_5_1_ui_polish.py
+          python tests/test_phase4_3c_market_registry.py

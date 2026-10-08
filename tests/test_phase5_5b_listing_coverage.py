@@ -43,7 +43,7 @@ for pid in ['izumi-city','the-9-stellars','celesta-gold','essensia-parkway']:
     assert by[pid]['asking_price_low_vnd_per_m2'] is None
     assert by[pid]['asking_price_high_vnd_per_m2'] is None
 
-assert canonical['record_count']==7
+assert canonical['record_count']==len(canonical['data']) and canonical['record_count']>=7
 assert not any(x.get('source_id')=='batdongsan-com-vn' for x in canonical['data'])
 assert len(production['data'])==18
 

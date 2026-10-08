@@ -423,7 +423,7 @@
       ${filterToolbar({ includeSegment:false, includeStatus:false })}
       <div class="article-list">${articles.map(article => {
         const projectNames = Resolver.getEntities('project', article.project_ids || []).map(item => item.name).join(' · ');
-        return `<article class="article-row"><div class="article-row__date">${esc(App.formatDate(article.published_at))}</div><div><div class="article-row__meta"><span class="source-tag">${esc(article.content_type)}</span>${sourceRef(article.source_id,{publishedAt:article.published_at,sourceUrl:article.url})}<span>${esc(projectNames || Resolver.getEntities('region', article.region_ids || []).map(item=>item.short_name || item.name).join(' · '))}</span></div><h3>${esc(article.title)}</h3><p>${esc(article.summary)}</p></div></article>`;
+        return `<article class="article-row"><div class="article-row__date">${esc(App.formatDate(article.published_at))}</div><div><div class="article-row__meta"><span class="source-tag">${esc(article.content_type)}</span>${sourceRef(article.source_id,{publishedAt:article.published_at,sourceUrl:article.url})}<span>${esc(projectNames || Resolver.getEntities('region', article.region_ids || []).map(item=>item.short_name || item.name).join(' · '))}</span></div><h3><a class="article-title-link" href="${esc(article.url)}" target="_blank" rel="noopener noreferrer">${esc(article.title)}</a></h3><p>${esc(article.summary)}</p></div></article>`;
       }).join('') || Components.stateBox('No articles match the selected filters.')}</div>`;
     setView(html);
     bindFilters();

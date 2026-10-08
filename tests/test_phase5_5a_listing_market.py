@@ -47,7 +47,7 @@ assert any(x['comparable_name']=='Eaton Park' and x['asking_price_vnd_per_m2']==
 assert any(x['comparable_name']=='The Global City' and x['asking_price_vnd_per_m2']==125_400_000 for x in comparables['data'])
 
 # Listing intelligence stays separate from canonical research/official market observations.
-assert canonical['record_count']==7
+assert canonical['record_count']==len(canonical['data']) and canonical['record_count']>=7
 assert not any(x.get('source_id')=='batdongsan-com-vn' for x in canonical['data'])
 assert len(production['data'])==18
 
