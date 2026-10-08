@@ -13,7 +13,7 @@ REPORT=ROOT/"data/candidate/market/market-promotion-report.json"
 SOURCES=ROOT/"data/mock/core/sources.json"
 PROJECTS=ROOT/"data/mock/market/projects.json"
 
-OBS_FIELDS=("new_supply","sales_units","absorption_rate","average_asp","asp_unit","currency","price_basis")
+OBS_FIELDS=("new_supply","new_supply_lower_bound","sales_units","absorption_rate","average_asp","asp_unit","currency","price_basis","metric_qualifiers")
 ART_FIELDS=("title","published_at","category","subcategory","content_type","region_ids","project_ids","developer_ids","tags","summary")
 
 def read_json(path: Path, default=None):
