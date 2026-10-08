@@ -446,13 +446,15 @@
   }
 
   function listingRangeLabel(row) {
-    if (!row) return '—';
+    if (!row || row.asking_price_low_vnd_per_m2 == null || row.asking_price_high_vnd_per_m2 == null) return '—';
     return Formatters.number(row.asking_price_low_vnd_per_m2 / 1_000_000,{min:0,max:1}) + '–' + Formatters.number(row.asking_price_high_vnd_per_m2 / 1_000_000,{min:0,max:1}) + ' mn VND/m²';
   }
 
   function listingCoverage(ctx) {
     const rows = ctx.projects.map(project => ({project,listing:latestListingObservation(project.id)})).filter(x => x.listing);
-    return { count:rows.length, projects:ctx.projects.length, rows };
+    const priced = rows.filter(x => x.listing.asking_price_low_vnd_per_m2 != null && x.listing.asking_price_high_vnd_per_m2 != null);
+    const full = rows.filter(x => x.listing.coverage_status === 'full' || x.listing.coverage_status == null);
+    return { count:rows.length, priced:priced.length, full:full.length, projects:ctx.projects.length, rows };
   }
 
   function listingMarketHTML(ctx) {
@@ -462,8 +464,8 @@
       const comps = listingComparables(project.id).filter(row => row.project_id !== project.id).slice(0,8);
       const productRanges = (listing.product_price_ranges || []).map(row => '<span class="research-listing-product"><strong>' + esc(row.product) + '</strong><small>' + esc(fmtBillion(row.low_vnd)) + '–' + esc(fmtBillion(row.high_vnd)) + '</small></span>').join('');
       const comparableHTML = comps.length ? '<div class="research-listing-comps">' + comps.map(row => '<span><strong>' + esc(row.comparable_name) + '</strong><small>' + esc(fmtMillionPerM2(row.asking_price_vnd_per_m2)) + '</small></span>').join('') + '</div>' : '';
-      return '<article class="research-listing-card"><div class="research-listing-card__head"><div><span class="eyebrow">Listing market</span><h3>' + esc(project.name) + '</h3></div><span class="source-tag">' + esc(sourceName(listing.source_id)) + '</span></div>' +
-        '<div class="research-listing-kpis"><div><span>' + esc(tr('Giá chào bán','Asking range')) + '</span><strong>' + esc(listingRangeLabel(listing)) + '</strong></div><div><span>' + esc(tr('Biến động 1 năm','1Y portal trend')) + '</span><strong>' + esc(Formatters.number(listing.asking_price_change_1y_pct * 100,{min:1,max:1}) + '%') + '</strong></div><div><span>' + esc(tr('Diện tích phổ biến','Popular area')) + '</span><strong>' + esc(listing.popular_area_low_sqm + '–' + listing.popular_area_high_sqm + ' m²') + '</strong></div></div>' +
+      return '<article class="research-listing-card"><div class="research-listing-card__head"><div><span class="eyebrow">Listing market · ' + esc(listing.coverage_status === 'partial' ? tr('Partial snapshot','Partial snapshot') : tr('Full snapshot','Full snapshot')) + '</span><h3>' + esc(project.name) + '</h3></div><span class="source-tag">' + esc(sourceName(listing.source_id)) + '</span></div>' +
+        '<div class="research-listing-kpis"><div><span>' + esc(tr('Giá chào bán','Asking range')) + '</span><strong>' + esc(listingRangeLabel(listing)) + '</strong></div><div><span>' + esc(tr('Biến động 1 năm','1Y portal trend')) + '</span><strong>' + esc(listing.asking_price_change_1y_pct == null ? '—' : Formatters.number(listing.asking_price_change_1y_pct * 100,{min:1,max:1}) + '%') + '</strong></div><div><span>' + esc(tr('Diện tích phổ biến','Popular area')) + '</span><strong>' + esc(listing.popular_area_low_sqm == null || listing.popular_area_high_sqm == null ? '—' : listing.popular_area_low_sqm + '–' + listing.popular_area_high_sqm + ' m²') + '</strong></div></div>' +
         '<div class="research-listing-products">' + productRanges + '</div>' +
         '<p class="research-disclaimer">' + esc(tr('Giá chào bán từ portal; không phải giá giao dịch, doanh số hay hấp thụ chính thức.','Portal asking prices; not transaction prices, official sales or absorption.')) + '</p>' +
         (comparableHTML ? '<div class="research-market-benchmark-head"><strong>' + esc(tr('Comparable map snapshot','Comparable map snapshot')) + '</strong></div>' + comparableHTML : '') +
@@ -536,7 +538,7 @@
       [tr('Coverage giá','Price coverage'), ctx => marketCoverage(ctx).price + '/' + marketCoverage(ctx).projects],
       [tr('Coverage bán hàng','Sales coverage'), ctx => marketCoverage(ctx).sales + '/' + marketCoverage(ctx).projects],
       [tr('Coverage hấp thụ','Absorption coverage'), ctx => marketCoverage(ctx).absorption + '/' + marketCoverage(ctx).projects],
-      [tr('Coverage listing market','Listing-market coverage'), ctx => listingCoverage(ctx).count + '/' + listingCoverage(ctx).projects],
+      [tr('Coverage listing market','Listing-market coverage'), ctx => listingCoverage(ctx).count + '/' + listingCoverage(ctx).projects + ' mapped · ' + listingCoverage(ctx).priced + '/' + listingCoverage(ctx).projects + ' priced'],
       [tr('Khoảng giá chào bán','Listing asking range'), ctx => { const x=listingCoverage(ctx).rows[0]; return x ? listingRangeLabel(x.listing) + ' · ' + x.project.name : '—'; }],
       [tr('Biến động giá portal 1 năm','Portal 1Y price trend'), ctx => { const x=listingCoverage(ctx).rows[0]; return x ? Formatters.number(x.listing.asking_price_change_1y_pct*100,{min:1,max:1}) + '% · ' + x.project.name : '—'; }],
       [tr('ASP dự án mới nhất','Latest project ASP'), ctx => { const x=ctx.projects.map(projectMarketRow).find(r=>r.asp!=null); return x ? fmtMarketValue(x.asp,'asp') + ' · ' + x.project.name : '—'; }],

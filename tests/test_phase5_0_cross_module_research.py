@@ -22,7 +22,7 @@ assert 'research.html' in common
 assert "{ key: 'research', label: 'Research'" in common
 assert 'data-research-type' in research
 assert 'data-research-entity' in research
-assert 'assets/js/research.js?v=5.5A1' in research
+assert 'assets/js/research.js?v=5.5B1' in research
 assert 'assets/js/common.js?v=5.0R1' in research
 assert 'assets/js/localization-dynamic.js?v=5.5A1' in research
 

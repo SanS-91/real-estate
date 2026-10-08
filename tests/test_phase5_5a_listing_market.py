@@ -22,9 +22,8 @@ assert source['source_type']=='property-listing-portal'
 assert source['source_priority']==4
 assert 'Never treated as transaction price' in source['notes']
 
-assert listing['record_count']==1
-row=listing['data'][0]
-assert row['project_id']=='the-global-city'
+assert listing['record_count']>=1
+row={x['project_id']:x for x in listing['data']}['the-global-city']
 assert row['market_layer']=='listing-asking'
 assert row['asking_price_low_vnd_per_m2']==112_000_000
 assert row['asking_price_high_vnd_per_m2']==143_500_000
@@ -60,10 +59,10 @@ assert 'function listingMarketDrawerHTML(project)' in market
 assert 'not transaction price' in market
 
 assert 'assets/js/data-store.js?v=5.5A1' in research_html
-assert 'assets/js/research.js?v=5.5A1' in research_html
+assert 'assets/js/research.js?v=5.5B1' in research_html
 assert 'assets/css/main.css?v=5.5A1' in research_html
 assert 'assets/js/data-store.js?v=5.5A1' in market_html
-assert 'assets/js/market.js?v=5.5A1' in market_html
+assert 'assets/js/market.js?v=5.5B1' in market_html
 assert 'assets/css/main.css?v=5.5A1' in market_html
 
 print('Phase 5.5A Listing Market Intelligence tests PASS')

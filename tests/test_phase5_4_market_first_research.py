@@ -8,7 +8,7 @@ css=(ROOT/'assets/css/main.css').read_text(encoding='utf-8')
 obs=json.loads((ROOT/'data/mock/market/observations.json').read_text(encoding='utf-8'))['data']
 production=json.loads((ROOT/'data/processed/macro/observations.json').read_text(encoding='utf-8'))['data']
 
-assert 'assets/js/research.js?v=5.5A1' in research
+assert 'assets/js/research.js?v=5.5B1' in research
 assert 'assets/css/main.css?v=5.5A1' in research
 assert 'assets/js/localization-dynamic.js?v=5.5A1' in research
 
