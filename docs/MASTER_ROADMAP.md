@@ -15,7 +15,7 @@ This document restores the original 8-phase outline as the governing roadmap. Ex
 | 4 — Source Registry & Auto Data Collection | COMPLETE | Market, Macro, Legal and Infrastructure now all have structured collection-to-candidate paths with controlled promotion gates. | All four modules have Source → Fetch/Assist → Parse → Normalize → Deduplicate → Candidate → Review/Promote paths. |
 | 5 — Automation | COMPLETE | Scheduled collectors, controlled promotion gates, blocked/assisted source states and unified operational health are in place across the four pillars. | Automatable sources self-refresh; blocked/manual sources are explicit; stale/failure/backlog is visible in one control layer. |
 | 6 — Intelligence Database | IN PROGRESS | Market is advanced; Macro has strong historical support; Legal/Infrastructure remain shallower. Project Detail is the first strong cross-module entity view. | Project / Region / Developer / Time can be queried across all four pillars. |
-| 7 — Intelligence, Ranking & AI optional | PARTIAL | Research Brief, Watchlist, What Changed and importance fields exist, but no single deterministic ranking engine governs all modules yet. | Rule-based Today / This Week / What Changed / Top Developments exists; AI stays optional and above canonical data. |
+| 7 — Intelligence, Ranking & AI optional | COMPLETE | Deterministic attention ranking powers Today / This Week / What Changed / Top Developments; optional AI analysis is available as a disabled-by-default canonical context layer. | Rule-based intelligence surfaces work without AI; AI remains optional and above canonical data. |
 
 ## Module architecture audit
 
@@ -95,13 +95,10 @@ The structured collector now parses official project/milestone updates, proposes
    - Derived intelligence surfaces from the ranking engine.
    - No AI required.
 
-10. **7.2 — Optional AI Analysis Layer**
-    - Summarize.
-    - Explain legal impact.
-    - Compare projects/developers.
-    - Weekly brief.
-    - Ask the normalized market database.
-    - AI must never become the canonical data source.
+10. **7.2 — Optional AI Analysis Layer** — COMPLETE
+    - Canonical context packs for summarize / compare / Legal context / weekly brief / Ask database.
+    - AI disabled by default; no browser secrets; same-origin server adapter only if explicitly enabled.
+    - AI never becomes the canonical data source.
 
 ## Architecture principles that remain locked
 
