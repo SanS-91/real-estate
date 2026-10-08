@@ -12,7 +12,7 @@ This document restores the original 8-phase outline as the governing roadmap. Ex
 | 1 — Skeleton Website | COMPLETE | Home + Market + Legal + Infrastructure + Macro share a responsive shell and reusable UI components. | Site is structurally complete even without deep data. |
 | 2 — Data Architecture | COMPLETE | Structured entities, source registry, provenance, observations, articles, relationships and schemas exist across modules. | New data has a canonical place to live. |
 | 3 — Simple Data Layer | COMPLETE | Static JSON drives pages, tables, filters, charts, search and history views. | Adding data does not require editing HTML. |
-| 4 — Source Registry & Auto Data Collection | IN PROGRESS | Market and Macro have structured collectors; Legal/Infrastructure currently rely mainly on assisted registry-watch/fingerprint discovery. | All four modules have Source → Fetch/Assist → Parse → Normalize → Deduplicate → Candidate paths. |
+| 4 — Source Registry & Auto Data Collection | COMPLETE | Market, Macro, Legal and Infrastructure now all have structured collection-to-candidate paths with controlled promotion gates. | All four modules have Source → Fetch/Assist → Parse → Normalize → Deduplicate → Candidate → Review/Promote paths. |
 | 5 — Automation | IN PROGRESS | GitHub Actions, candidate gates, idempotent promotion, source-blocked states and scheduled jobs exist, but operational status is fragmented. | Automatable sources self-refresh; blocked/manual sources are explicit; stale/failure/backlog is visible in one control layer. |
 | 6 — Intelligence Database | IN PROGRESS | Market is advanced; Macro has strong historical support; Legal/Infrastructure remain shallower. Project Detail is the first strong cross-module entity view. | Project / Region / Developer / Time can be queried across all four pillars. |
 | 7 — Intelligence, Ranking & AI optional | PARTIAL | Research Brief, Watchlist, What Changed and importance fields exist, but no single deterministic ranking engine governs all modules yet. | Rule-based Today / This Week / What Changed / Top Developments exists; AI stays optional and above canonical data. |
@@ -23,10 +23,12 @@ This document restores the original 8-phase outline as the governing roadmap. Ex
 |---|---|---|---|---|---|---|---|
 | Market | Complete | Complete | Automated + assisted | Complete | Complete | Framework complete; history depth still growing | Advanced |
 | Macro | Complete | Complete | Automated | Complete | Complete | Complete | Advanced |
-| Legal | Complete | Watch/fingerprint only | Assisted watch | Partial | Manual curated | Framework complete | Partial |
-| Infrastructure | Complete | Watch/fingerprint only | Assisted watch | Partial | Manual curated | Framework complete | Partial |
+| Legal | Complete | Structured candidate collector | Scheduled + assisted review | Complete | Preview → Promote | Framework complete | Partial |
+| Infrastructure | Complete | Structured candidate collector | Scheduled + assisted review | Complete | Preview → Promote | Framework complete | Partial |
 
 ## Main gaps
+
+Master Phase 4 is now complete. Remaining collection work is source-coverage expansion and history depth, not missing architecture.
 
 ### Market
 - Continue accumulating listing snapshots so history becomes analytically meaningful.
@@ -38,30 +40,10 @@ This document restores the original 8-phase outline as the governing roadmap. Ex
 - Main remaining need is integration into unified operational health and later cross-module intelligence.
 
 ### Legal
-Current registry watch can:
-- fingerprint canonical pages;
-- detect changed pages;
-- discover keyword-matched links;
-- create a human review queue.
-
-It does **not yet** satisfy the original Phase 4 collector exit criterion.
-
-Required next:
-- parse newly discovered official documents;
-- normalize document number/title/agency/issued date/effective date/status/topic;
-- deduplicate against canonical registry;
-- emit candidate records;
-- Preview → Promote after review.
+The structured collector now parses newly discovered official documents into review-required candidates, normalizes metadata, deduplicates against the canonical registry, and uses Preview → Promote for production updates. Remaining work is broader source coverage and deeper amendment/effective-date history.
 
 ### Infrastructure
-Current registry watch has the same limitation.
-
-Required next:
-- parse official project/milestone updates;
-- normalize project, milestone date, schedule revision, investment/status changes;
-- append/supersede history rather than overwrite;
-- emit candidate records;
-- Preview → Promote after review.
+The structured collector now parses official project/milestone updates, proposes explicit project patches, and appends schedule history with supersede semantics through Preview → Promote. Remaining work is broader source coverage and deeper milestone/schedule history.
 
 ## Sequential work packages from current state
 
