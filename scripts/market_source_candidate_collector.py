@@ -171,6 +171,27 @@ def main():
     args=ap.parse_args()
     cfg=read_json(TARGETS,{"targets":[]})
     selected=[x for x in cfg.get("targets",[]) if x.get("enabled") and x.get("collector") in {"cbre_market","namlong_official","cushman_market","jll_research","savills_research"}]
+    discovery_reports=[]
+    if not args.target:
+        for t in cfg.get("targets", []):
+            if t.get("collector") != "metadata_only" or t.get("target_id") != "nam-long-news":
+                continue
+            try:
+                http, final_index, index_html = fetch(t["url"])
+                if http != 200:
+                    discovery_reports.append({"index":t["url"],"status":"http-error","http_status":http})
+                    continue
+                urls=discover_namlong_links(index_html,final_index,max_items=12)
+                existing_urls={v["url"].rstrip("/") for v in selected}
+                added=0
+                for url in urls:
+                    if url.rstrip("/") not in existing_urls:
+                        selected.append(namlong_target(url,final_index))
+                        existing_urls.add(url.rstrip("/"))
+                        added+=1
+                discovery_reports.append({"index":final_index,"status":"discovered","links_found":len(urls),"targets_added":added})
+            except Exception as exc:
+                discovery_reports.append({"index":t["url"],"status":"discovery-error","error":f"{type(exc).__name__}: {exc}"[:300]})
     if args.target:
         wanted=set(args.target)
         selected=[x for x in selected if x.get("target_id") in wanted]
@@ -256,7 +277,7 @@ def main():
     report={
         "schema_version":1,"generated_at":generated,"targets_checked":len(selected),
         "observation_candidates":len(obs_candidates),"article_candidates":len(article_candidates),
-        "production_written":False,"targets":target_reports
+        "production_written":False,"discovery":discovery_reports,"targets":target_reports
     }
     write_json(REPORT,report)
     print(json.dumps(report,ensure_ascii=False,indent=2))
