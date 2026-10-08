@@ -72,3 +72,8 @@ assert partial_candidate["asking_price_low_vnd_per_m2"] is None
 assert mod.int_loose("3.517")==3517
 assert mod.number_vi("19,1")==19.1
 print("Phase 5.5D listing candidate collector tests PASS")
+
+collector_source=(ROOT/"scripts/listing_candidate_collector.py").read_text(encoding="utf-8")
+assert '"source_access": source_access' in collector_source
+assert 'counts.get("http-error", 0) == len(rows)' in collector_source
+print("Phase 5.5D source access status guards PASS")

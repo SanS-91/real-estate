@@ -259,12 +259,20 @@ def main():
         "record_count": len(candidates),
         "data": candidates,
     }
+    counts = {status: sum(1 for x in rows if x["status"] == status) for status in sorted({x["status"] for x in rows})}
+    source_access = "healthy"
+    if rows and counts.get("http-error", 0) == len(rows):
+        source_access = "blocked"
+    elif counts.get("http-error", 0) or counts.get("fetch-error", 0):
+        source_access = "degraded"
+
     report = {
         "generated_at": payload["generated_at"],
         "observation_date": args.date,
         "projects_checked": len(rows),
         "candidate_records": len(candidates),
-        "counts": {status: sum(1 for x in rows if x["status"] == status) for status in sorted({x["status"] for x in rows})},
+        "source_access": source_access,
+        "counts": counts,
         "projects": rows,
     }
     write_json(CANDIDATE, payload)

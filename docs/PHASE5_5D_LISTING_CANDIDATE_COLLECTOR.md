@@ -42,3 +42,9 @@ Production promotion remains a separate explicit action through **Listing Market
 - no direct production write from the collector
 - no inferred values when fields are absent
 - no candidate created solely because listing count/views changed
+
+
+## Live smoke result — 2026-10-08
+A GitHub-hosted Ubuntu 24.04 runner received HTTP 403 for all 12 mapped Batdongsan.com.vn project URLs. The collector therefore records `source_access: blocked` and produces no candidate rows.
+
+This is treated as a source-access limitation, not as "no market change". The project will not add bypass/proxy techniques to evade the source's access controls. Batdongsan.com.vn remains a manually curated / browser-accessible secondary source until an approved access path or licensed data service is available.
