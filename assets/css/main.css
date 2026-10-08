@@ -741,6 +741,8 @@ button, a, input, select { outline-offset: 3px; }
 .developer-card__stats { display: flex; gap: 18px; margin: auto 0 14px; padding-top: 20px; }
 .developer-card__stats span { color: var(--color-text-secondary); font-size: 10.5px; }
 .developer-card__stats strong { display: block; color: var(--color-text); font-size: 18px; }
+.developer-card__links { display: flex; flex-wrap: wrap; gap: 14px; align-items: center; }
+.developer-card__links .text-link { display: inline-flex; }
 .article-list { margin-top: 14px; overflow: hidden; border: 1px solid var(--color-border); border-radius: var(--radius-md); background: var(--color-surface); }
 .article-row { display: grid; grid-template-columns: 110px 1fr; gap: 18px; padding: 18px; }
 .article-row + .article-row { border-top: 1px solid var(--color-border); }
