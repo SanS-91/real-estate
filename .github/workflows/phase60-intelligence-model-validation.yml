@@ -1,0 +1,42 @@
+name: Phase 6.0 Cross-module Intelligence Model Validation
+
+on:
+  pull_request:
+    paths:
+      - 'config/intelligence_model.json'
+      - 'config/master-roadmap.json'
+      - 'assets/js/intelligence-context.js'
+      - 'assets/js/data-store.js'
+      - 'research.html'
+      - 'tests/test_phase6_0_*'
+      - 'docs/PHASE6_0_CROSS_MODULE_INTELLIGENCE_MODEL.md'
+      - 'docs/MASTER_ROADMAP.md'
+      - '.github/workflows/phase60-intelligence-model-validation.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  validate:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v7
+      - uses: actions/setup-python@v7
+        with:
+          python-version: '3.12'
+      - name: JavaScript syntax
+        run: |
+          node --check assets/js/intelligence-context.js
+          node --check assets/js/data-store.js
+      - name: Phase 6.0 relationship contract
+        run: |
+          python tests/test_phase6_0_intelligence_model.py
+          node tests/test_phase6_0_intelligence_context.js
+      - name: Roadmap regression
+        run: python tests/test_phase5_6b_master_roadmap_alignment.py
+      - name: Research regression
+        run: |
+          python tests/test_phase5_0_cross_module_research.py
+          python tests/test_phase5_1_research_compare.py
