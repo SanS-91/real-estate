@@ -34,6 +34,11 @@ def parse(html: str, source_url: str, fetched_at: str):
             "sales_units":landed_sales,
             "absorption_rate":landed_abs,
             "average_asp":None,
+            "metric_qualifiers":{
+                "new_supply":"approx",
+                "sales_units":"approx",
+                "absorption_rate":"approx"
+            },
             "evidence_text":"Cushman & Wakefield HCMC Residential MarketBeat Q2/2026; published figures are approximate where stated by source."
         })
 
@@ -51,6 +56,10 @@ def parse(html: str, source_url: str, fetched_at: str):
             "absorption_rate":apartment_abs,
             "average_asp":None,
             "lower_bound_new_supply":int(m.group(1).replace(",","")) if m else None,
+            "metric_qualifiers":{
+                "new_supply_lower_bound":"greater-than",
+                "absorption_rate":"exact"
+            },
             "evidence_text":"Cushman & Wakefield states apartment new supply was over 1,300 units, so exact new_supply remains blank; absorption is source-published."
         })
     return rows
