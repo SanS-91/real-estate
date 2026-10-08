@@ -38,5 +38,6 @@ status={x["work_package"]:x["status"] for x in roadmap["next_sequence"]}
 # Updated later in this branch before merge.
 assert status["6.0"]=="complete"
 assert status["6.1"]=="complete"
+assert status["6.2"]=="complete"
 
 print("Phase 6.2 Region & Developer intelligence UI contract tests PASS")
