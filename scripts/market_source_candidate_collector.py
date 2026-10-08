@@ -64,6 +64,57 @@ def build_cbre_rows(target, parsed, final_url):
         })
     return rows
 
+def build_cushman_rows(target, parsed, final_url):
+    rows=[]
+    for item in parsed:
+        segment=item["segment_id"]
+        rows.append({
+            "id":f"obs-hcmc-{segment}-2026-q2-cushman",
+            "scope_type":"region-segment",
+            "region_ids":["hcmc"],
+            "segment_ids":[segment],
+            "period":target.get("period") or "2026-Q2",
+            "period_type":target.get("period_type") or "quarter",
+            "new_supply":item.get("new_supply"),
+            "sales_units":item.get("sales_units"),
+            "absorption_rate":item.get("absorption_rate"),
+            "average_asp":item.get("average_asp"),
+            "asp_unit":"vnd-per-m2" if segment=="apartment" else "vnd-per-m2-land",
+            "currency":"VND",
+            "price_basis":None,
+            "source_id":target["observation_source_id"],
+            "source_date":"2026-08-01",
+            "source_url":final_url,
+            "methodology_note":item["evidence_text"]+" Parsed automatically into candidate; requires review before promotion."
+        })
+    return rows
+
+def build_research_article(target, parsed, final_url):
+    date=parsed.get("published_date") or target.get("period")
+    sid=target["observation_source_id"]
+    source_label={
+        "savills-vietnam-market":"Savills",
+        "jll-vietnam-market":"JLL",
+        "cushman-wakefield-vietnam-market":"Cushman & Wakefield",
+    }.get(sid,sid)
+    return {
+        "id":f"article-market-{slug(target['target_id'])}",
+        "title":parsed.get("title") or f"{source_label} market research update",
+        "url":final_url,
+        "category":"market",
+        "subcategory":"research",
+        "content_type":"research",
+        "published_at":f"{date}T09:00:00+07:00" if date and len(date)==10 else "2026-08-01T09:00:00+07:00",
+        "source_id":sid,
+        "region_ids":["hcmc"] if "hcmc" in (target.get("scope") or "") or sid=="jll-vietnam-market" else [],
+        "project_ids":[],
+        "developer_ids":[],
+        "tags":parsed.get("tags") or ["research"],
+        "importance":4,
+        "summary":parsed.get("summary") or f"{source_label} market research update.",
+        "candidate_note":"Automatically parsed from research source; review before production promotion."
+    }
+
 def project_regions(project_ids):
     projects=read_json(ROOT/"data/mock/market/projects.json",{"data":[]}).get("data",[])
     by={x.get("id"):x for x in projects}
@@ -114,7 +165,7 @@ def main():
     ap.add_argument("--target",action="append",default=[])
     args=ap.parse_args()
     cfg=read_json(TARGETS,{"targets":[]})
-    selected=[x for x in cfg.get("targets",[]) if x.get("enabled") and x.get("collector") in {"cbre_market","namlong_official"}]
+    selected=[x for x in cfg.get("targets",[]) if x.get("enabled") and x.get("collector") in {"cbre_market","namlong_official","cushman_market","jll_research","savills_research"}]
     if args.target:
         wanted=set(args.target)
         selected=[x for x in selected if x.get("target_id") in wanted]
@@ -136,9 +187,9 @@ def main():
                 continue
 
             module=importlib.import_module("collectors."+t["collector"])
-            if t["collector"]=="cbre_market":
+            if t["collector"] in {"cbre_market","cushman_market"}:
                 parsed=module.parse(html,final_url,datetime.now(timezone.utc).isoformat())
-                built=build_cbre_rows(t,parsed,final_url)
+                built=build_cbre_rows(t,parsed,final_url) if t["collector"]=="cbre_market" else build_cushman_rows(t,parsed,final_url)
                 decisions=[]
                 for row in built:
                     prev=obs_by_key.get(existing_obs_key(row))
@@ -151,9 +202,9 @@ def main():
                             obs_candidates.append(row); state="changed"
                         else:
                             state="unchanged"
-                    decisions.append({"id":row["id"],"status":state,"segment":row["segment_ids"][0],"new_supply":row["new_supply"]})
+                    decisions.append({"id":row["id"],"status":state,"segment":row["segment_ids"][0],"new_supply":row.get("new_supply"),"absorption_rate":row.get("absorption_rate")})
                 target_reports.append({"target_id":t["target_id"],"status":"parsed","type":"market-observation","records":len(built),"decisions":decisions})
-            else:
+            elif t["collector"]=="namlong_official":
                 parsed=module.parse_article(html,final_url,datetime.now(timezone.utc).isoformat())
                 row=build_namlong_article(t,parsed,final_url)
                 key=existing_article_key(row)
@@ -161,6 +212,14 @@ def main():
                 if state=="new":
                     article_candidates.append(row)
                 target_reports.append({"target_id":t["target_id"],"status":"parsed","type":"developer-evidence","records":1,"decision":state,"project_ids":row["project_ids"]})
+            else:
+                parsed=module.parse_article(html,final_url,datetime.now(timezone.utc).isoformat())
+                row=build_research_article(t,parsed,final_url)
+                key=existing_article_key(row)
+                state="unchanged" if key in art_keys else "new"
+                if state=="new":
+                    article_candidates.append(row)
+                target_reports.append({"target_id":t["target_id"],"status":"parsed","type":"research-evidence","records":1,"decision":state})
         except Exception as exc:
             target_reports.append({"target_id":t["target_id"],"status":"parse-error","error":f"{type(exc).__name__}: {exc}"[:400]})
 
