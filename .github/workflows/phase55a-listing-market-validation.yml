@@ -1,0 +1,54 @@
+name: Phase 5.5A Listing Market Intelligence Validation
+
+on:
+  pull_request:
+    paths:
+      - 'data/mock/core/sources.json'
+      - 'data/mock/market/listing-observations.json'
+      - 'data/mock/market/listing-comparables.json'
+      - 'assets/js/data-store.js'
+      - 'assets/js/research.js'
+      - 'assets/js/market.js'
+      - 'assets/js/localization-dynamic.js'
+      - 'assets/css/main.css'
+      - 'research.html'
+      - 'market.html'
+      - 'tests/test_phase5_5a_listing_market.py'
+      - '.github/workflows/phase55a-listing-market-validation.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  validate:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 10
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v7
+      - name: Set up Python
+        uses: actions/setup-python@v7
+        with:
+          python-version: '3.12'
+      - name: JavaScript syntax
+        run: |
+          node --check assets/js/data-store.js
+          node --check assets/js/research.js
+          node --check assets/js/market.js
+          node --check assets/js/localization-dynamic.js
+      - name: Listing market contract
+        run: python tests/test_phase5_5a_listing_market.py
+      - name: Market and Research regressions
+        run: |
+          python tests/test_phase4_3c_market_registry.py
+          python tests/test_phase4_3e_search_crosslinks.py
+          python tests/test_phase4_8_9_integration.py
+          python tests/test_phase4_9_1_ui_polish.py
+          python tests/test_market_5_1_ui_polish.py
+          python tests/test_phase5_0_cross_module_research.py
+          python tests/test_phase5_1_research_compare.py
+          python tests/test_phase5_2_research_brief.py
+          python tests/test_phase5_3_research_watchlist.py
+          python tests/test_phase5_4_market_first_research.py
+          python tests/test_phase4_4f_production_hardening.py
