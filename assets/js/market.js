@@ -371,6 +371,33 @@
     });
   }
 
+  function setupProjectDetailNavigation() {
+    const nav = document.querySelector('[data-project-detail-nav]');
+    if (!nav) return;
+    const links = [...nav.querySelectorAll('a[href^="#"]')];
+    const sections = links.map(link => document.querySelector(link.getAttribute('href'))).filter(Boolean);
+    const setActive = id => {
+      links.forEach(link => link.classList.toggle('is-active', link.getAttribute('href') === '#' + id));
+    };
+    links.forEach(link => link.addEventListener('click', event => {
+      const target = document.querySelector(link.getAttribute('href'));
+      if (!target) return;
+      event.preventDefault();
+      target.scrollIntoView({ behavior:'smooth', block:'start' });
+      history.replaceState(null, '', window.location.pathname + window.location.search + link.getAttribute('href'));
+      setActive(target.id);
+    }));
+    if (!sections.length || !('IntersectionObserver' in window)) return;
+    const observer = new IntersectionObserver(entries => {
+      const visible = entries
+        .filter(entry => entry.isIntersecting)
+        .sort((a,b) => b.intersectionRatio - a.intersectionRatio)[0];
+      if (visible?.target?.id) setActive(visible.target.id);
+    }, { rootMargin:'-28% 0px -58% 0px', threshold:[0.05,0.25,0.5] });
+    sections.forEach(section => observer.observe(section));
+    setActive(sections[0].id);
+  }
+
   function renderProjectDetail() {
     const projectId = App.getQueryParam('id');
     const project = Resolver.getEntity('project', projectId);
@@ -419,7 +446,16 @@
         ${Components.compactMetric({label:'Listing asking',value:formatListingRange(listing),note:listing?.observation_date || 'No listing snapshot'})}
       </div>
 
-      <div class="project-detail-grid">
+      <nav class="project-detail-nav" data-project-detail-nav aria-label="Project sections">
+        <a href="#project-overview">Tổng quan</a>
+        <a href="#project-pricing">Giá &amp; lịch sử</a>
+        <a href="#project-updates">Tin tức</a>
+        <a href="#project-legal">Pháp lý</a>
+        <a href="#project-infrastructure">Hạ tầng</a>
+        <a href="#project-phases">Phân kỳ</a>
+      </nav>
+
+      <div class="project-detail-grid" id="project-overview">
         <section class="section project-detail-main">
           <div class="section-header"><div><span class="eyebrow">Project profile</span><h2 class="section-title">Overview</h2></div></div>
           <div class="section-body"><p>${esc(project.summary)}</p>
@@ -442,7 +478,7 @@
         </aside>
       </div>
 
-      <section class="section">
+      <section class="section project-detail-anchor" id="project-pricing">
         <div class="section-header"><div><span class="eyebrow">Secondary market</span><h2 class="section-title">Listing Price History</h2></div><span class="section-meta">${listingRows.length} snapshot${listingRows.length===1?'':'s'}</span></div>
         <div class="section-body">${projectDetailListingHistory(project)}</div>
       </section>
@@ -452,7 +488,7 @@
         <div class="section-body section-body--table">${verifiedRows}</div>
       </section>
 
-      <div class="project-detail-grid">
+      <div class="project-detail-grid project-detail-anchor" id="project-updates">
         <section class="section project-detail-main">
           <div class="section-header"><div><span class="eyebrow">Evidence timeline</span><h2 class="section-title">Official &amp; Research Updates</h2></div></div>
           <div class="section-body">
@@ -461,24 +497,31 @@
         </section>
 
         <aside class="project-detail-stack">
-          <section class="section">
+          <section class="section project-detail-anchor" id="project-legal">
             <div class="section-header"><h2 class="section-title">Legal Research</h2></div>
             <div class="section-body">${legalTopics.length ? `<div class="project-detail-link-list">${legalTopics.map(item=>`<a href="legal.html?view=documents&topic=${encodeURIComponent(item.id)}"><strong>${esc(item.name)}</strong><span>Open related legal research →</span></a>`).join('')}</div><p class="muted-text">Topic links are research shortcuts and do not determine legal applicability to this project.</p>` : '<p class="muted-text">No curated legal-topic links.</p>'}</div>
           </section>
 
-          <section class="section">
+          <section class="section project-detail-anchor" id="project-infrastructure">
             <div class="section-header"><h2 class="section-title">Infrastructure</h2></div>
             <div class="section-body">${relatedInfrastructure.length ? `<div class="project-detail-link-list">${relatedInfrastructure.map(item=>`<a href="infrastructure.html?view=projects&project=${encodeURIComponent(item.id)}"><strong>${esc(item.name)}</strong><span>${esc(item.location_text || 'Open infrastructure detail')} →</span></a>`).join('')}</div>` : '<p class="muted-text">No direct infrastructure links in the curated dataset.</p>'}</div>
           </section>
         </aside>
       </div>
 
-      <section class="section">
+      <section class="section project-detail-anchor" id="project-phases">
         <div class="section-header"><div><span class="eyebrow">Development structure</span><h2 class="section-title">Phases</h2></div></div>
         <div class="section-body"><div class="project-phase-grid">${phases.map(item=>`<article><div><strong>${esc(item.name)}</strong><span>${esc(String(item.phase_type || '').replaceAll('-',' '))}</span></div>${Components.statusBadge(item.status)}${item.known_units_note ? `<p>${esc(item.known_units_note)}</p>` : ''}</article>`).join('') || '<p class="muted-text">No phase records yet.</p>'}</div></div>
       </section>`;
     setView(html);
-    requestAnimationFrame(() => renderProjectDetailListingChart(project.id));
+    requestAnimationFrame(() => {
+      renderProjectDetailListingChart(project.id);
+      setupProjectDetailNavigation();
+      if (window.location.hash) {
+        const target = document.querySelector(window.location.hash);
+        if (target) target.scrollIntoView({ block:'start' });
+      }
+    });
   }
 
   function renderProjects() {
