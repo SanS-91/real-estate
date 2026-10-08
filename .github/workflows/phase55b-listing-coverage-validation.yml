@@ -1,0 +1,42 @@
+name: Phase 5.5B Listing Market Coverage Validation
+
+on:
+  pull_request:
+    paths:
+      - 'data/mock/market/listing-observations.json'
+      - 'assets/js/research.js'
+      - 'assets/js/market.js'
+      - 'research.html'
+      - 'market.html'
+      - 'tests/test_phase5_5b_listing_coverage.py'
+      - '.github/workflows/phase55b-listing-coverage-validation.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  validate:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 10
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v7
+      - name: Set up Python
+        uses: actions/setup-python@v7
+        with:
+          python-version: '3.12'
+      - name: JavaScript syntax
+        run: |
+          node --check assets/js/research.js
+          node --check assets/js/market.js
+      - name: Phase 5.5B coverage contract
+        run: python tests/test_phase5_5b_listing_coverage.py
+      - name: Phase 5.5A and Market regressions
+        run: |
+          python tests/test_phase5_5a_listing_market.py
+          python tests/test_phase5_4_market_first_research.py
+          python tests/test_phase5_1_research_compare.py
+          python tests/test_phase4_3c_market_registry.py
+          python tests/test_phase4_8_9_integration.py
+          python tests/test_phase4_4f_production_hardening.py
