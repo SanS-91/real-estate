@@ -7,6 +7,9 @@ on:
     paths:
       - 'scripts/collectors/cbre_market.py'
       - 'scripts/collectors/namlong_official.py'
+      - 'scripts/collectors/cushman_market.py'
+      - 'scripts/collectors/jll_research.py'
+      - 'scripts/collectors/savills_research.py'
       - 'scripts/market_source_candidate_collector.py'
       - 'config/market-automation-targets.json'
       - '.github/workflows/market-source-candidate-collector.yml'
@@ -28,7 +31,7 @@ jobs:
           python-version: '3.12'
       - name: Install dependencies
         run: pip install -r requirements.txt
-      - name: Collect CBRE + Nam Long candidates
+      - name: Collect configured market-source candidates
         run: python scripts/market_source_candidate_collector.py
       - name: Candidate summary
         run: |
