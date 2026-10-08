@@ -275,7 +275,7 @@
       return `<article class="developer-card">
         <div><span class="eyebrow">Developer</span><h3>${esc(dev.name)}</h3><p>${esc(dev.summary)}</p><div>${sourceRef(dev.primary_source_id,{sourceUrl:dev.official_url})}</div></div>
         <div class="developer-card__stats"><span><strong>${projects.length}</strong> tracked projects</span><span><strong>${selling}</strong> selling</span></div>
-        <a class="text-link" href="market.html?view=projects&developer=${encodeURIComponent(dev.id)}">View projects</a>
+        <div class="developer-card__links"><a class="text-link" href="market.html?view=projects&developer=${encodeURIComponent(dev.id)}">View projects</a><a class="text-link" href="research.html?type=developer&ids=${encodeURIComponent(dev.id)}">Open Research</a></div>
       </article>`;
     }).join('');
     setView(`<div class="view-intro"><div><span class="eyebrow">Developer registry</span><h2>${data.developers.length} developers</h2><p>Developer records resolve to project relationships instead of storing duplicate project lists.</p></div></div><div class="developer-grid">${cards}</div>`);
@@ -361,6 +361,7 @@
         <h2>${esc(project.name)}</h2>
         <p>${esc(project.location_text)} · ${esc(developerName(project))}</p>
         ${Components.statusBadge(project.status)}
+        <div class="drawer-actions"><a class="button" href="research.html?type=project&ids=${encodeURIComponent(project.id)}">Open Research</a></div>
       </div>
       <div class="drawer-metrics">
         ${Components.compactMetric({label:'Planned units',value:Number.isFinite(project.planned_units) ? formatCompact(project.planned_units) : '—',note:project.known_units_note || 'No exact comparable count published'})}

@@ -1724,3 +1724,27 @@ button, a, input, select { outline-offset: 3px; }
   .research-meta { grid-template-columns: 1fr; }
   .research-hero h2 { font-size: 22px; }
 }
+
+
+/* Phase 5.1 · research compare */
+.research-selector--compare {
+  grid-template-columns: minmax(130px,.65fr) repeat(3,minmax(170px,1fr));
+}
+.research-selector__actions {
+  grid-column: 1 / -1;
+  display: flex;
+  justify-content: flex-end;
+  gap: 8px;
+}
+.research-hero--compare h2 { max-width: 980px; }
+.table-wrap--research-compare { overflow-x: auto; }
+.data-table--research-compare { min-width: 680px; }
+.data-table--research-compare th:not(:first-child),
+.data-table--research-compare td:not(:first-child) { text-align: right; }
+@media (max-width: 1050px) {
+  .research-selector--compare { grid-template-columns: repeat(2,minmax(0,1fr)); }
+}
+@media (max-width: 640px) {
+  .research-selector--compare { grid-template-columns: 1fr; }
+  .research-selector__actions { grid-column: auto; display: grid; }
+}

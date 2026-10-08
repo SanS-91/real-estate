@@ -1,17 +1,13 @@
 (() => {
   'use strict';
 
-  const state = { type: 'project', id: '' };
+  const state = { type: 'project', ids: [] };
   let data = null;
 
   const esc = value => Components.escapeHTML(value);
   const payload = x => Array.isArray(x?.data) ? x.data : [];
   const byId = rows => new Map(rows.map(row => [row.id, row]));
   const unique = values => [...new Set((values || []).filter(Boolean))];
-
-  function sourceBacked(row) {
-    return Boolean(row?.source_id || row?.primary_source_id || row?.source_url || row?.official_url || (row?.source_ids || []).length);
-  }
 
   function setView(html) {
     const node = document.querySelector('[data-research-view]');
@@ -21,9 +17,10 @@
   function queryState() {
     const params = new URLSearchParams(location.search);
     const type = params.get('type');
-    const id = params.get('id');
+    const ids = params.get('ids');
+    const legacyId = params.get('id');
     if (['project','region','developer'].includes(type)) state.type = type;
-    if (id) state.id = id;
+    state.ids = unique((ids ? ids.split(',') : legacyId ? [legacyId] : []).map(x => x.trim())).slice(0,3);
   }
 
   function subjectRows() {
@@ -39,23 +36,29 @@
 
   function renderSelector() {
     const type = document.querySelector('[data-research-type]');
-    const entity = document.querySelector('[data-research-entity]');
-    if (!type || !entity) return;
+    const selects = [...document.querySelectorAll('[data-research-entity]')];
+    if (!type || !selects.length) return;
     type.value = state.type;
     const rows = [...subjectRows()].sort((a,b) => subjectLabel(a).localeCompare(subjectLabel(b)));
-    if (!state.id || !rows.some(row => row.id === state.id)) state.id = rows[0]?.id || '';
-    entity.innerHTML = rows.map(row => `<option value="${esc(row.id)}">${esc(subjectLabel(row))}</option>`).join('');
-    entity.value = state.id;
+    if (!state.ids.length || !rows.some(row => row.id === state.ids[0])) state.ids = rows[0] ? [rows[0].id] : [];
+
+    selects.forEach((select, index) => {
+      const allowNone = index > 0;
+      const options = [
+        ...(allowNone ? ['<option value="">— None —</option>'] : []),
+        ...rows.map(row => `<option value="${esc(row.id)}">${esc(subjectLabel(row))}</option>`)
+      ];
+      select.innerHTML = options.join('');
+      select.value = state.ids[index] || '';
+    });
   }
 
-  function selectedSubject() {
-    return subjectRows().find(row => row.id === state.id) || null;
+  function selectedSubjects() {
+    const map = byId(subjectRows());
+    return state.ids.map(id => map.get(id)).filter(Boolean);
   }
 
-  function context() {
-    const subject = selectedSubject();
-    if (!subject) return null;
-
+  function contextFor(subject) {
     let projects = [];
     let regionIds = [];
     let developerIds = [];
@@ -73,7 +76,9 @@
     } else {
       regionIds = [subject.id];
       projects = data.projects.filter(project => (project.region_ids || []).includes(subject.id));
-      developerIds = unique(projects.flatMap(project => project.developer_ids || (project.lead_developer_id ? [project.lead_developer_id] : [])));
+      developerIds = unique(projects.flatMap(project =>
+        project.developer_ids || (project.lead_developer_id ? [project.lead_developer_id] : [])
+      ));
     }
 
     const projectIds = projects.map(project => project.id);
@@ -114,7 +119,7 @@
     return data.sourceMap.get(id)?.name || id || 'Source';
   }
 
-  function latestMacroCards() {
+  function latestMacroRows() {
     const latest = new Map();
     data.macroRows.forEach(row => {
       const prior = latest.get(row.indicator_id);
@@ -122,15 +127,20 @@
       const priorKey = prior ? (prior.data_date || prior.period || '') : '';
       if (!prior || key > priorKey) latest.set(row.indicator_id, row);
     });
-    const preferred = ['usd-vnd-central-rate','sjc-gold-sell','credit-growth-ytd','cpi-yoy'];
-    return preferred.map(id => latest.get(id)).filter(Boolean).map(row => {
-      const label = data.indicatorMap.get(row.indicator_id)?.name || row.indicator_id;
-      return Components.compactMetric({
-        label,
-        value: Formatters.unitValue(row.unit, row.value, { compact:true }),
-        note: row.period || row.data_date || ''
-      });
-    }).join('');
+    return latest;
+  }
+
+  function latestMacroCards() {
+    const latest = latestMacroRows();
+    return ['usd-vnd-central-rate','sjc-gold-sell','credit-growth-ytd','cpi-yoy']
+      .map(id => latest.get(id)).filter(Boolean).map(row => {
+        const label = data.indicatorMap.get(row.indicator_id)?.name || row.indicator_id;
+        return Components.compactMetric({
+          label,
+          value: Formatters.unitValue(row.unit, row.value, { compact:true }),
+          note: row.period || row.data_date || ''
+        });
+      }).join('');
   }
 
   function projectCards(ctx) {
@@ -162,7 +172,7 @@
     const topics = ctx.legalTopicIds.map(id => data.topicMap.get(id)).filter(Boolean);
     const docs = [...ctx.legalDocuments].sort((a,b) =>
       String(b.issued_date || b.effective_date || '').localeCompare(String(a.issued_date || a.effective_date || ''))
-    ).slice(0, 8);
+    ).slice(0,8);
     return `
       <div class="research-topic-row">${topics.map(topic => `<span class="research-topic-chip">${esc(topic.name)}</span>`).join('') || '<span class="muted-text">No project-level legal topics linked.</span>'}</div>
       <p class="research-disclaimer">Shared legal topics indicate research relevance only; they do not determine legal applicability to a project.</p>
@@ -194,7 +204,7 @@
           : row.category === 'infrastructure' ? 'infrastructure.html?view=news'
           : 'macro.html?view=news'
       }))
-    ].filter(row => row.date).sort((a,b) => String(b.date).localeCompare(String(a.date))).slice(0, 10);
+    ].filter(row => row.date).sort((a,b) => String(b.date).localeCompare(String(a.date))).slice(0,10);
 
     if (!rows.length) return Components.stateBox('No recent source-backed activity linked to this subject.');
     return `<div class="research-list">${rows.map(row => `
@@ -204,13 +214,63 @@
       </a>`).join('')}</div>`;
   }
 
-  function render() {
-    const ctx = context();
-    if (!ctx) {
-      setView(Components.stateBox('Select a research subject.'));
-      return;
-    }
+  function contextStats(ctx) {
+    return {
+      projects: ctx.projects.length,
+      regions: ctx.regionIds.length,
+      infrastructure: ctx.infrastructure.length,
+      legalTopics: ctx.legalTopicIds.length,
+      legalDocs: ctx.legalDocuments.length,
+      recent: ctx.articles.length + ctx.events.length
+    };
+  }
 
+  function compareTable(contexts) {
+    const rows = [
+      ['Projects', c => contextStats(c).projects],
+      ['Regions', c => contextStats(c).regions],
+      ['Infrastructure links', c => contextStats(c).infrastructure],
+      ['Legal topics', c => contextStats(c).legalTopics],
+      ['Relevant legal documents', c => contextStats(c).legalDocs],
+      ['Recent related activity', c => contextStats(c).recent]
+    ];
+    return `<div class="table-wrap table-wrap--research-compare"><table class="data-table data-table--research-compare">
+      <thead><tr><th>Metric</th>${contexts.map(c => `<th>${esc(subjectLabel(c.subject))}</th>`).join('')}</tr></thead>
+      <tbody>${rows.map(([label,getter]) => `<tr><td><strong>${esc(label)}</strong></td>${contexts.map(c => `<td class="numeric">${esc(String(getter(c)))}</td>`).join('')}</tr>`).join('')}</tbody>
+    </table></div>`;
+  }
+
+  function compareShared(contexts) {
+    const sharedInfra = contexts.reduce((set, ctx, index) => {
+      const ids = new Set(ctx.infrastructure.map(x => x.id));
+      if (index === 0) return ids;
+      return new Set([...set].filter(id => ids.has(id)));
+    }, new Set());
+    const sharedTopics = contexts.reduce((set, ctx, index) => {
+      const ids = new Set(ctx.legalTopicIds);
+      if (index === 0) return ids;
+      return new Set([...set].filter(id => ids.has(id)));
+    }, new Set());
+
+    const infra = [...sharedInfra].map(id => data.infrastructureMap.get(id)).filter(Boolean);
+    const topics = [...sharedTopics].map(id => data.topicMap.get(id)).filter(Boolean);
+
+    return `<div class="research-two-column">
+      <section class="section">
+        <div class="section-header"><div><span class="eyebrow">Shared infrastructure</span><h2 class="section-title">Common Connectivity</h2></div></div>
+        <div class="section-body">${infra.length ? `<div class="research-list">${infra.map(x => `<a href="infrastructure.html?view=projects&project=${encodeURIComponent(x.id)}"><strong>${esc(x.name)}</strong><span>${esc(x.location_text || '')}</span></a>`).join('')}</div>` : Components.stateBox('No shared canonical infrastructure link across all selected subjects.')}</div>
+      </section>
+      <section class="section">
+        <div class="section-header"><div><span class="eyebrow">Shared legal context</span><h2 class="section-title">Common Legal Topics</h2></div></div>
+        <div class="section-body">
+          <p class="research-disclaimer">Shared topics indicate research overlap only; they do not establish legal applicability.</p>
+          <div class="research-topic-row">${topics.map(x => `<span class="research-topic-chip">${esc(x.name)}</span>`).join('') || '<span class="muted-text">No common legal topics.</span>'}</div>
+        </div>
+      </section>
+    </div>`;
+  }
+
+  function renderSingle(ctx) {
     const regionNames = ctx.regionIds.map(id => data.regionMap.get(id)?.name).filter(Boolean);
     const developerNames = ctx.developerIds.map(id => data.developerMap.get(id)?.name).filter(Boolean);
     const sourceIds = unique([
@@ -271,31 +331,104 @@
         <div class="section-body">${recentActivity(ctx)}</div>
       </section>
     `);
+  }
+
+  function renderCompare(contexts) {
+    setView(`
+      <section class="research-hero research-hero--compare">
+        <div>
+          <span class="eyebrow">Compare · ${esc(state.type)}</span>
+          <h2>${contexts.map(c => esc(subjectLabel(c.subject))).join(' vs ')}</h2>
+          <p>Side-by-side comparison derived from the same canonical registries. Blank or missing business facts remain unfilled.</p>
+        </div>
+        <div class="research-meta">
+          <span>${contexts.length} subjects</span>
+          <span>Same subject type</span>
+          <span>Shareable URL</span>
+          <span>No synthetic scoring</span>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="section-header"><div><span class="eyebrow">Comparison</span><h2 class="section-title">Cross-module Coverage</h2></div></div>
+        <div class="section-body">${compareTable(contexts)}</div>
+      </section>
+
+      ${compareShared(contexts)}
+
+      <section class="section">
+        <div class="section-header"><div><span class="eyebrow">Subjects</span><h2 class="section-title">Open Individual Research</h2></div></div>
+        <div class="section-body"><div class="research-card-grid">${contexts.map(ctx => `
+          <a class="research-entity-card" href="research.html?type=${encodeURIComponent(state.type)}&ids=${encodeURIComponent(ctx.subject.id)}">
+            <span class="eyebrow">${esc(state.type)}</span>
+            <strong>${esc(subjectLabel(ctx.subject))}</strong>
+            <span>${contextStats(ctx).projects} projects · ${contextStats(ctx).infrastructure} infrastructure links</span>
+            <small>${contextStats(ctx).legalTopics} legal topics · ${contextStats(ctx).recent} recent items</small>
+          </a>`).join('')}</div></div>
+      </section>
+
+      <section class="section">
+        <div class="section-header"><div><span class="eyebrow">Macro</span><h2 class="section-title">Common Macro Context</h2></div><a class="text-link" href="macro.html">Open Macro</a></div>
+        <div class="section-body">
+          <p class="research-disclaimer">Macro context is common to the comparison and is not used as a project score.</p>
+          <div class="research-macro-grid">${latestMacroCards()}</div>
+        </div>
+      </section>
+    `);
+  }
+
+  function render() {
+    const subjects = selectedSubjects();
+    if (!subjects.length) {
+      setView(Components.stateBox('Select a research subject.'));
+      return;
+    }
+    const contexts = subjects.map(contextFor);
+    if (contexts.length === 1) renderSingle(contexts[0]);
+    else renderCompare(contexts);
     window.AppDynamicLocalization?.apply?.();
   }
 
   function updateUrl() {
     const url = new URL(location.href);
     url.searchParams.set('type', state.type);
-    if (state.id) url.searchParams.set('id', state.id);
+    url.searchParams.delete('id');
+    if (state.ids.length) url.searchParams.set('ids', state.ids.join(','));
+    else url.searchParams.delete('ids');
     history.replaceState({}, '', url);
+  }
+
+  function collectSelections() {
+    const selects = [...document.querySelectorAll('[data-research-entity]')];
+    state.ids = unique(selects.map(select => select.value).filter(Boolean)).slice(0,3);
   }
 
   function bind() {
     const type = document.querySelector('[data-research-type]');
-    const entity = document.querySelector('[data-research-entity]');
     document.querySelector('[data-research-load]')?.addEventListener('click', () => {
       state.type = type?.value || 'project';
-      state.id = entity?.value || '';
+      collectSelections();
       updateUrl();
       render();
     });
     type?.addEventListener('change', () => {
       state.type = type.value;
-      state.id = '';
+      state.ids = [];
       renderSelector();
     });
-    entity?.addEventListener('change', () => { state.id = entity.value; });
+    document.querySelector('[data-research-share]')?.addEventListener('click', async event => {
+      collectSelections();
+      updateUrl();
+      const button = event.currentTarget;
+      try {
+        await navigator.clipboard.writeText(location.href);
+        const prior = button.textContent;
+        button.textContent = 'Link copied';
+        setTimeout(() => { button.textContent = prior; window.AppDynamicLocalization?.apply?.(); }, 1200);
+      } catch {
+        button.textContent = 'Copy URL from address bar';
+      }
+    });
   }
 
   async function load() {
@@ -316,6 +449,7 @@
       data.developerMap = byId(data.developers);
       data.projectMap = byId(data.projects);
       data.topicMap = byId(data.topics);
+      data.infrastructureMap = byId(data.infrastructure);
       data.indicatorMap = byId(data.indicators);
       data.sourceMap = byId(data.sources);
       queryState();
