@@ -446,13 +446,15 @@
   }
 
   function listingRangeLabel(row) {
-    if (!row) return '—';
+    if (!row || row.asking_price_low_vnd_per_m2 == null || row.asking_price_high_vnd_per_m2 == null) return '—';
     return Formatters.number(row.asking_price_low_vnd_per_m2 / 1_000_000,{min:0,max:1}) + '–' + Formatters.number(row.asking_price_high_vnd_per_m2 / 1_000_000,{min:0,max:1}) + ' mn VND/m²';
   }
 
   function listingCoverage(ctx) {
     const rows = ctx.projects.map(project => ({project,listing:latestListingObservation(project.id)})).filter(x => x.listing);
-    return { count:rows.length, projects:ctx.projects.length, rows };
+    const priced = rows.filter(x => x.listing.asking_price_low_vnd_per_m2 != null && x.listing.asking_price_high_vnd_per_m2 != null);
+    const full = rows.filter(x => x.listing.coverage_status === 'full' || x.listing.coverage_status == null);
+    return { count:rows.length, priced:priced.length, full:full.length, projects:ctx.projects.length, rows };
   }
 
   function listingMarketHTML(ctx) {
@@ -536,7 +538,7 @@
       [tr('Coverage giá','Price coverage'), ctx => marketCoverage(ctx).price + '/' + marketCoverage(ctx).projects],
       [tr('Coverage bán hàng','Sales coverage'), ctx => marketCoverage(ctx).sales + '/' + marketCoverage(ctx).projects],
       [tr('Coverage hấp thụ','Absorption coverage'), ctx => marketCoverage(ctx).absorption + '/' + marketCoverage(ctx).projects],
-      [tr('Coverage listing market','Listing-market coverage'), ctx => listingCoverage(ctx).count + '/' + listingCoverage(ctx).projects],
+      [tr('Coverage listing market','Listing-market coverage'), ctx => listingCoverage(ctx).count + '/' + listingCoverage(ctx).projects + ' mapped · ' + listingCoverage(ctx).priced + '/' + listingCoverage(ctx).projects + ' priced'],
       [tr('Khoảng giá chào bán','Listing asking range'), ctx => { const x=listingCoverage(ctx).rows[0]; return x ? listingRangeLabel(x.listing) + ' · ' + x.project.name : '—'; }],
       [tr('Biến động giá portal 1 năm','Portal 1Y price trend'), ctx => { const x=listingCoverage(ctx).rows[0]; return x ? Formatters.number(x.listing.asking_price_change_1y_pct*100,{min:1,max:1}) + '% · ' + x.project.name : '—'; }],
       [tr('ASP dự án mới nhất','Latest project ASP'), ctx => { const x=ctx.projects.map(projectMarketRow).find(r=>r.asp!=null); return x ? fmtMarketValue(x.asp,'asp') + ' · ' + x.project.name : '—'; }],
