@@ -18,7 +18,7 @@ on:
     - cron: '30 2 * * 2,5'
 
 permissions:
-  contents: write
+  contents: read
 
 jobs:
   collect:
@@ -53,26 +53,16 @@ jobs:
                   decision=", ".join(f"{d['segment']}:{d['status']}" for d in x["decisions"])
               print(f"| {x['target_id']} | {x.get('type','—')} | {x['status']} | {decision or '—'} |")
           PY
-      - name: Validate and auto-promote non-conflicting candidates
+      - name: Validate candidate integrity (preview only)
         run: |
-          python scripts/market_candidate_promotion.py --mode promote
+          python scripts/market_candidate_promotion.py --mode preview
           python - <<'PY'
           import json
           from pathlib import Path
-          p=json.loads(Path("data/candidate/market/market-promotion-report.json").read_text())
-          print("Auto-promote result:", p["counts"])
+          r=json.loads(Path("data/candidate/market/market-promotion-report.json").read_text())
+          print("Market candidate decisions:", r["counts"])
+          print("Production write disabled until period freshness and source verification gates pass.")
           PY
-      - name: Commit verified market updates
-        run: |
-          if git diff --quiet -- data/mock/market/observations.json data/mock/articles/articles.json; then
-            echo "No verified new market data to publish."
-            exit 0
-          fi
-          git config user.name "github-actions[bot]"
-          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add data/mock/market/observations.json data/mock/articles/articles.json
-          git commit -m "data(market): auto-publish validated candidates"
-          git push
       - name: Upload candidates
         uses: actions/upload-artifact@v7
         with:
