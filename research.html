@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="description" content="Cross-module research workspace for Vietnam real estate projects, regions and developers.">
   <title>Research · Market Intelligence</title>
-  <link rel="stylesheet" href="assets/css/main.css?v=5.2B1">
+  <link rel="stylesheet" href="assets/css/main.css?v=5.3W1">
   <link rel="stylesheet" href="assets/css/localization.css?v=7.2.0">
 </head>
 <body data-page="research">
@@ -50,7 +50,27 @@
         </label>
         <div class="research-selector__actions">
           <button class="button button-primary" type="button" data-research-load>Open research view</button>
+          <button class="button" type="button" data-research-watch>Save to watchlist</button>
           <button class="button" type="button" data-research-share>Copy share link</button>
+        </div>
+      </section>
+
+      <section class="section research-watchlist" data-research-watchlist>
+        <div class="section-header">
+          <div>
+            <span class="eyebrow">Saved Research</span>
+            <h2 class="section-title">Watchlist & Update Inbox</h2>
+          </div>
+          <button class="button" type="button" data-watchlist-review>Mark all reviewed</button>
+        </div>
+        <div class="section-body">
+          <div class="research-watchlist__saved" data-watchlist-saved></div>
+          <div class="research-watchlist__inbox-head">
+            <strong>New source-backed activity</strong>
+            <span class="research-watchlist__count" data-watchlist-new-count>0</span>
+          </div>
+          <div data-watchlist-inbox></div>
+          <p class="research-disclaimer">Saved Research is stored only in this browser. It does not sync across devices or change repository data.</p>
         </div>
       </section>
 
@@ -71,8 +91,8 @@
   <script src="assets/js/search.js?v=4.3E"></script>
   <script src="assets/js/resolver.js"></script>
   <script src="assets/js/history-engine.js?v=4.9I1"></script>
-  <script src="assets/js/research.js?v=5.2B1"></script>
+  <script src="assets/js/research.js?v=5.3W1"></script>
   <script src="assets/js/localization-static.js?v=4.3E"></script>
-  <script src="assets/js/localization-dynamic.js?v=5.2B1"></script>
+  <script src="assets/js/localization-dynamic.js?v=5.3W1"></script>
 </body>
 </html>
