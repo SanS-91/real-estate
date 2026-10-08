@@ -11,7 +11,7 @@ Current master status:
 - Phase 1 — Skeleton Website: complete.
 - Phase 2 — Data Architecture: complete.
 - Phase 3 — Simple Data Layer: complete.
-- Phase 4 — Source Registry & Auto Data Collection: in progress; Legal and Infrastructure structured collectors remain the main gap.
+- Phase 4 — Source Registry & Auto Data Collection: complete; all four pillars now have structured collection-to-candidate paths with controlled promotion gates.
 - Phase 5 — Automation: in progress; unified operational health/stale/backlog visibility remains to be completed.
 - Phase 6 — Intelligence Database: in progress; Market is the most mature module and Project Detail is the first deep entity view.
 - Phase 7 — Intelligence / Ranking / optional AI: partial.
