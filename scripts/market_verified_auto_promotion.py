@@ -69,7 +69,7 @@ def assess(row, source_ids, project_ids, today):
         return "unknown-project-reference"
     try:
         published = datetime.fromisoformat(row["published_at"])
-        if published.tzinfo is None or not (2024 <= published.year <= today.year):
+        if published.tzinfo is None or published.year < 2024:
             return "invalid-publication-timestamp"
         if published.date() > today.date():
             return "future-publication"
