@@ -1,6 +1,15 @@
 name: Market Source Candidate Collector
 
 on:
+  push:
+    branches:
+      - main
+    paths:
+      - 'scripts/collectors/cbre_market.py'
+      - 'scripts/collectors/namlong_official.py'
+      - 'scripts/market_source_candidate_collector.py'
+      - 'config/market-automation-targets.json'
+      - '.github/workflows/market-source-candidate-collector.yml'
   workflow_dispatch:
   schedule:
     - cron: '30 2 * * 2,5'
