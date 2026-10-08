@@ -252,6 +252,21 @@ def main():
                     target_reports[-1]["article_decision"]=astate
             elif t["collector"]=="namlong_official":
                 parsed=module.parse_article(html,final_url,datetime.now(timezone.utc).isoformat())
+                from datetime import date
+                page_date=parsed.get("published_date")
+                if not page_date:
+                    target_reports.append({"target_id":t["target_id"],"status":"manual-review-required","reason":"No verified article publication date","url":final_url})
+                    continue
+                try:
+                    published=date.fromisoformat(page_date)
+                    if published > datetime.now(timezone.utc).date() or published.year < 2022:
+                        raise ValueError("Publication date outside accepted range")
+                except ValueError:
+                    target_reports.append({"target_id":t["target_id"],"status":"manual-review-required","reason":"Invalid article publication date","url":final_url})
+                    continue
+                if t.get("period") and t["period_type"] == "date" and t["period"] != page_date:
+                    target_reports.append({"target_id":t["target_id"],"status":"manual-review-required","reason":"Source publication date differs from configured date","configured_date":t["period"],"verified_date":page_date,"url":final_url})
+                    continue
                 row=build_namlong_article(t,parsed,final_url)
                 key=existing_article_key(row)
                 state="unchanged" if key in art_keys else "new"
