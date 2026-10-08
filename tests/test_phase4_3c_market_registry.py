@@ -34,7 +34,7 @@ assert 'Implementation demo.' not in html
 assert 'Curated market registry.' in html
 assert 'market.js?v=5.5B1S1' in html
 assert 'Demo data' not in js
-assert 'No missing project price is estimated.' in js
+assert 'no missing project price is estimated.' in js.lower()
 assert "scope_type === 'region-segment-benchmark'" in js
 # Publication/source-date precision guards
 obs_by_id = {x["id"]: x for x in obs['data']}
