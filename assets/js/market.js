@@ -361,6 +361,7 @@
         <h2>${esc(project.name)}</h2>
         <p>${esc(project.location_text)} · ${esc(developerName(project))}</p>
         ${Components.statusBadge(project.status)}
+        <div class="drawer-actions"><a class="button" href="research.html?type=project&ids=${encodeURIComponent(project.id)}">Open Research</a></div>
       </div>
       <div class="drawer-metrics">
         ${Components.compactMetric({label:'Planned units',value:Number.isFinite(project.planned_units) ? formatCompact(project.planned_units) : '—',note:project.known_units_note || 'No exact comparable count published'})}
