@@ -198,6 +198,9 @@ def main():
                     "evidence": evidence["evidence"], "url": final_url,
                 })
                 continue
+            if t.get("period_type") == "quarter" and t["collector"] in ("jll_research", "savills_research"):
+                target_reports.append({"target_id":t["target_id"],"status":"manual-review-required","reason":"Research landing page is not a verified individual quarterly report","detected_period":evidence["period"],"url":final_url})
+                continue
             module=importlib.import_module("collectors."+t["collector"])
             if t["collector"] in {"cbre_market","cushman_market"}:
                 parsed=module.parse(html,final_url,datetime.now(timezone.utc).isoformat())
