@@ -1,0 +1,36 @@
+name: Phase 5.5F Market Source Connector Validation
+
+on:
+  pull_request:
+    paths:
+      - 'config/market-automation-targets.json'
+      - 'scripts/market_source_connector.py'
+      - 'tests/test_phase5_5f_market_source_connectors.py'
+      - '.github/workflows/market-source-connector-probe.yml'
+      - '.github/workflows/phase55f-market-source-connector-validation.yml'
+      - 'docs/PHASE5_5F_MARKET_SOURCE_CONNECTORS.md'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  validate:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v7
+      - uses: actions/setup-python@v7
+        with:
+          python-version: '3.12'
+      - name: Install dependencies
+        run: pip install -r requirements.txt
+      - name: Syntax
+        run: python -m py_compile scripts/market_source_connector.py
+      - name: Phase 5.5F contracts
+        run: python tests/test_phase5_5f_market_source_connectors.py
+      - name: Listing regressions
+        run: |
+          python tests/test_phase5_5e_source_diversification.py
+          python tests/test_phase5_5d_listing_candidate_collector.py
+          python tests/test_phase5_5c_listing_pipeline.py

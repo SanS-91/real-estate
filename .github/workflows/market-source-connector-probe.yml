@@ -1,0 +1,46 @@
+name: Market Source Connector Probe
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: '15 2 * * 2,5'
+
+permissions:
+  contents: read
+
+jobs:
+  probe:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v7
+      - uses: actions/setup-python@v7
+        with:
+          python-version: '3.12'
+      - name: Install dependencies
+        run: pip install -r requirements.txt
+      - name: Probe configured market sources
+        run: python scripts/market_source_connector.py
+      - name: Summary
+        run: |
+          echo "## Market Source Connector Probe" >> "$GITHUB_STEP_SUMMARY"
+          python - <<'PY' >> "$GITHUB_STEP_SUMMARY"
+          import json
+          from pathlib import Path
+          r=json.loads(Path("data/candidate/market/market-source-connector-report.json").read_text())
+          print(f"- Targets checked: **{r['targets_checked']}**")
+          for k,v in r.get("counts",{}).items():
+              print(f"- {k}: **{v}**")
+          print("")
+          print("| Target | Source | Status | HTTP |")
+          print("|---|---|---|---:|")
+          for x in r.get("sources",[]):
+              print(f"| {x['target_id']} | {x['source_id']} | {x['status']} | {x.get('http_status','—')} |")
+          print("")
+          print("Discovery/probe only: production observations are not written.")
+          PY
+      - uses: actions/upload-artifact@v7
+        with:
+          name: market-source-connector-report
+          path: data/candidate/market/market-source-connector-report.json
+          retention-days: 14
