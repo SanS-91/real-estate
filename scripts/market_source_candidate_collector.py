@@ -7,6 +7,7 @@ import json
 import re
 from datetime import datetime, timezone
 from market_period_evidence import extract_period_evidence
+from market_source_discovery import discover_namlong_links, namlong_target
 import requests
 
 ROOT=Path(__file__).resolve().parents[1]
@@ -133,7 +134,7 @@ def project_regions(project_ids):
     return out
 
 def build_namlong_article(target, parsed, final_url):
-    date=parsed.get("published_date") or target.get("period")
+    date=parsed.get("published_date")
     project_ids=parsed.get("project_ids") or []
     tags=list(dict.fromkeys(parsed.get("tags") or []))
     summary_bits=[]
@@ -160,7 +161,8 @@ def build_namlong_article(target, parsed, final_url):
         "importance":4 if len(project_ids)>=2 else 3,
         "summary":" ".join(summary_bits),
         "structured_facts":parsed.get("facts") or [],
-        "candidate_note":"Automatically parsed from official developer page; review before production promotion."
+        "candidate_note":"Official article publication date validated; strict review gate still applies.",
+        "source_verification":{"publication_date_verified":True,"article_page":final_url,"discovery_url":target.get("discovery_url")},
     }
 
 def main():
