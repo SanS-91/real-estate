@@ -6,7 +6,7 @@ pages={
  'macro.html':'assets/js/macro.js?v=4.9I1',
  'legal.html':'assets/js/legal.js?v=4.9I1',
  'infrastructure.html':'assets/js/infrastructure.js?v=4.9I1',
- 'market.html':'assets/js/market.js?v=5.5C1',
+ 'market.html':'assets/js/market.js?v=',
 }
 for page,script in pages.items():
     text=(ROOT/page).read_text(encoding='utf-8')

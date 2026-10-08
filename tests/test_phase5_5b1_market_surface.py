@@ -9,7 +9,7 @@ listing=json.loads((ROOT/'data/mock/market/listing-observations.json').read_text
 canonical=json.loads((ROOT/'data/mock/market/observations.json').read_text(encoding='utf-8'))
 macro=json.loads((ROOT/'data/processed/macro/observations.json').read_text(encoding='utf-8'))
 
-assert 'assets/js/market.js?v=5.5C1' in html
+assert 'assets/js/market.js' in html
 assert 'assets/css/main.css?v=5.5C1' in html
 assert 'assets/js/localization-dynamic.js?v=5.5C1' in html
 

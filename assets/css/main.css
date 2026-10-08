@@ -2322,3 +2322,36 @@ button, a, input, select { outline-offset: 3px; }
 .maintenance-operation-card.is-review .data-health-status { background:#fff8e8; color:#8a5b00; }
 .maintenance-operation-card.is-degraded .data-health-status,
 .maintenance-operation-card.is-stale .data-health-status { background:#fff0ee; color:#b42318; }
+
+
+/* Phase 6.1 — Project intelligence dossier */
+.project-intelligence-summary { margin-bottom:14px; }
+.project-intelligence-counts { display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:10px; }
+.project-intelligence-counts > div { border:1px solid var(--color-border); border-radius:var(--radius-md); padding:12px; background:var(--color-surface-subtle); }
+.project-intelligence-counts strong { display:block; font-size:20px; line-height:1; margin-bottom:5px; }
+.project-intelligence-counts span { color:var(--color-text-secondary); font-size:10.5px; line-height:1.35; }
+.project-evidence-list { display:grid; gap:0; }
+.project-evidence-list > a,
+.project-evidence-static { display:flex; justify-content:space-between; gap:14px; align-items:flex-start; padding:10px 0; border-bottom:1px solid var(--color-border); color:var(--color-text); text-decoration:none; }
+.project-evidence-list > a:last-child,
+.project-evidence-static:last-child { border-bottom:0; }
+.project-evidence-list > a:hover strong { text-decoration:underline; }
+.project-evidence-list > a > div,
+.project-evidence-static > div { min-width:0; display:flex; flex-direction:column; gap:3px; }
+.project-evidence-list span,
+.project-evidence-static span { color:var(--color-text-secondary); font-size:10.5px; }
+.project-evidence-list small,
+.project-evidence-static small { flex:0 0 auto; max-width:46%; color:var(--color-text-secondary); font-size:10.5px; line-height:1.35; text-align:right; }
+.project-context-grid { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:18px; }
+.project-context-grid h3 { margin:0 0 8px; font-size:12px; }
+@media (max-width: 760px) {
+  .project-intelligence-counts { grid-template-columns:repeat(2,minmax(0,1fr)); }
+  .project-context-grid { grid-template-columns:1fr; }
+}
+@media (max-width: 480px) {
+  .project-intelligence-counts { grid-template-columns:1fr; }
+  .project-evidence-list > a,
+  .project-evidence-static { flex-direction:column; gap:5px; }
+  .project-evidence-list small,
+  .project-evidence-static small { max-width:none; text-align:left; }
+}
