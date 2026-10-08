@@ -1,0 +1,41 @@
+{
+  "schema_version": 1,
+  "generated_at": "2026-10-08T00:00:00+00:00",
+  "overall_status": "review",
+  "note": "Seed snapshot. Phase 5.8 operational workflow refreshes this file from live GitHub Actions state after deployment.",
+  "modules": [
+    {
+      "module": "market",
+      "status": "review",
+      "dataset_count": 3,
+      "candidate_backlog": 0,
+      "last_successful_run_at": null,
+      "last_production_at": null
+    },
+    {
+      "module": "legal",
+      "status": "review",
+      "dataset_count": 1,
+      "candidate_backlog": 0,
+      "last_successful_run_at": null,
+      "last_production_at": null
+    },
+    {
+      "module": "infrastructure",
+      "status": "review",
+      "dataset_count": 1,
+      "candidate_backlog": 0,
+      "last_successful_run_at": null,
+      "last_production_at": null
+    },
+    {
+      "module": "macro",
+      "status": "review",
+      "dataset_count": 4,
+      "candidate_backlog": 0,
+      "last_successful_run_at": null,
+      "last_production_at": null
+    }
+  ],
+  "datasets": []
+}
