@@ -26,7 +26,7 @@ def evaluate(targets, report):
         passed = bool(
             item.get("status") == "parsed"
             and source_period and source_date
-            and source_period != expected
+            and source_period == expected
             and item.get("source_period_evidence_url")
         )
         results.append({
@@ -35,7 +35,7 @@ def evaluate(targets, report):
             "verified_source_period": source_period,
             "verified_source_date": source_date,
             "decision": "freshness-verified" if passed else "manual-review-required",
-            "reason": "Source period/date evidence not independently verified" if not passed else "New period verified",
+            "reason": "Source period/date evidence not independently verified" if not passed else "Source period verified against configured target",
         })
     return {"schema_version": 1, "auto_publish_eligible": False,
             "reason": "Auto-publish remains disabled pending end-to-end tests and approval",
