@@ -12,9 +12,9 @@ assert 'data-research-entity="0"' in research
 assert 'data-research-entity="1"' in research
 assert 'data-research-entity="2"' in research
 assert 'data-research-share' in research
-assert 'assets/js/research.js?v=5.2B1' in research
-assert 'assets/css/main.css?v=5.2B1' in research
-assert 'assets/js/localization-dynamic.js?v=5.2B1' in research
+assert 'assets/js/research.js?v=5.3W1' in research
+assert 'assets/css/main.css?v=5.3W1' in research
+assert 'assets/js/localization-dynamic.js?v=5.3W1' in research
 
 assert "const state = { type: 'project', ids: [] };" in js
 assert "url.searchParams.set('ids', state.ids.join(','))" in js
