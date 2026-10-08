@@ -1,0 +1,163 @@
+{
+  "schema_version": 1,
+  "updated_at": "2026-10-08",
+  "governing_principle": "Build the complete framework first, then deepen each module without over-engineering the foundation.",
+  "master_phases": [
+    {
+      "id": "0",
+      "name": "Blueprint tổng thể",
+      "status": "complete",
+      "exit_criteria": "Sitemap, four pillars, repository architecture, data flow and naming conventions are defined."
+    },
+    {
+      "id": "1",
+      "name": "Xây Skeleton Website",
+      "status": "complete",
+      "exit_criteria": "Home + Market + Legal + Infrastructure + Macro render through a shared responsive shell."
+    },
+    {
+      "id": "2",
+      "name": "Thiết kế Data Architecture",
+      "status": "complete",
+      "exit_criteria": "Core entities, relationships, source registry and canonical field conventions exist for all four pillars."
+    },
+    {
+      "id": "3",
+      "name": "Data Layer bản đơn giản",
+      "status": "complete",
+      "exit_criteria": "Website is data-driven from structured JSON with shared search/filter/sort/chart utilities."
+    },
+    {
+      "id": "4",
+      "name": "Source Registry & Auto Data Collection",
+      "status": "in-progress",
+      "exit_criteria": "All four modules have a defined Source → Fetch/Assist → Parse → Normalize → Deduplicate → Candidate path. Legal and Infrastructure must move beyond fingerprint/watch-only discovery."
+    },
+    {
+      "id": "5",
+      "name": "Automation",
+      "status": "in-progress",
+      "exit_criteria": "Automatable sources refresh on schedule; blocked/manual sources are explicitly classified; failures, stale data, last-good retention and candidate backlog are visible through one operations layer."
+    },
+    {
+      "id": "6",
+      "name": "Intelligence Database",
+      "status": "in-progress",
+      "exit_criteria": "Project / Region / Developer / Time views can query and connect Market, Legal, Infrastructure and Macro evidence without fabricating missing data."
+    },
+    {
+      "id": "7",
+      "name": "Intelligence, Ranking & AI optional",
+      "status": "partial",
+      "exit_criteria": "Rule-based importance/change ranking powers Today / This Week / What Changed / Top Developments; AI remains an optional analysis layer above canonical data."
+    }
+  ],
+  "module_audit": [
+    {
+      "module": "market",
+      "registry": "complete",
+      "collectors": "complete",
+      "scheduling": "complete-assisted-mix",
+      "candidate_gate": "complete",
+      "production_promotion": "complete",
+      "history": "complete-framework-shallow-depth",
+      "intelligence": "advanced",
+      "primary_gap": "Increase historical depth and ongoing listing/project-source coverage; Batdongsan remains assisted because GitHub-hosted access is blocked."
+    },
+    {
+      "module": "macro",
+      "registry": "complete",
+      "collectors": "complete",
+      "scheduling": "complete",
+      "candidate_gate": "complete",
+      "production_promotion": "complete",
+      "history": "complete",
+      "intelligence": "advanced",
+      "primary_gap": "Operational consolidation and broader source-health reporting rather than new core architecture."
+    },
+    {
+      "module": "legal",
+      "registry": "complete",
+      "collectors": "watch-only",
+      "scheduling": "assisted-watch",
+      "candidate_gate": "partial",
+      "production_promotion": "manual-curated",
+      "history": "complete-framework",
+      "intelligence": "partial",
+      "primary_gap": "Structured legal candidate collector and review/promotion flow for newly discovered official documents and amendments."
+    },
+    {
+      "module": "infrastructure",
+      "registry": "complete",
+      "collectors": "watch-only",
+      "scheduling": "assisted-watch",
+      "candidate_gate": "partial",
+      "production_promotion": "manual-curated",
+      "history": "complete-framework",
+      "intelligence": "partial",
+      "primary_gap": "Structured infrastructure candidate collector for milestones, schedule revisions, investment/status changes and append-only promotion."
+    }
+  ],
+  "next_sequence": [
+    {
+      "order": 1,
+      "work_package": "5.6B",
+      "name": "Master Roadmap Alignment & Architecture Audit",
+      "goal": "Lock master roadmap, module gap matrix and exit criteria."
+    },
+    {
+      "order": 2,
+      "work_package": "5.7",
+      "name": "Legal & Infrastructure Collection Completion",
+      "goal": "Close Master Phase 4 gaps with structured candidate collectors and review gates."
+    },
+    {
+      "order": 3,
+      "work_package": "5.8",
+      "name": "Unified Automation & Data Health",
+      "goal": "Close Master Phase 5 with one operational source/data health layer."
+    },
+    {
+      "order": 4,
+      "work_package": "6.0",
+      "name": "Cross-module Intelligence Model",
+      "goal": "Define entity-centric Project / Region / Developer / Time queries across modules."
+    },
+    {
+      "order": 5,
+      "work_package": "6.1",
+      "name": "Project Intelligence Deepening",
+      "goal": "Complete project dossiers with cross-module evidence."
+    },
+    {
+      "order": 6,
+      "work_package": "6.2",
+      "name": "Region & Developer Intelligence",
+      "goal": "Add cross-module Region and Developer intelligence views."
+    },
+    {
+      "order": 7,
+      "work_package": "6.3",
+      "name": "Historical Coverage Expansion",
+      "goal": "Increase listing/research/legal/infrastructure time-series depth."
+    },
+    {
+      "order": 8,
+      "work_package": "7.0",
+      "name": "Importance & Change Ranking Engine",
+      "goal": "Create deterministic rule-based relevance/change scoring."
+    },
+    {
+      "order": 9,
+      "work_package": "7.1",
+      "name": "Today / This Week / Top Developments",
+      "goal": "Publish derived intelligence surfaces from the ranking engine."
+    },
+    {
+      "order": 10,
+      "work_package": "7.2",
+      "name": "Optional AI Analysis Layer",
+      "goal": "Summarize, explain, compare and query normalized canonical data without making AI a data source."
+    }
+  ]
+}
