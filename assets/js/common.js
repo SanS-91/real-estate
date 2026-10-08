@@ -3,6 +3,7 @@
 
   const NAV_ITEMS = [
     { key: 'home', label: 'Home', href: 'index.html' },
+    { key: 'research', label: 'Research', href: 'research.html' },
     { key: 'market', label: 'Market', href: 'market.html' },
     { key: 'legal', label: 'Legal', href: 'legal.html' },
     { key: 'infrastructure', label: 'Infrastructure', href: 'infrastructure.html' },
