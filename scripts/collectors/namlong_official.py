@@ -59,6 +59,7 @@ def parse_article(html: str, source_url: str, fetched_at: str):
         if cut >= 0:
             text = text[:cut]
     text = text[:20000]
+    excerpt = text.strip()[:330].rsplit(" ", 1)[0]
     project_ids = [pid for pid, pat in PROJECT_PATTERNS.items() if pat.search(text)]
     tags = []
     for tag, pat in (
@@ -80,6 +81,7 @@ def parse_article(html: str, source_url: str, fetched_at: str):
 
     return {
         "title": title,
+        "excerpt": excerpt,
         "published_date": date_string,
         "project_ids": project_ids,
         "tags": tags,
