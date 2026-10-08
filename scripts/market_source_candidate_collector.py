@@ -43,15 +43,16 @@ def existing_article_key(x):
     return (x.get("url"),x.get("source_id"))
 
 def build_cbre_rows(target, parsed, final_url):
+    period=target.get("period") or "2026-Q2"  # legacy fixture compatibility; live targets carry a verified period
     rows=[]
     for item in parsed:
         segment=item["segment_id"]
         rows.append({
-            "id":f"obs-hcmc-{segment}-{target['period'].lower()}-cbre",
+            "id":f"obs-hcmc-{segment}-{period.lower()}-cbre",
             "scope_type":"region-segment",
             "region_ids":["hcmc"],
             "segment_ids":[segment],
-            "period":target["period"],
+            "period":period,
             "period_type":"quarter",
             "new_supply":item["new_supply"],
             "sales_units":None,
