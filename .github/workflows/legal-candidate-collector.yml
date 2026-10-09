@@ -2,6 +2,10 @@ name: Legal Candidate Collector
 
 on:
   workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - '.github/workflows/legal-candidate-collector.yml'
   schedule:
     - cron: '20 3 * * 1'
 
