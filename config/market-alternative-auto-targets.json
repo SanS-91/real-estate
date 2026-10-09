@@ -1,0 +1,53 @@
+{
+  "schema_version": 1,
+  "updated_at": "2026-10-09",
+  "production_policy": "candidate-only-never-auto-promote",
+  "schedule": "twice-weekly",
+  "description": "Controlled alternative-source access and observed-month discovery. Historical launch prices never become fresh time series; a single listing is never a project ASP.",
+  "targets": [
+    {
+      "target_id": "onehousing-vinhomes-grand-park-apartment",
+      "source_id": "onehousing-vn",
+      "project_id": "vinhomes-grand-park",
+      "url": "https://onehousing.vn/phan-tich/du-an/can-ho-chung-cu-du-an-Vinhomes-Grand-Park.1012",
+      "mode": "monthly-price-candidate",
+      "metric_type": "popular-asking-price-per-sqm",
+      "asset_type": "apartment",
+      "period_type": "month",
+      "baseline_id": "onehousing-vinhomes-grand-park-apartment-2026-10"
+    },
+    {
+      "target_id": "rever-vinhomes-grand-park-listing",
+      "source_id": "rever-vn",
+      "project_id": "vinhomes-grand-park",
+      "url": "https://rever.vn/mua/can-ho-vinhomes-grand-park-23",
+      "mode": "single-listing-review",
+      "metric_type": "single-listing-asking-price-per-sqm",
+      "asset_type": "apartment",
+      "period_type": "date",
+      "baseline_id": "rever-vinhomes-grand-park-apartment-listing-2026-09-16"
+    },
+    {
+      "target_id": "rever-the-privia-historical",
+      "source_id": "rever-vn",
+      "project_id": "the-privia",
+      "url": "https://blog.rever.vn/the-privia-khang-dien-du-dieu-kien-mua-ban-rever-chinh-thuc-phan-phoi",
+      "mode": "historical-reference-monitor",
+      "metric_type": "historical-launch-starting-price-per-sqm",
+      "asset_type": "apartment",
+      "period_type": "date",
+      "baseline_id": "rever-the-privia-launch-floor-2023-11-14"
+    },
+    {
+      "target_id": "onehousing-global-city-historical",
+      "source_id": "onehousing-vn",
+      "project_id": "the-global-city",
+      "url": "https://onehousing.vn/blog/can-ho-the-global-city",
+      "mode": "historical-reference-monitor",
+      "metric_type": "historical-launch-starting-price-per-sqm",
+      "asset_type": "apartment",
+      "period_type": "date",
+      "baseline_id": "onehousing-the-global-city-grand-view-launch-floor-2024-11-12"
+    }
+  ]
+}
