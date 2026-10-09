@@ -6,6 +6,10 @@ on:
       - 'assets/js/common.js'
       - 'assets/js/home.js'
       - 'assets/js/market.js'
+      - 'assets/js/legal.js'
+      - 'assets/js/infrastructure.js'
+      - 'assets/js/macro.js'
+      - 'tests/test_4j3_density.cjs'
       - 'tests/test_market_4j2.cjs'
       - 'assets/js/components.js'
       - 'tests/test_home_4j1.cjs'
@@ -48,6 +52,10 @@ jobs:
           node tests/test_home_4j1.cjs
           node --check assets/js/market.js
           node tests/test_market_4j2.cjs
+          node --check assets/js/legal.js
+          node --check assets/js/infrastructure.js
+          node --check assets/js/macro.js
+          node tests/test_4j3_density.cjs
           node --check assets/js/common.js
           node --check assets/js/localization-static.js
           node --check assets/js/market-news-ui.js
