@@ -227,17 +227,17 @@
     const rows = model.rows.map(row => {
       const reviewNote = row.review_by ? `${c.reviewBy} ${formatDateTime(row.review_by)}` : (row.freshness === 'derived' ? (language() === 'vi' ? 'Theo trạng thái dữ liệu nguồn' : 'Follows source datasets') : '');
       return `<tr>
-        <td><span class="maintenance-module">${esc(c.modules[row.module] || row.module)}</span></td>
-        <td><strong class="maintenance-dataset-name">${esc(row.label)}</strong><span class="table-subtext">${esc(c.modes[row.update_mode] || row.update_mode)}</span></td>
-        <td>${statusBadge(row.status, row.freshness)}</td>
-        <td>${esc(c.cadence[row.check_frequency] || row.check_frequency)}</td>
-        <td>${esc(row.latest_observation_period || '—')}</td>
-        <td class="numeric">${row.record_count === null || row.record_count === undefined ? '—' : esc(row.record_count)}</td>
-        <td>${esc(formatDateTime(row.last_updated_at))}<span class="table-subtext">${esc(reviewNote)}</span></td>
+        <td data-label-vi="Module" data-label-en="Module"><span class="maintenance-module">${esc(c.modules[row.module] || row.module)}</span></td>
+        <td data-label-vi="Bộ dữ liệu" data-label-en="Dataset"><strong class="maintenance-dataset-name">${esc(row.label)}</strong><span class="table-subtext">${esc(c.modes[row.update_mode] || row.update_mode)}</span></td>
+        <td data-label-vi="Trạng thái" data-label-en="Status">${statusBadge(row.status, row.freshness)}</td>
+        <td data-label-vi="Tần suất" data-label-en="Cadence">${esc(c.cadence[row.check_frequency] || row.check_frequency)}</td>
+        <td data-label-vi="Kỳ dữ liệu" data-label-en="Latest period">${esc(row.latest_observation_period || '—')}</td>
+        <td class="numeric" data-label-vi="Số bản ghi" data-label-en="Records">${row.record_count === null || row.record_count === undefined ? '—' : esc(row.record_count)}</td>
+        <td data-label-vi="Cập nhật gần nhất" data-label-en="Last updated">${esc(formatDateTime(row.last_updated_at))}<span class="table-subtext">${esc(reviewNote)}</span></td>
       </tr>`;
     }).join('');
 
-    document.querySelector('[data-maintenance-table]').innerHTML = `<div class="table-wrap table-wrap--maintenance"><table class="data-table data-table--maintenance">
+    document.querySelector('[data-maintenance-table]').innerHTML = `<div class="table-wrap table-wrap--maintenance"><table class="data-table data-table--maintenance mobile-record-table">
       <thead><tr><th>Module</th><th>Dataset</th><th>Status</th><th>${esc(c.cadenceLabel)}</th><th>${esc(c.latestPeriod)}</th><th class="numeric">${esc(c.records)}</th><th>${esc(c.lastUpdated)}</th></tr></thead>
       <tbody>${rows}</tbody>
     </table></div>`;
@@ -346,9 +346,9 @@
         return;
       }
       node.innerHTML = `<div class="table-wrap table-wrap--maintenance">
-        <table class="data-table data-table--maintenance">
+        <table class="data-table data-table--maintenance mobile-record-table">
           <thead><tr><th>${esc(labels.provider)}</th><th>${esc(labels.project)}</th><th>${esc(labels.state)}</th><th class="numeric">${esc(labels.checks)}</th></tr></thead>
-          <tbody>${rows.map(row => `<tr>${row.map((cell, i) => `<td${i === 3 ? ' class="numeric"' : ''}>${esc(cell)}</td>`).join('')}</tr>`).join('')}</tbody>
+          <tbody>${rows.map(row => `<tr>${row.map((cell, i) => `<td${i === 3 ? ' class="numeric"' : ''} data-label-vi="${['Nguồn', 'Dự án / dữ liệu', 'Tình trạng', 'Lượt kiểm tra'][i]}" data-label-en="${['Source', 'Project / dataset', 'Status', 'Checks'][i]}">${esc(cell)}</td>`).join('')}</tr>`).join('')}</tbody>
         </table>
       </div><p class="table-subtext" style="padding:10px 14px">${esc(labels.note)}</p>`;
     } catch (error) {

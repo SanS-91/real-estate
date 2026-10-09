@@ -481,9 +481,9 @@
   function indicatorTable(ids) {
     const rows = ids.map(id => {
       const ind = indicator(id); const {current} = latestPair(id); const delta = deltaInfo(id);
-      return `<tr><td><button class="table-link" type="button" data-macro-indicator-id="${esc(id)}">${esc(ind?.name || id)}</button><span class="table-subtext">${esc(labelize(ind?.indicator_category))}</span></td><td class="numeric">${esc(formatObservationValue(ind,current))}</td><td class="numeric">${esc(delta.label)}</td><td>${esc(formatPeriod(current))}<span class="table-subtext">Published ${esc(App.formatDate(current?.published_at))}</span></td><td>${current ? sourceRef(current.source_id,{publishedAt:current.published_at,period:current.period,sourceUrl:current.source_url}) : '—'}</td></tr>`;
+      return `<tr><td data-label-vi="Chỉ số" data-label-en="Indicator"><button class="table-link" type="button" data-macro-indicator-id="${esc(id)}">${esc(ind?.name || id)}</button><span class="table-subtext">${esc(labelize(ind?.indicator_category))}</span></td><td class="numeric" data-label-vi="Giá trị gần nhất" data-label-en="Current">${esc(formatObservationValue(ind,current))}</td><td class="numeric" data-label-vi="Thay đổi" data-label-en="Change">${esc(delta.label)}</td><td data-label-vi="Kỳ dữ liệu" data-label-en="Data period">${esc(formatPeriod(current))}<span class="table-subtext">Published ${esc(App.formatDate(current?.published_at))}</span></td><td data-label-vi="Nguồn" data-label-en="Source">${current ? sourceRef(current.source_id,{publishedAt:current.published_at,period:current.period,sourceUrl:current.source_url}) : '—'}</td></tr>`;
     }).join('');
-    return `<div class="table-wrap"><table class="data-table data-table--macro"><thead><tr><th>Indicator</th><th class="numeric">Current</th><th class="numeric">Change</th><th>Data Period</th><th>Source</th></tr></thead><tbody>${rows}</tbody></table></div>`;
+    return `<div class="table-wrap"><table class="data-table data-table--macro mobile-record-table"><thead><tr><th>Indicator</th><th class="numeric">Current</th><th class="numeric">Change</th><th>Data Period</th><th>Source</th></tr></thead><tbody>${rows}</tbody></table></div>`;
   }
 
   function renderOverview() {
@@ -526,8 +526,8 @@
 
   function recentObservationTable(id, limit = 12) {
     const ind = indicator(id);
-    const rows = [...observationsFor(id)].reverse().slice(0,limit).map(row => `<tr><td>${esc(formatPeriod(row))}<span class="table-subtext">${esc(row.period)}</span></td><td class="numeric">${esc(formatObservationValue(ind,row))}</td><td>${esc(observationStatusLabel(row))}</td><td>${esc(App.formatDate(row.published_at))}</td><td>${sourceRef(row.source_id,{publishedAt:row.published_at,period:row.period,sourceUrl:row.source_url})}</td></tr>`).join('');
-    return `<div class="table-wrap"><table class="data-table data-table--macro-history"><thead><tr><th>Data Period</th><th class="numeric">Value</th><th>Status</th><th>Published</th><th>Source</th></tr></thead><tbody>${rows}</tbody></table></div>`;
+    const rows = [...observationsFor(id)].reverse().slice(0,limit).map(row => `<tr><td data-label-vi="Kỳ dữ liệu" data-label-en="Data period">${esc(formatPeriod(row))}<span class="table-subtext">${esc(row.period)}</span></td><td class="numeric" data-label-vi="Giá trị" data-label-en="Value">${esc(formatObservationValue(ind,row))}</td><td data-label-vi="Trạng thái" data-label-en="Status">${esc(observationStatusLabel(row))}</td><td data-label-vi="Ngày công bố" data-label-en="Published">${esc(App.formatDate(row.published_at))}</td><td data-label-vi="Nguồn" data-label-en="Source">${sourceRef(row.source_id,{publishedAt:row.published_at,period:row.period,sourceUrl:row.source_url})}</td></tr>`).join('');
+    return `<div class="table-wrap"><table class="data-table data-table--macro-history mobile-record-table"><thead><tr><th>Data Period</th><th class="numeric">Value</th><th>Status</th><th>Published</th><th>Source</th></tr></thead><tbody>${rows}</tbody></table></div>`;
   }
 
   function renderSeriesView(view) {
