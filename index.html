@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="description" content="A structured research dashboard for real estate market, legal, infrastructure and macro developments.">
   <title>Market Intelligence · Vietnam Real Estate</title>
-  <link rel="stylesheet" href="assets/css/main.css?v=4.9I1&ui=UI8&news=UI9&rev=UI10">
+  <link rel="stylesheet" href="assets/css/main.css?v=4.9I1&ui=UI8&news=UI9&rev=UI10&home4J1=1">
   <link rel="stylesheet" href="assets/css/localization.css?v=7.2.0">
 </head>
 <body data-page="home">
@@ -17,23 +17,22 @@
         <div>
           <p class="page-kicker">Vietnam Real Estate</p>
           <h1 class="page-title">Market Intelligence</h1>
-          <p class="page-description">Monitor what changed today, review the week, and move quickly into structured project, legal, infrastructure and macro research.</p>
+          <p class="page-description">Latest verified updates across property markets, legal, infrastructure and macro — in one place.</p>
         </div>
-        <a class="updated-label text-link" href="maintenance.html" data-home-updated title="Open data status">Integrated data</a>
+        <div class="home-header-actions"><button class="button button-primary" type="button" data-search-open>Search research</button><a class="updated-label text-link" href="maintenance.html" data-home-updated title="Open data status">Data status</a></div>
       </header>
 
-      <div class="demo-banner" role="note">
-        <strong>Integrated curated data.</strong>
-        <span>Home combines the curated Market registry, official Legal and Infrastructure registries, and controlled Macro production. Missing figures remain blank rather than being estimated.</span>
-      </div>
-
-      <section class="home-snapshot" aria-labelledby="snapshot-title">
-        <div>
-          <span class="eyebrow">Market snapshot</span>
-          <h2 id="snapshot-title">One screen for what matters now</h2>
-          <p>Use the dashboard for fast monitoring, then move into each module for structured historical research.</p>
+      <section class="home-block" aria-labelledby="today-title">
+        <div class="home-block__header">
+          <div>
+            <span class="eyebrow">Ranked activity</span>
+            <h2 id="today-title">Latest Updates</h2>
+          </div>
+          <span class="home-block__note">Most relevant dated updates by module</span>
         </div>
-        <button class="button button-primary" type="button" data-search-open>Search research</button>
+        <div class="today-grid" data-home-today>
+          <div class="state-box">Loading Today…</div>
+        </div>
       </section>
 
       <section class="home-block" aria-labelledby="data-health-title">
@@ -46,19 +45,6 @@
         </div>
         <div class="data-health-grid" data-home-data-health>
           <div class="state-box">Loading data health…</div>
-        </div>
-      </section>
-
-      <section class="home-block" aria-labelledby="today-title">
-        <div class="home-block__header">
-          <div>
-            <span class="eyebrow">Ranked activity</span>
-            <h2 id="today-title">Today</h2>
-          </div>
-          <span class="home-block__note">Source-backed updates ranked by attention priority</span>
-        </div>
-        <div class="today-grid" data-home-today>
-          <div class="state-box">Loading Today…</div>
         </div>
       </section>
 
@@ -81,13 +67,15 @@
             <span class="eyebrow">Meaningful developments</span>
             <h2 id="changes-title">What Changed</h2>
           </div>
-          <span class="home-block__note">Events, not just headlines</span>
+          <span class="home-block__note">Timeline of material changes</span>
         </div>
         <div class="change-grid" data-home-changes>
           <div class="state-box">Loading changes…</div>
         </div>
       </section>
 
+      <details class="home-more-history">
+        <summary>More updates · 7–30 day history</summary>
       <section class="home-block" aria-labelledby="top-developments-title">
         <div class="home-block__header">
           <div>
@@ -114,6 +102,8 @@
         </div>
       </section>
 
+      </details>
+
       <section class="home-block" aria-labelledby="research-title">
         <div class="home-block__header">
           <div>
@@ -134,13 +124,13 @@
   <script src="assets/js/formatters.js"></script>
   <script src="assets/js/data-store.js?v=5.8"></script>
   <script src="assets/js/provenance.js"></script>
-  <script src="assets/js/components.js"></script>
+  <script src="assets/js/components.js?home4J1=1"></script>
   <script src="assets/js/search.js?v=4.3E"></script>
   <script src="assets/js/history-engine.js?v=4.9I1"></script>
   <script src="assets/js/intelligence-ranking.js?v=7.0"></script>
   <script src="assets/js/intelligence-surfaces.js?v=7.1"></script>
-  <script src="assets/js/home.js?v=7.1"></script>
-  <script src="assets/js/localization-static.js?v=4.3E&ui=UI8&rev=UI10"></script>
+  <script src="assets/js/home.js?v=7.1&home4J1=1"></script>
+  <script src="assets/js/localization-static.js?v=4.3E&ui=UI8&rev=UI10&home4J1=1"></script>
   <script src="assets/js/localization-dynamic.js?v=5.0R1"></script>
 </body>
 </html>
