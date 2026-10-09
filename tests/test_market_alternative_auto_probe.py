@@ -37,7 +37,7 @@ def rever_fixture(day="17", amount="48.60"):
     <p>Chi tiết căn hộ và mức giá tham khảo tại trang tin Rever.</p></body></html>"""
 
 now = date(2026, 11, 9)
-assert len(cfg["targets"]) == 6
+assert len(cfg["targets"]) == 7
 assert {x["mode"] for x in cfg["targets"]} == {
     "monthly-price-candidate", "single-listing-review", "historical-reference-monitor"}
 assert all(probe.allowed_target(x) for x in cfg["targets"])
@@ -62,7 +62,7 @@ for candidate_name in ("Lumière Boulevard", "Masteri Centre Point"):
     sample = probe.plain_text(fixture().replace("Vinhomes Grand Park", candidate_name))
     assert probe.onehousing_monthly(sample, now, candidate_name)["period"] == "2026-11"
     assert probe.onehousing_monthly(sample, now, "Vinhomes Grand Park") is None
-for row in cfg["targets"][4:]:
+for row in [x for x in cfg["targets"] if x.get("subproject_name")]:
     assert probe.publisher_hosts(row["source_id"])
     actual = by_id[row["baseline_id"]]
     assert actual["subproject_name"] == row["publisher_project_name"]
@@ -107,21 +107,21 @@ def fake_fetch(item, session):
         return {"status":"blocked","http_status":403}, None
     return {"status":"reachable","http_status":200}, fixture()
 checks,candidates=probe.run(cfg["targets"],by_id,now,None,fetcher=fake_fetch)
-assert len(checks)==6 and len(candidates)==3
-assert sum(row["status"]=="new-period-review-required" for row in checks)==3
+assert len(checks)==7 and len(candidates)==4
+assert sum(row["status"]=="new-period-review-required" for row in checks)==4
 assert sum(row["status"]=="blocked" for row in checks)==1
 assert all(not x.get("production_written",False) for x in checks)
 queue={"schema_version":1,"candidate_only":True,"review_required":True,"data":[]}
 added,conflicts=probe.append_review_queue(queue,candidates)
-assert (added,conflicts,queue["record_count"])==(3,0,3)
+assert (added,conflicts,queue["record_count"])==(4,0,4)
 added,conflicts=probe.append_review_queue(queue,candidates)
-assert (added,conflicts,queue["record_count"])==(0,0,3)
+assert (added,conflicts,queue["record_count"])==(0,0,4)
 tampered=copy.deepcopy(candidates[0])
 tampered["value_vnd_per_m2"]=111_000_000
 added,conflicts=probe.append_review_queue(queue,[tampered])
-assert (added,conflicts,queue["record_count"])==(0,1,3)
+assert (added,conflicts,queue["record_count"])==(0,1,4)
 assert queue["data"][0]["value_vnd_per_m2"]==55_100_000
 current_queue=json.loads((ROOT/"data/candidate/market/alternative-price-review-queue.json").read_text())
 assert current_queue["record_count"]==len(current_queue["data"])
 assert all(item.get("candidate_only") is True and item.get("review_required") is True and item.get("review_date") is None for item in current_queue["data"])
-print("PASS: 6 source targets, 3 distinct OneHousing apartment series, strict name/month matching, and safe review queue.")
+print("PASS: 7 source targets, 4 distinct OneHousing apartment series, strict name/month matching, and safe review queue.")

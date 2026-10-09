@@ -27,6 +27,10 @@ LOCKED_LINKS = {
         "the-global-city", "onehousing-vn",
         "https://onehousing.vn/blog/can-ho-the-global-city",
         "historical-launch-starting-price-per-sqm", "2024-11-12"),
+    "onehousing-lumiere-riverside-apartment-2026-10": (
+        "lumiere-riverside", "onehousing-vn",
+        "https://onehousing.vn/phan-tich/du-an/can-ho-chung-cu-du-an-Lumiere-Riverside.625",
+        "popular-asking-price-per-sqm", "2026-10"),
 }
 PRICE = re.compile(r"(\d+(?:[.,]\d+)?)\s*triệu\s*/\s*m(?:²|2)", re.I)
 RANGE = re.compile(r"Khoảng giá\s*:\s*(\d+(?:[.,]\d+)?)\s*[-–]\s*(\d+(?:[.,]\d+)?)\s*triệu", re.I)
@@ -64,7 +68,7 @@ def validate(rows, source_ids, project_ids, today):
             period = row["period"]
             if row.get("period_type") == "month":
                 observed = date.fromisoformat(period + "-01")
-                if row["source_id"] != "onehousing-vn" or rid != "onehousing-vinhomes-grand-park-apartment-2026-10":
+                if row["source_id"] != "onehousing-vn" or row.get("metric_type") != "popular-asking-price-per-sqm":
                     problems.append(f"{rid}: unapproved month basis")
                 if observed.strftime("%Y-%m") != review.strftime("%Y-%m"):
                     problems.append(f"{rid}: reviewed month mismatch")
@@ -110,11 +114,11 @@ def main():
     projects = {x["id"] for x in json.loads(PROJECTS.read_text(encoding="utf-8"))["data"]}
     sources = {x["id"] for x in json.loads(SOURCES.read_text(encoding="utf-8"))["data"]}
     problems = validate(payload["data"], sources, projects, date.today())
-    if payload.get("record_count") != len(payload["data"]) or len(payload["data"]) != 4:
+    if payload.get("record_count") != len(payload["data"]) or len(payload["data"]) != len(LOCKED_LINKS):
         problems.append("bad count")
     if problems:
         raise SystemExit("\n".join(problems))
-    print("PASS: 4 alternative source reference facts, 3 projects, 2 publishers; no price history promotion.")
+    print(f"PASS: {len(LOCKED_LINKS)} strictly mapped source references; no unverified publisher history promotion.")
 
 if __name__ == "__main__":
     main()

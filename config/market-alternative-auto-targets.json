@@ -77,6 +77,18 @@
       "fallback_urls": [
         "https://onehousing.vn/phan-tich/du-an/can-ho-chung-cu-du-an-Masteri-Centre-Point.53"
       ]
+    },
+    {
+      "target_id": "onehousing-lumiere-riverside-apartment",
+      "source_id": "onehousing-vn",
+      "project_id": "lumiere-riverside",
+      "publisher_project_name": "Lumière Riverside",
+      "url": "https://onehousing.vn/phan-tich/du-an/can-ho-chung-cu-du-an-Lumiere-Riverside.625",
+      "mode": "monthly-price-candidate",
+      "metric_type": "popular-asking-price-per-sqm",
+      "asset_type": "apartment",
+      "period_type": "month",
+      "baseline_id": "onehousing-lumiere-riverside-apartment-2026-10"
     }
   ]
 }

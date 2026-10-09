@@ -87,9 +87,9 @@ def main():
     existing=json.loads(EXISTING.read_text(encoding="utf-8"))
     if d.get("record_count")!=len(d.get("data",[])) or d.get("record_count")!=2:
         errors.append("subproject baseline count mismatch")
-    if portal["record_count"]!=18 or existing["record_count"]!=4:
+    if portal["record_count"]!=18 or existing["record_count"]!=5:
         errors.append("original market price records changed")
     if errors:raise SystemExit("\n".join(errors))
-    print("PASS: two distinct OneHousing nested apartment references; 12 parent projects and portal asking history unchanged.")
+    print("PASS: two distinct OneHousing nested apartment references; 13 parent projects and portal asking history structurally isolated.")
 
 if __name__=="__main__":main()

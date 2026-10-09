@@ -2,7 +2,7 @@
   "schema_version": 1,
   "build_id": "phase4.7-market-registry-20261007",
   "generated_at": "2026-10-07T21:55:00+07:00",
-  "record_count": 12,
+  "record_count": 13,
   "data": [
     {
       "id": "izumi-city",
@@ -416,6 +416,38 @@
         "construction",
         "investment",
         "finance"
+      ]
+    },
+    {
+      "id": "lumiere-riverside",
+      "name": "Lumière Riverside",
+      "developer_ids": [
+        "masterise"
+      ],
+      "lead_developer_id": "masterise",
+      "region_ids": [
+        "hcmc"
+      ],
+      "segment_ids": [
+        "apartment"
+      ],
+      "status": "handover",
+      "location_text": "259 Xa lộ Hà Nội (Võ Nguyên Giáp), An Phú/Thảo Điền, TP. Thủ Đức, TPHCM",
+      "total_area_sqm": 19000,
+      "planned_units": null,
+      "known_units_note": "Trang OneHousing mô tả quy mô 1,9 ha; trang chính thức của Masterise mô tả 2 tháp. Chưa ghi tổng số căn như một chỉ tiêu đã xác minh độc lập.",
+      "launch_date": null,
+      "summary": "Lumière Riverside là khu căn hộ do Masterise Homes phát triển tại Thảo Điền–An Phú. Trang chính thức nêu thiết kế Leafscape và dự án đã hoàn thiện để bàn giao từ cuối 2023. Giá chào bán phổ biến ghi riêng trong nguồn OneHousing, không phải giá giao dịch.",
+      "related_infrastructure_ids": [
+        "hcmc-metro-line-1"
+      ],
+      "official_url": "https://masterisehomes.com/lumiere-riverside/",
+      "primary_source_id": "masterise-homes-official",
+      "source_date": "2026-10-09",
+      "related_legal_topic_ids": [
+        "housing",
+        "real-estate-business",
+        "construction"
       ]
     }
   ]

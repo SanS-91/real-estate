@@ -1,0 +1,58 @@
+name: Market 4I.3 - New Project Verified Source Coverage
+
+on:
+  pull_request:
+    paths:
+      - 'data/mock/market/projects.json'
+      - 'data/mock/market/alternative-price-evidence.json'
+      - 'config/market-alternative-auto-targets.json'
+      - 'tests/test_market_lumiere_riverside_source.py'
+      - '.github/workflows/market-4i3-project-source-validation.yml'
+  push:
+    branches: [main]
+    paths:
+      - 'data/mock/market/projects.json'
+      - 'data/mock/market/alternative-price-evidence.json'
+      - 'config/market-alternative-auto-targets.json'
+      - '.github/workflows/market-4i3-project-source-validation.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  verify-project-and-source-relationship:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Install parser dependencies
+        run: pip install -r requirements.txt
+      - name: Validate reviewed new project and source price
+        run: |
+          python -m unittest discover -s tests -p 'test_market_lumiere_riverside_source.py' -v
+          python -m unittest discover -s tests -p 'test_market_onehousing_project_history.py' -v
+      - name: Browser smoke new project and scope-labeled price
+        run: |
+          set -eu
+          BROWSER="$(command -v google-chrome || command -v chromium || command -v chromium-browser || true)"
+          test -n "$BROWSER"
+          python -m http.server 8765 --bind 127.0.0.1 >/tmp/market4i-project-server.log 2>&1 &
+          SERVER_PID=$!
+          trap 'kill "$SERVER_PID" || true' EXIT
+          sleep 3
+          "$BROWSER" --headless --no-sandbox --disable-gpu --disable-dev-shm-usage --virtual-time-budget=15000 --dump-dom 'http://127.0.0.1:8765/market.html?view=projects' > /tmp/market4i-project.html
+          "$BROWSER" --headless --no-sandbox --disable-gpu --disable-dev-shm-usage --virtual-time-budget=15000 --dump-dom 'http://127.0.0.1:8765/market.html?view=pricing&price-layer=listing' > /tmp/market4i-pricing.html
+          python - <<'PY'
+          from pathlib import Path
+          projects=Path('/tmp/market4i-project.html').read_text()
+          prices=Path('/tmp/market4i-pricing.html').read_text()
+          assert 'Lumière Riverside' in projects, 'New project is missing'
+          assert 'Lumière Riverside' in prices, 'Price reference is missing'
+          assert '178.17' in prices, 'Source-reported modal asking price not displayed'
+          assert 'Giá tham khảo bổ sung' in prices, 'Reference scope should remain separate'
+          print('PASS: source-backed new project, source-labeled price reference and browser views')
+          PY
