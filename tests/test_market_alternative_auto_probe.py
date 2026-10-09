@@ -20,8 +20,12 @@ prior = by_id[target["baseline_id"]]
 def fixture(month=11, year=2026, amount="55.10", low="38.40", high="250.25"):
     return f"""<!doctype html><html><head><title>Vinhomes Grand Park - OneHousing</title></head><body>
         <main><h1>Căn hộ chung cư dự án Vinhomes Grand Park tháng {month}/{year}</h1>
-        <section>Đơn giá phổ biến | {amount} triệu/m²</section>
+        <section>Khoảng giá: 1.35 - 32 tỷ</section>
+        <section>Đơn giá phổ biến
+        Mức giá/ mét vuông xuất hiện nhiều nhất trong khoảng giá
+        {amount} triệu/m² 0%</section>
         <section>Khoảng giá: {low} - {high} triệu</section>
+        <section>Giá thuê phổ biến ~7.09 triệu/tháng</section>
         <p>Thống kê tin chào bán theo tháng tại dự án Vinhomes Grand Park
         Căn hộ chung cư đang được rao bán theo từng phân khúc sản phẩm.</p></main>
         </body></html>"""
@@ -47,6 +51,9 @@ assert parsed["value_vnd_per_m2"] == 55_100_000
 assert parsed["range_low_vnd_per_m2"] == 38_400_000
 assert parsed["range_high_vnd_per_m2"] == 250_250_000
 assert probe.onehousing_monthly(probe.plain_text(fixture(month=12)), now) is None
+archived = probe.onehousing_monthly(probe.plain_text(fixture(month=8,amount="57.24",low="38.55",high="331.19")), now)
+assert archived["period"] == "2026-08" and archived["value_vnd_per_m2"] == 57_240_000
+assert probe.classify(target,fixture(month=8,amount="57.24",low="38.55",high="331.19"),prior,now) == ("older-period-no-candidate",None)
 assert probe.onehousing_monthly(probe.plain_text(fixture(low="90")), now) is None
 assert probe.onehousing_monthly(probe.plain_text(fixture().replace("Vinhomes Grand Park", "Izumi City")), now) is None
 assert probe.onehousing_monthly("Đơn giá phổ biến 100 triệu/m² Khoảng giá 90 - 110 triệu", now) is None
