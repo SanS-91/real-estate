@@ -1,0 +1,106 @@
+name: Market Scope Correctness and Listing Source Coverage
+
+on:
+  pull_request:
+    paths:
+      - 'data/mock/market/listing-scope-evidence.json'
+      - 'data/state/listing-source-coverage.json'
+      - 'scripts/listing_scope_evidence_gate.py'
+      - 'scripts/listing_monitor_health.py'
+      - '.github/workflows/listing-market-candidate.yml'
+      - 'assets/js/market.js'
+      - 'assets/js/data-store.js'
+      - 'assets/css/market-listing-evidence.css'
+      - 'market.html'
+      - 'tests/test_listing_coverage_next.py'
+      - 'tests/test_market_source_scope_coverage.py'
+      - '.github/workflows/market-source-scope-coverage.yml'
+  push:
+    branches: [main]
+    paths:
+      - 'data/mock/market/listing-scope-evidence.json'
+      - 'scripts/listing_scope_evidence_gate.py'
+      - '.github/workflows/market-source-scope-coverage.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  verify:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 14
+    steps:
+      - uses: actions/checkout@v7
+      - uses: actions/setup-python@v7
+        with:
+          python-version: '3.12'
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Evidence provenance, series and source-access tests
+        run: |
+          python -m py_compile scripts/listing_scope_evidence_gate.py scripts/listing_monitor_health.py
+          python scripts/listing_scope_evidence_gate.py
+          python tests/test_market_source_scope_coverage.py
+          python tests/test_listing_coverage_next.py
+          python tests/test_phase5_5b_listing_coverage.py
+          python tests/test_phase5_5c_frontend.py
+          node --check assets/js/market.js
+          node --check assets/js/data-store.js
+      - name: Source coverage report generation (no new listing price)
+        run: |
+          python scripts/listing_monitor_health.py
+          python - <<'PY'
+          from pathlib import Path
+          import json
+          p=json.loads(Path('data/state/listing-source-coverage.json').read_text())
+          assert p['projects_tracked']==12
+          assert p['aggregate_priced_projects']==8
+          assert p['project_level_price_missing']==4
+          assert p['category_reference_projects']==4
+          assert p['category_reference_count']==4
+          assert p['no_new_price_inferred'] is True
+          assert p['source_access']=='not-checked', 'CI must not pretend it collected portal data'
+          assert p['source_checked_at'] is None
+          print('PASS: missing-source check is explicit; project data retained.')
+          PY
+      - name: Real-browser responsive QA for Izumi Essensia and Pricing
+        if: github.event_name == 'pull_request'
+        run: |
+          set -eu
+          BROWSER="$(command -v google-chrome || command -v chromium || command -v chromium-browser || true)"
+          test -n "$BROWSER"
+          mkdir -p artifacts
+          python3 -m http.server 8765 --bind 127.0.0.1 >/tmp/market-scoped-http.log 2>&1 &
+          SERVER_PID=$!
+          trap 'kill "$SERVER_PID" || true' EXIT
+          sleep 3
+          BASE='http://127.0.0.1:8765/market.html'
+          "$BROWSER" --headless --no-sandbox --disable-gpu --disable-dev-shm-usage --hide-scrollbars --window-size=1440,960 --virtual-time-budget=9000 --screenshot=artifacts/pricing-desktop.png "$BASE?view=pricing"
+          "$BROWSER" --headless --no-sandbox --disable-gpu --disable-dev-shm-usage --window-size=1440,960 --virtual-time-budget=9000 --dump-dom "$BASE?view=pricing" >artifacts/pricing-dom.html
+          "$BROWSER" --headless --no-sandbox --disable-gpu --disable-dev-shm-usage --hide-scrollbars --window-size=390,860 --virtual-time-budget=9000 --screenshot=artifacts/izumi-mobile.png "$BASE?view=project-detail&id=izumi-city"
+          "$BROWSER" --headless --no-sandbox --disable-gpu --disable-dev-shm-usage --window-size=390,860 --virtual-time-budget=9000 --dump-dom "$BASE?view=project-detail&id=izumi-city" >artifacts/izumi-dom.html
+          "$BROWSER" --headless --no-sandbox --disable-gpu --disable-dev-shm-usage --window-size=1440,960 --virtual-time-budget=9000 --dump-dom "$BASE?view=project-detail&id=essensia-parkway" >artifacts/essensia-dom.html
+          python3 - <<'PY'
+          from pathlib import Path
+          pricing=Path('artifacts/pricing-dom.html').read_text(encoding='utf-8')
+          izumi=Path('artifacts/izumi-dom.html').read_text(encoding='utf-8')
+          essensia=Path('artifacts/essensia-dom.html').read_text(encoding='utf-8')
+          for text in ('Giá chào bán theo phân khúc dự án','Tình trạng nguồn','Biệt thự / liền kề','8</strong>','market-listing-health'):
+              assert text in pricing, ('pricing',text)
+          for text in ('Giá chào bán theo phạm vi sản phẩm','54,5','83,5','Không sử dụng để tính giá căn hộ Izumi'):
+              assert text in izumi or text.replace(',','.') in izumi, ('izumi',text)
+          for text in ('Giá chào bán theo phạm vi sản phẩm','196,1','225'):
+              assert text in essensia or text.replace(',','.') in essensia, ('essensia',text)
+          assert '1/3 snapshots' in izumi, 'No invented additional Izumi observations'
+          print('PASS: source scope and original 1/3 history visible on desktop/mobile.')
+          PY
+      - name: Upload QA evidence
+        if: always()
+        uses: actions/upload-artifact@v7
+        with:
+          name: market-project-scoped-pricing-qa
+          path: artifacts/
+          if-no-files-found: warn
+          retention-days: 14
