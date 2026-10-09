@@ -145,13 +145,34 @@ def onehousing_monthly(text, today, publisher_project_name="Vinhomes Grand Park"
         return None
     return matching[0]
 
-def onehousing_source_diagnostics(text,publisher_project_name):
-    """Small, non-sensitive parser hints for public runner HTML (never store full page)."""
-    headers=[f"{m.group(3)}-{int(m.group(2)):02d}" for m in MONTH_LABEL.finditer(text)
-             if normal_name(m.group(1))==normal_name(publisher_project_name)]
+def onehousing_source_diagnostics(text, publisher_project_name):
+    """Expose only parser structure flags, never copied page bodies."""
+    headers=list(MONTH_LABEL.finditer(text))
+    matched=[]
+    for i,header in enumerate(headers):
+        if normal_name(header.group(1)) != normal_name(publisher_project_name):
+            continue
+        next_head=headers[i+1].start() if i+1<len(headers) else len(text)
+        section_text=text[header.end():min(next_head,header.end()+9000)]
+        section=MODAL_SECTION.search(section_text)
+        inner=section.group("section") if section else ""
+        price=MODAL.search(inner)
+        quoted_range=RANGE.search(inner)
+        preceding=text[max(0,header.start()-180):header.start()]
+        matched.append({
+            "period":f"{header.group(3)}-{int(header.group(2)):02d}",
+            "header_block_characters":len(section_text),
+            "price_section_found":bool(section),
+            "price_section_offset":section.start() if section else None,
+            "modal_in_section":bool(price),
+            "range_in_section":bool(quoted_range),
+            "price_context_marker":"Biến động giá" in preceding,
+        })
     return {
-        "publisher_project_header":bool(headers),
-        "publisher_periods":sorted(set(headers)),
+        "publisher_project_header":bool(matched),
+        "publisher_periods":sorted({row["period"] for row in matched}),
+        "heading_block_count":len(matched),
+        "heading_block_diagnostics":matched[-8:],
         "modal_price_section":bool(MODAL_SECTION.search(text)),
         "asking_price_number":bool(MODAL.search(text)),
         "asking_range_number":bool(RANGE.search(text)),
