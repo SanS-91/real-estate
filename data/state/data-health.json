@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-10-09T12:41:08.525529+00:00",
+  "generated_at": "2026-10-09T14:15:41.746845+00:00",
   "overall_status": "stale",
   "modules": [
     {
@@ -8,7 +8,7 @@
       "status": "healthy",
       "dataset_count": 3,
       "candidate_backlog": 0,
-      "last_successful_run_at": "2026-10-09T12:39:13Z",
+      "last_successful_run_at": "2026-10-09T09:28:15Z",
       "last_production_at": "2026-10-09T04:15:03.529948+00:00"
     },
     {
@@ -47,11 +47,14 @@
       "operational_note": "Candidate evidence is produced in workflow artifacts; production uses controlled persistence gates.",
       "workflow_file": "macro-candidate.yml",
       "production_path": "data/processed/macro/observations.json",
-      "record_count": 18,
+      "record_count": 6,
       "last_production_at": "2026-10-07T08:46:36.737784+00:00",
-      "age_hours": 51.9,
+      "age_hours": 53.5,
       "stale_after_hours": 36,
       "freshness": "stale",
+      "latest_source_period": "2026-10-07",
+      "source_business_day_lag": 2,
+      "source_freshness": "late",
       "candidate_state": "artifact-only",
       "candidate_backlog": null,
       "candidate_conflicts": 0,
@@ -59,6 +62,28 @@
       "workflow_status": "degraded",
       "last_workflow_run_at": "2026-10-09T10:54:21Z",
       "last_successful_run_at": "2026-10-07T13:20:10Z",
+      "last_workflow_run_url": "https://github.com/SanS-91/real-estate/actions/runs/37920418731",
+      "last_workflow_conclusion": "failure",
+      "recent_attempts": [
+        {
+          "status": "completed",
+          "conclusion": "failure",
+          "at": "2026-10-09T10:54:21Z",
+          "url": "https://github.com/SanS-91/real-estate/actions/runs/37920418731"
+        },
+        {
+          "status": "completed",
+          "conclusion": "failure",
+          "at": "2026-10-09T10:31:45Z",
+          "url": "https://github.com/SanS-91/real-estate/actions/runs/37918125940"
+        },
+        {
+          "status": "completed",
+          "conclusion": "failure",
+          "at": "2026-10-08T16:30:20Z",
+          "url": "https://github.com/SanS-91/real-estate/actions/runs/37809248063"
+        }
+      ],
       "status": "stale",
       "failure_behavior": "retain-last-good"
     },
@@ -71,11 +96,14 @@
       "candidate_path": null,
       "workflow_file": "macro-candidate.yml",
       "production_path": "data/processed/macro/observations.json",
-      "record_count": 18,
+      "record_count": 5,
       "last_production_at": "2026-10-07T08:46:36.737784+00:00",
-      "age_hours": 51.9,
+      "age_hours": 53.5,
       "stale_after_hours": 1080,
       "freshness": "fresh",
+      "latest_source_period": "2026-09",
+      "source_business_day_lag": null,
+      "source_freshness": "release-based",
       "candidate_state": "artifact-only",
       "candidate_backlog": null,
       "candidate_conflicts": 0,
@@ -83,6 +111,28 @@
       "workflow_status": "degraded",
       "last_workflow_run_at": "2026-10-09T10:54:21Z",
       "last_successful_run_at": "2026-10-07T13:20:10Z",
+      "last_workflow_run_url": "https://github.com/SanS-91/real-estate/actions/runs/37920418731",
+      "last_workflow_conclusion": "failure",
+      "recent_attempts": [
+        {
+          "status": "completed",
+          "conclusion": "failure",
+          "at": "2026-10-09T10:54:21Z",
+          "url": "https://github.com/SanS-91/real-estate/actions/runs/37920418731"
+        },
+        {
+          "status": "completed",
+          "conclusion": "failure",
+          "at": "2026-10-09T10:31:45Z",
+          "url": "https://github.com/SanS-91/real-estate/actions/runs/37918125940"
+        },
+        {
+          "status": "completed",
+          "conclusion": "failure",
+          "at": "2026-10-08T16:30:20Z",
+          "url": "https://github.com/SanS-91/real-estate/actions/runs/37809248063"
+        }
+      ],
       "status": "degraded",
       "failure_behavior": "retain-last-good"
     },
@@ -95,11 +145,14 @@
       "candidate_path": null,
       "workflow_file": "macro-candidate.yml",
       "production_path": "data/processed/macro/observations.json",
-      "record_count": 18,
+      "record_count": 4,
       "last_production_at": "2026-10-07T08:46:36.737784+00:00",
-      "age_hours": 51.9,
+      "age_hours": 53.5,
       "stale_after_hours": 1080,
       "freshness": "fresh",
+      "latest_source_period": "2026-08",
+      "source_business_day_lag": null,
+      "source_freshness": "release-based",
       "candidate_state": "artifact-only",
       "candidate_backlog": null,
       "candidate_conflicts": 0,
@@ -107,6 +160,28 @@
       "workflow_status": "degraded",
       "last_workflow_run_at": "2026-10-09T10:54:21Z",
       "last_successful_run_at": "2026-10-07T13:20:10Z",
+      "last_workflow_run_url": "https://github.com/SanS-91/real-estate/actions/runs/37920418731",
+      "last_workflow_conclusion": "failure",
+      "recent_attempts": [
+        {
+          "status": "completed",
+          "conclusion": "failure",
+          "at": "2026-10-09T10:54:21Z",
+          "url": "https://github.com/SanS-91/real-estate/actions/runs/37920418731"
+        },
+        {
+          "status": "completed",
+          "conclusion": "failure",
+          "at": "2026-10-09T10:31:45Z",
+          "url": "https://github.com/SanS-91/real-estate/actions/runs/37918125940"
+        },
+        {
+          "status": "completed",
+          "conclusion": "failure",
+          "at": "2026-10-08T16:30:20Z",
+          "url": "https://github.com/SanS-91/real-estate/actions/runs/37809248063"
+        }
+      ],
       "status": "degraded",
       "failure_behavior": "retain-last-good"
     },
@@ -119,11 +194,14 @@
       "candidate_path": null,
       "workflow_file": "macro-candidate.yml",
       "production_path": "data/processed/macro/observations.json",
-      "record_count": 18,
+      "record_count": 3,
       "last_production_at": "2026-10-07T08:46:36.737784+00:00",
-      "age_hours": 51.9,
+      "age_hours": 53.5,
       "stale_after_hours": 192,
       "freshness": "fresh",
+      "latest_source_period": "2023-06-19",
+      "source_business_day_lag": null,
+      "source_freshness": "release-based",
       "candidate_state": "artifact-only",
       "candidate_backlog": null,
       "candidate_conflicts": 0,
@@ -131,6 +209,28 @@
       "workflow_status": "degraded",
       "last_workflow_run_at": "2026-10-09T10:54:21Z",
       "last_successful_run_at": "2026-10-07T13:20:10Z",
+      "last_workflow_run_url": "https://github.com/SanS-91/real-estate/actions/runs/37920418731",
+      "last_workflow_conclusion": "failure",
+      "recent_attempts": [
+        {
+          "status": "completed",
+          "conclusion": "failure",
+          "at": "2026-10-09T10:54:21Z",
+          "url": "https://github.com/SanS-91/real-estate/actions/runs/37920418731"
+        },
+        {
+          "status": "completed",
+          "conclusion": "failure",
+          "at": "2026-10-09T10:31:45Z",
+          "url": "https://github.com/SanS-91/real-estate/actions/runs/37918125940"
+        },
+        {
+          "status": "completed",
+          "conclusion": "failure",
+          "at": "2026-10-08T16:30:20Z",
+          "url": "https://github.com/SanS-91/real-estate/actions/runs/37809248063"
+        }
+      ],
       "status": "degraded",
       "failure_behavior": "retain-last-good"
     },
@@ -145,16 +245,29 @@
       "production_path": "data/mock/market/projects.json",
       "record_count": 13,
       "last_production_at": "2026-10-07T21:55:00+07:00",
-      "age_hours": 45.8,
+      "age_hours": 47.3,
       "stale_after_hours": 192,
       "freshness": "fresh",
+      "latest_source_period": null,
+      "source_business_day_lag": null,
+      "source_freshness": "release-based",
       "candidate_state": "persisted",
       "candidate_backlog": 0,
       "candidate_conflicts": 0,
       "last_candidate_at": "2026-10-08T12:36:04.335455+00:00",
       "workflow_status": "healthy",
-      "last_workflow_run_at": "2026-10-09T12:39:13Z",
-      "last_successful_run_at": "2026-10-09T12:39:13Z",
+      "last_workflow_run_at": "2026-10-09T09:28:15Z",
+      "last_successful_run_at": "2026-10-09T09:28:15Z",
+      "last_workflow_run_url": "https://github.com/SanS-91/real-estate/actions/runs/37911409234",
+      "last_workflow_conclusion": "success",
+      "recent_attempts": [
+        {
+          "status": "completed",
+          "conclusion": "success",
+          "at": "2026-10-09T09:28:15Z",
+          "url": "https://github.com/SanS-91/real-estate/actions/runs/37911409234"
+        }
+      ],
       "status": "healthy",
       "failure_behavior": "retain-last-good"
     },
@@ -169,16 +282,29 @@
       "production_path": "data/mock/market/observations.json",
       "record_count": 26,
       "last_production_at": "2026-10-09T03:21:16.025473+00:00",
-      "age_hours": 9.3,
+      "age_hours": 10.9,
       "stale_after_hours": 1080,
       "freshness": "fresh",
+      "latest_source_period": "2026-Q2",
+      "source_business_day_lag": null,
+      "source_freshness": "release-based",
       "candidate_state": "persisted",
       "candidate_backlog": 0,
       "candidate_conflicts": 0,
       "last_candidate_at": "2026-10-08T12:36:04.335455+00:00",
       "workflow_status": "healthy",
-      "last_workflow_run_at": "2026-10-09T12:39:13Z",
-      "last_successful_run_at": "2026-10-09T12:39:13Z",
+      "last_workflow_run_at": "2026-10-09T09:28:15Z",
+      "last_successful_run_at": "2026-10-09T09:28:15Z",
+      "last_workflow_run_url": "https://github.com/SanS-91/real-estate/actions/runs/37911409234",
+      "last_workflow_conclusion": "success",
+      "recent_attempts": [
+        {
+          "status": "completed",
+          "conclusion": "success",
+          "at": "2026-10-09T09:28:15Z",
+          "url": "https://github.com/SanS-91/real-estate/actions/runs/37911409234"
+        }
+      ],
       "status": "healthy",
       "failure_behavior": "retain-last-good"
     },
@@ -195,8 +321,11 @@
       "workflow_file": "listing-market-candidate.yml",
       "record_count": 18,
       "last_production_at": "2026-10-09T04:15:03.529948+00:00",
-      "age_hours": 8.4,
+      "age_hours": 10.0,
       "freshness": "fresh",
+      "latest_source_period": null,
+      "source_business_day_lag": null,
+      "source_freshness": "release-based",
       "candidate_state": "persisted",
       "candidate_backlog": 0,
       "candidate_conflicts": 0,
@@ -204,6 +333,28 @@
       "workflow_status": "healthy",
       "last_workflow_run_at": "2026-10-09T04:15:10Z",
       "last_successful_run_at": "2026-10-09T04:15:10Z",
+      "last_workflow_run_url": "https://github.com/SanS-91/real-estate/actions/runs/37882969802",
+      "last_workflow_conclusion": "success",
+      "recent_attempts": [
+        {
+          "status": "completed",
+          "conclusion": "success",
+          "at": "2026-10-09T04:15:10Z",
+          "url": "https://github.com/SanS-91/real-estate/actions/runs/37882969802"
+        },
+        {
+          "status": "completed",
+          "conclusion": "success",
+          "at": "2026-10-09T03:57:51Z",
+          "url": "https://github.com/SanS-91/real-estate/actions/runs/37881643615"
+        },
+        {
+          "status": "completed",
+          "conclusion": "success",
+          "at": "2026-10-08T07:11:04Z",
+          "url": "https://github.com/SanS-91/real-estate/actions/runs/37741855798"
+        }
+      ],
       "status": "healthy",
       "failure_behavior": "retain-last-good"
     },
@@ -218,9 +369,12 @@
       "production_path": "data/mock/legal/documents.json",
       "record_count": 16,
       "last_production_at": "2026-10-07T21:55:00+07:00",
-      "age_hours": 45.8,
+      "age_hours": 47.3,
       "stale_after_hours": 192,
       "freshness": "fresh",
+      "latest_source_period": null,
+      "source_business_day_lag": null,
+      "source_freshness": "release-based",
       "candidate_state": "not-persisted",
       "candidate_backlog": 0,
       "candidate_conflicts": 0,
@@ -228,6 +382,9 @@
       "workflow_status": "unknown",
       "last_workflow_run_at": null,
       "last_successful_run_at": null,
+      "last_workflow_run_url": null,
+      "last_workflow_conclusion": null,
+      "recent_attempts": [],
       "status": "healthy",
       "failure_behavior": "retain-last-good"
     },
@@ -242,9 +399,12 @@
       "production_path": "data/mock/infrastructure/projects.json",
       "record_count": 8,
       "last_production_at": "2026-10-08T15:08:55.288Z",
-      "age_hours": 21.5,
+      "age_hours": 23.1,
       "stale_after_hours": 192,
       "freshness": "fresh",
+      "latest_source_period": null,
+      "source_business_day_lag": null,
+      "source_freshness": "release-based",
       "candidate_state": "not-persisted",
       "candidate_backlog": 0,
       "candidate_conflicts": 0,
@@ -252,6 +412,9 @@
       "workflow_status": "unknown",
       "last_workflow_run_at": null,
       "last_successful_run_at": null,
+      "last_workflow_run_url": null,
+      "last_workflow_conclusion": null,
+      "recent_attempts": [],
       "status": "healthy",
       "failure_behavior": "retain-last-good"
     }
