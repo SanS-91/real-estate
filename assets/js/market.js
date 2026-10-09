@@ -685,7 +685,7 @@
     const segment = state.segment;
     const regionObj = Resolver.getEntity('region', region);
     const allRows = data.observations
-      .filter(item => item.scope_type === 'region-segment' && (item.region_ids || []).includes(region) && (item.segment_ids || []).includes(segment))
+      .filter(item => item.scope_type === 'region-segment' && item.period_type === 'quarter' && (item.region_ids || []).includes(region) && (item.segment_ids || []).includes(segment))
       .sort((a,b) => String(a.period).localeCompare(String(b.period)) || marketSourceLabel(a.source_id).localeCompare(marketSourceLabel(b.source_id)));
     const sourceIds = [...new Set(allRows.map(item => item.source_id).filter(Boolean))];
     if (!state.source || !sourceIds.includes(state.source)) {
@@ -695,6 +695,13 @@
     }
     const rows = state.source ? allRows.filter(item => item.source_id === state.source) : allRows;
     const latest = rows[rows.length - 1] || null;
+    const history = MarketHistorySeries.expandQuarterHistory(rows);
+    const coverage = MarketHistorySeries.coverageSummary(history);
+    const benchmarkRows = data.observations
+      .filter(item => item.scope_type === 'region-segment-benchmark'
+        && (item.region_ids || []).includes(region)
+        && ((item.segment_ids || []).includes(segment) || (item.segment_ids || []).includes('residential')))
+      .sort((a,b) => String(b.period).localeCompare(String(a.period)));
     const hasApproximateMetrics = rows.some(row => Object.values(row.metric_qualifiers || {}).includes('approx') || Number.isFinite(row.new_supply_lower_bound));
     const sourceOptions = sourceIds.map(id => option(marketSourceLabel(id), id, state.source)).join('');
     const sourceControl = `
