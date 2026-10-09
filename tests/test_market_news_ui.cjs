@@ -46,7 +46,7 @@ params['news-source']='vnexpress-real-estate';
 html=window.MarketNewsUI.render(args);
 assert.equal(cards(html),16,'Source filter retains matching results');
 assert.doesNotMatch(html,/market-news-card--lead/,'Filtered results use consistent compact grid');
-assert.match(html,/16 bài phù hợp/);
+assert.match(html,/<strong>16<\/strong> bài phù hợp/);
 params['news-topic']='legal';
 html=window.MarketNewsUI.render(args);
 assert.equal(cards(html),0);
