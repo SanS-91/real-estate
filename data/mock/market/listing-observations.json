@@ -1,8 +1,8 @@
 {
   "schema_version": 2,
-  "build_id": "phase5.5c-listing-history-20261009T034049Z",
-  "generated_at": "2026-10-09T03:40:49.906568+00:00",
-  "record_count": 16,
+  "build_id": "phase5.5c-listing-history-20261009T035739Z",
+  "generated_at": "2026-10-09T03:57:39.114177+00:00",
+  "record_count": 18,
   "data": [
     {
       "id": "bdsc-akari-city-2026-10-08",
@@ -133,6 +133,52 @@
       "methodology_note": "Portal aggregate apartment asking range. Not transaction price or official developer sales.",
       "confidence": "secondary-source-snapshot",
       "status": "coverage"
+    },
+    {
+      "id": "bdsc-eaton-park-2026-10-09",
+      "project_id": "eaton-park",
+      "source_id": "batdongsan-com-vn",
+      "source_url": "https://batdongsan.com.vn/ban-can-ho-chung-cu-eaton-park",
+      "observation_date": "2026-10-09",
+      "source_data_as_of": "2026-09-29",
+      "asset_type": "apartment",
+      "market_layer": "listing-asking",
+      "coverage_status": "full",
+      "asking_price_low_vnd_per_m2": 126900000,
+      "asking_price_high_vnd_per_m2": 188600000,
+      "asking_price_change_1y_pct": -0.045,
+      "popular_area_low_sqm": 51,
+      "popular_area_high_sqm": 215,
+      "product_price_ranges": [],
+      "volatile_metrics": {
+        "listing_count": 125,
+        "project_views_7d": null,
+        "use_in_primary_kpi": false,
+        "note": "Counts belong to the publisher's search page and can change intraday; not used in price KPI."
+      },
+      "methodology_note": "Manually reviewed public publisher project-page aggregate asking range, captured from a fresh search-indexed excerpt. Source's 'latest listing updated' date is NOT the timestamp for computing this aggregate range. Listing-year percentage is publisher-reported, NOT change between local snapshots. No sales/transaction price inference. Listing counts are ancillary.",
+      "confidence": "reviewed-public-index-snapshot",
+      "status": "reviewed",
+      "provenance": {
+        "capture_mode": "assisted-reviewed-public-index",
+        "source_review_date": "2026-10-09",
+        "last_listing_date": "2026-09-29",
+        "last_listing_date_is_price_timestamp": false,
+        "source_evidence": {
+          "price": "Giá bán căn hộ chung cư Eaton Park | 126.9 - 188,6 tr/m²",
+          "trend": "4,5% Giá bán đã giảm trong 1 năm qua",
+          "area": "Diện tích phổ biến | 51 - 215 m²",
+          "listing_count": "Số lượng | 125 căn",
+          "last_listing": "Cập nhật tin đăng gần đây nhất | 29-09-2026, 20:18"
+        },
+        "source_access": "public-index-only-github-runner-blocked",
+        "verified_fields": [
+          "asking_price_range",
+          "publisher_1y_trend",
+          "latest_listing_date"
+        ],
+        "review_required": false
+      }
     },
     {
       "id": "bdsc-elysian-2026-10-08",
@@ -521,6 +567,52 @@
       "methodology_note": "Portal aggregate asking range for villas/townhouses at Waterpoint. Not transaction price or official developer sales.",
       "confidence": "secondary-source-snapshot",
       "status": "coverage"
+    },
+    {
+      "id": "bdsc-waterpoint-2026-10-09",
+      "project_id": "waterpoint",
+      "source_id": "batdongsan-com-vn",
+      "source_url": "https://batdongsan.com.vn/ban-nha-biet-thu-lien-ke-khu-do-thi-waterpoint",
+      "observation_date": "2026-10-09",
+      "source_data_as_of": "2026-09-23",
+      "asset_type": "villa-townhouse",
+      "market_layer": "listing-asking",
+      "coverage_status": "full",
+      "asking_price_low_vnd_per_m2": 38200000,
+      "asking_price_high_vnd_per_m2": 60200000,
+      "asking_price_change_1y_pct": -0.066,
+      "popular_area_low_sqm": 68,
+      "popular_area_high_sqm": 315,
+      "product_price_ranges": [],
+      "volatile_metrics": {
+        "listing_count": 74,
+        "project_views_7d": null,
+        "use_in_primary_kpi": false,
+        "note": "Counts belong to the publisher's search page and can change intraday; not used in price KPI."
+      },
+      "methodology_note": "Manually reviewed public publisher project-page aggregate asking range, captured from a fresh search-indexed excerpt. Source's 'latest listing updated' date is NOT the timestamp for computing this aggregate range. Listing-year percentage is publisher-reported, NOT change between local snapshots. No sales/transaction price inference. Listing counts are ancillary.",
+      "confidence": "reviewed-public-index-snapshot",
+      "status": "reviewed",
+      "provenance": {
+        "capture_mode": "assisted-reviewed-public-index",
+        "source_review_date": "2026-10-09",
+        "last_listing_date": "2026-09-23",
+        "last_listing_date_is_price_timestamp": false,
+        "source_evidence": {
+          "price": "Giá bán nhà biệt thự, liền kề Khu đô thị Waterpoint | 38.2 - 60,2 tr/m²",
+          "trend": "6,6% Giá bán đã giảm trong 1 năm qua",
+          "area": "Diện tích phổ biến | 68 - 315 m²",
+          "listing_count": "Số lượng | 74 căn",
+          "last_listing": "Cập nhật tin đăng gần đây nhất | 23-09-2026, 07:32"
+        },
+        "source_access": "public-index-only-github-runner-blocked",
+        "verified_fields": [
+          "asking_price_range",
+          "publisher_1y_trend",
+          "latest_listing_date"
+        ],
+        "review_required": false
+      }
     }
   ]
 }

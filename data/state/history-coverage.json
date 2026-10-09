@@ -1,106 +1,144 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-10-09T03:40:49.939933+00:00",
+  "generated_at": "2026-10-09T03:57:39.137019+00:00",
   "listing_market": {
     "series_count": 12,
     "trend_ready_series": 0,
     "threshold_snapshots": 3,
+    "threshold_priced_snapshots": 3,
+    "minimum_span_days": 30,
     "items": [
       {
         "project_id": "akari-city",
         "snapshot_count": 2,
+        "priced_snapshot_count": 2,
         "first_snapshot": "2026-10-08",
         "latest_snapshot": "2026-10-09",
+        "priced_history_span_days": 1,
         "trend_ready": false,
-        "missing_snapshots_to_trend_ready": 1
+        "missing_snapshots_to_trend_ready": 1,
+        "additional_days_needed": null
       },
       {
         "project_id": "celesta-gold",
         "snapshot_count": 1,
+        "priced_snapshot_count": 0,
         "first_snapshot": "2026-10-08",
         "latest_snapshot": "2026-10-08",
+        "priced_history_span_days": 0,
         "trend_ready": false,
-        "missing_snapshots_to_trend_ready": 2
+        "missing_snapshots_to_trend_ready": 3,
+        "additional_days_needed": null
       },
       {
         "project_id": "eaton-park",
-        "snapshot_count": 1,
+        "snapshot_count": 2,
+        "priced_snapshot_count": 2,
         "first_snapshot": "2026-10-08",
-        "latest_snapshot": "2026-10-08",
+        "latest_snapshot": "2026-10-09",
+        "priced_history_span_days": 1,
         "trend_ready": false,
-        "missing_snapshots_to_trend_ready": 2
+        "missing_snapshots_to_trend_ready": 1,
+        "additional_days_needed": null
       },
       {
         "project_id": "elysian",
         "snapshot_count": 1,
+        "priced_snapshot_count": 1,
         "first_snapshot": "2026-10-08",
         "latest_snapshot": "2026-10-08",
+        "priced_history_span_days": 0,
         "trend_ready": false,
-        "missing_snapshots_to_trend_ready": 2
+        "missing_snapshots_to_trend_ready": 2,
+        "additional_days_needed": null
       },
       {
         "project_id": "essensia-parkway",
         "snapshot_count": 1,
+        "priced_snapshot_count": 0,
         "first_snapshot": "2026-10-08",
         "latest_snapshot": "2026-10-08",
+        "priced_history_span_days": 0,
         "trend_ready": false,
-        "missing_snapshots_to_trend_ready": 2
+        "missing_snapshots_to_trend_ready": 3,
+        "additional_days_needed": null
       },
       {
         "project_id": "izumi-city",
         "snapshot_count": 1,
+        "priced_snapshot_count": 0,
         "first_snapshot": "2026-10-08",
         "latest_snapshot": "2026-10-08",
+        "priced_history_span_days": 0,
         "trend_ready": false,
-        "missing_snapshots_to_trend_ready": 2
+        "missing_snapshots_to_trend_ready": 3,
+        "additional_days_needed": null
       },
       {
         "project_id": "mizuki-park",
         "snapshot_count": 2,
+        "priced_snapshot_count": 2,
         "first_snapshot": "2026-10-08",
         "latest_snapshot": "2026-10-09",
+        "priced_history_span_days": 1,
         "trend_ready": false,
-        "missing_snapshots_to_trend_ready": 1
+        "missing_snapshots_to_trend_ready": 1,
+        "additional_days_needed": null
       },
       {
         "project_id": "the-9-stellars",
         "snapshot_count": 1,
+        "priced_snapshot_count": 0,
         "first_snapshot": "2026-10-08",
         "latest_snapshot": "2026-10-08",
+        "priced_history_span_days": 0,
         "trend_ready": false,
-        "missing_snapshots_to_trend_ready": 2
+        "missing_snapshots_to_trend_ready": 3,
+        "additional_days_needed": null
       },
       {
         "project_id": "the-global-city",
         "snapshot_count": 1,
+        "priced_snapshot_count": 1,
         "first_snapshot": "2026-10-08",
         "latest_snapshot": "2026-10-08",
+        "priced_history_span_days": 0,
         "trend_ready": false,
-        "missing_snapshots_to_trend_ready": 2
+        "missing_snapshots_to_trend_ready": 2,
+        "additional_days_needed": null
       },
       {
         "project_id": "the-privia",
         "snapshot_count": 2,
+        "priced_snapshot_count": 2,
         "first_snapshot": "2026-10-08",
         "latest_snapshot": "2026-10-09",
+        "priced_history_span_days": 1,
         "trend_ready": false,
-        "missing_snapshots_to_trend_ready": 1
+        "missing_snapshots_to_trend_ready": 1,
+        "additional_days_needed": null
       },
       {
         "project_id": "vinhomes-grand-park",
         "snapshot_count": 2,
+        "priced_snapshot_count": 2,
         "first_snapshot": "2026-10-08",
         "latest_snapshot": "2026-10-09",
+        "priced_history_span_days": 1,
         "trend_ready": false,
-        "missing_snapshots_to_trend_ready": 1
+        "missing_snapshots_to_trend_ready": 1,
+        "additional_days_needed": null
       },
       {
         "project_id": "waterpoint",
-        "snapshot_count": 1,
+        "snapshot_count": 2,
+        "priced_snapshot_count": 2,
         "first_snapshot": "2026-10-08",
-        "latest_snapshot": "2026-10-08",
+        "latest_snapshot": "2026-10-09",
+        "priced_history_span_days": 1,
         "trend_ready": false,
-        "missing_snapshots_to_trend_ready": 2
+        "missing_snapshots_to_trend_ready": 1,
+        "additional_days_needed": null
       }
     ]
   },
@@ -382,6 +420,7 @@
     "Blocked listing sources remain assisted and only reviewed snapshots become history.",
     "Research-house series remain source-specific.",
     "Approximate source values retain qualifiers.",
-    "Infrastructure schedule revisions append/supersede; they are never destructively overwritten."
+    "Infrastructure schedule revisions append/supersede; they are never destructively overwritten.",
+    "Listing trend readiness needs three actual full price snapshots spanning at least 30 days; source-reported 1Y percentage is never computed from the portal snapshots."
   ]
 }
