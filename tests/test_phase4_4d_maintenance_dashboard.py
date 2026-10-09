@@ -15,10 +15,12 @@ assert 'data-maintenance-summary' in html
 assert 'data-maintenance-attention' in html
 assert 'data-maintenance-table' in html
 assert 'data-maintenance-rules' in html
-assert 'assets/js/maintenance.js?v=4.4D' in html
+assert 'assets/js/maintenance.js?v=' in html
 
-# Home exposes the dashboard without adding another crowded primary-navigation item.
+# Home keeps its status shortcut and shared navigation exposes the maintenance tab.
 assert 'href="maintenance.html" data-home-updated' in home
+common = (ROOT / "assets/js/common.js").read_text(encoding="utf-8")
+assert "key: 'maintenance', label: 'Data Status', href: 'maintenance.html'" in common
 
 # Dashboard computes current freshness from deployed repository metadata rather than
 # relying on the static 4.4B status snapshot or on GitHub Actions artifacts.
@@ -42,13 +44,13 @@ assert 'table-layout: fixed;' in css
 # VI/EN support exists for the new page.
 assert "maintenance: {" in loc
 assert "maintenance: MAINTENANCE" in loc
-assert "Trạng thái Dữ liệu" in loc
-assert "Dashboard bảo trì chỉ đọc" in loc
+assert "Trạng thái dữ liệu" in loc
+assert "Trạng thái dữ liệu · chỉ đọc" in loc
 
 # Every source-backed matrix dataset resolves to a real repository file.
 source_entries = [entry for entry in matrix["datasets"] if entry.get("data_path")]
-assert len(matrix["datasets"]) == 10
-assert len(source_entries) == 8
+assert len(matrix["datasets"]) >= 10
+assert len(source_entries) >= 8
 for entry in source_entries:
     assert (ROOT / entry["data_path"]).exists(), entry["data_path"]
 

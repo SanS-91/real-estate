@@ -238,3 +238,66 @@
   .market-news-page .tabs { margin-bottom: 7px; }
   .market-news-heading { margin-top: 10px; }
 }
+
+
+/* Shared topic taxonomy across filters and article cards — quiet, legible tones. */
+.market-news-card__topics {
+  display: inline-flex; align-items: center; justify-content: flex-end;
+  gap: 5px; flex-wrap: wrap; margin-left: auto; min-width: 0;
+}
+.market-news-card .market-news-card__topic {
+  appearance: none; margin-left: 0; max-width: 100%; min-height: 22px;
+  padding: 3px 8px; border: 1px solid #e1e5ec; border-radius: 5px;
+  background: #f4f6f9; color: #475467;
+  font-size: 10.5px; font-weight: 750; line-height: 1.25;
+  white-space: nowrap; cursor: pointer;
+}
+.market-news-card__topic:hover { filter: brightness(.96); }
+.market-news-card__topic:focus-visible { outline: 2px solid var(--color-primary); outline-offset: 2px; }
+.market-news-topic[data-topic="pricing"],
+.market-news-card__topic[data-topic="pricing"],
+.market-news-topic[data-topic="sales"],
+.market-news-card__topic[data-topic="sales"] {
+  --news-chip-bg: #f8edf0; --news-chip-text: #842b41; --news-chip-border: #ead0d7;
+}
+.market-news-topic[data-topic="supply"],
+.market-news-card__topic[data-topic="supply"],
+.market-news-topic[data-topic="projects"],
+.market-news-card__topic[data-topic="projects"] {
+  --news-chip-bg: #edf2f8; --news-chip-text: #355474; --news-chip-border: #d4deea;
+}
+.market-news-topic[data-topic="legal"],
+.market-news-card__topic[data-topic="legal"],
+.market-news-topic[data-topic="infrastructure"],
+.market-news-card__topic[data-topic="infrastructure"] {
+  --news-chip-bg: #edf5f2; --news-chip-text: #24634e; --news-chip-border: #d2e5db;
+}
+.market-news-topic[data-topic="research"],
+.market-news-card__topic[data-topic="research"] {
+  --news-chip-bg: #f3eff7; --news-chip-text: #604b7d; --news-chip-border: #e1d8ec;
+}
+.market-news-topic:not([data-topic="all"]) {
+  background: var(--news-chip-bg, #fff);
+  color: var(--news-chip-text, #475467);
+  border-color: var(--news-chip-border, #e7e9ed);
+}
+.market-news-topic:not([data-topic="all"])[aria-pressed="true"] {
+  box-shadow: inset 0 0 0 1px var(--news-chip-text, #475467);
+}
+.market-news-topic:not([data-topic="all"]) span { color: inherit; opacity: .72; }
+.market-news-card__topic[data-topic] {
+  color: var(--news-chip-text, #475467)!important;
+  border-color: var(--news-chip-border, #e1e5ec)!important;
+  background: var(--news-chip-bg, #f4f6f9)!important;
+}
+.market-news-topics {
+  -webkit-overflow-scrolling: touch;
+  scroll-snap-type: x proximity;
+  scroll-padding-inline: 10px;
+}
+.market-news-topics .market-news-topic { scroll-snap-align: start; }
+@media (max-width: 640px) {
+  .market-news-card__topics { width: 100%; justify-content: flex-start; margin-left: 0; gap: 5px; }
+  .market-news-card__meta { row-gap: 6px; }
+  .market-news-card .market-news-card__topic { min-height: 23px; font-size: 10px; padding-inline: 8px; }
+}

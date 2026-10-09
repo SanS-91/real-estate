@@ -1,0 +1,63 @@
+name: Site UI Audit - Navigation Content Mobile News
+
+on:
+  pull_request:
+    paths:
+      - 'assets/js/common.js'
+      - 'assets/js/localization-static.js'
+      - 'assets/js/market-news-ui.js'
+      - 'assets/css/main.css'
+      - 'assets/css/market-news.css'
+      - '*.html'
+      - 'tests/test_site_ui_consistency.cjs'
+      - 'tests/test_site_ui_browser.py'
+      - '.github/workflows/site-ui-audit.yml'
+  push:
+    branches: [main]
+    paths:
+      - 'assets/js/common.js'
+      - 'assets/js/localization-static.js'
+      - 'assets/js/market-news-ui.js'
+      - 'assets/css/main.css'
+      - 'assets/css/market-news.css'
+      - '.github/workflows/site-ui-audit.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  verify-cross-site-design-and-mobile-scroll:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 16
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with: {node-version: '22'}
+      - uses: actions/setup-python@v5
+        with: {python-version: '3.12'}
+      - name: Validate shared markup and news tags
+        run: |
+          node --check assets/js/common.js
+          node --check assets/js/localization-static.js
+          node --check assets/js/market-news-ui.js
+          node tests/test_site_ui_consistency.cjs
+          node tests/test_market_news_ui.cjs
+          python tests/test_phase4_4d_maintenance_dashboard.py
+      - name: Install browser driver (system Chromium only)
+        run: pip install playwright==1.55.0
+      - name: Browser audit across seven pages at 360, 390, 820 and 1366 px
+        run: |
+          set -e
+          python -m http.server 8765 --bind 127.0.0.1 >/tmp/ui-audit-server.log 2>&1 &
+          SRV=$!
+          trap 'kill "$SRV" || true' EXIT
+          sleep 3
+          python tests/test_site_ui_browser.py
+      - uses: actions/upload-artifact@v4
+        if: failure()
+        with:
+          name: cross-site-mobile-audit-failures
+          path: artifacts/ui-audit/
+          if-no-files-found: ignore
+          retention-days: 7
