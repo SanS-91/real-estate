@@ -33,7 +33,8 @@
       "reporting_basis": "quarterly-launches",
       "source_evidence": {
         "new_supply": "approximately 2,719 new apartments",
-        "sales_units": "new absorption of 2,630 units"
+        "sales_units": "new absorption of 2,630 units",
+        "reported_primary_price_usd_per_sqm": "Publisher primary price 3,672 US$/sqm"
       },
       "reported_primary_price_usd_per_sqm": 3672,
       "reported_primary_price_area_basis": "published-primary-sqm"
@@ -64,7 +65,8 @@
       "reporting_basis": "quarterly-launches",
       "source_evidence": {
         "new_supply": "only 27 new units launched",
-        "sales_units": "80 successful transactions"
+        "sales_units": "80 successful transactions",
+        "reported_primary_price_usd_per_sqm": "Publisher primary price 10,701 US$/sqm"
       },
       "reported_primary_price_usd_per_sqm": 10701,
       "reported_primary_price_area_basis": "land-area"
@@ -133,7 +135,8 @@
       "source_evidence": {
         "new_supply": "3,358 new apartment units launched",
         "sales_units": "new absorption approximately 3,196 units",
-        "absorption_rate": "approximately 62% (publisher-defined)"
+        "absorption_rate": "approximately 62% (publisher-defined)",
+        "reported_primary_price_usd_per_sqm": "Publisher primary price 6,113 US$/sqm"
       },
       "reported_primary_price_usd_per_sqm": 6113,
       "reported_primary_price_area_basis": "GFA"
@@ -170,7 +173,8 @@
       "source_evidence": {
         "new_supply": "approximately 1,535 new landed units",
         "sales_units": "approximately 1,167 new absorption",
-        "absorption_rate": "about 70% (publisher-defined)"
+        "absorption_rate": "about 70% (publisher-defined)",
+        "reported_primary_price_usd_per_sqm": "Publisher primary price 6,330 US$/sqm"
       },
       "reported_primary_price_usd_per_sqm": 6330,
       "reported_primary_price_area_basis": "land-area"
