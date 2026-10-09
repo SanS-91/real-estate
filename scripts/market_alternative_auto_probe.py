@@ -210,6 +210,10 @@ def onehousing_source_diagnostics(text, publisher_project_name):
         "publisher_project_header":bool(matched),
         "publisher_periods":sorted({row["period"] for row in matched}),
         "heading_block_count":len(matched),
+        "other_publisher_project_headers":sum(
+            normal_name(header.group(1)) != normal_name(publisher_project_name)
+            for header in headers),
+        "page_level_price_sections":len(list(MODAL_SECTION.finditer(text))),
         "heading_block_diagnostics":matched[-8:],
         "modal_price_section":bool(MODAL_SECTION.search(text)),
         "asking_price_number":bool(MODAL.search(text)),
