@@ -329,7 +329,7 @@ def source_health(report, verification_state, production):
     recent_published = sum(
         row.get("review_status") == "automated-two-hosted-checks"
         and isinstance(row.get("source_updated_date"), str)
-        and bool(re.fullmatch(r"20\\d{2}-\\d{2}-\\d{2}", row["source_updated_date"]))
+        and bool(re.fullmatch(r"20\d{2}-\d{2}-\d{2}", row["source_updated_date"]))
         and 0 <= (today - date.fromisoformat(row["source_updated_date"])).days <= MAX_AGE_DAYS
         for row in published
     )
