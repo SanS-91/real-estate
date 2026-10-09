@@ -80,6 +80,30 @@ async def run():
                             assert await page.locator("[data-mobile-nav] a[href='maintenance.html']").count()==1
                             await page.keyboard.press("Escape")
                             assert await menu.get_attribute("aria-expanded")=="false"
+                    if path in ("legal.html?view=news", "infrastructure.html?view=news",
+                                "macro.html?view=news"):
+                        section=path.split(".html")[0]
+                        heading=page.locator(f'[data-news-view-label="{section}.title"]')
+                        await heading.wait_for(timeout=12000)
+                        vietnamese={
+                            "legal":"Tin tức & phân tích pháp lý",
+                            "infrastructure":"Tin tức & tiến độ hạ tầng",
+                            "macro":"Tin tức & nghiên cứu vĩ mô (minh họa)"
+                        }
+                        assert await heading.text_content()==vietnamese[section],(path,"Vietnamese title")
+                        chips=page.locator(".article-row__meta .news-kind-chip")
+                        if await chips.count():
+                            chip=chips.first
+                            assert await chip.get_attribute("data-news-kind"),(path,"source taxonomy")
+                            assert "-" not in (await chip.text_content()),(path,"raw technical label")
+                        toggle=page.locator("[data-language-toggle]")
+                        await toggle.click()
+                        expected={"legal":"Legal news & analysis",
+                                  "infrastructure":"Infrastructure news & milestones",
+                                  "macro":"Illustrative macro news & research"}
+                        assert await heading.text_content()==expected[section],(path,"English toggle")
+                        await toggle.click()
+                        assert await heading.text_content()==vietnamese[section],(path,"Vietnamese toggle restore")
                     if path=="market.html?view=news":
                         await page.locator("[data-news-topic='pricing']").first.wait_for(timeout=12000)
                         pills=page.locator(".market-news-card__topic")
