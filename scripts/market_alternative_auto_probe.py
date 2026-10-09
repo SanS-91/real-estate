@@ -124,6 +124,21 @@ def onehousing_monthly(text, today, publisher_project_name="Vinhomes Grand Park"
         }
     return None
 
+
+def onehousing_source_diagnostics(text,publisher_project_name):
+    """Small, non-sensitive parser hints for public runner HTML (never store full page)."""
+    headers=[f"{m.group(3)}-{int(m.group(2)):02d}" for m in MONTH_LABEL.finditer(text)
+             if normal_name(m.group(1))==normal_name(publisher_project_name)]
+    return {
+        "publisher_project_header":bool(headers),
+        "publisher_periods":sorted(set(headers)),
+        "modal_price_section":bool(MODAL_SECTION.search(text)),
+        "asking_price_number":bool(MODAL.search(text)),
+        "asking_range_number":bool(RANGE.search(text)),
+        "login_wall_in_text":"Đăng nhập để xem giá" in text,
+    }
+
+
 def rever_single_listing(text, today):
     if "Vinhomes Grand Park" not in text or not re.search(r"\b69\s*m[²2]\b", text, re.I):
         return None
@@ -244,6 +259,9 @@ def run(targets, baselines, today, session, fetcher=fetch_html):
             if html is not None:
                 status, candidate = classify(target, html, prior, today)
                 row["status"] = status
+                if status == "reachable-no-verifiable-metric" and target.get("mode") == "monthly-price-candidate":
+                    row["parser_diagnostics"] = onehousing_source_diagnostics(
+                        plain_text(html), target.get("publisher_project_name","Vinhomes Grand Park"))
                 if candidate:
                     candidates.append(candidate)
         checks.append(row)
