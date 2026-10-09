@@ -1,0 +1,50 @@
+name: Market 4H - Operational Source Status UI
+
+on:
+  pull_request:
+    paths:
+      - 'maintenance.html'
+      - 'assets/js/maintenance.js'
+      - 'tests/test_phase4h_source_health_ui.py'
+      - '.github/workflows/market-4h-source-health-ui-validation.yml'
+  push:
+    branches: [main]
+    paths:
+      - 'maintenance.html'
+      - 'assets/js/maintenance.js'
+      - '.github/workflows/market-4h-source-health-ui-validation.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  source-health-ui:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Validate source-status integrity
+        run: |
+          node --check assets/js/maintenance.js
+          python tests/test_phase4h_source_health_ui.py
+      - name: Browser smoke check under deployed-style static server
+        run: |
+          set -eu
+          BROWSER="$(command -v google-chrome || command -v chromium || command -v chromium-browser || true)"
+          test -n "$BROWSER"
+          python -m http.server 8765 --bind 127.0.0.1 >/tmp/market4h-status-server.log 2>&1 &
+          SERVER_PID=$!
+          trap 'kill "$SERVER_PID" || true' EXIT
+          sleep 3
+          "$BROWSER" --headless --no-sandbox --disable-gpu --disable-dev-shm-usage --virtual-time-budget=15000 --dump-dom 'http://127.0.0.1:8765/maintenance.html' > /tmp/market4h-status.html
+          python - <<'PY'
+          from pathlib import Path
+          html = Path('/tmp/market4h-status.html').read_text(encoding='utf-8')
+          for marker in ('Lumière Boulevard', 'Masteri Centre Point', 'Nhà Tốt', 'OneHousing'):
+              assert marker in html, f'missing rendered source: {marker}'
+          print('PASS: real generated source quality and access states render in maintenance.')
+          PY
