@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-10-09T05:22:39.459855+00:00",
+  "generated_at": "2026-10-09T05:24:27.887822+00:00",
   "targets_checked": 4,
   "candidate_count": 0,
   "queue_backlog": 0,
@@ -8,8 +8,7 @@
   "production_updated": false,
   "counts": {
     "reachable-historical-reference-frozen": 2,
-    "reachable-no-verifiable-metric": 1,
-    "same-period-unchanged": 1
+    "same-period-unchanged": 2
   },
   "checks": [
     {
@@ -20,7 +19,7 @@
       "baseline_period": "2026-10",
       "http_status": 200,
       "final_host": "onehousing.vn",
-      "status": "reachable-no-verifiable-metric"
+      "status": "same-period-unchanged"
     },
     {
       "target_id": "rever-vinhomes-grand-park-listing",
