@@ -82,7 +82,7 @@ def allowed_target(target):
 
 def normal_name(text):
     value = unicodedata.normalize("NFKD", text.lower().replace("đ", "d"))
-    return re.sub(r"\\s+", " ", "".join(c for c in value if not unicodedata.combining(c))).strip()
+    return re.sub(r"\s+", " ", "".join(c for c in value if not unicodedata.combining(c))).strip()
 
 
 def onehousing_monthly(text, today, publisher_project_name="Vinhomes Grand Park"):
