@@ -107,37 +107,45 @@
   }
 
 
-  function renderRangeSeries(id, { labels = [], lowValues = [], highValues = [], lowLabel = 'Lower bound', highLabel = 'Upper bound', yFormatter = compactNumber } = {}) {
+  // A categorical project comparison must not connect independent properties into a
+  // time-series curve. Render one floating vertical interval per project instead.
+  function renderRangeSeries(id, { labels = [], lowValues = [], highValues = [], lowLabel = 'Giá thấp', highLabel = 'Giá cao', yFormatter = compactNumber } = {}) {
+    const ranges = labels.map((_, i) => {
+      const low = Number(lowValues[i]), high = Number(highValues[i]);
+      return Number.isFinite(low) && Number.isFinite(high) && low > 0 && high >= low
+        ? [low, high] : null;
+    });
     return render(id, {
-      type: 'line',
+      type: 'bar',
       data: {
         labels,
-        datasets: [
-          {
-            label: lowLabel,
-            data: lowValues,
-            borderColor: '#667085',
-            backgroundColor: '#667085',
-            tension: .22,
-            spanGaps: false,
-            pointRadius: lowValues.length > 40 ? 0 : 2.5,
-            pointHoverRadius: 4,
-            borderWidth: 2
-          },
-          {
-            label: highLabel,
-            data: highValues,
-            borderColor: '#8b1e2d',
-            backgroundColor: '#8b1e2d',
-            tension: .22,
-            spanGaps: false,
-            pointRadius: highValues.length > 40 ? 0 : 2.5,
-            pointHoverRadius: 4,
-            borderWidth: 2
-          }
-        ]
+        datasets: [{
+          label: 'Khoảng giá chào bán',
+          data: ranges,
+          backgroundColor: 'rgba(139,30,45,.28)',
+          hoverBackgroundColor: 'rgba(139,30,45,.45)',
+          borderColor: '#8b1e2d',
+          borderWidth: 1.4,
+          borderRadius: 3,
+          borderSkipped: false,
+          maxBarThickness: 24
+        }]
       },
-      options: baseOptions({ yFormatter })
+      options: {
+        ...baseOptions({ yFormatter }),
+        plugins: {
+          legend: { display: false },
+          tooltip: {
+            callbacks: {
+              label(context) {
+                const range = context.raw;
+                if (!Array.isArray(range)) return 'Chưa có khoảng giá';
+                return `${lowLabel}: ${yFormatter(range[0])} · ${highLabel}: ${yFormatter(range[1])}`;
+              }
+            }
+          }
+        }
+      }
     });
   }
 
