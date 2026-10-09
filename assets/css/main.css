@@ -2444,3 +2444,29 @@ html { scroll-padding-top: calc(var(--header-height) + 12px); }
   html { scroll-behavior: auto; }
   .tabs { scroll-behavior: auto; }
 }
+
+
+/* Consistent article-type chips in Legal, Infrastructure and Macro news.
+   Technical content_type values remain in source records and data attributes. */
+.article-row__meta { display: flex; gap: 7px; align-items: center; flex-wrap: wrap; }
+.article-row__meta .news-kind-chip {
+  display: inline-flex; align-items: center; min-height: 23px;
+  padding: 4px 9px; border-radius: 5px; border: 1px solid #e1e5ec;
+  background: #f3f5f8; color: #44546a;
+  font-weight: 750; font-size: 10.5px; line-height: 1.3;
+  letter-spacing: normal; text-transform: none; white-space: normal;
+}
+.article-row__meta .news-kind-chip[data-news-kind="analysis"],
+.article-row__meta .news-kind-chip[data-news-kind="research"] {
+  color: #82384b; background: #f8edf0; border-color: #ebd3d9;
+}
+.article-row__meta .news-kind-chip[data-news-kind="official-update"] {
+  color: #28654f; background: #edf5f2; border-color: #d2e5db;
+}
+.article-row__meta .news-kind-chip[data-news-kind="data-release"] {
+  color: #385978; background: #eef3f9; border-color: #d4dfec;
+}
+@media (max-width: 640px) {
+  .article-row__meta .news-kind-chip { font-size: 11px; min-height: 25px; }
+  .article-row__meta { gap: 6px; }
+}
