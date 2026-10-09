@@ -1,0 +1,120 @@
+name: Market Data Coverage Round 4C - Secondary Listing Sources
+
+on:
+  pull_request:
+    paths:
+      - 'data/mock/market/secondary-listing-evidence.json'
+      - 'data/mock/core/sources.json'
+      - 'config/market-source-registry.json'
+      - 'scripts/market_secondary_listing_gate.py'
+      - 'scripts/market_secondary_listing_probe.py'
+      - 'tests/test_market_secondary_listing_evidence.py'
+      - 'tests/test_market_secondary_listing_probe.py'
+      - 'assets/js/market.js'
+      - 'assets/js/data-store.js'
+      - 'market.html'
+      - '.github/workflows/market-secondary-listing-sources.yml'
+  push:
+    branches: [main]
+    paths:
+      - 'data/mock/market/secondary-listing-evidence.json'
+      - 'scripts/market_secondary_listing_probe.py'
+      - 'scripts/market_secondary_listing_gate.py'
+      - '.github/workflows/market-secondary-listing-sources.yml'
+  schedule:
+    - cron: '50 3 * * 2,5'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: market-secondary-listing-coverage
+  cancel-in-progress: false
+
+jobs:
+  evidence-and-probe:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Install dependencies
+        run: pip install -r requirements.txt
+      - name: Source and regression QA
+        run: |
+          python -m py_compile scripts/market_secondary_listing_gate.py scripts/market_secondary_listing_probe.py
+          python scripts/market_secondary_listing_gate.py
+          python tests/test_market_secondary_listing_evidence.py
+          python tests/test_market_secondary_listing_probe.py
+          python tests/test_market_alternative_sources.py
+          python tests/test_market_source_scope_coverage.py
+          python tests/test_listing_coverage_next.py
+          node --check assets/js/data-store.js
+          node --check assets/js/market.js
+      - name: Browser smoke-test references in existing Market views
+        if: github.event_name == 'pull_request'
+        run: |
+          set -eu
+          BROWSER="$(command -v google-chrome || command -v chromium || command -v chromium-browser || true)"
+          test -n "$BROWSER"
+          python -m http.server 8765 --bind 127.0.0.1 >/tmp/r4c-http.log 2>&1 &
+          SERVER_PID=$!
+          trap 'kill "$SERVER_PID" || true' EXIT
+          sleep 3
+          "$BROWSER" --headless --no-sandbox --disable-gpu --disable-dev-shm-usage --virtual-time-budget=10000 --dump-dom 'http://127.0.0.1:8765/market.html?view=pricing' >/tmp/r4c-pricing.html
+          python - <<'PY'
+          from pathlib import Path
+          s=Path('/tmp/r4c-pricing.html').read_text(encoding='utf-8')
+          for marker in ('Nguồn giá đối chiếu','Izumi City','Essensia Parkway','The 9 Stellars','CafeLand'):
+              assert marker in s, marker
+          assert 'Không dùng cho ASP hay trend tổng hợp' in s
+          assert 'Biệt thự song lập' in s and 'Nhà phố' in s
+          print('PASS: three individually sourced property references appear in existing pricing cards; no UI restructure.')
+          PY
+      - name: Fetch three pinned property-source pages and classify access
+        if: github.event_name != 'pull_request'
+        run: python scripts/market_secondary_listing_probe.py
+      - name: Summarize verified source access
+        if: github.event_name != 'pull_request'
+        run: |
+          echo '## Round 4C - Source coverage' >> "$GITHUB_STEP_SUMMARY"
+          python - <<'PY' >> "$GITHUB_STEP_SUMMARY"
+          import json
+          from pathlib import Path
+          data=json.loads(Path('data/state/secondary-listing-source-health.json').read_text())
+          print(f"- Pinned source pages: **{data['targets_checked']}**")
+          print(f"- New project-wide price histories: **{data['new_history_candidates']}**")
+          print("| Project | Access/evidence | HTTP | Original ad date |")
+          print("|---|---|---:|---|")
+          for r in data['checks']:
+              print(f"| {r['project_id']} | {r['status']} | {r.get('http_status','—')} | {r['source_publication_date']} |")
+          print("Checks never turn listing publication dates into trend-ready historical snapshots.")
+          PY
+      - name: Archive source-check report
+        if: always() && github.event_name != 'pull_request'
+        uses: actions/upload-artifact@v4
+        with:
+          name: secondary-listing-source-check
+          path: |
+            data/candidate/market/secondary-listing-probe-report.json
+            data/state/secondary-listing-source-health.json
+          if-no-files-found: warn
+          retention-days: 30
+      - name: Persist operational status only
+        if: github.event_name != 'pull_request'
+        run: |
+          set -eu
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add data/state/secondary-listing-source-health.json
+          if git diff --cached --quiet; then exit 0; fi
+          git commit -m 'chore(market): record CafeLand source access and evidence health'
+          git restore --worktree -- .
+          git pull --rebase origin main
+          git push origin HEAD:main
