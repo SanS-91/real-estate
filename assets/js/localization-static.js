@@ -41,7 +41,7 @@
     ['.main-nav a[href="legal.html"], .mobile-nav-panel a[href="legal.html"]', 'Legal', 'Pháp lý'],
     ['.main-nav a[href="infrastructure.html"], .mobile-nav-panel a[href="infrastructure.html"]', 'Infrastructure', 'Hạ tầng'],
     ['.main-nav a[href="macro.html"], .mobile-nav-panel a[href="macro.html"]', 'Macro', 'Vĩ mô'],
-    ['.main-nav a[href="maintenance.html"], .mobile-nav-panel a[href="maintenance.html"]', 'Data Status', 'Trạng thái dữ liệu'],
+    ['.main-nav a[href="maintenance.html"], .mobile-nav-panel a[href="maintenance.html"]', 'Maintenance', 'Bảo trì dữ liệu'],
     ['.global-search-trigger span:first-child', 'Search research...', 'Tìm kiếm nghiên cứu...'],
     ['[data-global-search-status]', 'Search across Market, Legal, Infrastructure and controlled Macro data.', 'Tìm kiếm trên dữ liệu Thị trường, Pháp lý, Hạ tầng và Vĩ mô production có kiểm soát.'],
     ['[data-drawer-title]', 'Details', 'Chi tiết'],
