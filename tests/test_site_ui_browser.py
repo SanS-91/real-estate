@@ -179,7 +179,9 @@ async def run():
                     }
                     if path in mobile_lists:
                         family, count = mobile_lists[path]
-                        table = page.locator(f".data-table--{family}.mobile-record-table").first
+                        selector = ("[data-maintenance-table] .data-table--maintenance.mobile-record-table"
+                                    if family=="maintenance" else f".data-table--{family}.mobile-record-table")
+                        table = page.locator(selector).first
                         await table.wait_for(timeout=14000)
                         layout = await table.evaluate("""el => {
                           const row = el.querySelector('tbody tr');
@@ -203,7 +205,7 @@ async def run():
                             assert layout["rowWidth"]<=width-20,(width,path,layout)
                             if family in ("market-projects","macro"):
                                 assert layout["firstWidth"]>=layout["rowWidth"]-48,(width,path,layout)
-                            label_td=page.locator(f".data-table--{family}.mobile-record-table tbody tr:first-child td:nth-child(3)" if family=="maintenance" else f".data-table--{family}.mobile-record-table tbody tr:first-child td").first
+                            label_td=table.locator("tbody tr:first-child td:nth-child(3)" if family=="maintenance" else "tbody tr:first-child td").first
                             before=lambda: label_td.evaluate("(el)=>getComputedStyle(el,'::before').content")
                             vi_label=await before()
                             await page.locator("[data-language-toggle]").click()
