@@ -34,7 +34,9 @@
       "source_evidence": {
         "new_supply": "approximately 2,719 new apartments",
         "sales_units": "new absorption of 2,630 units"
-      }
+      },
+      "reported_primary_price_usd_per_sqm": 3672,
+      "reported_primary_price_area_basis": "published-primary-sqm"
     },
     {
       "id": "obs-hcmc-landed-2024-q4-cushman",
@@ -63,7 +65,9 @@
       "source_evidence": {
         "new_supply": "only 27 new units launched",
         "sales_units": "80 successful transactions"
-      }
+      },
+      "reported_primary_price_usd_per_sqm": 10701,
+      "reported_primary_price_area_basis": "land-area"
     },
     {
       "id": "obs-hcmc-landed-2025-q1-cushman",
@@ -78,21 +82,25 @@
       "period_type": "quarter",
       "new_supply": 178,
       "sales_units": 120,
-      "absorption_rate": null,
+      "absorption_rate": 0.38,
       "average_asp": null,
       "asp_unit": "vnd-per-m2",
       "currency": "VND",
       "price_basis": null,
       "source_id": "cushman-wakefield-vietnam-market",
       "source_date": "2025-04-14",
-      "source_url": "https://uat-sitecore-www.cushmanwakefield.com/en/vietnam/insights/ho-chi-minh-city-marketbeat/residential-marketbeat",
-      "methodology_note": "Cushman HCMC Residential MarketBeat Q1 2025 states 178 landed units offered across four projects and 120 new transactions; this is a different research methodology from CBRE.",
+      "source_url": "https://assets.cushmanwakefield.com/-/media/cw/marketbeat-pdfs/2025/q1/apac-and-gc/vietnam-marketbeat-q1-2025-hcmc-residential_eng.pdf",
+      "methodology_note": "Cushman & Wakefield official Q1 2025 HCMC Residential MarketBeat PDF tables: landed 178 launches, 120 sales volume, 38% publisher-defined absorption and USD 11,978/sqm primary asking (land area). Source period is Q1 2025, not a forecast.",
       "reported_geography": "former-hcmc-core",
       "reporting_basis": "quarterly-launches",
       "source_evidence": {
-        "new_supply": "178 units across three Thu Duc and one Binh Chanh project",
-        "sales_units": "120 new transactions"
-      }
+        "new_supply": "178 landed launched",
+        "sales_units": "120 landed sales volume",
+        "absorption_rate": "38% absorption in Market Statistics",
+        "reported_primary_price_usd_per_sqm": "11,978 US$/sq.m in Market Statistics"
+      },
+      "reported_primary_price_usd_per_sqm": 11978,
+      "reported_primary_price_area_basis": "land-area"
     },
     {
       "id": "obs-hcmc-apartment-2025-q4-cushman",
@@ -126,7 +134,9 @@
         "new_supply": "3,358 new apartment units launched",
         "sales_units": "new absorption approximately 3,196 units",
         "absorption_rate": "approximately 62% (publisher-defined)"
-      }
+      },
+      "reported_primary_price_usd_per_sqm": 6113,
+      "reported_primary_price_area_basis": "GFA"
     },
     {
       "id": "obs-hcmc-landed-2025-q4-cushman",
@@ -161,7 +171,9 @@
         "new_supply": "approximately 1,535 new landed units",
         "sales_units": "approximately 1,167 new absorption",
         "absorption_rate": "about 70% (publisher-defined)"
-      }
+      },
+      "reported_primary_price_usd_per_sqm": 6330,
+      "reported_primary_price_area_basis": "land-area"
     },
     {
       "id": "obs-hcmc-apartment-2024-annual-cbre",
@@ -304,6 +316,45 @@
       "reporting_basis": "quarterly-launches",
       "source_evidence": {
         "new_supply": "around 800 new apartment units in Q1 2025"
+      }
+    },
+    {
+      "id": "obs-hcmc-apartment-2025-q1-cushman",
+      "scope_type": "region-segment",
+      "region_ids": [
+        "hcmc"
+      ],
+      "segment_ids": [
+        "apartment"
+      ],
+      "period": "2025-Q1",
+      "period_type": "quarter",
+      "new_supply": 2877,
+      "sales_units": 1101,
+      "absorption_rate": 0.46,
+      "average_asp": null,
+      "asp_unit": "vnd-per-m2",
+      "currency": "VND",
+      "price_basis": null,
+      "source_id": "cushman-wakefield-vietnam-market",
+      "source_date": "2025-04-14",
+      "source_url": "https://assets.cushmanwakefield.com/-/media/cw/marketbeat-pdfs/2025/q1/apac-and-gc/vietnam-marketbeat-q1-2025-hcmc-residential_eng.pdf",
+      "methodology_note": "Cushman & Wakefield original signed MarketBeat PDF Q1 2025 table reports 2,877 new apartments, 1,101 sales volume, 46% publisher-defined absorption and USD 4,691/sqm primary price. A separate website snippet displays 2,392 units; the dated PDF table is used for this observation, and discrepancy remains documented for review.",
+      "reported_geography": "former-hcmc-core",
+      "reporting_basis": "quarterly-launches",
+      "reported_primary_price_usd_per_sqm": 4691,
+      "reported_primary_price_area_basis": "GFA",
+      "source_evidence": {
+        "new_supply": "2,877 apartment new supply in Q1 2025 market statistics",
+        "sales_units": "1,101 sales volume",
+        "absorption_rate": "46% absorption",
+        "reported_primary_price_usd_per_sqm": "4,691 USD/sq.m"
+      },
+      "source_discrepancy": {
+        "site_excerpt_value": 2392,
+        "pdf_statistics_value": 2877,
+        "decision": "prefer-official-pdf-table",
+        "review_note": "Different figures visible in C&W site's Q1 2025 text and signed MarketBeat PDF; keep disclosure, never synthesize."
       }
     }
   ]
