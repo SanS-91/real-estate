@@ -7,6 +7,7 @@ import json
 import re
 from datetime import datetime, timezone
 from market_period_evidence import extract_period_evidence
+from market_quarterly_source_period import source_quarter
 from market_publication_evidence import extract_publication_date
 from market_source_discovery import discover_namlong_links, namlong_target, discover_cbre_hcmc_reports
 import requests
@@ -237,7 +238,31 @@ def main():
 
             evidence=extract_period_evidence(html, final_url)
             publication_evidence=extract_publication_date(html)
+            t=dict(t)
             t["verified_source_date"]=publication_evidence["date"]
+            if t["collector"] == "cushman_market":
+                # The MarketBeat URL is overwritten with a NEW quarterly report.
+                # Do not infer its quarter from the crawl date or old config.
+                quarterly = source_quarter(html)
+                if quarterly["period"] is None:
+                    target_reports.append({
+                        "target_id":t["target_id"], "status":"period-review-required",
+                        "reason":quarterly["status"], "segment_evidence":quarterly["evidence"],
+                        "url":final_url,
+                    })
+                    continue
+                if t.get("period") and quarterly["period"] < t["period"]:
+                    target_reports.append({
+                        "target_id":t["target_id"], "status":"period-review-required",
+                        "reason":"source-older-than-configured-quarter",
+                        "configured_period":t["period"],
+                        "detected_period":quarterly["period"], "url":final_url,
+                    })
+                    continue
+                t["period"]=quarterly["period"]
+                evidence={"period":quarterly["period"],"evidence":list(quarterly["evidence"].values()),
+                          "status":quarterly["status"]}
+
             if t.get("period_type") == "quarter" and evidence["period"] != t.get("period"):
                 target_reports.append({
                     "target_id": t["target_id"], "status": "period-review-required",
@@ -277,13 +302,11 @@ def main():
                     decisions.append({"id":row["id"],"status":state,"segment":row["segment_ids"][0],"new_supply":row.get("new_supply"),"absorption_rate":row.get("absorption_rate")})
                 target_reports.append({"target_id":t["target_id"],"status":"parsed" if built else "no-data","type":"market-observation","records":len(built),"decisions":decisions,"configured_period":t.get("period"),"verified_source_period":evidence["period"],"verified_source_date":publication_evidence["date"],"source_period_evidence_url":final_url if evidence["period"] else None,"publication_date_method":publication_evidence["method"]})
                 if t["collector"]=="cushman_market" and hasattr(module,"parse_article"):
-                    parsed_article=module.parse_article(html,final_url,datetime.now(timezone.utc).isoformat())
-                    article=build_research_article(t,parsed_article,final_url)
-                    akey=existing_article_key(article)
-                    astate="unchanged" if akey in art_keys else "new"
-                    if astate=="new":
-                        article_candidates.append(article)
-                    target_reports[-1]["article_decision"]=astate
+                    # Moving publisher pages must not manufacture a publication
+                    # date or carry old Q2 article text into a later quarter.
+                    # The independently parsed figures remain candidate-only.
+                    target_reports[-1]["article_decision"]="not-staged-rolling-report-requires-publication-date"
+
             elif t["collector"]=="namlong_official":
                 parsed=module.parse_article(html,final_url,datetime.now(timezone.utc).isoformat())
                 from datetime import date
