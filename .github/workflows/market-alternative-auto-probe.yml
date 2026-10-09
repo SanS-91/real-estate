@@ -52,6 +52,25 @@ jobs:
           python scripts/market_alternative_source_gate.py
           python tests/test_market_alternative_sources.py
           python tests/test_market_source_scope_coverage.py
+      - name: Browser smoke test nested source references
+        if: github.event_name == 'pull_request'
+        run: |
+          set -eu
+          BROWSER="$(command -v google-chrome || command -v chromium || command -v chromium-browser || true)"
+          test -n "$BROWSER"
+          python -m http.server 8765 --bind 127.0.0.1 >/tmp/market-4e-http.log 2>&1 &
+          PID=$!
+          trap 'kill "$PID" || true' EXIT
+          sleep 3
+          "$BROWSER" --headless --no-sandbox --disable-dev-shm-usage --disable-gpu --virtual-time-budget=9500 --dump-dom 'http://127.0.0.1:8765/market.html?view=pricing' > /tmp/market-4e-pricing.html
+          python - <<'PY'
+          from pathlib import Path
+          html=Path('/tmp/market-4e-pricing.html').read_text(encoding='utf-8')
+          for name in ('Nguồn giá đối chiếu','Lumière Boulevard','Masteri Centre Point','73.4 triệu','70.9 triệu'):
+              assert name in html, name
+          assert 'Không dùng cho ASP hay trend tổng hợp' in html
+          print('PASS: nested OneHousing references and non-trend pricing warnings visible in browser.')
+          PY
       - name: Inspect publisher access and stage only review-required candidates
         if: github.event_name != 'pull_request'
         run: python scripts/market_alternative_auto_probe.py
