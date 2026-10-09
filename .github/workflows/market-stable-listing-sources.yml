@@ -14,8 +14,9 @@ on:
       - 'config/market-stable-listing-sources.json'
       - '.github/workflows/market-stable-listing-sources.yml'
   schedule:
-    - cron: '5 1 * * *'
-    - cron: '5 7 * * *'
+    # Nha Tot category pages currently return HTTP 403 to GitHub runners.
+    # Check weekly and retain manual dispatch instead of redundant daily failures.
+    - cron: '5 0 * * 1'
   workflow_dispatch:
 
 permissions:

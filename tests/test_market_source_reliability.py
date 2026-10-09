@@ -30,6 +30,11 @@ class ReliabilityTests(unittest.TestCase):
         c = update(b, self.targets, self.report("same-period-unchanged"), "2", "later")
         self.assertEqual(c["targets"][0]["check_count"], 2)
 
+    def test_new_period_pending_review_is_a_parseable_source_observation(self):
+        result = update({}, self.targets, self.report("new-period-review-required"), "1", "now")
+        self.assertEqual(result["targets"][0]["classification"], "source-parseable-not-yet-repeatable")
+        self.assertEqual(result["targets"][0]["parseable_check_count"], 1)
+
     def test_recent_source_failure_demotes_reliability(self):
         a = update({}, self.targets, self.report("same-period-unchanged"), "1", "now")
         b = update(a, self.targets, self.report("same-period-unchanged"), "2", "later")

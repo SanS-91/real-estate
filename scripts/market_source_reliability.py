@@ -16,7 +16,7 @@ HEALTH = ROOT / "data/state/alternative-source-health.json"
 TARGETS = ROOT / "config/market-alternative-auto-targets.json"
 OUTPUT = ROOT / "data/state/market-source-reliability.json"
 WINDOW = 14
-VALID_MONTHLY = {"candidate-staged", "same-period-unchanged", "new-period-candidate"}
+VALID_MONTHLY = {"candidate-staged", "same-period-unchanged", "new-period-candidate", "new-period-review-required"}
 UNVERIFIABLE = {"reachable-no-verifiable-metric", "challenge-or-access-wall"}
 HISTORICAL = "historical-reference-monitor"
 
