@@ -1,0 +1,7 @@
+{
+  "schema_version": 1,
+  "updated_at": "2026-10-09",
+  "description": "Only explicitly reviewed source-authored monthly candidates may enter OneHousing history. Candidate queue alone NEVER releases data. Each approval must match an existing candidate and contain review_date, review_note, and checked_source_evidence=true.",
+  "record_count": 0,
+  "data": []
+}
