@@ -2735,3 +2735,70 @@ html { scroll-padding-top: calc(var(--header-height) + 12px); }
     grid-column: 1 / -1;
   }
 }
+
+
+/* Phase 4J.1 — concise Home with dated updates and optional history. */
+body[data-page="home"] .page-header--home {
+  align-items: center;
+  gap: 16px;
+  padding-bottom: 0;
+}
+body[data-page="home"] .page-header--home .page-description {
+  max-width: 630px;
+}
+.home-header-actions {
+  display: flex;
+  flex: 0 0 auto;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 12px;
+}
+body[data-page="home"] .home-block { margin-top: 24px; }
+body[data-page="home"] .today-card { padding: 14px 15px; }
+body[data-page="home"] .today-card__count {
+  font-size: 12px;
+  color: var(--color-text-secondary);
+  font-weight: 600;
+  line-height: 1.45;
+}
+body[data-page="home"] .compact-link {
+  line-height: 1.42;
+  padding: 10px 0;
+}
+body[data-page="home"] .compact-link__meta time {
+  font-variant-numeric: tabular-nums;
+  font-weight: 650;
+}
+body[data-page="home"] .metric-card__cadence {
+  color: var(--color-text-secondary);
+  margin: -5px 0 8px;
+  font-size: 11px;
+}
+body[data-page="home"] .metric-grid {
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+}
+.home-more-history {
+  margin-top: 28px;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  padding: 12px 16px 16px;
+  background: #fff;
+}
+.home-more-history > summary {
+  font-weight: 680;
+  color: var(--color-primary);
+  cursor: pointer;
+}
+.home-more-history:not([open]) { padding-bottom: 12px; }
+.home-more-history .home-block:first-of-type { margin-top: 18px; }
+@media (max-width: 767px) {
+  body[data-page="home"] .page-header--home { align-items: flex-start; }
+  .home-header-actions { justify-content: flex-start; width: 100%; }
+  body[data-page="home"] .metric-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  body[data-page="home"] .today-card { padding: 14px; }
+  .home-more-history { margin-top: 20px; }
+}
+@media (max-width: 430px) {
+  .home-header-actions .button { flex: 1; }
+}
