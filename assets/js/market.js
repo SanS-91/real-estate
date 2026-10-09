@@ -164,6 +164,7 @@
   }
 
   function updateTabs() {
+    document.body.classList.toggle('market-news-page', state.view === 'news');
     document.querySelectorAll('[data-market-tabs] [data-view]').forEach(link => {
       link.classList.toggle('is-active', link.dataset.view === state.view);
     });
@@ -761,20 +762,17 @@
   }
 
   function renderNews() {
-    let articles = [...data.articles];
-    if (state.region) articles = articles.filter(item => (item.region_ids || []).includes(state.region));
-    if (state.developer) articles = articles.filter(item => (item.developer_ids || []).includes(state.developer));
-    if (state.q) articles = articles.filter(item => FilterEngine.textMatch(item, state.q, ['title','summary','tags']));
-    articles.sort((a,b) => String(b.published_at).localeCompare(String(a.published_at)));
-    const html = `
-      <div class="view-intro"><div><span class="eyebrow">Evidence layer</span><h2>Market News &amp; Research</h2><p>Articles are evidence linked to projects, developers and regions; they are not treated as the same thing as market events.</p></div></div>
-      ${filterToolbar({ includeSegment:false, includeStatus:false })}
-      <div class="article-list">${articles.map(article => {
-        const projectNames = Resolver.getEntities('project', article.project_ids || []).map(item => item.name).join(' · ');
-        return `<article class="article-row"><div class="article-row__date">${esc(App.formatDate(article.published_at))}</div><div><div class="article-row__meta"><span class="source-tag">${esc(article.content_type)}</span>${sourceRef(article.source_id,{publishedAt:article.published_at,sourceUrl:article.url})}<span>${esc(projectNames || Resolver.getEntities('region', article.region_ids || []).map(item=>item.short_name || item.name).join(' · '))}</span></div><h3><a class="article-title-link" href="${esc(article.url)}" target="_blank" rel="noopener noreferrer">${esc(article.title)}</a></h3><p>${esc(article.summary)}</p></div></article>`;
-      }).join('') || Components.stateBox('No articles match the selected filters.')}</div>`;
-    setView(html);
-    bindFilters();
+    if (!window.MarketNewsUI) {
+      setView(Components.stateBox('News presentation module is unavailable.', 'error'));
+      return;
+    }
+    setView(window.MarketNewsUI.render({
+      articles: data.articles,
+      regions: data.regions,
+      developers: data.developers,
+      state
+    }));
+    window.MarketNewsUI.bind({ state, refresh: renderNews });
   }
 
   function setView(html) {
