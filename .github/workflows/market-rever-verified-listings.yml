@@ -55,6 +55,16 @@ jobs:
               print(json.dumps(dict(project=target['project_id'],status=status,discovered_links=len(urls)),ensure_ascii=False))
           print('Source probe finished; no listings published by a PR.')
           PY
+          python scripts/market_rever_project_listings.py
+          python - <<'PY'
+          import json
+          from pathlib import Path
+          r=json.loads(Path('data/candidate/market/market-rever-listing-report.json').read_text())
+          for s in r['sources']:
+              print(json.dumps({'project':s['project_id'],'detail_checks':s['details_checked'],
+                                'exact_matches':s['qualified'],'reasons':s['reasons']},ensure_ascii=False))
+          assert r['accepted_new_individual_listings']==0, 'PRs cannot self-confirm as two independent runs'
+          PY
       - name: Discover and verify dated source listings
         if: github.event_name != 'pull_request'
         run: python scripts/market_rever_project_listings.py
