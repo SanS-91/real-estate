@@ -1,0 +1,133 @@
+name: Market 4G - Automatic Monthly Source Price Pipeline
+
+on:
+  pull_request:
+    paths:
+      - 'scripts/market_alternative_auto_probe.py'
+      - 'scripts/market_subproject_candidate_recheck.py'
+      - 'scripts/market_subproject_monthly_release.py'
+      - 'tests/test_market_subproject_monthly_review.py'
+      - 'tests/test_market_automatic_monthly_pipeline.py'
+      - 'config/market-alternative-auto-targets.json'
+      - 'assets/js/market.js'
+      - 'assets/js/data-store.js'
+      - '.github/workflows/market-auto-monthly-prices.yml'
+  push:
+    branches: [main]
+    paths:
+      - 'scripts/market_alternative_auto_probe.py'
+      - 'scripts/market_subproject_monthly_release.py'
+      - 'scripts/market_subproject_candidate_recheck.py'
+      - 'config/market-alternative-auto-targets.json'
+      - '.github/workflows/market-auto-monthly-prices.yml'
+  schedule:
+    - cron: '35 2 * * *'
+    - cron: '45 6 * * *'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: automatic-monthly-source-price-pipeline
+  cancel-in-progress: false
+
+jobs:
+  automatic-publisher-month:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Install pinned project dependencies
+        run: pip install -r requirements.txt
+      - name: Validate source isolation and automatic release integrity
+        run: |
+          python -m py_compile scripts/market_alternative_auto_probe.py scripts/market_subproject_candidate_recheck.py scripts/market_subproject_monthly_release.py
+          python tests/test_market_subproject_monthly_review.py
+          python tests/test_market_automatic_monthly_pipeline.py
+          python tests/test_market_alternative_auto_probe.py
+          python tests/test_market_onehousing_subproject_evidence.py
+          node --check assets/js/data-store.js
+          node --check assets/js/market.js
+      - name: Fetch publisher pages and stage new source-authored months
+        if: github.event_name != 'pull_request'
+        run: python scripts/market_alternative_auto_probe.py
+      - name: Independently confirm queued months on original publisher
+        if: github.event_name != 'pull_request'
+        run: python scripts/market_subproject_candidate_recheck.py --run-id "$GITHUB_RUN_ID"
+      - name: Automatically append only independently verified, non-outlier subproject months
+        if: github.event_name != 'pull_request'
+        run: python scripts/market_subproject_monthly_release.py --mode auto
+      - name: Verify resulting history and render constraints
+        if: github.event_name != 'pull_request'
+        run: |
+          python scripts/market_subproject_monthly_release.py --mode preview
+          python scripts/market_onehousing_subproject_gate.py
+      - name: Summarize publisher access, pending and newly published months
+        if: always()
+        run: |
+          echo '## Market 4G — Automatic monthly apartment price source pipeline' >> "$GITHUB_STEP_SUMMARY"
+          python - <<'PY' >> "$GITHUB_STEP_SUMMARY"
+          import json
+          from pathlib import Path
+          def load(name):
+              p=Path(name)
+              return json.loads(p.read_text()) if p.exists() else {}
+          probe=load('data/candidate/market/alternative-source-probe-report.json')
+          audit=load('data/candidate/market/alternative-candidate-verification-report.json')
+          release=load('data/candidate/market/subproject-monthly-release-report.json')
+          history=load('data/mock/market/alternative-subproject-monthly-history.json')
+          print(f"- Publisher pages tested: **{probe.get('targets_checked','not run')}**")
+          print(f"- New candidate observations on this check: **{probe.get('candidates_staged','not run')}**")
+          print(f"- Pending independent source checks: **{audit.get('checked_candidates','not run')}**")
+          print(f"- Eligible auto-verified months: **{release.get('auto_eligible','not run')}**")
+          print(f"- History records (including 2 indexed baselines): **{history.get('record_count','not loaded')}**")
+          print(f"- Published this run: **{release.get('production_changed',False)}**")
+          for d in audit.get('checks',[]):
+              print(f"  - {d['candidate_id']}: {d['status']} (HTTP {d.get('http_status','n/a')})")
+          print('No stale publisher month or crawler date is ever a new snapshot. All published releases are marked automated-source-verified.')
+          PY
+      - name: Commit all source health, candidate queue, independent proof and released history atomically
+        if: github.event_name != 'pull_request'
+        run: |
+          set -eu
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add data/state/alternative-source-health.json data/candidate/market/alternative-price-review-queue.json data/state/alternative-candidate-verification.json data/mock/market/alternative-subproject-monthly-history.json
+          if git diff --cached --quiet; then
+            echo 'No content changes to save.'
+            exit 0
+          fi
+          git commit -m 'data(market): automatically verify publisher prices and append source-specific monthly history'
+          git restore --worktree -- .
+          pushed=false
+          for attempt in 1 2 3 4 5; do
+            if git pull --rebase origin main && git push origin HEAD:main; then
+              pushed=true
+              break
+            fi
+            echo "Concurrent repository change; retry $attempt"
+            sleep 3
+          done
+          if [ "$pushed" != true ]; then
+            echo '::error::Failed to persist collected candidates/verified history; see run artifact.'
+            exit 1
+          fi
+      - uses: actions/upload-artifact@v4
+        if: always() && github.event_name != 'pull_request'
+        with:
+          name: automatic-monthly-publisher-evidence
+          path: |
+            data/candidate/market/alternative-source-probe-report.json
+            data/candidate/market/alternative-candidate-verification-report.json
+            data/candidate/market/subproject-monthly-release-report.json
+            data/state/alternative-candidate-verification.json
+            data/mock/market/alternative-subproject-monthly-history.json
+          if-no-files-found: warn
+          retention-days: 45
