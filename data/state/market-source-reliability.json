@@ -1,0 +1,125 @@
+{
+  "schema_version": 1,
+  "description": "Rolling publisher-source health only. This file never supplies price values or triggers promotion.",
+  "window_runs": 14,
+  "targets": [
+    {
+      "target_id": "onehousing-vinhomes-grand-park-apartment",
+      "source_id": "onehousing-vn",
+      "project_id": "vinhomes-grand-park",
+      "mode": "monthly-price-candidate",
+      "price_metric": "popular-asking-price-per-sqm",
+      "checks": [
+        {
+          "run_id": "37897823483",
+          "observed_at": "2026-10-09T07:14:04.708202+00:00",
+          "status": "reachable-no-verifiable-metric",
+          "http_status": 200,
+          "publisher_periods": [
+            "2026-10"
+          ]
+        }
+      ],
+      "check_count": 1,
+      "parseable_check_count": 0,
+      "classification": "needs-stable-alternative"
+    },
+    {
+      "target_id": "rever-vinhomes-grand-park-listing",
+      "source_id": "rever-vn",
+      "project_id": "vinhomes-grand-park",
+      "mode": "single-listing-review",
+      "price_metric": "single-listing-asking-price-per-sqm",
+      "checks": [
+        {
+          "run_id": "37897823483",
+          "observed_at": "2026-10-09T07:14:04.708202+00:00",
+          "status": "same-period-unchanged",
+          "http_status": 200,
+          "publisher_periods": []
+        }
+      ],
+      "check_count": 1,
+      "parseable_check_count": 1,
+      "classification": "listing-only"
+    },
+    {
+      "target_id": "rever-the-privia-historical",
+      "source_id": "rever-vn",
+      "project_id": "the-privia",
+      "mode": "historical-reference-monitor",
+      "price_metric": "historical-launch-starting-price-per-sqm",
+      "checks": [
+        {
+          "run_id": "37897823483",
+          "observed_at": "2026-10-09T07:14:04.708202+00:00",
+          "status": "reachable-historical-reference-frozen",
+          "http_status": 200,
+          "publisher_periods": []
+        }
+      ],
+      "check_count": 1,
+      "parseable_check_count": 0,
+      "classification": "historical-only"
+    },
+    {
+      "target_id": "onehousing-global-city-historical",
+      "source_id": "onehousing-vn",
+      "project_id": "the-global-city",
+      "mode": "historical-reference-monitor",
+      "price_metric": "historical-launch-starting-price-per-sqm",
+      "checks": [
+        {
+          "run_id": "37897823483",
+          "observed_at": "2026-10-09T07:14:04.708202+00:00",
+          "status": "reachable-historical-reference-frozen",
+          "http_status": 200,
+          "publisher_periods": []
+        }
+      ],
+      "check_count": 1,
+      "parseable_check_count": 0,
+      "classification": "historical-only"
+    },
+    {
+      "target_id": "onehousing-lumiere-boulevard-apartment",
+      "source_id": "onehousing-vn",
+      "project_id": "vinhomes-grand-park",
+      "mode": "monthly-price-candidate",
+      "price_metric": "popular-asking-price-per-sqm",
+      "checks": [
+        {
+          "run_id": "37897823483",
+          "observed_at": "2026-10-09T07:14:04.708202+00:00",
+          "status": "reachable-no-verifiable-metric",
+          "http_status": 200,
+          "publisher_periods": [
+            "2026-10"
+          ]
+        }
+      ],
+      "check_count": 1,
+      "parseable_check_count": 0,
+      "classification": "needs-stable-alternative"
+    },
+    {
+      "target_id": "onehousing-masteri-centre-point-apartment",
+      "source_id": "onehousing-vn",
+      "project_id": "vinhomes-grand-park",
+      "mode": "monthly-price-candidate",
+      "price_metric": "popular-asking-price-per-sqm",
+      "checks": [
+        {
+          "run_id": "37897823483",
+          "observed_at": "2026-10-09T07:14:04.708202+00:00",
+          "status": "reachable-no-verifiable-metric",
+          "http_status": 200,
+          "publisher_periods": []
+        }
+      ],
+      "check_count": 1,
+      "parseable_check_count": 0,
+      "classification": "needs-stable-alternative"
+    }
+  ]
+}
