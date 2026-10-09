@@ -49,7 +49,8 @@ jobs:
           node --check assets/js/market.js
           node --check assets/js/data-store.js
           node tests/test_market_rever_verified_ui.cjs
-          node tests/test_market_project_price_range_chart.js      - name: Probe live provider pages for structure and access on pull requests
+          node tests/test_market_project_price_range_chart.js
+      - name: Probe live provider pages for structure and access on pull requests
         if: github.event_name == 'pull_request'
         run: |
           python - <<'PY'
