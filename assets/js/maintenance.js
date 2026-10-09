@@ -278,6 +278,63 @@
     }
   }
 
+  async function renderMarketSourceHealth() {
+    const node = document.querySelector('[data-market-source-health]');
+    if (!node) return;
+    const vi = language() !== 'en';
+    const labels = vi ? {
+      provider: 'Nguồn', project: 'Dự án / Phân khu', state: 'Khả năng thu thập',
+      checks: 'Lượt kiểm tra', good: 'Đọc được nhiều lượt',
+      partial: 'Đã đọc được · theo dõi thêm', blocked: 'Không xác minh được',
+      unknown: 'Chưa có bằng chứng', listing: 'Chỉ tin đăng', noData: 'Chưa có báo cáo kiểm tra nguồn.',
+      note: 'Khả năng đọc được dữ liệu không đồng nghĩa có giá mới đủ điều kiện đưa lên biểu đồ.'
+    } : {
+      provider: 'Source', project: 'Project / Subproject', state: 'Capture quality',
+      checks: 'Checks', good: 'Repeatedly parseable', partial: 'Parseable · monitoring',
+      blocked: 'Not verifiable', unknown: 'No verification yet', listing: 'Listing-only',
+      noData: 'No source reliability report available.',
+      note: 'Source accessibility is not proof that a new price has qualified for a published chart.'
+    };
+    try {
+      const [reliabilityResult, secondaryResult] = await Promise.allSettled([
+        fetchJSON('data/state/market-source-reliability.json'),
+        fetchJSON('data/state/market-stable-listing-health.json')
+      ]);
+      const reliability = reliabilityResult.status === 'fulfilled' ? reliabilityResult.value : {};
+      const secondary = secondaryResult.status === 'fulfilled' ? secondaryResult.value : {};
+      const targets = (reliability.targets || []).filter(row => row.mode === 'monthly-price-candidate');
+      const rows = targets.map(row => {
+        const id = row.target_id || '';
+        const project = id.includes('lumiere-boulevard') ? 'Lumière Boulevard'
+          : id.includes('masteri-centre-point') ? 'Masteri Centre Point' : 'Vinhomes Grand Park';
+        const status = row.classification === 'repeatably-parseable' ? labels.good
+          : row.classification === 'source-parseable-not-yet-repeatable' ? labels.partial
+          : row.classification === 'not-yet-measured' ? labels.unknown : labels.blocked;
+        return ['OneHousing', project, status, String(row.check_count || 0)];
+      });
+      if (secondary.categories_checked) {
+        const blocked = (secondary.status_counts || {})['access-blocked'] || 0;
+        const categories = Number(secondary.categories_checked) || 0;
+        const status = blocked === categories ? (vi ? 'Bị chặn HTTP 403' : 'HTTP 403 blocked')
+          : secondary.new_listing_candidates ? labels.partial : labels.unknown;
+        rows.push(['Nhà Tốt', vi ? 'Tin đăng thứ cấp' : 'Secondary listings', status, String(categories)]);
+      }
+      if (!rows.length) {
+        node.innerHTML = `<div class="state-box">${esc(labels.noData)}</div>`;
+        return;
+      }
+      node.innerHTML = `<div class="table-wrap table-wrap--maintenance">
+        <table class="data-table data-table--maintenance">
+          <thead><tr><th>${esc(labels.provider)}</th><th>${esc(labels.project)}</th><th>${esc(labels.state)}</th><th class="numeric">${esc(labels.checks)}</th></tr></thead>
+          <tbody>${rows.map(row => `<tr>${row.map((cell, i) => `<td${i === 3 ? ' class="numeric"' : ''}>${esc(cell)}</td>`).join('')}</tr>`).join('')}</tbody>
+        </table>
+      </div><p class="table-subtext" style="padding:10px 14px">${esc(labels.note)}</p>`;
+    } catch (error) {
+      console.warn('[maintenance] market source-health unavailable', error);
+      node.innerHTML = `<div class="state-box">${esc(labels.noData)}</div>`;
+    }
+  }
+
   function renderRules() {
     const c = copy();
     document.querySelector('[data-maintenance-rules]').innerHTML = `<div class="maintenance-rules">${c.rules.map(([title, text]) => `<div class="maintenance-rule"><strong>${esc(title)}</strong><span>${esc(text)}</span></div>`).join('')}</div>`;
@@ -312,6 +369,7 @@
     try {
       render(await buildModel());
       await renderOperations();
+      await renderMarketSourceHealth();
     } catch (error) {
       renderError(error);
     }
@@ -319,6 +377,7 @@
       if (lastModel) render(lastModel);
       else renderRules();
       renderOperations();
+      renderMarketSourceHealth();
     });
   }
 
