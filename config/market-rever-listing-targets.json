@@ -1,0 +1,27 @@
+{
+  "schema_version": 1,
+  "source": "rever.vn",
+  "purpose": "Discover and verify individual apartment asking listings. Never label as project range, ASP, deal, or latest developer sale price.",
+  "targets": [
+    {
+      "project_id": "akari-city",
+      "publisher_project_name": "Akari City",
+      "url": "https://rever.vn/s/akari-city-quan-binh-tan/mua/can-ho"
+    },
+    {
+      "project_id": "eaton-park",
+      "publisher_project_name": "Eaton Park",
+      "url": "https://rever.vn/s/eaton-park/mua/can-ho"
+    },
+    {
+      "project_id": "the-privia",
+      "publisher_project_name": "THE PRIVIA",
+      "url": "https://rever.vn/s/the-privia/mua/can-ho"
+    },
+    {
+      "project_id": "the-global-city",
+      "publisher_project_name": "The Global City",
+      "url": "https://rever.vn/s/the-global-city/mua/can-ho"
+    }
+  ]
+}
