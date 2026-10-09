@@ -19,3 +19,13 @@ const zone=market.slice(market.indexOf('function listingRangeChartData'),market.
 assert.ok(!zone.includes('reverVerifiedUnitListings'),'Never contaminate portal project chart');
 assert.ok(workflow.includes('market-rever-verified-listings'));
 console.log('PASS: live Rever single-listing source stays recent, capped, separated from prices and collapsed when numerous');
+
+const maintenance=fs.readFileSync('assets/js/maintenance.js','utf8');
+const rever=fs.readFileSync('scripts/market_rever_project_listings.py','utf8');
+assert.ok(maintenance.includes("data/state/market-rever-source-health.json"));
+assert.ok(maintenance.includes("source_updates_within_90_days"));
+assert.ok(maintenance.includes("published_current_individual_listings"));
+assert.ok(rever.includes('publish=not pr_preview'));
+assert.ok(rever.includes('if not pr_preview:'));
+assert.ok(rever.includes('source_health(report, state, prod)'));
+console.log('PASS: Rever read-only source freshness monitoring stays separate from verified prices');

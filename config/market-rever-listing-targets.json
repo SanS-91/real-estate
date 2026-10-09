@@ -16,12 +16,16 @@
     {
       "project_id": "the-privia",
       "publisher_project_name": "THE PRIVIA",
-      "url": "https://rever.vn/s/the-privia/mua/can-ho"
+      "url": "https://rever.vn/s/the-privia/mua/can-ho",
+      "discovery_urls": [
+        "https://rever.vn/s/binh-tan/mua/can-ho"
+      ]
     },
     {
       "project_id": "the-global-city",
       "publisher_project_name": "The Global City",
       "url": "https://rever.vn/s/the-global-city/mua/can-ho"
     }
-  ]
+  ],
+  "discovery_note": "Regional apartment catalogs are discovery-only, and each listing must still identify the exact target project on its own detail page. Only publisher-dated <=90-day individual ads can be considered after two independent hosted checks."
 }

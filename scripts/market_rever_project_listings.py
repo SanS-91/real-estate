@@ -26,9 +26,11 @@ CONFIG = ROOT / "config/market-rever-listing-targets.json"
 STATE = ROOT / "data/state/market-rever-listing-verification.json"
 OUTPUT = ROOT / "data/mock/market/verified-unit-listings.json"
 REPORT = ROOT / "data/candidate/market/market-rever-listing-report.json"
+HEALTH = ROOT / "data/state/market-rever-source-health.json"
 HOST = "rever.vn"
 CAP = 3_000_000
 MAX_LISTINGS_PER_PROJECT = 12
+MAX_CATALOGS_PER_PROJECT = 3
 MAX_AGE_DAYS = 90
 MAX_CHECKS = 8
 AGENT = "MarketIntelligenceResearchBot/1.0 (public market evidence monitoring)"
@@ -225,56 +227,144 @@ def evaluate(previous, rows, seen, now, run_id):
     return {"schema_version": 1, "listings": sorted(states.values(), key=lambda x:x["listing_id"])}, accepted, decisions
 
 
-def run(config, history, state, fetcher, now, run_id):
+def run(config, history, state, fetcher, now, run_id, publish=True):
+    """Discover at project and optional regional catalogs; never infer project
+    identity from a regional result or promote evidence during PR previews.
+    """
     discovered, qualifying = 0, []
     diagnostics = []
+    # The same regional catalog can contain several monitored projects. Only
+    # deduplicate per expected project; an off-project URL must not block its
+    # later evaluation for the correct project.
     inspected = set()
     for target in config["targets"]:
-        if (not safe_url(target.get("url", "")) or not target.get("project_id") or
-                not target.get("publisher_project_name")):
-            diagnostics.append({"project_id":target.get("project_id"), "index_status":"invalid-source-config",
-                "listing_links":0,"details_checked":0,"qualified":0,"reasons":{}})
+        project_id = target.get("project_id")
+        project_name = target.get("publisher_project_name")
+        catalogs = [target.get("url", "")] + list(target.get("discovery_urls", []))
+        catalogs = list(dict.fromkeys(catalogs))[:MAX_CATALOGS_PER_PROJECT]
+        checks = {"project_id": project_id, "source_url": target.get("url"),
+                  "index_status": "not-checked", "catalogs": [],
+                  "listing_links": 0, "details_checked": 0,
+                  "qualified": 0, "recent": 0, "recent_30": 0,
+                  "latest_source_update_date": None, "reasons": {}}
+        if not project_id or not project_name:
+            checks["index_status"] = "invalid-source-config"
+            diagnostics.append(checks)
             continue
-        html, access = fetcher(target["url"], listing=False)
-        urls = discover(html, target["url"]) if html else []
-        checks = {"project_id":target["project_id"], "source_url":target["url"],
-                  "index_status":access, "listing_links":len(urls),
-                  "details_checked":0, "qualified":0, "recent":0, "reasons":{}}
-        for url in urls:
-            if url in inspected:
-                continue
-            inspected.add(url)
-            body, status = fetcher(url, listing=True)
-            checks["details_checked"] += 1
-            if body is None:
-                reason = status
-                row = None
+        unique_links = set()
+        for index, catalog_url in enumerate(catalogs):
+            if not safe_url(catalog_url, listing=False):
+                access, urls = "invalid-source-config", []
             else:
-                row, reason = parse_detail(body, url, target["publisher_project_name"],
-                                           target["project_id"], now)
-            checks["reasons"][reason] = checks["reasons"].get(reason, 0) + 1
-            if row:
-                checks["qualified"] += 1
-                if (now.date()-date.fromisoformat(row["source_updated_date"])).days <= MAX_AGE_DAYS:
-                    checks["recent"] += 1
-                qualifying.append(row)
-        discovered += len(urls)
+                html, access = fetcher(catalog_url, listing=False)
+                urls = discover(html, catalog_url) if html else []
+            if index == 0:
+                checks["index_status"] = access
+            checks["catalogs"].append({"source_url": catalog_url,
+                                      "access_status": access,
+                                      "links_discovered": len(urls)})
+            for url in urls:
+                unique_links.add(url)
+                if (project_id, url) in inspected:
+                    continue
+                inspected.add((project_id, url))
+                body, status = fetcher(url, listing=True)
+                checks["details_checked"] += 1
+                if body is None:
+                    row, reason = None, status
+                else:
+                    row, reason = parse_detail(body, url, project_name,
+                                               project_id, now)
+                checks["reasons"][reason] = checks["reasons"].get(reason, 0) + 1
+                if row:
+                    checks["qualified"] += 1
+                    days = (now.date() - date.fromisoformat(
+                        row["source_updated_date"])).days
+                    if days <= MAX_AGE_DAYS:
+                        checks["recent"] += 1
+                    if days <= 30:
+                        checks["recent_30"] += 1
+                    stamp = row["source_updated_date"]
+                    if not checks["latest_source_update_date"] or stamp > checks["latest_source_update_date"]:
+                        checks["latest_source_update_date"] = stamp
+                    qualifying.append(row)
+        checks["listing_links"] = len(unique_links)
+        discovered += len(unique_links)
         diagnostics.append(checks)
-    updated, additions, decisions = evaluate(state, history.get("data", []), qualifying, now, run_id)
+    if publish:
+        updated, additions, decisions = evaluate(
+            state, history.get("data", []), qualifying, now, run_id)
+    else:
+        # Pull requests test source parsing, but must never use existing main
+        # checks as the first independent proof and release live prices.
+        updated, additions = state, []
+        decisions = [{"listing_id": x["listing_id"],
+                      "project_id": x["project_id"],
+                      "decision": "pr-diagnostic-only"} for x in qualifying]
     final_rows = (history.get("data", []) + additions)[-250:]
     production = {
         **history, "schema_version": 1,
         "collection_mode": "individually-publisher-verified-apartment-asking-only",
         "record_count": len(final_rows), "data": final_rows,
     }
-    report = {"schema_version":1, "generated_at":now.isoformat(),
-              "targets_checked":len(config["targets"]),
-              "listing_urls_discovered":discovered, "qualified_current_or_historical":len(qualifying),
-              "recent_qualified":sum(x.get("recent", 0) for x in diagnostics),
-              "accepted_new_individual_listings":len(additions),
-              "production_project_aggregates_changed":False,
-              "sources":diagnostics, "decisions":decisions}
+    report = {"schema_version": 2, "generated_at": now.isoformat(),
+              "targets_checked": len(config["targets"]),
+              "catalogs_checked": sum(len(x["catalogs"]) for x in diagnostics),
+              "listing_urls_discovered": discovered,
+              "qualified_current_or_historical": len(qualifying),
+              "recent_qualified": sum(x["recent"] for x in diagnostics),
+              "recent_30_days": sum(x["recent_30"] for x in diagnostics),
+              "accepted_new_individual_listings": len(additions),
+              "production_project_aggregates_changed": False,
+              "source_date_is_publisher_date": True,
+              "publication_enabled": publish,
+              "sources": diagnostics, "decisions": decisions}
     return production, updated, report
+
+
+def source_health(report, verification_state, production):
+    """Small read-only deployment artifact; excludes unverified listing prices."""
+    published = production.get("data", [])
+    today = date.fromisoformat(report["generated_at"][:10])
+    recent_published = sum(
+        row.get("review_status") == "automated-two-hosted-checks"
+        and isinstance(row.get("source_updated_date"), str)
+        and bool(re.fullmatch(r"20\d{2}-\d{2}-\d{2}", row["source_updated_date"]))
+        and 0 <= (today - date.fromisoformat(row["source_updated_date"])).days <= MAX_AGE_DAYS
+        for row in published
+    )
+    unique_runs = {str(check["run_id"])
+                   for row in verification_state.get("listings", [])
+                   for check in row.get("checks", [])
+                   if check.get("run_id")}
+    return {
+        "schema_version": 1,
+        "generated_at": report["generated_at"],
+        "source_id": "rever-vn",
+        "scope": "individual-apartment-asking-only",
+        "targets_checked": report["targets_checked"],
+        "catalogs_checked": report["catalogs_checked"],
+        "listing_urls_discovered": report["listing_urls_discovered"],
+        "details_checked": sum(x["details_checked"] for x in report["sources"]),
+        "exact_project_matches": report["qualified_current_or_historical"],
+        "source_updates_within_30_days": report["recent_30_days"],
+        "source_updates_within_90_days": report["recent_qualified"],
+        "published_current_individual_listings": recent_published,
+        "source_runs_seen": len(unique_runs),
+        "projects": [{
+            "project_id": x["project_id"],
+            "catalogs": x["catalogs"],
+            "details_checked": x["details_checked"],
+            "exact_project_matches": x["qualified"],
+            "recent_30_days": x["recent_30"],
+            "recent_90_days": x["recent"],
+            "latest_publisher_listing_update_date": x["latest_source_update_date"],
+        } for x in report["sources"]],
+        "methodology": ("Access and fresh publisher dates are diagnostics only. "
+                        "Individual prices are published only after two distinct "
+                        "hosted checks at least one hour apart. No project ASP "
+                        "or asking-range aggregation is inferred."),
+    }
 
 
 def main():
@@ -284,11 +374,15 @@ def main():
     session = requests.Session()
     now = datetime.now(timezone.utc)
     run_id = os.environ.get("GITHUB_RUN_ID", now.isoformat())
+    pr_preview = os.environ.get("GITHUB_EVENT_NAME") == "pull_request"
     prod, state, report = run(config, history, previous,
-        lambda url, listing: fetch(session,url,listing), now, run_id)
-    save(OUTPUT, prod)
-    save(STATE, state)
+        lambda url, listing: fetch(session,url,listing), now, run_id,
+        publish=not pr_preview)
     save(REPORT, report)
+    if not pr_preview:
+        save(OUTPUT, prod)
+        save(STATE, state)
+        save(HEALTH, source_health(report, state, prod))
     print(json.dumps({k:v for k,v in report.items() if k!="decisions"},ensure_ascii=False))
 
 

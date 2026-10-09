@@ -6,6 +6,8 @@ on:
       - 'scripts/market_rever_project_listings.py'
       - 'config/market-rever-listing-targets.json'
       - 'tests/test_market_rever_project_listings.py'
+      - 'tests/test_market_rever_freshness_first.py'
+      - 'assets/js/maintenance.js'
       - 'tests/test_market_rever_verified_ui.cjs'
       - 'assets/js/market.js'
       - 'assets/js/data-store.js'
@@ -15,6 +17,7 @@ on:
     paths:
       - 'scripts/market_rever_project_listings.py'
       - 'config/market-rever-listing-targets.json'
+      - 'tests/test_market_rever_freshness_first.py'
       - '.github/workflows/market-rever-verified-listings.yml'
   schedule:
     - cron: '25 2 * * *'
@@ -46,7 +49,9 @@ jobs:
         run: |
           python -m py_compile scripts/market_rever_project_listings.py
           python -m unittest discover -s tests -p 'test_market_rever_project_listings.py' -v
+          python -m unittest discover -s tests -p 'test_market_rever_freshness_first.py' -v
           node --check assets/js/market.js
+          node --check assets/js/maintenance.js
           node --check assets/js/data-store.js
           node tests/test_market_rever_verified_ui.cjs
           node tests/test_market_project_price_range_chart.js
@@ -90,8 +95,14 @@ jobs:
           for s in r['sources']:
               print(json.dumps({'project':s['project_id'],'detail_checks':s['details_checked'],
                                 'exact_matches':s['qualified'],'reasons':s['reasons']},ensure_ascii=False))
-          assert r['accepted_new_individual_listings']==0, 'PRs cannot self-confirm as two independent runs'
+          assert r['publication_enabled'] is False, 'PR must be diagnostic-only'
+          assert r['accepted_new_individual_listings']==0, 'PR cannot publish listings'
           PY
+          # The preview may produce an ephemeral report, but must not touch
+          # published values, prior hosted-check evidence or health snapshots.
+          git diff --exit-code -- data/mock/market/verified-unit-listings.json data/state/market-rever-listing-verification.json data/state/market-rever-source-health.json
+          # End PR verification
+
       - name: Discover and verify dated source listings
         if: github.event_name != 'pull_request'
         run: python scripts/market_rever_project_listings.py
@@ -110,6 +121,8 @@ jobs:
               for s in r['sources']:
                   print(f"- {s['project_id']}: {s['index_status']}, "
                         f"{s['listing_links']} discovered, {s['qualified']} exact project matches")
+              print(f"- Exact matches updated within 30 / 90 days: **{r['recent_30_days']} / {r['recent_qualified']}**")
+              print(f"- Catalogs inspected: **{r['catalogs_checked']}**")
               print(f"- Independently verified new individual listings: **{r['accepted_new_individual_listings']}**")
               print('- No project ASP or portal-wide asking ranges are generated.')
           PY
@@ -119,7 +132,7 @@ jobs:
           set -eu
           git config user.name 'github-actions[bot]'
           git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
-          git add data/state/market-rever-listing-verification.json data/mock/market/verified-unit-listings.json
+          git add data/state/market-rever-listing-verification.json data/mock/market/verified-unit-listings.json data/state/market-rever-source-health.json
           if git diff --cached --quiet; then
             echo 'No new source evidence'
             exit 0
@@ -144,6 +157,7 @@ jobs:
           name: market-rever-source-discovery
           path: |
             data/state/market-rever-listing-verification.json
+            data/state/market-rever-source-health.json
             data/candidate/market/market-rever-listing-report.json
             data/mock/market/verified-unit-listings.json
           retention-days: 45
