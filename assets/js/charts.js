@@ -50,18 +50,61 @@
     return chart;
   }
 
+  // Separate exact supply, published lower bounds, sales and absorption.
+  // A lower bound is drawn as a distinct category with an explicit '>' tooltip;
+  // it never becomes exact project supply, sales or an ASP metric.
   function renderSupplySales(id, rows) {
-    return render(id, {
-      type: 'bar',
-      data: {
-        labels: rows.map(row => row.period),
-        datasets: [
-          { label: 'New Supply', data: rows.map(row => row.new_supply), backgroundColor: '#c9aeb4', borderRadius: 3 },
-          { label: 'Sales', data: rows.map(row => row.sales_units), backgroundColor: '#8b1e2d', borderRadius: 3 }
-        ]
-      },
-      options: baseOptions()
-    });
+    const hasBounds = rows.some(row => row.new_supply == null
+      && Number.isFinite(row.new_supply_lower_bound));
+    const hasAbsorption = rows.some(row => Number.isFinite(row.absorption_rate));
+    const datasets = [
+      { label: 'New Supply (reported)', data: rows.map(row => row.new_supply),
+        backgroundColor: '#c9aeb4', borderRadius: 3, marketValueKind: 'supply' },
+    ];
+    if (hasBounds) {
+      datasets.push({ label: 'New Supply (reported >)', data: rows.map(row =>
+        row.new_supply == null && Number.isFinite(row.new_supply_lower_bound)
+          ? row.new_supply_lower_bound : null),
+      backgroundColor: '#a5a9b2', borderColor: '#667085',
+      borderWidth: 1, borderDash: [4, 3], borderRadius: 3,
+      marketValueKind: 'lower-bound' });
+    }
+    datasets.push({ label: 'Sales', data: rows.map(row => row.sales_units),
+      backgroundColor: '#8b1e2d', borderRadius: 3, marketValueKind: 'sales' });
+    if (hasAbsorption) {
+      datasets.push({ type: 'line', label: 'Absorption rate',
+        data: rows.map(row => Number.isFinite(row.absorption_rate) ? row.absorption_rate : null),
+        yAxisID: 'y1', borderColor: '#344054', backgroundColor: '#344054',
+        pointBackgroundColor: '#344054', tension: 0.2,
+        pointRadius: 3, spanGaps: false, borderWidth: 2, marketValueKind: 'absorption' });
+    }
+    const options = baseOptions();
+    options.plugins.tooltip.callbacks.label = context => {
+      const value = context.parsed?.y;
+      if (!Number.isFinite(value)) return context.dataset.label + ': —';
+      if (context.dataset.marketValueKind === 'lower-bound') {
+        return 'New supply: > ' + compactNumber(value) + ' units (publisher lower bound)';
+      }
+      if (context.dataset.marketValueKind === 'absorption') {
+        return 'Absorption rate: ' + (value * 100).toFixed(1) + '%';
+      }
+      const sourceRow = rows[context.dataIndex] || {};
+      const kind = context.dataset.marketValueKind;
+      const qualifier = kind === 'supply' ? sourceRow.metric_qualifiers?.new_supply
+        : kind === 'sales' ? sourceRow.metric_qualifiers?.sales_units : null;
+      return context.dataset.label + ': '
+        + (qualifier === 'approx' ? '≈ ' : '') + compactNumber(value) + ' units';
+    };
+    if (hasAbsorption) {
+      options.scales.y1 = {
+        position: 'right', min: 0, max: 1,
+        grid: { drawOnChartArea: false },
+        ticks: { color: '#667085', callback: value => Math.round(value * 100) + '%' }
+      };
+    }
+    return render(id, { type: 'bar', data: {
+      labels: rows.map(row => row.period), datasets
+    }, options });
   }
 
   function renderPriceTrend(id, series) {
