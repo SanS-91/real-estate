@@ -34,7 +34,7 @@ def periods(segment,source):
     })
 assert periods("apartment","cbre-vietnam-market")==["2025-Q3","2025-Q4","2026-Q1","2026-Q2"]
 assert periods("landed","cbre-vietnam-market")==["2025-Q3","2025-Q4","2026-Q1","2026-Q2"]
-assert periods("apartment","cushman-wakefield-vietnam-market")==["2026-Q1","2026-Q2"]
+assert periods("apartment","cushman-wakefield-vietnam-market")==["2024-Q4","2025-Q1","2025-Q4","2026-Q1","2026-Q2"]
 
 spec=importlib.util.spec_from_file_location("coverage",ROOT/"scripts/build_history_coverage.py")
 mod=importlib.util.module_from_spec(spec)
