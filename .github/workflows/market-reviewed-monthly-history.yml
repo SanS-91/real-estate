@@ -1,0 +1,104 @@
+name: Market Coverage Round 4D - Reviewed Monthly History and Price Chart
+
+on:
+  pull_request:
+    paths:
+      - 'data/mock/market/alternative-monthly-history.json'
+      - 'config/market-alternative-reviewed-approvals.json'
+      - 'scripts/market_alternative_history_release.py'
+      - 'tests/test_market_alternative_history_release.py'
+      - 'tests/test_market_project_price_range_chart.js'
+      - 'assets/js/charts.js'
+      - 'assets/js/market.js'
+      - 'market.html'
+      - '.github/workflows/market-reviewed-monthly-history.yml'
+  push:
+    branches: [main]
+    paths:
+      - 'config/market-alternative-reviewed-approvals.json'
+      - 'scripts/market_alternative_history_release.py'
+      - 'data/mock/market/alternative-monthly-history.json'
+      - '.github/workflows/market-reviewed-monthly-history.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: market-reviewed-monthly-price-history
+  cancel-in-progress: false
+
+jobs:
+  reviewed-monthly-history:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 12
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Release source and chart regression
+        run: |
+          python -m py_compile scripts/market_alternative_history_release.py
+          python tests/test_market_alternative_history_release.py
+          python scripts/market_alternative_history_release.py --mode preview
+          python scripts/market_alternative_source_gate.py
+          node --check assets/js/charts.js
+          node --check assets/js/market.js
+          node tests/test_market_project_price_range_chart.js
+      - name: Source-specific monthly release after explicit reviewed approvals
+        if: github.event_name != 'pull_request'
+        run: python scripts/market_alternative_history_release.py --mode promote
+      - name: Publish evidence release summary
+        if: always()
+        run: |
+          echo "## Market Coverage 4D — reviewed publisher-specific monthly history" >> "$GITHUB_STEP_SUMMARY"
+          if [ -f data/candidate/market/alternative-history-release-report.json ]; then
+            python - <<'PY' >> "$GITHUB_STEP_SUMMARY"
+          import json
+          from pathlib import Path
+          r=json.loads(Path('data/candidate/market/alternative-history-release-report.json').read_text())
+          print(f"- Baseline publisher periods: **{r['existing_monthly_records']}**")
+          print(f"- Independently reviewed candidate approvals: **{r['approvals_checked']}**")
+          print(f"- New approved periods: **{r['ready_for_promotion']}**")
+          print(f"- Blocked approvals: **{r['blocked']}**")
+          print(f"- Production update: **{r['production_updated']}**")
+          print("Source-specific OneHousing modal apartment asking rate is not project ASP or Batdongsan asking-range history.")
+          PY
+          fi
+      - name: Persist append-only reviewed periods only if present
+        if: github.event_name != 'pull_request'
+        run: |
+          set -eu
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add data/mock/market/alternative-monthly-history.json
+          if git diff --cached --quiet; then
+            echo 'No independently reviewed new monthly period to release.'
+            exit 0
+          fi
+          git commit -m 'data(market): append explicitly reviewed OneHousing monthly price evidence'
+          git restore --worktree -- .
+          pushed=false
+          for attempt in 1 2 3 4 5; do
+            git pull --rebase origin main
+            if git push origin HEAD:main; then
+              pushed=true
+              break
+            fi
+            sleep 2
+          done
+          if [ "$pushed" != true ]; then
+            echo '::error::Approved price release could not be pushed after concurrent commits.'
+            exit 1
+          fi
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: market-4d-monthly-price-evidence-review
+          path: data/candidate/market/alternative-history-release-report.json
+          if-no-files-found: warn
+          retention-days: 30

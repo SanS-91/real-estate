@@ -89,7 +89,7 @@
   function listingRangeChartData(records = data.projects) {
     const rows = listingPriceRows(records);
     return {
-      labels: rows.map(item => item.project.name),
+      labels: rows.map(item => item.project.name + (item.row.asset_type === 'apartment' ? ' · Căn hộ' : ' · Thấp tầng')),
       lowValues: rows.map(item => item.row.asking_price_low_vnd_per_m2),
       highValues: rows.map(item => item.row.asking_price_high_vnd_per_m2)
     };
@@ -849,7 +849,7 @@
       '<td>' + esc(row.coverage_status || 'full') + '</td>' +
       '<td>' + sourceRef(row.source_id,{sourceDate:row.observation_date,sourceUrl:row.source_url,methodology:row.methodology_note}) + '</td></tr>'
     ).join('');
-    const listingSnapshotTable = '<thead><tr><th>Project</th><th>Region</th><th>Snapshot</th><th class="numeric">Asking Range</th><th class="numeric">1Y Trend</th><th>Coverage</th><th>Source</th></tr></thead><tbody>' +
+    const listingSnapshotTable = '<thead><tr><th>Project</th><th>Region</th><th>Snapshot</th><th class="numeric">Asking Range</th><th class="numeric">1Y theo nguồn</th><th>Coverage</th><th>Source</th></tr></thead><tbody>' +
       (listingSnapshotRows || '<tr><td colspan="7" class="table-empty">No priced listing snapshots.</td></tr>') + '</tbody>';
 
     const verifiedSnapshotRows = projectRows.map(({project,obs}) =>
@@ -864,7 +864,7 @@
       (verifiedSnapshotRows || '<tr><td colspan="6" class="table-empty">No comparable pricing records.</td></tr>') + '</tbody>';
 
     const chartBody = state.priceLayer === 'listing'
-      ? (listingRows.length ? '<div class="chart-frame chart-frame--large"><canvas id="market-pricing"></canvas></div><p class="chart-note">Portal asking-price ranges; not executed transaction prices or official developer sales.</p>' : '<div class="state-box">No priced listing snapshots for the selected filters.</div>')
+      ? (listingRows.length ? '<div class="chart-frame chart-frame--large"><canvas id="market-pricing"></canvas></div><p class="chart-note">Khoảng giá chào bán theo từng dự án (tin đăng; không phải giao dịch). Không nối thành xu hướng thời gian. Căn hộ và nhà thấp tầng không so sánh trực tiếp.</p>' : '<div class="state-box">No priced listing snapshots for the selected filters.</div>')
       : (series.length ? '<div class="chart-frame chart-frame--large"><canvas id="market-pricing"></canvas></div><p class="chart-note">Sparse source-stated snapshots; no missing project price is estimated.</p>' : '<div class="state-box">No verified project price observations for the selected filters.</div>');
     const snapshotTable = state.priceLayer === 'listing' ? listingSnapshotTable : verifiedSnapshotTable;
 
