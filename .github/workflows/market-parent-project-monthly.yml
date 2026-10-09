@@ -1,0 +1,98 @@
+name: Market 4I.3 - Verified Parent Project Monthly Prices
+
+on:
+  pull_request:
+    paths:
+      - 'scripts/market_onehousing_project_history.py'
+      - 'tests/test_market_onehousing_project_history.py'
+      - '.github/workflows/market-parent-project-monthly.yml'
+      - 'assets/js/market.js'
+      - 'assets/js/data-store.js'
+  push:
+    branches: [main]
+    paths:
+      - 'scripts/market_onehousing_project_history.py'
+      - '.github/workflows/market-parent-project-monthly.yml'
+  schedule:
+    - cron: '50 2 * * *'
+    - cron: '20 7 * * *'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: market-parent-project-monthly-prices
+  cancel-in-progress: false
+
+jobs:
+  parent-monthly-evidence:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 16
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Install parser dependencies
+        run: pip install -r requirements.txt
+      - name: Verify parser safeguards and parent/subproject separation
+        run: |
+          python -m py_compile scripts/market_onehousing_project_history.py
+          python -m unittest discover -s tests -p 'test_market_onehousing_project_history.py' -v
+      - name: Collect publisher-hosted month and commit verified future periods
+        if: github.event_name != 'pull_request'
+        run: python scripts/market_onehousing_project_history.py
+      - name: Summarize coverage
+        if: always() && github.event_name != 'pull_request'
+        run: |
+          echo '## OneHousing parent project monthly source history' >> "$GITHUB_STEP_SUMMARY"
+          python - <<'PY' >> "$GITHUB_STEP_SUMMARY"
+          import json
+          from pathlib import Path
+          p=Path('data/candidate/market/onehousing-project-monthly-release-report.json')
+          if not p.exists():
+              print('Source report unavailable')
+          else:
+              r=json.loads(p.read_text())
+              print(f"- Tracked parent-price series: **{r['series_count']}**")
+              print(f"- Verified history rows including indexed baseline: **{r['history_records']}**")
+              print(f"- New source-verified months this run: **{r['released_new_months']}**")
+              for d in r['decisions']:
+                  print(f"  - {d['project_id']}: {d['decision']} ({d['period'] or 'no publisher period'})")
+          PY
+      - name: Persist only price history and source proofs
+        if: github.event_name != 'pull_request'
+        run: |
+          set -eu
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add data/mock/market/onehousing-project-monthly-history.json data/state/onehousing-project-monthly-verification.json
+          if git diff --cached --quiet; then
+            echo 'No new publisher evidence to persist.'
+            exit 0
+          fi
+          git commit -m 'data(market): track verified parent-project publisher asking-price history'
+          git restore --worktree -- .
+          pushed=false
+          for attempt in 1 2 3 4 5; do
+            if git pull --rebase origin main && git push origin HEAD:main; then
+              pushed=true
+              break
+            fi
+            sleep 3
+          done
+          if [ "$pushed" != true ]; then
+            echo '::error::Unable to safely commit publisher-source history.'
+            exit 1
+          fi
+      - uses: actions/upload-artifact@v4
+        if: always() && github.event_name != 'pull_request'
+        with:
+          name: market-parent-monthly-source-evidence
+          path: |
+            data/state/onehousing-project-monthly-verification.json
+            data/candidate/market/onehousing-project-monthly-release-report.json
+            data/mock/market/onehousing-project-monthly-history.json
+          if-no-files-found: warn
+          retention-days: 45
