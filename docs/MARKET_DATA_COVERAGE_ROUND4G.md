@@ -33,3 +33,6 @@ A single GitHub Actions workflow `market-auto-monthly-prices.yml` is the sole sc
 - Existing older Round 4B/4F workflows remain available for manual QA, **but no longer have overlapping schedules**.
 
 This workflow is subject to source availability and GitHub Actions schedule delays. Reliable scheduling and automatic publication cannot guarantee a source publishes data every month.
+
+## Follow-up reliability rule: correct publisher month on multi-period pages
+Pages can contain multiple project-month headings, cached excerpts and competing prices. The collector must identify the newest source-authored month **for that exact subproject**, bound its modal-price/range section to the next project heading, and reject conflicting values within the same month. If a newer month heading exists but its prices are incomplete, the page becomes **unverifiable** rather than silently reusing an older month. This deliberately favors missing data over misleading auto-published history. Regression: `tests/test_market_onehousing_latest_month_parser.py`.
