@@ -16,6 +16,8 @@ class SourceStatusUITests(unittest.TestCase):
         script = (ROOT / "assets/js/maintenance.js").read_text(encoding="utf-8")
         self.assertIn("data/state/market-source-reliability.json", script)
         self.assertIn("data/state/market-stable-listing-health.json", script)
+        self.assertIn("data/state/market-cushman-quarterly-verification.json", script)
+        self.assertIn("Cushman & Wakefield", script)
         self.assertIn("repeatably-parseable", script)
         self.assertIn("access-blocked", script)
         self.assertIn("esc(cell)", script)
