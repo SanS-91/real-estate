@@ -221,3 +221,20 @@
 @media (prefers-reduced-motion: reduce) {
   .market-news-card { transition: none; }
 }
+
+/* Keep the opening stories informative without an oversized hero gap. */
+@media (min-width: 641px) {
+  .market-news-card--lead { min-height: 244px; }
+  .market-news-card--side { min-height: 116px; padding: 11px 14px 9px; }
+  .market-news-card--side .market-news-card__meta { margin-bottom: 5px; }
+  .market-news-card--side h3 { margin-bottom: 5px; }
+  .market-news-card--side .market-news-card__excerpt { margin-bottom: 6px; }
+  .market-news-card--side .market-news-card__footer { padding-top: 6px; }
+}
+/* On phones the reader heading replaces the redundant parent page heading.
+   The active tab is scrolled into view by market.js. */
+@media (max-width: 640px) {
+  .market-news-page .page-header { display: none; }
+  .market-news-page .tabs { margin-bottom: 7px; }
+  .market-news-heading { margin-top: 10px; }
+}
