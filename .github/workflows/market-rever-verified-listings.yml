@@ -1,0 +1,113 @@
+name: Market 4I.4 - Rever Verified Apartment Listing Discovery
+
+on:
+  pull_request:
+    paths:
+      - 'scripts/market_rever_project_listings.py'
+      - 'config/market-rever-listing-targets.json'
+      - 'tests/test_market_rever_project_listings.py'
+      - '.github/workflows/market-rever-verified-listings.yml'
+  push:
+    branches: [main]
+    paths:
+      - 'scripts/market_rever_project_listings.py'
+      - 'config/market-rever-listing-targets.json'
+      - '.github/workflows/market-rever-verified-listings.yml'
+  schedule:
+    - cron: '25 2 * * *'
+    - cron: '30 7 * * *'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: market-rever-verified-listings
+  cancel-in-progress: false
+
+jobs:
+  source-verified-individual-apartment-listings:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Install project dependencies
+        run: pip install -r requirements.txt
+      - name: Verify source and listing integrity
+        run: |
+          python -m py_compile scripts/market_rever_project_listings.py
+          python -m unittest discover -s tests -p 'test_market_rever_project_listings.py' -v
+      - name: Probe live provider pages for structure and access on pull requests
+        if: github.event_name == 'pull_request'
+        run: |
+          python - <<'PY'
+          import sys,json,requests
+          sys.path.insert(0,'scripts')
+          import market_rever_project_listings as p
+          targets=json.load(open('config/market-rever-listing-targets.json'))['targets']
+          session=requests.Session()
+          for target in targets:
+              html,status=p.fetch(session,target['url'])
+              urls=p.discover(html,target['url']) if html else []
+              print(json.dumps(dict(project=target['project_id'],status=status,discovered_links=len(urls)),ensure_ascii=False))
+          print('Source probe finished; no listings published by a PR.')
+          PY
+      - name: Discover and verify dated source listings
+        if: github.event_name != 'pull_request'
+        run: python scripts/market_rever_project_listings.py
+      - name: Report exact access and candidate decision counts
+        if: always() && github.event_name != 'pull_request'
+        run: |
+          echo '## Market 4I.4 — ReveR dated single-listing source' >> "$GITHUB_STEP_SUMMARY"
+          python - <<'PY' >> "$GITHUB_STEP_SUMMARY"
+          import json
+          from pathlib import Path
+          p=Path('data/candidate/market/market-rever-listing-report.json')
+          if not p.exists():
+              print('No source report produced.')
+          else:
+              r=json.loads(p.read_text())
+              for s in r['sources']:
+                  print(f"- {s['project_id']}: {s['index_status']}, "
+                        f"{s['listing_links']} discovered, {s['qualified']} exact project matches")
+              print(f"- Independently verified new individual listings: **{r['accepted_new_individual_listings']}**")
+              print('- No project ASP or portal-wide asking ranges are generated.')
+          PY
+      - name: Commit source proof and verified individual listings only
+        if: github.event_name != 'pull_request'
+        run: |
+          set -eu
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add data/state/market-rever-listing-verification.json data/mock/market/verified-unit-listings.json
+          if git diff --cached --quiet; then
+            echo 'No new source evidence'
+            exit 0
+          fi
+          git commit -m 'data(market): persist Rever source-proof and verified dated unit listings'
+          git restore --worktree -- .
+          pushed=false
+          for attempt in 1 2 3 4 5; do
+            if git pull --rebase origin main && git push origin HEAD:main; then
+              pushed=true
+              break
+            fi
+            sleep 3
+          done
+          if [ "$pushed" != true ]; then
+            echo '::error::Could not safely save independent source verification.'
+            exit 1
+          fi
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: market-rever-source-discovery
+          path: |
+            data/state/market-rever-listing-verification.json
+            data/candidate/market/market-rever-listing-report.json
+            data/mock/market/verified-unit-listings.json
+          retention-days: 45
+          if-no-files-found: warn
