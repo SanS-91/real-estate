@@ -296,14 +296,16 @@
       note: 'Source access is not a new verified observation. Project asking prices and market-wide supply/demand remain separate.'
     };
     try {
-      const [reliabilityResult, secondaryResult, quarterlyResult] = await Promise.allSettled([
+      const [reliabilityResult, secondaryResult, quarterlyResult, portalResult] = await Promise.allSettled([
         fetchJSON('data/state/market-source-reliability.json'),
         fetchJSON('data/state/market-stable-listing-health.json'),
-        fetchJSON('data/state/market-cushman-quarterly-verification.json')
+        fetchJSON('data/state/market-cushman-quarterly-verification.json'),
+        fetchJSON('data/state/listing-source-coverage.json')
       ]);
       const reliability = reliabilityResult.status === 'fulfilled' ? reliabilityResult.value : {};
       const secondary = secondaryResult.status === 'fulfilled' ? secondaryResult.value : {};
       const quarterly = quarterlyResult.status === 'fulfilled' ? quarterlyResult.value : {};
+      const portal = portalResult.status === 'fulfilled' ? portalResult.value : {};
       const targets = (reliability.targets || []).filter(row => row.mode === 'monthly-price-candidate');
       const rows = targets.map(row => {
         const id = row.target_id || '';
@@ -324,6 +326,13 @@
             : labels.blocked);
         rows.push(['Cushman & Wakefield', vi ? 'Căn hộ TP.HCM · Cung/Hấp thụ'
           : 'HCMC apartments · Supply/absorption', status, String(quarterly.checks.length)]);
+      }
+      if (portal.source_access) {
+        const detail = portal.source_access === 'blocked'
+          ? (vi ? 'Bị hạn chế truy cập (HTTP 403)' : 'Access restricted (HTTP 403)')
+          : portal.source_access === 'healthy' ? labels.partial : labels.unknown;
+        rows.push(['Batdongsan', vi ? 'Snapshot giá chào bán' : 'Asking-price snapshots',
+          detail, String(portal.source_checks || 0)]);
       }
       if (secondary.categories_checked) {
         const blocked = (secondary.status_counts || {})['access-blocked'] || 0;
