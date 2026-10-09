@@ -22,6 +22,17 @@
       "project_id": "the-privia",
       "publisher_project_name": "The Privia",
       "url": "https://muaban.net/bat-dong-san/ban-can-ho-du-an-the-privia-quan-binh-tan-ho-chi-minh"
+    },
+    {
+      "project_id": "mizuki-park",
+      "publisher_project_name": "Mizuki Park",
+      "url": "https://muaban.net/bat-dong-san/ban-can-ho-chung-cu-du-an-mizuki-park-5598-huyen-binh-chanh-ho-chi-minh"
+    },
+    {
+      "project_id": "eaton-park",
+      "publisher_project_name": "Eaton Park",
+      "url": "https://muaban.net/bat-dong-san/ban-can-ho-chung-cu-du-an-eaton-park-quan-2-ho-chi-minh"
     }
-  ]
+  ],
+  "coverage_policy": "Project catalogs are monitored even when empty or expired; only a single still-listed and unexpired property with two separate confirmed hosted runs qualifies as a current unit-level asking reference."
 }
