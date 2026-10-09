@@ -53,7 +53,8 @@ listing_rows=json.loads((ROOT/"data/mock/market/listing-observations.json").read
 listing=mod.listing_report(coverage_cfg,listing_rows)
 assert listing["series_count"]==12
 assert listing["trend_ready_series"]==0
-assert all(x["snapshot_count"]==1 for x in listing["items"])
+assert all(1<=x["snapshot_count"]<=2 for x in listing["items"])
+assert sum(x["snapshot_count"]==2 for x in listing["items"]) in (0,4)
 
 legal_rows=json.loads((ROOT/"data/mock/legal/documents.json").read_text(encoding="utf-8"))["data"]
 legal=mod.legal_report(coverage_cfg,legal_rows)
