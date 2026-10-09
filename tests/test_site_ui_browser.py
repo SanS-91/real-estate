@@ -203,7 +203,7 @@ async def run():
                             assert layout["rowWidth"]<=width-20,(width,path,layout)
                             if family in ("market-projects","macro"):
                                 assert layout["firstWidth"]>=layout["rowWidth"]-48,(width,path,layout)
-                            label_td=page.locator(f".data-table--{family}.mobile-record-table tbody tr:first-child td").first
+                            label_td=page.locator(f".data-table--{family}.mobile-record-table tbody tr:first-child td:nth-child(3)" if family=="maintenance" else f".data-table--{family}.mobile-record-table tbody tr:first-child td").first
                             before=lambda: label_td.evaluate("(el)=>getComputedStyle(el,'::before').content")
                             vi_label=await before()
                             await page.locator("[data-language-toggle]").click()
