@@ -283,25 +283,27 @@
     if (!node) return;
     const vi = language() !== 'en';
     const labels = vi ? {
-      provider: 'Nguồn', project: 'Dự án / Phân khu', state: 'Khả năng thu thập',
+      provider: 'Nguồn', project: 'Dự án / Phân khúc', state: 'Khả năng thu thập',
       checks: 'Lượt kiểm tra', good: 'Đọc được nhiều lượt',
       partial: 'Đã đọc được · theo dõi thêm', blocked: 'Không xác minh được',
       unknown: 'Chưa có bằng chứng', listing: 'Chỉ tin đăng', noData: 'Chưa có báo cáo kiểm tra nguồn.',
-      note: 'Khả năng đọc được dữ liệu không đồng nghĩa có giá mới đủ điều kiện đưa lên biểu đồ.'
+      note: 'Đọc được nguồn không đồng nghĩa đã có số liệu mới được công bố. Giá dự án và cung/cầu toàn thị trường được theo dõi riêng.'
     } : {
-      provider: 'Source', project: 'Project / Subproject', state: 'Capture quality',
+      provider: 'Source', project: 'Project / Segment', state: 'Capture quality',
       checks: 'Checks', good: 'Repeatedly parseable', partial: 'Parseable · monitoring',
       blocked: 'Not verifiable', unknown: 'No verification yet', listing: 'Listing-only',
       noData: 'No source reliability report available.',
-      note: 'Source accessibility is not proof that a new price has qualified for a published chart.'
+      note: 'Source access is not a new verified observation. Project asking prices and market-wide supply/demand remain separate.'
     };
     try {
-      const [reliabilityResult, secondaryResult] = await Promise.allSettled([
+      const [reliabilityResult, secondaryResult, quarterlyResult] = await Promise.allSettled([
         fetchJSON('data/state/market-source-reliability.json'),
-        fetchJSON('data/state/market-stable-listing-health.json')
+        fetchJSON('data/state/market-stable-listing-health.json'),
+        fetchJSON('data/state/market-cushman-quarterly-verification.json')
       ]);
       const reliability = reliabilityResult.status === 'fulfilled' ? reliabilityResult.value : {};
       const secondary = secondaryResult.status === 'fulfilled' ? secondaryResult.value : {};
+      const quarterly = quarterlyResult.status === 'fulfilled' ? quarterlyResult.value : {};
       const targets = (reliability.targets || []).filter(row => row.mode === 'monthly-price-candidate');
       const rows = targets.map(row => {
         const id = row.target_id || '';
@@ -312,6 +314,17 @@
           : row.classification === 'not-yet-measured' ? labels.unknown : labels.blocked;
         return ['OneHousing', project, status, String(row.check_count || 0)];
       });
+      if ((quarterly.checks || []).length) {
+        const recent = quarterly.checks.at(-1) || {};
+        const period = String(recent.period || '').replace(/^([0-9]{4})-Q([1-4])$/, 'Q$2/$1');
+        const status = quarterly.latest_status === 'matched-source-quarter-and-metrics'
+          ? (vi ? 'Đọc được ' : 'Parsed ') + (period || '—')
+          : (quarterly.access_status === 'access-blocked'
+            ? (vi ? 'Bị chặn truy cập' : 'Access blocked')
+            : labels.blocked);
+        rows.push(['Cushman & Wakefield', vi ? 'Căn hộ TP.HCM · Cung/Hấp thụ'
+          : 'HCMC apartments · Supply/absorption', status, String(quarterly.checks.length)]);
+      }
       if (secondary.categories_checked) {
         const blocked = (secondary.status_counts || {})['access-blocked'] || 0;
         const categories = Number(secondary.categories_checked) || 0;
