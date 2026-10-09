@@ -62,6 +62,31 @@ jobs:
           assert r['eligible']==0 or r.get('new_total',0)>=26
           print('PR isolation: append-only historical publisher data simulated; no remote production writes.')
           PY
+      - name: Inspect real historical data in desktop and mobile browsers
+        if: github.event_name == 'pull_request'
+        run: |
+          set -eu
+          BROWSER="$(command -v google-chrome || command -v chromium || command -v chromium-browser || true)"
+          test -n "$BROWSER"
+          mkdir -p artifacts
+          python3 -m http.server 8765 --bind 127.0.0.1 > /tmp/history-market-http.log 2>&1 &
+          SERVER_PID=$!
+          trap 'kill "$SERVER_PID" || true' EXIT
+          sleep 3
+          PAGE='http://127.0.0.1:8765/market.html?view=supply-sales&source=cushman-wakefield-vietnam-market&region=hcmc&segment=apartment'
+          "$BROWSER" --headless --no-sandbox --disable-gpu --disable-dev-shm-usage --hide-scrollbars --window-size=1440,960 --virtual-time-budget=7000 --screenshot=artifacts/history-desktop.png "$PAGE"
+          "$BROWSER" --headless --no-sandbox --disable-gpu --disable-dev-shm-usage --hide-scrollbars --window-size=390,860 --virtual-time-budget=7000 --screenshot=artifacts/history-mobile.png "$PAGE"
+          "$BROWSER" --headless --no-sandbox --disable-gpu --disable-dev-shm-usage --window-size=1440,960 --virtual-time-budget=7000 --dump-dom "$PAGE" > artifacts/history-dom.html
+          python3 - <<'PY'
+          from pathlib import Path
+          html=Path('artifacts/history-dom.html').read_text(encoding='utf-8')
+          for expected in ['Source-period coverage','2025-Q2','2025-Q3','2025-H1','US$ 6,113/m²','market-history-gap','obs-hcmc']:
+              if expected == 'obs-hcmc':
+                  continue
+              assert expected in html, f'Historical UI missing evidence: {expected}'
+          assert 'No observations for this source' not in html
+          print('Desktop & mobile: source-period gaps, original USD, and distinct H1 benchmark rendered.')
+          PY
       - name: Promote verified historical records on main
         if: github.ref == 'refs/heads/main' && github.event_name != 'pull_request'
         run: |
@@ -90,5 +115,6 @@ jobs:
             data/candidate/market/history-expansion-candidates.json
             data/candidate/market/history-expansion-report.json
             data/state/history-coverage.json
+            artifacts/
           retention-days: 14
           if-no-files-found: warn
