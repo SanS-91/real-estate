@@ -2,7 +2,7 @@
   "schema_version": 1,
   "build_id": "phase5.5a-listing-market-20261008",
   "generated_at": "2026-10-08T14:32:55.012Z",
-  "record_count": 45,
+  "record_count": 46,
   "data": [
     {
       "id": "demo-official",
@@ -543,6 +543,18 @@
       "source_priority": 4,
       "active": true,
       "notes": "Dated individual property listings and dated historical launch/starting prices only, not representative project asking-price aggregates."
+    },
+    {
+      "id": "cafeland-listings",
+      "name": "CafeLand Nhà đất",
+      "source_type": "property-listing-portal",
+      "base_url": "https://nhadat.cafeland.vn/",
+      "language": "vi",
+      "collection_method": "assisted-reviewed-listing-evidence",
+      "fetch_frequency": "periodic-access-probe",
+      "source_priority": 4,
+      "active": true,
+      "notes": "Single listing details including source dates, price, advertised area and advertised price per sqm. Some site categories may be mislabelled. Never infer official transaction, project ASP, or independent market price trend."
     }
   ]
 }
