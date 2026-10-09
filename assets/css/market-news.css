@@ -301,3 +301,14 @@
   .market-news-card__meta { row-gap: 6px; }
   .market-news-card .market-news-card__topic { min-height: 23px; font-size: 10px; padding-inline: 8px; }
 }
+
+/* Consolidated news taxonomy: quiet, distinguishable topic hues. */
+.market-news-topic[data-topic="all"]{--topic-ink:#344054;--topic-wash:#f2f4f7;--topic-border:#d0d5dd}
+.market-news-topic[data-topic="project"],.market-news-topic[data-topic="projects"]{--topic-ink:#7b3143;--topic-wash:#fbf0f2;--topic-border:#e7cbd1}
+.market-news-topic[data-topic="developer"],.market-news-topic[data-topic="developers"]{--topic-ink:#37516f;--topic-wash:#eef4fa;--topic-border:#cbd9e9}
+.market-news-topic[data-topic="legal"]{--topic-ink:#755324;--topic-wash:#faf4e8;--topic-border:#e8d9bc}
+.market-news-topic[data-topic="infrastructure"]{--topic-ink:#326a66;--topic-wash:#edf7f5;--topic-border:#c4e0db}
+.market-news-topic[data-topic="macro"],.market-news-topic[data-topic="finance"]{--topic-ink:#624d83;--topic-wash:#f4f0fa;--topic-border:#ddd1ee}
+.market-news-topic[data-topic]:not([data-topic="all"]){border-color:var(--topic-border,#e7e9ed);color:var(--topic-ink,#5f6673)}
+.market-news-topic[data-topic][aria-pressed="true"]{background:var(--topic-wash,#f7eff1);border-color:var(--topic-border,#cfb3b9);color:var(--topic-ink,#762436);box-shadow:inset 0 0 0 1px currentColor}
+@media(max-width:640px){.market-news-topics{margin-inline:-12px;padding-inline:12px;scroll-padding-inline:12px}.market-news-topic{min-height:38px;font-size:12px}}
