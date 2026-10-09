@@ -36,13 +36,39 @@
   function coverageSummary(series) {
     const hasSales = series.rows.filter(r => !r.data_missing && r.sales_units != null).length;
     const hasSupply = series.rows.filter(r => !r.data_missing && r.new_supply != null).length;
+    const hasLowerBound = series.rows.filter(r => !r.data_missing && r.new_supply == null && Number.isFinite(r.new_supply_lower_bound)).length;
+    const hasAbsorption = series.rows.filter(r => !r.data_missing && Number.isFinite(r.absorption_rate)).length;
     return { total:series.rows.length, observed:series.observed, missing:series.missing.length,
-      supplyPeriods:hasSupply, salesPeriods:hasSales, missingPeriods:series.missing };
+      supplyPeriods:hasSupply, lowerBoundSupplyPeriods:hasLowerBound,
+      salesPeriods:hasSales, absorptionPeriods:hasAbsorption, missingPeriods:series.missing };
   }
+  // Choose ONE complete source series, not an average across publishers.
+  // Source freshness outranks historical brand preference; a same-quarter
+  // tie selects the source publishing more usable metrics for that quarter.
+  function preferredQuarterlySource(rows) {
+    const sources = [...new Set((rows || []).map(row => row.source_id).filter(Boolean))];
+    if (!sources.length) return '';
+    const ranked = sources.map(id => {
+      const candidateRows = rows.filter(row => row.source_id === id && quarterIndex(row.period) !== null)
+        .sort((a, b) => quarterIndex(b.period) - quarterIndex(a.period));
+      const latest = candidateRows[0];
+      if (!latest) return { id, quarter: -1, coverage: 0, preference: 0 };
+      const coverage = (Number.isFinite(latest.new_supply) ? 2 : 0)
+        + (Number.isFinite(latest.new_supply_lower_bound) ? 1 : 0)
+        + (Number.isFinite(latest.sales_units) ? 1 : 0)
+        + (Number.isFinite(latest.absorption_rate) ? 2 : 0);
+      return { id, quarter: quarterIndex(latest.period), coverage,
+        preference: id === 'cbre-vietnam-market' ? 1 : 0 };
+    });
+    ranked.sort((a, b) => b.quarter - a.quarter || b.coverage - a.coverage
+      || b.preference - a.preference || a.id.localeCompare(b.id));
+    return ranked[0].id;
+  }
+
   function originalUsdPrice(row) {
     if (!Number.isFinite(row?.reported_primary_price_usd_per_sqm)) return '—';
     return 'US$ ' + new Intl.NumberFormat('en-US', { maximumFractionDigits: 0 })
       .format(row.reported_primary_price_usd_per_sqm) + '/m²';
   }
-  window.MarketHistorySeries = { quarterIndex, quarterFromIndex, expandQuarterHistory, coverageSummary, originalUsdPrice };
+  window.MarketHistorySeries = { quarterIndex, quarterFromIndex, expandQuarterHistory, coverageSummary, preferredQuarterlySource, originalUsdPrice };
 })();
