@@ -375,13 +375,37 @@
 
   function renderNews() {
     const articles = [...data.articles].filter(articleMatchesFilters).sort((a,b) => String(b.published_at).localeCompare(String(a.published_at)));
+    const officialDocuments = [...data.documents]
+      .filter(doc =>
+        (!state.q || FilterEngine.textMatch(doc,state.q,['title','document_number','summary'])) &&
+        (!state.agency || doc.issuing_agency_id === state.agency) &&
+        (!state.topic || (doc.topic_ids || []).includes(state.topic)))
+      .sort((a,b) => String(b.issued_date || '').localeCompare(String(a.issued_date || '')))
+      .slice(0,10);
+    const officialItems = officialDocuments.map(doc => `
+      <article class="article-row legal-official-row">
+        <div class="article-row__date">${esc(App.formatDate(doc.issued_date || doc.draft_published_date))}</div>
+        <div>
+          <div class="article-row__meta"><span class="source-tag">Văn bản chính thức</span>${sourceRef(doc.primary_source_id,{sourceDate:doc.issued_date,sourceUrl:doc.official_url})}<span>${esc(doc.document_number || '—')}</span></div>
+          <button class="table-link legal-official-title" type="button" data-document-id="${esc(doc.id)}">${esc(doc.title)}</button>
+          <p>${esc(doc.summary || '')}</p>
+        </div>
+      </article>`).join('');
+
     setView(`
       <div class="view-intro"><div><span class="eyebrow" data-news-view-label="legal.eyebrow">${esc(App.newsViewCopy('legal').eyebrow)}</span><h2 data-news-view-label="legal.title">${esc(App.newsViewCopy('legal').title)}</h2><p data-news-view-label="legal.description">${esc(App.newsViewCopy('legal').description)}</p></div></div>
       ${newsFilterToolbar()}
+      <section class="section legal-official-updates">
+        <div class="section-header"><div><span class="eyebrow">Nguồn Chính phủ</span><h3 class="section-title">Cập nhật văn bản chính thức · ${officialDocuments.length} gần nhất</h3></div><a class="text-link" href="legal.html?view=documents">Xem đủ ${data.documents.length} văn bản</a></div>
+        <p class="table-subtext">Ngày ban hành và ngày hiệu lực là hai mốc khác nhau. Mở từng văn bản để kiểm tra văn bản gốc.</p>
+        <div class="article-list article-list--legal-official">${officialItems || Components.stateBox('Không có văn bản phù hợp bộ lọc.')}</div>
+      </section>
+      <section class="section legal-editorial-updates">
+        <div class="section-header"><div><span class="eyebrow">Tin tức &amp; nghiên cứu</span><h3 class="section-title">Bài phân tích, minh họa</h3></div></div>
       <div class="article-list">${articles.map(article => {
         const docs = Resolver.getEntities('legal-document', article.legal_document_ids || []);
         return `<article class="article-row"><div class="article-row__date">${esc(App.formatDate(article.published_at))}</div><div><div class="article-row__meta"><span class="source-tag news-kind-chip" data-news-kind="${esc(article.content_type)}">${esc(App.newsKindLabel(article.content_type))}</span>${sourceRef(article.source_id,{publishedAt:article.published_at,sourceUrl:article.url})}<span>${esc(docs.map(doc => doc.document_number).join(' · '))}</span></div><h3>${esc(article.title)}</h3><p>${esc(article.summary)}</p>${docs.length ? `<div class="article-relations">${docs.map(doc => `<button type="button" class="relation-button" data-document-id="${esc(doc.id)}">Official context: ${esc(doc.title)}</button>`).join('')}</div>` : ''}</div></article>`;
-      }).join('') || Components.stateBox('No legal articles match the selected filters.')}</div>
+      }).join('') || Components.stateBox('No legal articles match the selected filters.')}</div></section>
     `);
     bindFilters();
   }
