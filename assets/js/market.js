@@ -13,7 +13,7 @@
     source: '',
     priceLayer: 'listing'
   };
-  let data = { regions: [], developers: [], projects: [], phases: [], observations: [], listingObservations: [], listingScopeEvidence: [], alternativePriceEvidence: [], secondaryListingEvidence: [], listingSourceCoverage: null, listingComparables: [], articles: [], allArticles: [], infrastructureProjects: [], infrastructureSchedules: [], legalTopics: [], legalDocuments: [], events: [], macroIndicators: [], macroRows: [] };
+  let data = { regions: [], developers: [], projects: [], phases: [], observations: [], listingObservations: [], listingScopeEvidence: [], alternativePriceEvidence: [], secondaryListingEvidence: [], oneHousingSubprojectEvidence: [], listingSourceCoverage: null, listingComparables: [], articles: [], allArticles: [], infrastructureProjects: [], infrastructureSchedules: [], legalTopics: [], legalDocuments: [], events: [], macroIndicators: [], macroRows: [] };
 
   function payloadData(payload) { return payload?.data || []; }
   function byId(records) { return new Map(records.map(item => [item.id, item])); }
@@ -128,7 +128,7 @@
   // Alternative publisher references are never part of the Batdongsan price chart.
   // Monthly modal price, single listing and historical launch floor are distinct.
   function alternativePriceCardsHTML(projectIds) {
-    const rows = [...data.alternativePriceEvidence, ...data.secondaryListingEvidence].filter(item => projectIds.includes(item.project_id));
+    const rows = [...data.alternativePriceEvidence, ...data.secondaryListingEvidence, ...data.oneHousingSubprojectEvidence].filter(item => projectIds.includes(item.project_id));
     if (!rows.length) return '';
     const labels = {
       'popular-asking-price-per-sqm': 'Giá phổ biến theo nguồn',
@@ -1088,11 +1088,11 @@
   async function load() {
     try {
       await window.Provenance?.load?.();
-      const [regions, developers, projects, phases, observations, listingObservations, listingScopeEvidence, alternativePriceEvidence, secondaryListingEvidence, listingSourceCoverage, listingComparables, articles, infrastructureProjects, infrastructureSchedules, legalTopics, legalDocuments, events, macroIndicators, macroRows, meta] = await Promise.all([
-        DataStore.getRegions(), DataStore.getDevelopers(), DataStore.getProjects(), DataStore.getProjectPhases(), DataStore.getMarketObservations(), DataStore.getListingObservations(), DataStore.getListingScopeEvidence(), DataStore.getAlternativePriceEvidence(), DataStore.getSecondaryListingEvidence(), DataStore.getListingSourceCoverage().catch(() => null), DataStore.getListingComparables(), DataStore.getArticles(), DataStore.getInfrastructureProjects(), DataStore.getInfrastructureSchedules(), DataStore.getLegalTopics(), DataStore.getLegalDocuments(), DataStore.getEvents(), DataStore.getMacroIndicators(), DataStore.getProcessedMacroObservations(), DataStore.getMeta()
+      const [regions, developers, projects, phases, observations, listingObservations, listingScopeEvidence, alternativePriceEvidence, secondaryListingEvidence, oneHousingSubprojectEvidence, listingSourceCoverage, listingComparables, articles, infrastructureProjects, infrastructureSchedules, legalTopics, legalDocuments, events, macroIndicators, macroRows, meta] = await Promise.all([
+        DataStore.getRegions(), DataStore.getDevelopers(), DataStore.getProjects(), DataStore.getProjectPhases(), DataStore.getMarketObservations(), DataStore.getListingObservations(), DataStore.getListingScopeEvidence(), DataStore.getAlternativePriceEvidence(), DataStore.getSecondaryListingEvidence(), DataStore.getOneHousingSubprojectEvidence(), DataStore.getListingSourceCoverage().catch(() => null), DataStore.getListingComparables(), DataStore.getArticles(), DataStore.getInfrastructureProjects(), DataStore.getInfrastructureSchedules(), DataStore.getLegalTopics(), DataStore.getLegalDocuments(), DataStore.getEvents(), DataStore.getMacroIndicators(), DataStore.getProcessedMacroObservations(), DataStore.getMeta()
       ]);
       data = {
-        regions: payloadData(regions), developers: payloadData(developers), projects: payloadData(projects), phases: payloadData(phases), observations: payloadData(observations), listingObservations: payloadData(listingObservations), listingScopeEvidence: payloadData(listingScopeEvidence), alternativePriceEvidence: payloadData(alternativePriceEvidence), secondaryListingEvidence: payloadData(secondaryListingEvidence), listingSourceCoverage, listingComparables: payloadData(listingComparables), articles: payloadData(articles).filter(item => item.category === 'market'), allArticles: payloadData(articles), infrastructureProjects: payloadData(infrastructureProjects), infrastructureSchedules: payloadData(infrastructureSchedules), legalTopics: payloadData(legalTopics), legalDocuments: payloadData(legalDocuments), events: payloadData(events), macroIndicators: payloadData(macroIndicators), macroRows: payloadData(macroRows)
+        regions: payloadData(regions), developers: payloadData(developers), projects: payloadData(projects), phases: payloadData(phases), observations: payloadData(observations), listingObservations: payloadData(listingObservations), listingScopeEvidence: payloadData(listingScopeEvidence), alternativePriceEvidence: payloadData(alternativePriceEvidence), secondaryListingEvidence: payloadData(secondaryListingEvidence), oneHousingSubprojectEvidence: payloadData(oneHousingSubprojectEvidence), listingSourceCoverage, listingComparables: payloadData(listingComparables), articles: payloadData(articles).filter(item => item.category === 'market'), allArticles: payloadData(articles), infrastructureProjects: payloadData(infrastructureProjects), infrastructureSchedules: payloadData(infrastructureSchedules), legalTopics: payloadData(legalTopics), legalDocuments: payloadData(legalDocuments), events: payloadData(events), macroIndicators: payloadData(macroIndicators), macroRows: payloadData(macroRows)
       };
       Resolver.setData('region', data.regions);
       Resolver.setData('developer', data.developers);
