@@ -60,7 +60,7 @@ jobs:
                   body,state=p.fetch(session,url,listing=True)
                   if body:
                       import re
-                      from bs4 import BeautifulSoup
+                      from bs4 import BeautifulSoup,NavigableString
                       soup=BeautifulSoup(body,'lxml')
                       for x in soup(['script','style','noscript']):x.decompose()
                       text=re.sub(r'\\s+',' ',soup.get_text(' ',strip=True))
@@ -69,7 +69,7 @@ jobs:
                       snippets=[text[max(0,m.start()-15):m.start()+85] for m in matches[:7]]
                       print(json.dumps({'diagnostic_url':url,'detail_status':state,
                         'h1':h.get_text(' ',strip=True)[:105] if h else None,
-                        'after_h1':re.sub(r'\\s+',' ', ' '.join(z.strip() for z in h.next_strings if z and z.strip()))[:680] if h else None, 'section_tokens':snippets},ensure_ascii=False))
+                        'after_h1':re.sub(r'\\s+',' ', ' '.join(str(z).strip() for z in h.next_elements if isinstance(z,NavigableString) and str(z).strip()))[:680] if h else None, 'section_tokens':snippets},ensure_ascii=False))
           print('Source probe finished; no listings published by a PR.')
           PY
           python scripts/market_rever_project_listings.py
