@@ -168,6 +168,24 @@ def onehousing_monthly(text, today, publisher_project_name="Vinhomes Grand Park"
                             "range":range_text,
                         },
                     }
+    if observations and headers:
+        names = {normal_name(h.group(1)) for h in headers}
+        periods = {f"{h.group(3)}-{int(h.group(2)):02d}" for h in headers}
+        if names == {normal_name(publisher_project_name)} and len(periods) == 1:
+            # Even a section linked to a heading is not trustworthy if the
+            # SAME source page also gives a contradictory modal/range pair
+            # elsewhere for that exact same project and reporting month.
+            global_values=set()
+            for source_section in MODAL_SECTION.finditer(text):
+                rate=MODAL.search(source_section.group("section"))
+                quoted_range=RANGE.search(source_section.group("section"))
+                if rate and quoted_range:
+                    value,low,high=(vnd(rate.group(1)),vnd(quoted_range.group(1)),
+                                    vnd(quoted_range.group(2)))
+                    if 0 < low <= value <= high <= 1_000_000_000:
+                        global_values.add((value,low,high))
+            if len(global_values)>1:
+                return None
     if not observations:
         return None
     latest = max(observation["period"] for observation in observations)
