@@ -207,6 +207,8 @@
         `<p>Khoảng chào bán theo nguồn: <strong>${esc(amount(row.range_low_vnd_per_m2))}–${esc(amount(row.range_high_vnd_per_m2))} triệu VND/m²</strong>.</p>` : '';
       const unit = row.listed_area_sqm ?
         `<p>Diện tích tin đăng: ${esc(String(row.listed_area_sqm))} m²${row.price_area_basis === 'land-area-reported-by-publisher' ? ' đất' : ''}.</p>` : '';
+      const unitListing = row.listing_id ?
+        '<p>Giá rao theo căn ' + esc(row.listing_id) + '; không đại diện giá bình quân dự án.</p>' : '';
       const access = row.source_id === 'cafeland-listings' ?
         '<p class="market-evidence-warning">CafeLand đang chặn truy cập tự động (HTTP 403); chưa thể tự cập nhật giá mới.</p>' : '';
       const historyNote = category === 'historical' ?
@@ -217,11 +219,11 @@
         <summary class="market-evidence-row__summary">
           <span class="market-evidence-row__name"><strong>${esc(name)}</strong><small>${esc(product)}</small></span>
           <span class="market-evidence-row__price"><strong>${esc(amount(row.value_vnd_per_m2))}</strong><small>triệu VND/m²</small></span>
-          <span class="market-evidence-row__period"><small>Kỳ nguồn</small>${esc(formatPeriod(row.period))}</span>
+          <span class="market-evidence-row__period"><small>${row.listing_id ? "Ngày cập nhật tin" : "Kỳ nguồn"}</small>${esc(formatPeriod(row.period))}</span>
           <span class="market-evidence-row__publisher">${esc(sourceNames[row.source_id] || row.source_id)}</span>
         </summary>
         <div class="market-evidence-row__body">
-          <p>${esc(context)}</p>${range}${unit}${access}${trendHTML}
+          <p>${esc(context)}</p>${range}${unit}${unitListing}${access}${trendHTML}
           <div class="market-evidence-row__source">
             ${sourceRef(row.source_id,{sourceDate:row.source_publication_date || row.review_date,sourceUrl:row.source_url,methodology:row.methodology_note})}
             <span>Kiểm tra ${esc(formatPeriod(row.review_date || '—'))}</span>${historyNote}${sourceVerifiedNote}
@@ -233,7 +235,7 @@
     const sections = labels.filter(group => groupRows[group.id].length).map(group => {
       const items = groupRows[group.id].slice().sort(byPeriod).map(renderRow).join('');
       const heading = `<strong>${esc(group.title)}</strong><small>${groupRows[group.id].length} mức giá · ${esc(group.note)}</small>`;
-      return group.id === 'historical' ?
+      return group.id === 'historical' || (group.id === 'listing' && groupRows[group.id].length > 3) ?
         `<details class="market-evidence-group market-evidence-group--historical">
           <summary class="market-evidence-group__title">${heading}</summary>
           <div class="market-evidence-group__rows">${items}</div>
