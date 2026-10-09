@@ -87,7 +87,7 @@ def current_verified(record):
             "latest_source_status":checks[-1]["status"] if checks else "not-checked",
             "latest_matches":bool(checks and checks[-1]["status"]=="matched-source-period-and-metric")}
 
-def run_once(queue,targets,previous,today,run_id,checked,fetcher=provider.fetch_html):
+def run_once(queue,targets,previous,today,run_id,checked,fetcher=provider.fetch_with_publisher_fallback):
     histories={row["candidate_id"]:row for row in previous.get("data",[])}
     target_by_base={x["baseline_id"]:x for x in targets}
     checks=[]
