@@ -145,7 +145,7 @@
     ['.page-kicker', 'Update Operations', 'Vận hành cập nhật'],
     ['.page-title', 'Data Status', 'Maintenance · Trạng thái dữ liệu'],
     ['.page-description', 'Review freshness, update cadence and maintenance status across the integrated research datasets.', 'Theo dõi độ mới, lịch cập nhật và tình trạng vận hành các bộ dữ liệu nghiên cứu.'],
-    ['.demo-banner strong', 'Read-only maintenance dashboard.', 'Bảng theo dõi dữ liệu · chỉ đọc.'],
+    ['.demo-banner strong', 'Read-only maintenance dashboard.', 'Trạng thái dữ liệu · chỉ đọc.'],
     ['.demo-banner span', 'Freshness is recalculated from the metadata of the currently deployed repository. This page does not fetch external sources, promote candidates or change production data.', 'Độ mới được tính từ metadata đang triển khai. Trang này không thu thập nguồn bên ngoài, duyệt dữ liệu ứng viên hoặc thay đổi dữ liệu đã công bố.'],
     ['#maintenance-summary-title', 'Update Health', 'Tình trạng cập nhật'],
     ['.home-block[aria-labelledby="maintenance-summary-title"] .eyebrow', 'Current state', 'Trạng thái hiện tại'],
