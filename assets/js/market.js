@@ -136,6 +136,7 @@
       if (!published.has(key) || String(item.period) > String(published.get(key).period)) published.set(key, item);
     });
     const subprojectRows = data.oneHousingSubprojectEvidence.map(item => published.get(item.subproject_name) || item);
+    const sourceHistory = window.MarketSubprojectTrends?.verifiedGroups?.(data.oneHousingSubprojectHistory) || [];
     const rows = [...data.alternativePriceEvidence, ...data.secondaryListingEvidence, ...subprojectRows]
       .filter(item => projectIds.includes(item.project_id));
     if (!rows.length) return '';
@@ -167,6 +168,13 @@
         'Giá phổ biến do nguồn thống kê cho đúng phân khúc và kỳ nêu trên.' :
         category === 'historical' ? 'Giá từ kỳ lịch sử, không sử dụng như giá hiện tại.' :
         'Một tin rao bán cụ thể, không phải mức giá bình quân toàn dự án.';
+      const trend = window.MarketSubprojectTrends?.forRow?.(sourceHistory, row);
+      const trendId = trend ? 'market-subproject-trend-' + trend.series_key.replace(/[^a-z0-9_-]/gi, '-') : '';
+      const trendHTML = trend ? `<details class="market-evidence-method" data-subproject-trend-toggle data-trend-series="${esc(trend.series_key)}">
+        <summary>Lịch sử giá cùng phân khu · ${trend.values.length} kỳ</summary>
+        <div class="chart-frame chart-frame--drawer"><canvas id="${esc(trendId)}" data-subproject-price-chart></canvas></div>
+        <p class="chart-note">Giá phổ biến do OneHousing báo cáo, riêng ${esc(trend.subproject_name)}. Kỳ đầu là dữ liệu nguồn đã lập chỉ mục; kỳ tiếp theo chỉ ghi khi được xác minh. Không đại diện giá giao dịch hoặc ASP toàn dự án.</p>
+      </details>` : '';
       const range = row.range_low_vnd_per_m2 != null && row.range_high_vnd_per_m2 != null ?
         `<p>Khoảng chào bán theo nguồn: <strong>${esc(amount(row.range_low_vnd_per_m2))}–${esc(amount(row.range_high_vnd_per_m2))} triệu VND/m²</strong>.</p>` : '';
       const unit = row.listed_area_sqm ?
@@ -185,7 +193,7 @@
           <span class="market-evidence-row__publisher">${esc(sourceNames[row.source_id] || row.source_id)}</span>
         </summary>
         <div class="market-evidence-row__body">
-          <p>${esc(context)}</p>${range}${unit}${access}
+          <p>${esc(context)}</p>${range}${unit}${access}${trendHTML}
           <div class="market-evidence-row__source">
             ${sourceRef(row.source_id,{sourceDate:row.source_publication_date || row.review_date,sourceUrl:row.source_url,methodology:row.methodology_note})}
             <span>Kiểm tra ${esc(formatPeriod(row.review_date || '—'))}</span>${historyNote}${sourceVerifiedNote}
@@ -996,9 +1004,29 @@
     window.MarketNewsUI.bind({ state, refresh: renderNews });
   }
 
+  function bindSubprojectTrendCharts(node) {
+    if (!node || !window.MarketSubprojectTrends) return;
+    const groups = MarketSubprojectTrends.verifiedGroups(data.oneHousingSubprojectHistory);
+    node.querySelectorAll('[data-subproject-trend-toggle]').forEach(details => {
+      details.addEventListener('toggle', () => {
+        if (!details.open) return;
+        const row = groups.find(item => item.series_key === details.dataset.trendSeries);
+        const canvas = details.querySelector('canvas[data-subproject-price-chart]');
+        if (!canvas || !row || row.values.length < 2) return;
+        requestAnimationFrame(() => ChartTools.renderPriceTrend(canvas.id, [
+          { label: row.subproject_name + ' · OneHousing', values: row.values }
+        ]));
+      });
+    });
+  }
+
   function setView(html) {
     const node = document.querySelector('[data-market-view]');
-    if (node) node.innerHTML = html;
+    if (node) {
+      node.querySelectorAll('canvas[data-subproject-price-chart]').forEach(canvas => ChartTools.destroy(canvas.id));
+      node.innerHTML = html;
+      bindSubprojectTrendCharts(node);
+    }
   }
 
   function render() {
