@@ -7,6 +7,8 @@ on:
     paths:
       - 'scripts/listing_candidate_collector.py'
       - '.github/workflows/listing-market-candidate.yml'
+  schedule:
+    - cron: '20 2 * * 2,5'
   workflow_dispatch:
     inputs:
       project:
@@ -45,6 +47,8 @@ jobs:
           fi
       - name: Validate candidate against append-only pipeline
         run: python scripts/listing_snapshot_pipeline.py --mode preview
+      - name: Build coverage gaps and collector-access backlog
+        run: python scripts/listing_monitor_health.py
       - name: Job summary
         run: |
           echo "## Listing Market Candidate Collector" >> "$GITHUB_STEP_SUMMARY"
@@ -56,6 +60,15 @@ jobs:
           print(f"- Source access: **{r.get('source_access','unknown')}**")
           print(f"- Projects checked: **{r['projects_checked']}**")
           print(f"- Candidate records: **{r['candidate_records']}**")
+          backlog=json.loads(Path("data/candidate/market/listing-coverage-backlog.json").read_text())
+          print(f"- Priced projects: **{backlog['aggregate_priced_projects']}/{backlog['projects_tracked']}**")
+          print(f"- Projects with at least 2 captures: **{backlog['projects_with_2plus_snapshots']}**")
+          print(f"- Aggregate price missing: **{backlog['project_level_price_missing']}**")
+          print("")
+          print("| Project | Price coverage | Captures | Collector |")
+          print("|---|---|---:|---|")
+          for line in backlog['priority_backlog']:
+              print(f"| {line['project_id']} | {line['project_price_coverage']} | {line['snapshot_count']} | {line['collector_status']} |")
           for k,v in r.get('counts',{}).items():
               print(f"- Collector {k}: **{v}**")
           print(f"- Pipeline changed candidates: **{p.get('counts',{}).get('new-changed',0)}**")
@@ -93,6 +106,7 @@ jobs:
             data/candidate/market/listing-observations.json
             data/candidate/market/listing-collector-report.json
             data/candidate/market/listing-refresh-report.json
+            data/candidate/market/listing-coverage-backlog.json
           retention-days: 14
       - name: Persist reviewed staging candidate
         if: inputs.persist_candidate == true

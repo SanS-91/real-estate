@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 from __future__ import annotations
 from pathlib import Path
-from datetime import datetime, timezone
+from datetime import date, datetime, timezone
 import json
 
 ROOT=Path(__file__).resolve().parents[1]
@@ -23,25 +23,48 @@ def uniq(values):
     return sorted({x for x in values if x not in (None,"")})
 
 def listing_report(cfg,rows):
-    threshold=int(cfg["rules"]["listing_market"]["trend_ready_snapshots"])
+    rules=cfg["rules"]["listing_market"]
+    threshold=int(rules["trend_ready_snapshots"])
+    priced_threshold=int(rules.get("trend_ready_priced_snapshots",threshold))
+    minimum_span=int(rules.get("trend_ready_min_span_days",30))
     by={}
     for row in rows:
-        by.setdefault(row.get("project_id"),[]).append(row)
+        if row.get("project_id"):
+            by.setdefault(row["project_id"],[]).append(row)
     items=[]
     for pid,group in sorted(by.items()):
         dates=uniq([x.get("observation_date") for x in group])
+        priced_dates=uniq([
+            x.get("observation_date") for x in group
+            if x.get("coverage_status")=="full"
+            and isinstance(x.get("asking_price_low_vnd_per_m2"),(int,float))
+            and isinstance(x.get("asking_price_high_vnd_per_m2"),(int,float))
+            and x["asking_price_low_vnd_per_m2"]>0
+            and x["asking_price_high_vnd_per_m2"]>=x["asking_price_low_vnd_per_m2"]
+        ])
+        try:
+            span=(date.fromisoformat(priced_dates[-1])-date.fromisoformat(priced_dates[0])).days if len(priced_dates)>=2 else 0
+        except ValueError:
+            span=0
+        enough_count=len(dates)>=threshold and len(priced_dates)>=priced_threshold
+        trend_ready=enough_count and span>=minimum_span
         items.append({
           "project_id":pid,
           "snapshot_count":len(dates),
+          "priced_snapshot_count":len(priced_dates),
           "first_snapshot":dates[0] if dates else None,
           "latest_snapshot":dates[-1] if dates else None,
-          "trend_ready":len(dates)>=threshold,
-          "missing_snapshots_to_trend_ready":max(0,threshold-len(dates))
+          "priced_history_span_days":span,
+          "trend_ready":trend_ready,
+          "missing_snapshots_to_trend_ready":max(0,threshold-len(dates),priced_threshold-len(priced_dates)),
+          "additional_days_needed":max(0,minimum_span-span) if enough_count else None
         })
     return {
       "series_count":len(items),
       "trend_ready_series":sum(1 for x in items if x["trend_ready"]),
       "threshold_snapshots":threshold,
+      "threshold_priced_snapshots":priced_threshold,
+      "minimum_span_days":minimum_span,
       "items":items
     }
 

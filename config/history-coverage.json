@@ -5,7 +5,9 @@
     "listing_market": {
       "trend_ready_snapshots": 3,
       "target_cadence": "monthly-or-reviewed-change",
-      "source_constraint": "assisted-browser where automated access is blocked"
+      "source_constraint": "assisted-browser where automated access is blocked",
+      "trend_ready_min_span_days": 30,
+      "trend_ready_priced_snapshots": 3
     },
     "market_research": {
       "trend_ready_periods": 4,
@@ -33,6 +35,7 @@
     "Blocked listing sources remain assisted and only reviewed snapshots become history.",
     "Research-house series remain source-specific.",
     "Approximate source values retain qualifiers.",
-    "Infrastructure schedule revisions append/supersede; they are never destructively overwritten."
+    "Infrastructure schedule revisions append/supersede; they are never destructively overwritten.",
+    "Listing trend readiness needs three actual full price snapshots spanning at least 30 days; source-reported 1Y percentage is never computed from the portal snapshots."
   ]
 }

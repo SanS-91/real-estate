@@ -1,0 +1,48 @@
+{
+  "schema_version": 1,
+  "captured_on": "2026-10-09",
+  "observation_basis": "reviewed-source-page-public-index",
+  "notes": "Reviewed base URL (not filtered subpages). Source's latest listing date is distinct from the aggregate asking range's unknown effective timestamp. No third snapshot created for other projects just because the calendar date changed.",
+  "records": [
+    {
+      "project_id": "waterpoint",
+      "source_url": "https://batdongsan.com.vn/ban-nha-biet-thu-lien-ke-khu-do-thi-waterpoint",
+      "observation_date": "2026-10-09",
+      "source_data_as_of": "2026-09-23",
+      "asset_type": "villa-townhouse",
+      "asking_price_low_vnd_per_m2": 38200000,
+      "asking_price_high_vnd_per_m2": 60200000,
+      "asking_price_change_1y_pct": -0.066,
+      "popular_area_low_sqm": 68,
+      "popular_area_high_sqm": 315,
+      "listing_count": 74,
+      "evidence": {
+        "price": "Giá bán nhà biệt thự, liền kề Khu đô thị Waterpoint | 38.2 - 60,2 tr/m²",
+        "trend": "6,6% Giá bán đã giảm trong 1 năm qua",
+        "area": "Diện tích phổ biến | 68 - 315 m²",
+        "listing_count": "Số lượng | 74 căn",
+        "last_listing": "Cập nhật tin đăng gần đây nhất | 23-09-2026, 07:32"
+      }
+    },
+    {
+      "project_id": "eaton-park",
+      "source_url": "https://batdongsan.com.vn/ban-can-ho-chung-cu-eaton-park",
+      "observation_date": "2026-10-09",
+      "source_data_as_of": "2026-09-29",
+      "asset_type": "apartment",
+      "asking_price_low_vnd_per_m2": 126900000,
+      "asking_price_high_vnd_per_m2": 188600000,
+      "asking_price_change_1y_pct": -0.045,
+      "popular_area_low_sqm": 51,
+      "popular_area_high_sqm": 215,
+      "listing_count": 125,
+      "evidence": {
+        "price": "Giá bán căn hộ chung cư Eaton Park | 126.9 - 188,6 tr/m²",
+        "trend": "4,5% Giá bán đã giảm trong 1 năm qua",
+        "area": "Diện tích phổ biến | 51 - 215 m²",
+        "listing_count": "Số lượng | 125 căn",
+        "last_listing": "Cập nhật tin đăng gần đây nhất | 29-09-2026, 20:18"
+      }
+    }
+  ]
+}

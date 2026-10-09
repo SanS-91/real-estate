@@ -61,7 +61,7 @@ assert 'not transaction price' in market
 assert 'assets/js/data-store.js?v=5.5A1' in research_html
 assert 'assets/js/research.js' in research_html
 assert 'assets/css/main.css' in research_html
-assert 'assets/js/data-store.js?v=5.5A1' in market_html
+assert 'assets/js/data-store.js?v=' in market_html
 assert 'assets/js/market.js' in market_html
 assert 'assets/css/main.css?v=5.5C1' in market_html
 

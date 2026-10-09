@@ -15,6 +15,8 @@ assert sources["batdongsan-com-vn"]["access_mode"]=="assisted-browser"
 assert "cbre-vietnam" not in sources  # consultancy reports are not listing-asking sources
 
 prod=json.loads((ROOT/"data/mock/market/listing-observations.json").read_text(encoding="utf-8"))
+# Fixture captures originally compared against the 08 Oct baseline, not current history.
+prod["data"]=[x for x in prod["data"] if x.get("observation_date")=="2026-10-08"]
 base={x["project_id"]:x for x in prod["data"]}["mizuki-park"]
 
 args=argparse.Namespace(

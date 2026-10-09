@@ -14,6 +14,8 @@ spec.loader.exec_module(module)
 
 cfg = json.loads((ROOT / "config/listing-reviewed-captures-20261009.json").read_text(encoding="utf-8"))
 production = json.loads((ROOT / "data/mock/market/listing-observations.json").read_text(encoding="utf-8"))["data"]
+# Reproduce the original 08 Oct fixture even after the first batch was promoted.
+production = [row for row in production if row.get("observation_date") == "2026-10-08"]
 TODAY = date(2026, 10, 9)
 assert len(cfg["records"]) == 4
 

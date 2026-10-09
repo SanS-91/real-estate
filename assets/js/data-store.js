@@ -65,6 +65,7 @@
     getProjectPhases: () => loadJSON('market/project-phases.json'),
     getMarketObservations: () => loadJSON('market/observations.json'),
     getListingObservations: () => loadJSON('market/listing-observations.json'),
+    getListingScopeEvidence: () => loadJSON('market/listing-scope-evidence.json'),
     getListingComparables: () => loadJSON('market/listing-comparables.json'),
     getLegalTopics: () => loadJSON('legal/topics.json'),
     getLegalDocuments: () => loadJSON('legal/documents.json'),
