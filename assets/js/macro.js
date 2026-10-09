@@ -374,13 +374,51 @@
     });
   }
 
+  function indicatorCadence(row) {
+    if (!row) return { label:'Chưa có số liệu đã xác minh', stale:false };
+    if (row.indicator_id === 'policy-refinancing-rate') {
+      return {label:'Theo quyết định · kỳ công bố gần nhất',stale:false};
+    }
+    if (row.period_type === 'month') {
+      return {label:'Theo tháng · không cập nhật hằng ngày',stale:false};
+    }
+    if (row.period_type === 'day') {
+      const stamp = Date.parse((row.data_date || row.period) + 'T00:00:00Z');
+      const diff = Number.isFinite(stamp) ? Math.floor((Date.now()-stamp)/86400000) : null;
+      return {label:diff != null && diff >= 0
+        ? `Chuỗi ngày · cách hiện tại ${diff} ngày`
+        : 'Chuỗi ngày · theo ngày nguồn',stale:diff != null && diff > 3};
+    }
+    return {label:'Kỳ công bố gần nhất',stale:false};
+  }
+
+  function latestProductionReleaseList(limit=5) {
+    const seen = new Set();
+    return [...data.observations]
+      .filter(row => row._data_layer === 'production' && row.published_at && row.indicator_id)
+      .sort((a,b)=>String(b.published_at).localeCompare(String(a.published_at))
+        || String(b.data_date||b.period).localeCompare(String(a.data_date||a.period)))
+      .filter(row => {
+        if (seen.has(row.indicator_id)) return false;
+        seen.add(row.indicator_id);
+        return true;
+      }).slice(0,limit).map(row => `<button class="macro-release-row" type="button" data-macro-indicator-id="${esc(row.indicator_id)}">
+        <span>${esc(App.formatDate(row.published_at))}</span><div>
+          <span class="source-tag">${esc(productionEvidenceLabel(row))}</span>
+          <strong>${esc(indicator(row.indicator_id)?.name || row.indicator_id)}</strong>
+          <small>Kỳ dữ liệu: ${esc(formatPeriod(row))}</small>
+        </div></button>`).join('') || Components.stateBox('Chưa có kỳ công bố production mới được xác minh.');
+  }
+
   function metricCard(id) {
     const ind = indicator(id); if (!ind) return '';
     const { current } = latestPair(id); const delta = deltaInfo(id);
+    const cadence = indicatorCadence(current);
     return `<button class="macro-metric-card" type="button" data-macro-indicator-id="${esc(id)}">
       <div class="macro-metric-card__top"><span>${esc(ind.name)}</span><span class="source-tag">${esc(dataLayerBadge(ind, current))}</span></div>
       <strong>${esc(formatObservationValue(ind, current, true))}</strong>
       <div class="macro-metric-card__foot"><span class="macro-delta">${esc(delta.label)}</span><span>${esc(formatPeriod(current))}</span></div>
+      <small class="macro-cadence${cadence.stale ? ' is-stale' : ''}">${esc(cadence.label)}</small>
     </button>`;
   }
 
@@ -490,6 +528,7 @@
     const ids = keyIndicators();
     const fxRows = rangeRows('usd-vnd-central-rate','1M');
     setView(`
+      <p class="macro-overview-cadence-note">Các kỳ công bố được giữ nguyên: tỷ giá/vàng theo ngày nguồn, CPI/tín dụng theo tháng, lãi suất chính sách theo quyết định. Không có số liệu mới thì giữ kỳ cũ, không tự nội suy.</p>
       <div class="macro-metric-grid macro-metric-grid--overview">${ids.map(metricCard).join('')}</div>
       <div class="market-layout market-layout--overview">
         <section class="section market-panel market-panel--wide">
@@ -497,8 +536,8 @@
           <div class="section-body"><div class="chart-frame"><canvas id="macro-overview-chart"></canvas></div><p class="chart-note">${esc(overviewChartNote('usd-vnd-central-rate'))}</p></div>
         </section>
         <section class="section market-panel">
-          <div class="section-header"><div><span class="eyebrow">Demo context</span><h2 class="section-title">Illustrative Developments</h2></div><a class="text-link" href="macro.html?view=news">View demo news</a></div>
-          <div class="section-body macro-release-list">${latestEventList(5)}</div>
+          <div class="section-header"><div><span class="eyebrow">Verified releases</span><h2 class="section-title">Kỳ dữ liệu mới công bố</h2></div><a class="text-link" href="macro.html?view=overview">Xem chỉ số</a></div>
+          <div class="section-body macro-release-list">${latestProductionReleaseList(5)}</div>
         </section>
       </div>
       <section class="section"><div class="section-header"><div><span class="eyebrow">Comparable series</span><h2 class="section-title">Key Indicators</h2></div></div><div class="section-body section-body--table">${indicatorTable(ids)}</div></section>`);

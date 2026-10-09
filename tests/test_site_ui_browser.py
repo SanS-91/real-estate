@@ -105,6 +105,27 @@ async def run():
                             assert await page.locator("[data-mobile-nav] a[href='maintenance.html']").count()==1
                             await page.keyboard.press("Escape")
                             assert await menu.get_attribute("aria-expanded")=="false"
+                    if path=="legal.html?view=news":
+                        await page.locator(".legal-official-updates").wait_for(timeout=12000)
+                        official=page.locator(".article-list--legal-official .legal-official-row")
+                        assert await official.count()>=8,(width,"official legal update count")
+                        assert await page.locator(".legal-editorial-updates").count()==1
+                        assert await official.first.locator("[data-document-id]").count()==1
+                    if path=="infrastructure.html?view=overview":
+                        table=page.locator(".data-table--infra tbody tr")
+                        await table.first.wait_for(timeout=12000)
+                        assert await table.count()==8,(width,"eight infrastructure records")
+                        assert await page.locator(".infra-milestone-grid .infra-milestone").count()>=3
+                    if path=="infrastructure.html?view=news":
+                        await page.locator(".article-list--infra-compact").wait_for(timeout=12000)
+                        assert await page.locator(".article-list--infra-compact .article-row").count()>0
+                    if path=="macro.html?view=overview":
+                        await page.locator(".macro-metric-card").first.wait_for(timeout=12000)
+                        assert await page.locator(".macro-metric-card .macro-cadence").count()>=4
+                        assert await page.locator(".macro-overview-cadence-note").count()==1
+                        release=page.locator(".macro-release-list .macro-release-row")
+                        assert await release.count()>=3,(width,"latest production release entries")
+                        assert "DEMO" not in (await page.locator(".macro-release-list").inner_text())
                     if path in ("legal.html?view=news", "infrastructure.html?view=news",
                                 "macro.html?view=news"):
                         section=path.split(".html")[0]
