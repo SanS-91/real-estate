@@ -53,6 +53,23 @@ jobs:
               html,status=p.fetch(session,target['url'])
               urls=p.discover(html,target['url']) if html else []
               print(json.dumps(dict(project=target['project_id'],status=status,discovered_links=len(urls)),ensure_ascii=False))
+          for target in targets[:3]:
+              index,status=p.fetch(session,target['url'])
+              urls=p.discover(index,target['url']) if index else []
+              for url in urls[:2]:
+                  body,state=p.fetch(session,url,listing=True)
+                  if body:
+                      import re
+                      from bs4 import BeautifulSoup
+                      soup=BeautifulSoup(body,'lxml')
+                      for x in soup(['script','style','noscript']):x.decompose()
+                      text=re.sub(r'\\s+',' ',soup.get_text(' ',strip=True))
+                      h=soup.find('h1')
+                      matches=list(re.finditer(r'Dự án|Giá bán|Mã nhà đất|Cập nhật',text,re.I))
+                      snippets=[text[max(0,m.start()-15):m.start()+85] for m in matches[:7]]
+                      print(json.dumps({'diagnostic_url':url,'detail_status':state,
+                        'h1':h.get_text(' ',strip=True)[:105] if h else None,
+                        'first300':text[:300], 'section_tokens':snippets},ensure_ascii=False))
           print('Source probe finished; no listings published by a PR.')
           PY
           python scripts/market_rever_project_listings.py
