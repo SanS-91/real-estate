@@ -6,6 +6,9 @@ on:
       - 'scripts/market_rever_project_listings.py'
       - 'config/market-rever-listing-targets.json'
       - 'tests/test_market_rever_project_listings.py'
+      - 'tests/test_market_rever_verified_ui.cjs'
+      - 'assets/js/market.js'
+      - 'assets/js/data-store.js'
       - '.github/workflows/market-rever-verified-listings.yml'
   push:
     branches: [main]
@@ -34,13 +37,19 @@ jobs:
       - uses: actions/setup-python@v5
         with:
           python-version: '3.12'
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
       - name: Install project dependencies
         run: pip install -r requirements.txt
       - name: Verify source and listing integrity
         run: |
           python -m py_compile scripts/market_rever_project_listings.py
           python -m unittest discover -s tests -p 'test_market_rever_project_listings.py' -v
-      - name: Probe live provider pages for structure and access on pull requests
+          node --check assets/js/market.js
+          node --check assets/js/data-store.js
+          node tests/test_market_rever_verified_ui.cjs
+          node tests/test_market_project_price_range_chart.js      - name: Probe live provider pages for structure and access on pull requests
         if: github.event_name == 'pull_request'
         run: |
           python - <<'PY'
