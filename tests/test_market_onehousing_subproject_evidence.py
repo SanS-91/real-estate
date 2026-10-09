@@ -41,5 +41,7 @@ assert "row.subproject_name ?" in market and "productNames[row.asset_type]" in m
 assert "oneHousingSubprojectEvidence" not in market[market.index("function listingRangeChartData"):market.index("function priceLayerControls")]
 assert json.loads((ROOT/"data/mock/market/listing-observations.json").read_text())["record_count"]==18
 assert json.loads((ROOT/"data/mock/market/alternative-monthly-history.json").read_text())["record_count"]==1
-assert json.loads((ROOT/"data/candidate/market/alternative-price-review-queue.json").read_text())["record_count"]==0
+current_queue=json.loads((ROOT/"data/candidate/market/alternative-price-review-queue.json").read_text())
+assert current_queue["record_count"]==len(current_queue["data"])
+assert all(item.get("candidate_only") is True and item.get("review_required") is True and item.get("review_date") is None for item in current_queue["data"])
 print("PASS: two source-dated subproject price references isolated from 12 parent project and price-history chart.")
