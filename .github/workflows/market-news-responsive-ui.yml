@@ -1,0 +1,63 @@
+name: Market News Responsive UI Validation
+
+on:
+  pull_request:
+    paths:
+      - 'assets/js/market-news-ui.js'
+      - 'assets/js/market.js'
+      - 'assets/css/market-news.css'
+      - 'market.html'
+      - 'tests/test_market_news_ui.cjs'
+      - '.github/workflows/market-news-responsive-ui.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  validate:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 12
+    steps:
+      - uses: actions/checkout@v7
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: JavaScript syntax and UI contracts
+        run: |
+          node --check assets/js/market.js
+          node --check assets/js/market-news-ui.js
+          node tests/test_market_news_ui.cjs
+      - name: Render desktop and mobile screenshots
+        run: |
+          set -eu
+          BROWSER="$(command -v google-chrome || command -v chromium || command -v chromium-browser || true)"
+          if [ -z "$BROWSER" ]; then
+            echo "No Chromium-compatible browser is installed on the runner"
+            exit 1
+          fi
+          mkdir -p artifacts
+          python3 -m http.server 8765 --bind 127.0.0.1 > /tmp/market-news-http.log 2>&1 &
+          SERVER_PID=$!
+          trap 'kill "$SERVER_PID" || true' EXIT
+          sleep 3
+          "$BROWSER" --headless --no-sandbox --disable-gpu --disable-dev-shm-usage --hide-scrollbars --force-device-scale-factor=1 --window-size=1440,960 --virtual-time-budget=8000 --screenshot=artifacts/news-desktop.png "http://127.0.0.1:8765/market.html?view=news"
+          "$BROWSER" --headless --no-sandbox --disable-gpu --disable-dev-shm-usage --hide-scrollbars --force-device-scale-factor=1 --window-size=390,860 --virtual-time-budget=8000 --screenshot=artifacts/news-mobile.png "http://127.0.0.1:8765/market.html?view=news"
+          "$BROWSER" --headless --no-sandbox --disable-gpu --disable-dev-shm-usage --force-device-scale-factor=1 --window-size=1440,960 --virtual-time-budget=8000 --dump-dom "http://127.0.0.1:8765/market.html?view=news" > artifacts/news-dom.html
+          python3 - <<'PY'
+          from html.parser import HTMLParser
+          from pathlib import Path
+          h=Path("artifacts/news-dom.html").read_text()
+          assert 'market-news-card--lead' in h, 'News cards did not render'
+          assert 'market-news-filters' in h, 'News search did not render'
+          assert 'market-news-more' in h, 'News pagination did not render'
+          print("Browser-rendered desktop/mobile News layout: PASS")
+          PY
+      - name: Upload visual QA
+        if: always()
+        uses: actions/upload-artifact@v7
+        with:
+          name: market-news-responsive-qa
+          path: artifacts/
+          retention-days: 14
+          if-no-files-found: warn
