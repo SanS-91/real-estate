@@ -2471,12 +2471,17 @@ html { scroll-padding-top: calc(var(--header-height) + 12px); }
   .article-row__meta { gap: 6px; }
 }
 
-/* Consolidated mobile containment: allow intended horizontal scrolling inside
-   tables and tab rails without widening the page viewport. */
-@media(max-width:767px){
-  html,body{max-width:100%;overflow-x:clip}
-  .page-shell,.page-shell .container,.section,.section-body,.market-panel{min-width:0;max-width:100%}
-  .table-wrap,.section-body--table{max-width:100%;overflow-x:auto;-webkit-overflow-scrolling:touch}
-  .tabs{max-width:100%;overflow-x:auto;overscroll-behavior-x:contain;-webkit-overflow-scrolling:touch;scrollbar-width:thin}
-  .chart-frame canvas{max-width:100%}
+/* Cross-site mobile flow: scroll dense content locally instead of shrinking text.
+   Do not clip the page, which can hide sticky menus and focus outlines. */
+@media (max-width: 767px) {
+  .page-shell,.page-shell .container,.section,.section-body,.market-panel { min-width:0; }
+  .table-wrap,.section-body--table {
+    width:100%;max-width:100%;overflow-x:auto;-webkit-overflow-scrolling:touch;
+    overscroll-behavior-x:contain;
+  }
+  .tabs {
+    max-width:100%;overflow-x:auto;overscroll-behavior-x:contain;
+    -webkit-overflow-scrolling:touch;scrollbar-width:thin;
+  }
+  .chart-frame { max-width:100%;min-width:0; }
 }
