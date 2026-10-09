@@ -86,12 +86,15 @@ def normal_name(text):
 
 
 def onehousing_monthly(text, today, publisher_project_name="Vinhomes Grand Park"):
-    """Match EXACT source-authored apartment project name, month, and modal price section.
+    """Select the latest *source-authored* complete project/month price block.
 
-    Never reassign a Lumière/Masteri subproject value to the parent Vinhomes
-    Grand Park series. Do not use a crawler/check date as a monthly period.
+    Bound every project's price section by the next project's heading. Never
+    match a rate from another subproject or combine incomplete historical
+    sections. Conflicting values for the same latest month fail closed.
     """
-    for header in MONTH_LABEL.finditer(text):
+    headers = list(MONTH_LABEL.finditer(text))
+    observations = []
+    for index, header in enumerate(headers):
         if normal_name(header.group(1)) != normal_name(publisher_project_name):
             continue
         month, year = int(header.group(2)), int(header.group(3))
@@ -100,18 +103,21 @@ def onehousing_monthly(text, today, publisher_project_name="Vinhomes Grand Park"
         period = f"{year:04d}-{month:02d}"
         if period > today.strftime("%Y-%m"):
             continue
-        block = text[header.end():header.end() + 9000]
+        next_heading = headers[index + 1].start() if index + 1 < len(headers) else len(text)
+        block = text[header.end():min(next_heading, header.end() + 9000)]
         section = MODAL_SECTION.search(block)
         if not section or section.start() > 6000:
             continue
         modal = MODAL.search(section.group("section"))
-        range_match = RANGE.search(section.group("section"))
-        if not (modal and range_match):
+        price_range = RANGE.search(section.group("section"))
+        if not (modal and price_range):
             continue
-        value, low, high = vnd(modal.group(1)), vnd(range_match.group(1)), vnd(range_match.group(2))
+        value = vnd(modal.group(1))
+        low = vnd(price_range.group(1))
+        high = vnd(price_range.group(2))
         if not (0 < low <= value <= high <= 1_000_000_000):
             continue
-        return {
+        observations.append({
             "period": period,
             "value_vnd_per_m2": value,
             "range_low_vnd_per_m2": low,
@@ -119,11 +125,19 @@ def onehousing_monthly(text, today, publisher_project_name="Vinhomes Grand Park"
             "evidence": {
                 "period": header.group(0),
                 "metric": modal.group(0),
-                "range": range_match.group(0),
-            },
-        }
-    return None
-
+                "range": price_range.group(0),
+            }
+        })
+    if not observations:
+        return None
+    latest = max(observation["period"] for observation in observations)
+    matching = [observation for observation in observations if observation["period"] == latest]
+    numbers = {(observation["value_vnd_per_m2"],
+                observation["range_low_vnd_per_m2"],
+                observation["range_high_vnd_per_m2"]) for observation in matching}
+    if len(numbers) != 1:
+        return None
+    return matching[0]
 
 def onehousing_source_diagnostics(text,publisher_project_name):
     """Small, non-sensitive parser hints for public runner HTML (never store full page)."""
