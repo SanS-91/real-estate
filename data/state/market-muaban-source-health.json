@@ -1,0 +1,61 @@
+{
+  "schema_version": 1,
+  "generated_at": "2026-10-09T12:41:10.436200+00:00",
+  "source_id": "muaban-vn",
+  "targets_checked": 4,
+  "listing_urls_discovered": 9,
+  "details_checked": 9,
+  "valid_unexpired_project_ads": 3,
+  "newly_published": 0,
+  "published_current_individual_listings": 0,
+  "sources": [
+    {
+      "project_id": "akari-city",
+      "source_url": "https://muaban.net/bat-dong-san/ban-can-ho-chung-cu-du-an-akari-city-quan-binh-tan-ho-chi-minh",
+      "access": "reachable",
+      "discovered": 1,
+      "checked": 1,
+      "qualified": 0,
+      "reasons": {
+        "publisher-expired": 1
+      }
+    },
+    {
+      "project_id": "vinhomes-grand-park",
+      "source_url": "https://muaban.net/bat-dong-san/ban-can-ho-chung-cu-du-an-vinhomes-grand-park-quan-9-ho-chi-minh",
+      "access": "reachable",
+      "discovered": 6,
+      "checked": 6,
+      "qualified": 3,
+      "reasons": {
+        "qualified-unexpired-listing": 3,
+        "publisher-expired": 3
+      }
+    },
+    {
+      "project_id": "the-global-city",
+      "source_url": "https://muaban.net/bat-dong-san/ban-can-ho-chung-cu-du-an-the-global-city-quan-2-ho-chi-minh",
+      "access": "reachable",
+      "discovered": 1,
+      "checked": 1,
+      "qualified": 0,
+      "reasons": {
+        "publisher-expired": 1
+      }
+    },
+    {
+      "project_id": "the-privia",
+      "source_url": "https://muaban.net/bat-dong-san/ban-can-ho-du-an-the-privia-quan-binh-tan-ho-chi-minh",
+      "access": "reachable",
+      "discovered": 1,
+      "checked": 1,
+      "qualified": 0,
+      "reasons": {
+        "missing-numeric-total-sale-price": 1
+      }
+    }
+  ],
+  "publication_enabled": true,
+  "no_project_asp_or_range": true,
+  "date_policy": "start-and-expiry-only; relative update badges are not validity evidence"
+}
