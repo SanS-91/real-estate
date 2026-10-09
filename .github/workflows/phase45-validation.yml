@@ -1,6 +1,16 @@
 name: Phase 4.5 Macro Automation Validation
 
 on:
+  pull_request:
+    paths:
+      - 'tests/test_phase4_5a_monthly_macro_auto_update.py'
+      - 'tests/test_phase4_5b_customer_rates_auto_update.py'
+      - 'tests/test_phase4_5c_policy_rates_auto_update.py'
+      - 'tests/test_phase4_5d_operational_qa.py'
+      - 'scripts/persist_customer_rates.py'
+      - 'scripts/persist_policy_rates.py'
+      - '.github/workflows/macro-candidate.yml'
+      - '.github/workflows/phase45-validation.yml'
   workflow_dispatch:
 
 permissions:
