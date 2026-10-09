@@ -190,13 +190,29 @@ def evaluate(captures, production, today):
     for row in sorted(production, key=lambda x: (x.get("project_id") or "", x.get("observation_date") or "")):
         existing[row["project_id"]] = row
     decisions, rows, seen = [], [], set()
+    by_day = {(r.get("project_id"), r.get("observation_date")): r for r in production}
     for item in captures:
         pid = item.get("project_id")
         prior = existing.get(pid)
-        problems = validate_capture(item, prior, today)
         if pid in seen:
-            problems.append("duplicate-project-in-capture-batch")
+            decisions.append({"project_id": pid, "status": "manual-review-required",
+                              "reasons": ["duplicate-project-in-capture-batch"]})
+            continue
         seen.add(pid)
+        archived = by_day.get((pid, item.get("observation_date")))
+        if archived:
+            # Idempotent reruns of scheduled/reviewed workflows must never add
+            # repeated daily records or silently change previously published data.
+            matches = (all(archived.get(field) == item.get(field) for field in FIELDS)
+                       and archived.get("source_url") == item.get("source_url")
+                       and archived.get("source_data_as_of") == item.get("source_data_as_of")
+                       and (archived.get("volatile_metrics") or {}).get("listing_count") == item.get("listing_count")
+                       and (archived.get("provenance") or {}).get("source_evidence") == item.get("evidence"))
+            decisions.append({"project_id": pid,
+                              "status": "unchanged" if matches else "manual-review-required",
+                              "reasons": [] if matches else ["conflict-with-same-day-observation"]})
+            continue
+        problems = validate_capture(item, prior, today)
         if problems:
             decisions.append({"project_id": pid, "status": "manual-review-required", "reasons": problems})
         else:
@@ -215,13 +231,14 @@ def main():
     expected_projects = {p["id"] for p in read(PROJECTS)["data"]}
     captures = cfg["records"]
     ready, decisions = evaluate(captures, production.get("data", []), today)
-    errors = [d for d in decisions if d["status"] != "ready"]
+    errors = [d for d in decisions if d["status"] not in ("ready", "unchanged")]
     errors += [{"project_id": d.get("project_id"), "reasons": ["project-not-in-project-registry"]}
                for d in captures if d.get("project_id") not in expected_projects]
     timestamp = datetime.now(timezone.utc).isoformat()
     report = {
         "schema_version": 1, "generated_at": timestamp,
         "sources_checked": len(captures), "ready": len(ready),
+        "unchanged": sum(d["status"] == "unchanged" for d in decisions),
         "blocked": len(errors), "production_written": False,
         "source_access": "assisted-reviewed-index",
         "source_data_not_directly_refetched_on_github": True,
