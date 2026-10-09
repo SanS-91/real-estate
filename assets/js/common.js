@@ -7,7 +7,8 @@
     { key: 'market', label: 'Market', href: 'market.html' },
     { key: 'legal', label: 'Legal', href: 'legal.html' },
     { key: 'infrastructure', label: 'Infrastructure', href: 'infrastructure.html' },
-    { key: 'macro', label: 'Macro', href: 'macro.html' }
+    { key: 'macro', label: 'Macro', href: 'macro.html' },
+    { key: 'maintenance', label: 'Data Status', href: 'maintenance.html' }
   ];
 
   function currentPageKey() {
@@ -27,7 +28,7 @@
     return `
       <header class="site-header">
         <div class="container header-row">
-          <button class="icon-button mobile-menu-button" type="button" aria-label="Open menu" data-mobile-menu-button>☰</button>
+          <button class="icon-button mobile-menu-button" type="button" aria-label="Open menu" aria-controls="site-mobile-navigation" aria-expanded="false" data-mobile-menu-button>☰</button>
 
           <a class="brand" href="index.html" aria-label="Vietnam Real Estate Market Intelligence home">
             <span class="brand-mark">RE</span>
@@ -46,9 +47,9 @@
           </div>
         </div>
       </header>
-      <div class="mobile-nav-panel" data-mobile-nav>
+      <nav id="site-mobile-navigation" class="mobile-nav-panel" data-mobile-nav aria-label="Mobile navigation">
         <div class="container">${navMarkup('mobile-nav-link')}</div>
-      </div>
+      </nav>
     `;
   }
 
@@ -60,7 +61,8 @@
           <div>© ${year} Vietnam Real Estate Market Intelligence</div>
           <div class="footer-links">
             <button class="footer-link-button" type="button" data-source-registry-open>Data Sources</button>
-            <a href="#">Methodology</a>
+            <a href="maintenance.html#maintenance-rules-title">Methodology &amp; data</a>
+            <a href="maintenance.html">Data Status</a>
             <span>Research use only</span>
           </div>
         </div>
@@ -115,6 +117,7 @@
     const searchOverlay = document.querySelector('[data-search-overlay]');
     const searchInput = document.querySelector('[data-global-search-input]');
     mobileNav?.classList.remove('is-open');
+    document.querySelector('[data-mobile-menu-button]')?.setAttribute('aria-expanded', 'false');
     searchOverlay?.classList.add('is-open');
     searchOverlay?.setAttribute('aria-hidden', 'false');
     setBodyLock(true);
@@ -145,8 +148,16 @@
     const mobileNav = document.querySelector('[data-mobile-nav]');
     const drawerOverlay = document.querySelector('[data-drawer-overlay]');
 
+    const toggleMobileNav = open => {
+      mobileNav?.classList.toggle('is-open', open);
+      menuButton?.setAttribute('aria-expanded', String(!!open));
+    };
     menuButton?.addEventListener('click', () => {
-      mobileNav?.classList.toggle('is-open');
+      toggleMobileNav(!mobileNav?.classList.contains('is-open'));
+    });
+    document.addEventListener('click', event => {
+      if (!mobileNav?.classList.contains('is-open')) return;
+      if (!mobileNav.contains(event.target) && !menuButton?.contains(event.target)) toggleMobileNav(false);
     });
 
     document.querySelectorAll('[data-search-open]').forEach(button => {
@@ -169,8 +180,36 @@
       if (event.key !== 'Escape') return;
       closeSearch();
       closeDrawer();
-      mobileNav?.classList.remove('is-open');
+      toggleMobileNav(false);
     });
+  }
+
+  // Preserve touch-driven horizontal swiping; after each module sets its
+  // active tab, reveal that tab WITHOUT vertical page scrolling or DOM reorder.
+  function bindHorizontalNavigation() {
+    const tabs = [...document.querySelectorAll('.tabs')];
+    if (!tabs.length) return;
+    const align = tabbar => {
+      if ((window.innerWidth || 1440) >= 1200 || tabbar.scrollWidth <= tabbar.clientWidth) return;
+      const active = tabbar.querySelector('.tab-link.is-active, [aria-current="page"]');
+      if (!active) return;
+      const view = tabbar.getBoundingClientRect();
+      const rect = active.getBoundingClientRect();
+      const gap = 12;
+      if (rect.left < view.left + gap) tabbar.scrollLeft -= (view.left + gap - rect.left);
+      else if (rect.right > view.right - gap) tabbar.scrollLeft += rect.right - (view.right - gap);
+    };
+    for (const tabbar of tabs) {
+      align(tabbar);
+      if (typeof MutationObserver === 'function') {
+        new MutationObserver(() => align(tabbar)).observe(tabbar, {
+          attributes: true, attributeFilter: ['class', 'aria-current'],
+          subtree: true
+        });
+      }
+    }
+    document.addEventListener('app:language-changed', () => tabs.forEach(align));
+    window.addEventListener('resize', () => tabs.forEach(align));
   }
 
   function getQueryParam(name) {
@@ -221,5 +260,6 @@
   document.addEventListener('DOMContentLoaded', () => {
     mountShell();
     bindShellEvents();
+    bindHorizontalNavigation();
   });
 })();
