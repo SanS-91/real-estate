@@ -13,7 +13,7 @@
     source: '',
     priceLayer: 'listing'
   };
-  let data = { regions: [], developers: [], projects: [], phases: [], observations: [], listingObservations: [], listingScopeEvidence: [], listingComparables: [], articles: [], allArticles: [], infrastructureProjects: [], infrastructureSchedules: [], legalTopics: [], legalDocuments: [], events: [], macroIndicators: [], macroRows: [] };
+  let data = { regions: [], developers: [], projects: [], phases: [], observations: [], listingObservations: [], listingScopeEvidence: [], listingSourceCoverage: null, listingComparables: [], articles: [], allArticles: [], infrastructureProjects: [], infrastructureSchedules: [], legalTopics: [], legalDocuments: [], events: [], macroIndicators: [], macroRows: [] };
 
   function payloadData(payload) { return payload?.data || []; }
   function byId(records) { return new Map(records.map(item => [item.id, item])); }
@@ -781,6 +781,26 @@
     requestAnimationFrame(() => ChartTools.renderSupplySales('market-supply-sales', history.rows));
   }
 
+  function marketListingCoverageSummary() {
+    const summary = data.listingSourceCoverage;
+    if (!summary) return '';
+    const sourceText = summary.source_access === 'blocked'
+      ? 'Nguồn Batdongsan đang chặn thu thập tự động (HTTP 403).'
+      : summary.source_access === 'healthy'
+        ? 'Đường thu thập giá hoạt động; bản ghi mới vẫn phải qua kiểm chứng.'
+        : 'Chưa có kết quả kiểm tra truy cập nguồn gần đây.';
+    return `<section class="market-listing-health" aria-label="Listing source data coverage">
+      <div class="market-listing-health__cell"><strong>${esc(summary.aggregate_priced_projects)}/${esc(summary.projects_tracked)}</strong><span>Dự án có khoảng giá tổng hợp</span></div>
+      <div class="market-listing-health__cell"><strong>${esc(summary.category_reference_projects || 0)}</strong><span>Dự án chỉ có giá theo phân khúc/FAQ</span></div>
+      <div class="market-listing-health__cell"><strong>${esc(summary.projects_with_2plus_snapshots)}</strong><span>Dự án có từ 2 snapshot</span></div>
+      <div class="market-listing-health__source">
+        <span class="market-listing-health__source-label">Tình trạng nguồn</span>
+        <strong>${esc(sourceText)}</strong>
+        <small>${summary.source_checked_at ? 'Kiểm tra nguồn ' + esc(summary.source_checked_at.slice(0,10)) : 'Đang đợi lần kiểm tra tiếp theo'}</small>
+      </div>
+    </section>`;
+  }
+
   function renderPricing() {
     const filteredProjects = projectFilter(data.projects);
     const projectRows = filteredProjects
@@ -822,6 +842,7 @@
     const html = `
       <div class="view-intro"><div><span class="eyebrow">Evidence-backed price observations</span><h2>Pricing</h2><p>Verified project prices and listing-market asking ranges are shown as separate layers. Missing fields remain blank.</p></div></div>
       ${filterToolbar({ includeStatus:false })}
+      ${state.priceLayer === 'listing' ? marketListingCoverageSummary() : ''}
       <section class="section">
         <div class="section-header"><div><h2 class="section-title">${state.priceLayer === 'listing' ? 'Listing Market Asking Ranges' : 'Verified Project Pricing'}</h2></div>${priceLayerControls()}</div>
         <div class="section-body">${chartBody}</div>
@@ -1037,11 +1058,11 @@
   async function load() {
     try {
       await window.Provenance?.load?.();
-      const [regions, developers, projects, phases, observations, listingObservations, listingScopeEvidence, listingComparables, articles, infrastructureProjects, infrastructureSchedules, legalTopics, legalDocuments, events, macroIndicators, macroRows, meta] = await Promise.all([
-        DataStore.getRegions(), DataStore.getDevelopers(), DataStore.getProjects(), DataStore.getProjectPhases(), DataStore.getMarketObservations(), DataStore.getListingObservations(), DataStore.getListingScopeEvidence(), DataStore.getListingComparables(), DataStore.getArticles(), DataStore.getInfrastructureProjects(), DataStore.getInfrastructureSchedules(), DataStore.getLegalTopics(), DataStore.getLegalDocuments(), DataStore.getEvents(), DataStore.getMacroIndicators(), DataStore.getProcessedMacroObservations(), DataStore.getMeta()
+      const [regions, developers, projects, phases, observations, listingObservations, listingScopeEvidence, listingSourceCoverage, listingComparables, articles, infrastructureProjects, infrastructureSchedules, legalTopics, legalDocuments, events, macroIndicators, macroRows, meta] = await Promise.all([
+        DataStore.getRegions(), DataStore.getDevelopers(), DataStore.getProjects(), DataStore.getProjectPhases(), DataStore.getMarketObservations(), DataStore.getListingObservations(), DataStore.getListingScopeEvidence(), DataStore.getListingSourceCoverage().catch(() => null), DataStore.getListingComparables(), DataStore.getArticles(), DataStore.getInfrastructureProjects(), DataStore.getInfrastructureSchedules(), DataStore.getLegalTopics(), DataStore.getLegalDocuments(), DataStore.getEvents(), DataStore.getMacroIndicators(), DataStore.getProcessedMacroObservations(), DataStore.getMeta()
       ]);
       data = {
-        regions: payloadData(regions), developers: payloadData(developers), projects: payloadData(projects), phases: payloadData(phases), observations: payloadData(observations), listingObservations: payloadData(listingObservations), listingScopeEvidence: payloadData(listingScopeEvidence), listingComparables: payloadData(listingComparables), articles: payloadData(articles).filter(item => item.category === 'market'), allArticles: payloadData(articles), infrastructureProjects: payloadData(infrastructureProjects), infrastructureSchedules: payloadData(infrastructureSchedules), legalTopics: payloadData(legalTopics), legalDocuments: payloadData(legalDocuments), events: payloadData(events), macroIndicators: payloadData(macroIndicators), macroRows: payloadData(macroRows)
+        regions: payloadData(regions), developers: payloadData(developers), projects: payloadData(projects), phases: payloadData(phases), observations: payloadData(observations), listingObservations: payloadData(listingObservations), listingScopeEvidence: payloadData(listingScopeEvidence), listingSourceCoverage, listingComparables: payloadData(listingComparables), articles: payloadData(articles).filter(item => item.category === 'market'), allArticles: payloadData(articles), infrastructureProjects: payloadData(infrastructureProjects), infrastructureSchedules: payloadData(infrastructureSchedules), legalTopics: payloadData(legalTopics), legalDocuments: payloadData(legalDocuments), events: payloadData(events), macroIndicators: payloadData(macroIndicators), macroRows: payloadData(macroRows)
       };
       Resolver.setData('region', data.regions);
       Resolver.setData('developer', data.developers);
