@@ -169,15 +169,26 @@
     tabs?.querySelectorAll('[data-view]').forEach(link => {
       link.classList.toggle('is-active', link.dataset.view === state.view);
     });
-    // Mobile navigation is horizontally scrollable: keep the selected tab visible
-    // without scrolling the document itself.
+    // On phones, pin the active News link at the start of the Market tabs.
+    // Moving the actual DOM link (not CSS order) preserves keyboard focus order.
     if (!tabs) return;
+    const orderedViews = ['overview', 'projects', 'supply-sales', 'pricing', 'developers', 'news'];
+    if (state.view === 'news' && window.matchMedia('(max-width: 640px)').matches) {
+      const selected = tabs.querySelector('[data-view="news"]');
+      if (selected && tabs.firstElementChild !== selected) tabs.prepend(selected);
+      tabs.scrollLeft = 0;
+    } else {
+      // Restore canonical order for desktop and other Market views.
+      orderedViews.forEach(view => {
+        const link = tabs.querySelector('[data-view="' + view + '"]');
+        if (link) tabs.appendChild(link);
+      });
+    }
     const keepActiveVisible = () => {
       const active = tabs.querySelector('.tab-link.is-active');
       if (!active || tabs.scrollWidth <= tabs.clientWidth) return;
-      if (state.view === 'news') {
-        // News is the rightmost tab. Always reveal it, including after VI/EN labels change.
-        tabs.scrollLeft = tabs.scrollWidth;
+      if (state.view === 'news' && window.matchMedia('(max-width: 640px)').matches) {
+        tabs.scrollLeft = 0;
         return;
       }
       const area = tabs.getBoundingClientRect();
