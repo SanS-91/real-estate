@@ -1,0 +1,7 @@
+{
+  "schema_version": 1,
+  "updated_at": "2026-10-09",
+  "description": "Subproject monthly source approvals require exact pending candidate, two source rechecks with matching month/modal/range on independent GitHub-hosted runs, human review note and date. No automatic approval.",
+  "record_count": 0,
+  "data": []
+}
