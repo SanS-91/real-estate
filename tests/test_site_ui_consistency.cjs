@@ -11,8 +11,9 @@ const root = ['index','research','market','legal','infrastructure','macro','main
 
 for (const name of root) {
   const html = fs.readFileSync(name+'.html','utf8');
-  for(const asset of ['main.css?v=UI8','common.js?v=UI8','localization-static.js?v=UI8']) {
-    assert.ok(html.includes(asset), name+' not cache-busted for '+asset);
+  for(const asset of ['main.css','common.js','localization-static.js']) {
+    const row=html.split('\n').find(line=>line.includes('assets/'+(asset.endsWith('.css')?'css/':'js/')+asset));
+    assert.ok(row && row.includes('&ui=UI8'), name+' not cache-busted for '+asset);
   }
   assert.match(html, /<meta name="viewport" content="width=device-width, initial-scale=1">/);
 }
