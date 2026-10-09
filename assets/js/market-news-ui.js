@@ -5,6 +5,25 @@
   // existing sourced articles for a compact, responsive reading experience.
   const FIRST_PAGE = 16;
   const NEXT_PAGE = 12;
+  const DAY_MS = 86400000;
+  const DATE_WINDOWS = [['all', 'Tất cả thời gian'], ['7', '7 ngày'], ['30', '30 ngày'], ['90', '90 ngày']];
+  function isWithinDays(article, days, now = Date.now()) {
+    if (days === 'all') return true;
+    const date = Date.parse(article.published_at || '');
+    return Number.isFinite(date) && date <= now + DAY_MS && date >= now - Number(days) * DAY_MS;
+  }
+  function diverseFeatured(rows, count = 3) {
+    const selected = [], sources = new Set();
+    for (const article of rows) {
+      if (selected.length >= count) break;
+      if (!sources.has(article.source_id)) { selected.push(article); sources.add(article.source_id); }
+    }
+    for (const article of rows) {
+      if (selected.length >= count) break;
+      if (!selected.includes(article)) selected.push(article);
+    }
+    return selected;
+  }
   let visibleCount = FIRST_PAGE;
 
   const TOPICS = [
@@ -103,6 +122,7 @@
       `<option value="${esc(x.id)}"${state.developer === x.id ? ' selected' : ''}>${esc(x.name)}</option>`
     ).join('');
     const advancedOpen = !!(state.region || state.developer);
+    const windowId = window.App.getQueryParam('news-days') || 'all';
     return `<div class="market-news-filters">
       <form class="market-news-search" data-news-search role="search">
         <label for="market-news-q">Tìm tin tức</label>
@@ -111,6 +131,12 @@
           <button type="submit" aria-label="Tìm tin">Tìm</button>
         </div>
       </form>
+      <label class="market-news-source-filter" for="market-news-days">
+        <span>Thời gian</span>
+        <select id="market-news-days" data-news-days>
+          ${DATE_WINDOWS.map(([id,label]) => `<option value="${id}"${id === windowId ? ' selected' : ''}>${label}</option>`).join('')}
+        </select>
+      </label>
       <label class="market-news-source-filter" for="market-news-source">
         <span>Nguồn tin</span>
         <select id="market-news-source" data-news-source>
@@ -139,13 +165,17 @@
   function render({ articles, regions, developers, state }) {
     const sourceId = window.App.getQueryParam('news-source') || '';
     const topicParam = window.App.getQueryParam('news-topic') || 'all';
+    const daysParam = window.App.getQueryParam('news-days') || 'all';
+    const days = DATE_WINDOWS.some(([id]) => id === daysParam) ? daysParam : 'all';
     const topicId = TOPIC_NAMES[topicParam] ? topicParam : 'all';
     const visibleArticles = articles.filter(a => a.url && a.title && a.category === 'market' &&
       !String(a.source_id || '').startsWith('demo-') &&
       !/^(demo|illustrative)[\s:–-]/i.test(String(a.title || '')));
     const publishers = new Set(visibleArticles.map(a => a.source_id).filter(Boolean)).size;
+    const latestDate = visibleArticles.map(a => a.published_at || '').filter(Boolean).sort().at(-1) || '';
     const sourceRestricted = visibleArticles.filter(a => {
       if (sourceId && a.source_id !== sourceId) return false;
+      if (!isWithinDays(a, days)) return false;
       if (state.region && !(a.region_ids || []).includes(state.region)) return false;
       if (state.developer && !(a.developer_ids || []).includes(state.developer)) return false;
       if (state.q && !window.FilterEngine.textMatch(a, state.q, ['title','summary','tags','project_ids','developer_ids'])) return false;
@@ -155,9 +185,9 @@
     const list = sourceRestricted.filter(a => topicMatch(a, topicId))
       .sort((a, b) => String(b.published_at || '').localeCompare(String(a.published_at || '')));
     const shown = list.slice(0, visibleCount);
-    const focused = !!(state.q || state.region || state.developer || sourceId || topicId !== 'all');
-    const featured = !focused && shown.length >= 3 ? shown.slice(0, 3) : [];
-    const rest = featured.length ? shown.slice(3) : shown;
+    const focused = !!(state.q || state.region || state.developer || sourceId || topicId !== 'all' || days !== 'all');
+    const featured = !focused && shown.length >= 3 ? diverseFeatured(shown) : [];
+    const rest = featured.length ? shown.filter(a => !featured.includes(a)) : shown;
     const pills = TOPICS.filter(([id]) => id === 'all' || counts[id] > 0 || topicId === id)
       .map(([id, label]) => `<button type="button" class="market-news-topic" data-news-topic="${esc(id)}" aria-pressed="${id === topicId}">
         ${esc(label)} <span>${counts[id]}</span>
@@ -171,6 +201,7 @@
         </div>
         <div class="market-news-heading__total" aria-label="${visibleArticles.length} bài viết từ ${publishers} nguồn">
           <strong>${visibleArticles.length}</strong><span>bài · ${publishers} nguồn</span>
+          ${latestDate ? `<small style="display:block;font-size:11px;font-weight:400;margin-top:4px">Tin mới nhất: ${esc(window.App.formatDate(latestDate))}</small>` : ''}
         </div>
       </div>
       ${newsFilters({articles:visibleArticles, regions, developers, state, sourceId, topicId})}
@@ -202,6 +233,10 @@
       window.App.setQueryParam('q', state.q || null);
       resetPage();
     });
+    document.querySelector('[data-news-days]')?.addEventListener('change', event => {
+      window.App.setQueryParam('news-days', event.target.value === 'all' ? null : event.target.value);
+      resetPage();
+    });
     document.querySelector('[data-news-source]')?.addEventListener('change', event => {
       window.App.setQueryParam('news-source', event.target.value || null);
       resetPage();
@@ -226,6 +261,7 @@
         window.App.removeQueryParam(field);
       }
       window.App.removeQueryParam('news-source');
+      window.App.removeQueryParam('news-days');
       window.App.removeQueryParam('news-topic');
       resetPage();
     });
