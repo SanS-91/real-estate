@@ -25,7 +25,7 @@ CANDIDATES = ROOT / "data/candidate/market/alternative-price-candidates.json"
 STATE = ROOT / "data/state/alternative-source-health.json"
 QUEUE = ROOT / "data/candidate/market/alternative-price-review-queue.json"
 TIMEOUT = 16
-MAX_BYTES = 1_500_000
+MAX_BYTES = 8_000_000
 HEADERS = {"User-Agent": "MarketIntelligenceResearchBot/1.0 (public source check)",
            "Accept": "text/html,application/xhtml+xml",
            "Accept-Language": "vi-VN,vi;q=0.9,en;q=0.6"}
