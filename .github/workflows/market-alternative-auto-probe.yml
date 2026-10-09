@@ -1,0 +1,96 @@
+name: Market Data Coverage Round 4B - Alternative Source Monitor
+
+on:
+  pull_request:
+    paths:
+      - 'config/market-alternative-auto-targets.json'
+      - 'scripts/market_alternative_auto_probe.py'
+      - 'tests/test_market_alternative_auto_probe.py'
+      - 'data/mock/market/alternative-price-evidence.json'
+      - '.github/workflows/market-alternative-auto-probe.yml'
+  push:
+    branches: [main]
+    paths:
+      - 'config/market-alternative-auto-targets.json'
+      - 'scripts/market_alternative_auto_probe.py'
+      - 'tests/test_market_alternative_auto_probe.py'
+      - '.github/workflows/market-alternative-auto-probe.yml'
+  schedule:
+    - cron: '35 3 * * 2,5'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: market-alternative-source-monitor
+  cancel-in-progress: false
+
+jobs:
+  source-probe:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Install source inspection dependencies
+        run: pip install -r requirements.txt
+      - name: Regression checks and source isolation
+        run: |
+          python -m py_compile scripts/market_alternative_auto_probe.py
+          python tests/test_market_alternative_auto_probe.py
+          python scripts/market_alternative_source_gate.py
+          python tests/test_market_alternative_sources.py
+          python tests/test_market_source_scope_coverage.py
+      - name: Inspect publisher access and stage only review-required candidates
+        if: github.event_name != 'pull_request'
+        run: python scripts/market_alternative_auto_probe.py
+      - name: Summarize runner source accessibility
+        if: github.event_name != 'pull_request'
+        run: |
+          echo "## Market Data Coverage R4B — publisher access" >> "$GITHUB_STEP_SUMMARY"
+          python - <<'PY' >> "$GITHUB_STEP_SUMMARY"
+          import json
+          from pathlib import Path
+          p=json.loads(Path('data/candidate/market/alternative-source-probe-report.json').read_text())
+          print(f"- Source pages tested: **{p['targets_checked']}**")
+          print(f"- New source-period review candidates: **{p['candidates_staged']}**")
+          print(f"- Pending review queue: **{p['queued_backlog']}**; queue conflicts: **{p['queue_conflicts']}**")
+          print(f"- Production price changes: **0** (review required)")
+          print("")
+          print("| Target | Access / evidence | HTTP | Baseline period |")
+          print("|---|---|---:|---|")
+          for item in p['checks']:
+              print(f"| {item['target_id']} | {item['status']} | {item.get('http_status','—')} | {item.get('baseline_period','—')} |")
+          print("")
+          print("Historical launch prices are frozen. Same-period publisher changes are not additional historical snapshots.")
+          PY
+      - name: Archive source evidence and candidate review reports
+        if: always() && github.event_name != 'pull_request'
+        uses: actions/upload-artifact@v4
+        with:
+          name: alternative-source-access-review
+          path: |
+            data/candidate/market/alternative-source-probe-report.json
+            data/candidate/market/alternative-price-candidates.json
+            data/candidate/market/alternative-price-review-queue.json
+            data/state/alternative-source-health.json
+          if-no-files-found: warn
+          retention-days: 30
+      - name: Persist source status and review queue, never publish prices automatically
+        if: github.event_name != 'pull_request'
+        run: |
+          set -eu
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add data/state/alternative-source-health.json data/candidate/market/alternative-price-review-queue.json
+          if git diff --cached --quiet; then
+            echo 'No source-health changes.'
+            exit 0
+          fi
+          git commit -m 'chore(market): record alternative publisher access and candidate health'
+          git restore --worktree -- .
+          git pull --rebase origin main
+          git push origin HEAD:main

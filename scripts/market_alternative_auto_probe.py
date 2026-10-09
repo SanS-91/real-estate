@@ -1,0 +1,297 @@
+"""Alternative publisher monitor: safe access tests and strictly typed candidates.
+
+No attempt to bypass access controls; no in-browser scraping; no automatic
+publication to canonical price or Batdongsan listing histories. Historical
+launch prices are frozen references. Only explicit new publisher periods can
+produce a review-required candidate.
+"""
+from __future__ import annotations
+
+import argparse
+import json
+import re
+from datetime import date, datetime, timezone
+from pathlib import Path
+from urllib.parse import urlsplit
+
+import requests
+from bs4 import BeautifulSoup
+
+ROOT = Path(__file__).resolve().parents[1]
+CONFIG = ROOT / "config/market-alternative-auto-targets.json"
+BASELINE = ROOT / "data/mock/market/alternative-price-evidence.json"
+REPORT = ROOT / "data/candidate/market/alternative-source-probe-report.json"
+CANDIDATES = ROOT / "data/candidate/market/alternative-price-candidates.json"
+STATE = ROOT / "data/state/alternative-source-health.json"
+QUEUE = ROOT / "data/candidate/market/alternative-price-review-queue.json"
+TIMEOUT = 16
+MAX_BYTES = 1_500_000
+HEADERS = {"User-Agent": "MarketIntelligenceResearchBot/1.0 (public source check)",
+           "Accept": "text/html,application/xhtml+xml",
+           "Accept-Language": "vi-VN,vi;q=0.9,en;q=0.6"}
+PRICE = r"(\d+(?:[.,]\d+)?)"
+MONTH_LABEL = re.compile(r"Căn hộ chung cư dự án\s+Vinhomes Grand Park\s+tháng\s+(\d{1,2})\s*/\s*(20\d{2})", re.I)
+MODAL = re.compile(r"Đơn giá phổ biến\s*[:|]?\s*" + PRICE + r"\s*triệu\s*/?\s*m[²2]", re.I)
+RANGE = re.compile(r"Khoảng giá\s*[:|]?\s*" + PRICE + r"\s*[-–]\s*" + PRICE + r"\s*triệu", re.I)
+REVER_DATE = re.compile(r"Cập nhật\s*[:|]?\s*(\d{2})/(\d{2})/(20\d{2})", re.I)
+REVER_PRICE = re.compile(PRICE + r"\s*triệu\s*/?\s*m[²2]", re.I)
+CHALLENGE = re.compile(r"just a moment|attention required|checking your browser|verify you are human|captcha|cloudflare challenge", re.I)
+
+
+def load(path):
+    return json.loads(Path(path).read_text(encoding="utf-8"))
+
+
+def save(path, value):
+    path.parent.mkdir(parents=True, exist_ok=True)
+    path.write_text(json.dumps(value, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
+
+
+def vnd(raw):
+    return int(round(float(raw.replace(",", ".")) * 1_000_000))
+
+
+def plain_text(html):
+    soup = BeautifulSoup(html, "lxml")
+    for node in soup(["script", "style", "noscript"]):
+        node.decompose()
+    return re.sub(r"\s+", " ", soup.get_text(" ", strip=True))
+
+
+def source_hostname(url):
+    host = (urlsplit(url).hostname or "").lower().removeprefix("www.")
+    return host
+
+
+def publisher_hosts(source_id):
+    return {
+        "onehousing-vn": {"onehousing.vn"},
+        "rever-vn": {"rever.vn", "blog.rever.vn"},
+    }.get(source_id, set())
+
+
+def allowed_target(target):
+    url = urlsplit(target["url"])
+    return (url.scheme == "https" and not url.username and not url.password
+            and not url.query and not url.fragment
+            and source_hostname(target["url"]) in publisher_hosts(target["source_id"]))
+
+
+def onehousing_monthly(text, today):
+    """Only a project-specific month header + exact label/value evidence qualifies."""
+    header = MONTH_LABEL.search(text)
+    modal = MODAL.search(text)
+    range_match = RANGE.search(text)
+    if not (header and modal and range_match):
+        return None
+    month, year = int(header.group(1)), int(header.group(2))
+    if not 1 <= month <= 12:
+        return None
+    period = f"{year:04d}-{month:02d}"
+    if period > today.strftime("%Y-%m"):
+        return None
+    value, low, high = vnd(modal.group(1)), vnd(range_match.group(1)), vnd(range_match.group(2))
+    if not (0 < low <= value <= high <= 1_000_000_000):
+        return None
+    # Avoid picking modal values from unrelated property types elsewhere on page.
+    if modal.start() < header.start() or modal.start() - header.end() > 3500:
+        return None
+    if range_match.start() < header.start() or range_match.start() - header.end() > 3500:
+        return None
+    return {
+        "period": period,
+        "value_vnd_per_m2": value,
+        "range_low_vnd_per_m2": low,
+        "range_high_vnd_per_m2": high,
+        "evidence": {
+            "period": header.group(0),
+            "metric": modal.group(0),
+            "range": range_match.group(0),
+        },
+    }
+
+
+def rever_single_listing(text, today):
+    if "Vinhomes Grand Park" not in text or not re.search(r"\b69\s*m[²2]\b", text, re.I):
+        return None
+    match_date = REVER_DATE.search(text)
+    if not match_date:
+        return None
+    try:
+        publication = date(int(match_date.group(3)), int(match_date.group(2)), int(match_date.group(1)))
+    except ValueError:
+        return None
+    if publication > today:
+        return None
+    # The price must be anchored near the expected apartment unit description.
+    unit_pos = re.search(r"\b69\s*m[²2]\b", text, re.I)
+    window = text[max(0, unit_pos.start() - 250):unit_pos.end() + 300]
+    prices = list(REVER_PRICE.finditer(window))
+    if len(prices) != 1:
+        return None
+    return {
+        "period": publication.isoformat(),
+        "value_vnd_per_m2": vnd(prices[0].group(1)),
+        "range_low_vnd_per_m2": None,
+        "range_high_vnd_per_m2": None,
+        "evidence": {
+            "period": match_date.group(0),
+            "metric": prices[0].group(0),
+            "unit": "Căn hộ Vinhomes Grand Park · 69m²",
+        },
+    }
+
+
+def classify(target, html, baseline, today):
+    text = plain_text(html)
+    if len(text) < 100 or CHALLENGE.search(text[:900]):
+        return "blocked-or-empty-page", None
+    mode = target["mode"]
+    if mode == "historical-reference-monitor":
+        return "reachable-historical-reference-frozen", None
+    parsed = (onehousing_monthly(text, today) if mode == "monthly-price-candidate"
+              else rever_single_listing(text, today) if mode == "single-listing-review"
+              else None)
+    if parsed is None:
+        return "reachable-no-verifiable-metric", None
+    old_period = baseline["period"]
+    if parsed["period"] < old_period:
+        return "older-period-no-candidate", None
+    if parsed["period"] == old_period:
+        unchanged = (all(parsed[k] == baseline.get(k) for k in
+                         ("value_vnd_per_m2", "range_low_vnd_per_m2", "range_high_vnd_per_m2")))
+        return ("same-period-unchanged" if unchanged else "same-period-review-required"), None
+    # Independent publication period is required. This is NEVER auto-promoted.
+    row = {k: baseline.get(k) for k in
+           ("project_id", "source_id", "source_url", "asset_type",
+            "metric_type", "period_type", "subproject_name") if k in baseline}
+    row.update(parsed)
+    row.update({
+        "id": "candidate-" + target["target_id"] + "-" + parsed["period"],
+        "source_url": target["url"],
+        "source_publication_date": parsed["period"] if target["period_type"] == "date" else None,
+        "review_date": None,
+        "candidate_only": True,
+        "review_required": True,
+        "collection_mode": "github-runner-public-html",
+        "baseline_record_id": baseline["id"],
+        "methodology_note": "New independent publisher period requires human evidence review. Never blend source metrics or use single listing as project ASP.",
+    })
+    return "new-period-review-required", row
+
+
+def fetch_html(target, session):
+    if not allowed_target(target):
+        return {"status": "invalid-source-url"}, None
+    try:
+        resp = session.get(target["url"], headers=HEADERS, timeout=TIMEOUT, allow_redirects=True, stream=True)
+        code = resp.status_code
+        final_url = resp.url
+        result = {"http_status": code, "final_host": source_hostname(final_url)}
+        if source_hostname(final_url) not in publisher_hosts(target["source_id"]):
+            resp.close()
+            return dict(result, status="redirect-off-publisher"), None
+        if code in (401, 403, 429):
+            resp.close()
+            return dict(result, status="blocked"), None
+        if code != 200:
+            resp.close()
+            return dict(result, status="http-error"), None
+        if "html" not in resp.headers.get("Content-Type", "").lower():
+            resp.close()
+            return dict(result, status="non-html"), None
+        chunks, size = [], 0
+        for chunk in resp.iter_content(chunk_size=32768):
+            size += len(chunk)
+            if size > MAX_BYTES:
+                resp.close()
+                return dict(result, status="too-large"), None
+            chunks.append(chunk)
+        resp.close()
+        return dict(result, status="reachable"), b"".join(chunks).decode(resp.encoding or "utf-8", errors="replace")
+    except requests.RequestException as error:
+        return {"status": "fetch-error", "error_type": error.__class__.__name__}, None
+
+
+def run(targets, baselines, today, session, fetcher=fetch_html):
+    checks, candidates = [], []
+    for target in targets:
+        prior = baselines.get(target["baseline_id"])
+        row = {
+            "target_id": target["target_id"], "source_id": target["source_id"],
+            "project_id": target["project_id"], "mode": target["mode"],
+            "baseline_period": prior.get("period") if prior else None,
+        }
+        if not prior or not allowed_target(target) or (prior["project_id"], prior["source_id"], prior["source_url"], prior["metric_type"]) != (
+                target["project_id"], target["source_id"], target["url"], target["metric_type"]):
+            row["status"] = "invalid-target-mapping"
+        else:
+            probe, html = fetcher(target, session)
+            row.update(probe)
+            if html is not None:
+                status, candidate = classify(target, html, prior, today)
+                row["status"] = status
+                if candidate:
+                    candidates.append(candidate)
+        checks.append(row)
+    return checks, candidates
+
+
+def append_review_queue(queue, detected):
+    """Append-only candidate queue; never rewrite an older unreviewed observation."""
+    existing = {r["id"]: r for r in queue.get("data", [])}
+    added, conflicts = 0, 0
+    for row in detected:
+        previous = existing.get(row["id"])
+        if previous is None:
+            queue["data"].append(row)
+            existing[row["id"]] = row
+            added += 1
+        elif any(previous.get(field) != row.get(field) for field in
+                 ("period", "source_url", "metric_type", "value_vnd_per_m2",
+                  "range_low_vnd_per_m2", "range_high_vnd_per_m2")):
+            conflicts += 1
+    queue["record_count"] = len(queue["data"])
+    return added, conflicts
+
+
+def main():
+    parser = argparse.ArgumentParser()
+    parser.add_argument("--today", default=date.today().isoformat())
+    args = parser.parse_args()
+    today = date.fromisoformat(args.today)
+    config = load(CONFIG)
+    baseline = {r["id"]: r for r in load(BASELINE)["data"]}
+    checks, candidates = run(config["targets"], baseline, today, requests.Session())
+    queue = load(QUEUE) if QUEUE.exists() else {
+        "schema_version": 1, "candidate_only": True, "review_required": True, "data": []}
+    new_queue_rows, queue_conflicts = append_review_queue(queue, candidates)
+    if new_queue_rows or not QUEUE.exists():
+        save(QUEUE, queue)
+    timestamp = datetime.now(timezone.utc).isoformat()
+    counts = {status: sum(x["status"] == status for x in checks) for status in sorted({x["status"] for x in checks})}
+    report = {
+        "schema_version": 1, "generated_at": timestamp,
+        "targets_checked": len(checks), "candidates_staged": len(candidates),
+        "queued_new": new_queue_rows, "queued_backlog": queue["record_count"],
+        "queue_conflicts": queue_conflicts,
+        "counts": counts, "checks": checks, "production_written": False,
+        "source_prices_not_inferred": True,
+        "note": "No access bypass. Candidate-only; source dates and metric types must pass manual source review before publication.",
+    }
+    save(REPORT, report)
+    save(CANDIDATES, {
+        "schema_version": 1, "generated_at": timestamp, "candidate_only": True,
+        "record_count": len(candidates), "data": candidates,
+    })
+    save(STATE, {
+        "schema_version": 1, "generated_at": timestamp, "targets_checked": len(checks),
+        "candidate_count": len(candidates), "queue_backlog": queue["record_count"],
+        "queue_conflicts": queue_conflicts, "production_updated": False,
+        "counts": counts, "checks": checks,
+    })
+    print(json.dumps({"checked": len(checks), "candidates": len(candidates), "queue_backlog": queue["record_count"], "conflicts": queue_conflicts, "counts": counts}, ensure_ascii=False))
+
+
+if __name__ == "__main__":
+    main()
