@@ -2,7 +2,9 @@ name: Unified Data Health
 
 on:
   schedule:
-    - cron: '5 1 * * *'
+    - cron: '5 1 * * *'       # 08:05 ICT preflight
+    - cron: '10 4 * * *'      # 11:10 ICT after morning FX/gold checks
+    - cron: '45 10 * * 1-5'   # 17:45 ICT after afternoon FX/gold checks
   push:
     branches:
       - main
@@ -22,7 +24,7 @@ permissions:
 
 concurrency:
   group: unified-data-health-main
-  cancel-in-progress: true
+  cancel-in-progress: false
 
 jobs:
   build:
