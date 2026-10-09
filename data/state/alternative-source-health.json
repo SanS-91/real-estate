@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-10-09T06:57:23.978997+00:00",
+  "generated_at": "2026-10-09T07:01:25.865702+00:00",
   "targets_checked": 6,
   "candidate_count": 0,
   "queue_backlog": 1,
@@ -27,6 +27,8 @@
           "2026-10"
         ],
         "heading_block_count": 3,
+        "other_publisher_project_headers": 1,
+        "page_level_price_sections": 1,
         "heading_block_diagnostics": [
           {
             "period": "2026-10",
@@ -107,6 +109,8 @@
           "2026-10"
         ],
         "heading_block_count": 3,
+        "other_publisher_project_headers": 1,
+        "page_level_price_sections": 1,
         "heading_block_diagnostics": [
           {
             "period": "2026-10",
@@ -155,6 +159,8 @@
         "publisher_project_header": false,
         "publisher_periods": [],
         "heading_block_count": 0,
+        "other_publisher_project_headers": 1,
+        "page_level_price_sections": 1,
         "heading_block_diagnostics": [],
         "modal_price_section": true,
         "asking_price_number": true,
