@@ -2931,3 +2931,29 @@ body[data-page="home"] .metric-grid {
   .infra-milestone-grid { grid-template-columns: 1fr; }
   .infra-milestone-grid .infra-milestone { min-height: 0; }
 }
+
+
+/* Phase 4K.1 — make source observation lag and failing GitHub run actionable. */
+.maintenance-ops-detail {
+  display: grid;
+  gap: 7px;
+  margin-top: 12px;
+  padding-top: 10px;
+  border-top: 1px solid var(--color-border);
+  font-size: 11px;
+  overflow-wrap: anywhere;
+}
+.maintenance-ops-detail a {
+  color: var(--color-primary);
+  font-weight: 730;
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+.maintenance-ops-detail small { color: var(--color-text-secondary); }
+.maintenance-lag {
+  display: grid;
+  gap: 2px;
+  color: var(--color-text-secondary);
+}
+.maintenance-lag strong { color: var(--color-text); font-size: 12px; }
+.maintenance-lag.is-late strong { color: var(--color-danger); }
