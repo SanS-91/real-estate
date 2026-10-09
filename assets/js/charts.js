@@ -152,7 +152,7 @@
 
   // A categorical project comparison must not connect independent properties into a
   // time-series curve. Render one floating vertical interval per project instead.
-  function renderRangeSeries(id, { labels = [], lowValues = [], highValues = [], lowLabel = 'Giá thấp', highLabel = 'Giá cao', yFormatter = compactNumber } = {}) {
+  function renderRangeSeries(id, { labels = [], fullLabels = [], lowValues = [], highValues = [], lowLabel = 'Giá thấp', highLabel = 'Giá cao', yFormatter = compactNumber, horizontal = false } = {}) {
     const ranges = labels.map((_, i) => {
       const low = Number(lowValues[i]), high = Number(highValues[i]);
       return Number.isFinite(low) && Number.isFinite(high) && low > 0 && high >= low
@@ -171,15 +171,31 @@
           borderWidth: 1.4,
           borderRadius: 3,
           borderSkipped: false,
-          maxBarThickness: 24
+          maxBarThickness: horizontal ? 18 : 24
         }]
       },
       options: {
         ...baseOptions({ yFormatter }),
+        indexAxis: horizontal ? 'y' : 'x',
+        scales: horizontal ? {
+          x: {
+            beginAtZero: false,
+            grid: { color: '#eef0f3' },
+            ticks: { color: '#667085', callback: value => yFormatter(value) }
+          },
+          y: {
+            grid: { display: false },
+            ticks: { color: '#475467', autoSkip: false, font: { size: 11 } }
+          }
+        } : baseOptions({ yFormatter }).scales,
         plugins: {
           legend: { display: false },
           tooltip: {
             callbacks: {
+              title(items) {
+                const index = items[0]?.dataIndex;
+                return (index != null && fullLabels[index]) || (index != null && labels[index]) || '';
+              },
               label(context) {
                 const range = context.raw;
                 if (!Array.isArray(range)) return 'Chưa có khoảng giá';
