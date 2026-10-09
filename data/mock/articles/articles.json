@@ -1,9 +1,1698 @@
 {
   "schema_version": 1,
-  "build_id": "market-verified-official-news-20261008T172731Z",
-  "generated_at": "2026-10-08T17:27:31.858973+00:00",
-  "record_count": 37,
+  "build_id": "market-news-rss-20261009T023307Z",
+  "generated_at": "2026-10-09T02:33:07.713413+00:00",
+  "record_count": 112,
   "data": [
+    {
+      "id": "article-market-rss-e4bc6fe1e246b54a63e5",
+      "title": "Kết nối đa tầng tăng sức hút cho Hồng Hạc City",
+      "url": "https://vnexpress.net/ket-noi-da-tang-tang-suc-hut-cho-hong-hac-city-5129979.html",
+      "category": "market",
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-10-09T02:00:00+00:00",
+      "source_id": "vnexpress-real-estate",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [
+        "infrastructure"
+      ],
+      "importance": 2,
+      "summary": "Các lớp kết nối từ hạ tầng, việc làm đến tiện ích, cộng đồng giúp Hồng Hạc City mở rộng khả năng tiếp cận, đáp ứng nhu cầu ở và gia tăng giá trị sử dụng của khu đô thị.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://vnexpress.net/rss/bat-dong-san.rss",
+        "publisher_host": "vnexpress.net",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-4a6366ba8fa09d9c025e",
+      "title": "Meypearl Harmony bàn giao cùng dịp APEC 2027",
+      "url": "https://vnexpress.net/meypearl-harmony-ban-giao-cung-dip-apec-2027-5130072.html",
+      "category": "market",
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-10-09T01:00:00+00:00",
+      "source_id": "vnexpress-real-estate",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "Các căn hộ Meypearl Harmony dự kiến bàn giao quý IV/2027, cùng thời điểm Phú Quốc đăng cai APEC, tạo dư địa khai thác.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://vnexpress.net/rss/bat-dong-san.rss",
+        "publisher_host": "vnexpress.net",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-264c62f26c7446680544",
+      "title": "Sếp công ty địa ốc giải mã lý do giá chung cư mới khó giảm",
+      "url": "https://dantri.com.vn/bat-dong-san/sep-cong-ty-dia-oc-giai-ma-ly-do-gia-chung-cu-moi-kho-giam-20261008220312416.htm",
+      "category": "market",
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-10-08T23:11:00+00:00",
+      "source_id": "dantri-real-estate",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "(Dân trí) - Lãi vay neo cao, dự án kéo dài khiến chi phí tăng, trong khi người mua chung cư chờ giá giảm khiến chủ đầu tư khó hạ giá mà thay vào đó là điều chỉnh chính sách bán hàng trong thời gian tới.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://dantri.com.vn/rss/bat-dong-san.rss",
+        "publisher_host": "dantri.com.vn",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-0fc64582532151fb9c98",
+      "title": "Nhà hẻm, nhà phố tại TP HCM rớt giá hàng tỷ đồng",
+      "url": "https://vnexpress.net/nha-hem-nha-pho-tai-tp-hcm-rot-gia-hang-ty-dong-5129906.html",
+      "category": "market",
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-10-08T22:00:00+00:00",
+      "source_id": "vnexpress-real-estate",
+      "region_ids": [
+        "hcmc"
+      ],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [
+        "pricing"
+      ],
+      "importance": 2,
+      "summary": "Giá nhà phố, riêng lẻ tại TP HCM giảm hàng tỷ đồng ở nhiều khu vực khi người bán chịu áp lực tài chính, còn người mua vẫn chưa vội xuống tiền.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://vnexpress.net/rss/bat-dong-san.rss",
+        "publisher_host": "vnexpress.net",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-625c0f56530f7d631e67",
+      "title": "Ba điểm nghẽn kìm hãm đà phục hồi bất động sản 2027",
+      "url": "https://vnexpress.net/ba-diem-nghen-kim-ham-da-phuc-hoi-bat-dong-san-2027-5130116.html",
+      "category": "market",
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-10-08T20:20:17+00:00",
+      "source_id": "vnexpress-real-estate",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [
+        "pricing"
+      ],
+      "importance": 2,
+      "summary": "Thị trường bất động sản năm sau đối mặt áp lực lãi suất, giá nhà vượt thu nhập và quy định niên hạn chung cư, buộc doanh nghiệp phải cơ cấu lại tài sản, theo chuyên gia.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://vnexpress.net/rss/bat-dong-san.rss",
+        "publisher_host": "vnexpress.net",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-7fad0106f8ca38992fce",
+      "title": "10 dự án nhà ở thương mại tại Hải Phòng được triển khai theo cơ chế mới",
+      "url": "https://vnexpress.net/10-du-an-nha-o-thuong-mai-tai-hai-phong-duoc-trien-khai-theo-co-che-moi-5130115.html",
+      "category": "market",
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-10-08T18:01:21+00:00",
+      "source_id": "vnexpress-real-estate",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "6 doanh nghiệp bất động sản được UBND TP Hải Phòng cho phép thí điểm 10 dự án nhà ở thương mại theo cơ chế mới với tổng vốn đầu tư dự kiến hơn 11.346 tỷ đồng.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://vnexpress.net/rss/bat-dong-san.rss",
+        "publisher_host": "vnexpress.net",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-f1731624c270fecaa95c",
+      "title": "Nhà vườn miền Tây mở tầng trệt, kín tầng lầu",
+      "url": "https://vnexpress.net/nha-vuon-mien-tay-mo-tang-tret-kin-tang-lau-5129946.html",
+      "category": "market",
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-10-08T17:00:00+00:00",
+      "source_id": "vnexpress-real-estate",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "Ngôi nhà có diện tích xây dựng 160 m2, kết hợp mái ngói dốc, khoảng thông tầng và hệ cửa kính lớn để tận dụng ánh sáng, thông gió tự nhiên.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://vnexpress.net/rss/bat-dong-san.rss",
+        "publisher_host": "vnexpress.net",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-67a86b20e81e29b51dc2",
+      "title": "TPHCM đề xuất hỗ trợ lãi vay 10 năm cho nhà ở xã hội",
+      "url": "https://dantri.com.vn/bat-dong-san/tphcm-de-xuat-ho-tro-lai-vay-10-nam-cho-nha-o-xa-hoi-20261008192145187.htm",
+      "category": "market",
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-10-08T12:30:27+00:00",
+      "source_id": "dantri-real-estate",
+      "region_ids": [
+        "hcmc"
+      ],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "(Dân trí) - TPHCM dự kiến nâng mức vốn được hỗ trợ lãi suất cho các dự án nhà ở xã hội từ 200 tỷ đồng lên 300 tỷ đồng, đồng thời kéo dài thời gian hỗ trợ từ 7 lên 10 năm.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://dantri.com.vn/rss/bat-dong-san.rss",
+        "publisher_host": "dantri.com.vn",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-080abd9594744fb2556b",
+      "title": "TP.HCM ưu tiên xử lý hồ sơ đất đai tồn đọng kéo dài",
+      "url": "https://thanhnien.vn/tphcm-uu-tien-xu-ly-ho-so-dat-dai-ton-dong-keo-dai-185261008175753667.htm",
+      "category": "market",
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-10-08T11:32:00+00:00",
+      "source_id": "thanhnien-real-estate",
+      "region_ids": [
+        "hcmc"
+      ],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "Đó là chỉ đạo của ông Nguyễn Toàn Thắng tại Hội nghị giao ban công tác 9 tháng đầu năm và triển khai phương hướng, nhiệm vụ 3 tháng cuối năm 2026 của Văn phòng Đăng ký đất đai TP.HCM.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://thanhnien.vn/rss/kinh-te/dia-oc.rss",
+        "publisher_host": "thanhnien.vn",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-1f9586cf283ea68351e5",
+      "title": "Hồng Hạc City và định hướng trở thành cực trung tâm mới tại cửa ngõ Đông Bắc Hà Nội",
+      "url": "https://dantri.com.vn/bat-dong-san/hong-hac-city-va-dinh-huong-tro-thanh-cuc-trung-tam-moi-tai-cua-ngo-dong-bac-ha-noi-20261008144323635.htm",
+      "category": "market",
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-10-08T09:00:00+00:00",
+      "source_id": "dantri-real-estate",
+      "region_ids": [
+        "ha-noi"
+      ],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "(Dân trí) - Sự kiện “Hồng Hạc City - Kết nối đa tầng, đón đầu cơ hội” ngày 10/10 tại Bắc Ninh, do Phú Mỹ Hưng, Nomura Real Estate Vietnam tổ chức, chia sẻ định hướng Hồng Hạc City là cấu phần trong quá trình hình thành cực trung tâm sống mới tại Đông Bắc Hà Nội.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://dantri.com.vn/rss/bat-dong-san.rss",
+        "publisher_host": "dantri.com.vn",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-dd7eac68090cccc2c510",
+      "title": "Phát triển đô thị tương lai: Từ câu hỏi của WEF đến lời giải của Vinhomes",
+      "url": "https://dantri.com.vn/bat-dong-san/phat-trien-do-thi-tuong-lai-tu-cau-hoi-cua-wef-den-loi-giai-cua-vinhomes-20261008151350177.htm",
+      "category": "market",
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-10-08T08:57:51+00:00",
+      "source_id": "dantri-real-estate",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [
+        "vinhomes"
+      ],
+      "tags": [],
+      "importance": 2,
+      "summary": "(Dân trí) - Trước sự phát triển của công nghệ và xu hướng tài nguyên ngày càng khan hiếm, Diễn đàn Kinh tế Thế giới (WEF) từng đặt ra câu hỏi: Liệu các đô thị có thể được kiến tạo để chủ động đón trước các thách thức của tương lai hay không?",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://dantri.com.vn/rss/bat-dong-san.rss",
+        "publisher_host": "dantri.com.vn",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-f86beb34aa47c84f665a",
+      "title": "Huế sẽ đấu giá lần 2 khu đất vàng ven sông Hương",
+      "url": "https://vnexpress.net/hue-se-dau-gia-lan-2-khu-dat-vang-ven-song-huong-5129873.html",
+      "category": "market",
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-10-08T08:03:33+00:00",
+      "source_id": "vnexpress-real-estate",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "Hơn 10.600 m2 đất vàng ven sông Hương, từng là trụ sở nhiều cơ quan ở Huế, sẽ được đấu giá lần hai sau khi không có nhà đầu tư nộp hồ sơ trong đợt đầu.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://vnexpress.net/rss/bat-dong-san.rss",
+        "publisher_host": "vnexpress.net",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-c9cf421c763ade99d235",
+      "title": "Malaysia lấn biển xây “đảo Silicon”, đặt cược vào làn sóng chip AI",
+      "url": "https://dantri.com.vn/bat-dong-san/malaysia-lan-bien-xay-dao-silicon-dat-cuoc-vao-lan-song-chip-ai-20261008115405858.htm",
+      "category": "market",
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-10-08T06:33:34+00:00",
+      "source_id": "dantri-real-estate",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "(Dân trí) - Malaysia đang bồi đắp một hòn đảo nhân tạo rộng khoảng 930ha ngay phía nam Penang. Mục tiêu biến nơi đây thành trung tâm bán dẫn thế hệ mới, đóng góp khoảng 269 tỷ USD cho nền kinh tế đến năm 2050.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://dantri.com.vn/rss/bat-dong-san.rss",
+        "publisher_host": "dantri.com.vn",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-f4a27d7df8b36a5f4935",
+      "title": "Chính phủ đốc thúc chọn tư vấn quốc tế cho đường sắt cao tốc Bắc - Nam",
+      "url": "https://dantri.com.vn/bat-dong-san/chinh-phu-doc-thuc-chon-tu-van-quoc-te-cho-duong-sat-cao-toc-bac-nam-20261008115425247.htm",
+      "category": "market",
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-10-08T05:22:07+00:00",
+      "source_id": "dantri-real-estate",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [
+        "infrastructure"
+      ],
+      "importance": 2,
+      "summary": "(Dân trí) - Chính phủ yêu cầu Bộ Xây dựng sớm lựa chọn tư vấn quốc tế lập báo cáo nghiên cứu khả thi dự án đường sắt tốc độ cao Bắc - Nam, có tổng vốn đầu tư sơ bộ hơn 67 tỷ USD.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://dantri.com.vn/rss/bat-dong-san.rss",
+        "publisher_host": "dantri.com.vn",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-cb94ec24a01b99364c35",
+      "title": "Quảng Ninh thúc tiến độ dự án nghỉ dưỡng gần tỷ USD ở Vân Đồn",
+      "url": "https://vnexpress.net/quang-ninh-thuc-tien-do-du-an-nghi-duong-gan-ty-usd-o-van-don-5129837.html",
+      "category": "market",
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-10-08T05:16:11+00:00",
+      "source_id": "vnexpress-real-estate",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "Thành phố yêu cầu nhà đầu tư tổ hợp Monbay Vân Đồn hoàn thiện bảng tiến độ triển khai dự án và tổ chức khởi công ngay khi đủ điều kiện.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://vnexpress.net/rss/bat-dong-san.rss",
+        "publisher_host": "vnexpress.net",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-2ce5bfb25258d244ce54",
+      "title": "Khu căn hộ gần 2 ha với tiện ích wellness tại Đồng Nai",
+      "url": "https://vnexpress.net/khu-can-ho-gan-2-ha-voi-tien-ich-wellness-tai-dong-nai-5129766.html",
+      "category": "market",
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-10-08T04:30:00+00:00",
+      "source_id": "vnexpress-real-estate",
+      "region_ids": [
+        "dong-nai"
+      ],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "Filmore Development vừa khởi công khu căn hộ Soma The First gồm hai tháp 36 tầng, với khoảng 1.800 căn hộ và shophouse theo hướng tiếp cận mới về wellness tại Đồng Nai.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://vnexpress.net/rss/bat-dong-san.rss",
+        "publisher_host": "vnexpress.net",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-58417fb3643d981d60be",
+      "title": "Lãi suất thế chấp tăng cao gây sức ép lên thị trường nhà ở Anh",
+      "url": "https://dantri.com.vn/bat-dong-san/lai-suat-the-chap-tang-cao-gay-suc-ep-len-thi-truong-nha-o-anh-20261008103913458.htm",
+      "category": "market",
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-10-08T04:28:37+00:00",
+      "source_id": "dantri-real-estate",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [
+        "pricing",
+        "sales"
+      ],
+      "importance": 2,
+      "summary": "(Dân trí) - Chi phí vay đắt đỏ đang làm suy yếu nhu cầu sở hữu bất động sản tại Anh. Người mua do dự, lượng giao dịch sụt giảm và giá nhà tiếp tục chịu sức ép lớn trong những tháng cuối năm.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://dantri.com.vn/rss/bat-dong-san.rss",
+        "publisher_host": "dantri.com.vn",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-7ee2922650b18531119e",
+      "title": "TP HCM sẽ ra tiêu chí riêng cho khu công nghiệp sinh thái",
+      "url": "https://vnexpress.net/tp-hcm-se-ra-tieu-chi-rieng-cho-khu-cong-nghiep-sinh-thai-5129818.html",
+      "category": "market",
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-10-08T04:19:23+00:00",
+      "source_id": "vnexpress-real-estate",
+      "region_ids": [
+        "hcmc"
+      ],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "TP HCM đang lấy ý kiến dự thảo quy định tiêu chí, chính sách chuyển đổi khu, cụm công nghiệp sang mô hình sinh thái từ 6/10 đến 6/11.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://vnexpress.net/rss/bat-dong-san.rss",
+        "publisher_host": "vnexpress.net",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-2bbde88dc4ada55b8ae3",
+      "title": "37 tiện ích đề cao tinh thần sống khỏe tại Sun Glory Residence",
+      "url": "https://vnexpress.net/37-tien-ich-de-cao-tinh-than-song-khoe-tai-sun-glory-residence-5129851.html",
+      "category": "market",
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-10-08T04:15:00+00:00",
+      "source_id": "vnexpress-real-estate",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "Sun Glory Residence phát triển hơn 37 tiện ích chăm sóc sức khỏe, thư giãn và kết nối cộng đồng, mang mô hình sống nghỉ dưỡng vào khu vực trung tâm Vinh, Nghệ An.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://vnexpress.net/rss/bat-dong-san.rss",
+        "publisher_host": "vnexpress.net",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-5204930ce931413a483b",
+      "title": "Chuyên gia: Cần rõ tiêu chí xác định đất bỏ hoang trước khi thu thuế 0,2%",
+      "url": "https://vnexpress.net/chuyen-gia-can-ro-tieu-chi-xac-dinh-dat-bo-hoang-truoc-khi-thu-thue-0-2-5129740.html",
+      "category": "market",
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-10-08T04:00:00+00:00",
+      "source_id": "vnexpress-real-estate",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "Ủng hộ áp thuế với đất bỏ hoang, song nhiều chuyên gia kiến nghị cần có tiêu chí xác định rõ ràng để tránh gây khó thêm cho doanh nghiệp, thị trường địa ốc.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://vnexpress.net/rss/bat-dong-san.rss",
+        "publisher_host": "vnexpress.net",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-d83a8f03fbe375410158",
+      "title": "Eurowindow Light City: 3 tầng giá trị kiến tạo cuộc sống chất lượng",
+      "url": "https://dantri.com.vn/bat-dong-san/eurowindow-light-city-3-tang-gia-tri-kien-tao-cuoc-song-chat-luong-20261007195005505.htm",
+      "category": "market",
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-10-08T01:00:00+00:00",
+      "source_id": "dantri-real-estate",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "(Dân trí) - Bên bờ sông Mã, Eurowindow Light City kiến tạo 3 tầng giá trị, nơi chất lượng sống được tính toán cho cả nhu cầu hiện tại và hành trình gắn bó lâu dài của mỗi gia đình.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://dantri.com.vn/rss/bat-dong-san.rss",
+        "publisher_host": "dantri.com.vn",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-212eb3a7c66f514a77a8",
+      "title": "Không gian sống mang dấu ấn nghệ thuật giữa lòng Hà Nội",
+      "url": "https://dantri.com.vn/bat-dong-san/khong-gian-song-mang-dau-an-nghe-thuat-giua-long-ha-noi-20261007193828200.htm",
+      "category": "market",
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-10-08T01:00:00+00:00",
+      "source_id": "dantri-real-estate",
+      "region_ids": [
+        "ha-noi"
+      ],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "(Dân trí) - Sự xa xỉ của bất động sản hàng hiệu dần không còn đo đếm bằng diện tích hay vật liệu xa hoa, mà nằm ở tính độc bản và những giá trị riêng tư được may đo riêng cho gia chủ.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://dantri.com.vn/rss/bat-dong-san.rss",
+        "publisher_host": "dantri.com.vn",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-0d11cec84028c881f38d",
+      "title": "Giá căn hộ chào bán mới tại TP HCM tiếp tục tăng",
+      "url": "https://vnexpress.net/gia-can-ho-chao-ban-moi-tai-tp-hcm-tiep-tuc-tang-5129592.html",
+      "category": "market",
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-10-08T00:30:00+00:00",
+      "source_id": "vnexpress-real-estate",
+      "region_ids": [
+        "hcmc"
+      ],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [
+        "supply",
+        "pricing"
+      ],
+      "importance": 2,
+      "summary": "Dù nguồn cung tăng gần một nửa trong quý III, giá căn hộ sơ cấp tại TP HCM vẫn tăng 12% so với cùng kỳ, đạt bình quân 110 triệu đồng mỗi m2, theo Knight Frank.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://vnexpress.net/rss/bat-dong-san.rss",
+        "publisher_host": "vnexpress.net",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-8da3d2c1e2b8e1bf6d96",
+      "title": "5 thói quen trong bếp làm tốn điện và cách khắc phục hiệu quả",
+      "url": "https://dantri.com.vn/bat-dong-san/5-thoi-quen-trong-bep-lam-ton-dien-va-cach-khac-phuc-hieu-qua-20261006133426874.htm",
+      "category": "market",
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-10-07T23:00:00+00:00",
+      "source_id": "dantri-real-estate",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "(Dân trí) - Những thói quen nấu nướng và dọn dẹp tưởng chừng vô hại trong gian bếp lại âm thầm làm hóa đơn tiền điện đội lên đáng kể mỗi tháng mà nhiều người không hề hay biết.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://dantri.com.vn/rss/bat-dong-san.rss",
+        "publisher_host": "dantri.com.vn",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-20fcce31c5eeebc78e13",
+      "title": "Nhà một tầng nâng sàn, mở không gian ra hồ hoa súng",
+      "url": "https://vnexpress.net/nha-mot-tang-nang-san-mo-khong-gian-ra-ho-hoa-sung-5129586.html",
+      "category": "market",
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-10-07T17:00:00+00:00",
+      "source_id": "vnexpress-real-estate",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "Hệ cửa kính lớn, hàng hiên rộng cùng mặt bằng mở giúp ngôi nhà vườn một tầng tại Thái Lan đón trọn ánh sáng tự nhiên và cảnh quan hồ nước vào mọi góc sinh hoạt.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://vnexpress.net/rss/bat-dong-san.rss",
+        "publisher_host": "vnexpress.net",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-7c479e74c527938d4f5b",
+      "title": "Nhà xã hội gần khu công nghệ cao Hòa Lạc 23,5 triệu đồng mỗi m2",
+      "url": "https://vnexpress.net/nha-xa-hoi-gan-khu-cong-nghe-cao-hoa-lac-23-5-trieu-dong-moi-m2-5129513.html",
+      "category": "market",
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-10-07T14:01:28+00:00",
+      "source_id": "vnexpress-real-estate",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "Dự án nhà ở xã hội Tân Xã - Thạch Thất có 100 căn hộ để bán, giá bình quân 23,5 triệu đồng một m2.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://vnexpress.net/rss/bat-dong-san.rss",
+        "publisher_host": "vnexpress.net",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-589cb255d2f4ef3856ff",
+      "title": "Hà Nội có thêm khu phức hợp y tế 600 tỷ đồng ở 'đất vàng' Giảng Võ",
+      "url": "https://vnexpress.net/ha-noi-co-them-khu-phuc-hop-y-te-600-ty-dong-o-dat-vang-giang-vo-5129320.html",
+      "category": "market",
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-10-07T12:23:52+00:00",
+      "source_id": "vnexpress-real-estate",
+      "region_ids": [
+        "ha-noi"
+      ],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "Tổ hợp chăm sóc sức khỏe có tổng vốn đầu tư 600 tỷ đồng, nằm sát hồ Thành Công, cung cấp khu căn hộ dưỡng cư dành cho người cao tuổi.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://vnexpress.net/rss/bat-dong-san.rss",
+        "publisher_host": "vnexpress.net",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-0f927bc208220c489f5a",
+      "title": "Solaria Rise cất nóc sau hơn một năm thi công, dự kiến bàn giao từ quý III/2027",
+      "url": "https://dantri.com.vn/bat-dong-san/solaria-rise-cat-noc-sau-hon-mot-nam-thi-cong-du-kien-ban-giao-tu-quy-iii2027-20261007180022950.htm",
+      "category": "market",
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-10-07T11:05:40+00:00",
+      "source_id": "dantri-real-estate",
+      "region_ids": [],
+      "project_ids": [
+        "waterpoint"
+      ],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "(Dân trí) - Ngày 7/10, Solaria Rise - khu căn hộ cao tầng thuộc đại đô thị tích hợp Waterpoint cất nóc, đánh dấu cột mốc hoàn thành phần kết cấu và chuyển sang giai đoạn hoàn thiện, sẵn sàng bàn giao nhà dự kiến từ quý III/2027.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://dantri.com.vn/rss/bat-dong-san.rss",
+        "publisher_host": "dantri.com.vn",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-54e2c2e3dc3a6c3787f9",
+      "title": "Bắc Ninh sắp mở bán thêm gần 1.600 căn nhà xã hội",
+      "url": "https://vnexpress.net/bac-ninh-sap-mo-ban-them-gan-1-600-can-nha-xa-hoi-5129518.html",
+      "category": "market",
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-10-07T09:00:00+00:00",
+      "source_id": "vnexpress-real-estate",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [
+        "supply"
+      ],
+      "importance": 2,
+      "summary": "Gần 1.600 căn nhà ở xã hội tại phường Tiền Phong chuẩn bị mở bán, giá dự kiến cao nhất 22 triệu đồng mỗi m2.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://vnexpress.net/rss/bat-dong-san.rss",
+        "publisher_host": "vnexpress.net",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-9e8a79b7ab373d0a57a1",
+      "title": "Giá chung cư cũ giảm, căn hộ mới vẫn neo cao",
+      "url": "https://dantri.com.vn/bat-dong-san/gia-chung-cu-cu-giam-can-ho-moi-van-neo-cao-20261007140605847.htm",
+      "category": "market",
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-10-07T07:35:01+00:00",
+      "source_id": "dantri-real-estate",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [
+        "supply"
+      ],
+      "importance": 2,
+      "summary": "(Dân trí) - Sức mua chậm nhưng giá chung cư sơ cấp bình quân quý III vẫn vượt 100 triệu đồng/m2 do nguồn cung mới tập trung vào các dự án hạng sang và siêu sang.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://dantri.com.vn/rss/bat-dong-san.rss",
+        "publisher_host": "dantri.com.vn",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-86d2c46b5a73b1e0f089",
+      "title": "Lợi thế khai thác của Ixora Grand Ho Tram by Fusion",
+      "url": "https://vnexpress.net/loi-the-khai-thac-cua-ixora-grand-ho-tram-by-fusion-5129495.html",
+      "category": "market",
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-10-07T07:30:00+00:00",
+      "source_id": "vnexpress-real-estate",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "Ixora Grand Ho Tram by Fusion mở rộng khả năng khai thác nhờ hệ tiện ích đang hoạt động tại The Grand Ho Tram, sự quản lý của Fusion Hotel Group và nguồn khách đa dạng.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://vnexpress.net/rss/bat-dong-san.rss",
+        "publisher_host": "vnexpress.net",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-95a022d63c2f7d6d53fe",
+      "title": "Quy Nhơn phát triển đô thị trên nền tảng cảnh quan, văn hóa",
+      "url": "https://vnexpress.net/quy-nhon-phat-trien-do-thi-tren-nen-tang-canh-quan-van-hoa-5129487.html",
+      "category": "market",
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-10-07T07:15:00+00:00",
+      "source_id": "vnexpress-real-estate",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "Biển, đầm Thị Nại, hệ sinh thái ven bờ cùng các giá trị lịch sử, văn hóa đang mở rộng dư địa phát triển không gian đô thị Quy Nhơn theo hướng gắn cảnh quan với đời sống và trải nghiệm.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://vnexpress.net/rss/bat-dong-san.rss",
+        "publisher_host": "vnexpress.net",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-7de3b03907530c3a00c9",
+      "title": "Đầu tư dòng căn hoàn thiện Đảo Ngọc, gia tăng dòng tiền nhờ Vinpearl vận hành",
+      "url": "https://dantri.com.vn/bat-dong-san/dau-tu-dong-can-hoan-thien-dao-ngoc-gia-tang-dong-tien-nho-vinpearl-van-hanh-20261007135628648.htm",
+      "category": "market",
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-10-07T07:08:48+00:00",
+      "source_id": "dantri-real-estate",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [
+        "vinhomes"
+      ],
+      "tags": [],
+      "importance": 2,
+      "summary": "(Dân trí) - Tại Vinhomes Hải Vân Bay, dòng căn hoàn thiện nội thất Đảo Ngọc có thể được ủy thác cho Vinpearl quản lý, khai thác hệ sinh thái nghỉ dưỡng, vui chơi giải trí để tiếp cận nhu cầu lưu trú của khách gia đình, góp phần tạo dòng tiền cho chủ sở hữu.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://dantri.com.vn/rss/bat-dong-san.rss",
+        "publisher_host": "dantri.com.vn",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-a82d0daea26b30cb46a8",
+      "title": "'78% chung cư mới tại Hà Nội nửa đầu năm là cao cấp, siêu sang'",
+      "url": "https://vnexpress.net/78-chung-cu-moi-tai-ha-noi-nua-dau-nam-la-cao-cap-sieu-sang-5129431.html",
+      "category": "market",
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-10-07T07:00:24+00:00",
+      "source_id": "vnexpress-real-estate",
+      "region_ids": [
+        "ha-noi"
+      ],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "Theo Ban Đô thị HĐNĐ TP Hà Nội, 78% nguồn chung cư thương mại mới ở Thủ đô nửa đầu năm là cao cấp, siêu sang, phân khúc nhà bình dân vẫn vắng bóng.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://vnexpress.net/rss/bat-dong-san.rss",
+        "publisher_host": "vnexpress.net",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-d636b97ad076f73399b7",
+      "title": "‘Gần metro’ có thể sẽ là một tiêu chí mới để chọn nhà an cư",
+      "url": "https://thanhnien.vn/gan-metro-co-the-se-la-mot-tieu-chi-moi-de-chon-nha-an-cu-18526100712111224.htm",
+      "category": "market",
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-10-07T07:00:00+00:00",
+      "source_id": "thanhnien-real-estate",
+      "region_ids": [
+        "hcmc"
+      ],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [
+        "legal",
+        "infrastructure"
+      ],
+      "importance": 2,
+      "summary": "Định vị cự ly an cư gần metro ngày càng rõ nét vai trò của một tiêu chí mới với người mua nhà. Tiêu chí này dần hình thành là xu hướng trong bối cảnh của cuộc đại phẫu đô thị TP.HCM với quy hoạch tầm nhìn 100 năm.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://thanhnien.vn/rss/kinh-te/dia-oc.rss",
+        "publisher_host": "thanhnien.vn",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-4d2838d83e192f6152ee",
+      "title": "Rivea Residences và triển vọng căn hộ cao cấp cho thuê tại Hà Nội",
+      "url": "https://dantri.com.vn/bat-dong-san/rivea-residences-va-trien-vong-can-ho-cao-cap-cho-thue-tai-ha-noi-20261007090628879.htm",
+      "category": "market",
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-10-07T06:30:00+00:00",
+      "source_id": "dantri-real-estate",
+      "region_ids": [
+        "ha-noi"
+      ],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "(Dân trí) - Tại Hà Nội, sức hút của phân khúc căn hộ cao cấp cho thuê tiếp tục được quan tâm, nhất là vị trí, không gian sống và chất lượng vận hành. Những dự án đáp ứng tốt nhu cầu hằng ngày có thêm lợi thế để duy trì sức hấp dẫn trong dài hạn.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://dantri.com.vn/rss/bat-dong-san.rss",
+        "publisher_host": "dantri.com.vn",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-471285a992abc536fd8e",
+      "title": "Lionel Messi và bất động sản trải dài từ châu Mỹ đến châu Âu",
+      "url": "https://vnexpress.net/lionel-messi-va-bat-dong-san-trai-dai-tu-chau-my-den-chau-au-5129340.html",
+      "category": "market",
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-10-07T06:02:27+00:00",
+      "source_id": "vnexpress-real-estate",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "Các bất động sản của Lionel Messi được thiết kế theo nhu cầu riêng tư, sum họp, nghỉ dưỡng và giao lưu của gia đình.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://vnexpress.net/rss/bat-dong-san.rss",
+        "publisher_host": "vnexpress.net",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-7f5a5feba31bb1637cc4",
+      "title": "Maison Privée lấy đặc trưng văn hóa Hà Nội làm cảm hứng kiến trúc",
+      "url": "https://vnexpress.net/maison-privee-lay-dac-trung-van-hoa-ha-noi-lam-cam-hung-kien-truc-5129386.html",
+      "category": "market",
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-10-07T06:00:00+00:00",
+      "source_id": "vnexpress-real-estate",
+      "region_ids": [
+        "ha-noi"
+      ],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "Maison Privée phát triển không gian sống theo hướng kết nối các giá trị đặc trưng của Hà Nội với kiến trúc đương đại, cảnh quan và tiêu chuẩn wellness.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://vnexpress.net/rss/bat-dong-san.rss",
+        "publisher_host": "vnexpress.net",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-fcf3e82b2ee86f767fc0",
+      "title": "TPHCM yêu cầu doanh nghiệp bất động sản khai báo dự án qua VNeID",
+      "url": "https://dantri.com.vn/bat-dong-san/tphcm-yeu-cau-doanh-nghiep-bat-dong-san-khai-bao-du-an-qua-vneid-20261007112345635.htm",
+      "category": "market",
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-10-07T04:38:31+00:00",
+      "source_id": "dantri-real-estate",
+      "region_ids": [
+        "hcmc"
+      ],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [
+        "sales"
+      ],
+      "importance": 2,
+      "summary": "(Dân trí) - Sở Xây dựng TPHCM yêu cầu chủ đầu tư, sàn giao dịch bất động sản định danh điện tử và đăng nhập hệ thống bằng VNeID để báo cáo, công khai thông tin dự án.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://dantri.com.vn/rss/bat-dong-san.rss",
+        "publisher_host": "dantri.com.vn",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-64bfb4f02d1f7c8a10ea",
+      "title": "Quy định mới về điều kiện lập khu thương mại tự do: Quy mô ít nhất 1.000ha",
+      "url": "https://dantri.com.vn/bat-dong-san/quy-dinh-moi-ve-dieu-kien-lap-khu-thuong-mai-tu-do-quy-mo-it-nhat-1000ha-20261007105042085.htm",
+      "category": "market",
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-10-07T03:58:17+00:00",
+      "source_id": "dantri-real-estate",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [
+        "infrastructure"
+      ],
+      "importance": 2,
+      "summary": "(Dân trí) - Chính phủ vừa ban hành các tiêu chí cụ thể để thành lập khu thương mại tự do. Ngoài yêu cầu về diện tích và hạ tầng số, các khu vực này phải có phương án bảo đảm an ninh quốc gia.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://dantri.com.vn/rss/bat-dong-san.rss",
+        "publisher_host": "dantri.com.vn",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-37be92ca53fc45ff6aaf",
+      "title": "Cao tốc, metro và loạt dự án nghìn tỷ đồng tại TPHCM đang thi công đến đâu?",
+      "url": "https://dantri.com.vn/bat-dong-san/cao-toc-metro-va-loat-du-an-nghin-ty-dong-tai-tphcm-dang-thi-cong-den-dau-20261007092349513.htm",
+      "category": "market",
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-10-07T02:42:43+00:00",
+      "source_id": "dantri-real-estate",
+      "region_ids": [
+        "hcmc"
+      ],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [
+        "infrastructure"
+      ],
+      "importance": 2,
+      "summary": "(Dân trí) - Các dự án trọng điểm tại TPHCM đang được đẩy nhanh tiến độ, trong đó tuyến đường nối cao tốc Biên Hòa - Vũng Tàu với vòng xoay đường 2 Tháng 9 được phấn đấu hoàn thành cuối năm nay.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://dantri.com.vn/rss/bat-dong-san.rss",
+        "publisher_host": "dantri.com.vn",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-b3cb5096eb644daec80f",
+      "title": "CapitaLand gắn kết cộng đồng trong phát triển bất động sản",
+      "url": "https://vnexpress.net/capitaland-gan-ket-cong-dong-trong-phat-trien-bat-dong-san-5129334.html",
+      "category": "market",
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-10-07T02:30:00+00:00",
+      "source_id": "vnexpress-real-estate",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "CapitaLand tổ chức chiến dịch cộng đồng kéo dài 4 tháng, thu hút hơn 8.500 người tham gia, thu về hơn 2,5 tỷ đồng hỗ trợ trẻ em yếu thế.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://vnexpress.net/rss/bat-dong-san.rss",
+        "publisher_host": "vnexpress.net",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-6a33905f07fc76f8a773",
+      "title": "Những trải nghiệm trong một ngày tại Serena Riverside",
+      "url": "https://vnexpress.net/nhung-trai-nghiem-trong-mot-ngay-tai-serena-riverside-5129295.html",
+      "category": "market",
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-10-07T02:00:00+00:00",
+      "source_id": "vnexpress-real-estate",
+      "region_ids": [
+        "hcmc"
+      ],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "Serena Riverside vị trí bên sông Sài Gòn phát triển theo mô hình nghỉ dưỡng tại nhà, với không gian đa trải nghiệm.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://vnexpress.net/rss/bat-dong-san.rss",
+        "publisher_host": "vnexpress.net",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-f377679f01778676524c",
+      "title": "Gần 400 triệu USD vốn ngoại chảy vào bất động sản Hà Nội",
+      "url": "https://dantri.com.vn/bat-dong-san/gan-400-trieu-usd-von-ngoai-chay-vao-bat-dong-san-ha-noi-20261007082313679.htm",
+      "category": "market",
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-10-07T01:51:09+00:00",
+      "source_id": "dantri-real-estate",
+      "region_ids": [
+        "ha-noi"
+      ],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "(Dân trí) - Trong 9 tháng năm 2026, lĩnh vực kinh doanh bất động sản thu hút khoảng 394 triệu USD vốn FDI, chiếm gần 10% tổng vốn đầu tư trực tiếp nước ngoài vào Hà Nội.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://dantri.com.vn/rss/bat-dong-san.rss",
+        "publisher_host": "dantri.com.vn",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-3695af829de8126f84a9",
+      "title": "Sức bật hạ tầng mở ra chu kỳ tích sản mới với bất động sản thấp tầng",
+      "url": "https://thanhnien.vn/suc-bat-ha-tang-mo-ra-chu-ky-tich-san-moi-voi-bat-dong-san-thap-tang-185261006212643841.htm",
+      "category": "market",
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-10-07T00:00:00+00:00",
+      "source_id": "thanhnien-real-estate",
+      "region_ids": [
+        "ha-noi"
+      ],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [
+        "infrastructure"
+      ],
+      "importance": 2,
+      "summary": "Sự phát triển đồng bộ của hạ tầng giao thông và hạ tầng xã hội đang mở ra cơ hội an cư mới tại phía Đông Hà Nội. Kết nối thuận tiện và hệ sinh thái tiện ích đã hiện hữu giúp khu vực này trở thành lựa chọn của những gia đình tìm kiếm môi trường sống chất lượng cùng giá trị bền vững dài hạn.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://thanhnien.vn/rss/kinh-te/dia-oc.rss",
+        "publisher_host": "thanhnien.vn",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-51a291450a4040202e38",
+      "title": "7 vị trí trong nhà nên tránh đặt nếu muốn cây cảnh luôn tươi tốt",
+      "url": "https://dantri.com.vn/bat-dong-san/7-vi-tri-trong-nha-nen-tranh-dat-neu-muon-cay-canh-luon-tuoi-tot-20261006132242782.htm",
+      "category": "market",
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-10-06T23:00:00+00:00",
+      "source_id": "dantri-real-estate",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "(Dân trí) - Chăm mãi nhưng các chậu cây cảnh vẫn vàng lá, rụng cành? Rất có thể bạn đã vô tình đặt cây vào những vị trí bất lợi trong nhà khiến cây kiệt sức từng ngày mà không hề hay biết.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://dantri.com.vn/rss/bat-dong-san.rss",
+        "publisher_host": "dantri.com.vn",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-6e488dbd4ac5ec2dc773",
+      "title": "TP HCM giao hơn 700 ha đất cho Thadico và Becamex",
+      "url": "https://vnexpress.net/tp-hcm-giao-hon-700-ha-dat-cho-thadico-va-becamex-5129244.html",
+      "category": "market",
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-10-06T22:00:00+00:00",
+      "source_id": "vnexpress-real-estate",
+      "region_ids": [
+        "hcmc"
+      ],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "Thadico, Becamex vừa được TP HCM giao, cho thuê khoảng 708 ha đất để thực hiện các dự án công nghiệp và đô thị.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://vnexpress.net/rss/bat-dong-san.rss",
+        "publisher_host": "vnexpress.net",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-2da844cc5215fc0187c3",
+      "title": "Căn hộ 100 m2 bỏ bớt phòng ngủ để mở rộng không gian chung",
+      "url": "https://vnexpress.net/can-ho-100-m2-bo-bot-phong-ngu-de-mo-rong-khong-gian-chung-5129039.html",
+      "category": "market",
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-10-06T21:30:00+00:00",
+      "source_id": "vnexpress-real-estate",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "Không gian được tổ chức theo nhu cầu nghỉ cuối tuần, ưu tiên khu sinh hoạt chung thoáng, nhiều ánh sáng và các góc ngồi thư giãn cho gia đình.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://vnexpress.net/rss/bat-dong-san.rss",
+        "publisher_host": "vnexpress.net",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-69464e321e8c8fb9fa25",
+      "title": "Doanh nghiệp bất động sản giải thể tăng hơn 120%",
+      "url": "https://vnexpress.net/doanh-nghiep-bat-dong-san-giai-the-tang-hon-120-5129025.html",
+      "category": "market",
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-10-06T21:00:00+00:00",
+      "source_id": "vnexpress-real-estate",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "9 tháng đầu năm, hơn 2.800 doanh nghiệp kinh doanh bất động sản hoàn tất thủ tục giải thể, tăng 123% so với cùng kỳ năm ngoái.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://vnexpress.net/rss/bat-dong-san.rss",
+        "publisher_host": "vnexpress.net",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-4320c557ca4aa905204f",
+      "title": "Người nước ngoài chốt mua 57 căn hộ tại phường An Khánh",
+      "url": "https://vnexpress.net/nguoi-nuoc-ngoai-chot-mua-57-can-ho-tai-phuong-an-khanh-5129243.html",
+      "category": "market",
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-10-06T20:17:02+00:00",
+      "source_id": "vnexpress-real-estate",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "Sở Xây dựng thành phố xác nhận dự án chung cư Sensation đã ký hợp đồng mua bán 57 căn hộ cho khách nước ngoài, dư địa khối ngoại sở hữu hiện còn 24 căn.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://vnexpress.net/rss/bat-dong-san.rss",
+        "publisher_host": "vnexpress.net",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-1558b58b70de59a53179",
+      "title": "Ngân hàng Chính sách xã hội hết 'room' cho vay nhà ở xã hội năm nay",
+      "url": "https://vnexpress.net/ngan-hang-chinh-sach-xa-hoi-het-room-cho-vay-nha-o-xa-hoi-nam-nay-5128985.html",
+      "category": "market",
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-10-06T13:28:37+00:00",
+      "source_id": "vnexpress-real-estate",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "Trước phản ánh một số người mua nhà xã hội chưa được tiếp nhận hồ sơ vay, Ngân hàng Chính sách xã hội cho biết chỉ tiêu vốn năm 2026 đã phân bổ hết và đang đề xuất bổ sung.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://vnexpress.net/rss/bat-dong-san.rss",
+        "publisher_host": "vnexpress.net",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-b3e1caf442fb304f6f76",
+      "title": "TPHCM tính phát hành trái phiếu để huy động vốn làm dự án trọng điểm",
+      "url": "https://dantri.com.vn/bat-dong-san/tphcm-tinh-phat-hanh-trai-phieu-de-huy-dong-von-lam-du-an-trong-diem-20261006185430166.htm",
+      "category": "market",
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-10-06T12:16:57+00:00",
+      "source_id": "dantri-real-estate",
+      "region_ids": [
+        "hcmc"
+      ],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "(Dân trí) - TPHCM đang lấy ý kiến phương án phát hành trái phiếu qua Trung tâm tài chính quốc tế để huy động vốn cho các dự án trọng điểm. Thời gian góp ý từ ngày 6/10 đến hết ngày 16/10.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://dantri.com.vn/rss/bat-dong-san.rss",
+        "publisher_host": "dantri.com.vn",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-464d42398060b46daecd",
+      "title": "Bộ Tài chính nêu căn cứ xác định đất bỏ hoang để tính thuế 0,2%",
+      "url": "https://dantri.com.vn/bat-dong-san/bo-tai-chinh-neu-can-cu-xac-dinh-dat-bo-hoang-de-tinh-thue-02-20261006173146268.htm",
+      "category": "market",
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-10-06T10:51:24+00:00",
+      "source_id": "dantri-real-estate",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "(Dân trí) - Đất bỏ hoang, chậm hoặc không đưa vào sử dụng được đề xuất áp thuế suất 0,2%. Bộ Tài chính cho biết việc xác định nhóm đất này sẽ căn cứ theo các tiêu chí, quy định của pháp luật về đất đai.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://dantri.com.vn/rss/bat-dong-san.rss",
+        "publisher_host": "dantri.com.vn",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-76a6979b0780ee907711",
+      "title": "Tháng 10, TPHCM đấu giá các lô đất với 3.790 căn hộ tái định cư ở Thủ Thiêm",
+      "url": "https://dantri.com.vn/bat-dong-san/thang-10-tphcm-dau-gia-cac-lo-dat-voi-3790-can-ho-tai-dinh-cu-o-thu-thiem-20261006162842741.htm",
+      "category": "market",
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-10-06T10:02:34+00:00",
+      "source_id": "dantri-real-estate",
+      "region_ids": [
+        "hcmc"
+      ],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "(Dân trí) - TPHCM sẽ đấu giá 5 lô đất có 3.790 căn hộ tái định cư Khu đô thị mới Thủ Thiêm trong tháng 10. Giá khởi điểm quyền sử dụng đất và giá trị công trình sẽ được các cơ quan xác định tại thời điểm đấu giá.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://dantri.com.vn/rss/bat-dong-san.rss",
+        "publisher_host": "dantri.com.vn",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-de98e508f5b86b0549d6",
+      "title": "Nhà ở tái định cư có thể chuyển thành nhà ở thương mại tại TPHCM",
+      "url": "https://dantri.com.vn/bat-dong-san/nha-o-tai-dinh-cu-co-the-chuyen-thanh-nha-o-thuong-mai-tai-tphcm-20261006151427118.htm",
+      "category": "market",
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-10-06T09:59:22+00:00",
+      "source_id": "dantri-real-estate",
+      "region_ids": [
+        "hcmc"
+      ],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "(Dân trí) - TPHCM đang xây dựng quy định đối với việc chuyển đổi các loại hình nhà ở thương mại, xã hội, tái định cư. Thành phố cũng lấy ý kiến về việc chuyển công năng sử dụng giữa các loại nhà là tài sản công.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://dantri.com.vn/rss/bat-dong-san.rss",
+        "publisher_host": "dantri.com.vn",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-c99ce1c051b9d9005fc1",
+      "title": "Bỗng dưng nợ thuế hàng trăm triệu đồng",
+      "url": "https://thanhnien.vn/bong-dung-no-thue-hang-tram-trieu-dong-185261006163035789.htm",
+      "category": "market",
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-10-06T09:52:00+00:00",
+      "source_id": "thanhnien-real-estate",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [
+        "sales"
+      ],
+      "importance": 2,
+      "summary": "Dù các giao dịch bất động sản đã hoàn thành từ 4 - 5 năm trước, thế nhưng gần đây nhiều người dân bỗng dưng nhận được thông báo nợ thuế từ ngành thuế qua ứng dụng eTax Mobil, với số tiền hàng chục, thậm chí hàng trăm triệu đồng.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://thanhnien.vn/rss/kinh-te/dia-oc.rss",
+        "publisher_host": "thanhnien.vn",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-1d39fe387caa3877b584",
+      "title": "Đề xuất đánh thuế đất bỏ hoang gấp 7 lần: Thế nào được xem là bỏ hoang?",
+      "url": "https://dantri.com.vn/bat-dong-san/de-xuat-danh-thue-dat-bo-hoang-gap-7-lan-the-nao-duoc-xem-la-bo-hoang-20261006154741340.htm",
+      "category": "market",
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-10-06T09:12:55+00:00",
+      "source_id": "dantri-real-estate",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "(Dân trí) - Đề xuất áp thuế 0,2% với đất bỏ hoang nhằm hạn chế lãng phí đất đai, nhưng đặt ra câu hỏi về tiêu chí xác định và những trường hợp đất vẫn đang được sử dụng.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://dantri.com.vn/rss/bat-dong-san.rss",
+        "publisher_host": "dantri.com.vn",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-1f42937bfd0718e8333c",
+      "title": "Cực bắc TP.HCM chuyển mình, thị trường nhà ở đón nhu cầu mới từ giới chuyên gia",
+      "url": "https://thanhnien.vn/cuc-bac-tphcm-chuyen-minh-thi-truong-nha-o-don-nhu-cau-moi-tu-gioi-chuyen-gia-185261006161916513.htm",
+      "category": "market",
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-10-06T09:07:00+00:00",
+      "source_id": "thanhnien-real-estate",
+      "region_ids": [
+        "hcmc",
+        "binh-duong"
+      ],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "Sự chuyển dịch từ trung tâm công nghiệp truyền thống sang cực tăng trưởng về công nghệ, đổi mới sáng tạo ở phía bắc TP.HCM (khu vực Bình Dương và Thủ Đức trước đây) được kỳ vọng kéo theo lực lượng kỹ sư, chuyên gia và quản lý chất lượng cao, từ đó hình thành những nhu cầu mới trên thị trường nhà ở.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://thanhnien.vn/rss/kinh-te/dia-oc.rss",
+        "publisher_host": "thanhnien.vn",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-f5dbff0dd8be7090636f",
+      "title": "Cập nhật tiến độ dự án 7 cây cầu lớn bắc qua sông Hồng",
+      "url": "https://dantri.com.vn/bat-dong-san/cap-nhat-tien-do-du-an-7-cay-cau-lon-bac-qua-song-hong-20261006121644496.htm",
+      "category": "market",
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-10-06T07:43:04+00:00",
+      "source_id": "dantri-real-estate",
+      "region_ids": [
+        "ha-noi"
+      ],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [
+        "infrastructure"
+      ],
+      "importance": 2,
+      "summary": "(Dân trí) - Nhiều công trình hạ tầng lớn tại Hà Nội đang được đẩy nhanh tiến độ, gồm 7 cầu vượt sông Hồng, các tuyến vành đai, đường sắt đô thị và loạt dự án chống ngập.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://dantri.com.vn/rss/bat-dong-san.rss",
+        "publisher_host": "dantri.com.vn",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-3db65a0eb25f3c30b582",
+      "title": "TP HCM yêu cầu doanh nghiệp địa ốc khai báo dự án qua VNeID",
+      "url": "https://vnexpress.net/tp-hcm-yeu-cau-doanh-nghiep-dia-oc-khai-bao-du-an-qua-vneid-5129053.html",
+      "category": "market",
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-10-06T07:30:14+00:00",
+      "source_id": "vnexpress-real-estate",
+      "region_ids": [
+        "hcmc"
+      ],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "Sở Xây dựng TP HCM yêu cầu các doanh nghiệp kinh doanh địa ốc đăng ký tài khoản định danh điện tử, đăng nhập bằng VNeID để công khai dự án trên hệ thống thông tin nhà ở.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://vnexpress.net/rss/bat-dong-san.rss",
+        "publisher_host": "vnexpress.net",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-97db4799f103fa456bcf",
+      "title": "Rare Collection: Những ‘tác phẩm nghệ thuật’ sống giữa lòng Hà Nội",
+      "url": "https://thanhnien.vn/rare-collection-nhung-tac-pham-nghe-thuat-song-giua-long-ha-noi-185261006125442153.htm",
+      "category": "market",
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-10-06T07:00:00+00:00",
+      "source_id": "thanhnien-real-estate",
+      "region_ids": [
+        "ha-noi"
+      ],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "Dưới góc nhìn của văn hóa và kiến trúc đương đại, sự xa xỉ của bất động sản hàng hiệu không còn đo đếm bằng diện tích hay vật liệu xa hoa, mà nằm ở tính 'độc bản' và những giá trị riêng tư được may đo riêng cho gia chủ.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://thanhnien.vn/rss/kinh-te/dia-oc.rss",
+        "publisher_host": "thanhnien.vn",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-a825ecdb2636358149a1",
+      "title": "Bộ Tài chính đề xuất đánh thuế đất bỏ hoang gấp 7 lần đất trong hạn mức",
+      "url": "https://dantri.com.vn/bat-dong-san/bo-tai-chinh-de-xuat-danh-thue-dat-bo-hoang-gap-7-lan-dat-trong-han-muc-20261006124335826.htm",
+      "category": "market",
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-10-06T05:55:18+00:00",
+      "source_id": "dantri-real-estate",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "(Dân trí) - Bộ Tài chính đề xuất áp thuế suất 0,2% với đất bỏ hoang, không đưa vào sử dụng hoặc chậm đưa vào sử dụng, cao gấp gần 7 lần mức 0,03% với đất ở trong hạn mức.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://dantri.com.vn/rss/bat-dong-san.rss",
+        "publisher_host": "dantri.com.vn",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-42f8717a334c4455efb4",
+      "title": "Cổ phiếu giảm, Novaland bác tin “phá sản”",
+      "url": "https://dantri.com.vn/bat-dong-san/co-phieu-giam-novaland-bac-tin-pha-san-20261006124035408.htm",
+      "category": "market",
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-10-06T05:51:07+00:00",
+      "source_id": "dantri-real-estate",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "(Dân trí) - Cổ phiếu Novaland lao dốc, có thời điểm xuống dưới mệnh giá giữa tin đồn “mất khả năng hoạt động” lan truyền trên thị trường. Doanh nghiệp khẳng định thông tin này không chính xác.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://dantri.com.vn/rss/bat-dong-san.rss",
+        "publisher_host": "dantri.com.vn",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-0c3c5379e17a9150ea15",
+      "title": "Hé lộ 3 dự án mang về gần 27.600 tỷ đồng tiền sử dụng đất cho Hà Nội",
+      "url": "https://dantri.com.vn/bat-dong-san/he-lo-3-du-an-mang-ve-gan-27600-ty-dong-tien-su-dung-dat-cho-ha-noi-20261006094408816.htm",
+      "category": "market",
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-10-06T03:11:09+00:00",
+      "source_id": "dantri-real-estate",
+      "region_ids": [
+        "ha-noi"
+      ],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "(Dân trí) - Hà Nội thu hơn 85.000 tỷ đồng tiền sử dụng đất trong 9 tháng, trong đó 3 dự án bất động sản đóng góp khoảng 27.600 tỷ đồng.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://dantri.com.vn/rss/bat-dong-san.rss",
+        "publisher_host": "dantri.com.vn",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-639b7cb731c7d4d351b7",
+      "title": "Hàng tỷ USD đang tìm đến một phân khúc bất động sản mới",
+      "url": "https://dantri.com.vn/bat-dong-san/hang-ty-usd-dang-tim-den-mot-phan-khuc-bat-dong-san-moi-20261006095540992.htm",
+      "category": "market",
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-10-06T03:03:18+00:00",
+      "source_id": "dantri-real-estate",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [
+        "infrastructure"
+      ],
+      "importance": 2,
+      "summary": "(Dân trí) - Làn sóng đầu tư trung tâm dữ liệu đang mở ra nguồn cầu hàng tỷ USD cho bất động sản công nghiệp Việt Nam, kéo theo nhu cầu về quỹ đất có nguồn điện ổn định, hạ tầng và khả năng mở rộng dài hạn.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://dantri.com.vn/rss/bat-dong-san.rss",
+        "publisher_host": "dantri.com.vn",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-c312b75399d9efa8d506",
+      "title": "Bcons Central Park: Giải mã bài toán chọn nhà gần trường, trọn vẹn an cư",
+      "url": "https://thanhnien.vn/bcons-central-park-giai-ma-bai-toan-chon-nha-gan-truong-tron-ven-an-cu-185261006093308729.htm",
+      "category": "market",
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-10-06T02:40:00+00:00",
+      "source_id": "thanhnien-real-estate",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "Bài toán chọn căn hộ của các gia đình thường bắt đầu từ một câu hỏi thực tế: con sẽ học ở đâu và mất bao lâu để di chuyển.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://thanhnien.vn/rss/kinh-te/dia-oc.rss",
+        "publisher_host": "thanhnien.vn",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-0ce0307f632361d4d2d8",
+      "title": "4 mẹo tăng áp lực nước vòi sen chảy mạnh tức thì tại nhà",
+      "url": "https://dantri.com.vn/bat-dong-san/4-meo-tang-ap-luc-nuoc-voi-sen-chay-manh-tuc-thi-tai-nha-20261004180500448.htm",
+      "category": "market",
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-10-05T23:00:00+00:00",
+      "source_id": "dantri-real-estate",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "(Dân trí) - Vòi sen, vòi rửa bát chảy yếu có thể bắt nguồn từ cặn bẩn, thiết bị xuống cấp, rò rỉ hoặc đường ống bị tắc. Một số nguyên nhân có thể được xử lý ngay tại nhà.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://dantri.com.vn/rss/bat-dong-san.rss",
+        "publisher_host": "dantri.com.vn",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-2cde5beaa0f3258bf35f",
+      "title": "Lãi suất vay cao, người mua nhà thận trọng",
+      "url": "https://thanhnien.vn/lai-suat-vay-cao-nguoi-mua-nha-giam-manh-185261005213623653.htm",
+      "category": "market",
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-10-05T22:58:00+00:00",
+      "source_id": "thanhnien-real-estate",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [
+        "supply",
+        "legal"
+      ],
+      "importance": 2,
+      "summary": "Thị trường bất động sản đang đứng trước một nghịch lý: nguồn cung được cải thiện, pháp lý nhiều dự án từng bước được tháo gỡ nhưng thanh khoản lại không tăng tương ứng. Một trong những nguyên nhân lớn nhất là mặt bằng lãi suất cho vay mua nhà quá cao.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://thanhnien.vn/rss/kinh-te/dia-oc.rss",
+        "publisher_host": "thanhnien.vn",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-d14ead662479d32064e2",
+      "title": "Victoria Village, Aqua City tăng tốc bàn giao, Novaland bước vào mùa ghi nhận doanh thu",
+      "url": "https://thanhnien.vn/victoria-village-aqua-city-tang-toc-ban-giao-novaland-buoc-vao-mua-ghi-nhan-doanh-thu-185261005111617316.htm",
+      "category": "market",
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-10-05T04:06:00+00:00",
+      "source_id": "thanhnien-real-estate",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "Hoạt động xây dựng và bàn giao tại các dự án của Novaland tăng tốc trong nửa cuối năm 2026. Victoria Village và Aqua City dự kiến đóng góp chính vào doanh thu quý III, trong khi The Grand Manhattan tiếp tục đẩy nhanh thi công, hoàn thiện để chuẩn bị bàn giao từ quý IV.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://thanhnien.vn/rss/kinh-te/dia-oc.rss",
+        "publisher_host": "thanhnien.vn",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-f26c4bd958cf723a0b88",
+      "title": "Đông đảo khách hàng thẩm định tại sự kiện khai trương mô hình kiến trúc A&K Tower",
+      "url": "https://thanhnien.vn/dong-dao-khach-hang-tham-dinh-tai-su-kien-khai-truong-mo-hinh-kien-truc-ak-tower-185261004170823205.htm",
+      "category": "market",
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-10-05T01:00:00+00:00",
+      "source_id": "thanhnien-real-estate",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "Hàng trăm khách hàng quan tâm chính sách vay mua căn hộ A&K Tower với chính sách \"Mua nhà 3 Không\" đã được thẩm định hồ sơ cơ sở thành công với sự tham gia của nhóm đối tác ngân hàng của OBC Holdings gồm: MB Bank, ACB, Vietcombank, PVcombank, Publicbank.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://thanhnien.vn/rss/kinh-te/dia-oc.rss",
+        "publisher_host": "thanhnien.vn",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-a322c48f25d8fe556539",
+      "title": "Sau hơn 10 năm chờ đợi, cư dân chung cư 4S Linh Đông được cấp sổ hồng",
+      "url": "https://thanhnien.vn/sau-hon-10-nam-cho-doi-cu-dan-chung-cu-4s-linh-dong-duoc-cap-so-hong-185261003171614443.htm",
+      "category": "market",
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-10-03T10:28:00+00:00",
+      "source_id": "thanhnien-real-estate",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [
+        "legal"
+      ],
+      "importance": 2,
+      "summary": "Ngày 3.10, Công ty TNHH Xây dựng Thành Trường Lộc, chủ đầu tư chung cư 4S Linh Đông đã tổ chức trao giấy chứng nhận (sổ hồng) đợt 1 cho các cư dân tại đây.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://thanhnien.vn/rss/kinh-te/dia-oc.rss",
+        "publisher_host": "thanhnien.vn",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-0d55c8fdb5a19f743a34",
+      "title": "Phát Đạt ra mắt tháp biểu tượng mới ngay quảng trường trung tâm Quy Nhơn",
+      "url": "https://thanhnien.vn/phat-dat-ra-mat-thap-bieu-tuong-moi-ngay-quang-truong-trung-tam-quy-nhon-185261003154056903.htm",
+      "category": "market",
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-10-03T09:30:00+00:00",
+      "source_id": "thanhnien-real-estate",
+      "region_ids": [
+        "ha-noi"
+      ],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [
+        "supply"
+      ],
+      "importance": 2,
+      "summary": "Sáng 2.10, Công ty Cổ phần Phát triển Bất động sản Phát Đạt (PDR:HOSE) chính thức giới thiệu dự án Q'Terra đến thị trường Hà Nội. Đây là cột mốc tiếp theo của doanh nghiệp trên hành trình chinh phục nhà đầu tư phía Bắc với tòa tháp biểu tượng mới mặt biển, ngay quảng trường trung tâm Quy Nhơn.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://thanhnien.vn/rss/kinh-te/dia-oc.rss",
+        "publisher_host": "thanhnien.vn",
+        "publication_date_from_feed": true
+      }
+    },
     {
       "id": "article-legal-001",
       "title": "Illustrative briefing: housing decree approaches late-October effective date",
@@ -139,6 +1828,52 @@
       "summary": "Demo release used to separate the September data period from its October publication date."
     },
     {
+      "id": "article-market-rss-43bf9d492b1d8a55dbeb",
+      "title": "Trellia Vista - Từ khung cửa mở ra thiên nhiên đến nhịp sống đủ đầy",
+      "url": "https://thanhnien.vn/trellia-vista-tu-khung-cua-mo-ra-thien-nhien-den-nhip-song-du-day-185261002114018477.htm",
+      "category": "market",
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-10-02T05:00:00+00:00",
+      "source_id": "thanhnien-real-estate",
+      "region_ids": [],
+      "project_ids": [
+        "mizuki-park"
+      ],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "Giữa một Mizuki Park đã thành hình, Trellia Vista mang đến lựa chọn sống mới cho gia đình trẻ, nơi thiên nhiên không chỉ hiện diện quanh nhà mà được kết nối trong từng trải nghiệm sống thường ngày.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://thanhnien.vn/rss/kinh-te/dia-oc.rss",
+        "publisher_host": "thanhnien.vn",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-f22edd412de7ec257752",
+      "title": "Đề xuất cho hoán đổi đất liền kề khi bị thu hồi",
+      "url": "https://thanhnien.vn/de-xuat-cho-hoan-doi-dat-lien-ke-khi-bi-thu-hoi-185261001214235864.htm",
+      "category": "market",
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-10-01T23:00:00+00:00",
+      "source_id": "thanhnien-real-estate",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "Đề xuất trường hợp người dân bị thu hồi đất, có thửa đất khác liền kề với thửa đất bị thu hồi thì được hoán đổi diện tích đất tương đương và được chuyển mục đích sử dụng đất sang đất ở nhưng không phải đóng tiền sử dụng đất đối với phần đất này đang thu hút sự quan tâm của nhiều người.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://thanhnien.vn/rss/kinh-te/dia-oc.rss",
+        "publisher_host": "thanhnien.vn",
+        "publication_date_from_feed": true
+      }
+    },
+    {
       "id": "article-macro-003",
       "title": "Domestic gold demo series extends its late-September rise",
       "url": "#",
@@ -182,6 +1917,30 @@
       ],
       "importance": 3,
       "summary": "Illustrative research note demonstrating related-document navigation and recently-effective status."
+    },
+    {
+      "id": "article-market-rss-8cec1532de296c5af52c",
+      "title": "Sở Nông nghiệp và Môi trường TP.HCM bổ nhiệm nhiều vị trí lãnh đạo",
+      "url": "https://thanhnien.vn/ong-tran-dinh-quan-giu-chuc-pho-giam-doc-van-phong-dang-ky-dat-dai-tphcm-185261001171141716.htm",
+      "category": "market",
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-10-01T10:27:00+00:00",
+      "source_id": "thanhnien-real-estate",
+      "region_ids": [
+        "hcmc"
+      ],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "Ngày 1.10, Sở Nông nghiệp và Môi trường TP.HCM tổ chức công bố các quyết định về công tác cán bộ đối với nhiều vị trí lãnh đạo chủ, trong đó ông Trần Đình Quân, Giám đốc Chi nhánh Văn phòng Đăng ký đất đai số 2 được bổ nhiệm giữ chức Phó giám đốc Văn phòng Đăng ký đất đai TP.HCM.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://thanhnien.vn/rss/kinh-te/dia-oc.rss",
+        "publisher_host": "thanhnien.vn",
+        "publication_date_from_feed": true
+      }
     },
     {
       "id": "article-infra-blt",
