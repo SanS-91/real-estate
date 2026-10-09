@@ -1,0 +1,58 @@
+name: Market 4I - Live History Chart Contract
+
+on:
+  pull_request:
+    paths:
+      - 'assets/js/market-history-series.js'
+      - 'assets/js/charts.js'
+      - 'assets/js/market.js'
+      - 'tests/test_phase4i_source_aware_charts.cjs'
+      - '.github/workflows/market-phase4i-source-charts.yml'
+  push:
+    branches: [main]
+    paths:
+      - 'assets/js/market-history-series.js'
+      - 'assets/js/charts.js'
+      - 'assets/js/market.js'
+      - '.github/workflows/market-phase4i-source-charts.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  multi-source-chart-contract:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Chart syntax and quarterly source integrity tests
+        run: |
+          node --check assets/js/market-history-series.js
+          node --check assets/js/charts.js
+          node --check assets/js/market.js
+          node tests/test_phase4i_source_aware_charts.cjs
+          node tests/test_market_history_series.cjs
+          node tests/test_market_project_price_range_chart.js
+      - name: Browser smoke supply-sales and overview
+        run: |
+          set -eu
+          BROWSER="$(command -v google-chrome || command -v chromium || command -v chromium-browser || true)"
+          test -n "$BROWSER"
+          python -m http.server 8765 --bind 127.0.0.1 >/tmp/market4i-http.log 2>&1 &
+          SERVER_PID=$!
+          trap 'kill "$SERVER_PID" || true' EXIT
+          sleep 3
+          "$BROWSER" --headless --no-sandbox --disable-gpu --disable-dev-shm-usage --virtual-time-budget=11000 --dump-dom 'http://127.0.0.1:8765/market.html?view=supply-sales&region=hcmc&segment=apartment' >/tmp/market4i-supply.html
+          python - <<'PY'
+          from pathlib import Path
+          s=Path('/tmp/market4i-supply.html').read_text()
+          assert 'Source-period coverage' in s, 'Supply history did not render'
+          assert 'quý nguồn cung cận dưới' in s, 'Lower-bound coverage not displayed'
+          assert 'quý có tỷ lệ hấp thụ' in s, 'Absorption period count missing'
+          assert 'Cushman &amp; Wakefield' in s or 'Cushman & Wakefield' in s, 'Publisher not listed'
+          print('PASS: supply history renders source-specific coverage and missing fields')
+          PY
