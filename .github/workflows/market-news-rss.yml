@@ -43,6 +43,19 @@ jobs:
         run: python scripts/test_market_news_rss.py
       - name: Preview live source feeds
         run: python scripts/market_news_rss.py --mode preview
+      - name: Simulate append-only publishing on PR runner
+        if: github.event_name == 'pull_request'
+        run: |
+          python scripts/market_news_rss.py --mode promote
+          python - <<'PY'
+          import json
+          from pathlib import Path
+          data=json.loads(Path('data/mock/articles/articles.json').read_text())
+          assert data['record_count']==len(data['data'])
+          keys=[x['url'] for x in data['data'] if x['id'].startswith('article-market-rss-')]
+          assert len(keys)==len(set(keys))
+          print('PR-only validation passed; remote production unchanged.')
+          PY
       - name: Publish newly validated market news
         if: github.ref == 'refs/heads/main' && github.event_name != 'pull_request'
         run: python scripts/market_news_rss.py --mode promote
