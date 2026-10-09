@@ -69,7 +69,7 @@ jobs:
                       snippets=[text[max(0,m.start()-15):m.start()+85] for m in matches[:7]]
                       print(json.dumps({'diagnostic_url':url,'detail_status':state,
                         'h1':h.get_text(' ',strip=True)[:105] if h else None,
-                        'first300':text[:300], 'section_tokens':snippets},ensure_ascii=False))
+                        'after_h1':re.sub(r'\\s+',' ', ' '.join(z.strip() for z in h.next_strings if z and z.strip()))[:680] if h else None, 'section_tokens':snippets},ensure_ascii=False))
           print('Source probe finished; no listings published by a PR.')
           PY
           python scripts/market_rever_project_listings.py
