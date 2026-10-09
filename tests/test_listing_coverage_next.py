@@ -59,10 +59,10 @@ assert max(len(dates) for dates in by_day.values())==2
 again,repeat=batch.evaluate(config["records"],with_data,today)
 assert not again and all(x["status"]=="unchanged" for x in repeat)
 
-assert len(scoped)==2
+assert len(scoped)==4
 assert not scope.check(scoped,with_data,projects,today)
-assert {r["project_id"] for r in scoped}=={"the-9-stellars","celesta-gold"}
-for pid in ("the-9-stellars","celesta-gold"):
+assert {r["project_id"] for r in scoped}=={"the-9-stellars","celesta-gold","izumi-city","essensia-parkway"}
+for pid in ("the-9-stellars","celesta-gold","izumi-city","essensia-parkway"):
     ref=next(x for x in scoped if x["project_id"]==pid)
     assert ref["asking_price_low_vnd_per_m2"]>0
     assert next(x for x in with_data if x["project_id"]==pid)["asking_price_low_vnd_per_m2"] is None
@@ -90,4 +90,4 @@ assert report.listing_report(history_cfg,third)["trend_ready_series"]==1
 third[-1]["asking_price_low_vnd_per_m2"]=None
 assert report.listing_report(history_cfg,third)["trend_ready_series"]==0
 
-print("Market listing coverage: 2 new sourced full ranges + 2 scoped references; 6/12 projects have two snapshots; trends remain 0.")
+print("Market listing coverage: 2 reviewed priced records + 4 non-chartable scoped references; 6/12 projects have two snapshots.")

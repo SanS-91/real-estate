@@ -6,6 +6,8 @@ on:
       - main
     paths:
       - 'scripts/listing_candidate_collector.py'
+      - 'scripts/listing_monitor_health.py'
+      - 'data/mock/market/listing-scope-evidence.json'
       - '.github/workflows/listing-market-candidate.yml'
   schedule:
     - cron: '20 2 * * 2,5'
@@ -24,6 +26,10 @@ on:
 
 permissions:
   contents: write
+
+concurrency:
+  group: listing-market-candidate-and-coverage
+  cancel-in-progress: false
 
 jobs:
   collect:
@@ -107,6 +113,7 @@ jobs:
             data/candidate/market/listing-collector-report.json
             data/candidate/market/listing-refresh-report.json
             data/candidate/market/listing-coverage-backlog.json
+            data/state/listing-source-coverage.json
           retention-days: 14
       - name: Persist reviewed staging candidate
         if: inputs.persist_candidate == true
@@ -119,4 +126,28 @@ jobs:
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git add data/candidate/market/listing-observations.json data/candidate/market/listing-collector-report.json
           git commit -m "data(market): refresh listing candidate staging"
+          git pull --rebase origin main
           git push
+      - name: Publish non-sensitive source coverage and blocked access status
+        if: github.ref == 'refs/heads/main'
+        run: |
+          if git diff --quiet -- data/state/listing-source-coverage.json; then
+            echo "No source coverage change."
+            exit 0
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data/state/listing-source-coverage.json
+          git commit -m "ops(market): refresh project pricing coverage and source health"
+          # Candidate files are artifacts, not part of this production commit.
+          git restore --worktree -- .
+          for attempt in 1 2 3; do
+            git fetch origin main
+            git rebase origin/main
+            if git push origin HEAD:main; then
+              exit 0
+            fi
+            sleep $((attempt * 2))
+          done
+          echo "Unable to publish source health after three attempts."
+          exit 1

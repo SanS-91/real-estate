@@ -11,8 +11,10 @@ FILE=ROOT/"data/mock/market/listing-scope-evidence.json"
 LISTING=ROOT/"data/mock/market/listing-observations.json"
 PROJECTS=ROOT/"data/mock/market/projects.json"
 EXPECTED={
-    "the-9-stellars":("https://batdongsan.com.vn/ban-can-ho-chung-cu-the-9-stellars","apartment-only"),
-    "celesta-gold":("https://batdongsan.com.vn/ban-can-ho-chung-cu-celesta-gold","publisher-faq-indicative"),
+    "the-9-stellars":("https://batdongsan.com.vn/ban-can-ho-chung-cu-the-9-stellars","apartment-only","apartment"),
+    "celesta-gold":("https://batdongsan.com.vn/ban-can-ho-chung-cu-celesta-gold","publisher-faq-indicative","apartment"),
+    "izumi-city":("https://batdongsan.com.vn/ban-nha-biet-thu-lien-ke-izumi-city","landed-only","villa-townhouse"),
+    "essensia-parkway":("https://batdongsan.com.vn/ban-nha-biet-thu-lien-ke-essensia-parkway","landed-only","villa-townhouse"),
 }
 NUM=r"(\d+(?:[.,]\d+)?)"
 RANGE_PATTERNS=(
@@ -60,7 +62,7 @@ def check(rows, observations, project_ids, today):
         if x.get("id") in ids:
             errors.append(f"{pid}: duplicated evidence ID")
         ids.add(x.get("id"))
-        if pid not in project_ids or expected is None or (uri,x.get("price_scope"))!=expected:
+        if pid not in project_ids or expected is None or (uri,x.get("price_scope"),x.get("asset_type"))!=expected:
             errors.append(f"{pid}: unexpected project/scope or source link")
             continue
         if urlsplit(uri).scheme!="https" or urlsplit(uri).hostname!="batdongsan.com.vn":
@@ -86,8 +88,14 @@ def check(rows, observations, project_ids, today):
             errors.append(f"{pid}: last-listing date not evidenced")
         if evidence_trend(evidence.get("trend"))!=x.get("asking_price_change_1y_pct"):
             errors.append(f"{pid}: quoted segment 1Y trend mismatch")
-        if pid=="the-9-stellars" and x.get("asset_type")!="apartment":
-            errors.append(f"{pid}: reference must be apartment-only")
+        if x.get("price_scope")=="landed-only" and x.get("coverage_status")!="segment-only-not-project-aggregate":
+            errors.append(f"{pid}: landed category is not a comparable project-wide series")
+        if x.get("price_scope")=="publisher-faq-indicative" and x.get("coverage_status")!="reference-only-not-chartable":
+            errors.append(f"{pid}: FAQ prices must be non-chartable")
+        if x.get("price_scope")=="apartment-only" and x.get("asset_type")!="apartment":
+            errors.append(f"{pid}: apartment scope may not be blended with landed property")
+        if x.get("project_id")=="izumi-city" and not x.get("data_quality_flag"):
+            errors.append("izumi-city: original project apartment source mismatch needs explicit warning")
         if x.get("asking_price_low_vnd_per_m2",0)<=0 or x.get("asking_price_high_vnd_per_m2",0)<=x.get("asking_price_low_vnd_per_m2",0):
             errors.append(f"{pid}: invalid positive price")
         previous=latest.get(pid) or {}
@@ -106,7 +114,7 @@ def main():
         problems.append("record_count mismatch")
     if problems:
         raise SystemExit("\n".join(problems))
-    print("Scope evidence PASS: 2 separately sourced, neither promoted to comparable project ASP.")
+    print("Scope evidence PASS: %d publisher references, source scopes isolated." % len(payload["data"]))
 
 if __name__=="__main__":
     main()

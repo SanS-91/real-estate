@@ -1,9 +1,72 @@
 {
   "schema_version": 1,
   "generated_at": "2026-10-09",
-  "methodology": "Segment-specific reference ranges collected from publisher pages. This secondary layer is NOT project-wide verified ASP or general comparable asking range. It does not create an artificial extra time-series snapshot.",
-  "record_count": 2,
+  "methodology": "Category-specific 2026-10-09 source evidence from Batdongsan.com.vn. Scope-only figures are not the price of an entire mixed-use development. Keeping original snapshots unchanged (no invented 2nd dates) and publication caveats explicit.",
+  "record_count": 4,
   "data": [
+    {
+      "id": "scope-celesta-gold-apartment-faq-2026-10-09",
+      "project_id": "celesta-gold",
+      "asset_type": "apartment",
+      "project_asset_type": "apartment",
+      "price_scope": "publisher-faq-indicative",
+      "source_id": "batdongsan-com-vn",
+      "source_url": "https://batdongsan.com.vn/ban-can-ho-chung-cu-celesta-gold",
+      "review_date": "2026-10-09",
+      "latest_listing_date": "2026-09-30",
+      "asking_price_low_vnd_per_m2": 100000000,
+      "asking_price_high_vnd_per_m2": 115900000,
+      "asking_price_change_1y_pct": null,
+      "coverage_status": "reference-only-not-chartable",
+      "evidence": {
+        "price": "Tham kháo giá mua bán căn hộ chung cư Celesta Gold từ 100 triệu/m² - 115.9 triệu/m²",
+        "last_listing": "Cập nhật tin đăng gần đây nhất | 30-09-2026, 11:08"
+      },
+      "methodology_note": "A publisher FAQ 'reference' price, NOT an explicitly labeled project aggregate statistics range. Do not promote into verified project-wide listing series or calculate an implied trend."
+    },
+    {
+      "id": "scope-essensia-parkway-landed-2026-10-09",
+      "project_id": "essensia-parkway",
+      "asset_type": "villa-townhouse",
+      "project_asset_type": "villa-townhouse-shophouse",
+      "price_scope": "landed-only",
+      "source_id": "batdongsan-com-vn",
+      "source_url": "https://batdongsan.com.vn/ban-nha-biet-thu-lien-ke-essensia-parkway",
+      "review_date": "2026-10-09",
+      "latest_listing_date": "2026-10-08",
+      "asking_price_low_vnd_per_m2": 196100000,
+      "asking_price_high_vnd_per_m2": 225000000,
+      "asking_price_change_1y_pct": -0.05,
+      "coverage_status": "segment-only-not-project-aggregate",
+      "evidence": {
+        "price": "Giá bán nhà biệt thự, liền kề Essensia Parkway | 196.1 - 225 tr/m²",
+        "trend": "5% Giá bán đã giảm trong 1 năm qua",
+        "last_listing": "Cập nhật tin đăng gần đây nhất | 08-10-2026, 14:39"
+      },
+      "methodology_note": "Essensia Parkway villa/townhouse category only; excludes commercial shophouses with materially different asking ranges. The mixed villa-townhouse-shophouse project listing series stays unpriced. 5% change is publisher 1Y indicator, not local snapshot delta. Source's latest listing date is not effective date of asking-range statistics."
+    },
+    {
+      "id": "scope-izumi-city-landed-2026-10-09",
+      "project_id": "izumi-city",
+      "asset_type": "villa-townhouse",
+      "project_asset_type": "mixed-residential",
+      "price_scope": "landed-only",
+      "source_id": "batdongsan-com-vn",
+      "source_url": "https://batdongsan.com.vn/ban-nha-biet-thu-lien-ke-izumi-city",
+      "review_date": "2026-10-09",
+      "latest_listing_date": "2026-09-20",
+      "asking_price_low_vnd_per_m2": 54500000,
+      "asking_price_high_vnd_per_m2": 83500000,
+      "asking_price_change_1y_pct": 0.14,
+      "coverage_status": "segment-only-not-project-aggregate",
+      "evidence": {
+        "price": "Giá bán nhà biệt thự, liền kề Izumi City | 54.5 - 83,5 tr/m²",
+        "trend": "14% Giá bán đã tăng trong 1 năm qua",
+        "last_listing": "Cập nhật tin đăng gần đây nhất | 20-09-2026, 08:46"
+      },
+      "methodology_note": "Izumi City landed / villa / townhouse portal category (101 advertised listings on reviewed indexed page), not apartment and not a mixed-project ASP. Existing apartment project URL includes a misleading Mizuki Park listing and EHomeS social housing; apartment series stays unpriced. 14% is site-reported 1Y change for this lowrise category only; last listing date is not aggregate price effective date.",
+      "data_quality_flag": "existing-apartment-listing-source-has-unrelated-project-and-social-housing-ads"
+    },
     {
       "id": "scope-the-9-stellars-apartment-2026-10-09",
       "project_id": "the-9-stellars",
@@ -24,26 +87,6 @@
         "last_listing": "Cập nhật tin đăng gần đây nhất | 04-10-2026, 19:57"
       },
       "methodology_note": "Official portal apartment-only category; excludes villas, landed and other residential units. The main mixed-residential historical series remains unpriced. 1Y rate applies to apartments and must not replace the mixed-project trend."
-    },
-    {
-      "id": "scope-celesta-gold-apartment-faq-2026-10-09",
-      "project_id": "celesta-gold",
-      "asset_type": "apartment",
-      "project_asset_type": "apartment",
-      "price_scope": "publisher-faq-indicative",
-      "source_id": "batdongsan-com-vn",
-      "source_url": "https://batdongsan.com.vn/ban-can-ho-chung-cu-celesta-gold",
-      "review_date": "2026-10-09",
-      "latest_listing_date": "2026-09-30",
-      "asking_price_low_vnd_per_m2": 100000000,
-      "asking_price_high_vnd_per_m2": 115900000,
-      "asking_price_change_1y_pct": null,
-      "coverage_status": "reference-only-not-chartable",
-      "evidence": {
-        "price": "Tham kháo giá mua bán căn hộ chung cư Celesta Gold từ 100 triệu/m² - 115.9 triệu/m²",
-        "last_listing": "Cập nhật tin đăng gần đây nhất | 30-09-2026, 11:08"
-      },
-      "methodology_note": "A publisher FAQ 'reference' price, NOT an explicitly labeled project aggregate statistics range. Do not promote into verified project-wide listing series or calculate an implied trend."
     }
   ]
 }
