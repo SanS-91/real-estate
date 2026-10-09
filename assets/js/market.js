@@ -864,7 +864,7 @@
       (verifiedSnapshotRows || '<tr><td colspan="6" class="table-empty">No comparable pricing records.</td></tr>') + '</tbody>';
 
     const chartBody = state.priceLayer === 'listing'
-      ? (listingRows.length ? '<div class="chart-frame chart-frame--large"><canvas id="market-pricing"></canvas></div><p class="chart-note">Khoảng giá chào bán theo từng dự án (tin đăng; không phải giao dịch). Đây không phải chuỗi thời gian. Căn hộ và nhà thấp tầng không so sánh trực tiếp.</p>' : '<div class="state-box">No priced listing snapshots for the selected filters.</div>')
+      ? (listingRows.length ? '<div class="chart-frame chart-frame--large"><canvas id="market-pricing"></canvas></div><p class="chart-note">Khoảng giá chào bán theo từng dự án (tin đăng; không phải giao dịch). Không nối thành xu hướng thời gian. Căn hộ và nhà thấp tầng không so sánh trực tiếp.</p>' : '<div class="state-box">No priced listing snapshots for the selected filters.</div>')
       : (series.length ? '<div class="chart-frame chart-frame--large"><canvas id="market-pricing"></canvas></div><p class="chart-note">Sparse source-stated snapshots; no missing project price is estimated.</p>' : '<div class="state-box">No verified project price observations for the selected filters.</div>');
     const snapshotTable = state.priceLayer === 'listing' ? listingSnapshotTable : verifiedSnapshotTable;
 
