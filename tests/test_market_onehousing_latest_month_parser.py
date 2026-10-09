@@ -55,4 +55,17 @@ assert diagnostics["publisher_periods"]==["2026-09","2026-10"]
 assert diagnostics["heading_block_diagnostics"][1]["modal_in_section"]
 assert diagnostics["heading_block_diagnostics"][1]["range_in_section"]
 assert not diagnostics["login_wall_in_text"]
+# Source templates can render the same project/month several times while
+# locating the price-analysis widget elsewhere in the page structure.
+loose_metric="Đơn giá phổ biến 73.74 triệu/m² | Khoảng giá: 57 - 100.19 triệu Giá thuê phổ biến"
+repeat_header="Căn hộ chung cư dự án Lumière Boulevard tháng 10/2026"
+unambiguous=loose_metric+" Tổng quan "+repeat_header+" Tiện ích "+repeat_header+" Tin nổi bật "+repeat_header
+assert onehousing_monthly(unambiguous,today,"Lumière Boulevard")["value_vnd_per_m2"]==73_740_000
+assert onehousing_monthly(unambiguous+loose_metric,today,"Lumière Boulevard")["period"]=="2026-10"
+# Never attribute this loose price to a different project or disparate month.
+assert onehousing_monthly(unambiguous+" Căn hộ chung cư dự án Masteri Centre Point tháng 10/2026",
+                          today,"Lumière Boulevard") is None
+assert onehousing_monthly(unambiguous+" Căn hộ chung cư dự án Lumière Boulevard tháng 9/2026",
+                          today,"Lumière Boulevard") is None
+assert onehousing_monthly(unambiguous+loose_metric.replace("73.74","79.99"),today,"Lumière Boulevard") is None
 print("PASS: independently bounded project sections, newest source month, duplicate consistency and fail-closed price parsing.")

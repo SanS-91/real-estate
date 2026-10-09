@@ -130,6 +130,62 @@ def onehousing_monthly(text, today, publisher_project_name="Vinhomes Grand Park"
                 "range": price_range.group(0),
             }
         })
+    if not observations and headers:
+        # Some OneHousing templates repeat the identical month header in their
+        # navigation / summary, while the labelled modal-price table appears
+        # outside those header blocks. Accept page-level evidence ONLY when
+        # every publisher month header identifies the exact same project
+        # and one common eligible month. Any other project or another month
+        # makes global association ambiguous and therefore unusable.
+        names = {normal_name(h.group(1)) for h in headers}
+        periods = {f"{h.group(3)}-{int(h.group(2)):02d}" for h in headers}
+        if names == {normal_name(publisher_project_name)} and len(periods) == 1:
+            period = next(iter(periods))
+            if period <= today.strftime("%Y-%m"):
+                possible = []
+                for price_section in MODAL_SECTION.finditer(text):
+                    section_text = price_section.group("section")
+                    rate = MODAL.search(section_text)
+                    quote_range = RANGE.search(section_text)
+                    if not (rate and quote_range):
+                        continue
+                    value, low, high = (vnd(rate.group(1)),
+                                        vnd(quote_range.group(1)),
+                                        vnd(quote_range.group(2)))
+                    if 0 < low <= value <= high <= 1_000_000_000:
+                        possible.append((value,low,high,rate.group(0),quote_range.group(0)))
+                distinct = {values[:3] for values in possible}
+                if len(distinct) == 1 and possible:
+                    value,low,high,metric_text,range_text = possible[0]
+                    return {
+                        "period":period,
+                        "value_vnd_per_m2":value,
+                        "range_low_vnd_per_m2":low,
+                        "range_high_vnd_per_m2":high,
+                        "evidence":{
+                            "period":headers[-1].group(0),
+                            "metric":metric_text,
+                            "range":range_text,
+                        },
+                    }
+    if observations and headers:
+        names = {normal_name(h.group(1)) for h in headers}
+        periods = {f"{h.group(3)}-{int(h.group(2)):02d}" for h in headers}
+        if names == {normal_name(publisher_project_name)} and len(periods) == 1:
+            # Even a section linked to a heading is not trustworthy if the
+            # SAME source page also gives a contradictory modal/range pair
+            # elsewhere for that exact same project and reporting month.
+            global_values=set()
+            for source_section in MODAL_SECTION.finditer(text):
+                rate=MODAL.search(source_section.group("section"))
+                quoted_range=RANGE.search(source_section.group("section"))
+                if rate and quoted_range:
+                    value,low,high=(vnd(rate.group(1)),vnd(quoted_range.group(1)),
+                                    vnd(quoted_range.group(2)))
+                    if 0 < low <= value <= high <= 1_000_000_000:
+                        global_values.add((value,low,high))
+            if len(global_values)>1:
+                return None
     if not observations:
         return None
     latest = max(observation["period"] for observation in observations)
@@ -172,6 +228,10 @@ def onehousing_source_diagnostics(text, publisher_project_name):
         "publisher_project_header":bool(matched),
         "publisher_periods":sorted({row["period"] for row in matched}),
         "heading_block_count":len(matched),
+        "other_publisher_project_headers":sum(
+            normal_name(header.group(1)) != normal_name(publisher_project_name)
+            for header in headers),
+        "page_level_price_sections":len(list(MODAL_SECTION.finditer(text))),
         "heading_block_diagnostics":matched[-8:],
         "modal_price_section":bool(MODAL_SECTION.search(text)),
         "asking_price_number":bool(MODAL.search(text)),
