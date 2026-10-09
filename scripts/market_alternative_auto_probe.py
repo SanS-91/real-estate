@@ -143,7 +143,7 @@ def rever_single_listing(text, today):
 
 def classify(target, html, baseline, today):
     text = plain_text(html)
-    if len(text) < 160 or CHALLENGE.search(text[:900]):
+    if len(text) < 100 or CHALLENGE.search(text[:900]):
         return "blocked-or-empty-page", None
     mode = target["mode"]
     if mode == "historical-reference-monitor":
