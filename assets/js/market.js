@@ -89,7 +89,8 @@
   function listingRangeChartData(records = data.projects) {
     const rows = listingPriceRows(records);
     return {
-      labels: rows.map(item => item.project.name + (item.row.asset_type === 'apartment' ? ' · Căn hộ' : ' · Thấp tầng')),
+      labels: rows.map(item => item.project.name),
+      fullLabels: rows.map(item => item.project.name + (item.row.asset_type === 'apartment' ? ' · Căn hộ' : ' · Thấp tầng')),
       lowValues: rows.map(item => item.row.asking_price_low_vnd_per_m2),
       highValues: rows.map(item => item.row.asking_price_high_vnd_per_m2)
     };
@@ -925,9 +926,9 @@
         ? 'Đường thu thập giá hoạt động; bản ghi mới vẫn phải qua kiểm chứng.'
         : 'Chưa có kết quả kiểm tra truy cập nguồn gần đây.';
     return `<section class="market-listing-health" aria-label="Listing source data coverage">
-      <div class="market-listing-health__cell"><strong>${esc(summary.aggregate_priced_projects)}/${esc(summary.projects_tracked)}</strong><span>Dự án có khoảng giá tổng hợp</span></div>
-      <div class="market-listing-health__cell"><strong>${esc(summary.category_reference_projects || 0)}</strong><span>Dự án chỉ có giá theo phân khúc/FAQ</span></div>
-      <div class="market-listing-health__cell"><strong>${esc(summary.projects_with_2plus_snapshots)}</strong><span>Dự án có từ 2 snapshot</span></div>
+      <div class="market-listing-health__cell"><strong>${esc(summary.aggregate_priced_projects)}/${esc(summary.projects_tracked)}</strong><span>Có khoảng giá tổng hợp trên Batdongsan · ${esc(data.projects.length)} dự án toàn danh mục</span></div>
+      <div class="market-listing-health__cell"><strong>${esc(summary.category_reference_projects || 0)}</strong><span>Chỉ có giá riêng theo phân khúc/FAQ trên Batdongsan</span></div>
+      <div class="market-listing-health__cell"><strong>${esc(summary.projects_with_2plus_snapshots)}</strong><span>Có từ 2 lượt lưu snapshot Batdongsan</span></div>
       <div class="market-listing-health__source">
         <span class="market-listing-health__source-label">Tình trạng nguồn</span>
         <strong>${esc(sourceText)}</strong>
@@ -952,10 +953,10 @@
       '<td>' + esc(row.observation_date || '—') + '</td>' +
       '<td class="numeric">' + esc(formatListingRange(row)) + '</td>' +
       '<td class="numeric">' + esc(listingTrendLabel(row)) + '</td>' +
-      '<td>' + esc(row.coverage_status || 'full') + '</td>' +
+      '<td>' + esc(row.coverage_status === 'full' ? 'Đủ khoảng giá' : 'Một phần') + '</td>' +
       '<td>' + sourceRef(row.source_id,{sourceDate:row.observation_date,sourceUrl:row.source_url,methodology:row.methodology_note}) + '</td></tr>'
     ).join('');
-    const listingSnapshotTable = '<thead><tr><th>Project</th><th>Region</th><th>Snapshot</th><th class="numeric">Asking Range</th><th class="numeric">1Y theo nguồn</th><th>Coverage</th><th>Source</th></tr></thead><tbody>' +
+    const listingSnapshotTable = '<thead><tr><th>Dự án</th><th>Khu vực</th><th>Ngày snapshot</th><th class="numeric">Khoảng giá rao bán</th><th class="numeric">1Y theo nguồn</th><th>Phạm vi</th><th>Nguồn</th></tr></thead><tbody>' +
       (listingSnapshotRows || '<tr><td colspan="7" class="table-empty">No priced listing snapshots.</td></tr>') + '</tbody>';
 
     const verifiedSnapshotRows = projectRows.map(({project,obs}) =>
@@ -970,7 +971,7 @@
       (verifiedSnapshotRows || '<tr><td colspan="6" class="table-empty">No comparable pricing records.</td></tr>') + '</tbody>';
 
     const chartBody = state.priceLayer === 'listing'
-      ? (listingRows.length ? '<div class="chart-frame chart-frame--large"><canvas id="market-pricing"></canvas></div><p class="chart-note">Khoảng giá chào bán theo từng dự án (tin đăng; không phải giao dịch). Không nối thành xu hướng thời gian. Căn hộ và nhà thấp tầng không so sánh trực tiếp.</p>' : '<div class="state-box">No priced listing snapshots for the selected filters.</div>')
+      ? (listingRows.length ? '<div class="chart-frame chart-frame--large chart-frame--pricing-range" style="height:' + Math.max(380, Math.min(850, listingRows.length * 46 + 90)) + 'px"><canvas id="market-pricing" aria-label="Khoảng giá rao bán theo dự án, biểu đồ thanh ngang" role="img"></canvas></div><p class="chart-note">Khoảng giá rao bán theo dự án (triệu VND/m², không phải giao dịch). Đọc tên dự án bên trái và khoảng thấp–cao theo trục giá ngang; chạm vào thanh để xem đủ phạm vi sản phẩm. Không nối thành xu hướng thời gian. Căn hộ và thấp tầng không so sánh trực tiếp.</p>' : '<div class="state-box">No priced listing snapshots for the selected filters.</div>')
       : (series.length ? '<div class="chart-frame chart-frame--large"><canvas id="market-pricing"></canvas></div><p class="chart-note">Sparse source-stated snapshots; no missing project price is estimated.</p>' : '<div class="state-box">No verified project price observations for the selected filters.</div>');
     const snapshotTable = state.priceLayer === 'listing' ? listingSnapshotTable : verifiedSnapshotTable;
 
@@ -983,7 +984,7 @@
         <div class="section-body">${chartBody}</div>
       </section>
       <section class="section">
-        <div class="section-header"><h2 class="section-title">${state.priceLayer === 'listing' ? 'Latest Listing Snapshot' : 'Latest Verified Snapshot'}</h2></div>
+        <div class="section-header"><div><h2 class="section-title">${state.priceLayer === 'listing' ? 'Snapshot tin đăng mới nhất' : 'Snapshot giá đã xác minh mới nhất'}</h2>${state.priceLayer === 'listing' ? '<p class="chart-note">Ngày snapshot là ngày lưu số liệu nguồn, không phải ngày giao dịch hoặc ngày cập nhật mọi tin rao.</p>' : ''}</div></div>
         <div class="section-body section-body--table"><div class="table-wrap"><table class="data-table">${snapshotTable}</table></div></div>
       </section>
       ${state.priceLayer === 'listing' && data.listingScopeEvidence.some(row=>filteredProjects.some(project=>project.id === row.project_id)) ? `<section class="section">
@@ -991,12 +992,14 @@
         <div class="section-body"><p class="chart-note">Giá chào bán theo phân khúc (căn hộ, biệt thự/liền kề hoặc FAQ tham khảo) được hiển thị riêng, không gộp vào biểu đồ giá bình quân dự án và không được xem là giá giao dịch.</p>
         <div class="market-listing-scope-grid">${data.listingScopeEvidence.filter(row=>filteredProjects.some(project=>project.id === row.project_id)).map(row=>`<div class="market-listing-scope-item"><div class="market-listing-scope-item__head"><strong>${esc(Resolver.getEntity('project',row.project_id)?.name || row.project_id)}</strong><span>${esc(listingScopeLabel(row))}</span></div><div class="market-listing-scope-item__price">${esc(formatListingRange(row))}</div><p>${esc(listingScopeDescription(row))}</p><div class="provenance-inline-row">${sourceRef(row.source_id,{sourceDate:row.review_date,sourceUrl:row.source_url,methodology:row.methodology_note})}<span>Ngày xem ${esc(row.review_date)}</span></div></div>`).join('')}</div></div></section>` : ''}
       ${state.priceLayer === 'listing' ? alternativePriceCardsHTML(filteredProjects.map(project => project.id)) : ''}
-      <section class="section"><div class="section-header"><h2 class="section-title">Market Benchmarks</h2></div><div class="section-body section-body--table"><div class="table-wrap"><table class="data-table"><thead><tr><th>Market</th><th>Period</th><th class="numeric">New Supply</th><th class="numeric">Transactions</th><th class="numeric">Absorption</th><th class="numeric">Average ASP</th><th>Source</th></tr></thead><tbody>${benchmarkRows.map(row=>`<tr><td>HCMC · Apartment</td><td>${esc(row.period)}</td><td class="numeric">${esc(formatMarketMetric(row,'new_supply'))}</td><td class="numeric">${esc(formatMarketMetric(row,'sales_units'))}</td><td class="numeric">${esc(formatMarketMetric(row,'absorption_rate'))}</td><td class="numeric">${esc(formatMarketMetric(row,'average_asp'))}</td><td>${sourceRef(row.source_id,{sourceDate:row.source_date,period:row.period,methodology:row.methodology_note,sourceUrl:row.source_url})}</td></tr>`).join('') || '<tr><td colspan="7" class="table-empty">No market benchmark records.</td></tr>'}</tbody></table></div></div></section>`;
+      <section class="section"><div class="section-header"><div><h2 class="section-title">Benchmark toàn thị trường</h2><p class="chart-note">Số liệu cung, giao dịch và hấp thụ theo kỳ báo cáo của từng đơn vị nghiên cứu. Không phải giá bán từng dự án; không cộng gộp số liệu các nguồn.</p></div></div><div class="section-body section-body--table"><div class="table-wrap"><table class="data-table"><thead><tr><th>Thị trường</th><th>Kỳ báo cáo</th><th class="numeric">Nguồn cung mới</th><th class="numeric">Giao dịch</th><th class="numeric">Hấp thụ</th><th class="numeric">Giá TB theo nguồn</th><th>Nguồn</th></tr></thead><tbody>${benchmarkRows.map(row=>`<tr><td>HCMC · Apartment</td><td>${esc(row.period)}</td><td class="numeric">${esc(formatMarketMetric(row,'new_supply'))}</td><td class="numeric">${esc(formatMarketMetric(row,'sales_units'))}</td><td class="numeric">${esc(formatMarketMetric(row,'absorption_rate'))}</td><td class="numeric">${esc(formatMarketMetric(row,'average_asp'))}</td><td>${sourceRef(row.source_id,{sourceDate:row.source_date,period:row.period,methodology:row.methodology_note,sourceUrl:row.source_url})}</td></tr>`).join('') || '<tr><td colspan="7" class="table-empty">No market benchmark records.</td></tr>'}</tbody></table></div></div></section>`;
     setView(html);
     bindFilters();
     if (state.priceLayer === 'listing') {
       if (listingRows.length) requestAnimationFrame(() => ChartTools.renderRangeSeries('market-pricing', {
         labels: listingChart.labels,
+        fullLabels: listingChart.fullLabels,
+        horizontal: true,
         lowValues: listingChart.lowValues,
         highValues: listingChart.highValues,
         lowLabel: 'Asking low',
