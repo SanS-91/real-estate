@@ -1,0 +1,21 @@
+{
+  "schema_version": 1,
+  "module": "legal",
+  "generated_at": "2026-10-09T14:51:11.758450+00:00",
+  "status": "baseline-initialized",
+  "source_watch_at": "2026-10-09T14:51:10.702901+00:00",
+  "candidate_report_at": "2026-10-09T14:51:10.920008+00:00",
+  "baseline_available": false,
+  "canonical_record_count": 16,
+  "source_targets_checked": 17,
+  "source_targets_reachable": 17,
+  "source_targets_failed": 0,
+  "discovery_links_seen": 0,
+  "new_links_since_baseline": null,
+  "candidate_detail_pages_parsed": 0,
+  "candidate_fetch_errors": 0,
+  "candidates_awaiting_review_in_this_run": 0,
+  "candidate_only": true,
+  "production_written": false,
+  "methodology": "Official-source URLs are monitored; new links and unreviewed candidates are not automatically published as legal acts or infrastructure milestones."
+}
