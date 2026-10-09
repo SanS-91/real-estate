@@ -74,6 +74,15 @@
     }
     return 'all';
   }
+  // Topic labels reuse exactly the same classifier as the filter. Multiple
+  // relevant topics appear on a story, but are limited to two readable chips.
+  function articleTopics(article) {
+    const primary = articleTopic(article);
+    const topics = TOPICS.map(([id]) => id)
+      .filter(id => id !== 'all' && topicMatch(article, id));
+    return [primary, ...topics].filter((id, index, all) =>
+      id !== 'all' && all.indexOf(id) === index).slice(0, 2);
+  }
   function excerpt(article, limit) {
     const raw = String(article.summary || '').replace(/\s+/g, ' ').trim();
     if (!raw || raw.toLocaleLowerCase() === String(article.title || '').trim().toLocaleLowerCase()) return '';
@@ -88,7 +97,7 @@
   }
   function card(article, variant) {
     const lead = variant === 'lead';
-    const topic = articleTopic(article);
+    const topics = articleTopics(article);
     const published = article.published_at || '';
     const summary = excerpt(article, lead ? 290 : 170);
     const context = relatedLabel(article);
@@ -98,7 +107,7 @@
         <span class="market-news-card__source">${esc(sourceName(article.source_id))}</span>
         <span class="market-news-card__dot" aria-hidden="true">·</span>
         <time datetime="${esc(published)}">${esc(window.App.formatDate(published))}</time>
-        ${topic !== 'all' ? `<span class="market-news-card__topic">${esc(TOPIC_NAMES[topic])}</span>` : ''}
+        ${topics.length ? `<span class="market-news-card__topics">${topics.map(topic => `<button type="button" class="market-news-card__topic" data-news-topic="${esc(topic)}" data-topic="${esc(topic)}" aria-label="Lọc tin: ${esc(TOPIC_NAMES[topic])}">${esc(TOPIC_NAMES[topic])}</button>`).join('')}</span>` : ''}
       </div>
       <h3><a href="${url}" target="_blank" rel="noopener noreferrer">${esc(article.title)}</a></h3>
       ${summary ? `<p class="market-news-card__excerpt">${esc(summary)}</p>` : ''}
@@ -189,7 +198,7 @@
     const featured = !focused && shown.length >= 3 ? diverseFeatured(shown) : [];
     const rest = featured.length ? shown.filter(a => !featured.includes(a)) : shown;
     const pills = TOPICS.filter(([id]) => id === 'all' || counts[id] > 0 || topicId === id)
-      .map(([id, label]) => `<button type="button" class="market-news-topic" data-news-topic="${esc(id)}" aria-pressed="${id === topicId}">
+      .map(([id, label]) => `<button type="button" class="market-news-topic" data-news-topic="${esc(id)}" data-topic="${esc(id)}" aria-pressed="${id === topicId}">
         ${esc(label)} <span>${counts[id]}</span>
       </button>`).join('');
     return `<div class="market-news">
@@ -226,6 +235,13 @@
   }
 
   function bind({state, refresh}) {
+    const topicBar = document.querySelector('.market-news-topics');
+    const selected = topicBar?.querySelector('.market-news-topic[aria-pressed="true"]');
+    if (topicBar && selected) {
+      const left = selected.offsetLeft - topicBar.offsetLeft;
+      if (left < topicBar.scrollLeft || left + selected.offsetWidth > topicBar.scrollLeft + topicBar.clientWidth)
+        topicBar.scrollLeft = Math.max(0, left - 12);
+    }
     const resetPage = () => { visibleCount = FIRST_PAGE; refresh(); };
     document.querySelector('[data-news-search]')?.addEventListener('submit', event => {
       event.preventDefault();
