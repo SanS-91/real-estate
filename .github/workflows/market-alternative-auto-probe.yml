@@ -23,8 +23,6 @@ on:
       - 'scripts/market_onehousing_subproject_gate.py'
       - 'tests/test_market_onehousing_subproject_evidence.py'
       - '.github/workflows/market-alternative-auto-probe.yml'
-  schedule:
-    - cron: '35 3 * * 2,5'
   workflow_dispatch:
 
 permissions:
@@ -74,10 +72,10 @@ jobs:
           print('PASS: nested OneHousing references and non-trend pricing warnings visible in browser.')
           PY
       - name: Inspect publisher access and stage only review-required candidates
-        if: github.event_name != 'pull_request'
+        if: github.event_name == 'workflow_dispatch'
         run: python scripts/market_alternative_auto_probe.py
       - name: Summarize runner source accessibility
-        if: github.event_name != 'pull_request'
+        if: github.event_name == 'workflow_dispatch'
         run: |
           echo "## Market Data Coverage R4B — publisher access" >> "$GITHUB_STEP_SUMMARY"
           python - <<'PY' >> "$GITHUB_STEP_SUMMARY"
@@ -109,7 +107,7 @@ jobs:
           if-no-files-found: warn
           retention-days: 30
       - name: Persist source status and review queue, never publish prices automatically
-        if: github.event_name != 'pull_request'
+        if: github.event_name == 'workflow_dispatch'
         run: |
           set -eu
           git config user.name 'github-actions[bot]'

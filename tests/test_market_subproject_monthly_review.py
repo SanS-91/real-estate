@@ -14,7 +14,9 @@ import market_subproject_monthly_release as release
 
 load=lambda path:json.loads((ROOT/path).read_text(encoding="utf-8"))
 baseline=load("data/mock/market/alternative-subproject-monthly-evidence.json")["data"]
-history=load("data/mock/market/alternative-subproject-monthly-history.json")["data"]
+published_history=load("data/mock/market/alternative-subproject-monthly-history.json")["data"]
+history=[x for x in published_history if x["review_status"]=="source-indexed-baseline"]
+assert not release.validate_history(published_history,baseline)
 queue=load("data/candidate/market/alternative-price-review-queue.json")["data"]
 approvals=load("config/market-subproject-reviewed-approvals.json")["data"]
 targets=load("config/market-alternative-auto-targets.json")["targets"]

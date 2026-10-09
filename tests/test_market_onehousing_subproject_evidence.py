@@ -33,7 +33,8 @@ market=(ROOT/"assets/js/market.js").read_text()
 store=(ROOT/"assets/js/data-store.js").read_text()
 assert "getOneHousingSubprojectEvidence()" in market
 assert "oneHousingSubprojectEvidence: payloadData(oneHousingSubprojectEvidence)" in market
-assert "...data.oneHousingSubprojectEvidence" in market
+assert "const subprojectRows = data.oneHousingSubprojectEvidence.map" in market
+assert "published.get(item.subproject_name) || item" in market
 assert "getOneHousingSubprojectEvidence:" in store
 assert "projectIds.includes(item.project_id)" in market
 assert "function alternativePriceCardsHTML" in market

@@ -19,8 +19,6 @@ on:
       - 'data/mock/market/alternative-subproject-monthly-history.json'
       - 'config/market-subproject-reviewed-approvals.json'
       - '.github/workflows/market-subproject-reviewed-history.yml'
-  schedule:
-    - cron: '45 4 * * 2,5'
   workflow_dispatch:
 
 permissions:
@@ -49,10 +47,10 @@ jobs:
           python scripts/market_onehousing_subproject_gate.py
           python tests/test_market_onehousing_subproject_evidence.py
       - name: Independently recheck pending source price months
-        if: github.event_name != 'pull_request'
+        if: github.event_name == 'workflow_dispatch'
         run: python scripts/market_subproject_candidate_recheck.py --run-id "$GITHUB_RUN_ID"
       - name: Fail closed if reviewed approvals do not have two matching source rechecks
-        if: github.event_name != 'pull_request'
+        if: github.event_name == 'workflow_dispatch'
         run: python scripts/market_subproject_monthly_release.py --mode promote
       - name: Explain real producer source status and approval queue
         if: always()
@@ -77,7 +75,7 @@ jobs:
           print("- Indexed 09/2026 baselines are labeled as indexed, not independently reverified prices.")
           PY
       - name: Persist recheck history and separately reviewed series only
-        if: github.event_name != 'pull_request'
+        if: github.event_name == 'workflow_dispatch'
         run: |
           set -eu
           git config user.name 'github-actions[bot]'

@@ -77,7 +77,7 @@ def validate_history(history,baselines):
                 errors.append("indexed-baseline-drift")
             if row.get("review_status")!="source-indexed-baseline":
                 errors.append("indexed-baseline-misrepresented")
-        elif row.get("review_status")!="reviewed-release" or row.get("period","")<=base["period"]:
+        elif row.get("review_status") not in ("reviewed-release","automated-source-verified") or row.get("period","")<=base["period"]:
             errors.append("not-approved-after-indexed-baseline")
     for b in bmap.values():
         if b["period"] not in observations.get(b["id"],set()):
@@ -149,7 +149,7 @@ def evaluate(history,baselines,queue,rechecks,approvals,today):
             key=(candidate.get("baseline_record_id"),candidate.get("period"))
             current=existing.get(key)
             if current:
-                if not issues and current.get("value_vnd_per_m2")==candidate.get("value_vnd_per_m2") and current.get("review_status")=="reviewed-release":
+                if not issues and current.get("value_vnd_per_m2")==candidate.get("value_vnd_per_m2") and current.get("review_status") in ("reviewed-release","automated-source-verified"):
                     decisions.append({"candidate_id":cid,"status":"already-published","issues":[]})
                     continue
                 issues.append("existing-period-cannot-be-overwritten")
@@ -167,9 +167,78 @@ def evaluate(history,baselines,queue,rechecks,approvals,today):
         decisions.append({"candidate_id":cid,"status":"blocked" if issues else "ready","issues":issues})
     return ready,decisions,problems
 
+
+AUTO_MAX_CHANGE_PCT = 30.0
+
+def build_auto_approvals(history, baselines, queue, rechecks, existing_approvals, today):
+    """Technical proof only; never masquerade as human approval.
+
+    Require two most recent independent publisher-hosted captures, 1h apart,
+    same publisher period and all three prices; 30% sanity change threshold.
+    """
+    by_base=baseline_map(baselines)
+    by_recheck={r.get("candidate_id"):r for r in rechecks}
+    already={r.get("candidate_id") for r in existing_approvals}
+    released={(r.get("source_record_id"),r.get("period")) for r in history}
+    auto=[];status=[]
+    for candidate in queue:
+        cid=candidate.get("id")
+        base=by_base.get(candidate.get("baseline_record_id"))
+        if not base or not candidate.get("subproject_name"):
+            continue
+        if not candidate_in_series(candidate,base):
+            status.append({"candidate_id":cid,"status":"rejected-quote-or-source-scope"})
+            continue
+        if cid in already:
+            status.append({"candidate_id":cid,"status":"manual-approval-route"})
+            continue
+        if (base["id"],candidate["period"]) in released:
+            status.append({"candidate_id":cid,"status":"already-in-historical-series"})
+            continue
+        older=[r["period"] for r in history if r.get("source_record_id")==base["id"]]
+        if candidate["period"] <= max(older):
+            status.append({"candidate_id":cid,"status":"out-of-order-publisher-month"})
+            continue
+        previous=max((r for r in history if r.get("source_record_id")==base["id"]),
+                     key=lambda x:x["period"])
+        change=abs(candidate["value_vnd_per_m2"]/previous["value_vnd_per_m2"]-1)*100
+        if change > AUTO_MAX_CHANGE_PCT:
+            status.append({"candidate_id":cid,"status":"price-jump-needs-human-review",
+                           "change_percent":round(change,2)})
+            continue
+        record=by_recheck.get(cid)
+        checks=(record or {}).get("checks",[])
+        if len(checks)<2:
+            status.append({"candidate_id":cid,"status":"waiting-for-two-source-checks"})
+            continue
+        pair=checks[-2:]
+        ids=[str(x.get("run_id")) for x in pair]
+        technical={
+            "candidate_id":cid,
+            "checked_source_evidence":True,
+            "review_date":today.isoformat(),
+            "review_note":"Automatic source verification: two independent OneHousing runner captures with matching source period and all three apartment price figures.",
+            "verification_run_ids":ids}
+        faults=verification_proofs(record,candidate,technical)
+        if faults:
+            status.append({"candidate_id":cid,"status":"source-proof-incomplete","issues":faults})
+            continue
+        try:
+            if any(datetime.fromisoformat(check["checked_at"]).date()>today for check in pair):
+                status.append({"candidate_id":cid,"status":"future-check-date"})
+                continue
+        except (ValueError,TypeError,KeyError):
+            status.append({"candidate_id":cid,"status":"invalid-check-date"})
+            continue
+        auto.append(technical)
+        status.append({"candidate_id":cid,"status":"automatically-verified",
+                       "independent_runs":ids,"change_percent":round(change,2)})
+    return auto,status
+
+
 def main():
     p=argparse.ArgumentParser()
-    p.add_argument("--mode",choices=("preview","promote"),default="preview")
+    p.add_argument("--mode",choices=("preview","promote","auto"),default="preview")
     p.add_argument("--today",default=date.today().isoformat())
     args=p.parse_args()
     history=probe.load(HISTORY)
@@ -179,13 +248,25 @@ def main():
     rechecks=probe.load(VERIFICATION) if VERIFICATION.exists() else {"schema_version":1,"record_count":0,"data":[]}
     if any(x.get("record_count")!=len(x.get("data",[])) for x in (history,baselines,queue,approvals,rechecks)):
         raise SystemExit("Count mismatch in subproject history/recheck/approval contracts")
-    ready,decisions,problems=evaluate(history["data"],baselines["data"],queue["data"],rechecks["data"],approvals["data"],date.fromisoformat(args.today))
+    today=date.fromisoformat(args.today)
+    automatic,auto_status=build_auto_approvals(history["data"],baselines["data"],
+        queue["data"],rechecks["data"],approvals["data"],today)
+    selected_approvals=approvals["data"] + (automatic if args.mode=="auto" else [])
+    ready,decisions,problems=evaluate(history["data"],baselines["data"],queue["data"],rechecks["data"],selected_approvals,today)
+    automated_ids={row["candidate_id"] for row in automatic}
+    for row in ready:
+        if row["id"] in automated_ids:
+            row["review_status"]="automated-source-verified"
+            row["verification_mode"]="two-independent-live-publisher-checks"
+            row["verified_at"]=today.isoformat()
+            row["review_note"]="Automated validation; no manual sign-off. Two independent original-source captures matched the month and price metrics."
+
     report={"mode":args.mode,"checked_date":args.today,"indexed_subproject_baselines":2,
-            "approvals_checked":len(approvals["data"]),"eligible_new_months":len(ready),
+            "approvals_checked":len(approvals["data"]),"auto_eligible":len(automatic),"auto_candidates":auto_status,"eligible_new_months":len(ready),
             "blocked_approvals":sum(d["status"]=="blocked" for d in decisions),
             "validation_issues":problems,"decisions":decisions,
             "production_changed":False}
-    if args.mode=="promote" and ready and not problems and not report["blocked_approvals"]:
+    if args.mode in ("promote","auto") and ready and not problems and not report["blocked_approvals"]:
         history["data"].extend(ready)
         history["record_count"]=len(history["data"])
         probe.save(HISTORY,history)

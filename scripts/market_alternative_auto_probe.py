@@ -241,6 +241,38 @@ def fetch_html(target, session):
         return {"status": "fetch-error", "error_type": error.__class__.__name__}, None
 
 
+
+def fetch_with_publisher_fallback(target, session):
+    """On a publisher login/JS-only variant, inspect an explicitly pinned official mirror.
+
+    Mirror must be the exact same project slug and ID on an allowed OneHousing
+    host. Never bypass a block or treat an unlabelled numeric value as evidence.
+    """
+    status,html=fetch_html(target,session)
+    # A blocked/403 publisher is not permission to try another access path.
+    # Only attempt an official same-ID URL if the source responded HTTP 200
+    # with HTML, but that HTML is an unparseable login/JS-only variant.
+    if html is None or status.get("http_status")!=200:
+        return status,html
+    if target.get("mode")=="monthly-price-candidate":
+        if onehousing_monthly(plain_text(html),date.today(),
+                             target.get("publisher_project_name","Vinhomes Grand Park")):
+            return status,html
+    for url in target.get("fallback_urls",[]):
+        main=urlsplit(target["url"])
+        mirror=urlsplit(url)
+        if (mirror.path!=main.path or mirror.scheme!="https" or
+            mirror.hostname not in publisher_hosts(target["source_id"]) or
+            mirror.query or mirror.fragment):
+            continue
+        alt={**target,"url":url}
+        details,page=fetch_html(alt,session)
+        if page and onehousing_monthly(plain_text(page),date.today(),
+                                      target.get("publisher_project_name","Vinhomes Grand Park")):
+            return dict(details,fallback_used=True,checked_url=url),page
+    return status,html
+
+
 def run(targets, baselines, today, session, fetcher=fetch_html):
     checks, candidates = [], []
     for target in targets:
@@ -254,7 +286,8 @@ def run(targets, baselines, today, session, fetcher=fetch_html):
                 target["project_id"], target["source_id"], target["url"], target["metric_type"]) or (target.get("subproject_name") and prior.get("subproject_name") != target["subproject_name"]):
             row["status"] = "invalid-target-mapping"
         else:
-            probe, html = fetcher(target, session)
+            probe, html = (fetch_with_publisher_fallback(target,session)
+                           if fetcher is fetch_html else fetcher(target,session))
             row.update(probe)
             if html is not None:
                 status, candidate = classify(target, html, prior, today)
