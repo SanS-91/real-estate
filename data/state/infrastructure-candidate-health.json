@@ -1,0 +1,21 @@
+{
+  "schema_version": 1,
+  "module": "infrastructure",
+  "generated_at": "2026-10-09T14:51:08.117638+00:00",
+  "status": "source-degraded",
+  "source_watch_at": "2026-10-09T14:51:06.325508+00:00",
+  "candidate_report_at": "2026-10-09T14:51:06.548064+00:00",
+  "baseline_available": false,
+  "canonical_record_count": 8,
+  "source_targets_checked": 13,
+  "source_targets_reachable": 12,
+  "source_targets_failed": 1,
+  "discovery_links_seen": 2,
+  "new_links_since_baseline": null,
+  "candidate_detail_pages_parsed": 0,
+  "candidate_fetch_errors": 0,
+  "candidates_awaiting_review_in_this_run": 0,
+  "candidate_only": true,
+  "production_written": false,
+  "methodology": "Official-source URLs are monitored; new links and unreviewed candidates are not automatically published as legal acts or infrastructure milestones."
+}
