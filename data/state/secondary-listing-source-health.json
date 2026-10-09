@@ -1,0 +1,38 @@
+{
+  "schema_version": 1,
+  "generated_at": "2026-10-09T05:34:04.247447+00:00",
+  "source_check_date": "2026-10-09",
+  "targets_checked": 3,
+  "new_history_candidates": 0,
+  "production_written": false,
+  "counts": {
+    "blocked": 3
+  },
+  "checks": [
+    {
+      "id": "cafeland-izumi-city-garden-townhouse-2026-05-26",
+      "project_id": "izumi-city",
+      "source_publication_date": "2026-05-26",
+      "http_status": 403,
+      "final_host": "nhadat.cafeland.vn",
+      "status": "blocked"
+    },
+    {
+      "id": "cafeland-essensia-parkway-semidetached-villa-2026-10-08",
+      "project_id": "essensia-parkway",
+      "source_publication_date": "2026-10-08",
+      "http_status": 403,
+      "final_host": "nhadat.cafeland.vn",
+      "status": "blocked"
+    },
+    {
+      "id": "cafeland-the-9-stellars-alta-heights-apartment-2025-01-05",
+      "project_id": "the-9-stellars",
+      "source_publication_date": "2025-01-05",
+      "http_status": 403,
+      "final_host": "nhadat.cafeland.vn",
+      "status": "blocked"
+    }
+  ],
+  "note": "Date here is a check date, NOT a price observation period. An old listing cannot become a new historical price."
+}
