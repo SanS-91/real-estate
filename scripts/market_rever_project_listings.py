@@ -19,7 +19,7 @@ from pathlib import Path
 from urllib.parse import urljoin, urlsplit
 
 import requests
-from bs4 import BeautifulSoup
+from bs4 import BeautifulSoup, NavigableString
 
 ROOT = Path(__file__).resolve().parents[1]
 CONFIG = ROOT / "config/market-rever-listing-targets.json"
@@ -92,7 +92,7 @@ def parse_detail(html, url, expected_name, project_id, captured):
     # Source headings are repeated in <title>, navigation and other listings.
     # Read the genuine listing DOM strictly *after* the first H1, not global text.
     tail = re.sub(r"\s+", " ", " ".join(
-        t.strip() for t in heading.next_strings if t and t.strip()))[:30000]
+        str(t).strip() for t in heading.next_elements if isinstance(t, NavigableString) and str(t).strip()))[:30000]
     # Strong project attribution: the detail's own "Dự án" field, not
     # the nav's "Dự án nổi bật" or nearby search recommendations.
     info_marker = tail.find("Thông tin cơ bản")
