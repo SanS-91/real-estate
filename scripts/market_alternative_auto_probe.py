@@ -249,7 +249,12 @@ def fetch_with_publisher_fallback(target, session):
     host. Never bypass a block or treat an unlabelled numeric value as evidence.
     """
     status,html=fetch_html(target,session)
-    if html and target.get("mode")=="monthly-price-candidate":
+    # A blocked/403 publisher is not permission to try another access path.
+    # Only attempt an official same-ID URL if the source responded HTTP 200
+    # with HTML, but that HTML is an unparseable login/JS-only variant.
+    if html is None or status.get("http_status")!=200:
+        return status,html
+    if target.get("mode")=="monthly-price-candidate":
         if onehousing_monthly(plain_text(html),date.today(),
                              target.get("publisher_project_name","Vinhomes Grand Park")):
             return status,html
