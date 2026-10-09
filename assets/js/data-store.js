@@ -69,6 +69,7 @@
     getAlternativePriceEvidence: () => loadJSON('market/alternative-price-evidence.json'),
     getSecondaryListingEvidence: () => loadJSON('market/secondary-listing-evidence.json'),
     getReverVerifiedUnitListings: () => loadJSON('market/verified-unit-listings.json'),
+    getMuabanVerifiedUnitListings: () => loadJSON('market/verified-muaban-unit-listings.json'),
     getOneHousingSubprojectEvidence: () => loadJSON('market/alternative-subproject-monthly-evidence.json'),
     getOneHousingSubprojectHistory: () => loadJSON('market/alternative-subproject-monthly-history.json'),
     getOneHousingProjectHistory: () => loadJSON('market/onehousing-project-monthly-history.json'),
