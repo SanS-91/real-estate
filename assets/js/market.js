@@ -230,7 +230,7 @@
         <div class="market-evidence-row__body">
           <p>${esc(context)}</p>${range}${unit}${unitListing}${access}${trendHTML}
           <div class="market-evidence-row__source">
-            ${sourceRef(row.source_id,{sourceDate:row.source_publication_date || row.review_date,sourceUrl:row.source_url,methodology:row.methodology_note})}
+            ${sourceRef(row.source_id,{sourceDate:row.source_publication_date || (row.source_date_basis ? null : row.review_date),sourceUrl:row.source_url,methodology:row.methodology_note})}
             <span>Kiểm tra ${esc(formatPeriod(row.review_date || '—'))}</span>${historyNote}${sourceVerifiedNote}
           </div>
           <details class="market-evidence-method"><summary>Ghi chú phương pháp đầy đủ</summary><p>${esc(row.methodology_note || 'Không có ghi chú bổ sung.')}</p></details>
