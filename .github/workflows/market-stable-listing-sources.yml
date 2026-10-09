@@ -1,0 +1,99 @@
+name: Market 4H - Independent Stable Listing Source Discovery
+
+on:
+  pull_request:
+    paths:
+      - 'scripts/market_stable_listing_discovery.py'
+      - 'config/market-stable-listing-sources.json'
+      - 'tests/test_market_stable_listing_discovery.py'
+      - '.github/workflows/market-stable-listing-sources.yml'
+  push:
+    branches: [main]
+    paths:
+      - 'scripts/market_stable_listing_discovery.py'
+      - 'config/market-stable-listing-sources.json'
+      - '.github/workflows/market-stable-listing-sources.yml'
+  schedule:
+    - cron: '5 1 * * *'
+    - cron: '5 7 * * *'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: market-4h-secondary-listings
+  cancel-in-progress: false
+
+jobs:
+  discover-unreviewed-listing-evidence:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Install pinned dependencies
+        run: pip install -r requirements.txt
+      - name: Verify strict source/project/methodology rules
+        run: |
+          python -m py_compile scripts/market_stable_listing_discovery.py
+          python -m unittest discover -s tests -p 'test_market_stable_listing_discovery.py' -v
+      - name: Discover public secondary listing candidates
+        if: github.event_name != 'pull_request'
+        run: python scripts/market_stable_listing_discovery.py
+      - name: Summarize source quality and candidate evidence
+        if: always() && github.event_name != 'pull_request'
+        run: |
+          echo '## Market 4H — Independent listing source probe' >> "$GITHUB_STEP_SUMMARY"
+          python - <<'PY' >> "$GITHUB_STEP_SUMMARY"
+          import json
+          from pathlib import Path
+          p=Path('data/state/market-stable-listing-health.json')
+          if not p.exists():
+              print('No health report produced.')
+          else:
+              d=json.loads(p.read_text())
+              print(f"- Category pages tested: **{d['categories_checked']}**")
+              print(f"- Individual listing URLs discovered: **{d['unique_listings_checked']}**")
+              print(f"- New listing-only candidates: **{d['new_listing_candidates']}**")
+              for c in d['categories']:
+                  print(f"  - {c['category_id']}: {c['index_status']}, {c['discovered_listing_count']} links, {c['qualified_candidates']} strict matches")
+              print('- **Published project price histories: 0.** No candidate is promoted as project ASP.')
+          PY
+      - name: Persist evidence and source status without touching production price data
+        if: github.event_name != 'pull_request'
+        run: |
+          set -eu
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add data/state/market-stable-listing-health.json data/candidate/market/stable-listing-candidates.json
+          if git diff --cached --quiet; then
+            echo 'No source evidence changes.'
+            exit 0
+          fi
+          git commit -m 'data(market): persist independent secondary listing evidence and health'
+          git restore --worktree -- .
+          pushed=false
+          for attempt in 1 2 3 4 5; do
+            if git pull --rebase origin main && git push origin HEAD:main; then
+              pushed=true
+              break
+            fi
+            sleep 3
+          done
+          if [ "$pushed" != true ]; then
+            echo '::error::Could not persist secondary listing source evidence.'
+            exit 1
+          fi
+      - uses: actions/upload-artifact@v4
+        if: always() && github.event_name != 'pull_request'
+        with:
+          name: market-4h-secondary-listing-probe
+          path: |
+            data/state/market-stable-listing-health.json
+            data/candidate/market/stable-listing-candidates.json
+            data/candidate/market/stable-listing-run-report.json
+          if-no-files-found: warn
+          retention-days: 30
