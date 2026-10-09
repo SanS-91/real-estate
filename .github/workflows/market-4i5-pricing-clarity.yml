@@ -31,6 +31,8 @@ jobs:
         run: |
           node --check assets/js/market.js
           node --check assets/js/charts.js
+          node --check assets/js/maintenance.js
+          python tests/test_phase4h_source_health_ui.py
           node tests/test_market_4i5_pricing_clarity.cjs
           node tests/test_market_project_price_range_chart.js
           node tests/test_market_rever_verified_ui.cjs
@@ -54,5 +56,7 @@ jobs:
                            'chart-frame--pricing-range','Ng\u00e0y snapshot'):
                   assert text in doc,(kind,text)
               assert 'Kho\u1ea3ng gi\u00e1 rao b\u00e1n theo d\u1ef1 \u00e1n' in doc
+              assert 'Đang hiển thị dữ liệu giá đã lưu' in doc, 'Friendly source status missing'
+              assert 'maintenance.html#market-source-health-title' in doc, 'Source detail link missing'
               print(f'PASS {kind}: readable project intervals, transparent source coverage and benchmarks')
           PY
