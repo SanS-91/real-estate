@@ -231,18 +231,18 @@
   function documentTable(records, { limit = null, compact = false } = {}) {
     const rows = (limit ? records.slice(0, limit) : records).map(document => `
       <tr>
-        <td><span class="document-number">${esc(document.document_number || '—')}</span></td>
-        <td><button class="table-link" type="button" data-document-id="${esc(document.id)}">${esc(document.title)}</button><span class="table-subtext">${esc(topicNames(document))}</span></td>
-        <td>${esc(labelize(document.document_type))}</td>
-        <td>${esc(agencyNames(document))}</td>
-        <td>${Components.statusBadge(statusForDisplay(document))}</td>
-        <td>${esc(App.formatDate(document.issued_date || document.draft_published_date))}</td>
-        <td>${esc(App.formatDate(document.effective_date))}<span class="table-subtext">${document.effective_date ? esc(daysLabel(document)) : ''}</span></td>
+        <td data-label-vi="Số hiệu" data-label-en="Number"><span class="document-number">${esc(document.document_number || '—')}</span></td>
+        <td data-label-vi="Văn bản" data-label-en="Document"><button class="table-link" type="button" data-document-id="${esc(document.id)}">${esc(document.title)}</button><span class="table-subtext">${esc(topicNames(document))}</span></td>
+        <td data-label-vi="Loại văn bản" data-label-en="Type">${esc(labelize(document.document_type))}</td>
+        <td data-label-vi="Cơ quan" data-label-en="Agency">${esc(agencyNames(document))}</td>
+        <td data-label-vi="Trạng thái" data-label-en="Status">${Components.statusBadge(statusForDisplay(document))}</td>
+        <td data-label-vi="Ban hành / Dự thảo" data-label-en="Issued / Draft">${esc(App.formatDate(document.issued_date || document.draft_published_date))}</td>
+        <td data-label-vi="Hiệu lực" data-label-en="Effective">${esc(App.formatDate(document.effective_date))}<span class="table-subtext">${document.effective_date ? esc(daysLabel(document)) : ''}</span></td>
       </tr>
     `).join('');
     return `
       <div class="table-wrap${compact ? ' table-wrap--legal-overview' : ''}">
-        <table class="data-table data-table--legal${compact ? ' data-table--legal-overview' : ''}">
+        <table class="data-table data-table--legal mobile-record-table${compact ? ' data-table--legal-overview' : ''}">
           <thead><tr><th>Number</th><th>Document</th><th>Type</th><th>Agency</th><th>Status</th><th>Issued / Draft</th><th>Effective</th></tr></thead>
           <tbody>${rows || '<tr><td colspan="7" class="table-empty">No documents match the selected filters.</td></tr>'}</tbody>
         </table>
