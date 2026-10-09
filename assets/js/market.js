@@ -13,7 +13,7 @@
     source: '',
     priceLayer: 'listing'
   };
-  let data = { regions: [], developers: [], projects: [], phases: [], observations: [], listingObservations: [], listingScopeEvidence: [], listingSourceCoverage: null, listingComparables: [], articles: [], allArticles: [], infrastructureProjects: [], infrastructureSchedules: [], legalTopics: [], legalDocuments: [], events: [], macroIndicators: [], macroRows: [] };
+  let data = { regions: [], developers: [], projects: [], phases: [], observations: [], listingObservations: [], listingScopeEvidence: [], alternativePriceEvidence: [], listingSourceCoverage: null, listingComparables: [], articles: [], allArticles: [], infrastructureProjects: [], infrastructureSchedules: [], legalTopics: [], legalDocuments: [], events: [], macroIndicators: [], macroRows: [] };
 
   function payloadData(payload) { return payload?.data || []; }
   function byId(records) { return new Map(records.map(item => [item.id, item])); }
@@ -124,9 +124,36 @@
     return 'Mức giá tham khảo FAQ, chưa xác minh là dải giá thống kê toàn dự án.';
   }
 
+
+  // Alternative publisher references are never part of the Batdongsan price chart.
+  // Monthly modal price, single listing and historical launch floor are distinct.
+  function alternativePriceCardsHTML(projectIds) {
+    const rows = data.alternativePriceEvidence.filter(item => projectIds.includes(item.project_id));
+    if (!rows.length) return '';
+    const labels = {
+      'popular-asking-price-per-sqm': 'Giá phổ biến theo nguồn',
+      'single-listing-asking-price-per-sqm': 'Giá rao của một căn',
+      'historical-launch-starting-price-per-sqm': 'Giá chào khởi điểm lịch sử'
+    };
+    const price = value => Formatters.number(value / 1_000_000, {min:0,max:2}) + ' triệu VND/m²';
+    const cards = rows.map(row => {
+      const project = Resolver.getEntity('project', row.project_id);
+      const scope = row.subproject_name ? ' · ' + row.subproject_name : ' · Căn hộ';
+      const bounds = row.range_low_vnd_per_m2 != null && row.range_high_vnd_per_m2 != null
+        ? 'Dải giá nhà cung cấp: ' + price(row.range_low_vnd_per_m2) + ' đến ' + price(row.range_high_vnd_per_m2) + '. ' : '';
+      return `<article class="market-listing-scope-item">
+        <div class="market-listing-scope-item__head"><strong>${esc(project?.name || row.project_id)}${esc(scope)}</strong><span>${esc(labels[row.metric_type] || row.metric_type)} · ${esc(row.period)}</span></div>
+        <div class="market-listing-scope-item__price">${esc(price(row.value_vnd_per_m2))}</div>
+        <p>${esc(bounds + row.methodology_note)}</p>
+        <div class="provenance-inline-row">${sourceRef(row.source_id,{sourceDate:row.source_publication_date || row.review_date,sourceUrl:row.source_url,methodology:row.methodology_note})}<span>Kiểm tra ${esc(row.review_date)} · Không dùng cho ASP hay trend tổng hợp</span></div>
+      </article>`;
+    }).join('');
+    return `<div class="market-listing-scope" role="note"><h4>Nguồn giá đối chiếu (khác phương pháp)</h4><div class="market-listing-scope-grid">${cards}</div></div>`;
+  }
+
   function scopedListingReferenceHTML(projectId) {
     const rows = data.listingScopeEvidence.filter(item => item.project_id === projectId);
-    if (!rows.length) return '';
+    if (!rows.length) return alternativePriceCardsHTML([projectId]);
     const cards = rows.map(row => `<article class="market-listing-scope-item">
       <div class="market-listing-scope-item__head"><strong>${esc(listingScopeLabel(row))}</strong><span>Không đưa vào biểu đồ giá tổng hợp</span></div>
       <div class="market-listing-scope-item__price">${esc(formatListingRange(row))}</div>
@@ -134,7 +161,7 @@
       ${row.data_quality_flag ? '<p class="market-listing-scope-warning">Lưu ý: trang rao bán căn hộ trước đây có tin ngoài phạm vi Izumi. Không sử dụng để tính giá căn hộ Izumi.</p>' : ''}
       <div class="provenance-inline-row">${sourceRef(row.source_id,{sourceDate:row.review_date,sourceUrl:row.source_url,methodology:row.methodology_note})}<span>Kiểm tra ${esc(row.review_date)} · Tin gần nhất ${esc(row.latest_listing_date || '—')}</span></div>
     </article>`).join('');
-    return `<div class="market-listing-scope" role="note"><h4>Giá chào bán theo phạm vi sản phẩm</h4>${cards}</div>`;
+    return `<div class="market-listing-scope" role="note"><h4>Giá chào bán theo phạm vi sản phẩm</h4>${cards}</div>` + alternativePriceCardsHTML([projectId]);
   }
 
   function listingMarketDrawerHTML(project) {
@@ -855,6 +882,7 @@
         <div class="section-header"><div><span class="eyebrow">Category-specific evidence</span><h2 class="section-title">Giá chào bán theo phân khúc dự án</h2></div></div>
         <div class="section-body"><p class="chart-note">Giá chào bán theo phân khúc (căn hộ, biệt thự/liền kề hoặc FAQ tham khảo) được hiển thị riêng, không gộp vào biểu đồ giá bình quân dự án và không được xem là giá giao dịch.</p>
         <div class="market-listing-scope-grid">${data.listingScopeEvidence.filter(row=>filteredProjects.some(project=>project.id === row.project_id)).map(row=>`<div class="market-listing-scope-item"><div class="market-listing-scope-item__head"><strong>${esc(Resolver.getEntity('project',row.project_id)?.name || row.project_id)}</strong><span>${esc(listingScopeLabel(row))}</span></div><div class="market-listing-scope-item__price">${esc(formatListingRange(row))}</div><p>${esc(listingScopeDescription(row))}</p><div class="provenance-inline-row">${sourceRef(row.source_id,{sourceDate:row.review_date,sourceUrl:row.source_url,methodology:row.methodology_note})}<span>Ngày xem ${esc(row.review_date)}</span></div></div>`).join('')}</div></div></section>` : ''}
+      ${state.priceLayer === 'listing' ? alternativePriceCardsHTML(filteredProjects.map(project => project.id)) : ''}
       <section class="section"><div class="section-header"><h2 class="section-title">Market Benchmarks</h2></div><div class="section-body section-body--table"><div class="table-wrap"><table class="data-table"><thead><tr><th>Market</th><th>Period</th><th class="numeric">New Supply</th><th class="numeric">Transactions</th><th class="numeric">Absorption</th><th class="numeric">Average ASP</th><th>Source</th></tr></thead><tbody>${benchmarkRows.map(row=>`<tr><td>HCMC · Apartment</td><td>${esc(row.period)}</td><td class="numeric">${esc(formatMarketMetric(row,'new_supply'))}</td><td class="numeric">${esc(formatMarketMetric(row,'sales_units'))}</td><td class="numeric">${esc(formatMarketMetric(row,'absorption_rate'))}</td><td class="numeric">${esc(formatMarketMetric(row,'average_asp'))}</td><td>${sourceRef(row.source_id,{sourceDate:row.source_date,period:row.period,methodology:row.methodology_note,sourceUrl:row.source_url})}</td></tr>`).join('') || '<tr><td colspan="7" class="table-empty">No market benchmark records.</td></tr>'}</tbody></table></div></div></section>`;
     setView(html);
     bindFilters();
@@ -1058,11 +1086,11 @@
   async function load() {
     try {
       await window.Provenance?.load?.();
-      const [regions, developers, projects, phases, observations, listingObservations, listingScopeEvidence, listingSourceCoverage, listingComparables, articles, infrastructureProjects, infrastructureSchedules, legalTopics, legalDocuments, events, macroIndicators, macroRows, meta] = await Promise.all([
-        DataStore.getRegions(), DataStore.getDevelopers(), DataStore.getProjects(), DataStore.getProjectPhases(), DataStore.getMarketObservations(), DataStore.getListingObservations(), DataStore.getListingScopeEvidence(), DataStore.getListingSourceCoverage().catch(() => null), DataStore.getListingComparables(), DataStore.getArticles(), DataStore.getInfrastructureProjects(), DataStore.getInfrastructureSchedules(), DataStore.getLegalTopics(), DataStore.getLegalDocuments(), DataStore.getEvents(), DataStore.getMacroIndicators(), DataStore.getProcessedMacroObservations(), DataStore.getMeta()
+      const [regions, developers, projects, phases, observations, listingObservations, listingScopeEvidence, alternativePriceEvidence, listingSourceCoverage, listingComparables, articles, infrastructureProjects, infrastructureSchedules, legalTopics, legalDocuments, events, macroIndicators, macroRows, meta] = await Promise.all([
+        DataStore.getRegions(), DataStore.getDevelopers(), DataStore.getProjects(), DataStore.getProjectPhases(), DataStore.getMarketObservations(), DataStore.getListingObservations(), DataStore.getListingScopeEvidence(), DataStore.getAlternativePriceEvidence(), DataStore.getListingSourceCoverage().catch(() => null), DataStore.getListingComparables(), DataStore.getArticles(), DataStore.getInfrastructureProjects(), DataStore.getInfrastructureSchedules(), DataStore.getLegalTopics(), DataStore.getLegalDocuments(), DataStore.getEvents(), DataStore.getMacroIndicators(), DataStore.getProcessedMacroObservations(), DataStore.getMeta()
       ]);
       data = {
-        regions: payloadData(regions), developers: payloadData(developers), projects: payloadData(projects), phases: payloadData(phases), observations: payloadData(observations), listingObservations: payloadData(listingObservations), listingScopeEvidence: payloadData(listingScopeEvidence), listingSourceCoverage, listingComparables: payloadData(listingComparables), articles: payloadData(articles).filter(item => item.category === 'market'), allArticles: payloadData(articles), infrastructureProjects: payloadData(infrastructureProjects), infrastructureSchedules: payloadData(infrastructureSchedules), legalTopics: payloadData(legalTopics), legalDocuments: payloadData(legalDocuments), events: payloadData(events), macroIndicators: payloadData(macroIndicators), macroRows: payloadData(macroRows)
+        regions: payloadData(regions), developers: payloadData(developers), projects: payloadData(projects), phases: payloadData(phases), observations: payloadData(observations), listingObservations: payloadData(listingObservations), listingScopeEvidence: payloadData(listingScopeEvidence), alternativePriceEvidence: payloadData(alternativePriceEvidence), listingSourceCoverage, listingComparables: payloadData(listingComparables), articles: payloadData(articles).filter(item => item.category === 'market'), allArticles: payloadData(articles), infrastructureProjects: payloadData(infrastructureProjects), infrastructureSchedules: payloadData(infrastructureSchedules), legalTopics: payloadData(legalTopics), legalDocuments: payloadData(legalDocuments), events: payloadData(events), macroIndicators: payloadData(macroIndicators), macroRows: payloadData(macroRows)
       };
       Resolver.setData('region', data.regions);
       Resolver.setData('developer', data.developers);

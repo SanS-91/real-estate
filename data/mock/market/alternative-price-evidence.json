@@ -1,0 +1,92 @@
+{
+  "schema_version": 1,
+  "generated_at": "2026-10-09",
+  "collection_mode": "assisted-reviewed-publisher-evidence",
+  "description": "Alternative-source price references, deliberately separated from Batdongsan asking price snapshots, official pricing and comparable charts.",
+  "record_count": 4,
+  "data": [
+    {
+      "id": "onehousing-vinhomes-grand-park-apartment-2026-10",
+      "project_id": "vinhomes-grand-park",
+      "source_id": "onehousing-vn",
+      "source_url": "https://onehousing.vn/phan-tich/du-an/can-ho-chung-cu-du-an-Vinhomes-Grand-Park.1012",
+      "asset_type": "apartment",
+      "metric_type": "popular-asking-price-per-sqm",
+      "value_vnd_per_m2": 54470000,
+      "range_low_vnd_per_m2": 36810000,
+      "range_high_vnd_per_m2": 331190000,
+      "period": "2026-10",
+      "period_type": "month",
+      "review_date": "2026-10-09",
+      "source_publication_date": null,
+      "evidence": {
+        "period": "Căn hộ chung cư dự án Vinhomes Grand Park tháng 10/2026",
+        "metric": "Đơn giá phổ biến | 54.47 triệu/m²",
+        "range": "Khoảng giá: 36.81 - 331.19 triệu"
+      },
+      "methodology_note": "OneHousing's modal/popular apartment asking rate (54.47 million VND/m²) and exceptionally broad apartment asking range are different statistics. Neither is a weighted project ASP or transaction price. Source's 0% change indicator is not a second independent observation. Do not combine with Batdongsan's methodology."
+    },
+    {
+      "id": "rever-vinhomes-grand-park-apartment-listing-2026-09-16",
+      "project_id": "vinhomes-grand-park",
+      "source_id": "rever-vn",
+      "source_url": "https://rever.vn/mua/can-ho-vinhomes-grand-park-23",
+      "asset_type": "apartment",
+      "metric_type": "single-listing-asking-price-per-sqm",
+      "value_vnd_per_m2": 48550000,
+      "range_low_vnd_per_m2": null,
+      "range_high_vnd_per_m2": null,
+      "period": "2026-09-16",
+      "period_type": "date",
+      "review_date": "2026-10-09",
+      "source_publication_date": "2026-09-16",
+      "evidence": {
+        "period": "Cập nhật: 16/09/2026",
+        "metric": "3.35 tỷ 48.55 triệu/m²",
+        "unit": "Căn hộ Vinhomes Grand Park · 69m²"
+      },
+      "methodology_note": "One individual 69 m² apartment asking listing updated 16 Sep 2026, NOT an aggregate project statistic, and not a second OneHousing/Batdongsan project price point. Price may be edited or listing may disappear."
+    },
+    {
+      "id": "rever-the-privia-launch-floor-2023-11-14",
+      "project_id": "the-privia",
+      "source_id": "rever-vn",
+      "source_url": "https://blog.rever.vn/the-privia-khang-dien-du-dieu-kien-mua-ban-rever-chinh-thuc-phan-phoi",
+      "asset_type": "apartment",
+      "metric_type": "historical-launch-starting-price-per-sqm",
+      "value_vnd_per_m2": 48000000,
+      "range_low_vnd_per_m2": null,
+      "range_high_vnd_per_m2": null,
+      "period": "2023-11-14",
+      "period_type": "date",
+      "review_date": "2026-10-09",
+      "source_publication_date": "2023-11-14",
+      "evidence": {
+        "period": "14/11/2023",
+        "metric": "Mức giá chỉ từ 48 triệu/m²"
+      },
+      "methodology_note": "Historical broker/distributor advertised starting price from a 14 Nov 2023 article. Not a price observed in 2026, not an average/transaction or reliable time-series baseline."
+    },
+    {
+      "id": "onehousing-the-global-city-grand-view-launch-floor-2024-11-12",
+      "project_id": "the-global-city",
+      "source_id": "onehousing-vn",
+      "source_url": "https://onehousing.vn/blog/can-ho-the-global-city",
+      "asset_type": "apartment",
+      "subproject_name": "Masteri Grand View",
+      "metric_type": "historical-launch-starting-price-per-sqm",
+      "value_vnd_per_m2": 100000000,
+      "range_low_vnd_per_m2": null,
+      "range_high_vnd_per_m2": null,
+      "period": "2024-11-12",
+      "period_type": "date",
+      "review_date": "2026-10-09",
+      "source_publication_date": "2024-11-12",
+      "evidence": {
+        "period": "12/11/2024",
+        "metric": "Masteri Grand View ... chỉ từ 100 triệu/m2"
+      },
+      "methodology_note": "Historical OneHousing distribution/article starting price for Masteri Grand View apartment subproject only, not The Global City master-project ASP and not a current 2026 offering."
+    }
+  ]
+}

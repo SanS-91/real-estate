@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "updated_at": "2026-10-08",
+  "updated_at": "2026-10-09",
   "policy_note": "Source registry for market-data provenance. Automation is enabled only where access is stable and permitted; blocked sources remain assisted/manual. Source roles are kept separate so listing asking prices are not mixed with official/consultancy market benchmarks.",
   "sources": [
     {
@@ -74,6 +74,28 @@
         "market-report"
       ],
       "primary_use": "Market supply, demand, pricing and outlook research."
+    },
+    {
+      "source_id": "onehousing-vn",
+      "label": "OneHousing",
+      "source_role": "secondary-project-price-analytics",
+      "access_mode": "public-page-reviewed; runner-access-unverified",
+      "automation_status": "candidate-evaluation",
+      "supported_layers": [
+        "alternative-price-evidence"
+      ],
+      "primary_use": "Monthly category modal/popular asking price or historical distributor starting price, source-specific and never merged into Batdongsan price trends."
+    },
+    {
+      "source_id": "rever-vn",
+      "label": "Rever",
+      "source_role": "secondary-brokerage",
+      "access_mode": "public-page-reviewed; runner-access-unverified",
+      "automation_status": "candidate-evaluation",
+      "supported_layers": [
+        "alternative-price-evidence"
+      ],
+      "primary_use": "Dated single-listing asking price or archived advertised launch starting price. Not project average."
     }
   ]
 }
