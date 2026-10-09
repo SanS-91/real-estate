@@ -13,7 +13,7 @@
     source: '',
     priceLayer: 'listing'
   };
-  let data = { regions: [], developers: [], projects: [], phases: [], observations: [], listingObservations: [], listingScopeEvidence: [], alternativePriceEvidence: [], secondaryListingEvidence: [], oneHousingSubprojectEvidence: [], oneHousingSubprojectHistory: [], listingSourceCoverage: null, listingComparables: [], articles: [], allArticles: [], infrastructureProjects: [], infrastructureSchedules: [], legalTopics: [], legalDocuments: [], events: [], macroIndicators: [], macroRows: [] };
+  let data = { regions: [], developers: [], projects: [], phases: [], observations: [], listingObservations: [], listingScopeEvidence: [], alternativePriceEvidence: [], secondaryListingEvidence: [], oneHousingSubprojectEvidence: [], oneHousingSubprojectHistory: [], oneHousingProjectHistory: [], listingSourceCoverage: null, listingComparables: [], articles: [], allArticles: [], infrastructureProjects: [], infrastructureSchedules: [], legalTopics: [], legalDocuments: [], events: [], macroIndicators: [], macroRows: [] };
 
   function payloadData(payload) { return payload?.data || []; }
   function byId(records) { return new Map(records.map(item => [item.id, item])); }
@@ -136,8 +136,16 @@
       if (!published.has(key) || String(item.period) > String(published.get(key).period)) published.set(key, item);
     });
     const subprojectRows = data.oneHousingSubprojectEvidence.map(item => published.get(item.subproject_name) || item);
+    const parentPublished = new Map();
+    data.oneHousingProjectHistory.filter(item => item.review_status === 'automated-source-verified' || item.review_status === 'reviewed-release' || item.review_status === 'source-indexed-baseline')
+      .forEach(item => {
+        const key = item.source_record_id;
+        if (!parentPublished.has(key) || String(item.period) > String(parentPublished.get(key).period)) parentPublished.set(key, item);
+      });
+    const parentRows = data.alternativePriceEvidence.map(item => parentPublished.get(item.id) || item);
     const sourceHistory = window.MarketSubprojectTrends?.verifiedGroups?.(data.oneHousingSubprojectHistory) || [];
-    const rows = [...data.alternativePriceEvidence, ...data.secondaryListingEvidence, ...subprojectRows]
+    const parentSourceHistory = window.MarketSubprojectTrends?.verifiedParentGroups?.(data.oneHousingProjectHistory) || [];
+    const rows = [...parentRows, ...data.secondaryListingEvidence, ...subprojectRows]
       .filter(item => projectIds.includes(item.project_id));
     if (!rows.length) return '';
     const sourceNames = { 'onehousing-vn':'OneHousing', 'rever-vn':'Rever', 'cafeland-listings':'CafeLand' };
@@ -168,12 +176,12 @@
         'Giá phổ biến do nguồn thống kê cho đúng phân khúc và kỳ nêu trên.' :
         category === 'historical' ? 'Giá từ kỳ lịch sử, không sử dụng như giá hiện tại.' :
         'Một tin rao bán cụ thể, không phải mức giá bình quân toàn dự án.';
-      const trend = window.MarketSubprojectTrends?.forRow?.(sourceHistory, row);
+      const trend = window.MarketSubprojectTrends?.forRow?.(sourceHistory, row) || window.MarketSubprojectTrends?.forParentRow?.(parentSourceHistory, row);
       const trendId = trend ? 'market-subproject-trend-' + trend.series_key.replace(/[^a-z0-9_-]/gi, '-') : '';
       const trendHTML = trend ? `<details class="market-evidence-method" data-subproject-trend-toggle data-trend-series="${esc(trend.series_key)}">
-        <summary>Lịch sử giá cùng phân khu · ${trend.values.length} kỳ</summary>
+        <summary>Lịch sử giá cùng phạm vi nguồn · ${trend.values.length} kỳ</summary>
         <div class="chart-frame chart-frame--drawer"><canvas id="${esc(trendId)}" data-subproject-price-chart></canvas></div>
-        <p class="chart-note">Giá phổ biến do OneHousing báo cáo, riêng ${esc(trend.subproject_name)}. Kỳ đầu là dữ liệu nguồn đã lập chỉ mục; kỳ tiếp theo chỉ ghi khi được xác minh. Không đại diện giá giao dịch hoặc ASP toàn dự án.</p>
+        <p class="chart-note">Giá phổ biến OneHousing theo đúng ${esc(trend.subproject_name || 'dự án ' + (project?.name || row.project_id))}. Kỳ đầu là nguồn đã lập chỉ mục; kỳ sau cần xác minh độc lập. Không đại diện giá giao dịch hoặc ASP có trọng số.</p>
       </details>` : '';
       const range = row.range_low_vnd_per_m2 != null && row.range_high_vnd_per_m2 != null ?
         `<p>Khoảng chào bán theo nguồn: <strong>${esc(amount(row.range_low_vnd_per_m2))}–${esc(amount(row.range_high_vnd_per_m2))} triệu VND/m²</strong>.</p>` : '';
@@ -1006,7 +1014,10 @@
 
   function bindSubprojectTrendCharts(node) {
     if (!node || !window.MarketSubprojectTrends) return;
-    const groups = MarketSubprojectTrends.verifiedGroups(data.oneHousingSubprojectHistory);
+    const groups = [
+      ...MarketSubprojectTrends.verifiedGroups(data.oneHousingSubprojectHistory),
+      ...MarketSubprojectTrends.verifiedParentGroups(data.oneHousingProjectHistory)
+    ];
     node.querySelectorAll('[data-subproject-trend-toggle]').forEach(details => {
       details.addEventListener('toggle', () => {
         if (!details.open) return;
@@ -1014,7 +1025,7 @@
         const canvas = details.querySelector('canvas[data-subproject-price-chart]');
         if (!canvas || !row || row.values.length < 2) return;
         requestAnimationFrame(() => ChartTools.renderPriceTrend(canvas.id, [
-          { label: row.subproject_name + ' · OneHousing', values: row.values }
+          { label: (row.subproject_name || Resolver.getEntity('project', row.project_id)?.name || row.project_id) + ' · OneHousing', values: row.values }
         ]));
       });
     });
@@ -1184,11 +1195,11 @@
   async function load() {
     try {
       await window.Provenance?.load?.();
-      const [regions, developers, projects, phases, observations, listingObservations, listingScopeEvidence, alternativePriceEvidence, secondaryListingEvidence, oneHousingSubprojectEvidence, oneHousingSubprojectHistory, listingSourceCoverage, listingComparables, articles, infrastructureProjects, infrastructureSchedules, legalTopics, legalDocuments, events, macroIndicators, macroRows, meta] = await Promise.all([
-        DataStore.getRegions(), DataStore.getDevelopers(), DataStore.getProjects(), DataStore.getProjectPhases(), DataStore.getMarketObservations(), DataStore.getListingObservations(), DataStore.getListingScopeEvidence(), DataStore.getAlternativePriceEvidence(), DataStore.getSecondaryListingEvidence(), DataStore.getOneHousingSubprojectEvidence(), DataStore.getOneHousingSubprojectHistory(), DataStore.getListingSourceCoverage().catch(() => null), DataStore.getListingComparables(), DataStore.getArticles(), DataStore.getInfrastructureProjects(), DataStore.getInfrastructureSchedules(), DataStore.getLegalTopics(), DataStore.getLegalDocuments(), DataStore.getEvents(), DataStore.getMacroIndicators(), DataStore.getProcessedMacroObservations(), DataStore.getMeta()
+      const [regions, developers, projects, phases, observations, listingObservations, listingScopeEvidence, alternativePriceEvidence, secondaryListingEvidence, oneHousingSubprojectEvidence, oneHousingSubprojectHistory, oneHousingProjectHistory, listingSourceCoverage, listingComparables, articles, infrastructureProjects, infrastructureSchedules, legalTopics, legalDocuments, events, macroIndicators, macroRows, meta] = await Promise.all([
+        DataStore.getRegions(), DataStore.getDevelopers(), DataStore.getProjects(), DataStore.getProjectPhases(), DataStore.getMarketObservations(), DataStore.getListingObservations(), DataStore.getListingScopeEvidence(), DataStore.getAlternativePriceEvidence(), DataStore.getSecondaryListingEvidence(), DataStore.getOneHousingSubprojectEvidence(), DataStore.getOneHousingSubprojectHistory(), DataStore.getOneHousingProjectHistory().catch(() => ({data:[]})), DataStore.getListingSourceCoverage().catch(() => null), DataStore.getListingComparables(), DataStore.getArticles(), DataStore.getInfrastructureProjects(), DataStore.getInfrastructureSchedules(), DataStore.getLegalTopics(), DataStore.getLegalDocuments(), DataStore.getEvents(), DataStore.getMacroIndicators(), DataStore.getProcessedMacroObservations(), DataStore.getMeta()
       ]);
       data = {
-        regions: payloadData(regions), developers: payloadData(developers), projects: payloadData(projects), phases: payloadData(phases), observations: payloadData(observations), listingObservations: payloadData(listingObservations), listingScopeEvidence: payloadData(listingScopeEvidence), alternativePriceEvidence: payloadData(alternativePriceEvidence), secondaryListingEvidence: payloadData(secondaryListingEvidence), oneHousingSubprojectEvidence: payloadData(oneHousingSubprojectEvidence), oneHousingSubprojectHistory: payloadData(oneHousingSubprojectHistory), listingSourceCoverage, listingComparables: payloadData(listingComparables), articles: payloadData(articles).filter(item => item.category === 'market'), allArticles: payloadData(articles), infrastructureProjects: payloadData(infrastructureProjects), infrastructureSchedules: payloadData(infrastructureSchedules), legalTopics: payloadData(legalTopics), legalDocuments: payloadData(legalDocuments), events: payloadData(events), macroIndicators: payloadData(macroIndicators), macroRows: payloadData(macroRows)
+        regions: payloadData(regions), developers: payloadData(developers), projects: payloadData(projects), phases: payloadData(phases), observations: payloadData(observations), listingObservations: payloadData(listingObservations), listingScopeEvidence: payloadData(listingScopeEvidence), alternativePriceEvidence: payloadData(alternativePriceEvidence), secondaryListingEvidence: payloadData(secondaryListingEvidence), oneHousingSubprojectEvidence: payloadData(oneHousingSubprojectEvidence), oneHousingSubprojectHistory: payloadData(oneHousingSubprojectHistory), oneHousingProjectHistory: payloadData(oneHousingProjectHistory), listingSourceCoverage, listingComparables: payloadData(listingComparables), articles: payloadData(articles).filter(item => item.category === 'market'), allArticles: payloadData(articles), infrastructureProjects: payloadData(infrastructureProjects), infrastructureSchedules: payloadData(infrastructureSchedules), legalTopics: payloadData(legalTopics), legalDocuments: payloadData(legalDocuments), events: payloadData(events), macroIndicators: payloadData(macroIndicators), macroRows: payloadData(macroRows)
       };
       Resolver.setData('region', data.regions);
       Resolver.setData('developer', data.developers);
