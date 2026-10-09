@@ -1,0 +1,58 @@
+name: Market 4I.5 - Pricing Readability and Source Coverage
+
+on:
+  pull_request:
+    paths:
+      - 'assets/js/market.js'
+      - 'assets/js/charts.js'
+      - 'tests/test_market_4i5_pricing_clarity.cjs'
+      - '.github/workflows/market-4i5-pricing-clarity.yml'
+  push:
+    branches: [main]
+    paths:
+      - 'assets/js/market.js'
+      - 'assets/js/charts.js'
+      - '.github/workflows/market-4i5-pricing-clarity.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  validate-accurate-coverage-and-responsive-pricing:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 12
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Verify source-backed status and price range chart
+        run: |
+          node --check assets/js/market.js
+          node --check assets/js/charts.js
+          node tests/test_market_4i5_pricing_clarity.cjs
+          node tests/test_market_project_price_range_chart.js
+          node tests/test_market_rever_verified_ui.cjs
+      - name: Smoke Pricing page across desktop and mobile
+        run: |
+          set -eu
+          BROWSER="$(command -v google-chrome || command -v chromium || command -v chromium-browser || true)"
+          test -n "$BROWSER"
+          python -m http.server 8765 --bind 127.0.0.1 > /tmp/pricing-4i5.log 2>&1 &
+          PID=$!
+          trap 'kill "$PID" || true' EXIT
+          sleep 3
+          "$BROWSER" --headless --no-sandbox --disable-gpu --disable-dev-shm-usage --window-size=1440,900 --virtual-time-budget=9000 --dump-dom 'http://127.0.0.1:8765/market.html?view=pricing' > /tmp/pricing-4i5-desktop.html
+          "$BROWSER" --headless --no-sandbox --disable-gpu --disable-dev-shm-usage --window-size=390,844 --virtual-time-budget=9000 --dump-dom 'http://127.0.0.1:8765/market.html?view=pricing' > /tmp/pricing-4i5-mobile.html
+          python - <<'PY'
+          from pathlib import Path
+          for kind in ('desktop','mobile'):
+              doc=Path(f'/tmp/pricing-4i5-{kind}.html').read_text()
+              for text in ('C\u00f3 kho\u1ea3ng gi\u00e1 t\u1ed5ng h\u1ee3p tr\u00ean Batdongsan',
+                           '13 d\u1ef1 \u00e1n to\u00e0n danh m\u1ee5c','Benchmark to\u00e0n th\u1ecb tr\u01b0\u1eddng',
+                           'chart-frame--pricing-range','Ng\u00e0y snapshot'):
+                  assert text in doc,(kind,text)
+              assert 'Kho\u1ea3ng gi\u00e1 rao b\u00e1n theo d\u1ef1 \u00e1n' in doc
+              print(f'PASS {kind}: readable project intervals, transparent source coverage and benchmarks')
+          PY
