@@ -1,0 +1,54 @@
+name: Phase 4K Macro Recovery Verification
+
+on:
+  pull_request:
+    paths:
+      - '.github/workflows/phase4k-macro-recovery.yml'
+      - 'tests/test_phase4_5b_customer_rates_auto_update.py'
+  push:
+    branches: [main]
+    paths:
+      - '.github/workflows/phase4k-macro-recovery.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  verify-test-gates:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Install pipeline requirements
+        run: pip install -r requirements.txt
+      - name: Validate restored customer-rate negative fixture
+        run: |
+          python tests/test_phase4_5b_customer_rates_auto_update.py
+          python tests/test_phase4_4f_production_hardening.py
+          python tests/test_phase4_4e_daily_macro_auto_publish.py
+
+  verify-real-daily-pipeline:
+    if: github.event_name != 'pull_request'
+    needs: verify-test-gates
+    runs-on: ubuntu-24.04
+    timeout-minutes: 5
+    permissions:
+      actions: write
+      contents: read
+    steps:
+      - name: Trigger existing controlled Macro daily markets workflow
+        env:
+          GH_TOKEN: ${{ github.token }}
+          GH_REPO: ${{ github.repository }}
+        run: |
+          set -euo pipefail
+          # A workflow_dispatch is a permitted trigger from GITHUB_TOKEN.
+          # This runs the EXACT existing verified daily FX/gold path.
+          # No source values, production JSON or corroboration gates are modified.
+          gh workflow run macro-candidate.yml --ref main -f source=daily-markets-production
+          echo "Dispatched Macro Candidate Collector using daily-markets-production."
+          echo "Review resulting full workflow: https://github.com/$GH_REPO/actions/workflows/macro-candidate.yml"
