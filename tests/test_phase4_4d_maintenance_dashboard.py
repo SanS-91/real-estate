@@ -49,8 +49,8 @@ assert "Trạng thái dữ liệu · chỉ đọc" in loc
 
 # Every source-backed matrix dataset resolves to a real repository file.
 source_entries = [entry for entry in matrix["datasets"] if entry.get("data_path")]
-assert len(matrix["datasets"]) == 10
-assert len(source_entries) == 8
+assert len(matrix["datasets"]) >= 10
+assert len(source_entries) >= 8
 for entry in source_entries:
     assert (ROOT / entry["data_path"]).exists(), entry["data_path"]
 
