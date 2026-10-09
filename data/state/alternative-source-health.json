@@ -1,15 +1,16 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-10-09T07:14:04.643735+00:00",
+  "generated_at": "2026-10-09T07:22:51.224209+00:00",
   "targets_checked": 6,
-  "candidate_count": 0,
+  "candidate_count": 1,
   "queue_backlog": 1,
   "queue_conflicts": 0,
   "production_updated": false,
   "counts": {
+    "new-period-review-required": 1,
     "reachable-historical-reference-frozen": 2,
-    "reachable-no-verifiable-metric": 3,
-    "same-period-unchanged": 1
+    "reachable-no-verifiable-metric": 1,
+    "same-period-unchanged": 2
   },
   "checks": [
     {
@@ -20,49 +21,7 @@
       "baseline_period": "2026-10",
       "http_status": 200,
       "final_host": "onehousing.vn",
-      "status": "reachable-no-verifiable-metric",
-      "parser_diagnostics": {
-        "publisher_project_header": true,
-        "publisher_periods": [
-          "2026-10"
-        ],
-        "heading_block_count": 3,
-        "other_publisher_project_headers": 1,
-        "page_level_price_sections": 1,
-        "heading_block_diagnostics": [
-          {
-            "period": "2026-10",
-            "header_block_characters": 185,
-            "price_section_found": false,
-            "price_section_offset": null,
-            "modal_in_section": false,
-            "range_in_section": false,
-            "price_context_marker": false
-          },
-          {
-            "period": "2026-10",
-            "header_block_characters": 299,
-            "price_section_found": false,
-            "price_section_offset": null,
-            "modal_in_section": false,
-            "range_in_section": false,
-            "price_context_marker": true
-          },
-          {
-            "period": "2026-10",
-            "header_block_characters": 459,
-            "price_section_found": false,
-            "price_section_offset": null,
-            "modal_in_section": false,
-            "range_in_section": false,
-            "price_context_marker": false
-          }
-        ],
-        "modal_price_section": true,
-        "asking_price_number": true,
-        "asking_range_number": true,
-        "login_wall_in_text": true
-      }
+      "status": "same-period-unchanged"
     },
     {
       "target_id": "rever-vinhomes-grand-park-listing",
@@ -102,49 +61,7 @@
       "baseline_period": "2026-09",
       "http_status": 200,
       "final_host": "onehousing.vn",
-      "status": "reachable-no-verifiable-metric",
-      "parser_diagnostics": {
-        "publisher_project_header": true,
-        "publisher_periods": [
-          "2026-10"
-        ],
-        "heading_block_count": 3,
-        "other_publisher_project_headers": 1,
-        "page_level_price_sections": 1,
-        "heading_block_diagnostics": [
-          {
-            "period": "2026-10",
-            "header_block_characters": 165,
-            "price_section_found": false,
-            "price_section_offset": null,
-            "modal_in_section": false,
-            "range_in_section": false,
-            "price_context_marker": false
-          },
-          {
-            "period": "2026-10",
-            "header_block_characters": 363,
-            "price_section_found": false,
-            "price_section_offset": null,
-            "modal_in_section": false,
-            "range_in_section": false,
-            "price_context_marker": true
-          },
-          {
-            "period": "2026-10",
-            "header_block_characters": 443,
-            "price_section_found": false,
-            "price_section_offset": null,
-            "modal_in_section": false,
-            "range_in_section": false,
-            "price_context_marker": false
-          }
-        ],
-        "modal_price_section": true,
-        "asking_price_number": true,
-        "asking_range_number": true,
-        "login_wall_in_text": true
-      }
+      "status": "new-period-review-required"
     },
     {
       "target_id": "onehousing-masteri-centre-point-apartment",

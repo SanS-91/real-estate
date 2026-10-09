@@ -18,11 +18,18 @@
           "publisher_periods": [
             "2026-10"
           ]
+        },
+        {
+          "run_id": "37898652894",
+          "observed_at": "2026-10-09T07:22:51.296354+00:00",
+          "status": "same-period-unchanged",
+          "http_status": 200,
+          "publisher_periods": []
         }
       ],
-      "check_count": 1,
-      "parseable_check_count": 0,
-      "classification": "needs-stable-alternative"
+      "check_count": 2,
+      "parseable_check_count": 1,
+      "classification": "source-parseable-not-yet-repeatable"
     },
     {
       "target_id": "rever-vinhomes-grand-park-listing",
@@ -37,10 +44,17 @@
           "status": "same-period-unchanged",
           "http_status": 200,
           "publisher_periods": []
+        },
+        {
+          "run_id": "37898652894",
+          "observed_at": "2026-10-09T07:22:51.296354+00:00",
+          "status": "same-period-unchanged",
+          "http_status": 200,
+          "publisher_periods": []
         }
       ],
-      "check_count": 1,
-      "parseable_check_count": 1,
+      "check_count": 2,
+      "parseable_check_count": 2,
       "classification": "listing-only"
     },
     {
@@ -56,9 +70,16 @@
           "status": "reachable-historical-reference-frozen",
           "http_status": 200,
           "publisher_periods": []
+        },
+        {
+          "run_id": "37898652894",
+          "observed_at": "2026-10-09T07:22:51.296354+00:00",
+          "status": "reachable-historical-reference-frozen",
+          "http_status": 200,
+          "publisher_periods": []
         }
       ],
-      "check_count": 1,
+      "check_count": 2,
       "parseable_check_count": 0,
       "classification": "historical-only"
     },
@@ -75,9 +96,16 @@
           "status": "reachable-historical-reference-frozen",
           "http_status": 200,
           "publisher_periods": []
+        },
+        {
+          "run_id": "37898652894",
+          "observed_at": "2026-10-09T07:22:51.296354+00:00",
+          "status": "reachable-historical-reference-frozen",
+          "http_status": 200,
+          "publisher_periods": []
         }
       ],
-      "check_count": 1,
+      "check_count": 2,
       "parseable_check_count": 0,
       "classification": "historical-only"
     },
@@ -96,11 +124,18 @@
           "publisher_periods": [
             "2026-10"
           ]
+        },
+        {
+          "run_id": "37898652894",
+          "observed_at": "2026-10-09T07:22:51.296354+00:00",
+          "status": "new-period-review-required",
+          "http_status": 200,
+          "publisher_periods": []
         }
       ],
-      "check_count": 1,
+      "check_count": 2,
       "parseable_check_count": 0,
-      "classification": "needs-stable-alternative"
+      "classification": "not-verifiably-parseable"
     },
     {
       "target_id": "onehousing-masteri-centre-point-apartment",
@@ -115,9 +150,16 @@
           "status": "reachable-no-verifiable-metric",
           "http_status": 200,
           "publisher_periods": []
+        },
+        {
+          "run_id": "37898652894",
+          "observed_at": "2026-10-09T07:22:51.296354+00:00",
+          "status": "reachable-no-verifiable-metric",
+          "http_status": 200,
+          "publisher_periods": []
         }
       ],
-      "check_count": 1,
+      "check_count": 2,
       "parseable_check_count": 0,
       "classification": "needs-stable-alternative"
     }
