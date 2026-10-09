@@ -10,7 +10,7 @@ assert.ok(market.includes("item.metric_type === 'single-listing-asking-price-per
 assert.ok(market.includes("item.asset_type === 'apartment'"));
 assert.ok(market.includes("90 * 86400000"));
 assert.ok(market.includes("existing.length >= 2"));
-assert.ok(market.includes("existing.some(row => row.listing_id === item.listing_id)"));
+assert.ok(market.includes("existing.some(row => row.listing_id === item.listing_id && row.source_id === item.source_id)"));
 assert.ok(market.includes("...currentUnitOffers"));
 assert.ok(market.includes("Ngày cập nhật tin"));
 assert.ok(market.includes("không đại diện giá bình quân dự án"));
