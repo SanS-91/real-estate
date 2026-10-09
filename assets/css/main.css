@@ -2718,3 +2718,20 @@ html { scroll-padding-top: calc(var(--header-height) + 12px); }
     overflow-wrap: break-word;
   }
 }
+
+
+/* 4I.7 — readable listing-source coverage cards on narrow phones. */
+@media (max-width: 767px) {
+  .data-table--listing-coverage.mobile-record-table tbody td:first-child {
+    grid-column: 1 / -1;
+    padding-bottom: 8px;
+    border-bottom: 1px solid #edf0f4;
+  }
+  .data-table--listing-coverage.mobile-record-table tbody td:first-child::before {
+    display: none;
+  }
+  .data-table--listing-coverage.mobile-record-table tbody td:nth-child(2),
+  .data-table--listing-coverage.mobile-record-table tbody td:last-child {
+    grid-column: 1 / -1;
+  }
+}
