@@ -8,6 +8,8 @@ on:
       - '.github/workflows/market-parent-project-monthly.yml'
       - 'assets/js/market.js'
       - 'assets/js/data-store.js'
+      - 'assets/js/market-subproject-trends.js'
+      - 'tests/test_market_onehousing_parent_ui.cjs'
   push:
     branches: [main]
     paths:
@@ -34,12 +36,18 @@ jobs:
       - uses: actions/setup-python@v5
         with:
           python-version: '3.12'
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
       - name: Install parser dependencies
         run: pip install -r requirements.txt
       - name: Verify parser safeguards and parent/subproject separation
         run: |
           python -m py_compile scripts/market_onehousing_project_history.py
           python -m unittest discover -s tests -p 'test_market_onehousing_project_history.py' -v
+          node --check assets/js/market.js
+          node --check assets/js/market-subproject-trends.js
+          node tests/test_market_onehousing_parent_ui.cjs
       - name: Collect publisher-hosted month and commit verified future periods
         if: github.event_name != 'pull_request'
         run: python scripts/market_onehousing_project_history.py
