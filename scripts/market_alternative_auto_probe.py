@@ -94,6 +94,7 @@ def onehousing_monthly(text, today, publisher_project_name="Vinhomes Grand Park"
     """
     headers = list(MONTH_LABEL.finditer(text))
     observations = []
+    published_months = []
     for index, header in enumerate(headers):
         if normal_name(header.group(1)) != normal_name(publisher_project_name):
             continue
@@ -103,6 +104,7 @@ def onehousing_monthly(text, today, publisher_project_name="Vinhomes Grand Park"
         period = f"{year:04d}-{month:02d}"
         if period > today.strftime("%Y-%m"):
             continue
+        published_months.append(period)
         next_heading = headers[index + 1].start() if index + 1 < len(headers) else len(text)
         block = text[header.end():min(next_heading, header.end() + 9000)]
         section = MODAL_SECTION.search(block)
@@ -131,6 +133,10 @@ def onehousing_monthly(text, today, publisher_project_name="Vinhomes Grand Park"
     if not observations:
         return None
     latest = max(observation["period"] for observation in observations)
+    if latest < max(published_months):
+        # A newer publisher month exists, but its figures are incomplete. Do
+        # not silently surface an older month as if it were the freshest one.
+        return None
     matching = [observation for observation in observations if observation["period"] == latest]
     numbers = {(observation["value_vnd_per_m2"],
                 observation["range_low_vnd_per_m2"],
