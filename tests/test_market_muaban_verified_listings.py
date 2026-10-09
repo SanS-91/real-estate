@@ -67,6 +67,15 @@ class MuabanListingTests(unittest.TestCase):
         self.assertEqual(row["source_date_basis"], "publisher-listing-start-not-update")
         self.assertNotIn("average_asp", row)
 
+    def test_multi_unit_price_list_not_treated_as_one_apartment(self):
+        page = html().replace(
+            "Thông tin chi tiết",
+            "Thông tin chi tiết Giỏ hàng nhiều căn: căn 2PN 4,4 tỷ; căn 3PN 6,1 tỷ."
+        )
+        row, decision = parse_detail(page, URL, "Akari City", "akari-city", NOW)
+        self.assertIsNone(row)
+        self.assertEqual(decision, "multiple-sale-price-claims")
+
     def test_expiry_outranks_dynamic_updated_badge(self):
         row, decision = parse_detail(html(start="10/08/2026", expiry="24/08/2026",
                                           updated="1 giờ trước"), URL,
