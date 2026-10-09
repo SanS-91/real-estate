@@ -1,0 +1,26 @@
+{
+  "schema_version": 1,
+  "updated_at": "2026-10-09",
+  "purpose": "Phase 4H public secondary listing discovery; independent from OneHousing and canonical project price series.",
+  "source_id": "nhatot-vn",
+  "projects": {
+    "vinhomes-grand-park": "Vinhomes Grand Park",
+    "akari-city": "Akari City",
+    "the-privia": "The Privia",
+    "eaton-park": "Eaton Park"
+  },
+  "categories": [
+    {
+      "id": "nhatot-thu-duc-apartment",
+      "url": "https://www.nhatot.com/mua-ban-can-ho-chung-cu-thanh-pho-thu-duc-tp-ho-chi-minh"
+    },
+    {
+      "id": "nhatot-binh-tan-apartment",
+      "url": "https://www.nhatot.com/mua-ban-can-ho-chung-cu-quan-binh-tan-tp-ho-chi-minh"
+    },
+    {
+      "id": "nhatot-tan-phu-apartment",
+      "url": "https://www.nhatot.com/mua-ban-can-ho-chung-cu-quan-tan-phu-tp-ho-chi-minh"
+    }
+  ]
+}
