@@ -4,6 +4,8 @@ on:
   pull_request:
     paths:
       - 'scripts/market_alternative_auto_probe.py'
+      - 'scripts/market_source_reliability.py'
+      - 'tests/test_market_source_reliability.py'
       - 'scripts/market_subproject_candidate_recheck.py'
       - 'scripts/market_subproject_monthly_release.py'
       - 'tests/test_market_subproject_monthly_review.py'
@@ -53,6 +55,7 @@ jobs:
           python tests/test_market_subproject_monthly_review.py
           python tests/test_market_automatic_monthly_pipeline.py
           python tests/test_market_alternative_auto_probe.py
+          python -m unittest discover -s tests -p 'test_market_source_reliability.py'
           python tests/test_market_onehousing_latest_month_parser.py
           python tests/test_market_onehousing_subproject_evidence.py
           node --check assets/js/data-store.js
@@ -60,6 +63,9 @@ jobs:
       - name: Fetch publisher pages and stage new source-authored months
         if: github.event_name != 'pull_request'
         run: python scripts/market_alternative_auto_probe.py
+      - name: Record independent rolling publisher reliability
+        if: github.event_name != 'pull_request'
+        run: python scripts/market_source_reliability.py --run-id "$GITHUB_RUN_ID"
       - name: Independently confirm queued months on original publisher
         if: github.event_name != 'pull_request'
         run: python scripts/market_subproject_candidate_recheck.py --run-id "$GITHUB_RUN_ID"
@@ -111,7 +117,7 @@ jobs:
           set -eu
           git config user.name 'github-actions[bot]'
           git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
-          git add data/state/alternative-source-health.json data/candidate/market/alternative-price-review-queue.json data/state/alternative-candidate-verification.json data/mock/market/alternative-subproject-monthly-history.json
+          git add data/state/market-source-reliability.json data/state/alternative-source-health.json data/candidate/market/alternative-price-review-queue.json data/state/alternative-candidate-verification.json data/mock/market/alternative-subproject-monthly-history.json
           if git diff --cached --quiet; then
             echo 'No content changes to save.'
             exit 0
