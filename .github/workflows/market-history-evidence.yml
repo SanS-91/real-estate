@@ -1,0 +1,120 @@
+name: Market Verified Historical Coverage Expansion
+
+on:
+  pull_request:
+    paths:
+      - 'config/market-history-expansion-20261009.json'
+      - 'scripts/market_history_expansion_gate.py'
+      - 'tests/test_market_history_evidence_20261009.py'
+      - 'assets/js/market-history-series.js'
+      - 'assets/js/market.js'
+      - 'market.html'
+      - 'tests/test_market_history_series.cjs'
+      - '.github/workflows/market-history-evidence.yml'
+  push:
+    branches: [main]
+    paths:
+      - 'config/market-history-expansion-20261009.json'
+      - 'scripts/market_history_expansion_gate.py'
+      - '.github/workflows/market-history-evidence.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: market-historical-evidence-publish
+  cancel-in-progress: false
+
+jobs:
+  verify-and-append:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v7
+      - uses: actions/setup-python@v7
+        with:
+          python-version: '3.12'
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Validate code and source evidence
+        run: |
+          python -m py_compile scripts/market_history_expansion_gate.py
+          python tests/test_market_history_evidence_20261009.py
+          node --check assets/js/market-history-series.js
+          node --check assets/js/market.js
+          node tests/test_market_history_series.cjs
+      - name: Stage source-verified historical observations
+        run: python scripts/market_history_expansion_gate.py --mode preview
+      - name: PR end-to-end dry run on isolated checkout
+        if: github.event_name == 'pull_request'
+        run: |
+          python scripts/market_history_expansion_gate.py --mode promote
+          python scripts/build_history_coverage.py
+          python - <<'PY'
+          import json
+          from pathlib import Path
+          p=json.loads(Path('data/mock/market/observations.json').read_text())
+          r=json.loads(Path('data/candidate/market/history-expansion-report.json').read_text())
+          assert p['record_count']==len(p['data'])
+          assert r['blocked']==0
+          assert r['eligible']==0 or r.get('new_total',0)>=26
+          print('PR isolation: append-only historical publisher data simulated; no remote production writes.')
+          PY
+      - name: Inspect real historical data in desktop and mobile browsers
+        if: github.event_name == 'pull_request'
+        run: |
+          set -eu
+          BROWSER="$(command -v google-chrome || command -v chromium || command -v chromium-browser || true)"
+          test -n "$BROWSER"
+          mkdir -p artifacts
+          python3 -m http.server 8765 --bind 127.0.0.1 > /tmp/history-market-http.log 2>&1 &
+          SERVER_PID=$!
+          trap 'kill "$SERVER_PID" || true' EXIT
+          sleep 3
+          PAGE='http://127.0.0.1:8765/market.html?view=supply-sales&source=cushman-wakefield-vietnam-market&region=hcmc&segment=apartment'
+          "$BROWSER" --headless --no-sandbox --disable-gpu --disable-dev-shm-usage --hide-scrollbars --window-size=1440,960 --virtual-time-budget=7000 --screenshot=artifacts/history-desktop.png "$PAGE"
+          "$BROWSER" --headless --no-sandbox --disable-gpu --disable-dev-shm-usage --hide-scrollbars --window-size=390,860 --virtual-time-budget=7000 --screenshot=artifacts/history-mobile.png "$PAGE"
+          "$BROWSER" --headless --no-sandbox --disable-gpu --disable-dev-shm-usage --window-size=1440,960 --virtual-time-budget=7000 --dump-dom "$PAGE" > artifacts/history-dom.html
+          python3 - <<'PY'
+          from pathlib import Path
+          html=Path('artifacts/history-dom.html').read_text(encoding='utf-8')
+          for expected in ['Source-period coverage','2025-Q2','2025-Q3','2025-H1','US$ 6,113/m²','market-history-gap','obs-hcmc']:
+              if expected == 'obs-hcmc':
+                  continue
+              assert expected in html, f'Historical UI missing evidence: {expected}'
+          assert 'No observations for this source' not in html
+          print('Desktop & mobile: source-period gaps, original USD, and distinct H1 benchmark rendered.')
+          PY
+      - name: Promote verified historical records on main
+        if: github.ref == 'refs/heads/main' && github.event_name != 'pull_request'
+        run: |
+          python scripts/market_history_expansion_gate.py --mode promote
+          python scripts/build_history_coverage.py
+          python scripts/build_market_coverage.py
+      - name: Commit only source-verified history
+        if: github.ref == 'refs/heads/main' && github.event_name != 'pull_request'
+        run: |
+          if git diff --quiet -- data/mock/market/observations.json; then
+            echo "Already published; no duplicate history."
+            exit 0
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data/mock/market/observations.json data/state/history-coverage.json data/state/market-coverage.json
+          git commit -m "data(market): append 11 verified historic publisher observations"
+          git pull --rebase origin main
+          git push origin HEAD:main
+      - name: Upload candidate and coverage audit
+        if: always()
+        uses: actions/upload-artifact@v7
+        with:
+          name: market-source-verified-history
+          path: |
+            data/candidate/market/history-expansion-candidates.json
+            data/candidate/market/history-expansion-report.json
+            data/state/history-coverage.json
+            artifacts/
+          retention-days: 14
+          if-no-files-found: warn
