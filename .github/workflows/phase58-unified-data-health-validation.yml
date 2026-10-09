@@ -14,6 +14,7 @@ on:
       - 'index.html'
       - 'maintenance.html'
       - 'tests/test_phase5_8_*'
+      - 'tests/test_phase4k1_source_lag.py'
       - 'tests/fixtures/workflow_runs_health_sample.json'
       - '.github/workflows/unified-data-health.yml'
       - '.github/workflows/phase58-unified-data-health-validation.yml'
@@ -47,6 +48,7 @@ jobs:
           python tests/test_phase5_8_unified_data_health.py
           python tests/test_phase5_8_data_health_build.py
           python tests/test_phase5_8_data_health_ui.py
+          python tests/test_phase4k1_source_lag.py
       - name: Roadmap regression
         run: python tests/test_phase5_6b_master_roadmap_alignment.py
       - name: Core regressions
