@@ -31,7 +31,8 @@ HEADERS = {"User-Agent": "MarketIntelligenceResearchBot/1.0 (public source check
            "Accept-Language": "vi-VN,vi;q=0.9,en;q=0.6"}
 PRICE = r"(\d+(?:[.,]\d+)?)"
 MONTH_LABEL = re.compile(r"Căn hộ chung cư dự án\s+Vinhomes Grand Park\s+tháng\s+(\d{1,2})\s*/\s*(20\d{2})", re.I)
-MODAL = re.compile(r"Đơn giá phổ biến\s*[:|]?\s*" + PRICE + r"\s*triệu\s*/?\s*m[²2]", re.I)
+MODAL = re.compile(PRICE + r"\s*triệu\s*/?\s*m[²2]", re.I)
+MODAL_SECTION = re.compile(r"Đơn giá phổ biến(?P<section>.{0,500}?)Giá thuê phổ biến", re.I)
 RANGE = re.compile(r"Khoảng giá\s*[:|]?\s*" + PRICE + r"\s*[-–]\s*" + PRICE + r"\s*triệu", re.I)
 REVER_DATE = re.compile(r"Cập nhật\s*[:|]?\s*(\d{2})/(\d{2})/(20\d{2})", re.I)
 REVER_PRICE = re.compile(PRICE + r"\s*triệu\s*/?\s*m[²2]", re.I)
@@ -80,9 +81,10 @@ def allowed_target(target):
 def onehousing_monthly(text, today):
     """Only a project-specific month header + exact label/value evidence qualifies."""
     header = MONTH_LABEL.search(text)
-    modal = MODAL.search(text)
-    range_match = RANGE.search(text)
-    if not (header and modal and range_match):
+    section = MODAL_SECTION.search(text)
+    modal = MODAL.search(section.group("section")) if section else None
+    range_match = RANGE.search(section.group("section")) if section else None
+    if not (header and section and modal and range_match):
         return None
     month, year = int(header.group(1)), int(header.group(2))
     if not 1 <= month <= 12:
@@ -94,9 +96,7 @@ def onehousing_monthly(text, today):
     if not (0 < low <= value <= high <= 1_000_000_000):
         return None
     # Avoid picking modal values from unrelated property types elsewhere on page.
-    if modal.start() < header.start() or modal.start() - header.end() > 3500:
-        return None
-    if range_match.start() < header.start() or range_match.start() - header.end() > 3500:
+    if section.start() < header.start() or section.start() - header.end() > 6000:
         return None
     return {
         "period": period,
