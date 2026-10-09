@@ -79,7 +79,7 @@ class MuabanListingTests(unittest.TestCase):
             (html(project="Vinhomes Grand Park"), "project-not-explicit"),
             (html(title="CHO THUÊ CĂN HỘ AKARI CITY"), "non-apartment-or-rental"),
             (html(price="Thỏa thuận"), "missing-numeric-total-sale-price"),
-            (html(expiry="01/09/2026", updated="Hôm nay"), "publisher-expired"),
+            (html(start="10/08/2026", expiry="01/09/2026", updated="Hôm nay"), "publisher-expired"),
             (html(area="20 m²"), "invalid-area"),
             (html(ident="70111111"), "listing-id-mismatch"),
             (html(expiry="20/10/2026", start="20/11/2026"), "incomplete-or-conflicting-validity"),
