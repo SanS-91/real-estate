@@ -1,8 +1,8 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-10-09T07:22:51.455907+00:00",
+  "generated_at": "2026-10-09T07:30:17.691436+00:00",
   "source_recheck_only": true,
-  "recheck_run_id": "37898652894",
+  "recheck_run_id": "37899358527",
   "record_count": 1,
   "data": [
     {
@@ -63,6 +63,14 @@
         {
           "run_id": "37898652894",
           "checked_at": "2026-10-09T07:22:51.455907+00:00",
+          "status": "matched-source-period-and-metric",
+          "source_http_status": 200,
+          "source_final_host": "onehousing.vn",
+          "candidate_signature": "a799c927d25698c6aa54b441850b5e8cb9478828f876e0cbf99a5c81683f1329"
+        },
+        {
+          "run_id": "37899358527",
+          "checked_at": "2026-10-09T07:30:17.691436+00:00",
           "status": "matched-source-period-and-metric",
           "source_http_status": 200,
           "source_final_host": "onehousing.vn",
