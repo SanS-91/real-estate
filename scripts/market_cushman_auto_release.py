@@ -115,8 +115,7 @@ def digest(candidate):
 
 def check(history, previous, html, now, run_id):
     """Pure decision over persisted source checks; no filesystem or HTTP effects."""
-    record = extract(html, now)[0] if html is not None else None
-    status = extract(html, now)[1] if html is not None else "source-fetch-failed"
+    record, status = extract(html, now) if html is not None else (None, "source-fetch-failed")
     checks = list(previous.get("checks", []))
     if not any(x.get("run_id") == str(run_id) for x in checks):
         checks.append({
