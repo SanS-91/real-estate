@@ -29,9 +29,16 @@ Each record includes its **exact source URL, listing ID, original date, quoted a
 ## Pipeline
 - `scripts/market_secondary_listing_gate.py` validates source URL, publisher, exact product, original source date, price, area and total.
 - `scripts/market_secondary_listing_probe.py` checks pinned source access and evidence visibility **without generating dates or candidate prices**.
-- `.github/workflows/market-secondary-listing-sources.yml` runs Tue/Fri 10:50 ICT and reports source access status. Only health JSON is persisted.
+- `.github/workflows/market-secondary-listing-sources.yml` initially ran Tue/Fri, but after the first real GitHub-hosted run returned HTTP 403 on all three pages (2026-10-09), it runs **weekly Tuesday 10:50 ICT** to check whether access conditions change; CafeLand remains assisted-only until then. Only health JSON is persisted.
 - Existing pricing/project detail panels use the same reference card layout and distinguish apartment/townhouse/villa.
 - No chart averages, derived market changes, trend-ready flags, or gross-to-net conversions are inferred from individual ads.
 
 ## Next work package
 Round 4D: qualify new source-authored dates or independent monthly category metrics for an auditable review/promotion path. Separate listing-index discovery from single-unit monitoring; never let a changing webpage without a new publisher reporting period create a synthetic historical observation.
+
+## First post-merge production access audit (09 Oct 2026)
+
+- Three URLs checked from GitHub Actions: **3/3 HTTP 403 (blocked)**.
+- Price candidates created: **0**; production observation/history writes: **0**.
+- The three already source-backed single-unit references remain visible, with an explicit blocked/assisted caveat.
+- CafeLand is **not** counted as an automatically updating price source. The status is persisted in `data/state/secondary-listing-source-health.json`.
