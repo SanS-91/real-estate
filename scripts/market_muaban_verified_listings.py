@@ -141,15 +141,29 @@ def parse_detail(html, url, project_name, project_id, now):
     # project; an unrelated recommendation or category page is insufficient.
     basic = raw.split("Thông tin cơ bản", 1)[1].split("Thông tin dự án", 1)[0]
     basic_lines = [x.strip() for x in basic.splitlines() if x.strip()]
-    project = after_label(basic_lines, "Dự án")
+    # HTML publisher badges often put labels, colons and values in separate
+    # nodes. Normalize whitespace *inside the source's own basic-info block*
+    # only; never use the category, title or recommended projects as proof.
+    basic_flat = " ".join(basic_lines)
+    boundaries = (
+        r"Loại hình căn hộ|Loại hình bất động sản|Dự án|Diện tích sử dụng|"
+        r"Số phòng ngủ|Số phòng vệ sinh|Hướng cửa chính|Hướng ban công|"
+        r"Giấy tờ pháp lý|Tầng số"
+    )
+    def basic_value(label):
+        matches = re.findall(
+            r"(?:^|\s)" + re.escape(label) +
+            r"\s*:\s*(.+?)(?=\s+(?:" + boundaries + r")\s*:|$)",
+            basic_flat, re.I)
+        return matches[0].strip() if len(matches) == 1 else None
+
+    project = basic_value("Dự án")
     if not project or norm(project) != norm(project_name):
         return None, "project-not-explicit"
-    product = after_label(basic_lines, "Loại hình căn hộ")
-    if product is None:
-        product = after_label(basic_lines, "Loại hình bất động sản")
+    product = basic_value("Loại hình căn hộ") or basic_value("Loại hình bất động sản")
     if not product or not re.search(r"chung cư|căn hộ", product, re.I):
         return None, "wrong-product-type"
-    area_text = after_label(basic_lines, "Diện tích sử dụng")
+    area_text = basic_value("Diện tích sử dụng")
     sqm_match = AREA.search(area_text or "")
     if not sqm_match:
         return None, "missing-area"
@@ -158,9 +172,15 @@ def parse_detail(html, url, project_name, project_id, now):
         return None, "invalid-area"
     # Dates MUST come from the publisher's actual start/expiry fields.
     # "Cập nhật: Hôm nay" cannot override an expired posting.
-    start_raw = after_label(lines, "Ngày bắt đầu")
-    expiry_raw = after_label(lines, "Ngày hết hạn")
-    start, expiry = iso_date(start_raw), iso_date(expiry_raw)
+    def scoped_date(label):
+        values = re.findall(
+            re.escape(label) + r"\s*:?\s*" + DATE_RX, raw, re.I)
+        return date(int(values[0][2]), int(values[0][1]), int(values[0][0])) if len(values) == 1 else None
+
+    try:
+        start, expiry = scoped_date("Ngày bắt đầu"), scoped_date("Ngày hết hạn")
+    except ValueError:
+        start, expiry = None, None
     if not start or not expiry or expiry < start:
         return None, "incomplete-or-conflicting-validity"
     if now.date() > expiry:
@@ -170,8 +190,8 @@ def parse_detail(html, url, project_name, project_id, now):
     if (now.date() - start).days > MAX_AGE:
         return None, "older-than-90-day-start"
     listing_id = ID_RX.search(valid).group(1)
-    source_id = after_label(lines, "Mã tin")
-    if not source_id or source_id != listing_id:
+    ids = re.findall(r"Mã tin\s*:?\s*(\d{6,12})(?!\d)", raw, re.I)
+    if len(ids) != 1 or ids[0] != listing_id:
         return None, "listing-id-mismatch"
     # "Tin hết hạn" sometimes appears as an image badge. Restrict to explicit
     # publisher status within listing header, and retain absolute expiry as
