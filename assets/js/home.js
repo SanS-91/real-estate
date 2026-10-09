@@ -376,39 +376,51 @@
   }
 
   function buildTodayGroups(data) {
-    const referenceDate=homeReferenceDate();
-    const ranked=rankedCandidates(data);
-    const today=window.IntelligenceSurfaces?.today?.(ranked,referenceDate) || [];
-    const metaByCategory={
-      market:{ label:'Market',href:'market.html?view=projects' },
-      legal:{ label:'Legal',href:'legal.html?view=documents' },
-      infrastructure:{ label:'Infrastructure',href:'infrastructure.html?view=projects' },
-      macro:{ label:'Macro',href:'macro.html?view=overview' }
+    const ref = homeReferenceDate();
+    const ranked = rankedCandidates(data);
+    const vi = document.documentElement.lang !== 'en';
+    const metaByCategory = {
+      market: { label: vi ? 'Thị trường' : 'Market', href: 'market.html?view=news' },
+      legal: { label: vi ? 'Pháp lý' : 'Legal', href: 'legal.html?view=news' },
+      infrastructure: { label: vi ? 'Hạ tầng' : 'Infrastructure', href: 'infrastructure.html?view=news' },
+      macro: { label: vi ? 'Vĩ mô' : 'Macro', href: 'macro.html?view=overview' }
     };
-
-    return ['market','legal','infrastructure','macro'].map(category=>{
-      const items=today
-        .filter(row=>row.category===category)
-        .slice(0,2)
-        .map(row=>{
-          const item=formatRankedItem(row,data);
-          const sourceIds=row.ranking_evidence?.source_ids || [];
-          const sourceLabel=sourceIds.length ? sourceName(data.sources,sourceIds[0]) : 'Source-backed';
-          return {
-            title:item.title,
-            meta:`${item.importance_label} · ${sourceLabel}`,
-            href:item.href
-          };
-        });
+    // Rank within a recent window first, then backfill with real older
+    // evidence if necessary. Never create or date a synthetic headline.
+    const within = days => window.IntelligenceSurfaces?.withinDays?.(ranked, ref, days) || [];
+    const recent = within(7), extended = within(90), older = within(365);
+    return Object.keys(metaByCategory).map(category => {
+      const picked = [], seen = new Set();
+      for (const source of [recent, extended, older]) {
+        for (const row of source) {
+          if (row.category !== category || picked.length >= 3) continue;
+          const key = row.id || row.title || '';
+          if (!key || seen.has(key)) continue;
+          seen.add(key);
+          picked.push(row);
+        }
+      }
+      const items = picked.map(row => {
+        const item = formatRankedItem(row, data);
+        const sourceIds = row.ranking_evidence?.source_ids || [];
+        return {
+          title: item.title,
+          date_label: item.date_label || App.formatDate(item.sort_date),
+          meta: sourceIds.length ? sourceName(data.sources, sourceIds[0]) : (vi ? 'Dữ liệu có nguồn' : 'Source-backed'),
+          href: item.href
+        };
+      });
+      const withinWeek = picked.filter(row =>
+        recent.some(current => current.id === row.id)).length;
+      const countLabel = !items.length
+        ? (vi ? 'Chưa có tin có nguồn trong 12 tháng' : 'No sourced updates in 12 months')
+        : vi
+          ? `${items.length} cập nhật gần nhất${withinWeek < items.length ? ' · có tin kỳ trước' : ''}`
+          : `${items.length} latest updates${withinWeek < items.length ? ' · includes older dates' : ''}`;
       return {
-        category,
-        label:metaByCategory[category].label,
-        count:items.length,
-        count_label:items.length
-          ? `${items.length} ranked update${items.length===1?'':'s'} today`
-          : 'No ranked updates today',
-        href:metaByCategory[category].href,
-        items
+        category, label: metaByCategory[category].label,
+        count: items.length, count_label: countLabel,
+        href: metaByCategory[category].href, items
       };
     });
   }
@@ -529,6 +541,8 @@
       change_label: changeLabel,
       change_direction: changeDirection,
       period_label: formatProductionPeriod(row),
+      cadence_label: row.period_type === 'month' ? 'Monthly' :
+        row.indicator_id === 'policy-refinancing-rate' ? 'Policy update' : 'Dated release',
       source: productionEvidenceLabel(row)
     };
   }
@@ -543,6 +557,7 @@
       change_label: 'Latest range',
       change_direction: 'neutral',
       period_label: formatProductionPeriod(lowRow),
+      cadence_label: lowRow.period_type === 'month' ? 'Monthly' : 'Latest published',
       source: 'CORROBORATED'
     };
   }
@@ -601,7 +616,20 @@
       const cards = mergeHomeIndicatorCards(payload.data || [], production);
       const grid = document.querySelector('[data-home-indicators]');
       grid?.classList.toggle('metric-grid--controlled', production.active);
-      setHTML('[data-home-indicators]', cards.map(Components.metricCard).join(''));
+      // Home is a high-level snapshot, not a substitute for the full Macro page.
+      // Show two latest dated FX/gold observations and two released monthly series.
+      const priority = ['usd-vnd-central-rate','sjc-gold-sell',
+                        'credit-growth-ytd','cpi-yoy'];
+      const nonEmpty = cards.filter(card => card.display_value !== '—' &&
+        card.display_value !== null && card.display_value !== undefined);
+      const shortlist = priority.map(id => nonEmpty.find(card => card.id === id))
+        .filter(Boolean);
+      for (const card of nonEmpty) {
+        if (shortlist.length >= 4) break;
+        if (!shortlist.some(item => item.id === card.id)) shortlist.push(card);
+      }
+      setHTML('[data-home-indicators]', (shortlist.length ? shortlist : cards.slice(0,4))
+        .map(Components.metricCard).join(''));
     } catch (error) {
       console.error(error);
       setHTML('[data-home-indicators]', Components.stateBox('Unable to load indicator data.', 'error'));

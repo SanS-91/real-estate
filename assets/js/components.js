@@ -20,6 +20,7 @@
           <span class="source-tag">${escapeHTML(item.source || 'Demo')}</span>
         </div>
         <div class="metric-card__value">${escapeHTML(item.display_value)}</div>
+        ${item.cadence_label ? `<div class="metric-card__cadence">${escapeHTML(item.cadence_label)}</div>` : ''}
         <div class="metric-card__footer">
           <span class="metric-change ${changeClass}">${escapeHTML(item.change_label || '—')}</span>
           <span>${escapeHTML(item.period_label || '')}</span>
@@ -29,11 +30,11 @@
   }
 
   function todayCard(group) {
-    const items = (group.items || []).slice(0, 2).map(item => `
+    const items = (group.items || []).slice(0, 3).map(item => `
       <li>
         <a class="compact-link" href="${escapeHTML(item.href || '#')}">
           <span>${escapeHTML(item.title)}</span>
-          <span class="compact-link__meta">${escapeHTML(item.meta || '')}</span>
+          <span class="compact-link__meta"><time>${escapeHTML(item.date_label || '')}</time>${item.date_label && item.meta ? ' · ' : ''}${escapeHTML(item.meta || '')}</span>
         </a>
       </li>
     `).join('');

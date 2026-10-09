@@ -6,11 +6,12 @@ home=(ROOT/"assets/js/home.js").read_text(encoding="utf-8")
 components=(ROOT/"assets/js/components.js").read_text(encoding="utf-8")
 roadmap=(ROOT/"config/master-roadmap.json").read_text(encoding="utf-8")
 
-assert '<h2 id="today-title">Today</h2>' in index
+assert '<h2 id="today-title">Latest Updates</h2>' in index
 assert 'data-home-top-developments' in index
+assert 'class="home-more-history"' in index
 assert 'assets/js/intelligence-ranking.js?v=7.0' in index
 assert 'assets/js/intelligence-surfaces.js?v=7.1' in index
-assert 'assets/js/home.js?v=7.1' in index
+assert 'assets/js/home.js?v=7.1&home4J1=1' in index
 
 for fn in [
     "function homeReferenceDate()",
@@ -24,7 +25,7 @@ for fn in [
     assert fn in home
 
 assert "IntelligenceRanking.rankAll" in home
-assert "IntelligenceSurfaces?.today" in home
+assert "IntelligenceSurfaces?.withinDays" in home
 assert "IntelligenceSurfaces?.thisWeek" in home
 assert "IntelligenceSurfaces?.topDevelopments" in home
 assert "IntelligenceSurfaces?.topPerCategory" in home

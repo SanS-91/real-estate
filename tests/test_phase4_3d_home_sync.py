@@ -46,15 +46,18 @@ joined = '\n'.join([
 for banned in ['Sample township', 'Illustrative pricing', 'Sample land regulation', 'Implementation demo.', 'Mixed data mode.']:
     assert banned not in joined
 
-assert 'Integrated curated data.' in index
-assert '<h2 id="today-title">Today</h2>' in index
+assert 'class="demo-banner"' not in index
+assert 'class="home-snapshot"' not in index
+assert 'class="home-more-history"' in index
+assert '<h2 id="today-title">Latest Updates</h2>' in index
 assert 'policy-refinancing-rate' in home_js
 assert 'Integrated data · 4 curated modules' in home_js
 assert 'group.count_label' in components
-assert "['#today-title', 'Today', 'Hôm nay']" in loc_static
+assert "['#today-title', 'Latest Updates', 'Cập nhật mới nhất']" in loc_static
 assert 'assets/js/home.js?v=' in index
 assert 'loadCanonicalHomeData' in home_js
 assert 'buildTodayGroups(data)' in home_js
+assert 'date_label: item.date_label || App.formatDate(item.sort_date)' in home_js
 assert 'buildChanges(data)' in home_js
 assert 'buildWeekly(data)' in home_js
 assert 'buildTopDevelopments(data)' in home_js
