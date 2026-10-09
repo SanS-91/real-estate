@@ -175,6 +175,11 @@
     const keepActiveVisible = () => {
       const active = tabs.querySelector('.tab-link.is-active');
       if (!active || tabs.scrollWidth <= tabs.clientWidth) return;
+      if (state.view === 'news') {
+        // News is the rightmost tab. Always reveal it, including after VI/EN labels change.
+        tabs.scrollLeft = tabs.scrollWidth;
+        return;
+      }
       const area = tabs.getBoundingClientRect();
       const box = active.getBoundingClientRect();
       if (box.left < area.left + 8 || box.right > area.right - 8) {
