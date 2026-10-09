@@ -18,10 +18,10 @@ def kind(row):
         return "popular"
     return "listing"
 
-assert len(rows)==9
+assert len(rows)==10
 assert {x:sum(kind(row)==x for row in rows) for x in ("popular","listing","historical")}=={
-    "popular":3,"listing":3,"historical":3}
-assert len({row["project_id"] for row in rows})==6
+    "popular":4,"listing":3,"historical":3}
+assert len({row["project_id"] for row in rows})==7
 assert sum(row["project_id"]=="vinhomes-grand-park" for row in rows)==4
 assert "function alternativePriceCardsHTML(projectIds, options = {})" in js
 assert "<details class=\"market-price-references\" " in js
@@ -45,4 +45,4 @@ assert "market-listing-evidence.css?v=1.3" in html
 assert "market.js?v=6.3R4G" in html
 assert "getAlternativePriceEvidence()" in js and "getSecondaryListingEvidence()" in js and "getOneHousingSubprojectEvidence()" in js
 assert json.loads((ROOT/"data/mock/market/listing-observations.json").read_text(encoding="utf-8"))["record_count"]==18
-print("PASS: 9 source records in 3 evidence groups, compact keyboard-accessible mobile UI; source detail preserved, aggregate price history unchanged.")
+print("PASS: 10 source records in 3 evidence groups, compact keyboard-accessible mobile UI; source detail preserved, aggregate price history unchanged.")
