@@ -384,10 +384,21 @@
   function projectDetailListingHistory(project) {
     const rows = window.HistoryEngine?.listingMarketSeries?.(data.listingObservations, project.id) || [];
     if (!rows.length) return '<div class="state-box">No listing-market history is available for this project yet.</div>';
+    const dates = [...new Set(rows.map(row => row.observation_date).filter(Boolean))];
+    const minimum = 3;
+    const ready = dates.length >= minimum;
+    const note = ready
+      ? 'Đủ số lần chụp để xem lịch sử giá chào bán; không đồng nghĩa dữ liệu giá giao dịch.'
+      : 'Chưa đủ dữ liệu để kết luận xu hướng giá. Cần ít nhất ' + minimum + ' thời điểm quan sát độc lập.';
     return `
+      <div class="market-listing-history-status" role="note">
+        <div><strong>${dates.length}/${minimum} snapshots</strong><span>${esc(note)}</span></div>
+        <span class="market-listing-history-status__type">Giá chào bán · không phải giá giao dịch</span>
+      </div>
       <div class="chart-frame chart-frame--large"><canvas id="market-project-listing-history"></canvas></div>
-      <div class="table-wrap"><table class="data-table"><thead><tr><th>Snapshot</th><th class="numeric">Asking Low</th><th class="numeric">Asking High</th><th class="numeric">1Y Trend</th><th>Coverage</th><th>Source</th></tr></thead><tbody>
-      ${[...rows].reverse().map(row=>`<tr><td>${esc(row.observation_date)}</td><td class="numeric">${row.asking_price_low_vnd_per_m2 == null ? '—' : esc(formatAsp(row.asking_price_low_vnd_per_m2))}</td><td class="numeric">${row.asking_price_high_vnd_per_m2 == null ? '—' : esc(formatAsp(row.asking_price_high_vnd_per_m2))}</td><td class="numeric">${esc(listingTrendLabel(row))}</td><td>${esc(row.coverage_status || 'full')}</td><td>${sourceRef(row.source_id,{sourceDate:row.observation_date,sourceUrl:row.source_url,methodology:row.methodology_note})}</td></tr>`).join('')}
+      <p class="chart-note">Ngày snapshot là ngày thu thập, còn ngày tin đăng mới nhất chỉ thể hiện hoạt động đăng tin trên nguồn. Chỉ số “biến động 1 năm” do trang nguồn công bố, không phải thay đổi giữa hai snapshot.</p>
+      <div class="table-wrap"><table class="data-table"><thead><tr><th>Snapshot</th><th>Ngày tin gần nhất</th><th class="numeric">Asking Low</th><th class="numeric">Asking High</th><th class="numeric">1Y Trend (source)</th><th>Coverage</th><th>Source</th></tr></thead><tbody>
+      ${[...rows].reverse().map(row=>`<tr><td>${esc(row.observation_date)}</td><td>${esc(row.source_data_as_of || '—')}</td><td class="numeric">${row.asking_price_low_vnd_per_m2 == null ? '—' : esc(formatAsp(row.asking_price_low_vnd_per_m2))}</td><td class="numeric">${row.asking_price_high_vnd_per_m2 == null ? '—' : esc(formatAsp(row.asking_price_high_vnd_per_m2))}</td><td class="numeric">${esc(listingTrendLabel(row))}</td><td>${esc(row.coverage_status || 'full')}</td><td>${sourceRef(row.source_id,{sourceDate:row.observation_date,sourceUrl:row.source_url,methodology:row.methodology_note})}</td></tr>`).join('')}
       </tbody></table></div>`;
   }
 
