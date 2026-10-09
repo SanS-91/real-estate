@@ -1,16 +1,15 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-10-09T06:43:01.251212+00:00",
+  "generated_at": "2026-10-09T06:53:28.439676+00:00",
   "targets_checked": 6,
-  "candidate_count": 1,
+  "candidate_count": 0,
   "queue_backlog": 1,
   "queue_conflicts": 0,
   "production_updated": false,
   "counts": {
-    "new-period-review-required": 1,
     "reachable-historical-reference-frozen": 2,
-    "reachable-no-verifiable-metric": 1,
-    "same-period-unchanged": 2
+    "reachable-no-verifiable-metric": 3,
+    "same-period-unchanged": 1
   },
   "checks": [
     {
@@ -21,7 +20,17 @@
       "baseline_period": "2026-10",
       "http_status": 200,
       "final_host": "onehousing.vn",
-      "status": "same-period-unchanged"
+      "status": "reachable-no-verifiable-metric",
+      "parser_diagnostics": {
+        "publisher_project_header": true,
+        "publisher_periods": [
+          "2026-10"
+        ],
+        "modal_price_section": true,
+        "asking_price_number": true,
+        "asking_range_number": true,
+        "login_wall_in_text": true
+      }
     },
     {
       "target_id": "rever-vinhomes-grand-park-listing",
@@ -61,7 +70,17 @@
       "baseline_period": "2026-09",
       "http_status": 200,
       "final_host": "onehousing.vn",
-      "status": "new-period-review-required"
+      "status": "reachable-no-verifiable-metric",
+      "parser_diagnostics": {
+        "publisher_project_header": true,
+        "publisher_periods": [
+          "2026-10"
+        ],
+        "modal_price_section": true,
+        "asking_price_number": true,
+        "asking_range_number": true,
+        "login_wall_in_text": true
+      }
     },
     {
       "target_id": "onehousing-masteri-centre-point-apartment",
