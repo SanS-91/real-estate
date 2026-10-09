@@ -1,0 +1,69 @@
+name: Market Coverage Round 4 - Alternative Price Evidence
+
+on:
+  pull_request:
+    paths:
+      - 'data/mock/market/alternative-price-evidence.json'
+      - 'data/mock/core/sources.json'
+      - 'config/market-source-registry.json'
+      - 'scripts/market_alternative_source_gate.py'
+      - 'tests/test_market_alternative_sources.py'
+      - 'assets/js/market.js'
+      - 'assets/js/data-store.js'
+      - 'market.html'
+      - '.github/workflows/market-alternative-price-evidence.yml'
+  push:
+    branches: [main]
+    paths:
+      - 'data/mock/market/alternative-price-evidence.json'
+      - 'scripts/market_alternative_source_gate.py'
+      - '.github/workflows/market-alternative-price-evidence.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  alternative-price-qa:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 12
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Validate sources, literal metric evidence and historical scope
+        run: |
+          python -m py_compile scripts/market_alternative_source_gate.py
+          python scripts/market_alternative_source_gate.py
+          python tests/test_market_alternative_sources.py
+          python tests/test_market_source_scope_coverage.py
+          python tests/test_listing_coverage_next.py
+          node --check assets/js/data-store.js
+          node --check assets/js/market.js
+      - name: Browser smoke-test data display without chart mixing
+        run: |
+          set -eu
+          BROWSER="$(command -v google-chrome || command -v chromium || command -v chromium-browser || true)"
+          test -n "$BROWSER"
+          python -m http.server 8765 --bind 127.0.0.1 >/tmp/market-alt-http.log 2>&1 &
+          SERVER_PID=$!
+          trap 'kill "$SERVER_PID" || true' EXIT
+          sleep 3
+          "$BROWSER" --headless --no-sandbox --disable-dev-shm-usage --disable-gpu --virtual-time-budget=8500 --dump-dom 'http://127.0.0.1:8765/market.html?view=pricing' >/tmp/market-pricing-r4.html
+          "$BROWSER" --headless --no-sandbox --disable-dev-shm-usage --disable-gpu --virtual-time-budget=8500 --dump-dom 'http://127.0.0.1:8765/market.html?view=project-detail&id=vinhomes-grand-park' >/tmp/market-project-r4.html
+          python - <<'PY'
+          from pathlib import Path
+          pricing=Path('/tmp/market-pricing-r4.html').read_text(encoding='utf-8')
+          project=Path('/tmp/market-project-r4.html').read_text(encoding='utf-8')
+          assert 'Nguồn giá đối chiếu' in pricing, 'Alternate price evidence not visible'
+          for marker in ('OneHousing','Rever','Vinhomes Grand Park','The Privia','The Global City'):
+              assert marker in pricing, marker
+          assert 'Không dùng cho ASP hay trend tổng hợp' in pricing
+          assert 'Nguồn giá đối chiếu' in project
+          assert '54,47' in project or '54.47' in project
+          print('PASS: alternative sources visible, clearly separated from chart pricing')
+          PY
