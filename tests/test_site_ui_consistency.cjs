@@ -17,14 +17,14 @@ for (const name of root) {
   }
   assert.match(html, /<meta name="viewport" content="width=device-width, initial-scale=1">/);
 }
-assert.match(common, /key: 'maintenance', label: 'Data Status', href: 'maintenance.html'/);
+assert.match(common, /key: 'maintenance', label: 'Maintenance', href: 'maintenance.html'/);
 assert.match(common, /aria-controls="site-mobile-navigation" aria-expanded="false"/);
 assert.match(common, /class="mobile-nav-panel"/);
 assert.match(common, /setAttribute\('aria-expanded', String\(!!open\)\)/);
 assert.match(common, /MutationObserver/);
 assert.match(common, /maintenance.html#maintenance-rules-title/);
 assert.ok(!common.includes('<a href="#">Methodology'));
-assert.match(localization, /Trạng thái dữ liệu/);
+assert.match(localization, /Maintenance · Trạng thái dữ liệu/);
 assert.match(localization, /Quy tắc & nguồn dữ liệu/);
 assert.match(localization, /'Research', 'Nghiên cứu'/);
 assert.match(css, /@media \(max-width: 1199px\)/);
@@ -37,6 +37,7 @@ assert.match(newsJs, /data-topic="\$\{esc\(topic\)\}"/);
 assert.match(newsCss, /market-news-card__topic\[data-topic="pricing"\]/);
 assert.match(newsCss, /market-news-card__topic\[data-topic="legal"\]/);
 assert.match(newsCss, /market-news-card__topic\[data-topic="research"\]/);
+assert.match(newsCss, /market-news-card__topic\[data-topic="sales"\]/);
 
 const params={};
 const browser = {Components:{escapeHTML:s=>String(s).replaceAll('&','&amp;').replaceAll('<','&lt;').replaceAll('>','&gt;').replaceAll('"','&quot;')},
