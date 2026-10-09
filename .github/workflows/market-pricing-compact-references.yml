@@ -1,0 +1,69 @@
+name: Market Pricing - Compact Price References UI
+
+on:
+  pull_request:
+    paths:
+      - 'assets/js/market.js'
+      - 'assets/css/market-listing-evidence.css'
+      - 'market.html'
+      - 'tests/test_market_compact_price_references.py'
+      - '.github/workflows/market-pricing-compact-references.yml'
+  push:
+    branches: [main]
+    paths:
+      - 'assets/js/market.js'
+      - 'assets/css/market-listing-evidence.css'
+      - 'market.html'
+      - '.github/workflows/market-pricing-compact-references.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  pricing-reference-layout:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 12
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Regression — metric grouping, source retention and accessibility
+        run: |
+          node --check assets/js/market.js
+          python tests/test_market_compact_price_references.py
+          python tests/test_market_onehousing_subproject_evidence.py
+          python tests/test_market_secondary_listing_evidence.py
+          python tests/test_market_alternative_sources.py
+      - name: Browser smoke — desktop and mobile responsive views
+        run: |
+          set -eu
+          BROWSER="$(command -v google-chrome || command -v chromium || command -v chromium-browser || true)"
+          test -n "$BROWSER"
+          python -m http.server 8765 --bind 127.0.0.1 > /tmp/market-compact-http.log 2>&1 &
+          PID=$!
+          trap 'kill "$PID" || true' EXIT
+          sleep 3
+          "$BROWSER" --headless --no-sandbox --disable-dev-shm-usage --disable-gpu --window-size=1440,900 --virtual-time-budget=10000 --dump-dom 'http://127.0.0.1:8765/market.html?view=pricing' > /tmp/market-price-desktop.html
+          "$BROWSER" --headless --no-sandbox --disable-dev-shm-usage --disable-gpu --window-size=390,844 --virtual-time-budget=10000 --dump-dom 'http://127.0.0.1:8765/market.html?view=pricing' > /tmp/market-price-mobile.html
+          python - <<'PY'
+          from pathlib import Path
+          import re
+          for width in ('desktop','mobile'):
+              content=Path('/tmp/market-price-'+width+'.html').read_text(encoding='utf-8')
+              for key in ('Giá tham khảo bổ sung','Giá phổ biến theo nguồn',
+                          'Giá rao của từng căn','Giá lịch sử','Lumière Boulevard',
+                          'Masteri Centre Point','Izumi City','CafeLand'):
+                  assert key in content, (width,key)
+              assert content.count('class="market-evidence-row"') == 9, (width,content.count('class="market-evidence-row"'))
+              assert 'Ghi chú phương pháp đầy đủ' in content
+              assert re.search(r'<details class="market-price-references"\s*>',content), 'Default Pricing disclosure should be closed'
+              assert 'market-evidence-group--historical' in content
+              assert 'onehousing.vn' in content and 'rever.vn' in content and 'cafeland.vn' in content
+              assert 'market-listing-scope-grid' in content, 'Preserve category-specific listing source evidence above compact section'
+              print(f'PASS: {width} Pricing view, 9 compact evidence rows, 3 groups, collapsed by default; source details retained.')
+          PY
