@@ -1,0 +1,310 @@
+{
+  "schema_version": 1,
+  "updated_at": "2026-10-09",
+  "title": "Evidence-backed expanded HCMC historic observations (source-specific)",
+  "citation_policy": "Each observed value comes from the linked publisher report, with source period, publication date, reporting geography and qualifiers. Do not derive quarterly figures from H1/annual totals.",
+  "records": [
+    {
+      "id": "obs-hcmc-apartment-2024-q4-cushman",
+      "scope_type": "region-segment",
+      "region_ids": [
+        "hcmc"
+      ],
+      "segment_ids": [
+        "apartment"
+      ],
+      "period": "2024-Q4",
+      "period_type": "quarter",
+      "new_supply": 2719,
+      "sales_units": 2630,
+      "absorption_rate": null,
+      "average_asp": null,
+      "asp_unit": "vnd-per-m2",
+      "currency": "VND",
+      "price_basis": null,
+      "metric_qualifiers": {
+        "new_supply": "approx"
+      },
+      "source_id": "cushman-wakefield-vietnam-market",
+      "source_date": "2025-01-25",
+      "source_url": "https://www.cushmanwakefield.com/en/vietnam/news/2025/01/hcmc-real-estate-market-overview-q4-2024",
+      "methodology_note": "Cushman Q4 2024 HCMC apartment launches approx 2,719; new absorption (transactions) 2,630. New absorption need not equal sales of the same-quarter launches.",
+      "reported_geography": "former-hcmc-core",
+      "reporting_basis": "quarterly-launches",
+      "source_evidence": {
+        "new_supply": "approximately 2,719 new apartments",
+        "sales_units": "new absorption of 2,630 units"
+      }
+    },
+    {
+      "id": "obs-hcmc-landed-2024-q4-cushman",
+      "scope_type": "region-segment",
+      "region_ids": [
+        "hcmc"
+      ],
+      "segment_ids": [
+        "landed"
+      ],
+      "period": "2024-Q4",
+      "period_type": "quarter",
+      "new_supply": 27,
+      "sales_units": 80,
+      "absorption_rate": null,
+      "average_asp": null,
+      "asp_unit": "vnd-per-m2",
+      "currency": "VND",
+      "price_basis": null,
+      "source_id": "cushman-wakefield-vietnam-market",
+      "source_date": "2025-01-25",
+      "source_url": "https://www.cushmanwakefield.com/en/vietnam/news/2025/01/hcmc-real-estate-market-overview-q4-2024",
+      "methodology_note": "Cushman Q4 2024 HCMC landed projects launched 27 units and recorded 80 successful transactions, which may involve prior inventory.",
+      "reported_geography": "former-hcmc-core",
+      "reporting_basis": "quarterly-launches",
+      "source_evidence": {
+        "new_supply": "only 27 new units launched",
+        "sales_units": "80 successful transactions"
+      }
+    },
+    {
+      "id": "obs-hcmc-landed-2025-q1-cushman",
+      "scope_type": "region-segment",
+      "region_ids": [
+        "hcmc"
+      ],
+      "segment_ids": [
+        "landed"
+      ],
+      "period": "2025-Q1",
+      "period_type": "quarter",
+      "new_supply": 178,
+      "sales_units": 120,
+      "absorption_rate": null,
+      "average_asp": null,
+      "asp_unit": "vnd-per-m2",
+      "currency": "VND",
+      "price_basis": null,
+      "source_id": "cushman-wakefield-vietnam-market",
+      "source_date": "2025-04-14",
+      "source_url": "https://uat-sitecore-www.cushmanwakefield.com/en/vietnam/insights/ho-chi-minh-city-marketbeat/residential-marketbeat",
+      "methodology_note": "Cushman HCMC Residential MarketBeat Q1 2025 states 178 landed units offered across four projects and 120 new transactions; this is a different research methodology from CBRE.",
+      "reported_geography": "former-hcmc-core",
+      "reporting_basis": "quarterly-launches",
+      "source_evidence": {
+        "new_supply": "178 units across three Thu Duc and one Binh Chanh project",
+        "sales_units": "120 new transactions"
+      }
+    },
+    {
+      "id": "obs-hcmc-apartment-2025-q4-cushman",
+      "scope_type": "region-segment",
+      "region_ids": [
+        "hcmc"
+      ],
+      "segment_ids": [
+        "apartment"
+      ],
+      "period": "2025-Q4",
+      "period_type": "quarter",
+      "new_supply": 3358,
+      "sales_units": 3196,
+      "absorption_rate": 0.62,
+      "average_asp": null,
+      "asp_unit": "vnd-per-m2",
+      "currency": "VND",
+      "price_basis": null,
+      "metric_qualifiers": {
+        "sales_units": "approx",
+        "absorption_rate": "approx"
+      },
+      "source_id": "cushman-wakefield-vietnam-market",
+      "source_date": "2026-01-27",
+      "source_url": "https://www.cushmanwakefield.com/en/vietnam/news/2026/01/q4-2025-hcmc-residential-marketbeat-report",
+      "methodology_note": "Cushman HCMC core apartment Q4 2025: 3,358 launched, about 3,196 new absorption and source-stated about 62% absorption. Absorption rate is not calculated as 3,196/3,358 because denominators differ.",
+      "reported_geography": "former-hcmc-core",
+      "reporting_basis": "quarterly-launches",
+      "source_evidence": {
+        "new_supply": "3,358 new apartment units launched",
+        "sales_units": "new absorption approximately 3,196 units",
+        "absorption_rate": "approximately 62% (publisher-defined)"
+      }
+    },
+    {
+      "id": "obs-hcmc-landed-2025-q4-cushman",
+      "scope_type": "region-segment",
+      "region_ids": [
+        "hcmc"
+      ],
+      "segment_ids": [
+        "landed"
+      ],
+      "period": "2025-Q4",
+      "period_type": "quarter",
+      "new_supply": 1535,
+      "sales_units": 1167,
+      "absorption_rate": 0.7,
+      "average_asp": null,
+      "asp_unit": "vnd-per-m2",
+      "currency": "VND",
+      "price_basis": null,
+      "metric_qualifiers": {
+        "new_supply": "approx",
+        "sales_units": "approx",
+        "absorption_rate": "approx"
+      },
+      "source_id": "cushman-wakefield-vietnam-market",
+      "source_date": "2026-01-27",
+      "source_url": "https://www.cushmanwakefield.com/en/vietnam/news/2026/01/q4-2025-hcmc-residential-marketbeat-report",
+      "methodology_note": "Cushman HCMC core landed Q4 2025: approx 1,535 new launches, approx 1,167 new absorption and source-stated ~70% absorption, reflecting its own inventory denominator.",
+      "reported_geography": "former-hcmc-core",
+      "reporting_basis": "quarterly-launches",
+      "source_evidence": {
+        "new_supply": "approximately 1,535 new landed units",
+        "sales_units": "approximately 1,167 new absorption",
+        "absorption_rate": "about 70% (publisher-defined)"
+      }
+    },
+    {
+      "id": "obs-hcmc-apartment-2024-annual-cbre",
+      "scope_type": "region-segment-benchmark",
+      "region_ids": [
+        "hcmc"
+      ],
+      "segment_ids": [
+        "apartment"
+      ],
+      "period": "2024",
+      "period_type": "year",
+      "new_supply": 5050,
+      "sales_units": null,
+      "absorption_rate": null,
+      "average_asp": null,
+      "asp_unit": "vnd-per-m2",
+      "currency": "VND",
+      "price_basis": null,
+      "source_id": "cbre-vietnam-market",
+      "source_date": "2025-01-17",
+      "source_url": "https://www.cbrevietnam.com/insights/figures/ho-chi-minh-city-figures-q4-2024",
+      "methodology_note": "CBRE reports 5,050 new condominium units across full-year 2024 in HCMC (former administrative boundary). Annual total must not be interpreted as Q4-only or plotted as quarterly supply.",
+      "reported_geography": "former-hcmc-core",
+      "reporting_basis": "calendar-year-total",
+      "source_evidence": {
+        "new_supply": "5,050 HCMC condominium units in 2024"
+      }
+    },
+    {
+      "id": "obs-hcmc-residential-2025-q1-cbre",
+      "scope_type": "region-segment-benchmark",
+      "region_ids": [
+        "hcmc"
+      ],
+      "segment_ids": [
+        "residential"
+      ],
+      "period": "2025-Q1",
+      "period_type": "quarter",
+      "new_supply": 408,
+      "sales_units": null,
+      "absorption_rate": null,
+      "average_asp": null,
+      "asp_unit": "vnd-per-m2",
+      "currency": "VND",
+      "price_basis": null,
+      "source_id": "cbre-vietnam-market",
+      "source_date": "2025-05-09",
+      "source_url": "https://www.cbrevietnam.com/insights/figures/ho-chi-minh-city-figures-q1-2025",
+      "methodology_note": "CBRE Q1 2025 reports 408 new launched residential units in total (high-rise AND low-rise). This combined count must not be assigned to either apartment or landed segment.",
+      "reported_geography": "former-hcmc-core",
+      "reporting_basis": "combined-apartment-and-landed",
+      "source_evidence": {
+        "new_supply": "408 combined high-rise and low-rise new units"
+      }
+    },
+    {
+      "id": "obs-hcmc-apartment-2025-h1-cbre",
+      "scope_type": "region-segment-benchmark",
+      "region_ids": [
+        "hcmc"
+      ],
+      "segment_ids": [
+        "apartment"
+      ],
+      "period": "2025-H1",
+      "period_type": "half-year",
+      "new_supply": 1400,
+      "sales_units": null,
+      "absorption_rate": null,
+      "average_asp": null,
+      "asp_unit": "vnd-per-m2",
+      "currency": "VND",
+      "price_basis": null,
+      "source_id": "cbre-vietnam-market",
+      "source_date": "2025-08-27",
+      "source_url": "https://www.cbrevietnam.com/insights/figures/ho-chi-minh-city-figures-q2-2025",
+      "methodology_note": "CBRE Q2 2025 H1 cumulative data, 1,400 high-rise units in HCMC from January through June 2025. Not a standalone Q2 observation.",
+      "reported_geography": "former-hcmc-core",
+      "reporting_basis": "year-to-date-first-half",
+      "source_evidence": {
+        "new_supply": "1,400 high-rise new supply, H1 2025"
+      }
+    },
+    {
+      "id": "obs-hcmc-landed-2025-h1-cbre",
+      "scope_type": "region-segment-benchmark",
+      "region_ids": [
+        "hcmc"
+      ],
+      "segment_ids": [
+        "landed"
+      ],
+      "period": "2025-H1",
+      "period_type": "half-year",
+      "new_supply": 74,
+      "sales_units": null,
+      "absorption_rate": null,
+      "average_asp": null,
+      "asp_unit": "vnd-per-m2",
+      "currency": "VND",
+      "price_basis": null,
+      "source_id": "cbre-vietnam-market",
+      "source_date": "2025-08-27",
+      "source_url": "https://www.cbrevietnam.com/insights/figures/ho-chi-minh-city-figures-q2-2025",
+      "methodology_note": "CBRE Q2 2025 H1 cumulative data, 74 low-rise units in HCMC from January through June 2025. Not a standalone Q2 observation.",
+      "reported_geography": "former-hcmc-core",
+      "reporting_basis": "year-to-date-first-half",
+      "source_evidence": {
+        "new_supply": "74 low-rise new supply, H1 2025"
+      }
+    },
+    {
+      "id": "obs-hcmc-apartment-2025-q1-savills",
+      "scope_type": "region-segment",
+      "region_ids": [
+        "hcmc"
+      ],
+      "segment_ids": [
+        "apartment"
+      ],
+      "period": "2025-Q1",
+      "period_type": "quarter",
+      "new_supply": 800,
+      "sales_units": null,
+      "absorption_rate": null,
+      "average_asp": null,
+      "asp_unit": "vnd-per-m2",
+      "currency": "VND",
+      "price_basis": null,
+      "metric_qualifiers": {
+        "new_supply": "approx"
+      },
+      "source_id": "savills-vietnam-market",
+      "source_date": "2025-04-19",
+      "source_url": "https://www.savills.com/blog/article/221175-1/vietnam-eng/apartment-market-overview-in-q1-2025.aspx",
+      "methodology_note": "Savills Market Brief Q1 2025 reports around 800 new apartment units in HCMC. This is Savills methodology and must not be conflated with CBRE's 408 combined high/low-rise Q1 count.",
+      "reported_geography": "former-hcmc-core",
+      "reporting_basis": "quarterly-launches",
+      "source_evidence": {
+        "new_supply": "around 800 new apartment units in Q1 2025"
+      }
+    }
+  ]
+}
