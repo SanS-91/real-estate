@@ -481,20 +481,20 @@
       const listing = latestListingObservation(project.id);
       return `
         <tr>
-          <td><button class="table-link" type="button" data-project-id="${esc(project.id)}">${esc(project.name)}</button><span class="table-subtext">${esc(project.location_text)}</span></td>
-          <td>${esc(developerName(project))}</td>
-          <td>${esc(regionNames(project))}</td>
-          <td>${Components.statusBadge(project.status)}</td>
-          <td class="numeric">${Number.isFinite(project.planned_units) ? esc(formatCompact(project.planned_units)) : '<span class="table-muted">Disclosed qualitatively</span>'}</td>
-          <td class="numeric">${esc(formatAsp(obs?.average_asp))}<span class="table-subtext">${esc(obs?.period || '')}</span></td>
-          <td class="numeric market-listing-cell">${esc(formatListingRange(listing))}<span class="table-subtext">${listing?.coverage_status === 'partial' ? 'Partial snapshot' : (listing?.observation_date || '')}</span></td>
-          <td class="numeric market-trend-cell">${esc(listingTrendLabel(listing))}</td>
-          <td class="numeric">${esc(formatPercent(obs?.absorption_rate))}</td>
+          <td data-label-vi="Dự án" data-label-en="Project"><button class="table-link" type="button" data-project-id="${esc(project.id)}">${esc(project.name)}</button><span class="table-subtext">${esc(project.location_text)}</span></td>
+          <td data-label-vi="Chủ đầu tư" data-label-en="Developer">${esc(developerName(project))}</td>
+          <td data-label-vi="Khu vực" data-label-en="Region">${esc(regionNames(project))}</td>
+          <td data-label-vi="Trạng thái" data-label-en="Status">${Components.statusBadge(project.status)}</td>
+          <td class="numeric" data-label-vi="Quy mô căn" data-label-en="Units">${Number.isFinite(project.planned_units) ? esc(formatCompact(project.planned_units)) : '<span class="table-muted">Disclosed qualitatively</span>'}</td>
+          <td class="numeric" data-label-vi="ASP xác minh" data-label-en="Verified ASP">${esc(formatAsp(obs?.average_asp))}<span class="table-subtext">${esc(obs?.period || '')}</span></td>
+          <td class="numeric market-listing-cell" data-label-vi="Khoảng giá chào" data-label-en="Asking range">${esc(formatListingRange(listing))}<span class="table-subtext">${listing?.coverage_status === 'partial' ? 'Partial snapshot' : (listing?.observation_date || '')}</span></td>
+          <td class="numeric market-trend-cell" data-label-vi="Biến động 1 năm" data-label-en="1Y trend">${esc(listingTrendLabel(listing))}</td>
+          <td class="numeric" data-label-vi="Hấp thụ" data-label-en="Absorption">${esc(formatPercent(obs?.absorption_rate))}</td>
         </tr>`;
     }).join('');
     return `
       <div class="table-wrap">
-        <table class="data-table data-table--market-projects">
+        <table class="data-table data-table--market-projects mobile-record-table">
           <thead><tr><th>Project</th><th>Developer</th><th>Region</th><th>Status</th><th class="numeric">Units</th><th class="numeric">Verified ASP</th><th class="numeric">Asking range</th><th class="numeric">1Y trend</th><th class="numeric">Absorption</th></tr></thead>
           <tbody>${rows || '<tr><td colspan="9" class="table-empty">No projects match the selected filters.</td></tr>'}</tbody>
         </table>
