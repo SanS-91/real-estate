@@ -30,8 +30,12 @@ assert '.segmented-control.market-price-layer' in css
 assert '.data-table--market-projects' in css
 
 rows=listing['data']
-priced=[x for x in rows if x.get('asking_price_low_vnd_per_m2') is not None and x.get('asking_price_high_vnd_per_m2') is not None]
-assert len(rows)==12
+latest={}
+for row in sorted(rows,key=lambda x:(x['project_id'],x['observation_date'])):
+    latest[row['project_id']]=row
+priced=[x for x in latest.values() if x.get('asking_price_low_vnd_per_m2') is not None and x.get('asking_price_high_vnd_per_m2') is not None]
+assert len(rows)>=12
+assert len(latest)==12
 assert len(priced)==8
 assert canonical['record_count']==len(canonical['data']) and canonical['record_count']>=7
 assert macro['record_count']==18
