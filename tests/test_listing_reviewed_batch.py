@@ -90,6 +90,11 @@ assert "not-a-new-snapshot-date" in module.validate_capture(
 # Main batch must remain idempotent once a date has been added.
 again, decisions = module.evaluate(cfg["records"], updated, TODAY)
 assert len(again) == 0
-assert all(x["status"] == "manual-review-required" for x in decisions)
+assert all(x["status"] == "unchanged" for x in decisions)
+
+tampered_history = copy.deepcopy(updated)
+tampered_history[-1]["asking_price_low_vnd_per_m2"] += 1000000
+_, bad_decisions = module.evaluate(cfg["records"], tampered_history, TODAY)
+assert any(x["status"] == "manual-review-required" for x in bad_decisions)
 
 print("Reviewed listing capture tests PASS: 4 new sourced snapshots, 12 projects, 0 fabricated trends")
