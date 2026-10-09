@@ -1,9 +1,345 @@
 {
   "schema_version": 1,
-  "build_id": "market-news-rss-20261009T023307Z",
-  "generated_at": "2026-10-09T02:33:07.713413+00:00",
-  "record_count": 112,
+  "build_id": "market-news-rss-20261009T170036Z",
+  "generated_at": "2026-10-09T17:00:36.109405+00:00",
+  "record_count": 140,
   "data": [
+    {
+      "id": "article-market-rss-e5315a483cf9f30aa4bf",
+      "title": "TP HCM có 158 dự án nhà ở bán cho người nước ngoài",
+      "url": "https://vnexpress.net/tp-hcm-co-158-du-an-nha-o-ban-cho-nguoi-nuoc-ngoai-5130531.html",
+      "category": "market",
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-10-09T13:42:10+00:00",
+      "source_id": "vnexpress-real-estate",
+      "region_ids": [
+        "hcmc"
+      ],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "UBND TP HCM vừa công bố thêm 10 dự án nhà ở thương mại được phép bán cho người nước ngoài, nâng tổng số dự án đủ điều kiện lên 158.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://vnexpress.net/rss/bat-dong-san.rss",
+        "publisher_host": "vnexpress.net",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-d118d9d5eab2bc1c8d00",
+      "title": "Vinhomes Sài Gòn Park: Nhiều tiện ích lớn chốt tiến độ",
+      "url": "https://dantri.com.vn/bat-dong-san/vinhomes-sai-gon-park-nhieu-tien-ich-lon-chot-tien-do-20261009192015492.htm",
+      "category": "market",
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-10-09T12:34:31+00:00",
+      "source_id": "dantri-real-estate",
+      "region_ids": [
+        "hcmc"
+      ],
+      "project_ids": [],
+      "developer_ids": [
+        "vinhomes"
+      ],
+      "tags": [],
+      "importance": 2,
+      "summary": "(Dân trí) - Công viên Thiên văn Galaxy Park dự kiến hoàn thành quý IV; chuỗi điểm đến giải trí hẹn ngày khai trương quý IV/2027; tiếp đến, trường học, trung tâm thương mại, bệnh viện và văn phòng cũng lần lượt về đích.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://dantri.com.vn/rss/bat-dong-san.rss",
+        "publisher_host": "dantri.com.vn",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-d7c14a2c5e13314a368b",
+      "title": "Chủ đầu tư bán \"chui\" 682 căn hộ ở TPHCM đang nợ thuế 46,6 tỷ đồng",
+      "url": "https://dantri.com.vn/bat-dong-san/chu-dau-tu-ban-chui-682-can-ho-o-tphcm-dang-no-thue-466-ty-dong-20261009184908813.htm",
+      "category": "market",
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-10-09T12:07:19+00:00",
+      "source_id": "dantri-real-estate",
+      "region_ids": [
+        "hcmc"
+      ],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "(Dân trí) - Công ty TNHH Sản xuất thương mại Lý Khương, đơn vị vừa bị phạt vì bán sai phép 682 căn hộ, đang nợ thuế 46,6 tỷ đồng, đứng đầu danh sách tại Thuế cơ sở 13 TPHCM.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://dantri.com.vn/rss/bat-dong-san.rss",
+        "publisher_host": "dantri.com.vn",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-d22df230c9375e1bf12d",
+      "title": "Palm City khởi công công viên và đường chạy bộ ven sông",
+      "url": "https://vnexpress.net/palm-city-khoi-cong-cong-vien-va-duong-chay-bo-ven-song-5130496.html",
+      "category": "market",
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-10-09T10:30:00+00:00",
+      "source_id": "vnexpress-real-estate",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "Hướng Việt Properties tổ chức lễ khởi công công viên và đường chạy bộ ven sông tại Palm City, với sự tham dự của đại diện đơn vị phát triển và cộng đồng cư dân, ngày 8/10.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://vnexpress.net/rss/bat-dong-san.rss",
+        "publisher_host": "vnexpress.net",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-20eb476a007dfa0cfa6e",
+      "title": "Rivera Nagomi tại Waterpoint: Từ không gian an hòa đến giá trị sống thực tế",
+      "url": "https://dantri.com.vn/bat-dong-san/rivera-nagomi-tai-waterpoint-tu-khong-gian-an-hoa-den-gia-tri-song-thuc-te-20261009160649838.htm",
+      "category": "market",
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-10-09T10:00:00+00:00",
+      "source_id": "dantri-real-estate",
+      "region_ids": [],
+      "project_ids": [
+        "waterpoint"
+      ],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "(Dân trí) - Vượt lên khái niệm về một sản phẩm nhà ở thấp tầng, phân khu Rivera Nagomi chuyển hóa triết lý an hòa - Nagomi thành những giá trị sống thực tế, kết nối hài hòa giữa thiên nhiên, sự riêng tư và nhịp sống đô thị hiện hữu tại Waterpoint.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://dantri.com.vn/rss/bat-dong-san.rss",
+        "publisher_host": "dantri.com.vn",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-4a048dfa2b3363079aea",
+      "title": "Diện mạo của một khu đô thị hạnh phúc nhìn từ nụ cười trẻ thơ",
+      "url": "https://thanhnien.vn/dien-mao-cua-mot-khu-do-thi-hanh-phuc-nhin-tu-nu-cuoi-tre-tho-185261009153949439.htm",
+      "category": "market",
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-10-09T09:30:00+00:00",
+      "source_id": "thanhnien-real-estate",
+      "region_ids": [],
+      "project_ids": [
+        "mizuki-park"
+      ],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "Mizuki Park đang từng ngày kiến tạo không gian sống hạnh phúc, để mỗi thế hệ cư dân nhí nuôi dưỡng những ký ức đầu đời tươi đẹp ở nơi mình gọi là nhà.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://thanhnien.vn/rss/kinh-te/dia-oc.rss",
+        "publisher_host": "thanhnien.vn",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-435052b8ce6adcf8cd77",
+      "title": "Hơn 2.000 người tham gia lễ ra quân dự án Norton Park",
+      "url": "https://vnexpress.net/hon-2-000-nguoi-tham-gia-le-ra-quan-du-an-norton-park-5130441.html",
+      "category": "market",
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-10-09T09:00:00+00:00",
+      "source_id": "vnexpress-real-estate",
+      "region_ids": [
+        "hcmc"
+      ],
+      "project_ids": [],
+      "developer_ids": [
+        "gamuda-land"
+      ],
+      "tags": [],
+      "importance": 2,
+      "summary": "Gamuda Land giới thiệu Norton Park, dự án quy mô 7,9 ha với 1.286 sản phẩm tại phía Bắc TP HCM, trong sự kiện The Sync Show quy tụ hơn 2.000 chuyên viên kinh doanh.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://vnexpress.net/rss/bat-dong-san.rss",
+        "publisher_host": "vnexpress.net",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-2efdd93723ac82d9916e",
+      "title": "The Sync Show: Màn ra mắt của Norton Park thu hút 2.000 nhân viên kinh doanh",
+      "url": "https://dantri.com.vn/bat-dong-san/the-sync-show-man-ra-mat-cua-norton-park-thu-hut-2000-nhan-vien-kinh-doanh-20261009152512585.htm",
+      "category": "market",
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-10-09T09:00:00+00:00",
+      "source_id": "dantri-real-estate",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [
+        "gamuda-land"
+      ],
+      "tags": [
+        "supply"
+      ],
+      "importance": 2,
+      "summary": "(Dân trí) - 2.000 chuyên viên kinh doanh cùng hội tụ tại The Sync Show, nơi Gamuda Land lần đầu giới thiệu về Norton Park qua ngôn ngữ của âm thanh, ánh sáng và nghệ thuật đương đại.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://dantri.com.vn/rss/bat-dong-san.rss",
+        "publisher_host": "dantri.com.vn",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-8b82ee99aa6f3f23b2d4",
+      "title": "Loạt cổ phiếu bất động sản quay đầu tăng mạnh, dự báo lợi nhuận quý III",
+      "url": "https://dantri.com.vn/bat-dong-san/loat-co-phieu-bat-dong-san-quay-dau-tang-manh-du-bao-loi-nhuan-quy-iii-20261009142406309.htm",
+      "category": "market",
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-10-09T08:37:02+00:00",
+      "source_id": "dantri-real-estate",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [
+        "sales"
+      ],
+      "importance": 2,
+      "summary": "(Dân trí) - Nhiều cổ phiếu bất động sản giao dịch khởi sắc, điểm nhấn là NVL của Novaland tăng trần sau chuỗi giảm liên tiếp.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://dantri.com.vn/rss/bat-dong-san.rss",
+        "publisher_host": "dantri.com.vn",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-03ca3f9bc846c1aab0e0",
+      "title": "TT Genesis tích hợp thiết bị cao cấp vào tiêu chuẩn bàn giao",
+      "url": "https://vnexpress.net/tt-genesis-tich-hop-thiet-bi-cao-cap-vao-tieu-chuan-ban-giao-5130385.html",
+      "category": "market",
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-10-09T07:30:00+00:00",
+      "source_id": "vnexpress-real-estate",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "Danh mục bàn giao tại căn hộ TT Genesis gồm thiết bị bếp, máy lọc nước uống tại vòi, máy rửa chén, kính Low-E cùng cùng hệ thống Intercom nhận diện khuôn mặt, kết nối với điện thoại.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://vnexpress.net/rss/bat-dong-san.rss",
+        "publisher_host": "vnexpress.net",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-fcb86dade5e4d667759d",
+      "title": "Chung cư The Sun Avenue tăng phí giữ xe gần gấp đôi, cư dân phản ứng",
+      "url": "https://dantri.com.vn/bat-dong-san/chung-cu-the-sun-avenue-tang-phi-giu-xe-gan-gap-doi-cu-dan-phan-ung-20261009110210024.htm",
+      "category": "market",
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-10-09T07:17:26+00:00",
+      "source_id": "dantri-real-estate",
+      "region_ids": [
+        "hcmc"
+      ],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "(Dân trí) - Cư dân tại chung cư The Sun Avenue ở TPHCM phản ứng sau khi phí trông giữ xe máy tăng từ 64.800 lên 120.000 đồng/tháng, ô tô tăng từ 1,32 triệu lên 1,5 triệu đồng/tháng.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://dantri.com.vn/rss/bat-dong-san.rss",
+        "publisher_host": "dantri.com.vn",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-d836fb34333e553df478",
+      "title": "Diễn biến mới tại siêu dự án đường sắt Lào Cai - Hà Nội - Hải Phòng",
+      "url": "https://dantri.com.vn/bat-dong-san/dien-bien-moi-tai-sieu-du-an-duong-sat-lao-cai-ha-noi-hai-phong-20261009103945594.htm",
+      "category": "market",
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-10-09T06:42:09+00:00",
+      "source_id": "dantri-real-estate",
+      "region_ids": [
+        "ha-noi"
+      ],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "(Dân trí) - Dù nhu cầu vốn trung hạn giai đoạn 2026-2030 còn thiếu hơn 76.000 tỷ đồng, Bộ Xây dựng trước mắt chưa đề nghị bổ sung vốn cho dự án đường sắt Lào Cai - Hà Nội - Hải Phòng.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://dantri.com.vn/rss/bat-dong-san.rss",
+        "publisher_host": "dantri.com.vn",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-1f4c25371ff758fe8ee0",
+      "title": "TP.HCM cho công chứng điện tử hợp đồng thế chấp",
+      "url": "https://thanhnien.vn/tphcm-cho-cong-chung-dien-tu-hop-dong-the-chap-185261009105417534.htm",
+      "category": "market",
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-10-09T04:21:00+00:00",
+      "source_id": "thanhnien-real-estate",
+      "region_ids": [
+        "hcmc"
+      ],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "Văn phòng đăng ký đất đai TP.HCM cho biết đã phối hợp cùng Ngân hàng TMCP Quân đội (MBBank) triển khai công chứng điện tử và nộp hồ sơ trực tuyến toàn trình về tài sản bảo đảm trong quy trình đăng ký thế chấp, xóa thế chấp đối với bất động sản.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://thanhnien.vn/rss/kinh-te/dia-oc.rss",
+        "publisher_host": "thanhnien.vn",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-ece363cdc9660fa1d557",
+      "title": "Tuyên Quang muốn mời đầu tư cáp treo ở khu du lịch Mã Pì Lèng",
+      "url": "https://vnexpress.net/tuyen-quang-muon-moi-dau-tu-cap-treo-o-khu-du-lich-ma-pi-leng-5130195.html",
+      "category": "market",
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-10-09T03:00:00+00:00",
+      "source_id": "vnexpress-real-estate",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "Hệ thống cáp treo khu du lịch Mã Pì Lèng được tỉnh Tuyên Quang đưa vào danh mục dự án thu hút đầu tư ngoài ngân sách giai đoạn đến 2030.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://vnexpress.net/rss/bat-dong-san.rss",
+        "publisher_host": "vnexpress.net",
+        "publication_date_from_feed": true
+      }
+    },
     {
       "id": "article-market-rss-e4bc6fe1e246b54a63e5",
       "title": "Kết nối đa tầng tăng sức hút cho Hồng Hạc City",
@@ -47,6 +383,28 @@
         "method": "official-rss",
         "feed_url": "https://vnexpress.net/rss/bat-dong-san.rss",
         "publisher_host": "vnexpress.net",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-104c5773ff0c5ad9646a",
+      "title": "7 điều âm thầm thu hút nhện vào phòng tắm và cách xử lý",
+      "url": "https://dantri.com.vn/bat-dong-san/7-dieu-am-tham-thu-hut-nhen-vao-phong-tam-va-cach-xu-ly-20261008224407772.htm",
+      "category": "market",
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-10-08T23:28:22+00:00",
+      "source_id": "dantri-real-estate",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "(Dân trí) - Không gian ẩm ướt và bừa bộn vô tình biến phòng tắm thành nơi trú ngụ lý tưởng của loài nhện. Chỉ với vài thay đổi nhỏ khi dọn dẹp, bạn sẽ lấy lại không gian thư giãn sạch thoáng cho gia đình.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://dantri.com.vn/rss/bat-dong-san.rss",
+        "publisher_host": "dantri.com.vn",
         "publication_date_from_feed": true
       }
     },
@@ -2022,6 +2380,30 @@
       "summary": "Demo research note testing multiple related macro indicators with different frequencies."
     },
     {
+      "id": "article-market-rss-d7df9567e89352c22630",
+      "title": "Rào cản lớn nhất của người trẻ khi mua nhà có thực sự là giá?",
+      "url": "https://thanhnien.vn/rao-can-lon-nhat-cua-nguoi-tre-khi-mua-nha-co-thuc-su-la-gia-185260930154035095.htm",
+      "category": "market",
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-09-30T09:30:00+00:00",
+      "source_id": "thanhnien-real-estate",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [
+        "pricing"
+      ],
+      "importance": 2,
+      "summary": "Điều khiến nhiều người trẻ trì hoãn kế hoạch an cư không chỉ là giá căn hộ, mà còn là bài toán tài chính dài hạn và bài toán chất lượng sống sau khi chuyển về ở. Đây cũng là lý do thị trường đang xuất hiện những cách tiếp cận mới nhằm thu hẹp khoảng cách giữa mong muốn sở hữu và khả năng sở hữu thực",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://thanhnien.vn/rss/kinh-te/dia-oc.rss",
+        "publisher_host": "thanhnien.vn",
+        "publication_date_from_feed": true
+      }
+    },
+    {
       "id": "article-market-nam-long-discovered-5be78a5020a6ddb0",
       "title": "Nam Long cập nhật về thông báo kết luận thanh tra số 3451/TB-TTCP",
       "url": "https://www.namlongvn.com/tin-tuc/nam-long-cap-nhat-ve-thong-bao-ket-luan-thanh-tra-so-3451-tb-ttcp/",
@@ -2051,6 +2433,76 @@
       }
     },
     {
+      "id": "article-market-rss-567af11a19d61efc71f8",
+      "title": "The Westique Residences tung loạt chính sách thanh toán may đo cá nhân hóa",
+      "url": "https://thanhnien.vn/the-westique-residences-tung-loat-chinh-sach-thanh-toan-may-do-ca-nhan-hoa-185260930085959009.htm",
+      "category": "market",
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-09-30T02:00:00+00:00",
+      "source_id": "thanhnien-real-estate",
+      "region_ids": [
+        "hcmc"
+      ],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "Không có công thức chung nào cho việc sở hữu tài sản giá trị, khám phá ngay 4 giải pháp tài chính 'may đo' riêng biệt tại The Westique Residences để đầu tư đón đầu sóng khu tây TP.HCM theo cách phù hợp nhất.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://thanhnien.vn/rss/kinh-te/dia-oc.rss",
+        "publisher_host": "thanhnien.vn",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-26a99ab4a7eb960df5a0",
+      "title": "Giải bài toán sở hữu ngôi nhà đầu tiên cho giới trẻ",
+      "url": "https://thanhnien.vn/giai-bai-toan-so-huu-ngoi-nha-dau-tien-cho-gioi-tre-185260929183605157.htm",
+      "category": "market",
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-09-30T01:00:00+00:00",
+      "source_id": "thanhnien-real-estate",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "Thế hệ trẻ đang thay đổi cách lựa chọn nhà ở khi không chỉ quan tâm đến khả năng sở hữu tài sản, mà ngày càng chú trọng chất lượng sống, sức khỏe, sự thuận tiện và hơn hết là sự cân bằng tài chính trong dài hạn.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://thanhnien.vn/rss/kinh-te/dia-oc.rss",
+        "publisher_host": "thanhnien.vn",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-bc53b5e3f311c4e358b2",
+      "title": "Gỡ vướng cho tách thửa đất",
+      "url": "https://thanhnien.vn/go-vuong-cho-tach-thua-dat-185260929174901578.htm",
+      "category": "market",
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-09-29T23:08:00+00:00",
+      "source_id": "thanhnien-real-estate",
+      "region_ids": [
+        "hcmc"
+      ],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "Việc TP.HCM ra Quyết định số 67/2026 quy định về điều kiện tách, hợp thửa đất và diện tích tối thiểu được tách thửa trên địa bàn đã giúp người dân thực hiện quyền tách, hợp thửa đất để đáp ứng nhu cầu sử dụng đất của cá nhân, hộ gia đình. Tuy nhiên, sau hơn 3 tuần triển khai, quyết định này cũng bộc",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://thanhnien.vn/rss/kinh-te/dia-oc.rss",
+        "publisher_host": "thanhnien.vn",
+        "publication_date_from_feed": true
+      }
+    },
+    {
       "id": "article-macro-005",
       "title": "Illustrative bank-rate monitor records a higher 12-month deposit average",
       "url": "#",
@@ -2073,6 +2525,222 @@
       ],
       "importance": 3,
       "summary": "Demo rate commentary tied to monthly observations and source dates."
+    },
+    {
+      "id": "article-market-rss-8980e4407ae3df6e3e91",
+      "title": "Mới thực hiện được 3 tuần, quy định tách thửa đã bộc lộ bất cập",
+      "url": "https://thanhnien.vn/moi-thuc-hien-duoc-3-tuan-quy-dinh-tach-thua-da-boc-lo-bat-cap-185260928075021449.htm",
+      "category": "market",
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-09-28T01:09:00+00:00",
+      "source_id": "thanhnien-real-estate",
+      "region_ids": [
+        "hcmc"
+      ],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "HoREA đã có văn bản gửi Thường trực HĐND TP.HCM, Thường trực UBND TP.HCM, Sở Nông nghiệp - Môi trường... đề nghị tiếp tục hoàn thiện quy định về điều kiện tách, hợp thửa đất và diện tích tối thiểu được tách thửa trên địa bàn TP đối với thửa đất có đất ở và đất khác, trong đó có đất ở, đất vườn, ao, ",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://thanhnien.vn/rss/kinh-te/dia-oc.rss",
+        "publisher_host": "thanhnien.vn",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-439d67ffece2c05abb78",
+      "title": "Vạn Xuân Group đặt kế hoạch triển khai 20 dự án",
+      "url": "https://thanhnien.vn/van-xuan-group-dat-ke-hoach-trien-khai-20-du-an-185260927152326325.htm",
+      "category": "market",
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-09-27T09:23:00+00:00",
+      "source_id": "thanhnien-real-estate",
+      "region_ids": [
+        "hcmc"
+      ],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "Ngày 24.9, Vạn Xuân Group cho biết đã có buổi gặp mặt lãnh đạo của 79 sàn phân phối dự án với chủ đề \"Đồng hành vươn xa - Song hành bứt phá\". Tại sự kiện, doanh nghiệp chính thức công bố dự án Happy One Elite tại Thủ Đức cũ (TP.HCM). Đồng thời công bố kế hoạch triển khai 20 dự án trong 10 năm tới.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://thanhnien.vn/rss/kinh-te/dia-oc.rss",
+        "publisher_host": "thanhnien.vn",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-4792b735fd29fedfc845",
+      "title": "Phạt Công ty Lý Khương 900 triệu đồng vì bán sai phép 682 căn hộ",
+      "url": "https://thanhnien.vn/phat-cong-ty-ly-khuong-900-trieu-dong-vi-ban-sai-phep-682-can-ho-185260927141207599.htm",
+      "category": "market",
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-09-27T07:40:00+00:00",
+      "source_id": "thanhnien-real-estate",
+      "region_ids": [
+        "hcmc"
+      ],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "Phó chủ tịch UBND TP.HCM Hoàng Nguyên Dinh vừa ký quyết định xử phạt vi phạm hành chính đối với Công ty TNHH Sản xuất Thương mại Lý Khương (Công ty Lý Khương) 900 triệu đồng do vi phạm quy định trong hoạt động kinh doanh bất động sản.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://thanhnien.vn/rss/kinh-te/dia-oc.rss",
+        "publisher_host": "thanhnien.vn",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-a474a23956ab7d91c376",
+      "title": "Đề xuất nhà chưa có sổ hồng được chuyển nhượng",
+      "url": "https://thanhnien.vn/de-xuat-nha-chua-co-so-hong-duoc-chuyen-nhuong-185260926220335661.htm",
+      "category": "market",
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-09-26T23:24:00+00:00",
+      "source_id": "thanhnien-real-estate",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [
+        "legal"
+      ],
+      "importance": 2,
+      "summary": "Bộ Xây dựng đề xuất mở rộng nhóm hợp đồng kinh doanh bất động sản được chuyển nhượng, gồm nhà ở và công trình xây sẵn chưa có sổ hồng.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://thanhnien.vn/rss/kinh-te/dia-oc.rss",
+        "publisher_host": "thanhnien.vn",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-4571157deefeb87762eb",
+      "title": "Hàng trăm gia đình vui hội trung thu tại Phố Lồng Đèn phường Tam Hiệp",
+      "url": "https://thanhnien.vn/hang-tram-gia-dinh-vui-hoi-trung-thu-tai-pho-long-den-phuong-tam-hiep-185260926173719536.htm",
+      "category": "market",
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-09-26T11:20:00+00:00",
+      "source_id": "thanhnien-real-estate",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "Đường Phan Trung rực rỡ với Phố Lồng Đèn do Bcons Central Park tổ chức, mang đến không khí lễ hội náo nhiệt cho các gia đình có con nhỏ. Chuỗi hoạt động khép lại với Đêm Hội Trăng Rằm ngày 24.9 với nhiều tiếng cười cho các em nhỏ và gia đình.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://thanhnien.vn/rss/kinh-te/dia-oc.rss",
+        "publisher_host": "thanhnien.vn",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-fbd07f058412b2c19e4a",
+      "title": "4 lợi ích, 6 rủi ro khi đưa giao dịch đất nền vào luật để quản lý",
+      "url": "https://thanhnien.vn/4-loi-ich-6-rui-ro-khi-dua-giao-dich-dat-nen-vao-luat-de-quan-ly-185260926173015523.htm",
+      "category": "market",
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-09-26T11:16:00+00:00",
+      "source_id": "thanhnien-real-estate",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [
+        "sales"
+      ],
+      "importance": 2,
+      "summary": "Đưa hoạt động kinh doanh đất nền phân lô vào luật Kinh doanh bất động sản có thể giúp bảo vệ người mua, minh bạch thị trường và hạn chế kinh doanh \"núp bóng\". Tuy nhiên, theo luật sư Trương Anh Tú, Chủ tịch TAT Law Firm, trước khi mở rộng phạm vi điều chỉnh cần xác định đúng hoạt động nào thực sự ma",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://thanhnien.vn/rss/kinh-te/dia-oc.rss",
+        "publisher_host": "thanhnien.vn",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-fd951c957165caa9a8b4",
+      "title": "TP.HCM gỡ vướng tách thửa đất hỗn hợp",
+      "url": "https://thanhnien.vn/tphcm-go-vuong-tach-thua-dat-hon-hop-185260926153036751.htm",
+      "category": "market",
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-09-26T08:35:00+00:00",
+      "source_id": "thanhnien-real-estate",
+      "region_ids": [
+        "hcmc"
+      ],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "Sở Nông nghiệp và Môi trường TP.HCM vừa có văn bản hướng dẫn tháo gỡ cho đất hỗn hợp nằm xen kẽ trong khu dân cư hiện hữu.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://thanhnien.vn/rss/kinh-te/dia-oc.rss",
+        "publisher_host": "thanhnien.vn",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-31019d2f60021c47bf3b",
+      "title": "Giao dịch đất nền phân lô có nên đưa vào luật để quản lý?",
+      "url": "https://thanhnien.vn/giao-dich-dat-nen-phan-lo-co-nen-dua-vao-luat-de-quan-ly-185260925175341121.htm",
+      "category": "market",
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-09-25T23:13:00+00:00",
+      "source_id": "thanhnien-real-estate",
+      "region_ids": [
+        "hcmc"
+      ],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [
+        "sales"
+      ],
+      "importance": 2,
+      "summary": "Hiệp hội Bất động sản TP.HCM (HoREA) vừa đề xuất khi sửa luật Kinh doanh bất động sản cần đưa đất nền được hình thành từ hoạt động tách thửa, chuyển mục đích sử dụng đất vào luật để quản lý nhằm ngăn chặn \"đầu nậu\" phân lô bán nền, đồng thời bảo vệ tài sản cho người mua.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://thanhnien.vn/rss/kinh-te/dia-oc.rss",
+        "publisher_host": "thanhnien.vn",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-103f703969c44683c417",
+      "title": "TP.HCM tái cấu trúc để đón dòng vốn FDI",
+      "url": "https://thanhnien.vn/tphcm-tai-cau-truc-de-don-dong-von-fdi-185260925172206241.htm",
+      "category": "market",
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-09-25T10:33:00+00:00",
+      "source_id": "thanhnien-real-estate",
+      "region_ids": [
+        "hcmc"
+      ],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "Tại tọa đàm \"Bất động sản công nghiệp phía nam: Đón làn sóng FDI công nghệ cao và kiến tạo hệ sinh thái sản xuất mới\" do Báo Công Thương tổ chức ngày 25.9, ông Lê Văn Thinh, Phó Trưởng Ban Quản lý các Khu chế xuất và Công nghiệp TP.HCM nói rằng TP sẽ tổ chức lại không gian phát triển các khu công ng",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://thanhnien.vn/rss/kinh-te/dia-oc.rss",
+        "publisher_host": "thanhnien.vn",
+        "publication_date_from_feed": true
+      }
     },
     {
       "id": "article-market-nam-long-discovered-6e43c3e611254526",
