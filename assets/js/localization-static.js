@@ -12,6 +12,10 @@
       en: 'Market Intelligence · Vietnam Real Estate',
       vi: 'Thông tin Thị trường · Bất động sản Việt Nam'
     },
+    research: {
+      en: 'Research · Market Intelligence',
+      vi: 'Nghiên cứu · Market Intelligence'
+    },
     market: {
       en: 'Market · Market Intelligence',
       vi: 'Thị trường · Market Intelligence'
@@ -140,24 +144,30 @@
   const MAINTENANCE = [
     ['.page-kicker', 'Update Operations', 'Vận hành cập nhật'],
     ['.page-title', 'Data Status', 'Maintenance · Trạng thái dữ liệu'],
-    ['.page-description', 'Review freshness, update cadence and maintenance status across the integrated research datasets.', 'Theo dõi độ mới, tần suất cập nhật và trạng thái bảo trì của các bộ dữ liệu nghiên cứu tích hợp.'],
-    ['.demo-banner strong', 'Read-only maintenance dashboard.', 'Trạng thái dữ liệu · chỉ đọc.'],
-    ['.demo-banner span', 'Freshness is recalculated from the metadata of the currently deployed repository. This page does not fetch external sources, promote candidates or change production data.', 'Độ mới được tính từ thông tin của dữ liệu đang hiển thị. Trang này chỉ theo dõi tình trạng nguồn và lịch cập nhật, không thay đổi dữ liệu đã công bố.'],
+    ['.page-description', 'Review freshness, update cadence and maintenance status across the integrated research datasets.', 'Theo dõi độ mới, lịch cập nhật và tình trạng vận hành các bộ dữ liệu nghiên cứu.'],
+    ['.demo-banner strong', 'Read-only maintenance dashboard.', 'Bảng theo dõi dữ liệu · chỉ đọc.'],
+    ['.demo-banner span', 'Freshness is recalculated from the metadata of the currently deployed repository. This page does not fetch external sources, promote candidates or change production data.', 'Độ mới được tính từ metadata đang triển khai. Trang này không thu thập nguồn bên ngoài, duyệt dữ liệu ứng viên hoặc thay đổi dữ liệu đã công bố.'],
     ['#maintenance-summary-title', 'Update Health', 'Tình trạng cập nhật'],
     ['.home-block[aria-labelledby="maintenance-summary-title"] .eyebrow', 'Current state', 'Trạng thái hiện tại'],
+    ['#maintenance-operations-title', 'Module Operations', 'Vận hành các module'],
+    ['.section[aria-labelledby="maintenance-operations-title"] .eyebrow', 'Workflow + source state', 'Workflow và tình trạng nguồn'],
+    ['.section[aria-labelledby="maintenance-operations-title"] .home-block__note', 'Workflow health · access mode · backlog', 'Tình trạng workflow · khả năng truy cập · dữ liệu chờ xử lý'],
+    ['#market-source-health-title', 'Market source stability', 'Độ ổn định nguồn dữ liệu thị trường'],
+    ['.section[aria-labelledby="market-source-health-title"] .eyebrow', 'Market 4H · source monitoring', 'Thị trường 4H · giám sát nguồn'],
+    ['.section[aria-labelledby="market-source-health-title"] .home-block__note', 'Per-check monitoring · Sources and published data tracked separately', 'Theo lượt kiểm tra · Tách dữ liệu nguồn và dữ liệu công bố'],
     ['#maintenance-attention-title', 'Needs Attention', 'Cần chú ý'],
     ['.maintenance-attention .eyebrow', 'Maintenance queue', 'Danh sách cần rà soát'],
     ['#maintenance-datasets-title', 'Dataset Freshness', 'Độ mới dữ liệu'],
-    ['.section[aria-labelledby="maintenance-datasets-title"] .eyebrow', '10 tracked datasets', '10 bộ dữ liệu theo dõi'],
-    ['.maintenance-flow span:nth-child(1)', 'Repository data', 'Dữ liệu repository'],
-    ['.maintenance-flow span:nth-child(3)', 'Freshness check', 'Kiểm tra độ mới'],
-    ['.maintenance-flow span:nth-child(5)', 'Summary + artifact', 'Tổng hợp + artifact'],
+    ['.section[aria-labelledby="maintenance-datasets-title"] .eyebrow', 'Tracked datasets', 'Các bộ dữ liệu đang theo dõi'],
     ['#maintenance-rules-title', 'Update Rules', 'Nguyên tắc cập nhật'],
     ['.section[aria-labelledby="maintenance-rules-title"] .eyebrow', 'Guardrails', 'Nguyên tắc kiểm soát'],
-    ['#maintenance-check-title', 'Daily Freshness Check', 'Kiểm tra độ mới hằng ngày'],
+    ['#maintenance-check-title', 'Daily Freshness Check', 'Kiểm tra dữ liệu hằng ngày'],
     ['.section[aria-labelledby="maintenance-check-title"] .eyebrow', 'Scheduled check', 'Kiểm tra theo lịch'],
-    ['.maintenance-workflow-note > strong', '07:45 ICT · Daily', '07:45 ICT · Hằng ngày'],
-    ['.maintenance-workflow-note p', 'GitHub Actions rebuilds a read-only status snapshot and keeps the artifact for 14 days. It does not fetch external sources or write production data.', 'GitHub Actions tạo lại snapshot trạng thái chỉ đọc và lưu artifact trong 14 ngày. Workflow không gọi nguồn bên ngoài và không ghi dữ liệu production.']
+    ['.maintenance-workflow-note > strong', '07:45 ICT freshness · 08:05 ICT operations health', '07:45 ICT kiểm tra độ mới · 08:05 ICT kiểm tra vận hành'],
+    ['.maintenance-workflow-note p', 'GitHub Actions recalculates repository freshness first, then builds the unified workflow/source/backlog health snapshot. The health layer never promotes candidates; production collectors keep their own controlled gates.', 'GitHub Actions kiểm tra độ mới trong repository trước, sau đó tạo snapshot chung về workflow, nguồn và dữ liệu chờ xử lý. Bước theo dõi không tự duyệt dữ liệu ứng viên; các bộ thu thập production vẫn sử dụng quy tắc kiểm soát riêng.'],
+    ['.maintenance-flow span:nth-child(1)', 'Repository + Actions', 'Repository + Actions'],
+    ['.maintenance-flow span:nth-child(3)', 'Unified health', 'Tình trạng tổng hợp'],
+    ['.maintenance-flow span:nth-child(5)', 'Website + snapshot', 'Website + snapshot']
   ];
 
   const PAGE_TRANSLATIONS = {
