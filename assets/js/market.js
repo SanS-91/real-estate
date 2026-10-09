@@ -171,14 +171,19 @@
     });
     // Mobile navigation is horizontally scrollable: keep the selected tab visible
     // without scrolling the document itself.
-    const active = tabs?.querySelector('.tab-link.is-active');
-    if (tabs && active && tabs.scrollWidth > tabs.clientWidth) {
+    if (!tabs) return;
+    const keepActiveVisible = () => {
+      const active = tabs.querySelector('.tab-link.is-active');
+      if (!active || tabs.scrollWidth <= tabs.clientWidth) return;
       const area = tabs.getBoundingClientRect();
       const box = active.getBoundingClientRect();
       if (box.left < area.left + 8 || box.right > area.right - 8) {
         tabs.scrollLeft += (box.left - area.left) - (area.width - box.width) / 2;
       }
-    }
+    };
+    // Translation and font loading can change tab widths after the initial render.
+    requestAnimationFrame(keepActiveVisible);
+    setTimeout(keepActiveVisible, 160);
   }
 
   function option(label, value, current) {
