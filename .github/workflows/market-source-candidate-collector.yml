@@ -4,6 +4,7 @@ on:
   pull_request:
     paths:
       - 'scripts/market_*.py'
+      - 'tests/test_market_quarterly_source_period.py'
       - 'scripts/test_market_*.py'
       - 'config/market-automation-targets.json'
       - '.github/workflows/market-source-candidate-collector.yml'
@@ -38,7 +39,9 @@ jobs:
       - name: Install dependencies
         run: pip install -r requirements.txt
       - name: Run source-period unit tests
-        run: python -m unittest discover -s scripts -p 'test_market_*.py'
+        run: |
+          python -m unittest discover -s scripts -p 'test_market_*.py'
+          python -m unittest discover -s tests -p 'test_market_quarterly_source_period.py' -v
       - name: Collect configured market-source candidates
         run: python scripts/market_source_candidate_collector.py
       - name: Candidate summary
