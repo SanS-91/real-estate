@@ -6,7 +6,7 @@ on:
     - cron: '20 3 * * 1'
 
 permissions:
-  contents: read
+  contents: write
 
 jobs:
   collect:
@@ -14,6 +14,14 @@ jobs:
     timeout-minutes: 12
     steps:
       - uses: actions/checkout@v7
+        with:
+          fetch-depth: 0
+      - uses: actions/cache@v6
+        with:
+          path: data/state/registry-watch-cache.json
+          key: registry-watch-legal-${{ github.ref_name }}-${{ github.run_id }}
+          restore-keys: |
+            registry-watch-legal-${{ github.ref_name }}-
       - uses: actions/setup-python@v7
         with:
           python-version: '3.12'
@@ -47,3 +55,28 @@ jobs:
             data/candidate/legal/legal-candidate-report.json
             data/candidate/registry/watch-report.json
           retention-days: 14
+      - name: Build registry source coverage snapshot
+        if: always()
+        env:
+          CURRENT_JOB_STATE: ${{ job.status }}
+        run: |
+          python scripts/build_registry_candidate_health.py \
+            --module legal \
+            --job-status "$CURRENT_JOB_STATE" \
+            --output data/state/legal-candidate-health.json
+      - name: Publish source coverage status (never candidates)
+        if: always() && github.ref == 'refs/heads/main'
+        run: |
+          set -e
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add data/state/legal-candidate-health.json
+          if git diff --cached --quiet; then exit 0; fi
+          git commit -m 'ops(legal): refresh official source candidate health'
+          git restore --worktree -- .
+          for attempt in 1 2 3 4; do
+            git fetch origin main
+            if git rebase origin/main && git push origin HEAD:main; then exit 0; fi
+            sleep 3
+          done
+          exit 1
