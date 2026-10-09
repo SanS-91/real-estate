@@ -114,7 +114,7 @@ def main():
         problems.append("record_count mismatch")
     if problems:
         raise SystemExit("\n".join(problems))
-    print(f"Scope evidence PASS: {len(payload[\'data\'])} category-specific publisher references, no implied project-level ASP.")
+    print("Scope evidence PASS: %d publisher references, source scopes isolated." % len(payload["data"]))
 
 if __name__=="__main__":
     main()
