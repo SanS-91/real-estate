@@ -296,16 +296,18 @@
       note: 'Source access is not a new verified observation. Project asking prices and market-wide supply/demand remain separate.'
     };
     try {
-      const [reliabilityResult, secondaryResult, quarterlyResult, portalResult] = await Promise.allSettled([
+      const [reliabilityResult, secondaryResult, quarterlyResult, portalResult, reverResult] = await Promise.allSettled([
         fetchJSON('data/state/market-source-reliability.json'),
         fetchJSON('data/state/market-stable-listing-health.json'),
         fetchJSON('data/state/market-cushman-quarterly-verification.json'),
-        fetchJSON('data/state/listing-source-coverage.json')
+        fetchJSON('data/state/listing-source-coverage.json'),
+        fetchJSON('data/state/market-rever-source-health.json')
       ]);
       const reliability = reliabilityResult.status === 'fulfilled' ? reliabilityResult.value : {};
       const secondary = secondaryResult.status === 'fulfilled' ? secondaryResult.value : {};
       const quarterly = quarterlyResult.status === 'fulfilled' ? quarterlyResult.value : {};
       const portal = portalResult.status === 'fulfilled' ? portalResult.value : {};
+      const rever = reverResult.status === 'fulfilled' ? reverResult.value : {};
       const targets = (reliability.targets || []).filter(row => row.mode === 'monthly-price-candidate');
       const rows = targets.map(row => {
         const id = row.target_id || '';
@@ -333,6 +335,20 @@
           : portal.source_access === 'healthy' ? labels.partial : labels.unknown;
         rows.push(['Batdongsan', vi ? 'Snapshot giá chào bán' : 'Asking-price snapshots',
           detail, String(portal.source_checks || 0)]);
+      }
+      if (rever.targets_checked) {
+        const fresh = Number(rever.source_updates_within_90_days || 0);
+        const verified = Number(rever.published_current_individual_listings || 0);
+        const latest = (rever.projects || []).map(item => item.latest_publisher_listing_update_date)
+          .filter(Boolean).sort().at(-1);
+        const status = vi
+          ? `${fresh} tin có ngày cập nhật ≤90 ngày · ${verified} tin đã đủ xác minh`
+          : `${fresh} publisher-dated within 90 days · ${verified} verified live listings`;
+        rows.push(['Rever',
+          vi ? `Căn hộ theo từng tin · ${rever.targets_checked} dự án`
+             : `Individual apartments · ${rever.targets_checked} projects`,
+          status + (latest ? ` · ${vi ? 'Mới nhất' : 'Latest'} ${latest}` : ''),
+          String(rever.source_runs_seen || 0)]);
       }
       if (secondary.categories_checked) {
         const blocked = (secondary.status_counts || {})['access-blocked'] || 0;
