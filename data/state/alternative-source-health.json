@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-10-09T06:53:28.439676+00:00",
+  "generated_at": "2026-10-09T06:57:23.978997+00:00",
   "targets_checked": 6,
   "candidate_count": 0,
   "queue_backlog": 1,
@@ -25,6 +25,36 @@
         "publisher_project_header": true,
         "publisher_periods": [
           "2026-10"
+        ],
+        "heading_block_count": 3,
+        "heading_block_diagnostics": [
+          {
+            "period": "2026-10",
+            "header_block_characters": 185,
+            "price_section_found": false,
+            "price_section_offset": null,
+            "modal_in_section": false,
+            "range_in_section": false,
+            "price_context_marker": false
+          },
+          {
+            "period": "2026-10",
+            "header_block_characters": 299,
+            "price_section_found": false,
+            "price_section_offset": null,
+            "modal_in_section": false,
+            "range_in_section": false,
+            "price_context_marker": true
+          },
+          {
+            "period": "2026-10",
+            "header_block_characters": 459,
+            "price_section_found": false,
+            "price_section_offset": null,
+            "modal_in_section": false,
+            "range_in_section": false,
+            "price_context_marker": false
+          }
         ],
         "modal_price_section": true,
         "asking_price_number": true,
@@ -76,6 +106,36 @@
         "publisher_periods": [
           "2026-10"
         ],
+        "heading_block_count": 3,
+        "heading_block_diagnostics": [
+          {
+            "period": "2026-10",
+            "header_block_characters": 165,
+            "price_section_found": false,
+            "price_section_offset": null,
+            "modal_in_section": false,
+            "range_in_section": false,
+            "price_context_marker": false
+          },
+          {
+            "period": "2026-10",
+            "header_block_characters": 363,
+            "price_section_found": false,
+            "price_section_offset": null,
+            "modal_in_section": false,
+            "range_in_section": false,
+            "price_context_marker": true
+          },
+          {
+            "period": "2026-10",
+            "header_block_characters": 443,
+            "price_section_found": false,
+            "price_section_offset": null,
+            "modal_in_section": false,
+            "range_in_section": false,
+            "price_context_marker": false
+          }
+        ],
         "modal_price_section": true,
         "asking_price_number": true,
         "asking_range_number": true,
@@ -94,6 +154,8 @@
       "parser_diagnostics": {
         "publisher_project_header": false,
         "publisher_periods": [],
+        "heading_block_count": 0,
+        "heading_block_diagnostics": [],
         "modal_price_section": true,
         "asking_price_number": true,
         "asking_range_number": true,
