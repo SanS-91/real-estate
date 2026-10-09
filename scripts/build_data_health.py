@@ -1,7 +1,9 @@
 #!/usr/bin/env python3
 from __future__ import annotations
 import argparse, json, os
-from datetime import datetime, timezone
+from datetime import datetime, timezone, date, timedelta
+from zoneinfo import ZoneInfo
+from urllib.parse import urlparse
 from pathlib import Path
 import requests
 
@@ -30,11 +32,72 @@ def parse_dt(v):
 
 def now_iso(): return datetime.now(timezone.utc).isoformat()
 
+def business_days_elapsed(start: date, end: date) -> int:
+    """Count working days *after* the source date, excluding weekends.
+
+    Public-holiday gaps are not guessed; this is an operational prompt for
+    review, never a claim that new market data must exist.
+    """
+    if start > end:
+        return 0
+    total = 0
+    cursor = start
+    while cursor < end:
+        cursor += timedelta(days=1)
+        if cursor.weekday() < 5:
+            total += 1
+    return total
+
+
+def source_observation(entry, rows, as_of):
+    """Separate publisher observation staleness from repository write age."""
+    selected = rows
+    if entry.get("id") == "macro-daily-markets":
+        valid = [r for r in selected
+                 if r.get("period_type") == "day"
+                 and r.get("period") and r.get("observation_status") == "final"]
+        dates = []
+        for row in valid:
+            try:
+                dates.append(date.fromisoformat(row["data_date"] or row["period"]))
+            except (ValueError, TypeError):
+                continue
+        if not dates:
+            return {"latest_source_period": None, "source_business_day_lag": None,
+                    "source_freshness": "unknown"}
+        last = max(dates)
+        today = as_of.astimezone(ZoneInfo("Asia/Ho_Chi_Minh")).date()
+        lag = business_days_elapsed(last, today)
+        return {"latest_source_period": last.isoformat(),
+                "source_business_day_lag": lag,
+                "source_freshness": "late" if lag > 1 else "within-window"}
+    periods = sorted([str(r["period"]) for r in selected if r.get("period")])
+    return {"latest_source_period": periods[-1] if periods else None,
+            "source_business_day_lag": None, "source_freshness": "release-based"}
+
+
+def trusted_run_url(run):
+    url = run.get("html_url")
+    if not isinstance(url, str):
+        return None
+    parsed = urlparse(url)
+    chunks = parsed.path.strip("/").split("/")
+    if (parsed.scheme == "https" and parsed.netloc == "github.com"
+        and len(chunks) == 5 and chunks[2:4] == ["actions", "runs"]
+        and chunks[4].isdigit() and not parsed.query and not parsed.fragment):
+        return url
+    return None
+
+
 def prod_info(entry,matrix_by_id,as_of):
     m=matrix_by_id.get(entry["id"],{})
     path=entry.get("production_path") or m.get("data_path")
     payload=load(ROOT/path,{"data":[]}) if path else {"data":[]}
     rows=payload.get("data",[]) if isinstance(payload,dict) else []
+    if not isinstance(rows,list): rows=[]
+    indicator_ids=set(m.get("indicator_ids") or [])
+    if indicator_ids:
+        rows=[r for r in rows if r.get("indicator_id") in indicator_ids]
     stamp=payload.get("generated_at") or payload.get("updated_at")
     dt=parse_dt(stamp)
     stale=entry.get("stale_after_hours",m.get("stale_after_hours"))
@@ -44,7 +107,7 @@ def prod_info(entry,matrix_by_id,as_of):
     elif dt and age<=stale: freshness="fresh"
     elif dt and age<=stale*1.25: freshness="due"
     elif dt: freshness="stale"
-    return {"production_path":path,"record_count":len(rows),"last_production_at":stamp,"age_hours":age,"stale_after_hours":stale,"freshness":freshness}
+    return {"production_path":path,"record_count":len(rows),"last_production_at":stamp,"age_hours":age,"stale_after_hours":stale,"freshness":freshness,**source_observation(entry,rows,as_of)}
 
 def market_obs_backlog(candidate_path):
     cand=load(ROOT/candidate_path,{"data":[]}).get("data",[])
@@ -96,23 +159,35 @@ def load_runs(args, ops):
     return runs
 
 def workflow_info(name,runs):
-    matches=[x for x in runs if x.get("name")==name]
+    # A failed PR test must not be reported as a failed production collector.
+    matches=[x for x in runs if x.get("name")==name and
+             x.get("head_branch") in ("main",None)]
     matches.sort(key=lambda x:x.get("created_at") or "",reverse=True)
     latest=matches[0] if matches else None
     success=next((x for x in matches if x.get("conclusion")=="success"),None)
     if not latest:
-        return {"workflow_status":"unknown","last_workflow_run_at":None,"last_successful_run_at":None}
+        return {"workflow_status":"unknown","last_workflow_run_at":None,
+                "last_successful_run_at":None,"last_workflow_run_url":None,
+                "last_workflow_conclusion":None,"recent_attempts":[]}
     if latest.get("status")!="completed": status="running"
     elif latest.get("conclusion")=="success": status="healthy"
     else: status="degraded"
+    recent=[{
+        "status":r.get("status"),"conclusion":r.get("conclusion"),
+        "at":r.get("updated_at") or r.get("created_at"),
+        "url":trusted_run_url(r)
+    } for r in matches[:3]]
     return {
       "workflow_status":status,
       "last_workflow_run_at":latest.get("updated_at") or latest.get("created_at"),
-      "last_successful_run_at":(success or {}).get("updated_at") or (success or {}).get("created_at")
+      "last_successful_run_at":(success or {}).get("updated_at") or (success or {}).get("created_at"),
+      "last_workflow_run_url":trusted_run_url(latest),
+      "last_workflow_conclusion":latest.get("conclusion"),
+      "recent_attempts":recent
     }
 
 def row_status(prod,cand,wf):
-    if prod["freshness"]=="stale": return "stale"
+    if prod["freshness"]=="stale" or prod["source_freshness"]=="late": return "stale"
     if wf["workflow_status"]=="degraded": return "degraded"
     if wf["workflow_status"]=="running": return "running"
     if (cand.get("candidate_backlog") or 0)>0 or (cand.get("candidate_conflicts") or 0)>0: return "review"
