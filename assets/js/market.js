@@ -86,6 +86,16 @@
     return row?.asking_price_change_1y_pct == null ? '—' : Formatters.number(row.asking_price_change_1y_pct * 100,{min:1,max:1}) + '%';
   }
 
+  function listingTrendHTML(row) {
+    const value = row?.asking_price_change_1y_pct;
+    if (value == null || !Number.isFinite(Number(value))) return '<span class="market-trend market-trend--neutral">—</span>';
+    const amount = Number(value);
+    const direction = amount > 0 ? 'up' : amount < 0 ? 'down' : 'neutral';
+    const arrow = amount > 0 ? '↑' : amount < 0 ? '↓' : '→';
+    const prefix = amount > 0 ? '+' : '';
+    return `<span class="market-trend market-trend--${direction}" title="Source-reported 1Y asking-price change; not computed from local snapshots">${arrow} ${prefix}${esc(listingTrendLabel(row))}</span>`;
+  }
+
   function listingRangeChartData(records = data.projects) {
     const rows = listingPriceRows(records);
     return {
@@ -491,8 +501,8 @@
           <td data-label-vi="Trạng thái" data-label-en="Status">${Components.statusBadge(project.status)}</td>
           <td class="numeric" data-label-vi="Quy mô căn" data-label-en="Units">${Number.isFinite(project.planned_units) ? esc(formatCompact(project.planned_units)) : '<span class="table-muted">Disclosed qualitatively</span>'}</td>
           <td class="numeric" data-label-vi="ASP xác minh" data-label-en="Verified ASP">${esc(formatAsp(obs?.average_asp))}<span class="table-subtext">${esc(obs?.period || '')}</span></td>
-          <td class="numeric market-listing-cell" data-label-vi="Khoảng giá chào" data-label-en="Asking range">${esc(formatListingRange(listing))}<span class="table-subtext">${listing?.coverage_status === 'partial' ? 'Partial snapshot' : (listing?.observation_date || '')}</span></td>
-          <td class="numeric market-trend-cell" data-label-vi="Biến động 1 năm" data-label-en="1Y trend">${esc(listingTrendLabel(listing))}</td>
+          <td class="numeric market-listing-cell" data-label-vi="Khoảng giá chào" data-label-en="Asking range"><strong class="market-asking-range">${esc(formatListingRange(listing))}</strong><span class="table-subtext">${listing?.coverage_status === 'partial' ? 'Partial snapshot' : (listing?.observation_date || '')}</span></td>
+          <td class="numeric market-trend-cell" data-label-vi="Biến động 1 năm" data-label-en="1Y trend">${listingTrendHTML(listing)}</td>
           <td class="numeric" data-label-vi="Hấp thụ" data-label-en="Absorption">${esc(formatPercent(obs?.absorption_rate))}</td>
         </tr>`;
     }).join('');
@@ -523,8 +533,8 @@
         </section>
       </div>
       <section class="section">
-        <div class="section-header"><div><span class="eyebrow">Tracked projects</span><h2 class="section-title">Key Projects</h2></div><a class="text-link" href="market.html?view=projects">Open database</a></div>
-        <div class="section-body section-body--table">${projectTable(data.projects, 6)}</div>
+        <div class="section-header"><div><span class="eyebrow">Tracked projects</span><h2 class="section-title">Key Projects · ${Math.min(data.projects.length,8)}/${data.projects.length}</h2></div><a class="text-link" href="market.html?view=projects">View all ${data.projects.length} projects</a></div>
+        <div class="section-body section-body--table">${projectTable(data.projects, 8)}</div>
       </section>
       <section class="section">
         <div class="section-header"><div><span class="eyebrow">Project pricing</span><h2 class="section-title">Pricing Snapshot</h2></div><div class="section-header__actions">${priceLayerControls()}<a class="text-link" href="market.html?view=pricing">Open Pricing</a></div></div>
