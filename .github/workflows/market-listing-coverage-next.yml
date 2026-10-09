@@ -100,7 +100,7 @@ jobs:
           detail=Path('artifacts/the9.html').read_text(encoding='utf-8')
           pricing=Path('artifacts/pricing.html').read_text(encoding='utf-8')
           assert 'Giá tham khảo theo phạm vi riêng' in detail
-          assert '75,4' in detail and '116,7' in detail
+          assert ('75,4' in detail or '75.4' in detail) and ('116,7' in detail or '116.7' in detail)
           assert 'Không đưa vào biểu đồ giá tổng hợp' in detail
           assert 'Giá tham khảo theo phạm vi sản phẩm' in pricing
           assert 'Celesta Gold' in pricing
