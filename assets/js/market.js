@@ -210,12 +210,15 @@
       const unit = row.listed_area_sqm ?
         `<p>Diện tích tin đăng: ${esc(String(row.listed_area_sqm))} m²${row.price_area_basis === 'land-area-reported-by-publisher' ? ' đất' : ''}.</p>` : '';
       const unitListing = row.listing_id ?
-        '<p>Giá rao theo căn ' + esc(row.listing_id) + '; không đại diện giá bình quân dự án.</p>' : '';
+        '<p>Giá rao theo căn ' + esc(row.listing_id) + '; không đại diện giá bình quân dự án.</p>' +
+        (row.source_expiration_date ? '<p>Hạn đăng theo nguồn: <strong>' + esc(formatPeriod(row.source_expiration_date)) + '</strong>. Ngày bắt đầu đăng không phải ngày cập nhật giá.</p>' : '') +
+        (row.unit_price_basis === 'derived-from-advertised-total-and-area' ?
+          '<p>Đơn giá/m² được tính từ tổng giá rao và diện tích sử dụng của chính tin này, không phải ASP do nguồn thống kê.</p>' : '') : '';
       const access = row.source_id === 'cafeland-listings' ?
         '<p class="market-evidence-warning">CafeLand đang chặn truy cập tự động (HTTP 403); chưa thể tự cập nhật giá mới.</p>' : '';
       const historyNote = category === 'historical' ?
         '<span class="market-evidence-archived">Dữ liệu lịch sử</span>' : '';
-      const sourceVerifiedNote = row.review_status === 'automated-source-verified' ?
+      const sourceVerifiedNote = (row.review_status === 'automated-source-verified' || row.review_status === 'automated-two-hosted-checks') ?
         '<span class="market-evidence-archived">Xác minh tự động qua 2 lượt nguồn</span>' : '';
       return `<details class="market-evidence-row">
         <summary class="market-evidence-row__summary">
