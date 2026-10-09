@@ -176,7 +176,7 @@ def main():
     baselines=probe.load(BASELINES)
     queue=probe.load(QUEUE)
     approvals=probe.load(APPROVALS)
-    rechecks=probe.load(VERIFICATION) if VERIFICATION.exists() else {"data":[]}
+    rechecks=probe.load(VERIFICATION) if VERIFICATION.exists() else {"schema_version":1,"record_count":0,"data":[]}
     if any(x.get("record_count")!=len(x.get("data",[])) for x in (history,baselines,queue,approvals,rechecks)):
         raise SystemExit("Count mismatch in subproject history/recheck/approval contracts")
     ready,decisions,problems=evaluate(history["data"],baselines["data"],queue["data"],rechecks["data"],approvals["data"],date.fromisoformat(args.today))
