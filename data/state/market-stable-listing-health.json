@@ -1,0 +1,35 @@
+{
+  "schema_version": 1,
+  "generated_at": "2026-10-09T07:18:56.611264+00:00",
+  "source_id": "nhatot-vn",
+  "categories_checked": 3,
+  "unique_listings_checked": 0,
+  "new_listing_candidates": 0,
+  "status_counts": {
+    "access-blocked": 3
+  },
+  "categories": [
+    {
+      "category_id": "nhatot-thu-duc-apartment",
+      "index_status": "access-blocked",
+      "discovered_listing_count": 0,
+      "listing_checks": 0,
+      "qualified_candidates": 0
+    },
+    {
+      "category_id": "nhatot-binh-tan-apartment",
+      "index_status": "access-blocked",
+      "discovered_listing_count": 0,
+      "listing_checks": 0,
+      "qualified_candidates": 0
+    },
+    {
+      "category_id": "nhatot-tan-phu-apartment",
+      "index_status": "access-blocked",
+      "discovered_listing_count": 0,
+      "listing_checks": 0,
+      "qualified_candidates": 0
+    }
+  ],
+  "production_changed": false
+}

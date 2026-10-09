@@ -1,0 +1,9 @@
+{
+  "schema_version": 1,
+  "capture_mode": "scheduled-public-listing-discovery",
+  "candidate_only": true,
+  "auto_publish": false,
+  "record_count": 0,
+  "data": [],
+  "note": "Never compute parent project averages from these listings automatically."
+}
