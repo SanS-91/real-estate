@@ -102,7 +102,7 @@ def validate_capture(item, prior, today):
     problems = []
     if not prior or not source_url_matches(item.get("source_url", ""), prior.get("source_url", "")):
         problems.append("source-link-does-not-match-project-mapping")
-    if item.get("asset_type") != "apartment" or (prior and item.get("asset_type") != prior.get("asset_type")):
+    if not prior or item.get("asset_type") != prior.get("asset_type"):
         problems.append("unsupported-or-changed-asset-type")
     try:
         reviewed = date.fromisoformat(item.get("observation_date") or "")
@@ -224,9 +224,10 @@ def evaluate(captures, production, today):
 def main():
     parser = argparse.ArgumentParser()
     parser.add_argument("--today", default=None, help="Override clock for reproducible tests, YYYY-MM-DD")
+    parser.add_argument("--config", default=str(CONFIG), help="Reviewed publisher-evidence batch JSON")
     args = parser.parse_args()
     today = date.fromisoformat(args.today) if args.today else datetime.now(timezone.utc).date()
-    cfg = read(CONFIG)
+    cfg = read(Path(args.config))
     production = read(PRODUCTION)
     expected_projects = {p["id"] for p in read(PROJECTS)["data"]}
     captures = cfg["records"]
