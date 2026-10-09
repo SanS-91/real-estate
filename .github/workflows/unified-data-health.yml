@@ -63,4 +63,16 @@ jobs:
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git add data/state/data-health.json
           git commit -m "ops: refresh unified data health"
-          git push
+          # Other source collectors may have appended reviewed Market data while
+          # this health snapshot was running. Rebase the single health commit.
+          git restore --worktree -- .
+          for attempt in 1 2 3; do
+            git fetch origin main
+            git rebase origin/main
+            if git push origin HEAD:main; then
+              exit 0
+            fi
+            sleep $((attempt * 2))
+          done
+          echo "Failed to publish health after concurrent updates."
+          exit 1
