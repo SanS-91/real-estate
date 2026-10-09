@@ -474,6 +474,54 @@
     }
   }
 
+  async function renderOfficialRegistryWatch() {
+    const node = document.querySelector('[data-official-registry-watch]');
+    if (!node) return;
+    const vi = language() !== 'en';
+    const names = {legal:vi?'Pháp lý':'Legal',infrastructure:vi?'Hạ tầng':'Infrastructure'};
+    const links = {
+      legal:'https://github.com/SanS-91/real-estate/actions/workflows/legal-candidate-collector.yml',
+      infrastructure:'https://github.com/SanS-91/real-estate/actions/workflows/infrastructure-candidate-collector.yml'
+    };
+    const statuses = vi ? {
+      incomplete:'Lượt chạy chưa hoàn tất', 'source-unavailable':'Nguồn không truy cập được',
+      'source-degraded':'Một phần nguồn bị lỗi','baseline-initialized':'Đã thiết lập mốc đối chiếu',
+      'candidates-await-review':'Có đề xuất cần xem xét','checked-no-new-approved-data':'Đã kiểm tra · chưa có dữ liệu mới được duyệt'
+    } : {
+      incomplete:'Collector run incomplete','source-unavailable':'Sources unavailable',
+      'source-degraded':'Some source checks failed','baseline-initialized':'Comparison baseline initialized',
+      'candidates-await-review':'Candidates require review','checked-no-new-approved-data':'Checked · no new approved data'
+    };
+    const rows = await Promise.allSettled([
+      fetchJSON('data/state/legal-candidate-health.json'),
+      fetchJSON('data/state/infrastructure-candidate-health.json')
+    ]);
+    node.innerHTML = ['legal','infrastructure'].map((module,i) => {
+      const data = rows[i].status === 'fulfilled' ? rows[i].value : null;
+      if (!data || data.module !== module || data.candidate_only !== true) {
+        return `<article class="maintenance-operation-card"><h3>${esc(names[module])}</h3>
+          <p class="muted-text">${esc(vi ? 'Chưa có báo cáo từ lượt collector production. Đang chờ lịch tự động đầu tiên.' :
+            'No production collector snapshot yet; waiting for the first scheduled check.')}</p>
+          <a class="text-link" target="_blank" rel="noopener noreferrer" href="${links[module]}">GitHub Actions</a></article>`;
+      }
+      const state = statuses[data.status] || data.status;
+      const newLinks = data.new_links_since_baseline == null ? '—' : String(data.new_links_since_baseline);
+      return `<article class="maintenance-operation-card">
+        <div class="data-health-card__top"><h3>${esc(names[module])}</h3><span class="data-health-status">${esc(state)}</span></div>
+        <dl>
+          <div><dt>${vi?'Nguồn đọc được':'Reachable sources'}</dt><dd>${esc(data.source_targets_reachable)}/${esc(data.source_targets_checked)}</dd></div>
+          <div><dt>${vi?'Link mới':'New links'}</dt><dd>${esc(newLinks)}</dd></div>
+          <div><dt>${vi?'Candidate chờ duyệt trong lượt':'Candidates this run'}</dt><dd>${data.candidates_awaiting_review_in_this_run == null ? '—' : esc(data.candidates_awaiting_review_in_this_run)}</dd></div>
+          <div><dt>${vi?'Đã có trong registry':'Registry items'}</dt><dd>${esc(data.canonical_record_count)}</dd></div>
+        </dl>
+        <div class="maintenance-ops-detail"><small>${esc(vi?'Lần kiểm tra':'Last check')}: ${esc(formatDateTime(data.generated_at))}</small>
+          <small>${esc(vi?'Tin chưa duyệt không tự chuyển thành dữ liệu chính thức.' :
+             'Unreviewed candidates are never auto-published as official records.')}</small>
+          <a href="${links[module]}" rel="noopener noreferrer" target="_blank">${vi?'Xem workflow':'Open workflow'}</a>
+        </div></article>`;
+    }).join('');
+  }
+
   function renderRules() {
     const c = copy();
     document.querySelector('[data-maintenance-rules]').innerHTML = `<div class="maintenance-rules">${c.rules.map(([title, text]) => `<div class="maintenance-rule"><strong>${esc(title)}</strong><span>${esc(text)}</span></div>`).join('')}</div>`;
@@ -510,6 +558,7 @@
       await renderOperations();
       await renderMarketSourceHealth();
       await renderActiveListingCoverage();
+      await renderOfficialRegistryWatch();
     } catch (error) {
       renderError(error);
     }
@@ -519,6 +568,7 @@
       renderOperations();
       renderMarketSourceHealth();
       renderActiveListingCoverage();
+      renderOfficialRegistryWatch();
     });
   }
 
