@@ -67,6 +67,7 @@
     getListingObservations: () => loadJSON('market/listing-observations.json'),
     getListingScopeEvidence: () => loadJSON('market/listing-scope-evidence.json'),
     getAlternativePriceEvidence: () => loadJSON('market/alternative-price-evidence.json'),
+    getSecondaryListingEvidence: () => loadJSON('market/secondary-listing-evidence.json'),
     getListingSourceCoverage: () => loadDirectJSON('./data/state/listing-source-coverage.json', 'listing source coverage'),
     getListingComparables: () => loadJSON('market/listing-comparables.json'),
     getLegalTopics: () => loadJSON('legal/topics.json'),
