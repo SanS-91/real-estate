@@ -1,0 +1,17 @@
+{
+  "schema_version": 1,
+  "source_id": "cushman-wakefield-vietnam-market",
+  "source_url": "https://www.cushmanwakefield.com/en/vietnam/insights/ho-chi-minh-city-marketbeat/residential-marketbeat",
+  "latest_status": "matched-source-quarter-and-metrics",
+  "checks": [
+    {
+      "run_id": "37901113501",
+      "checked_at": "2026-10-09T07:48:22.841442+00:00",
+      "status": "matched-source-quarter-and-metrics",
+      "period": "2026-Q2",
+      "signature": "02c49bad526c76d63dea0afc144eef24f78507f32b9c1de040a6c2ce9cbd678f"
+    }
+  ],
+  "note": "Only source-published reporting quarters; check time is not a price publication date.",
+  "access_status": "reachable"
+}
