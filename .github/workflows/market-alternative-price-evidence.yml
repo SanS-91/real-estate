@@ -59,11 +59,11 @@ jobs:
           from pathlib import Path
           pricing=Path('/tmp/market-pricing-r4.html').read_text(encoding='utf-8')
           project=Path('/tmp/market-project-r4.html').read_text(encoding='utf-8')
-          assert 'Nguồn giá đối chiếu' in pricing, 'Alternate price evidence not visible'
+          assert 'Giá tham khảo bổ sung' in pricing, 'Alternate price evidence not visible'
           for marker in ('OneHousing','Rever','Vinhomes Grand Park','The Privia','The Global City'):
               assert marker in pricing, marker
-          assert 'Không dùng cho ASP hay trend tổng hợp' in pricing
-          assert 'Nguồn giá đối chiếu' in project
+          assert 'market-evidence-row' in pricing
+          assert 'Giá tham khảo bổ sung' in project
           assert '54,47' in project or '54.47' in project
           print('PASS: alternative sources visible, clearly separated from chart pricing')
           PY

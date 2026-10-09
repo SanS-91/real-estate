@@ -31,8 +31,8 @@ assert "getSecondaryListingEvidence" in data_store
 assert "data.secondaryListingEvidence" in market
 assert "secondaryListingEvidence: payloadData(secondaryListingEvidence)" in market
 assert "projectIds.includes(item.project_id)" in market
-assert "productLabels" in market
-assert "row.subproject_name || productLabels[row.asset_type]" in market
+assert "productNames" in market
+assert "row.subproject_name ?" in market and "productNames[row.asset_type]" in market
 assert "listingPriceRows(filteredProjects)" in market and "listingRangeChartData(filteredProjects)" in market
 assert "data.secondaryListingEvidence" not in market[market.index("function listingRangeChartData"):market.index("function priceLayerControls")]
 listing=json.loads((ROOT/"data/mock/market/listing-observations.json").read_text(encoding="utf-8"))

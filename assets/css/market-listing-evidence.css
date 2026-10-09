@@ -43,3 +43,111 @@
 .market-listing-scope-warning{border-left:2px solid #b46a7b;padding-left:9px;color:#913f51!important;}
 @media(max-width:900px){.market-listing-health{grid-template-columns:repeat(3,minmax(0,1fr));}.market-listing-health__source{grid-column:1/-1;border-top:1px solid #ece5e8;}}
 @media(max-width:600px){.market-listing-health__cell{padding:11px 8px;}.market-listing-health__cell strong{font-size:17px;}.market-listing-health__cell span{font-size:10px;}.market-listing-health__source{padding:10px 12px;}}
+
+
+/* Compact supplementary source references — visually separate from primary Pricing
+   and keep historical, single-unit and publisher-category quotes distinct. */
+.market-price-references {
+  margin:14px 0 0;
+  border:1px solid #e3d9dd;
+  border-radius:9px;
+  background:#fff;
+  overflow:hidden;
+}
+.market-price-references summary,
+.market-evidence-row summary,
+.market-evidence-group summary,
+.market-evidence-method summary {cursor:pointer;list-style:none}
+.market-price-references summary::-webkit-details-marker,
+.market-evidence-row summary::-webkit-details-marker,
+.market-evidence-group summary::-webkit-details-marker,
+.market-evidence-method summary::-webkit-details-marker {display:none}
+.market-price-references__summary {
+  display:flex;align-items:center;justify-content:space-between;gap:14px;
+  padding:13px 15px;
+  background:#fbf9fa;
+}
+.market-price-references__summary:hover {background:#f8f4f6}
+.market-price-references__summary:focus-visible,
+.market-evidence-row__summary:focus-visible,
+.market-evidence-group__title:focus-visible,
+.market-evidence-method summary:focus-visible {outline:2px solid #8b1e2d;outline-offset:-2px}
+.market-price-references__title {display:flex;flex-direction:column;gap:3px;min-width:0}
+.market-price-references__title strong {color:#702638;font-size:13px}
+.market-price-references__title small {color:#657083;font-size:11px;line-height:1.35}
+.market-price-references__action {
+  white-space:nowrap;font-size:11px;font-weight:680;color:#813348;
+}
+.market-price-references__action::after {content:"⌄";font-size:17px;margin-left:7px;display:inline-block;transition:transform .18s}
+.market-price-references[open] .market-price-references__action::after {transform:rotate(180deg)}
+.market-price-references__body {padding:9px 14px 14px}
+.market-price-references__intro {
+  margin:2px 0 9px;color:#687483;font-size:11.5px;line-height:1.5;
+}
+.market-evidence-group {padding:11px 0 4px;border-top:1px solid #eee7ea}
+.market-evidence-group__title {
+  display:flex;justify-content:space-between;align-items:baseline;gap:12px;
+  padding:0 2px 8px;line-height:1.35;
+}
+.market-evidence-group__title strong {color:#364152;font-size:12.5px}
+.market-evidence-group__title small {color:#81818c;font-size:11px;max-width:60%;text-align:right}
+.market-evidence-group--historical>.market-evidence-group__title {padding:8px 2px}
+.market-evidence-group--historical>.market-evidence-group__title strong::before {content:"▸";margin-right:7px;font-size:12px;color:#8b1e2d}
+.market-evidence-group--historical[open]>.market-evidence-group__title strong::before {content:"▾"}
+.market-evidence-group__rows {border:1px solid #e7e8ed;border-radius:7px;overflow:hidden;background:#fff}
+.market-evidence-row + .market-evidence-row {border-top:1px solid #eaecf0}
+.market-evidence-row__summary {
+  display:grid;grid-template-columns:minmax(160px,2fr) minmax(112px,1.1fr) minmax(85px,.75fr) minmax(72px,.7fr) 14px;
+  align-items:center;column-gap:12px;padding:10px 12px;
+}
+.market-evidence-row__summary:hover {background:#faf7f8}
+.market-evidence-row[open]>.market-evidence-row__summary {background:#fbf8f9}
+.market-evidence-row__summary::after {content:"⌄";font-size:15px;color:#8a5160;transition:transform .18s}
+.market-evidence-row[open]>.market-evidence-row__summary::after {transform:rotate(180deg)}
+.market-evidence-row__name {min-width:0;overflow-wrap:anywhere}
+.market-evidence-row__name strong {display:block;font-size:12px;color:#6e2635;line-height:1.25}
+.market-evidence-row__name small {display:block;margin-top:3px;font-size:10.5px;color:#697586}
+.market-evidence-row__price {min-width:0;font-variant-numeric:tabular-nums;white-space:nowrap}
+.market-evidence-row__price strong {display:block;font-size:15px;color:#202936;line-height:1.15}
+.market-evidence-row__price small {font-size:10px;color:#697586}
+.market-evidence-row__period {font-size:11px;font-weight:650;color:#475467;font-variant-numeric:tabular-nums}
+.market-evidence-row__period small {display:block;font-size:10px;color:#84909c;font-weight:400}
+.market-evidence-row__publisher {font-size:10.5px;color:#606b7b}
+.market-evidence-row__body {
+  padding:10px 14px 12px;border-top:1px solid #eee8eb;background:#fdfcfc;
+  color:#566174;font-size:11.5px;line-height:1.48;
+}
+.market-evidence-row__body p {margin:0 0 6px;overflow-wrap:anywhere}
+.market-evidence-row__source {
+  display:flex;align-items:center;gap:11px;flex-wrap:wrap;
+  padding-top:5px;color:#7c8592;font-size:10.5px;
+}
+.market-evidence-warning {color:#8d3d4d}
+.market-evidence-archived {color:#88566a}
+.market-evidence-method {margin-top:8px}
+.market-evidence-method summary {display:inline-block;font-size:10.5px;color:#7b4150}
+.market-evidence-method summary::before {content:"▸";margin-right:4px}
+.market-evidence-method[open] summary::before {content:"▾"}
+.market-evidence-method p {margin:6px 0 0;color:#747d89;max-width:72ch}
+@media (max-width:700px) {
+  .market-price-references__summary {align-items:flex-start;padding:11px 12px}
+  .market-price-references__action {font-size:10px}
+  .market-price-references__body {padding:8px 10px 11px}
+  .market-evidence-group__title {flex-direction:column;gap:4px;align-items:flex-start}
+  .market-evidence-group__title small {max-width:none;text-align:left}
+  .market-evidence-row__summary {
+    position:relative;grid-template-columns:minmax(0,1fr) minmax(94px,auto);
+    grid-template-areas:"name price" "period publisher";
+    row-gap:7px;column-gap:8px;padding:10px 28px 10px 11px;
+  }
+  .market-evidence-row__name {grid-area:name}
+  .market-evidence-row__price {grid-area:price;text-align:right}
+  .market-evidence-row__period {grid-area:period}
+  .market-evidence-row__period small {display:inline;margin-right:5px}
+  .market-evidence-row__publisher {grid-area:publisher;text-align:right}
+  .market-evidence-row__summary::after {position:absolute;right:10px;top:13px}
+  .market-evidence-row__body {padding:10px 11px}
+}
+@media (prefers-reduced-motion:reduce) {
+  .market-price-references__action::after,.market-evidence-row__summary::after {transition:none}
+}

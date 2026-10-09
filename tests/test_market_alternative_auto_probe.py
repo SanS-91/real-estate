@@ -121,5 +121,7 @@ tampered["value_vnd_per_m2"]=111_000_000
 added,conflicts=probe.append_review_queue(queue,[tampered])
 assert (added,conflicts,queue["record_count"])==(0,1,3)
 assert queue["data"][0]["value_vnd_per_m2"]==55_100_000
-assert json.loads((ROOT/"data/candidate/market/alternative-price-review-queue.json").read_text())["record_count"]==0
+current_queue=json.loads((ROOT/"data/candidate/market/alternative-price-review-queue.json").read_text())
+assert current_queue["record_count"]==len(current_queue["data"])
+assert all(item.get("candidate_only") is True and item.get("review_required") is True and item.get("review_date") is None for item in current_queue["data"])
 print("PASS: 6 source targets, 3 distinct OneHousing apartment series, strict name/month matching, and safe review queue.")
