@@ -2485,3 +2485,156 @@ html { scroll-padding-top: calc(var(--header-height) + 12px); }
   }
   .chart-frame { max-width:100%;min-width:0; }
 }
+
+
+/* Mobile-first record cards for Legal and Infrastructure only.
+   Full semantic tables remain unchanged on tablet/desktop; source data,
+   filters and delegated record-detail actions are preserved. */
+@media (max-width: 767px) {
+  .table-wrap:has(> .mobile-record-table) {
+    width: 100%;
+    max-width: 100%;
+    overflow-x: hidden;
+  }
+  .data-table.mobile-record-table {
+    display: block;
+    width: 100%;
+    min-width: 0;
+    table-layout: auto;
+    border-collapse: separate;
+    font-size: 13px;
+    -webkit-text-size-adjust: 100%;
+    text-size-adjust: 100%;
+  }
+  .mobile-record-table thead {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    clip-path: inset(50%);
+    white-space: nowrap;
+  }
+  .mobile-record-table tbody {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr);
+    gap: 12px;
+    padding: 12px;
+  }
+  .mobile-record-table tbody tr {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 11px 14px;
+    min-width: 0;
+    padding: 15px;
+    border: 1px solid #dfe3e9;
+    border-radius: 12px;
+    background: #fff;
+    box-shadow: 0 1px 3px rgba(16, 24, 40, .035);
+  }
+  .mobile-record-table tbody tr:hover { background: #fff; }
+  .data-table.mobile-record-table tbody td {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 3px;
+    width: auto;
+    min-width: 0;
+    padding: 0;
+    border: 0;
+    text-align: left;
+    white-space: normal;
+    overflow-wrap: break-word;
+    word-break: normal;
+    font-size: 12px;
+    line-height: 1.45;
+  }
+  .mobile-record-table tbody td::before {
+    content: attr(data-label-en);
+    display: block;
+    color: #697386;
+    font-size: 10px;
+    font-weight: 700;
+    line-height: 1.35;
+    text-transform: uppercase;
+    letter-spacing: .045em;
+  }
+  html[lang="vi"] .mobile-record-table tbody td::before {
+    content: attr(data-label-vi);
+  }
+  .data-table.mobile-record-table .table-link {
+    font-size: 15px;
+    font-weight: 750;
+    line-height: 1.44;
+    overflow-wrap: break-word;
+    word-break: normal;
+  }
+  .mobile-record-table .table-link::after {
+    content: ' ›';
+    font-size: 18px;
+    color: #8b1e2d;
+    white-space: nowrap;
+  }
+  .data-table.mobile-record-table .table-subtext {
+    display: block;
+    margin: 3px 0 0;
+    font-size: 11.5px;
+    line-height: 1.4;
+    overflow-wrap: break-word;
+  }
+  .data-table.mobile-record-table .status-badge {
+    display: inline-flex;
+    width: fit-content;
+    max-width: 100%;
+    padding: 3px 8px;
+    font-size: 11px;
+    line-height: 1.4;
+    text-align: left;
+    white-space: normal;
+    overflow-wrap: break-word;
+    word-break: normal;
+  }
+  .data-table--legal.mobile-record-table tbody td:nth-child(2) {
+    grid-column: 1 / -1;
+    grid-row: 1;
+  }
+  .data-table--legal.mobile-record-table tbody td:nth-child(2)::before,
+  .data-table--infra.mobile-record-table tbody td:first-child::before {
+    display: none;
+  }
+  .data-table--legal.mobile-record-table tbody td:first-child {
+    grid-column: 1 / -1;
+    grid-row: 2;
+    display: flex;
+    flex-direction: row;
+    align-items: baseline;
+    flex-wrap: wrap;
+    gap: 7px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #edf0f4;
+  }
+  .data-table--legal.mobile-record-table .document-number {
+    font-size: 12px;
+    line-height: 1.4;
+    overflow-wrap: break-word;
+  }
+  .data-table--infra.mobile-record-table tbody td:first-child {
+    grid-column: 1 / -1;
+    padding-bottom: 9px;
+    border-bottom: 1px solid #edf0f4;
+  }
+  .data-table--infra.mobile-record-table .progress-cell {
+    width: 100%;
+    min-width: 0;
+    grid-template-columns: minmax(0, 1fr) auto;
+    gap: 5px;
+  }
+  .data-table--infra.mobile-record-table .progress-track { min-width: 24px; }
+  .data-table--infra.mobile-record-table .progress-cell strong { font-size: 11px; }
+  .mobile-record-table tbody td.table-empty {
+    grid-column: 1 / -1;
+    display: block;
+    font-size: 13px;
+    padding: 3px 0;
+  }
+  .mobile-record-table tbody td.table-empty::before { display: none; }
+}
