@@ -129,6 +129,26 @@ async def run():
                         assert await heading.text_content()==expected[section],(path,"English toggle")
                         await toggle.click()
                         assert await heading.text_content()==vietnamese[section],(path,"Vietnamese toggle restore")
+                    if path in ("market.html?view=overview","market.html?view=projects"):
+                        table=page.locator(".data-table--market-projects")
+                        await table.wait_for(timeout=12000)
+                        total=await table.locator("tbody tr").count()
+                        assert total==(8 if "overview" in path else 13),(width,path,total)
+                        asks=table.locator(".market-asking-range")
+                        assert await asks.count()==total,(width,path,"price range markers")
+                        trend=table.locator(".market-trend")
+                        assert await trend.count()==total,(width,path,"trend markers")
+                        for kind in ("up","down"):
+                            marker=table.locator(f".market-trend--{kind}").first
+                            if await marker.count():
+                                color=await marker.evaluate("el=>getComputedStyle(el).color")
+                                assert color!= "rgb(102, 112, 133)",(path,kind,"trend not colored")
+                        up=table.locator(".market-trend--up")
+                        if await up.count():
+                            assert "↑" in (await up.first.text_content()),(path,"up arrow")
+                        down=table.locator(".market-trend--down")
+                        if await down.count():
+                            assert "↓" in (await down.first.text_content()),(path,"down arrow")
                     if path=="market.html?view=news":
                         await page.locator("[data-news-topic='pricing']").first.wait_for(timeout=12000)
                         pills=page.locator(".market-news-card__topic")
