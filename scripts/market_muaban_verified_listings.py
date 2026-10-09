@@ -137,6 +137,13 @@ def parse_detail(html, url, project_name, project_id, now):
         return None, "invalid-price"
     if not 0.4 <= value <= 250:
         return None, "implausible-price"
+    # Reject "giỏ hàng"/price-list ads which attach several sale prices to a
+    # single detail page: their page area and headline price need not refer to
+    # the same apartment. Never infer an individual-unit rate from those ads.
+    detail_section = raw.split("Thông tin chi tiết", 1)[1].split("Thông tin cơ bản", 1)[0]
+    stated_prices = {round(float(v.replace(",", ".")), 5) for v in PRICE.findall(detail_section)}
+    if len(stated_prices) > 1:
+        return None, "multiple-sale-price-claims"
     # Only the listing's own basic-information section may establish its
     # project; an unrelated recommendation or category page is insufficient.
     basic = raw.split("Thông tin cơ bản", 1)[1].split("Thông tin dự án", 1)[0]
