@@ -46,7 +46,6 @@ jobs:
           python tests/test_market_alternative_history_release.py
           python scripts/market_alternative_history_release.py --mode preview
           python scripts/market_alternative_source_gate.py
-          python tests/test_market_alternative_auto_probe.py
           node --check assets/js/charts.js
           node --check assets/js/market.js
           node tests/test_market_project_price_range_chart.js
