@@ -385,6 +385,71 @@
     }
   }
 
+  async function renderActiveListingCoverage() {
+    const node = document.querySelector('[data-market-active-coverage]');
+    if (!node) return;
+    const vi = language() !== 'en';
+    const heading = document.querySelector('#market-active-coverage-title');
+    if (heading) heading.textContent = vi ? 'Độ phủ giá rao căn hộ theo dự án' : 'Apartment asking-listing coverage by project';
+    const note = node.closest('.section')?.querySelector('.home-block__note');
+    if (note) note.textContent = vi ? 'Có nguồn ≠ có tin mới ≠ giá đã xác minh' : 'Tracked source ≠ new listing ≠ verified unit price';
+    const labels = vi
+      ? {project:'Dự án',source:'Nguồn theo dõi',candidate:'Tin đạt điều kiện nguồn',
+         published:'Tin đã xác minh',status:'Tình trạng',
+         tracked:'dự án có nguồn',verified:'dự án có giá từng căn đã xác minh',
+         lack:'chưa có nguồn theo dõi', waiting:'đang theo dõi · chưa có tin mới hợp lệ',
+         pending:'tin nguồn đủ điều kiện · chờ xác minh', current:'đã có tin xác minh còn trong hạn',
+         stale:'báo cáo nguồn cần cập nhật', date:'Báo cáo độ phủ',
+         note:'Chỉ là giá rao của từng căn. Không suy ra ASP dự án, giá giao dịch hay khoảng giá đại diện.',
+         empty:'Chưa có snapshot độ phủ từ GitHub Actions. Chờ lượt tự động đầu tiên.'}
+      : {project:'Project',source:'Tracked sources',candidate:'Source-qualified ads',
+         published:'Verified ads',status:'Status',
+         tracked:'projects monitored',verified:'projects with verified unit offers',
+         lack:'no tracked unit-listing source',waiting:'monitored · no eligible recent ad',
+         pending:'eligible source ad · awaiting verification',current:'current verified unit evidence',
+         stale:'source report needs refresh', date:'Coverage snapshot',
+         note:'Individual asking listings only; not a project ASP, transaction price or representative range.',
+         empty:'No coverage snapshot published yet. Waiting for first scheduled GitHub run.'};
+    try {
+      const payload = await fetchJSON('data/state/market-active-listing-coverage.json');
+      if (!Array.isArray(payload.projects) || payload.schema_version !== 1) throw new Error('Invalid coverage payload');
+      const sourceNames = {'muaban-vn':'Muaban.net', 'rever-vn':'Rever'};
+      const stateText = {
+        'no-verified-unit-source-target':labels.lack,
+        'monitored-no-current-verified-offer':labels.waiting,
+        'source-qualified-awaiting-verification':labels.pending,
+        'published-current-unit-offer':labels.current
+      };
+      const rows = payload.projects.map(item => {
+        const sources = (item.sources || []).map(s =>
+          sourceNames[s.source_id] || s.source_id).join(' · ');
+        const needsRefresh = (item.sources || []).some(s => !s.source_health_recent);
+        const projectLink = 'market.html?view=projects&project=' + encodeURIComponent(item.project_id);
+        return `<tr>
+          <td data-label-vi="Dự án" data-label-en="Project"><a class="table-link" href="${esc(projectLink)}">${esc(item.project_name)}</a></td>
+          <td data-label-vi="Nguồn theo dõi" data-label-en="Tracked sources">${esc(sources || '—')}${needsRefresh ? '<span class="table-subtext">'+esc(labels.stale)+'</span>' : ''}</td>
+          <td class="numeric" data-label-vi="Tin đạt điều kiện nguồn" data-label-en="Source-qualified ads">${esc(item.recent_eligible_ads ?? '—')}</td>
+          <td class="numeric" data-label-vi="Tin đã xác minh" data-label-en="Verified ads">${esc(item.current_verified_ads ?? '—')}</td>
+          <td data-label-vi="Tình trạng" data-label-en="Status">${esc(stateText[item.status] || item.status)}</td>
+        </tr>`;
+      }).join('');
+      node.innerHTML = `<div style="padding:12px 16px">
+          <strong>${esc(payload.projects_monitored)}/${esc(payload.project_registry_count)} ${esc(labels.tracked)}</strong>
+          · <strong>${esc(payload.projects_with_current_verified_unit_offers)} ${esc(labels.verified)}</strong>
+          <span class="table-subtext">${esc(labels.date)}: ${esc(formatDateTime(payload.generated_at))}</span>
+        </div>
+        <div class="table-wrap">
+          <table class="data-table data-table--listing-coverage mobile-record-table">
+            <thead><tr><th>${esc(labels.project)}</th><th>${esc(labels.source)}</th>
+              <th class="numeric">${esc(labels.candidate)}</th><th class="numeric">${esc(labels.published)}</th><th>${esc(labels.status)}</th></tr></thead>
+            <tbody>${rows || '<tr><td colspan="5" class="table-empty">'+esc(labels.empty)+'</td></tr>'}</tbody>
+          </table>
+        </div><p class="table-subtext" style="padding:8px 16px 14px">${esc(labels.note)}</p>`;
+    } catch (error) {
+      node.innerHTML = `<div class="state-box">${esc(labels.empty)}</div>`;
+    }
+  }
+
   function renderRules() {
     const c = copy();
     document.querySelector('[data-maintenance-rules]').innerHTML = `<div class="maintenance-rules">${c.rules.map(([title, text]) => `<div class="maintenance-rule"><strong>${esc(title)}</strong><span>${esc(text)}</span></div>`).join('')}</div>`;
@@ -420,6 +485,7 @@
       render(await buildModel());
       await renderOperations();
       await renderMarketSourceHealth();
+      await renderActiveListingCoverage();
     } catch (error) {
       renderError(error);
     }
@@ -428,6 +494,7 @@
       else renderRules();
       renderOperations();
       renderMarketSourceHealth();
+      renderActiveListingCoverage();
     });
   }
 
