@@ -243,6 +243,11 @@
     </table></div>`;
   }
 
+  function safeWorkflowRunUrl(value) {
+    return /^https:\/\/github\.com\/[A-Za-z0-9_.-]+\/[A-Za-z0-9_.-]+\/actions\/runs\/[0-9]+$/.test(value || '')
+      ? value : null;
+  }
+
   async function renderOperations() {
     const node = document.querySelector('[data-maintenance-operations]');
     if (!node) return;
@@ -259,6 +264,24 @@
           : workflows.includes('healthy') ? 'healthy'
           : 'unknown';
         const lastSuccess = module.last_successful_run_at ? formatDateTime(module.last_successful_run_at) : '—';
+        const vi = language() !== 'en';
+        const failed = rows.filter(row => ['degraded','stale'].includes(row.status));
+        const daily = module.module === 'macro' ? rows.find(row => row.id === 'macro-daily-markets') : null;
+        const sourceLag = daily && daily.source_business_day_lag != null
+          ? `<div class="maintenance-lag${daily.source_freshness === 'late' ? ' is-late' : ''}">
+             <strong>${esc(vi ? 'Kỳ tỷ giá/vàng cuối' : 'Last FX/gold source period')}: ${esc(daily.latest_source_period || '—')}</strong>
+             <span>${esc(daily.source_business_day_lag)} ${esc(vi ? 'ngày làm việc kể từ kỳ nguồn (không tính lễ)' : 'business days after source period (holidays excluded)')}</span>
+           </div>` : '';
+        const activeProblem = failed.find(row => safeWorkflowRunUrl(row.last_workflow_run_url)) ||
+          rows.find(row => safeWorkflowRunUrl(row.last_workflow_run_url));
+        const workflowLink = activeProblem ? safeWorkflowRunUrl(activeProblem.last_workflow_run_url) : null;
+        const detail = (failed.length || daily?.source_freshness === 'late') ?
+          `<div class="maintenance-ops-detail">${sourceLag}
+             <div>${esc(vi ? 'Lần chạy gần nhất' : 'Last run')}: ${esc(activeProblem?.last_workflow_conclusion || (vi ? 'Chưa xác định' : 'Unknown'))}
+               ${workflowLink ? ` · <a href="${esc(workflowLink)}" target="_blank" rel="noopener noreferrer">${esc(vi ? 'Mở GitHub Actions' : 'Open GitHub Actions')}</a>` : ''}
+             </div>
+             <small>${esc(vi ? 'Có kiểm tra nguồn không đồng nghĩa có số liệu mới được xác minh.' : 'A successful source check does not prove a new observation was verified.')}</small>
+           </div>` : '';
         return `<article class="maintenance-operation-card is-${esc(module.status || 'review')}">
           <div class="data-health-card__top">
             <h3>${esc(c.modules[module.module] || module.module)}</h3>
@@ -270,6 +293,7 @@
             <div><dt>Candidate backlog</dt><dd>${esc(module.candidate_backlog || 0)}</dd></div>
             <div><dt>Last success</dt><dd>${esc(lastSuccess)}</dd></div>
           </dl>
+          ${detail}
         </article>`;
       }).join('') || '<div class="state-box">Operational health is not available yet.</div>';
     } catch (error) {
