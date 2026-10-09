@@ -183,7 +183,7 @@ def signature(row):
 
 def evaluate(previous, rows, seen, now, run_id):
     """Persistent verification state and immutable publisher-dated listing releases."""
-    identities = {r["listing_id"]: r for r in rows}
+    published_signatures = {signature(r) for r in rows}
     states = {r["listing_id"]: r for r in previous.get("listings", [])}
     accepted = []
     decisions = []
@@ -199,7 +199,7 @@ def evaluate(previous, rows, seen, now, run_id):
         states[lid] = {"listing_id": lid, "project_id": detail["project_id"],
                        "source_url": detail["source_url"], "checks": checks}
         decision = "waiting-for-independent-verification"
-        if lid in identities:
+        if fingerprint in published_signatures:
             decision = "previously-recorded"
         elif (now.date() - date.fromisoformat(detail["source_updated_date"])).days > MAX_AGE_DAYS:
             decision = "historical-listing-not-current"
@@ -229,6 +229,11 @@ def run(config, history, state, fetcher, now, run_id):
     diagnostics = []
     inspected = set()
     for target in config["targets"]:
+        if (not safe_url(target.get("url", "")) or not target.get("project_id") or
+                not target.get("publisher_project_name")):
+            diagnostics.append({"project_id":target.get("project_id"), "index_status":"invalid-source-config",
+                "listing_links":0,"details_checked":0,"qualified":0,"reasons":{}})
+            continue
         html, access = fetcher(target["url"], listing=False)
         urls = discover(html, target["url"]) if html else []
         checks = {"project_id":target["project_id"], "source_url":target["url"],
@@ -253,11 +258,11 @@ def run(config, history, state, fetcher, now, run_id):
         discovered += len(urls)
         diagnostics.append(checks)
     updated, additions, decisions = evaluate(state, history.get("data", []), qualifying, now, run_id)
+    final_rows = (history.get("data", []) + additions)[-250:]
     production = {
         **history, "schema_version": 1,
         "collection_mode": "individually-publisher-verified-apartment-asking-only",
-        "record_count": len(history.get("data", [])) + len(additions),
-        "data": (history.get("data", []) + additions)[-250:],
+        "record_count": len(final_rows), "data": final_rows,
     }
     report = {"schema_version":1, "generated_at":now.isoformat(),
               "targets_checked":len(config["targets"]),
