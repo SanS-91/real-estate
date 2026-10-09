@@ -2,6 +2,7 @@
 import unittest
 from datetime import datetime, date, timezone
 from pathlib import Path
+from zoneinfo import ZoneInfo
 import sys
 sys.path.insert(0,str(Path(__file__).resolve().parents[1]/"scripts"))
 from build_data_health import (business_days_elapsed, source_observation, trusted_run_url,
@@ -16,19 +17,46 @@ class Freshness(unittest.TestCase):
         self.assertEqual(business_days_elapsed(date(2026,10,9),date(2026,10,11)),0)
         self.assertEqual(business_days_elapsed(date(2026,10,12),date(2026,10,10)),0)
 
-    def test_live_repository_is_late_without_claiming_fake_values(self):
-        m={x["id"]:x for x in load(ROOT/"config/update_matrix.json")["datasets"]}
-        daily=prod_info({"id":"macro-daily-markets"},m,NOW)
-        self.assertEqual(daily["latest_source_period"],"2026-10-07")
-        self.assertEqual(daily["source_business_day_lag"],2)
-        self.assertEqual(daily["source_freshness"],"late")
-        self.assertEqual(daily["record_count"],6)
-        monthly=prod_info({"id":"macro-monthly-statistics"},m,NOW)
-        self.assertEqual(monthly["latest_source_period"],"2026-09")
-        self.assertEqual(monthly["source_freshness"],"release-based")
-        self.assertIsNone(monthly["source_business_day_lag"])
-        self.assertEqual(monthly["record_count"],5)
-        self.assertEqual(prod_info({"id":"macro-policy-rates"},m,NOW)["record_count"],3)
+    def test_source_lag_classification_uses_real_publisher_period(self):
+        # Deterministic regression independent of future production updates.
+        fixture=[{"indicator_id":"usd-vnd-central-rate","period_type":"day",
+                  "period":"2026-10-07","data_date":"2026-10-07",
+                  "observation_status":"final"}]
+        result=source_observation({"id":"macro-daily-markets"},fixture,NOW)
+        self.assertEqual(result["latest_source_period"],"2026-10-07")
+        self.assertEqual(result["source_business_day_lag"],2)
+        self.assertEqual(result["source_freshness"],"late")
+        fixture[0]["period"]="2026-10-09"
+        fixture[0]["data_date"]="2026-10-09"
+        current=source_observation({"id":"macro-daily-markets"},fixture,NOW)
+        self.assertEqual(current["source_business_day_lag"],0)
+        self.assertEqual(current["source_freshness"],"within-window")
+
+    def test_live_repository_periods_are_computed_not_frozen_to_october_7(self):
+        # Production is intentionally append-only; a successful collector
+        # must not break CI just because new genuine observations were added.
+        matrix={x["id"]:x for x in load(ROOT/"config/update_matrix.json")["datasets"]}
+        observations=load(ROOT/"data/processed/macro/observations.json")["data"]
+        now=datetime.now(timezone.utc)
+        for dataset_id in ("macro-daily-markets","macro-monthly-statistics","macro-policy-rates"):
+            info=prod_info({"id":dataset_id},matrix,now)
+            members={r for r in matrix[dataset_id].get("indicator_ids",[])}
+            expected=[r for r in observations if r.get("indicator_id") in members]
+            self.assertEqual(info["record_count"],len(expected))
+            if dataset_id=="macro-daily-markets" and expected:
+                periods=[r.get("data_date") or r.get("period") for r in expected
+                         if r.get("period_type")=="day"
+                         and r.get("observation_status")=="final"]
+                last=max(periods)
+                days=business_days_elapsed(date.fromisoformat(last),
+                    now.astimezone(ZoneInfo("Asia/Ho_Chi_Minh")).date())
+                self.assertEqual(info["latest_source_period"],last)
+                self.assertEqual(info["source_business_day_lag"],days)
+                self.assertEqual(info["source_freshness"],
+                                 "late" if days>1 else "within-window")
+            elif expected:
+                self.assertEqual(info["source_freshness"],"release-based")
+                self.assertIsNone(info["source_business_day_lag"])
 
     def test_bad_urls_and_pr_failures_never_shown_as_main_incident(self):
         legit="https://github.com/SanS-91/real-estate/actions/runs/12345"
