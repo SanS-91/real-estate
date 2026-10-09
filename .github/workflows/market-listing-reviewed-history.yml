@@ -1,0 +1,127 @@
+name: Verified Listing Price History Capture
+
+on:
+  pull_request:
+    paths:
+      - 'config/listing-reviewed-captures-20261009.json'
+      - 'scripts/listing_reviewed_batch.py'
+      - 'tests/test_listing_reviewed_batch.py'
+      - 'tests/test_phase5_5b_listing_coverage.py'
+      - 'tests/test_phase5_5b1_market_surface.py'
+      - 'tests/test_phase5_5c_listing_pipeline.py'
+      - 'tests/test_phase5_5c_listing_history.js'
+      - 'tests/test_phase6_3_historical_coverage_expansion.py'
+      - 'assets/js/market.js'
+      - 'assets/css/market-listing-evidence.css'
+      - 'market.html'
+      - '.github/workflows/market-listing-reviewed-history.yml'
+  push:
+    branches: [main]
+    paths:
+      - 'config/listing-reviewed-captures-20261009.json'
+      - 'scripts/listing_reviewed_batch.py'
+      - '.github/workflows/market-listing-reviewed-history.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: reviewed-listing-history
+  cancel-in-progress: false
+
+jobs:
+  listing-reviewed-capture:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 14
+    steps:
+      - uses: actions/checkout@v7
+      - uses: actions/setup-python@v7
+        with:
+          python-version: '3.12'
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Check pipeline and source-provenance contracts
+        run: |
+          python -m py_compile scripts/listing_reviewed_batch.py scripts/listing_snapshot_pipeline.py
+          python tests/test_listing_reviewed_batch.py
+          python tests/test_phase5_5b_listing_coverage.py
+          python tests/test_phase5_5b1_market_surface.py
+          python tests/test_phase5_5c_listing_pipeline.py
+          node tests/test_phase5_5c_listing_history.js
+          node --check assets/js/market.js
+      - name: Stage only supported reviewed portal observations
+        run: python scripts/listing_reviewed_batch.py --today 2026-10-09
+      - name: Validate against append-only history pipeline
+        run: python scripts/listing_snapshot_pipeline.py --mode preview
+      - name: Verify candidate quantity and independent observations
+        run: |
+          python - <<'PY'
+          import json
+          from pathlib import Path
+          candidate=json.loads(Path('data/candidate/market/listing-observations.json').read_text())
+          report=json.loads(Path('data/candidate/market/listing-reviewed-batch-report.json').read_text())
+          assert report['blocked']==0, report
+          assert report['ready'] in (0,4), report
+          assert candidate['record_count']==report['ready']
+          print('Candidate records:',candidate['record_count'])
+          PY
+      - name: Simulate append-only publication and build coverage in isolated PR
+        if: github.event_name == 'pull_request'
+        run: |
+          python scripts/listing_snapshot_pipeline.py --mode promote
+          python scripts/build_history_coverage.py
+          python tests/test_phase5_5b_listing_coverage.py
+          python tests/test_phase5_5b1_market_surface.py
+          python tests/test_phase5_5c_listing_pipeline.py
+          node tests/test_phase5_5c_listing_history.js
+          python tests/test_phase6_3_historical_coverage_expansion.py
+          python - <<'PY'
+          import json
+          from pathlib import Path
+          data=json.loads(Path('data/mock/market/listing-observations.json').read_text())
+          listing=json.loads(Path('data/state/history-coverage.json').read_text())['listing_market']
+          assert data['record_count'] == len(data['data']) == 16
+          assert listing['series_count']==12
+          assert listing['trend_ready_series']==0
+          assert sum(x['snapshot_count']==2 for x in listing['items']) == 4
+          assert sum(x['snapshot_count']==1 for x in listing['items']) == 8
+          print('PR-only: 16 real snapshots / 12 projects / no invented trend-ready histories.')
+          PY
+      - name: Commit only appended verified snapshots on main
+        if: github.ref == 'refs/heads/main' && github.event_name != 'pull_request'
+        run: |
+          RECORDS=$(python -c 'import json;print(json.load(open("data/candidate/market/listing-observations.json"))["record_count"])')
+          if [ "$RECORDS" -eq 0 ]; then
+            echo "Already published. No additional listing snapshots."
+            exit 0
+          fi
+          python scripts/listing_snapshot_pipeline.py --mode promote
+          python scripts/build_history_coverage.py
+          python tests/test_phase5_5b_listing_coverage.py
+          python tests/test_phase5_5b1_market_surface.py
+          python tests/test_phase5_5c_listing_pipeline.py
+          node tests/test_phase5_5c_listing_history.js
+          if git diff --quiet -- data/mock/market/listing-observations.json; then
+            echo "No production differences."
+            exit 0
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data/mock/market/listing-observations.json data/state/history-coverage.json
+          git commit -m "data(market): append four source-reviewed October listing snapshots"
+          git pull --rebase origin main
+          git push origin HEAD:main
+      - name: Publish evidence-gate artifact
+        if: always()
+        uses: actions/upload-artifact@v7
+        with:
+          name: reviewed-listing-history-evidence
+          path: |
+            data/candidate/market/listing-observations.json
+            data/candidate/market/listing-reviewed-batch-report.json
+            data/candidate/market/listing-refresh-report.json
+            data/state/history-coverage.json
+          retention-days: 14
+          if-no-files-found: warn
