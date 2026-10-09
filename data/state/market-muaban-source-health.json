@@ -1,11 +1,11 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-10-09T12:41:10.436200+00:00",
+  "generated_at": "2026-10-09T12:56:23.687614+00:00",
   "source_id": "muaban-vn",
-  "targets_checked": 4,
-  "listing_urls_discovered": 9,
-  "details_checked": 9,
-  "valid_unexpired_project_ads": 3,
+  "targets_checked": 6,
+  "listing_urls_discovered": 21,
+  "details_checked": 21,
+  "valid_unexpired_project_ads": 6,
   "newly_published": 0,
   "published_current_individual_listings": 0,
   "sources": [
@@ -40,7 +40,7 @@
       "checked": 1,
       "qualified": 0,
       "reasons": {
-        "publisher-expired": 1
+        "multiple-sale-price-claims": 1
       }
     },
     {
@@ -53,6 +53,28 @@
       "reasons": {
         "missing-numeric-total-sale-price": 1
       }
+    },
+    {
+      "project_id": "mizuki-park",
+      "source_url": "https://muaban.net/bat-dong-san/ban-can-ho-chung-cu-du-an-mizuki-park-5598-huyen-binh-chanh-ho-chi-minh",
+      "access": "reachable",
+      "discovered": 12,
+      "checked": 12,
+      "qualified": 3,
+      "reasons": {
+        "qualified-unexpired-listing": 3,
+        "multiple-sale-price-claims": 1,
+        "publisher-expired": 8
+      }
+    },
+    {
+      "project_id": "eaton-park",
+      "source_url": "https://muaban.net/bat-dong-san/ban-can-ho-chung-cu-du-an-eaton-park-quan-2-ho-chi-minh",
+      "access": "reachable",
+      "discovered": 0,
+      "checked": 0,
+      "qualified": 0,
+      "reasons": {}
     }
   ],
   "publication_enabled": true,

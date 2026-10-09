@@ -11,6 +11,51 @@
           "checked_at": "2026-10-09T12:41:10.436200+00:00",
           "fingerprint": "7a2437e83823a8e616a59c27316a8b3b4a4c587953dacc450640aa000efe6214",
           "expiry": "2026-10-21"
+        },
+        {
+          "run_id": "37933336773",
+          "checked_at": "2026-10-09T12:56:23.687614+00:00",
+          "fingerprint": "7a2437e83823a8e616a59c27316a8b3b4a4c587953dacc450640aa000efe6214",
+          "expiry": "2026-10-21"
+        }
+      ]
+    },
+    {
+      "listing_id": "71070085",
+      "project_id": "mizuki-park",
+      "source_url": "https://muaban.net/bat-dong-san/ban-can-ho-chung-cu-du-an-mizuki-park-5598-huyen-binh-chanh-ho-chi-minh/suat-noi-bo-cdt-nam-long-trellia-cove-mizuki-park-2pn-1wc-4-6-ty-id71070085",
+      "checks": [
+        {
+          "run_id": "37933336773",
+          "checked_at": "2026-10-09T12:56:23.687614+00:00",
+          "fingerprint": "e9c544d0745778700f2cc6597b6aea2981f6f5965f8f306ea69f5e56f95b2a47",
+          "expiry": "2026-10-16"
+        }
+      ]
+    },
+    {
+      "listing_id": "71137247",
+      "project_id": "mizuki-park",
+      "source_url": "https://muaban.net/bat-dong-san/ban-can-ho-chung-cu-du-an-mizuki-park-5598-huyen-binh-chanh-ho-chi-minh/can-2pn-trellia-cove-suat-noi-bo-chu-dau-tu-nam-long-view-song-id71137247",
+      "checks": [
+        {
+          "run_id": "37933336773",
+          "checked_at": "2026-10-09T12:56:23.687614+00:00",
+          "fingerprint": "dd55e9dd1c65c7e147bc10396cce7d09e76512197f537924c2e1ce7b10d26088",
+          "expiry": "2026-10-20"
+        }
+      ]
+    },
+    {
+      "listing_id": "71259763",
+      "project_id": "mizuki-park",
+      "source_url": "https://muaban.net/bat-dong-san/ban-can-ho-chung-cu-du-an-mizuki-park-5598-huyen-binh-chanh-ho-chi-minh/nong-cuc-truong-giang-va-nha-phuong-dang-o-id71259763",
+      "checks": [
+        {
+          "run_id": "37933336773",
+          "checked_at": "2026-10-09T12:56:23.687614+00:00",
+          "fingerprint": "7b4e46450172a4629f0e711ffe46a06dba7ebd3101790c929f9896f0bb22b9a3",
+          "expiry": "2026-10-11"
         }
       ]
     },
@@ -24,6 +69,12 @@
           "checked_at": "2026-10-09T12:41:10.436200+00:00",
           "fingerprint": "1aebf665d13e659c6fec2cfdf80c37af026c75586cfe3cd17d0788a594d65e5f",
           "expiry": "2026-11-04"
+        },
+        {
+          "run_id": "37933336773",
+          "checked_at": "2026-10-09T12:56:23.687614+00:00",
+          "fingerprint": "1aebf665d13e659c6fec2cfdf80c37af026c75586cfe3cd17d0788a594d65e5f",
+          "expiry": "2026-11-04"
         }
       ]
     },
@@ -35,6 +86,12 @@
         {
           "run_id": "37931643763",
           "checked_at": "2026-10-09T12:41:10.436200+00:00",
+          "fingerprint": "33022f6f5e681acd7b1af8755a8e72d7d8502fa138e620db22ed485b6f34eb61",
+          "expiry": "2026-10-15"
+        },
+        {
+          "run_id": "37933336773",
+          "checked_at": "2026-10-09T12:56:23.687614+00:00",
           "fingerprint": "33022f6f5e681acd7b1af8755a8e72d7d8502fa138e620db22ed485b6f34eb61",
           "expiry": "2026-10-15"
         }
