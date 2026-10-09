@@ -1,6 +1,16 @@
 name: Unified Data Health
 
 on:
+  # GitHub Actions commits made with GITHUB_TOKEN do not generally launch
+  # downstream push-triggered Actions. React to completed source workflows
+  # directly, so Maintenance reflects successful and failed collections.
+  workflow_run:
+    workflows:
+      - Macro Candidate Collector
+      - Legal Candidate Collector
+      - Infrastructure Candidate Collector
+    types:
+      - completed
   schedule:
     - cron: '5 1 * * *'       # 08:05 ICT preflight
     - cron: '10 4 * * *'      # 11:10 ICT after morning FX/gold checks
