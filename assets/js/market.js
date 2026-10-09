@@ -143,9 +143,29 @@
         if (!parentPublished.has(key) || String(item.period) > String(parentPublished.get(key).period)) parentPublished.set(key, item);
       });
     const parentRows = data.alternativePriceEvidence.map(item => parentPublished.get(item.id) || item);
+    // Fresh, individually verified advertisements; never synthesize project-wide prices.
+    const currentUnitOffers = [];
+    const offersByProject = new Map();
+    data.reverVerifiedUnitListings
+      .filter(item => item.review_status === 'automated-two-hosted-checks'
+        && item.metric_type === 'single-listing-asking-price-per-sqm'
+        && item.asset_type === 'apartment'
+        && /^20\d{2}-\d{2}-\d{2}$/.test(item.source_updated_date || '')
+        && Number.isFinite(item.value_vnd_per_m2)
+        && (Date.now() - Date.parse(item.source_updated_date + 'T00:00:00+07:00')) <= 90 * 86400000
+        && Date.now() >= Date.parse(item.source_updated_date + 'T00:00:00+07:00'))
+      .sort((a,b) => String(b.source_updated_date).localeCompare(String(a.source_updated_date)))
+      .forEach(item => {
+        const existing = offersByProject.get(item.project_id) || [];
+        if (existing.length >= 2 || existing.some(row => row.listing_id === item.listing_id)) return;
+        const row = { ...item, period: item.source_updated_date };
+        existing.push(row);
+        offersByProject.set(item.project_id, existing);
+        currentUnitOffers.push(row);
+      });
     const sourceHistory = window.MarketSubprojectTrends?.verifiedGroups?.(data.oneHousingSubprojectHistory) || [];
     const parentSourceHistory = window.MarketSubprojectTrends?.verifiedParentGroups?.(data.oneHousingProjectHistory) || [];
-    const rows = [...parentRows, ...data.secondaryListingEvidence, ...subprojectRows]
+    const rows = [...parentRows, ...data.secondaryListingEvidence, ...subprojectRows, ...currentUnitOffers]
       .filter(item => projectIds.includes(item.project_id));
     if (!rows.length) return '';
     const sourceNames = { 'onehousing-vn':'OneHousing', 'rever-vn':'Rever', 'cafeland-listings':'CafeLand' };
