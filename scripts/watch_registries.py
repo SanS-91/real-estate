@@ -73,11 +73,15 @@ def main():
         r["changed_since_previous_check"]=bool(old.get("content_sha256") and r.get("content_sha256") and old["content_sha256"]!=r["content_sha256"])
         links.extend(discover(r,cfg))
         r.pop("html",None)
+    has_previous_baseline=bool(prev.get("generated_at"))
     prev_links={x.get("url") for x in prev.get("discovery_links",[])}
-    for x in links: x["new_since_previous_check"]=x["url"] not in prev_links
+    # First successful capture establishes a comparison baseline; do not
+    # describe every existing discovery link as a newly published event.
+    for x in links: x["new_since_previous_check"]=has_previous_baseline and x["url"] not in prev_links
     results.sort(key=lambda x:(x["module"],x["url"]))
     report={
       "schema_version":1,"generated_at":now_iso(),"mode":cfg["mode"],"auto_publish":False,
+      "previous_baseline_available":has_previous_baseline,
       "target_count":len(results),"healthy_count":sum(1 for x in results if x["ok"]),
       "failed_count":sum(1 for x in results if not x["ok"]),
       "changed_target_count":sum(1 for x in results if x["changed_since_previous_check"]),
