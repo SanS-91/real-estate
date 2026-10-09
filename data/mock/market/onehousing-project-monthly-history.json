@@ -1,6 +1,31 @@
 {
   "data": [
     {
+      "id": "onehousing-lumiere-riverside-apartment-2026-10",
+      "project_id": "lumiere-riverside",
+      "source_id": "onehousing-vn",
+      "source_url": "https://onehousing.vn/phan-tich/du-an/can-ho-chung-cu-du-an-Lumiere-Riverside.625",
+      "asset_type": "apartment",
+      "metric_type": "popular-asking-price-per-sqm",
+      "value_vnd_per_m2": 178170000,
+      "range_low_vnd_per_m2": 149910000,
+      "range_high_vnd_per_m2": 356550000,
+      "period": "2026-10",
+      "period_type": "month",
+      "review_date": "2026-10-09",
+      "source_publication_date": null,
+      "evidence": {
+        "period": "Căn hộ chung cư dự án Lumière Riverside tháng 10/2026",
+        "metric": "Đơn giá phổ biến | 178.17 triệu/m²",
+        "range": "Khoảng giá: 149.91 - 356.55 triệu"
+      },
+      "methodology_note": "OneHousing public October 2026 analysis page publishes modal/popular apartment asking price of 178.17 million VND/m² and an asking range of 149.91–356.55 million VND/m². Indexed source evidence, not developer primary price, no transaction confirmation, not a weighted project ASP. Separate source-scoped monthly history will auto-update only after two matching original-source checks at least one hour apart. Historical series initialized from an existing reviewed evidence record. Not a newly captured publisher observation.",
+      "series_key": "onehousing-parent-lumiere-riverside-apartment-popular-asking",
+      "source_record_id": "onehousing-lumiere-riverside-apartment-2026-10",
+      "review_status": "source-indexed-baseline",
+      "verification_mode": "existing-reviewed-source-reference"
+    },
+    {
       "id": "onehousing-vinhomes-grand-park-apartment-2026-10",
       "project_id": "vinhomes-grand-park",
       "source_id": "onehousing-vn",
@@ -27,6 +52,6 @@
     }
   ],
   "schema_version": 1,
-  "record_count": 1,
+  "record_count": 2,
   "collection_mode": "source-indexed-reference-plus-future-verified-months"
 }

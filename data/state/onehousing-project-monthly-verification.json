@@ -14,6 +14,32 @@
           "signature": "5a481d87110ae44fb14945b99d07b59768e97238717939b09c847f815d07e5f1",
           "http_status": 200,
           "source_host": "onehousing.vn"
+        },
+        {
+          "run_id": "37907349294",
+          "checked_at": "2026-10-09T08:49:47.188945+00:00",
+          "status": "existing-month-unchanged",
+          "period": "2026-10",
+          "signature": "5a481d87110ae44fb14945b99d07b59768e97238717939b09c847f815d07e5f1",
+          "http_status": 200,
+          "source_host": "onehousing.vn"
+        }
+      ],
+      "latest_decision": "already-in-source-history"
+    },
+    {
+      "series_key": "onehousing-parent-lumiere-riverside-apartment-popular-asking",
+      "project_id": "lumiere-riverside",
+      "source_url": "https://onehousing.vn/phan-tich/du-an/can-ho-chung-cu-du-an-Lumiere-Riverside.625",
+      "checks": [
+        {
+          "run_id": "37907349294",
+          "checked_at": "2026-10-09T08:49:47.188945+00:00",
+          "status": "existing-month-unchanged",
+          "period": "2026-10",
+          "signature": "05d573bf50df6d47ea104dae7a215f89ce770f87c3995bcbbbb0ba90c7d452e4",
+          "http_status": 200,
+          "source_host": "onehousing.vn"
         }
       ],
       "latest_decision": "already-in-source-history"
