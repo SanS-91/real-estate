@@ -165,9 +165,20 @@
 
   function updateTabs() {
     document.body.classList.toggle('market-news-page', state.view === 'news');
-    document.querySelectorAll('[data-market-tabs] [data-view]').forEach(link => {
+    const tabs = document.querySelector('[data-market-tabs]');
+    tabs?.querySelectorAll('[data-view]').forEach(link => {
       link.classList.toggle('is-active', link.dataset.view === state.view);
     });
+    // Mobile navigation is horizontally scrollable: keep the selected tab visible
+    // without scrolling the document itself.
+    const active = tabs?.querySelector('.tab-link.is-active');
+    if (tabs && active && tabs.scrollWidth > tabs.clientWidth) {
+      const area = tabs.getBoundingClientRect();
+      const box = active.getBoundingClientRect();
+      if (box.left < area.left + 8 || box.right > area.right - 8) {
+        tabs.scrollLeft += (box.left - area.left) - (area.width - box.width) / 2;
+      }
+    }
   }
 
   function option(label, value, current) {
