@@ -20,6 +20,11 @@ on:
       - '*.html'
       - 'tests/test_site_ui_consistency.cjs'
       - 'tests/test_site_ui_browser.py'
+      - 'tests/test_phase4k3_registry_watch.py'
+      - 'scripts/watch_registries.py'
+      - 'scripts/build_registry_candidate_health.py'
+      - '.github/workflows/legal-candidate-collector.yml'
+      - '.github/workflows/infrastructure-candidate-collector.yml'
       - '.github/workflows/site-ui-audit.yml'
   push:
     branches: [main]
@@ -56,6 +61,7 @@ jobs:
           node --check assets/js/infrastructure.js
           node --check assets/js/macro.js
           node tests/test_4j3_density.cjs
+          python tests/test_phase4k3_registry_watch.py
           node --check assets/js/common.js
           node --check assets/js/localization-static.js
           node --check assets/js/market-news-ui.js
