@@ -22,7 +22,7 @@ on:
       - 'scripts/market_secondary_listing_gate.py'
       - '.github/workflows/market-secondary-listing-sources.yml'
   schedule:
-    - cron: '50 3 * * 2,5'
+    - cron: '50 3 * * 2'
   workflow_dispatch:
 
 permissions:
