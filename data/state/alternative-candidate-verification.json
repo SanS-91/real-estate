@@ -1,0 +1,26 @@
+{
+  "schema_version": 1,
+  "generated_at": "2026-10-09T06:26:49.745629+00:00",
+  "source_recheck_only": true,
+  "recheck_run_id": "37893548415",
+  "record_count": 1,
+  "data": [
+    {
+      "candidate_id": "candidate-onehousing-lumiere-boulevard-apartment-2026-10",
+      "source_url": "https://onehousing.vn/phan-tich/du-an/can-ho-chung-cu-du-an-Lumiere-Boulevard.34",
+      "period": "2026-10",
+      "subproject_name": "Lumière Boulevard",
+      "candidate_signature": "a799c927d25698c6aa54b441850b5e8cb9478828f876e0cbf99a5c81683f1329",
+      "checks": [
+        {
+          "run_id": "37893548415",
+          "checked_at": "2026-10-09T06:26:49.745629+00:00",
+          "status": "matched-source-period-and-metric",
+          "source_http_status": 200,
+          "source_final_host": "onehousing.vn",
+          "candidate_signature": "a799c927d25698c6aa54b441850b5e8cb9478828f876e0cbf99a5c81683f1329"
+        }
+      ]
+    }
+  ]
+}
