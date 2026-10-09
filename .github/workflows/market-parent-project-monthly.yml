@@ -5,6 +5,8 @@ on:
     paths:
       - 'scripts/market_onehousing_project_history.py'
       - 'tests/test_market_onehousing_project_history.py'
+      - 'config/market-alternative-auto-targets.json'
+      - 'data/mock/market/alternative-price-evidence.json'
       - '.github/workflows/market-parent-project-monthly.yml'
       - 'assets/js/market.js'
       - 'assets/js/data-store.js'
@@ -14,6 +16,8 @@ on:
     branches: [main]
     paths:
       - 'scripts/market_onehousing_project_history.py'
+      - 'config/market-alternative-auto-targets.json'
+      - 'data/mock/market/alternative-price-evidence.json'
       - '.github/workflows/market-parent-project-monthly.yml'
   schedule:
     - cron: '50 2 * * *'
