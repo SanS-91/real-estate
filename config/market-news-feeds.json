@@ -11,21 +11,21 @@
       "max_items": 30
     },
     {
-      "id": "tuoitre-real-estate",
-      "source_id": "tuoitre-real-estate",
-      "label": "Tuổi Trẻ Bất động sản",
-      "url": "https://tuoitre.vn/nld/rss/nld/thi-truong/bat-dong-san.rss",
-      "host": "tuoitre.vn",
+      "id": "thanhnien-real-estate",
+      "source_id": "thanhnien-real-estate",
+      "label": "Thanh Niên Địa ốc",
+      "url": "https://thanhnien.vn/rss/kinh-te/dia-oc.rss",
+      "host": "thanhnien.vn",
       "category": "real-estate",
       "max_items": 30
     },
     {
-      "id": "baodautu-investment",
-      "source_id": "baodautu-market-news",
-      "label": "Báo Đầu tư",
-      "url": "https://baodautu.vn/toan-canh-dau-tu.rss",
-      "host": "baodautu.vn",
-      "category": "filtered-investment",
+      "id": "dantri-real-estate",
+      "source_id": "dantri-real-estate",
+      "label": "Dân trí Bất động sản",
+      "url": "https://dantri.com.vn/rss/bat-dong-san.rss",
+      "host": "dantri.com.vn",
+      "category": "real-estate",
       "max_items": 30
     }
   ],
