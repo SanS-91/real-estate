@@ -545,6 +545,18 @@
       "notes": "Dated individual property listings and dated historical launch/starting prices only, not representative project asking-price aggregates."
     },
     {
+      "id": "muaban-vn",
+      "name": "Muaban.net",
+      "source_type": "property-listing-portal",
+      "base_url": "https://muaban.net/",
+      "language": "vi",
+      "collection_method": "automated-expiry-and-double-check-gated",
+      "fetch_frequency": "daily-twice",
+      "source_priority": 4,
+      "active": true,
+      "notes": "Individual apartment advertised prices only. Requires matching project and product, numeric total and usable area, explicit publisher start/expiry that remains valid, and two independent hosted checks >=1h apart. Unit VND/m² is derived from the same ad; never project ASP, price range or transaction."
+    },
+    {
       "id": "cafeland-listings",
       "name": "CafeLand Nhà đất",
       "source_type": "property-listing-portal",
