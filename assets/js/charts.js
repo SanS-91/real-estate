@@ -58,7 +58,7 @@
       && Number.isFinite(row.new_supply_lower_bound));
     const hasAbsorption = rows.some(row => Number.isFinite(row.absorption_rate));
     const datasets = [
-      { label: 'New Supply (exact)', data: rows.map(row => row.new_supply),
+      { label: 'New Supply (reported)', data: rows.map(row => row.new_supply),
         backgroundColor: '#c9aeb4', borderRadius: 3, marketValueKind: 'supply' },
     ];
     if (hasBounds) {
@@ -88,7 +88,12 @@
       if (context.dataset.marketValueKind === 'absorption') {
         return 'Absorption rate: ' + (value * 100).toFixed(1) + '%';
       }
-      return context.dataset.label + ': ' + compactNumber(value) + ' units';
+      const sourceRow = rows[context.dataIndex] || {};
+      const kind = context.dataset.marketValueKind;
+      const qualifier = kind === 'supply' ? sourceRow.metric_qualifiers?.new_supply
+        : kind === 'sales' ? sourceRow.metric_qualifiers?.sales_units : null;
+      return context.dataset.label + ': '
+        + (qualifier === 'approx' ? '≈ ' : '') + compactNumber(value) + ' units';
     };
     if (hasAbsorption) {
       options.scales.y1 = {
