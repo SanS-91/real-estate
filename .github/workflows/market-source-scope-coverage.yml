@@ -87,7 +87,7 @@ jobs:
           pricing=Path('artifacts/pricing-dom.html').read_text(encoding='utf-8')
           izumi=Path('artifacts/izumi-dom.html').read_text(encoding='utf-8')
           essensia=Path('artifacts/essensia-dom.html').read_text(encoding='utf-8')
-          for text in ('Giá chào bán theo phân khúc dự án','Tình trạng nguồn','Biệt thự / liền kề','8/12</strong>','market-listing-health'):
+          for text in ('Giá chào bán theo phân khúc dự án','Cập nhật dữ liệu Batdongsan','Biệt thự / liền kề','8/12</strong>','market-listing-health'):
               assert text in pricing, ('pricing',text)
           for text in ('Giá chào bán theo phạm vi sản phẩm','54,5','83,5','Không sử dụng để tính giá căn hộ Izumi'):
               assert text in izumi or text.replace(',','.') in izumi, ('izumi',text)

@@ -12,6 +12,14 @@ assert.ok(market.includes('DataStore.getReverVerifiedUnitListings()'),
   'Do not break automated incoming individual listing facts');
 assert.ok(market.includes('Ngày snapshot là ngày lưu số liệu nguồn'));
 assert.ok(market.includes('Benchmark toàn thị trường'));
+assert.ok(market.includes('Đang hiển thị dữ liệu giá đã lưu; chưa có bản cập nhật mới từ Batdongsan.'));
+assert.ok(!market.includes('Nguồn Batdongsan đang chặn thu thập tự động (HTTP 403).'));
+assert.ok(market.includes('maintenance.html#market-source-health-title'));
+const status=fs.readFileSync('assets/js/maintenance.js','utf8');
+assert.ok(status.includes('listing-source-coverage.json') && status.includes('HTTP 403'));
+const markup=fs.readFileSync('market.html','utf8');
+assert.ok(markup.includes('charts.js?v=4I5B') && markup.includes('market.js?v=4I5B'));
+
 assert.ok(market.includes('fullLabels: listingChart.fullLabels'));
 assert.ok(market.includes('horizontal: true'));
 assert.ok(market.includes('listingRows.length * 46 + 90'),
@@ -34,6 +42,22 @@ const rows={labels:['Waterpoint','Vinhomes Grand Park'],
 chart.renderRangeSeries('test-price',rows);
 assert.equal(last.type,'bar');
 assert.equal(last.options.indexAxis,'y');
+assert.ok(last.options.layout.padding.right >= 92, 'Right-side range values need reserved space');
+assert.ok(Array.isArray(last.plugins) && last.plugins.some(x => x.id === 'range-value-labels'));
+const drawn=[];
+const labelPlugin=last.plugins.find(x=>x.id==='range-value-labels');
+labelPlugin.afterDatasetsDraw({
+  ctx:{
+    save(){},restore(){},fillText(value,x,y){drawn.push({value,x,y})},
+    set font(value){},set textAlign(value){},set textBaseline(value){},set fillStyle(value){}
+  },
+  chartArea:{right:400},
+  getDatasetMeta:()=>({data:[{y:44},{y:88}]})
+});
+assert.deepEqual(drawn.map(x=>x.value),['38,2–60,2','43,8–77']);
+assert.ok(drawn.every(x=>x.x>400), 'Every range should appear to the right of its bar');
+assert.equal(drawn[0].y,44);
+
 assert.equal(last.options.scales.y.ticks.autoSkip,false);
 assert.equal(last.data.datasets[0].data[0][0],38200000);
 assert.equal(last.data.datasets[0].data[1][1],77000000);

@@ -921,18 +921,18 @@
     const summary = data.listingSourceCoverage;
     if (!summary) return '';
     const sourceText = summary.source_access === 'blocked'
-      ? 'Nguồn Batdongsan đang chặn thu thập tự động (HTTP 403).'
+      ? 'Đang hiển thị dữ liệu giá đã lưu; chưa có bản cập nhật mới từ Batdongsan.'
       : summary.source_access === 'healthy'
-        ? 'Đường thu thập giá hoạt động; bản ghi mới vẫn phải qua kiểm chứng.'
-        : 'Chưa có kết quả kiểm tra truy cập nguồn gần đây.';
+        ? 'Đang theo dõi tự động; dữ liệu mới cần được xác minh trước khi hiển thị.'
+        : 'Đang chờ kết quả kiểm tra nguồn tiếp theo.';
     return `<section class="market-listing-health" aria-label="Listing source data coverage">
       <div class="market-listing-health__cell"><strong>${esc(summary.aggregate_priced_projects)}/${esc(summary.projects_tracked)}</strong><span>Có khoảng giá tổng hợp trên Batdongsan · ${esc(data.projects.length)} dự án toàn danh mục</span></div>
       <div class="market-listing-health__cell"><strong>${esc(summary.category_reference_projects || 0)}</strong><span>Chỉ có giá riêng theo phân khúc/FAQ trên Batdongsan</span></div>
       <div class="market-listing-health__cell"><strong>${esc(summary.projects_with_2plus_snapshots)}</strong><span>Có từ 2 lượt lưu snapshot Batdongsan</span></div>
       <div class="market-listing-health__source">
-        <span class="market-listing-health__source-label">Tình trạng nguồn</span>
+        <span class="market-listing-health__source-label">Cập nhật dữ liệu Batdongsan</span>
         <strong>${esc(sourceText)}</strong>
-        <small>${summary.source_checked_at ? 'Kiểm tra nguồn ' + esc(summary.source_checked_at.slice(0,10)) : 'Đang đợi lần kiểm tra tiếp theo'}</small>
+        <small>${summary.source_checked_at ? 'Lần kiểm tra: ' + esc(summary.source_checked_at.slice(0,10)) : 'Đang đợi lần kiểm tra tiếp theo'} · <a href="maintenance.html#market-source-health-title">Chi tiết nguồn</a></small>
       </div>
     </section>`;
   }
@@ -971,7 +971,7 @@
       (verifiedSnapshotRows || '<tr><td colspan="6" class="table-empty">No comparable pricing records.</td></tr>') + '</tbody>';
 
     const chartBody = state.priceLayer === 'listing'
-      ? (listingRows.length ? '<div class="chart-frame chart-frame--large chart-frame--pricing-range" style="height:' + Math.max(380, Math.min(850, listingRows.length * 46 + 90)) + 'px"><canvas id="market-pricing" aria-label="Khoảng giá rao bán theo dự án, biểu đồ thanh ngang" role="img"></canvas></div><p class="chart-note">Khoảng giá rao bán theo dự án (triệu VND/m², không phải giao dịch). Đọc tên dự án bên trái và khoảng thấp–cao theo trục giá ngang; chạm vào thanh để xem đủ phạm vi sản phẩm. Không nối thành xu hướng thời gian. Căn hộ và thấp tầng không so sánh trực tiếp.</p>' : '<div class="state-box">No priced listing snapshots for the selected filters.</div>')
+      ? (listingRows.length ? '<div class="chart-frame chart-frame--large chart-frame--pricing-range" style="height:' + Math.max(380, Math.min(850, listingRows.length * 46 + 90)) + 'px"><canvas id="market-pricing" aria-label="Khoảng giá rao bán theo dự án, biểu đồ thanh ngang" role="img"></canvas></div><p class="chart-note">Khoảng giá rao bán theo dự án (triệu VND/m², không phải giao dịch). Số thấp–cao hiển thị ngay bên phải mỗi thanh; chạm vào thanh để xem loại sản phẩm. Không nối thành xu hướng thời gian. Căn hộ và thấp tầng không so sánh trực tiếp.</p>' : '<div class="state-box">No priced listing snapshots for the selected filters.</div>')
       : (series.length ? '<div class="chart-frame chart-frame--large"><canvas id="market-pricing"></canvas></div><p class="chart-note">Sparse source-stated snapshots; no missing project price is estimated.</p>' : '<div class="state-box">No verified project price observations for the selected filters.</div>');
     const snapshotTable = state.priceLayer === 'listing' ? listingSnapshotTable : verifiedSnapshotTable;
 

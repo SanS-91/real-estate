@@ -18,6 +18,8 @@ class SourceStatusUITests(unittest.TestCase):
         self.assertIn("data/state/market-stable-listing-health.json", script)
         self.assertIn("data/state/market-cushman-quarterly-verification.json", script)
         self.assertIn("Cushman & Wakefield", script)
+        self.assertIn("data/state/listing-source-coverage.json", script)
+        self.assertIn("Batdongsan", script)
         self.assertIn("repeatably-parseable", script)
         self.assertIn("access-blocked", script)
         self.assertIn("esc(cell)", script)
