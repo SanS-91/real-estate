@@ -89,23 +89,26 @@ def parse_detail(html, url, expected_name, project_id, captured):
     title = " ".join(heading.get_text(" ", strip=True).split())
     if BANNED.search(title):
         return None, "wrong-product-type"
-    raw = soup.get_text(" ", strip=True)
-    text = re.sub(r"\s+", " ", raw)
-    # Strong project attribution: explicit project field on property detail,
-    # not a neighborhood recommendation mentioning the desired project.
+    # Source headings are repeated in <title>, navigation and other listings.
+    # Read the genuine listing DOM strictly *after* the first H1, not global text.
+    tail = re.sub(r"\s+", " ", " ".join(
+        t.strip() for t in heading.next_strings if t and t.strip()))[:30000]
+    # Strong project attribution: the detail's own "Dự án" field, not
+    # the nav's "Dự án nổi bật" or nearby search recommendations.
+    info_marker = tail.find("Thông tin cơ bản")
+    info = tail[info_marker:info_marker + 4800] if info_marker >= 0 else tail[:6500]
     match_project = re.search(
         r"(?:Dự án|Project)\s*:?\s*([\wÀ-ỹ\s\-]{3,90})(?=\s+Giá bán|\s+Tình trạng|\s+Tìm kiếm|\s+Xem chi tiết)",
-        text, re.I
+        info, re.I
     )
     match_title = re.search(re.escape(expected_name), title, re.I)
     if not match_project or " ".join(match_project.group(1).casefold().split()) != expected_name.casefold():
         return None, "project-not-explicit"
-    if not match_title and expected_name.casefold() not in text[:800].casefold():
+    if not match_title and expected_name.casefold() not in tail[:1400].casefold():
         return None, "listing-heading-not-project-scoped"
     # Evaluate listing price in the compact summary before full-description
     # suggested listings, avoiding unrelated price amounts.
-    h_end = text.find(title)
-    header = text[h_end:h_end + 650] if h_end >= 0 else ""
+    header = tail[:950]
     ident = ID.search(header)
     dt = DATE.search(header)
     price = PRICE.search(header)
