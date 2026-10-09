@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-10-08T15:34:40.592Z",
+  "generated_at": "2026-10-09T03:21:16.056890+00:00",
   "listing_market": {
     "series_count": 12,
     "trend_ready_series": 0,
@@ -105,42 +105,10 @@
     ]
   },
   "market_research": {
-    "series_count": 6,
-    "trend_ready_series": 2,
+    "series_count": 10,
+    "trend_ready_series": 4,
     "threshold_periods": 4,
     "items": [
-      {
-        "scope_type": "region-segment-benchmark",
-        "region_ids": [
-          "hcmc"
-        ],
-        "segment_ids": [
-          "apartment"
-        ],
-        "source_id": "savills-vietnam-market",
-        "period_count": 1,
-        "periods": [
-          "2025"
-        ],
-        "trend_ready": false,
-        "missing_periods_to_trend_ready": 3
-      },
-      {
-        "scope_type": "region-segment-benchmark",
-        "region_ids": [
-          "hcmc"
-        ],
-        "segment_ids": [
-          "landed"
-        ],
-        "source_id": "savills-vietnam-market",
-        "period_count": 1,
-        "periods": [
-          "2025"
-        ],
-        "trend_ready": false,
-        "missing_periods_to_trend_ready": 3
-      },
       {
         "scope_type": "region-segment",
         "region_ids": [
@@ -169,16 +137,106 @@
           "apartment"
         ],
         "source_id": "cushman-wakefield-vietnam-market",
-        "period_count": 2,
+        "period_count": 5,
         "periods": [
+          "2024-Q4",
+          "2025-Q1",
+          "2025-Q4",
           "2026-Q1",
           "2026-Q2"
+        ],
+        "trend_ready": true,
+        "missing_periods_to_trend_ready": 0
+      },
+      {
+        "scope_type": "region-segment",
+        "region_ids": [
+          "hcmc"
+        ],
+        "segment_ids": [
+          "apartment"
+        ],
+        "source_id": "savills-vietnam-market",
+        "period_count": 1,
+        "periods": [
+          "2025-Q1"
+        ],
+        "trend_ready": false,
+        "missing_periods_to_trend_ready": 3
+      },
+      {
+        "scope_type": "region-segment",
+        "region_ids": [
+          "hcmc"
+        ],
+        "segment_ids": [
+          "landed"
+        ],
+        "source_id": "cbre-vietnam-market",
+        "period_count": 4,
+        "periods": [
+          "2025-Q3",
+          "2025-Q4",
+          "2026-Q1",
+          "2026-Q2"
+        ],
+        "trend_ready": true,
+        "missing_periods_to_trend_ready": 0
+      },
+      {
+        "scope_type": "region-segment",
+        "region_ids": [
+          "hcmc"
+        ],
+        "segment_ids": [
+          "landed"
+        ],
+        "source_id": "cushman-wakefield-vietnam-market",
+        "period_count": 4,
+        "periods": [
+          "2024-Q4",
+          "2025-Q1",
+          "2025-Q4",
+          "2026-Q2"
+        ],
+        "trend_ready": true,
+        "missing_periods_to_trend_ready": 0
+      },
+      {
+        "scope_type": "region-segment-benchmark",
+        "region_ids": [
+          "hcmc"
+        ],
+        "segment_ids": [
+          "apartment"
+        ],
+        "source_id": "cbre-vietnam-market",
+        "period_count": 2,
+        "periods": [
+          "2024",
+          "2025-H1"
         ],
         "trend_ready": false,
         "missing_periods_to_trend_ready": 2
       },
       {
-        "scope_type": "region-segment",
+        "scope_type": "region-segment-benchmark",
+        "region_ids": [
+          "hcmc"
+        ],
+        "segment_ids": [
+          "apartment"
+        ],
+        "source_id": "savills-vietnam-market",
+        "period_count": 1,
+        "periods": [
+          "2025"
+        ],
+        "trend_ready": false,
+        "missing_periods_to_trend_ready": 3
+      },
+      {
+        "scope_type": "region-segment-benchmark",
         "region_ids": [
           "hcmc"
         ],
@@ -186,28 +244,41 @@
           "landed"
         ],
         "source_id": "cbre-vietnam-market",
-        "period_count": 4,
+        "period_count": 1,
         "periods": [
-          "2025-Q3",
-          "2025-Q4",
-          "2026-Q1",
-          "2026-Q2"
+          "2025-H1"
         ],
-        "trend_ready": true,
-        "missing_periods_to_trend_ready": 0
+        "trend_ready": false,
+        "missing_periods_to_trend_ready": 3
       },
       {
-        "scope_type": "region-segment",
+        "scope_type": "region-segment-benchmark",
         "region_ids": [
           "hcmc"
         ],
         "segment_ids": [
           "landed"
         ],
-        "source_id": "cushman-wakefield-vietnam-market",
+        "source_id": "savills-vietnam-market",
         "period_count": 1,
         "periods": [
-          "2026-Q2"
+          "2025"
+        ],
+        "trend_ready": false,
+        "missing_periods_to_trend_ready": 3
+      },
+      {
+        "scope_type": "region-segment-benchmark",
+        "region_ids": [
+          "hcmc"
+        ],
+        "segment_ids": [
+          "residential"
+        ],
+        "source_id": "cbre-vietnam-market",
+        "period_count": 1,
+        "periods": [
+          "2025-Q1"
         ],
         "trend_ready": false,
         "missing_periods_to_trend_ready": 3

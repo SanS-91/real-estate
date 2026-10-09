@@ -1,9 +1,37 @@
 {
   "schema_version": 1,
-  "build_id": "phase6.3-historical-backfill-20261008",
-  "generated_at": "2026-10-08T15:34:16.117Z",
-  "record_count": 15,
+  "build_id": "source-verified-history-20261009T032116Z",
+  "generated_at": "2026-10-09T03:21:16.025473+00:00",
+  "record_count": 26,
   "data": [
+    {
+      "id": "obs-hcmc-apartment-2024-annual-cbre",
+      "scope_type": "region-segment-benchmark",
+      "region_ids": [
+        "hcmc"
+      ],
+      "segment_ids": [
+        "apartment"
+      ],
+      "period": "2024",
+      "period_type": "year",
+      "new_supply": 5050,
+      "sales_units": null,
+      "absorption_rate": null,
+      "average_asp": null,
+      "asp_unit": "vnd-per-m2",
+      "currency": "VND",
+      "price_basis": null,
+      "source_id": "cbre-vietnam-market",
+      "source_date": "2025-01-17",
+      "source_url": "https://www.cbrevietnam.com/insights/figures/ho-chi-minh-city-figures-q4-2024",
+      "methodology_note": "CBRE reports 5,050 new condominium units across full-year 2024 in HCMC (former administrative boundary). Annual total must not be interpreted as Q4-only or plotted as quarterly supply.",
+      "reported_geography": "former-hcmc-core",
+      "reporting_basis": "calendar-year-total",
+      "source_evidence": {
+        "new_supply": "5,050 HCMC condominium units in 2024"
+      }
+    },
     {
       "id": "obs-the-privia-2024",
       "scope_type": "project",
@@ -29,6 +57,119 @@
       "methodology_note": "Khang Điền stated that 100% of The Privia apartments were sold within three months of launch in 2024; project has 1,043 apartments."
     },
     {
+      "id": "obs-hcmc-apartment-2024-q4-cushman",
+      "scope_type": "region-segment",
+      "region_ids": [
+        "hcmc"
+      ],
+      "segment_ids": [
+        "apartment"
+      ],
+      "period": "2024-Q4",
+      "period_type": "quarter",
+      "new_supply": 2719,
+      "sales_units": 2630,
+      "absorption_rate": null,
+      "average_asp": null,
+      "asp_unit": "vnd-per-m2",
+      "currency": "VND",
+      "price_basis": null,
+      "metric_qualifiers": {
+        "new_supply": "approx"
+      },
+      "source_id": "cushman-wakefield-vietnam-market",
+      "source_date": "2025-01-25",
+      "source_url": "https://www.cushmanwakefield.com/en/vietnam/news/2025/01/hcmc-real-estate-market-overview-q4-2024",
+      "methodology_note": "Cushman Q4 2024 HCMC apartment launches approx 2,719; new absorption (transactions) 2,630. New absorption need not equal sales of the same-quarter launches.",
+      "reported_geography": "former-hcmc-core",
+      "reporting_basis": "quarterly-launches",
+      "source_evidence": {
+        "new_supply": "approximately 2,719 new apartments",
+        "sales_units": "new absorption of 2,630 units",
+        "reported_primary_price_usd_per_sqm": "Publisher primary price 3,672 US$/sqm"
+      },
+      "reported_primary_price_usd_per_sqm": 3672,
+      "reported_primary_price_area_basis": "published-primary-sqm"
+    },
+    {
+      "id": "obs-hcmc-landed-2024-q4-cushman",
+      "scope_type": "region-segment",
+      "region_ids": [
+        "hcmc"
+      ],
+      "segment_ids": [
+        "landed"
+      ],
+      "period": "2024-Q4",
+      "period_type": "quarter",
+      "new_supply": 27,
+      "sales_units": 80,
+      "absorption_rate": null,
+      "average_asp": null,
+      "asp_unit": "vnd-per-m2",
+      "currency": "VND",
+      "price_basis": null,
+      "source_id": "cushman-wakefield-vietnam-market",
+      "source_date": "2025-01-25",
+      "source_url": "https://www.cushmanwakefield.com/en/vietnam/news/2025/01/hcmc-real-estate-market-overview-q4-2024",
+      "methodology_note": "Cushman Q4 2024 HCMC landed projects launched 27 units and recorded 80 successful transactions, which may involve prior inventory.",
+      "reported_geography": "former-hcmc-core",
+      "reporting_basis": "quarterly-launches",
+      "source_evidence": {
+        "new_supply": "only 27 new units launched",
+        "sales_units": "80 successful transactions",
+        "reported_primary_price_usd_per_sqm": "Publisher primary price 10,701 US$/sqm"
+      },
+      "reported_primary_price_usd_per_sqm": 10701,
+      "reported_primary_price_area_basis": "land-area"
+    },
+    {
+      "id": "obs-hcmc-apartment-2025-savills-benchmark",
+      "scope_type": "region-segment-benchmark",
+      "region_ids": [
+        "hcmc"
+      ],
+      "segment_ids": [
+        "apartment"
+      ],
+      "period": "2025",
+      "period_type": "year",
+      "new_supply": 8600,
+      "sales_units": 11500,
+      "absorption_rate": 0.82,
+      "average_asp": 102000000,
+      "asp_unit": "vnd-per-m2",
+      "currency": "VND",
+      "price_basis": "primary-average",
+      "source_id": "savills-vietnam-market",
+      "source_date": "2026-04-21",
+      "source_url": "https://www.savills.com.vn/blog/article/235335/vietnam-viet/nha-o-la-mot-phan-cua-ha-tang-quoc-gia.aspx",
+      "methodology_note": "Savills public 2025 HCMC benchmark: about 8,600 new units, 11,500 transactions, 82% absorption and average primary price around VND 102m/m². Definitions are source-specific and should not be mechanically combined with CBRE quarterly launch figures."
+    },
+    {
+      "id": "obs-hcmc-landed-2025-savills-benchmark",
+      "scope_type": "region-segment-benchmark",
+      "region_ids": [
+        "hcmc"
+      ],
+      "segment_ids": [
+        "landed"
+      ],
+      "period": "2025",
+      "period_type": "year",
+      "new_supply": 4100,
+      "sales_units": 2000,
+      "absorption_rate": null,
+      "average_asp": 233000000,
+      "asp_unit": "vnd-per-m2-land",
+      "currency": "VND",
+      "price_basis": "primary-average-land",
+      "source_id": "savills-vietnam-market",
+      "source_date": "2026-03-28",
+      "source_url": "https://vn.savills.com.vn/blog/article/234705/vietnam-eng/hcmc-real-estate-q4-2025.aspx",
+      "methodology_note": "Savills public 2025 villa/townhouse benchmark: about 4,100 new units, 2,000 transactions and average primary price VND 233m/m² of land."
+    },
+    {
       "id": "obs-elysian-2025-07",
       "scope_type": "project",
       "project_id": "elysian",
@@ -51,6 +192,193 @@
       "source_date": "2025-07-31",
       "source_url": "https://gamudaland.com.vn/vn/news/news-and-story-34",
       "methodology_note": "Gamuda Land stated an average price of VND 68m/m² in a July 2025 project-sales article. Developer-stated pricing is kept distinct from independent market research."
+    },
+    {
+      "id": "obs-hcmc-apartment-2025-h1-cbre",
+      "scope_type": "region-segment-benchmark",
+      "region_ids": [
+        "hcmc"
+      ],
+      "segment_ids": [
+        "apartment"
+      ],
+      "period": "2025-H1",
+      "period_type": "half-year",
+      "new_supply": 1400,
+      "sales_units": null,
+      "absorption_rate": null,
+      "average_asp": null,
+      "asp_unit": "vnd-per-m2",
+      "currency": "VND",
+      "price_basis": null,
+      "source_id": "cbre-vietnam-market",
+      "source_date": "2025-08-27",
+      "source_url": "https://www.cbrevietnam.com/insights/figures/ho-chi-minh-city-figures-q2-2025",
+      "methodology_note": "CBRE Q2 2025 H1 cumulative data, 1,400 high-rise units in HCMC from January through June 2025. Not a standalone Q2 observation.",
+      "reported_geography": "former-hcmc-core",
+      "reporting_basis": "year-to-date-first-half",
+      "source_evidence": {
+        "new_supply": "1,400 high-rise new supply, H1 2025"
+      }
+    },
+    {
+      "id": "obs-hcmc-landed-2025-h1-cbre",
+      "scope_type": "region-segment-benchmark",
+      "region_ids": [
+        "hcmc"
+      ],
+      "segment_ids": [
+        "landed"
+      ],
+      "period": "2025-H1",
+      "period_type": "half-year",
+      "new_supply": 74,
+      "sales_units": null,
+      "absorption_rate": null,
+      "average_asp": null,
+      "asp_unit": "vnd-per-m2",
+      "currency": "VND",
+      "price_basis": null,
+      "source_id": "cbre-vietnam-market",
+      "source_date": "2025-08-27",
+      "source_url": "https://www.cbrevietnam.com/insights/figures/ho-chi-minh-city-figures-q2-2025",
+      "methodology_note": "CBRE Q2 2025 H1 cumulative data, 74 low-rise units in HCMC from January through June 2025. Not a standalone Q2 observation.",
+      "reported_geography": "former-hcmc-core",
+      "reporting_basis": "year-to-date-first-half",
+      "source_evidence": {
+        "new_supply": "74 low-rise new supply, H1 2025"
+      }
+    },
+    {
+      "id": "obs-hcmc-residential-2025-q1-cbre",
+      "scope_type": "region-segment-benchmark",
+      "region_ids": [
+        "hcmc"
+      ],
+      "segment_ids": [
+        "residential"
+      ],
+      "period": "2025-Q1",
+      "period_type": "quarter",
+      "new_supply": 408,
+      "sales_units": null,
+      "absorption_rate": null,
+      "average_asp": null,
+      "asp_unit": "vnd-per-m2",
+      "currency": "VND",
+      "price_basis": null,
+      "source_id": "cbre-vietnam-market",
+      "source_date": "2025-05-09",
+      "source_url": "https://www.cbrevietnam.com/insights/figures/ho-chi-minh-city-figures-q1-2025",
+      "methodology_note": "CBRE Q1 2025 reports 408 new launched residential units in total (high-rise AND low-rise). This combined count must not be assigned to either apartment or landed segment.",
+      "reported_geography": "former-hcmc-core",
+      "reporting_basis": "combined-apartment-and-landed",
+      "source_evidence": {
+        "new_supply": "408 combined high-rise and low-rise new units"
+      }
+    },
+    {
+      "id": "obs-hcmc-apartment-2025-q1-cushman",
+      "scope_type": "region-segment",
+      "region_ids": [
+        "hcmc"
+      ],
+      "segment_ids": [
+        "apartment"
+      ],
+      "period": "2025-Q1",
+      "period_type": "quarter",
+      "new_supply": 2877,
+      "sales_units": 1101,
+      "absorption_rate": 0.46,
+      "average_asp": null,
+      "asp_unit": "vnd-per-m2",
+      "currency": "VND",
+      "price_basis": null,
+      "source_id": "cushman-wakefield-vietnam-market",
+      "source_date": "2025-04-14",
+      "source_url": "https://assets.cushmanwakefield.com/-/media/cw/marketbeat-pdfs/2025/q1/apac-and-gc/vietnam-marketbeat-q1-2025-hcmc-residential_eng.pdf",
+      "methodology_note": "Cushman & Wakefield original signed MarketBeat PDF Q1 2025 table reports 2,877 new apartments, 1,101 sales volume, 46% publisher-defined absorption and USD 4,691/sqm primary price. A separate website snippet displays 2,392 units; the dated PDF table is used for this observation, and discrepancy remains documented for review.",
+      "reported_geography": "former-hcmc-core",
+      "reporting_basis": "quarterly-launches",
+      "reported_primary_price_usd_per_sqm": 4691,
+      "reported_primary_price_area_basis": "GFA",
+      "source_evidence": {
+        "new_supply": "2,877 apartment new supply in Q1 2025 market statistics",
+        "sales_units": "1,101 sales volume",
+        "absorption_rate": "46% absorption",
+        "reported_primary_price_usd_per_sqm": "4,691 USD/sq.m"
+      },
+      "source_discrepancy": {
+        "site_excerpt_value": 2392,
+        "pdf_statistics_value": 2877,
+        "decision": "prefer-official-pdf-table",
+        "review_note": "Different figures visible in C&W site's Q1 2025 text and signed MarketBeat PDF; keep disclosure, never synthesize."
+      }
+    },
+    {
+      "id": "obs-hcmc-landed-2025-q1-cushman",
+      "scope_type": "region-segment",
+      "region_ids": [
+        "hcmc"
+      ],
+      "segment_ids": [
+        "landed"
+      ],
+      "period": "2025-Q1",
+      "period_type": "quarter",
+      "new_supply": 178,
+      "sales_units": 120,
+      "absorption_rate": 0.38,
+      "average_asp": null,
+      "asp_unit": "vnd-per-m2",
+      "currency": "VND",
+      "price_basis": null,
+      "source_id": "cushman-wakefield-vietnam-market",
+      "source_date": "2025-04-14",
+      "source_url": "https://assets.cushmanwakefield.com/-/media/cw/marketbeat-pdfs/2025/q1/apac-and-gc/vietnam-marketbeat-q1-2025-hcmc-residential_eng.pdf",
+      "methodology_note": "Cushman & Wakefield official Q1 2025 HCMC Residential MarketBeat PDF tables: landed 178 launches, 120 sales volume, 38% publisher-defined absorption and USD 11,978/sqm primary asking (land area). Source period is Q1 2025, not a forecast.",
+      "reported_geography": "former-hcmc-core",
+      "reporting_basis": "quarterly-launches",
+      "source_evidence": {
+        "new_supply": "178 landed launched",
+        "sales_units": "120 landed sales volume",
+        "absorption_rate": "38% absorption in Market Statistics",
+        "reported_primary_price_usd_per_sqm": "11,978 US$/sq.m in Market Statistics"
+      },
+      "reported_primary_price_usd_per_sqm": 11978,
+      "reported_primary_price_area_basis": "land-area"
+    },
+    {
+      "id": "obs-hcmc-apartment-2025-q1-savills",
+      "scope_type": "region-segment",
+      "region_ids": [
+        "hcmc"
+      ],
+      "segment_ids": [
+        "apartment"
+      ],
+      "period": "2025-Q1",
+      "period_type": "quarter",
+      "new_supply": 800,
+      "sales_units": null,
+      "absorption_rate": null,
+      "average_asp": null,
+      "asp_unit": "vnd-per-m2",
+      "currency": "VND",
+      "price_basis": null,
+      "metric_qualifiers": {
+        "new_supply": "approx"
+      },
+      "source_id": "savills-vietnam-market",
+      "source_date": "2025-04-19",
+      "source_url": "https://www.savills.com/blog/article/221175-1/vietnam-eng/apartment-market-overview-in-q1-2025.aspx",
+      "methodology_note": "Savills Market Brief Q1 2025 reports around 800 new apartment units in HCMC. This is Savills methodology and must not be conflated with CBRE's 408 combined high/low-rise Q1 count.",
+      "reported_geography": "former-hcmc-core",
+      "reporting_basis": "quarterly-launches",
+      "source_evidence": {
+        "new_supply": "around 800 new apartment units in Q1 2025"
+      }
     },
     {
       "id": "obs-hcmc-apartment-2025-q3-cbre",
@@ -146,6 +474,81 @@
       "source_date": "2026-02-05",
       "source_url": "https://www.cbrevietnam.com/insights/figures/ho-chi-minh-city-figures-q4-2025",
       "methodology_note": "CBRE HCMC Figures Q4 2025 reports 4,569 newly launched landed properties in the former HCMC market."
+    },
+    {
+      "id": "obs-hcmc-apartment-2025-q4-cushman",
+      "scope_type": "region-segment",
+      "region_ids": [
+        "hcmc"
+      ],
+      "segment_ids": [
+        "apartment"
+      ],
+      "period": "2025-Q4",
+      "period_type": "quarter",
+      "new_supply": 3358,
+      "sales_units": 3196,
+      "absorption_rate": 0.62,
+      "average_asp": null,
+      "asp_unit": "vnd-per-m2",
+      "currency": "VND",
+      "price_basis": null,
+      "metric_qualifiers": {
+        "sales_units": "approx",
+        "absorption_rate": "approx"
+      },
+      "source_id": "cushman-wakefield-vietnam-market",
+      "source_date": "2026-01-27",
+      "source_url": "https://www.cushmanwakefield.com/en/vietnam/news/2026/01/q4-2025-hcmc-residential-marketbeat-report",
+      "methodology_note": "Cushman HCMC core apartment Q4 2025: 3,358 launched, about 3,196 new absorption and source-stated about 62% absorption. Absorption rate is not calculated as 3,196/3,358 because denominators differ.",
+      "reported_geography": "former-hcmc-core",
+      "reporting_basis": "quarterly-launches",
+      "source_evidence": {
+        "new_supply": "3,358 new apartment units launched",
+        "sales_units": "new absorption approximately 3,196 units",
+        "absorption_rate": "approximately 62% (publisher-defined)",
+        "reported_primary_price_usd_per_sqm": "Publisher primary price 6,113 US$/sqm"
+      },
+      "reported_primary_price_usd_per_sqm": 6113,
+      "reported_primary_price_area_basis": "GFA"
+    },
+    {
+      "id": "obs-hcmc-landed-2025-q4-cushman",
+      "scope_type": "region-segment",
+      "region_ids": [
+        "hcmc"
+      ],
+      "segment_ids": [
+        "landed"
+      ],
+      "period": "2025-Q4",
+      "period_type": "quarter",
+      "new_supply": 1535,
+      "sales_units": 1167,
+      "absorption_rate": 0.7,
+      "average_asp": null,
+      "asp_unit": "vnd-per-m2",
+      "currency": "VND",
+      "price_basis": null,
+      "metric_qualifiers": {
+        "new_supply": "approx",
+        "sales_units": "approx",
+        "absorption_rate": "approx"
+      },
+      "source_id": "cushman-wakefield-vietnam-market",
+      "source_date": "2026-01-27",
+      "source_url": "https://www.cushmanwakefield.com/en/vietnam/news/2026/01/q4-2025-hcmc-residential-marketbeat-report",
+      "methodology_note": "Cushman HCMC core landed Q4 2025: approx 1,535 new launches, approx 1,167 new absorption and source-stated ~70% absorption, reflecting its own inventory denominator.",
+      "reported_geography": "former-hcmc-core",
+      "reporting_basis": "quarterly-launches",
+      "source_evidence": {
+        "new_supply": "approximately 1,535 new landed units",
+        "sales_units": "approximately 1,167 new absorption",
+        "absorption_rate": "about 70% (publisher-defined)",
+        "reported_primary_price_usd_per_sqm": "Publisher primary price 6,330 US$/sqm"
+      },
+      "reported_primary_price_usd_per_sqm": 6330,
+      "reported_primary_price_area_basis": "land-area"
     },
     {
       "id": "obs-hcmc-apartment-2026-q1-cbre",
@@ -324,52 +727,6 @@
       "source_date": "2026-08-01",
       "source_url": "https://www.cushmanwakefield.com/en/vietnam/insights/ho-chi-minh-city-marketbeat/residential-marketbeat",
       "methodology_note": "Cushman & Wakefield Q2/2026 states landed new supply at approximately 1,700 units, absorption at ~36%, and nearly 870 units. Approximation qualifiers are retained explicitly."
-    },
-    {
-      "id": "obs-hcmc-apartment-2025-savills-benchmark",
-      "scope_type": "region-segment-benchmark",
-      "region_ids": [
-        "hcmc"
-      ],
-      "segment_ids": [
-        "apartment"
-      ],
-      "period": "2025",
-      "period_type": "year",
-      "new_supply": 8600,
-      "sales_units": 11500,
-      "absorption_rate": 0.82,
-      "average_asp": 102000000,
-      "asp_unit": "vnd-per-m2",
-      "currency": "VND",
-      "price_basis": "primary-average",
-      "source_id": "savills-vietnam-market",
-      "source_date": "2026-04-21",
-      "source_url": "https://www.savills.com.vn/blog/article/235335/vietnam-viet/nha-o-la-mot-phan-cua-ha-tang-quoc-gia.aspx",
-      "methodology_note": "Savills public 2025 HCMC benchmark: about 8,600 new units, 11,500 transactions, 82% absorption and average primary price around VND 102m/m². Definitions are source-specific and should not be mechanically combined with CBRE quarterly launch figures."
-    },
-    {
-      "id": "obs-hcmc-landed-2025-savills-benchmark",
-      "scope_type": "region-segment-benchmark",
-      "region_ids": [
-        "hcmc"
-      ],
-      "segment_ids": [
-        "landed"
-      ],
-      "period": "2025",
-      "period_type": "year",
-      "new_supply": 4100,
-      "sales_units": 2000,
-      "absorption_rate": null,
-      "average_asp": 233000000,
-      "asp_unit": "vnd-per-m2-land",
-      "currency": "VND",
-      "price_basis": "primary-average-land",
-      "source_id": "savills-vietnam-market",
-      "source_date": "2026-03-28",
-      "source_url": "https://vn.savills.com.vn/blog/article/234705/vietnam-eng/hcmc-real-estate-q4-2025.aspx",
-      "methodology_note": "Savills public 2025 villa/townhouse benchmark: about 4,100 new units, 2,000 transactions and average primary price VND 233m/m² of land."
     }
   ]
 }

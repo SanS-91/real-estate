@@ -1,0 +1,42 @@
+{
+  "schema_version": 1,
+  "generated_at": "2026-10-09T03:21:16.090071+00:00",
+  "mode": "market-coverage-qa-v1",
+  "status": "pass",
+  "counts": {
+    "projects": 12,
+    "developers": 9,
+    "observations": 26
+  },
+  "first_party_project_share": 1.0,
+  "by_region": {
+    "dong-nai": 1,
+    "hcmc": 10,
+    "long-an": 1
+  },
+  "by_segment": {
+    "apartment": 10,
+    "landed": 7,
+    "township": 6
+  },
+  "by_developer": {
+    "gamuda-land": 2,
+    "keppel": 1,
+    "khang-dien": 1,
+    "masterise": 1,
+    "nam-long": 4,
+    "nomura-real-estate-vietnam": 1,
+    "phu-long": 2,
+    "sonkim-land": 1,
+    "vinhomes": 1
+  },
+  "checks": {
+    "projects": true,
+    "developers": true,
+    "first_party_project_share": true,
+    "regions_with_projects": true,
+    "segments_with_projects": true
+  },
+  "errors": [],
+  "coverage_note": "Coverage can expand without inventing price, absorption, sales or supply metrics; quantitative gaps remain explicit."
+}
