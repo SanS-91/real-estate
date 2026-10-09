@@ -158,6 +158,34 @@
       return Number.isFinite(low) && Number.isFinite(high) && low > 0 && high >= low
         ? [low, high] : null;
     });
+    // Display the source range for every project without hovering. Labels are
+    // drawn alongside their own horizontal bar, not as a synthetic midpoint.
+    const millionFormat = new Intl.NumberFormat('vi-VN', { maximumFractionDigits: 1 });
+    const rangeLabels = ranges.map(range => range
+      ? millionFormat.format(range[0] / 1_000_000) + '–' + millionFormat.format(range[1] / 1_000_000)
+      : '');
+    const labelGutter = horizontal ? Math.max(92, Math.ceil(Math.max(0, ...rangeLabels.map(label => label.length)) * 6.7) + 16) : 0;
+    const rangeValueLabels = {
+      id: 'range-value-labels',
+      afterDatasetsDraw(chart) {
+        if (!horizontal) return;
+        const meta = chart.getDatasetMeta(0);
+        const { ctx, chartArea } = chart;
+        if (!meta || !chartArea) return;
+        ctx.save();
+        ctx.font = '600 11px system-ui, -apple-system, sans-serif';
+        ctx.textAlign = 'left';
+        ctx.textBaseline = 'middle';
+        ctx.fillStyle = '#344054';
+        meta.data.forEach((bar, index) => {
+          const label = rangeLabels[index];
+          if (bar && label && Number.isFinite(bar.y)) {
+            ctx.fillText(label, chartArea.right + 9, bar.y);
+          }
+        });
+        ctx.restore();
+      }
+    };
     return render(id, {
       type: 'bar',
       data: {
@@ -176,6 +204,7 @@
       },
       options: {
         ...baseOptions({ yFormatter }),
+        layout: horizontal ? { padding: { right: labelGutter } } : {},
         indexAxis: horizontal ? 'y' : 'x',
         scales: horizontal ? {
           x: {
@@ -185,7 +214,20 @@
           },
           y: {
             grid: { display: false },
-            ticks: { color: '#475467', autoSkip: false, font: { size: 11 } }
+            ticks: {
+              color: '#475467', autoSkip: false, font: { size: 11 },
+              callback(value) {
+                const name = this.getLabelForValue(value);
+                if (!this.chart || this.chart.width >= 640 || name.length <= 16) return name;
+                const lines = [''];
+                name.split(' ').forEach(word => {
+                  const last = lines.length - 1;
+                  if (lines[last] && (lines[last] + ' ' + word).length > 16) lines.push(word);
+                  else lines[last] = (lines[last] ? lines[last] + ' ' : '') + word;
+                });
+                return lines;
+              }
+            }
           }
         } : baseOptions({ yFormatter }).scales,
         plugins: {
@@ -204,7 +246,8 @@
             }
           }
         }
-      }
+      },
+      plugins: horizontal ? [rangeValueLabels] : []
     });
   }
 
