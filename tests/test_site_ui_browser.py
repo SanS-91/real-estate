@@ -66,6 +66,10 @@ async def run():
                     })""")
                     assert len(measurements["navItems"])==7,(path,measurements["navItems"])
                     assert "maintenance.html" in measurements["navItems"],path
+                    # Same explicit tab label in both primary and touch menu;
+                    # article/data pages translate their content separately.
+                    assert await page.locator(".main-nav a[href='maintenance.html']").text_content()=="Maintenance"
+                    assert await page.locator("[data-mobile-nav] a[href='maintenance.html']").text_content()=="Maintenance"
                     expected_mobile=width<1200
                     assert measurements["mobileMenu"]==expected_mobile,(width,path,"menu")
                     assert measurements["visibleMain"]!=expected_mobile,(width,path,"desktop nav")
@@ -111,6 +115,13 @@ async def run():
                             first=pills.first
                             assert await first.get_attribute("data-topic") in {
                                "pricing","supply","sales","projects","legal","infrastructure","research"}
+                            # Topic tags need an actual visual distinction on
+                            # both cards and filters, not just source HTML labels.
+                            style=await first.evaluate("""el=>{
+                              const c=getComputedStyle(el);
+                              return {color:c.color, bg:c.backgroundColor, border:c.borderColor};
+                            }""")
+                            assert style["bg"] not in ("rgba(0, 0, 0, 0)","rgb(255, 255, 255)"),(path,style)
                             await first.click()
                             assert "news-topic=" in page.url,(width,"clickable tags do not filter",page.url)
                     if width==390 and path=="maintenance.html":
