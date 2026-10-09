@@ -142,7 +142,7 @@ async def run():
                                 clientWidth: el.clientWidth,
                                 rowDisplay: getComputedStyle(row).display,
                                 rowWidth: row.getBoundingClientRect().width,
-                                titleWidth: title?.getBoundingClientRect().width ?? 0,
+                                titleWidth: title?.closest('td')?.getBoundingClientRect().width ?? 0,
                                 fields: [...row.querySelectorAll('td:not(.table-empty)')].map(
                                     td => ({vi: td.dataset.labelVi, en: td.dataset.labelEn}))
                             };
