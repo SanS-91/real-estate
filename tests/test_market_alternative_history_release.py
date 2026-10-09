@@ -12,7 +12,9 @@ history=json.loads((ROOT/"data/mock/market/alternative-monthly-history.json").re
 queue=json.loads((ROOT/"data/candidate/market/alternative-price-review-queue.json").read_text())["data"]
 approvals=json.loads((ROOT/"config/market-alternative-reviewed-approvals.json").read_text())["data"]
 assert len(history)==1 and history[0]["period"]=="2026-10"
-assert not queue and not approvals
+assert not approvals
+assert all(row.get("candidate_only") is True and row.get("review_required") is True for row in queue)
+assert all(row.get("period") != history[0]["period"] or row.get("project_id") != history[0]["project_id"] or row.get("subproject_name") for row in queue)
 assert not rel.base_issues(history)
 assert rel.eligible_monthly(history[0]) and rel.quoted_metrics_match(history[0])
 assert rel.evaluate(history,queue,approvals,date(2026,10,9)) == ([],[],[])
