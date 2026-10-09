@@ -57,6 +57,7 @@ jobs:
           p=json.loads(Path('data/candidate/market/alternative-source-probe-report.json').read_text())
           print(f"- Source pages tested: **{p['targets_checked']}**")
           print(f"- New source-period review candidates: **{p['candidates_staged']}**")
+          print(f"- Pending review queue: **{p['queued_backlog']}**; queue conflicts: **{p['queue_conflicts']}**")
           print(f"- Production price changes: **0** (review required)")
           print("")
           print("| Target | Access / evidence | HTTP | Baseline period |")
@@ -74,16 +75,17 @@ jobs:
           path: |
             data/candidate/market/alternative-source-probe-report.json
             data/candidate/market/alternative-price-candidates.json
+            data/candidate/market/alternative-price-review-queue.json
             data/state/alternative-source-health.json
           if-no-files-found: warn
           retention-days: 30
-      - name: Persist source status only, never publish candidates automatically
+      - name: Persist source status and review queue, never publish prices automatically
         if: github.event_name != 'pull_request'
         run: |
           set -eu
           git config user.name 'github-actions[bot]'
           git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
-          git add data/state/alternative-source-health.json
+          git add data/state/alternative-source-health.json data/candidate/market/alternative-price-review-queue.json
           if git diff --cached --quiet; then
             echo 'No source-health changes.'
             exit 0
