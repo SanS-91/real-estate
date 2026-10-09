@@ -81,6 +81,23 @@ async def run():
                     if path=="maintenance.html":
                         assert measurements["activeLink"]=="maintenance.html"
                     if path=="index.html":
+                        await page.locator(".today-card").first.wait_for(timeout=12000)
+                        assert await page.locator(".today-card").count()==4,(width,"four modules")
+                        assert await page.locator(".metric-card").count()<=4,(width,"home macro must remain concise")
+                        assert await page.locator(".home-more-history").get_attribute("open") is None
+                        for card in await page.locator(".today-card").all():
+                            items=card.locator(".compact-list li")
+                            count=await items.count()
+                            assert count<=3,(width,count)
+                            if count and await items.first.locator(".compact-link").count():
+                                for item in await items.all():
+                                    assert await item.locator("time").count()==1,(width,"source dated item")
+                                    assert (await item.locator("time").inner_text()).strip(),(width,"empty update date")
+                        assert await page.locator("body .home-snapshot, body .demo-banner").count()==0
+                        for card in await page.locator(".metric-card").all():
+                            assert await card.locator(".metric-card__footer").count()==1
+                        assert await page.locator(".home-header-actions [data-search-open]").count()==1
+                    if path=="index.html":
                         menu=page.locator("[data-mobile-menu-button]")
                         if expected_mobile:
                             await menu.click()
