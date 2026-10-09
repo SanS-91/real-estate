@@ -1,0 +1,91 @@
+{
+  "schema_version": 1,
+  "generated_at": "2026-10-09",
+  "collection_mode": "assisted-reviewed-public-search-evidence",
+  "description": "Secondary property listing evidence for 3 missing-project coverage targets; source dates retained, non-comparable to aggregate portal asking ranges and not trend-chart eligible.",
+  "record_count": 3,
+  "data": [
+    {
+      "id": "cafeland-izumi-city-garden-townhouse-2026-05-26",
+      "project_id": "izumi-city",
+      "source_id": "cafeland-listings",
+      "source_url": "https://nhadat.cafeland.vn/can-nha-pho-view-pho-va-view-cong-vien-thoang-2-mat-gia-chi-68trm2-2484684.html",
+      "asset_type": "townhouse",
+      "metric_type": "single-listing-asking-price-per-sqm",
+      "value_vnd_per_m2": 68500000,
+      "period": "2026-05-26",
+      "period_type": "date",
+      "source_publication_date": "2026-05-26",
+      "review_date": "2026-10-09",
+      "listing_id": "26042484684",
+      "listed_total_vnd": 11243000000,
+      "listed_area_sqm": 164,
+      "price_area_basis": "land-area-reported-by-publisher",
+      "publisher_claim_status": "source-reported-asking-not-transaction",
+      "evidence": {
+        "date": "Ngày đăng: 26-05-2026",
+        "price": "68,5 triệu/m²",
+        "total": "11 tỷ 243 triệu",
+        "area": "Diện tích 164m2",
+        "project": "Bán Izumi City",
+        "listing": "Mã tài sản: 26042484684"
+      },
+      "methodology_note": "Single townhouse/garden row in Izumi City as of 26 May 2026; source total is listed in rounded VND and its 164m² is land area, not floor area 188.85m² described below. Not a source aggregate, 2026-10 current quote, developer ASP or transaction. Historical listing is not promoted to Batdongsan snapshots."
+    },
+    {
+      "id": "cafeland-essensia-parkway-semidetached-villa-2026-10-08",
+      "project_id": "essensia-parkway",
+      "source_id": "cafeland-listings",
+      "source_url": "https://nhadat.cafeland.vn/biet-thu-truc-duong-nguyen-huu-tho-so-huu-lau-dai-gia-325-ty-3191696.html",
+      "asset_type": "semidetached-villa",
+      "metric_type": "single-listing-asking-price-per-sqm",
+      "value_vnd_per_m2": 203000000,
+      "period": "2026-10-08",
+      "period_type": "date",
+      "source_publication_date": "2026-10-08",
+      "review_date": "2026-10-09",
+      "listing_id": "26103191696",
+      "listed_total_vnd": 32500000000,
+      "listed_area_sqm": 160,
+      "price_area_basis": "land-area-reported-by-publisher",
+      "publisher_claim_status": "source-reported-asking-not-transaction",
+      "evidence": {
+        "date": "Ngày đăng: 08-10-2026",
+        "price": "203 triệu/m²",
+        "total": "32 tỷ 500 triệu",
+        "area": "Diện tích 160m2",
+        "project": "Bán Essensia Parkway",
+        "listing": "Mã tài sản: 26103191696"
+      },
+      "methodology_note": "Single semidetached villa advertisement; 160m² publisher area basis. The listing text describes purported developer sales representative, but publisher listing is not independently verified first-party developer pricing. Not the 234m² construction-area listing nor shophouse; not estate-wide asking ASP or completed transaction."
+    },
+    {
+      "id": "cafeland-the-9-stellars-alta-heights-apartment-2025-01-05",
+      "project_id": "the-9-stellars",
+      "source_id": "cafeland-listings",
+      "source_url": "https://nhadat.cafeland.vn/giai-doan-1-can-ho-alta-height-thuoc-du-an-the-9-stellars-ngay-ga-metro-2259497.html",
+      "asset_type": "apartment",
+      "subproject_name": "Alta Heights",
+      "metric_type": "single-listing-asking-price-per-sqm",
+      "value_vnd_per_m2": 62000000,
+      "period": "2025-01-05",
+      "period_type": "date",
+      "source_publication_date": "2025-01-05",
+      "review_date": "2026-10-09",
+      "listing_id": "25012259497",
+      "listed_total_vnd": 6200000000,
+      "listed_area_sqm": 100,
+      "price_area_basis": "publisher-stated-apartment-area",
+      "publisher_claim_status": "expired-source-reported-asking-not-transaction",
+      "evidence": {
+        "date": "Ngày đăng: 05-01-2025",
+        "price": "62 triệu/m²",
+        "total": "6 tỷ 200 triệu",
+        "area": "Diện tích 100m2",
+        "project": "Bán The 9 Stellars",
+        "listing": "Mã tài sản: 25012259497"
+      },
+      "methodology_note": "Historical expired single apartment listing for Alta Heights at The 9 Stellars (5 Jan 2025). Source description separately mentions an expected 62–74m/m² scheme range; that marketing forecast is NOT treated as a verified observed time series, price band, or current October 2026 price."
+    }
+  ]
+}
