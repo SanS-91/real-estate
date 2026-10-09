@@ -17,6 +17,7 @@ import market_alternative_auto_probe as provider
 
 ROOT=Path(__file__).resolve().parents[1]
 QUEUE=ROOT/"data/candidate/market/alternative-price-review-queue.json"
+HISTORY=ROOT/"data/mock/market/alternative-subproject-monthly-history.json"
 TARGETS=ROOT/"config/market-alternative-auto-targets.json"
 STATE=ROOT/"data/state/alternative-candidate-verification.json"
 REPORT=ROOT/"data/candidate/market/alternative-candidate-verification-report.json"
@@ -131,7 +132,12 @@ def main():
     from datetime import date
     today=date.fromisoformat(args.today)
     checked=datetime.now(timezone.utc).isoformat()
-    queue=provider.load(QUEUE)["data"]
+    all_candidates=provider.load(QUEUE)["data"]
+    published=provider.load(HISTORY)["data"]
+    released={(r.get("source_record_id"),r.get("period")) for r in published
+              if r.get("review_status") in ("automated-source-verified","reviewed-release")}
+    queue=[c for c in all_candidates
+           if (c.get("baseline_record_id"),c.get("period")) not in released]
     targets=provider.load(TARGETS)["targets"]
     previous=provider.load(STATE) if STATE.exists() else {"data":[]}
     state,report=run_once(queue,targets,previous,today,args.run_id,checked)
