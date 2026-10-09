@@ -2802,3 +2802,34 @@ body[data-page="home"] .metric-grid {
 @media (max-width: 430px) {
   .home-header-actions .button { flex: 1; }
 }
+
+
+/* Phase 4J.2 — Market pricing and direction are scannable without
+   mistaking missing observations for a price change. */
+.data-table--market-projects .market-asking-range {
+  color: var(--color-primary-dark);
+  font-weight: 750;
+  font-variant-numeric: tabular-nums;
+  white-space: nowrap;
+}
+.data-table--market-projects .market-asking-range:not(:only-child) {
+  display: block;
+}
+.market-trend {
+  display: inline-block;
+  font-weight: 750;
+  font-variant-numeric: tabular-nums;
+  white-space: nowrap;
+}
+.market-trend--up { color: #1f7849; }
+.market-trend--down { color: #bd3329; }
+.market-trend--neutral { color: var(--color-text-secondary); }
+@media (max-width: 767px) {
+  .data-table--market-projects.mobile-record-table .market-asking-range {
+    white-space: normal;
+    overflow-wrap: break-word;
+  }
+  .data-table--market-projects.mobile-record-table tbody td:nth-child(7) {
+    border-block: 1px solid #edf0f4;
+  }
+}
