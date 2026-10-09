@@ -11,6 +11,7 @@ on:
       - 'tests/test_market_subproject_monthly_review.py'
       - 'tests/test_market_automatic_monthly_pipeline.py'
       - 'tests/test_market_onehousing_latest_month_parser.py'
+      - 'tests/test_market_onehousing_semantic_scope.py'
       - 'config/market-alternative-auto-targets.json'
       - 'assets/js/market.js'
       - 'assets/js/data-store.js'
@@ -57,6 +58,7 @@ jobs:
           python tests/test_market_alternative_auto_probe.py
           python -m unittest discover -s tests -p 'test_market_source_reliability.py'
           python tests/test_market_onehousing_latest_month_parser.py
+          python -m unittest discover -s tests -p 'test_market_onehousing_semantic_scope.py'
           python tests/test_market_onehousing_subproject_evidence.py
           node --check assets/js/data-store.js
           node --check assets/js/market.js
