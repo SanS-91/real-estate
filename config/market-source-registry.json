@@ -96,6 +96,17 @@
         "alternative-price-evidence"
       ],
       "primary_use": "Dated single-listing asking price or archived advertised launch starting price. Not project average."
+    },
+    {
+      "source_id": "cafeland-listings",
+      "label": "CafeLand Nhà đất",
+      "source_role": "secondary-individual-property-listing",
+      "access_mode": "public-page-reviewed; automated-source-probe-to-be-tested",
+      "automation_status": "candidate-evaluation",
+      "supported_layers": [
+        "secondary-listing-evidence"
+      ],
+      "primary_use": "Source-reported dated individual asking listings, with strict project, unit-type, total price and area verification. Not aggregate or developer ASP."
     }
   ]
 }
