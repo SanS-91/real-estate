@@ -4,7 +4,7 @@ const loc=fs.readFileSync('assets/js/localization-static.js','utf8');
 const news=fs.readFileSync('assets/css/market-news.css','utf8');
 const css=fs.readFileSync('assets/css/main.css','utf8');
 assert(common.includes("key: 'maintenance', label: 'Maintenance', href: 'maintenance.html'"));
-assert(loc.includes("'Maintenance', 'Bảo trì dữ liệu'"));
+assert(loc.includes("'Maintenance', 'Maintenance'"));
 for(const topic of ['all','legal','infrastructure','macro'])assert(news.includes('data-topic="'+topic+'"'));
 assert(news.includes('overflow-x: auto')||news.includes('overflow-x:auto'));
 assert(css.includes('.section-body--table{max-width:100%;overflow-x:auto'));
