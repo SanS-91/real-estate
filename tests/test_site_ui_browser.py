@@ -18,8 +18,10 @@ CASES=[
     "market.html?view=pricing",
     "market.html?view=news",
     "legal.html?view=overview",
+    "legal.html?view=documents",
     "legal.html?view=news",
     "infrastructure.html?view=overview",
+    "infrastructure.html?view=projects",
     "infrastructure.html?view=news",
     "macro.html?view=overview",
     "maintenance.html",
@@ -124,6 +126,48 @@ async def run():
                             assert style["bg"] not in ("rgba(0, 0, 0, 0)","rgb(255, 255, 255)"),(path,style)
                             await first.click()
                             assert "news-topic=" in page.url,(width,"clickable tags do not filter",page.url)
+                    if path in ("legal.html?view=overview", "legal.html?view=documents",
+                                "infrastructure.html?view=overview", "infrastructure.html?view=projects"):
+                        table = page.locator(".mobile-record-table").first
+                        await table.wait_for(timeout=12000)
+                        expected_rows = page.locator(".mobile-record-table tbody tr")
+                        assert await expected_rows.count() >= 1, (path, "empty record table")
+                        layout = await table.evaluate("""el => {
+                            const row = el.querySelector('tbody tr');
+                            const title = row.querySelector('button.table-link');
+                            return {
+                                display: getComputedStyle(el).display,
+                                width: el.getBoundingClientRect().width,
+                                scrollWidth: el.scrollWidth,
+                                clientWidth: el.clientWidth,
+                                rowDisplay: getComputedStyle(row).display,
+                                rowWidth: row.getBoundingClientRect().width,
+                                titleWidth: title?.closest('td')?.getBoundingClientRect().width ?? 0,
+                                fields: [...row.querySelectorAll('td:not(.table-empty)')].map(
+                                    td => ({vi: td.dataset.labelVi, en: td.dataset.labelEn}))
+                            };
+                        }""")
+                        assert len(layout["fields"])==7, (path,layout)
+                        assert all(f["vi"] and f["en"] for f in layout["fields"]), (path,layout)
+                        if width<=767:
+                            assert layout["display"]=="block" and layout["rowDisplay"]=="grid", (width,path,layout)
+                            assert layout["scrollWidth"]<=layout["clientWidth"]+2, (width,path,layout)
+                            assert layout["rowWidth"]<=width-20, (width,path,layout)
+                            assert layout["titleWidth"]>=layout["rowWidth"]-48, (width,path,layout)
+                            label_td=page.locator(".mobile-record-table tbody tr:first-child td:nth-child(1)" if "legal." in path
+                                                else ".mobile-record-table tbody tr:first-child td:nth-child(2)")
+                            def before_value():
+                                return label_td.evaluate("(el) => getComputedStyle(el,'::before').content")
+                            assert "Số hiệu" in (await before_value()) if "legal." in path else "Loại" in (await before_value())
+                            await page.locator("[data-language-toggle]").click()
+                            assert "Number" in (await before_value()) if "legal." in path else "Type" in (await before_value())
+                            await page.locator("[data-language-toggle]").click()
+                        else:
+                            assert layout["display"]=="table", (width,path,layout)
+                        if width==390:
+                            await page.locator(".mobile-record-table button.table-link").first.click()
+                            await page.locator("[data-drawer-overlay].is-open").wait_for(timeout=6000)
+                            await page.locator("[data-drawer-close]").click()
                     if width==390 and path=="maintenance.html":
                         tables=page.locator(".table-wrap")
                         if await tables.count():

@@ -214,15 +214,15 @@
     const items = limit ? records.slice(0, limit) : records;
     const rows = items.map(project => `
       <tr>
-        <td><button class="table-link" type="button" data-infra-project-id="${esc(project.id)}">${esc(project.name)}</button><span class="table-subtext">${esc(project.location_text)}</span></td>
-        <td>${esc(labelize(project.infrastructure_type))}</td>
-        <td>${esc(regionNames(project))}</td>
-        <td>${infrastructureStatusBadge(project.status)}</td>
-        <td>${progressHTML(project)}</td>
-        <td>${esc(formatTarget(project.current_expected_completion))}<span class="table-subtext">${esc(project.completion_date_precision || '')}</span></td>
-        <td class="numeric">${esc(String(relatedRealEstate(project).length))}</td>
+        <td data-label-vi="Dự án hạ tầng" data-label-en="Infrastructure project"><button class="table-link" type="button" data-infra-project-id="${esc(project.id)}">${esc(project.name)}</button><span class="table-subtext">${esc(project.location_text)}</span></td>
+        <td data-label-vi="Loại" data-label-en="Type">${esc(labelize(project.infrastructure_type))}</td>
+        <td data-label-vi="Khu vực" data-label-en="Region">${esc(regionNames(project))}</td>
+        <td data-label-vi="Trạng thái" data-label-en="Status">${infrastructureStatusBadge(project.status)}</td>
+        <td data-label-vi="Tiến độ" data-label-en="Progress">${progressHTML(project)}</td>
+        <td data-label-vi="Mốc hiện tại" data-label-en="Current target">${esc(formatTarget(project.current_expected_completion))}<span class="table-subtext">${esc(project.completion_date_precision || '')}</span></td>
+        <td class="numeric" data-label-vi="BĐS liên quan" data-label-en="Related RE">${esc(String(relatedRealEstate(project).length))}</td>
       </tr>`).join('');
-    return `<div class="table-wrap${compact ? ' table-wrap--infra-overview' : ''}"><table class="data-table data-table--infra${compact ? ' data-table--infra-overview' : ''}"><thead><tr><th>Infrastructure Project</th><th>Type</th><th>Region</th><th>Status</th><th>Progress</th><th>Current Target</th><th class="numeric">Related RE</th></tr></thead><tbody>${rows || '<tr><td colspan="7" class="table-empty">No infrastructure projects match the selected filters.</td></tr>'}</tbody></table></div>`;
+    return `<div class="table-wrap${compact ? ' table-wrap--infra-overview' : ''}"><table class="data-table data-table--infra mobile-record-table${compact ? ' data-table--infra-overview' : ''}"><thead><tr><th>Infrastructure Project</th><th>Type</th><th>Region</th><th>Status</th><th>Progress</th><th>Current Target</th><th class="numeric">Related RE</th></tr></thead><tbody>${rows || '<tr><td colspan="7" class="table-empty">No infrastructure projects match the selected filters.</td></tr>'}</tbody></table></div>`;
   }
 
   function milestoneList(records, limit = 5) {
