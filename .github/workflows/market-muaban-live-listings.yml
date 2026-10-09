@@ -1,0 +1,109 @@
+name: Market 4I.6 - Muaban Unexpired Apartment Listing Verification
+
+on:
+  pull_request:
+    paths:
+      - 'scripts/market_muaban_verified_listings.py'
+      - 'config/market-muaban-listing-targets.json'
+      - 'tests/test_market_muaban_verified_listings.py'
+      - 'tests/test_market_muaban_ui.cjs'
+      - 'assets/js/market.js'
+      - 'assets/js/maintenance.js'
+      - 'assets/js/data-store.js'
+      - '.github/workflows/market-muaban-live-listings.yml'
+  push:
+    branches: [main]
+    paths:
+      - 'scripts/market_muaban_verified_listings.py'
+      - 'config/market-muaban-listing-targets.json'
+      - '.github/workflows/market-muaban-live-listings.yml'
+  schedule:
+    - cron: '15 2 * * *'
+    - cron: '40 7 * * *'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: market-muaban-unexpired-source
+  cancel-in-progress: false
+
+jobs:
+  source-verified-unexpired-apartments:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Install source inspection dependencies
+        run: pip install -r requirements.txt
+      - name: Validate strict publisher-date rules and UI isolation
+        run: |
+          python -m py_compile scripts/market_muaban_verified_listings.py
+          python -m unittest discover -s tests -p 'test_market_muaban_verified_listings.py' -v
+          node --check assets/js/market.js
+          node --check assets/js/maintenance.js
+          node --check assets/js/data-store.js
+          node tests/test_market_muaban_ui.cjs
+      - name: Source access, detail parsing, and expiry evidence (PR only)
+        if: github.event_name == 'pull_request'
+        env:
+          GITHUB_EVENT_NAME: pull_request
+        run: |
+          python scripts/market_muaban_verified_listings.py
+          python - <<'PY'
+          import json
+          p=json.load(open('data/candidate/market/muaban-listing-report.json'))
+          assert not p['publication_enabled']
+          assert p['newly_published']==0
+          for row in p['sources']:
+              print(row['project_id'],row['access'],
+                    'links',row['discovered'],'checked',row['checked'],
+                    'unexpired',row['qualified'],'reasons',row['reasons'])
+          print('Muaban PR probe is diagnostic-only. No listed prices published.')
+          PY
+          git diff --exit-code -- data/mock/market/verified-muaban-unit-listings.json data/state/market-muaban-listing-verification.json data/state/market-muaban-source-health.json
+      - name: Verify unexpired listings on distinct hosted runs
+        if: github.event_name != 'pull_request'
+        run: python scripts/market_muaban_verified_listings.py
+      - name: Commit only hosted source proof and accepted unit listings
+        if: github.event_name != 'pull_request'
+        run: |
+          set -eu
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add data/mock/market/verified-muaban-unit-listings.json data/state/market-muaban-listing-verification.json data/state/market-muaban-source-health.json
+          if git diff --cached --quiet; then
+            echo 'No new Muaban source evidence'
+            exit 0
+          fi
+          git commit -m 'data(market): save independent Muaban source proof and expiry health'
+          git restore --worktree -- .
+          pushed=false
+          for attempt in 1 2 3 4 5; do
+            if git pull --rebase origin main && git push origin HEAD:main; then
+              pushed=true
+              break
+            fi
+            sleep 3
+          done
+          if [ "$pushed" != true ]; then
+            echo '::error::Unable to save hosted source proof'
+            exit 1
+          fi
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: muaban-4i6-source-health
+          path: |
+            data/candidate/market/muaban-listing-report.json
+            data/state/market-muaban-source-health.json
+            data/mock/market/verified-muaban-unit-listings.json
+          retention-days: 30
+          if-no-files-found: warn

@@ -296,18 +296,20 @@
       note: 'Source access is not a new verified observation. Project asking prices and market-wide supply/demand remain separate.'
     };
     try {
-      const [reliabilityResult, secondaryResult, quarterlyResult, portalResult, reverResult] = await Promise.allSettled([
+      const [reliabilityResult, secondaryResult, quarterlyResult, portalResult, reverResult, muabanResult] = await Promise.allSettled([
         fetchJSON('data/state/market-source-reliability.json'),
         fetchJSON('data/state/market-stable-listing-health.json'),
         fetchJSON('data/state/market-cushman-quarterly-verification.json'),
         fetchJSON('data/state/listing-source-coverage.json'),
-        fetchJSON('data/state/market-rever-source-health.json')
+        fetchJSON('data/state/market-rever-source-health.json'),
+        fetchJSON('data/state/market-muaban-source-health.json')
       ]);
       const reliability = reliabilityResult.status === 'fulfilled' ? reliabilityResult.value : {};
       const secondary = secondaryResult.status === 'fulfilled' ? secondaryResult.value : {};
       const quarterly = quarterlyResult.status === 'fulfilled' ? quarterlyResult.value : {};
       const portal = portalResult.status === 'fulfilled' ? portalResult.value : {};
       const rever = reverResult.status === 'fulfilled' ? reverResult.value : {};
+      const muaban = muabanResult.status === 'fulfilled' ? muabanResult.value : {};
       const targets = (reliability.targets || []).filter(row => row.mode === 'monthly-price-candidate');
       const rows = targets.map(row => {
         const id = row.target_id || '';
@@ -349,6 +351,16 @@
              : `Individual apartments · ${rever.targets_checked} projects`,
           status + (latest ? ` · ${vi ? 'Mới nhất' : 'Latest'} ${latest}` : ''),
           String(rever.source_runs_seen || 0)]);
+      }
+      if (muaban.targets_checked) {
+        const valid = Number(muaban.valid_unexpired_project_ads || 0);
+        const published = Number(muaban.published_current_individual_listings || 0);
+        const state = vi ? `${valid} tin đúng dự án, chưa hết hạn · ${published} đã xác minh`
+                         : `${valid} project-matched, unexpired · ${published} verified`;
+        rows.push(['Muaban.net',
+          vi ? `Tin căn hộ bán · ${muaban.targets_checked} dự án`
+             : `Apartment sale ads · ${muaban.targets_checked} projects`,
+          state, String(muaban.details_checked || 0)]);
       }
       if (secondary.categories_checked) {
         const blocked = (secondary.status_counts || {})['access-blocked'] || 0;
