@@ -1,0 +1,171 @@
+{
+  "schema_version": 2,
+  "generated_at": "2026-10-09T04:00:00+00:00",
+  "source_access": "blocked",
+  "source_checked_at": "2026-10-09T03:57:47+00:00",
+  "source_checks": 12,
+  "source_candidate_records": 0,
+  "projects_tracked": 12,
+  "aggregate_priced_projects": 8,
+  "projects_with_2plus_snapshots": 6,
+  "project_level_price_missing": 4,
+  "category_reference_projects": 4,
+  "category_reference_count": 4,
+  "no_new_price_inferred": true,
+  "price_basis": "listing-asking-not-transactions",
+  "source_note": "Blocked source: project price snapshots require independently reviewed publisher evidence. Category-only prices do not repair missing project-wide aggregate metrics.",
+  "priority_backlog": [
+    {
+      "project_id": "celesta-gold",
+      "project_price_coverage": "partial",
+      "category_reference_count": 1,
+      "category_reference_scopes": [
+        "publisher-faq-indicative"
+      ],
+      "snapshot_count": 1,
+      "last_capture_date": "2026-10-08",
+      "days_since_capture": 1,
+      "collector_status": "http-error",
+      "priority": 1,
+      "follow_up": "review-project-aggregate-with-correct-product-class"
+    },
+    {
+      "project_id": "essensia-parkway",
+      "project_price_coverage": "partial",
+      "category_reference_count": 1,
+      "category_reference_scopes": [
+        "landed-only"
+      ],
+      "snapshot_count": 1,
+      "last_capture_date": "2026-10-08",
+      "days_since_capture": 1,
+      "collector_status": "http-error",
+      "priority": 1,
+      "follow_up": "review-project-aggregate-with-correct-product-class"
+    },
+    {
+      "project_id": "izumi-city",
+      "project_price_coverage": "partial",
+      "category_reference_count": 1,
+      "category_reference_scopes": [
+        "landed-only"
+      ],
+      "snapshot_count": 1,
+      "last_capture_date": "2026-10-08",
+      "days_since_capture": 1,
+      "collector_status": "http-error",
+      "priority": 1,
+      "follow_up": "review-project-aggregate-with-correct-product-class"
+    },
+    {
+      "project_id": "the-9-stellars",
+      "project_price_coverage": "partial",
+      "category_reference_count": 1,
+      "category_reference_scopes": [
+        "apartment-only"
+      ],
+      "snapshot_count": 1,
+      "last_capture_date": "2026-10-08",
+      "days_since_capture": 1,
+      "collector_status": "http-error",
+      "priority": 1,
+      "follow_up": "review-project-aggregate-with-correct-product-class"
+    },
+    {
+      "project_id": "elysian",
+      "project_price_coverage": "full",
+      "category_reference_count": 0,
+      "category_reference_scopes": [],
+      "snapshot_count": 1,
+      "last_capture_date": "2026-10-08",
+      "days_since_capture": 1,
+      "collector_status": "http-error",
+      "priority": 2,
+      "follow_up": "source-recheck-when-available"
+    },
+    {
+      "project_id": "the-global-city",
+      "project_price_coverage": "full",
+      "category_reference_count": 0,
+      "category_reference_scopes": [],
+      "snapshot_count": 1,
+      "last_capture_date": "2026-10-08",
+      "days_since_capture": 1,
+      "collector_status": "http-error",
+      "priority": 2,
+      "follow_up": "source-recheck-when-available"
+    },
+    {
+      "project_id": "akari-city",
+      "project_price_coverage": "full",
+      "category_reference_count": 0,
+      "category_reference_scopes": [],
+      "snapshot_count": 2,
+      "last_capture_date": "2026-10-09",
+      "days_since_capture": 0,
+      "collector_status": "http-error",
+      "priority": 3,
+      "follow_up": "source-recheck-when-available"
+    },
+    {
+      "project_id": "eaton-park",
+      "project_price_coverage": "full",
+      "category_reference_count": 0,
+      "category_reference_scopes": [],
+      "snapshot_count": 2,
+      "last_capture_date": "2026-10-09",
+      "days_since_capture": 0,
+      "collector_status": "http-error",
+      "priority": 3,
+      "follow_up": "source-recheck-when-available"
+    },
+    {
+      "project_id": "mizuki-park",
+      "project_price_coverage": "full",
+      "category_reference_count": 0,
+      "category_reference_scopes": [],
+      "snapshot_count": 2,
+      "last_capture_date": "2026-10-09",
+      "days_since_capture": 0,
+      "collector_status": "http-error",
+      "priority": 3,
+      "follow_up": "source-recheck-when-available"
+    },
+    {
+      "project_id": "the-privia",
+      "project_price_coverage": "full",
+      "category_reference_count": 0,
+      "category_reference_scopes": [],
+      "snapshot_count": 2,
+      "last_capture_date": "2026-10-09",
+      "days_since_capture": 0,
+      "collector_status": "http-error",
+      "priority": 3,
+      "follow_up": "source-recheck-when-available"
+    },
+    {
+      "project_id": "vinhomes-grand-park",
+      "project_price_coverage": "full",
+      "category_reference_count": 0,
+      "category_reference_scopes": [],
+      "snapshot_count": 2,
+      "last_capture_date": "2026-10-09",
+      "days_since_capture": 0,
+      "collector_status": "http-error",
+      "priority": 3,
+      "follow_up": "source-recheck-when-available"
+    },
+    {
+      "project_id": "waterpoint",
+      "project_price_coverage": "full",
+      "category_reference_count": 0,
+      "category_reference_scopes": [],
+      "snapshot_count": 2,
+      "last_capture_date": "2026-10-09",
+      "days_since_capture": 0,
+      "collector_status": "http-error",
+      "priority": 3,
+      "follow_up": "source-recheck-when-available"
+    }
+  ]
+}
