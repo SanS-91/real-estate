@@ -22,7 +22,7 @@ assert "data-price-layer=\"listing\"" in market
 assert "state.priceLayer = ['verified','listing'].includes(priceLayer) ? priceLayer : 'listing';" in market
 assert "renderRangeSeries('market-overview-price'" in market
 assert "renderRangeSeries('market-pricing'" in market
-assert 'Latest Listing Snapshot' in market
+assert 'Snapshot tin đăng mới nhất' in market
 assert 'Latest Verified Snapshot' in market
 assert 'Khoảng giá chào bán theo từng dự án (tin đăng; không phải giao dịch).' in market
 assert 'Không nối thành xu hướng thời gian.' in market
