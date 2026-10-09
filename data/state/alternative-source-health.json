@@ -1,0 +1,56 @@
+{
+  "schema_version": 1,
+  "generated_at": "2026-10-09T05:21:11.199121+00:00",
+  "targets_checked": 4,
+  "candidate_count": 0,
+  "queue_backlog": 0,
+  "queue_conflicts": 0,
+  "production_updated": false,
+  "counts": {
+    "reachable-historical-reference-frozen": 2,
+    "same-period-unchanged": 1,
+    "too-large": 1
+  },
+  "checks": [
+    {
+      "target_id": "onehousing-vinhomes-grand-park-apartment",
+      "source_id": "onehousing-vn",
+      "project_id": "vinhomes-grand-park",
+      "mode": "monthly-price-candidate",
+      "baseline_period": "2026-10",
+      "http_status": 200,
+      "final_host": "onehousing.vn",
+      "status": "too-large"
+    },
+    {
+      "target_id": "rever-vinhomes-grand-park-listing",
+      "source_id": "rever-vn",
+      "project_id": "vinhomes-grand-park",
+      "mode": "single-listing-review",
+      "baseline_period": "2026-09-16",
+      "http_status": 200,
+      "final_host": "rever.vn",
+      "status": "same-period-unchanged"
+    },
+    {
+      "target_id": "rever-the-privia-historical",
+      "source_id": "rever-vn",
+      "project_id": "the-privia",
+      "mode": "historical-reference-monitor",
+      "baseline_period": "2023-11-14",
+      "http_status": 200,
+      "final_host": "blog.rever.vn",
+      "status": "reachable-historical-reference-frozen"
+    },
+    {
+      "target_id": "onehousing-global-city-historical",
+      "source_id": "onehousing-vn",
+      "project_id": "the-global-city",
+      "mode": "historical-reference-monitor",
+      "baseline_period": "2024-11-12",
+      "http_status": 200,
+      "final_host": "onehousing.vn",
+      "status": "reachable-historical-reference-frozen"
+    }
+  ]
+}
