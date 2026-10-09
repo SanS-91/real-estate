@@ -2,7 +2,7 @@
   "schema_version": 1,
   "build_id": "phase5.5a-listing-market-20261008",
   "generated_at": "2026-10-08T14:32:55.012Z",
-  "record_count": 43,
+  "record_count": 45,
   "data": [
     {
       "id": "demo-official",
@@ -519,6 +519,30 @@
       "source_priority": 3,
       "active": true,
       "notes": "Publisher RSS; original article URL and publication metadata, no unverified numbers."
+    },
+    {
+      "id": "onehousing-vn",
+      "name": "OneHousing",
+      "source_type": "property-price-analytics",
+      "base_url": "https://onehousing.vn/",
+      "language": "vi",
+      "collection_method": "assisted-reviewed-public-page",
+      "fetch_frequency": "monthly-assess",
+      "source_priority": 4,
+      "active": true,
+      "notes": "Category-specific popular asking rate or historical distributor starting-price reference. Source- and product-specific; never merge with Batdongsan listing ranges or project ASP."
+    },
+    {
+      "id": "rever-vn",
+      "name": "Rever",
+      "source_type": "real-estate-brokerage",
+      "base_url": "https://rever.vn/",
+      "language": "vi",
+      "collection_method": "assisted-reviewed-public-page",
+      "fetch_frequency": "event-driven",
+      "source_priority": 4,
+      "active": true,
+      "notes": "Dated individual property listings and dated historical launch/starting prices only, not representative project asking-price aggregates."
     }
   ]
 }
