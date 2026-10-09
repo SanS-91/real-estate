@@ -20,7 +20,7 @@ assert 'assets/js/maintenance.js?v=' in html
 # Home keeps its status shortcut and shared navigation exposes the maintenance tab.
 assert 'href="maintenance.html" data-home-updated' in home
 common = (ROOT / "assets/js/common.js").read_text(encoding="utf-8")
-assert "key: 'maintenance', label: 'Data Status', href: 'maintenance.html'" in common
+assert "key: 'maintenance', label: 'Maintenance', href: 'maintenance.html'" in common
 
 # Dashboard computes current freshness from deployed repository metadata rather than
 # relying on the static 4.4B status snapshot or on GitHub Actions artifacts.

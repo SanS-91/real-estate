@@ -29,8 +29,8 @@
       vi: 'Vĩ mô & Tiền tệ · Market Intelligence'
     },
     maintenance: {
-      en: 'Data Status · Market Intelligence',
-      vi: 'Trạng thái dữ liệu · Market Intelligence'
+      en: 'Maintenance & Data Status · Market Intelligence',
+      vi: 'Maintenance · Trạng thái dữ liệu · Market Intelligence'
     }
   };
 
@@ -41,14 +41,14 @@
     ['.main-nav a[href="legal.html"], .mobile-nav-panel a[href="legal.html"]', 'Legal', 'Pháp lý'],
     ['.main-nav a[href="infrastructure.html"], .mobile-nav-panel a[href="infrastructure.html"]', 'Infrastructure', 'Hạ tầng'],
     ['.main-nav a[href="macro.html"], .mobile-nav-panel a[href="macro.html"]', 'Macro', 'Vĩ mô'],
-    ['.main-nav a[href="maintenance.html"], .mobile-nav-panel a[href="maintenance.html"]', 'Data Status', 'Trạng thái dữ liệu'],
+    ['.main-nav a[href="maintenance.html"], .mobile-nav-panel a[href="maintenance.html"]', 'Maintenance', 'Maintenance'],
     ['.global-search-trigger span:first-child', 'Search research...', 'Tìm kiếm nghiên cứu...'],
     ['[data-global-search-status]', 'Search across Market, Legal, Infrastructure and controlled Macro data.', 'Tìm kiếm trên dữ liệu Thị trường, Pháp lý, Hạ tầng và Vĩ mô production có kiểm soát.'],
     ['[data-drawer-title]', 'Details', 'Chi tiết'],
     ['[data-drawer-body] .state-box', 'Select an item to inspect its details.', 'Chọn một mục để xem thông tin chi tiết.'],
     ['[data-source-registry-open]', 'Data Sources', 'Nguồn dữ liệu'],
     ['.footer-links a[href="maintenance.html#maintenance-rules-title"]', 'Methodology & data', 'Quy tắc & nguồn dữ liệu'],
-    ['.footer-links a[href="maintenance.html"]', 'Data Status', 'Trạng thái dữ liệu'],
+    ['.footer-links a[href="maintenance.html"]', 'Data Status', 'Maintenance · Trạng thái dữ liệu'],
     ['.footer-links span', 'Research use only', 'Chỉ dùng cho mục đích nghiên cứu']
   ];
 
@@ -139,20 +139,20 @@
 
   const MAINTENANCE = [
     ['.page-kicker', 'Update Operations', 'Vận hành cập nhật'],
-    ['.page-title', 'Data Status', 'Trạng thái dữ liệu'],
+    ['.page-title', 'Data Status', 'Maintenance · Trạng thái dữ liệu'],
     ['.page-description', 'Review freshness, update cadence and maintenance status across the integrated research datasets.', 'Theo dõi độ mới, tần suất cập nhật và trạng thái bảo trì của các bộ dữ liệu nghiên cứu tích hợp.'],
     ['.demo-banner strong', 'Read-only maintenance dashboard.', 'Trạng thái dữ liệu · chỉ đọc.'],
     ['.demo-banner span', 'Freshness is recalculated from the metadata of the currently deployed repository. This page does not fetch external sources, promote candidates or change production data.', 'Độ mới được tính từ thông tin của dữ liệu đang hiển thị. Trang này chỉ theo dõi tình trạng nguồn và lịch cập nhật, không thay đổi dữ liệu đã công bố.'],
-    ['#maintenance-summary-title', 'Update Health', 'Tình trạng Cập nhật'],
+    ['#maintenance-summary-title', 'Update Health', 'Tình trạng cập nhật'],
     ['.home-block[aria-labelledby="maintenance-summary-title"] .eyebrow', 'Current state', 'Trạng thái hiện tại'],
     ['#maintenance-attention-title', 'Needs Attention', 'Cần chú ý'],
     ['.maintenance-attention .eyebrow', 'Maintenance queue', 'Danh sách cần rà soát'],
-    ['#maintenance-datasets-title', 'Dataset Freshness', 'Độ mới Dữ liệu'],
+    ['#maintenance-datasets-title', 'Dataset Freshness', 'Độ mới dữ liệu'],
     ['.section[aria-labelledby="maintenance-datasets-title"] .eyebrow', '10 tracked datasets', '10 bộ dữ liệu theo dõi'],
     ['.maintenance-flow span:nth-child(1)', 'Repository data', 'Dữ liệu repository'],
     ['.maintenance-flow span:nth-child(3)', 'Freshness check', 'Kiểm tra độ mới'],
     ['.maintenance-flow span:nth-child(5)', 'Summary + artifact', 'Tổng hợp + artifact'],
-    ['#maintenance-rules-title', 'Update Rules', 'Nguyên tắc Cập nhật'],
+    ['#maintenance-rules-title', 'Update Rules', 'Nguyên tắc cập nhật'],
     ['.section[aria-labelledby="maintenance-rules-title"] .eyebrow', 'Guardrails', 'Nguyên tắc kiểm soát'],
     ['#maintenance-check-title', 'Daily Freshness Check', 'Kiểm tra độ mới hằng ngày'],
     ['.section[aria-labelledby="maintenance-check-title"] .eyebrow', 'Scheduled check', 'Kiểm tra theo lịch'],

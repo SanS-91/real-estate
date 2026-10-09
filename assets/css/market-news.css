@@ -301,3 +301,38 @@
   .market-news-card__meta { row-gap: 6px; }
   .market-news-card .market-news-card__topic { min-height: 23px; font-size: 10px; padding-inline: 8px; }
 }
+
+/* Topic palette shared by filter chips AND the tag chips on article cards.
+   Use restrained distinct hues; labels remain readable without color alone. */
+.market-news-topic[data-topic="all"] { --news-chip-bg:#f2f4f7; --news-chip-text:#344054; --news-chip-border:#d0d5dd; }
+.market-news-topic[data-topic="pricing"],.market-news-card__topic[data-topic="pricing"] {
+  --news-chip-bg:#f8edf0; --news-chip-text:#82364a; --news-chip-border:#e5c7d0;
+}
+.market-news-topic[data-topic="sales"],.market-news-card__topic[data-topic="sales"] {
+  --news-chip-bg:#fff1eb; --news-chip-text:#975037; --news-chip-border:#efd0c3;
+}
+.market-news-topic[data-topic="supply"],.market-news-card__topic[data-topic="supply"] {
+  --news-chip-bg:#edf6f4; --news-chip-text:#2f6b61; --news-chip-border:#c6e0d8;
+}
+.market-news-topic[data-topic="projects"],.market-news-card__topic[data-topic="projects"] {
+  --news-chip-bg:#eef2f9; --news-chip-text:#385978; --news-chip-border:#cedbec;
+}
+.market-news-topic[data-topic="legal"],.market-news-card__topic[data-topic="legal"] {
+  --news-chip-bg:#fcf5e9; --news-chip-text:#825c26; --news-chip-border:#ebdcbb;
+}
+.market-news-topic[data-topic="infrastructure"],.market-news-card__topic[data-topic="infrastructure"] {
+  --news-chip-bg:#eef6eb; --news-chip-text:#446b3b; --news-chip-border:#d1e4cc;
+}
+.market-news-topic[data-topic="research"],.market-news-card__topic[data-topic="research"] {
+  --news-chip-bg:#f4f0f8; --news-chip-text:#624d80; --news-chip-border:#ded4ec;
+}
+.market-news-topic[data-topic="all"][aria-pressed="true"] {
+  background:var(--news-chip-bg);border-color:var(--news-chip-border);color:var(--news-chip-text);
+}
+.market-news-topic[data-topic]:focus-visible,
+.market-news-card__topic[data-topic]:focus-visible {outline:2px solid var(--news-chip-text,#82364a);outline-offset:2px}
+@media (max-width:640px) {
+  .market-news-topics { margin-inline:-12px; padding-inline:12px; scroll-padding-inline:12px; }
+  .market-news-topic { min-height:38px; font-size:12px; }
+  .market-news-card__topic { overflow-wrap:normal; white-space:nowrap; }
+}

@@ -8,7 +8,7 @@
     { key: 'legal', label: 'Legal', href: 'legal.html' },
     { key: 'infrastructure', label: 'Infrastructure', href: 'infrastructure.html' },
     { key: 'macro', label: 'Macro', href: 'macro.html' },
-    { key: 'maintenance', label: 'Data Status', href: 'maintenance.html' }
+    { key: 'maintenance', label: 'Maintenance', href: 'maintenance.html' }
   ];
 
   // Keep a single, bilingual taxonomy for sourced article TYPES. These are
