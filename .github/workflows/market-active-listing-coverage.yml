@@ -1,0 +1,98 @@
+name: Market 4I.7 - Verified Unit Listing Coverage Monitor
+
+on:
+  pull_request:
+    paths:
+      - 'scripts/market_active_listing_coverage.py'
+      - 'tests/test_market_active_listing_coverage.py'
+      - 'assets/js/maintenance.js'
+      - 'maintenance.html'
+      - 'assets/css/main.css'
+      - 'config/market-muaban-listing-targets.json'
+      - '.github/workflows/market-active-listing-coverage.yml'
+  push:
+    branches: [main]
+    paths:
+      - 'scripts/market_active_listing_coverage.py'
+      - 'config/market-muaban-listing-targets.json'
+      - '.github/workflows/market-active-listing-coverage.yml'
+  schedule:
+    - cron: '15 3 * * *'
+    - cron: '30 8 * * *'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: market-active-listing-coverage
+  cancel-in-progress: false
+
+jobs:
+  verified-unit-coverage:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 12
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Validate verified asking coverage contracts
+        run: |
+          python -m py_compile scripts/market_active_listing_coverage.py
+          python -m unittest discover -s tests -p 'test_market_active_listing_coverage.py' -v
+          node --check assets/js/maintenance.js
+          node tests/test_market_active_listing_coverage_ui.cjs
+      - name: Recalculate dated coverage from production artifacts
+        run: python scripts/market_active_listing_coverage.py
+      - name: Confirm registry completeness and no inferred prices
+        run: |
+          python - <<'PY'
+          import json
+          from pathlib import Path
+          x=json.loads(Path('data/state/market-active-listing-coverage.json').read_text())
+          ids=[y['project_id'] for y in x['projects']]
+          registry=json.loads(Path('data/mock/market/projects.json').read_text())
+          r=[y['id'] for y in registry['data']]
+          assert set(ids)==set(r) and len(ids)==len(r)
+          assert x['project_registry_count']==len(r)
+          assert x['current_verified_unit_ads']==sum(y['current_verified_ads'] for y in x['projects'])
+          forbidden=('price_vnd','value_vnd_per_m2','average_asp','listing_price')
+          assert all(not any(k in y for k in forbidden) for y in x['projects'])
+          print('Source dates preserved; full registry counted, no derived prices.')
+          PY
+      - name: Persist coverage snapshot on main only
+        if: github.event_name != 'pull_request'
+        run: |
+          set -eu
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add data/state/market-active-listing-coverage.json
+          if git diff --cached --quiet; then
+            echo 'No coverage changes'
+            exit 0
+          fi
+          git commit -m 'data(market): refresh verified listing coverage for 13-project registry'
+          git restore --worktree -- .
+          pushed=false
+          for attempt in 1 2 3 4 5; do
+            if git pull --rebase origin main && git push origin HEAD:main; then
+              pushed=true
+              break
+            fi
+            sleep 3
+          done
+          if [ "$pushed" != true ]; then
+            echo '::error::Unable to safely persist coverage snapshot'
+            exit 1
+          fi
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: market-4i7-verified-coverage
+          path: data/state/market-active-listing-coverage.json
+          retention-days: 30
+          if-no-files-found: warn
