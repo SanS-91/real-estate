@@ -1,13 +1,15 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-10-09T05:24:27.887822+00:00",
-  "targets_checked": 4,
-  "candidate_count": 0,
-  "queue_backlog": 0,
+  "generated_at": "2026-10-09T06:00:27.574294+00:00",
+  "targets_checked": 6,
+  "candidate_count": 1,
+  "queue_backlog": 1,
   "queue_conflicts": 0,
   "production_updated": false,
   "counts": {
+    "new-period-review-required": 1,
     "reachable-historical-reference-frozen": 2,
+    "reachable-no-verifiable-metric": 1,
     "same-period-unchanged": 2
   },
   "checks": [
@@ -50,6 +52,26 @@
       "http_status": 200,
       "final_host": "onehousing.vn",
       "status": "reachable-historical-reference-frozen"
+    },
+    {
+      "target_id": "onehousing-lumiere-boulevard-apartment",
+      "source_id": "onehousing-vn",
+      "project_id": "vinhomes-grand-park",
+      "mode": "monthly-price-candidate",
+      "baseline_period": "2026-09",
+      "http_status": 200,
+      "final_host": "onehousing.vn",
+      "status": "new-period-review-required"
+    },
+    {
+      "target_id": "onehousing-masteri-centre-point-apartment",
+      "source_id": "onehousing-vn",
+      "project_id": "vinhomes-grand-park",
+      "mode": "monthly-price-candidate",
+      "baseline_period": "2026-09",
+      "http_status": 200,
+      "final_host": "beta.onehousing.vn",
+      "status": "reachable-no-verifiable-metric"
     }
   ]
 }
