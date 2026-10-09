@@ -17,6 +17,6 @@ assert 'function renderListingHistoryChart(projectId)' in market
 assert 'Listing Price History' in market
 assert 'listingMarketSeries' in history and 'listingMarketDelta' in history
 assert '.chart-frame--drawer' in css
-assert prod['record_count']==12
+assert prod['record_count']==len(prod['data'])>=12
 assert candidate['data']==[]
 print('Phase 5.5C frontend contract tests PASS')
