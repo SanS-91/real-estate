@@ -22,7 +22,7 @@ for i in range(2):
         ("subproject_name","Vinhomes Grand Park"),
         ("value_vnd_per_m2",300_000_000),
         ("range_high_vnd_per_m2",5_000_000),
-        ("period","2026-10"),("review_date","2026-09-01"),
+        ("period","2026-10"),("review_date","2026-08-01"),
         ("source_url","https://not-onehousing.vn/prices")]:
         tampered=copy.deepcopy(rows)
         tampered[i][field]=bad
