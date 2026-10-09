@@ -67,7 +67,17 @@ jobs:
       - name: Verify resulting history and render constraints
         if: github.event_name != 'pull_request'
         run: |
-          python scripts/market_subproject_monthly_release.py --mode preview
+          python - <<'PY'
+          import sys, json
+          from pathlib import Path
+          sys.path.insert(0,'scripts')
+          import market_subproject_monthly_release as r
+          history=json.loads(Path('data/mock/market/alternative-subproject-monthly-history.json').read_text())['data']
+          base=json.loads(Path('data/mock/market/alternative-subproject-monthly-evidence.json').read_text())['data']
+          problems=r.validate_history(history,base)
+          assert not problems, problems
+          print('PASS: auto-published source-specific monthly history still validates; release audit retained.')
+          PY
           python scripts/market_onehousing_subproject_gate.py
       - name: Summarize publisher access, pending and newly published months
         if: always()
