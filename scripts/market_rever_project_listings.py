@@ -94,7 +94,7 @@ def parse_detail(html, url, expected_name, project_id, captured):
     # Strong project attribution: explicit project field on property detail,
     # not a neighborhood recommendation mentioning the desired project.
     match_project = re.search(
-        r"(?:Dự án|Project)\s*:\s*([\wÀ-ỹ\s\-]{3,90})(?=\s+Giá bán|\s+Tình trạng|\s+Tìm kiếm|\s+Xem chi tiết)",
+        r"(?:Dự án|Project)\s*:?\s*([\wÀ-ỹ\s\-]{3,90})(?=\s+Giá bán|\s+Tình trạng|\s+Tìm kiếm|\s+Xem chi tiết)",
         text, re.I
     )
     match_title = re.search(re.escape(expected_name), title, re.I)
