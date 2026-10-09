@@ -13,7 +13,7 @@ legal = (ROOT / 'assets/js/legal.js').read_text(encoding='utf-8')
 loc = (ROOT / 'assets/js/localization-dynamic.js').read_text(encoding='utf-8')
 
 valid_topics = {x['id'] for x in topics}
-assert len(projects) == 12
+assert len(projects) == 13
 assert all(p.get('related_legal_topic_ids') for p in projects)
 assert all(set(p['related_legal_topic_ids']) <= valid_topics for p in projects)
 assert all(p.get('related_infrastructure_ids') for p in projects[:2])
