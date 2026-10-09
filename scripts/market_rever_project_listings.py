@@ -211,6 +211,7 @@ def evaluate(previous, rows, seen, now, run_id):
                     accepted.append({**detail,
                         "id": "rever-" + detail["listing_id"].lower() + "-" + fingerprint[:12],
                         "review_status": "automated-two-hosted-checks",
+                        "review_date": now.date().isoformat(),
                         "verification_run_ids": [x["run_id"] for x in checks[-2:]],
                         "verified_at": now.isoformat()})
                     decision = "independent-live-listing-verified"
@@ -238,7 +239,7 @@ def run(config, history, state, fetcher, now, run_id):
         urls = discover(html, target["url"]) if html else []
         checks = {"project_id":target["project_id"], "source_url":target["url"],
                   "index_status":access, "listing_links":len(urls),
-                  "details_checked":0, "qualified":0, "reasons":{}}
+                  "details_checked":0, "qualified":0, "recent":0, "reasons":{}}
         for url in urls:
             if url in inspected:
                 continue
@@ -254,6 +255,8 @@ def run(config, history, state, fetcher, now, run_id):
             checks["reasons"][reason] = checks["reasons"].get(reason, 0) + 1
             if row:
                 checks["qualified"] += 1
+                if (now.date()-date.fromisoformat(row["source_updated_date"])).days <= MAX_AGE_DAYS:
+                    checks["recent"] += 1
                 qualifying.append(row)
         discovered += len(urls)
         diagnostics.append(checks)
@@ -267,6 +270,7 @@ def run(config, history, state, fetcher, now, run_id):
     report = {"schema_version":1, "generated_at":now.isoformat(),
               "targets_checked":len(config["targets"]),
               "listing_urls_discovered":discovered, "qualified_current_or_historical":len(qualifying),
+              "recent_qualified":sum(x.get("recent", 0) for x in diagnostics),
               "accepted_new_individual_listings":len(additions),
               "production_project_aggregates_changed":False,
               "sources":diagnostics, "decisions":decisions}
