@@ -1,0 +1,22 @@
+{
+  "schema_version": 1,
+  "series": [
+    {
+      "series_key": "onehousing-parent-vinhomes-grand-park-apartment-popular-asking",
+      "project_id": "vinhomes-grand-park",
+      "source_url": "https://onehousing.vn/phan-tich/du-an/can-ho-chung-cu-du-an-Vinhomes-Grand-Park.1012",
+      "checks": [
+        {
+          "run_id": "37906311885",
+          "checked_at": "2026-10-09T08:39:39.780769+00:00",
+          "status": "existing-month-unchanged",
+          "period": "2026-10",
+          "signature": "5a481d87110ae44fb14945b99d07b59768e97238717939b09c847f815d07e5f1",
+          "http_status": 200,
+          "source_host": "onehousing.vn"
+        }
+      ],
+      "latest_decision": "already-in-source-history"
+    }
+  ]
+}
