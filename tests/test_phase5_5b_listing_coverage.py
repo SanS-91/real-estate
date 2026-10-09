@@ -18,7 +18,8 @@ for row in sorted(rows,key=lambda x:(x['project_id'],x['observation_date'])):
     latest[row['project_id']]=row
 baseline={x['project_id']:x for x in rows if x['observation_date']=='2026-10-08'}
 assert len(baseline)==12
-assert set(latest) == {x['id'] for x in projects}
+assert set(latest) == {x['id'] for x in projects} - {'lumiere-riverside'}
+assert 'lumiere-riverside' in {x['id'] for x in projects}  # Newly added project needs no fabricated legacy portal snapshot.
 assert all(x['market_layer']=='listing-asking' for x in rows)
 assert all(x['source_id']=='batdongsan-com-vn' for x in rows)
 assert all(x['volatile_metrics']['use_in_primary_kpi'] is False for x in rows)

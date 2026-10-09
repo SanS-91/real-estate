@@ -66,8 +66,15 @@ jobs:
           python - <<'PY'
           from pathlib import Path
           html=Path('/tmp/market-4e-pricing.html').read_text(encoding='utf-8')
-          for name in ('Giá tham khảo bổ sung','Lumière Boulevard','Masteri Centre Point','73.4','70.9'):
+          for name in ('Giá tham khảo bổ sung','Lumière Boulevard','Masteri Centre Point'):
               assert name in html, name
+          import json
+          records=json.loads(Path('data/mock/market/alternative-subproject-monthly-history.json').read_text())['data']
+          for project in ('Lumière Boulevard','Masteri Centre Point'):
+              latest=max((row for row in records if row.get('subproject_name')==project),
+                         key=lambda x:x['period'])
+              display=('{:.2f}'.format(latest['value_vnd_per_m2']/1_000_000)).rstrip('0').rstrip('.')
+              assert display in html or display.replace('.',',') in html, (project,display)
           assert 'market-evidence-row' in html and 'market-evidence-group--historical' in html
           print('PASS: nested OneHousing references and non-trend pricing warnings visible in browser.')
           PY

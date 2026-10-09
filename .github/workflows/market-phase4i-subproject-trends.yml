@@ -51,7 +51,16 @@ jobs:
           html=Path('/tmp/market4i-price.html').read_text()
           assert 'Giá tham khảo bổ sung' in html
           assert 'market-price-references' in html
-          # Baseline-only sources must not inflate visual clutter today.
-          assert 'data-subproject-trend-toggle' not in html
-          print('PASS: source-specific charts stay hidden until actual second published period.')
+          # Derive visibility from live published history: the October release
+          # may appear autonomously between PR creation and CI execution.
+          import json
+          data=json.loads(Path('data/mock/market/alternative-subproject-monthly-history.json').read_text())['data']
+          from collections import defaultdict
+          periods=defaultdict(set)
+          for row in data:
+              if row.get('review_status') in ('source-indexed-baseline','reviewed-release','automated-source-verified'):
+                  periods[(row.get('project_id'),row.get('series_key'))].add(row['period'])
+          show=any(len(v)>=2 for v in periods.values())
+          assert ('data-subproject-trend-toggle' in html)==show, 'Trend visibility must follow actual published periods'
+          print('PASS: source-specific chart visibility follows verified history, never fixed baseline count.')
           PY

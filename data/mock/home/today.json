@@ -1,15 +1,15 @@
 {
   "schema_version": 2,
   "build_id": "home-live-derived-sync-20261007",
-  "generated_at": "2026-10-07T22:39:00+07:00",
+  "generated_at": "2026-10-09T16:00:00+07:00",
   "is_mock": false,
   "fallback_only": true,
   "data": [
     {
       "category": "market",
       "label": "Market",
-      "count": 12,
-      "count_label": "12 curated projects",
+      "count": 13,
+      "count_label": "13 curated projects",
       "href": "market.html?view=projects",
       "items": [
         {
