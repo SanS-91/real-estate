@@ -102,18 +102,39 @@
     </div>`;
   }
 
+  function listingScopeLabel(row) {
+    const labels = {
+      'apartment-only': 'Chỉ căn hộ',
+      'landed-only': 'Biệt thự / liền kề',
+      'publisher-faq-indicative': 'Tham khảo FAQ'
+    };
+    return labels[row.price_scope] || 'Nguồn theo phân khúc';
+  }
+
+  function listingScopeDescription(row) {
+    if (row.price_scope === 'landed-only' && row.project_id === 'izumi-city') {
+      return 'Nguồn dành riêng cho biệt thự/nhà liền kề tại Izumi, không phải giá căn hộ hay bình quân của đại đô thị.';
+    }
+    if (row.price_scope === 'landed-only') {
+      return 'Nguồn dành riêng cho biệt thự/nhà liền kề. Không bao gồm shophouse có đơn giá khác biệt.';
+    }
+    if (row.price_scope === 'apartment-only') {
+      return 'Chỉ áp dụng cho căn hộ, không đại diện biệt thự và nhà phố của dự án.';
+    }
+    return 'Mức giá tham khảo FAQ, chưa xác minh là dải giá thống kê toàn dự án.';
+  }
+
   function scopedListingReferenceHTML(projectId) {
     const rows = data.listingScopeEvidence.filter(item => item.project_id === projectId);
     if (!rows.length) return '';
     const cards = rows.map(row => `<article class="market-listing-scope-item">
-      <div class="market-listing-scope-item__head"><strong>${esc(row.price_scope === 'apartment-only' ? 'Chỉ căn hộ' : 'Giá tham khảo FAQ')}</strong><span>Không đưa vào biểu đồ giá tổng hợp</span></div>
+      <div class="market-listing-scope-item__head"><strong>${esc(listingScopeLabel(row))}</strong><span>Không đưa vào biểu đồ giá tổng hợp</span></div>
       <div class="market-listing-scope-item__price">${esc(formatListingRange(row))}</div>
-      <p>${esc(row.price_scope === 'apartment-only'
-        ? 'Chỉ áp dụng cho căn hộ, không đại diện biệt thự và nhà phố của dự án.'
-        : 'Khoảng giá tham khảo của nguồn, chưa xác minh là dải giá thống kê cho toàn dự án.')}</p>
-      <div class="provenance-inline-row">${sourceRef(row.source_id,{sourceDate:row.review_date,sourceUrl:row.source_url,methodology:row.methodology_note})}<span>${esc(row.review_date)}</span></div>
+      <p>${esc(listingScopeDescription(row))}</p>
+      ${row.data_quality_flag ? '<p class="market-listing-scope-warning">Lưu ý: trang rao bán căn hộ trước đây có tin ngoài phạm vi Izumi. Không sử dụng để tính giá căn hộ Izumi.</p>' : ''}
+      <div class="provenance-inline-row">${sourceRef(row.source_id,{sourceDate:row.review_date,sourceUrl:row.source_url,methodology:row.methodology_note})}<span>Kiểm tra ${esc(row.review_date)} · Tin gần nhất ${esc(row.latest_listing_date || '—')}</span></div>
     </article>`).join('');
-    return `<div class="market-listing-scope" role="note"><h4>Giá tham khảo theo phạm vi riêng</h4>${cards}</div>`;
+    return `<div class="market-listing-scope" role="note"><h4>Giá chào bán theo phạm vi sản phẩm</h4>${cards}</div>`;
   }
 
   function listingMarketDrawerHTML(project) {
@@ -809,10 +830,10 @@
         <div class="section-header"><h2 class="section-title">${state.priceLayer === 'listing' ? 'Latest Listing Snapshot' : 'Latest Verified Snapshot'}</h2></div>
         <div class="section-body section-body--table"><div class="table-wrap"><table class="data-table">${snapshotTable}</table></div></div>
       </section>
-      ${state.priceLayer === 'listing' && data.listingScopeEvidence.length ? `<section class="section">
-        <div class="section-header"><div><span class="eyebrow">Separate evidence</span><h2 class="section-title">Giá tham khảo theo phạm vi sản phẩm</h2></div></div>
-        <div class="section-body"><p class="chart-note">Các mức giá dưới đây là căn hộ riêng hoặc FAQ tham khảo, không đủ điều kiện đưa vào biểu đồ giá chung của dự án.</p>
-        <div class="market-listing-scope-grid">${data.listingScopeEvidence.map(row=>`<div class="market-listing-scope-item"><div class="market-listing-scope-item__head"><strong>${esc(Resolver.getEntity('project',row.project_id)?.name || row.project_id)}</strong><span>${esc(row.price_scope === 'apartment-only' ? 'Căn hộ riêng' : 'Tham khảo FAQ')}</span></div><div class="market-listing-scope-item__price">${esc(formatListingRange(row))}</div><div class="provenance-inline-row">${sourceRef(row.source_id,{sourceDate:row.review_date,sourceUrl:row.source_url,methodology:row.methodology_note})}</div></div>`).join('')}</div></div></section>` : ''}
+      ${state.priceLayer === 'listing' && data.listingScopeEvidence.some(row=>filteredProjects.some(project=>project.id === row.project_id)) ? `<section class="section">
+        <div class="section-header"><div><span class="eyebrow">Category-specific evidence</span><h2 class="section-title">Giá chào bán theo phân khúc dự án</h2></div></div>
+        <div class="section-body"><p class="chart-note">Giá chào bán theo phân khúc (căn hộ, biệt thự/liền kề hoặc FAQ tham khảo) được hiển thị riêng, không gộp vào biểu đồ giá bình quân dự án và không được xem là giá giao dịch.</p>
+        <div class="market-listing-scope-grid">${data.listingScopeEvidence.filter(row=>filteredProjects.some(project=>project.id === row.project_id)).map(row=>`<div class="market-listing-scope-item"><div class="market-listing-scope-item__head"><strong>${esc(Resolver.getEntity('project',row.project_id)?.name || row.project_id)}</strong><span>${esc(listingScopeLabel(row))}</span></div><div class="market-listing-scope-item__price">${esc(formatListingRange(row))}</div><p>${esc(listingScopeDescription(row))}</p><div class="provenance-inline-row">${sourceRef(row.source_id,{sourceDate:row.review_date,sourceUrl:row.source_url,methodology:row.methodology_note})}<span>Ngày xem ${esc(row.review_date)}</span></div></div>`).join('')}</div></div></section>` : ''}
       <section class="section"><div class="section-header"><h2 class="section-title">Market Benchmarks</h2></div><div class="section-body section-body--table"><div class="table-wrap"><table class="data-table"><thead><tr><th>Market</th><th>Period</th><th class="numeric">New Supply</th><th class="numeric">Transactions</th><th class="numeric">Absorption</th><th class="numeric">Average ASP</th><th>Source</th></tr></thead><tbody>${benchmarkRows.map(row=>`<tr><td>HCMC · Apartment</td><td>${esc(row.period)}</td><td class="numeric">${esc(formatMarketMetric(row,'new_supply'))}</td><td class="numeric">${esc(formatMarketMetric(row,'sales_units'))}</td><td class="numeric">${esc(formatMarketMetric(row,'absorption_rate'))}</td><td class="numeric">${esc(formatMarketMetric(row,'average_asp'))}</td><td>${sourceRef(row.source_id,{sourceDate:row.source_date,period:row.period,methodology:row.methodology_note,sourceUrl:row.source_url})}</td></tr>`).join('') || '<tr><td colspan="7" class="table-empty">No market benchmark records.</td></tr>'}</tbody></table></div></div></section>`;
     setView(html);
     bindFilters();
