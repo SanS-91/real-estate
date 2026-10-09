@@ -11,6 +11,70 @@
     { key: 'maintenance', label: 'Data Status', href: 'maintenance.html' }
   ];
 
+  // Keep a single, bilingual taxonomy for sourced article TYPES. These are
+  // descriptive labels, never a change to the data's original content_type.
+  const NEWS_KIND_LABELS = {
+    'analysis': { vi: 'Phân tích', en: 'Analysis' },
+    'news': { vi: 'Tin tức', en: 'News' },
+    'research': { vi: 'Nghiên cứu', en: 'Research' },
+    'official-update': { vi: 'Cập nhật chính thức', en: 'Official update' },
+    'data-release': { vi: 'Công bố dữ liệu', en: 'Data release' },
+    'publisher-rss': { vi: 'Tin từ nguồn', en: 'Publisher news' },
+    'developer-update': { vi: 'Tin chủ đầu tư', en: 'Developer update' }
+  };
+  const NEWS_VIEW_COPY = {
+    legal: {
+      vi: {
+        eyebrow: 'Nguồn & diễn giải', title: 'Tin tức & phân tích pháp lý',
+        description: 'Tin tức hỗ trợ theo dõi và diễn giải; khi áp dụng cần đối chiếu văn bản pháp luật gốc và hiệu lực thực tế.'
+      },
+      en: {
+        eyebrow: 'Evidence & context', title: 'Legal news & analysis',
+        description: 'News supports research and interpretation; consult the original legal documents and their effective status before applying them.'
+      }
+    },
+    infrastructure: {
+      vi: {
+        eyebrow: 'Cập nhật dự án', title: 'Tin tức & tiến độ hạ tầng',
+        description: 'Tin tức giúp theo dõi diễn biến; mốc tiến độ chính thức và lịch sử điều chỉnh được lưu riêng trong hồ sơ dự án.'
+      },
+      en: {
+        eyebrow: 'Project developments', title: 'Infrastructure news & milestones',
+        description: 'News provides context; official milestones and schedule revisions remain separately recorded in each project dossier.'
+      }
+    },
+    macro: {
+      vi: {
+        eyebrow: 'Nội dung minh họa', title: 'Tin tức & nghiên cứu vĩ mô (minh họa)',
+        description: 'Các bài viết tại đây chỉ để minh họa, không phải số liệu chính thức. Chỉ số được xác minh hiển thị riêng trong các bảng dữ liệu.'
+      },
+      en: {
+        eyebrow: 'Illustrative material', title: 'Illustrative macro news & research',
+        description: 'These articles are illustrative, not official observations. Verified indicators are published separately in the data views.'
+      }
+    }
+  };
+  function newsLanguage() {
+    return window.AppLocalization?.getLanguage?.() === 'en' ? 'en'
+      : document.documentElement.lang === 'en' && !window.AppLocalization ? 'en' : 'vi';
+  }
+  function newsKindLabel(kind) {
+    return NEWS_KIND_LABELS[kind]?.[newsLanguage()] || String(kind || '—');
+  }
+  function newsViewCopy(section) {
+    return NEWS_VIEW_COPY[section]?.[newsLanguage()] || NEWS_VIEW_COPY.legal.vi;
+  }
+  function refreshArticleLabels() {
+    document.querySelectorAll('[data-news-kind]').forEach(node => {
+      node.textContent = newsKindLabel(node.dataset.newsKind);
+    });
+    document.querySelectorAll('[data-news-view-label]').forEach(node => {
+      const [section, field] = String(node.dataset.newsViewLabel || '').split('.');
+      const copy = NEWS_VIEW_COPY[section]?.[newsLanguage()];
+      if (copy && copy[field]) node.textContent = copy[field];
+    });
+  }
+
   function currentPageKey() {
     const file = window.location.pathname.split('/').pop() || 'index.html';
     if (file === 'index.html' || file === '') return 'home';
@@ -254,12 +318,15 @@
     openDrawer,
     closeDrawer,
     openSearch,
-    closeSearch
+    closeSearch,
+    newsKindLabel,
+    newsViewCopy
   };
 
   document.addEventListener('DOMContentLoaded', () => {
     mountShell();
     bindShellEvents();
     bindHorizontalNavigation();
+    document.addEventListener('app:language-changed', refreshArticleLabels);
   });
 })();

@@ -325,12 +325,12 @@
     if (state.q) articles = articles.filter(item => FilterEngine.textMatch(item,state.q,['title','summary','tags']));
     articles.sort((a,b) => String(b.published_at).localeCompare(String(a.published_at)));
     setView(`
-      <div class="view-intro"><div><span class="eyebrow">Evidence layer</span><h2>Infrastructure News &amp; Research</h2><p>Articles support project records and milestones; they do not replace schedule history or current master status.</p></div></div>
+      <div class="view-intro"><div><span class="eyebrow" data-news-view-label="infrastructure.eyebrow">${esc(App.newsViewCopy('infrastructure').eyebrow)}</span><h2 data-news-view-label="infrastructure.title">${esc(App.newsViewCopy('infrastructure').title)}</h2><p data-news-view-label="infrastructure.description">${esc(App.newsViewCopy('infrastructure').description)}</p></div></div>
       ${newsToolbar()}
       <div class="article-list">${articles.map(article => {
         const projects = Resolver.getEntities('infrastructure-project',article.infrastructure_project_ids || []);
         const reProjects = Resolver.getEntities('real-estate-project',article.project_ids || []);
-        return `<article class="article-row"><div class="article-row__date">${esc(App.formatDate(article.published_at))}</div><div><div class="article-row__meta"><span class="source-tag">${esc(article.content_type)}</span>${sourceRef(article.source_id,{publishedAt:article.published_at,sourceUrl:article.url})}<span>${esc(projects.map(item => item.name).join(' · '))}</span></div><h3>${esc(article.title)}</h3><p>${esc(article.summary)}</p>${reProjects.length ? `<div class="article-relations">${reProjects.map(project => `<a class="relation-chip" href="market.html?view=projects&project=${encodeURIComponent(project.id)}">Related RE: ${esc(project.name)}</a>`).join('')}</div>` : ''}</div></article>`;
+        return `<article class="article-row"><div class="article-row__date">${esc(App.formatDate(article.published_at))}</div><div><div class="article-row__meta"><span class="source-tag news-kind-chip" data-news-kind="${esc(article.content_type)}">${esc(App.newsKindLabel(article.content_type))}</span>${sourceRef(article.source_id,{publishedAt:article.published_at,sourceUrl:article.url})}<span>${esc(projects.map(item => item.name).join(' · '))}</span></div><h3>${esc(article.title)}</h3><p>${esc(article.summary)}</p>${reProjects.length ? `<div class="article-relations">${reProjects.map(project => `<a class="relation-chip" href="market.html?view=projects&project=${encodeURIComponent(project.id)}">Related RE: ${esc(project.name)}</a>`).join('')}</div>` : ''}</div></article>`;
       }).join('') || Components.stateBox('No infrastructure articles match the selected filters.')}</div>`);
     bindFilters();
   }
