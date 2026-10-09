@@ -142,10 +142,11 @@
       const scope = ' · ' + (row.subproject_name || productLabels[row.asset_type] || 'Loại sản phẩm chưa xác định');
       const bounds = row.range_low_vnd_per_m2 != null && row.range_high_vnd_per_m2 != null
         ? 'Dải giá nhà cung cấp: ' + price(row.range_low_vnd_per_m2) + ' đến ' + price(row.range_high_vnd_per_m2) + '. ' : '';
+      const accessNote = row.source_id === 'cafeland-listings' ? ' Nguồn này hiện cần kiểm chứng hỗ trợ: GitHub Actions bị chặn HTTP 403 khi kiểm tra ngày 09/10/2026, không tự thu thập giá mới.' : '';
       return `<article class="market-listing-scope-item">
         <div class="market-listing-scope-item__head"><strong>${esc(project?.name || row.project_id)}${esc(scope)}</strong><span>${esc(labels[row.metric_type] || row.metric_type)} · ${esc(row.period)}</span></div>
         <div class="market-listing-scope-item__price">${esc(price(row.value_vnd_per_m2))}</div>
-        <p>${esc(bounds + row.methodology_note)}</p>
+        <p>${esc(bounds + row.methodology_note + accessNote)}</p>
         <div class="provenance-inline-row">${sourceRef(row.source_id,{sourceDate:row.source_publication_date || row.review_date,sourceUrl:row.source_url,methodology:row.methodology_note})}<span>Kiểm tra ${esc(row.review_date)} · Không dùng cho ASP hay trend tổng hợp</span></div>
       </article>`;
     }).join('');

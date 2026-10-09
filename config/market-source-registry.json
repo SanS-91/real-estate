@@ -101,12 +101,12 @@
       "source_id": "cafeland-listings",
       "label": "CafeLand Nhà đất",
       "source_role": "secondary-individual-property-listing",
-      "access_mode": "public-page-reviewed; automated-source-probe-to-be-tested",
-      "automation_status": "candidate-evaluation",
+      "access_mode": "assisted-reviewed-public-index",
+      "automation_status": "blocked-on-github-runner-http-403",
       "supported_layers": [
         "secondary-listing-evidence"
       ],
-      "primary_use": "Source-reported dated individual asking listings, with strict project, unit-type, total price and area verification. Not aggregate or developer ASP."
+      "primary_use": "Reviewed single-unit asking-price references; current Github-hosted HTTP 403 requires manual or public-index assisted capture. Not project ASP or automatic history."
     }
   ]
 }
