@@ -55,4 +55,33 @@ assert.match(html, /aria-label="Lọc tin: Giá bán"/);
 assert.match(html, /market-news-card__topic/);
 assert.ok((html.match(/class="market-news-card__topic"/g)||[]).length <= 2);
 assert.ok(html.includes('data-news-topic="pricing"'));
+
+const scriptContext = {
+  window:{},
+  document:{documentElement:{lang:'vi'},addEventListener(){}}
+};
+vm.runInNewContext(common, scriptContext);
+const labels=scriptContext.window.App;
+assert.equal(labels.newsKindLabel('analysis'),'Phân tích');
+assert.equal(labels.newsKindLabel('news'),'Tin tức');
+assert.equal(labels.newsKindLabel('official-update'),'Cập nhật chính thức');
+assert.equal(labels.newsKindLabel('data-release'),'Công bố dữ liệu');
+assert.equal(labels.newsViewCopy('macro').title,'Tin tức & nghiên cứu vĩ mô (minh họa)');
+assert.ok(labels.newsViewCopy('legal').description.includes('văn bản pháp luật gốc'));
+scriptContext.document.documentElement.lang='en';
+assert.equal(labels.newsKindLabel('official-update'),'Official update');
+assert.equal(labels.newsViewCopy('infrastructure').title,'Infrastructure news & milestones');
+for(const module of ['legal','infrastructure','macro']) {
+  const js=fs.readFileSync('assets/js/'+module+'.js','utf8');
+  const html=fs.readFileSync(module+'.html','utf8');
+  assert.ok(js.includes('data-news-kind='),module+' must classify news source type');
+  assert.ok(js.includes('App.newsKindLabel(article.content_type)'),module+' must use common labels');
+  assert.ok(js.includes('data-news-view-label="'+module+'.title"'),module+' must explain its evidence layer');
+  assert.ok(html.includes('assets/js/'+module+'.js?v=4.9I1&news=UI9'),module+' must load updated content');
+}
+assert.match(css,/\.article-row__meta \.news-kind-chip/);
+assert.match(css,/\.news-kind-chip\[data-news-kind="official-update"\]/);
+assert.match(css,/\.news-kind-chip\[data-news-kind="data-release"\]/);
+console.log('PASS: shared VI/EN taxonomy for Legal, Infrastructure and demonstrative Macro news');
+
 console.log('PASS: 7-site shared navigation, VI/EN terminology, auto-swipe tabs and distinct news topic chips');
