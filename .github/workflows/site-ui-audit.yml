@@ -5,6 +5,8 @@ on:
     paths:
       - 'assets/js/common.js'
       - 'assets/js/home.js'
+      - 'assets/js/market.js'
+      - 'tests/test_market_4j2.cjs'
       - 'assets/js/components.js'
       - 'tests/test_home_4j1.cjs'
       - 'assets/js/localization-static.js'
@@ -44,6 +46,8 @@ jobs:
           node --check assets/js/home.js
           node --check assets/js/components.js
           node tests/test_home_4j1.cjs
+          node --check assets/js/market.js
+          node tests/test_market_4j2.cjs
           node --check assets/js/common.js
           node --check assets/js/localization-static.js
           node --check assets/js/market-news-ui.js
