@@ -1,0 +1,136 @@
+name: Market Listing Coverage And Scoped Evidence
+
+on:
+  pull_request:
+    paths:
+      - 'config/listing-reviewed-captures-20261009-part2.json'
+      - 'data/mock/market/listing-scope-evidence.json'
+      - 'scripts/listing_scope_evidence_gate.py'
+      - 'scripts/listing_reviewed_batch.py'
+      - 'scripts/listing_monitor_health.py'
+      - 'scripts/build_history_coverage.py'
+      - 'assets/js/market.js'
+      - 'assets/js/data-store.js'
+      - 'assets/css/market-listing-evidence.css'
+      - 'config/history-coverage.json'
+      - 'market.html'
+      - 'tests/test_listing_coverage_next.py'
+      - 'tests/test_listing_reviewed_batch.py'
+      - '.github/workflows/market-listing-coverage-next.yml'
+  push:
+    branches: [main]
+    paths:
+      - 'config/listing-reviewed-captures-20261009-part2.json'
+      - 'scripts/listing_scope_evidence_gate.py'
+      - 'scripts/listing_reviewed_batch.py'
+      - '.github/workflows/market-listing-coverage-next.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: market-listing-coverage-promote
+  cancel-in-progress: false
+
+jobs:
+  check-and-promote:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v7
+      - uses: actions/setup-python@v7
+        with:
+          python-version: '3.12'
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Source and regression tests
+        run: |
+          python -m py_compile scripts/listing_scope_evidence_gate.py scripts/listing_reviewed_batch.py scripts/listing_monitor_health.py scripts/build_history_coverage.py
+          python scripts/listing_scope_evidence_gate.py
+          python tests/test_listing_coverage_next.py
+          python tests/test_listing_reviewed_batch.py
+          python tests/test_phase5_5b_listing_coverage.py
+          python tests/test_phase5_5b1_market_surface.py
+          python tests/test_phase5_5c_listing_pipeline.py
+          node tests/test_phase5_5c_listing_history.js
+          node --check assets/js/data-store.js
+          node --check assets/js/market.js
+      - name: Stage vetted Waterpoint and Eaton Park snapshots
+        run: |
+          python scripts/listing_reviewed_batch.py --today 2026-10-09 --config config/listing-reviewed-captures-20261009-part2.json
+          python scripts/listing_snapshot_pipeline.py --mode preview
+      - name: Isolated end-to-end append and coverage test
+        if: github.event_name == 'pull_request'
+        run: |
+          python scripts/listing_snapshot_pipeline.py --mode promote
+          python scripts/build_history_coverage.py
+          python tests/test_listing_coverage_next.py
+          python tests/test_phase6_3_historical_coverage_expansion.py
+          python - <<'PY'
+          import json
+          from pathlib import Path
+          rows=json.loads(Path('data/mock/market/listing-observations.json').read_text())['data']
+          history=json.loads(Path('data/state/history-coverage.json').read_text())['listing_market']
+          assert len(rows)==18
+          assert history['series_count']==12 and history['trend_ready_series']==0
+          assert history['minimum_span_days']==30
+          assert sum(x['snapshot_count']>=2 for x in history['items'])==6
+          print('PASS: 18 source-reviewed snapshots, 12 tracked projects, 6 with 2 dates, no fabricated trend.')
+          PY
+      - name: Browser smoke-test pricing reference separation
+        if: github.event_name == 'pull_request'
+        run: |
+          set -eu
+          BROWSER="$(command -v google-chrome || command -v chromium || command -v chromium-browser || true)"
+          test -n "$BROWSER"
+          mkdir -p artifacts
+          python3 -m http.server 8765 --bind 127.0.0.1 >/tmp/market-http.log 2>&1 &
+          S=$!
+          trap 'kill "$S" || true' EXIT
+          sleep 3
+          PAGE='http://127.0.0.1:8765/market.html?view=project-detail&id=the-9-stellars'
+          "$BROWSER" --headless --no-sandbox --disable-gpu --disable-dev-shm-usage --window-size=1440,980 --virtual-time-budget=8000 --dump-dom "$PAGE" > artifacts/the9.html
+          "$BROWSER" --headless --no-sandbox --disable-gpu --disable-dev-shm-usage --window-size=390,850 --virtual-time-budget=8000 --screenshot=artifacts/the9-mobile.png "$PAGE"
+          PAGE2='http://127.0.0.1:8765/market.html?view=pricing'
+          "$BROWSER" --headless --no-sandbox --disable-gpu --disable-dev-shm-usage --window-size=1440,980 --virtual-time-budget=8000 --dump-dom "$PAGE2" > artifacts/pricing.html
+          python3 - <<'PY'
+          from pathlib import Path
+          detail=Path('artifacts/the9.html').read_text(encoding='utf-8')
+          pricing=Path('artifacts/pricing.html').read_text(encoding='utf-8')
+          assert 'Giá tham khảo theo phạm vi riêng' in detail
+          assert '75,4' in detail and '116,7' in detail
+          assert 'Không đưa vào biểu đồ giá tổng hợp' in detail
+          assert 'Giá tham khảo theo phạm vi sản phẩm' in pricing
+          assert 'Celesta Gold' in pricing
+          print('PASS: scoped evidence visible but excluded from price chart.')
+          PY
+      - name: Publish two independently sourced observations (main only)
+        if: github.ref == 'refs/heads/main' && github.event_name != 'pull_request'
+        run: |
+          python scripts/listing_snapshot_pipeline.py --mode promote
+          python scripts/build_history_coverage.py
+          python tests/test_phase6_3_historical_coverage_expansion.py
+          if git diff --quiet -- data/mock/market/listing-observations.json; then
+            echo 'No new evidence-backed history.'
+            exit 0
+          fi
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add data/mock/market/listing-observations.json data/state/history-coverage.json
+          git commit -m 'data(market): append reviewed Waterpoint and Eaton Park listing snapshots'
+          git restore --worktree -- .
+          git pull --rebase origin main
+          git push origin HEAD:main
+      - name: Upload evidence and responsive QA
+        if: always()
+        uses: actions/upload-artifact@v7
+        with:
+          name: market-listing-coverage-review
+          path: |
+            data/candidate/market/listing-reviewed-batch-report.json
+            data/candidate/market/listing-refresh-report.json
+            artifacts/
+          if-no-files-found: warn
+          retention-days: 14
