@@ -376,11 +376,11 @@
   function renderNews() {
     const articles = [...data.articles].filter(articleMatchesFilters).sort((a,b) => String(b.published_at).localeCompare(String(a.published_at)));
     setView(`
-      <div class="view-intro"><div><span class="eyebrow">Evidence layer</span><h2>Legal News &amp; Analysis</h2><p>Analysis helps interpret a document, but the official legal record remains the source of truth. Related documents are shown explicitly on each item.</p></div></div>
+      <div class="view-intro"><div><span class="eyebrow" data-news-view-label="legal.eyebrow">${esc(App.newsViewCopy('legal').eyebrow)}</span><h2 data-news-view-label="legal.title">${esc(App.newsViewCopy('legal').title)}</h2><p data-news-view-label="legal.description">${esc(App.newsViewCopy('legal').description)}</p></div></div>
       ${newsFilterToolbar()}
       <div class="article-list">${articles.map(article => {
         const docs = Resolver.getEntities('legal-document', article.legal_document_ids || []);
-        return `<article class="article-row"><div class="article-row__date">${esc(App.formatDate(article.published_at))}</div><div><div class="article-row__meta"><span class="source-tag">${esc(article.content_type)}</span>${sourceRef(article.source_id,{publishedAt:article.published_at,sourceUrl:article.url})}<span>${esc(docs.map(doc => doc.document_number).join(' · '))}</span></div><h3>${esc(article.title)}</h3><p>${esc(article.summary)}</p>${docs.length ? `<div class="article-relations">${docs.map(doc => `<button type="button" class="relation-button" data-document-id="${esc(doc.id)}">Official context: ${esc(doc.title)}</button>`).join('')}</div>` : ''}</div></article>`;
+        return `<article class="article-row"><div class="article-row__date">${esc(App.formatDate(article.published_at))}</div><div><div class="article-row__meta"><span class="source-tag news-kind-chip" data-news-kind="${esc(article.content_type)}">${esc(App.newsKindLabel(article.content_type))}</span>${sourceRef(article.source_id,{publishedAt:article.published_at,sourceUrl:article.url})}<span>${esc(docs.map(doc => doc.document_number).join(' · '))}</span></div><h3>${esc(article.title)}</h3><p>${esc(article.summary)}</p>${docs.length ? `<div class="article-relations">${docs.map(doc => `<button type="button" class="relation-button" data-document-id="${esc(doc.id)}">Official context: ${esc(doc.title)}</button>`).join('')}</div>` : ''}</div></article>`;
       }).join('') || Components.stateBox('No legal articles match the selected filters.')}</div>
     `);
     bindFilters();
