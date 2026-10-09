@@ -85,4 +85,15 @@ assert len(checks)==4 and len(candidates)==1
 assert sum(row["status"]=="new-period-review-required" for row in checks)==1
 assert sum(row["status"]=="blocked" for row in checks)==1
 assert all(not x.get("production_written",False) for x in checks)
-print("PASS: 4 source targets, isolated OneHousing month candidate, Rever scope and immutable historical launch references.")
+queue={"schema_version":1,"candidate_only":True,"review_required":True,"data":[]}
+added,conflicts=probe.append_review_queue(queue,candidates)
+assert (added,conflicts,queue["record_count"])==(1,0,1)
+added,conflicts=probe.append_review_queue(queue,candidates)
+assert (added,conflicts,queue["record_count"])==(0,0,1)
+tampered=copy.deepcopy(candidates[0])
+tampered["value_vnd_per_m2"]=111_000_000
+added,conflicts=probe.append_review_queue(queue,[tampered])
+assert (added,conflicts,queue["record_count"])==(0,1,1)
+assert queue["data"][0]["value_vnd_per_m2"]==55_100_000
+assert json.loads((ROOT/"data/candidate/market/alternative-price-review-queue.json").read_text())["record_count"]==0
+print("PASS: 4 source targets, safe month detection, immutable launch references and append-only review queue.")
