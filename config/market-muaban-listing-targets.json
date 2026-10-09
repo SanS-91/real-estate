@@ -1,0 +1,27 @@
+{
+  "schema_version": 1,
+  "source": "muaban.net",
+  "purpose": "Strict project-specific for-sale apartment ads. Expiration is authoritative; relative update badges cannot override it.",
+  "targets": [
+    {
+      "project_id": "akari-city",
+      "publisher_project_name": "Akari City",
+      "url": "https://muaban.net/bat-dong-san/ban-can-ho-chung-cu-du-an-akari-city-quan-binh-tan-ho-chi-minh"
+    },
+    {
+      "project_id": "vinhomes-grand-park",
+      "publisher_project_name": "Vinhomes Grand Park",
+      "url": "https://muaban.net/bat-dong-san/ban-can-ho-chung-cu-du-an-vinhomes-grand-park-quan-9-ho-chi-minh"
+    },
+    {
+      "project_id": "the-global-city",
+      "publisher_project_name": "The Global City",
+      "url": "https://muaban.net/bat-dong-san/ban-can-ho-chung-cu-du-an-the-global-city-quan-2-ho-chi-minh"
+    },
+    {
+      "project_id": "the-privia",
+      "publisher_project_name": "The Privia",
+      "url": "https://muaban.net/bat-dong-san/ban-can-ho-du-an-the-privia-quan-binh-tan-ho-chi-minh"
+    }
+  ]
+}
