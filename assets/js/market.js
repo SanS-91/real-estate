@@ -127,30 +127,90 @@
 
   // Alternative publisher references are never part of the Batdongsan price chart.
   // Monthly modal price, single listing and historical launch floor are distinct.
-  function alternativePriceCardsHTML(projectIds) {
-    const rows = [...data.alternativePriceEvidence, ...data.secondaryListingEvidence, ...data.oneHousingSubprojectEvidence].filter(item => projectIds.includes(item.project_id));
+  // Supplementary offers are not the same metric as portal asking ranges or ASP.
+  // Group by evidence type and hide long methodology by default to keep Pricing readable.
+  function alternativePriceCardsHTML(projectIds, options = {}) {
+    const rows = [...data.alternativePriceEvidence, ...data.secondaryListingEvidence, ...data.oneHousingSubprojectEvidence]
+      .filter(item => projectIds.includes(item.project_id));
     if (!rows.length) return '';
-    const labels = {
-      'popular-asking-price-per-sqm': 'Giá phổ biến theo nguồn',
-      'single-listing-asking-price-per-sqm': 'Giá rao của một căn',
-      'historical-launch-starting-price-per-sqm': 'Giá chào khởi điểm lịch sử'
-    };
-    const price = value => Formatters.number(value / 1_000_000, {min:0,max:2}) + ' triệu VND/m²';
-    const cards = rows.map(row => {
+    const sourceNames = { 'onehousing-vn':'OneHousing', 'rever-vn':'Rever', 'cafeland-listings':'CafeLand' };
+    const productNames = { apartment:'Căn hộ', townhouse:'Nhà phố', 'semidetached-villa':'Biệt thự song lập' };
+    const labels = [
+      { id:'popular', title:'Giá phổ biến theo nguồn', note:'Giá theo phân khúc, không phải giá giao dịch hay ASP toàn dự án.' },
+      { id:'listing', title:'Giá rao của từng căn', note:'Giá chào bán của một bất động sản cụ thể, không đại diện toàn dự án.' },
+      { id:'historical', title:'Giá lịch sử', note:'Giá khởi điểm trước đây hoặc tin rao cũ; không phải giá hiện hành.' }
+    ];
+    const kind = row => row.metric_type === 'historical-launch-starting-price-per-sqm' ||
+      String(row.publisher_claim_status || '').startsWith('expired') ? 'historical' :
+      row.metric_type === 'popular-asking-price-per-sqm' ? 'popular' : 'listing';
+    const formatPeriod = period => /^\d{4}-\d{2}$/.test(period) ?
+      period.slice(5) + '/' + period.slice(0,4) :
+      /^\d{4}-\d{2}-\d{2}$/.test(period) ? period.slice(8) + '/' + period.slice(5,7) + '/' + period.slice(0,4) : period;
+    const amount = value => Formatters.number(value / 1_000_000,{min:0,max:2});
+    const groupRows = Object.fromEntries(labels.map(group => [group.id,rows.filter(item => kind(item) === group.id)]));
+    const byPeriod = (a,b) => String(b.period || '').localeCompare(String(a.period || '')) ||
+      String(a.project_id).localeCompare(String(b.project_id));
+    const renderRow = row => {
       const project = Resolver.getEntity('project', row.project_id);
-      const productLabels = {'apartment':'Căn hộ','townhouse':'Nhà phố','semidetached-villa':'Biệt thự song lập'};
-      const scope = ' · ' + (row.subproject_name || productLabels[row.asset_type] || 'Loại sản phẩm chưa xác định');
-      const bounds = row.range_low_vnd_per_m2 != null && row.range_high_vnd_per_m2 != null
-        ? 'Dải giá nhà cung cấp: ' + price(row.range_low_vnd_per_m2) + ' đến ' + price(row.range_high_vnd_per_m2) + '. ' : '';
-      const accessNote = row.source_id === 'cafeland-listings' ? ' Nguồn này hiện cần kiểm chứng hỗ trợ: GitHub Actions bị chặn HTTP 403 khi kiểm tra ngày 09/10/2026, không tự thu thập giá mới.' : '';
-      return `<article class="market-listing-scope-item">
-        <div class="market-listing-scope-item__head"><strong>${esc(project?.name || row.project_id)}${esc(scope)}</strong><span>${esc(labels[row.metric_type] || row.metric_type)} · ${esc(row.period)}</span></div>
-        <div class="market-listing-scope-item__price">${esc(price(row.value_vnd_per_m2))}</div>
-        <p>${esc(bounds + row.methodology_note + accessNote)}</p>
-        <div class="provenance-inline-row">${sourceRef(row.source_id,{sourceDate:row.source_publication_date || row.review_date,sourceUrl:row.source_url,methodology:row.methodology_note})}<span>Kiểm tra ${esc(row.review_date)} · Không dùng cho ASP hay trend tổng hợp</span></div>
-      </article>`;
+      const name = project?.name || row.project_id;
+      const product = row.subproject_name ?
+        row.subproject_name + ' · ' + (productNames[row.asset_type] || 'Sản phẩm') :
+        (productNames[row.asset_type] || 'Loại sản phẩm chưa xác định');
+      const category = kind(row);
+      const context = category === 'popular' ?
+        'Giá phổ biến do nguồn thống kê cho đúng phân khúc và kỳ nêu trên.' :
+        category === 'historical' ? 'Giá từ kỳ lịch sử, không sử dụng như giá hiện tại.' :
+        'Một tin rao bán cụ thể, không phải mức giá bình quân toàn dự án.';
+      const range = row.range_low_vnd_per_m2 != null && row.range_high_vnd_per_m2 != null ?
+        `<p>Khoảng chào bán theo nguồn: <strong>${esc(amount(row.range_low_vnd_per_m2))}–${esc(amount(row.range_high_vnd_per_m2))} triệu VND/m²</strong>.</p>` : '';
+      const unit = row.listed_area_sqm ?
+        `<p>Diện tích tin đăng: ${esc(String(row.listed_area_sqm))} m²${row.price_area_basis === 'land-area-reported-by-publisher' ? ' đất' : ''}.</p>` : '';
+      const access = row.source_id === 'cafeland-listings' ?
+        '<p class="market-evidence-warning">CafeLand đang chặn truy cập tự động (HTTP 403); chưa thể tự cập nhật giá mới.</p>' : '';
+      const historyNote = category === 'historical' ?
+        '<span class="market-evidence-archived">Dữ liệu lịch sử</span>' : '';
+      return `<details class="market-evidence-row">
+        <summary class="market-evidence-row__summary">
+          <span class="market-evidence-row__name"><strong>${esc(name)}</strong><small>${esc(product)}</small></span>
+          <span class="market-evidence-row__price"><strong>${esc(amount(row.value_vnd_per_m2))}</strong><small>triệu VND/m²</small></span>
+          <span class="market-evidence-row__period"><small>Kỳ nguồn</small>${esc(formatPeriod(row.period))}</span>
+          <span class="market-evidence-row__publisher">${esc(sourceNames[row.source_id] || row.source_id)}</span>
+        </summary>
+        <div class="market-evidence-row__body">
+          <p>${esc(context)}</p>${range}${unit}${access}
+          <div class="market-evidence-row__source">
+            ${sourceRef(row.source_id,{sourceDate:row.source_publication_date || row.review_date,sourceUrl:row.source_url,methodology:row.methodology_note})}
+            <span>Kiểm tra ${esc(formatPeriod(row.review_date || '—'))}</span>${historyNote}
+          </div>
+          <details class="market-evidence-method"><summary>Ghi chú phương pháp đầy đủ</summary><p>${esc(row.methodology_note || 'Không có ghi chú bổ sung.')}</p></details>
+        </div>
+      </details>`;
+    };
+    const sections = labels.filter(group => groupRows[group.id].length).map(group => {
+      const items = groupRows[group.id].slice().sort(byPeriod).map(renderRow).join('');
+      const heading = `<strong>${esc(group.title)}</strong><small>${groupRows[group.id].length} mức giá · ${esc(group.note)}</small>`;
+      return group.id === 'historical' ?
+        `<details class="market-evidence-group market-evidence-group--historical">
+          <summary class="market-evidence-group__title">${heading}</summary>
+          <div class="market-evidence-group__rows">${items}</div>
+        </details>` :
+        `<section class="market-evidence-group" aria-label="${esc(group.title)}">
+          <div class="market-evidence-group__title">${heading}</div>
+          <div class="market-evidence-group__rows">${items}</div>
+        </section>`;
     }).join('');
-    return `<div class="market-listing-scope" role="note"><h4>Nguồn giá đối chiếu (khác phương pháp)</h4><div class="market-listing-scope-grid">${cards}</div></div>`;
+    const counts = labels.filter(group=>groupRows[group.id].length).map(group=>
+      groupRows[group.id].length + ' ' + (group.id === 'popular' ? 'giá theo nguồn' : group.id === 'listing' ? 'tin rao' : 'giá cũ')).join(' · ');
+    return `<details class="market-price-references" ${options.expanded ? 'open' : ''}>
+      <summary class="market-price-references__summary">
+        <span class="market-price-references__title"><strong>Giá tham khảo bổ sung</strong><small>${esc(counts)}</small></span>
+        <span class="market-price-references__action">${rows.length} bản ghi · Xem chi tiết</span>
+      </summary>
+      <div class="market-price-references__body">
+        <p class="market-price-references__intro">Dữ liệu từ nhiều nguồn và kỳ khác nhau. Không cộng gộp để tính ASP, so sánh giá hoặc suy diễn xu hướng thị trường.</p>
+        ${sections}
+      </div>
+    </details>`;
   }
 
   function scopedListingReferenceHTML(projectId) {
