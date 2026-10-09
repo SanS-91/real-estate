@@ -20,6 +20,7 @@ on:
     branches: [main]
     paths:
       - 'scripts/market_alternative_auto_probe.py'
+      - 'scripts/market_source_reliability.py'
       - 'scripts/market_subproject_monthly_release.py'
       - 'scripts/market_subproject_candidate_recheck.py'
       - 'config/market-alternative-auto-targets.json'
