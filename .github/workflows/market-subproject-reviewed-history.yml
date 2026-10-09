@@ -1,0 +1,114 @@
+name: Market Coverage Round 4F - Source-Rechecked Subproject Price History
+
+on:
+  pull_request:
+    paths:
+      - 'scripts/market_subproject_candidate_recheck.py'
+      - 'scripts/market_subproject_monthly_release.py'
+      - 'tests/test_market_subproject_monthly_review.py'
+      - 'data/mock/market/alternative-subproject-monthly-history.json'
+      - 'config/market-subproject-reviewed-approvals.json'
+      - 'scripts/market_alternative_auto_probe.py'
+      - '.github/workflows/market-subproject-reviewed-history.yml'
+  push:
+    branches: [main]
+    paths:
+      - 'scripts/market_subproject_candidate_recheck.py'
+      - 'scripts/market_subproject_monthly_release.py'
+      - 'tests/test_market_subproject_monthly_review.py'
+      - 'data/mock/market/alternative-subproject-monthly-history.json'
+      - 'config/market-subproject-reviewed-approvals.json'
+      - '.github/workflows/market-subproject-reviewed-history.yml'
+  schedule:
+    - cron: '45 4 * * 2,5'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: market-subproject-source-review
+  cancel-in-progress: false
+
+jobs:
+  source-reverified-monthly-price:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 16
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Install source inspection libraries
+        run: pip install -r requirements.txt
+      - name: Validate isolated price history, publisher proofs and no fake date promotions
+        run: |
+          python -m py_compile scripts/market_subproject_candidate_recheck.py scripts/market_subproject_monthly_release.py
+          python tests/test_market_subproject_monthly_review.py
+          python scripts/market_subproject_monthly_release.py --mode preview
+          python scripts/market_onehousing_subproject_gate.py
+          python tests/test_market_onehousing_subproject_evidence.py
+      - name: Independently recheck pending source price months
+        if: github.event_name != 'pull_request'
+        run: python scripts/market_subproject_candidate_recheck.py --run-id "$GITHUB_RUN_ID"
+      - name: Fail closed if reviewed approvals do not have two matching source rechecks
+        if: github.event_name != 'pull_request'
+        run: python scripts/market_subproject_monthly_release.py --mode promote
+      - name: Explain real producer source status and approval queue
+        if: always()
+        run: |
+          echo '## Phase 4F — independent OneHousing subproject source verification' >> "$GITHUB_STEP_SUMMARY"
+          python - <<'PY' >> "$GITHUB_STEP_SUMMARY"
+          import json
+          from pathlib import Path
+          p=Path('data/candidate/market/alternative-candidate-verification-report.json')
+          if p.exists():
+              d=json.loads(p.read_text())
+              print(f"- Independent candidate source rechecks: **{d['checked_candidates']}**")
+              print("- No new published price is inferred from a crawler date.")
+              print("| Candidate | Source check | HTTP |")
+              print("|---|---|---:|")
+              for row in d["checks"]:
+                  print(f"| {row['candidate_id']} | {row['status']} | {row.get('http_status','—')} |")
+          else:
+              print("- Source recheck not run for pull request; deterministic tests completed.")
+          approvals=json.loads(Path('config/market-subproject-reviewed-approvals.json').read_text())['data']
+          print(f"- Separately approved candidates: **{len(approvals)}**")
+          print("- Indexed 09/2026 baselines are labeled as indexed, not independently reverified prices.")
+          PY
+      - name: Persist recheck history and separately reviewed series only
+        if: github.event_name != 'pull_request'
+        run: |
+          set -eu
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add data/state/alternative-candidate-verification.json data/mock/market/alternative-subproject-monthly-history.json
+          if git diff --cached --quiet; then
+            echo 'Nothing to persist.'
+            exit 0
+          fi
+          git commit -m 'chore(market): audit independent publisher month recheck status'
+          git restore --worktree -- .
+          pushed=false
+          for attempt in 1 2 3 4 5; do
+            git pull --rebase origin main
+            if git push origin HEAD:main; then
+              pushed=true
+              break
+            fi
+            sleep 2
+          done
+          if [ "$pushed" != true ]; then
+            echo '::warning::Recheck operational status deferred by concurrent main changes. Evidence report archived below.'
+          fi
+      - name: Archive independent recheck audit
+        if: always() && github.event_name != 'pull_request'
+        uses: actions/upload-artifact@v4
+        with:
+          name: market-4f-independent-publisher-recheck
+          path: |
+            data/state/alternative-candidate-verification.json
+            data/candidate/market/alternative-candidate-verification-report.json
+            data/candidate/market/subproject-monthly-release-report.json
+          if-no-files-found: warn
+          retention-days: 45
