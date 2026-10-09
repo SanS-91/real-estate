@@ -24,7 +24,7 @@ assert "renderRangeSeries('market-overview-price'" in market
 assert "renderRangeSeries('market-pricing'" in market
 assert 'Snapshot tin đăng mới nhất' in market
 assert 'Snapshot giá đã xác minh mới nhất' in market
-assert 'Khoảng giá chào bán theo từng dự án (tin đăng; không phải giao dịch).' in market
+assert 'Khoảng giá rao bán theo dự án (triệu VND/m², không phải giao dịch).' in market
 assert 'Không nối thành xu hướng thời gian.' in market
 
 assert '.segmented-control.market-price-layer' in css
