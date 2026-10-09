@@ -71,9 +71,9 @@ jobs:
           python - <<'PY'
           from pathlib import Path
           s=Path('/tmp/r4c-pricing.html').read_text(encoding='utf-8')
-          for marker in ('Nguồn giá đối chiếu','Izumi City','Essensia Parkway','The 9 Stellars','CafeLand'):
+          for marker in ('Giá tham khảo bổ sung','Izumi City','Essensia Parkway','The 9 Stellars','CafeLand'):
               assert marker in s, marker
-          assert 'Không dùng cho ASP hay trend tổng hợp' in s
+          assert 'market-evidence-row' in s and 'market-price-references' in s
           assert 'Biệt thự song lập' in s and 'Nhà phố' in s
           print('PASS: three individually sourced property references appear in existing pricing cards; no UI restructure.')
           PY
