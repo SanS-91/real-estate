@@ -2,7 +2,7 @@
   "schema_version": 1,
   "build_id": "phase5.5a-listing-market-20261008",
   "generated_at": "2026-10-08T14:32:55.012Z",
-  "record_count": 41,
+  "record_count": 43,
   "data": [
     {
       "id": "demo-official",
@@ -495,6 +495,30 @@
       "source_priority": 3,
       "active": true,
       "notes": "RSS provides publisher titles, dates, excerpt and original links only; no unverified quantitative market data."
+    },
+    {
+      "id": "thanhnien-real-estate",
+      "name": "Thanh Niên Địa ốc",
+      "source_type": "publisher",
+      "base_url": "https://thanhnien.vn/",
+      "language": "vi",
+      "collection_method": "official-rss-metadata",
+      "fetch_frequency": "daily",
+      "source_priority": 3,
+      "active": true,
+      "notes": "Publisher RSS; original article URL and publication metadata, no unverified numbers."
+    },
+    {
+      "id": "dantri-real-estate",
+      "name": "Dân trí Bất động sản",
+      "source_type": "publisher",
+      "base_url": "https://dantri.com.vn/",
+      "language": "vi",
+      "collection_method": "official-rss-metadata",
+      "fetch_frequency": "daily",
+      "source_priority": 3,
+      "active": true,
+      "notes": "Publisher RSS; original article URL and publication metadata, no unverified numbers."
     }
   ]
 }
