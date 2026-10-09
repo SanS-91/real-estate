@@ -37,7 +37,7 @@ assert "...data.oneHousingSubprojectEvidence" in market
 assert "getOneHousingSubprojectEvidence:" in store
 assert "projectIds.includes(item.project_id)" in market
 assert "function alternativePriceCardsHTML" in market
-assert "subproject_name || productLabels" in market
+assert "row.subproject_name ?" in market and "productNames[row.asset_type]" in market
 assert "oneHousingSubprojectEvidence" not in market[market.index("function listingRangeChartData"):market.index("function priceLayerControls")]
 assert json.loads((ROOT/"data/mock/market/listing-observations.json").read_text())["record_count"]==18
 assert json.loads((ROOT/"data/mock/market/alternative-monthly-history.json").read_text())["record_count"]==1
