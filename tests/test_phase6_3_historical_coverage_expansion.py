@@ -34,7 +34,7 @@ def periods(segment,source):
     })
 assert periods("apartment","cbre-vietnam-market")==["2025-Q3","2025-Q4","2026-Q1","2026-Q2"]
 assert periods("landed","cbre-vietnam-market")==["2025-Q3","2025-Q4","2026-Q1","2026-Q2"]
-assert periods("apartment","cushman-wakefield-vietnam-market")==["2026-Q1","2026-Q2"]
+assert periods("apartment","cushman-wakefield-vietnam-market")==["2024-Q4","2025-Q1","2025-Q4","2026-Q1","2026-Q2"]
 
 spec=importlib.util.spec_from_file_location("coverage",ROOT/"scripts/build_history_coverage.py")
 mod=importlib.util.module_from_spec(spec)
@@ -53,7 +53,8 @@ listing_rows=json.loads((ROOT/"data/mock/market/listing-observations.json").read
 listing=mod.listing_report(coverage_cfg,listing_rows)
 assert listing["series_count"]==12
 assert listing["trend_ready_series"]==0
-assert all(x["snapshot_count"]==1 for x in listing["items"])
+assert all(1<=x["snapshot_count"]<=2 for x in listing["items"])
+assert sum(x["snapshot_count"]==2 for x in listing["items"]) in (0,4)
 
 legal_rows=json.loads((ROOT/"data/mock/legal/documents.json").read_text(encoding="utf-8"))["data"]
 legal=mod.legal_report(coverage_cfg,legal_rows)

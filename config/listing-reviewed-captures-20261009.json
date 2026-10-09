@@ -1,0 +1,89 @@
+{
+  "schema_version": 1,
+  "captured_on": "2026-10-09",
+  "observation_basis": "curated-from-publicly-indexed-source-page-2026-10-09",
+  "collection_note": "The primary listing portal blocks GitHub-hosted collectors. These records were inspected against recently indexed public project pages and may not be re-fetched independently by GitHub Actions. Last-listing date is not the publication date of the aggregate asking range.",
+  "review_policy": "Require publisher URL and verbatim source extract per metric, preserve original 2026-10-08 snapshots, reject stale/conflicting/unchanged data and never fabricate missing time points.",
+  "records": [
+    {
+      "project_id": "mizuki-park",
+      "source_url": "https://batdongsan.com.vn/ban-can-ho-chung-cu-mizuki-park",
+      "observation_date": "2026-10-09",
+      "source_data_as_of": "2026-10-07",
+      "asset_type": "apartment",
+      "asking_price_low_vnd_per_m2": 55800000,
+      "asking_price_high_vnd_per_m2": 72700000,
+      "asking_price_change_1y_pct": 0.058,
+      "popular_area_low_sqm": null,
+      "popular_area_high_sqm": null,
+      "listing_count": 294,
+      "evidence": {
+        "price": "Giá bán căn hộ chung cư Mizuki Park | 55.8 - 72,7 tr/m²",
+        "trend": "5,8% Giá bán đã tăng trong 1 năm qua",
+        "listing_count": "Số lượng | 294 căn",
+        "last_listing": "Cập nhật tin đăng gần đây nhất | 07-10-2026, 21:04",
+        "notes": "Source project header shows 56–107 m² but listings table shows 38–114 m²; area is omitted rather than selecting a conflicting figure."
+      }
+    },
+    {
+      "project_id": "akari-city",
+      "source_url": "https://batdongsan.com.vn/ban-can-ho-chung-cu-akari-city-nam-long",
+      "observation_date": "2026-10-09",
+      "source_data_as_of": "2026-10-08",
+      "asset_type": "apartment",
+      "asking_price_low_vnd_per_m2": 54100000,
+      "asking_price_high_vnd_per_m2": 64700000,
+      "asking_price_change_1y_pct": 0.049,
+      "popular_area_low_sqm": 34,
+      "popular_area_high_sqm": 120,
+      "listing_count": 124,
+      "evidence": {
+        "price": "Giá bán căn hộ chung cư Akari City Nam Long | 54.1 - 64,7 tr/m²",
+        "trend": "4,9% Giá bán đã tăng trong 1 năm qua",
+        "area": "Diện tích phổ biến | 34 - 120 m²",
+        "listing_count": "Số lượng | 124 căn",
+        "last_listing": "Cập nhật tin đăng gần đây nhất | 08-10-2026, 15:15"
+      }
+    },
+    {
+      "project_id": "the-privia",
+      "source_url": "https://batdongsan.com.vn/ban-can-ho-chung-cu-the-privia",
+      "observation_date": "2026-10-09",
+      "source_data_as_of": "2026-10-09",
+      "asset_type": "apartment",
+      "asking_price_low_vnd_per_m2": 61000000,
+      "asking_price_high_vnd_per_m2": 70000000,
+      "asking_price_change_1y_pct": 0.048,
+      "popular_area_low_sqm": 34,
+      "popular_area_high_sqm": 120,
+      "listing_count": 64,
+      "evidence": {
+        "price": "Giá bán căn hộ chung cư The Privia | 61 - 70 tr/m²",
+        "trend": "4,8% Giá bán đã tăng trong 1 năm qua",
+        "area": "Diện tích phổ biến | 34 - 120 m²",
+        "listing_count": "Số lượng | 64 căn",
+        "last_listing": "Cập nhật tin đăng gần đây nhất | 09-10-2026, 02:12"
+      }
+    },
+    {
+      "project_id": "vinhomes-grand-park",
+      "source_url": "https://batdongsan.com.vn/ban-can-ho-chung-cu-vinhomes-grand-park",
+      "observation_date": "2026-10-09",
+      "source_data_as_of": "2026-10-08",
+      "asset_type": "apartment",
+      "asking_price_low_vnd_per_m2": 43800000,
+      "asking_price_high_vnd_per_m2": 77000000,
+      "asking_price_change_1y_pct": -0.015,
+      "popular_area_low_sqm": 34,
+      "popular_area_high_sqm": 137,
+      "listing_count": 760,
+      "evidence": {
+        "price": "Giá bán căn hộ chung cư Vinhomes Grand Park | 43.8 - 77 tr/m²",
+        "trend": "1,5% Giá bán đã giảm trong 1 năm qua",
+        "area": "Diện tích phổ biến | 34 - 137 m²",
+        "listing_count": "Số lượng | 760 căn",
+        "last_listing": "Cập nhật tin đăng gần đây nhất | 08-10-2026, 17:59"
+      }
+    }
+  ]
+}

@@ -1,0 +1,13 @@
+/* Listing snapshots: observation date is not the latest listing publication date. */
+.market-listing-history-status {
+  display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;
+  gap:10px;padding:11px 14px;margin:0 0 12px;
+  border:1px solid #e5d3d7;border-radius:8px;background:#fbf7f8;
+  color:#6f4b57;font-size:12px;
+}
+.market-listing-history-status div {display:flex;gap:9px;align-items:center;flex-wrap:wrap}
+.market-listing-history-status strong {font-variant-numeric:tabular-nums;color:#7d2639}
+.market-listing-history-status__type {color:#667085;font-size:11px}
+@media (max-width:640px) {
+  .market-listing-history-status {align-items:flex-start;flex-direction:column;gap:5px;padding:10px}
+}

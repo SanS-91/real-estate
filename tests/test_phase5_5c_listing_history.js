@@ -6,14 +6,15 @@ global.window=global;
 vm.runInThisContext(fs.readFileSync(path.join(ROOT,'assets/js/history-engine.js'),'utf8'));
 const listing=JSON.parse(fs.readFileSync(path.join(ROOT,'data/mock/market/listing-observations.json'),'utf8')).data;
 function assert(x,msg){if(!x)throw new Error(msg);}
-const base=HistoryEngine.listingMarketSeries(listing,'akari-city');
+const baseline=listing.filter(row => row.project_id==='akari-city' && row.observation_date==='2026-10-08');
+const base=HistoryEngine.listingMarketSeries(baseline,'akari-city');
 assert(base.length===1,'Akari must start with one real listing snapshot');
 assert(base[0].observation_date==='2026-10-08','baseline date must be 2026-10-08');
 const next=JSON.parse(JSON.stringify(base[0]));
 next.id='test-akari-next';
 next.observation_date='2026-10-09';
 next.asking_price_high_vnd_per_m2=67000000;
-const rows=[...listing,next];
+const rows=[...baseline,next];
 const series=HistoryEngine.listingMarketSeries(rows,'akari-city');
 assert(series.length===2,'appended snapshot must extend series');
 const delta=HistoryEngine.listingMarketDelta(rows,'akari-city');
