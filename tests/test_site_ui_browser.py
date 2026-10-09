@@ -15,6 +15,7 @@ CASES=[
     "index.html",
     "research.html",
     "market.html?view=overview",
+    "market.html?view=projects",
     "market.html?view=pricing",
     "market.html?view=news",
     "legal.html?view=overview",
@@ -24,6 +25,7 @@ CASES=[
     "infrastructure.html?view=projects",
     "infrastructure.html?view=news",
     "macro.html?view=overview",
+    "macro.html?view=fx&series=usd-vnd-central-rate",
     "maintenance.html",
 ]
 WIDTHS=[360,390,820,1366]
@@ -167,6 +169,52 @@ async def run():
                         if width==390:
                             await page.locator(".mobile-record-table button.table-link").first.click()
                             await page.locator("[data-drawer-overlay].is-open").wait_for(timeout=6000)
+                            await page.locator("[data-drawer-close]").click()
+                    # Mobile data list cards (not comparison matrices).
+                    mobile_lists = {
+                        "market.html?view=projects": ("market-projects", 9),
+                        "macro.html?view=overview": ("macro", 5),
+                        "macro.html?view=fx&series=usd-vnd-central-rate": ("macro-history", 5),
+                        "maintenance.html": ("maintenance", 7),
+                    }
+                    if path in mobile_lists:
+                        family, count = mobile_lists[path]
+                        table = page.locator(f".data-table--{family}.mobile-record-table").first
+                        await table.wait_for(timeout=14000)
+                        layout = await table.evaluate("""el => {
+                          const row = el.querySelector('tbody tr');
+                          const cells = [...row.querySelectorAll('td')];
+                          const title = row.querySelector('td:first-child');
+                          return {
+                            display: getComputedStyle(el).display,
+                            rowDisplay: getComputedStyle(row).display,
+                            tableWidth: el.clientWidth,
+                            scrollWidth: el.scrollWidth,
+                            rowWidth: row.getBoundingClientRect().width,
+                            cells: cells.map(td=>[td.dataset.labelVi,td.dataset.labelEn]),
+                            firstWidth: title?.getBoundingClientRect().width??0
+                          };
+                        }""")
+                        assert len(layout["cells"])==count,(path,layout)
+                        assert all(vi and en for vi,en in layout["cells"]),(path,layout)
+                        if width<=767:
+                            assert layout["display"]=="block" and layout["rowDisplay"]=="grid",(width,path,layout)
+                            assert layout["scrollWidth"]<=layout["tableWidth"]+3,(width,path,layout)
+                            assert layout["rowWidth"]<=width-20,(width,path,layout)
+                            if family in ("market-projects","macro"):
+                                assert layout["firstWidth"]>=layout["rowWidth"]-48,(width,path,layout)
+                            label_td=page.locator(f".data-table--{family}.mobile-record-table tbody tr:first-child td").first
+                            before=lambda: label_td.evaluate("(el)=>getComputedStyle(el,'::before').content")
+                            vi_label=await before()
+                            await page.locator("[data-language-toggle]").click()
+                            en_label=await before()
+                            assert vi_label!=en_label,(width,path,vi_label,en_label)
+                            await page.locator("[data-language-toggle]").click()
+                        else:
+                            assert layout["display"]=="table",(width,path,layout)
+                        if width==390 and family in ("market-projects","macro"):
+                            await table.locator("button.table-link").first.click()
+                            await page.locator("[data-drawer-overlay].is-open").wait_for(timeout=6500)
                             await page.locator("[data-drawer-close]").click()
                     if width==390 and path=="maintenance.html":
                         tables=page.locator(".table-wrap")
