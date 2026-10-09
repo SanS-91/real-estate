@@ -1,6 +1,33 @@
 {
-  "data": [],
+  "data": [
+    {
+      "project_id": "eaton-park",
+      "project_name": "Eaton Park",
+      "source_id": "rever-vn",
+      "source_url": "https://rever.vn/mua/can-ho-eaton-park-dien-tich-72-m2",
+      "listing_id": "A02199312",
+      "listing_title": "Căn hộ Eaton Park, diện tích 72 m²",
+      "asset_type": "apartment",
+      "market_layer": "individual-listing-asking",
+      "metric_type": "single-listing-asking-price-per-sqm",
+      "source_updated_date": "2026-07-28",
+      "listed_area_sqm": 72.0,
+      "listing_price_vnd": 8900000000,
+      "value_vnd_per_m2": 123610000,
+      "publication_status": "candidate-source-evidence",
+      "source_publication_date": null,
+      "methodology_note": "One Rever apartment advertisement only, not the project median, transaction price or ASP. Publisher listing update date is not an aggregation date.",
+      "id": "rever-a02199312-919c7eb5ff72",
+      "review_status": "automated-two-hosted-checks",
+      "review_date": "2026-10-09",
+      "verification_run_ids": [
+        "37910502233",
+        "37927633867"
+      ],
+      "verified_at": "2026-10-09T12:04:14.876948+00:00"
+    }
+  ],
   "schema_version": 1,
   "collection_mode": "individually-publisher-verified-apartment-asking-only",
-  "record_count": 0
+  "record_count": 1
 }

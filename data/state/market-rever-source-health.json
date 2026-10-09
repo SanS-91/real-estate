@@ -1,0 +1,83 @@
+{
+  "schema_version": 1,
+  "generated_at": "2026-10-09T12:04:14.876948+00:00",
+  "source_id": "rever-vn",
+  "scope": "individual-apartment-asking-only",
+  "targets_checked": 4,
+  "catalogs_checked": 5,
+  "listing_urls_discovered": 42,
+  "details_checked": 42,
+  "exact_project_matches": 21,
+  "source_updates_within_30_days": 0,
+  "source_updates_within_90_days": 1,
+  "published_current_individual_listings": 1,
+  "source_runs_seen": 2,
+  "projects": [
+    {
+      "project_id": "akari-city",
+      "catalogs": [
+        {
+          "source_url": "https://rever.vn/s/akari-city-quan-binh-tan/mua/can-ho",
+          "access_status": "reachable",
+          "links_discovered": 12
+        }
+      ],
+      "details_checked": 12,
+      "exact_project_matches": 2,
+      "recent_30_days": 0,
+      "recent_90_days": 0,
+      "latest_publisher_listing_update_date": "2023-08-14"
+    },
+    {
+      "project_id": "eaton-park",
+      "catalogs": [
+        {
+          "source_url": "https://rever.vn/s/eaton-park/mua/can-ho",
+          "access_status": "reachable",
+          "links_discovered": 12
+        }
+      ],
+      "details_checked": 12,
+      "exact_project_matches": 6,
+      "recent_30_days": 0,
+      "recent_90_days": 1,
+      "latest_publisher_listing_update_date": "2026-07-28"
+    },
+    {
+      "project_id": "the-privia",
+      "catalogs": [
+        {
+          "source_url": "https://rever.vn/s/the-privia/mua/can-ho",
+          "access_status": "reachable",
+          "links_discovered": 12
+        },
+        {
+          "source_url": "https://rever.vn/s/binh-tan/mua/can-ho",
+          "access_status": "reachable",
+          "links_discovered": 12
+        }
+      ],
+      "details_checked": 12,
+      "exact_project_matches": 12,
+      "recent_30_days": 0,
+      "recent_90_days": 0,
+      "latest_publisher_listing_update_date": "2024-08-01"
+    },
+    {
+      "project_id": "the-global-city",
+      "catalogs": [
+        {
+          "source_url": "https://rever.vn/s/the-global-city/mua/can-ho",
+          "access_status": "reachable",
+          "links_discovered": 6
+        }
+      ],
+      "details_checked": 6,
+      "exact_project_matches": 1,
+      "recent_30_days": 0,
+      "recent_90_days": 0,
+      "latest_publisher_listing_update_date": "2025-03-19"
+    }
+  ],
+  "methodology": "Access and fresh publisher dates are diagnostics only. Individual prices are published only after two distinct hosted checks at least one hour apart. No project ASP or asking-range aggregation is inferred."
+}
