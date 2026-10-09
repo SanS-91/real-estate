@@ -23,6 +23,7 @@ BASELINE = ROOT / "data/mock/market/alternative-price-evidence.json"
 REPORT = ROOT / "data/candidate/market/alternative-source-probe-report.json"
 CANDIDATES = ROOT / "data/candidate/market/alternative-price-candidates.json"
 STATE = ROOT / "data/state/alternative-source-health.json"
+QUEUE = ROOT / "data/candidate/market/alternative-price-review-queue.json"
 TIMEOUT = 16
 MAX_BYTES = 1_500_000
 HEADERS = {"User-Agent": "MarketIntelligenceResearchBot/1.0 (public source check)",
@@ -236,6 +237,24 @@ def run(targets, baselines, today, session, fetcher=fetch_html):
     return checks, candidates
 
 
+def append_review_queue(queue, detected):
+    """Append-only candidate queue; never rewrite an older unreviewed observation."""
+    existing = {r["id"]: r for r in queue.get("data", [])}
+    added, conflicts = 0, 0
+    for row in detected:
+        previous = existing.get(row["id"])
+        if previous is None:
+            queue["data"].append(row)
+            existing[row["id"]] = row
+            added += 1
+        elif any(previous.get(field) != row.get(field) for field in
+                 ("period", "source_url", "metric_type", "value_vnd_per_m2",
+                  "range_low_vnd_per_m2", "range_high_vnd_per_m2")):
+            conflicts += 1
+    queue["record_count"] = len(queue["data"])
+    return added, conflicts
+
+
 def main():
     parser = argparse.ArgumentParser()
     parser.add_argument("--today", default=date.today().isoformat())
@@ -244,11 +263,18 @@ def main():
     config = load(CONFIG)
     baseline = {r["id"]: r for r in load(BASELINE)["data"]}
     checks, candidates = run(config["targets"], baseline, today, requests.Session())
+    queue = load(QUEUE) if QUEUE.exists() else {
+        "schema_version": 1, "candidate_only": True, "review_required": True, "data": []}
+    new_queue_rows, queue_conflicts = append_review_queue(queue, candidates)
+    if new_queue_rows or not QUEUE.exists():
+        save(QUEUE, queue)
     timestamp = datetime.now(timezone.utc).isoformat()
     counts = {status: sum(x["status"] == status for x in checks) for status in sorted({x["status"] for x in checks})}
     report = {
         "schema_version": 1, "generated_at": timestamp,
         "targets_checked": len(checks), "candidates_staged": len(candidates),
+        "queued_new": new_queue_rows, "queued_backlog": queue["record_count"],
+        "queue_conflicts": queue_conflicts,
         "counts": counts, "checks": checks, "production_written": False,
         "source_prices_not_inferred": True,
         "note": "No access bypass. Candidate-only; source dates and metric types must pass manual source review before publication.",
@@ -260,10 +286,11 @@ def main():
     })
     save(STATE, {
         "schema_version": 1, "generated_at": timestamp, "targets_checked": len(checks),
-        "candidate_count": len(candidates), "production_updated": False,
+        "candidate_count": len(candidates), "queue_backlog": queue["record_count"],
+        "queue_conflicts": queue_conflicts, "production_updated": False,
         "counts": counts, "checks": checks,
     })
-    print(json.dumps({"checked": len(checks), "candidates": len(candidates), "counts": counts}, ensure_ascii=False))
+    print(json.dumps({"checked": len(checks), "candidates": len(candidates), "queue_backlog": queue["record_count"], "conflicts": queue_conflicts, "counts": counts}, ensure_ascii=False))
 
 
 if __name__ == "__main__":
