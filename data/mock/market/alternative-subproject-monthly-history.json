@@ -2,7 +2,7 @@
   "schema_version": 1,
   "created_at": "2026-10-09",
   "description": "Distinct OneHousing nested apartment subprojects. September 2026 indexed-source baselines are not independently reverified live. Subsequent months require separately approved source rechecks. Never combine with parent Vinhomes Grand Park prices.",
-  "record_count": 2,
+  "record_count": 3,
   "data": [
     {
       "id": "onehousing-lumiere-boulevard-apartment-2026-09",
@@ -59,6 +59,38 @@
       "source_record_id": "onehousing-masteri-centre-point-apartment-2026-09",
       "review_status": "source-indexed-baseline",
       "review_note": "Publisher-labelled historical month from indexed source result; not equivalent to independently recaptured publisher HTML at review time."
+    },
+    {
+      "id": "candidate-onehousing-lumiere-boulevard-apartment-2026-10",
+      "project_id": "vinhomes-grand-park",
+      "source_id": "onehousing-vn",
+      "source_url": "https://onehousing.vn/phan-tich/du-an/can-ho-chung-cu-du-an-Lumiere-Boulevard.34",
+      "subproject_name": "Lumière Boulevard",
+      "asset_type": "apartment",
+      "metric_type": "popular-asking-price-per-sqm",
+      "period_type": "month",
+      "period": "2026-10",
+      "value_vnd_per_m2": 73740000,
+      "range_low_vnd_per_m2": 57000000,
+      "range_high_vnd_per_m2": 100190000,
+      "source_publication_date": null,
+      "evidence": {
+        "period": "Căn hộ chung cư dự án Lumière Boulevard tháng 10/2026",
+        "metric": "73.74 triệu/m²",
+        "range": "Khoảng giá: 57 - 100.19 triệu"
+      },
+      "methodology_note": "New independent publisher period requires human evidence review. Never blend source metrics or use single listing as project ASP.",
+      "series_key": "onehousing-lumiere-boulevard-apartment-popular-asking",
+      "source_record_id": "onehousing-lumiere-boulevard-apartment-2026-09",
+      "review_date": "2026-10-09",
+      "review_note": "Automated validation; no manual sign-off. Two independent original-source captures matched the month and price metrics.",
+      "review_status": "automated-source-verified",
+      "verification_run_ids": [
+        "37899358527",
+        "37907349276"
+      ],
+      "verification_mode": "two-independent-live-publisher-checks",
+      "verified_at": "2026-10-09"
     }
   ]
 }

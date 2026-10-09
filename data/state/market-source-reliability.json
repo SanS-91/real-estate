@@ -32,10 +32,17 @@
           "status": "same-period-unchanged",
           "http_status": 200,
           "publisher_periods": []
+        },
+        {
+          "run_id": "37907349276",
+          "observed_at": "2026-10-09T08:49:57.462571+00:00",
+          "status": "same-period-unchanged",
+          "http_status": 200,
+          "publisher_periods": []
         }
       ],
-      "check_count": 3,
-      "parseable_check_count": 2,
+      "check_count": 4,
+      "parseable_check_count": 3,
       "classification": "repeatably-parseable"
     },
     {
@@ -65,10 +72,17 @@
           "status": "same-period-unchanged",
           "http_status": 200,
           "publisher_periods": []
+        },
+        {
+          "run_id": "37907349276",
+          "observed_at": "2026-10-09T08:49:57.462571+00:00",
+          "status": "same-period-unchanged",
+          "http_status": 200,
+          "publisher_periods": []
         }
       ],
-      "check_count": 3,
-      "parseable_check_count": 3,
+      "check_count": 4,
+      "parseable_check_count": 4,
       "classification": "listing-only"
     },
     {
@@ -98,9 +112,16 @@
           "status": "reachable-historical-reference-frozen",
           "http_status": 200,
           "publisher_periods": []
+        },
+        {
+          "run_id": "37907349276",
+          "observed_at": "2026-10-09T08:49:57.462571+00:00",
+          "status": "reachable-historical-reference-frozen",
+          "http_status": 200,
+          "publisher_periods": []
         }
       ],
-      "check_count": 3,
+      "check_count": 4,
       "parseable_check_count": 0,
       "classification": "historical-only"
     },
@@ -131,9 +152,16 @@
           "status": "reachable-historical-reference-frozen",
           "http_status": 200,
           "publisher_periods": []
+        },
+        {
+          "run_id": "37907349276",
+          "observed_at": "2026-10-09T08:49:57.462571+00:00",
+          "status": "reachable-historical-reference-frozen",
+          "http_status": 200,
+          "publisher_periods": []
         }
       ],
-      "check_count": 3,
+      "check_count": 4,
       "parseable_check_count": 0,
       "classification": "historical-only"
     },
@@ -166,10 +194,17 @@
           "status": "new-period-review-required",
           "http_status": 200,
           "publisher_periods": []
+        },
+        {
+          "run_id": "37907349276",
+          "observed_at": "2026-10-09T08:49:57.462571+00:00",
+          "status": "new-period-review-required",
+          "http_status": 200,
+          "publisher_periods": []
         }
       ],
-      "check_count": 3,
-      "parseable_check_count": 2,
+      "check_count": 4,
+      "parseable_check_count": 3,
       "classification": "repeatably-parseable"
     },
     {
@@ -199,11 +234,37 @@
           "status": "reachable-no-verifiable-metric",
           "http_status": 200,
           "publisher_periods": []
+        },
+        {
+          "run_id": "37907349276",
+          "observed_at": "2026-10-09T08:49:57.462571+00:00",
+          "status": "reachable-no-verifiable-metric",
+          "http_status": 200,
+          "publisher_periods": []
         }
       ],
-      "check_count": 3,
+      "check_count": 4,
       "parseable_check_count": 0,
       "classification": "needs-stable-alternative"
+    },
+    {
+      "target_id": "onehousing-lumiere-riverside-apartment",
+      "source_id": "onehousing-vn",
+      "project_id": "lumiere-riverside",
+      "mode": "monthly-price-candidate",
+      "price_metric": "popular-asking-price-per-sqm",
+      "checks": [
+        {
+          "run_id": "37907349276",
+          "observed_at": "2026-10-09T08:49:57.462571+00:00",
+          "status": "same-period-unchanged",
+          "http_status": 200,
+          "publisher_periods": []
+        }
+      ],
+      "check_count": 1,
+      "parseable_check_count": 1,
+      "classification": "source-parseable-not-yet-repeatable"
     }
   ]
 }
