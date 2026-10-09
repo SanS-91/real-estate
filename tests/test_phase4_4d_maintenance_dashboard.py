@@ -44,7 +44,7 @@ assert 'table-layout: fixed;' in css
 # VI/EN support exists for the new page.
 assert "maintenance: {" in loc
 assert "maintenance: MAINTENANCE" in loc
-assert "Trạng thái Dữ liệu" in loc
+assert "Trạng thái dữ liệu" in loc
 assert "Trạng thái dữ liệu · chỉ đọc" in loc
 
 # Every source-backed matrix dataset resolves to a real repository file.
