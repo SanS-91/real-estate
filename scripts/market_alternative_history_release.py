@@ -6,7 +6,6 @@ this publisher- and product-specific series.
 """
 from __future__ import annotations
 import argparse
-import calendar
 import json
 import re
 from datetime import date
@@ -22,6 +21,7 @@ REPORT = ROOT / "data/candidate/market/alternative-history-release-report.json"
 SERIES_KEY = "onehousing-vinhomes-grand-park-apartment-popular-asking"
 BASELINE_ID = "onehousing-vinhomes-grand-park-apartment-2026-10"
 EXPECTED_URL = "https://onehousing.vn/phan-tich/du-an/can-ho-chung-cu-du-an-Vinhomes-Grand-Park.1012"
+LOCKED_BASELINE = (54_470_000, 36_810_000, 331_190_000)
 METRIC_RE = re.compile(r"(\d+(?:[.,]\d+)?)\s*triệu\s*/?\s*m[²2]", re.I)
 RANGE_RE = re.compile(r"Khoảng giá\s*[:|]?\s*(\d+(?:[.,]\d+)?)\s*[-–]\s*(\d+(?:[.,]\d+)?)\s*triệu", re.I)
 MONTH_RE = re.compile(r"\btháng\s*(\d{1,2})\s*/\s*(20\d{2})\b", re.I)
@@ -97,6 +97,8 @@ def base_issues(history):
             problems.append("history-missing-review-date")
     if history[0].get("source_record_id") != BASELINE_ID or history[0].get("period") != "2026-10":
         problems.append("monthly-sequence-must-begin-from-reviewed-october-baseline")
+    elif tuple(history[0].get(k) for k in ("value_vnd_per_m2","range_low_vnd_per_m2","range_high_vnd_per_m2")) != LOCKED_BASELINE:
+        problems.append("original-reviewed-baseline-must-not-change")
     return problems
 
 
@@ -150,7 +152,7 @@ def evaluate(history, queue, approvals, today):
                             existing_period[period].get(key) for key in
                             ("value_vnd_per_m2","range_low_vnd_per_m2","range_high_vnd_per_m2")):
                     issues.append("conflicting-existing-period")
-                else:
+                elif not issues:
                     decisions.append({"candidate_id":ident,"status":"already-published","issues":[]})
                     continue
             if period <= latest:
