@@ -85,6 +85,67 @@ def normal_name(text):
     return re.sub(r"\s+", " ", "".join(c for c in value if not unicodedata.combining(c))).strip()
 
 
+def onehousing_price_trend_section(text, today, publisher_project_name):
+    """Parse ONE exact publisher project/month in a bounded price-trend section.
+
+    Other-project titles from recommendation/footer blocks cannot enter this
+    scope. Ambiguous project, period, incomplete or contradictory price blocks
+    fail closed. The check date never supplies the reporting period.
+    """
+    candidates = []
+    for marker in re.finditer(r"Biến động giá", text, re.I):
+        tail = text[marker.end():]
+        # Source template end markers; don't let footer project cards feed
+        # a pricing section even when they repeat monthly-style headings.
+        endings = [m.start() for pattern in (
+            r"Tiện ích nội khu", r"Tiện ích ngoại khu",
+            r"Tin nổi bật", r"Dự án cùng khu vực", r"Thông tin thêm"
+        ) if (m := re.search(pattern, tail, re.I))]
+        if not endings:
+            continue  # no positive boundary = cannot prove price scope
+        section = tail[:min(endings)]
+        headings = list(MONTH_LABEL.finditer(section))
+        if not headings:
+            continue
+        names = {normal_name(h.group(1)) for h in headings}
+        periods = {f"{h.group(3)}-{int(h.group(2)):02d}" for h in headings
+                   if 1 <= int(h.group(2)) <= 12}
+        if names != {normal_name(publisher_project_name)} or len(periods) != 1:
+            continue
+        period = next(iter(periods))
+        if period > today.strftime("%Y-%m"):
+            continue
+        blocks = list(MODAL_SECTION.finditer(section))
+        if not blocks:
+            continue
+        seen = []
+        for block in blocks:
+            modal = MODAL.search(block.group("section"))
+            rng = RANGE.search(block.group("section"))
+            if not modal or not rng:
+                seen = []
+                break
+            value, low, high = vnd(modal.group(1)), vnd(rng.group(1)), vnd(rng.group(2))
+            if not (0 < low <= value <= high <= 1_000_000_000):
+                seen = []
+                break
+            seen.append((value, low, high, modal.group(0), rng.group(0)))
+        if not seen or len({x[:3] for x in seen}) != 1:
+            continue
+        value, low, high, metric, price_range = seen[0]
+        candidates.append({
+            "period": period,
+            "value_vnd_per_m2": value,
+            "range_low_vnd_per_m2": low,
+            "range_high_vnd_per_m2": high,
+            "evidence": {"period": headings[0].group(0),
+                         "metric": metric, "range": price_range}
+        })
+    if len(candidates) != 1:
+        return None
+    return candidates[0]
+
+
 def onehousing_monthly(text, today, publisher_project_name="Vinhomes Grand Park"):
     """Select the latest *source-authored* complete project/month price block.
 
@@ -131,6 +192,14 @@ def onehousing_monthly(text, today, publisher_project_name="Vinhomes Grand Park"
             }
         })
     if not observations and headers:
+        # Generic template-scoped fallback: the publisher may put repeated page
+        # headings above the 'Biến động giá' table and unrelated project links
+        # below 'Tin nổi bật'. Restrict evidence to ONE explicitly named source
+        # project/month inside its OWN price-trend section; never associate a
+        # site-wide modal price with an unrelated recommendation header.
+        scoped = onehousing_price_trend_section(text, today, publisher_project_name)
+        if scoped is not None:
+            return scoped
         # Some OneHousing templates repeat the identical month header in their
         # navigation / summary, while the labelled modal-price table appears
         # outside those header blocks. Accept page-level evidence ONLY when
