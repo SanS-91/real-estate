@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-10-09T03:21:16.056890+00:00",
+  "generated_at": "2026-10-09T03:40:49.939933+00:00",
   "listing_market": {
     "series_count": 12,
     "trend_ready_series": 0,
@@ -8,11 +8,11 @@
     "items": [
       {
         "project_id": "akari-city",
-        "snapshot_count": 1,
+        "snapshot_count": 2,
         "first_snapshot": "2026-10-08",
-        "latest_snapshot": "2026-10-08",
+        "latest_snapshot": "2026-10-09",
         "trend_ready": false,
-        "missing_snapshots_to_trend_ready": 2
+        "missing_snapshots_to_trend_ready": 1
       },
       {
         "project_id": "celesta-gold",
@@ -56,11 +56,11 @@
       },
       {
         "project_id": "mizuki-park",
-        "snapshot_count": 1,
+        "snapshot_count": 2,
         "first_snapshot": "2026-10-08",
-        "latest_snapshot": "2026-10-08",
+        "latest_snapshot": "2026-10-09",
         "trend_ready": false,
-        "missing_snapshots_to_trend_ready": 2
+        "missing_snapshots_to_trend_ready": 1
       },
       {
         "project_id": "the-9-stellars",
@@ -80,19 +80,19 @@
       },
       {
         "project_id": "the-privia",
-        "snapshot_count": 1,
+        "snapshot_count": 2,
         "first_snapshot": "2026-10-08",
-        "latest_snapshot": "2026-10-08",
+        "latest_snapshot": "2026-10-09",
         "trend_ready": false,
-        "missing_snapshots_to_trend_ready": 2
+        "missing_snapshots_to_trend_ready": 1
       },
       {
         "project_id": "vinhomes-grand-park",
-        "snapshot_count": 1,
+        "snapshot_count": 2,
         "first_snapshot": "2026-10-08",
-        "latest_snapshot": "2026-10-08",
+        "latest_snapshot": "2026-10-09",
         "trend_ready": false,
-        "missing_snapshots_to_trend_ready": 2
+        "missing_snapshots_to_trend_ready": 1
       },
       {
         "project_id": "waterpoint",

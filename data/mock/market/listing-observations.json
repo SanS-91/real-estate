@@ -1,103 +1,9 @@
 {
-  "schema_version": 1,
-  "build_id": "phase5.5b-listing-market-coverage-20261008",
-  "generated_at": "2026-10-08T13:30:00+07:00",
-  "record_count": 12,
+  "schema_version": 2,
+  "build_id": "phase5.5c-listing-history-20261009T034049Z",
+  "generated_at": "2026-10-09T03:40:49.906568+00:00",
+  "record_count": 16,
   "data": [
-    {
-      "id": "bdsc-the-global-city-apartment-2026-10-08",
-      "project_id": "the-global-city",
-      "source_id": "batdongsan-com-vn",
-      "source_url": "https://batdongsan.com.vn/ban-can-ho-chung-cu-the-global-city",
-      "observation_date": "2026-10-08",
-      "source_data_as_of": "2026-09-29",
-      "asset_type": "apartment",
-      "market_layer": "listing-asking",
-      "asking_price_low_vnd_per_m2": 112000000,
-      "asking_price_high_vnd_per_m2": 143500000,
-      "asking_price_change_1y_pct": -0.189,
-      "popular_area_low_sqm": 51,
-      "popular_area_high_sqm": 215,
-      "product_price_ranges": [
-        {
-          "product": "1BR",
-          "low_vnd": 6150000000,
-          "high_vnd": 7640000000
-        },
-        {
-          "product": "2BR",
-          "low_vnd": 7490000000,
-          "high_vnd": 11000000000
-        },
-        {
-          "product": "3BR",
-          "low_vnd": 11500000000,
-          "high_vnd": 17910000000
-        }
-      ],
-      "volatile_metrics": {
-        "listing_count": 234,
-        "project_views_7d": 1254,
-        "use_in_primary_kpi": false,
-        "note": "Portal display counts and views can change intraday and may vary by result page. Stored as ancillary snapshot only."
-      },
-      "methodology_note": "Secondary portal snapshot. Values represent advertised asking/listing market, not executed transaction price, official developer sales, or absorption.",
-      "confidence": "secondary-source-snapshot",
-      "status": "pilot",
-      "coverage_status": "full"
-    },
-    {
-      "id": "bdsc-izumi-city-2026-10-08",
-      "project_id": "izumi-city",
-      "source_id": "batdongsan-com-vn",
-      "source_url": "https://batdongsan.com.vn/ban-can-ho-chung-cu-izumi-city",
-      "observation_date": "2026-10-08",
-      "source_data_as_of": "2026-08",
-      "asset_type": "apartment",
-      "market_layer": "listing-asking",
-      "coverage_status": "partial",
-      "asking_price_low_vnd_per_m2": null,
-      "asking_price_high_vnd_per_m2": null,
-      "asking_price_change_1y_pct": null,
-      "popular_area_low_sqm": null,
-      "popular_area_high_sqm": null,
-      "product_price_ranges": [],
-      "volatile_metrics": {
-        "listing_count": 1,
-        "project_views_7d": null,
-        "use_in_primary_kpi": false,
-        "note": "Portal page has only one listing and the visible listing content appears mismatched with the project; no price KPI promoted."
-      },
-      "methodology_note": "Page mapping confirmed, but quantitative listing evidence is insufficient/inconsistent. No asking-price KPI promoted.",
-      "confidence": "mapped-partial",
-      "status": "coverage"
-    },
-    {
-      "id": "bdsc-waterpoint-villa-2026-10-08",
-      "project_id": "waterpoint",
-      "source_id": "batdongsan-com-vn",
-      "source_url": "https://batdongsan.com.vn/ban-nha-biet-thu-lien-ke-khu-do-thi-waterpoint",
-      "observation_date": "2026-10-08",
-      "source_data_as_of": "2026-08",
-      "asset_type": "villa-townhouse",
-      "market_layer": "listing-asking",
-      "coverage_status": "full",
-      "asking_price_low_vnd_per_m2": 37100000,
-      "asking_price_high_vnd_per_m2": 58800000,
-      "asking_price_change_1y_pct": -0.052,
-      "popular_area_low_sqm": null,
-      "popular_area_high_sqm": null,
-      "product_price_ranges": [],
-      "volatile_metrics": {
-        "listing_count": 75,
-        "project_views_7d": 1495,
-        "use_in_primary_kpi": false,
-        "note": "Portal counts/views are ancillary only."
-      },
-      "methodology_note": "Portal aggregate asking range for villas/townhouses at Waterpoint. Not transaction price or official developer sales.",
-      "confidence": "secondary-source-snapshot",
-      "status": "coverage"
-    },
     {
       "id": "bdsc-akari-city-2026-10-08",
       "project_id": "akari-city",
@@ -125,29 +31,81 @@
       "status": "coverage"
     },
     {
-      "id": "bdsc-mizuki-park-2026-10-08",
-      "project_id": "mizuki-park",
+      "id": "bdsc-akari-city-2026-10-09",
+      "project_id": "akari-city",
       "source_id": "batdongsan-com-vn",
-      "source_url": "https://batdongsan.com.vn/ban-can-ho-chung-cu-mizuki-park",
-      "observation_date": "2026-10-08",
-      "source_data_as_of": "2026-08",
+      "source_url": "https://batdongsan.com.vn/ban-can-ho-chung-cu-akari-city-nam-long",
+      "observation_date": "2026-10-09",
+      "source_data_as_of": "2026-10-08",
       "asset_type": "apartment",
       "market_layer": "listing-asking",
       "coverage_status": "full",
-      "asking_price_low_vnd_per_m2": 57500000,
-      "asking_price_high_vnd_per_m2": 73000000,
-      "asking_price_change_1y_pct": 0.191,
-      "popular_area_low_sqm": 56,
-      "popular_area_high_sqm": 107,
+      "asking_price_low_vnd_per_m2": 54100000,
+      "asking_price_high_vnd_per_m2": 64700000,
+      "asking_price_change_1y_pct": 0.049,
+      "popular_area_low_sqm": 34,
+      "popular_area_high_sqm": 120,
       "product_price_ranges": [],
       "volatile_metrics": {
-        "listing_count": 267,
-        "project_views_7d": 3517,
+        "listing_count": 124,
+        "project_views_7d": null,
         "use_in_primary_kpi": false,
-        "note": "Portal counts/views are ancillary only."
+        "note": "Counts belong to the publisher's search page and can change intraday; not used in price KPI."
       },
-      "methodology_note": "Portal aggregate apartment asking range. Not transaction price or official developer sales.",
-      "confidence": "secondary-source-snapshot",
+      "methodology_note": "Manually reviewed public publisher project-page aggregate asking range, captured from a fresh search-indexed excerpt. Source's 'latest listing updated' date is NOT the timestamp for computing this aggregate range. Listing-year percentage is publisher-reported, NOT change between local snapshots. No sales/transaction price inference. Listing counts are ancillary.",
+      "confidence": "reviewed-public-index-snapshot",
+      "status": "reviewed",
+      "provenance": {
+        "capture_mode": "assisted-reviewed-public-index",
+        "source_review_date": "2026-10-09",
+        "last_listing_date": "2026-10-08",
+        "last_listing_date_is_price_timestamp": false,
+        "source_evidence": {
+          "price": "Giá bán căn hộ chung cư Akari City Nam Long | 54.1 - 64,7 tr/m²",
+          "trend": "4,9% Giá bán đã tăng trong 1 năm qua",
+          "area": "Diện tích phổ biến | 34 - 120 m²",
+          "listing_count": "Số lượng | 124 căn",
+          "last_listing": "Cập nhật tin đăng gần đây nhất | 08-10-2026, 15:15"
+        },
+        "source_access": "public-index-only-github-runner-blocked",
+        "verified_fields": [
+          "asking_price_range",
+          "publisher_1y_trend",
+          "latest_listing_date"
+        ],
+        "review_required": false
+      }
+    },
+    {
+      "id": "bdsc-celesta-gold-2026-10-08",
+      "project_id": "celesta-gold",
+      "source_id": "batdongsan-com-vn",
+      "source_url": "https://batdongsan.com.vn/ban-can-ho-chung-cu-celesta-gold",
+      "observation_date": "2026-10-08",
+      "source_data_as_of": "2026-09-30",
+      "asset_type": "apartment",
+      "market_layer": "listing-asking",
+      "coverage_status": "partial",
+      "asking_price_low_vnd_per_m2": null,
+      "asking_price_high_vnd_per_m2": null,
+      "asking_price_change_1y_pct": null,
+      "popular_area_low_sqm": 47,
+      "popular_area_high_sqm": 105,
+      "product_price_ranges": [
+        {
+          "product": "1BR",
+          "low_vnd": 5030000000,
+          "high_vnd": 6040000000
+        }
+      ],
+      "volatile_metrics": {
+        "listing_count": 6,
+        "project_views_7d": null,
+        "use_in_primary_kpi": false,
+        "note": "Early-stage portal coverage; no aggregate per-m² asking range promoted."
+      },
+      "methodology_note": "Portal product-level asking range only; no aggregate project asking-price range promoted.",
+      "confidence": "mapped-partial",
       "status": "coverage"
     },
     {
@@ -203,56 +161,128 @@
       "status": "coverage"
     },
     {
-      "id": "bdsc-the-privia-2026-10-08",
-      "project_id": "the-privia",
+      "id": "bdsc-essensia-parkway-2026-10-08",
+      "project_id": "essensia-parkway",
       "source_id": "batdongsan-com-vn",
-      "source_url": "https://batdongsan.com.vn/ban-can-ho-chung-cu-the-privia",
+      "source_url": "https://batdongsan.com.vn/nha-dat-ban-essensia-parkway",
       "observation_date": "2026-10-08",
       "source_data_as_of": "2026-08",
-      "asset_type": "apartment",
+      "asset_type": "villa-townhouse-shophouse",
       "market_layer": "listing-asking",
-      "coverage_status": "full",
-      "asking_price_low_vnd_per_m2": 61500000,
-      "asking_price_high_vnd_per_m2": 74000000,
-      "asking_price_change_1y_pct": 0.071,
-      "popular_area_low_sqm": null,
-      "popular_area_high_sqm": null,
+      "coverage_status": "partial",
+      "asking_price_low_vnd_per_m2": null,
+      "asking_price_high_vnd_per_m2": null,
+      "asking_price_change_1y_pct": -0.052,
+      "popular_area_low_sqm": 160,
+      "popular_area_high_sqm": 290,
       "product_price_ranges": [],
       "volatile_metrics": {
-        "listing_count": 57,
-        "project_views_7d": 1728,
+        "listing_count": 20,
+        "project_views_7d": null,
         "use_in_primary_kpi": false,
-        "note": "Portal counts/views are ancillary only."
+        "note": "Mixed low-rise products; no comparable aggregate asking range promoted."
       },
-      "methodology_note": "Portal aggregate apartment asking range after developer inventory sold out. Not transaction price.",
-      "confidence": "secondary-source-snapshot",
+      "methodology_note": "Portal page covers villas/townhouses/shophouses. Trend and area retained; no aggregate asking range promoted.",
+      "confidence": "mapped-partial",
       "status": "coverage"
     },
     {
-      "id": "bdsc-vinhomes-grand-park-2026-10-08",
-      "project_id": "vinhomes-grand-park",
+      "id": "bdsc-izumi-city-2026-10-08",
+      "project_id": "izumi-city",
       "source_id": "batdongsan-com-vn",
-      "source_url": "https://batdongsan.com.vn/ban-can-ho-chung-cu-vinhomes-grand-park",
+      "source_url": "https://batdongsan.com.vn/ban-can-ho-chung-cu-izumi-city",
+      "observation_date": "2026-10-08",
+      "source_data_as_of": "2026-08",
+      "asset_type": "apartment",
+      "market_layer": "listing-asking",
+      "coverage_status": "partial",
+      "asking_price_low_vnd_per_m2": null,
+      "asking_price_high_vnd_per_m2": null,
+      "asking_price_change_1y_pct": null,
+      "popular_area_low_sqm": null,
+      "popular_area_high_sqm": null,
+      "product_price_ranges": [],
+      "volatile_metrics": {
+        "listing_count": 1,
+        "project_views_7d": null,
+        "use_in_primary_kpi": false,
+        "note": "Portal page has only one listing and the visible listing content appears mismatched with the project; no price KPI promoted."
+      },
+      "methodology_note": "Page mapping confirmed, but quantitative listing evidence is insufficient/inconsistent. No asking-price KPI promoted.",
+      "confidence": "mapped-partial",
+      "status": "coverage"
+    },
+    {
+      "id": "bdsc-mizuki-park-2026-10-08",
+      "project_id": "mizuki-park",
+      "source_id": "batdongsan-com-vn",
+      "source_url": "https://batdongsan.com.vn/ban-can-ho-chung-cu-mizuki-park",
       "observation_date": "2026-10-08",
       "source_data_as_of": "2026-08",
       "asset_type": "apartment",
       "market_layer": "listing-asking",
       "coverage_status": "full",
-      "asking_price_low_vnd_per_m2": 44700000,
-      "asking_price_high_vnd_per_m2": 86600000,
-      "asking_price_change_1y_pct": 0.023,
-      "popular_area_low_sqm": null,
-      "popular_area_high_sqm": null,
+      "asking_price_low_vnd_per_m2": 57500000,
+      "asking_price_high_vnd_per_m2": 73000000,
+      "asking_price_change_1y_pct": 0.191,
+      "popular_area_low_sqm": 56,
+      "popular_area_high_sqm": 107,
       "product_price_ranges": [],
       "volatile_metrics": {
-        "listing_count": 868,
-        "project_views_7d": 7267,
+        "listing_count": 267,
+        "project_views_7d": 3517,
         "use_in_primary_kpi": false,
         "note": "Portal counts/views are ancillary only."
       },
       "methodology_note": "Portal aggregate apartment asking range. Not transaction price or official developer sales.",
       "confidence": "secondary-source-snapshot",
       "status": "coverage"
+    },
+    {
+      "id": "bdsc-mizuki-park-2026-10-09",
+      "project_id": "mizuki-park",
+      "source_id": "batdongsan-com-vn",
+      "source_url": "https://batdongsan.com.vn/ban-can-ho-chung-cu-mizuki-park",
+      "observation_date": "2026-10-09",
+      "source_data_as_of": "2026-10-07",
+      "asset_type": "apartment",
+      "market_layer": "listing-asking",
+      "coverage_status": "full",
+      "asking_price_low_vnd_per_m2": 55800000,
+      "asking_price_high_vnd_per_m2": 72700000,
+      "asking_price_change_1y_pct": 0.058,
+      "popular_area_low_sqm": null,
+      "popular_area_high_sqm": null,
+      "product_price_ranges": [],
+      "volatile_metrics": {
+        "listing_count": 294,
+        "project_views_7d": null,
+        "use_in_primary_kpi": false,
+        "note": "Counts belong to the publisher's search page and can change intraday; not used in price KPI."
+      },
+      "methodology_note": "Manually reviewed public publisher project-page aggregate asking range, captured from a fresh search-indexed excerpt. Source's 'latest listing updated' date is NOT the timestamp for computing this aggregate range. Listing-year percentage is publisher-reported, NOT change between local snapshots. No sales/transaction price inference. Listing counts are ancillary.",
+      "confidence": "reviewed-public-index-snapshot",
+      "status": "reviewed",
+      "provenance": {
+        "capture_mode": "assisted-reviewed-public-index",
+        "source_review_date": "2026-10-09",
+        "last_listing_date": "2026-10-07",
+        "last_listing_date_is_price_timestamp": false,
+        "source_evidence": {
+          "price": "Giá bán căn hộ chung cư Mizuki Park | 55.8 - 72,7 tr/m²",
+          "trend": "5,8% Giá bán đã tăng trong 1 năm qua",
+          "listing_count": "Số lượng | 294 căn",
+          "last_listing": "Cập nhật tin đăng gần đây nhất | 07-10-2026, 21:04",
+          "notes": "Source project header shows 56–107 m² but listings table shows 38–114 m²; area is omitted rather than selecting a conflicting figure."
+        },
+        "source_access": "public-index-only-github-runner-blocked",
+        "verified_fields": [
+          "asking_price_range",
+          "publisher_1y_trend",
+          "latest_listing_date"
+        ],
+        "review_required": false
+      }
     },
     {
       "id": "bdsc-the-9-stellars-2026-10-08",
@@ -281,61 +311,215 @@
       "status": "coverage"
     },
     {
-      "id": "bdsc-celesta-gold-2026-10-08",
-      "project_id": "celesta-gold",
+      "id": "bdsc-the-global-city-apartment-2026-10-08",
+      "project_id": "the-global-city",
       "source_id": "batdongsan-com-vn",
-      "source_url": "https://batdongsan.com.vn/ban-can-ho-chung-cu-celesta-gold",
+      "source_url": "https://batdongsan.com.vn/ban-can-ho-chung-cu-the-global-city",
       "observation_date": "2026-10-08",
-      "source_data_as_of": "2026-09-30",
+      "source_data_as_of": "2026-09-29",
       "asset_type": "apartment",
       "market_layer": "listing-asking",
-      "coverage_status": "partial",
-      "asking_price_low_vnd_per_m2": null,
-      "asking_price_high_vnd_per_m2": null,
-      "asking_price_change_1y_pct": null,
-      "popular_area_low_sqm": 47,
-      "popular_area_high_sqm": 105,
+      "asking_price_low_vnd_per_m2": 112000000,
+      "asking_price_high_vnd_per_m2": 143500000,
+      "asking_price_change_1y_pct": -0.189,
+      "popular_area_low_sqm": 51,
+      "popular_area_high_sqm": 215,
       "product_price_ranges": [
         {
           "product": "1BR",
-          "low_vnd": 5030000000,
-          "high_vnd": 6040000000
+          "low_vnd": 6150000000,
+          "high_vnd": 7640000000
+        },
+        {
+          "product": "2BR",
+          "low_vnd": 7490000000,
+          "high_vnd": 11000000000
+        },
+        {
+          "product": "3BR",
+          "low_vnd": 11500000000,
+          "high_vnd": 17910000000
         }
       ],
       "volatile_metrics": {
-        "listing_count": 6,
-        "project_views_7d": null,
+        "listing_count": 234,
+        "project_views_7d": 1254,
         "use_in_primary_kpi": false,
-        "note": "Early-stage portal coverage; no aggregate per-m² asking range promoted."
+        "note": "Portal display counts and views can change intraday and may vary by result page. Stored as ancillary snapshot only."
       },
-      "methodology_note": "Portal product-level asking range only; no aggregate project asking-price range promoted.",
-      "confidence": "mapped-partial",
+      "methodology_note": "Secondary portal snapshot. Values represent advertised asking/listing market, not executed transaction price, official developer sales, or absorption.",
+      "confidence": "secondary-source-snapshot",
+      "status": "pilot",
+      "coverage_status": "full"
+    },
+    {
+      "id": "bdsc-the-privia-2026-10-08",
+      "project_id": "the-privia",
+      "source_id": "batdongsan-com-vn",
+      "source_url": "https://batdongsan.com.vn/ban-can-ho-chung-cu-the-privia",
+      "observation_date": "2026-10-08",
+      "source_data_as_of": "2026-08",
+      "asset_type": "apartment",
+      "market_layer": "listing-asking",
+      "coverage_status": "full",
+      "asking_price_low_vnd_per_m2": 61500000,
+      "asking_price_high_vnd_per_m2": 74000000,
+      "asking_price_change_1y_pct": 0.071,
+      "popular_area_low_sqm": null,
+      "popular_area_high_sqm": null,
+      "product_price_ranges": [],
+      "volatile_metrics": {
+        "listing_count": 57,
+        "project_views_7d": 1728,
+        "use_in_primary_kpi": false,
+        "note": "Portal counts/views are ancillary only."
+      },
+      "methodology_note": "Portal aggregate apartment asking range after developer inventory sold out. Not transaction price.",
+      "confidence": "secondary-source-snapshot",
       "status": "coverage"
     },
     {
-      "id": "bdsc-essensia-parkway-2026-10-08",
-      "project_id": "essensia-parkway",
+      "id": "bdsc-the-privia-2026-10-09",
+      "project_id": "the-privia",
       "source_id": "batdongsan-com-vn",
-      "source_url": "https://batdongsan.com.vn/nha-dat-ban-essensia-parkway",
-      "observation_date": "2026-10-08",
-      "source_data_as_of": "2026-08",
-      "asset_type": "villa-townhouse-shophouse",
+      "source_url": "https://batdongsan.com.vn/ban-can-ho-chung-cu-the-privia",
+      "observation_date": "2026-10-09",
+      "source_data_as_of": "2026-10-09",
+      "asset_type": "apartment",
       "market_layer": "listing-asking",
-      "coverage_status": "partial",
-      "asking_price_low_vnd_per_m2": null,
-      "asking_price_high_vnd_per_m2": null,
-      "asking_price_change_1y_pct": -0.052,
-      "popular_area_low_sqm": 160,
-      "popular_area_high_sqm": 290,
+      "coverage_status": "full",
+      "asking_price_low_vnd_per_m2": 61000000,
+      "asking_price_high_vnd_per_m2": 70000000,
+      "asking_price_change_1y_pct": 0.048,
+      "popular_area_low_sqm": 34,
+      "popular_area_high_sqm": 120,
       "product_price_ranges": [],
       "volatile_metrics": {
-        "listing_count": 20,
+        "listing_count": 64,
         "project_views_7d": null,
         "use_in_primary_kpi": false,
-        "note": "Mixed low-rise products; no comparable aggregate asking range promoted."
+        "note": "Counts belong to the publisher's search page and can change intraday; not used in price KPI."
       },
-      "methodology_note": "Portal page covers villas/townhouses/shophouses. Trend and area retained; no aggregate asking range promoted.",
-      "confidence": "mapped-partial",
+      "methodology_note": "Manually reviewed public publisher project-page aggregate asking range, captured from a fresh search-indexed excerpt. Source's 'latest listing updated' date is NOT the timestamp for computing this aggregate range. Listing-year percentage is publisher-reported, NOT change between local snapshots. No sales/transaction price inference. Listing counts are ancillary.",
+      "confidence": "reviewed-public-index-snapshot",
+      "status": "reviewed",
+      "provenance": {
+        "capture_mode": "assisted-reviewed-public-index",
+        "source_review_date": "2026-10-09",
+        "last_listing_date": "2026-10-09",
+        "last_listing_date_is_price_timestamp": false,
+        "source_evidence": {
+          "price": "Giá bán căn hộ chung cư The Privia | 61 - 70 tr/m²",
+          "trend": "4,8% Giá bán đã tăng trong 1 năm qua",
+          "area": "Diện tích phổ biến | 34 - 120 m²",
+          "listing_count": "Số lượng | 64 căn",
+          "last_listing": "Cập nhật tin đăng gần đây nhất | 09-10-2026, 02:12"
+        },
+        "source_access": "public-index-only-github-runner-blocked",
+        "verified_fields": [
+          "asking_price_range",
+          "publisher_1y_trend",
+          "latest_listing_date"
+        ],
+        "review_required": false
+      }
+    },
+    {
+      "id": "bdsc-vinhomes-grand-park-2026-10-08",
+      "project_id": "vinhomes-grand-park",
+      "source_id": "batdongsan-com-vn",
+      "source_url": "https://batdongsan.com.vn/ban-can-ho-chung-cu-vinhomes-grand-park",
+      "observation_date": "2026-10-08",
+      "source_data_as_of": "2026-08",
+      "asset_type": "apartment",
+      "market_layer": "listing-asking",
+      "coverage_status": "full",
+      "asking_price_low_vnd_per_m2": 44700000,
+      "asking_price_high_vnd_per_m2": 86600000,
+      "asking_price_change_1y_pct": 0.023,
+      "popular_area_low_sqm": null,
+      "popular_area_high_sqm": null,
+      "product_price_ranges": [],
+      "volatile_metrics": {
+        "listing_count": 868,
+        "project_views_7d": 7267,
+        "use_in_primary_kpi": false,
+        "note": "Portal counts/views are ancillary only."
+      },
+      "methodology_note": "Portal aggregate apartment asking range. Not transaction price or official developer sales.",
+      "confidence": "secondary-source-snapshot",
+      "status": "coverage"
+    },
+    {
+      "id": "bdsc-vinhomes-grand-park-2026-10-09",
+      "project_id": "vinhomes-grand-park",
+      "source_id": "batdongsan-com-vn",
+      "source_url": "https://batdongsan.com.vn/ban-can-ho-chung-cu-vinhomes-grand-park",
+      "observation_date": "2026-10-09",
+      "source_data_as_of": "2026-10-08",
+      "asset_type": "apartment",
+      "market_layer": "listing-asking",
+      "coverage_status": "full",
+      "asking_price_low_vnd_per_m2": 43800000,
+      "asking_price_high_vnd_per_m2": 77000000,
+      "asking_price_change_1y_pct": -0.015,
+      "popular_area_low_sqm": 34,
+      "popular_area_high_sqm": 137,
+      "product_price_ranges": [],
+      "volatile_metrics": {
+        "listing_count": 760,
+        "project_views_7d": null,
+        "use_in_primary_kpi": false,
+        "note": "Counts belong to the publisher's search page and can change intraday; not used in price KPI."
+      },
+      "methodology_note": "Manually reviewed public publisher project-page aggregate asking range, captured from a fresh search-indexed excerpt. Source's 'latest listing updated' date is NOT the timestamp for computing this aggregate range. Listing-year percentage is publisher-reported, NOT change between local snapshots. No sales/transaction price inference. Listing counts are ancillary.",
+      "confidence": "reviewed-public-index-snapshot",
+      "status": "reviewed",
+      "provenance": {
+        "capture_mode": "assisted-reviewed-public-index",
+        "source_review_date": "2026-10-09",
+        "last_listing_date": "2026-10-08",
+        "last_listing_date_is_price_timestamp": false,
+        "source_evidence": {
+          "price": "Giá bán căn hộ chung cư Vinhomes Grand Park | 43.8 - 77 tr/m²",
+          "trend": "1,5% Giá bán đã giảm trong 1 năm qua",
+          "area": "Diện tích phổ biến | 34 - 137 m²",
+          "listing_count": "Số lượng | 760 căn",
+          "last_listing": "Cập nhật tin đăng gần đây nhất | 08-10-2026, 17:59"
+        },
+        "source_access": "public-index-only-github-runner-blocked",
+        "verified_fields": [
+          "asking_price_range",
+          "publisher_1y_trend",
+          "latest_listing_date"
+        ],
+        "review_required": false
+      }
+    },
+    {
+      "id": "bdsc-waterpoint-villa-2026-10-08",
+      "project_id": "waterpoint",
+      "source_id": "batdongsan-com-vn",
+      "source_url": "https://batdongsan.com.vn/ban-nha-biet-thu-lien-ke-khu-do-thi-waterpoint",
+      "observation_date": "2026-10-08",
+      "source_data_as_of": "2026-08",
+      "asset_type": "villa-townhouse",
+      "market_layer": "listing-asking",
+      "coverage_status": "full",
+      "asking_price_low_vnd_per_m2": 37100000,
+      "asking_price_high_vnd_per_m2": 58800000,
+      "asking_price_change_1y_pct": -0.052,
+      "popular_area_low_sqm": null,
+      "popular_area_high_sqm": null,
+      "product_price_ranges": [],
+      "volatile_metrics": {
+        "listing_count": 75,
+        "project_views_7d": 1495,
+        "use_in_primary_kpi": false,
+        "note": "Portal counts/views are ancillary only."
+      },
+      "methodology_note": "Portal aggregate asking range for villas/townhouses at Waterpoint. Not transaction price or official developer sales.",
+      "confidence": "secondary-source-snapshot",
       "status": "coverage"
     }
   ]
