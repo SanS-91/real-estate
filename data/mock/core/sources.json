@@ -550,11 +550,11 @@
       "source_type": "property-listing-portal",
       "base_url": "https://nhadat.cafeland.vn/",
       "language": "vi",
-      "collection_method": "assisted-reviewed-listing-evidence",
-      "fetch_frequency": "periodic-access-probe",
+      "collection_method": "assisted-reviewed-public-index",
+      "fetch_frequency": "weekly-access-recheck",
       "source_priority": 4,
       "active": true,
-      "notes": "Single listing details including source dates, price, advertised area and advertised price per sqm. Some site categories may be mislabelled. Never infer official transaction, project ASP, or independent market price trend."
+      "notes": "Three independently source-backed 2025/26 single-unit ads. Github-hosted fetch currently HTTP 403; never imply automatic price refresh. Original ad date, product/area/total and source-specific asking price remain frozen until independently reviewed."
     }
   ]
 }
