@@ -6,7 +6,7 @@ from pathlib import Path
 
 ROOT=Path(__file__).resolve().parents[1]
 sys.path.insert(0,str(ROOT/"scripts"))
-from market_alternative_auto_probe import onehousing_monthly
+from market_alternative_auto_probe import onehousing_monthly, onehousing_source_diagnostics
 
 def section(name, month, modal="73.74", lo="57", hi="100.19", complete=True):
     heading=f"Căn hộ chung cư dự án {name} tháng {month}/2026 "
@@ -49,4 +49,10 @@ assert onehousing_monthly(newer,today,"Vinhomes Grand Park") is None
 assert onehousing_monthly(newer,today,"Masteri Centre Point") is None
 assert onehousing_monthly(section("Lumière Boulevard",11),today,"Lumière Boulevard") is None
 assert onehousing_monthly(older+section("Lumière Boulevard",11),today,"Lumière Boulevard")["period"]=="2026-09"
+diagnostics=onehousing_source_diagnostics(older+newer,"Lumière Boulevard")
+assert diagnostics["heading_block_count"]==2
+assert diagnostics["publisher_periods"]==["2026-09","2026-10"]
+assert diagnostics["heading_block_diagnostics"][1]["modal_in_section"]
+assert diagnostics["heading_block_diagnostics"][1]["range_in_section"]
+assert not diagnostics["login_wall_in_text"]
 print("PASS: independently bounded project sections, newest source month, duplicate consistency and fail-closed price parsing.")
