@@ -10,6 +10,7 @@ from __future__ import annotations
 import argparse
 import json
 import re
+import unicodedata
 from datetime import date, datetime, timezone
 from pathlib import Path
 from urllib.parse import urlsplit
@@ -20,6 +21,7 @@ from bs4 import BeautifulSoup
 ROOT = Path(__file__).resolve().parents[1]
 CONFIG = ROOT / "config/market-alternative-auto-targets.json"
 BASELINE = ROOT / "data/mock/market/alternative-price-evidence.json"
+SUBPROJECT_BASELINE = ROOT / "data/mock/market/alternative-subproject-monthly-evidence.json"
 REPORT = ROOT / "data/candidate/market/alternative-source-probe-report.json"
 CANDIDATES = ROOT / "data/candidate/market/alternative-price-candidates.json"
 STATE = ROOT / "data/state/alternative-source-health.json"
@@ -30,7 +32,7 @@ HEADERS = {"User-Agent": "MarketIntelligenceResearchBot/1.0 (public source check
            "Accept": "text/html,application/xhtml+xml",
            "Accept-Language": "vi-VN,vi;q=0.9,en;q=0.6"}
 PRICE = r"(\d+(?:[.,]\d+)?)"
-MONTH_LABEL = re.compile(r"Căn hộ chung cư dự án\s+Vinhomes Grand Park\s+tháng\s+(\d{1,2})\s*/\s*(20\d{2})", re.I)
+MONTH_LABEL = re.compile(r"Căn hộ chung cư dự án\s+(.{3,90}?)\s+tháng\s+(\d{1,2})\s*/\s*(20\d{2})", re.I)
 MODAL = re.compile(PRICE + r"\s*triệu\s*/?\s*m[²2]", re.I)
 MODAL_SECTION = re.compile(r"Đơn giá phổ biến(?P<section>.{0,500}?)Giá thuê phổ biến", re.I)
 RANGE = re.compile(r"Khoảng giá\s*[:|]?\s*" + PRICE + r"\s*[-–]\s*" + PRICE + r"\s*triệu", re.I)
@@ -66,7 +68,7 @@ def source_hostname(url):
 
 def publisher_hosts(source_id):
     return {
-        "onehousing-vn": {"onehousing.vn"},
+        "onehousing-vn": {"onehousing.vn", "beta.onehousing.vn"},
         "rever-vn": {"rever.vn", "blog.rever.vn"},
     }.get(source_id, set())
 
@@ -78,38 +80,49 @@ def allowed_target(target):
             and source_hostname(target["url"]) in publisher_hosts(target["source_id"]))
 
 
-def onehousing_monthly(text, today):
-    """Only a project-specific month header + exact label/value evidence qualifies."""
-    header = MONTH_LABEL.search(text)
-    section = MODAL_SECTION.search(text)
-    modal = MODAL.search(section.group("section")) if section else None
-    range_match = RANGE.search(section.group("section")) if section else None
-    if not (header and section and modal and range_match):
-        return None
-    month, year = int(header.group(1)), int(header.group(2))
-    if not 1 <= month <= 12:
-        return None
-    period = f"{year:04d}-{month:02d}"
-    if period > today.strftime("%Y-%m"):
-        return None
-    value, low, high = vnd(modal.group(1)), vnd(range_match.group(1)), vnd(range_match.group(2))
-    if not (0 < low <= value <= high <= 1_000_000_000):
-        return None
-    # Avoid picking modal values from unrelated property types elsewhere on page.
-    if section.start() < header.start() or section.start() - header.end() > 6000:
-        return None
-    return {
-        "period": period,
-        "value_vnd_per_m2": value,
-        "range_low_vnd_per_m2": low,
-        "range_high_vnd_per_m2": high,
-        "evidence": {
-            "period": header.group(0),
-            "metric": modal.group(0),
-            "range": range_match.group(0),
-        },
-    }
+def normal_name(text):
+    value = unicodedata.normalize("NFKD", text.lower().replace("đ", "d"))
+    return re.sub(r"\\s+", " ", "".join(c for c in value if not unicodedata.combining(c))).strip()
 
+
+def onehousing_monthly(text, today, publisher_project_name="Vinhomes Grand Park"):
+    """Match EXACT source-authored apartment project name, month, and modal price section.
+
+    Never reassign a Lumière/Masteri subproject value to the parent Vinhomes
+    Grand Park series. Do not use a crawler/check date as a monthly period.
+    """
+    for header in MONTH_LABEL.finditer(text):
+        if normal_name(header.group(1)) != normal_name(publisher_project_name):
+            continue
+        month, year = int(header.group(2)), int(header.group(3))
+        if not 1 <= month <= 12:
+            continue
+        period = f"{year:04d}-{month:02d}"
+        if period > today.strftime("%Y-%m"):
+            continue
+        block = text[header.end():header.end() + 9000]
+        section = MODAL_SECTION.search(block)
+        if not section or section.start() > 6000:
+            continue
+        modal = MODAL.search(section.group("section"))
+        range_match = RANGE.search(section.group("section"))
+        if not (modal and range_match):
+            continue
+        value, low, high = vnd(modal.group(1)), vnd(range_match.group(1)), vnd(range_match.group(2))
+        if not (0 < low <= value <= high <= 1_000_000_000):
+            continue
+        return {
+            "period": period,
+            "value_vnd_per_m2": value,
+            "range_low_vnd_per_m2": low,
+            "range_high_vnd_per_m2": high,
+            "evidence": {
+                "period": header.group(0),
+                "metric": modal.group(0),
+                "range": range_match.group(0),
+            },
+        }
+    return None
 
 def rever_single_listing(text, today):
     if "Vinhomes Grand Park" not in text or not re.search(r"\b69\s*m[²2]\b", text, re.I):
@@ -149,7 +162,7 @@ def classify(target, html, baseline, today):
     mode = target["mode"]
     if mode == "historical-reference-monitor":
         return "reachable-historical-reference-frozen", None
-    parsed = (onehousing_monthly(text, today) if mode == "monthly-price-candidate"
+    parsed = (onehousing_monthly(text, today, target.get("publisher_project_name", "Vinhomes Grand Park")) if mode == "monthly-price-candidate"
               else rever_single_listing(text, today) if mode == "single-listing-review"
               else None)
     if parsed is None:
@@ -223,7 +236,7 @@ def run(targets, baselines, today, session, fetcher=fetch_html):
             "baseline_period": prior.get("period") if prior else None,
         }
         if not prior or not allowed_target(target) or (prior["project_id"], prior["source_id"], prior["source_url"], prior["metric_type"]) != (
-                target["project_id"], target["source_id"], target["url"], target["metric_type"]):
+                target["project_id"], target["source_id"], target["url"], target["metric_type"]) or (target.get("subproject_name") and prior.get("subproject_name") != target["subproject_name"]):
             row["status"] = "invalid-target-mapping"
         else:
             probe, html = fetcher(target, session)
@@ -261,7 +274,7 @@ def main():
     args = parser.parse_args()
     today = date.fromisoformat(args.today)
     config = load(CONFIG)
-    baseline = {r["id"]: r for r in load(BASELINE)["data"]}
+    baseline = {r["id"]: r for r in (load(BASELINE)["data"] + load(SUBPROJECT_BASELINE)["data"])}
     checks, candidates = run(config["targets"], baseline, today, requests.Session())
     queue = load(QUEUE) if QUEUE.exists() else {
         "schema_version": 1, "candidate_only": True, "review_required": True, "data": []}
