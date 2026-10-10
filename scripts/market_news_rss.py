@@ -183,7 +183,7 @@ def evaluate(cfg, feeds, existing, projects, known_sources, now):
             source_reports.append({"source_id":feed["source_id"],"status":"unknown-source"}); continue
         if feed["id"] not in feeds:
             source_reports.append({"source_id":feed["source_id"],"status":"fetch-error"}); continue
-        accepted = skipped = 0
+        accepted = skipped = duplicates = filtered = 0
         try:
             items = feed_items(feeds[feed["id"]])[:feed.get("max_items", 30)]
         except (ValueError, ET.ParseError):
@@ -192,16 +192,18 @@ def evaluate(cfg, feeds, existing, projects, known_sources, now):
             row, reason = classify(item, feed, project_names, now, cfg.get("days_lookback",21))
             if not row:
                 skipped += 1
+                filtered += 1
                 continue
             key = normalized_title(row["title"])
             if row["url"] in known_urls or row["url"] in seen_urls or key in recent_titles:
                 skipped += 1
+                duplicates += 1
                 continue
             additions.append(row)
             seen_urls.add(row["url"])
             recent_titles.add(key)
             accepted += 1
-        source_reports.append({"source_id":feed["source_id"],"status":"parsed" if items else "empty-feed","feed_items":len(items),"new":accepted,"skipped":skipped})
+        source_reports.append({"source_id":feed["source_id"],"status":"parsed" if items else "empty-feed","feed_items":len(items),"new":accepted,"skipped":skipped,"duplicates":duplicates,"filtered":filtered})
     additions.sort(key=lambda x:(x["published_at"],x["id"]),reverse=True)
     additions=additions[:cfg.get("max_new_per_run",75)]
     return additions, source_reports
@@ -249,6 +251,7 @@ def main():
         health = {"schema_version": 1, "checked_at": now.isoformat(),
                   "feeds_configured": len(cfg["feeds"]), "feeds_fetched": len(snapshots),
                   "accepted_new": len(candidates), "production_written": report["production_written"],
+                  "article_total": len(payload["data"]),
                   "published_by_module": counts, "feed_status": checked, "fetch_errors": fetch_errors}
         HEALTH.parent.mkdir(parents=True, exist_ok=True)
         HEALTH.write_text(json.dumps(health, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
