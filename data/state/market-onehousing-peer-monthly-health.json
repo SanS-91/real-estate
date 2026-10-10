@@ -1,0 +1,45 @@
+{
+  "schema_version": 1,
+  "generated_at": "2026-10-10T04:17:15.069684+00:00",
+  "targets_checked": 3,
+  "exact_publisher_months_parsed": 2,
+  "new_verified_months": 0,
+  "published_months": 0,
+  "projects_with_verified_month": 0,
+  "checks": [
+    {
+      "id": "masteri-thao-dien",
+      "status": "awaiting-independent-hosted-check",
+      "source_period": "2026-10",
+      "check_count": 1
+    },
+    {
+      "id": "estella-heights",
+      "status": "unverifiable-project-month",
+      "source_period": null,
+      "http_status": 200
+    },
+    {
+      "id": "the-panorama",
+      "status": "awaiting-independent-hosted-check",
+      "source_period": "2026-10",
+      "check_count": 1
+    }
+  ],
+  "candidate_only_unless_two_hosted_checks": true,
+  "methodology": "HCMC publisher-priced peers outside core 13. No price value is displayed before two independent matching checks >=1 hour apart.",
+  "check_urls": [
+    {
+      "id": "masteri-thao-dien",
+      "host": "onehousing.vn"
+    },
+    {
+      "id": "estella-heights",
+      "host": "onehousing.vn"
+    },
+    {
+      "id": "the-panorama",
+      "host": "onehousing.vn"
+    }
+  ]
+}

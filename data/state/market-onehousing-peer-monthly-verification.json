@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "candidates": {
+    "masteri-thao-dien|2026-10": {
+      "fingerprint": "c81ad272d114d8133a518df07c7022b4aaffd800b731d284d9e5759a358e4c02",
+      "period": "2026-10",
+      "target_id": "masteri-thao-dien",
+      "first_checked_at": "2026-10-10T04:17:15.069684+00:00",
+      "checks": [
+        {
+          "run_id": "38023524222",
+          "checked_at": "2026-10-10T04:17:15.069684+00:00"
+        }
+      ],
+      "conflict": false
+    },
+    "the-panorama|2026-10": {
+      "fingerprint": "ad5d2a9753f1b6dc82ec60d9d88f06755cc35594bba51a3a064ed24d5bd1a828",
+      "period": "2026-10",
+      "target_id": "the-panorama",
+      "first_checked_at": "2026-10-10T04:17:15.069684+00:00",
+      "checks": [
+        {
+          "run_id": "38023524222",
+          "checked_at": "2026-10-10T04:17:15.069684+00:00"
+        }
+      ],
+      "conflict": false
+    }
+  }
+}
