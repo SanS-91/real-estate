@@ -77,6 +77,12 @@
 
   const SOURCE_NAMES = {
     'vnexpress-real-estate': 'VnExpress',
+    'vnexpress-economy': 'VnExpress',
+    'vnexpress-current-affairs': 'VnExpress',
+    'vnexpress-legal': 'VnExpress',
+    'thanhnien-banking': 'Thanh Niên',
+    'thanhnien-policy': 'Thanh Niên',
+    'thanhnien-transport': 'Thanh Niên',
     'tuoitre-business': 'Tuổi Trẻ',
     'tuoitre-current-affairs': 'Tuổi Trẻ',
     'tuoitre-legal': 'Tuổi Trẻ',
