@@ -549,7 +549,7 @@
         ? { last: 'Kiểm tra gần nhất', perRun: 'Tin mới lượt gần nhất', total: 'Tổng bài trong kho',
             checked: 'RSS đọc hợp lệ', empty: 'Nguồn rỗng', errors: 'Nguồn lỗi',
             duplicates: 'Trùng đã bỏ qua', filtered: 'Không phù hợp đã lọc',
-            detail: 'Chi tiết 16 kênh và lý do bỏ qua', source: 'Nguồn',
+            detail: 'Chi tiết kênh RSS và lý do bỏ qua', source: 'Nguồn',
             fresh: 'Tin mới', status: 'Tình trạng', reason: 'Loại / trùng',
             good: 'Đọc được', blank: 'RSS rỗng', bad: 'Cần kiểm tra',
             noNew: 'Không có tin mới đủ điều kiện trong lượt này; không phải lỗi.',
