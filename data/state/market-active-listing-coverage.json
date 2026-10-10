@@ -1,18 +1,18 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-10-10T02:37:49.690786+00:00",
+  "generated_at": "2026-10-10T08:27:07.006507+00:00",
   "scope": "individual-verified-apartment-asking-only",
   "project_registry_count": 13,
   "projects_monitored": 7,
-  "projects_with_current_verified_unit_offers": 1,
-  "projects_with_recent_unpublished_source_candidates": 2,
-  "current_verified_unit_ads": 1,
+  "projects_with_current_verified_unit_offers": 3,
+  "projects_with_recent_unpublished_source_candidates": 0,
+  "current_verified_unit_ads": 7,
   "source_data_health": [
     {
       "source_id": "muaban-vn",
       "report_available": true,
       "report_fresh": true,
-      "checked_at": "2026-10-09T12:56:23.687614+00:00"
+      "checked_at": "2026-10-10T08:26:43.694778+00:00"
     },
     {
       "source_id": "rever-vn",
@@ -100,7 +100,7 @@
           "source_health_recent": true,
           "recent_eligible_ads": 0,
           "discovered_links": 1,
-          "last_checked_at": "2026-10-09T12:56:23.687614+00:00"
+          "last_checked_at": "2026-10-10T08:26:43.694778+00:00"
         },
         {
           "source_id": "rever-vn",
@@ -148,7 +148,7 @@
           "source_health_recent": true,
           "recent_eligible_ads": 0,
           "discovered_links": 1,
-          "last_checked_at": "2026-10-09T12:56:23.687614+00:00"
+          "last_checked_at": "2026-10-10T08:26:43.694778+00:00"
         },
         {
           "source_id": "rever-vn",
@@ -176,7 +176,7 @@
           "source_health_recent": true,
           "recent_eligible_ads": 0,
           "discovered_links": 1,
-          "last_checked_at": "2026-10-09T12:56:23.687614+00:00"
+          "last_checked_at": "2026-10-10T08:26:43.694778+00:00"
         },
         {
           "source_id": "rever-vn",
@@ -193,62 +193,6 @@
       "latest_source_listed_or_updated": null
     },
     {
-      "project_id": "mizuki-park",
-      "project_name": "Mizuki Park",
-      "status": "source-qualified-awaiting-verification",
-      "sources_monitored": 2,
-      "sources": [
-        {
-          "source_id": "muaban-vn",
-          "access_status": "reachable",
-          "source_health_recent": true,
-          "recent_eligible_ads": 3,
-          "discovered_links": 12,
-          "last_checked_at": "2026-10-09T12:56:23.687614+00:00"
-        },
-        {
-          "source_id": "rever-vn",
-          "access_status": "reachable",
-          "source_health_recent": true,
-          "recent_eligible_ads": 0,
-          "discovered_links": 12,
-          "last_checked_at": "2026-10-10T02:37:10.183202+00:00"
-        }
-      ],
-      "recent_eligible_ads": 3,
-      "current_verified_ads": 0,
-      "published_source_ids": [],
-      "latest_source_listed_or_updated": null
-    },
-    {
-      "project_id": "vinhomes-grand-park",
-      "project_name": "Vinhomes Grand Park",
-      "status": "source-qualified-awaiting-verification",
-      "sources_monitored": 2,
-      "sources": [
-        {
-          "source_id": "muaban-vn",
-          "access_status": "reachable",
-          "source_health_recent": true,
-          "recent_eligible_ads": 3,
-          "discovered_links": 6,
-          "last_checked_at": "2026-10-09T12:56:23.687614+00:00"
-        },
-        {
-          "source_id": "rever-vn",
-          "access_status": "reachable",
-          "source_health_recent": true,
-          "recent_eligible_ads": 0,
-          "discovered_links": 12,
-          "last_checked_at": "2026-10-10T02:37:10.183202+00:00"
-        }
-      ],
-      "recent_eligible_ads": 3,
-      "current_verified_ads": 0,
-      "published_source_ids": [],
-      "latest_source_listed_or_updated": null
-    },
-    {
       "project_id": "eaton-park",
       "project_name": "Eaton Park",
       "status": "published-current-unit-offer",
@@ -260,7 +204,7 @@
           "source_health_recent": true,
           "recent_eligible_ads": 0,
           "discovered_links": 0,
-          "last_checked_at": "2026-10-09T12:56:23.687614+00:00"
+          "last_checked_at": "2026-10-10T08:26:43.694778+00:00"
         },
         {
           "source_id": "rever-vn",
@@ -277,6 +221,66 @@
         "rever-vn"
       ],
       "latest_source_listed_or_updated": "2026-07-28"
+    },
+    {
+      "project_id": "mizuki-park",
+      "project_name": "Mizuki Park",
+      "status": "published-current-unit-offer",
+      "sources_monitored": 2,
+      "sources": [
+        {
+          "source_id": "muaban-vn",
+          "access_status": "reachable",
+          "source_health_recent": true,
+          "recent_eligible_ads": 3,
+          "discovered_links": 12,
+          "last_checked_at": "2026-10-10T08:26:43.694778+00:00"
+        },
+        {
+          "source_id": "rever-vn",
+          "access_status": "reachable",
+          "source_health_recent": true,
+          "recent_eligible_ads": 0,
+          "discovered_links": 12,
+          "last_checked_at": "2026-10-10T02:37:10.183202+00:00"
+        }
+      ],
+      "recent_eligible_ads": 3,
+      "current_verified_ads": 3,
+      "published_source_ids": [
+        "muaban-vn"
+      ],
+      "latest_source_listed_or_updated": "2026-10-05"
+    },
+    {
+      "project_id": "vinhomes-grand-park",
+      "project_name": "Vinhomes Grand Park",
+      "status": "published-current-unit-offer",
+      "sources_monitored": 2,
+      "sources": [
+        {
+          "source_id": "muaban-vn",
+          "access_status": "reachable",
+          "source_health_recent": true,
+          "recent_eligible_ads": 3,
+          "discovered_links": 6,
+          "last_checked_at": "2026-10-10T08:26:43.694778+00:00"
+        },
+        {
+          "source_id": "rever-vn",
+          "access_status": "reachable",
+          "source_health_recent": true,
+          "recent_eligible_ads": 0,
+          "discovered_links": 12,
+          "last_checked_at": "2026-10-10T02:37:10.183202+00:00"
+        }
+      ],
+      "recent_eligible_ads": 3,
+      "current_verified_ads": 3,
+      "published_source_ids": [
+        "muaban-vn"
+      ],
+      "latest_source_listed_or_updated": "2026-10-05"
     }
   ],
   "methodology": "Project monitoring coverage, qualifying source candidates and fully verified current individual apartment asking listings are distinct. Verified means two distinct hosted checks; Muaban also requires unexpired source end date; Rever requires publisher update within 90 days. Project ASP, market absorption, representative price range and actual transaction value are not computed."
