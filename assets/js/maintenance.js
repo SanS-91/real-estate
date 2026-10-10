@@ -527,6 +527,34 @@
     document.querySelector('[data-maintenance-rules]').innerHTML = `<div class="maintenance-rules">${c.rules.map(([title, text]) => `<div class="maintenance-rule"><strong>${esc(title)}</strong><span>${esc(text)}</span></div>`).join('')}</div>`;
   }
 
+  async function renderNewsAutomationHealth() {
+    const node = document.querySelector('[data-news-automation-health]');
+    if (!node) return;
+    const vi = language() === 'vi';
+    const moduleNames = {market: 'Thị trường', legal: 'Pháp lý', infrastructure: 'Hạ tầng', macro: 'Vĩ mô'};
+    const targets = {market: 'market.html?view=news', legal: 'legal.html?view=news',
+                     infrastructure: 'infrastructure.html?view=news', macro: 'macro.html?view=news'};
+    try {
+      const state = await DataStore.getNewsHealth();
+      const counts = state.published_by_module || {};
+      const sourceCount = Number(state.feeds_fetched || 0);
+      const configured = Number(state.feeds_configured || 0);
+      const checked = formatDateTime(state.checked_at);
+      node.innerHTML = Object.keys(moduleNames).map(id => {
+        const amount = Number(counts[id] || 0);
+        return `<div class="data-health-card">
+          <div class="data-health-card__top"><h3><a href="${targets[id]}">${esc(vi ? moduleNames[id] : id.toUpperCase())}</a></h3>
+          <span class="data-health-status">${sourceCount === configured && configured > 0 ? (vi ? 'Đã kiểm tra' : 'Checked') : (vi ? 'Nguồn thiếu' : 'Sources missing')}</span></div>
+          <dl><div><dt>${vi ? 'Tin mới lượt gần nhất' : 'Published last run'}</dt><dd>${esc(amount)}</dd></div>
+          <div><dt>${vi ? 'Nguồn RSS truy cập' : 'Reachable RSS feeds'}</dt><dd>${esc(sourceCount)}/${esc(configured)}</dd></div>
+          <div><dt>${vi ? 'Kiểm tra gần nhất' : 'Last check'}</dt><dd>${esc(checked)}</dd></div></dl>
+          </div>`;
+      }).join('');
+    } catch (error) {
+      node.innerHTML = `<div class="state-box">${esc(vi ? 'Chưa có báo cáo thu thập RSS tự động từ production.' : 'No production RSS ingestion health report yet.')}</div>`;
+    }
+  }
+
   function render(model) {
     lastModel = model;
     const c = copy();
@@ -559,6 +587,7 @@
       await renderMarketSourceHealth();
       await renderActiveListingCoverage();
       await renderOfficialRegistryWatch();
+      await renderNewsAutomationHealth();
     } catch (error) {
       renderError(error);
     }
@@ -569,6 +598,7 @@
       renderMarketSourceHealth();
       renderActiveListingCoverage();
       renderOfficialRegistryWatch();
+      renderNewsAutomationHealth();
     });
   }
 
