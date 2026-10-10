@@ -514,7 +514,7 @@
         agencies: payloadData(agencies),
         topics: payloadData(topics),
         documents: payloadData(documents),
-        articles: payloadData(articles).filter(item => item.category === 'legal'),
+        articles: payloadData(articles),
         regions: payloadData(regions),
         projects: payloadData(projects)
       };
