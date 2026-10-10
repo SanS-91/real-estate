@@ -1,9 +1,9 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-10-10T08:40:12.555550+00:00",
+  "generated_at": "2026-10-10T08:41:38.892764+00:00",
   "scope": "individual-verified-apartment-asking-only",
   "project_registry_count": 13,
-  "projects_monitored": 7,
+  "projects_monitored": 8,
   "projects_with_current_verified_unit_offers": 3,
   "projects_with_recent_unpublished_source_candidates": 0,
   "current_verified_unit_ads": 7,
@@ -67,17 +67,6 @@
       "latest_source_listed_or_updated": null
     },
     {
-      "project_id": "lumiere-riverside",
-      "project_name": "Lumière Riverside",
-      "status": "no-verified-unit-source-target",
-      "sources_monitored": 0,
-      "sources": [],
-      "recent_eligible_ads": 0,
-      "current_verified_ads": 0,
-      "published_source_ids": [],
-      "latest_source_listed_or_updated": null
-    },
-    {
       "project_id": "waterpoint",
       "project_name": "Waterpoint",
       "status": "no-verified-unit-source-target",
@@ -109,6 +98,26 @@
           "recent_eligible_ads": 0,
           "discovered_links": 12,
           "last_checked_at": "2026-10-10T08:39:35.547248+00:00"
+        }
+      ],
+      "recent_eligible_ads": 0,
+      "current_verified_ads": 0,
+      "published_source_ids": [],
+      "latest_source_listed_or_updated": null
+    },
+    {
+      "project_id": "lumiere-riverside",
+      "project_name": "Lumière Riverside",
+      "status": "monitored-no-current-verified-offer",
+      "sources_monitored": 1,
+      "sources": [
+        {
+          "source_id": "rever-vn",
+          "access_status": "not-measured-recently",
+          "source_health_recent": false,
+          "recent_eligible_ads": null,
+          "discovered_links": null,
+          "last_checked_at": null
         }
       ],
       "recent_eligible_ads": 0,
