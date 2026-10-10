@@ -117,6 +117,33 @@
       "host": "dantri.com.vn",
       "category": "filtered-macro",
       "max_items": 50
+    },
+    {
+      "id": "thanhnien-banking",
+      "source_id": "thanhnien-banking",
+      "label": "Thanh Niên Ngân hàng",
+      "url": "https://thanhnien.vn/rss/kinh-te/ngan-hang.rss",
+      "host": "thanhnien.vn",
+      "category": "filtered-economy",
+      "max_items": 50
+    },
+    {
+      "id": "thanhnien-policy",
+      "source_id": "thanhnien-policy",
+      "label": "Thanh Niên Chính sách - Phát triển",
+      "url": "https://thanhnien.vn/rss/kinh-te/chinh-sach-phat-trien.rss",
+      "host": "thanhnien.vn",
+      "category": "filtered-policy-infrastructure",
+      "max_items": 50
+    },
+    {
+      "id": "thanhnien-transport",
+      "source_id": "thanhnien-transport",
+      "label": "Thanh Niên Giao thông",
+      "url": "https://thanhnien.vn/rss/xe/xe-giao-thong.rss",
+      "host": "thanhnien.vn",
+      "category": "filtered-infrastructure",
+      "max_items": 50
     }
   ],
   "days_lookback": 30,
