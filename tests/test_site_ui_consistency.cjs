@@ -75,14 +75,14 @@ assert.equal(labels.newsViewCopy('infrastructure').title,'Infrastructure news & 
 for(const module of ['legal','infrastructure','macro']) {
   const js=fs.readFileSync('assets/js/'+module+'.js','utf8');
   const html=fs.readFileSync(module+'.html','utf8');
-  assert.ok(js.includes('data-news-kind='),module+' must classify news source type');
-  assert.ok(js.includes('App.newsKindLabel(article.content_type)'),module+' must use common labels');
-  assert.ok(js.includes('data-news-view-label="'+module+'.title"'),module+' must explain its evidence layer');
-  assert.ok(html.includes('assets/js/'+module+'.js?v=4.9I1&news=UI9'),module+' must load updated content');
+  assert.ok(js.includes("module: '"+module+"'"),module+' must route to its own news');
+  assert.ok(js.includes('MarketNewsUI.render'),module+' must use shared topic/card layout');
+  assert.ok(html.includes('assets/js/market-news-ui.js?v=NEWS-UNIFIED-20261010'),module+' must load the common News renderer');
+  assert.ok(html.includes('assets/css/market-news.css?v=NEWS-UNIFIED-20261010'),module+' must load mobile-responsive News CSS');
 }
 assert.match(css,/\.article-row__meta \.news-kind-chip/);
 assert.match(css,/\.news-kind-chip\[data-news-kind="official-update"\]/);
 assert.match(css,/\.news-kind-chip\[data-news-kind="data-release"\]/);
-console.log('PASS: shared VI/EN taxonomy for Legal, Infrastructure and demonstrative Macro news');
+console.log('PASS: shared News topic filter and responsive components across four modules');
 
 console.log('PASS: 7-site shared navigation, VI/EN terminology, auto-swipe tabs and distinct news topic chips');
