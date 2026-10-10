@@ -193,8 +193,8 @@ def evaluate(previous, rows, seen, now, run_id):
         if published.get("review_status") != "automated-two-hosted-checks":
             continue
         key = (published.get("project_id"), published.get("listing_id"))
-        previous = old_by_listing.get(key)
-        if not previous or published.get("source_updated_date", "") > previous.get("source_updated_date", ""):
+        recorded = old_by_listing.get(key)
+        if not recorded or published.get("source_updated_date", "") > recorded.get("source_updated_date", ""):
             old_by_listing[key] = published
     states = {r["listing_id"]: r for r in previous.get("listings", [])}
     accepted = []
