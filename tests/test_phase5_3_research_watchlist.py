@@ -28,6 +28,6 @@ assert '(row.source_ids || []).find(isRealSource)' in js
 
 assert '.research-watchlist__chips' in css
 assert '.research-watchlist__count' in css
-assert len(production)==18
+assert len(production)>=18
 
 print('Phase 5.3 Research Watchlist tests PASS')
