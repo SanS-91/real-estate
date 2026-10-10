@@ -1,0 +1,59 @@
+{
+  "schema_version": 1,
+  "checked_at": "2026-10-10T06:23:57.590208+00:00",
+  "feeds_configured": 6,
+  "feeds_fetched": 6,
+  "accepted_new": 25,
+  "production_written": true,
+  "published_by_module": {
+    "market": 20,
+    "legal": 1,
+    "infrastructure": 5,
+    "macro": 2
+  },
+  "feed_status": [
+    {
+      "source_id": "vnexpress-real-estate",
+      "status": "parsed",
+      "feed_items": 30,
+      "new": 6,
+      "skipped": 24
+    },
+    {
+      "source_id": "thanhnien-real-estate",
+      "status": "parsed",
+      "feed_items": 30,
+      "new": 1,
+      "skipped": 29
+    },
+    {
+      "source_id": "dantri-real-estate",
+      "status": "parsed",
+      "feed_items": 30,
+      "new": 5,
+      "skipped": 25
+    },
+    {
+      "source_id": "vnexpress-economy",
+      "status": "parsed",
+      "feed_items": 30,
+      "new": 6,
+      "skipped": 24
+    },
+    {
+      "source_id": "vnexpress-current-affairs",
+      "status": "parsed",
+      "feed_items": 30,
+      "new": 6,
+      "skipped": 24
+    },
+    {
+      "source_id": "vnexpress-legal",
+      "status": "parsed",
+      "feed_items": 30,
+      "new": 1,
+      "skipped": 29
+    }
+  ],
+  "fetch_errors": []
+}

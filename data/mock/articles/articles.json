@@ -1,9 +1,426 @@
 {
   "schema_version": 1,
-  "build_id": "market-news-rss-20261009T170036Z",
-  "generated_at": "2026-10-09T17:00:36.109405+00:00",
-  "record_count": 140,
+  "build_id": "market-news-rss-20261010T062357Z",
+  "generated_at": "2026-10-10T06:23:57.590208+00:00",
+  "record_count": 165,
   "data": [
+    {
+      "id": "article-market-rss-3e7e79da138edc3537ad",
+      "title": "Doanh nghiệp địa ốc phát hành trái phiếu gần 150.000 tỷ đồng sau 9 tháng",
+      "url": "https://vnexpress.net/doanh-nghiep-dia-oc-phat-hanh-trai-phieu-gan-150-000-ty-dong-sau-9-thang-5130655.html",
+      "category": "market",
+      "module_ids": [
+        "market"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-10-10T04:49:23+00:00",
+      "source_id": "vnexpress-real-estate",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "Các doanh nghiệp địa ốc phát hành trái phiếu 149.455 tỷ đồng trong 9 tháng đầu năm, tăng mạnh so với cùng kỳ 2025 khi tín dụng thắt chặt.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://vnexpress.net/rss/bat-dong-san.rss",
+        "publisher_host": "vnexpress.net",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-58eb43ec2be6371113c3",
+      "title": "Khu đô thị 15.600 tỷ đồng tại Hưng Yên tìm được chủ đầu tư",
+      "url": "https://vnexpress.net/khu-do-thi-15-600-ty-dong-tai-hung-yen-tim-duoc-chu-dau-tu-5130675.html",
+      "category": "market",
+      "module_ids": [
+        "market",
+        "infrastructure"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-10-10T04:32:09+00:00",
+      "source_id": "vnexpress-real-estate",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "Công ty vừa thành lập 3 tháng ở Hưng Yên được duyệt là nhà đầu tư Khu đô thị mới Mễ Sở giáp Vành đai 4.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://vnexpress.net/rss/bat-dong-san.rss",
+        "publisher_host": "vnexpress.net",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-f12ba0bb5c32879f5d6e",
+      "title": "The Elite - Charmora City: Những lớp văn hóa Nha Trang trong ngôn ngữ kiến trúc mới",
+      "url": "https://dantri.com.vn/bat-dong-san/the-elite-charmora-city-nhung-lop-van-hoa-nha-trang-trong-ngon-ngu-kien-truc-moi-20261010102125043.htm",
+      "category": "market",
+      "module_ids": [
+        "market"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-10-10T03:28:15+00:00",
+      "source_id": "dantri-real-estate",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "(Dân trí) - Nếu Nha Trang kể câu chuyện của vùng đất bằng kiến trúc, đó phải là lớp dấu tích Champa bên sông Cái, hay vẻ phóng khoáng rất riêng của một đô thị biển.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://dantri.com.vn/rss/bat-dong-san.rss",
+        "publisher_host": "dantri.com.vn",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-c6486e46616fa8306391",
+      "title": "Điểm tên loạt công ty bất động sản đứng đầu danh sách nợ thuế tại TPHCM",
+      "url": "https://dantri.com.vn/bat-dong-san/diem-ten-loat-cong-ty-bat-dong-san-dung-dau-danh-sach-no-thue-tai-tphcm-20261010090847089.htm",
+      "category": "market",
+      "module_ids": [
+        "market"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-10-10T02:24:18+00:00",
+      "source_id": "dantri-real-estate",
+      "region_ids": [
+        "hcmc"
+      ],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "(Dân trí) - Nhiều doanh nghiệp bất động sản tại TPHCM đang đứng đầu trong danh sách nợ thuế do các thuế cơ sở công bố, trong đó có đơn vị nợ thuế hơn 329 tỷ đồng.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://dantri.com.vn/rss/bat-dong-san.rss",
+        "publisher_host": "dantri.com.vn",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-81c62cc4bf9711364f80",
+      "title": "Căn hộ chung cư chưa có sổ đỏ, tặng cho con thế nào là tiện nhất?",
+      "url": "https://vnexpress.net/can-ho-chung-cu-chua-co-so-do-tang-cho-con-the-nao-la-tien-nhat-5130081.html",
+      "category": "market",
+      "module_ids": [
+        "market",
+        "legal"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-10-10T01:37:40+00:00",
+      "source_id": "vnexpress-legal",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [
+        "legal"
+      ],
+      "importance": 2,
+      "summary": "Bố mẹ muốn cho em một căn hộ chung cư mà hiện chỉ có hợp đồng mua bán (mới nhận bàn giao nhà), chưa ra sổ hồng.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://vnexpress.net/rss/phap-luat.rss",
+        "publisher_host": "vnexpress.net",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-95c7f7bb93d280a037d3",
+      "title": "Giá vàng thế giới lên cao nhất một tuần",
+      "url": "https://vnexpress.net/gia-vang-the-gioi-len-cao-nhat-mot-tuan-5130611.html",
+      "category": "macro",
+      "module_ids": [
+        "macro"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-10-10T01:34:39+00:00",
+      "source_id": "vnexpress-economy",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "Lực mua bắt đáy giúp giá vàng thế giới tăng 2 phiên liên tiếp, lên sát 4.200 USD một ounce.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://vnexpress.net/rss/kinh-doanh.rss",
+        "publisher_host": "vnexpress.net",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-0dd2e6d39b9780cef086",
+      "title": "Đấu giá khu đất làm biệt thự du lịch golf gần 1.500 tỷ đồng",
+      "url": "https://vnexpress.net/dau-gia-khu-dat-lam-biet-thu-du-lich-golf-gan-1-500-ty-dong-5130607.html",
+      "category": "market",
+      "module_ids": [
+        "market"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-10-10T01:20:00+00:00",
+      "source_id": "vnexpress-real-estate",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "Gia Lai dự kiến đấu giá khu đất hơn 19 ha tại Khu kinh tế Nhơn Hội để phát triển Khu biệt thự du lịch Học viện Golf vào quý IV/2026.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://vnexpress.net/rss/bat-dong-san.rss",
+        "publisher_host": "vnexpress.net",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-7e858b9d7db7d0221ca0",
+      "title": "Q' Terra đưa văn hóa Quy Nhơn vào kiến trúc đương đại",
+      "url": "https://vnexpress.net/q-terra-dua-van-hoa-quy-nhon-vao-kien-truc-duong-dai-5129922.html",
+      "category": "market",
+      "module_ids": [
+        "market"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-10-10T01:00:00+00:00",
+      "source_id": "vnexpress-real-estate",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "Q'Terra đưa văn hóa Quy Nhơn vào kiến trúc đương đại qua cảm hứng từ sắc đất nung Terracotta, thổ cẩm Chăm H’Roi, kết hợp hệ tiện ích và dịch vụ nghỉ dưỡng.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://vnexpress.net/rss/bat-dong-san.rss",
+        "publisher_host": "vnexpress.net",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-b10ca67800951286e970",
+      "title": "Vì sao Đại Quang Minh và loạt công ty địa ốc đua phát hành trái phiếu?",
+      "url": "https://dantri.com.vn/bat-dong-san/vi-sao-dai-quang-minh-va-loat-cong-ty-dia-oc-dua-phat-hanh-trai-phieu-20261010000712026.htm",
+      "category": "market",
+      "module_ids": [
+        "market"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-10-10T00:18:00+00:00",
+      "source_id": "dantri-real-estate",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "(Dân trí) - Tín dụng bất động sản tăng trưởng chậm lại, kênh phát hành cổ phiếu gặp hạn chế khiến doanh nghiệp địa ốc đẩy mạnh huy động vốn qua trái phiếu, dù chi phí lãi vay ở mức cao.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://dantri.com.vn/rss/bat-dong-san.rss",
+        "publisher_host": "dantri.com.vn",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-75bc335aabc5be20d71d",
+      "title": "The Infinity khai thác lợi thế từ dòng khách phía Nam đảo Ngọc",
+      "url": "https://vnexpress.net/the-infinity-khai-thac-loi-the-tu-dong-khach-phia-nam-dao-ngoc-5130527.html",
+      "category": "market",
+      "module_ids": [
+        "market"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-10-10T00:00:00+00:00",
+      "source_id": "vnexpress-real-estate",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "The Infinity sở hữu vị trí mặt tiền ĐT.975, gần ga LRT số 4, kết nối dòng khách du lịch và cư dân tại Nam Phú Quốc, tạo điều kiện khai thác kinh doanh, lưu trú và dịch vụ.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://vnexpress.net/rss/bat-dong-san.rss",
+        "publisher_host": "vnexpress.net",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-633d5596d88e17c72c29",
+      "title": "Sai lầm khi vặn vòi nước khiến bồn rửa phòng tắm nhanh hỏng",
+      "url": "https://dantri.com.vn/bat-dong-san/sai-lam-khi-van-voi-nuoc-khien-bon-rua-phong-tam-nhanh-hong-20261008221321303.htm",
+      "category": "market",
+      "module_ids": [
+        "market"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-10-09T23:00:00+00:00",
+      "source_id": "dantri-real-estate",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "(Dân trí) - Một tiếng nước nhỏ giọt ở bồn rửa có thể khiến bạn chỉ muốn vặn chặt vòi cho xong. Nhưng chính thói quen tưởng vô hại này lại có thể làm hỏng vòi, khiến một lỗi nhỏ thành khoản sửa chữa tốn kém.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://dantri.com.vn/rss/bat-dong-san.rss",
+        "publisher_host": "dantri.com.vn",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-3558679bba00cfc50dfc",
+      "title": "Baking soda có thực sự thông cống hiệu quả như lời đồn?",
+      "url": "https://dantri.com.vn/bat-dong-san/baking-soda-co-thuc-su-thong-cong-hieu-qua-nhu-loi-don-20261008222727398.htm",
+      "category": "market",
+      "module_ids": [
+        "market"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-10-09T23:00:00+00:00",
+      "source_id": "dantri-real-estate",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [
+        "pricing"
+      ],
+      "importance": 2,
+      "summary": "(Dân trí) - Nhiều người tin baking soda và giấm là thần dược cứu cánh cho bồn rửa tắc. Chuyên gia nhà cửa cảnh báo phương pháp này chỉ phát huy tác dụng trong một số trường hợp cụ thể.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://dantri.com.vn/rss/bat-dong-san.rss",
+        "publisher_host": "dantri.com.vn",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-2de544a2115c036d61c8",
+      "title": "Làm rõ 'đất bỏ hoang' trước khi đánh thuế",
+      "url": "https://thanhnien.vn/lam-ro-dat-bo-hoang-truoc-khi-danh-thue-185261009161954117.htm",
+      "category": "market",
+      "module_ids": [
+        "market"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-10-09T23:00:00+00:00",
+      "source_id": "thanhnien-real-estate",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [
+        "legal"
+      ],
+      "importance": 2,
+      "summary": "Đề xuất đánh thuế 0,2% đối với đất bỏ hoang, không đưa hoặc chậm đưa vào sử dụng được kỳ vọng góp phần hạn chế đầu cơ và lãng phí đất đai. Tuy nhiên nhiều ý kiến cho rằng cần phân biệt người chủ động găm giữ đất chờ tăng giá với người muốn sử dụng nhưng đang vướng quy hoạch, thủ tục hoặc những trở n",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://thanhnien.vn/rss/kinh-te/dia-oc.rss",
+        "publisher_host": "thanhnien.vn",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-864957e3d226344b55c4",
+      "title": "Diện mạo tuyến Vành đai 2,5 Hà Nội",
+      "url": "https://vnexpress.net/dien-mao-tuyen-vanh-dai-2-5-ha-noi-5130325.html",
+      "category": "market",
+      "module_ids": [
+        "market",
+        "infrastructure"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-10-09T21:00:00+00:00",
+      "source_id": "vnexpress-current-affairs",
+      "region_ids": [
+        "ha-noi"
+      ],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "Các đoạn tuyến thuộc dự án Vành đai 2,5 đang được đẩy nhanh tiến độ thi công, trong đó một số đoạn đã được thảm nhựa để thông xe kỹ thuật ngày 10/10.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://vnexpress.net/rss/thoi-su.rss",
+        "publisher_host": "vnexpress.net",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-afe349a6e9e150f11423",
+      "title": "Vì sao Vinhomes bán lô lớn cho chủ đầu tư khác thay vì tự bán từng căn?",
+      "url": "https://vnexpress.net/vi-sao-vinhomes-ban-lo-lon-cho-chu-dau-tu-khac-thay-vi-tu-ban-tung-can-5130302.html",
+      "category": "market",
+      "module_ids": [
+        "market"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-10-09T20:00:40+00:00",
+      "source_id": "vnexpress-economy",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [
+        "vinhomes"
+      ],
+      "tags": [
+        "sales"
+      ],
+      "importance": 2,
+      "summary": "Bán sỉ chiếm khoảng 81% doanh số bất động sản của Vinhomes trong nửa đầu năm, giúp thu tiền sớm và chia sẻ rủi ro phát triển với đối tác.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://vnexpress.net/rss/kinh-doanh.rss",
+        "publisher_host": "vnexpress.net",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-2e70e71b97470cd46025",
+      "title": "Ngôi nhà 222 m2 'hướng nội' từ trong ra ngoài",
+      "url": "https://vnexpress.net/ngoi-nha-222-m2-huong-noi-tu-trong-ra-ngoai-5130119.html",
+      "category": "market",
+      "module_ids": [
+        "market"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-10-09T17:00:00+00:00",
+      "source_id": "vnexpress-real-estate",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "Do khu đất bị vây kín, kiến trúc sư bố trí không gian xoay quanh sân trong, dùng bê tông trần, gỗ tự nhiên và nội thất tối giản để đảm bảo riêng tư.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://vnexpress.net/rss/bat-dong-san.rss",
+        "publisher_host": "vnexpress.net",
+        "publication_date_from_feed": true
+      }
+    },
     {
       "id": "article-market-rss-e5315a483cf9f30aa4bf",
       "title": "TP HCM có 158 dự án nhà ở bán cho người nước ngoài",
@@ -24,6 +441,31 @@
       "source_verification": {
         "method": "official-rss",
         "feed_url": "https://vnexpress.net/rss/bat-dong-san.rss",
+        "publisher_host": "vnexpress.net",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-9e6ee981a71569dbb936",
+      "title": "Phó thủ tướng yêu cầu không để giá hàng hóa tăng bất hợp lý",
+      "url": "https://vnexpress.net/pho-thu-tuong-yeu-cau-khong-de-gia-hang-hoa-tang-bat-hop-ly-5130535.html",
+      "category": "macro",
+      "module_ids": [
+        "macro"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-10-09T13:25:10+00:00",
+      "source_id": "vnexpress-economy",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "Phó thủ tướng Nguyễn Văn Thắng yêu cầu tăng kiểm tra, xử lý hành vi tăng giá bất hợp lý, nhất là với hàng thiết yếu trong bối cảnh CPI bình quân 9 tháng tăng 4,52%.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://vnexpress.net/rss/kinh-doanh.rss",
         "publisher_host": "vnexpress.net",
         "publication_date_from_feed": true
       }
@@ -75,6 +517,33 @@
         "method": "official-rss",
         "feed_url": "https://dantri.com.vn/rss/bat-dong-san.rss",
         "publisher_host": "dantri.com.vn",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-6dd204f5f911e74bcf06",
+      "title": "Hà Nội khởi công công viên Safari Ba Vì, trường đua ngựa Sóc Sơn",
+      "url": "https://vnexpress.net/ha-noi-khoi-cong-cong-vien-safari-ba-vi-truong-dua-ngua-soc-son-5130502.html",
+      "category": "infrastructure",
+      "module_ids": [
+        "infrastructure"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-10-09T10:55:45+00:00",
+      "source_id": "vnexpress-current-affairs",
+      "region_ids": [
+        "ha-noi"
+      ],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "Công viên Safari Ba Vì khoảng 299 ha, tổng đầu tư hơn 6.500 tỷ đồng; trường đua ngựa 125 ha ở Sóc Sơn, tổng vốn gần 9.600 tỷ đồng, được công bố khởi công.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://vnexpress.net/rss/thoi-su.rss",
+        "publisher_host": "vnexpress.net",
         "publication_date_from_feed": true
       }
     },
@@ -271,6 +740,58 @@
       }
     },
     {
+      "id": "article-market-rss-3d434e1959e6ee8979f2",
+      "title": "T&T Group đầu tư dự án điện gió 768 triệu USD tại Lào",
+      "url": "https://vnexpress.net/t-t-group-dau-tu-du-an-dien-gio-768-trieu-usd-tai-lao-5130381.html",
+      "category": "market",
+      "module_ids": [
+        "market"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-10-09T07:15:00+00:00",
+      "source_id": "vnexpress-economy",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "Nhà máy điện gió Savan 2 công suất 495 MW tại Lào do T&T Group hợp tác đầu tư, dự kiến vận hành thương mại cuối năm 2028.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://vnexpress.net/rss/kinh-doanh.rss",
+        "publisher_host": "vnexpress.net",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-4071c942ca529cc5a83f",
+      "title": "Chuyên gia Pháp: 'Hồ Gươm chưa cần dự án tái thiết quy mô lớn'",
+      "url": "https://vnexpress.net/chuyen-gia-phap-ho-guom-chua-can-du-an-tai-thiet-quy-mo-lon-5130220.html",
+      "category": "market",
+      "module_ids": [
+        "market"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-10-09T06:56:54+00:00",
+      "source_id": "vnexpress-current-affairs",
+      "region_ids": [
+        "ha-noi"
+      ],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "Kiến trúc sư Emmanuel Cerise cho rằng Hà Nội nên ưu tiên bảo tồn cây cổ thụ, công trình hiện hữu và bản sắc cảnh quan Hồ Gươm, thay vì phá bỏ để xây mới.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://vnexpress.net/rss/thoi-su.rss",
+        "publisher_host": "vnexpress.net",
+        "publication_date_from_feed": true
+      }
+    },
+    {
       "id": "article-market-rss-d836fb34333e553df478",
       "title": "Diễn biến mới tại siêu dự án đường sắt Lào Cai - Hà Nội - Hải Phòng",
       "url": "https://dantri.com.vn/bat-dong-san/dien-bien-moi-tai-sieu-du-an-duong-sat-lao-cai-ha-noi-hai-phong-20261009103945594.htm",
@@ -295,6 +816,92 @@
       }
     },
     {
+      "id": "article-market-rss-2d9646f722597e881c32",
+      "title": "Sân bay Cà Mau đón chuyến bay trở lại từ 29/11",
+      "url": "https://vnexpress.net/san-bay-ca-mau-don-chuyen-bay-tro-lai-tu-29-11-5130361.html",
+      "category": "infrastructure",
+      "module_ids": [
+        "infrastructure"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-10-09T06:35:40+00:00",
+      "source_id": "vnexpress-current-affairs",
+      "region_ids": [
+        "hcmc"
+      ],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [
+        "infrastructure"
+      ],
+      "importance": 2,
+      "summary": "Sau hơn một năm tạm ngừng để nâng cấp, sân bay Cà Mau dự kiến khai thác trở lại từ cuối tháng 11 với đường bay thương mại Cà Mau - TP HCM do Vietnam Airlines vận hành.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://vnexpress.net/rss/thoi-su.rss",
+        "publisher_host": "vnexpress.net",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-0b0342413296c989efba",
+      "title": "DNSE chiếm 26,62% thị phần môi giới chứng khoán phái sinh",
+      "url": "https://vnexpress.net/dnse-chiem-26-62-thi-phan-moi-gioi-chung-khoan-phai-sinh-5130327.html",
+      "category": "market",
+      "module_ids": [
+        "market"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-10-09T05:00:00+00:00",
+      "source_id": "vnexpress-economy",
+      "region_ids": [
+        "ha-noi"
+      ],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [
+        "pricing",
+        "sales"
+      ],
+      "importance": 2,
+      "summary": "DNSE củng cố vị trí top 2 thị phần môi giới chứng khoán phái sinh trong quý III với 26,62%, mức cao nhất từ khi gia nhập thị trường, theo Sở Giao dịch Chứng khoán Hà Nội.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://vnexpress.net/rss/kinh-doanh.rss",
+        "publisher_host": "vnexpress.net",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-091c36037f200567926d",
+      "title": "Ba xe máy bốc cháy trong nhà ở TP HCM, một người chết",
+      "url": "https://vnexpress.net/ba-xe-may-boc-chay-trong-nha-o-tp-hcm-mot-nguoi-chet-5130343.html",
+      "category": "market",
+      "module_ids": [
+        "market"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-10-09T04:47:21+00:00",
+      "source_id": "vnexpress-current-affairs",
+      "region_ids": [
+        "hcmc"
+      ],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "Hỏa hoạn bùng lên từ xe máy ở tầng trệt trong căn nhà ở phường Khánh Hội (quận 4 cũ), cụ bà 81 khi thoát từ ban công sang nhà bên cạnh bị ngã, tử vong, sáng 9/10.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://vnexpress.net/rss/thoi-su.rss",
+        "publisher_host": "vnexpress.net",
+        "publication_date_from_feed": true
+      }
+    },
+    {
       "id": "article-market-rss-1f4c25371ff758fe8ee0",
       "title": "TP.HCM cho công chứng điện tử hợp đồng thế chấp",
       "url": "https://thanhnien.vn/tphcm-cho-cong-chung-dien-tu-hop-dong-the-chap-185261009105417534.htm",
@@ -315,6 +922,33 @@
         "method": "official-rss",
         "feed_url": "https://thanhnien.vn/rss/kinh-te/dia-oc.rss",
         "publisher_host": "thanhnien.vn",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-bc4244011f1a436014cf",
+      "title": "Tăng tốc thi công trục đường 10 làn xe tại Phú Quốc",
+      "url": "https://vnexpress.net/tang-toc-thi-cong-truc-duong-10-lan-xe-tai-phu-quoc-5130227.html",
+      "category": "infrastructure",
+      "module_ids": [
+        "infrastructure"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-10-09T03:53:17+00:00",
+      "source_id": "vnexpress-current-affairs",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [
+        "infrastructure"
+      ],
+      "importance": 2,
+      "summary": "Đường tỉnh ĐT.975 quy mô 10 làn xe và tuyến đường sắt nhẹ LRT đang được đẩy nhanh tiến độ, nhằm kết nối sân bay Phú Quốc với trung tâm hội nghị APEC.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://vnexpress.net/rss/thoi-su.rss",
+        "publisher_host": "vnexpress.net",
         "publication_date_from_feed": true
       }
     },
@@ -520,6 +1154,33 @@
       "source_verification": {
         "method": "official-rss",
         "feed_url": "https://vnexpress.net/rss/bat-dong-san.rss",
+        "publisher_host": "vnexpress.net",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-f16cfefc163024a90bfe",
+      "title": "Hàn Quốc không gia nhập CPTPP năm nay",
+      "url": "https://vnexpress.net/han-quoc-khong-gia-nhap-cptpp-nam-nay-5130121.html",
+      "category": "market",
+      "module_ids": [
+        "market"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-10-08T15:27:15+00:00",
+      "source_id": "vnexpress-economy",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [
+        "pricing"
+      ],
+      "importance": 2,
+      "summary": "Tổng thống Hàn Quốc chỉ đạo chính phủ không nộp đơn xin gia nhập Hiệp định CPTPP năm nay, để thảo luận thêm với nông dân và ngư dân.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://vnexpress.net/rss/kinh-doanh.rss",
         "publisher_host": "vnexpress.net",
         "publication_date_from_feed": true
       }
