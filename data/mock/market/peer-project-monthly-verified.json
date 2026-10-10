@@ -1,0 +1,7 @@
+{
+  "schema_version": 1,
+  "record_count": 0,
+  "data": [],
+  "scope": "separate-hcm-peer-projects-not-in-13-project-registry",
+  "methodology": "Publisher-authored popular monthly apartment asking price per m². Requires two matching GitHub-hosted checks at least one hour apart. No derived transaction ASP, parent-level price or interpolated months."
+}

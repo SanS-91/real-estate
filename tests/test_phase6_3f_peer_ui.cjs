@@ -1,0 +1,33 @@
+const assert=require('node:assert/strict'),fs=require('node:fs');
+const read=p=>fs.readFileSync(p,'utf8');
+const config=JSON.parse(read('config/market-onehousing-peer-monthly-targets.json'));
+const peer=JSON.parse(read('data/mock/market/peer-project-monthly-verified.json'));
+const proj=JSON.parse(read('data/mock/market/projects.json'));
+const js=read('assets/js/market.js');
+const store=read('assets/js/data-store.js');
+const html=read('market.html');
+const work=read('.github/workflows/market-hcm-peer-monthly.yml');
+assert.equal(config.targets.length,3);
+assert.equal(peer.record_count,peer.data.length);
+assert.equal(proj.record_count,13,'core curated projects remain untouched');
+const peerIds=config.targets.map(x=>x.id);
+assert.equal(new Set(peerIds).size,3);
+assert(peerIds.every(id=>!proj.data.some(p=>p.id===id)));
+for(const t of config.targets) {
+  assert(t.url.startsWith('https://onehousing.vn/phan-tich/du-an/'));
+  assert(t.publisher_project_name);
+}
+assert(js.includes('function peerMonthlyComparablesHTML()'));
+assert(js.includes('new Set(row.verification_run_ids || []).size >= 2'));
+assert(js.includes("row.scope_type === 'separate-hcm-peer-comparable'"));
+assert(js.includes('Chưa đủ lịch sử thì không tính tăng/giảm.'));
+assert(js.includes('peerMonthlyComparablesHTML()'));
+assert(js.includes('peerMonthlyTargets:peerMonthlyTargets?.targets || []'));
+assert(store.includes('getPeerMonthlyVerified'));
+assert(store.includes('getPeerMonthlyTargets'));
+assert(store.includes('getPeerMonthlySourceHealth'));
+assert(html.includes('peers=6.3F'));
+assert(work.includes("github.event_name == 'pull_request'"));
+assert(work.includes('git diff --exit-code'));
+assert(work.includes("git add data/mock/market/peer-project-monthly-verified.json"));
+console.log('PASS 6.3F: three outside-registry peers, no unverified prices in Market, read-only PR, production two-run gate');
