@@ -168,6 +168,20 @@ async def run():
                         text=(await audit.inner_text()).lower()
                         assert "không phải kết luận xu hướng" in text
                         assert "số tháng của các phân khu không được cộng" in text
+                        peer=page.locator("[data-market-peer-monthly]")
+                        await peer.wait_for(timeout=12000)
+                        assert await peer.count()==1,(width,"peer comparable source panel")
+                        assert await peer.get_attribute("open") is None
+                        await peer.locator("summary").click()
+                        assert await peer.get_attribute("open") is not None
+                        peer_rows=peer.locator(".data-table--peer-monthly tbody tr")
+                        assert await peer_rows.count()==3,(width,"exactly three named peer sources")
+                        peer_names=await peer_rows.all_inner_texts()
+                        for name in ("Masteri Thảo Điền","Estella Heights","The Panorama"):
+                            assert any(name in label for label in peer_names),(width,name,"peer missing")
+                        assert "không phải ASP giao dịch" in (await peer.inner_text())
+                        await peer.locator("summary").click()
+                        assert await peer.get_attribute("open") is None
                         # A collapsed audit must not crowd mobile page before opening.
                         await audit.locator("summary").click()
                         assert await audit.get_attribute("open") is None
