@@ -1,0 +1,79 @@
+name: Market 6.3F - HCMC Peer Monthly Source Verification
+
+on:
+  pull_request:
+    paths:
+      - 'scripts/market_onehousing_peer_monthly.py'
+      - 'tests/test_phase6_3f_peer_monthly.py'
+      - 'config/market-onehousing-peer-monthly-targets.json'
+      - 'data/mock/market/peer-project-monthly-verified.json'
+      - '.github/workflows/market-hcm-peer-monthly.yml'
+  push:
+    branches: [main]
+    paths:
+      - 'scripts/market_onehousing_peer_monthly.py'
+      - 'config/market-onehousing-peer-monthly-targets.json'
+      - '.github/workflows/market-hcm-peer-monthly.yml'
+  schedule:
+    - cron: '20 2 * * *'
+    - cron: '50 7 * * *'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: market-peer-monthly-verified
+  cancel-in-progress: false
+
+jobs:
+  verify-and-record:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 14
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Install dependencies
+        run: pip install -r requirements.txt
+      - name: Fail-closed regression checks
+        run: |
+          python -m py_compile scripts/market_onehousing_peer_monthly.py
+          python -m unittest discover -s tests -p 'test_phase6_3f_peer_monthly.py' -v
+          python tests/test_market_onehousing_latest_month_parser.py
+          python -m unittest discover -s tests -p 'test_market_onehousing_semantic_scope.py'
+      - name: Check exact HCMC peer publisher scopes (PR read-only)
+        if: github.event_name == 'pull_request'
+        run: |
+          python scripts/market_onehousing_peer_monthly.py --preview --run-id "$GITHUB_RUN_ID"
+          git diff --exit-code -- data/mock/market data/state data/candidate/market
+      - name: Collect and independently confirm published peer months
+        if: github.event_name != 'pull_request'
+        run: python scripts/market_onehousing_peer_monthly.py --run-id "$GITHUB_RUN_ID"
+      - name: Persist verification and confirmed history only
+        if: github.event_name != 'pull_request'
+        run: |
+          set -euo pipefail
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add data/mock/market/peer-project-monthly-verified.json data/state/market-onehousing-peer-monthly-verification.json data/state/market-onehousing-peer-monthly-health.json
+          if git diff --cached --quiet; then exit 0; fi
+          git commit -m 'data(market): verify separately scoped HCMC peer monthly evidence'
+          git restore --worktree -- .
+          for attempt in 1 2 3 4 5; do
+            git fetch origin main
+            if git rebase origin/main && git push origin HEAD:main; then exit 0; fi
+            sleep 3
+          done
+          exit 1
+      - uses: actions/upload-artifact@v4
+        if: always() && github.event_name != 'pull_request'
+        with:
+          name: verified-hcm-peer-monthly-evidence
+          path: |
+            data/state/market-onehousing-peer-monthly-health.json
+            data/state/market-onehousing-peer-monthly-verification.json
+            data/mock/market/peer-project-monthly-verified.json
+          if-no-files-found: warn
+          retention-days: 45
