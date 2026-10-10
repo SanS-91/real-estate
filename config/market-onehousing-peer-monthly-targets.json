@@ -1,0 +1,37 @@
+{
+  "schema_version": 1,
+  "collection_mode": "github-hosted-two-independent-publisher-month-checks",
+  "description": "Comparable HCMC projects outside the curated 13-project registry; publisher-specific apartment monthly popular asking prices, not transaction ASP.",
+  "min_verified_runs": 2,
+  "min_hours_between_runs": 1,
+  "max_previous_change_pct": 30,
+  "targets": [
+    {
+      "id": "masteri-thao-dien",
+      "name": "Masteri Thảo Điền",
+      "source_id": "onehousing-vn",
+      "publisher_project_name": "Masteri Thảo Điền",
+      "url": "https://onehousing.vn/phan-tich/du-an/can-ho-chung-cu-du-an-Masteri-Thao-Dien.946",
+      "asset_type": "apartment",
+      "metric_type": "popular-asking-price-per-sqm"
+    },
+    {
+      "id": "estella-heights",
+      "name": "Estella Heights",
+      "source_id": "onehousing-vn",
+      "publisher_project_name": "Chung cư Estella Heights",
+      "url": "https://onehousing.vn/phan-tich/du-an/can-ho-chung-cu-du-an-Chung-cu-Estella-Heights.465",
+      "asset_type": "apartment",
+      "metric_type": "popular-asking-price-per-sqm"
+    },
+    {
+      "id": "the-panorama",
+      "name": "The Panorama",
+      "source_id": "onehousing-vn",
+      "publisher_project_name": "The Panorama",
+      "url": "https://onehousing.vn/phan-tich/du-an/can-ho-chung-cu-du-an-The-Panorama.744",
+      "asset_type": "apartment",
+      "metric_type": "popular-asking-price-per-sqm"
+    }
+  ]
+}
