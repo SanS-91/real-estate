@@ -52,6 +52,7 @@ MODULE_FEED_FILTERS = {
     "filtered-policy-infrastructure": ("infrastructure", "legal", "market"),
     "filtered-property-legal": ("legal",),
     "filtered-macro": ("macro",),
+    "filtered-infrastructure": ("infrastructure",),
 }
 REGION_PATTERNS = {
     "hcmc": ("tp hcm", "tp.hcm", "tphcm", "ho chi minh", "sai gon", "thu duc"),
@@ -119,10 +120,13 @@ def classify(item, feed, project_names, now, days_lookback):
     if dt < now - timedelta(days=days_lookback):
         return None, "older-than-retention-window"
     text = fold(title + " " + desc)
+    # Broad publisher categories often contain unrelated keywords in excerpts.
+    # Require the headline itself to establish module relevance for filtered feeds.
+    routing_text = fold(title) if feed["category"] in MODULE_FEED_FILTERS else text
     if feed["category"] == "filtered-investment" and not any(x in text for x in MARKET_WORDS):
         return None, "not-property-market-news"
-    module_ids = [module for module, patterns in MODULE_PATTERNS.items() if any(v in text for v in patterns)]
-    property_relevant = any(v in text for v in MARKET_WORDS)
+    module_ids = [module for module, patterns in MODULE_PATTERNS.items() if any(v in routing_text for v in patterns)]
+    property_relevant = any(v in routing_text for v in MARKET_WORDS)
     if property_relevant:
         module_ids.insert(0, "market")
     if feed["category"] in MODULE_FEED_FILTERS and not any(module in MODULE_FEED_FILTERS[feed["category"]] for module in module_ids):
@@ -197,7 +201,7 @@ def evaluate(cfg, feeds, existing, projects, known_sources, now):
             seen_urls.add(row["url"])
             recent_titles.add(key)
             accepted += 1
-        source_reports.append({"source_id":feed["source_id"],"status":"parsed","feed_items":len(items),"new":accepted,"skipped":skipped})
+        source_reports.append({"source_id":feed["source_id"],"status":"parsed" if items else "empty-feed","feed_items":len(items),"new":accepted,"skipped":skipped})
     additions.sort(key=lambda x:(x["published_at"],x["id"]),reverse=True)
     additions=additions[:cfg.get("max_new_per_run",75)]
     return additions, source_reports
