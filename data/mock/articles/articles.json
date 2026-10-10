@@ -1,9 +1,61 @@
 {
   "schema_version": 1,
-  "build_id": "market-news-rss-20261010T062357Z",
-  "generated_at": "2026-10-10T06:23:57.590208+00:00",
-  "record_count": 165,
+  "build_id": "market-news-rss-20261010T065125Z",
+  "generated_at": "2026-10-10T06:51:25.560359+00:00",
+  "record_count": 263,
   "data": [
+    {
+      "id": "article-market-rss-714c14e0e4478e187895",
+      "title": "Tổng Bí thư, Chủ tịch nước Tô Lâm kiểm tra một số công trình, dự án của Thủ đô",
+      "url": "https://vnexpress.net/tong-bi-thu-chu-tich-nuoc-to-lam-kiem-tra-mot-so-cong-trinh-du-an-cua-thu-do-5130699.html",
+      "category": "market",
+      "module_ids": [
+        "market"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-10-10T06:33:55+00:00",
+      "source_id": "vnexpress-current-affairs",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [
+        "infrastructure"
+      ],
+      "importance": 2,
+      "summary": "Sáng 10/10, Tổng Bí thư, Chủ tịch nước Tô Lâm kiểm tra dự án bãi đỗ xe, cây xanh giữa đường Vành đai 1 và đường La Thành, cùng đường Vành đai 2,5.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://vnexpress.net/rss/thoi-su.rss",
+        "publisher_host": "vnexpress.net",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-b22052d3b411b4ef529c",
+      "title": "Phú Mỹ Hưng 2.0 - bước chuyển mình của đô thị tỷ USD",
+      "url": "https://vnexpress.net/phu-my-hung-2-0-buoc-chuyen-minh-cua-do-thi-ty-usd-5128477.html",
+      "category": "market",
+      "module_ids": [
+        "market"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-10-10T06:00:00+00:00",
+      "source_id": "vnexpress-real-estate",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "Ngày 1/10, tòa nhà Lawrence S. Ting - trụ sở Phú Mỹ Hưng suốt 20 năm qua dừng hoạt động, đánh dấu quá trình \"thay áo mới\" của đô thị tỷ USD, hướng đến vai trò cực trung tâm của thành phố.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://vnexpress.net/rss/bat-dong-san.rss",
+        "publisher_host": "vnexpress.net",
+        "publication_date_from_feed": true
+      }
+    },
     {
       "id": "article-market-rss-3e7e79da138edc3537ad",
       "title": "Doanh nghiệp địa ốc phát hành trái phiếu gần 150.000 tỷ đồng sau 9 tháng",
@@ -30,6 +82,33 @@
       }
     },
     {
+      "id": "article-market-rss-243d4aab2ad545fcc152",
+      "title": "GTINX và Thales giới thiệu giải pháp công nghệ bảo vệ hạ tầng đường sắt trọng yếu",
+      "url": "https://dantri.com.vn/thoi-su/gtinx-va-thales-gioi-thieu-giai-phap-cong-nghe-bao-ve-ha-tang-duong-sat-trong-yeu-20261010103749090.htm",
+      "category": "infrastructure",
+      "module_ids": [
+        "infrastructure"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-10-10T04:45:50+00:00",
+      "source_id": "dantri-current-affairs",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [
+        "infrastructure"
+      ],
+      "importance": 2,
+      "summary": "(Dân trí) - GTINX và Tập đoàn Thales (Pháp) chia sẻ các giải pháp ứng dụng công nghệ lưỡng dụng, bảo đảm an ninh mạng và nâng cao năng lực bảo vệ hạ tầng đường sắt trước những thách thức an ninh mới.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://dantri.com.vn/rss/thoi-su.rss",
+        "publisher_host": "dantri.com.vn",
+        "publication_date_from_feed": true
+      }
+    },
+    {
       "id": "article-market-rss-58eb43ec2be6371113c3",
       "title": "Khu đô thị 15.600 tỷ đồng tại Hưng Yên tìm được chủ đầu tư",
       "url": "https://vnexpress.net/khu-do-thi-15-600-ty-dong-tai-hung-yen-tim-duoc-chu-dau-tu-5130675.html",
@@ -52,6 +131,59 @@
         "method": "official-rss",
         "feed_url": "https://vnexpress.net/rss/bat-dong-san.rss",
         "publisher_host": "vnexpress.net",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-40f1eb34415b81093da5",
+      "title": "Bí thư Quảng Ninh yêu cầu đẩy nhanh giải phóng mặt bằng dự án trọng điểm",
+      "url": "https://dantri.com.vn/thoi-su/bi-thu-quang-ninh-yeu-cau-day-nhanh-giai-phong-mat-bang-du-an-trong-diem-20261010110606097.htm",
+      "category": "market",
+      "module_ids": [
+        "market",
+        "infrastructure"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-10-10T04:30:02+00:00",
+      "source_id": "dantri-current-affairs",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "(Dân trí) - Ông Quản Minh Cường, Bí thư Thành ủy Quảng Ninh, yêu cầu xác định giải phóng mặt bằng là nhiệm vụ chính trị trọng tâm từ nay đến cuối năm, kiểm điểm tráchảng ninh nhiệm nơi chậm tiến độ do chủ quan.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://dantri.com.vn/rss/thoi-su.rss",
+        "publisher_host": "dantri.com.vn",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-28c63eed0a1a2b6804e9",
+      "title": "Dự án chống ùn tắc cửa ngõ Quy Nhơn được tăng vốn đầu tư gần 400 tỷ đồng",
+      "url": "https://dantri.com.vn/thoi-su/du-an-chong-un-tac-cua-ngo-quy-nhon-duoc-tang-von-dau-tu-gan-400-ty-dong-20261009172550451.htm",
+      "category": "market",
+      "module_ids": [
+        "market"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-10-10T03:55:45+00:00",
+      "source_id": "dantri-current-affairs",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [
+        "infrastructure"
+      ],
+      "importance": 2,
+      "summary": "(Dân trí) - Dự án mở rộng, cải tạo nút giao thông ngã 5 Đống Đa - Hoa Lư được tăng thêm 387 tỷ đồng, nâng tổng mức đầu tư lên 900 tỷ đồng, trong đó điểm nhấn là cầu vượt dài hơn 300m.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://dantri.com.vn/rss/thoi-su.rss",
+        "publisher_host": "dantri.com.vn",
         "publication_date_from_feed": true
       }
     },
@@ -104,6 +236,60 @@
         "method": "official-rss",
         "feed_url": "https://dantri.com.vn/rss/bat-dong-san.rss",
         "publisher_host": "dantri.com.vn",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-8bda99dfcb38f2d27314",
+      "title": "TPHCM điều chỉnh giao thông phục vụ thi công Metro số 2 từ hôm nay",
+      "url": "https://dantri.com.vn/thoi-su/tphcm-dieu-chinh-giao-thong-phuc-vu-thi-cong-metro-so-2-tu-hom-nay-20261010085912011.htm",
+      "category": "infrastructure",
+      "module_ids": [
+        "infrastructure"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-10-10T02:15:33+00:00",
+      "source_id": "dantri-current-affairs",
+      "region_ids": [
+        "hcmc"
+      ],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [
+        "infrastructure"
+      ],
+      "importance": 2,
+      "summary": "(Dân trí) - TPHCM phân luồng giao thông và rào chắn phục vụ thi công ga Tao Đàn và ga Bảy Hiền thuộc tuyến Metro Bến Thành - Tham Lương. Nhiều tuyến đường qua khu vực được điều chỉnh thành một chiều.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://dantri.com.vn/rss/thoi-su.rss",
+        "publisher_host": "dantri.com.vn",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-dad7e5b8e1c62691e755",
+      "title": "Giá vàng hôm nay 10.10.2026: Đứng yên nhưng vẫn cao hơn thế giới 13 triệu đồng",
+      "url": "https://thanhnien.vn/gia-vang-hom-nay-10102026-dung-yen-nhung-van-cao-hon-the-gioi-13-trieu-dong-185261010082652652.htm",
+      "category": "macro",
+      "module_ids": [
+        "macro"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-10-10T02:02:00+00:00",
+      "source_id": "thanhnien-banking",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "Giá vàng trong nước đứng yên dù thế giới tiếp tục đi lên nhưng vẫn chênh lệch khá cao.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://thanhnien.vn/rss/kinh-te/ngan-hang.rss",
+        "publisher_host": "thanhnien.vn",
         "publication_date_from_feed": true
       }
     },
@@ -231,6 +417,33 @@
       "source_verification": {
         "method": "official-rss",
         "feed_url": "https://dantri.com.vn/rss/bat-dong-san.rss",
+        "publisher_host": "dantri.com.vn",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-b8c7853842b80b0052c1",
+      "title": "Đường kết nối cao tốc xuống cấp nghiêm trọng, chi chít \"ổ gà, ổ voi\"",
+      "url": "https://dantri.com.vn/dt360/duong-ket-noi-cao-toc-xuong-cap-nghiem-trong-chi-chit-o-ga-o-voi-20261009141127203.htm",
+      "category": "infrastructure",
+      "module_ids": [
+        "infrastructure"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-10-10T00:00:00+00:00",
+      "source_id": "dantri-current-affairs",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [
+        "infrastructure"
+      ],
+      "importance": 2,
+      "summary": "(Dân trí) - Tỉnh lộ 9 là một tuyến giao thông huyết mạch tại thành phố Huế, giúp kết nối quốc lộ 1 với cao tốc Cam Lộ - La Sơn. Hiện tuyến đường xuống cấp nghiêm trọng, xuất hiện nhiều ổ gà, ổ voi.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://dantri.com.vn/rss/thoi-su.rss",
         "publisher_host": "dantri.com.vn",
         "publication_date_from_feed": true
       }
@@ -422,6 +635,33 @@
       }
     },
     {
+      "id": "article-market-rss-c1c1ecb1075dcedba52b",
+      "title": "Cao tốc Cầu Giẽ - Ninh Bình giảm tốc độ tối đa từ ngày 12/10",
+      "url": "https://dantri.com.vn/thoi-su/cao-toc-cau-gie-ninh-binh-giam-toc-do-toi-da-tu-ngay-1210-20261009221145188.htm",
+      "category": "infrastructure",
+      "module_ids": [
+        "infrastructure"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-10-09T15:15:00+00:00",
+      "source_id": "dantri-current-affairs",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [
+        "infrastructure"
+      ],
+      "importance": 2,
+      "summary": "(Dân trí) - Từ ngày 12/10, tốc độ tối đa trên cao tốc Cầu Giẽ - Ninh Bình dự kiến giảm từ 120km/h xuống 100km/h nhằm bảo đảm an toàn giao thông và phù hợp với điều kiện hạ tầng tuyến đường.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://dantri.com.vn/rss/thoi-su.rss",
+        "publisher_host": "dantri.com.vn",
+        "publication_date_from_feed": true
+      }
+    },
+    {
       "id": "article-market-rss-e5315a483cf9f30aa4bf",
       "title": "TP HCM có 158 dự án nhà ở bán cho người nước ngoài",
       "url": "https://vnexpress.net/tp-hcm-co-158-du-an-nha-o-ban-cho-nguoi-nuoc-ngoai-5130531.html",
@@ -467,6 +707,37 @@
         "method": "official-rss",
         "feed_url": "https://vnexpress.net/rss/kinh-doanh.rss",
         "publisher_host": "vnexpress.net",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-66f570c61a2757420332",
+      "title": "TPHCM đưa sân bay Đất Đỏ, Gò Găng và Dầu Tiếng vào hồ sơ quy hoạch 100 năm",
+      "url": "https://dantri.com.vn/thoi-su/tphcm-dua-san-bay-dat-do-go-gang-va-dau-tieng-vao-ho-so-quy-hoach-100-nam-20261009191026013.htm",
+      "category": "market",
+      "module_ids": [
+        "market",
+        "infrastructure"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-10-09T12:53:38+00:00",
+      "source_id": "dantri-current-affairs",
+      "region_ids": [
+        "hcmc"
+      ],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [
+        "legal",
+        "infrastructure"
+      ],
+      "importance": 2,
+      "summary": "(Dân trí) - Sân bay Đất Đỏ, Gò Găng và Dầu Tiếng đang được TPHCM cập nhật vào hồ sơ Quy hoạch tổng thể thành phố tầm nhìn 100 năm với vai trò là các sân bay chuyên dùng.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://dantri.com.vn/rss/thoi-su.rss",
+        "publisher_host": "dantri.com.vn",
         "publication_date_from_feed": true
       }
     },
@@ -548,6 +819,59 @@
       }
     },
     {
+      "id": "article-market-rss-b0ff2b87a00b0a0ab4d3",
+      "title": "Hà Nội công bố khởi công Công viên Safari Ba Vì và hàng loạt dự án lớn",
+      "url": "https://dantri.com.vn/thoi-su/ha-noi-cong-bo-khoi-cong-cong-vien-safari-ba-vi-va-hang-loat-du-an-lon-20261009173701975.htm",
+      "category": "market",
+      "module_ids": [
+        "market",
+        "infrastructure"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-10-09T10:42:46+00:00",
+      "source_id": "dantri-current-affairs",
+      "region_ids": [
+        "ha-noi"
+      ],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "(Dân trí) - Dịp 10/10, Hà Nội có 96 công trình, dự án khánh thành, khởi công với tổng mức đầu tư khoảng 147.075 tỷ đồng, trong số này có 18 công trình, dự án tiêu biểu.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://dantri.com.vn/rss/thoi-su.rss",
+        "publisher_host": "dantri.com.vn",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-b9dc6be2ac5b17c343c5",
+      "title": "Lãi suất tiền đồng và giá USD liên ngân hàng liên tục giảm",
+      "url": "https://thanhnien.vn/lai-suat-tien-dong-va-gia-usd-lien-ngan-hang-lien-tuc-giam-185261009164808644.htm",
+      "category": "macro",
+      "module_ids": [
+        "macro"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-10-09T10:33:00+00:00",
+      "source_id": "thanhnien-banking",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "Lãi suất tiền đồng và giá USD trên thị trường liên ngân hàng liên tục giảm mạnh trong những ngày qua.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://thanhnien.vn/rss/kinh-te/ngan-hang.rss",
+        "publisher_host": "thanhnien.vn",
+        "publication_date_from_feed": true
+      }
+    },
+    {
       "id": "article-market-rss-d22df230c9375e1bf12d",
       "title": "Palm City khởi công công viên và đường chạy bộ ven sông",
       "url": "https://vnexpress.net/palm-city-khoi-cong-cong-vien-va-duong-chay-bo-ven-song-5130496.html",
@@ -566,6 +890,35 @@
         "method": "official-rss",
         "feed_url": "https://vnexpress.net/rss/bat-dong-san.rss",
         "publisher_host": "vnexpress.net",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-8614cef9daf0e985787a",
+      "title": "Phó Chủ tịch TPHCM Hoàng Nguyên Dinh kiểm tra cao tốc TPHCM - Mộc Bài",
+      "url": "https://dantri.com.vn/thoi-su/pho-chu-tich-tphcm-hoang-nguyen-dinh-kiem-tra-cao-toc-tphcm-moc-bai-20261009155057552.htm",
+      "category": "infrastructure",
+      "module_ids": [
+        "infrastructure"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-10-09T10:03:31+00:00",
+      "source_id": "dantri-current-affairs",
+      "region_ids": [
+        "hcmc"
+      ],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [
+        "infrastructure"
+      ],
+      "importance": 2,
+      "summary": "(Dân trí) - Phó Chủ tịch UBND TPHCM Hoàng Nguyên Dinh biểu dương nỗ lực của các địa phương trong công tác giải phóng mặt bằng dự án cao tốc TPHCM - Mộc Bài, đồng thời đề nghị hoàn thành trong tháng 10.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://dantri.com.vn/rss/thoi-su.rss",
+        "publisher_host": "dantri.com.vn",
         "publication_date_from_feed": true
       }
     },
@@ -618,6 +971,31 @@
       }
     },
     {
+      "id": "article-market-rss-16c7ca9979a57524efe6",
+      "title": "Loạt dự án điện LNG nguy cơ trễ hẹn, Bộ Công Thương tính phương án thay thế",
+      "url": "https://dantri.com.vn/kinh-doanh/loat-du-an-dien-lng-nguy-co-tre-hen-bo-cong-thuong-tinh-phuong-an-thay-the-20261009151253210.htm",
+      "category": "market",
+      "module_ids": [
+        "market"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-10-09T09:17:38+00:00",
+      "source_id": "dantri-business",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "(Dân trí) - Một số dự án điện khí LNG tại miền Bắc có nguy cơ chậm tiến độ, không kịp vận hành trước năm 2030. Bộ Công Thương đề nghị lấy ý kiến phương án thay thế bằng nhiệt điện than, nhiệt điện khí.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://dantri.com.vn/rss/kinh-doanh.rss",
+        "publisher_host": "dantri.com.vn",
+        "publication_date_from_feed": true
+      }
+    },
+    {
       "id": "article-market-rss-435052b8ce6adcf8cd77",
       "title": "Hơn 2.000 người tham gia lễ ra quân dự án Norton Park",
       "url": "https://vnexpress.net/hon-2-000-nguoi-tham-gia-le-ra-quan-du-an-norton-park-5130441.html",
@@ -665,6 +1043,58 @@
       "source_verification": {
         "method": "official-rss",
         "feed_url": "https://dantri.com.vn/rss/bat-dong-san.rss",
+        "publisher_host": "dantri.com.vn",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-c14d05fa1fab91e31bf3",
+      "title": "Bốn cầu Hy vọng tại Đồng Tháp được khánh thành, khởi công",
+      "url": "https://vnexpress.net/bon-cau-hy-vong-tai-dong-thap-duoc-khanh-thanh-khoi-cong-5130241.html",
+      "category": "infrastructure",
+      "module_ids": [
+        "infrastructure"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-10-09T08:54:51+00:00",
+      "source_id": "vnexpress-current-affairs",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "Bốn cầu Hy vọng tại tỉnh Đồng Tháp vừa được khánh thành và khởi công với tổng kinh phí gần 2 tỷ đồng, giúp việc đi lại, vận chuyển nông sản thuận lợi.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://vnexpress.net/rss/thoi-su.rss",
+        "publisher_host": "vnexpress.net",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-8c13c6acdd2f542a7ff0",
+      "title": "Tài xế lái ô tô đi ngược chiều trên cao tốc, bị xe khác ghi hình gửi CSGT",
+      "url": "https://dantri.com.vn/thoi-su/tai-xe-lai-o-to-di-nguoc-chieu-tren-cao-toc-bi-xe-khac-ghi-hinh-gui-csgt-20261009151506982.htm",
+      "category": "infrastructure",
+      "module_ids": [
+        "infrastructure"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-10-09T08:53:30+00:00",
+      "source_id": "dantri-current-affairs",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [
+        "infrastructure"
+      ],
+      "importance": 2,
+      "summary": "(Dân trí) - Anh L. điều khiển ô tô con mang BKS 18A-134.xx có hành vi đi ngược chiều trên cao tốc. Hành vi vi phạm của tài xế đã bị người dân ghi hình và phản ánh tới Cục CSGT.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://dantri.com.vn/rss/thoi-su.rss",
         "publisher_host": "dantri.com.vn",
         "publication_date_from_feed": true
       }
@@ -765,6 +1195,33 @@
       }
     },
     {
+      "id": "article-market-rss-2c113eb49eca5d0476c2",
+      "title": "Hà Nội thông báo điều chỉnh giao thông trên Vành đai 1",
+      "url": "https://dantri.com.vn/thoi-su/ha-noi-thong-bao-dieu-chinh-giao-thong-tren-vanh-dai-1-20261009114445686.htm",
+      "category": "infrastructure",
+      "module_ids": [
+        "infrastructure"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-10-09T07:08:17+00:00",
+      "source_id": "dantri-current-affairs",
+      "region_ids": [
+        "ha-noi"
+      ],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "(Dân trí) - Từ hôm nay, Sở Xây dựng Hà Nội tổ chức giao thông một chiều trên từng chiều đường riêng biệt cho tất cả các loại phương tiện tại một số đoạn trên tuyến Vành đai 1.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://dantri.com.vn/rss/thoi-su.rss",
+        "publisher_host": "dantri.com.vn",
+        "publication_date_from_feed": true
+      }
+    },
+    {
       "id": "article-market-rss-4071c942ca529cc5a83f",
       "title": "Chuyên gia Pháp: 'Hồ Gươm chưa cần dự án tái thiết quy mô lớn'",
       "url": "https://vnexpress.net/chuyen-gia-phap-ho-guom-chua-can-du-an-tai-thiet-quy-mo-lon-5130220.html",
@@ -788,6 +1245,33 @@
         "method": "official-rss",
         "feed_url": "https://vnexpress.net/rss/thoi-su.rss",
         "publisher_host": "vnexpress.net",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-0f633794eed1bc80f342",
+      "title": "Sân bay Cà Mau dự kiến đón chuyến bay thương mại trở lại từ ngày 29.11",
+      "url": "https://thanhnien.vn/san-bay-ca-mau-du-kien-don-chuyen-bay-thuong-mai-tro-lai-tu-ngay-2911-185261009134335898.htm",
+      "category": "infrastructure",
+      "module_ids": [
+        "infrastructure"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-10-09T06:53:00+00:00",
+      "source_id": "thanhnien-policy",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [
+        "infrastructure"
+      ],
+      "importance": 2,
+      "summary": "Sân bay Cà Mau dự kiến đón chuyến bay thương mại trở lại từ ngày 29.11 tới, góp phần rút ngắn khoảng cách với các trung tâm kinh tế lớn.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://thanhnien.vn/rss/kinh-te/chinh-sach-phat-trien.rss",
+        "publisher_host": "thanhnien.vn",
         "publication_date_from_feed": true
       }
     },
@@ -975,6 +1459,33 @@
       }
     },
     {
+      "id": "article-market-rss-f252e2e61aae93e84921",
+      "title": "Kinh hoàng ô tô con phóng như 'tên bắn', chạy ngược chiều cao tốc",
+      "url": "https://thanhnien.vn/kinh-hoang-o-to-con-phong-nhu-ten-ban-chay-nguoc-chieu-cao-toc-185261008210329951.htm",
+      "category": "infrastructure",
+      "module_ids": [
+        "infrastructure"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-10-09T02:24:00+00:00",
+      "source_id": "thanhnien-transport",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [
+        "infrastructure"
+      ],
+      "importance": 2,
+      "summary": "Bất chấp luật giao thông và nguy hiểm, tài xế vẫn liều lĩnh lái ô tô chạy ngược chiều trên cao tốc, thậm chí phóng với tốc độ cao ở làn sát dải phân cách, suýt gây tai nạn với các xe ngược hướng.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://thanhnien.vn/rss/xe/xe-giao-thong.rss",
+        "publisher_host": "thanhnien.vn",
+        "publication_date_from_feed": true
+      }
+    },
+    {
       "id": "article-market-rss-e4bc6fe1e246b54a63e5",
       "title": "Kết nối đa tầng tăng sức hút cho Hồng Hạc City",
       "url": "https://vnexpress.net/ket-noi-da-tang-tang-suc-hut-cho-hong-hac-city-5129979.html",
@@ -995,6 +1506,56 @@
         "method": "official-rss",
         "feed_url": "https://vnexpress.net/rss/bat-dong-san.rss",
         "publisher_host": "vnexpress.net",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-26d662b478d29ebee5ca",
+      "title": "Chuyên gia: Giá vàng có thể tăng mạnh sau cú lao dốc 1.500 USD",
+      "url": "https://dantri.com.vn/kinh-doanh/chuyen-gia-gia-vang-co-the-tang-manh-sau-cu-lao-doc-1500-usd-20261008032729664.htm",
+      "category": "macro",
+      "module_ids": [
+        "macro"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-10-09T02:00:00+00:00",
+      "source_id": "dantri-business",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "(Dân trí) - Sau khi bốc hơi gần 1.500 USD/ounce từ đỉnh, giá vàng thế giới được giới phân tích nhận định đang đứng trước cơ hội phục hồi lớn nhờ chu kỳ mùa vụ và lực mua bền bỉ.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://dantri.com.vn/rss/kinh-doanh.rss",
+        "publisher_host": "dantri.com.vn",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-1b35349ddb1742a52e52",
+      "title": "Giá vàng hôm nay 9.10.2026: Bật tăng thêm gần triệu đồng",
+      "url": "https://thanhnien.vn/gia-vang-hom-nay-9102026-bat-tang-them-gan-trieu-dong-185261009080147425.htm",
+      "category": "macro",
+      "module_ids": [
+        "macro"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-10-09T01:49:00+00:00",
+      "source_id": "thanhnien-banking",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "Giá vàng thế giới lẫn trong nước đồng loạt đi lên khi nhà đầu tư lo lắng về nợ công lẫn lạm phát gia tăng.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://thanhnien.vn/rss/kinh-te/ngan-hang.rss",
+        "publisher_host": "thanhnien.vn",
         "publication_date_from_feed": true
       }
     },
@@ -1043,6 +1604,31 @@
       }
     },
     {
+      "id": "article-market-rss-8f521c13abb3bb826f29",
+      "title": "Giá vàng: Trong nước đi ngang, thế giới phục hồi",
+      "url": "https://dantri.com.vn/kinh-doanh/gia-vang-trong-nuoc-di-ngang-the-gioi-phuc-hoi-20261009001240025.htm",
+      "category": "macro",
+      "module_ids": [
+        "macro"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-10-08T23:19:37+00:00",
+      "source_id": "dantri-business",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "(Dân trí) - Giá vàng thế giới nhích lên song vẫn chưa thể trở lại ngưỡng 4.200 USD trong bối cảnh dự báo lãi suất Mỹ tiếp tục gây sức ép lên kim loại quý.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://dantri.com.vn/rss/kinh-doanh.rss",
+        "publisher_host": "dantri.com.vn",
+        "publication_date_from_feed": true
+      }
+    },
+    {
       "id": "article-market-rss-264c62f26c7446680544",
       "title": "Sếp công ty địa ốc giải mã lý do giá chung cư mới khó giảm",
       "url": "https://dantri.com.vn/bat-dong-san/sep-cong-ty-dia-oc-giai-ma-ly-do-gia-chung-cu-moi-kho-giam-20261008220312416.htm",
@@ -1061,6 +1647,34 @@
         "method": "official-rss",
         "feed_url": "https://dantri.com.vn/rss/bat-dong-san.rss",
         "publisher_host": "dantri.com.vn",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-34b79229d8566752d675",
+      "title": "Quy hoạch cốt nền phải đi cùng quy hoạch thoát nước",
+      "url": "https://thanhnien.vn/quy-hoach-cot-nen-phai-di-cung-quy-hoach-thoat-nuoc-185261008182612118.htm",
+      "category": "market",
+      "module_ids": [
+        "market"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-10-08T23:00:00+00:00",
+      "source_id": "thanhnien-policy",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [
+        "legal",
+        "infrastructure"
+      ],
+      "importance": 2,
+      "summary": "Chống ngập bền vững không phải là \"cuộc chạy đua giữa Sơn tinh với Thủy tinh\" mà là bài toán quản lý tổng hợp các yếu tố địa hình - địa chất - thủy văn - hạ tầng - không gian đô thị theo từng lưu vực.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://thanhnien.vn/rss/kinh-te/chinh-sach-phat-trien.rss",
+        "publisher_host": "thanhnien.vn",
         "publication_date_from_feed": true
       }
     },
@@ -1186,6 +1800,33 @@
       }
     },
     {
+      "id": "article-market-rss-5cb857c1d4b6b5641148",
+      "title": "Làm thế nào để Việt Nam phát triển công nghiệp đường sắt tốc độ cao?",
+      "url": "https://vnexpress.net/lam-the-nao-de-viet-nam-phat-trien-cong-nghiep-duong-sat-toc-do-cao-5130075.html",
+      "category": "infrastructure",
+      "module_ids": [
+        "infrastructure"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-10-08T13:33:01+00:00",
+      "source_id": "vnexpress-current-affairs",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [
+        "infrastructure"
+      ],
+      "importance": 2,
+      "summary": "Việt Nam có thể hình thành ngành công nghiệp đường sắt từ các dự án lớn, nếu bảo đảm vốn, nhân lực, công nghệ và đầu ra để doanh nghiệp trong nước tham gia.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://vnexpress.net/rss/thoi-su.rss",
+        "publisher_host": "vnexpress.net",
+        "publication_date_from_feed": true
+      }
+    },
+    {
       "id": "article-market-rss-67a86b20e81e29b51dc2",
       "title": "TPHCM đề xuất hỗ trợ lãi vay 10 năm cho nhà ở xã hội",
       "url": "https://dantri.com.vn/bat-dong-san/tphcm-de-xuat-ho-tro-lai-vay-10-nam-cho-nha-o-xa-hoi-20261008192145187.htm",
@@ -1234,6 +1875,31 @@
       }
     },
     {
+      "id": "article-market-rss-c0b8fcdc15c66c01d5b3",
+      "title": "Khánh Hòa tháo gỡ 106 dự án, khơi thông 88.000 tỉ đồng",
+      "url": "https://thanhnien.vn/khanh-hoa-thao-go-106-du-an-khoi-thong-88000-ti-dong-185261008163001566.htm",
+      "category": "market",
+      "module_ids": [
+        "market"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-10-08T11:00:00+00:00",
+      "source_id": "thanhnien-policy",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "Trong 9 tháng qua, Khánh Hòa ước tăng trưởng 11,21% so với cùng kỳ, đứng thứ 8 trong 34 tỉnh, thành phố và dẫn đầu vùng Duyên hải Nam Trung bộ",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://thanhnien.vn/rss/kinh-te/chinh-sach-phat-trien.rss",
+        "publisher_host": "thanhnien.vn",
+        "publication_date_from_feed": true
+      }
+    },
+    {
       "id": "article-market-rss-1f9586cf283ea68351e5",
       "title": "Hồng Hạc City và định hướng trở thành cực trung tâm mới tại cửa ngõ Đông Bắc Hà Nội",
       "url": "https://dantri.com.vn/bat-dong-san/hong-hac-city-va-dinh-huong-tro-thanh-cuc-trung-tam-moi-tai-cua-ngo-dong-bac-ha-noi-20261008144323635.htm",
@@ -1258,6 +1924,33 @@
       }
     },
     {
+      "id": "article-market-rss-0d51445a8580b38b65d1",
+      "title": "Siêu sân bay Long Thành đang chạy thử ORAT, vậy ORAT là gì?",
+      "url": "https://thanhnien.vn/sieu-san-bay-long-thanh-dang-chay-thu-orat-vay-orat-la-gi-18526100815465696.htm",
+      "category": "infrastructure",
+      "module_ids": [
+        "infrastructure"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-10-08T09:00:00+00:00",
+      "source_id": "thanhnien-policy",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [
+        "infrastructure"
+      ],
+      "importance": 2,
+      "summary": "Những ngày qua, không khí tại công trường Cảng hàng không quốc tế (HKQT) Long Thành trở nên hối hả hơn bao giờ hết. Đơn vị quản lý dự án phối hợp cùng đơn vị tư vấn IAC và các lực lượng liên quan đang gấp rút triển khai hàng loạt kịch bản chạy thử, diễn tập thực tế.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://thanhnien.vn/rss/kinh-te/chinh-sach-phat-trien.rss",
+        "publisher_host": "thanhnien.vn",
+        "publication_date_from_feed": true
+      }
+    },
+    {
       "id": "article-market-rss-dd7eac68090cccc2c510",
       "title": "Phát triển đô thị tương lai: Từ câu hỏi của WEF đến lời giải của Vinhomes",
       "url": "https://dantri.com.vn/bat-dong-san/phat-trien-do-thi-tuong-lai-tu-cau-hoi-cua-wef-den-loi-giai-cua-vinhomes-20261008151350177.htm",
@@ -1278,6 +1971,36 @@
         "method": "official-rss",
         "feed_url": "https://dantri.com.vn/rss/bat-dong-san.rss",
         "publisher_host": "dantri.com.vn",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-bc555afd6c01c7f89c9a",
+      "title": "Đề xuất xây 7 tuyến đường sắt mới khu vực TP HCM",
+      "url": "https://vnexpress.net/de-xuat-xay-7-tuyen-duong-sat-moi-khu-vuc-tp-hcm-5129989.html",
+      "category": "infrastructure",
+      "module_ids": [
+        "infrastructure"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-10-08T08:55:35+00:00",
+      "source_id": "vnexpress-current-affairs",
+      "region_ids": [
+        "hcmc"
+      ],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [
+        "legal",
+        "infrastructure"
+      ],
+      "importance": 2,
+      "summary": "Theo dự thảo Quy hoạch các tuyến, ga đường sắt khu vực đầu mối TP HCM, Cục Đường sắt Việt Nam đề xuất đầu tư 7 tuyến mới với tổng vốn hơn 544.000 tỷ đồng.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://vnexpress.net/rss/thoi-su.rss",
+        "publisher_host": "vnexpress.net",
         "publication_date_from_feed": true
       }
     },
@@ -1421,6 +2144,31 @@
       }
     },
     {
+      "id": "article-market-rss-a7db1d005657aa5a1c0e",
+      "title": "Fed có thể tăng lãi suất một lần nữa năm nay",
+      "url": "https://vnexpress.net/fed-co-the-tang-lai-suat-mot-lan-nua-nam-nay-5129831.html",
+      "category": "macro",
+      "module_ids": [
+        "macro"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-10-08T04:24:10+00:00",
+      "source_id": "vnexpress-economy",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "Tùy vào số liệu cụ thể của từng phiên họp sắp tới, Fed nhiều khả năng tăng lãi suất thêm một lần nữa trước cuối năm.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://vnexpress.net/rss/kinh-doanh.rss",
+        "publisher_host": "vnexpress.net",
+        "publication_date_from_feed": true
+      }
+    },
+    {
       "id": "article-market-rss-7ee2922650b18531119e",
       "title": "TP HCM sẽ ra tiêu chí riêng cho khu công nghiệp sinh thái",
       "url": "https://vnexpress.net/tp-hcm-se-ra-tieu-chi-rieng-cho-khu-cong-nghiep-sinh-thai-5129818.html",
@@ -1485,6 +2233,31 @@
         "method": "official-rss",
         "feed_url": "https://vnexpress.net/rss/bat-dong-san.rss",
         "publisher_host": "vnexpress.net",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-52a7ea927287833a6c22",
+      "title": "Giá vàng hôm nay 8.10.2026: Đứng yên nhưng người mua lỗ ngay 3 triệu đồng một lượng",
+      "url": "https://thanhnien.vn/gia-vang-hom-nay-8102026-dung-yen-nhung-nguoi-mua-lo-ngay-3-trieu-dong-mot-luong-185261008080558497.htm",
+      "category": "macro",
+      "module_ids": [
+        "macro"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-10-08T01:45:00+00:00",
+      "source_id": "thanhnien-banking",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "Giá vàng trong nước đứng yên nhưng người mua vẫn bị lỗ do chênh lệch mua - bán.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://thanhnien.vn/rss/kinh-te/ngan-hang.rss",
+        "publisher_host": "thanhnien.vn",
         "publication_date_from_feed": true
       }
     },
@@ -1562,6 +2335,33 @@
       }
     },
     {
+      "id": "article-market-rss-79b65344025bb09cfab3",
+      "title": "Người vay mua xe lao đao vì lãi suất thả nổi lên 17-18%",
+      "url": "https://vnexpress.net/nguoi-vay-mua-xe-lao-dao-vi-lai-suat-tha-noi-len-17-18-5129684.html",
+      "category": "macro",
+      "module_ids": [
+        "macro"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-10-07T23:22:28+00:00",
+      "source_id": "vnexpress-economy",
+      "region_ids": [
+        "ha-noi"
+      ],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "Hết thời gian ưu đãi, lãi suất vay mua ôtô thả nổi vọt lên 17-18% mỗi năm, thậm chí gần 20% nếu không kèm bảo hiểm thân vỏ, khiến nhiều chủ xe chịu áp lực trả nợ.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://vnexpress.net/rss/kinh-doanh.rss",
+        "publisher_host": "vnexpress.net",
+        "publication_date_from_feed": true
+      }
+    },
+    {
       "id": "article-market-rss-8da3d2c1e2b8e1bf6d96",
       "title": "5 thói quen trong bếp làm tốn điện và cách khắc phục hiệu quả",
       "url": "https://dantri.com.vn/bat-dong-san/5-thoi-quen-trong-bep-lam-ton-dien-va-cach-khac-phuc-hieu-qua-20261006133426874.htm",
@@ -1580,6 +2380,31 @@
         "method": "official-rss",
         "feed_url": "https://dantri.com.vn/rss/bat-dong-san.rss",
         "publisher_host": "dantri.com.vn",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-52fd8a84cb55d54a5cc8",
+      "title": "Chủ đầu tư sẽ quyết định việc 'mở trạm sạc cho hãng khác hay không",
+      "url": "https://thanhnien.vn/chu-dau-tu-se-quyet-dinh-viec-mo-tram-sac-cho-hang-khac-hay-khong-185261007211356187.htm",
+      "category": "market",
+      "module_ids": [
+        "market"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-10-07T23:00:00+00:00",
+      "source_id": "thanhnien-policy",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "Điểm đáng chú ý nhất trong quy chuẩn của Bộ Công thương về trụ sạc, trạm sạc (QCVN 32) nằm ở quy định bắt buộc về khả năng tương thích và \"dùng chung\". Tuy nhiên, đây không phải một mệnh lệnh hành chính buộc mọi trạm sạc phải mở cửa tự do cho các hãng xe khác.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://thanhnien.vn/rss/kinh-te/chinh-sach-phat-trien.rss",
+        "publisher_host": "thanhnien.vn",
         "publication_date_from_feed": true
       }
     },
@@ -1652,6 +2477,33 @@
       }
     },
     {
+      "id": "article-market-rss-2e39e674a3b4b0e10156",
+      "title": "Phó Thủ tướng Thường trực yêu cầu xử lý nhà thầu chậm trễ thi công sân bay Long Thành",
+      "url": "https://thanhnien.vn/pho-thu-tuong-yeu-cau-xu-ly-nha-thau-cham-tre-thi-cong-san-bay-long-thanh-185261007180539932.htm",
+      "category": "infrastructure",
+      "module_ids": [
+        "infrastructure"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-10-07T11:10:00+00:00",
+      "source_id": "thanhnien-policy",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [
+        "infrastructure"
+      ],
+      "importance": 2,
+      "summary": "Văn phòng Chính phủ vừa có Thông báo kết luận của Phó thủ tướng Thường trực Chính phủ Phạm Gia Túc tại buổi kiểm tra hiện trường, đôn đốc tiến độ thực hiện dự án Cảng hàng không quốc tế Long Thành.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://thanhnien.vn/rss/kinh-te/chinh-sach-phat-trien.rss",
+        "publisher_host": "thanhnien.vn",
+        "publication_date_from_feed": true
+      }
+    },
+    {
       "id": "article-market-rss-0f927bc208220c489f5a",
       "title": "Solaria Rise cất nóc sau hơn một năm thi công, dự kiến bàn giao từ quý III/2027",
       "url": "https://dantri.com.vn/bat-dong-san/solaria-rise-cat-noc-sau-hon-mot-nam-thi-cong-du-kien-ban-giao-tu-quy-iii2027-20261007180022950.htm",
@@ -1676,6 +2528,33 @@
       }
     },
     {
+      "id": "article-market-rss-123588eb00225326ae29",
+      "title": "Cà Mau chuẩn bị dự án 536 tỉ đồng nâng cấp cảng cá và vùng nuôi tôm",
+      "url": "https://thanhnien.vn/ca-mau-chuan-bi-du-an-536-ti-dong-nang-cap-cang-ca-va-vung-nuoi-tom-185261007005521099.htm",
+      "category": "market",
+      "module_ids": [
+        "market"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-10-07T09:49:00+00:00",
+      "source_id": "thanhnien-policy",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [
+        "infrastructure"
+      ],
+      "importance": 2,
+      "summary": "Cà Mau chuẩn bị triển khai dự án thủy sản 536 tỉ đồng, đầu tư cảng cá và hạ tầng vùng nuôi tôm. Cùng với xây dựng công trình, tỉnh đặt yêu cầu liên kết các hộ nuôi, tổ chức lại sản xuất để nâng hiệu quả đầu tư.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://thanhnien.vn/rss/kinh-te/chinh-sach-phat-trien.rss",
+        "publisher_host": "thanhnien.vn",
+        "publication_date_from_feed": true
+      }
+    },
+    {
       "id": "article-market-rss-54e2c2e3dc3a6c3787f9",
       "title": "Bắc Ninh sắp mở bán thêm gần 1.600 căn nhà xã hội",
       "url": "https://vnexpress.net/bac-ninh-sap-mo-ban-them-gan-1-600-can-nha-xa-hoi-5129518.html",
@@ -1696,6 +2575,33 @@
         "method": "official-rss",
         "feed_url": "https://vnexpress.net/rss/bat-dong-san.rss",
         "publisher_host": "vnexpress.net",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-44e6f4c31bda6f209d10",
+      "title": "‘Đóng cửa’ quốc lộ 14D với xe tải lớn: Doanh nghiệp lo đứt tuyến vận tải Việt - Lào",
+      "url": "https://thanhnien.vn/dong-cua-quoc-lo-14d-voi-xe-tai-lon-doanh-nghiep-lo-dut-tuyen-van-tai-viet-lao-185261007111459475.htm",
+      "category": "infrastructure",
+      "module_ids": [
+        "infrastructure"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-10-07T08:19:00+00:00",
+      "source_id": "thanhnien-policy",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [
+        "infrastructure"
+      ],
+      "importance": 2,
+      "summary": "Việc cấm xe tải từ 4 trục trở lên trên quốc lộ 14D từ ngày 10.10 để phục vụ thi công dự án cải tạo, nâng cấp tuyến đường khiến nhiều doanh nghiệp vận tải hàng hóa từ Lào qua cửa khẩu quốc tế Nam Giang lo hoạt động bị đình trệ, ảnh hưởng đến chuỗi logistics và giao thương quốc tế.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://thanhnien.vn/rss/kinh-te/chinh-sach-phat-trien.rss",
+        "publisher_host": "thanhnien.vn",
         "publication_date_from_feed": true
       }
     },
@@ -2011,6 +2917,31 @@
       }
     },
     {
+      "id": "article-market-rss-ed2c6861c62ede842667",
+      "title": "Giá vàng hôm nay 7.10.2026: ACB mua thấp, chênh lệch mua bán lên 5 triệu đồng/lượng",
+      "url": "https://thanhnien.vn/gia-vang-hom-nay-7102026-acb-mua-thap-chenh-lech-mua-ban-len-5-trieu-dong-luong-185261007084247791.htm",
+      "category": "macro",
+      "module_ids": [
+        "macro"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-10-07T02:11:00+00:00",
+      "source_id": "thanhnien-banking",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "Chênh lệch giá mua và bán vàng miếng SJC tại ACB ở mức 5 triệu đồng/lượng, trong khi các công ty kinh doanh khác chỉ quanh mức 1,5 - 3 triệu đồng/lượng.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://thanhnien.vn/rss/kinh-te/ngan-hang.rss",
+        "publisher_host": "thanhnien.vn",
+        "publication_date_from_feed": true
+      }
+    },
+    {
       "id": "article-market-rss-6a33905f07fc76f8a773",
       "title": "Những trải nghiệm trong một ngày tại Serena Riverside",
       "url": "https://vnexpress.net/nhung-trai-nghiem-trong-mot-ngay-tai-serena-riverside-5129295.html",
@@ -2192,6 +3123,34 @@
       "source_verification": {
         "method": "official-rss",
         "feed_url": "https://vnexpress.net/rss/bat-dong-san.rss",
+        "publisher_host": "vnexpress.net",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-ed112116ae9325685d05",
+      "title": "Bầu Đoan được ưu ái trúng đấu giá đất để nuôi CLB bóng đá Thanh Hóa",
+      "url": "https://vnexpress.net/bau-doan-duoc-uu-ai-trung-dau-gia-dat-de-nuoi-clb-bong-da-thanh-hoa-5129037.html",
+      "category": "market",
+      "module_ids": [
+        "market",
+        "legal"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-10-06T17:00:00+00:00",
+      "source_id": "vnexpress-legal",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [
+        "pricing"
+      ],
+      "importance": 2,
+      "summary": "Sau khi tiếp quản CLB bóng đá Thanh Hóa, doanh nhân Cao Tiến Đoan (Bầu Đoan) nhiều lần đề nghị lãnh đạo tỉnh \"tạo điều kiện\" về dự án để có kinh phí lo cho đội bóng.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://vnexpress.net/rss/phap-luat.rss",
         "publisher_host": "vnexpress.net",
         "publication_date_from_feed": true
       }
@@ -2458,6 +3417,60 @@
       }
     },
     {
+      "id": "article-market-rss-313588dea9565edffbb5",
+      "title": "Đề xuất thu thuế 0,2% với đất bỏ hoang",
+      "url": "https://vnexpress.net/de-xuat-thu-thue-0-2-voi-dat-bo-hoang-5129024.html",
+      "category": "market",
+      "module_ids": [
+        "market"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-10-06T06:09:29+00:00",
+      "source_id": "vnexpress-real-estate",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "Bộ Tài chính đề xuất thu thuế 0,2% và không áp dụng hạn mức với đất bỏ hoang, chậm đưa vào sử dụng, gấp gần 7 lần đất ở trong hạn mức.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://vnexpress.net/rss/bat-dong-san.rss",
+        "publisher_host": "vnexpress.net",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-253b624d0f85889a1826",
+      "title": "Soho, The Global City tăng sức hút thương mại nhờ vị trí và hệ sinh thái",
+      "url": "https://vnexpress.net/soho-the-global-city-tang-suc-hut-thuong-mai-nho-vi-tri-va-he-sinh-thai-5128619.html",
+      "category": "market",
+      "module_ids": [
+        "market"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-10-06T06:00:00+00:00",
+      "source_id": "vnexpress-real-estate",
+      "region_ids": [],
+      "project_ids": [
+        "the-global-city"
+      ],
+      "developer_ids": [],
+      "tags": [
+        "legal"
+      ],
+      "importance": 2,
+      "summary": "Vị trí kết nối, quy hoạch ưu tiên trải nghiệm cùng hệ sinh thái đa dạng tạo thêm điều kiện để Soho, The Global City thu hút dòng khách và duy trì hoạt động thương mại dài hạn.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://vnexpress.net/rss/bat-dong-san.rss",
+        "publisher_host": "vnexpress.net",
+        "publication_date_from_feed": true
+      }
+    },
+    {
       "id": "article-market-rss-a825ecdb2636358149a1",
       "title": "Bộ Tài chính đề xuất đánh thuế đất bỏ hoang gấp 7 lần đất trong hạn mức",
       "url": "https://dantri.com.vn/bat-dong-san/bo-tai-chinh-de-xuat-danh-thue-dat-bo-hoang-gap-7-lan-dat-trong-han-muc-20261006124335826.htm",
@@ -2498,6 +3511,60 @@
         "method": "official-rss",
         "feed_url": "https://dantri.com.vn/rss/bat-dong-san.rss",
         "publisher_host": "dantri.com.vn",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-982cd37ff517fa36916c",
+      "title": "Văn phòng, spa, kho hàng vẫn núp bóng căn hộ",
+      "url": "https://vnexpress.net/van-phong-spa-kho-hang-van-nup-bong-can-ho-5125769.html",
+      "category": "market",
+      "module_ids": [
+        "market"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-10-06T04:16:33+00:00",
+      "source_id": "vnexpress-real-estate",
+      "region_ids": [
+        "hcmc"
+      ],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "Dù bị cấm, tình trạng dùng căn hộ làm văn phòng công ty, kho hàng, spa… vẫn xuất hiện ở nhiều chung cư tại TP HCM, gây bức xúc cho không ít cư dân.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://vnexpress.net/rss/bat-dong-san.rss",
+        "publisher_host": "vnexpress.net",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-42f2667e199afb7a9654",
+      "title": "TP HCM thu hồi hơn 6.400 m2 đất công khu C30",
+      "url": "https://vnexpress.net/tp-hcm-thu-hoi-hon-6-400-m2-dat-cong-khu-c30-5128926.html",
+      "category": "market",
+      "module_ids": [
+        "market"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-10-06T03:25:47+00:00",
+      "source_id": "vnexpress-real-estate",
+      "region_ids": [
+        "hcmc"
+      ],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "Hơn 6.400 m2 đất công tại Lô B18 khu C30, phường Diên Hồng vừa được UBND TP HCM thu hồi do đơn vị đang quản lý tự nguyện hoàn trả.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://vnexpress.net/rss/bat-dong-san.rss",
+        "publisher_host": "vnexpress.net",
         "publication_date_from_feed": true
       }
     },
@@ -2550,6 +3617,37 @@
       }
     },
     {
+      "id": "article-market-rss-5b02e1ee569c5283d927",
+      "title": "Le Parc Place đón dư địa tăng trưởng từ hạ tầng phía Tây Hà Nội",
+      "url": "https://vnexpress.net/le-parc-place-don-du-dia-tang-truong-tu-ha-tang-phia-tay-ha-noi-5128832.html",
+      "category": "market",
+      "module_ids": [
+        "market",
+        "infrastructure"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-10-06T03:00:00+00:00",
+      "source_id": "vnexpress-real-estate",
+      "region_ids": [
+        "ha-noi"
+      ],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [
+        "legal",
+        "infrastructure"
+      ],
+      "importance": 2,
+      "summary": "Le Parc Place hưởng lợi từ các tuyến vành đai 3.5, vành đai 4 và mạng lưới metro theo quy hoạch, cùng hệ sinh thái đô thị đã hoàn thiện của ParkCity Hanoi.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://vnexpress.net/rss/bat-dong-san.rss",
+        "publisher_host": "vnexpress.net",
+        "publication_date_from_feed": true
+      }
+    },
+    {
       "id": "article-market-rss-c312b75399d9efa8d506",
       "title": "Bcons Central Park: Giải mã bài toán chọn nhà gần trường, trọn vẹn an cư",
       "url": "https://thanhnien.vn/bcons-central-park-giai-ma-bai-toan-chon-nha-gan-truong-tron-ven-an-cu-185261006093308729.htm",
@@ -2568,6 +3666,88 @@
         "method": "official-rss",
         "feed_url": "https://thanhnien.vn/rss/kinh-te/dia-oc.rss",
         "publisher_host": "thanhnien.vn",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-7b96ae4516c876e4b850",
+      "title": "Giá vàng hôm nay 6.10.2026: Vàng trong nước cao hơn thế giới gần 13 triệu đồng/lượng",
+      "url": "https://thanhnien.vn/gia-vang-hom-nay-6102026-vang-trong-nuoc-cao-hon-the-gioi-gan-13-trieu-dong-luong-185261006084452978.htm",
+      "category": "macro",
+      "module_ids": [
+        "macro"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-10-06T02:03:00+00:00",
+      "source_id": "thanhnien-banking",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "Các công ty kinh doanh vàng trong nước giữ giá khá ổn định khi bước qua ngày thứ 2 trong tuần. Vàng trong nước đắt hơn thế giới 12,7 triệu đồng/lượng.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://thanhnien.vn/rss/kinh-te/ngan-hang.rss",
+        "publisher_host": "thanhnien.vn",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-0f682a2ea3bb9137d4c3",
+      "title": "The Westique Residences tạo không gian sống phục vụ nhu cầu kép",
+      "url": "https://vnexpress.net/the-westique-residences-tao-khong-gian-song-phuc-vu-nhu-cau-kep-5126217.html",
+      "category": "market",
+      "module_ids": [
+        "market"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-10-06T02:00:00+00:00",
+      "source_id": "vnexpress-real-estate",
+      "region_ids": [
+        "hcmc"
+      ],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "The Westique Residences phát triển dòng căn hộ boutique, với số lượng giới hạn 99 căn, hướng đến nhu cầu ở thực, cho thuê và tích sản lâu dài tại khu Tây TP HCM.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://vnexpress.net/rss/bat-dong-san.rss",
+        "publisher_host": "vnexpress.net",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-7b7345495592f1293b2b",
+      "title": "Khải Hoàn Prime đón động lực từ hệ sinh thái đô thị phía Nam TP HCM",
+      "url": "https://vnexpress.net/khai-hoan-prime-don-dong-luc-tu-he-sinh-thai-do-thi-phia-nam-tp-hcm-5128448.html",
+      "category": "market",
+      "module_ids": [
+        "market",
+        "infrastructure"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-10-06T01:00:00+00:00",
+      "source_id": "vnexpress-real-estate",
+      "region_ids": [
+        "hcmc"
+      ],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [
+        "infrastructure"
+      ],
+      "importance": 2,
+      "summary": "Khải Hoàn Prime nằm trên trục Lê Văn Lương, hưởng lợi từ hệ tiện ích của Phú Mỹ Hưng cùng các khu đô thị mới và hạ tầng giao thông phía Nam TP HCM.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://vnexpress.net/rss/bat-dong-san.rss",
+        "publisher_host": "vnexpress.net",
         "publication_date_from_feed": true
       }
     },
@@ -2619,6 +3799,198 @@
       }
     },
     {
+      "id": "article-market-rss-145ead1ab967ac2090ec",
+      "title": "Nhà hẹp ngang đào sâu 0,85 m để mở rộng thêm phòng",
+      "url": "https://vnexpress.net/nha-hep-ngang-dao-sau-0-85-m-de-mo-rong-them-phong-5128592.html",
+      "category": "market",
+      "module_ids": [
+        "market"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-10-05T17:03:00+00:00",
+      "source_id": "vnexpress-real-estate",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "Công trình được hạ nền, chèn thêm tầng lửng để đáp ứng không gian sống cho hai thế hệ.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://vnexpress.net/rss/bat-dong-san.rss",
+        "publisher_host": "vnexpress.net",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-0396e3c25ec40b516c3f",
+      "title": "Hà Nội bãi bỏ quyết định cũ, tiếp tục điều chỉnh quy hoạch đô thị sông Hồng",
+      "url": "https://dantri.com.vn/bat-dong-san/ha-noi-bai-bo-quyet-dinh-cu-tiep-tuc-dieu-chinh-quy-hoach-do-thi-song-hong-20261005200436999.htm",
+      "category": "market",
+      "module_ids": [
+        "market",
+        "legal"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-10-05T13:27:33+00:00",
+      "source_id": "dantri-real-estate",
+      "region_ids": [
+        "ha-noi"
+      ],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [
+        "legal"
+      ],
+      "importance": 2,
+      "summary": "(Dân trí) - Việc bãi bỏ Quyết định 6142 không đồng nghĩa dừng điều chỉnh Quy hoạch phân khu đô thị sông Hồng. Hà Nội sẽ tiếp tục thực hiện nhiệm vụ này theo quy định mới.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://dantri.com.vn/rss/bat-dong-san.rss",
+        "publisher_host": "dantri.com.vn",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-7ebb72a08f7804d37ecb",
+      "title": "Bồi thường đất dự án Công viên Bến Nhà Rồng cao nhất hơn 338 triệu đồng/m2",
+      "url": "https://dantri.com.vn/bat-dong-san/boi-thuong-dat-du-an-cong-vien-ben-nha-rong-cao-nhat-hon-338-trieu-dongm2-20261005172233893.htm",
+      "category": "market",
+      "module_ids": [
+        "market"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-10-05T10:48:22+00:00",
+      "source_id": "dantri-real-estate",
+      "region_ids": [
+        "hcmc"
+      ],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "(Dân trí) - Phương án bồi thường dự án Công viên văn hóa Bến Nhà Rồng - Khánh Hội và cây xanh công cộng Bến Bạch Đằng ở TPHCM được đề xuất giá cao nhất là hơn 338 triệu đồng/m2 đối với đất ở.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://dantri.com.vn/rss/bat-dong-san.rss",
+        "publisher_host": "dantri.com.vn",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-2e38c4d7a376dbec4e2f",
+      "title": "Diễn biến mới tại siêu dự án sân bay gần 200.000 tỷ đồng",
+      "url": "https://dantri.com.vn/bat-dong-san/dien-bien-moi-tai-sieu-du-an-san-bay-gan-200000-ty-dong-20261005152738337.htm",
+      "category": "market",
+      "module_ids": [
+        "market",
+        "infrastructure"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-10-05T09:05:31+00:00",
+      "source_id": "dantri-real-estate",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [
+        "infrastructure"
+      ],
+      "importance": 2,
+      "summary": "(Dân trí) - Hơn 1.195ha đất nông nghiệp phục vụ sân bay Gia Bình đã hoàn thành giải phóng mặt bằng. Tại một khu tái định cư, người dân bắt đầu được đăng ký nhận tạm mặt bằng để xây nhà.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://dantri.com.vn/rss/bat-dong-san.rss",
+        "publisher_host": "dantri.com.vn",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-9609fb8fc8f2ea163461",
+      "title": "Đất nền nhiều nơi ở TPHCM hạ giá tiền tỷ vẫn khó bán",
+      "url": "https://dantri.com.vn/bat-dong-san/dat-nen-nhieu-noi-o-tphcm-ha-gia-tien-ty-van-kho-ban-20261005145948119.htm",
+      "category": "market",
+      "module_ids": [
+        "market"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-10-05T08:33:00+00:00",
+      "source_id": "dantri-real-estate",
+      "region_ids": [
+        "hcmc"
+      ],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "(Dân trí) - Sau thời gian dài tăng giá, đất nền tại TPHCM đang xuất hiện nhiều trường hợp chủ đất phải hạ giá, có lô giảm hàng tỷ đồng nhưng vẫn khó tìm được người mua.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://dantri.com.vn/rss/bat-dong-san.rss",
+        "publisher_host": "dantri.com.vn",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-fc9ac5699fd81e40345a",
+      "title": "Loạt cổ phiếu NVL, PDR, DIG từ đỉnh cao về sát mệnh giá 10.000 đồng",
+      "url": "https://dantri.com.vn/bat-dong-san/loat-co-phieu-nvl-pdr-dig-tu-dinh-cao-ve-sat-menh-gia-10000-dong-20261005125717928.htm",
+      "category": "market",
+      "module_ids": [
+        "market"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-10-05T06:37:07+00:00",
+      "source_id": "dantri-real-estate",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "(Dân trí) - Loạt cổ phiếu bất động sản liên tục sụt giảm, mức giảm cao nhất thống kê đến 38% từ tháng 5 đến nay. Hiện, các mã NVL, PDR, DXG, DIG... đã về vùng mệnh giá.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://dantri.com.vn/rss/bat-dong-san.rss",
+        "publisher_host": "dantri.com.vn",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-ab24e8d1f0b08f5b5084",
+      "title": "Bất động sản TPHCM: Hàng loạt dự án “hồi sinh”, thị trường có gì mới?",
+      "url": "https://dantri.com.vn/bat-dong-san/bat-dong-san-tphcm-hang-loat-du-an-hoi-sinh-thi-truong-co-gi-moi-20261005110725390.htm",
+      "category": "market",
+      "module_ids": [
+        "market"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-10-05T04:25:31+00:00",
+      "source_id": "dantri-real-estate",
+      "region_ids": [
+        "hcmc"
+      ],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [
+        "supply",
+        "pricing"
+      ],
+      "importance": 2,
+      "summary": "(Dân trí) - Trong 9 tháng đầu năm, hàng loạt dự án như One Central Saigon, The Grand Manhattan, Lancaster Lincoln được tháo gỡ vướng mắc, giúp nguồn cung tại TPHCM cải thiện nhưng giá căn hộ vẫn neo cao.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://dantri.com.vn/rss/bat-dong-san.rss",
+        "publisher_host": "dantri.com.vn",
+        "publication_date_from_feed": true
+      }
+    },
+    {
       "id": "article-market-rss-d14ead662479d32064e2",
       "title": "Victoria Village, Aqua City tăng tốc bàn giao, Novaland bước vào mùa ghi nhận doanh thu",
       "url": "https://thanhnien.vn/victoria-village-aqua-city-tang-toc-ban-giao-novaland-buoc-vao-mua-ghi-nhan-doanh-thu-185261005111617316.htm",
@@ -2641,6 +4013,56 @@
       }
     },
     {
+      "id": "article-market-rss-abcbb06012515f1422d3",
+      "title": "Giá USD hôm nay 5.10.2026: Tỷ giá trung tâm bật tăng, ngân hàng đứng yên",
+      "url": "https://thanhnien.vn/gia-usd-hom-nay-5102026-ty-gia-trung-tam-bat-tang-ngan-hang-dung-yen-18526100508373736.htm",
+      "category": "macro",
+      "module_ids": [
+        "macro"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-10-05T02:28:00+00:00",
+      "source_id": "thanhnien-banking",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "Giá USD trong các ngân đứng yên sáng đầu tuần dù thế giới bật tăng cao.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://thanhnien.vn/rss/kinh-te/ngan-hang.rss",
+        "publisher_host": "thanhnien.vn",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-368748d42d48dbeff4ee",
+      "title": "Giá vàng hôm nay 5.10.2026: Vừa mua đã lỗ hơn 2%",
+      "url": "https://thanhnien.vn/gia-vang-hom-nay-5102026-vua-mua-da-lo-hon-2-185261005084847039.htm",
+      "category": "macro",
+      "module_ids": [
+        "macro"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-10-05T02:25:00+00:00",
+      "source_id": "thanhnien-banking",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "Giá vàng trong nước đứng yên 'thăm dò' trước sự tăng nhanh của kim loại quý thế giới. Dù thị trường vàng trong nước trầm lắng nhưng chênh lệch giá mua và bán duy trì 3 triệu đồng/lượng, đồng nghĩa người mua vàng lỗ ngay 2,1%.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://thanhnien.vn/rss/kinh-te/ngan-hang.rss",
+        "publisher_host": "thanhnien.vn",
+        "publication_date_from_feed": true
+      }
+    },
+    {
       "id": "article-market-rss-f26c4bd958cf723a0b88",
       "title": "Đông đảo khách hàng thẩm định tại sự kiện khai trương mô hình kiến trúc A&K Tower",
       "url": "https://thanhnien.vn/dong-dao-khach-hang-tham-dinh-tai-su-kien-khai-truong-mo-hinh-kien-truc-ak-tower-185261004170823205.htm",
@@ -2658,6 +4080,164 @@
       "source_verification": {
         "method": "official-rss",
         "feed_url": "https://thanhnien.vn/rss/kinh-te/dia-oc.rss",
+        "publisher_host": "thanhnien.vn",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-fc02128940b146cb3c3d",
+      "title": "Metro TP.HCM vào giai đoạn bùng nổ",
+      "url": "https://thanhnien.vn/metro-tphcm-vao-giai-doan-bung-no-185261004225740901.htm",
+      "category": "infrastructure",
+      "module_ids": [
+        "infrastructure"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-10-04T23:05:00+00:00",
+      "source_id": "thanhnien-policy",
+      "region_ids": [
+        "hcmc"
+      ],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [
+        "infrastructure"
+      ],
+      "importance": 2,
+      "summary": "Trong khi tuyến metro số 2 (Bến Thành - Tham Lương) đang siết chặt tiến độ và mở rộng tầm nhìn kết nối đến tận Tây Ninh, thì ở khu vực phía đông, hàng loạt siêu dự án metro của TP.HCM cũng đang gấp rút hoàn thiện thủ tục để chuẩn bị đồng loạt khởi công vào cuối năm nay.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://thanhnien.vn/rss/kinh-te/chinh-sach-phat-trien.rss",
+        "publisher_host": "thanhnien.vn",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-a48dc9f4a20876a6ca8c",
+      "title": "Cao tốc Bến Lức - Long Thành tiện lợi thế nào?",
+      "url": "https://thanhnien.vn/cao-toc-ben-luc-long-thanh-tien-loi-the-nao-185261004220722695.htm",
+      "category": "infrastructure",
+      "module_ids": [
+        "infrastructure"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-10-04T23:03:00+00:00",
+      "source_id": "thanhnien-policy",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [
+        "infrastructure"
+      ],
+      "importance": 2,
+      "summary": "Ngay từ trước khi cao tốc Bến Lức - Long Thành thông xe, các diễn đàn trên mạng xã hội đã xôn xao bàn luận và không ít người nôn nao trải nghiệm, cảm nhận sự tiện lợi của tuyến đường cao tốc này.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://thanhnien.vn/rss/kinh-te/chinh-sach-phat-trien.rss",
+        "publisher_host": "thanhnien.vn",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-a0a15451ba230e9d9519",
+      "title": "Cửa ra vào bị kẹt cứng và cách xử lý đơn giản tại nhà",
+      "url": "https://dantri.com.vn/bat-dong-san/cua-ra-vao-bi-ket-cung-va-cach-xu-ly-don-gian-tai-nha-20261004174401203.htm",
+      "category": "market",
+      "module_ids": [
+        "market"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-10-04T23:00:00+00:00",
+      "source_id": "dantri-real-estate",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "(Dân trí) - Cửa chính khó đóng mở gây không ít phiền toái cho sinh hoạt gia đình. Chỉ với vài thao tác đơn giản, bạn hoàn toàn có thể tự xử lý trơn tru mà chưa cần tốn tiền gọi thợ.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://dantri.com.vn/rss/bat-dong-san.rss",
+        "publisher_host": "dantri.com.vn",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-c4eb04d9d9c37f336d6f",
+      "title": "Tài xế trả bao nhiêu tiền để đi cao tốc Bến Lức - Long Thành?",
+      "url": "https://thanhnien.vn/tai-xe-tra-bao-nhieu-tien-de-di-cao-toc-ben-luc-long-thanh-18526100411135635.htm",
+      "category": "infrastructure",
+      "module_ids": [
+        "infrastructure"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-10-04T09:49:00+00:00",
+      "source_id": "thanhnien-transport",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [
+        "infrastructure"
+      ],
+      "importance": 2,
+      "summary": "Xe con đi hết cao tốc Bến Lức - Long Thành phải trả khoảng 111.700 đồng mỗi lượt. Tuy nhiên, mức phí thực tế còn phụ thuộc nhóm phương tiện và điểm vào - ra của từng hành trình.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://thanhnien.vn/rss/xe/xe-giao-thong.rss",
+        "publisher_host": "thanhnien.vn",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-7407de3f5fc450fb590f",
+      "title": "Trung Quốc siết bán nhà trên giấy, giảm rủi ro cho người mua",
+      "url": "https://dantri.com.vn/bat-dong-san/trung-quoc-siet-ban-nha-tren-giay-giam-rui-ro-cho-nguoi-mua-20261004092906135.htm",
+      "category": "market",
+      "module_ids": [
+        "market"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-10-04T02:32:54+00:00",
+      "source_id": "dantri-real-estate",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "(Dân trí) - Để chặn đứng rủi ro chậm bàn giao dự án, chính quyền Trung Quốc đang tái định hình lại toàn bộ chuỗi cấp vốn của ngành bất động sản, hạn chế tối đa việc chủ đầu tư chiếm dụng vốn của người mua.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://dantri.com.vn/rss/bat-dong-san.rss",
+        "publisher_host": "dantri.com.vn",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-3565fe1cb355a2e36227",
+      "title": "Giá vàng hôm nay 4.10.2026: Người mua lỗ đến 8,5 triệu đồng sau nửa tháng",
+      "url": "https://thanhnien.vn/gia-vang-hom-nay-4102026-nguoi-mua-lo-den-85-trieu-dong-sau-nua-thang-185261003205107118.htm",
+      "category": "macro",
+      "module_ids": [
+        "macro"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-10-04T00:43:00+00:00",
+      "source_id": "thanhnien-banking",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "Giá vàng trong nước ghi nhận một tuần đi xuống cùng chiều thế giới khiến người mua lỗ nặng.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://thanhnien.vn/rss/kinh-te/ngan-hang.rss",
         "publisher_host": "thanhnien.vn",
         "publication_date_from_feed": true
       }
@@ -2733,6 +4313,142 @@
       ],
       "importance": 4,
       "summary": "Demo analysis explaining how an upcoming effective date is surfaced without replacing the official document as the source of truth."
+    },
+    {
+      "id": "article-market-rss-64778fd436851699876b",
+      "title": "Cao tốc Bến Lức - Long Thành: Đoạn nào chạy 90 km/giờ, đoạn nào chỉ 80 km/giờ?",
+      "url": "https://thanhnien.vn/cao-toc-ben-luc-long-thanh-doan-nao-chay-90-km-gio-doan-nao-chi-80-km-gio-185261003115315233.htm",
+      "category": "infrastructure",
+      "module_ids": [
+        "infrastructure"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-10-03T08:42:00+00:00",
+      "source_id": "thanhnien-transport",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [
+        "infrastructure"
+      ],
+      "importance": 2,
+      "summary": "Dù tốc độ tối đa trên phần lớn tuyến cao tốc Bến Lức - Long Thành là 90 km/giờ, tuy nhiên có một đoạn dài gần 16 km qua khu vực hai cầu lớn chỉ cho phép tối đa 80 km/giờ. Tài xế không chú ý biển báo sẽ rất dễ chạy quá tốc độ quy định.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://thanhnien.vn/rss/xe/xe-giao-thong.rss",
+        "publisher_host": "thanhnien.vn",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-ec885760dbbf72a0a5bc",
+      "title": "Chậm quy hoạch chung, chính quyền cơ sở tại Tây Ninh lúng túng",
+      "url": "https://thanhnien.vn/cham-quy-hoach-chung-chinh-quyen-co-so-tai-tay-ninh-lung-tung-18526100309464152.htm",
+      "category": "market",
+      "module_ids": [
+        "market"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-10-03T04:40:00+00:00",
+      "source_id": "thanhnien-policy",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [
+        "legal"
+      ],
+      "importance": 2,
+      "summary": "Nhiều dự án nhà ở xã hội phải chờ, xã không biết trả lời dân có được xây nhà hay không… là thực trạng tại nhiều xã, phường ở tỉnh Tây Ninh.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://thanhnien.vn/rss/kinh-te/chinh-sach-phat-trien.rss",
+        "publisher_host": "thanhnien.vn",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-12a80b60e8a590347dc7",
+      "title": "Lần đầu chạy cao tốc Bến Lức - Long Thành, tài xế cần lưu ý gì?",
+      "url": "https://thanhnien.vn/lan-dau-chay-cao-toc-ben-luc-long-thanh-tai-xe-can-luu-y-gi-185261003061440752.htm",
+      "category": "infrastructure",
+      "module_ids": [
+        "infrastructure"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-10-03T02:20:00+00:00",
+      "source_id": "thanhnien-transport",
+      "region_ids": [
+        "hcmc",
+        "dong-nai"
+      ],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [
+        "infrastructure"
+      ],
+      "importance": 2,
+      "summary": "Cao tốc Bến Lức - Long Thành đã chính thức thông xe toàn tuyến, mở thêm lựa chọn di chuyển giữa miền Tây, TP.HCM và Đồng Nai. Tuy nhiên, tài xế lần đầu lưu thông cần đặc biệt chú ý những quy định riêng khi qua hai cầu lớn; bên cạnh các quy định về tốc độ, làn đường, các nút ra vào.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://thanhnien.vn/rss/xe/xe-giao-thong.rss",
+        "publisher_host": "thanhnien.vn",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-ffe2921e99f060eb4e35",
+      "title": "Giá vàng hôm nay 3.10.2026: Đứng yên dưới 144 triệu đồng",
+      "url": "https://thanhnien.vn/gia-vang-hom-nay-3102026-dung-yen-duoi-144-trieu-dong-185261003080720533.htm",
+      "category": "macro",
+      "module_ids": [
+        "macro"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-10-03T01:49:00+00:00",
+      "source_id": "thanhnien-banking",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "Giá vàng trong nước đứng yên với mỗi lượng vàng miếng bán ra dưới ngưỡng 144 triệu đồng.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://thanhnien.vn/rss/kinh-te/ngan-hang.rss",
+        "publisher_host": "thanhnien.vn",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-8eefe10c63cfa8a2afda",
+      "title": "Dự án chống ngập 10.000 tỉ chạy nước rút về đích",
+      "url": "https://thanhnien.vn/du-an-chong-ngap-10000-ti-chay-nuoc-rut-ve-dich-185261002195230563.htm",
+      "category": "market",
+      "module_ids": [
+        "market"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-10-02T23:00:00+00:00",
+      "source_id": "thanhnien-policy",
+      "region_ids": [
+        "hcmc"
+      ],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "Những ngày qua, triều cường kết hợp mưa lớn liên tục khiến nhiều tuyến đường TP.HCM chìm trong biển nước. Giữa muôn vàn vất vả bì bõm lội nước, câu hỏi \"khi nào siêu dự án chống ngập 10.000 tỉ đồng mới đi vào vận hành?\" tiếp tục trở nên nóng bỏng.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://thanhnien.vn/rss/kinh-te/chinh-sach-phat-trien.rss",
+        "publisher_host": "thanhnien.vn",
+        "publication_date_from_feed": true
+      }
     },
     {
       "id": "article-macro-002",
@@ -2847,6 +4563,33 @@
       "summary": "Demo release used to separate the September data period from its October publication date."
     },
     {
+      "id": "article-market-rss-7cf0bf2ccc5304cb6e7c",
+      "title": "Hà Nội làm thủ tục đính chính sổ đỏ online miễn phí",
+      "url": "https://thanhnien.vn/ha-noi-lam-thu-tuc-dinh-chinh-so-do-online-mien-phi-185261002160609881.htm",
+      "category": "legal",
+      "module_ids": [
+        "legal"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-10-02T09:00:00+00:00",
+      "source_id": "thanhnien-policy",
+      "region_ids": [
+        "ha-noi"
+      ],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "Nhằm cải cách quy trình giải quyết thủ tục đất đai, trong thời gian từ nay đến hết ngày 31.12.2026, Hà Nội sẽ làm thủ tục đính chính sổ đỏ do sai sót của cơ quan Nhà nước theo hình thức trực tuyến toàn trình miễn phí cho người dân.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://thanhnien.vn/rss/kinh-te/chinh-sach-phat-trien.rss",
+        "publisher_host": "thanhnien.vn",
+        "publication_date_from_feed": true
+      }
+    },
+    {
       "id": "article-market-rss-43bf9d492b1d8a55dbeb",
       "title": "Trellia Vista - Từ khung cửa mở ra thiên nhiên đến nhịp sống đủ đầy",
       "url": "https://thanhnien.vn/trellia-vista-tu-khung-cua-mo-ra-thien-nhien-den-nhip-song-du-day-185261002114018477.htm",
@@ -2866,6 +4609,31 @@
       "source_verification": {
         "method": "official-rss",
         "feed_url": "https://thanhnien.vn/rss/kinh-te/dia-oc.rss",
+        "publisher_host": "thanhnien.vn",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-9a3078c6962ec0d2debc",
+      "title": "Giá vàng hôm nay 2.10.2026: Giảm nhưng vẫn cao hơn thế giới gần 13 triệu đồng",
+      "url": "https://thanhnien.vn/gia-vang-hom-nay-2102026-giam-nhung-van-cao-hon-the-gioi-gan-13-trieu-dong-185261002083651812.htm",
+      "category": "macro",
+      "module_ids": [
+        "macro"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-10-02T02:18:00+00:00",
+      "source_id": "thanhnien-banking",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "Giá vàng trong nước quay đầu giảm nhưng vẫn cao hơn thế giới gần 13 triệu đồng một lượng.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://thanhnien.vn/rss/kinh-te/ngan-hang.rss",
         "publisher_host": "thanhnien.vn",
         "publication_date_from_feed": true
       }
@@ -2962,6 +4730,31 @@
       }
     },
     {
+      "id": "article-market-rss-c1b9fa7a81b50904209e",
+      "title": "Tuyến đường hơn 7.000 tỉ đồng sắp khởi công, đẩy mạnh kinh tế ven biển Đồng Tháp",
+      "url": "https://thanhnien.vn/tuyen-duong-hon-7000-ti-dong-sap-khoi-cong-day-manh-kinh-te-ven-bien-dong-thap-185261001143609031.htm",
+      "category": "infrastructure",
+      "module_ids": [
+        "infrastructure"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-10-01T10:13:00+00:00",
+      "source_id": "thanhnien-policy",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "Tuyến đường bộ ven biển đoạn qua địa bàn Tiền Giang trước đây được tỉnh Đồng Tháp xác định là công trình trọng điểm, với mục tiêu khởi công trong quý 1/2027.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://thanhnien.vn/rss/kinh-te/chinh-sach-phat-trien.rss",
+        "publisher_host": "thanhnien.vn",
+        "publication_date_from_feed": true
+      }
+    },
+    {
       "id": "article-infra-blt",
       "title": "Cao tốc Bến Lức – Long Thành chính thức thông xe toàn tuyến",
       "url": "https://www2.en.baochinhphu.vn/cao-toc-ben-luc-long-thanh-chinh-thuc-thong-xe-toan-tuyen-102261001024813814.htm",
@@ -2989,6 +4782,31 @@
       ],
       "importance": 5,
       "summary": "Thông tin Chính phủ xác nhận toàn tuyến Bến Lức – Long Thành đưa vào khai thác từ 01/10/2026."
+    },
+    {
+      "id": "article-market-rss-fb85b777074448236514",
+      "title": "Giá vàng hôm nay 1.10.2026: Quay đầu giảm dưới 144 triệu đồng/lượng",
+      "url": "https://thanhnien.vn/gia-vang-hom-nay-1102026-quay-dau-giam-duoi-144-trieu-dong-luong-18526100107092501.htm",
+      "category": "macro",
+      "module_ids": [
+        "macro"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-10-01T03:13:00+00:00",
+      "source_id": "thanhnien-banking",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "Giá vàng trong nước đồng loạt quay đầu giảm xuống dưới 144 triệu đồng một lượng.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://thanhnien.vn/rss/kinh-te/ngan-hang.rss",
+        "publisher_host": "thanhnien.vn",
+        "publication_date_from_feed": true
+      }
     },
     {
       "id": "article-legal-004",
@@ -3118,6 +4936,58 @@
       }
     },
     {
+      "id": "article-market-rss-f17134b4a641fb06eb13",
+      "title": "Lỗi phổ biến khi nhập làn cao tốc, phạt cao nhất 6 triệu đồng",
+      "url": "https://thanhnien.vn/loi-pho-bien-khi-nhap-lan-cao-toc-phat-cao-nhat-6-trieu-dong-185260929161953486.htm",
+      "category": "infrastructure",
+      "module_ids": [
+        "infrastructure"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-09-30T01:49:00+00:00",
+      "source_id": "thanhnien-transport",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [
+        "infrastructure"
+      ],
+      "importance": 2,
+      "summary": "Khi nhập vào đường cao tốc, nếu có làn tăng tốc, tài xế bắt buộc phải sử dụng trước khi vào làn chính. Bỏ qua làn này có thể bị phạt 4 - 6 triệu đồng, đồng thời trừ 2 điểm giấy phép lái xe.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://thanhnien.vn/rss/xe/xe-giao-thong.rss",
+        "publisher_host": "thanhnien.vn",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-58902b9215d71a11247d",
+      "title": "Giá vàng hôm nay 30.9.2026: Đồng loạt tăng",
+      "url": "https://thanhnien.vn/gia-vang-hom-nay-3092026-dong-loat-tang-185260930084357335.htm",
+      "category": "macro",
+      "module_ids": [
+        "macro"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-09-30T01:47:00+00:00",
+      "source_id": "thanhnien-banking",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "Các công ty vàng trong nước tăng giá vàng miếng cùng vàng nhẫn. Kim loại quý trên thị trường thế giới giảm nhẹ sau đà tăng từ mức thấp nhất trong vòng 2 tháng qua.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://thanhnien.vn/rss/kinh-te/ngan-hang.rss",
+        "publisher_host": "thanhnien.vn",
+        "publication_date_from_feed": true
+      }
+    },
+    {
       "id": "article-market-rss-26a99ab4a7eb960df5a0",
       "title": "Giải bài toán sở hữu ngôi nhà đầu tiên cho giới trẻ",
       "url": "https://thanhnien.vn/giai-bai-toan-so-huu-ngoi-nha-dau-tien-cho-gioi-tre-185260929183605157.htm",
@@ -3164,6 +5034,56 @@
       }
     },
     {
+      "id": "article-market-rss-668682e90a894da99def",
+      "title": "Standard Chartered: Tăng trưởng kinh tế Việt Nam mạnh mẽ trong thời gian còn lại của năm 2026",
+      "url": "https://thanhnien.vn/standard-chartered-tang-truong-kinh-te-viet-nam-manh-me-trong-thoi-gian-con-lai-cua-nam-2026-18526092916534325.htm",
+      "category": "macro",
+      "module_ids": [
+        "macro"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-09-29T12:24:00+00:00",
+      "source_id": "thanhnien-banking",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "Ngày 29.9, Ngân hàng Standard Chartered đưa ra báo cáo đánh giá kinh tế mới nhất, dự báo tăng trưởng GDP quý 3/2026 của Việt Nam đạt 8,7% so với cùng kỳ năm trước, tăng từ mức 8,4% trong quý 2. Điều này phản ánh đà tăng trưởng tiếp tục được duy trì bất chấp những thách thức từ môi trường bên ngoài.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://thanhnien.vn/rss/kinh-te/ngan-hang.rss",
+        "publisher_host": "thanhnien.vn",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-937b48c93872ac8f78da",
+      "title": "VPBank ký kết khoản vay 27 triệu USD với JBIC, tài trợ dự án truyền tải điện",
+      "url": "https://thanhnien.vn/vpbank-ky-ket-khoan-vay-27-trieu-usd-voi-jbic-tai-tro-du-an-truyen-tai-dien-185260929174347187.htm",
+      "category": "market",
+      "module_ids": [
+        "market"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-09-29T12:21:00+00:00",
+      "source_id": "thanhnien-banking",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "VPBank ký kết hợp đồng vay 27 triệu USD với JBIC, SMBC và Joyo Bank để tài trợ dự án đường dây truyền tải 220 kV của EVNNPT. Khoản vay góp phần tăng năng lực truyền tải điện, hỗ trợ giải tỏa công suất năng lượng tái tạo tại phía nam.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://thanhnien.vn/rss/kinh-te/ngan-hang.rss",
+        "publisher_host": "thanhnien.vn",
+        "publication_date_from_feed": true
+      }
+    },
+    {
       "id": "article-macro-005",
       "title": "Illustrative bank-rate monitor records a higher 12-month deposit average",
       "url": "#",
@@ -3186,6 +5106,81 @@
       ],
       "importance": 3,
       "summary": "Demo rate commentary tied to monthly observations and source dates."
+    },
+    {
+      "id": "article-market-rss-08cdac4bc964e1e93b78",
+      "title": "Giá vàng hôm nay 29.9.2026: Vàng miếng SJC cao hơn thế giới 12 triệu đồng/lượng",
+      "url": "https://thanhnien.vn/gia-vang-hom-nay-2992026-vang-mieng-sjc-cao-hon-the-gioi-12-trieu-dong-luong-185260929083843366.htm",
+      "category": "macro",
+      "module_ids": [
+        "macro"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-09-29T01:53:00+00:00",
+      "source_id": "thanhnien-banking",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "Giá vàng trong nước tăng giảm trái chiều sau đà giảm mạnh của kim loại quý thế giới, về mức thấp nhất trong vòng 2 tháng qua. Vàng miếng SJC cao hơn thế giới 10,6 - 12 triệu đồng/lượng.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://thanhnien.vn/rss/kinh-te/ngan-hang.rss",
+        "publisher_host": "thanhnien.vn",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-b9d5a93cb4c85b540e23",
+      "title": "Giá vàng, bạc tiếp tục giảm sâu",
+      "url": "https://thanhnien.vn/gia-vang-bac-tiep-tuc-giam-sau-18526092816015988.htm",
+      "category": "macro",
+      "module_ids": [
+        "macro"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-09-28T09:44:00+00:00",
+      "source_id": "thanhnien-banking",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "Giá vàng trong nước tiếp tục giảm thêm 1 triệu đồng mỗi lượng vào đầu giờ chiều 28.9, nâng tổng mức giảm trong ngày lên 2 triệu đồng. Vàng đang giảm về mức thấp nhất trong vòng 2 tháng trở lại đây.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://thanhnien.vn/rss/kinh-te/ngan-hang.rss",
+        "publisher_host": "thanhnien.vn",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-b75103421e36fc943fba",
+      "title": "Giá vàng hôm nay 28.9.2026: Giảm mạnh xuống mức thấp nhất trong một tháng",
+      "url": "https://thanhnien.vn/gia-vang-hom-nay-2892026-giam-manh-xuong-muc-thap-nhat-trong-mot-thang-185260928084456375.htm",
+      "category": "macro",
+      "module_ids": [
+        "macro"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-09-28T02:04:00+00:00",
+      "source_id": "thanhnien-banking",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "Giá vàng trong nước đồng loạt giảm mạnh cùng kim loại quý thế giới. Vàng miếng SJC đang ở mức thấp nhất trong vòng một tháng qua.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://thanhnien.vn/rss/kinh-te/ngan-hang.rss",
+        "publisher_host": "thanhnien.vn",
+        "publication_date_from_feed": true
+      }
     },
     {
       "id": "article-market-rss-8980e4407ae3df6e3e91",
@@ -3354,6 +5349,33 @@
       }
     },
     {
+      "id": "article-market-rss-c2315b7384b803b39629",
+      "title": "Tài xế ô tô dính 'combo lỗi' trên cao tốc, bị CSGT xử phạt 23 triệu đồng",
+      "url": "https://thanhnien.vn/tai-xe-o-to-dinh-combo-loi-tren-cao-toc-bi-csgt-xu-phat-23-trieu-dong-185260925160421739.htm",
+      "category": "infrastructure",
+      "module_ids": [
+        "infrastructure"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-09-26T01:00:00+00:00",
+      "source_id": "thanhnien-transport",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [
+        "infrastructure"
+      ],
+      "importance": 2,
+      "summary": "Không chỉ lái xe chạy vào làn dừng khẩn cấp trên cao tốc, tài xế ô tô còn vi phạm các lỗi như chuyển làn ẩu, dừng xe sai quy định; bị CSGT xử phạt tổng cộng đến 23 triệu đồng.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://thanhnien.vn/rss/xe/xe-giao-thong.rss",
+        "publisher_host": "thanhnien.vn",
+        "publication_date_from_feed": true
+      }
+    },
+    {
       "id": "article-market-rss-31019d2f60021c47bf3b",
       "title": "Giao dịch đất nền phân lô có nên đưa vào luật để quản lý?",
       "url": "https://thanhnien.vn/giao-dich-dat-nen-phan-lo-co-nen-dua-vao-luat-de-quan-ly-185260925175341121.htm",
@@ -3404,6 +5426,170 @@
       }
     },
     {
+      "id": "article-market-rss-042b74c8dc2716927277",
+      "title": "The Glen tại Celadon City: Giải pháp kiến trúc độc bản, vô cùng khan hiếm tại TP.HCM",
+      "url": "https://thanhnien.vn/the-glen-tai-celadon-city-giai-phap-kien-truc-doc-ban-vo-cung-khan-hiem-tai-tphcm-185260925170341618.htm",
+      "category": "market",
+      "module_ids": [
+        "market"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-09-25T10:30:00+00:00",
+      "source_id": "thanhnien-real-estate",
+      "region_ids": [
+        "hcmc"
+      ],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [
+        "pricing"
+      ],
+      "importance": 2,
+      "summary": "Tọa lạc tại vị trí đắt giá nhất Celadon City, phân khu The Glen nâng tầm trải nghiệm chuẩn sống thượng lưu với dòng căn hộ độc đáo - sự kết hợp tinh tế giữa mô hình biệt thự và căn hộ cao cấp 5 tầng.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://thanhnien.vn/rss/kinh-te/dia-oc.rss",
+        "publisher_host": "thanhnien.vn",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-373a2cebc92ee8c438dc",
+      "title": "‘Thượng lưu tĩnh tại’: Xu hướng định hình chuẩn sống từ chiều sâu trải nghiệm",
+      "url": "https://thanhnien.vn/thuong-luu-tinh-tai-xu-huong-dinh-hinh-chuan-song-tu-chieu-sau-trai-nghiem-18526092514591079.htm",
+      "category": "market",
+      "module_ids": [
+        "market"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-09-25T09:00:00+00:00",
+      "source_id": "thanhnien-real-estate",
+      "region_ids": [
+        "ha-noi"
+      ],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "Trong thế giới của những chuẩn mực sống hạng sang, sự xa xỉ không còn được định nghĩa bằng những biểu hiện phô trương, mà bằng chiều sâu trải nghiệm và những giá trị bền bỉ theo thời gian. Tại Global Gate Hà Nội, phiên bản giới hạn The Essence Wing của LUMIÈRE Essence Peak và triết lý Quiet luxury c",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://thanhnien.vn/rss/kinh-te/dia-oc.rss",
+        "publisher_host": "thanhnien.vn",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-8f2054eaabd1915312f3",
+      "title": "Đề nghị không cắt điện, nước đối với công trình vi phạm xây dựng",
+      "url": "https://thanhnien.vn/de-nghi-khong-cat-dien-nuoc-doi-voi-cong-trinh-vi-pham-xay-dung-185260925143234223.htm",
+      "category": "market",
+      "module_ids": [
+        "market"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-09-25T07:54:00+00:00",
+      "source_id": "thanhnien-real-estate",
+      "region_ids": [
+        "hcmc"
+      ],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "Trong văn bản gửi Thường trực HĐND TP.HCM, Thường trực UBND TP.HCM, HoREA đề nghị không áp dụng biện pháp ngừng cung cấp dịch vụ điện, nước đối với trường hợp công trình xây dựng là nhà ở được cải tạo, sửa chữa có vi phạm pháp luật về xây dựng mà chủ sở hữu nhà ở vẫn đang cư trú hợp pháp tại nhà ở đ",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://thanhnien.vn/rss/kinh-te/dia-oc.rss",
+        "publisher_host": "thanhnien.vn",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-d3b8e9fbe57e4ad65a7f",
+      "title": "Từ sức sống hiện hữu của Mizuki Park đến mảnh ghép mới Trellia Vista",
+      "url": "https://thanhnien.vn/tu-suc-song-hien-huu-cua-mizuki-park-den-manh-ghep-moi-trellia-vista-185260924141031873.htm",
+      "category": "market",
+      "module_ids": [
+        "market"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-09-25T01:00:00+00:00",
+      "source_id": "thanhnien-real-estate",
+      "region_ids": [
+        "hcmc"
+      ],
+      "project_ids": [
+        "mizuki-park"
+      ],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "Tiến gần cột mốc hoàn thiện, Trellia Cove - phân khu compound cuối cùng tại khu đô thị tích hợp Mizuki Park (Bình Chánh, TP.HCM), vừa chính thức được cất nóc vào ngày 17.9. Thông tin về Trellia Vista - tháp cuối cùng của phân khu cũng vừa được hé lộ.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://thanhnien.vn/rss/kinh-te/dia-oc.rss",
+        "publisher_host": "thanhnien.vn",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-1cd7a701c9e0d263d5c1",
+      "title": "Nhà mẫu dự án bất động sản thành điểm check - in nổi tiếng ở TP.HCM",
+      "url": "https://thanhnien.vn/nha-mau-du-an-bat-dong-san-thanh-diem-check-in-noi-tieng-o-tphcm-185260924141914935.htm",
+      "category": "market",
+      "module_ids": [
+        "market"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-09-24T07:58:00+00:00",
+      "source_id": "thanhnien-real-estate",
+      "region_ids": [
+        "hcmc"
+      ],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "Ngày 24.9, TT Capital, chủ đầu tư dự án TT GENESIS công bố trung tâm trải nghiệm WOW Center tại khu Nam TP.HCM. Dù là khu nhà mẫu của dự án bất động sản nhưng nơi đây đang làm điểm đến check - in nổi tiếng của người dân TP.HCM bởi tính độc, lạ, hoành tráng của nó.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://thanhnien.vn/rss/kinh-te/dia-oc.rss",
+        "publisher_host": "thanhnien.vn",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-2db3cbe0db8572fc0cd5",
+      "title": "Maison Privée: Khi giới siêu giàu định nghĩa lại chuẩn mực xa xỉ",
+      "url": "https://thanhnien.vn/maison-privee-khi-gioi-sieu-giau-dinh-nghia-lai-chuan-muc-xa-xi-185260923151529601.htm",
+      "category": "market",
+      "module_ids": [
+        "market"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-09-24T01:00:00+00:00",
+      "source_id": "thanhnien-real-estate",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "Khi vật chất phô trương không còn là thước đo duy nhất cho vị thế, giới thượng lưu bắt đầu tìm kiếm những giá trị có chiều sâu. Sự xa xỉ ở kỷ nguyên mới không nằm ở việc sở hữu bao nhiêu tài sản, mà hiện diện ở khả năng tận hưởng những đặc quyền riêng tư và khác biệt.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://thanhnien.vn/rss/kinh-te/dia-oc.rss",
+        "publisher_host": "thanhnien.vn",
+        "publication_date_from_feed": true
+      }
+    },
+    {
       "id": "article-market-nam-long-discovered-6e43c3e611254526",
       "title": "Dấu ấn giá trị thực tại triển lãm Nam Long Experience 2026",
       "url": "https://www.namlongvn.com/tin-tuc/dau-an-gia-tri-thuc-tai-trien-lam-nam-long-experience-2026/",
@@ -3442,6 +5628,137 @@
       }
     },
     {
+      "id": "article-market-rss-ba40dfb2e260c950a90a",
+      "title": "Chuyển làn trên cao tốc thế nào để tránh bị phạt 6 triệu đồng?",
+      "url": "https://thanhnien.vn/chuyen-lan-tren-cao-toc-the-nao-de-tranh-bi-phat-6-trieu-dong-185260922172530217.htm",
+      "category": "infrastructure",
+      "module_ids": [
+        "infrastructure"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-09-23T07:50:00+00:00",
+      "source_id": "thanhnien-transport",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [
+        "infrastructure"
+      ],
+      "importance": 2,
+      "summary": "Bật xi-nhan chưa đồng nghĩa tài xế đã chuyển làn đúng luật. Trên cao tốc, chỉ cần chuyển sai vị trí, cắt liền nhiều làn hoặc không bảo đảm an toàn, người lái ô tô có thể bị phạt tới 6 triệu đồng.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://thanhnien.vn/rss/xe/xe-giao-thong.rss",
+        "publisher_host": "thanhnien.vn",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-5af01214e3dd96dcecbb",
+      "title": "Khám phá chất sống 'động' tại phân khu The Vigos - Hiep Phuoc Premia",
+      "url": "https://thanhnien.vn/kham-pha-chat-song-dong-tai-phan-khu-the-vigos-hiep-phuoc-premia-185260923123854788.htm",
+      "category": "market",
+      "module_ids": [
+        "market"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-09-23T06:00:00+00:00",
+      "source_id": "thanhnien-real-estate",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "Lấy cảm hứng từ tinh thần tự do, cởi mở và giàu năng lượng của Hawaii phóng khoáng, phân khu The Vigos - Hiep Phuoc Premia được phát triển chất sống 'động' đa chiều với 3 giá trị cốt lõi: Khoáng đạt - Tận hưởng - Sinh lực, đưa con người bước ra ngoài, vận động, kết nối và tận hưởng nhiều hơn trong c",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://thanhnien.vn/rss/kinh-te/dia-oc.rss",
+        "publisher_host": "thanhnien.vn",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-4def9b5c8f05b56d2e08",
+      "title": "Serena Riverside đưa trải nghiệm nghỉ dưỡng vào nhịp sống mỗi ngày",
+      "url": "https://thanhnien.vn/serena-riverside-dua-trai-nghiem-nghi-duong-vao-nhip-song-moi-ngay-185260923105707788.htm",
+      "category": "market",
+      "module_ids": [
+        "market"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-09-23T03:46:00+00:00",
+      "source_id": "thanhnien-real-estate",
+      "region_ids": [
+        "hcmc"
+      ],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "Với mô hình Home Resort bên sông Sài Gòn, Serena Riverside hướng đến việc đưa trải nghiệm nghỉ dưỡng vào ngay nơi ở, để cư dân chăm sóc cho bản thân ngay trong nhịp sống thường ngày.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://thanhnien.vn/rss/kinh-te/dia-oc.rss",
+        "publisher_host": "thanhnien.vn",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-925a68b0aac8dbb409f0",
+      "title": "Văn Phú công bố chính sách Vlasta Premier - Phú Thuận, hỗ trợ đến 600 triệu đồng",
+      "url": "https://thanhnien.vn/van-phu-cong-bo-chinh-sach-vlasta-premier-phu-thuan-ho-tro-den-600-trieu-dong-185260923164400874.htm",
+      "category": "market",
+      "module_ids": [
+        "market"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-09-23T03:30:00+00:00",
+      "source_id": "thanhnien-real-estate",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "Văn Phú vừa công bố chính sách bán hàng mới dành cho khách hàng tại dự án Vlasta Premier - Phú Thuận, với tổng giá trị hỗ trợ lên đến 600 triệu đồng tùy phương án.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://thanhnien.vn/rss/kinh-te/dia-oc.rss",
+        "publisher_host": "thanhnien.vn",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-c2d48262040563b323b6",
+      "title": "'Xe tập lái' di chuyển trên cao tốc có phù hợp?",
+      "url": "https://thanhnien.vn/xe-tap-lai-di-chuyen-tren-cao-toc-co-phu-hop-18526092117024172.htm",
+      "category": "infrastructure",
+      "module_ids": [
+        "infrastructure"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-09-22T09:12:00+00:00",
+      "source_id": "thanhnien-transport",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [
+        "infrastructure"
+      ],
+      "importance": 2,
+      "summary": "Cao tốc là tuyến đường giao thông các phương tiện thường di chuyển tốc độ cao, đòi hỏi người lái cần quan sát, xử lý tình huống nhanh. Vì vậy, để học viên \"non tay\" điều khiển xe tập lái trên cao tốc tiềm ẩn không ít rủi ro.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://thanhnien.vn/rss/xe/xe-giao-thong.rss",
+        "publisher_host": "thanhnien.vn",
+        "publication_date_from_feed": true
+      }
+    },
+    {
       "id": "article-market-nam-long-discovered-6ccc19426ae2f0db",
       "title": "‘Trạm xanh’ hút khách tại Nam Long Experience 2026",
       "url": "https://www.namlongvn.com/tin-tuc/tram-xanh-hut-khach-tai-nam-long-experience-2026/",
@@ -3466,6 +5783,61 @@
         "publication_date_verified": true,
         "article_page": "https://www.namlongvn.com/tin-tuc/tram-xanh-hut-khach-tai-nam-long-experience-2026/",
         "discovery_url": "https://www.namlongvn.com/tin-tuc/"
+      }
+    },
+    {
+      "id": "article-market-rss-e28e2bc41c3effa0669e",
+      "title": "Nam Long Experience 2026: Sức hút từ giá trị thực của đại đô thị tích hợp",
+      "url": "https://thanhnien.vn/nam-long-experience-2026-suc-hut-tu-gia-tri-thuc-cua-dai-do-thi-tich-hop-185260922105232524.htm",
+      "category": "market",
+      "module_ids": [
+        "market"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-09-22T04:00:00+00:00",
+      "source_id": "thanhnien-real-estate",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [
+        "nam-long"
+      ],
+      "tags": [],
+      "importance": 2,
+      "summary": "Sau 3 ngày triển lãm diễn ra tại SECC, Nam Long Experience 2026 mở ra câu chuyện gần gũi hơn về cách giá trị thực của một bất động sản được kiểm chứng bằng trải nghiệm thực tế.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://thanhnien.vn/rss/kinh-te/dia-oc.rss",
+        "publisher_host": "thanhnien.vn",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-660a239b2fb4e3b13647",
+      "title": "Bất động sản Bắc Ninh - Những động lực tạo sức bật mới",
+      "url": "https://thanhnien.vn/bat-dong-san-bac-ninh-nhung-dong-luc-tao-suc-bat-moi-185260921204829844.htm",
+      "category": "market",
+      "module_ids": [
+        "market",
+        "legal"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-09-22T01:00:00+00:00",
+      "source_id": "thanhnien-real-estate",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [
+        "infrastructure"
+      ],
+      "importance": 2,
+      "summary": "Sở hữu dân số đông, quy mô kinh tế lớn, tốc độ tăng trưởng hàng đầu cả nước cùng sự mở rộng nhanh chóng về hạ tầng và không gian đô thị, Bắc Ninh đang trở thành một trong những thị trường giàu tiềm năng và hấp dẫn bậc nhất đối với giới đầu tư bất động sản.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://thanhnien.vn/rss/kinh-te/dia-oc.rss",
+        "publisher_host": "thanhnien.vn",
+        "publication_date_from_feed": true
       }
     },
     {
@@ -3502,6 +5874,141 @@
       "candidate_note": "Automatically parsed from official developer page; review before production promotion."
     },
     {
+      "id": "article-market-rss-a9269aaf32b5fc844d50",
+      "title": "3.407 dự án đã được tháo gỡ vướng mắc, khó khăn",
+      "url": "https://thanhnien.vn/3407-du-an-da-duoc-thao-go-vuong-mac-kho-khan-185260921130209872.htm",
+      "category": "market",
+      "module_ids": [
+        "market"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-09-21T07:32:00+00:00",
+      "source_id": "thanhnien-real-estate",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "Bộ Tài chính cho biết, tính đến ngày 15.9 đã tổng hợp được tổng số 4.685 dự án khó khăn, vướng mắc tồn đọng kéo dài trong phạm vi cả nước được đăng ký trên Hệ thống 751 của Bộ Tài chính.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://thanhnien.vn/rss/kinh-te/dia-oc.rss",
+        "publisher_host": "thanhnien.vn",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-50facb8ea0c98cef4ae3",
+      "title": "Chính phủ 'chốt' giữ nguyên công chứng để ngăn ngừa tranh chấp",
+      "url": "https://thanhnien.vn/chinh-phu-chot-giu-nguyen-cong-chung-de-ngan-ngua-tranh-chap-185260921114404833.htm",
+      "category": "market",
+      "module_ids": [
+        "market",
+        "legal"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-09-21T07:31:00+00:00",
+      "source_id": "thanhnien-real-estate",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [
+        "sales",
+        "legal"
+      ],
+      "importance": 2,
+      "summary": "Trước đề xuất bỏ công chứng khi mua bán đất, trong dự án luật Đất đai (sửa đổi) Chính phủ yêu cầu giữ quy định công chứng đối với giao dịch chuyển nhượng quyền sử dụng đất để ngăn ngừa tranh chấp.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://thanhnien.vn/rss/kinh-te/dia-oc.rss",
+        "publisher_host": "thanhnien.vn",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-a1b5b6750df828939289",
+      "title": "Cú hích cho Nhơn Hội: Cực tăng trưởng mới của Gia Lai",
+      "url": "https://thanhnien.vn/cu-hich-cho-nhon-hoi-cuc-tang-truong-moi-cua-gia-lai-185260921143908342.htm",
+      "category": "market",
+      "module_ids": [
+        "market"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-09-21T07:28:00+00:00",
+      "source_id": "thanhnien-real-estate",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [
+        "legal"
+      ],
+      "importance": 2,
+      "summary": "Khu kinh tế Nhơn Hội (Gia Lai) đang đứng trước cơ hội bứt phá lớn nhất từ trước đến nay, khi không gian phát triển mới sau sáp nhập tỉnh cộng hưởng với bản quy hoạch vừa được Chính phủ phê duyệt, định hướng đến năm 2050.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://thanhnien.vn/rss/kinh-te/dia-oc.rss",
+        "publisher_host": "thanhnien.vn",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-01f95ea89c213912b925",
+      "title": "Sống cận đô, không rời nhịp phố: Thế hệ 8X - 9X và 'dòng chảy thời đại'",
+      "url": "https://thanhnien.vn/song-can-do-khong-roi-nhip-pho-the-he-8x-9x-va-dong-chay-thoi-dai-185260921075307949.htm",
+      "category": "market",
+      "module_ids": [
+        "market"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-09-21T01:00:00+00:00",
+      "source_id": "thanhnien-real-estate",
+      "region_ids": [
+        "hcmc",
+        "dong-nai",
+        "binh-duong"
+      ],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "Có một thế hệ người miền Tây rời quê từ những năm đôi mươi, mang theo giấc mơ lập nghiệp tại TP.HCM, Bình Dương cũ, TP.Đồng Nai. Họ trưởng thành giữa văn phòng, nhà máy, khu công nghiệp với nhịp sống nhanh và nhiều áp lực.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://thanhnien.vn/rss/kinh-te/dia-oc.rss",
+        "publisher_host": "thanhnien.vn",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-89e6a932a383544fe9e5",
+      "title": "Chung cư hết thời hạn, quyền lợi người dân ra sao?",
+      "url": "https://thanhnien.vn/chung-cu-het-thoi-han-quyen-loi-nguoi-dan-ra-sao-185260920221139803.htm",
+      "category": "market",
+      "module_ids": [
+        "market"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-09-20T23:00:00+00:00",
+      "source_id": "thanhnien-real-estate",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "Chính phủ đã chính thức thống nhất quy định thời hạn sử dụng nhà chung cư theo niên hạn xây dựng công trình, bảo đảm phù hợp, thống nhất với thời hạn sử dụng công trình. Thời hạn sử dụng thì đã rõ, nhưng điều hàng triệu người dân đang sở hữu nhà chung cư quan tâm là sau khi căn hộ bị tháo dỡ, quyền ",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://thanhnien.vn/rss/kinh-te/dia-oc.rss",
+        "publisher_host": "thanhnien.vn",
+        "publication_date_from_feed": true
+      }
+    },
+    {
       "id": "article-market-nam-long-discovered-e6bb8c5a6eeb04e0",
       "title": "Từ 1,5 tỷ đến 20 tỷ đồng: Câu chuyện bất động sản giá trị thực tại Nam Long Experience 2026",
       "url": "https://www.namlongvn.com/tin-tuc/tu-15-ty-den-20-ty-dong-cau-chuyen-bat-dong-san-gia-tri-thuc-tai-nam-long-experience-2026/",
@@ -3536,6 +6043,115 @@
         "publication_date_verified": true,
         "article_page": "https://www.namlongvn.com/tin-tuc/tu-15-ty-den-20-ty-dong-cau-chuyen-bat-dong-san-gia-tri-thuc-tai-nam-long-experience-2026/",
         "discovery_url": "https://www.namlongvn.com/tin-tuc/"
+      }
+    },
+    {
+      "id": "article-market-rss-00641dae2638058ec3c4",
+      "title": "Khai mạc Nam Long Experience 2026, khách hào hứng ‘khám phá’ bất động sản giá trị thực",
+      "url": "https://thanhnien.vn/khai-mac-nam-long-experience-2026-khach-hao-hung-kham-pha-bat-dong-san-gia-tri-thuc-185260919125717032.htm",
+      "category": "market",
+      "module_ids": [
+        "market"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-09-19T06:00:00+00:00",
+      "source_id": "thanhnien-real-estate",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [
+        "nam-long"
+      ],
+      "tags": [],
+      "importance": 2,
+      "summary": "Ngay trong ngày đầu mở cửa đón khách, Nam Long Experience 2026 (diễn ra từ 18 - 20.9), ghi nhận không khí sôi động với hàng nghìn khách hàng, nhà đầu tư và các gia đình đến tham quan. Không chỉ xem triển lãm bất động sản, khách tham dự khá bất ngờ với loạt hoạt động trải nghiệm đa dạng, từ mini game",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://thanhnien.vn/rss/kinh-te/dia-oc.rss",
+        "publisher_host": "thanhnien.vn",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-c3976170e6b714167275",
+      "title": "A&K Tower sắp 'công chiếu', sẵn sàng bùng nổ thời khắc ra quân",
+      "url": "https://thanhnien.vn/ak-tower-sap-cong-chieu-san-sang-bung-no-thoi-khac-ra-quan-185260918200516457.htm",
+      "category": "market",
+      "module_ids": [
+        "market"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-09-19T01:00:00+00:00",
+      "source_id": "thanhnien-real-estate",
+      "region_ids": [
+        "hcmc"
+      ],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "Ngay sau Lễ ký kết hợp tác với các đại lý phân phối và đối tác tư vấn thương mại, tư vấn quản lý vận hành… A&K Tower sẽ chính thức ra quân với sự kiện 'Khai mở tinh hoa - Khắc danh bản lĩnh' vào ngày 22.9 tại White Palace Phạm Văn Đồng, TP.HCM.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://thanhnien.vn/rss/kinh-te/dia-oc.rss",
+        "publisher_host": "thanhnien.vn",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-1981fe95a2aa1f9e0905",
+      "title": "Giảm tỷ lệ vốn vay có giúp hạ giá nhà?",
+      "url": "https://thanhnien.vn/giam-ty-le-von-vay-co-giup-ha-gia-nha-185260918183238667.htm",
+      "category": "market",
+      "module_ids": [
+        "market",
+        "legal"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-09-18T23:00:00+00:00",
+      "source_id": "thanhnien-real-estate",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [
+        "pricing"
+      ],
+      "importance": 2,
+      "summary": "Góp ý cho luật Kinh doanh bất động sản (sửa đổi), Kiểm toán Nhà nước đề nghị tăng tỷ lệ vốn chủ sở hữu, giảm vốn tín dụng để hạ giá nhà. Thế nhưng xung quanh đề xuất này vẫn còn nhiều ý kiến khác nhau.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://thanhnien.vn/rss/kinh-te/dia-oc.rss",
+        "publisher_host": "thanhnien.vn",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-93b6fd0b19a7f2376dd8",
+      "title": "Xe Lexus lạng lách, chặn đường ô tô khác trên cao tốc gây tai nạn liên hoàn",
+      "url": "https://thanhnien.vn/xe-lexus-lang-lach-chan-duong-o-to-khac-tren-cao-toc-gay-tai-nan-lien-hoan-185260917130450601.htm",
+      "category": "infrastructure",
+      "module_ids": [
+        "infrastructure"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-09-17T07:44:00+00:00",
+      "source_id": "thanhnien-transport",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [
+        "infrastructure"
+      ],
+      "importance": 2,
+      "summary": "Không rõ trước đó có mâu thuẫn gì, tài xế xe sang hiệu Lexus bất chấp nguy hiểm, cố tình lái xe lạng lách, chèn ép thậm chí dừng ngay trên làn đường cao tốc, khiến các phương tiện phía sau không kịp phản ứng dẫn đến tai nạn liên hoàn, làm 2 người bị thương.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://thanhnien.vn/rss/xe/xe-giao-thong.rss",
+        "publisher_host": "thanhnien.vn",
+        "publication_date_from_feed": true
       }
     },
     {
