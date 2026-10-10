@@ -525,7 +525,7 @@
       item(result.aggregate,'Có khoảng giá rao') +
       item(result.scoped,'Chỉ giá theo sản phẩm') +
       item(result.popular,'Chỉ giá phổ biến tháng') +
-      item(result.asp,'Có ASP dự án xác minh') + '</div>';
+      item(result.asp,'Giá TB dự án theo nguồn') + '</div>';
     if (!expanded) return '<div class="market-project-coverage" data-market-project-coverage>' +
       summary + '<p>Giá rao tổng hợp, giá theo phân khúc, giá phổ biến và ASP là các chỉ tiêu khác nhau. ' +
       '<a href="market.html?view=pricing">Xem độ phủ giá bán</a>.</p></div>';
