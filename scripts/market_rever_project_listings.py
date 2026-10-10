@@ -184,8 +184,18 @@ def signature(row):
 
 
 def evaluate(previous, rows, seen, now, run_id):
-    """Persistent verification state and immutable publisher-dated listing releases."""
+    """Persist immutable publisher-dated unit changes, not inferred project trends."""
     published_signatures = {signature(r) for r in rows}
+    # A revised unit offer is valid historical evidence only when its own
+    # publisher update date advances. Same-date price conflicts require review.
+    old_by_listing = {}
+    for published in rows:
+        if published.get("review_status") != "automated-two-hosted-checks":
+            continue
+        key = (published.get("project_id"), published.get("listing_id"))
+        previous = old_by_listing.get(key)
+        if not previous or published.get("source_updated_date", "") > previous.get("source_updated_date", ""):
+            old_by_listing[key] = published
     states = {r["listing_id"]: r for r in previous.get("listings", [])}
     accepted = []
     decisions = []
@@ -201,8 +211,11 @@ def evaluate(previous, rows, seen, now, run_id):
         states[lid] = {"listing_id": lid, "project_id": detail["project_id"],
                        "source_url": detail["source_url"], "checks": checks}
         decision = "waiting-for-independent-verification"
+        prior = old_by_listing.get((detail["project_id"], lid))
         if fingerprint in published_signatures:
             decision = "previously-recorded"
+        elif prior and detail["source_updated_date"] <= prior["source_updated_date"]:
+            decision = "publisher-date-not-newer-than-recorded"
         elif (now.date() - date.fromisoformat(detail["source_updated_date"])).days > MAX_AGE_DAYS:
             decision = "historical-listing-not-current"
         elif len(checks) >= 2 and checks[-1]["signature"] == checks[-2]["signature"] and (
@@ -301,7 +314,10 @@ def run(config, history, state, fetcher, now, run_id, publish=True):
         decisions = [{"listing_id": x["listing_id"],
                       "project_id": x["project_id"],
                       "decision": "pr-diagnostic-only"} for x in qualifying]
-    final_rows = (history.get("data", []) + additions)[-250:]
+    # Publisher-dated verified unit changes are historical evidence: do not
+    # silently drop oldest proof when the source ledger exceeds 250 rows.
+    # Market continues showing only a compact subset of live unit references.
+    final_rows = history.get("data", []) + additions
     production = {
         **history, "schema_version": 1,
         "collection_mode": "individually-publisher-verified-apartment-asking-only",
