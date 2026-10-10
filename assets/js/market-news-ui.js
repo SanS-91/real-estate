@@ -267,9 +267,9 @@
     return `<div class="market-news">
       <div class="market-news-heading">
         <div>
-          <span class="market-news-heading__eyebrow">${esc(MODULE_CONFIG[module]?.eyebrow || MODULE_CONFIG.market.eyebrow)}</span>
-          <h2>${esc(MODULE_CONFIG[module]?.title || MODULE_CONFIG.market.title)}</h2>
-          <p>${esc(MODULE_CONFIG[module]?.description || MODULE_CONFIG.market.description)}</p>
+          <span class="market-news-heading__eyebrow" data-news-view-label="${esc(module)}.eyebrow">${esc(window.App.newsViewCopy?.(module)?.eyebrow || MODULE_CONFIG[module]?.eyebrow || MODULE_CONFIG.market.eyebrow)}</span>
+          <h2 data-news-view-label="${esc(module)}.title">${esc(window.App.newsViewCopy?.(module)?.title || MODULE_CONFIG[module]?.title || MODULE_CONFIG.market.title)}</h2>
+          <p data-news-view-label="${esc(module)}.description">${esc(window.App.newsViewCopy?.(module)?.description || MODULE_CONFIG[module]?.description || MODULE_CONFIG.market.description)}</p>
         </div>
         <div class="market-news-heading__total" aria-label="${visibleArticles.length} bài viết từ ${publishers} nguồn">
           <strong>${visibleArticles.length}</strong><span>bài · ${publishers} nguồn</span>
