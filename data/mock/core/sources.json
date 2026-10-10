@@ -2,7 +2,7 @@
   "schema_version": 1,
   "build_id": "phase5.5a-listing-market-20261008",
   "generated_at": "2026-10-08T14:32:55.012Z",
-  "record_count": 50,
+  "record_count": 57,
   "data": [
     {
       "id": "demo-official",
@@ -603,6 +603,90 @@
       "source_priority": 3,
       "active": true,
       "notes": "Publisher RSS metadata only. Editorial classification; not evidence for numeric indicators or official legal registries."
+    },
+    {
+      "id": "tuoitre-business",
+      "name": "Tuổi Trẻ Kinh doanh",
+      "source_type": "publisher",
+      "base_url": "https://tuoitre.vn/",
+      "language": "vi",
+      "collection_method": "official-rss-metadata",
+      "fetch_frequency": "daily",
+      "source_priority": 3,
+      "active": true,
+      "notes": "Link, title, date and excerpt from publisher RSS only; not evidence for verified financial metrics or official registries."
+    },
+    {
+      "id": "tuoitre-current-affairs",
+      "name": "Tuổi Trẻ Thời sự",
+      "source_type": "publisher",
+      "base_url": "https://tuoitre.vn/",
+      "language": "vi",
+      "collection_method": "official-rss-metadata",
+      "fetch_frequency": "daily",
+      "source_priority": 3,
+      "active": true,
+      "notes": "Link, title, date and excerpt from publisher RSS only; not evidence for verified financial metrics or official registries."
+    },
+    {
+      "id": "tuoitre-legal",
+      "name": "Tuổi Trẻ Pháp luật",
+      "source_type": "publisher",
+      "base_url": "https://tuoitre.vn/",
+      "language": "vi",
+      "collection_method": "official-rss-metadata",
+      "fetch_frequency": "daily",
+      "source_priority": 3,
+      "active": true,
+      "notes": "Link, title, date and excerpt from publisher RSS only; not evidence for verified financial metrics or official registries."
+    },
+    {
+      "id": "dantri-business",
+      "name": "Dân trí Kinh doanh",
+      "source_type": "publisher",
+      "base_url": "https://dantri.com.vn/",
+      "language": "vi",
+      "collection_method": "official-rss-metadata",
+      "fetch_frequency": "daily",
+      "source_priority": 3,
+      "active": true,
+      "notes": "Link, title, date and excerpt from publisher RSS only; not evidence for verified financial metrics or official registries."
+    },
+    {
+      "id": "dantri-current-affairs",
+      "name": "Dân trí Thời sự",
+      "source_type": "publisher",
+      "base_url": "https://dantri.com.vn/",
+      "language": "vi",
+      "collection_method": "official-rss-metadata",
+      "fetch_frequency": "daily",
+      "source_priority": 3,
+      "active": true,
+      "notes": "Link, title, date and excerpt from publisher RSS only; not evidence for verified financial metrics or official registries."
+    },
+    {
+      "id": "dantri-legal",
+      "name": "Dân trí Pháp luật",
+      "source_type": "publisher",
+      "base_url": "https://dantri.com.vn/",
+      "language": "vi",
+      "collection_method": "official-rss-metadata",
+      "fetch_frequency": "daily",
+      "source_priority": 3,
+      "active": true,
+      "notes": "Link, title, date and excerpt from publisher RSS only; not evidence for verified financial metrics or official registries."
+    },
+    {
+      "id": "dantri-gold",
+      "name": "Dân trí Giá vàng",
+      "source_type": "publisher",
+      "base_url": "https://dantri.com.vn/",
+      "language": "vi",
+      "collection_method": "official-rss-metadata",
+      "fetch_frequency": "daily",
+      "source_priority": 3,
+      "active": true,
+      "notes": "Link, title, date and excerpt from publisher RSS only; not evidence for verified financial metrics or official registries."
     }
   ]
 }
