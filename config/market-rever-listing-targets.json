@@ -40,6 +40,15 @@
       "project_id": "vinhomes-grand-park",
       "publisher_project_name": "Vinhomes Grand Park",
       "url": "https://rever.vn/s/vinhomes-grand-park/mua/can-ho"
+    },
+    {
+      "project_id": "lumiere-riverside",
+      "publisher_project_name": "Lumiere Riverside",
+      "url": "https://rever.vn/s/masterise-lumiere-riverside/mua/can-ho",
+      "discovery_urls": [
+        "https://rever.vn/s/masterise-lumiere-riverside/mua"
+      ],
+      "source_scope_note": "Apartment-only Rever project listings. Require listing detail project match, original dated update <90 days and two independent hosted checks; never aggregate into project ASP."
     }
   ],
   "discovery_note": "Project-specific apartment sale catalogs only. Each independently verified listing must identify the exact configured project on its own detail page, have an explicit publisher-updated date no older than 90 days and match in two GitHub-hosted runs at least one hour apart. Ads remain individual asking offers, never price-history trend or project ASP."
