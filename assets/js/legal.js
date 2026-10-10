@@ -354,6 +354,10 @@
   }
 
   function articleMatchesFilters(article) {
+    // RSS stories remain in category=market but can be relevant legal news.
+    // Exclude unrelated market articles and illustrative/demo entries.
+    const isLegal = article.category === 'legal' || (article.tags || []).includes('legal') || (article.legal_document_ids || []).length > 0;
+    if (!isLegal || String(article.source_id || '').startsWith('demo-') || article.url === '#') return false;
     const relatedDocs = Resolver.getEntities('legal-document', article.legal_document_ids || []);
     if (state.agency && !relatedDocs.some(document => (document.agency_ids || []).includes(state.agency))) return false;
     if (state.topic && !relatedDocs.some(document => (document.topic_ids || []).includes(state.topic))) return false;
