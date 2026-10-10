@@ -32,7 +32,7 @@ TOPIC_PATTERNS = {
     "pricing": ("gia ban", "gia can ho", "gia nha", "gia dat", "bang gia dat"),
     "sales": ("doanh so", "giao dich", "tieu thu", "hap thu", "ban duoc"),
     "legal": ("phap ly", "so hong", "luat dat dai", "quy hoach"),
-    "infrastructure": ("ha tang", "metro", "cao toc", "duong vanh dai", "san bay"),
+    "infrastructure": ("ha tang", "metro", "cao toc", "duong vanh dai", "san bay", "quoc lo", "nut giao", "duong sat", "cau duong"),
 }
 DEV_PATTERNS = {
     "nam-long": ("nam long",),
@@ -43,14 +43,15 @@ DEV_PATTERNS = {
     "dat-xanh": ("dat xanh",),
 }
 MODULE_PATTERNS = {
-    "legal": ("luat dat dai", "nghi dinh", "thong tu", "chinh sach nha o", "phap ly du an", "quy hoach su dung dat", "so hong", "bang gia dat", "tien su dung dat", "cap giay chung nhan"),
-    "infrastructure": ("vanh dai", "cao toc", "metro", "san bay", "cau duong", "duong sat", "giai phong mat bang", "khoi cong", "thong xe", "ha tang giao thong"),
-    "macro": ("lai suat", "ty gia", "gia vang", "cpi", "lam phat", "tang truong tin dung", "cung tien", "ngan hang nha nuoc", "gdp", "tang truong kinh te"),
+    "legal": ("luat dat dai", "luat nha o", "luat kinh doanh bat dong san", "nghi dinh", "thong tu", "chinh sach nha o", "phap ly du an", "quy hoach su dung dat", "quy hoach do thi", "quy hoach tinh", "so hong", "so do", "bang gia dat", "tien su dung dat", "cap giay chung nhan", "boi thuong tai dinh cu", "chuyen muc dich su dung dat", "thu hoi dat", "dau gia dat", "cap phep xay dung"),
+    "infrastructure": ("vanh dai", "cao toc", "metro", "san bay", "cau duong", "duong sat", "giai phong mat bang", "khoi cong", "thong xe", "ha tang giao thong", "quoc lo", "duong tinh", "tuyen duong", "nut giao", "cau vuot", "ham chui", "tien do thi cong", "duong lien vung", "dau tu cong", "du an giao thong"),
+    "macro": ("lai suat", "lai vay", "ty gia", "gia vang", "vang sjc", "cpi", "lam phat", "tang truong tin dung", "tang truong cho vay", "cung tien", "thanh khoan ngan hang", "ngan hang nha nuoc", "gdp", "tang truong kinh te", "kinh te vi mo", "chi so gia tieu dung", "chinh sach tien te", "tin dung bat dong san", "ty le du tru bat buoc"),
 }
 MODULE_FEED_FILTERS = {
     "filtered-economy": ("macro", "market", "legal"),
     "filtered-policy-infrastructure": ("infrastructure", "legal", "market"),
     "filtered-property-legal": ("legal",),
+    "filtered-macro": ("macro",),
 }
 REGION_PATTERNS = {
     "hcmc": ("tp hcm", "tp.hcm", "tphcm", "ho chi minh", "sai gon", "thu duc"),
