@@ -969,7 +969,7 @@
         ? `${r.portal_max_snapshots} kỳ · ${portal.span_days} ngày`
         : '—';
       const monthly = r.monthly_series.map(x =>
-        `${x.scope === 'subproject' ? (x.subproject_name||x.subject) : 'Toàn dự án'}: ${x.observations} tháng`).join(' · ') || '—';
+        `${x.scope === 'subproject' ? (x.subproject_name||x.subject) : 'Toàn dự án'}: ${x.observations} tháng (${x.indexed_months} chỉ mục · ${x.verified_months} đã kiểm chứng)`).join(' · ') || '—';
       const status = r.history_ready
         ? '<span class="history-depth-state is-ready">Đạt mốc quan sát</span>'
         : '<span class="history-depth-state is-short">Chưa đủ lịch sử</span>';
@@ -987,6 +987,7 @@
       <div class="market-price-history-audit__body">
         <p>Kiểm tra tự động trên dữ liệu đang có: ${esc(report.portal_priced_projects)}/${esc(report.total_projects)} dự án có snapshot giá rao đầy đủ; ${esc(report.monthly_priced_projects)} dự án có dữ liệu giá phổ biến theo tháng; ${esc(report.unit_offer_projects)} dự án có tin từng căn đã xác minh còn hiệu lực.</p>
         <p><strong>Điều kiện sơ bộ:</strong> ít nhất 3 snapshot giá cùng nguồn và loại sản phẩm cách nhau từ 30 ngày, hoặc 3 tháng cùng chuỗi từ một nguồn trải dài ít nhất 2 tháng. Đây không phải kết luận xu hướng giá. Số tháng của các phân khu không được cộng thành lịch sử giá toàn dự án.</p>
+        <p><strong>Chất lượng nguồn:</strong> “chỉ mục” là kỳ giá có nhãn tháng trong bằng chứng nguồn đã rà soát, chưa được hai lượt thu thập độc lập xác nhận; “đã kiểm chứng” là kỳ phát hành sau bước kiểm tra nguồn. Cả hai không phải ASP giao dịch.</p>
         <div class="table-wrap"><table class="data-table mobile-record-table data-table--history-readiness">
           <thead><tr><th>Dự án</th><th>Giá rao</th><th>Giá phổ biến tháng</th><th class="numeric">Tin từng căn</th><th class="numeric">ASP / Doanh số</th><th>Độ sâu</th></tr></thead>
           <tbody>${cells || '<tr><td colspan="6">Không có dự án phù hợp bộ lọc.</td></tr>'}</tbody>

@@ -79,7 +79,7 @@
         "metric": "73.74 triệu/m²",
         "range": "Khoảng giá: 57 - 100.19 triệu"
       },
-      "methodology_note": "New independent publisher period requires human evidence review. Never blend source metrics or use single listing as project ASP.",
+      "methodology_note": "Source-authored monthly popular asking price for Lumière Boulevard. Independently verified on two distinct GitHub runner captures at least one hour apart; not whole-project transaction ASP. September 2026 indexed baseline is separately labelled and not independently reverified.",
       "series_key": "onehousing-lumiere-boulevard-apartment-popular-asking",
       "source_record_id": "onehousing-lumiere-boulevard-apartment-2026-09",
       "review_date": "2026-10-09",
@@ -90,7 +90,8 @@
         "37907349276"
       ],
       "verification_mode": "two-independent-live-publisher-checks",
-      "verified_at": "2026-10-09"
+      "verified_at": "2026-10-09",
+      "subproject_id": "lumiere-boulevard"
     }
   ]
 }

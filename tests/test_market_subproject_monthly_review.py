@@ -86,6 +86,16 @@ assert not release.verification_proofs(v2,lumiere,approval)
 ready,decisions,issues=release.evaluate(history,baseline,queue,s2["data"],[approval],today)
 assert not issues and len(ready)==1 and decisions[0]["status"]=="ready"
 assert ready[0]["subproject_name"]=="Lumière Boulevard"
+assert ready[0]["subproject_id"]=="lumiere-boulevard"
+missing_id=copy.deepcopy(published_history)
+missing_id[-1].pop("subproject_id",None)
+assert "source-or-subproject-changed" in release.validate_history(missing_id,baseline)
+wrong_id=copy.deepcopy(published_history)
+wrong_id[-1]["subproject_id"]="masteri-centre-point"
+assert "source-or-subproject-changed" in release.validate_history(wrong_id,baseline)
+wrong_candidate=copy.deepcopy(lumiere)
+wrong_candidate["subproject_id"]="masteri-centre-point"
+assert not release.candidate_in_series(wrong_candidate,base)
 assert ready[0]["series_key"]=="onehousing-lumiere-boulevard-apartment-popular-asking"
 assert ready[0]["period"]=="2026-10" and ready[0]["value_vnd_per_m2"]==73_740_000
 assert ready[0]["review_status"]=="reviewed-release"
