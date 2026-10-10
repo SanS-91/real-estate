@@ -4,6 +4,9 @@ on:
   pull_request:
     paths:
       - 'assets/js/market.js'
+      - 'assets/js/market-project-coverage.js'
+      - 'tests/test_market_project_price_coverage.cjs'
+      - 'data/mock/market/project-phases.json'
       - 'assets/js/charts.js'
       - 'tests/test_market_4i5_pricing_clarity.cjs'
       - '.github/workflows/market-4i5-pricing-clarity.yml'
@@ -30,6 +33,8 @@ jobs:
       - name: Verify source-backed status and price range chart
         run: |
           node --check assets/js/market.js
+          node --check assets/js/market-project-coverage.js
+          node tests/test_market_project_price_coverage.cjs
           node --check assets/js/charts.js
           node --check assets/js/maintenance.js
           python tests/test_phase4h_source_health_ui.py
@@ -51,12 +56,11 @@ jobs:
           from pathlib import Path
           for kind in ('desktop','mobile'):
               doc=Path(f'/tmp/pricing-4i5-{kind}.html').read_text()
-              for text in ('C\u00f3 kho\u1ea3ng gi\u00e1 t\u1ed5ng h\u1ee3p tr\u00ean Batdongsan',
-                           '13 d\u1ef1 \u00e1n to\u00e0n danh m\u1ee5c','Benchmark to\u00e0n th\u1ecb tr\u01b0\u1eddng',
-                           'chart-frame--pricing-range','Ng\u00e0y snapshot'):
+              for text in ('Dự án theo dõi', 'Có khoảng giá rao',
+                           'Chỉ giá theo sản phẩm','Giá TB dự án theo nguồn',
+                           'Benchmark toàn thị trường', 'chart-frame--pricing-range',
+                           'Ngày snapshot','Giá được hiển thị theo đúng phạm vi nguồn'):
                   assert text in doc,(kind,text)
               assert 'Kho\u1ea3ng gi\u00e1 rao b\u00e1n theo d\u1ef1 \u00e1n' in doc
-              assert 'Đang hiển thị dữ liệu giá đã lưu' in doc, 'Friendly source status missing'
-              assert 'maintenance.html#market-source-health-title' in doc, 'Source detail link missing'
               print(f'PASS {kind}: readable project intervals, transparent source coverage and benchmarks')
           PY

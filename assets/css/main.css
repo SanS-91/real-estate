@@ -3051,3 +3051,37 @@ body[data-page="home"] .metric-grid {
    .news-health-overview {grid-template-columns:minmax(0,1fr);}
   .news-health-overview small {grid-column:1;}
 }
+
+
+/* Market coverage: one concise, source-separated project price audit. */
+.market-project-coverage {
+  margin:12px 0 16px; padding:12px 14px; background:var(--color-surface);
+  border:1px solid var(--color-border); border-radius:var(--radius-md);
+}
+.market-project-coverage__stats {
+  display:grid; grid-template-columns:repeat(5,minmax(0,1fr)); gap:0;
+}
+.market-project-coverage__stat {
+  min-width:0; padding:5px 12px; border-right:1px solid var(--color-border);
+}
+.market-project-coverage__stat:first-child {padding-left:0;}
+.market-project-coverage__stat:last-child {border-right:0;}
+.market-project-coverage__stat strong {display:block; font-size:19px; font-variant-numeric:tabular-nums; color:#713e4e;}
+.market-project-coverage__stat span {display:block; font-size:11px; line-height:1.45; color:var(--color-text-secondary);}
+.market-project-coverage > p {margin:11px 0 0; font-size:11px; line-height:1.55; color:var(--color-text-secondary);}
+.market-project-coverage__details {margin-top:10px; border-top:1px solid var(--color-border);}
+.market-project-coverage__details > summary {padding:10px 0 4px; font-size:12px; cursor:pointer; font-weight:700;}
+.market-project-coverage__details .table-wrap {margin-top:9px;}
+.data-table--market-coverage {font-size:11px;}
+.data-table--market-coverage td:nth-child(2) {max-width:190px; white-space:normal;}
+.data-table--market-projects .market-listing-cell .table-subtext {font-size:10px; line-height:1.35; white-space:normal;}
+@media(max-width:760px) {
+  .market-project-coverage__stats {grid-template-columns:repeat(3,minmax(0,1fr)); gap:8px 0;}
+  .market-project-coverage__stat {padding:5px 9px;}
+  .market-project-coverage__stat:nth-child(3) {border-right:0;}
+}
+@media(max-width:420px) {
+  .market-project-coverage__stats {grid-template-columns:repeat(2,minmax(0,1fr));}
+  .market-project-coverage__stat:nth-child(3) {border-right:1px solid var(--color-border);}
+  .market-project-coverage__stat:nth-child(2n) {border-right:0;}
+}

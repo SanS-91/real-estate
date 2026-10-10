@@ -14,7 +14,8 @@ assert 'assets/css/main.css?v=5.5C1' in html
 assert 'assets/js/localization-dynamic.js?v=5.5C1' in html
 
 assert 'Verified ASP</th>' in market
-assert 'Asking range</th>' in market
+assert 'Giá tham chiếu</th>' in market
+assert 'projectPriceCell(coverage?.byId[project.id],listing)' in market
 assert '1Y trend</th>' in market
 assert 'function priceLayerControls()' in market
 assert "data-price-layer=\"verified\"" in market
