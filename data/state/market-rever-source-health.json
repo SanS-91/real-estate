@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-10-10T02:37:10.183202+00:00",
+  "generated_at": "2026-10-10T08:39:35.547248+00:00",
   "source_id": "rever-vn",
   "scope": "individual-apartment-asking-only",
   "targets_checked": 7,
@@ -11,7 +11,7 @@
   "source_updates_within_30_days": 0,
   "source_updates_within_90_days": 1,
   "published_current_individual_listings": 1,
-  "source_runs_seen": 3,
+  "source_runs_seen": 4,
   "projects": [
     {
       "project_id": "akari-city",
