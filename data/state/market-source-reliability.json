@@ -74,10 +74,17 @@
           "status": "same-period-unchanged",
           "http_status": 200,
           "publisher_periods": []
+        },
+        {
+          "run_id": "38054259145",
+          "observed_at": "2026-10-10T13:03:47.913963+00:00",
+          "status": "same-period-unchanged",
+          "http_status": 200,
+          "publisher_periods": []
         }
       ],
-      "check_count": 9,
-      "parseable_check_count": 8,
+      "check_count": 10,
+      "parseable_check_count": 9,
       "classification": "repeatably-parseable"
     },
     {
@@ -149,10 +156,17 @@
           "status": "same-period-unchanged",
           "http_status": 200,
           "publisher_periods": []
+        },
+        {
+          "run_id": "38054259145",
+          "observed_at": "2026-10-10T13:03:47.913963+00:00",
+          "status": "same-period-unchanged",
+          "http_status": 200,
+          "publisher_periods": []
         }
       ],
-      "check_count": 9,
-      "parseable_check_count": 9,
+      "check_count": 10,
+      "parseable_check_count": 10,
       "classification": "listing-only"
     },
     {
@@ -224,9 +238,16 @@
           "status": "reachable-historical-reference-frozen",
           "http_status": 200,
           "publisher_periods": []
+        },
+        {
+          "run_id": "38054259145",
+          "observed_at": "2026-10-10T13:03:47.913963+00:00",
+          "status": "reachable-historical-reference-frozen",
+          "http_status": 200,
+          "publisher_periods": []
         }
       ],
-      "check_count": 9,
+      "check_count": 10,
       "parseable_check_count": 0,
       "classification": "historical-only"
     },
@@ -299,9 +320,16 @@
           "status": "reachable-historical-reference-frozen",
           "http_status": 200,
           "publisher_periods": []
+        },
+        {
+          "run_id": "38054259145",
+          "observed_at": "2026-10-10T13:03:47.913963+00:00",
+          "status": "reachable-historical-reference-frozen",
+          "http_status": 200,
+          "publisher_periods": []
         }
       ],
-      "check_count": 9,
+      "check_count": 10,
       "parseable_check_count": 0,
       "classification": "historical-only"
     },
@@ -376,10 +404,17 @@
           "status": "published-period-unchanged",
           "http_status": 200,
           "publisher_periods": []
+        },
+        {
+          "run_id": "38054259145",
+          "observed_at": "2026-10-10T13:03:47.913963+00:00",
+          "status": "published-period-unchanged",
+          "http_status": 200,
+          "publisher_periods": []
         }
       ],
-      "check_count": 9,
-      "parseable_check_count": 8,
+      "check_count": 10,
+      "parseable_check_count": 9,
       "classification": "repeatably-parseable"
     },
     {
@@ -451,9 +486,16 @@
           "status": "reachable-no-verifiable-metric",
           "http_status": 200,
           "publisher_periods": []
+        },
+        {
+          "run_id": "38054259145",
+          "observed_at": "2026-10-10T13:03:47.913963+00:00",
+          "status": "reachable-no-verifiable-metric",
+          "http_status": 200,
+          "publisher_periods": []
         }
       ],
-      "check_count": 9,
+      "check_count": 10,
       "parseable_check_count": 0,
       "classification": "needs-stable-alternative"
     },
@@ -505,10 +547,17 @@
           "status": "same-period-unchanged",
           "http_status": 200,
           "publisher_periods": []
+        },
+        {
+          "run_id": "38054259145",
+          "observed_at": "2026-10-10T13:03:47.913963+00:00",
+          "status": "same-period-unchanged",
+          "http_status": 200,
+          "publisher_periods": []
         }
       ],
-      "check_count": 6,
-      "parseable_check_count": 6,
+      "check_count": 7,
+      "parseable_check_count": 7,
       "classification": "repeatably-parseable"
     }
   ]
