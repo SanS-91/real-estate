@@ -25,7 +25,22 @@
       "project_id": "the-global-city",
       "publisher_project_name": "The Global City",
       "url": "https://rever.vn/s/the-global-city/mua/can-ho"
+    },
+    {
+      "project_id": "the-9-stellars",
+      "publisher_project_name": "The 9 Stellars",
+      "url": "https://rever.vn/s/the-9-stellars/mua/can-ho"
+    },
+    {
+      "project_id": "mizuki-park",
+      "publisher_project_name": "Mizuki Park",
+      "url": "https://rever.vn/s/mizuki-park/mua/can-ho"
+    },
+    {
+      "project_id": "vinhomes-grand-park",
+      "publisher_project_name": "Vinhomes Grand Park",
+      "url": "https://rever.vn/s/vinhomes-grand-park/mua/can-ho"
     }
   ],
-  "discovery_note": "Regional apartment catalogs are discovery-only, and each listing must still identify the exact target project on its own detail page. Only publisher-dated <=90-day individual ads can be considered after two independent hosted checks."
+  "discovery_note": "Project-specific apartment sale catalogs only. Each independently verified listing must identify the exact configured project on its own detail page, have an explicit publisher-updated date no older than 90 days and match in two GitHub-hosted runs at least one hour apart. Ads remain individual asking offers, never price-history trend or project ASP."
 }

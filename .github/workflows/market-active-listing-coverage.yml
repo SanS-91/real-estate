@@ -1,6 +1,12 @@
 name: Market 4I.7 - Verified Unit Listing Coverage Monitor
 
 on:
+  workflow_run:
+    workflows:
+      - Market 4I.4 - Rever Verified Apartment Listing Discovery
+      - Market 4I.6 - Muaban Unexpired Apartment Listing Verification
+    types:
+      - completed
   pull_request:
     paths:
       - 'scripts/market_active_listing_coverage.py'
@@ -9,12 +15,14 @@ on:
       - 'maintenance.html'
       - 'assets/css/main.css'
       - 'config/market-muaban-listing-targets.json'
+      - 'config/market-rever-listing-targets.json'
       - '.github/workflows/market-active-listing-coverage.yml'
   push:
     branches: [main]
     paths:
       - 'scripts/market_active_listing_coverage.py'
       - 'config/market-muaban-listing-targets.json'
+      - 'config/market-rever-listing-targets.json'
       - '.github/workflows/market-active-listing-coverage.yml'
   schedule:
     - cron: '15 3 * * *'
@@ -30,6 +38,7 @@ concurrency:
 
 jobs:
   verified-unit-coverage:
+    if: github.event_name != 'workflow_run' || github.event.workflow_run.head_branch == 'main'
     runs-on: ubuntu-24.04
     timeout-minutes: 12
     steps:

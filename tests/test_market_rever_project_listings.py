@@ -66,6 +66,60 @@ class ReverSourceTests(unittest.TestCase):
         self.assertEqual(decisions[0]["decision"],"historical-listing-not-current")
         self.assertFalse(unverified)
 
+    def test_source_dated_price_revision_is_append_only(self):
+        first,_=parse_detail(HTML,LISTING,"Eaton Park","eaton-park",NOW)
+        saved={
+            **first, "id":"rever-a02199312-old", "review_status":"automated-two-hosted-checks",
+            "verification_run_ids":["old-a","old-b"],
+            "review_date":"2026-08-01", "verified_at":"2026-08-01T08:00:00+00:00"
+        }
+        revised={**first,"source_updated_date":"2026-10-09",
+                 "listing_price_vnd":9_000_000_000,"value_vnd_per_m2":125_000_000}
+        # Existing unit cannot be re-dated from an unchanged source date.
+        conflicting={**revised,"source_updated_date":first["source_updated_date"]}
+        st,accepted,decisions=evaluate({},[saved],[conflicting],NOW,"revision-1")
+        self.assertEqual(decisions[0]["decision"],"publisher-date-not-newer-than-recorded")
+        self.assertFalse(accepted)
+        st,accepted,_=evaluate(st,[saved],[revised],NOW,"revision-2")
+        self.assertFalse(accepted)
+        st,accepted,decisions=evaluate(st,[saved],[revised],NOW+timedelta(hours=2),"revision-3")
+        self.assertEqual(len(accepted),1)
+        self.assertEqual(accepted[0]["source_updated_date"],"2026-10-09")
+        self.assertEqual(decisions[0]["decision"],"independent-live-listing-verified")
+        # Two publisher-dated price versions remain independent unit evidence.
+        _,dup,d=evaluate(st,[saved]+accepted,[revised],NOW+timedelta(hours=3),"revision-4")
+        self.assertFalse(dup)
+        self.assertEqual(d[0]["decision"],"previously-recorded")
+
+    def test_long_term_history_is_not_silently_truncated(self):
+        saved=[{
+          **parse_detail(HTML,LISTING,"Eaton Park","eaton-park",NOW)[0],
+          "id":f"verified-old-{idx}",
+          "listing_id":f"A021{idx:05d}",
+          "source_updated_date":"2026-09-01",
+          "review_status":"automated-two-hosted-checks",
+          "verification_run_ids":["a","b"],
+        } for idx in range(255)]
+        cfg={"targets":[{"project_id":"eaton-park","publisher_project_name":"Eaton Park","url":INDEX}]}
+        result,_,report=run(cfg,{"data":saved},{},
+          lambda url,listing:(None,"access-blocked"),NOW,"probe")
+        self.assertEqual(result["record_count"],255)
+        self.assertEqual(result["data"][0]["id"],"verified-old-0")
+        self.assertEqual(report["accepted_new_individual_listings"],0)
+
+    def test_new_source_target_registry_has_real_exact_rever_catalogs(self):
+        import json
+        settings=json.loads((Path(__file__).resolve().parents[1]/
+           "config/market-rever-listing-targets.json").read_text())
+        mapping={x["project_id"]:x for x in settings["targets"]}
+        for pid,slug in (("the-9-stellars","the-9-stellars"),
+                         ("mizuki-park","mizuki-park"),
+                         ("vinhomes-grand-park","vinhomes-grand-park")):
+            self.assertEqual(mapping[pid]["url"],
+                             f"https://rever.vn/s/{slug}/mua/can-ho")
+            self.assertIsNotNone(safe_url(mapping[pid]["url"]))
+        self.assertEqual(len(mapping),len(settings["targets"]))
+
     def test_runner_fetch_outage_only_reports_health(self):
         config={"targets":[{"project_id":"eaton-park","publisher_project_name":"Eaton Park","url":INDEX}]}
         prod,state,report=run(config,{"data":[]},{},lambda url,listing:(None,"access-blocked"),
