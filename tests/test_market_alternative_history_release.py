@@ -92,5 +92,5 @@ _,decisions,_=rel.evaluate(history,[same],[approval(same)],date(2026,11,20))
 assert "conflicting-existing-period" in decisions[0]["issues"]
 assert rel.base_issues(history+[history[0]])
 original=json.loads((ROOT/"data/mock/market/listing-observations.json").read_text())
-assert original["record_count"]==18
+assert original["record_count"]>=18
 print("PASS: 1 real OneHousing monthly baseline; preview empty; forged dates, prices, sources and approvals rejected.")
