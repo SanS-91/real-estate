@@ -1,13 +1,13 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-10-09T12:56:23.687614+00:00",
+  "generated_at": "2026-10-10T08:26:43.694778+00:00",
   "source_id": "muaban-vn",
   "targets_checked": 6,
   "listing_urls_discovered": 21,
   "details_checked": 21,
   "valid_unexpired_project_ads": 6,
-  "newly_published": 0,
-  "published_current_individual_listings": 0,
+  "newly_published": 6,
+  "published_current_individual_listings": 6,
   "sources": [
     {
       "project_id": "akari-city",
