@@ -1,0 +1,28 @@
+{
+  "schema_version": 1,
+  "timezone": "Asia/Ho_Chi_Minh",
+  "utc_cron": "20 0,2,4,6,8,10,12,14 * * *",
+  "utc_hours": [
+    0,
+    2,
+    4,
+    6,
+    8,
+    10,
+    12,
+    14
+  ],
+  "utc_minute": 20,
+  "local_times": [
+    "07:20",
+    "09:20",
+    "11:20",
+    "13:20",
+    "15:20",
+    "17:20",
+    "19:20",
+    "21:20"
+  ],
+  "max_delay_minutes": 90,
+  "notes": "GitHub Actions scheduled workflow checks RSS; start times may vary. Zero new eligible articles is not a failure. Official Legal and Infrastructure candidate collectors have separate schedules."
+}

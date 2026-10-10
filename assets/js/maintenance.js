@@ -527,31 +527,102 @@
     document.querySelector('[data-maintenance-rules]').innerHTML = `<div class="maintenance-rules">${c.rules.map(([title, text]) => `<div class="maintenance-rule"><strong>${esc(title)}</strong><span>${esc(text)}</span></div>`).join('')}</div>`;
   }
 
+
   async function renderNewsAutomationHealth() {
     const node = document.querySelector('[data-news-automation-health]');
     if (!node) return;
     const vi = language() === 'vi';
-    const moduleNames = {market: 'Thị trường', legal: 'Pháp lý', infrastructure: 'Hạ tầng', macro: 'Vĩ mô'};
-    const targets = {market: 'market.html?view=news', legal: 'legal.html?view=news',
-                     infrastructure: 'infrastructure.html?view=news', macro: 'macro.html?view=news'};
+    const moduleNames = { market: 'Thị trường', legal: 'Pháp lý', infrastructure: 'Hạ tầng', macro: 'Vĩ mô' };
+    const targets = { market: 'market.html?view=news', legal: 'legal.html?view=news',
+                      infrastructure: 'infrastructure.html?view=news', macro: 'macro.html?view=news' };
     try {
-      const state = await DataStore.getNewsHealth();
-      const counts = state.published_by_module || {};
-      const sourceCount = Number(state.feeds_fetched || 0);
-      const configured = Number(state.feeds_configured || 0);
-      const checked = formatDateTime(state.checked_at);
-      node.innerHTML = Object.keys(moduleNames).map(id => {
-        const amount = Number(counts[id] || 0);
-        return `<div class="data-health-card">
-          <div class="data-health-card__top"><h3><a href="${targets[id]}">${esc(vi ? moduleNames[id] : id.toUpperCase())}</a></h3>
-          <span class="data-health-status">${sourceCount === configured && configured > 0 ? (vi ? 'Đã kiểm tra' : 'Checked') : (vi ? 'Nguồn thiếu' : 'Sources missing')}</span></div>
-          <dl><div><dt>${vi ? 'Tin mới lượt gần nhất' : 'Published last run'}</dt><dd>${esc(amount)}</dd></div>
-          <div><dt>${vi ? 'Nguồn RSS truy cập' : 'Reachable RSS feeds'}</dt><dd>${esc(sourceCount)}/${esc(configured)}</dd></div>
-          <div><dt>${vi ? 'Kiểm tra gần nhất' : 'Last check'}</dt><dd>${esc(checked)}</dd></div></dl>
-          </div>`;
+      const [snapshot, config, sourcesPayload] = await Promise.all([
+        DataStore.getNewsHealth(), DataStore.getNewsAutomationConfig(), DataStore.getSources()
+      ]);
+      const model = window.NewsAutomationHealth.evaluate(snapshot, config);
+      const names = new Map((sourcesPayload?.data || []).map(source => [source.id, source.name]));
+      const counts = snapshot.published_by_module || {};
+      const statusLabels = vi
+        ? { healthy: 'Đúng lịch', degraded: 'Nguồn cần xem', stale: 'Quá hạn cập nhật', 'no-data': 'Chưa có báo cáo' }
+        : { healthy: 'On schedule', degraded: 'Source issues', stale: 'Update overdue', 'no-data': 'No report' };
+      const labels = vi
+        ? { last: 'Kiểm tra gần nhất', perRun: 'Tin mới lượt gần nhất', total: 'Tổng bài trong kho',
+            checked: 'RSS đọc hợp lệ', empty: 'Nguồn rỗng', errors: 'Nguồn lỗi',
+            duplicates: 'Trùng đã bỏ qua', filtered: 'Không phù hợp đã lọc',
+            detail: 'Chi tiết kênh RSS và lý do bỏ qua', source: 'Nguồn',
+            fresh: 'Tin mới', status: 'Tình trạng', reason: 'Loại / trùng',
+            good: 'Đọc được', blank: 'RSS rỗng', bad: 'Cần kiểm tra',
+            noNew: 'Không có tin mới đủ điều kiện trong lượt này; không phải lỗi.',
+            newArticles: 'Có tin mới được công bố trong lượt gần nhất.',
+            schedule: 'Lịch kiểm tra (giờ Việt Nam)', expected: 'Mốc dự kiến gần nhất' }
+        : { last: 'Last checked', perRun: 'New articles last run', total: 'Articles in archive',
+            checked: 'Parsed RSS feeds', empty: 'Empty feeds', errors: 'Source failures',
+            duplicates: 'Duplicates skipped', filtered: 'Unrelated rejected',
+            detail: 'Individual source diagnostics', source: 'Source',
+            fresh: 'New', status: 'Status', reason: 'Filtered / duplicate',
+            good: 'Parsed', blank: 'Empty RSS', bad: 'Review needed',
+            noNew: 'No new eligible articles in this check; this is not a failure.',
+            newArticles: 'New articles were published in the latest check.',
+            schedule: 'Scheduled checks (Vietnam time)', expected: 'Most recent expected slot' };
+      const feeds = Array.isArray(snapshot.feed_status) ? snapshot.feed_status : [];
+      const feedIssue = item => item.status !== 'parsed';
+      const ordered = [...feeds].sort((a, b) => Number(feedIssue(b)) - Number(feedIssue(a)) ||
+        String(a.source_id).localeCompare(String(b.source_id)));
+      const statusClass = model.state === 'stale' ? 'is-stale' :
+        model.state === 'degraded' || model.state === 'no-data' ? 'is-review' : 'is-healthy';
+      const feedRows = ordered.map(item => {
+        const status = item.status === 'parsed' ? labels.good :
+          item.status === 'empty-feed' ? labels.blank : labels.bad + ' (' + item.status + ')';
+        const skipped = item.filtered == null && item.duplicates == null
+          ? String(item.skipped ?? '—')
+          : String(item.filtered ?? 0) + ' / ' + String(item.duplicates ?? 0);
+        return `<div class="news-feed-row${item.status === 'parsed' ? '' : ' is-issue'}">
+          <span class="news-feed-name">${esc(names.get(item.source_id) || item.source_id)}</span>
+          <span class="news-feed-state">${esc(status)}</span>
+          <span>${esc(item.new ?? 0)}</span>
+          <span>${esc(skipped)}</span>
+        </div>`;
       }).join('');
+      const issueCount = model.issues.length + model.errors.length;
+      node.innerHTML = `
+        <div class="news-health-overview ${statusClass}" role="status">
+          <strong>${esc(statusLabels[model.state] || model.state)}</strong>
+          <span>${esc(labels.schedule)}: ${esc((config.local_times || []).join(' · '))}</span>
+          <span>${esc(labels.last)}: ${esc(formatDateTime(snapshot.checked_at))}</span>
+          <span>${esc(labels.expected)}: ${model.expected == null ? '—' : esc(formatDateTime(new Date(model.expected)))}</span>
+          <small>${esc(model.added > 0 ? labels.newArticles : labels.noNew)}</small>
+        </div>
+        ${Object.keys(moduleNames).map(id => `<div class="data-health-card ${statusClass}">
+          <div class="data-health-card__top">
+            <strong><a href="${targets[id]}">${esc(vi ? moduleNames[id] : id.toUpperCase())}</a></strong>
+            <span class="data-health-status">${esc(statusLabels[model.state] || model.state)}</span>
+          </div>
+          <div class="news-health-big">${esc(counts[id] || 0)}</div>
+          <div class="news-health-card-caption">${esc(labels.perRun)}</div>
+        </div>`).join('')}
+        <div class="news-health-summary">
+          <span><strong>${esc(model.parsed)}/${esc(model.configured)}</strong> ${esc(labels.checked)}</span>
+          <span><strong>${esc(model.empty.length)}</strong> ${esc(labels.empty)}</span>
+          <span><strong>${esc(model.invalid.length + model.errors.length)}</strong> ${esc(labels.errors)}</span>
+          <span><strong>${model.total == null ? '—' : esc(model.total)}</strong> ${esc(labels.total)}</span>
+          <span><strong>${esc(model.filtered)}</strong> ${esc(labels.filtered)}</span>
+          <span><strong>${esc(model.duplicate)}</strong> ${esc(labels.duplicates)}</span>
+        </div>
+        <details class="news-feed-details">
+          <summary>${esc(labels.detail)} · ${esc(model.configured)} ${issueCount ? ' · ' + esc(issueCount) + (vi ? ' cảnh báo' : ' alerts') : ''}</summary>
+          <div class="news-feed-list">
+            <div class="news-feed-row news-feed-row--head">
+              <strong>${esc(labels.source)}</strong><strong>${esc(labels.status)}</strong>
+              <strong>${esc(labels.fresh)}</strong><strong>${esc(labels.reason)}</strong>
+            </div>
+            ${feedRows}
+          </div>
+          <p class="news-feed-note">${esc(vi ? '“Loại / trùng” lần lượt là tin không phù hợp và bản ghi đã có. Nguồn RSS rỗng không được tính là nguồn đọc hợp lệ.' :
+            'Filtered / duplicate counts are separate; an empty RSS feed is not considered parsed.')}</p>
+        </details>`;
     } catch (error) {
-      node.innerHTML = `<div class="state-box">${esc(vi ? 'Chưa có báo cáo thu thập RSS tự động từ production.' : 'No production RSS ingestion health report yet.')}</div>`;
+      console.warn('[maintenance] news automation report unavailable:', error);
+      node.innerHTML = `<div class="state-box">${esc(vi ? 'Chưa thể đọc báo cáo RSS. Không thể xác nhận lịch tự động đã chạy.' : 'RSS report unavailable; automated update status cannot be verified.')}</div>`;
     }
   }
 

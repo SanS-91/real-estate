@@ -7,6 +7,11 @@ on:
       - 'scripts/test_market_news_rss.py'
       - 'config/market-news-feeds.json'
       - '.github/workflows/market-news-rss.yml'
+      - 'config/news-automation.json'
+      - 'assets/js/news-automation-health.js'
+      - 'assets/js/maintenance.js'
+      - 'tests/test_news_automation_health.cjs'
+      - 'tests/test_news_automation_schedule.py'
       - 'data/mock/core/sources.json'
   push:
     branches: [main]
@@ -15,9 +20,15 @@ on:
       - 'scripts/test_market_news_rss.py'
       - 'config/market-news-feeds.json'
       - '.github/workflows/market-news-rss.yml'
+      - 'config/news-automation.json'
+      - 'assets/js/news-automation-health.js'
+      - 'assets/js/maintenance.js'
+      - 'tests/test_news_automation_health.cjs'
+      - 'tests/test_news_automation_schedule.py'
   workflow_dispatch:
   schedule:
-    - cron: '20 1,10 * * *'
+    # Eight daytime checks in Vietnam: 07:20, 09:20, ..., 21:20 (UTC+7).
+    - cron: '20 0,2,4,6,8,10,12,14 * * *'
 
 permissions:
   contents: write
@@ -39,8 +50,13 @@ jobs:
           python-version: '3.12'
       - name: Install dependencies
         run: pip install -r requirements.txt
-      - name: Unit tests
-        run: python scripts/test_market_news_rss.py
+      - name: Unit tests and daily schedule contract
+        run: |
+          python scripts/test_market_news_rss.py
+          python tests/test_news_automation_schedule.py
+          node --check assets/js/news-automation-health.js
+          node --check assets/js/maintenance.js
+          node tests/test_news_automation_health.cjs
       - name: Preview live source feeds
         run: python scripts/market_news_rss.py --mode preview
       - name: Simulate append-only publishing on PR runner
