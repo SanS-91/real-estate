@@ -537,11 +537,11 @@
         p.row ? formatListingRange(p.row) : '—';
       const link = p.row?.source_url ? '<a href="' + esc(p.row.source_url) +
         '" target="_blank" rel="noopener noreferrer">Nguồn ↗</a>' : '—';
-      return '<tr><td><button class="table-link" type="button" data-project-id="' +
-        esc(p.project_id) + '">' + esc(p.project_name) + '</button></td><td>' +
-        esc(statuses[p.tier]) + '</td><td>' + esc(p.product || '—') +
-        '</td><td class="numeric">' + esc(price) + '</td><td>' +
-        esc(p.as_of || '—') + '</td><td>' + link + '</td></tr>';
+      return '<tr><td data-label-vi="Dự án" data-label-en="Project"><button class="table-link" type="button" data-project-id="' +
+        esc(p.project_id) + '">' + esc(p.project_name) + '</button></td><td data-label-vi="Phạm vi" data-label-en="Scope">' +
+        esc(statuses[p.tier]) + '</td><td data-label-vi="Sản phẩm" data-label-en="Product">' + esc(p.product || '—') +
+        '</td><td class="numeric" data-label-vi="Giá tham chiếu" data-label-en="Price">' + esc(price) + '</td><td data-label-vi="Kỳ nguồn" data-label-en="Source period">' +
+        esc(p.as_of || '—') + '</td><td data-label-vi="Nguồn" data-label-en="Source">' + link + '</td></tr>';
     }).join('');
     return '<section class="market-project-coverage" data-market-project-coverage>' +
       summary + '<p>Giá được hiển thị theo đúng phạm vi nguồn, không tự suy ra ASP hoặc nối các snapshot thành xu hướng.</p>' +
@@ -822,6 +822,17 @@
       .filter(item => (item.project_ids || []).includes(project.id))
       .sort((a,b)=>String(b.published_at || '').localeCompare(String(a.published_at || '')));
     const dev = leadDeveloper(project);
+    const priceCoverage = projectPriceCoverage([project])?.byId[project.id];
+    const priceCoverageLabel = priceCoverage?.tier === 'scoped-asking' ? 'Giá rao theo sản phẩm' :
+      priceCoverage?.tier === 'monthly-popular' ? 'Giá phổ biến tháng' : 'Khoảng giá rao';
+    const priceCoverageValue = priceCoverage?.tier === 'monthly-popular'
+      ? formatAsp(priceCoverage.row.value_vnd_per_m2)
+      : priceCoverage?.row ? formatListingRange(priceCoverage.row) : '—';
+    const priceCoverageNote = priceCoverage?.tier === 'aggregate-asking' ? 'Giá rao tổng hợp · ' + (priceCoverage.as_of || '—') :
+      priceCoverage?.tier === 'scoped-asking' ? 'Chỉ ' + (priceCoverage.product === 'landed' ? 'thấp tầng' :
+        priceCoverage.product === 'apartment' ? 'căn hộ' : 'FAQ') + ', không phải ASP' :
+      priceCoverage?.tier === 'monthly-popular' ? 'OneHousing · không phải ASP · ' + (priceCoverage.as_of || '—') :
+      'Chưa có dữ liệu giá phù hợp';
 
     const verifiedRows = obsRows.length
       ? `<div class="table-wrap"><table class="data-table"><thead><tr><th>Period</th><th class="numeric">ASP</th><th class="numeric">Absorption</th><th>Basis</th><th>Source</th></tr></thead><tbody>${obsRows.map(row=>`<tr><td>${esc(row.period)}</td><td class="numeric">${esc(formatAsp(row.average_asp))}</td><td class="numeric">${esc(formatPercent(row.absorption_rate))}</td><td>${esc(row.price_basis?.replaceAll('-',' ') || '—')}</td><td>${sourceRef(row.source_id,{sourceDate:row.source_date,period:row.period,methodology:row.methodology_note,sourceUrl:row.source_url})}</td></tr>`).join('')}</tbody></table></div>`
@@ -846,7 +857,7 @@
         ${Components.compactMetric({label:'Planned units',value:Number.isFinite(project.planned_units) ? formatCompact(project.planned_units) : '—',note:project.known_units_note || 'No exact comparable count published'})}
         ${Components.compactMetric({label:'Area',value:formatArea(project.total_area_sqm)})}
         ${Components.compactMetric({label:'Verified ASP',value:formatAsp(latestObs?.average_asp),note:latestObs?.period || 'No project-level observation'})}
-        ${Components.compactMetric({label:'Listing asking',value:formatListingRange(listing),note:listing?.observation_date || 'No listing snapshot'})}
+        ${Components.compactMetric({label:priceCoverageLabel,value:priceCoverageValue,note:priceCoverageNote})}
       </div>
 
       <nav class="project-detail-nav" data-project-detail-nav aria-label="Project sections">
