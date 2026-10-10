@@ -4,6 +4,8 @@ on:
   pull_request:
     paths:
       - 'scripts/market_alternative_auto_probe.py'
+      - 'scripts/market_onehousing_source_probe.py'
+      - 'tests/test_phase6_3e_masteri_source_probe.py'
       - 'scripts/market_source_reliability.py'
       - 'tests/test_market_source_reliability.py'
       - 'tests/test_phase6_3d_onehousing_unresolved_months.py'
@@ -58,6 +60,7 @@ jobs:
           python tests/test_market_subproject_monthly_review.py
           python tests/test_market_automatic_monthly_pipeline.py
           python tests/test_phase6_3d_onehousing_unresolved_months.py
+          python -m unittest discover -s tests -p 'test_phase6_3e_masteri_source_probe.py' -v
           python tests/test_market_alternative_auto_probe.py
           python -m unittest discover -s tests -p 'test_market_source_reliability.py'
           python tests/test_market_onehousing_latest_month_parser.py
@@ -65,6 +68,11 @@ jobs:
           python tests/test_market_onehousing_subproject_evidence.py
           node --check assets/js/data-store.js
           node --check assets/js/market.js
+      - name: PR live read-only OneHousing Masteri source diagnostics
+        if: github.event_name == 'pull_request'
+        run: |
+          python scripts/market_onehousing_source_probe.py
+          git diff --exit-code -- data/mock/market data/candidate/market data/state
       - name: Fetch publisher pages and stage new source-authored months
         if: github.event_name != 'pull_request'
         run: python scripts/market_alternative_auto_probe.py
@@ -115,6 +123,16 @@ jobs:
           for d in audit.get('checks',[]):
               print(f"  - {d['candidate_id']}: {d['status']} (HTTP {d.get('http_status','n/a')})")
           print('No stale publisher month or crawler date is ever a new snapshot. All published releases are marked automated-source-verified.')
+          for checked in probe.get('checks',[]):
+              if checked.get('target_id') != 'onehousing-masteri-centre-point-apartment': continue
+              print('### Masteri Centre Point — publisher exact-project checks')
+              print(f"- Source result: **{checked.get('status','n/a')}**")
+              for variant in checked.get('source_variants',[]):
+                  host=variant.get('host','unknown')
+                  periods=', '.join(variant.get('publisher_periods',[])) or 'no exact named period'
+                  verified=variant.get('verified_source_period') or 'not parseable'
+                  print(f"- {host}: HTTP {variant.get('http_status')}; exact-project periods: {periods}; strictly parsed month: {verified}")
+              print('No source quote has been added unless independently verified by the existing publication gate.')
           PY
       - name: Commit all source health, candidate queue, independent proof and released history atomically
         if: github.event_name != 'pull_request'
