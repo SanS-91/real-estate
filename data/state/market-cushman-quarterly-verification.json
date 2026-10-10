@@ -17,6 +17,13 @@
       "status": "matched-source-quarter-and-metrics",
       "period": "2026-Q2",
       "signature": "02c49bad526c76d63dea0afc144eef24f78507f32b9c1de040a6c2ce9cbd678f"
+    },
+    {
+      "run_id": "38056374896",
+      "checked_at": "2026-10-10T13:36:45.423958+00:00",
+      "status": "matched-source-quarter-and-metrics",
+      "period": "2026-Q2",
+      "signature": "02c49bad526c76d63dea0afc144eef24f78507f32b9c1de040a6c2ce9cbd678f"
     }
   ],
   "note": "Only source-published reporting quarters; check time is not a price publication date.",
