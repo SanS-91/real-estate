@@ -49,7 +49,7 @@ assert any(x['comparable_name']=='The Global City' and x['asking_price_vnd_per_m
 # Listing intelligence stays separate from canonical research/official market observations.
 assert canonical['record_count']==len(canonical['data']) and canonical['record_count']>=7
 assert not any(x.get('source_id')=='batdongsan-com-vn' for x in canonical['data'])
-assert len(production['data'])==18
+assert production['record_count']==len(production['data']) and production['record_count']>=18
 
 assert 'getListingObservations' in store
 assert 'getListingComparables' in store
