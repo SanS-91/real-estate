@@ -1,8 +1,8 @@
 {
   "schema_version": 1,
-  "build_id": "market-news-rss-20261010T065125Z",
-  "generated_at": "2026-10-10T06:51:25.560359+00:00",
-  "record_count": 263,
+  "build_id": "market-news-rss-20261010T075720Z",
+  "generated_at": "2026-10-10T07:57:20.110903+00:00",
+  "record_count": 266,
   "data": [
     {
       "id": "article-market-rss-714c14e0e4478e187895",
@@ -32,6 +32,65 @@
       }
     },
     {
+      "id": "article-market-rss-f0d42a9edce696613586",
+      "title": "Hà Nội thông xe kỹ thuật gần 20km tuyến đường Vành đai 2,5",
+      "url": "https://dantri.com.vn/thoi-su/ha-noi-thong-xe-ky-thuat-gan-20km-tuyen-duong-vanh-dai-25-20261009192835663.htm",
+      "category": "infrastructure",
+      "module_ids": [
+        "infrastructure"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-10-10T06:13:58+00:00",
+      "source_id": "dantri-current-affairs",
+      "region_ids": [
+        "ha-noi"
+      ],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [
+        "infrastructure"
+      ],
+      "importance": 2,
+      "summary": "(Dân trí) - Sáng 10/10, TP Hà Nội đã hoàn thiện nhiều đoạn Vành đai 2,5, từ thảm nhựa, kẻ vạch đến chỉnh trang cảnh quan và chính thức thông xe kỹ thuật nhân dịp kỷ niệm 72 năm Ngày Giải phóng Thủ đô 10/10.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://dantri.com.vn/rss/thoi-su.rss",
+        "publisher_host": "dantri.com.vn",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-b53f3ae3efa642f81b20",
+      "title": "\"Phải quản lý chặt quy hoạch xây dựng hai bên Vành đai 1, Vành đai 2,5\"",
+      "url": "https://dantri.com.vn/thoi-su/phai-quan-ly-chat-quy-hoach-xay-dung-hai-ben-vanh-dai-1-vanh-dai-25-20261010124029618.htm",
+      "category": "market",
+      "module_ids": [
+        "market",
+        "infrastructure"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-10-10T06:07:04+00:00",
+      "source_id": "dantri-current-affairs",
+      "region_ids": [
+        "ha-noi"
+      ],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [
+        "legal"
+      ],
+      "importance": 2,
+      "summary": "(Dân trí) - Trực tiếp kiểm tra tại tuyến Vành đai 1 và Vành đai 2,5, Tổng Bí thư, Chủ tịch nước yêu cầu Hà Nội phải quản lý chặt chẽ quy hoạch xây dựng hai bên tuyến đường, ưu tiên tối đa cho giao thông.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://dantri.com.vn/rss/thoi-su.rss",
+        "publisher_host": "dantri.com.vn",
+        "publication_date_from_feed": true
+      }
+    },
+    {
       "id": "article-market-rss-b22052d3b411b4ef529c",
       "title": "Phú Mỹ Hưng 2.0 - bước chuyển mình của đô thị tỷ USD",
       "url": "https://vnexpress.net/phu-my-hung-2-0-buoc-chuyen-minh-cua-do-thi-ty-usd-5128477.html",
@@ -53,6 +112,31 @@
         "method": "official-rss",
         "feed_url": "https://vnexpress.net/rss/bat-dong-san.rss",
         "publisher_host": "vnexpress.net",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-4b8044dcbc509ec0488c",
+      "title": "\"Dự án không thể thành công nếu làm tổn thương cảnh quan, niềm tin xã hội\"",
+      "url": "https://dantri.com.vn/thoi-su/du-an-khong-the-thanh-cong-neu-lam-ton-thuong-canh-quan-niem-tin-xa-hoi-20261010121516862.htm",
+      "category": "market",
+      "module_ids": [
+        "market"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-10-10T05:43:32+00:00",
+      "source_id": "dantri-current-affairs",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "(Dân trí) - Theo Phó Trưởng Ban Tuyên giáo Trung ương Bùi Hoài Sơn, một dự án không thể coi là thành công nếu tạo ra tăng trưởng nhưng làm tổn thương cảnh quan, ký ức cộng đồng hay niềm tin xã hội.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://dantri.com.vn/rss/thoi-su.rss",
+        "publisher_host": "dantri.com.vn",
         "publication_date_from_feed": true
       }
     },
