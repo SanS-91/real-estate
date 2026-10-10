@@ -1,7 +1,54 @@
 {
   "schema_version": 1,
-  "record_count": 0,
-  "data": [],
+  "record_count": 2,
+  "data": [
+    {
+      "id": "peer-onehousing-masteri-thao-dien-2026-10",
+      "target_id": "masteri-thao-dien",
+      "project_name": "Masteri Thảo Điền",
+      "source_id": "onehousing-vn",
+      "source_url": "https://onehousing.vn/phan-tich/du-an/can-ho-chung-cu-du-an-Masteri-Thao-Dien.946",
+      "asset_type": "apartment",
+      "metric_type": "popular-asking-price-per-sqm",
+      "scope_type": "separate-hcm-peer-comparable",
+      "period": "2026-10",
+      "period_type": "month",
+      "value_vnd_per_m2": 117890000,
+      "range_low_vnd_per_m2": 99640000,
+      "range_high_vnd_per_m2": 204190000,
+      "fingerprint": "c81ad272d114d8133a518df07c7022b4aaffd800b731d284d9e5759a358e4c02",
+      "review_status": "automated-two-hosted-checks",
+      "verified_at": "2026-10-10T13:58:56.495599+00:00",
+      "verification_run_ids": [
+        "38023524222",
+        "38057794452"
+      ],
+      "methodology_note": "Source-authored apartment popular asking rate per m² for this exact separate HCMC peer. Two matching GitHub-hosted checks >=1h apart. Not transaction ASP or a core registry project."
+    },
+    {
+      "id": "peer-onehousing-the-panorama-2026-10",
+      "target_id": "the-panorama",
+      "project_name": "The Panorama",
+      "source_id": "onehousing-vn",
+      "source_url": "https://onehousing.vn/phan-tich/du-an/can-ho-chung-cu-du-an-The-Panorama.744",
+      "asset_type": "apartment",
+      "metric_type": "popular-asking-price-per-sqm",
+      "scope_type": "separate-hcm-peer-comparable",
+      "period": "2026-10",
+      "period_type": "month",
+      "value_vnd_per_m2": 64240000,
+      "range_low_vnd_per_m2": 60390000,
+      "range_high_vnd_per_m2": 69890000,
+      "fingerprint": "ad5d2a9753f1b6dc82ec60d9d88f06755cc35594bba51a3a064ed24d5bd1a828",
+      "review_status": "automated-two-hosted-checks",
+      "verified_at": "2026-10-10T13:58:56.495599+00:00",
+      "verification_run_ids": [
+        "38023524222",
+        "38057794452"
+      ],
+      "methodology_note": "Source-authored apartment popular asking rate per m² for this exact separate HCMC peer. Two matching GitHub-hosted checks >=1h apart. Not transaction ASP or a core registry project."
+    }
+  ],
   "scope": "separate-hcm-peer-projects-not-in-13-project-registry",
   "methodology": "Publisher-authored popular monthly apartment asking price per m². Requires two matching GitHub-hosted checks at least one hour apart. No derived transaction ASP, parent-level price or interpolated months."
 }
