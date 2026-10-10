@@ -23,35 +23,29 @@
     'developer-update': { vi: 'Tin chủ đầu tư', en: 'Developer update' }
   };
   const NEWS_VIEW_COPY = {
+    market: {
+      vi: {eyebrow:'MARKET / NEWS', title:'Tin tức thị trường',
+           description:'Tin bất động sản từ các nguồn công bố · Mở bài gốc để đọc chi tiết.'},
+      en: {eyebrow:'MARKET / NEWS', title:'Real estate market news',
+           description:'Published real estate news · Open the original article for details.'}
+    },
     legal: {
-      vi: {
-        eyebrow: 'Nguồn & diễn giải', title: 'Tin tức & phân tích pháp lý',
-        description: 'Tin tức hỗ trợ theo dõi và diễn giải; khi áp dụng cần đối chiếu văn bản pháp luật gốc và hiệu lực thực tế.'
-      },
-      en: {
-        eyebrow: 'Evidence & context', title: 'Legal news & analysis',
-        description: 'News supports research and interpretation; consult the original legal documents and their effective status before applying them.'
-      }
+      vi: {eyebrow:'LEGAL / NEWS', title:'Tin tức pháp lý',
+           description:'Chính sách, quy hoạch và pháp lý dự án · Đối chiếu văn bản gốc tại mục Văn bản.'},
+      en: {eyebrow:'LEGAL / NEWS', title:'Legal news',
+           description:'Policy, planning and project legal updates · Consult the official document registry for primary evidence.'}
     },
     infrastructure: {
-      vi: {
-        eyebrow: 'Cập nhật dự án', title: 'Tin tức & tiến độ hạ tầng',
-        description: 'Tin tức giúp theo dõi diễn biến; mốc tiến độ chính thức và lịch sử điều chỉnh được lưu riêng trong hồ sơ dự án.'
-      },
-      en: {
-        eyebrow: 'Project developments', title: 'Infrastructure news & milestones',
-        description: 'News provides context; official milestones and schedule revisions remain separately recorded in each project dossier.'
-      }
+      vi: {eyebrow:'INFRASTRUCTURE / NEWS', title:'Tin tức hạ tầng',
+           description:'Giao thông, đầu tư và tiến độ · Tin báo chí không tự thay đổi tiến độ dự án.'},
+      en: {eyebrow:'INFRASTRUCTURE / NEWS', title:'Infrastructure news',
+           description:'Transport, investment and construction updates · News is separate from verified project schedules.'}
     },
     macro: {
-      vi: {
-        eyebrow: 'Nội dung minh họa', title: 'Tin tức & nghiên cứu vĩ mô (minh họa)',
-        description: 'Các bài viết tại đây chỉ để minh họa, không phải số liệu chính thức. Chỉ số được xác minh hiển thị riêng trong các bảng dữ liệu.'
-      },
-      en: {
-        eyebrow: 'Illustrative material', title: 'Illustrative macro news & research',
-        description: 'These articles are illustrative, not official observations. Verified indicators are published separately in the data views.'
-      }
+      vi: {eyebrow:'MACRO / NEWS', title:'Tin tức vĩ mô',
+           description:'Lãi suất, tỷ giá, vàng và chính sách kinh tế · Chỉ tiêu xác minh được quản lý riêng.'},
+      en: {eyebrow:'MACRO / NEWS', title:'Macro news',
+           description:'Rates, FX, gold and economic policy · Verified indicators remain separate from news headlines.'}
     }
   };
   function newsLanguage() {
