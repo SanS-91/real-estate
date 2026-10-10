@@ -57,7 +57,7 @@ jobs:
           for kind in ('desktop','mobile'):
               doc=Path(f'/tmp/pricing-4i5-{kind}.html').read_text()
               for text in ('Dự án theo dõi', 'Có khoảng giá rao',
-                           'Chỉ giá theo sản phẩm','Có ASP dự án xác minh',
+                           'Chỉ giá theo sản phẩm','Giá TB dự án theo nguồn',
                            'Benchmark toàn thị trường', 'chart-frame--pricing-range',
                            'Ngày snapshot','Giá rao tổng hợp, giá theo phân khúc'):
                   assert text in doc,(kind,text)
