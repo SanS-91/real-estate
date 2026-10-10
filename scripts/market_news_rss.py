@@ -41,6 +41,16 @@ DEV_PATTERNS = {
     "gamuda-land": ("gamuda",),
     "dat-xanh": ("dat xanh",),
 }
+MODULE_PATTERNS = {
+    "legal": ("luat dat dai", "nghi dinh", "thong tu", "chinh sach nha o", "phap ly du an", "quy hoach su dung dat", "so hong", "bang gia dat", "tien su dung dat", "cap giay chung nhan"),
+    "infrastructure": ("vanh dai", "cao toc", "metro", "san bay", "cau duong", "duong sat", "giai phong mat bang", "khoi cong", "thong xe", "ha tang giao thong"),
+    "macro": ("lai suat", "ty gia", "gia vang", "cpi", "lam phat", "tang truong tin dung", "cung tien", "ngan hang nha nuoc", "gdp", "tang truong kinh te"),
+}
+MODULE_FEED_FILTERS = {
+    "filtered-economy": ("macro", "market", "legal"),
+    "filtered-policy-infrastructure": ("infrastructure", "legal", "market"),
+    "filtered-property-legal": ("legal",),
+}
 REGION_PATTERNS = {
     "hcmc": ("tp hcm", "tp.hcm", "tphcm", "ho chi minh", "sai gon", "thu duc"),
     "dong-nai": ("dong nai",),
@@ -109,6 +119,14 @@ def classify(item, feed, project_names, now, days_lookback):
     text = fold(title + " " + desc)
     if feed["category"] == "filtered-investment" and not any(x in text for x in MARKET_WORDS):
         return None, "not-property-market-news"
+    module_ids = [module for module, patterns in MODULE_PATTERNS.items() if any(v in text for v in patterns)]
+    property_relevant = any(v in text for v in MARKET_WORDS)
+    if property_relevant:
+        module_ids.insert(0, "market")
+    if feed["category"] in MODULE_FEED_FILTERS and not any(module in MODULE_FEED_FILTERS[feed["category"]] for module in module_ids):
+        return None, "off-topic-for-feed"
+    if feed["category"] == "filtered-property-legal" and not ("legal" in module_ids and property_relevant):
+        return None, "off-topic-for-feed"
     project_ids = [project_id for project_id, names in project_names.items() if any(v in text for v in names)]
     developer_ids = [did for did, variants in DEV_PATTERNS.items() if any(v in text for v in variants)]
     region_ids = [region for region, variants in REGION_PATTERNS.items() if any(v in text for v in variants)]
@@ -118,7 +136,8 @@ def classify(item, feed, project_names, now, days_lookback):
         "id": "article-market-rss-" + digest,
         "title": title,
         "url": url,
-        "category": "market",
+        "category": "market" if "market" in module_ids or feed["category"] == "real-estate" else module_ids[0],
+        "module_ids": list(dict.fromkeys(module_ids or (["market"] if feed["category"] == "real-estate" else []))),
         "subcategory": "news",
         "content_type": "publisher-rss",
         "published_at": dt.isoformat(),
@@ -150,7 +169,7 @@ def evaluate(cfg, feeds, existing, projects, known_sources, now):
                 variants.add(fold(value).replace("-", " "))
         project_names[p["id"]] = variants
     known_urls = {url for x in existing if (url := canonical_url(x.get("url"), (urlsplit(x.get("url") or "").hostname or "").lower().removeprefix("www.")))}
-    recent_titles = {normalized_title(x.get("title")) for x in existing if x.get("category") == "market"}
+    recent_titles = {normalized_title(x.get("title")) for x in existing}
     seen_urls = set()
     additions, source_reports = [], []
     for feed in cfg["feeds"]:
