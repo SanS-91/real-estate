@@ -704,7 +704,7 @@
       data = {
         indicators: applyProductionIndicatorMetadata(payloadData(indicators), integrated.productionIndicatorIds),
         observations: integrated.rows,
-        articles:payloadData(articles).filter(item=>item.category==='macro').map(item=>({ ...item, _data_layer:'demo' })),
+        articles:payloadData(articles),
         events:payloadData(events).filter(item=>item.category==='macro').map(item=>({ ...item, _data_layer:'demo' }))
       };
       Resolver.setData('macro-indicator',data.indicators);
