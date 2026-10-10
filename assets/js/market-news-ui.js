@@ -179,11 +179,12 @@
   }
 
   function newsFilters({articles, regions, developers, state, sourceId, topicId, module = 'market'}) {
-    const sourceIds = [...new Set(articles.map(a => a.source_id).filter(Boolean))];
-    sourceIds.sort((a, b) => sourceName(a).localeCompare(sourceName(b), 'vi'));
-    const sourceOptions = sourceIds.map(id =>
-      `<option value="${esc(id)}"${id === sourceId ? ' selected' : ''}>${esc(sourceName(id))}</option>`
-    ).join('');
+    const publisherNames = [...new Set(articles.map(a => sourceName(a.source_id)).filter(Boolean))]
+      .sort((a,b) => a.localeCompare(b,'vi'));
+    const sourceOptions = publisherNames.map(name => {
+      const id = 'pub:' + name;
+      return `<option value="${esc(id)}"${id === sourceId ? ' selected' : ''}>${esc(name)}</option>`;
+    }).join('');
     const regionOptions = regions.map(x =>
       `<option value="${esc(x.id)}"${state.region === x.id ? ' selected' : ''}>${esc(x.short_name || x.name)}</option>`
     ).join('');
@@ -242,10 +243,10 @@
     const visibleArticles = articles.filter(a => a.url && a.title && (window.DataStore?.isNewsFor ? window.DataStore.isNewsFor(a, module) : a.category === module) &&
       !String(a.source_id || '').startsWith('demo-') &&
       !/^(demo|illustrative)[\s:–-]/i.test(String(a.title || '')));
-    const publishers = new Set(visibleArticles.map(a => a.source_id).filter(Boolean)).size;
+    const publishers = new Set(visibleArticles.map(a => sourceName(a.source_id)).filter(Boolean)).size;
     const latestDate = visibleArticles.map(a => a.published_at || '').filter(Boolean).sort().at(-1) || '';
     const sourceRestricted = visibleArticles.filter(a => {
-      if (sourceId && a.source_id !== sourceId) return false;
+      if (sourceId && (sourceId.startsWith('pub:') ? sourceName(a.source_id) !== sourceId.slice(4) : a.source_id !== sourceId)) return false;
       if (!isWithinDays(a, days)) return false;
       if (state.region && !(a.region_ids || []).includes(state.region)) return false;
       if (state.developer && !(a.developer_ids || []).includes(state.developer)) return false;
