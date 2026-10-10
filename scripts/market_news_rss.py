@@ -24,6 +24,7 @@ ARTICLES = ROOT / "data/mock/articles/articles.json"
 PROJECTS = ROOT / "data/mock/market/projects.json"
 SOURCES = ROOT / "data/mock/core/sources.json"
 REPORT = ROOT / "data/candidate/market/market-news-rss-report.json"
+HEALTH = ROOT / "data/state/news-ingestion-health.json"
 HEADERS = {"User-Agent": "MarketIntelligenceRSS/1.0 (personal noncommercial feed reader)"}
 MARKET_WORDS = ("bat dong san", "nha dat", "du an", "chung cu", "can ho", "nha o", "khu do thi", "gia nha", "gia dat", "dat nen", "quy hoach", "phap ly dat dai", "ha tang do thi", "chu dau tu", "bat dong san cong nghiep")
 TOPIC_PATTERNS = {
@@ -234,6 +235,18 @@ def main():
         report["production_written"]=True
     REPORT.parent.mkdir(parents=True,exist_ok=True)
     REPORT.write_text(json.dumps(report,ensure_ascii=False,indent=2)+"\n",encoding="utf-8")
+    if args.mode == "promote":
+        counts = {name: 0 for name in ("market", "legal", "infrastructure", "macro")}
+        for article in candidates:
+            for module in article.get("module_ids", [article.get("category")]):
+                if module in counts:
+                    counts[module] += 1
+        health = {"schema_version": 1, "checked_at": now.isoformat(),
+                  "feeds_configured": len(cfg["feeds"]), "feeds_fetched": len(snapshots),
+                  "accepted_new": len(candidates), "production_written": report["production_written"],
+                  "published_by_module": counts, "feed_status": checked, "fetch_errors": fetch_errors}
+        HEALTH.parent.mkdir(parents=True, exist_ok=True)
+        HEALTH.write_text(json.dumps(health, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
     print(json.dumps(report,ensure_ascii=False,indent=2))
 
 if __name__=="__main__":
