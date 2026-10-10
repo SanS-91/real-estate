@@ -23,7 +23,7 @@ assert next(x for x in records if x['id']=='hcmc-ring-road-4')['current_expected
 infra_events=[x for x in events['data'] if x.get('category')=='infrastructure']
 infra_articles=[x for x in articles['data'] if x.get('category')=='infrastructure']
 assert len(infra_events)>=8
-assert len(infra_articles)==8
+assert len(infra_articles)>=8  # Seed records plus append-only verified news RSS
 assert all(x['entity_id'] in ids for x in infra_events)
 assert all(set(x.get('infrastructure_project_ids',[])) <= ids for x in infra_articles)
 assert all(x['url'].startswith('https://') for x in infra_articles)

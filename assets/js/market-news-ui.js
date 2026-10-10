@@ -37,8 +37,59 @@
     ['research', 'Nghiên cứu']
   ];
   const TOPIC_NAMES = Object.fromEntries(TOPICS);
+
+  const MODULE_CONFIG = {
+    market: {eyebrow:'MARKET / NEWS', title:'Tin tức thị trường', description:'Thông tin bất động sản từ các nguồn công bố · Mở bài gốc để đọc chi tiết.'},
+    legal: {eyebrow:'LEGAL / NEWS', title:'Tin tức pháp lý', description:'Chính sách, quy hoạch và pháp lý dự án · Văn bản chính thức được quản lý riêng tại mục Văn bản.'},
+    infrastructure: {eyebrow:'INFRASTRUCTURE / NEWS', title:'Tin tức hạ tầng', description:'Giao thông, đầu tư và tiến độ hạ tầng · Thông tin báo chí không tự thay đổi tiến độ trong cơ sở dữ liệu.'},
+    macro: {eyebrow:'MACRO / NEWS', title:'Tin tức vĩ mô', description:'Lãi suất, tỷ giá, vàng và các chính sách kinh tế · Không dùng tin báo để tự thay số liệu chỉ tiêu.'}
+  };
+  const MODULE_TOPICS = {
+    legal: [
+      ['all','Tất cả'],['policy','Chính sách',/chinh sach|quy dinh|nghi dinh|thong tu|quoc hoi/],
+      ['land','Đất đai',/dat dai|so hong|so do|tien su dung dat|bang gia dat|quyen su dung dat/],
+      ['planning','Quy hoạch',/quy hoach|ke hoach su dung dat|dieu chinh quy hoach/],
+      ['housing','Nhà ở',/nha o|chung cu|can ho|kinh doanh bat dong san/],
+      ['investment','Đầu tư',/dau tu|dau thau|cap phep|phap ly du an/]
+    ],
+    infrastructure: [
+      ['all','Tất cả'],['road','Đường & Vành đai',/vanh dai|cao toc|duong bo|duong vanh|thong xe|nut giao/],
+      ['metro','Metro & Đường sắt',/metro|duong sat|ga tau/],
+      ['airport','Sân bay',/san bay|hang khong|long thanh/],
+      ['construction','Tiến độ',/khoi cong|thi cong|hoan thanh|tien do|giai phong mat bang/],
+      ['investment','Đầu tư',/von dau tu|giai ngan|du an ha tang|dau tu cong/]
+    ],
+    macro: [
+      ['all','Tất cả'],['rates','Lãi suất',/lai suat|lai vay|lai tien gui|chinh sach tien te/],
+      ['fx','Tỷ giá',/ty gia|usd|vnd|ngoai hoi/],
+      ['gold','Giá vàng',/gia vang|sjc|vang mieng/],
+      ['inflation','Lạm phát & CPI',/lam phat|cpi|gia tieu dung/],
+      ['credit','Tín dụng & M2',/tin dung|cung tien|m2|thanh khoan/],
+      ['economy','Kinh tế',/gdp|tang truong kinh te|thu ngan sach|dau tu cong/]
+    ]
+  };
+  function foldNews(value) {
+    return String(value || '').toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g,'').replace(/đ/g,'d');
+  }
+  function availableTopics(module) {
+    return MODULE_TOPICS[module] || TOPICS;
+  }
+
   const SOURCE_NAMES = {
     'vnexpress-real-estate': 'VnExpress',
+    'vnexpress-economy': 'VnExpress',
+    'vnexpress-current-affairs': 'VnExpress',
+    'vnexpress-legal': 'VnExpress',
+    'thanhnien-banking': 'Thanh Niên',
+    'thanhnien-policy': 'Thanh Niên',
+    'thanhnien-transport': 'Thanh Niên',
+    'tuoitre-business': 'Tuổi Trẻ',
+    'tuoitre-current-affairs': 'Tuổi Trẻ',
+    'tuoitre-legal': 'Tuổi Trẻ',
+    'dantri-business': 'Dân trí',
+    'dantri-current-affairs': 'Dân trí',
+    'dantri-legal': 'Dân trí',
+    'dantri-gold': 'Dân trí',
     'dantri-real-estate': 'Dân trí',
     'thanhnien-real-estate': 'Thanh Niên',
     'nam-long-official': 'Nam Long',
@@ -57,7 +108,14 @@
   function sourceName(id) {
     return SOURCE_NAMES[id] || String(id || 'Nguồn khác').replace(/-(market|official|research)$/i, '').replaceAll('-', ' ');
   }
-  function topicMatch(article, topic) {
+  function topicMatch(article, topic, module = 'market') {
+    if (module !== 'market') {
+      if (topic === 'all') return true;
+      const definition = availableTopics(module).find(([id]) => id === topic);
+      if (!definition || !definition[2]) return false;
+      const text = foldNews([article.title, article.summary, ...(article.tags || [])].join(' '));
+      return definition[2].test(text);
+    }
     if (topic === 'all') return true;
     const tags = article.tags || [];
     if (topic === 'projects') {
@@ -68,7 +126,8 @@
     if (topic === 'research') return article.content_type === 'research';
     return tags.includes(topic);
   }
-  function articleTopic(article) {
+  function articleTopic(article, module = 'market') {
+    if (module !== 'market') return availableTopics(module).find(([id]) => id !== 'all' && topicMatch(article, id, module))?.[0] || 'all';
     for (const id of ['research', 'legal', 'infrastructure', 'pricing', 'supply', 'sales', 'projects']) {
       if (topicMatch(article, id)) return id;
     }
@@ -76,10 +135,10 @@
   }
   // Topic labels reuse exactly the same classifier as the filter. Multiple
   // relevant topics appear on a story, but are limited to two readable chips.
-  function articleTopics(article) {
-    const primary = articleTopic(article);
-    const topics = TOPICS.map(([id]) => id)
-      .filter(id => id !== 'all' && topicMatch(article, id));
+  function articleTopics(article, module = 'market') {
+    const primary = articleTopic(article, module);
+    const topics = availableTopics(module).map(([id]) => id)
+      .filter(id => id !== 'all' && topicMatch(article, id, module));
     return [primary, ...topics].filter((id, index, all) =>
       id !== 'all' && all.indexOf(id) === index).slice(0, 2);
   }
@@ -95,9 +154,10 @@
     const regions = window.Resolver.getEntities('region', article.region_ids || []).map(p => p.short_name || p.name);
     return regions.slice(0, 2).join(' · ');
   }
-  function card(article, variant) {
+  function card(article, variant, module = 'market') {
     const lead = variant === 'lead';
-    const topics = articleTopics(article);
+    const topics = articleTopics(article, module);
+    const names = Object.fromEntries(availableTopics(module).map(([id,label]) => [id,label]));
     const published = article.published_at || '';
     const summary = excerpt(article, lead ? 290 : 170);
     const context = relatedLabel(article);
@@ -107,7 +167,7 @@
         <span class="market-news-card__source">${esc(sourceName(article.source_id))}</span>
         <span class="market-news-card__dot" aria-hidden="true">·</span>
         <time datetime="${esc(published)}">${esc(window.App.formatDate(published))}</time>
-        ${topics.length ? `<span class="market-news-card__topics">${topics.map(topic => `<button type="button" class="market-news-card__topic" data-news-topic="${esc(topic)}" data-topic="${esc(topic)}" aria-label="Lọc tin: ${esc(TOPIC_NAMES[topic])}">${esc(TOPIC_NAMES[topic])}</button>`).join('')}</span>` : ''}
+        ${topics.length ? `<span class="market-news-card__topics">${topics.map(topic => `<button type="button" class="market-news-card__topic" data-news-topic="${esc(topic)}" data-topic="${esc(topic)}" aria-label="Lọc tin: ${esc(names[topic])}">${esc(TOPIC_NAMES[topic])}</button>`).join('')}</span>` : ''}
       </div>
       <h3><a href="${url}" target="_blank" rel="noopener noreferrer">${esc(article.title)}</a></h3>
       ${summary ? `<p class="market-news-card__excerpt">${esc(summary)}</p>` : ''}
@@ -118,19 +178,21 @@
     </article>`;
   }
 
-  function newsFilters({articles, regions, developers, state, sourceId, topicId}) {
-    const sourceIds = [...new Set(articles.map(a => a.source_id).filter(Boolean))];
-    sourceIds.sort((a, b) => sourceName(a).localeCompare(sourceName(b), 'vi'));
-    const sourceOptions = sourceIds.map(id =>
-      `<option value="${esc(id)}"${id === sourceId ? ' selected' : ''}>${esc(sourceName(id))}</option>`
-    ).join('');
+  function newsFilters({articles, regions, developers, state, sourceId, topicId, module = 'market'}) {
+    const publisherNames = [...new Set(articles.map(a => sourceName(a.source_id)).filter(Boolean))]
+      .sort((a,b) => a.localeCompare(b,'vi'));
+    const sourceOptions = publisherNames.map(name => {
+      const id = 'pub:' + name;
+      return `<option value="${esc(id)}"${id === sourceId ? ' selected' : ''}>${esc(name)}</option>`;
+    }).join('');
     const regionOptions = regions.map(x =>
       `<option value="${esc(x.id)}"${state.region === x.id ? ' selected' : ''}>${esc(x.short_name || x.name)}</option>`
     ).join('');
     const developerOptions = developers.map(x =>
       `<option value="${esc(x.id)}"${state.developer === x.id ? ' selected' : ''}>${esc(x.name)}</option>`
     ).join('');
-    const advancedOpen = !!(state.region || state.developer);
+    const showAdvanced = module === 'market' || module === 'infrastructure';
+    const advancedOpen = !!(state.region || (module === 'market' && state.developer));
     const windowId = window.App.getQueryParam('news-days') || 'all';
     return `<div class="market-news-filters">
       <form class="market-news-search" data-news-search role="search">
@@ -152,7 +214,7 @@
           <option value="">Tất cả nguồn</option>${sourceOptions}
         </select>
       </label>
-      <details class="market-news-advanced"${advancedOpen ? ' open' : ''}>
+      ${showAdvanced ? `<details class="market-news-advanced"${advancedOpen ? ' open' : ''}>
         <summary>Bộ lọc khác ${advancedOpen ? '• đang chọn' : ''}</summary>
         <div class="market-news-advanced__body">
           <label for="market-news-region">Khu vực
@@ -160,73 +222,74 @@
               <option value="">Tất cả khu vực</option>${regionOptions}
             </select>
           </label>
-          <label for="market-news-developer">Chủ đầu tư
+          ${module === 'market' ? `<label for="market-news-developer">Chủ đầu tư
             <select id="market-news-developer" data-news-field="developer">
               <option value="">Tất cả chủ đầu tư</option>${developerOptions}
             </select>
-          </label>
+          </label>` : ''}
         </div>
-      </details>
+      </details>` : ''}
       <button class="market-news-reset" data-news-reset type="button">Xóa lọc</button>
     </div>`;
   }
 
-  function render({ articles, regions, developers, state }) {
+  function render({ articles, regions = [], developers = [], state, module = 'market' }) {
     const sourceId = window.App.getQueryParam('news-source') || '';
     const topicParam = window.App.getQueryParam('news-topic') || 'all';
     const daysParam = window.App.getQueryParam('news-days') || 'all';
     const days = DATE_WINDOWS.some(([id]) => id === daysParam) ? daysParam : 'all';
-    const topicId = TOPIC_NAMES[topicParam] ? topicParam : 'all';
-    const visibleArticles = articles.filter(a => a.url && a.title && (window.DataStore?.isNewsFor ? window.DataStore.isNewsFor(a, 'market') : a.category === 'market') &&
+    const topics = availableTopics(module);
+    const topicId = topics.some(([id]) => id === topicParam) ? topicParam : 'all';
+    const visibleArticles = articles.filter(a => a.url && a.title && (window.DataStore?.isNewsFor ? window.DataStore.isNewsFor(a, module) : a.category === module) &&
       !String(a.source_id || '').startsWith('demo-') &&
       !/^(demo|illustrative)[\s:–-]/i.test(String(a.title || '')));
-    const publishers = new Set(visibleArticles.map(a => a.source_id).filter(Boolean)).size;
+    const publishers = new Set(visibleArticles.map(a => sourceName(a.source_id)).filter(Boolean)).size;
     const latestDate = visibleArticles.map(a => a.published_at || '').filter(Boolean).sort().at(-1) || '';
     const sourceRestricted = visibleArticles.filter(a => {
-      if (sourceId && a.source_id !== sourceId) return false;
+      if (sourceId && (sourceId.startsWith('pub:') ? sourceName(a.source_id) !== sourceId.slice(4) : a.source_id !== sourceId)) return false;
       if (!isWithinDays(a, days)) return false;
       if (state.region && !(a.region_ids || []).includes(state.region)) return false;
       if (state.developer && !(a.developer_ids || []).includes(state.developer)) return false;
       if (state.q && !window.FilterEngine.textMatch(a, state.q, ['title','summary','tags','project_ids','developer_ids'])) return false;
       return true;
     });
-    const counts = Object.fromEntries(TOPICS.map(([id]) => [id, sourceRestricted.filter(a => topicMatch(a, id)).length]));
-    const list = sourceRestricted.filter(a => topicMatch(a, topicId))
+    const counts = Object.fromEntries(topics.map(([id]) => [id, sourceRestricted.filter(a => topicMatch(a, id, module)).length]));
+    const list = sourceRestricted.filter(a => topicMatch(a, topicId, module))
       .sort((a, b) => String(b.published_at || '').localeCompare(String(a.published_at || '')));
     const shown = list.slice(0, visibleCount);
     const focused = !!(state.q || state.region || state.developer || sourceId || topicId !== 'all' || days !== 'all');
     const featured = !focused && shown.length >= 3 ? diverseFeatured(shown) : [];
     const rest = featured.length ? shown.filter(a => !featured.includes(a)) : shown;
-    const pills = TOPICS.filter(([id]) => id === 'all' || counts[id] > 0 || topicId === id)
+    const pills = topics.filter(([id]) => id === 'all' || counts[id] > 0 || topicId === id)
       .map(([id, label]) => `<button type="button" class="market-news-topic" data-news-topic="${esc(id)}" data-topic="${esc(id)}" aria-pressed="${id === topicId}">
         ${esc(label)} <span>${counts[id]}</span>
       </button>`).join('');
     return `<div class="market-news">
       <div class="market-news-heading">
         <div>
-          <span class="market-news-heading__eyebrow">MARKET / NEWS</span>
-          <h2>Tin tức thị trường</h2>
-          <p>Tin từ nguồn công bố · Nhấn tiêu đề để đọc bài gốc.</p>
+          <span class="market-news-heading__eyebrow" data-news-view-label="${esc(module)}.eyebrow">${esc(window.App.newsViewCopy?.(module)?.eyebrow || MODULE_CONFIG[module]?.eyebrow || MODULE_CONFIG.market.eyebrow)}</span>
+          <h2 data-news-view-label="${esc(module)}.title">${esc(window.App.newsViewCopy?.(module)?.title || MODULE_CONFIG[module]?.title || MODULE_CONFIG.market.title)}</h2>
+          <p data-news-view-label="${esc(module)}.description">${esc(window.App.newsViewCopy?.(module)?.description || MODULE_CONFIG[module]?.description || MODULE_CONFIG.market.description)}</p>
         </div>
         <div class="market-news-heading__total" aria-label="${visibleArticles.length} bài viết từ ${publishers} nguồn">
           <strong>${visibleArticles.length}</strong><span>bài · ${publishers} nguồn</span>
           ${latestDate ? `<small style="display:block;font-size:11px;font-weight:400;margin-top:4px">Tin mới nhất: ${esc(window.App.formatDate(latestDate))}</small>` : ''}
         </div>
       </div>
-      ${newsFilters({articles:visibleArticles, regions, developers, state, sourceId, topicId})}
+      ${newsFilters({articles:visibleArticles, regions, developers, state, sourceId, topicId, module})}
       <div class="market-news-topics" role="group" aria-label="Lọc theo chủ đề">${pills}</div>
       <div class="market-news-result" aria-live="polite">
         <span><strong>${list.length}</strong> bài phù hợp</span>
         <span>Đang xem ${shown.length}/${list.length}</span>
       </div>
       ${featured.length ? `<section aria-label="Tin mới nhất" class="market-news-feature">
-        ${card(featured[0], 'lead')}
+        ${card(featured[0], 'lead', module)}
         <div class="market-news-feature__side">
-          ${card(featured[1], 'side')}
-          ${card(featured[2], 'side')}
+          ${card(featured[1], 'side', module)}
+          ${card(featured[2], 'side', module)}
         </div>
       </section>` : ''}
-      ${rest.length ? `<div class="market-news-grid" aria-label="Danh sách tin tức">${rest.map(a => card(a, 'compact')).join('')}</div>` :
+      ${rest.length ? `<div class="market-news-grid" aria-label="Danh sách tin tức">${rest.map(a => card(a, 'compact', module)).join('')}</div>` :
         (!featured.length ? '<div class="market-news-empty">Không có tin phù hợp. Hãy thử từ khóa hoặc bộ lọc khác.</div>' : '')}
       ${shown.length < list.length ? `<div class="market-news-more"><button type="button" data-news-more>
         Xem thêm ${Math.min(NEXT_PAGE, list.length - shown.length)} tin <span aria-hidden="true">↓</span>

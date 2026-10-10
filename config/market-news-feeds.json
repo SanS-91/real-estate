@@ -8,7 +8,7 @@
       "url": "https://vnexpress.net/rss/bat-dong-san.rss",
       "host": "vnexpress.net",
       "category": "real-estate",
-      "max_items": 30
+      "max_items": 50
     },
     {
       "id": "thanhnien-real-estate",
@@ -17,7 +17,7 @@
       "url": "https://thanhnien.vn/rss/kinh-te/dia-oc.rss",
       "host": "thanhnien.vn",
       "category": "real-estate",
-      "max_items": 30
+      "max_items": 50
     },
     {
       "id": "dantri-real-estate",
@@ -26,7 +26,7 @@
       "url": "https://dantri.com.vn/rss/bat-dong-san.rss",
       "host": "dantri.com.vn",
       "category": "real-estate",
-      "max_items": 30
+      "max_items": 50
     },
     {
       "id": "vnexpress-economy",
@@ -35,7 +35,7 @@
       "url": "https://vnexpress.net/rss/kinh-doanh.rss",
       "host": "vnexpress.net",
       "category": "filtered-economy",
-      "max_items": 30
+      "max_items": 50
     },
     {
       "id": "vnexpress-current-affairs",
@@ -44,7 +44,7 @@
       "url": "https://vnexpress.net/rss/thoi-su.rss",
       "host": "vnexpress.net",
       "category": "filtered-policy-infrastructure",
-      "max_items": 30
+      "max_items": 50
     },
     {
       "id": "vnexpress-legal",
@@ -53,9 +53,99 @@
       "url": "https://vnexpress.net/rss/phap-luat.rss",
       "host": "vnexpress.net",
       "category": "filtered-property-legal",
-      "max_items": 30
+      "max_items": 50
+    },
+    {
+      "id": "tuoitre-business",
+      "source_id": "tuoitre-business",
+      "label": "Tuổi Trẻ Kinh doanh",
+      "url": "https://tuoitre.vn/kinh-doanh.rss",
+      "host": "tuoitre.vn",
+      "category": "filtered-economy",
+      "max_items": 50
+    },
+    {
+      "id": "tuoitre-current-affairs",
+      "source_id": "tuoitre-current-affairs",
+      "label": "Tuổi Trẻ Thời sự",
+      "url": "https://tuoitre.vn/thoi-su.rss",
+      "host": "tuoitre.vn",
+      "category": "filtered-policy-infrastructure",
+      "max_items": 50
+    },
+    {
+      "id": "tuoitre-legal",
+      "source_id": "tuoitre-legal",
+      "label": "Tuổi Trẻ Pháp luật",
+      "url": "https://tuoitre.vn/phap-luat.rss",
+      "host": "tuoitre.vn",
+      "category": "filtered-property-legal",
+      "max_items": 50
+    },
+    {
+      "id": "dantri-business",
+      "source_id": "dantri-business",
+      "label": "Dân trí Kinh doanh",
+      "url": "https://dantri.com.vn/rss/kinh-doanh.rss",
+      "host": "dantri.com.vn",
+      "category": "filtered-economy",
+      "max_items": 50
+    },
+    {
+      "id": "dantri-current-affairs",
+      "source_id": "dantri-current-affairs",
+      "label": "Dân trí Thời sự",
+      "url": "https://dantri.com.vn/rss/thoi-su.rss",
+      "host": "dantri.com.vn",
+      "category": "filtered-policy-infrastructure",
+      "max_items": 50
+    },
+    {
+      "id": "dantri-legal",
+      "source_id": "dantri-legal",
+      "label": "Dân trí Pháp luật",
+      "url": "https://dantri.com.vn/rss/phap-luat.rss",
+      "host": "dantri.com.vn",
+      "category": "filtered-property-legal",
+      "max_items": 50
+    },
+    {
+      "id": "dantri-gold",
+      "source_id": "dantri-gold",
+      "label": "Dân trí Giá vàng",
+      "url": "https://dantri.com.vn/rss/gia-vang.rss",
+      "host": "dantri.com.vn",
+      "category": "filtered-macro",
+      "max_items": 50
+    },
+    {
+      "id": "thanhnien-banking",
+      "source_id": "thanhnien-banking",
+      "label": "Thanh Niên Ngân hàng",
+      "url": "https://thanhnien.vn/rss/kinh-te/ngan-hang.rss",
+      "host": "thanhnien.vn",
+      "category": "filtered-economy",
+      "max_items": 50
+    },
+    {
+      "id": "thanhnien-policy",
+      "source_id": "thanhnien-policy",
+      "label": "Thanh Niên Chính sách - Phát triển",
+      "url": "https://thanhnien.vn/rss/kinh-te/chinh-sach-phat-trien.rss",
+      "host": "thanhnien.vn",
+      "category": "filtered-policy-infrastructure",
+      "max_items": 50
+    },
+    {
+      "id": "thanhnien-transport",
+      "source_id": "thanhnien-transport",
+      "label": "Thanh Niên Giao thông",
+      "url": "https://thanhnien.vn/rss/xe/xe-giao-thong.rss",
+      "host": "thanhnien.vn",
+      "category": "filtered-infrastructure",
+      "max_items": 50
     }
   ],
-  "days_lookback": 21,
-  "max_new_per_run": 100
+  "days_lookback": 30,
+  "max_new_per_run": 175
 }

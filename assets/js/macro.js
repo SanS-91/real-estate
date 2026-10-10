@@ -621,16 +621,12 @@
   }
 
   function renderNews() {
-    let articles = [...data.articles]
-      .filter(item => DataStore.isNewsFor(item, 'macro'))
-      .sort((a,b)=>String(b.published_at).localeCompare(String(a.published_at)));
-    if (state.indicatorFilter) articles = articles.filter(item => (item.indicator_ids || []).includes(state.indicatorFilter));
-    if (state.q) articles = articles.filter(item => FilterEngine.textMatch(item,state.q,['title','summary','tags']));
-    const opts = data.indicators.map(ind=>`<option value="${esc(ind.id)}"${state.indicatorFilter===ind.id?' selected':''}>${esc(ind.name)}</option>`).join('');
-    setView(`<div class="view-intro"><div><span class="eyebrow" data-news-view-label="macro.eyebrow">${esc(App.newsViewCopy('macro').eyebrow)}</span><h2 data-news-view-label="macro.title">${esc(App.newsViewCopy('macro').title)}</h2><p data-news-view-label="macro.description">${esc(App.newsViewCopy('macro').description)}</p></div></div>
-      <div class="filter-bar filter-bar--macro-news"><label class="filter-field filter-field--search"><span>Search</span><input type="search" data-macro-news-q value="${esc(state.q)}" placeholder="Rates, FX, gold, CPI…"></label><label class="filter-field"><span>Indicator</span><select data-macro-news-indicator><option value="">All indicators</option>${opts}</select></label><button class="button filter-reset" type="button" data-macro-news-reset>Reset</button></div>
-      <div class="article-list">${articles.map(article => `<article class="article-row"><div class="article-row__date">${esc(App.formatDate(article.published_at))}</div><div><div class="article-row__meta"><span class="source-tag news-kind-chip" data-news-kind="${esc(article.content_type)}">${esc(App.newsKindLabel(article.content_type))}</span>${sourceRef(article.source_id,{publishedAt:article.published_at,sourceUrl:article.url})}<span>${esc((article.indicator_ids||[]).map(id=>indicator(id)?.name).filter(Boolean).join(' · '))}</span></div><h3>${esc(article.title)}</h3><p>${esc(article.summary)}</p><div class="article-relations">${(article.indicator_ids||[]).map(id=>`<button class="relation-button" type="button" data-macro-indicator-id="${esc(id)}">${esc(indicator(id)?.name || id)}</button>`).join('')}</div></div></article>`).join('') || Components.stateBox('Chưa có tin vĩ mô từ nguồn đã kết nối phù hợp bộ lọc.')}</div>`);
-    bindNewsFilters();
+    setView(MarketNewsUI.render({
+      module: 'macro',
+      articles: data.articles,
+      state
+    }));
+    MarketNewsUI.bind({state, refresh: renderNews});
   }
 
   function bindNewsFilters() {
@@ -708,7 +704,7 @@
       data = {
         indicators: applyProductionIndicatorMetadata(payloadData(indicators), integrated.productionIndicatorIds),
         observations: integrated.rows,
-        articles:payloadData(articles).filter(item=>item.category==='macro').map(item=>({ ...item, _data_layer:'demo' })),
+        articles:payloadData(articles),
         events:payloadData(events).filter(item=>item.category==='macro').map(item=>({ ...item, _data_layer:'demo' }))
       };
       Resolver.setData('macro-indicator',data.indicators);

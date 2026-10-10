@@ -63,6 +63,36 @@ html=window.MarketNewsUI.render(args);
 assert.doesNotMatch(html,/<img src=x/);
 assert.match(html,/&lt;img/);
 
+
+/* All four modules use identical responsive News layout, with module-specific topics. */
+const moduleStories = [
+  {id:'legal-rss',category:'legal',module_ids:['legal'],title:'Nghị định đất đai và quy hoạch nhà ở',
+   summary:'Quy định mới về đất đai',url:'https://vnexpress.net/legal.html',source_id:'vnexpress-legal',
+   published_at:'2026-10-10T07:00:00Z',tags:['legal'],region_ids:[],project_ids:[]},
+  {id:'infra-rss',category:'infrastructure',module_ids:['infrastructure'],title:'Thi công đường Vành đai 3',
+   summary:'Tiến độ đường Vành đai tại TPHCM',url:'https://tuoitre.vn/infrastructure.html',source_id:'tuoitre-current-affairs',
+   published_at:'2026-10-10T07:00:00Z',tags:['infrastructure'],region_ids:[],project_ids:[]},
+  {id:'macro-rss',category:'macro',module_ids:['macro'],title:'Giá vàng và lãi suất ngân hàng',
+   summary:'Cập nhật giá vàng SJC',url:'https://dantri.com.vn/gold.html',source_id:'dantri-gold',
+   published_at:'2026-10-10T07:00:00Z',tags:['macro'],region_ids:[],project_ids:[]}
+];
+window.DataStore = {
+  isNewsFor: (article, module) => (article.module_ids || [article.category]).includes(module)
+};
+for (const [module, heading, topic] of [
+  ['legal','Tin tức pháp lý','Đất đai'],
+  ['infrastructure','Tin tức hạ tầng','Đường &amp; Vành đai'],
+  ['macro','Tin tức vĩ mô','Giá vàng']
+]) {
+  const page = window.MarketNewsUI.render({module, articles:moduleStories, regions:[],developers:[],state:{q:'',region:'',developer:''}});
+  assert.equal(cards(page),1, module + ' shows only its article');
+  assert.match(page, /market-news-filters/, module + ' uses Market News filters');
+  assert.match(page, /market-news-topics/, module + ' uses same topic chips');
+  assert.match(page, /market-news-grid/, module + ' uses responsive article grid');
+  assert.ok(page.includes(heading),module + ' correct headline');
+  assert.ok(page.includes(topic),module + ' correct topic');
+}
+
 const css=fs.readFileSync('assets/css/market-news.css','utf8');
 assert.match(css,/@media \(max-width: 640px\)/);
 assert.match(css,/@media \(max-width: 1120px\)/);

@@ -25,6 +25,7 @@ CASES=[
     "infrastructure.html?view=projects",
     "infrastructure.html?view=news",
     "macro.html?view=overview",
+    "macro.html?view=news",
     "macro.html?view=fx&series=usd-vnd-central-rate",
     "maintenance.html",
 ]
@@ -105,20 +106,11 @@ async def run():
                             assert await page.locator("[data-mobile-nav] a[href='maintenance.html']").count()==1
                             await page.keyboard.press("Escape")
                             assert await menu.get_attribute("aria-expanded")=="false"
-                    if path=="legal.html?view=news":
-                        await page.locator(".legal-official-updates").wait_for(timeout=12000)
-                        official=page.locator(".article-list--legal-official .legal-official-row")
-                        assert await official.count()>=8,(width,"official legal update count")
-                        assert await page.locator(".legal-editorial-updates").count()==1
-                        assert await official.first.locator("[data-document-id]").count()==1
                     if path=="infrastructure.html?view=overview":
                         table=page.locator(".data-table--infra tbody tr")
                         await table.first.wait_for(timeout=12000)
                         assert await table.count()==8,(width,"eight infrastructure records")
                         assert await page.locator(".infra-milestone-grid .infra-milestone").count()>=3
-                    if path=="infrastructure.html?view=news":
-                        await page.locator(".article-list--infra-compact").wait_for(timeout=12000)
-                        assert await page.locator(".article-list--infra-compact .article-row").count()>0
                     if path=="macro.html?view=overview":
                         await page.locator(".macro-metric-card").first.wait_for(timeout=12000)
                         assert await page.locator(".macro-metric-card .macro-cadence").count()>=4
@@ -126,30 +118,29 @@ async def run():
                         release=page.locator(".macro-release-list .macro-release-row")
                         assert await release.count()>=3,(width,"latest production release entries")
                         assert "DEMO" not in (await page.locator(".macro-release-list").inner_text())
-                    if path in ("legal.html?view=news", "infrastructure.html?view=news",
-                                "macro.html?view=news"):
-                        section=path.split(".html")[0]
-                        heading=page.locator(f'[data-news-view-label="{section}.title"]')
+                    if path in ("market.html?view=news", "legal.html?view=news",
+                                "infrastructure.html?view=news", "macro.html?view=news"):
+                        module=path.split(".html")[0]
+                        section=page.locator(".market-news")
+                        await section.wait_for(timeout=12000)
+                        assert await section.locator(".market-news-filters").count()==1
+                        assert await section.locator(".market-news-topics").count()==1
+                        assert await section.locator("[data-news-source]").count()==1
+                        assert await section.locator("[data-news-days]").count()==1
+                        heading=section.locator(f'[data-news-view-label="{module}.title"]')
                         await heading.wait_for(timeout=12000)
-                        vietnamese={
-                            "legal":"Tin tức & phân tích pháp lý",
-                            "infrastructure":"Tin tức & tiến độ hạ tầng",
-                            "macro":"Tin tức & nghiên cứu vĩ mô (minh họa)"
-                        }
-                        assert await heading.text_content()==vietnamese[section],(path,"Vietnamese title")
-                        chips=page.locator(".article-row__meta .news-kind-chip")
-                        if await chips.count():
-                            chip=chips.first
-                            assert await chip.get_attribute("data-news-kind"),(path,"source taxonomy")
-                            assert "-" not in (await chip.text_content()),(path,"raw technical label")
+                        vietnamese={"market":"Tin tức thị trường", "legal":"Tin tức pháp lý",
+                                    "infrastructure":"Tin tức hạ tầng","macro":"Tin tức vĩ mô"}
+                        assert await heading.text_content()==vietnamese[module]
+                        cards=section.locator(".market-news-card")
+                        assert await cards.count()>0,(width,module,"no sourced news cards")
                         toggle=page.locator("[data-language-toggle]")
                         await toggle.click()
-                        expected={"legal":"Legal news & analysis",
-                                  "infrastructure":"Infrastructure news & milestones",
-                                  "macro":"Illustrative macro news & research"}
-                        assert await heading.text_content()==expected[section],(path,"English toggle")
+                        english={"market":"Real estate market news", "legal":"Legal news",
+                                 "infrastructure":"Infrastructure news","macro":"Macro news"}
+                        assert await heading.text_content()==english[module],(module,"English heading")
                         await toggle.click()
-                        assert await heading.text_content()==vietnamese[section],(path,"Vietnamese toggle restore")
+                        assert await heading.text_content()==vietnamese[module],(module,"Vietnamese heading restore")
                     if path=="market.html?view=pricing":
                         audit=page.locator("[data-market-history-audit]")
                         await audit.wait_for(timeout=12000)
