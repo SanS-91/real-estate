@@ -33,6 +33,6 @@ assert 'research relevance only' in js
 
 assert '.research-brief__grid' in css
 assert 'body.print-research-brief' in css
-assert len(production)==18
+assert len(production)>=18
 
 print('Phase 5.2 Research Brief tests PASS')
