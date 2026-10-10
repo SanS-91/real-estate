@@ -159,6 +159,11 @@ async def run():
                         assert await audit.get_attribute("open") is not None
                         rows=audit.locator(".data-table--history-readiness tbody tr")
                         assert await rows.count()==13,(width,"all 13 projects have history coverage")
+                        grand=rows.filter(has=page.locator('[data-project-id="vinhomes-grand-park"]')).first
+                        assert await grand.count()==1,(width,"Grand Park pricing-history entry")
+                        grand_text=await grand.inner_text()
+                        assert "Lumière Boulevard: 2 tháng" in grand_text,(width,"Sep and Oct subproject continuity",grand_text)
+                        assert "1 chỉ mục" in grand_text and "1 đã kiểm chứng" in grand_text,(width,"provenance labels",grand_text)
                         assert await rows.first.locator("[data-project-id]").count()==1
                         text=(await audit.inner_text()).lower()
                         assert "không phải kết luận xu hướng" in text
