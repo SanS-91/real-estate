@@ -64,6 +64,7 @@ class NewsRSSTests(unittest.TestCase):
         self.assertEqual(row["category"],"macro")
         self.assertIn("macro",row["module_ids"])
         item["title"]="Bóng đá quốc tế tối nay"
+        item["description"]="Kết quả trận đấu"
         self.assertEqual(classify(item,feed,{},NOW,21)[1],"off-topic-for-feed")
 
     def test_invalid_future_and_missing_date(self):
