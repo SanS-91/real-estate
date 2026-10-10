@@ -490,35 +490,69 @@ def fetch_html(target, session):
 
 
 
-def fetch_with_publisher_fallback(target, session):
-    """On a publisher login/JS-only variant, inspect an explicitly pinned official mirror.
+def publisher_variant_health(url, access, html, target, today):
+    """Safe, compact per-official-host diagnostics; no raw HTML or price values."""
+    info={
+        "host":source_hostname(url),
+        "http_status":access.get("http_status"),
+        "fetch_status":access.get("status"),
+        "source_url":url,
+    }
+    if html is not None and target.get("mode")=="monthly-price-candidate":
+        text=plain_text(html)
+        diag=onehousing_source_diagnostics(
+            text,target.get("publisher_project_name","Vinhomes Grand Park"))
+        parsed=onehousing_monthly(
+            text,today,target.get("publisher_project_name","Vinhomes Grand Park"))
+        info.update({
+            "exact_project_header":diag["publisher_project_header"],
+            "publisher_periods":diag["publisher_periods"],
+            "other_project_headers":diag["other_publisher_project_headers"],
+            "page_price_section_count":diag["page_level_price_sections"],
+            "login_wall_visible":diag["login_wall_in_text"],
+            "verified_source_scope":bool(parsed),
+            "verified_source_period":parsed["period"] if parsed else None,
+        })
+    return info
 
-    Mirror must be the exact same project slug and ID on an allowed OneHousing
-    host. Never bypass a block or treat an unlabelled numeric value as evidence.
+
+def fetch_with_publisher_fallback(target, session):
+    """Try only explicit same-ID official mirror after HTTP 200 unparseable HTML.
+
+    Never bypass 401/403/429; never accept related project prices, crawler
+    dates or unscoped modal values as a Masteri observation. The outcome
+    retains both checked URLs' compact provenance for source-health review.
     """
+    original_url=target["url"]
     status,html=fetch_html(target,session)
-    # A blocked/403 publisher is not permission to try another access path.
-    # Only attempt an official same-ID URL if the source responded HTTP 200
-    # with HTML, but that HTML is an unparseable login/JS-only variant.
-    if html is None or status.get("http_status")!=200:
-        return status,html
-    if target.get("mode")=="monthly-price-candidate":
-        if onehousing_monthly(plain_text(html),date.today(),
-                             target.get("publisher_project_name","Vinhomes Grand Park")):
-            return status,html
+    today=date.today()
+    variants=[publisher_variant_health(original_url,status,html,target,today)]
+    if (html is None or status.get("http_status")!=200 or
+        target.get("mode")!="monthly-price-candidate"):
+        return dict(status,source_variants=variants),html
+    parsed=onehousing_monthly(
+        plain_text(html),today,target.get("publisher_project_name","Vinhomes Grand Park"))
+    if parsed:
+        return dict(status,checked_url=original_url,source_variants=variants),html
     for url in target.get("fallback_urls",[]):
-        main=urlsplit(target["url"])
+        main=urlsplit(original_url)
         mirror=urlsplit(url)
+        # Pinned, unmodified project path and ID on an allowed publisher host.
         if (mirror.path!=main.path or mirror.scheme!="https" or
             mirror.hostname not in publisher_hosts(target["source_id"]) or
-            mirror.query or mirror.fragment):
+            mirror.query or mirror.fragment or mirror.username or mirror.password or
+            url==original_url):
             continue
         alt={**target,"url":url}
         details,page=fetch_html(alt,session)
-        if page and onehousing_monthly(plain_text(page),date.today(),
-                                      target.get("publisher_project_name","Vinhomes Grand Park")):
-            return dict(details,fallback_used=True,checked_url=url),page
-    return status,html
+        variants.append(publisher_variant_health(url,details,page,target,today))
+        if page and details.get("http_status")==200:
+            parsed_alt=onehousing_monthly(
+                plain_text(page),today,target.get("publisher_project_name","Vinhomes Grand Park"))
+            if parsed_alt:
+                return dict(details,fallback_used=True,checked_url=url,
+                            source_variants=variants),page
+    return dict(status,checked_url=original_url,source_variants=variants),html
 
 
 def run(targets, baselines, today, session, fetcher=fetch_html, published_history=None):
