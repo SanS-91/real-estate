@@ -26,6 +26,8 @@ REPORT = ROOT / "data/candidate/market/alternative-source-probe-report.json"
 CANDIDATES = ROOT / "data/candidate/market/alternative-price-candidates.json"
 STATE = ROOT / "data/state/alternative-source-health.json"
 QUEUE = ROOT / "data/candidate/market/alternative-price-review-queue.json"
+SUBPROJECT_HISTORY = ROOT / "data/mock/market/alternative-subproject-monthly-history.json"
+PARENT_HISTORY = ROOT / "data/mock/market/onehousing-project-monthly-history.json"
 TIMEOUT = 16
 MAX_BYTES = 8_000_000
 HEADERS = {"User-Agent": "MarketIntelligenceResearchBot/1.0 (public source check)",
@@ -340,40 +342,116 @@ def rever_single_listing(text, today):
     }
 
 
-def classify(target, html, baseline, today):
+def _valid_published(reference, row):
+    """Fail closed: a released month is comparable only within its exact series."""
+    if row.get("review_status") not in ("source-indexed-baseline","reviewed-release",
+                                         "automated-source-verified"):
+        return False
+    if row.get("source_record_id") != reference.get("id"):
+        return False
+    if any(row.get(key) != reference.get(key) for key in
+           ("project_id","source_id","source_url","asset_type","metric_type")):
+        return False
+    if reference.get("subproject_name"):
+        if (row.get("subproject_name") != reference.get("subproject_name") or
+            row.get("subproject_id") != reference.get("subproject_id")):
+            return False
+    elif row.get("subproject_name") or row.get("subproject_id"):
+        return False
+    return (row.get("period_type") == "month" and
+            bool(re.fullmatch(r"20\d{2}-(0[1-9]|1[0-2])",row.get("period",""))) and
+            all(isinstance(row.get(key),int) and row[key]>0 for key in
+                ("value_vnd_per_m2","range_low_vnd_per_m2","range_high_vnd_per_m2")))
+
+
+def latest_published_month(baseline, published):
+    """Read immutable reviewed history; never reclassify nested prices as parent."""
+    eligible=[row for row in (published or []) if _valid_published(baseline,row)]
+    # Detect contradictory duplicate periods rather than silently picking one.
+    grouped={}
+    for row in eligible:
+        signature=tuple(row.get(k) for k in
+                        ("value_vnd_per_m2","range_low_vnd_per_m2","range_high_vnd_per_m2"))
+        grouped.setdefault(row["period"],set()).add(signature)
+    if any(len(signatures)!=1 for signatures in grouped.values()):
+        return None
+    return max(eligible,key=lambda row:row["period"]) if eligible else None
+
+
+def published_candidate_status(candidate, released):
+    """Historical review queue remains immutable, but resolved items are not backlog."""
+    for row in released:
+        if (candidate.get("baseline_record_id") != row.get("source_record_id") or
+            candidate.get("period") != row.get("period") or
+            candidate.get("project_id") != row.get("project_id") or
+            candidate.get("source_id") != row.get("source_id") or
+            candidate.get("source_url") != row.get("source_url") or
+            candidate.get("subproject_name") != row.get("subproject_name")):
+            continue
+        if (row.get("review_status") not in ("automated-source-verified","reviewed-release") or
+            row.get("period_type")!="month"):
+            continue
+        if all(candidate.get(k)==row.get(k) for k in
+               ("value_vnd_per_m2","range_low_vnd_per_m2","range_high_vnd_per_m2")):
+            return "published-matching"
+        return "published-price-conflict"
+    return "unresolved"
+
+
+def candidate_backlog(queue, released):
+    unresolved=[]; matched=[]; conflicts=[]
+    for row in queue.get("data",[]):
+        status=published_candidate_status(row,released)
+        (matched if status=="published-matching" else
+         conflicts if status=="published-price-conflict" else unresolved).append(row.get("id"))
+    return {"pending_count":len(unresolved)+len(conflicts),
+            "pending_ids":unresolved+conflicts,
+            "published_matched_count":len(matched),
+            "published_matched_ids":matched,
+            "published_conflict_count":len(conflicts),
+            "published_conflict_ids":conflicts}
+
+
+def classify(target, html, baseline, today, published_month=None):
     text = plain_text(html)
     if len(text) < 100 or CHALLENGE.search(text[:900]):
         return "blocked-or-empty-page", None
     mode = target["mode"]
     if mode == "historical-reference-monitor":
         return "reachable-historical-reference-frozen", None
-    parsed = (onehousing_monthly(text, today, target.get("publisher_project_name", "Vinhomes Grand Park")) if mode == "monthly-price-candidate"
+    parsed = (onehousing_monthly(text, today, target.get("publisher_project_name", "Vinhomes Grand Park"))
+              if mode == "monthly-price-candidate"
               else rever_single_listing(text, today) if mode == "single-listing-review"
               else None)
     if parsed is None:
         return "reachable-no-verifiable-metric", None
-    old_period = baseline["period"]
-    if parsed["period"] < old_period:
+    # The reviewed baseline remains the immutable source_record_id for future
+    # candidates; only the comparison period/value advances as verified releases
+    # appear in the actual OneHousing parent/subproject monthly histories.
+    comparison = published_month if mode=="monthly-price-candidate" and published_month else baseline
+    if parsed["period"] < comparison["period"]:
         return "older-period-no-candidate", None
-    if parsed["period"] == old_period:
-        unchanged = (all(parsed[k] == baseline.get(k) for k in
-                         ("value_vnd_per_m2", "range_low_vnd_per_m2", "range_high_vnd_per_m2")))
+    if parsed["period"] == comparison["period"]:
+        unchanged=all(parsed[k]==comparison.get(k) for k in
+                      ("value_vnd_per_m2","range_low_vnd_per_m2","range_high_vnd_per_m2"))
+        if published_month and comparison["period"] > baseline["period"]:
+            return ("published-period-unchanged" if unchanged else
+                    "published-period-price-conflict"), None
         return ("same-period-unchanged" if unchanged else "same-period-review-required"), None
-    # Independent publication period is required. This is NEVER auto-promoted.
-    row = {k: baseline.get(k) for k in
-           ("project_id", "source_id", "source_url", "asset_type",
-            "metric_type", "period_type", "subproject_name") if k in baseline}
+    row = {k:baseline.get(k) for k in
+           ("project_id","source_id","source_url","asset_type",
+            "metric_type","period_type","subproject_name","subproject_id") if k in baseline}
     row.update(parsed)
     row.update({
         "id": "candidate-" + target["target_id"] + "-" + parsed["period"],
         "source_url": target["url"],
-        "source_publication_date": parsed["period"] if target["period_type"] == "date" else None,
+        "source_publication_date": parsed["period"] if target["period_type"]=="date" else None,
         "review_date": None,
         "candidate_only": True,
         "review_required": True,
         "collection_mode": "github-runner-public-html",
         "baseline_record_id": baseline["id"],
-        "methodology_note": "New independent publisher period requires human evidence review. Never blend source metrics or use single listing as project ASP.",
+        "methodology_note": "Only a publisher-authored later month is a candidate, requiring independent original-source rechecks; never a project ASP."
     })
     return "new-period-review-required", row
 
@@ -443,7 +521,7 @@ def fetch_with_publisher_fallback(target, session):
     return status,html
 
 
-def run(targets, baselines, today, session, fetcher=fetch_html):
+def run(targets, baselines, today, session, fetcher=fetch_html, published_history=None):
     checks, candidates = [], []
     for target in targets:
         prior = baselines.get(target["baseline_id"])
@@ -452,6 +530,8 @@ def run(targets, baselines, today, session, fetcher=fetch_html):
             "project_id": target["project_id"], "mode": target["mode"],
             "baseline_period": prior.get("period") if prior else None,
         }
+        released=latest_published_month(prior,published_history) if prior and target["mode"]=="monthly-price-candidate" else None
+        row["latest_published_period"]=released["period"] if released else (prior.get("period") if prior else None)
         if not prior or not allowed_target(target) or (prior["project_id"], prior["source_id"], prior["source_url"], prior["metric_type"]) != (
                 target["project_id"], target["source_id"], target["url"], target["metric_type"]) or (target.get("subproject_name") and prior.get("subproject_name") != target["subproject_name"]):
             row["status"] = "invalid-target-mapping"
@@ -460,7 +540,7 @@ def run(targets, baselines, today, session, fetcher=fetch_html):
                            if fetcher is fetch_html else fetcher(target,session))
             row.update(probe)
             if html is not None:
-                status, candidate = classify(target, html, prior, today)
+                status, candidate = classify(target, html, prior, today, released)
                 row["status"] = status
                 if status == "reachable-no-verifiable-metric" and target.get("mode") == "monthly-price-candidate":
                     row["parser_diagnostics"] = onehousing_source_diagnostics(
@@ -496,18 +576,26 @@ def main():
     today = date.fromisoformat(args.today)
     config = load(CONFIG)
     baseline = {r["id"]: r for r in (load(BASELINE)["data"] + load(SUBPROJECT_BASELINE)["data"])}
-    checks, candidates = run(config["targets"], baseline, today, requests.Session())
+    published = (load(SUBPROJECT_HISTORY)["data"] if SUBPROJECT_HISTORY.exists() else []) + (
+        load(PARENT_HISTORY)["data"] if PARENT_HISTORY.exists() else [])
+    checks, candidates = run(config["targets"], baseline, today, requests.Session(),
+                             published_history=published)
     queue = load(QUEUE) if QUEUE.exists() else {
         "schema_version": 1, "candidate_only": True, "review_required": True, "data": []}
     new_queue_rows, queue_conflicts = append_review_queue(queue, candidates)
     if new_queue_rows or not QUEUE.exists():
         save(QUEUE, queue)
+    backlog=candidate_backlog(queue,published)
     timestamp = datetime.now(timezone.utc).isoformat()
     counts = {status: sum(x["status"] == status for x in checks) for status in sorted({x["status"] for x in checks})}
     report = {
         "schema_version": 1, "generated_at": timestamp,
         "targets_checked": len(checks), "candidates_staged": len(candidates),
-        "queued_new": new_queue_rows, "queued_backlog": queue["record_count"],
+        "queued_new": new_queue_rows, "queued_backlog": backlog["pending_count"],
+        "queue_historical_total":queue["record_count"],
+        "queue_published_matched":backlog["published_matched_count"],
+        "queue_published_conflicts":backlog["published_conflict_count"],
+        "pending_candidate_ids":backlog["pending_ids"],
         "queue_conflicts": queue_conflicts,
         "counts": counts, "checks": checks, "production_written": False,
         "source_prices_not_inferred": True,
@@ -520,11 +608,14 @@ def main():
     })
     save(STATE, {
         "schema_version": 1, "generated_at": timestamp, "targets_checked": len(checks),
-        "candidate_count": len(candidates), "queue_backlog": queue["record_count"],
+        "candidate_count": len(candidates), "queue_backlog": backlog["pending_count"],
+        "queue_historical_total":queue["record_count"],
+        "queue_published_matched":backlog["published_matched_count"],
+        "queue_published_conflicts":backlog["published_conflict_count"],
         "queue_conflicts": queue_conflicts, "production_updated": False,
         "counts": counts, "checks": checks,
     })
-    print(json.dumps({"checked": len(checks), "candidates": len(candidates), "queue_backlog": queue["record_count"], "conflicts": queue_conflicts, "counts": counts}, ensure_ascii=False))
+    print(json.dumps({"checked": len(checks), "candidates": len(candidates), "queue_backlog": backlog["pending_count"], "queue_historical_total":queue["record_count"], "conflicts": queue_conflicts, "counts": counts}, ensure_ascii=False))
 
 
 if __name__ == "__main__":

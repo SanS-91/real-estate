@@ -6,6 +6,7 @@ on:
       - 'scripts/market_alternative_auto_probe.py'
       - 'scripts/market_source_reliability.py'
       - 'tests/test_market_source_reliability.py'
+      - 'tests/test_phase6_3d_onehousing_unresolved_months.py'
       - 'scripts/market_subproject_candidate_recheck.py'
       - 'scripts/market_subproject_monthly_release.py'
       - 'tests/test_market_subproject_monthly_review.py'
@@ -56,6 +57,7 @@ jobs:
           python -m py_compile scripts/market_alternative_auto_probe.py scripts/market_subproject_candidate_recheck.py scripts/market_subproject_monthly_release.py
           python tests/test_market_subproject_monthly_review.py
           python tests/test_market_automatic_monthly_pipeline.py
+          python tests/test_phase6_3d_onehousing_unresolved_months.py
           python tests/test_market_alternative_auto_probe.py
           python -m unittest discover -s tests -p 'test_market_source_reliability.py'
           python tests/test_market_onehousing_latest_month_parser.py
