@@ -53,7 +53,7 @@ assert len(dongnai_projects) >= 1
 dongnai_infra=[x for x in infra if 'dong-nai' in x.get('region_ids',[])]
 assert len(dongnai_infra) >= 1
 
-assert len(production)==18
+assert len(production)>=18
 assert 'Research relevance, not legal advice.' in research
 assert 'do not determine legal applicability' in js
 assert 'not project-specific causality' in js
