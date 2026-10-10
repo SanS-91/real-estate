@@ -439,7 +439,7 @@
         infrastructureProjects: payloadData(projects),
         schedules: payloadData(schedules),
         events: payloadData(events).filter(item => item.category === 'infrastructure'),
-        articles: payloadData(articles).filter(item => item.category === 'infrastructure'),
+        articles: payloadData(articles),
         realEstateProjects: payloadData(realEstateProjects)
       };
       Resolver.setData('region',data.regions);
