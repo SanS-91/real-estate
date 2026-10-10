@@ -67,11 +67,11 @@ assert.equal(labels.newsKindLabel('analysis'),'Phân tích');
 assert.equal(labels.newsKindLabel('news'),'Tin tức');
 assert.equal(labels.newsKindLabel('official-update'),'Cập nhật chính thức');
 assert.equal(labels.newsKindLabel('data-release'),'Công bố dữ liệu');
-assert.equal(labels.newsViewCopy('macro').title,'Tin tức & nghiên cứu vĩ mô (minh họa)');
-assert.ok(labels.newsViewCopy('legal').description.includes('văn bản pháp luật gốc'));
+assert.equal(labels.newsViewCopy('macro').title,'Tin tức vĩ mô');
+assert.ok(labels.newsViewCopy('legal').description.includes('văn bản gốc'));
 scriptContext.document.documentElement.lang='en';
 assert.equal(labels.newsKindLabel('official-update'),'Official update');
-assert.equal(labels.newsViewCopy('infrastructure').title,'Infrastructure news & milestones');
+assert.equal(labels.newsViewCopy('infrastructure').title,'Infrastructure news');
 for(const module of ['legal','infrastructure','macro']) {
   const js=fs.readFileSync('assets/js/'+module+'.js','utf8');
   const html=fs.readFileSync(module+'.html','utf8');
