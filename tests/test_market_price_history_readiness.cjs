@@ -11,6 +11,10 @@ const portal=(date,source='portal-one',asset='apartment')=>({
 const month=(period,subprojectId=null)=>({
   project_id:project.id,source_id:'onehousing-vn',asset_type:'apartment',
   metric_type:'popular-asking-price-per-sqm',period,value_vnd_per_m2:73000000,
+  review_status:'source-indexed-baseline',
+  source_url:'https://onehousing.vn/phan-tich/du-an/source-authored',
+  source_record_id:'indexed-baseline-'+(subprojectId||project.id),
+  series_key:'onehousing-'+(subprojectId||project.id)+'-apartment-popular-asking',
   ...(subprojectId?{subproject_id:subprojectId,subproject_name:subprojectId}:{})
 });
 const base={
@@ -59,6 +63,32 @@ result=model.build({...base,listingObservations:[],
 assert.equal(result.projects[0].monthly_max_periods,2);
 assert.equal(result.history_ready_projects,0,'repeated publisher month cannot create synthetic history');
 
+result=model.build({...base,listingObservations:[],
+  subprojectMonthly:[month('2026-09','tower-a'),{
+    ...month('2026-10','tower-a'),review_status:'automated-source-verified'
+  }]},now);
+assert.equal(result.projects[0].subproject_monthly_series,1);
+assert.equal(result.projects[0].parent_monthly_series,0);
+assert.equal(result.projects[0].monthly_max_periods,2);
+assert.equal(result.projects[0].monthly_series[0].indexed_months,1);
+assert.equal(result.projects[0].monthly_series[0].verified_months,1);
+assert.equal(result.history_ready_projects,0,'two real months do not equal three months');
+
+result=model.build({...base,listingObservations:[],
+ subprojectMonthly:[month('2026-09','tower-a'),{
+   ...month('2026-10','tower-a'),subproject_id:undefined,review_status:'automated-source-verified'
+ }]},now);
+assert.equal(result.projects[0].monthly_max_periods,1,
+ 'a missing subproject ID is ignored, never reclassified as parent');
+assert.equal(result.projects[0].parent_monthly_series,0);
+result=model.build({...base,listingObservations:[],
+ subprojectMonthly:[month('2026-08','tower-a'),month('2026-09','tower-a'),{
+   ...month('2026-10','tower-a'),value_vnd_per_m2:88000000
+ },{
+   ...month('2026-10','tower-a'),value_vnd_per_m2:73000000
+ }]},now);
+assert.equal(result.history_ready_projects,0,'conflicting published values in a monthly source must fail closed');
+
 const ad={project_id:project.id,source_id:'muaban-vn',listing_id:'987654321',
  review_status:'automated-two-hosted-checks',asset_type:'apartment',
  metric_type:'single-listing-asking-price-per-sqm',value_vnd_per_m2:50000000,
@@ -90,6 +120,17 @@ assert.equal(prod.projects.length,prod.total_projects);
 assert(prod.history_ready_projects<=prod.total_projects);
 assert(prod.monthly_priced_projects<=prod.total_projects);
 assert(prod.projects.every(x=>typeof x.history_ready==='boolean'));
+const grand=prod.projects.find(x=>x.project_id==='vinhomes-grand-park');
+assert(grand,'Vinhomes Grand Park still monitored');
+const boulevard=grand.monthly_series.find(x=>x.subject==='lumiere-boulevard');
+assert(boulevard,'Lumière Boulevard must remain its own separately scoped series');
+assert.equal(boulevard.observations,2,'Sep indexed and Oct verified share a series');
+assert.equal(boulevard.indexed_months,1);
+assert.equal(boulevard.verified_months,1);
+assert.equal(boulevard.from,'2026-09');
+assert.equal(boulevard.to,'2026-10');
+assert(!grand.monthly_series.some(x=>x.scope==='project' && x.observations===2),
+  'Two nested-subproject months are not two whole-project prices');
 const site=fs.readFileSync('market.html','utf8');
 const js=fs.readFileSync('assets/js/market.js','utf8');
 assert(site.indexOf('market-price-history-readiness.js')<site.indexOf('assets/js/market.js'));
