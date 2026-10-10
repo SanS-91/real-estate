@@ -59,7 +59,7 @@ jobs:
               for text in ('Dự án theo dõi', 'Có khoảng giá rao',
                            'Chỉ giá theo sản phẩm','Giá TB dự án theo nguồn',
                            'Benchmark toàn thị trường', 'chart-frame--pricing-range',
-                           'Ngày snapshot','Giá rao tổng hợp, giá theo phân khúc'):
+                           'Ngày snapshot','Giá được hiển thị theo đúng phạm vi nguồn'):
                   assert text in doc,(kind,text)
               assert 'Kho\u1ea3ng gi\u00e1 rao b\u00e1n theo d\u1ef1 \u00e1n' in doc
               print(f'PASS {kind}: readable project intervals, transparent source coverage and benchmarks')
