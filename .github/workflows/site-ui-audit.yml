@@ -6,6 +6,9 @@ on:
       - 'assets/js/common.js'
       - 'assets/js/home.js'
       - 'assets/js/market.js'
+      - 'assets/js/data-store.js'
+      - 'tests/test_phase6_3f_peer_ui.cjs'
+      - 'config/market-onehousing-peer-monthly-targets.json'
       - 'assets/js/market-price-history-readiness.js'
       - 'tests/test_market_price_history_readiness.cjs'
       - 'assets/js/legal.js'
@@ -61,6 +64,9 @@ jobs:
           node tests/test_market_4j2.cjs
           node --check assets/js/market-price-history-readiness.js
           node tests/test_market_price_history_readiness.cjs
+          node --check assets/js/data-store.js
+          node --check assets/js/market.js
+          node tests/test_phase6_3f_peer_ui.cjs
           node --check assets/js/legal.js
           node --check assets/js/infrastructure.js
           node --check assets/js/macro.js
