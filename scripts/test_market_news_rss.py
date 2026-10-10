@@ -67,6 +67,19 @@ class NewsRSSTests(unittest.TestCase):
         item["description"]="Kết quả trận đấu"
         self.assertEqual(classify(item,feed,{},NOW,21)[1],"off-topic-for-feed")
 
+    def test_gold_feed_must_be_macro(self):
+        feed=dict(FEED, category="filtered-macro")
+        item={"title":"Giá vàng SJC tăng mạnh tại thị trường Việt Nam",
+              "description":"Giá vàng hôm nay",
+              "link":"https://vnexpress.net/gia-vang-sjc-123.html",
+              "date":"Fri, 09 Oct 2026 07:00:00 +0700"}
+        row,error=classify(item,feed,{},NOW,21)
+        self.assertIsNone(error)
+        self.assertIn("macro",row["module_ids"])
+        item["title"]="Bóng đá tối nay"
+        item["description"]="Kết quả các trận đấu"
+        self.assertEqual(classify(item,feed,{},NOW,21)[1],"off-topic-for-feed")
+
     def test_invalid_future_and_missing_date(self):
         self.assertIsNone(parse_date("Sat, 10 Oct 2026 23:00:00 +0700",NOW))
         self.assertIsNone(parse_date("",NOW))
