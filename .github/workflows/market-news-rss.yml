@@ -7,6 +7,7 @@ on:
       - 'scripts/test_market_news_rss.py'
       - 'config/market-news-feeds.json'
       - '.github/workflows/market-news-rss.yml'
+      - 'config/news-automation.json'
       - 'data/mock/core/sources.json'
   push:
     branches: [main]
@@ -15,9 +16,11 @@ on:
       - 'scripts/test_market_news_rss.py'
       - 'config/market-news-feeds.json'
       - '.github/workflows/market-news-rss.yml'
+      - 'config/news-automation.json'
   workflow_dispatch:
   schedule:
-    - cron: '20 1,10 * * *'
+    # Eight daytime checks in Vietnam: 07:20, 09:20, ..., 21:20 (UTC+7).
+    - cron: '20 0,2,4,6,8,10,12,14 * * *'
 
 permissions:
   contents: write
