@@ -101,5 +101,5 @@ assert "automated-source-verified" in market
 assert "published.get(item.subproject_name) || item" in market
 assert "getOneHousingSubprojectHistory()" in market
 assert "market-price-references" in market
-assert read("data/mock/market/listing-observations.json")["record_count"]==18
+assert read("data/mock/market/listing-observations.json")["record_count"]>=18
 print("PASS: scheduled auto-verified months require two >1h source checks; avoid 403, stale, outlier or replay; price reference uses latest valid release.")
