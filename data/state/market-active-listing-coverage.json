@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-10-10T02:37:05.569672+00:00",
+  "generated_at": "2026-10-10T02:37:49.690786+00:00",
   "scope": "individual-verified-apartment-asking-only",
   "project_registry_count": 13,
   "projects_monitored": 7,
@@ -18,7 +18,7 @@
       "source_id": "rever-vn",
       "report_available": true,
       "report_fresh": true,
-      "checked_at": "2026-10-09T12:04:14.876948+00:00"
+      "checked_at": "2026-10-10T02:37:10.183202+00:00"
     }
   ],
   "projects": [
@@ -108,7 +108,7 @@
           "source_health_recent": true,
           "recent_eligible_ads": 0,
           "discovered_links": 12,
-          "last_checked_at": "2026-10-09T12:04:14.876948+00:00"
+          "last_checked_at": "2026-10-10T02:37:10.183202+00:00"
         }
       ],
       "recent_eligible_ads": 0,
@@ -124,11 +124,11 @@
       "sources": [
         {
           "source_id": "rever-vn",
-          "access_status": "not-measured-recently",
-          "source_health_recent": false,
-          "recent_eligible_ads": null,
-          "discovered_links": null,
-          "last_checked_at": null
+          "access_status": "reachable",
+          "source_health_recent": true,
+          "recent_eligible_ads": 0,
+          "discovered_links": 8,
+          "last_checked_at": "2026-10-10T02:37:10.183202+00:00"
         }
       ],
       "recent_eligible_ads": 0,
@@ -156,7 +156,7 @@
           "source_health_recent": true,
           "recent_eligible_ads": 0,
           "discovered_links": 6,
-          "last_checked_at": "2026-10-09T12:04:14.876948+00:00"
+          "last_checked_at": "2026-10-10T02:37:10.183202+00:00"
         }
       ],
       "recent_eligible_ads": 0,
@@ -184,7 +184,7 @@
           "source_health_recent": true,
           "recent_eligible_ads": 0,
           "discovered_links": 24,
-          "last_checked_at": "2026-10-09T12:04:14.876948+00:00"
+          "last_checked_at": "2026-10-10T02:37:10.183202+00:00"
         }
       ],
       "recent_eligible_ads": 0,
@@ -208,11 +208,11 @@
         },
         {
           "source_id": "rever-vn",
-          "access_status": "not-measured-recently",
-          "source_health_recent": false,
-          "recent_eligible_ads": null,
-          "discovered_links": null,
-          "last_checked_at": null
+          "access_status": "reachable",
+          "source_health_recent": true,
+          "recent_eligible_ads": 0,
+          "discovered_links": 12,
+          "last_checked_at": "2026-10-10T02:37:10.183202+00:00"
         }
       ],
       "recent_eligible_ads": 3,
@@ -236,11 +236,11 @@
         },
         {
           "source_id": "rever-vn",
-          "access_status": "not-measured-recently",
-          "source_health_recent": false,
-          "recent_eligible_ads": null,
-          "discovered_links": null,
-          "last_checked_at": null
+          "access_status": "reachable",
+          "source_health_recent": true,
+          "recent_eligible_ads": 0,
+          "discovered_links": 12,
+          "last_checked_at": "2026-10-10T02:37:10.183202+00:00"
         }
       ],
       "recent_eligible_ads": 3,
@@ -268,7 +268,7 @@
           "source_health_recent": true,
           "recent_eligible_ads": 1,
           "discovered_links": 12,
-          "last_checked_at": "2026-10-09T12:04:14.876948+00:00"
+          "last_checked_at": "2026-10-10T02:37:10.183202+00:00"
         }
       ],
       "recent_eligible_ads": 1,
