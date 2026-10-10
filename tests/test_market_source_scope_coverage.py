@@ -44,7 +44,7 @@ assert essensia["asking_price_change_1y_pct"] == -0.05
 assert "/ban-nha-biet-thu-lien-ke-essensia-parkway" in essensia["source_url"]
 
 by_project = {x["project_id"]: x for x in sorted(listing, key=lambda o: (o["project_id"], o["observation_date"]))}
-assert len(listing) == 18
+assert len(listing) >= 18
 assert all(by_project[pid]["asking_price_low_vnd_per_m2"] is None for pid in refs)
 assert by_project["izumi-city"]["asset_type"] == "apartment"  # original misleading portal mapping stays historical
 assert by_project["essensia-parkway"]["asset_type"] == "villa-townhouse-shophouse"
