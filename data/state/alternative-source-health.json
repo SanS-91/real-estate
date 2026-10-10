@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-10-10T03:27:01.361010+00:00",
+  "generated_at": "2026-10-10T04:06:11.717107+00:00",
   "targets_checked": 7,
   "candidate_count": 0,
   "queue_backlog": 0,
@@ -25,7 +25,25 @@
       "latest_published_period": "2026-10",
       "http_status": 200,
       "final_host": "onehousing.vn",
-      "status": "same-period-unchanged"
+      "status": "same-period-unchanged",
+      "checked_url": "https://onehousing.vn/phan-tich/du-an/can-ho-chung-cu-du-an-Vinhomes-Grand-Park.1012",
+      "source_variants": [
+        {
+          "host": "onehousing.vn",
+          "http_status": 200,
+          "fetch_status": "reachable",
+          "source_url": "https://onehousing.vn/phan-tich/du-an/can-ho-chung-cu-du-an-Vinhomes-Grand-Park.1012",
+          "exact_project_header": true,
+          "publisher_periods": [
+            "2026-10"
+          ],
+          "other_project_headers": 1,
+          "page_price_section_count": 1,
+          "login_wall_visible": true,
+          "verified_source_scope": true,
+          "verified_source_period": "2026-10"
+        }
+      ]
     },
     {
       "target_id": "rever-vinhomes-grand-park-listing",
@@ -36,7 +54,15 @@
       "latest_published_period": "2026-09-16",
       "http_status": 200,
       "final_host": "rever.vn",
-      "status": "same-period-unchanged"
+      "status": "same-period-unchanged",
+      "source_variants": [
+        {
+          "host": "rever.vn",
+          "http_status": 200,
+          "fetch_status": "reachable",
+          "source_url": "https://rever.vn/mua/can-ho-vinhomes-grand-park-23"
+        }
+      ]
     },
     {
       "target_id": "rever-the-privia-historical",
@@ -47,7 +73,15 @@
       "latest_published_period": "2023-11-14",
       "http_status": 200,
       "final_host": "blog.rever.vn",
-      "status": "reachable-historical-reference-frozen"
+      "status": "reachable-historical-reference-frozen",
+      "source_variants": [
+        {
+          "host": "blog.rever.vn",
+          "http_status": 200,
+          "fetch_status": "reachable",
+          "source_url": "https://blog.rever.vn/the-privia-khang-dien-du-dieu-kien-mua-ban-rever-chinh-thuc-phan-phoi"
+        }
+      ]
     },
     {
       "target_id": "onehousing-global-city-historical",
@@ -58,7 +92,15 @@
       "latest_published_period": "2024-11-12",
       "http_status": 200,
       "final_host": "onehousing.vn",
-      "status": "reachable-historical-reference-frozen"
+      "status": "reachable-historical-reference-frozen",
+      "source_variants": [
+        {
+          "host": "onehousing.vn",
+          "http_status": 200,
+          "fetch_status": "reachable",
+          "source_url": "https://onehousing.vn/blog/can-ho-the-global-city"
+        }
+      ]
     },
     {
       "target_id": "onehousing-lumiere-boulevard-apartment",
@@ -69,7 +111,25 @@
       "latest_published_period": "2026-10",
       "http_status": 200,
       "final_host": "onehousing.vn",
-      "status": "published-period-unchanged"
+      "status": "published-period-unchanged",
+      "checked_url": "https://onehousing.vn/phan-tich/du-an/can-ho-chung-cu-du-an-Lumiere-Boulevard.34",
+      "source_variants": [
+        {
+          "host": "onehousing.vn",
+          "http_status": 200,
+          "fetch_status": "reachable",
+          "source_url": "https://onehousing.vn/phan-tich/du-an/can-ho-chung-cu-du-an-Lumiere-Boulevard.34",
+          "exact_project_header": true,
+          "publisher_periods": [
+            "2026-10"
+          ],
+          "other_project_headers": 1,
+          "page_price_section_count": 1,
+          "login_wall_visible": true,
+          "verified_source_scope": true,
+          "verified_source_period": "2026-10"
+        }
+      ]
     },
     {
       "target_id": "onehousing-masteri-centre-point-apartment",
@@ -81,6 +141,35 @@
       "http_status": 200,
       "final_host": "beta.onehousing.vn",
       "status": "reachable-no-verifiable-metric",
+      "checked_url": "https://beta.onehousing.vn/phan-tich/du-an/can-ho-chung-cu-du-an-Masteri-Centre-Point.53",
+      "source_variants": [
+        {
+          "host": "beta.onehousing.vn",
+          "http_status": 200,
+          "fetch_status": "reachable",
+          "source_url": "https://beta.onehousing.vn/phan-tich/du-an/can-ho-chung-cu-du-an-Masteri-Centre-Point.53",
+          "exact_project_header": false,
+          "publisher_periods": [],
+          "other_project_headers": 1,
+          "page_price_section_count": 1,
+          "login_wall_visible": true,
+          "verified_source_scope": false,
+          "verified_source_period": null
+        },
+        {
+          "host": "onehousing.vn",
+          "http_status": 200,
+          "fetch_status": "reachable",
+          "source_url": "https://onehousing.vn/phan-tich/du-an/can-ho-chung-cu-du-an-Masteri-Centre-Point.53",
+          "exact_project_header": false,
+          "publisher_periods": [],
+          "other_project_headers": 1,
+          "page_price_section_count": 1,
+          "login_wall_visible": true,
+          "verified_source_scope": false,
+          "verified_source_period": null
+        }
+      ],
       "parser_diagnostics": {
         "publisher_project_header": false,
         "publisher_periods": [],
@@ -103,7 +192,25 @@
       "latest_published_period": "2026-10",
       "http_status": 200,
       "final_host": "onehousing.vn",
-      "status": "same-period-unchanged"
+      "status": "same-period-unchanged",
+      "checked_url": "https://onehousing.vn/phan-tich/du-an/can-ho-chung-cu-du-an-Lumiere-Riverside.625",
+      "source_variants": [
+        {
+          "host": "onehousing.vn",
+          "http_status": 200,
+          "fetch_status": "reachable",
+          "source_url": "https://onehousing.vn/phan-tich/du-an/can-ho-chung-cu-du-an-Lumiere-Riverside.625",
+          "exact_project_header": true,
+          "publisher_periods": [
+            "2026-10"
+          ],
+          "other_project_headers": 1,
+          "page_price_section_count": 1,
+          "login_wall_visible": true,
+          "verified_source_scope": true,
+          "verified_source_period": "2026-10"
+        }
+      ]
     }
   ]
 }
