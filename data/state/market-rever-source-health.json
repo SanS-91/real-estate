@@ -1,17 +1,17 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-10-09T12:04:14.876948+00:00",
+  "generated_at": "2026-10-10T02:37:10.183202+00:00",
   "source_id": "rever-vn",
   "scope": "individual-apartment-asking-only",
-  "targets_checked": 4,
-  "catalogs_checked": 5,
-  "listing_urls_discovered": 42,
-  "details_checked": 42,
-  "exact_project_matches": 21,
+  "targets_checked": 7,
+  "catalogs_checked": 8,
+  "listing_urls_discovered": 74,
+  "details_checked": 74,
+  "exact_project_matches": 23,
   "source_updates_within_30_days": 0,
   "source_updates_within_90_days": 1,
   "published_current_individual_listings": 1,
-  "source_runs_seen": 2,
+  "source_runs_seen": 3,
   "projects": [
     {
       "project_id": "akari-city",
@@ -77,6 +77,51 @@
       "recent_30_days": 0,
       "recent_90_days": 0,
       "latest_publisher_listing_update_date": "2025-03-19"
+    },
+    {
+      "project_id": "the-9-stellars",
+      "catalogs": [
+        {
+          "source_url": "https://rever.vn/s/the-9-stellars/mua/can-ho",
+          "access_status": "reachable",
+          "links_discovered": 8
+        }
+      ],
+      "details_checked": 8,
+      "exact_project_matches": 2,
+      "recent_30_days": 0,
+      "recent_90_days": 0,
+      "latest_publisher_listing_update_date": "2023-03-23"
+    },
+    {
+      "project_id": "mizuki-park",
+      "catalogs": [
+        {
+          "source_url": "https://rever.vn/s/mizuki-park/mua/can-ho",
+          "access_status": "reachable",
+          "links_discovered": 12
+        }
+      ],
+      "details_checked": 12,
+      "exact_project_matches": 0,
+      "recent_30_days": 0,
+      "recent_90_days": 0,
+      "latest_publisher_listing_update_date": null
+    },
+    {
+      "project_id": "vinhomes-grand-park",
+      "catalogs": [
+        {
+          "source_url": "https://rever.vn/s/vinhomes-grand-park/mua/can-ho",
+          "access_status": "reachable",
+          "links_discovered": 12
+        }
+      ],
+      "details_checked": 12,
+      "exact_project_matches": 0,
+      "recent_30_days": 0,
+      "recent_90_days": 0,
+      "latest_publisher_listing_update_date": null
     }
   ],
   "methodology": "Access and fresh publisher dates are diagnostics only. Individual prices are published only after two distinct hosted checks at least one hour apart. No project ASP or asking-range aggregation is inferred."
