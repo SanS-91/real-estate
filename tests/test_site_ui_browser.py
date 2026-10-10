@@ -150,6 +150,22 @@ async def run():
                         assert await heading.text_content()==expected[section],(path,"English toggle")
                         await toggle.click()
                         assert await heading.text_content()==vietnamese[section],(path,"Vietnamese toggle restore")
+                    if path=="market.html?view=pricing":
+                        audit=page.locator("[data-market-history-audit]")
+                        await audit.wait_for(timeout=12000)
+                        assert await audit.count()==1,(width,"one opt-in pricing history matrix")
+                        assert await audit.get_attribute("open") is None,(width,"history must start folded")
+                        await audit.locator("summary").click()
+                        assert await audit.get_attribute("open") is not None
+                        rows=audit.locator(".data-table--history-readiness tbody tr")
+                        assert await rows.count()==13,(width,"all 13 projects have history coverage")
+                        assert await rows.first.locator("[data-project-id]").count()==1
+                        text=(await audit.inner_text()).lower()
+                        assert "không phải kết luận xu hướng" in text
+                        assert "số tháng của các phân khu không được cộng" in text
+                        # A collapsed audit must not crowd mobile page before opening.
+                        await audit.locator("summary").click()
+                        assert await audit.get_attribute("open") is None
                     if path in ("market.html?view=overview","market.html?view=projects"):
                         table=page.locator(".data-table--market-projects")
                         await table.wait_for(timeout=12000)
