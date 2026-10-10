@@ -2957,3 +2957,48 @@ body[data-page="home"] .metric-grid {
 }
 .maintenance-lag strong { color: var(--color-text); font-size: 12px; }
 .maintenance-lag.is-late strong { color: var(--color-danger); }
+
+/* Phase 6.3A — historical data depth is opt-in, never crowds Pricing. */
+.market-price-history-audit {
+  margin: 24px 0;
+  border: 1px solid var(--color-border);
+  border-radius: 12px;
+  background: var(--color-surface);
+}
+.market-price-history-audit > summary {
+  cursor: pointer;
+  padding: 14px 18px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 14px;
+  color: var(--color-primary);
+}
+.market-price-history-audit > summary span {
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--color-text-secondary);
+}
+.market-price-history-audit__body {
+  padding: 4px 16px 16px;
+  border-top: 1px solid var(--color-border);
+}
+.market-price-history-audit__body > p {
+  font-size: 12px;
+  line-height: 1.65;
+}
+.data-table--history-readiness { font-size: 12px; }
+.data-table--history-readiness td { vertical-align: top; }
+.history-depth-state {
+  display: inline-block;
+  font-size: 11px;
+  font-weight: 750;
+  white-space: nowrap;
+}
+.history-depth-state.is-short { color: var(--color-text-secondary); }
+.history-depth-state.is-ready { color: #16764b; }
+@media(max-width:767px) {
+  .market-price-history-audit > summary { align-items: flex-start; flex-direction: column; gap: 4px; }
+  .market-price-history-audit__body { padding: 4px 10px 14px; }
+  .data-table--history-readiness.mobile-record-table tbody td { overflow-wrap: anywhere; }
+}

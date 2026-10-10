@@ -39,6 +39,6 @@ assert len(rows)>=12
 assert len(latest)==12
 assert len(priced)==8
 assert canonical['record_count']==len(canonical['data']) and canonical['record_count']>=7
-assert macro['record_count']==18
+assert macro['record_count']==len(macro['data']) and macro['record_count']>=18
 
 print('Phase 5.5B.1 Market Surface Integration tests PASS')

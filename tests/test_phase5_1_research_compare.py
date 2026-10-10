@@ -29,6 +29,6 @@ assert 'Common context, not used to score subjects.' in js
 assert 'research.html?type=project&ids=${encodeURIComponent(project.id)}' in market
 assert 'research.html?type=developer&ids=${encodeURIComponent(dev.id)}' in market
 assert 'assets/js/market.js' in market_html
-assert len(production)==18
+assert len(production)>=18
 
 print('Phase 5.1 research compare tests PASS')

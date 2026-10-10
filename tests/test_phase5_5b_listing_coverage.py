@@ -51,7 +51,7 @@ for pid in ['izumi-city','the-9-stellars','celesta-gold','essensia-parkway']:
 
 assert canonical['record_count']==len(canonical['data']) and canonical['record_count']>=7
 assert not any(x.get('source_id')=='batdongsan-com-vn' for x in canonical['data'])
-assert len(production['data'])==18
+assert production['record_count']==len(production['data']) and len(production['data'])>=18
 
 assert 'listing.coverage_status === \'partial\'' in research
 assert 'listingCoverage(ctx).priced' in research

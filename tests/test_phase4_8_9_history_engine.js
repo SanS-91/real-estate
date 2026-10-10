@@ -23,13 +23,24 @@ const market = load('data/mock/market/observations.json').data;
 const projects = load('data/mock/market/projects.json').data;
 const phases = load('data/mock/market/project-phases.json').data;
 
-const fx = HistoryEngine.macroDelta(macro, 'usd-vnd-central-rate');
-assert(fx.current.period === '2026-10-07', 'FX latest period must be 2026-10-07');
-assert(fx.previous.period === '2026-10-05', 'FX prior period must be 2026-10-05');
-assert(fx.delta === -5, 'FX delta must equal -5 VND/USD');
-
-const gold = HistoryEngine.macroDelta(macro, 'sjc-gold-sell');
-assert(gold.delta === -500000, 'SJC sell delta must equal -500,000 VND/tael');
+// Live Macro production is append-only. Match the *actual* latest publisher
+// periods; testing a fixed "latest = 2026-10-07" would fail when collection
+// succeeds for Oct 9 or any subsequent date.
+for (const id of ['usd-vnd-central-rate','sjc-gold-sell']) {
+  const dated = macro.filter(x=>x.indicator_id===id && Number.isFinite(x.value))
+    .sort((a,b)=>String(a.period).localeCompare(String(b.period)));
+  assert(dated.length>=2, 'At least two source-backed Macro periods required');
+  const actual = HistoryEngine.macroDelta(macro,id);
+  assert(actual.current.period===dated.at(-1).period, id+' current must use latest source date');
+  assert(actual.previous.period===dated.at(-2).period, id+' prior must use preceding actual date');
+  assert(actual.delta===dated.at(-1).value-dated.at(-2).value, id+' delta must use source values');
+}
+const archivedFx = macro.filter(x=>x.indicator_id==='usd-vnd-central-rate' &&
+  ['2026-10-05','2026-10-07'].includes(x.period));
+assert(archivedFx.length===2, 'Retain original confirmed FX baseline periods');
+const fxByDate = Object.fromEntries(archivedFx.map(x=>[x.period,x.value]));
+assert(fxByDate['2026-10-07']-fxByDate['2026-10-05']===-5,
+  'Original Oct 5-to-Oct 7 FX baseline remains auditable');
 
 const rr3 = HistoryEngine.infrastructureScheduleChange('hcmc-ring-road-3', schedules);
 assert(rr3 && rr3.from === '2026-Q2' && rr3.to === '2026-Q4', 'Ring Road 3 schedule history must preserve Q2 -> Q4 revision');

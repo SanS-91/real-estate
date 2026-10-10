@@ -39,7 +39,7 @@ project_obs=[x for x in obs if x.get('project_id')]
 assert len(project_obs)==2
 assert any(x.get('average_asp') is not None for x in project_obs)
 assert any(x.get('sales_units') is not None for x in project_obs)
-assert len(production)==18
+assert len(production)>=18
 
 assert '.research-market-primary' in css
 assert '.research-context-grid' in css

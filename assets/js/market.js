@@ -951,6 +951,51 @@
     </section>`;
   }
 
+  function priceHistoryReadinessHTML(filteredProjects) {
+    if (!window.MarketPriceHistoryReadiness) return '';
+    const currentVietnamDay = new Date(Date.now() + 7*3600000).toISOString().slice(0,10);
+    const report = MarketPriceHistoryReadiness.build({
+      projects:filteredProjects,
+      listingObservations:data.listingObservations,
+      projectMonthly:data.oneHousingProjectHistory,
+      subprojectMonthly:data.oneHousingSubprojectHistory,
+      marketObservations:data.observations,
+      reverOffers:data.reverVerifiedUnitListings,
+      muabanOffers:data.muabanVerifiedUnitListings
+    },currentVietnamDay);
+    const cells = report.projects.map(r => {
+      const portal = r.portal_series[0];
+      const portalText = portal
+        ? `${r.portal_max_snapshots} kỳ · ${portal.span_days} ngày`
+        : '—';
+      const monthly = r.monthly_series.map(x =>
+        `${x.scope === 'subproject' ? (x.subproject_name||x.subject) : 'Toàn dự án'}: ${x.observations} tháng`).join(' · ') || '—';
+      const status = r.history_ready
+        ? '<span class="history-depth-state is-ready">Đạt mốc quan sát</span>'
+        : '<span class="history-depth-state is-short">Chưa đủ lịch sử</span>';
+      return `<tr>
+        <td data-label-vi="Dự án" data-label-en="Project"><button class="table-link" type="button" data-project-id="${esc(r.project_id)}">${esc(r.project_name)}</button></td>
+        <td data-label-vi="Khoảng giá rao" data-label-en="Asking snapshots">${esc(portalText)}</td>
+        <td data-label-vi="Giá phổ biến tháng" data-label-en="Monthly popular rate">${esc(monthly)}</td>
+        <td class="numeric" data-label-vi="Tin căn xác minh" data-label-en="Verified unit ads">${esc(r.current_verified_unit_ads)}</td>
+        <td class="numeric" data-label-vi="ASP / Doanh số" data-label-en="ASP / Sales">${esc(r.disclosed_project_asp_observations)} / ${esc(r.disclosed_project_sales_observations)}</td>
+        <td data-label-vi="Độ sâu" data-label-en="History depth">${status}</td>
+      </tr>`;
+    }).join('');
+    return `<details class="market-price-history-audit" data-market-history-audit>
+      <summary><strong>Độ sâu lịch sử giá theo dự án</strong><span>${esc(report.history_ready_projects)}/${esc(report.total_projects)} dự án đạt mốc quan sát</span></summary>
+      <div class="market-price-history-audit__body">
+        <p>Kiểm tra tự động trên dữ liệu đang có: ${esc(report.portal_priced_projects)}/${esc(report.total_projects)} dự án có snapshot giá rao đầy đủ; ${esc(report.monthly_priced_projects)} dự án có dữ liệu giá phổ biến theo tháng; ${esc(report.unit_offer_projects)} dự án có tin từng căn đã xác minh còn hiệu lực.</p>
+        <p><strong>Điều kiện sơ bộ:</strong> ít nhất 3 snapshot giá cùng nguồn và loại sản phẩm cách nhau từ 30 ngày, hoặc 3 tháng cùng chuỗi từ một nguồn trải dài ít nhất 2 tháng. Đây không phải kết luận xu hướng giá. Số tháng của các phân khu không được cộng thành lịch sử giá toàn dự án.</p>
+        <div class="table-wrap"><table class="data-table mobile-record-table data-table--history-readiness">
+          <thead><tr><th>Dự án</th><th>Giá rao</th><th>Giá phổ biến tháng</th><th class="numeric">Tin từng căn</th><th class="numeric">ASP / Doanh số</th><th>Độ sâu</th></tr></thead>
+          <tbody>${cells || '<tr><td colspan="6">Không có dự án phù hợp bộ lọc.</td></tr>'}</tbody>
+        </table></div>
+        <p class="chart-note">Giá rao, giá phổ biến, giá từng căn, ASP và doanh số là các lớp chứng cứ khác nhau. Chỉ số tăng 1 năm do nguồn công bố không được suy ra từ 1–2 snapshot nội bộ. Kết quả tự cập nhật khi có JSON dữ liệu mới, không cần nhập lại từng dự án.</p>
+      </div>
+    </details>`;
+  }
+
   function renderPricing() {
     const filteredProjects = projectFilter(data.projects);
     const projectRows = filteredProjects
@@ -1006,6 +1051,7 @@
         <div class="section-body"><p class="chart-note">Giá chào bán theo phân khúc (căn hộ, biệt thự/liền kề hoặc FAQ tham khảo) được hiển thị riêng, không gộp vào biểu đồ giá bình quân dự án và không được xem là giá giao dịch.</p>
         <div class="market-listing-scope-grid">${data.listingScopeEvidence.filter(row=>filteredProjects.some(project=>project.id === row.project_id)).map(row=>`<div class="market-listing-scope-item"><div class="market-listing-scope-item__head"><strong>${esc(Resolver.getEntity('project',row.project_id)?.name || row.project_id)}</strong><span>${esc(listingScopeLabel(row))}</span></div><div class="market-listing-scope-item__price">${esc(formatListingRange(row))}</div><p>${esc(listingScopeDescription(row))}</p><div class="provenance-inline-row">${sourceRef(row.source_id,{sourceDate:row.review_date,sourceUrl:row.source_url,methodology:row.methodology_note})}<span>Ngày xem ${esc(row.review_date)}</span></div></div>`).join('')}</div></div></section>` : ''}
       ${state.priceLayer === 'listing' ? alternativePriceCardsHTML(filteredProjects.map(project => project.id)) : ''}
+      ${priceHistoryReadinessHTML(filteredProjects)}
       <section class="section"><div class="section-header"><div><h2 class="section-title">Benchmark toàn thị trường</h2><p class="chart-note">Số liệu cung, giao dịch và hấp thụ theo kỳ báo cáo của từng đơn vị nghiên cứu. Không phải giá bán từng dự án; không cộng gộp số liệu các nguồn.</p></div></div><div class="section-body section-body--table"><div class="table-wrap"><table class="data-table"><thead><tr><th>Thị trường</th><th>Kỳ báo cáo</th><th class="numeric">Nguồn cung mới</th><th class="numeric">Giao dịch</th><th class="numeric">Hấp thụ</th><th class="numeric">Giá TB theo nguồn</th><th>Nguồn</th></tr></thead><tbody>${benchmarkRows.map(row=>`<tr><td>HCMC · Apartment</td><td>${esc(row.period)}</td><td class="numeric">${esc(formatMarketMetric(row,'new_supply'))}</td><td class="numeric">${esc(formatMarketMetric(row,'sales_units'))}</td><td class="numeric">${esc(formatMarketMetric(row,'absorption_rate'))}</td><td class="numeric">${esc(formatMarketMetric(row,'average_asp'))}</td><td>${sourceRef(row.source_id,{sourceDate:row.source_date,period:row.period,methodology:row.methodology_note,sourceUrl:row.source_url})}</td></tr>`).join('') || '<tr><td colspan="7" class="table-empty">No market benchmark records.</td></tr>'}</tbody></table></div></div></section>`;
     setView(html);
     bindFilters();
