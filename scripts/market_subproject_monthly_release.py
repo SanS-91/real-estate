@@ -44,7 +44,9 @@ def baseline_map(baselines):
 
 def candidate_in_series(candidate,base):
     keys=("project_id","source_id","source_url","asset_type","metric_type","period_type","subproject_name")
-    return (base is not None and all(candidate.get(k)==base.get(k) for k in keys)
+    return (base is not None and
+            candidate.get("subproject_id", base.get("subproject_id")) == base.get("subproject_id") and
+            all(candidate.get(k)==base.get(k) for k in keys)
             and candidate.get("baseline_record_id")==base.get("id")
             and candidate.get("candidate_only") is True
             and candidate.get("review_required") is True
@@ -65,7 +67,7 @@ def validate_history(history,baselines):
         if base is None or not quote_matches(row):
             errors.append("unknown-or-bad-quoted-subproject-history")
             continue
-        if any(row.get(k)!=base.get(k) for k in ("project_id","source_id","source_url","subproject_name","asset_type","metric_type")):
+        if any(row.get(k)!=base.get(k) for k in ("project_id","source_id","source_url","subproject_name","subproject_id","asset_type","metric_type")):
             errors.append("source-or-subproject-changed")
         if row.get("series_key") != f"onehousing-{base['subproject_id']}-apartment-popular-asking":
             errors.append("wrong-series-key")
@@ -159,7 +161,10 @@ def evaluate(history,baselines,queue,rechecks,approvals,today):
                     "id","project_id","source_id","source_url","subproject_name",
                     "asset_type","metric_type","period_type","period","value_vnd_per_m2",
                     "range_low_vnd_per_m2","range_high_vnd_per_m2","source_publication_date","evidence","methodology_note")}
-                row.update(series_key=series_key,source_record_id=base["id"],review_date=approval["review_date"],
+                # The canonical subproject ID always comes from the
+                # immutable reviewed baseline, NEVER a candidate heading.
+                row.update(subproject_id=base["subproject_id"],
+                           series_key=series_key,source_record_id=base["id"],review_date=approval["review_date"],
                            review_note=approval["review_note"],review_status="reviewed-release",
                            verification_run_ids=approval["verification_run_ids"])
                 ready.append(row)
