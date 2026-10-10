@@ -67,17 +67,60 @@
       .sort((a,b)=>b.observations-a.observations||a.source_id.localeCompare(b.source_id));
 
     const monthly = new Map();
-    for (const row of [...(args.projectMonthly || []),...(args.subprojectMonthly || [])]) {
-      if (row.project_id !== projectId || !row.source_id || !validMonth(row.period) ||
-          !isMoney(row.value_vnd_per_m2)) continue;
-      const scope = row.subproject_id ? 'subproject':'project';
-      const subject = row.subproject_id || projectId;
-      const key = [row.source_id,scope,subject,row.asset_type || '',row.metric_type || ''].join('|');
-      if (!monthly.has(key)) monthly.set(key,{source_id:row.source_id,scope,subject,
-        subproject_name:row.subproject_name||null,periods:[]});
-      monthly.get(key).periods.push(row.period);
+    const acceptedStatus = new Set(['source-indexed-baseline','reviewed-release','automated-source-verified']);
+    // The physical JSON file is authoritative for parent-vs-subproject scope:
+    // a missing subproject ID can NEVER silently become a parent price.
+    for (const [scope, input] of [
+      ['project', args.projectMonthly || []],
+      ['subproject', args.subprojectMonthly || []]
+    ]) {
+      for (const row of input) {
+        if (row.project_id !== projectId || row.source_id !== 'onehousing-vn' ||
+            row.asset_type !== 'apartment' ||
+            row.metric_type !== 'popular-asking-price-per-sqm' ||
+            !acceptedStatus.has(row.review_status) ||
+            !validMonth(row.period) || !isMoney(row.value_vnd_per_m2) ||
+            !row.source_record_id || !row.series_key) continue;
+        if (scope === 'subproject' && (!row.subproject_id || !row.subproject_name)) continue;
+        if (scope === 'project' && (row.subproject_id || row.subproject_name)) continue;
+        const subject = scope === 'subproject' ? row.subproject_id : projectId;
+        const key = [row.source_id,scope,subject,row.series_key].join('|');
+        if (!monthly.has(key)) monthly.set(key,{
+          source_id:row.source_id,scope,subject,
+          subproject_name:row.subproject_name||null,periods:new Map(),
+          source_record_id:row.source_record_id,conflict:false
+        });
+        const group=monthly.get(key);
+        if (group.source_record_id !== row.source_record_id ||
+            group.subproject_name !== (row.subproject_name||null)) {
+          group.conflict=true; continue;
+        }
+        const old=group.periods.get(row.period);
+        if (old && (old.value !== row.value_vnd_per_m2 ||
+                    old.source_url !== row.source_url ||
+                    old.review_status !== row.review_status)) {
+          group.conflict=true; continue;
+        }
+        group.periods.set(row.period,{
+          value:row.value_vnd_per_m2,source_url:row.source_url,
+          review_status:row.review_status
+        });
+      }
     }
-    const monthlySeries = [...monthly.values()].map(x=>({...x,...statusForMonths(x.periods)}))
+    const monthlySeries = [...monthly.values()]
+      .filter(x=>!x.conflict)
+      .map(x=>{
+        const records=[...x.periods.entries()];
+        const span=statusForMonths(records.map(([period])=>period));
+        const indexed=records.filter(([,v])=>v.review_status==='source-indexed-baseline').length;
+        const verified=records.filter(([,v])=>v.review_status==='automated-source-verified' ||
+          v.review_status==='reviewed-release').length;
+        return {
+          source_id:x.source_id,scope:x.scope,subject:x.subject,
+          subproject_name:x.subproject_name,source_record_id:x.source_record_id,
+          indexed_months:indexed,verified_months:verified,...span
+        };
+      })
       .sort((a,b)=>b.observations-a.observations||a.subject.localeCompare(b.subject));
     const projectMetrics = (args.marketObservations||[]).filter(x=>
       x.scope_type==='project' && x.project_id===projectId);
