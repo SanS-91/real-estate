@@ -28,9 +28,10 @@ assert 'intelligence?.direct?.listingObservations' in market
 assert 'projectLegalEvidenceHTML(intelligence, project)' in market
 assert 'projectInfrastructureEvidenceHTML(intelligence)' in market
 
-# Market news keeps its own category filter even though the dossier needs all articles.
+# Shared News UI performs module-level filtering while dossier still sees all articles.
 assert 'allArticles: []' in market
-assert "articles: payloadData(articles).filter(item => item.category === 'market')" in market
+assert 'articles: payloadData(articles), allArticles: payloadData(articles)' in market
+assert 'MarketNewsUI.render' in market
 assert 'allArticles: payloadData(articles)' in market
 assert 'articles:data.allArticles' in market
 
