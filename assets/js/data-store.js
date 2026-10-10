@@ -48,7 +48,25 @@
     memoryCache.clear();
   }
 
+  // Cross-tab news routing: one canonical article can appear in several modules.
+  // Source metadata alone is insufficient: preserve explicit tags and legacy categories.
+  function newsModules(article) {
+    if (!article || !article.url || !article.title || String(article.source_id || '').startsWith('demo-') ||
+        /^(demo|illustrative)[\\s:–-]/i.test(String(article.title || ''))) return [];
+    const allowed = ['market', 'legal', 'infrastructure', 'macro'];
+    const tags = Array.isArray(article.tags) ? article.tags : [];
+    const explicit = Array.isArray(article.module_ids) ? article.module_ids : [];
+    const modules = [...explicit, article.category, ...tags].filter(m => allowed.includes(m));
+    return [...new Set(modules)];
+  }
+  function isNewsFor(article, module) {
+    return newsModules(article).includes(module);
+  }
+
   window.DataStore = {
+    newsModules,
+    isNewsFor,
+    getNewsHealth: () => loadDirectJSON('./data/state/news-ingestion-health.json', 'news ingestion health'),
     getSettings,
     loadJSON,
     clearCache,
