@@ -489,7 +489,71 @@
     }).filter(item => item.values.length);
   }
 
+  function projectPriceCoverage(records = data.projects) {
+    return window.MarketProjectCoverage?.build({
+      projects:records, phases:data.phases, observations:data.observations,
+      listingObservations:data.listingObservations,
+      listingScopeEvidence:data.listingScopeEvidence,
+      oneHousingProjectHistory:data.oneHousingProjectHistory
+    }) || null;
+  }
+
+  // A scoped product reference is visible but never treated as full-project ASP.
+  function projectPriceCell(coverage, listing) {
+    if (!coverage || coverage.tier === 'no-price') return '<span class="table-muted">Chưa có giá tham chiếu</span>';
+    if (coverage.tier === 'aggregate-asking')
+      return '<strong class="market-asking-range">' + esc(formatListingRange(listing || coverage.row)) +
+        '</strong><span class="table-subtext">Khoảng rao · ' + esc(coverage.product === 'apartment' ? 'Căn hộ' : 'Thấp tầng') +
+        ' · ' + esc(coverage.as_of || '—') + '</span>';
+    if (coverage.tier === 'scoped-asking')
+      return '<strong class="market-asking-range">' + esc(formatListingRange(coverage.row)) +
+        '</strong><span class="table-subtext">' + esc(coverage.product === 'landed' ? 'Chỉ thấp tầng' :
+           coverage.product === 'apartment' ? 'Chỉ căn hộ' : 'FAQ tham khảo') +
+        ' · không phải ASP · ' + esc(coverage.as_of || '—') + '</span>';
+    return '<strong class="market-asking-range">' + esc(formatAsp(coverage.row.value_vnd_per_m2)) +
+      '</strong><span class="table-subtext">Giá phổ biến tháng · OneHousing · ' +
+      esc(coverage.as_of || '—') + '</span>';
+  }
+
+  function projectCoverageStatusHTML(records, expanded = false) {
+    const result = projectPriceCoverage(records);
+    if (!result || !result.count) return '';
+    const item = (value, label) => '<div class="market-project-coverage__stat"><strong>' +
+      esc(value) + '</strong><span>' + esc(label) + '</span></div>';
+    const summary = '<div class="market-project-coverage__stats">' +
+      item(result.count,'Dự án theo dõi') +
+      item(result.aggregate,'Có khoảng giá rao') +
+      item(result.scoped,'Chỉ giá theo sản phẩm') +
+      item(result.popular,'Chỉ giá phổ biến tháng') +
+      item(result.asp,'Có ASP dự án xác minh') + '</div>';
+    if (!expanded) return '<div class="market-project-coverage" data-market-project-coverage>' +
+      summary + '<p>Giá rao tổng hợp, giá theo phân khúc, giá phổ biến và ASP là các chỉ tiêu khác nhau. ' +
+      '<a href="market.html?view=pricing">Xem độ phủ giá bán</a>.</p></div>';
+    const statuses = { 'aggregate-asking':'Khoảng giá rao tổng hợp',
+      'scoped-asking':'Chỉ một loại sản phẩm / FAQ',
+      'monthly-popular':'Giá phổ biến tháng', 'no-price':'Chưa có giá có nguồn' };
+    const details = result.records.map(p => {
+      const price = p.tier === 'monthly-popular' ? formatAsp(p.row.value_vnd_per_m2) :
+        p.row ? formatListingRange(p.row) : '—';
+      const link = p.row?.source_url ? '<a href="' + esc(p.row.source_url) +
+        '" target="_blank" rel="noopener noreferrer">Nguồn ↗</a>' : '—';
+      return '<tr><td><button class="table-link" type="button" data-project-id="' +
+        esc(p.project_id) + '">' + esc(p.project_name) + '</button></td><td>' +
+        esc(statuses[p.tier]) + '</td><td>' + esc(p.product || '—') +
+        '</td><td class="numeric">' + esc(price) + '</td><td>' +
+        esc(p.as_of || '—') + '</td><td>' + link + '</td></tr>';
+    }).join('');
+    return '<section class="market-project-coverage" data-market-project-coverage>' +
+      summary + '<p>Giá được hiển thị theo đúng phạm vi nguồn, không tự suy ra ASP hoặc nối các snapshot thành xu hướng.</p>' +
+      '<details class="market-project-coverage__details"><summary>Xem đầy đủ độ phủ giá theo ' +
+      result.count + ' dự án</summary><div class="table-wrap"><table class="data-table mobile-record-table data-table--market-coverage">' +
+      '<thead><tr><th>Dự án</th><th>Phạm vi giá</th><th>Sản phẩm</th><th class="numeric">Giá tham chiếu</th>' +
+      '<th>Kỳ nguồn</th><th>Nguồn gốc</th></tr></thead><tbody>' + details +
+      '</tbody></table></div></details></section>';
+  }
+
   function projectTable(records, limit = null) {
+    const coverage = projectPriceCoverage(records);
     const rows = (limit ? records.slice(0, limit) : records).map(project => {
       const obs = latestProjectObservation(project.id);
       const listing = latestListingObservation(project.id);
@@ -501,7 +565,7 @@
           <td data-label-vi="Trạng thái" data-label-en="Status">${Components.statusBadge(project.status)}</td>
           <td class="numeric" data-label-vi="Quy mô căn" data-label-en="Units">${Number.isFinite(project.planned_units) ? esc(formatCompact(project.planned_units)) : '<span class="table-muted">Disclosed qualitatively</span>'}</td>
           <td class="numeric" data-label-vi="ASP xác minh" data-label-en="Verified ASP">${esc(formatAsp(obs?.average_asp))}<span class="table-subtext">${esc(obs?.period || '')}</span></td>
-          <td class="numeric market-listing-cell" data-label-vi="Khoảng giá chào" data-label-en="Asking range"><strong class="market-asking-range">${esc(formatListingRange(listing))}</strong><span class="table-subtext">${listing?.coverage_status === 'partial' ? 'Partial snapshot' : (listing?.observation_date || '')}</span></td>
+          <td class="numeric market-listing-cell" data-label-vi="Tham chiếu giá" data-label-en="Price evidence">${projectPriceCell(coverage?.byId[project.id],listing)}</td>
           <td class="numeric market-trend-cell" data-label-vi="Biến động 1 năm" data-label-en="1Y trend">${listingTrendHTML(listing)}</td>
           <td class="numeric" data-label-vi="Hấp thụ" data-label-en="Absorption">${esc(formatPercent(obs?.absorption_rate))}</td>
         </tr>`;
@@ -509,7 +573,7 @@
     return `
       <div class="table-wrap">
         <table class="data-table data-table--market-projects mobile-record-table">
-          <thead><tr><th>Project</th><th>Developer</th><th>Region</th><th>Status</th><th class="numeric">Units</th><th class="numeric">Verified ASP</th><th class="numeric">Asking range</th><th class="numeric">1Y trend</th><th class="numeric">Absorption</th></tr></thead>
+          <thead><tr><th>Project</th><th>Developer</th><th>Region</th><th>Status</th><th class="numeric">Units</th><th class="numeric">Verified ASP</th><th class="numeric">Giá tham chiếu</th><th class="numeric">1Y trend</th><th class="numeric">Absorption</th></tr></thead>
           <tbody>${rows || '<tr><td colspan="9" class="table-empty">No projects match the selected filters.</td></tr>'}</tbody>
         </table>
       </div>`;
@@ -876,6 +940,7 @@
     const html = `
       <div class="view-intro"><div><span class="eyebrow">Project database</span><h2>${records.length} projects</h2><p>Filter structured project records, then open a project for metrics, phases and related market updates.</p></div></div>
       ${filterToolbar()}
+      ${projectCoverageStatusHTML(records)}
       <section class="section"><div class="section-body section-body--table">${projectTable(records)}</div></section>`;
     setView(html);
     bindFilters();
@@ -1087,7 +1152,7 @@
     const html = `
       <div class="view-intro"><div><span class="eyebrow">Evidence-backed price observations</span><h2>Pricing</h2><p>Verified project prices and listing-market asking ranges are shown as separate layers. Missing fields remain blank.</p></div></div>
       ${filterToolbar({ includeStatus:false })}
-      ${state.priceLayer === 'listing' ? marketListingCoverageSummary() : ''}
+      ${projectCoverageStatusHTML(filteredProjects, true)}
       <section class="section">
         <div class="section-header"><div><h2 class="section-title">${state.priceLayer === 'listing' ? 'Listing Market Asking Ranges' : 'Verified Project Pricing'}</h2></div>${priceLayerControls()}</div>
         <div class="section-body">${chartBody}</div>
