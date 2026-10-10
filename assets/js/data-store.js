@@ -67,6 +67,7 @@
     newsModules,
     isNewsFor,
     getNewsHealth: () => loadDirectJSON('./data/state/news-ingestion-health.json', 'news ingestion health'),
+    getNewsAutomationConfig: () => loadDirectJSON('./config/news-automation.json', 'RSS schedule metadata'),
     getSettings,
     loadJSON,
     clearCache,
