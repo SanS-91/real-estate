@@ -265,6 +265,10 @@ def main():
             row["verification_mode"]="two-independent-live-publisher-checks"
             row["verified_at"]=today.isoformat()
             row["review_note"]="Automated validation; no manual sign-off. Two independent original-source captures matched the month and price metrics."
+            row["methodology_note"]=("Source-authored monthly popular asking price for "
+                +row["subproject_name"]+". Independently verified on two distinct GitHub runner "
+                "captures at least one hour apart; not whole-project transaction ASP. "
+                "Original indexed baseline is labelled separately.")
 
     report={"mode":args.mode,"checked_date":args.today,"indexed_subproject_baselines":2,
             "approvals_checked":len(approvals["data"]),"auto_eligible":len(automatic),"auto_candidates":auto_status,"eligible_new_months":len(ready),
