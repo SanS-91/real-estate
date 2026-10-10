@@ -20,7 +20,7 @@ assert.equal(state.filtered,16);
 const old = {...good,checked_at:'2026-10-10T10:40:00Z'};
 state = h.evaluate(old,config,ms('2026-10-10T14:00:00Z'));
 assert.equal(state.state,'stale','last scheduled check overdue beyond grace period');
-state = h.evaluate(good,config,ms('2026-10-10T23:00:00Z'));
+state = h.evaluate({...good,checked_at:'2026-10-10T14:35:00Z'},config,ms('2026-10-10T23:00:00Z'));
 assert.equal(state.state,'healthy','overnight pause is scheduled, not overdue');
 const warning = {...good,feed_status:feeds.map((item,i)=>i===8?{...item,status:'empty-feed'}:item)};
 state = h.evaluate(warning,config,ms('2026-10-10T13:20:00Z'));
