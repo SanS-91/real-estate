@@ -48,6 +48,24 @@ class NewsRSSTests(unittest.TestCase):
         item={"title":"Tỷ giá ngân hàng sáng nay","description":"Thông tin đầu tư tiền tệ","link":"https://vnexpress.net/a.html","date":"Fri, 09 Oct 2026 07:00:00 +0700"}
         self.assertEqual(classify(item,other,{},NOW,21)[1],"not-property-market-news")
 
+    def test_multimodule_routing(self):
+        item={"title":"Khởi công đường Vành đai 3 thúc đẩy dự án nhà ở", "description":"Tin hạ tầng TP HCM", "link":"https://vnexpress.net/vanh-dai-3-789.html", "date":"Fri, 09 Oct 2026 07:00:00 +0700"}
+        feed=dict(FEED, category="filtered-policy-infrastructure")
+        row,error=classify(item,feed,{},NOW,21)
+        self.assertIsNone(error)
+        self.assertIn("infrastructure",row["module_ids"])
+        self.assertIn("market",row["module_ids"])
+
+    def test_macro_economy_and_irrelevant_news(self):
+        feed=dict(FEED, category="filtered-economy")
+        item={"title":"Ngân hàng Nhà nước điều chỉnh tỷ giá trung tâm", "description":"Cập nhật tỷ giá", "link":"https://vnexpress.net/ty-gia-789.html", "date":"Fri, 09 Oct 2026 07:00:00 +0700"}
+        row,error=classify(item,feed,{},NOW,21)
+        self.assertIsNone(error)
+        self.assertEqual(row["category"],"macro")
+        self.assertIn("macro",row["module_ids"])
+        item["title"]="Bóng đá quốc tế tối nay"
+        self.assertEqual(classify(item,feed,{},NOW,21)[1],"off-topic-for-feed")
+
     def test_invalid_future_and_missing_date(self):
         self.assertIsNone(parse_date("Sat, 10 Oct 2026 23:00:00 +0700",NOW))
         self.assertIsNone(parse_date("",NOW))
