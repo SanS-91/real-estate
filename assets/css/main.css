@@ -3002,3 +3002,11 @@ body[data-page="home"] .metric-grid {
   .market-price-history-audit__body { padding: 4px 10px 14px; }
   .data-table--history-readiness.mobile-record-table tbody td { overflow-wrap: anywhere; }
 }
+
+/* Phase 6.3F: HCMC source-only peer comparables, folded until requested. */
+.data-table--peer-monthly { font-size: 12px; }
+.data-table--peer-monthly td strong { color: var(--color-primary-dark); }
+.market-peer-monthly-audit .chart-note { line-height: 1.55; }
+@media(max-width:767px){
+  .data-table--peer-monthly.mobile-record-table tbody td { overflow-wrap: anywhere; }
+}
