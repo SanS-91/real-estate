@@ -30,7 +30,7 @@
     },
     {
       "id": "vnexpress-economy",
-      "source_id": "vnexpress-real-estate",
+      "source_id": "vnexpress-economy",
       "label": "VnExpress Kinh doanh",
       "url": "https://vnexpress.net/rss/kinh-doanh.rss",
       "host": "vnexpress.net",
@@ -39,7 +39,7 @@
     },
     {
       "id": "vnexpress-current-affairs",
-      "source_id": "vnexpress-real-estate",
+      "source_id": "vnexpress-current-affairs",
       "label": "VnExpress Thời sự",
       "url": "https://vnexpress.net/rss/thoi-su.rss",
       "host": "vnexpress.net",
@@ -48,7 +48,7 @@
     },
     {
       "id": "vnexpress-legal",
-      "source_id": "vnexpress-real-estate",
+      "source_id": "vnexpress-legal",
       "label": "VnExpress Pháp luật",
       "url": "https://vnexpress.net/rss/phap-luat.rss",
       "host": "vnexpress.net",
