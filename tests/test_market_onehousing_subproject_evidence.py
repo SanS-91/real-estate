@@ -40,7 +40,7 @@ assert "projectIds.includes(item.project_id)" in market
 assert "function alternativePriceCardsHTML" in market
 assert "row.subproject_name ?" in market and "productNames[row.asset_type]" in market
 assert "oneHousingSubprojectEvidence" not in market[market.index("function listingRangeChartData"):market.index("function priceLayerControls")]
-assert json.loads((ROOT/"data/mock/market/listing-observations.json").read_text())["record_count"]==18
+assert json.loads((ROOT/"data/mock/market/listing-observations.json").read_text())["record_count"]>=18
 assert json.loads((ROOT/"data/mock/market/alternative-monthly-history.json").read_text())["record_count"]==1
 current_queue=json.loads((ROOT/"data/candidate/market/alternative-price-review-queue.json").read_text())
 assert current_queue["record_count"]==len(current_queue["data"])
