@@ -1,9 +1,222 @@
 {
   "schema_version": 1,
-  "build_id": "market-news-rss-20261010T075720Z",
-  "generated_at": "2026-10-10T07:57:20.110903+00:00",
-  "record_count": 266,
+  "build_id": "market-news-rss-20261010T143227Z",
+  "generated_at": "2026-10-10T14:32:27.011098+00:00",
+  "record_count": 274,
   "data": [
+    {
+      "id": "article-market-rss-52f03ea0ed398bac462b",
+      "title": "12 dự án liên quan ông Lê Thanh Thản được đề xuất xử lý ra sao?",
+      "url": "https://vnexpress.net/12-du-an-lien-quan-ong-le-thanh-than-duoc-de-xuat-xu-ly-ra-sao-5130802.html",
+      "category": "market",
+      "module_ids": [
+        "market"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-10-10T14:02:30+00:00",
+      "source_id": "vnexpress-current-affairs",
+      "region_ids": [
+        "ha-noi"
+      ],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "Dự thảo nghị quyết của HĐND Hà Nội chia vi phạm tại 12 dự án thành ba nhóm, quy định trách nhiệm khắc phục, di dời cư dân và nghĩa vụ tài chính của chủ đầu tư.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://vnexpress.net/rss/thoi-su.rss",
+        "publisher_host": "vnexpress.net",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-2dea4273c121e48fca1a",
+      "title": "Nhiều ngân hàng tăng lãi suất cơ sở, người vay mua nhà, mua ôtô cần lưu ý gì?",
+      "url": "https://dantri.com.vn/kinh-doanh/nhieu-ngan-hang-tang-lai-suat-co-so-nguoi-vay-mua-nha-mua-oto-can-luu-y-gi-20261010161245497.htm",
+      "category": "macro",
+      "module_ids": [
+        "macro"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-10-10T10:15:14+00:00",
+      "source_id": "dantri-business",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "(Dân trí) - Việc ngân hàng điều chỉnh tăng lãi suất cơ sở sẽ tác động đáng kể đến khách hàng vay mua nhà, mua ô tô hoặc vay kinh doanh dài hạn đã hết thời gian ưu đãi và chuẩn bị đến kỳ điều chỉnh.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://dantri.com.vn/rss/kinh-doanh.rss",
+        "publisher_host": "dantri.com.vn",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-969bee29a169a773f8c6",
+      "title": "Dự kiến xây đường trên cao từ cửa ngõ TPHCM đến cao tốc Biên Hòa - Vũng Tàu",
+      "url": "https://dantri.com.vn/thoi-su/du-kien-xay-duong-tren-cao-tu-cua-ngo-tphcm-den-cao-toc-bien-hoa-vung-tau-20261010164925246.htm",
+      "category": "infrastructure",
+      "module_ids": [
+        "infrastructure"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-10-10T09:56:51+00:00",
+      "source_id": "dantri-current-affairs",
+      "region_ids": [
+        "hcmc",
+        "dong-nai"
+      ],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [
+        "infrastructure"
+      ],
+      "importance": 2,
+      "summary": "(Dân trí) - Cục Đường bộ dự kiến bàn giao đoạn quốc lộ 1 từ cầu Đồng Nai đến ngã tư Vũng Tàu cho địa phương quản lý để phục vụ triển khai dự án đường trên cao kết nối cao tốc Biên Hòa - Vũng Tàu.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://dantri.com.vn/rss/thoi-su.rss",
+        "publisher_host": "dantri.com.vn",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-fbadabe412752495679d",
+      "title": "Nhà vườn thiết kế để cây cọ xuyên giữa nhà",
+      "url": "https://vnexpress.net/nha-vuon-thiet-ke-de-cay-co-xuyen-giua-nha-5130134.html",
+      "category": "market",
+      "module_ids": [
+        "market"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-10-10T09:22:12+00:00",
+      "source_id": "vnexpress-real-estate",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "Công trình ưu tiên bảo tồn thảm thực vật hiện hữu, đưa không gian sinh hoạt hòa vào cảnh quan rừng nhiệt đới.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://vnexpress.net/rss/bat-dong-san.rss",
+        "publisher_host": "vnexpress.net",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-31670b37bbf55614cb70",
+      "title": "Tuyến đường 72m tại Nghệ An ngập sâu sau trận mưa lớn kéo dài",
+      "url": "https://dantri.com.vn/thoi-su/tuyen-duong-72m-tai-nghe-an-ngap-sau-sau-tran-mua-lon-keo-dai-20261010155911580.htm",
+      "category": "infrastructure",
+      "module_ids": [
+        "infrastructure"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-10-10T09:20:42+00:00",
+      "source_id": "dantri-current-affairs",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "(Dân trí) - Mưa lớn kéo dài khiến nhiều tuyến đường ở thành phố Vinh cũ của tỉnh Nghệ An ngập nước. Đường 72m, phường Vinh Phú tiếp tục là một trong những điểm ngập nặng nhất, gây khó khăn cho người qua lại.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://dantri.com.vn/rss/thoi-su.rss",
+        "publisher_host": "dantri.com.vn",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-d059c4084488a73c9c25",
+      "title": "TPHCM chuẩn bị nguồn cung 27.000 căn nhà ở xã hội trong năm 2026",
+      "url": "https://dantri.com.vn/bat-dong-san/tphcm-chuan-bi-nguon-cung-27000-can-nha-o-xa-hoi-trong-nam-2026-20261009163511579.htm",
+      "category": "market",
+      "module_ids": [
+        "market"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-10-10T09:00:36+00:00",
+      "source_id": "dantri-real-estate",
+      "region_ids": [
+        "hcmc"
+      ],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [
+        "supply"
+      ],
+      "importance": 2,
+      "summary": "(Dân trí) - Cùng với kế hoạch đưa ra thị trường khoảng 27.000 căn nhà ở xã hội trong năm 2026, TPHCM đang tăng cường tháo gỡ khó khăn về quỹ đất và thủ tục để hiện thực hóa mục tiêu 181.257 căn hộ vào năm 2030.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://dantri.com.vn/rss/bat-dong-san.rss",
+        "publisher_host": "dantri.com.vn",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-6ddad0d0153f79ea7554",
+      "title": "Hội nghị nhà chung cư The Sun Avenue có nhiều bất thường, xem xét hủy kết quả biểu quyết",
+      "url": "https://dantri.com.vn/bat-dong-san/hoi-nghi-nha-chung-cu-the-sun-avenue-co-nhieu-bat-thuong-xem-xet-huy-ket-qua-bieu-quyet-20261010110720905.htm",
+      "category": "market",
+      "module_ids": [
+        "market"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-10-10T08:37:42+00:00",
+      "source_id": "dantri-real-estate",
+      "region_ids": [
+        "hcmc"
+      ],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "(Dân trí) - UBND phường Bình Trưng (TPHCM) ghi nhận nhiều sai lệch, bất thường trong hồ sơ Hội nghị nhà chung cư The Sun Avenue. Địa phương xem xét không công nhận các quyết định, kết quả biểu quyết của hội nghị.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://dantri.com.vn/rss/bat-dong-san.rss",
+        "publisher_host": "dantri.com.vn",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-d44f411654a6f233c3a3",
+      "title": "Loạt nhà máy trăm triệu USD đổ bộ, bất động sản công nghiệp thêm sức hút",
+      "url": "https://dantri.com.vn/bat-dong-san/loat-nha-may-tram-trieu-usd-do-bo-bat-dong-san-cong-nghiep-them-suc-hut-20261010122049273.htm",
+      "category": "market",
+      "module_ids": [
+        "market"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-10-10T08:00:32+00:00",
+      "source_id": "dantri-real-estate",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "(Dân trí) - Hàng loạt tập đoàn nước ngoài đang đầu tư hàng trăm triệu USD vào các dự án sản xuất tại Việt Nam, kéo theo nhu cầu về đất công nghiệp, nhà xưởng tăng cao.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://dantri.com.vn/rss/bat-dong-san.rss",
+        "publisher_host": "dantri.com.vn",
+        "publication_date_from_feed": true
+      }
+    },
     {
       "id": "article-market-rss-714c14e0e4478e187895",
       "title": "Tổng Bí thư, Chủ tịch nước Tô Lâm kiểm tra một số công trình, dự án của Thủ đô",
