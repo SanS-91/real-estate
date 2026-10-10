@@ -354,6 +354,7 @@
   }
 
   function articleMatchesFilters(article) {
+    if (!DataStore.isNewsFor(article, 'legal')) return false;
     const relatedDocs = Resolver.getEntities('legal-document', article.legal_document_ids || []);
     if (state.agency && !relatedDocs.some(document => (document.agency_ids || []).includes(state.agency))) return false;
     if (state.topic && !relatedDocs.some(document => (document.topic_ids || []).includes(state.topic))) return false;
@@ -401,7 +402,7 @@
         <div class="article-list article-list--legal-official">${officialItems || Components.stateBox('Không có văn bản phù hợp bộ lọc.')}</div>
       </section>
       <section class="section legal-editorial-updates">
-        <div class="section-header"><div><span class="eyebrow">Tin tức &amp; nghiên cứu</span><h3 class="section-title">Bài phân tích, minh họa</h3></div></div>
+        <div class="section-header"><div><span class="eyebrow">Tin tức &amp; nghiên cứu</span><h3 class="section-title">Bài viết về chính sách và pháp lý</h3></div></div>
       <div class="article-list">${articles.map(article => {
         const docs = Resolver.getEntities('legal-document', article.legal_document_ids || []);
         return `<article class="article-row"><div class="article-row__date">${esc(App.formatDate(article.published_at))}</div><div><div class="article-row__meta"><span class="source-tag news-kind-chip" data-news-kind="${esc(article.content_type)}">${esc(App.newsKindLabel(article.content_type))}</span>${sourceRef(article.source_id,{publishedAt:article.published_at,sourceUrl:article.url})}<span>${esc(docs.map(doc => doc.document_number).join(' · '))}</span></div><h3>${esc(article.title)}</h3><p>${esc(article.summary)}</p>${docs.length ? `<div class="article-relations">${docs.map(doc => `<button type="button" class="relation-button" data-document-id="${esc(doc.id)}">Official context: ${esc(doc.title)}</button>`).join('')}</div>` : ''}</div></article>`;

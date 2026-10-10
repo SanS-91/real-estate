@@ -214,7 +214,7 @@
     rows.push(...intelligence);
 
     data.articles
-      .filter(row=>['market','legal','infrastructure'].includes(row.category) && nonDemoSource(row.source_id))
+      .filter(row=>['market','legal','infrastructure','macro'].includes(row.category) && nonDemoSource(row.source_id))
       .forEach(row=>rows.push({
         id:`article:${row.id}`,
         category:row.category,
@@ -231,7 +231,7 @@
         display_summary:row.summary,
         display_href:row.category==='market' ? 'market.html?view=news'
           : row.category==='legal' ? 'legal.html?view=news'
-          : 'infrastructure.html?view=timeline'
+          : row.category==='macro' ? 'macro.html?view=news' : 'infrastructure.html?view=news'
       }));
 
     data.legal.forEach(row=>{

@@ -239,7 +239,7 @@
       .filter(item => item.status !== 'operational' && item.current_expected_completion)
       .sort((a,b) => targetSortValue(a.current_expected_completion) - targetSortValue(b.current_expected_completion))
       .slice(0,5);
-    const latestNews = [...data.articles].sort((a,b) => String(b.published_at).localeCompare(String(a.published_at))).slice(0,4);
+    const latestNews = [...data.articles].filter(article => DataStore.isNewsFor(article, 'infrastructure')).sort((a,b) => String(b.published_at).localeCompare(String(a.published_at))).slice(0,4);
 
     setView(`
       <div class="market-metric-grid">${metrics}</div>
@@ -319,7 +319,7 @@
   }
 
   function renderNews() {
-    let articles = [...data.articles];
+    let articles = [...data.articles].filter(article => DataStore.isNewsFor(article, 'infrastructure'));
     if (state.region) articles = articles.filter(item => (item.region_ids || []).includes(state.region));
     if (state.projectFilter) articles = articles.filter(item => (item.infrastructure_project_ids || []).includes(state.projectFilter));
     if (state.q) articles = articles.filter(item => FilterEngine.textMatch(item,state.q,['title','summary','tags']));

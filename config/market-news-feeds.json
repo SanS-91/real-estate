@@ -27,8 +27,35 @@
       "host": "dantri.com.vn",
       "category": "real-estate",
       "max_items": 30
+    },
+    {
+      "id": "vnexpress-economy",
+      "source_id": "vnexpress-economy",
+      "label": "VnExpress Kinh doanh",
+      "url": "https://vnexpress.net/rss/kinh-doanh.rss",
+      "host": "vnexpress.net",
+      "category": "filtered-economy",
+      "max_items": 30
+    },
+    {
+      "id": "vnexpress-current-affairs",
+      "source_id": "vnexpress-current-affairs",
+      "label": "VnExpress Thời sự",
+      "url": "https://vnexpress.net/rss/thoi-su.rss",
+      "host": "vnexpress.net",
+      "category": "filtered-policy-infrastructure",
+      "max_items": 30
+    },
+    {
+      "id": "vnexpress-legal",
+      "source_id": "vnexpress-legal",
+      "label": "VnExpress Pháp luật",
+      "url": "https://vnexpress.net/rss/phap-luat.rss",
+      "host": "vnexpress.net",
+      "category": "filtered-property-legal",
+      "max_items": 30
     }
   ],
   "days_lookback": 21,
-  "max_new_per_run": 75
+  "max_new_per_run": 100
 }

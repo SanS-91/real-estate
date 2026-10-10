@@ -2,7 +2,7 @@
   "schema_version": 1,
   "build_id": "phase5.5a-listing-market-20261008",
   "generated_at": "2026-10-08T14:32:55.012Z",
-  "record_count": 46,
+  "record_count": 50,
   "data": [
     {
       "id": "demo-official",
@@ -567,6 +567,42 @@
       "source_priority": 4,
       "active": true,
       "notes": "Three independently source-backed 2025/26 single-unit ads. Github-hosted fetch currently HTTP 403; never imply automatic price refresh. Original ad date, product/area/total and source-specific asking price remain frozen until independently reviewed."
+    },
+    {
+      "id": "vnexpress-economy",
+      "name": "VnExpress Kinh doanh",
+      "source_type": "publisher",
+      "base_url": "https://vnexpress.net/",
+      "language": "vi",
+      "collection_method": "official-rss-metadata",
+      "fetch_frequency": "daily",
+      "source_priority": 3,
+      "active": true,
+      "notes": "Publisher RSS metadata only. Editorial classification; not evidence for numeric indicators or official legal registries."
+    },
+    {
+      "id": "vnexpress-current-affairs",
+      "name": "VnExpress Thời sự",
+      "source_type": "publisher",
+      "base_url": "https://vnexpress.net/",
+      "language": "vi",
+      "collection_method": "official-rss-metadata",
+      "fetch_frequency": "daily",
+      "source_priority": 3,
+      "active": true,
+      "notes": "Publisher RSS metadata only. Editorial classification; not evidence for numeric indicators or official legal registries."
+    },
+    {
+      "id": "vnexpress-legal",
+      "name": "VnExpress Pháp luật",
+      "source_type": "publisher",
+      "base_url": "https://vnexpress.net/",
+      "language": "vi",
+      "collection_method": "official-rss-metadata",
+      "fetch_frequency": "daily",
+      "source_priority": 3,
+      "active": true,
+      "notes": "Publisher RSS metadata only. Editorial classification; not evidence for numeric indicators or official legal registries."
     }
   ]
 }

@@ -177,7 +177,7 @@
     const daysParam = window.App.getQueryParam('news-days') || 'all';
     const days = DATE_WINDOWS.some(([id]) => id === daysParam) ? daysParam : 'all';
     const topicId = TOPIC_NAMES[topicParam] ? topicParam : 'all';
-    const visibleArticles = articles.filter(a => a.url && a.title && a.category === 'market' &&
+    const visibleArticles = articles.filter(a => a.url && a.title && (window.DataStore?.isNewsFor ? window.DataStore.isNewsFor(a, 'market') : a.category === 'market') &&
       !String(a.source_id || '').startsWith('demo-') &&
       !/^(demo|illustrative)[\s:–-]/i.test(String(a.title || '')));
     const publishers = new Set(visibleArticles.map(a => a.source_id).filter(Boolean)).size;
