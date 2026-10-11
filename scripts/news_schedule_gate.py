@@ -25,7 +25,14 @@ def expected_slot(now):
                if midnight + timedelta(days=d, hours=h, minutes=20) <= now)
 
 
-def should_run(event, cron, checked, now):
+def should_run(event, cron, checked, now, trigger="", requested=""):
+    if event == "workflow_dispatch" and trigger == "cloudflare-fallback":
+        slot = parse_time(requested)
+        if slot is None or slot.minute != 20 or slot.hour not in HOURS:
+            raise ValueError("Invalid scheduled slot")
+        if slot > now or slot < now - timedelta(hours=24):
+            raise ValueError("Scheduled slot out of range")
+        return checked is None or checked < slot
     if event != "schedule" or cron != BACKUP:
         return True
     return checked is None or checked < expected_slot(now)
@@ -36,7 +43,7 @@ def main():
     snapshot = json.loads(path.read_text(encoding="utf-8")) if path.exists() else {}
     checked = parse_time(snapshot.get("checked_at"))
     now = datetime.now(timezone.utc)
-    run = should_run(os.getenv("NEWS_EVENT", ""), os.getenv("NEWS_CRON", ""), checked, now)
+    run = should_run(os.getenv("NEWS_EVENT", ""), os.getenv("NEWS_CRON", ""), checked, now, os.getenv("NEWS_TRIGGER_SOURCE", ""), os.getenv("NEWS_SCHEDULED_SLOT", ""))
     print(f"RSS catch-up gate: run={run}, last_checked={checked}, slot={expected_slot(now)}")
     if os.getenv("GITHUB_OUTPUT"):
         with open(os.environ["GITHUB_OUTPUT"], "a", encoding="utf-8") as f:
