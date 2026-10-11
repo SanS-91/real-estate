@@ -1,9 +1,86 @@
 {
   "schema_version": 1,
-  "build_id": "market-news-rss-20261011T130628Z",
-  "generated_at": "2026-10-11T13:06:28.349710+00:00",
-  "record_count": 294,
+  "build_id": "market-news-rss-20261011T162654Z",
+  "generated_at": "2026-10-11T16:26:54.318992+00:00",
+  "record_count": 297,
   "data": [
+    {
+      "id": "article-market-rss-3e9ac3cf63d58cc4f1f3",
+      "title": "Gia Lai đấu giá gần 20 ha đất làm khu biệt thự du lịch golf",
+      "url": "https://vnexpress.net/gia-lai-dau-gia-gan-20-ha-dat-lam-khu-biet-thu-du-lich-golf-5130888.html",
+      "category": "market",
+      "module_ids": [
+        "market"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-10-11T14:37:35+00:00",
+      "source_id": "vnexpress-real-estate",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "Gia Lai dự kiến đấu giá gần 20 ha đất tại Khu kinh tế Nhơn Hội để phát triển 331 lô biệt thự du lịch, chi phí gần 1.486 tỷ đồng.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://vnexpress.net/rss/bat-dong-san.rss",
+        "publisher_host": "vnexpress.net",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-a9c1532d3495d1c2ec93",
+      "title": "Nhiều lô đất tại Khu dân cư Làng Sen bị ngân hàng thông báo thu giữ",
+      "url": "https://dantri.com.vn/bat-dong-san/nhieu-lo-dat-tai-khu-dan-cu-lang-sen-bi-ngan-hang-thong-bao-thu-giu-20261011195245694.htm",
+      "category": "market",
+      "module_ids": [
+        "market"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-10-11T13:07:02+00:00",
+      "source_id": "dantri-real-estate",
+      "region_ids": [
+        "hcmc"
+      ],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "(Dân trí) - BIDV Bắc Sài Gòn thông báo thu giữ 37 lô đất tại Khu dân cư Làng Sen, tỉnh Tây Ninh, để xử lý tài sản bảo đảm và thu hồi khoản nợ của một doanh nghiệp.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://dantri.com.vn/rss/bat-dong-san.rss",
+        "publisher_host": "dantri.com.vn",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-116e3af14a6bc20e894a",
+      "title": "Global Gate Hạ Long ESG++ Marathon 2026: Kích hoạt nhịp sống bên vịnh di sản",
+      "url": "https://dantri.com.vn/bat-dong-san/global-gate-ha-long-esg-marathon-2026-kich-hoat-nhip-song-ben-vinh-di-san-20261011192155239.htm",
+      "category": "market",
+      "module_ids": [
+        "market"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-10-11T12:41:08+00:00",
+      "source_id": "dantri-real-estate",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "(Dân trí) - Giải chạy Global Gate Hạ Long ESG++ Marathon 2026 quy tụ hàng nghìn vận động viên, đưa siêu đô thị bên vịnh kỳ quan vào nhịp sôi động của một điểm đến sự kiện.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://dantri.com.vn/rss/bat-dong-san.rss",
+        "publisher_host": "dantri.com.vn",
+        "publication_date_from_feed": true
+      }
+    },
     {
       "id": "article-market-rss-ba7801490794fd732312",
       "title": "5 ôtô tông liên hoàn trên quốc lộ nối TP HCM với Đà Lạt",
