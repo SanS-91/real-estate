@@ -23,7 +23,7 @@ export async function recover(time, token, requester = fetch) {
     const result = await requester(BASE + "/contents/data/state/news-ingestion-health.json?ref=main", { headers });
     if (!result.ok) throw new Error("GitHub health unavailable");
     const file = await result.json();
-    const content = JSON.parse(atob(file.content.replace(/\\s/g, "")));
+    const content = JSON.parse(atob(file.content.replace(/\s/g, "")));
     if (Date.parse(content.checked_at) >= Date.parse(slot)) return { status: "already-checked", slot };
   } catch (error) {
     console.warn("Checking health failed, trying dispatch", String(error));
