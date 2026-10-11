@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-10-11T09:14:37.140637+00:00",
+  "generated_at": "2026-10-11T13:32:34.579313+00:00",
   "targets_checked": 7,
   "candidate_count": 0,
   "queue_backlog": 0,
@@ -10,8 +10,9 @@
   "queue_conflicts": 0,
   "production_updated": false,
   "counts": {
+    "fetch-error": 1,
     "published-period-unchanged": 1,
-    "reachable-historical-reference-frozen": 2,
+    "reachable-historical-reference-frozen": 1,
     "reachable-no-verifiable-metric": 1,
     "same-period-unchanged": 3
   },
@@ -71,14 +72,13 @@
       "mode": "historical-reference-monitor",
       "baseline_period": "2023-11-14",
       "latest_published_period": "2023-11-14",
-      "http_status": 200,
-      "final_host": "blog.rever.vn",
-      "status": "reachable-historical-reference-frozen",
+      "status": "fetch-error",
+      "error_type": "ReadTimeout",
       "source_variants": [
         {
           "host": "blog.rever.vn",
-          "http_status": 200,
-          "fetch_status": "reachable",
+          "http_status": null,
+          "fetch_status": "fetch-error",
           "source_url": "https://blog.rever.vn/the-privia-khang-dien-du-dieu-kien-mua-ban-rever-chinh-thuc-phan-phoi"
         }
       ]
