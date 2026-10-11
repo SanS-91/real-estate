@@ -1,9 +1,39 @@
 {
   "schema_version": 1,
-  "build_id": "market-news-rss-20261011T162654Z",
-  "generated_at": "2026-10-11T16:26:54.318992+00:00",
-  "record_count": 297,
+  "build_id": "market-news-rss-20261011T190045Z",
+  "generated_at": "2026-10-11T19:00:45.301413+00:00",
+  "record_count": 298,
   "data": [
+    {
+      "id": "article-market-rss-423f6108ef2d15a2ce30",
+      "title": "Hé lộ điều kiện để cư dân HH Linh Đàm được cấp sổ hồng",
+      "url": "https://dantri.com.vn/bat-dong-san/he-lo-dieu-kien-de-cu-dan-hh-linh-dam-duoc-cap-so-hong-20261011212120682.htm",
+      "category": "market",
+      "module_ids": [
+        "market",
+        "legal"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-10-11T14:43:00+00:00",
+      "source_id": "dantri-real-estate",
+      "region_ids": [
+        "ha-noi"
+      ],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [
+        "legal"
+      ],
+      "importance": 2,
+      "summary": "(Dân trí) - Dự thảo nghị quyết của Hà Nội đề xuất sau khi chủ đầu tư hoàn thành nghĩa vụ tài chính, người mua nhà tại các dự án vi phạm, có thể được giải quyết thủ tục cấp sổ hồng theo quy định.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://dantri.com.vn/rss/bat-dong-san.rss",
+        "publisher_host": "dantri.com.vn",
+        "publication_date_from_feed": true
+      }
+    },
     {
       "id": "article-market-rss-3e9ac3cf63d58cc4f1f3",
       "title": "Gia Lai đấu giá gần 20 ha đất làm khu biệt thự du lịch golf",
