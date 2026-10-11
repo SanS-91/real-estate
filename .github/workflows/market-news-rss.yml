@@ -7,6 +7,8 @@ on:
       - 'scripts/test_market_news_rss.py'
       - 'scripts/news_schedule_gate.py'
       - 'tests/test_news_schedule_gate.py'
+      - 'tests/test_news_cloudflare_fallback.cjs'
+      - 'workers/news-rss-fallback/**'
       - 'config/market-news-feeds.json'
       - '.github/workflows/market-news-rss.yml'
       - 'config/news-automation.json'
@@ -22,6 +24,8 @@ on:
       - 'scripts/test_market_news_rss.py'
       - 'scripts/news_schedule_gate.py'
       - 'tests/test_news_schedule_gate.py'
+      - 'tests/test_news_cloudflare_fallback.cjs'
+      - 'workers/news-rss-fallback/**'
       - 'config/market-news-feeds.json'
       - '.github/workflows/market-news-rss.yml'
       - 'config/news-automation.json'
@@ -30,6 +34,15 @@ on:
       - 'tests/test_news_automation_health.cjs'
       - 'tests/test_news_automation_schedule.py'
   workflow_dispatch:
+    inputs:
+      trigger_source:
+        description: 'cloudflare-fallback, or blank for manual force run'
+        required: false
+        type: string
+      scheduled_slot:
+        description: 'UTC primary slot (ISO 8601)'
+        required: false
+        type: string
   schedule:
     # Eight primary daytime checks in Vietnam.
     - cron: '20 0,2,4,6,8,10,12,14 * * *'
@@ -56,6 +69,8 @@ jobs:
         env:
           NEWS_EVENT: ${{ github.event_name }}
           NEWS_CRON: ${{ github.event.schedule }}
+          NEWS_TRIGGER_SOURCE: ${{ inputs.trigger_source }}
+          NEWS_SCHEDULED_SLOT: ${{ inputs.scheduled_slot }}
         run: python scripts/news_schedule_gate.py
       - uses: actions/setup-python@v7
         if: steps.gate.outputs.run == 'true'
@@ -70,6 +85,7 @@ jobs:
           python scripts/test_market_news_rss.py
           python tests/test_news_automation_schedule.py
           python tests/test_news_schedule_gate.py
+          node tests/test_news_cloudflare_fallback.cjs
           node --check assets/js/news-automation-health.js
           node --check assets/js/maintenance.js
           node tests/test_news_automation_health.cjs
