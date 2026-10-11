@@ -1,15 +1,15 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-10-10T13:58:56.495599+00:00",
+  "generated_at": "2026-10-11T09:03:56.549235+00:00",
   "targets_checked": 3,
   "exact_publisher_months_parsed": 2,
-  "new_verified_months": 2,
+  "new_verified_months": 0,
   "published_months": 2,
   "projects_with_verified_month": 2,
   "checks": [
     {
       "id": "masteri-thao-dien",
-      "status": "new-month-verified",
+      "status": "published-period-unchanged",
       "source_period": "2026-10"
     },
     {
@@ -20,7 +20,7 @@
     },
     {
       "id": "the-panorama",
-      "status": "new-month-verified",
+      "status": "published-period-unchanged",
       "source_period": "2026-10"
     }
   ],
