@@ -1,9 +1,191 @@
 {
   "schema_version": 1,
-  "build_id": "market-news-rss-20261010T143227Z",
-  "generated_at": "2026-10-10T14:32:27.011098+00:00",
-  "record_count": 274,
+  "build_id": "market-news-rss-20261011T023319Z",
+  "generated_at": "2026-10-11T02:33:19.770499+00:00",
+  "record_count": 281,
   "data": [
+    {
+      "id": "article-market-rss-c934e14ee7352fe3f2b5",
+      "title": "Cùng báo Dân trí bàn giải pháp gỡ khó vốn, lãi suất cho doanh nghiệp",
+      "url": "https://dantri.com.vn/kinh-doanh/cung-bao-dan-tri-ban-giai-phap-go-kho-von-lai-suat-cho-doanh-nghiep-20261010175459277.htm",
+      "category": "macro",
+      "module_ids": [
+        "macro"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-10-11T01:00:00+00:00",
+      "source_id": "dantri-business",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "(Dân trí) - Tại tọa đàm “Vốn mở đường - Doanh nghiệp tăng tốc”, đại diện cơ quan quản lý, hiệp hội và doanh nghiệp bàn giải pháp gỡ khó về vốn, lãi suất nhằm góp phần thúc đẩy sản xuất, kinh doanh dịp cuối năm.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://dantri.com.vn/rss/kinh-doanh.rss",
+        "publisher_host": "dantri.com.vn",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-c0f445fd81ab36315357",
+      "title": "Giá vàng hôm nay 11.10.2026: Tăng trong tuần nhưng người mua vàng nhẫn lỗ gần 4 triệu",
+      "url": "https://thanhnien.vn/gia-vang-hom-nay-11102026-tang-trong-tuan-nhung-nguoi-mua-vang-nhan-lo-gan-4-trieu-185261010182724853.htm",
+      "category": "macro",
+      "module_ids": [
+        "macro"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-10-11T00:15:00+00:00",
+      "source_id": "thanhnien-banking",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "Giá vàng xác lập một tuần gia tăng nhưng người mua vào vẫn bị thua lỗ.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://thanhnien.vn/rss/kinh-te/ngan-hang.rss",
+        "publisher_host": "thanhnien.vn",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-3f0b6672dbf8ca85095c",
+      "title": "Cách xác định cư dân nào phải di dời khỏi chung cư HH Linh Đàm?",
+      "url": "https://dantri.com.vn/bat-dong-san/cach-xac-dinh-cu-dan-nao-phai-di-doi-khoi-chung-cu-hh-linh-dam-20261011024047844.htm",
+      "category": "market",
+      "module_ids": [
+        "market"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-10-11T00:01:57+00:00",
+      "source_id": "dantri-real-estate",
+      "region_ids": [
+        "ha-noi"
+      ],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "(Dân trí) - Hà Nội đề xuất phân 3 nhóm công trình vi phạm, làm căn cứ xác định những trường hợp được tiếp tục sử dụng căn hộ hoặc phải di dời tại chung cư HH Linh Đàm.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://dantri.com.vn/rss/bat-dong-san.rss",
+        "publisher_host": "dantri.com.vn",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-ae4fcc009e01186178ef",
+      "title": "20 phút dọn phòng tắm vào chủ nhật giúp nhà cửa sạch sẽ cả tuần",
+      "url": "https://dantri.com.vn/bat-dong-san/20-phut-don-phong-tam-vao-chu-nhat-giup-nha-cua-sach-se-ca-tuan-20261008225728733.htm",
+      "category": "market",
+      "module_ids": [
+        "market"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-10-10T23:00:00+00:00",
+      "source_id": "dantri-real-estate",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "(Dân trí) - Chỉ cần 20 phút ngày chủ nhật với quy trình 5 bước đơn giản, bạn sẽ giải phóng bản thân khỏi áp lực cọ rửa mệt mỏi, giữ không gian sống luôn khô ráo và tinh tươm suốt tuần dài.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://dantri.com.vn/rss/bat-dong-san.rss",
+        "publisher_host": "dantri.com.vn",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-2c263379722bd4c3a7aa",
+      "title": "Hoang mang vì thuế đất phi nông nghiệp",
+      "url": "https://thanhnien.vn/hoang-mang-vi-thue-dat-phi-nong-nghiep-185261010224317918.htm",
+      "category": "market",
+      "module_ids": [
+        "market"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-10-10T23:00:00+00:00",
+      "source_id": "thanhnien-real-estate",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "Thời gian gần đây, nhiều người khi vào ứng dụng eTax Mobile hoặc đi thực hiện thủ tục liên quan đến nhà đất bỗng dưng phát hiện mình nợ thuế sử dụng đất phi nông nghiệp. Điều này khiến họ hoang mang không biết mình có nợ thuế hay không...",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://thanhnien.vn/rss/kinh-te/dia-oc.rss",
+        "publisher_host": "thanhnien.vn",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-1c2919c90a0d5c58ad90",
+      "title": "Công nghiệp đường sắt thúc đẩy tăng trưởng kinh tế đất nước",
+      "url": "https://thanhnien.vn/cong-nghiep-duong-sat-thuc-day-tang-truong-kinh-te-dat-nuoc-18526101023043577.htm",
+      "category": "infrastructure",
+      "module_ids": [
+        "infrastructure",
+        "macro"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-10-10T23:00:00+00:00",
+      "source_id": "thanhnien-policy",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [
+        "infrastructure"
+      ],
+      "importance": 2,
+      "summary": "Hàng loạt dự án đường sắt đã khởi động và sắp khởi công với nhiều doanh nghiệp sẵn sàng tham gia, mở ra ngành công nghiệp đường sắt hiện đại cho VN.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://thanhnien.vn/rss/kinh-te/chinh-sach-phat-trien.rss",
+        "publisher_host": "thanhnien.vn",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-eed8f625e286d09d47b5",
+      "title": "Hà Nội lên phương án xử lý số phận chung cư HH Linh Đàm",
+      "url": "https://dantri.com.vn/bat-dong-san/ha-noi-len-phuong-an-xu-ly-so-phan-chung-cu-hh-linh-dam-20261010220736621.htm",
+      "category": "market",
+      "module_ids": [
+        "market"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-10-10T15:18:44+00:00",
+      "source_id": "dantri-real-estate",
+      "region_ids": [
+        "ha-noi"
+      ],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "(Dân trí) - Hà Nội đề xuất phân 3 nhóm xử lý công trình vi phạm tại 12 dự án liên quan ông Lê Thanh Thản, trong đó có loạt chung cư HH Linh Đàm, với phương án giữ lại, khắc phục có điều kiện hoặc tháo dỡ.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://dantri.com.vn/rss/bat-dong-san.rss",
+        "publisher_host": "dantri.com.vn",
+        "publication_date_from_feed": true
+      }
+    },
     {
       "id": "article-market-rss-52f03ea0ed398bac462b",
       "title": "12 dự án liên quan ông Lê Thanh Thản được đề xuất xử lý ra sao?",
