@@ -1,9 +1,92 @@
 {
   "schema_version": 1,
-  "build_id": "market-news-rss-20261011T092113Z",
-  "generated_at": "2026-10-11T09:21:13.197923+00:00",
-  "record_count": 291,
+  "build_id": "market-news-rss-20261011T130628Z",
+  "generated_at": "2026-10-11T13:06:28.349710+00:00",
+  "record_count": 294,
   "data": [
+    {
+      "id": "article-market-rss-ba7801490794fd732312",
+      "title": "5 ôtô tông liên hoàn trên quốc lộ nối TP HCM với Đà Lạt",
+      "url": "https://vnexpress.net/5-oto-tong-lien-hoan-tren-quoc-lo-noi-tp-hcm-voi-da-lat-5130999.html",
+      "category": "infrastructure",
+      "module_ids": [
+        "infrastructure"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-10-11T12:13:30+00:00",
+      "source_id": "vnexpress-current-affairs",
+      "region_ids": [
+        "hcmc"
+      ],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [
+        "infrastructure"
+      ],
+      "importance": 2,
+      "summary": "Xe giường nằm chạy tuyến Đà Lạt về TP HCM bất ngờ tông ôtô 5 chỗ chạy phía trước, gây chuỗi va chạm liên hoàn với 3 xe khác, quốc lộ 20 ùn tắc gần một giờ, chiều 11/10.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://vnexpress.net/rss/thoi-su.rss",
+        "publisher_host": "vnexpress.net",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-0662d959d62596c14f13",
+      "title": "Ngân hàng đấu giá nhà máy nước của công ty có ca sĩ làm chủ tịch",
+      "url": "https://dantri.com.vn/kinh-doanh/ngan-hang-dau-gia-nha-may-nuoc-cua-cong-ty-co-ca-si-lam-chu-tich-20261011153544601.htm",
+      "category": "market",
+      "module_ids": [
+        "market"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-10-11T09:23:00+00:00",
+      "source_id": "dantri-business",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [
+        "pricing"
+      ],
+      "importance": 2,
+      "summary": "(Dân trí) - Tài sản Nhà máy nước Cần Giờ của doanh nghiệp do một ca sĩ làm chủ tịch HĐQT được Agribank đưa ra đấu giá với giá khởi điểm 52,1 tỷ đồng, giảm gần 50% so với lần công bố đầu tiên.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://dantri.com.vn/rss/kinh-doanh.rss",
+        "publisher_host": "dantri.com.vn",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-def87d8966672914ba77",
+      "title": "Khu \"đất vàng\" ven biển Quy Nhơn sau tháo dỡ khách sạn sẽ làm gì?",
+      "url": "https://dantri.com.vn/bat-dong-san/khu-dat-vang-ven-bien-quy-nhon-sau-thao-do-khach-san-se-lam-gi-20261011094956024.htm",
+      "category": "market",
+      "module_ids": [
+        "market"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-10-11T08:07:25+00:00",
+      "source_id": "dantri-real-estate",
+      "region_ids": [
+        "binh-duong"
+      ],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "(Dân trí) - Khách sạn Bình Dương đã được tháo dỡ, trả lại mặt bằng khu đất vàng ven biển Quy Nhơn. Khu đất đang được rào chắn, chờ phương án sử dụng, trong đó ưu tiên cho công viên, không gian công cộng.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://dantri.com.vn/rss/bat-dong-san.rss",
+        "publisher_host": "dantri.com.vn",
+        "publication_date_from_feed": true
+      }
+    },
     {
       "id": "article-market-rss-08aae6e12b2e364e6e05",
       "title": "Hồng Hạc City đón dư địa khi Bắc Ninh lên thành phố",
