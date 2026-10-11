@@ -1,9 +1,238 @@
 {
   "schema_version": 1,
-  "build_id": "market-news-rss-20261011T023319Z",
-  "generated_at": "2026-10-11T02:33:19.770499+00:00",
-  "record_count": 281,
+  "build_id": "market-news-rss-20261011T060052Z",
+  "generated_at": "2026-10-11T06:00:52.909136+00:00",
+  "record_count": 289,
   "data": [
+    {
+      "id": "article-market-rss-258cfadb70054215d8ef",
+      "title": "TP HCM tháo gỡ vướng mắc cấp sổ hồng tại 4 dự án bất động sản",
+      "url": "https://vnexpress.net/tp-hcm-thao-go-vuong-mac-cap-so-hong-tai-4-du-an-bat-dong-san-5130880.html",
+      "category": "market",
+      "module_ids": [
+        "market",
+        "legal"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-10-11T04:45:06+00:00",
+      "source_id": "vnexpress-real-estate",
+      "region_ids": [
+        "hcmc"
+      ],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [
+        "legal"
+      ],
+      "importance": 2,
+      "summary": "Tổ Công tác 1645 vừa làm việc với các doanh nghiệp bất động sản để xem xét tháo gỡ vướng mắc, đẩy nhanh tiến độ cấp giấy chứng nhận cho người mua nhà tại 4 dự án.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://vnexpress.net/rss/bat-dong-san.rss",
+        "publisher_host": "vnexpress.net",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-2611db924a80d986235a",
+      "title": "TPHCM đề xuất hỗ trợ 10 tỷ đồng, mở đường cải tạo chung cư cũ",
+      "url": "https://dantri.com.vn/bat-dong-san/tphcm-de-xuat-ho-tro-10-ty-dong-mo-duong-cai-tao-chung-cu-cu-20261011104041924.htm",
+      "category": "market",
+      "module_ids": [
+        "market"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-10-11T04:08:46+00:00",
+      "source_id": "dantri-real-estate",
+      "region_ids": [
+        "hcmc"
+      ],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [
+        "legal"
+      ],
+      "importance": 2,
+      "summary": "(Dân trí) - TPHCM đề xuất hỗ trợ tối đa 10 tỷ đồng mỗi dự án cải tạo chung cư, cùng nhiều cơ chế về quy hoạch, đầu tư và tái định cư.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://dantri.com.vn/rss/bat-dong-san.rss",
+        "publisher_host": "dantri.com.vn",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-89817c52778d68fa59a6",
+      "title": "Quốc lộ 28B qua Lâm Đồng xuất hiện vết nứt gần hết làn đường",
+      "url": "https://dantri.com.vn/thoi-su/quoc-lo-28b-qua-lam-dong-xuat-hien-vet-nut-gan-het-lan-duong-20261011101137635.htm",
+      "category": "infrastructure",
+      "module_ids": [
+        "infrastructure"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-10-11T03:56:42+00:00",
+      "source_id": "dantri-current-affairs",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [
+        "infrastructure"
+      ],
+      "importance": 2,
+      "summary": "(Dân trí) - Do ảnh hưởng của mưa lớn và sạt trượt taluy, quốc lộ 28B đoạn qua đèo Đại Ninh, xã Phan Sơn (Lâm Đồng), bị nứt, lún kéo dài gần hết làn đường, uy hiếp an toàn giao thông.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://dantri.com.vn/rss/thoi-su.rss",
+        "publisher_host": "dantri.com.vn",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-f0fe46cb4017a758d8d4",
+      "title": "TP HCM giảm hơn 5,5 ha đất dự án khu đô thị Nam Thành phố",
+      "url": "https://vnexpress.net/tp-hcm-giam-hon-5-5-ha-dat-du-an-khu-do-thi-nam-thanh-pho-5130821.html",
+      "category": "market",
+      "module_ids": [
+        "market",
+        "infrastructure"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-10-11T03:45:03+00:00",
+      "source_id": "vnexpress-real-estate",
+      "region_ids": [
+        "hcmc"
+      ],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [
+        "infrastructure"
+      ],
+      "importance": 2,
+      "summary": "Dự án 5 cụm đô thị Nam Thành phố sẽ giảm hơn 5,5 ha đất để phục vụ mở rộng Quốc lộ 1.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://vnexpress.net/rss/bat-dong-san.rss",
+        "publisher_host": "vnexpress.net",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-1967640ff601c89fd3c8",
+      "title": "Điều chỉnh mới liên quan đến quy hoạch đô thị sông Hồng",
+      "url": "https://dantri.com.vn/bat-dong-san/dieu-chinh-moi-lien-quan-den-quy-hoach-do-thi-song-hong-20261011090032511.htm",
+      "category": "market",
+      "module_ids": [
+        "market",
+        "legal",
+        "infrastructure"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-10-11T03:16:11+00:00",
+      "source_id": "dantri-real-estate",
+      "region_ids": [
+        "ha-noi"
+      ],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [
+        "legal",
+        "infrastructure"
+      ],
+      "importance": 2,
+      "summary": "(Dân trí) - Thông tin Hà Nội bãi bỏ quyết định cũ, tiếp tục điều chỉnh quy hoạch đô thị sông Hồng; tiến độ giải phóng mặt bằng dự án sân bay Gia Bình được quan tâm trong tuần.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://dantri.com.vn/rss/bat-dong-san.rss",
+        "publisher_host": "dantri.com.vn",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-4afa4057f92604b39479",
+      "title": "Chuyên gia dự báo giá vàng tăng vào tuần tới",
+      "url": "https://dantri.com.vn/kinh-doanh/chuyen-gia-du-bao-gia-vang-tang-vao-tuan-toi-20261011083856190.htm",
+      "category": "macro",
+      "module_ids": [
+        "macro"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-10-11T02:24:28+00:00",
+      "source_id": "dantri-business",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [
+        "sales"
+      ],
+      "importance": 2,
+      "summary": "(Dân trí) - Giá vàng thế giới khép lại tuần giao dịch quanh 4.195 USD/ounce; vàng miếng SJC đóng cửa xấp xỉ 145 triệu đồng. Khảo sát chuyên gia cho thấy phần lớn dự báo giá kim loại quý sẽ tăng trong tuần tới.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://dantri.com.vn/rss/kinh-doanh.rss",
+        "publisher_host": "dantri.com.vn",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-9d97365539ad1cc8ced3",
+      "title": "Nếu phải di dời khỏi chung cư HH Linh Đàm, người dân được đổi nhà ở đâu?",
+      "url": "https://dantri.com.vn/bat-dong-san/neu-phai-di-doi-khoi-chung-cu-hh-linh-dam-nguoi-dan-duoc-doi-nha-o-dau-20261011025620998.htm",
+      "category": "market",
+      "module_ids": [
+        "market"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-10-11T02:11:51+00:00",
+      "source_id": "dantri-real-estate",
+      "region_ids": [
+        "ha-noi"
+      ],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "(Dân trí) - Theo dự thảo của Hà Nội, cư dân chung cư HH Linh Đàm thuộc diện phải di dời có thể thỏa thuận nhận tiền bồi thường, đổi nhà tương đương hoặc mua, thuê mua nhà ở xã hội nếu đủ điều kiện.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://dantri.com.vn/rss/bat-dong-san.rss",
+        "publisher_host": "dantri.com.vn",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-df9d847a310e583756de",
+      "title": "Hồng Hạc City - Động lực gia tăng từ nội tại đến tiềm năng phát triển của toàn vùng",
+      "url": "https://dantri.com.vn/bat-dong-san/hong-hac-city-dong-luc-gia-tang-tu-noi-tai-den-tiem-nang-phat-trien-cua-toan-vung-20261010194415783.htm",
+      "category": "market",
+      "module_ids": [
+        "market"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-10-11T01:00:00+00:00",
+      "source_id": "dantri-real-estate",
+      "region_ids": [
+        "ha-noi"
+      ],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "(Dân trí) - Trên nền tảng những chuyển dịch của Bắc Ninh, Hồng Hạc City được phát triển theo định hướng đô thị tích hợp, đặt trong mối liên kết giữa Hà Nội, Bắc Ninh và các trung tâm kinh tế lớn của miền Bắc.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://dantri.com.vn/rss/bat-dong-san.rss",
+        "publisher_host": "dantri.com.vn",
+        "publication_date_from_feed": true
+      }
+    },
     {
       "id": "article-market-rss-c934e14ee7352fe3f2b5",
       "title": "Cùng báo Dân trí bàn giải pháp gỡ khó vốn, lãi suất cho doanh nghiệp",

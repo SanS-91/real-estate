@@ -1,20 +1,29 @@
 {
   "schema_version": 1,
-  "checked_at": "2026-10-11T02:33:19.770499+00:00",
+  "checked_at": "2026-10-11T06:00:52.909136+00:00",
   "feeds_configured": 16,
   "feeds_fetched": 16,
-  "accepted_new": 7,
+  "accepted_new": 8,
   "production_written": true,
-  "article_total": 281,
+  "article_total": 289,
   "published_by_module": {
-    "market": 4,
-    "legal": 0,
-    "infrastructure": 1,
-    "macro": 3
+    "market": 6,
+    "legal": 2,
+    "infrastructure": 3,
+    "macro": 1
   },
   "feed_status": [
     {
       "source_id": "vnexpress-real-estate",
+      "status": "parsed",
+      "feed_items": 50,
+      "new": 2,
+      "skipped": 48,
+      "duplicates": 48,
+      "filtered": 0
+    },
+    {
+      "source_id": "thanhnien-real-estate",
       "status": "parsed",
       "feed_items": 50,
       "new": 0,
@@ -23,21 +32,12 @@
       "filtered": 0
     },
     {
-      "source_id": "thanhnien-real-estate",
-      "status": "parsed",
-      "feed_items": 50,
-      "new": 1,
-      "skipped": 49,
-      "duplicates": 49,
-      "filtered": 0
-    },
-    {
       "source_id": "dantri-real-estate",
       "status": "parsed",
       "feed_items": 50,
-      "new": 3,
-      "skipped": 47,
-      "duplicates": 47,
+      "new": 4,
+      "skipped": 46,
+      "duplicates": 46,
       "filtered": 0
     },
     {
@@ -107,10 +107,10 @@
       "source_id": "dantri-current-affairs",
       "status": "parsed",
       "feed_items": 50,
-      "new": 0,
-      "skipped": 50,
-      "duplicates": 11,
-      "filtered": 39
+      "new": 1,
+      "skipped": 49,
+      "duplicates": 8,
+      "filtered": 41
     },
     {
       "source_id": "dantri-legal",
@@ -134,18 +134,18 @@
       "source_id": "thanhnien-banking",
       "status": "parsed",
       "feed_items": 50,
-      "new": 1,
-      "skipped": 49,
-      "duplicates": 18,
+      "new": 0,
+      "skipped": 50,
+      "duplicates": 19,
       "filtered": 31
     },
     {
       "source_id": "thanhnien-policy",
       "status": "parsed",
       "feed_items": 50,
-      "new": 1,
-      "skipped": 49,
-      "duplicates": 13,
+      "new": 0,
+      "skipped": 50,
+      "duplicates": 14,
       "filtered": 36
     },
     {
