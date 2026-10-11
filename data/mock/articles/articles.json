@@ -1,9 +1,36 @@
 {
   "schema_version": 1,
-  "build_id": "market-news-rss-20261011T060052Z",
-  "generated_at": "2026-10-11T06:00:52.909136+00:00",
-  "record_count": 289,
+  "build_id": "market-news-rss-20261011T092113Z",
+  "generated_at": "2026-10-11T09:21:13.197923+00:00",
+  "record_count": 291,
   "data": [
+    {
+      "id": "article-market-rss-08aae6e12b2e364e6e05",
+      "title": "Hồng Hạc City đón dư địa khi Bắc Ninh lên thành phố",
+      "url": "https://vnexpress.net/hong-hac-city-don-du-dia-khi-bac-ninh-len-thanh-pho-5130926.html",
+      "category": "market",
+      "module_ids": [
+        "market"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-10-11T06:00:00+00:00",
+      "source_id": "vnexpress-real-estate",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [
+        "infrastructure"
+      ],
+      "importance": 2,
+      "summary": "Bắc Ninh trở thành thành phố trực thuộc Trung ương từ ngày 20/9 mở ra giai đoạn phát triển mới về hạ tầng, công nghiệp và đô thị, tạo động lực cho các dự án như Hồng Hạc City.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://vnexpress.net/rss/bat-dong-san.rss",
+        "publisher_host": "vnexpress.net",
+        "publication_date_from_feed": true
+      }
+    },
     {
       "id": "article-market-rss-258cfadb70054215d8ef",
       "title": "TP HCM tháo gỡ vướng mắc cấp sổ hồng tại 4 dự án bất động sản",
@@ -31,6 +58,31 @@
         "method": "official-rss",
         "feed_url": "https://vnexpress.net/rss/bat-dong-san.rss",
         "publisher_host": "vnexpress.net",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-ff703e8af3548d705d2f",
+      "title": "Loạt dự án nghìn tỷ đổ bộ, diện mạo mới của Thủ Thiêm sẽ ra sao?",
+      "url": "https://dantri.com.vn/bat-dong-san/loat-du-an-nghin-ty-do-bo-dien-mao-moi-cua-thu-thiem-se-ra-sao-20261011101241639.htm",
+      "category": "market",
+      "module_ids": [
+        "market"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-10-11T04:35:10+00:00",
+      "source_id": "dantri-real-estate",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "(Dân trí) - Hàng loạt công trình trọng điểm, siêu dự án bất động sản với tổng vốn đầu tư lên đến hàng trăm nghìn tỷ đồng, từng bước định hình diện mạo mới cho Khu đô thị Thủ Thiêm.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://dantri.com.vn/rss/bat-dong-san.rss",
+        "publisher_host": "dantri.com.vn",
         "publication_date_from_feed": true
       }
     },
