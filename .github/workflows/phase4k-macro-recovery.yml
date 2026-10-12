@@ -11,6 +11,8 @@ on:
       - '.github/workflows/macro-candidate.yml'
       - 'workers/news-rss-fallback/**'
       - 'data/processed/macro/historical-observations.json'
+      - 'data/processed/macro/historical-fx-gold-observations.json'
+      - 'tests/test_macro_historical_fx_gold.cjs'
       - 'assets/js/macro.js'
       - 'assets/js/data-store.js'
       - 'macro.html'
@@ -45,6 +47,7 @@ jobs:
           node tests/test_macro_cloudflare_fallback.cjs
           python tests/test_macro_maintenance_sync.py
           python tests/test_macro_official_history.py
+          node tests/test_macro_historical_fx_gold.cjs
           node --check assets/js/macro.js
           node --check assets/js/data-store.js
 
