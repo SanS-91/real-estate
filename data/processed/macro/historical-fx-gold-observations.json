@@ -1,0 +1,540 @@
+{
+  "schema_version": 1,
+  "mode": "corroborated-fx-gold-history-v1",
+  "generated_at": "2026-10-12T09:00:00+00:00",
+  "repository_publish": true,
+  "frontend_publish": false,
+  "record_count": 14,
+  "coverage": {
+    "first_period": "2025-03-10",
+    "last_period": "2026-09-10",
+    "fx_observations": 6,
+    "gold_buy_observations": 4,
+    "gold_sell_observations": 4,
+    "frequency": "verified-dated-snapshots-only",
+    "missing_dates_policy": "leave-gaps-no-interpolation",
+    "price_basis": "explicit source date, session and SJC bar product"
+  },
+  "data": [
+    {
+      "id": "verified-historical-sjc-gold-buy-2025-04-10",
+      "indicator_id": "sjc-gold-buy",
+      "period": "2025-04-10",
+      "period_type": "day",
+      "data_date": "2025-04-10",
+      "value": 100600000,
+      "unit": "vnd-per-tael",
+      "source_id": "vietnamnet-gold",
+      "source_url": "https://vietnamnet.vn/gia-vang-hom-nay-10-4-2025-tang-manh-cho-ky-luc-moi-2389489.html",
+      "published_at": "2025-04-10",
+      "fetched_at": "2026-10-12T09:00:00+00:00",
+      "observation_status": "final",
+      "evidence_status": "corroborated",
+      "historical_observation": true,
+      "source_reviewed_at": "2026-10-12",
+      "quote_session": "close",
+      "quote_time_local": "15:36",
+      "product": "SJC gold bar 1 tael / 10 taels / 1kg",
+      "basis": "SJC listed gold-bar price, not SJC ring, jewelry or NSO gold price index",
+      "corroboration_sources": [
+        {
+          "source_id": "vietnamnet-gold",
+          "url": "https://vietnamnet.vn/gia-vang-hom-nay-10-4-2025-tang-manh-cho-ky-luc-moi-2389489.html",
+          "observed_value": 100600000
+        },
+        {
+          "source_id": "baonghean-gold",
+          "url": "https://baonghean.vn/gia-vang-chieu-nay-10-4-2025-gia-vang-trong-nuoc-va-the-gioi-giam-nhe-vi-sieu-thue-125-10294843.html",
+          "observed_value": 100600000
+        }
+      ],
+      "corroboration_source_ids": [
+        "vietnamnet-gold",
+        "baonghean-gold"
+      ],
+      "methodology_note": "Source-attested close quote near 15:36 Vietnam local time, SJC 1 tael bar; quote session preserved for audit."
+    },
+    {
+      "id": "verified-historical-sjc-gold-buy-2025-06-10",
+      "indicator_id": "sjc-gold-buy",
+      "period": "2025-06-10",
+      "period_type": "day",
+      "data_date": "2025-06-10",
+      "value": 115700000,
+      "unit": "vnd-per-tael",
+      "source_id": "vietnamnet-gold",
+      "source_url": "https://vietnamnet.vn/gia-vang-hom-nay-10-6-giam-vang-sjc-nguoc-chieu-di-len-2409808.html",
+      "published_at": "2025-06-10",
+      "fetched_at": "2026-10-12T09:00:00+00:00",
+      "observation_status": "final",
+      "evidence_status": "corroborated",
+      "historical_observation": true,
+      "source_reviewed_at": "2026-10-12",
+      "quote_session": "morning",
+      "quote_time_local": "09:00",
+      "product": "SJC gold bar 1 tael / 10 taels / 1kg",
+      "basis": "SJC listed gold-bar price, not SJC ring, jewelry or NSO gold price index",
+      "corroboration_sources": [
+        {
+          "source_id": "vietnamnet-gold",
+          "url": "https://vietnamnet.vn/gia-vang-hom-nay-10-6-giam-vang-sjc-nguoc-chieu-di-len-2409808.html",
+          "observed_value": 115700000
+        },
+        {
+          "source_id": "vna-vietnamplus",
+          "url": "https://infographics.vn/interactive-sang-ngay-10-6-2025-gia-vang-mieng-o-nguong-1157-1177-trieu-dong-luong/215940.vna",
+          "observed_value": 115700000
+        }
+      ],
+      "corroboration_source_ids": [
+        "vietnamnet-gold",
+        "vna-vietnamplus"
+      ],
+      "methodology_note": "Source-attested morning quote near 09:00 Vietnam local time, SJC 1 tael bar; quote session preserved for audit."
+    },
+    {
+      "id": "verified-historical-sjc-gold-buy-2025-10-10",
+      "indicator_id": "sjc-gold-buy",
+      "period": "2025-10-10",
+      "period_type": "day",
+      "data_date": "2025-10-10",
+      "value": 140200000,
+      "unit": "vnd-per-tael",
+      "source_id": "vietnamnet-gold",
+      "source_url": "https://vietnamnet.vn/gia-vang-hom-nay-10-10-2025-buoc-vao-ngay-lich-su-sjc-se-the-nao-2450991.html",
+      "published_at": "2025-10-10",
+      "fetched_at": "2026-10-12T09:00:00+00:00",
+      "observation_status": "final",
+      "evidence_status": "corroborated",
+      "historical_observation": true,
+      "source_reviewed_at": "2026-10-12",
+      "quote_session": "close",
+      "quote_time_local": "16:30",
+      "product": "SJC gold bar 1 tael / 10 taels / 1kg",
+      "basis": "SJC listed gold-bar price, not SJC ring, jewelry or NSO gold price index",
+      "corroboration_sources": [
+        {
+          "source_id": "vietnamnet-gold",
+          "url": "https://vietnamnet.vn/gia-vang-hom-nay-10-10-2025-buoc-vao-ngay-lich-su-sjc-se-the-nao-2450991.html",
+          "observed_value": 140200000
+        },
+        {
+          "source_id": "baonghean-gold",
+          "url": "https://baonghean.vn/gia-vang-chieu-nay-10-10-2025-gia-vang-acb-sjc-pnj-vang-nhan-vang-the-gioi-10307995.html",
+          "observed_value": 140200000
+        }
+      ],
+      "corroboration_source_ids": [
+        "vietnamnet-gold",
+        "baonghean-gold"
+      ],
+      "methodology_note": "Source-attested close quote near 16:30 Vietnam local time, SJC 1 tael bar; quote session preserved for audit."
+    },
+    {
+      "id": "verified-historical-sjc-gold-buy-2026-09-10",
+      "indicator_id": "sjc-gold-buy",
+      "period": "2026-09-10",
+      "period_type": "day",
+      "data_date": "2026-09-10",
+      "value": 143600000,
+      "unit": "vnd-per-tael",
+      "source_id": "vietnamnet-gold",
+      "source_url": "https://vietnamnet.vn/gia-vang-hom-nay-10-9-2026-vang-bat-tang-khi-usd-suy-yeu-2553651.html",
+      "published_at": "2026-09-10",
+      "fetched_at": "2026-10-12T09:00:00+00:00",
+      "observation_status": "final",
+      "evidence_status": "corroborated",
+      "historical_observation": true,
+      "source_reviewed_at": "2026-10-12",
+      "quote_session": "morning",
+      "quote_time_local": "09:20",
+      "product": "SJC gold bar 1 tael / 10 taels / 1kg",
+      "basis": "SJC listed gold-bar price, not SJC ring, jewelry or NSO gold price index",
+      "corroboration_sources": [
+        {
+          "source_id": "vietnamnet-gold",
+          "url": "https://vietnamnet.vn/gia-vang-hom-nay-10-9-2026-vang-bat-tang-khi-usd-suy-yeu-2553651.html",
+          "observed_value": 143600000
+        },
+        {
+          "source_id": "vna-vietnamplus",
+          "url": "https://www.vietnamplus.vn/gia-vang-trong-nuoc-di-ngang-ty-gia-tai-ngan-hang-thuong-mai-giam-manh-post1135283.vnp",
+          "observed_value": 143600000
+        }
+      ],
+      "corroboration_source_ids": [
+        "vietnamnet-gold",
+        "vna-vietnamplus"
+      ],
+      "methodology_note": "Source-attested morning quote near 09:20 Vietnam local time, SJC 1 tael bar; quote session preserved for audit."
+    },
+    {
+      "id": "verified-historical-sjc-gold-sell-2025-04-10",
+      "indicator_id": "sjc-gold-sell",
+      "period": "2025-04-10",
+      "period_type": "day",
+      "data_date": "2025-04-10",
+      "value": 103600000,
+      "unit": "vnd-per-tael",
+      "source_id": "vietnamnet-gold",
+      "source_url": "https://vietnamnet.vn/gia-vang-hom-nay-10-4-2025-tang-manh-cho-ky-luc-moi-2389489.html",
+      "published_at": "2025-04-10",
+      "fetched_at": "2026-10-12T09:00:00+00:00",
+      "observation_status": "final",
+      "evidence_status": "corroborated",
+      "historical_observation": true,
+      "source_reviewed_at": "2026-10-12",
+      "quote_session": "close",
+      "quote_time_local": "15:36",
+      "product": "SJC gold bar 1 tael / 10 taels / 1kg",
+      "basis": "SJC listed gold-bar price, not SJC ring, jewelry or NSO gold price index",
+      "corroboration_sources": [
+        {
+          "source_id": "vietnamnet-gold",
+          "url": "https://vietnamnet.vn/gia-vang-hom-nay-10-4-2025-tang-manh-cho-ky-luc-moi-2389489.html",
+          "observed_value": 103600000
+        },
+        {
+          "source_id": "baonghean-gold",
+          "url": "https://baonghean.vn/gia-vang-chieu-nay-10-4-2025-gia-vang-trong-nuoc-va-the-gioi-giam-nhe-vi-sieu-thue-125-10294843.html",
+          "observed_value": 103600000
+        }
+      ],
+      "corroboration_source_ids": [
+        "vietnamnet-gold",
+        "baonghean-gold"
+      ],
+      "methodology_note": "Source-attested close quote near 15:36 Vietnam local time, SJC 1 tael bar; quote session preserved for audit."
+    },
+    {
+      "id": "verified-historical-sjc-gold-sell-2025-06-10",
+      "indicator_id": "sjc-gold-sell",
+      "period": "2025-06-10",
+      "period_type": "day",
+      "data_date": "2025-06-10",
+      "value": 117700000,
+      "unit": "vnd-per-tael",
+      "source_id": "vietnamnet-gold",
+      "source_url": "https://vietnamnet.vn/gia-vang-hom-nay-10-6-giam-vang-sjc-nguoc-chieu-di-len-2409808.html",
+      "published_at": "2025-06-10",
+      "fetched_at": "2026-10-12T09:00:00+00:00",
+      "observation_status": "final",
+      "evidence_status": "corroborated",
+      "historical_observation": true,
+      "source_reviewed_at": "2026-10-12",
+      "quote_session": "morning",
+      "quote_time_local": "09:00",
+      "product": "SJC gold bar 1 tael / 10 taels / 1kg",
+      "basis": "SJC listed gold-bar price, not SJC ring, jewelry or NSO gold price index",
+      "corroboration_sources": [
+        {
+          "source_id": "vietnamnet-gold",
+          "url": "https://vietnamnet.vn/gia-vang-hom-nay-10-6-giam-vang-sjc-nguoc-chieu-di-len-2409808.html",
+          "observed_value": 117700000
+        },
+        {
+          "source_id": "vna-vietnamplus",
+          "url": "https://infographics.vn/interactive-sang-ngay-10-6-2025-gia-vang-mieng-o-nguong-1157-1177-trieu-dong-luong/215940.vna",
+          "observed_value": 117700000
+        }
+      ],
+      "corroboration_source_ids": [
+        "vietnamnet-gold",
+        "vna-vietnamplus"
+      ],
+      "methodology_note": "Source-attested morning quote near 09:00 Vietnam local time, SJC 1 tael bar; quote session preserved for audit."
+    },
+    {
+      "id": "verified-historical-sjc-gold-sell-2025-10-10",
+      "indicator_id": "sjc-gold-sell",
+      "period": "2025-10-10",
+      "period_type": "day",
+      "data_date": "2025-10-10",
+      "value": 142200000,
+      "unit": "vnd-per-tael",
+      "source_id": "vietnamnet-gold",
+      "source_url": "https://vietnamnet.vn/gia-vang-hom-nay-10-10-2025-buoc-vao-ngay-lich-su-sjc-se-the-nao-2450991.html",
+      "published_at": "2025-10-10",
+      "fetched_at": "2026-10-12T09:00:00+00:00",
+      "observation_status": "final",
+      "evidence_status": "corroborated",
+      "historical_observation": true,
+      "source_reviewed_at": "2026-10-12",
+      "quote_session": "close",
+      "quote_time_local": "16:30",
+      "product": "SJC gold bar 1 tael / 10 taels / 1kg",
+      "basis": "SJC listed gold-bar price, not SJC ring, jewelry or NSO gold price index",
+      "corroboration_sources": [
+        {
+          "source_id": "vietnamnet-gold",
+          "url": "https://vietnamnet.vn/gia-vang-hom-nay-10-10-2025-buoc-vao-ngay-lich-su-sjc-se-the-nao-2450991.html",
+          "observed_value": 142200000
+        },
+        {
+          "source_id": "baonghean-gold",
+          "url": "https://baonghean.vn/gia-vang-chieu-nay-10-10-2025-gia-vang-acb-sjc-pnj-vang-nhan-vang-the-gioi-10307995.html",
+          "observed_value": 142200000
+        }
+      ],
+      "corroboration_source_ids": [
+        "vietnamnet-gold",
+        "baonghean-gold"
+      ],
+      "methodology_note": "Source-attested close quote near 16:30 Vietnam local time, SJC 1 tael bar; quote session preserved for audit."
+    },
+    {
+      "id": "verified-historical-sjc-gold-sell-2026-09-10",
+      "indicator_id": "sjc-gold-sell",
+      "period": "2026-09-10",
+      "period_type": "day",
+      "data_date": "2026-09-10",
+      "value": 146600000,
+      "unit": "vnd-per-tael",
+      "source_id": "vietnamnet-gold",
+      "source_url": "https://vietnamnet.vn/gia-vang-hom-nay-10-9-2026-vang-bat-tang-khi-usd-suy-yeu-2553651.html",
+      "published_at": "2026-09-10",
+      "fetched_at": "2026-10-12T09:00:00+00:00",
+      "observation_status": "final",
+      "evidence_status": "corroborated",
+      "historical_observation": true,
+      "source_reviewed_at": "2026-10-12",
+      "quote_session": "morning",
+      "quote_time_local": "09:20",
+      "product": "SJC gold bar 1 tael / 10 taels / 1kg",
+      "basis": "SJC listed gold-bar price, not SJC ring, jewelry or NSO gold price index",
+      "corroboration_sources": [
+        {
+          "source_id": "vietnamnet-gold",
+          "url": "https://vietnamnet.vn/gia-vang-hom-nay-10-9-2026-vang-bat-tang-khi-usd-suy-yeu-2553651.html",
+          "observed_value": 146600000
+        },
+        {
+          "source_id": "vna-vietnamplus",
+          "url": "https://www.vietnamplus.vn/gia-vang-trong-nuoc-di-ngang-ty-gia-tai-ngan-hang-thuong-mai-giam-manh-post1135283.vnp",
+          "observed_value": 146600000
+        }
+      ],
+      "corroboration_source_ids": [
+        "vietnamnet-gold",
+        "vna-vietnamplus"
+      ],
+      "methodology_note": "Source-attested morning quote near 09:20 Vietnam local time, SJC 1 tael bar; quote session preserved for audit."
+    },
+    {
+      "id": "verified-historical-usd-vnd-central-rate-2025-03-10",
+      "indicator_id": "usd-vnd-central-rate",
+      "period": "2025-03-10",
+      "period_type": "day",
+      "data_date": "2025-03-10",
+      "value": 24754,
+      "unit": "vnd-per-usd",
+      "source_id": "vna-vietnamplus",
+      "source_url": "https://infographics.vn/interactive-ty-gia-trung-tam-ngay-10-3-2025-1-usd-24754-vnd/214837.vna",
+      "published_at": "2025-03-10",
+      "fetched_at": "2026-10-12T09:00:00+00:00",
+      "observation_status": "final",
+      "evidence_status": "corroborated",
+      "historical_observation": true,
+      "source_reviewed_at": "2026-10-12",
+      "quote_session": "daily-reference",
+      "basis": "State Bank of Vietnam central reference rate, not bank bid/ask, street FX, nor NSO price index",
+      "corroboration_sources": [
+        {
+          "source_id": "vna-vietnamplus",
+          "url": "https://infographics.vn/interactive-ty-gia-trung-tam-ngay-10-3-2025-1-usd-24754-vnd/214837.vna",
+          "observed_value": 24754
+        },
+        {
+          "source_id": "vneconomy",
+          "url": "https://en.vneconomy.vn/bien-do-mua-va-ban-usd-o-cac-ngan-hang-giam-dan.htm",
+          "observed_value": 24754
+        }
+      ],
+      "corroboration_source_ids": [
+        "vna-vietnamplus",
+        "vneconomy"
+      ],
+      "methodology_note": "Day-specific SBV central rate reported consistently by two independent publishers; comparison uses VND/USD."
+    },
+    {
+      "id": "verified-historical-usd-vnd-central-rate-2025-04-10",
+      "indicator_id": "usd-vnd-central-rate",
+      "period": "2025-04-10",
+      "period_type": "day",
+      "data_date": "2025-04-10",
+      "value": 24964,
+      "unit": "vnd-per-usd",
+      "source_id": "vna-vietnamplus",
+      "source_url": "https://infographics.vn/interactive-ty-gia-trung-tam-ngay-10-4-2025-1-usd-24964-vnd/215194.vna",
+      "published_at": "2025-04-10",
+      "fetched_at": "2026-10-12T09:00:00+00:00",
+      "observation_status": "final",
+      "evidence_status": "corroborated",
+      "historical_observation": true,
+      "source_reviewed_at": "2026-10-12",
+      "quote_session": "daily-reference",
+      "basis": "State Bank of Vietnam central reference rate, not bank bid/ask, street FX, nor NSO price index",
+      "corroboration_sources": [
+        {
+          "source_id": "vna-vietnamplus",
+          "url": "https://infographics.vn/interactive-ty-gia-trung-tam-ngay-10-4-2025-1-usd-24964-vnd/215194.vna",
+          "observed_value": 24964
+        },
+        {
+          "source_id": "vietnamnet",
+          "url": "https://vietnamnet.vn/gia-vang-hom-nay-10-4-2025-tang-manh-cho-ky-luc-moi-2389489.html",
+          "observed_value": 24964
+        }
+      ],
+      "corroboration_source_ids": [
+        "vna-vietnamplus",
+        "vietnamnet"
+      ],
+      "methodology_note": "Day-specific SBV central rate reported consistently by two independent publishers; comparison uses VND/USD."
+    },
+    {
+      "id": "verified-historical-usd-vnd-central-rate-2025-06-10",
+      "indicator_id": "usd-vnd-central-rate",
+      "period": "2025-06-10",
+      "period_type": "day",
+      "data_date": "2025-06-10",
+      "value": 24985,
+      "unit": "vnd-per-usd",
+      "source_id": "vna-vietnamplus",
+      "source_url": "https://infographics.vn/interactive-ty-gia-trung-tam-ngay-10-6-2025-1-usd-24985-vnd/215939.vna",
+      "published_at": "2025-06-10",
+      "fetched_at": "2026-10-12T09:00:00+00:00",
+      "observation_status": "final",
+      "evidence_status": "corroborated",
+      "historical_observation": true,
+      "source_reviewed_at": "2026-10-12",
+      "quote_session": "daily-reference",
+      "basis": "State Bank of Vietnam central reference rate, not bank bid/ask, street FX, nor NSO price index",
+      "corroboration_sources": [
+        {
+          "source_id": "vna-vietnamplus",
+          "url": "https://infographics.vn/interactive-ty-gia-trung-tam-ngay-10-6-2025-1-usd-24985-vnd/215939.vna",
+          "observed_value": 24985
+        },
+        {
+          "source_id": "vov",
+          "url": "https://vov.vn/thi-truong/ty-gia/ty-gia-usd-hom-nay-106-gia-ban-usd-cho-den-tang-len-26380-dongusd-post1205814.vov",
+          "observed_value": 24985
+        }
+      ],
+      "corroboration_source_ids": [
+        "vna-vietnamplus",
+        "vov"
+      ],
+      "methodology_note": "Day-specific SBV central rate reported consistently by two independent publishers; comparison uses VND/USD."
+    },
+    {
+      "id": "verified-historical-usd-vnd-central-rate-2025-09-30",
+      "indicator_id": "usd-vnd-central-rate",
+      "period": "2025-09-30",
+      "period_type": "day",
+      "data_date": "2025-09-30",
+      "value": 25187,
+      "unit": "vnd-per-usd",
+      "source_id": "vna-vietnamplus",
+      "source_url": "https://infographics.vn/interactive-ty-gia-trung-tam-ngay-30-9-2025-1-usd-25187-vnd/217475.vna",
+      "published_at": "2025-09-30",
+      "fetched_at": "2026-10-12T09:00:00+00:00",
+      "observation_status": "final",
+      "evidence_status": "corroborated",
+      "historical_observation": true,
+      "source_reviewed_at": "2026-10-12",
+      "quote_session": "daily-reference",
+      "basis": "State Bank of Vietnam central reference rate, not bank bid/ask, street FX, nor NSO price index",
+      "corroboration_sources": [
+        {
+          "source_id": "vna-vietnamplus",
+          "url": "https://infographics.vn/interactive-ty-gia-trung-tam-ngay-30-9-2025-1-usd-25187-vnd/217475.vna",
+          "observed_value": 25187
+        },
+        {
+          "source_id": "vietnambiz",
+          "url": "https://vietnambiz.vn/ty-gia-usd-hom-nay-309-cung-co-da-tang-truoc-nguy-co-dong-cua-chinh-phu-2025929102116994.htm",
+          "observed_value": 25187
+        }
+      ],
+      "corroboration_source_ids": [
+        "vna-vietnamplus",
+        "vietnambiz"
+      ],
+      "methodology_note": "Day-specific SBV central rate reported consistently by two independent publishers; comparison uses VND/USD."
+    },
+    {
+      "id": "verified-historical-usd-vnd-central-rate-2025-10-10",
+      "indicator_id": "usd-vnd-central-rate",
+      "period": "2025-10-10",
+      "period_type": "day",
+      "data_date": "2025-10-10",
+      "value": 25128,
+      "unit": "vnd-per-usd",
+      "source_id": "vna-vietnamplus",
+      "source_url": "https://www.vietnamplus.vn/ty-gia-ngay-1010-dong-usd-tai-cac-ngan-hang-thuong-mai-van-theo-da-giam-post1069379.vnp",
+      "published_at": "2025-10-10",
+      "fetched_at": "2026-10-12T09:00:00+00:00",
+      "observation_status": "final",
+      "evidence_status": "corroborated",
+      "historical_observation": true,
+      "source_reviewed_at": "2026-10-12",
+      "quote_session": "daily-reference",
+      "basis": "State Bank of Vietnam central reference rate, not bank bid/ask, street FX, nor NSO price index",
+      "corroboration_sources": [
+        {
+          "source_id": "vna-vietnamplus",
+          "url": "https://www.vietnamplus.vn/ty-gia-ngay-1010-dong-usd-tai-cac-ngan-hang-thuong-mai-van-theo-da-giam-post1069379.vnp",
+          "observed_value": 25128
+        },
+        {
+          "source_id": "thitruongtaichinhtiente",
+          "url": "https://thitruongtaichinhtiente.vn/ngay-10-10-ty-gia-trung-tam-tiep-tuc-giam-72026.html",
+          "observed_value": 25128
+        }
+      ],
+      "corroboration_source_ids": [
+        "vna-vietnamplus",
+        "thitruongtaichinhtiente"
+      ],
+      "methodology_note": "Day-specific SBV central rate reported consistently by two independent publishers; comparison uses VND/USD."
+    },
+    {
+      "id": "verified-historical-usd-vnd-central-rate-2026-09-10",
+      "indicator_id": "usd-vnd-central-rate",
+      "period": "2026-09-10",
+      "period_type": "day",
+      "data_date": "2026-09-10",
+      "value": 25591,
+      "unit": "vnd-per-usd",
+      "source_id": "banking-times-vn",
+      "source_url": "https://thoibaonganhang.vn/sang-109-nhnn-niem-yet-ty-gia-trung-tam-o-muc-25591-dong-187339.html",
+      "published_at": "2026-09-10",
+      "fetched_at": "2026-10-12T09:00:00+00:00",
+      "observation_status": "final",
+      "evidence_status": "corroborated",
+      "historical_observation": true,
+      "source_reviewed_at": "2026-10-12",
+      "quote_session": "daily-reference",
+      "basis": "State Bank of Vietnam central reference rate, not bank bid/ask, street FX, nor NSO price index",
+      "corroboration_sources": [
+        {
+          "source_id": "banking-times-vn",
+          "url": "https://thoibaonganhang.vn/sang-109-nhnn-niem-yet-ty-gia-trung-tam-o-muc-25591-dong-187339.html",
+          "observed_value": 25591
+        },
+        {
+          "source_id": "nhipcaukinhte",
+          "url": "https://nhipcaukinhte.com.vn/thi-truong/ty-gia-ha-nhiet-nhung-an-so-tu-thi-truong-my-van-con-lon.html",
+          "observed_value": 25591
+        }
+      ],
+      "corroboration_source_ids": [
+        "banking-times-vn",
+        "nhipcaukinhte"
+      ],
+      "methodology_note": "Day-specific SBV central rate reported consistently by two independent publishers; comparison uses VND/USD."
+    }
+  ]
+}
