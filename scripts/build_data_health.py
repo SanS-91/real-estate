@@ -89,6 +89,49 @@ def trusted_run_url(run):
     return None
 
 
+
+def latest_due_quarter(as_of, grace_days=14):
+    """Return the last quarter for which the NSO publication window has elapsed.
+
+    This is an operational follow-up threshold, not a claim that NSO has
+    released or must have released a value.
+    """
+    today = as_of.astimezone(ZoneInfo("Asia/Ho_Chi_Minh")).date()
+    yr = today.year
+    for year in (yr, yr - 1):
+        for month in (12, 9, 6, 3):
+            from calendar import monthrange
+            end = date(year, month, monthrange(year, month)[1])
+            if today >= end + timedelta(days=grace_days):
+                return f"{year:04d}-{month:02d}"
+    return None
+
+
+def m2_release_observation(as_of, live_rows, archived_rows, grace_days=14):
+    """Monitor M2 YTD releases without inventing values for missing periods."""
+    valid = [
+        r for r in [*live_rows, *archived_rows]
+        if r.get("indicator_id") == "m2-growth-ytd"
+        and r.get("period_type") == "month"
+        and r.get("source_id") == "nso-vietnam"
+        and r.get("evidence_status") == "verified"
+        and r.get("observation_status") == "final"
+        and r.get("comparison_base") == "previous-year-end"
+    ]
+    latest = max((r.get("period") for r in valid if isinstance(r.get("period"), str)), default=None)
+    due = latest_due_quarter(as_of, grace_days)
+    missing = bool(due and (latest is None or latest < due))
+    return {
+        "release_expected_period": due,
+        "release_latest_period": latest,
+        "release_status": "missing-release" if missing else ("current" if latest else "awaiting-first"),
+        "source_freshness": "release-missing" if missing else "release-based",
+        "latest_source_period": latest,
+        "release_note": ("M2 YTD quarter publication follow-up: no verified official NSO observation "
+                         "for the last due period; check source, do not fabricate or interpolate."
+                         if missing else "Verified NSO quarterly YTD period available; no daily update expected."),
+    }
+
 def prod_info(entry,matrix_by_id,as_of):
     m=matrix_by_id.get(entry["id"],{})
     path=entry.get("production_path") or m.get("data_path")
@@ -107,7 +150,12 @@ def prod_info(entry,matrix_by_id,as_of):
     elif dt and age<=stale: freshness="fresh"
     elif dt and age<=stale*1.25: freshness="due"
     elif dt: freshness="stale"
-    return {"production_path":path,"record_count":len(rows),"last_production_at":stamp,"age_hours":age,"stale_after_hours":stale,"freshness":freshness,**source_observation(entry,rows,as_of)}
+    observed=source_observation(entry,rows,as_of)
+    if entry.get("id") == "macro-m2-ytd":
+        archive=load(ROOT/"data/processed/macro/historical-monetary-observations.json",{"data":[]})
+        archives=archive.get("data",[]) if isinstance(archive,dict) else []
+        observed.update(m2_release_observation(as_of,rows,archives))
+    return {"production_path":path,"record_count":len(rows),"last_production_at":stamp,"age_hours":age,"stale_after_hours":stale,"freshness":freshness,**observed}
 
 def market_obs_backlog(candidate_path):
     cand=load(ROOT/candidate_path,{"data":[]}).get("data",[])
@@ -187,6 +235,7 @@ def workflow_info(name,runs):
     }
 
 def row_status(prod,cand,wf):
+    if prod.get("source_freshness")=="release-missing": return "review"
     if prod["freshness"]=="stale" or prod["source_freshness"]=="late": return "stale"
     if wf["workflow_status"]=="degraded": return "degraded"
     if wf["workflow_status"]=="running": return "running"
