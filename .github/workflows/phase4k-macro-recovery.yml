@@ -7,6 +7,8 @@ on:
       - 'tests/test_phase4_5b_customer_rates_auto_update.py'
       - 'tests/test_phase4_5d_operational_qa.py'
       - 'tests/test_macro_cloudflare_fallback.cjs'
+      - 'tests/test_macro_maintenance_sync.py'
+      - '.github/workflows/macro-candidate.yml'
       - 'workers/news-rss-fallback/**'
   push:
     branches: [main]
@@ -36,6 +38,7 @@ jobs:
           python tests/test_phase4_4e_daily_macro_auto_publish.py
           python tests/test_phase4_5d_operational_qa.py
           node tests/test_macro_cloudflare_fallback.cjs
+          python tests/test_macro_maintenance_sync.py
 
   verify-real-daily-pipeline:
     if: github.event_name != 'pull_request'
