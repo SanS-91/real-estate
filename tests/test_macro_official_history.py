@@ -91,7 +91,8 @@ def validate():
     assert "getVerifiedMacroHistory" in store and "getVerifiedMacroHistory" in js
     assert "validHistoricalRows" in js and "currentProductionRows" in js
     assert "historical-observations.json" in store
-    assert "20261012-history1" in html
+    assert 'assets/js/macro.js?v=4.9I1' in html
+    assert 'history=20261012H2' in html
     assert "historicalCount" in js
     return {"historical_records": len(seen), "2025": by_year["2025"],
             "2026": by_year["2026"], "live_protected": len(live_keys)}
