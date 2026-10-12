@@ -276,7 +276,7 @@ jobs:
     timeout-minutes: 8
     permissions:
       contents: write
-      actions: read
+      actions: write
 
     steps:
       - name: Checkout current main
@@ -379,6 +379,14 @@ jobs:
             data/processed/macro/observations.json
             data/processed/macro/repository-publish.json
 
+      - name: Refresh Maintenance after controlled Macro persistence
+        if: always()
+        env:
+          GH_TOKEN: ${{ github.token }}
+          GH_REPO: ${{ github.repository }}
+        run: |
+          gh workflow run unified-data-health.yml --ref main
+          echo "Requested a fresh unified health snapshot after Macro production processing."
 
   persist-monthly-production:
     name: Auto-persist verified monthly CPI & banking growth
@@ -388,7 +396,7 @@ jobs:
     timeout-minutes: 8
     permissions:
       contents: write
-      actions: read
+      actions: write
 
     steps:
       - name: Checkout current main
@@ -491,6 +499,15 @@ jobs:
             data/processed/macro/observations.json
             data/processed/macro/repository-publish.json
 
+      - name: Refresh Maintenance after controlled Macro persistence
+        if: always()
+        env:
+          GH_TOKEN: ${{ github.token }}
+          GH_REPO: ${{ github.repository }}
+        run: |
+          gh workflow run unified-data-health.yml --ref main
+          echo "Requested a fresh unified health snapshot after Macro production processing."
+
   persist-customer-rates-production:
     name: Auto-persist corroborated customer rates
     needs: collect-candidate
@@ -499,7 +516,7 @@ jobs:
     timeout-minutes: 8
     permissions:
       contents: write
-      actions: read
+      actions: write
 
     steps:
       - name: Checkout current main
@@ -597,6 +614,15 @@ jobs:
             data/processed/macro/observations.json
             data/processed/macro/repository-publish.json
 
+      - name: Refresh Maintenance after controlled Macro persistence
+        if: always()
+        env:
+          GH_TOKEN: ${{ github.token }}
+          GH_REPO: ${{ github.repository }}
+        run: |
+          gh workflow run unified-data-health.yml --ref main
+          echo "Requested a fresh unified health snapshot after Macro production processing."
+
   persist-policy-rates-production:
     name: Auto-persist corroborated policy rates
     needs: collect-candidate
@@ -605,7 +631,7 @@ jobs:
     timeout-minutes: 8
     permissions:
       contents: write
-      actions: read
+      actions: write
 
     steps:
       - name: Checkout current main
@@ -702,3 +728,13 @@ jobs:
             data/staging/policy-rates-auto-persistence/
             data/processed/macro/observations.json
             data/processed/macro/repository-publish.json
+
+      - name: Refresh Maintenance after controlled Macro persistence
+        if: always()
+        env:
+          GH_TOKEN: ${{ github.token }}
+          GH_REPO: ${{ github.repository }}
+        run: |
+          gh workflow run unified-data-health.yml --ref main
+          echo "Requested a fresh unified health snapshot after Macro production processing."
+
