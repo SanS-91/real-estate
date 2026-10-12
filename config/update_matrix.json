@@ -84,7 +84,7 @@
         "10:55 every Monday (late NSO release catch-up)"
       ],
       "auto_publish_requires": "verified-official-nso, explicit previous-year-end basis and quarter date",
-      "notes": "Escalate as REVIEW after 14 calendar days past quarter end if no source-verified M2 YTD (from live or archived period); missing is not zero, stale data are not marked healthy. Monthly quarter catch-up allows verified M2 only up to 8 months behind; CPI/credit/funding retain 2-month cap.",
+      "notes": "Escalate as REVIEW on or after the 15th of the second month following quarter end if no source-verified M2 YTD (from live or archived period); missing is not zero, stale data are not marked healthy. Monthly quarter catch-up allows verified M2 only up to 8 months behind; CPI/credit/funding retain 2-month cap.",
       "history_strategy": "official NSO quarterly historical plus append-only canonical",
       "intelligence_mode": "YTD changes compare only within same calendar year"
     },
