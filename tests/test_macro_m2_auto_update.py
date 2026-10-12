@@ -38,6 +38,13 @@ def parser_tests():
     assert ready["m2-growth-ytd"] == "ready-canonical", ready
 
     # Reject absence of explicit previous-year-end base; never relabel YoY as YTD.
+    policy=json.loads((ROOT / "config/monthly_auto_persistence_policy.json").read_text(encoding="utf-8"))
+    assert policy["max_period_lag_months"] == 2
+    assert policy["max_m2_period_lag_months"] == 8
+    workflow=(ROOT / ".github/workflows/macro-candidate.yml").read_text(encoding="utf-8")
+    assert workflow.count('55 3 * * 1') == 4
+    assert "github.event.schedule == '55 3 * * 1'" in workflow
+
     for altered in [
         html.replace("so với cuối năm 2024", "so với cùng kỳ năm 2024"),
         html.replace("so với cuối năm 2024", "so với cuối năm 2023"),
@@ -92,14 +99,14 @@ def persist_tests():
         dump(inc / "observations.json", incoming)
         dump(inc / "promotion-run.json", run)
 
-        def attempt(n=0):
+        def attempt(n=0, when=None):
             return build_monthly_persistence(
                 inc, repo, report,
                 source_run_number=int(metadata.get("source_run_number") or 500) + 1000 + n,
                 source_run_database_id="m2-test-" + str(n),
                 auto_policy_path=ROOT / "config/monthly_auto_persistence_policy.json",
                 monthly_gate_path=ROOT / "config/monthly_macro_production_gate.json",
-                as_of=datetime(2026, 11, 5, 10, 45, tzinfo=ZoneInfo("Asia/Ho_Chi_Minh")),
+                as_of=when or datetime(2026, 11, 5, 10, 45, tzinfo=ZoneInfo("Asia/Ho_Chi_Minh")),
             )
         result = attempt()
         assert result["status"] == "ready-to-commit", result
@@ -122,6 +129,25 @@ def persist_tests():
                 assert "M2 YTD" in str(exc), str(exc)
             else:
                 raise AssertionError("Invalid M2 metadata passed monthly safety gate")
+        # A delayed but verified NSO quarter must be auto-recoverable even
+        # when older than the 2-month CPI restriction.
+        dump(repo / "observations.json", current)
+        late = deepcopy(incoming)
+        backfill = late["data"][-1]
+        backfill.update({"period": "2026-06", "data_date": "2026-06-26",
+                         "as_of_date": "2026-06-26"})
+        dump(inc / "observations.json", late)
+        good = attempt(20)
+        assert good["status"] == "ready-to-commit" and good["added_record_count"] == 1
+
+        dump(repo / "observations.json", current)
+        try:
+            attempt(21, datetime(2027, 4, 5, 10, 45, tzinfo=ZoneInfo("Asia/Ho_Chi_Minh")))
+        except ValueError as exc:
+            assert "Stale monthly record blocked" in str(exc), exc
+        else:
+            raise AssertionError("M2 older than 8 months must not auto-persist")
+
     finally:
         shutil.rmtree(work, ignore_errors=True)
 

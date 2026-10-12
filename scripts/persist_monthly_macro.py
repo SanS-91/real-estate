@@ -232,7 +232,9 @@ def build_monthly_persistence(
         lag = current_month_index - month_index(period_month)
         if lag < 0:
             raise ValueError(f"Future-dated monthly record blocked: {iid} {record.get('period')}")
-        if lag > max_lag:
+        allowed_lag = (int(auto_policy.get("max_m2_period_lag_months", max_lag))
+                       if iid == "m2-growth-ytd" else max_lag)
+        if lag > allowed_lag:
             raise ValueError(
                 f"Stale monthly record blocked: {iid} {record.get('period')} is {lag} month(s) behind current month"
             )

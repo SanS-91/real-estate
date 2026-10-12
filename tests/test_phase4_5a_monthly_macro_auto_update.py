@@ -129,6 +129,8 @@ def main():
     assert set(policy["allowed_indicator_ids"]) == MONTHLY_IDS | {"m2-growth-ytd"}
     assert policy["max_additions_per_run"] == 6
     assert policy["max_period_lag_months"] == 2
+    assert policy["max_m2_period_lag_months"] == 8
+    assert "55 3 * * 1" in (ROOT / ".github/workflows/macro-candidate.yml").read_text(encoding="utf-8")
     assert policy["on_source_failure"] == "retain-last-good"
     assert set(policy["allowed_source_hosts"]) == {"nso.gov.vn", "www.nso.gov.vn"}
 

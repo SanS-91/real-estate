@@ -56,10 +56,11 @@
       "failure_behavior": "retain-last-good",
       "repository_persistence": "automatic-narrow-gate",
       "schedule_ict": [
-        "10:45 daily on days 1-10 of each month"
+        "10:45 daily on days 1-10 of each month",
+        "10:55 every Monday (late NSO release catch-up)"
       ],
       "auto_publish_requires": "official verified NSO facts, plus explicit M2 prior-year-end basis",
-      "notes": "Only verified official NSO CPI/Core CPI and credit/funding growth facts auto-persist. Existing logical keys are immutable; source failure, missing data, stale periods or conflicts retain the last good repository state. M2 YTD may be published at quarter release; never confuse with M2 YoY or fake intermediary months.",
+      "notes": "Only verified official NSO CPI/Core CPI and credit/funding growth facts auto-persist. Existing logical keys are immutable; source failure, missing data, stale periods or conflicts retain the last good repository state. M2 YTD may be published at quarter release; never confuse with M2 YoY or fake intermediary months. Monthly quarter catch-up allows verified M2 only up to 8 months behind; CPI/credit/funding retain 2-month cap.",
       "history_strategy": "append-only-production-observations",
       "intelligence_mode": "previous-observation-delta-when-available"
     },
@@ -79,10 +80,11 @@
       "failure_behavior": "retain-last-good",
       "repository_persistence": "automatic-narrow-gate",
       "schedule_ict": [
-        "10:45 daily on days 1-10 of each month"
+        "10:45 daily on days 1-10 of each month",
+        "10:55 every Monday (late NSO release catch-up)"
       ],
       "auto_publish_requires": "verified-official-nso, explicit previous-year-end basis and quarter date",
-      "notes": "Escalate as REVIEW after 14 calendar days past quarter end if no source-verified M2 YTD (from live or archived period); missing is not zero, stale data are not marked healthy.",
+      "notes": "Escalate as REVIEW on or after the 15th of the second month following quarter end if no source-verified M2 YTD (from live or archived period); missing is not zero, stale data are not marked healthy. Monthly quarter catch-up allows verified M2 only up to 8 months behind; CPI/credit/funding retain 2-month cap.",
       "history_strategy": "official NSO quarterly historical plus append-only canonical",
       "intelligence_mode": "YTD changes compare only within same calendar year"
     },
