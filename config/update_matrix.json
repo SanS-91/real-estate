@@ -38,7 +38,7 @@
     {
       "id": "macro-monthly-statistics",
       "module": "macro",
-      "label": "CPI & Banking Growth",
+      "label": "CPI, Credit & M2 YTD",
       "update_mode": "automated-controlled",
       "check_frequency": "monthly",
       "update_trigger": "periodic-release",
@@ -49,7 +49,8 @@
         "cpi-mom",
         "core-cpi-yoy",
         "credit-growth-ytd",
-        "bank-funding-growth-ytd"
+        "bank-funding-growth-ytd",
+        "m2-growth-ytd"
       ],
       "source_health_mode": "controlled-production",
       "failure_behavior": "retain-last-good",
@@ -57,8 +58,8 @@
       "schedule_ict": [
         "10:45 daily on days 1-10 of each month"
       ],
-      "auto_publish_requires": "verified-official-nso",
-      "notes": "Only verified official NSO CPI/Core CPI and credit/funding growth facts auto-persist. Existing logical keys are immutable; source failure, missing data, stale periods or conflicts retain the last good repository state.",
+      "auto_publish_requires": "official verified NSO facts, plus explicit M2 prior-year-end basis",
+      "notes": "Only verified official NSO CPI/Core CPI and credit/funding growth facts auto-persist. Existing logical keys are immutable; source failure, missing data, stale periods or conflicts retain the last good repository state. M2 YTD may be published at quarter release; never confuse with M2 YoY or fake intermediary months.",
       "history_strategy": "append-only-production-observations",
       "intelligence_mode": "previous-observation-delta-when-available"
     },
