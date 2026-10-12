@@ -521,6 +521,12 @@
         ? { label:'Latest only', direction:'neutral' }
         : { label:'—', direction:'neutral' };
     }
+    // YTD percentage changes reset the comparison base each January.
+    // Showing a negative ppt movement between Dec and March would be false.
+    if (['credit-growth-ytd', 'bank-funding-growth-ytd', 'm2-growth-ytd'].includes(id)
+        && String(current.period).slice(0,4) !== String(previous.period).slice(0,4)) {
+      return { label:'New YTD baseline', direction:'neutral' };
+    }
     const delta = Number(current.value) - Number(previous.value);
     if (ind?.unit === 'percent' || ind?.unit === 'percent-per-year') {
       return { label:`${delta > 0 ? '+' : ''}${delta.toFixed(2)} ppt`, direction: delta > 0 ? 'up' : delta < 0 ? 'down' : 'neutral' };
@@ -554,6 +560,9 @@
     if (!row) return { label:'Chưa có số liệu đã xác minh', stale:false };
     if (row.indicator_id === 'policy-refinancing-rate') {
       return {label:'Theo quyết định · kỳ công bố gần nhất',stale:false};
+    }
+    if (row.reporting_cadence === 'quarterly' && row.comparison_base === 'previous-year-end') {
+      return {label:`Báo cáo theo quý · mốc đo ${row.as_of_date || row.period} · so với cuối năm trước`,stale:false};
     }
     if (row.period_type === 'month') {
       return {label:'Theo tháng · không cập nhật hằng ngày',stale:false};
@@ -729,7 +738,7 @@
       rates:'Track deposit, lending, interbank and policy-rate series without mixing publication dates with observation periods.',
       fx:'Compare structured daily USD/VND series and keep each quote definition as a separate indicator.',
       gold:'Monitor domestic and global gold as separate series because their units and market bases differ.',
-      liquidity:'Follow interbank liquidity, credit growth and broad money without forcing incompatible units onto one axis.',
+      liquidity:'Tín dụng, huy động vốn và M2 (tăng trưởng YTD so với cuối năm trước; mốc đo có thể sớm hơn cuối tháng). Không nhầm với M2 YoY hoặc số dư M2.',
       inflation:'Track CPI YoY, CPI MoM and core inflation with the underlying monthly data period preserved.'
     })[view] || '';
   }
