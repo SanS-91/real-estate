@@ -92,7 +92,7 @@ def validate():
     assert "validHistoricalRows" in js and "currentProductionRows" in js
     assert "historical-observations.json" in store
     assert 'assets/js/macro.js?v=4.9I1' in html
-    assert 'history=20261012H2' in html
+    assert re.search(r'history=20261012H[0-9]+', html), "Macro must include cache-busting history revision"
     assert "historicalCount" in js
     return {"historical_records": len(seen), "2025": by_year["2025"],
             "2026": by_year["2026"], "live_protected": len(live_keys)}

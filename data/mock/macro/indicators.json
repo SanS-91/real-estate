@@ -231,6 +231,18 @@
       "description": "Monthly range of average VND lending rates reported from the SBV customer-rate bulletin.",
       "methodology_note": "Displayed as a low–high range. The frontend pairs separately promoted low/high production components; it never collapses the official range into a single average.",
       "active": true
+    },
+    {
+      "id": "m2-growth-ytd",
+      "name": "M2 Growth YTD (Official NSO)",
+      "indicator_category": "money-supply",
+      "indicator_subcategory": "m2-growth",
+      "unit": "percent",
+      "frequency": "quarterly",
+      "default_source_id": "nso-vietnam",
+      "description": "Vietnam total means of payment (M2): percent change relative to previous calendar year-end, as of the official NSO quarterly reporting cutoff.",
+      "methodology_note": "Official NSO series: M2 YTD, not year-on-year. A data period can represent the NSO report quarter but the actual measurement cutoff may precede month-end. No interpolation or synthetic intermediate values.",
+      "active": true
     }
   ]
 }

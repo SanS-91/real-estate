@@ -6,7 +6,7 @@
     rates: ['deposit-rate-12m-average', 'lending-rate-average', 'interbank-on', 'policy-refinancing-rate'],
     fx: ['usd-vnd-central-rate', 'usd-vnd-bank-sell'],
     gold: ['sjc-gold-sell', 'sjc-gold-buy', 'global-gold-usd-oz'],
-    liquidity: ['interbank-on', 'credit-growth-ytd', 'bank-funding-growth-ytd', 'm2-growth-yoy'],
+    liquidity: ['interbank-on', 'credit-growth-ytd', 'bank-funding-growth-ytd', 'm2-growth-ytd'],
     inflation: ['cpi-yoy', 'cpi-mom', 'core-cpi-yoy']
   };
   const PRODUCTION_POLICY_RATE_SERIES = ['policy-refinancing-rate', 'policy-rediscount-rate', 'policy-overnight-lending-rate'];
@@ -27,6 +27,7 @@
     ['sjc-gold-sell', { unit: 'vnd-per-tael', evidenceStatus: 'corroborated', sources: ['baonghean-gold', 'vietnamnet-gold'] }],
     ['credit-growth-ytd', { unit: 'percent', evidenceStatus: 'verified', sources: ['nso-vietnam'] }],
     ['bank-funding-growth-ytd', { unit: 'percent', evidenceStatus: 'verified', sources: ['nso-vietnam'] }],
+    ['m2-growth-ytd', { unit: 'percent', evidenceStatus: 'verified', sources: ['nso-vietnam'] }],
     ['deposit-rate-vnd-6-12m-low', { unit: 'percent-per-year', evidenceStatus: 'corroborated', sources: ['vnba', 'vna-vietnamplus'] }],
     ['deposit-rate-vnd-6-12m-high', { unit: 'percent-per-year', evidenceStatus: 'corroborated', sources: ['vnba', 'vna-vietnamplus'] }],
     ['lending-rate-vnd-average-low', { unit: 'percent-per-year', evidenceStatus: 'corroborated', sources: ['vnba', 'vna-vietnamplus'] }],
@@ -81,6 +82,11 @@
       default_source_id: 'nso-vietnam',
       description: 'Year-to-date growth in economy-wide credit as reported in the official NSO socio-economic release.',
       methodology_note: 'Canonical observations are promoted only from verified official NSO releases. Missing historical periods are never backfilled with illustrative demo values.'
+    },
+    'm2-growth-ytd': {
+      default_source_id: 'nso-vietnam',
+      description: 'Vietnam total means of payment (M2) compared with the end of the preceding year.',
+      methodology_note: 'Official NSO quarterly banking report. Quarterly period represents reporting window, but the as-of date is the source cutoff (often earlier than month end). YTD growth, not YoY. Do not annualize or interpolate.'
     },
     'bank-funding-growth-ytd': {
       default_source_id: 'nso-vietnam',
@@ -236,6 +242,70 @@
     return accepted;
   }
 
+  const MONETARY_HISTORY_IDS = new Set([
+    'm2-growth-ytd', 'credit-growth-ytd', 'bank-funding-growth-ytd',
+    'deposit-rate-vnd-6-12m-low', 'deposit-rate-vnd-6-12m-high',
+    'lending-rate-vnd-average-low', 'lending-rate-vnd-average-high'
+  ]);
+  const MONETARY_RATE_COMPONENTS = {
+    'deposit-rate-vnd-6-12m-low': ['domestic-VND-commercial-bank-deposit-6-to-12-months', 'low'],
+    'deposit-rate-vnd-6-12m-high': ['domestic-VND-commercial-bank-deposit-6-to-12-months', 'high'],
+    'lending-rate-vnd-average-low': ['domestic-VND-commercial-bank-average-outstanding-lending-new-and-existing', 'low'],
+    'lending-rate-vnd-average-high': ['domestic-VND-commercial-bank-average-outstanding-lending-new-and-existing', 'high']
+  };
+  function officialMonetaryHost(url, source) {
+    try {
+      const link = new URL(url);
+      const host = link.hostname.toLowerCase().replace(/^www\./, '');
+      if (link.protocol !== 'https:') return false;
+      return source === 'nso-vietnam' ? host === 'nso.gov.vn'
+        : source === 'sbv-vietnam' && host === 'sbv.gov.vn'
+          && /\.pdf(\/|\?|$)/i.test(link.pathname + link.search) ? true
+        : source === 'sbv-vietnam' && host === 'sbv.gov.vn' && link.pathname.includes('.pdf');
+    } catch (_) { return false; }
+  }
+  function validOfficialMonetaryRows(payload, currentRows, historyRows) {
+    if (!payload || payload.mode !== 'official-monetary-history-v1'
+        || payload.repository_publish !== true || payload.frontend_publish !== false
+        || !Array.isArray(payload.data) || payload.record_count !== payload.data.length) return [];
+    const keys = new Set([...currentRows, ...historyRows]
+      .map(row => `${row.indicator_id}:${row.period_type}:${row.period}`));
+    const accepted = [];
+    payload.data.forEach(row => {
+      const rate = MONETARY_RATE_COMPONENTS[row?.indicator_id];
+      const policy = PRODUCTION_INDICATORS.get(row?.indicator_id);
+      const validPeriod = typeof row?.period === 'string' && /^20\d{2}-(0[1-9]|1[0-2])$/.test(row.period);
+      const key = `${row?.indicator_id}:${row?.period_type}:${row?.period}`;
+      if (!MONETARY_HISTORY_IDS.has(row?.indicator_id) || !policy || !validPeriod
+          || row.period_type !== 'month' || row.unit !== policy.unit
+          || row.evidence_status !== 'verified' || row.observation_status !== 'final'
+          || row.historical_observation !== true || !row.source_reviewed_at
+          || !/^20\d{2}-(0[1-9]|1[0-2])$/.test(row.source_release_period || '')
+          || !Number.isFinite(Number(row.value))
+          || !officialMonetaryHost(row.source_url, row.source_id) || keys.has(key)) return;
+      if (rate) {
+        if (row.source_id !== 'sbv-vietnam' || row.rate_basis !== rate[0]
+            || row.rate_bound !== rate[1]
+            || row.value < 0 || row.value > 25) return;
+      } else {
+        // NSO reports growth relative to the preceding December, not YoY.
+        // The stated observation date, not the nominal report period, is
+        // retained for audit and must fall within that quarter-end month.
+        if (row.source_id !== 'nso-vietnam'
+            || row.comparison_base !== 'previous-year-end'
+            || row.reporting_cadence !== 'quarterly'
+            || !/(03|06|09|12)$/.test(row.period)
+            || !/^20\d{2}-\d{2}-\d{2}$/.test(row.as_of_date || '')
+            || row.data_date !== row.as_of_date
+            || row.as_of_date.slice(0,7) !== row.period
+            || row.value < -50 || row.value > 100) return;
+      }
+      keys.add(key);
+      accepted.push({ ...row, _data_layer: 'production', _historical: true });
+    });
+    return accepted;
+  }
+
   function buildProductionRateRanges(productionRows) {
     const syntheticRows = [];
     const virtualIds = new Set();
@@ -263,7 +333,9 @@
           source_id: low.source_id,
           source_url: low.source_url,
           published_at: [low.published_at, high.published_at].filter(Boolean).sort().at(-1),
-          evidence_status: 'corroborated',
+          evidence_status: low.evidence_status === 'verified' && high.evidence_status === 'verified'
+            && low.source_id === 'sbv-vietnam' && high.source_id === 'sbv-vietnam'
+              ? 'verified' : 'corroborated',
           observation_status: 'final',
           corroboration_source_ids: sourceIds,
           corroboration_observation_ids: [...new Set([
@@ -280,12 +352,13 @@
     return { syntheticRows, virtualIds };
   }
 
-  function integrateMacroObservations(mockPayload, productionPayload, publishMeta, historyPayload, marketHistoryPayload) {
+  function integrateMacroObservations(mockPayload, productionPayload, publishMeta, historyPayload, marketHistoryPayload, monetaryHistoryPayload) {
     const mockRows = payloadData(mockPayload).map(row => ({ ...row, _data_layer: 'demo' }));
     const currentProductionRows = validProductionRows(productionPayload, publishMeta).map(row => ({ ...row, _data_layer: 'production' }));
     const historyRows = validHistoricalRows(historyPayload, currentProductionRows);
     const marketHistoryRows = validHistoricalMarketRows(marketHistoryPayload, currentProductionRows, historyRows);
-    const allHistoryRows = [...historyRows, ...marketHistoryRows];
+    const monetaryHistoryRows = validOfficialMonetaryRows(monetaryHistoryPayload, currentProductionRows, [...historyRows, ...marketHistoryRows]);
+    const allHistoryRows = [...historyRows, ...marketHistoryRows, ...monetaryHistoryRows];
     const productionRows = [...currentProductionRows, ...allHistoryRows];
     const rawProductionIndicatorIds = new Set(productionRows.map(row => row.indicator_id));
     const ranges = buildProductionRateRanges(productionRows);
@@ -448,6 +521,12 @@
         ? { label:'Latest only', direction:'neutral' }
         : { label:'—', direction:'neutral' };
     }
+    // YTD percentage changes reset the comparison base each January.
+    // Showing a negative ppt movement between Dec and March would be false.
+    if (['credit-growth-ytd', 'bank-funding-growth-ytd', 'm2-growth-ytd'].includes(id)
+        && String(current.period).slice(0,4) !== String(previous.period).slice(0,4)) {
+      return { label:'New YTD baseline', direction:'neutral' };
+    }
     const delta = Number(current.value) - Number(previous.value);
     if (ind?.unit === 'percent' || ind?.unit === 'percent-per-year') {
       return { label:`${delta > 0 ? '+' : ''}${delta.toFixed(2)} ppt`, direction: delta > 0 ? 'up' : delta < 0 ? 'down' : 'neutral' };
@@ -481,6 +560,9 @@
     if (!row) return { label:'Chưa có số liệu đã xác minh', stale:false };
     if (row.indicator_id === 'policy-refinancing-rate') {
       return {label:'Theo quyết định · kỳ công bố gần nhất',stale:false};
+    }
+    if (row.reporting_cadence === 'quarterly' && row.comparison_base === 'previous-year-end') {
+      return {label:`Báo cáo theo quý · mốc đo ${row.as_of_date || row.period} · so với cuối năm trước`,stale:false};
     }
     if (row.period_type === 'month') {
       return {label:'Theo tháng · không cập nhật hằng ngày',stale:false};
@@ -656,7 +738,7 @@
       rates:'Track deposit, lending, interbank and policy-rate series without mixing publication dates with observation periods.',
       fx:'Compare structured daily USD/VND series and keep each quote definition as a separate indicator.',
       gold:'Monitor domestic and global gold as separate series because their units and market bases differ.',
-      liquidity:'Follow interbank liquidity, credit growth and broad money without forcing incompatible units onto one axis.',
+      liquidity:'Tín dụng, huy động vốn và M2 (tăng trưởng YTD so với cuối năm trước; mốc đo có thể sớm hơn cuối tháng). Không nhầm với M2 YoY hoặc số dư M2.',
       inflation:'Track CPI YoY, CPI MoM and core inflation with the underlying monthly data period preserved.'
     })[view] || '';
   }
@@ -794,13 +876,15 @@
         .catch(error => { console.warn('[macro] verified historical observations unavailable.', error); return null; });
       const marketHistoryPromise = DataStore.getVerifiedMacroMarketHistory()
         .catch(error => { console.warn('[macro] reviewed FX/SJC historical quotes unavailable.', error); return null; });
+      const monetaryHistoryPromise = DataStore.getVerifiedMonetaryHistory()
+        .catch(error => { console.warn('[macro] NSO/SBV monetary history unavailable.', error); return null; });
 
-      const [indicators, observations, articles, events, meta, productionObservations, productionMeta, historicalObservations, marketHistoryObservations] = await Promise.all([
+      const [indicators, observations, articles, events, meta, productionObservations, productionMeta, historicalObservations, marketHistoryObservations, monetaryHistoryObservations] = await Promise.all([
         DataStore.getMacroIndicators(), DataStore.getMacroObservations(), DataStore.getArticles(), DataStore.getEvents(), DataStore.getMeta(),
-        productionObservationsPromise, productionMetaPromise, historyPromise, marketHistoryPromise
+        productionObservationsPromise, productionMetaPromise, historyPromise, marketHistoryPromise, monetaryHistoryPromise
       ]);
 
-      const integrated = integrateMacroObservations(observations, productionObservations, productionMeta, historicalObservations, marketHistoryObservations);
+      const integrated = integrateMacroObservations(observations, productionObservations, productionMeta, historicalObservations, marketHistoryObservations, monetaryHistoryObservations);
       productionState = {
         active: integrated.productionRows.length > 0,
         recordCount: integrated.productionRows.length,

@@ -13,6 +13,10 @@ on:
       - 'data/processed/macro/historical-observations.json'
       - 'data/processed/macro/historical-fx-gold-observations.json'
       - 'tests/test_macro_historical_fx_gold.cjs'
+      - 'data/processed/macro/historical-monetary-observations.json'
+      - 'data/mock/macro/indicators.json'
+      - 'tests/test_macro_official_monetary_history.py'
+      - 'tests/test_macro_monetary_history_ui.cjs'
       - 'assets/js/macro.js'
       - 'assets/js/data-store.js'
       - 'macro.html'
@@ -48,6 +52,8 @@ jobs:
           python tests/test_macro_maintenance_sync.py
           python tests/test_macro_official_history.py
           node tests/test_macro_historical_fx_gold.cjs
+          python tests/test_macro_official_monetary_history.py
+          node tests/test_macro_monetary_history_ui.cjs
           node --check assets/js/macro.js
           node --check assets/js/data-store.js
 
