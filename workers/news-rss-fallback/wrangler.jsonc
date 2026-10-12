@@ -1,11 +1,13 @@
 {
-  "name": "real-estate-news-rss-fallback",
+  "name": "real-estate",
   "main": "src/index.mjs",
   "compatibility_date": "2026-10-01",
   "workers_dev": false,
   "triggers": {
     "crons": [
-      "50 0,2,4,6,8,10,12,14 * * *"
+      "50 0,2,4,6,8,10,12,14 * * *",
+      "45 3 * * *",
+      "45 9 * * 1-5"
     ]
   },
   "observability": {
