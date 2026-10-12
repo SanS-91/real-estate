@@ -1,9 +1,230 @@
 {
   "schema_version": 1,
-  "build_id": "market-news-rss-20261012T085104Z",
-  "generated_at": "2026-10-12T08:51:04.495372+00:00",
-  "record_count": 320,
+  "build_id": "market-news-rss-20261012T105055Z",
+  "generated_at": "2026-10-12T10:50:55.638142+00:00",
+  "record_count": 329,
   "data": [
+    {
+      "id": "article-market-rss-4a730f8adf837baf0e4b",
+      "title": "Mã định danh bất động sản vẫn còn 'hoang sơ'",
+      "url": "https://thanhnien.vn/ma-dinh-danh-bat-dong-san-van-con-hoang-so-185261012164745552.htm",
+      "category": "market",
+      "module_ids": [
+        "market"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-10-12T10:21:00+00:00",
+      "source_id": "thanhnien-real-estate",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "Theo các chuyên gia, hiện nay mã định danh bất động sản vẫn chưa thể hiện được hết các thông tin cần thiết để người dân, doanh nghiệp và cả cơ quan quản lý nhà nước có thể nắm bắt.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://thanhnien.vn/rss/kinh-te/dia-oc.rss",
+        "publisher_host": "thanhnien.vn",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-88d56ceb152ff2aa47ed",
+      "title": "Đồng Nai thu hồi gần 1,2 ha đất dự án Berjaya sau 18 năm",
+      "url": "https://vnexpress.net/dong-nai-thu-hoi-gan-1-2-ha-dat-du-an-berjaya-sau-18-nam-5131275.html",
+      "category": "market",
+      "module_ids": [
+        "market"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-10-12T10:03:08+00:00",
+      "source_id": "vnexpress-real-estate",
+      "region_ids": [
+        "dong-nai"
+      ],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "Khu đất gần 1,2 ha của Berjaya-D2D tại phường Trấn Biên bị TP Đồng Nai thu hồi do hết thời gian gia hạn nhưng doanh nghiệp chưa hoàn thành dự án.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://vnexpress.net/rss/bat-dong-san.rss",
+        "publisher_host": "vnexpress.net",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-b8db9379daf5836e1357",
+      "title": "Cao tốc TP HCM - Dầu Giây, cầu Phú Mỹ giảm áp lực xe nhờ tuyến mới",
+      "url": "https://vnexpress.net/cao-toc-tp-hcm-dau-giay-cau-phu-my-giam-ap-luc-xe-nho-tuyen-moi-5131383.html",
+      "category": "infrastructure",
+      "module_ids": [
+        "infrastructure"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-10-12T09:24:02+00:00",
+      "source_id": "vnexpress-current-affairs",
+      "region_ids": [
+        "hcmc"
+      ],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [
+        "infrastructure"
+      ],
+      "importance": 2,
+      "summary": "Sau khi cao tốc Bến Lức - Long Thành nối thông, ôtô qua tuyến TP HCM - Long Thành - Dầu Giây và cầu Phú Mỹ đều giảm, góp phần giảm áp lực ở cửa ngõ thành phố.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://vnexpress.net/rss/thoi-su.rss",
+        "publisher_host": "vnexpress.net",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-2af7ae385e50c7f2c8ec",
+      "title": "Đầu tuần khác lạ khi đường trung tâm TPHCM được điều chỉnh để xây metro",
+      "url": "https://dantri.com.vn/thoi-su/dau-tuan-khac-la-khi-duong-trung-tam-tphcm-duoc-dieu-chinh-de-xay-metro-20261012161401262.htm",
+      "category": "infrastructure",
+      "module_ids": [
+        "infrastructure"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-10-12T09:22:43+00:00",
+      "source_id": "dantri-current-affairs",
+      "region_ids": [
+        "hcmc"
+      ],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [
+        "infrastructure"
+      ],
+      "importance": 2,
+      "summary": "(Dân trí) - Đường Cách Mạng Tháng Tám đoạn giáp Công viên Tao Đàn được mở rộng thêm hơn 10m trước khi rào chắn phần đường hiện hữu để thi công ga metro.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://dantri.com.vn/rss/thoi-su.rss",
+        "publisher_host": "dantri.com.vn",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-8749c57257614dd713f6",
+      "title": "Hơn 150 căn thấp tầng tại dự án Làng Vân đủ điều kiện mở bán",
+      "url": "https://vnexpress.net/hon-150-can-thap-tang-tai-du-an-lang-van-du-dieu-kien-mo-ban-5131288.html",
+      "category": "market",
+      "module_ids": [
+        "market"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-10-12T09:00:00+00:00",
+      "source_id": "vnexpress-real-estate",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [
+        "supply"
+      ],
+      "importance": 2,
+      "summary": "Sở Xây dựng TP Đà Nẵng tiếp tục duyệt cho Vinpearl mở bán hơn 150 căn nhà thấp tầng tại khu phức hợp du lịch và đô thị nghỉ dưỡng Làng Vân.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://vnexpress.net/rss/bat-dong-san.rss",
+        "publisher_host": "vnexpress.net",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-a07fcc713f17926bc2a9",
+      "title": "HĐND TPHCM sắp họp bàn về quy hoạch tầm nhìn 100 năm, khu thương mại tự do",
+      "url": "https://dantri.com.vn/thoi-su/hdnd-tphcm-sap-hop-ban-ve-quy-hoach-tam-nhin-100-nam-khu-thuong-mai-tu-do-20261012153507550.htm",
+      "category": "market",
+      "module_ids": [
+        "market"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-10-12T08:42:45+00:00",
+      "source_id": "dantri-current-affairs",
+      "region_ids": [
+        "hcmc"
+      ],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [
+        "legal"
+      ],
+      "importance": 2,
+      "summary": "(Dân trí) - HĐND TPHCM sắp họp chuyên đề để xem xét 25 dự thảo liên quan Luật Đô thị đặc biệt. Nội dung kỳ họp sẽ có nội dung liên quan đến quy hoạch tầm nhìn 100 năm, các chính sách về khu thương mại tự do.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://dantri.com.vn/rss/thoi-su.rss",
+        "publisher_host": "dantri.com.vn",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-8afd73b66ac38e623e37",
+      "title": "Cục Hàng không chấp thuận kế hoạch bay kiểm tra tại sân bay Long Thành",
+      "url": "https://dantri.com.vn/thoi-su/cuc-hang-khong-chap-thuan-ke-hoach-bay-kiem-tra-tai-san-bay-long-thanh-20261012145435662.htm",
+      "category": "infrastructure",
+      "module_ids": [
+        "infrastructure"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-10-12T08:16:49+00:00",
+      "source_id": "dantri-current-affairs",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [
+        "sales",
+        "infrastructure"
+      ],
+      "importance": 2,
+      "summary": "(Dân trí) - Cục Hàng không Việt Nam chấp thuận kế hoạch bay kiểm tra, hiệu chuẩn hệ thống dẫn đường và đèn tín hiệu tại sân bay Long Thành, kéo dài từ ngày 11 đến 19/10.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://dantri.com.vn/rss/thoi-su.rss",
+        "publisher_host": "dantri.com.vn",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-7ba29dcd5ac464eba182",
+      "title": "Sun Glory Residence - Dấu ấn đậm “chất Nghệ” mới ở trung tâm thành Vinh",
+      "url": "https://dantri.com.vn/bat-dong-san/sun-glory-residence-dau-an-dam-chat-nghe-moi-o-trung-tam-thanh-vinh-20261012144232813.htm",
+      "category": "market",
+      "module_ids": [
+        "market"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-10-12T08:07:09+00:00",
+      "source_id": "dantri-real-estate",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [
+        "supply"
+      ],
+      "importance": 2,
+      "summary": "(Dân trí) - Ra mắt tại trung tâm thành Vinh, tổ hợp Sun Glory Residence không chỉ kiến tạo phong cách sống hạng sang mà còn là công trình mang dấu ấn vùng đất địa linh nhân kiệt, hội tụ “chất đất, chất người, chất Nghệ, chất Vinh”.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://dantri.com.vn/rss/bat-dong-san.rss",
+        "publisher_host": "dantri.com.vn",
+        "publication_date_from_feed": true
+      }
+    },
     {
       "id": "article-market-rss-58afc8d4e9c93a2d65a7",
       "title": "Nam Long cất nóc phân khu cao tầng tại Waterpoint",
@@ -57,6 +278,35 @@
         "method": "official-rss",
         "feed_url": "https://vnexpress.net/rss/thoi-su.rss",
         "publisher_host": "vnexpress.net",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-dcb43a183ae12494ec10",
+      "title": "Người dân Vĩnh Hưng đến xem, góp ý dự án tái thiết đô thị gần 186.000 tỷ đồng",
+      "url": "https://dantri.com.vn/bat-dong-san/nguoi-dan-vinh-hung-den-xem-gop-y-du-an-tai-thiet-do-thi-gan-186000-ty-dong-20261012125852409.htm",
+      "category": "market",
+      "module_ids": [
+        "market"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-10-12T07:06:02+00:00",
+      "source_id": "dantri-real-estate",
+      "region_ids": [
+        "ha-noi"
+      ],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [
+        "legal"
+      ],
+      "importance": 2,
+      "summary": "(Dân trí) - Sáng 12/10, nhiều người dân phường Vĩnh Hưng, Hà Nội, đến các điểm niêm yết dự thảo quy hoạch chi tiết tỷ lệ 1/500 dự án cải tạo, chỉnh trang, tái thiết đô thị Vĩnh Hưng (dự thảo quy hoạch) để tìm hiểu, góp ý.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://dantri.com.vn/rss/bat-dong-san.rss",
+        "publisher_host": "dantri.com.vn",
         "publication_date_from_feed": true
       }
     },
