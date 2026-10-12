@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-10-12T08:52:08.665445+00:00",
+  "generated_at": "2026-10-12T08:55:48.062515+00:00",
   "overall_status": "review",
   "modules": [
     {
@@ -342,7 +342,7 @@
       "production_path": "data/mock/market/observations.json",
       "record_count": 26,
       "last_production_at": "2026-10-09T03:21:16.025473+00:00",
-      "age_hours": 77.5,
+      "age_hours": 77.6,
       "stale_after_hours": 1080,
       "freshness": "fresh",
       "latest_source_period": "2026-Q2",
@@ -387,7 +387,7 @@
       "workflow_file": "listing-market-candidate.yml",
       "record_count": 18,
       "last_production_at": "2026-10-09T04:15:03.529948+00:00",
-      "age_hours": 76.6,
+      "age_hours": 76.7,
       "freshness": "fresh",
       "latest_source_period": null,
       "source_business_day_lag": null,
@@ -472,7 +472,7 @@
       "production_path": "data/mock/infrastructure/projects.json",
       "record_count": 8,
       "last_production_at": "2026-10-08T15:08:55.288Z",
-      "age_hours": 89.7,
+      "age_hours": 89.8,
       "stale_after_hours": 192,
       "freshness": "fresh",
       "latest_source_period": null,
