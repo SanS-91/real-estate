@@ -1,9 +1,61 @@
 {
   "schema_version": 1,
-  "build_id": "market-news-rss-20261012T061128Z",
-  "generated_at": "2026-10-12T06:11:28.331243+00:00",
-  "record_count": 317,
+  "build_id": "market-news-rss-20261012T073055Z",
+  "generated_at": "2026-10-12T07:30:55.407494+00:00",
+  "record_count": 319,
   "data": [
+    {
+      "id": "article-market-rss-62eef42988993998d31e",
+      "title": "Bay kiểm tra thiết bị dẫn đường tại sân bay Long Thành trong tháng 10",
+      "url": "https://vnexpress.net/bay-kiem-tra-thiet-bi-dan-duong-tai-san-bay-long-thanh-trong-thang-10-5131302.html",
+      "category": "infrastructure",
+      "module_ids": [
+        "infrastructure"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-10-12T07:28:03+00:00",
+      "source_id": "vnexpress-current-affairs",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [
+        "infrastructure"
+      ],
+      "importance": 2,
+      "summary": "Cục Hàng không Việt Nam phê duyệt kế hoạch bay kiểm tra, hiệu chuẩn hệ thống dẫn đường và đèn tín hiệu đường cất hạ cánh tại sân bay Long Thành từ ngày 11 đến 19/10.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://vnexpress.net/rss/thoi-su.rss",
+        "publisher_host": "vnexpress.net",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-abd35ed63881299921d3",
+      "title": "Khu tái thiết đô thị Vĩnh Hưng dự kiến có 225 ha đất nhà ở",
+      "url": "https://vnexpress.net/khu-tai-thiet-do-thi-vinh-hung-du-kien-co-225-ha-dat-nha-o-5131274.html",
+      "category": "market",
+      "module_ids": [
+        "market"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-10-12T06:50:18+00:00",
+      "source_id": "vnexpress-real-estate",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "Công ty của Sun Group đề xuất khu vực Vĩnh Hưng có 225 ha đất nhà ở, tương đương 50% diện tích toàn dự án chỉnh trang, tái thiết đô thị.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://vnexpress.net/rss/bat-dong-san.rss",
+        "publisher_host": "vnexpress.net",
+        "publication_date_from_feed": true
+      }
+    },
     {
       "id": "article-market-rss-d70f7f6243c438f96686",
       "title": "Đề xuất đầu tư 50.990 tỷ đồng xây cao tốc đến Lai Châu",
