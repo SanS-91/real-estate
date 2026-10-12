@@ -22,11 +22,11 @@ const context = { window:{}, document:{addEventListener:()=>{}},URL,console };
 vm.runInNewContext(src.replace(target,injectable+target),context);
 const api=context.window.__macroMonetaryChecks;
 const monetary=api.validOfficialMonetaryRows(all,live.data,[...cpi.data,...fx.data]);
-assert.equal(monetary.length,29,'all 29 direct official rows must be accepted');
+assert.equal(monetary.length,33,'all 33 direct official rows must be accepted');
 function rejects(mutator) {
   const changed=JSON.parse(JSON.stringify(all));
   mutator(changed.data[0]);
-  assert.equal(api.validOfficialMonetaryRows(changed,live.data,[...cpi.data,...fx.data]).length,28);
+  assert.equal(api.validOfficialMonetaryRows(changed,live.data,[...cpi.data,...fx.data]).length,32);
 }
 rejects(x=>{x.source_id='unverified-website';});
 rejects(x=>{x.period_type='day';});
@@ -40,11 +40,14 @@ const integrated=api.integrateMacroObservations({data:[]},live,
   {repository_publish:true,final_record_count:live.data.length},cpi,fx,all);
 assert.equal(integrated.currentProductionCount,live.data.length,
   'live canonical record growth must not fail historical regression');
-assert.equal(integrated.historicalCount,101);
+assert.equal(integrated.historicalCount,105);
 assert.equal(integrated.productionRows.length,live.data.length+integrated.historicalCount);
 assert.equal(integrated.productionRows.filter(x=>x.indicator_id==='m2-growth-ytd').length,7);
+const mayRanges=integrated.rows.filter(x=>x._range && x.period==='2025-05');
+assert.equal(mayRanges.length,2, 'May 2025 source-verified rate ranges must be paired');
+assert(mayRanges.every(x=>x.evidence_status==='verified'));
 const ranges=integrated.rows.filter(x=>x._range && x.period==='2025-06');
 assert.equal(ranges.length,2,'June 2025 must have two valid ranges');
 assert(ranges.every(x=>x.evidence_status==='verified'),'original SBV primary verification must be retained');
 assert.equal(integrated.rows.filter(x=>x.indicator_id==='m2-growth-yoy').length,0);
-console.log('PASS Monetary integration: 21 NSO quarterly YTD + 8 direct SBV rate bounds; 101 historical + live official observations; no demo M2 YoY mixing');
+console.log('PASS Monetary integration: 21 NSO quarterly YTD + 12 direct SBV rate bounds; 105 historical + live official observations; no demo M2 YoY mixing');
