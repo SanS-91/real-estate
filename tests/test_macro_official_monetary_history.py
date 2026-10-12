@@ -22,6 +22,7 @@ QUARTERS={
 }
 IDS=["m2-growth-ytd","bank-funding-growth-ytd","credit-growth-ytd"]
 RATE={
+"2025-05":[4.5,5.5,6.6,8.9],
 "2025-06":[4.5,5.5,6.5,8.8],
 "2025-07":[4.6,5.5,6.5,8.9],
 }
@@ -36,7 +37,7 @@ def main():
     archive_time=datetime.fromisoformat(history["generated_at"].replace("Z","+00:00"))
     assert archive_time.tzinfo is not None
     assert archive_time <= datetime.now(timezone.utc), "archive metadata must not be future-dated"
-    assert history["record_count"]==len(history["data"])==29
+    assert history["record_count"]==len(history["data"])==33
     assert history["repository_publish"] is True
     assert history["frontend_publish"] is False
     canonical_keys={(r["indicator_id"],r["period_type"],r["period"]) for r in live["data"]+cpi["data"]}
@@ -81,7 +82,7 @@ def main():
     indicator=json.loads((ROOT/"data/mock/macro/indicators.json").read_text(encoding="utf-8"))
     assert any(x["id"]=="m2-growth-ytd" for x in indicator["data"])
     assert (ROOT/"assets/js/data-store.js").read_text().count("getVerifiedMonetaryHistory")==1
-    print("PASS monetary history: 21 NSO quarterly + 8 SBV monthly low/high, sources & baselines")
+    print("PASS monetary history: 21 NSO quarterly + 12 SBV monthly low/high, sources & baselines")
 
 if __name__=="__main__":
     main()
