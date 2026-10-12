@@ -90,24 +90,26 @@ def trusted_run_url(run):
 
 
 
-def latest_due_quarter(as_of, grace_days=14):
-    """Return the last quarter for which the NSO publication window has elapsed.
+def latest_due_quarter(as_of):
+    """Conservative M2 follow-up after the 15th of the quarter's second next month.
 
-    This is an operational follow-up threshold, not a claim that NSO has
-    released or must have released a value.
+    A 2026 public-sector reporting schedule has SBV submitting quarterly M2
+    to NSO by this date. It does not guarantee an NSO public release on the date.
+    Hence "missing" means REVIEW needed, never proof of publisher failure.
     """
     today = as_of.astimezone(ZoneInfo("Asia/Ho_Chi_Minh")).date()
     yr = today.year
     for year in (yr, yr - 1):
         for month in (12, 9, 6, 3):
-            from calendar import monthrange
-            end = date(year, month, monthrange(year, month)[1])
-            if today >= end + timedelta(days=grace_days):
+            target_month = month + 2
+            review_year = year + (target_month - 1) // 12
+            review_month = (target_month - 1) % 12 + 1
+            if today >= date(review_year, review_month, 15):
                 return f"{year:04d}-{month:02d}"
     return None
 
 
-def m2_release_observation(as_of, live_rows, archived_rows, grace_days=14):
+def m2_release_observation(as_of, live_rows, archived_rows):
     """Monitor M2 YTD releases without inventing values for missing periods."""
     valid = [
         r for r in [*live_rows, *archived_rows]
@@ -119,7 +121,7 @@ def m2_release_observation(as_of, live_rows, archived_rows, grace_days=14):
         and r.get("comparison_base") == "previous-year-end"
     ]
     latest = max((r.get("period") for r in valid if isinstance(r.get("period"), str)), default=None)
-    due = latest_due_quarter(as_of, grace_days)
+    due = latest_due_quarter(as_of)
     missing = bool(due and (latest is None or latest < due))
     return {
         "release_expected_period": due,
