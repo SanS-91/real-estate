@@ -1,5 +1,7 @@
 from __future__ import annotations
 
+import re
+
 from copy import deepcopy
 from datetime import datetime, timezone
 from pathlib import Path
@@ -212,6 +214,19 @@ def build_monthly_persistence(
         host = (urlparse(source_url).hostname or "").lower()
         if allowed_hosts and host not in allowed_hosts:
             raise ValueError(f"Official source host mismatch for {iid}: {host or '<missing>'}")
+
+        if iid == "m2-growth-ytd":
+            # M2 is released by NSO as a quarterly YTD measure, not M2 YoY.
+            # Require the exact as-of date, reporting month and comparison base.
+            actual_date = str(record.get("data_date") or "")
+            if (record.get("comparison_base") != "previous-year-end"
+                    or record.get("reporting_cadence") != "quarterly"
+                    or record.get("as_of_date") != actual_date
+                    or not re.fullmatch(r"20\d{2}-(0[1-9]|1[0-2])-(0[1-9]|[12]\d|3[01])", actual_date)
+                    or actual_date[:7] != record.get("period")
+                    or not str(record.get("period") or "").endswith(("-03", "-06", "-09", "-12"))
+                    or not -30 <= float(record.get("value", float("inf"))) <= 100):
+                raise ValueError("Safety stop: M2 YTD must match dated official quarterly previous-year-end basis")
 
         period_month = parse_month(record.get("period"))
         lag = current_month_index - month_index(period_month)

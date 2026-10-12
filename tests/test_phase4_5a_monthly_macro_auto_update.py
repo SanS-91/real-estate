@@ -125,9 +125,9 @@ def month_after_latest(periods: dict[str, str]) -> datetime:
 def main():
     gate = load(ROOT / "config/monthly_macro_production_gate.json")
     policy = load(ROOT / "config/monthly_auto_persistence_policy.json")
-    assert set(gate["allowed_indicators"]) == MONTHLY_IDS
-    assert set(policy["allowed_indicator_ids"]) == MONTHLY_IDS
-    assert policy["max_additions_per_run"] == 5
+    assert set(gate["allowed_indicators"]) == MONTHLY_IDS | {"m2-growth-ytd"}
+    assert set(policy["allowed_indicator_ids"]) == MONTHLY_IDS | {"m2-growth-ytd"}
+    assert policy["max_additions_per_run"] == 6
     assert policy["max_period_lag_months"] == 2
     assert policy["on_source_failure"] == "retain-last-good"
     assert set(policy["allowed_source_hosts"]) == {"nso.gov.vn", "www.nso.gov.vn"}

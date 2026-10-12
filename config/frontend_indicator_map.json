@@ -77,6 +77,10 @@
     "policy-overnight-lending-rate": {
       "frontend_indicator_id": "policy-overnight-lending-rate",
       "status": "compatible"
+    },
+    "m2-growth-ytd": {
+      "frontend_indicator_id": "m2-growth-ytd",
+      "status": "compatible"
     }
   }
 }

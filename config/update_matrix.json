@@ -38,7 +38,7 @@
     {
       "id": "macro-monthly-statistics",
       "module": "macro",
-      "label": "CPI & Banking Growth",
+      "label": "CPI, Credit & M2 YTD",
       "update_mode": "automated-controlled",
       "check_frequency": "monthly",
       "update_trigger": "periodic-release",
@@ -49,7 +49,8 @@
         "cpi-mom",
         "core-cpi-yoy",
         "credit-growth-ytd",
-        "bank-funding-growth-ytd"
+        "bank-funding-growth-ytd",
+        "m2-growth-ytd"
       ],
       "source_health_mode": "controlled-production",
       "failure_behavior": "retain-last-good",
@@ -57,10 +58,33 @@
       "schedule_ict": [
         "10:45 daily on days 1-10 of each month"
       ],
-      "auto_publish_requires": "verified-official-nso",
-      "notes": "Only verified official NSO CPI/Core CPI and credit/funding growth facts auto-persist. Existing logical keys are immutable; source failure, missing data, stale periods or conflicts retain the last good repository state.",
+      "auto_publish_requires": "official verified NSO facts, plus explicit M2 prior-year-end basis",
+      "notes": "Only verified official NSO CPI/Core CPI and credit/funding growth facts auto-persist. Existing logical keys are immutable; source failure, missing data, stale periods or conflicts retain the last good repository state. M2 YTD may be published at quarter release; never confuse with M2 YoY or fake intermediary months.",
       "history_strategy": "append-only-production-observations",
       "intelligence_mode": "previous-observation-delta-when-available"
+    },
+    {
+      "id": "macro-m2-ytd",
+      "module": "macro",
+      "label": "M2 YTD — Official Release Monitor",
+      "update_mode": "automated-controlled",
+      "check_frequency": "quarterly",
+      "update_trigger": "periodic-release",
+      "stale_after_hours": 1080,
+      "data_path": "data/processed/macro/observations.json",
+      "indicator_ids": [
+        "m2-growth-ytd"
+      ],
+      "source_health_mode": "release-schedule-gated",
+      "failure_behavior": "retain-last-good",
+      "repository_persistence": "automatic-narrow-gate",
+      "schedule_ict": [
+        "10:45 daily on days 1-10 of each month"
+      ],
+      "auto_publish_requires": "verified-official-nso, explicit previous-year-end basis and quarter date",
+      "notes": "Escalate as REVIEW after 14 calendar days past quarter end if no source-verified M2 YTD (from live or archived period); missing is not zero, stale data are not marked healthy.",
+      "history_strategy": "official NSO quarterly historical plus append-only canonical",
+      "intelligence_mode": "YTD changes compare only within same calendar year"
     },
     {
       "id": "macro-customer-rates",

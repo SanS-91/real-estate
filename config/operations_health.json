@@ -28,6 +28,16 @@
       "workflow_file": "macro-candidate.yml"
     },
     {
+      "id": "macro-m2-ytd",
+      "module": "macro",
+      "workflow_name": "Macro Candidate Collector",
+      "source_access": "automated",
+      "candidate_mode": "artifact-only",
+      "candidate_path": null,
+      "workflow_file": "macro-candidate.yml",
+      "operational_note": "Official NSO quarterly M2 YTD release monitor; overdue missing verified period triggers REVIEW rather than falsely reporting Healthy. No synthetic data."
+    },
+    {
       "id": "macro-customer-rates",
       "module": "macro",
       "workflow_name": "Macro Candidate Collector",
