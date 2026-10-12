@@ -26,6 +26,7 @@ on:
       - 'config/source_pools.json'
       - 'config/live_sources.json'
       - 'config/frontend_indicator_map.json'
+      - 'config/macro_indicators_live.json'
       - 'config/operations_health.json'
       - 'config/update_matrix.json'
       - 'tests/test_macro_m2_auto_update.py'
