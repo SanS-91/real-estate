@@ -166,6 +166,67 @@
     return accepted;
   }
 
+  // FX and SJC history is sparse, review-backed and independent of the live
+  // daily persistence policy. Exact quote sessions prevent intraday mixing.
+  const VERIFIED_HISTORY_HOSTS = {
+    'infographics.vn': 'vna', 'www.vietnamplus.vn': 'vna',
+    'thoibaonganhang.vn': 'banking-times',
+    'en.vneconomy.vn': 'vneconomy',
+    'vietnamnet.vn': 'vietnamnet',
+    'baonghean.vn': 'baonghean',
+    'vov.vn': 'vov', 'vietnambiz.vn': 'vietnambiz',
+    'thitruongtaichinhtiente.vn': 'thitruongtaichinhtiente',
+    'nhipcaukinhte.com.vn': 'nhipcaukinhte'
+  };
+  function independentHistoryPublisher(url) {
+    try {
+      const parsed = new URL(url);
+      if (parsed.protocol !== 'https:') return null;
+      const host = parsed.hostname.toLowerCase().replace(/^www\./, '');
+      return VERIFIED_HISTORY_HOSTS[host] || null;
+    } catch (_) { return null; }
+  }
+  function validHistoricalMarketRows(payload, currentRows, previouslyAcceptedHistory) {
+    if (!payload || payload.mode !== 'corroborated-fx-gold-history-v1'
+        || payload.repository_publish !== true || payload.frontend_publish !== false
+        || !Array.isArray(payload.data) || payload.record_count !== payload.data.length) return [];
+
+    const keys = new Set([...currentRows, ...previouslyAcceptedHistory]
+      .map(row => `${row.indicator_id}:${row.period_type}:${row.period}`));
+    const accepted = [];
+    payload.data.forEach(row => {
+      const iid = row?.indicator_id;
+      const rule = PRODUCTION_INDICATORS.get(iid);
+      const key = `${iid}:${row?.period_type}:${row?.period}`;
+      if (!['usd-vnd-central-rate', 'sjc-gold-buy', 'sjc-gold-sell'].includes(iid)
+          || !rule || row.unit !== rule.unit
+          || !rule.sources.includes(row.source_id)
+          || row.evidence_status !== 'corroborated' || row.observation_status !== 'final'
+          || row.historical_observation !== true
+          || row.period_type !== 'day' || !/^\d{4}-\d{2}-\d{2}$/.test(row.period || '')
+          || row.data_date !== row.period
+          || !Number.isFinite(Number(row.value)) || Number(row.value) <= 0
+          || !row.source_reviewed_at || !row.published_at
+          || keys.has(key)) return;
+
+      const sources = row.corroboration_sources;
+      if (!Array.isArray(sources) || sources.length < 2
+          || sources.some(s => !s?.source_id || !independentHistoryPublisher(s.url)
+            || Number(s.observed_value) !== Number(row.value))
+          || new Set(sources.map(s => independentHistoryPublisher(s.url))).size < 2
+          || sources[0].source_id !== row.source_id || sources[0].url !== row.source_url) return;
+      if (iid === 'usd-vnd-central-rate') {
+        if (row.quote_session !== 'daily-reference' || row.unit !== 'vnd-per-usd') return;
+      } else if (row.product !== 'SJC gold bar 1 tael / 10 taels / 1kg'
+          || !['morning', 'close'].includes(row.quote_session)
+          || !/^([01]\d|2[0-3]):[0-5]\d$/.test(row.quote_time_local || '')) return;
+
+      keys.add(key);
+      accepted.push({ ...row, _data_layer: 'production', _historical: true });
+    });
+    return accepted;
+  }
+
   function buildProductionRateRanges(productionRows) {
     const syntheticRows = [];
     const virtualIds = new Set();
@@ -210,11 +271,13 @@
     return { syntheticRows, virtualIds };
   }
 
-  function integrateMacroObservations(mockPayload, productionPayload, publishMeta, historyPayload) {
+  function integrateMacroObservations(mockPayload, productionPayload, publishMeta, historyPayload, marketHistoryPayload) {
     const mockRows = payloadData(mockPayload).map(row => ({ ...row, _data_layer: 'demo' }));
     const currentProductionRows = validProductionRows(productionPayload, publishMeta).map(row => ({ ...row, _data_layer: 'production' }));
     const historyRows = validHistoricalRows(historyPayload, currentProductionRows);
-    const productionRows = [...currentProductionRows, ...historyRows];
+    const marketHistoryRows = validHistoricalMarketRows(marketHistoryPayload, currentProductionRows, historyRows);
+    const allHistoryRows = [...historyRows, ...marketHistoryRows];
+    const productionRows = [...currentProductionRows, ...allHistoryRows];
     const rawProductionIndicatorIds = new Set(productionRows.map(row => row.indicator_id));
     const ranges = buildProductionRateRanges(productionRows);
     const productionIndicatorIds = new Set([...rawProductionIndicatorIds, ...ranges.virtualIds]);
@@ -231,7 +294,7 @@
       rows: [...retainedMockRows, ...productionRows, ...ranges.syntheticRows],
       productionRows,
       currentProductionCount: currentProductionRows.length,
-      historicalCount: historyRows.length,
+      historicalCount: allHistoryRows.length,
       productionIndicatorIds
     };
   }
@@ -720,13 +783,15 @@
         .catch(error => { console.warn('[macro] processed publish metadata unavailable; using demo fallback.', error); return null; });
       const historyPromise = DataStore.getVerifiedMacroHistory()
         .catch(error => { console.warn('[macro] verified historical observations unavailable.', error); return null; });
+      const marketHistoryPromise = DataStore.getVerifiedMacroMarketHistory()
+        .catch(error => { console.warn('[macro] reviewed FX/SJC historical quotes unavailable.', error); return null; });
 
-      const [indicators, observations, articles, events, meta, productionObservations, productionMeta, historicalObservations] = await Promise.all([
+      const [indicators, observations, articles, events, meta, productionObservations, productionMeta, historicalObservations, marketHistoryObservations] = await Promise.all([
         DataStore.getMacroIndicators(), DataStore.getMacroObservations(), DataStore.getArticles(), DataStore.getEvents(), DataStore.getMeta(),
-        productionObservationsPromise, productionMetaPromise, historyPromise
+        productionObservationsPromise, productionMetaPromise, historyPromise, marketHistoryPromise
       ]);
 
-      const integrated = integrateMacroObservations(observations, productionObservations, productionMeta, historicalObservations);
+      const integrated = integrateMacroObservations(observations, productionObservations, productionMeta, historicalObservations, marketHistoryObservations);
       productionState = {
         active: integrated.productionRows.length > 0,
         recordCount: integrated.productionRows.length,
