@@ -139,6 +139,33 @@
     });
   }
 
+  // Official historical releases are deliberately held in a separate, reviewed
+  // repository file: daily FX/gold collectors must never rewrite historical CPI.
+  function validHistoricalRows(payload, currentRows) {
+    if (!payload || payload.mode !== 'verified-official-nso-history-v1'
+        || payload.repository_publish !== true || payload.frontend_publish !== false
+        || !Array.isArray(payload.data) || payload.record_count !== payload.data.length) return [];
+
+    const keys = new Set(currentRows.map(row => `${row.indicator_id}:${row.period_type}:${row.period}`));
+    const accepted = [];
+    payload.data.forEach(row => {
+      const rule = PRODUCTION_INDICATORS.get(row?.indicator_id);
+      const key = `${row?.indicator_id}:${row?.period_type}:${row?.period}`;
+      if (!['cpi-yoy', 'cpi-mom', 'core-cpi-yoy'].includes(row?.indicator_id)
+          || !rule || row.unit !== rule.unit || row.source_id !== 'nso-vietnam'
+          || row.evidence_status !== 'verified' || row.observation_status !== 'final'
+          || row.historical_observation !== true
+          || typeof row.source_url !== 'string'
+          || !/^https:\/\/www\.nso\.gov\.vn\//.test(row.source_url)
+          || row.period_type !== 'month' || !/^\d{4}-\d{2}$/.test(row.period || '')
+          || !Number.isFinite(Number(row.value))
+          || !row.published_at || !row.source_reviewed_at || keys.has(key)) return;
+      keys.add(key);
+      accepted.push({ ...row, _data_layer: 'production', _historical: true });
+    });
+    return accepted;
+  }
+
   function buildProductionRateRanges(productionRows) {
     const syntheticRows = [];
     const virtualIds = new Set();
@@ -183,9 +210,11 @@
     return { syntheticRows, virtualIds };
   }
 
-  function integrateMacroObservations(mockPayload, productionPayload, publishMeta) {
+  function integrateMacroObservations(mockPayload, productionPayload, publishMeta, historyPayload) {
     const mockRows = payloadData(mockPayload).map(row => ({ ...row, _data_layer: 'demo' }));
-    const productionRows = validProductionRows(productionPayload, publishMeta).map(row => ({ ...row, _data_layer: 'production' }));
+    const currentProductionRows = validProductionRows(productionPayload, publishMeta).map(row => ({ ...row, _data_layer: 'production' }));
+    const historyRows = validHistoricalRows(historyPayload, currentProductionRows);
+    const productionRows = [...currentProductionRows, ...historyRows];
     const rawProductionIndicatorIds = new Set(productionRows.map(row => row.indicator_id));
     const ranges = buildProductionRateRanges(productionRows);
     const productionIndicatorIds = new Set([...rawProductionIndicatorIds, ...ranges.virtualIds]);
@@ -201,6 +230,8 @@
     return {
       rows: [...retainedMockRows, ...productionRows, ...ranges.syntheticRows],
       productionRows,
+      currentProductionCount: currentProductionRows.length,
+      historicalCount: historyRows.length,
       productionIndicatorIds
     };
   }
@@ -687,16 +718,20 @@
         .catch(error => { console.warn('[macro] processed observations unavailable; using demo fallback.', error); return null; });
       const productionMetaPromise = DataStore.getProcessedMacroPublishMeta()
         .catch(error => { console.warn('[macro] processed publish metadata unavailable; using demo fallback.', error); return null; });
+      const historyPromise = DataStore.getVerifiedMacroHistory()
+        .catch(error => { console.warn('[macro] verified historical observations unavailable.', error); return null; });
 
-      const [indicators, observations, articles, events, meta, productionObservations, productionMeta] = await Promise.all([
+      const [indicators, observations, articles, events, meta, productionObservations, productionMeta, historicalObservations] = await Promise.all([
         DataStore.getMacroIndicators(), DataStore.getMacroObservations(), DataStore.getArticles(), DataStore.getEvents(), DataStore.getMeta(),
-        productionObservationsPromise, productionMetaPromise
+        productionObservationsPromise, productionMetaPromise, historyPromise
       ]);
 
-      const integrated = integrateMacroObservations(observations, productionObservations, productionMeta);
+      const integrated = integrateMacroObservations(observations, productionObservations, productionMeta, historicalObservations);
       productionState = {
         active: integrated.productionRows.length > 0,
         recordCount: integrated.productionRows.length,
+        historicalCount: integrated.historicalCount,
+        currentProductionCount: integrated.currentProductionCount,
         indicatorIds: integrated.productionIndicatorIds,
         rows: integrated.productionRows,
         publishMeta: productionMeta
@@ -711,7 +746,7 @@
       parseState(); adjustViewFromDeepLink();
       if (updatedLabel()) {
         updatedLabel().textContent = productionState.active
-          ? `Controlled macro · ${productionState.recordCount} production records`
+          ? `Controlled macro · ${productionState.currentProductionCount} current + ${productionState.historicalCount} verified historical records`
           : (meta?.last_successful_build ? `Demo data · ${App.formatDate(meta.last_successful_build)}` : 'Demo data');
       }
       updateStatusBanner();
