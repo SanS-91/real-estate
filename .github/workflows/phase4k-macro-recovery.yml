@@ -17,6 +17,8 @@ on:
       - 'data/mock/macro/indicators.json'
       - 'tests/test_macro_official_monetary_history.py'
       - 'tests/test_macro_monetary_history_ui.cjs'
+      - 'data/processed/macro/historical-policy-monthly-observations.json'
+      - 'tests/test_macro_policy_monthly_history.cjs'
       - 'scripts/collectors/nso_banking_activity.py'
       - 'scripts/persist_monthly_macro.py'
       - 'scripts/build_data_health.py'
@@ -70,6 +72,7 @@ jobs:
           node tests/test_macro_historical_fx_gold.cjs
           python tests/test_macro_official_monetary_history.py
           node tests/test_macro_monetary_history_ui.cjs
+          node tests/test_macro_policy_monthly_history.cjs
           python tests/test_phase4_2i1_banking_activity.py
           python tests/test_phase4_5a_monthly_macro_auto_update.py
           python tests/test_macro_m2_auto_update.py
