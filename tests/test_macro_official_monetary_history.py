@@ -1,6 +1,7 @@
 """Regression: official NSO M2/credit/funding YTD, official SBV rate ranges."""
 import json
 import re
+from datetime import datetime, timezone
 from pathlib import Path
 from urllib.parse import urlparse
 
@@ -32,6 +33,9 @@ def main():
     live=json.loads(CURRENT.read_text(encoding="utf-8"))
     cpi=json.loads(CPI.read_text(encoding="utf-8"))
     assert history["mode"]=="official-monetary-history-v1"
+    archive_time=datetime.fromisoformat(history["generated_at"].replace("Z","+00:00"))
+    assert archive_time.tzinfo is not None
+    assert archive_time <= datetime.now(timezone.utc), "archive metadata must not be future-dated"
     assert history["record_count"]==len(history["data"])==29
     assert history["repository_publish"] is True
     assert history["frontend_publish"] is False
