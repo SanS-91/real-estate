@@ -306,6 +306,37 @@
     return accepted;
   }
 
+  const SBV_MONTHLY_POLICY_SOURCE = 'https://www.sbv.gov.vn/documents/d/sbv_portal/590044';
+  const POLICY_MONTH_IDS = new Set([
+    'policy-refinancing-rate', 'policy-rediscount-rate', 'policy-overnight-lending-rate'
+  ]);
+  function validOfficialPolicyMonthRows(payload, currentRows, priorHistoricalRows) {
+    if (!payload || payload.mode !== 'official-sbv-policy-monthly-history-v1'
+        || payload.repository_publish !== true || payload.frontend_publish !== false
+        || !Array.isArray(payload.data) || payload.record_count !== payload.data.length) return [];
+    const keys = new Set([...currentRows, ...priorHistoricalRows]
+      .map(row => [row.indicator_id,row.period_type,row.period].join(':')));
+    const accepted = [];
+    payload.data.forEach(row => {
+      const key = [row?.indicator_id,row?.period_type,row?.period].join(':');
+      if (!POLICY_MONTH_IDS.has(row?.indicator_id)
+          || row.unit !== 'percent-per-year'
+          || row.period_type !== 'month'
+          || !/^20(22|23)-(0[1-9]|1[0-2])$/.test(row.period || '')
+          || !Number.isFinite(Number(row.value)) || row.value < 0 || row.value > 15
+          || row.source_id !== 'sbv-vietnam-archive'
+          || row.source_url !== SBV_MONTHLY_POLICY_SOURCE
+          || row.evidence_status !== 'verified' || row.observation_status !== 'final'
+          || row.historical_observation !== true || row.monthly_rate_snapshot !== true
+          || row.snapshot_basis !== 'sbv-annual-report-appendix-1-monthly-level'
+          || row.data_date != null || row.published_at != null
+          || !row.source_reviewed_at || keys.has(key)) return;
+      keys.add(key);
+      accepted.push({ ...row, _data_layer: 'production', _historical: true });
+    });
+    return accepted;
+  }
+
   function buildProductionRateRanges(productionRows) {
     const syntheticRows = [];
     const virtualIds = new Set();
@@ -352,13 +383,15 @@
     return { syntheticRows, virtualIds };
   }
 
-  function integrateMacroObservations(mockPayload, productionPayload, publishMeta, historyPayload, marketHistoryPayload, monetaryHistoryPayload) {
+  function integrateMacroObservations(mockPayload, productionPayload, publishMeta, historyPayload, marketHistoryPayload, monetaryHistoryPayload, policyMonthHistoryPayload) {
     const mockRows = payloadData(mockPayload).map(row => ({ ...row, _data_layer: 'demo' }));
     const currentProductionRows = validProductionRows(productionPayload, publishMeta).map(row => ({ ...row, _data_layer: 'production' }));
     const historyRows = validHistoricalRows(historyPayload, currentProductionRows);
     const marketHistoryRows = validHistoricalMarketRows(marketHistoryPayload, currentProductionRows, historyRows);
     const monetaryHistoryRows = validOfficialMonetaryRows(monetaryHistoryPayload, currentProductionRows, [...historyRows, ...marketHistoryRows]);
-    const allHistoryRows = [...historyRows, ...marketHistoryRows, ...monetaryHistoryRows];
+    const policyHistoryRows = validOfficialPolicyMonthRows(policyMonthHistoryPayload, currentProductionRows,
+      [...historyRows, ...marketHistoryRows, ...monetaryHistoryRows]);
+    const allHistoryRows = [...historyRows, ...marketHistoryRows, ...monetaryHistoryRows, ...policyHistoryRows];
     const productionRows = [...currentProductionRows, ...allHistoryRows];
     const rawProductionIndicatorIds = new Set(productionRows.map(row => row.indicator_id));
     const ranges = buildProductionRateRanges(productionRows);
@@ -878,13 +911,15 @@
         .catch(error => { console.warn('[macro] reviewed FX/SJC historical quotes unavailable.', error); return null; });
       const monetaryHistoryPromise = DataStore.getVerifiedMonetaryHistory()
         .catch(error => { console.warn('[macro] NSO/SBV monetary history unavailable.', error); return null; });
+      const policyMonthHistoryPromise = DataStore.getVerifiedPolicyMonthHistory()
+        .catch(error => { console.warn('[macro] official SBV rate month snapshots unavailable.', error); return null; });
 
-      const [indicators, observations, articles, events, meta, productionObservations, productionMeta, historicalObservations, marketHistoryObservations, monetaryHistoryObservations] = await Promise.all([
+      const [indicators, observations, articles, events, meta, productionObservations, productionMeta, historicalObservations, marketHistoryObservations, monetaryHistoryObservations, policyMonthHistoryObservations] = await Promise.all([
         DataStore.getMacroIndicators(), DataStore.getMacroObservations(), DataStore.getArticles(), DataStore.getEvents(), DataStore.getMeta(),
-        productionObservationsPromise, productionMetaPromise, historyPromise, marketHistoryPromise, monetaryHistoryPromise
+        productionObservationsPromise, productionMetaPromise, historyPromise, marketHistoryPromise, monetaryHistoryPromise, policyMonthHistoryPromise
       ]);
 
-      const integrated = integrateMacroObservations(observations, productionObservations, productionMeta, historicalObservations, marketHistoryObservations, monetaryHistoryObservations);
+      const integrated = integrateMacroObservations(observations, productionObservations, productionMeta, historicalObservations, marketHistoryObservations, monetaryHistoryObservations, policyMonthHistoryObservations);
       productionState = {
         active: integrated.productionRows.length > 0,
         recordCount: integrated.productionRows.length,
