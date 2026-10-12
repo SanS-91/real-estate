@@ -86,8 +86,8 @@ def parse_nso_banking_activity(html: str, source_url: str, fetched_at: str):
     # says it is compared with the previous December. In particular do not
     # select the parenthetical "cùng thời điểm năm trước" (YoY comparator).
     m2_m = re.search(
-        r"tổng\s+phương\s+tiện\s+thanh\s+toán\s+tăng\s+([\\d.,]+)\\s*%"
-        r"\\s*so\\s+với\\s+cuối\\s+năm\\s+(20\\d{2})",
+        r"tổng\s+phương\s+tiện\s+thanh\s+toán\s+tăng\s+([\d.,]+)\s*%"
+        r"\s*so\s+với\s+cuối\s+năm\s+(20\d{2})",
         segment, re.I | re.S,
     )
     m2_value = _pct(m2_m.group(1)) if m2_m else None
