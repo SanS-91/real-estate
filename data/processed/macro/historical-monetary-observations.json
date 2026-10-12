@@ -4,7 +4,7 @@
   "generated_at": "2026-10-12T08:22:17Z",
   "repository_publish": true,
   "frontend_publish": false,
-  "record_count": 29,
+  "record_count": 33,
   "coverage": {
     "quarterly_as_of_periods": [
       "2024-09",
@@ -17,10 +17,11 @@
     ],
     "banking_observations": 21,
     "monthly_sbv_rate_periods": [
+      "2025-05",
       "2025-06",
       "2025-07"
     ],
-    "rate_bound_observations": 8,
+    "rate_bound_observations": 12,
     "observation_basis": "YTD relative to preceding December for NSO statistics; official monthly SBV low/high rate range for VND commercial banks; never annualize, interpolate or substitute YoY",
     "no_interpolation": true
   },
@@ -334,6 +335,27 @@
       "source_record_id": "nso-archive-credit-growth-ytd-2026-03"
     },
     {
+      "id": "sbv-archive-deposit-rate-vnd-6-12m-high-2025-05",
+      "indicator_id": "deposit-rate-vnd-6-12m-high",
+      "period": "2025-05",
+      "period_type": "month",
+      "data_date": null,
+      "value": 5.5,
+      "unit": "percent-per-year",
+      "source_id": "sbv-vietnam",
+      "source_url": "https://sbv.gov.vn/documents/d/sbv_portal/lai-suat-thang-5-2025-2-.pdf?download=true",
+      "source_release_period": "2025-06",
+      "published_at": null,
+      "evidence_status": "verified",
+      "observation_status": "final",
+      "historical_observation": true,
+      "source_reviewed_at": "2026-10-12",
+      "rate_basis": "domestic-VND-commercial-bank-deposit-6-to-12-months",
+      "rate_bound": "high",
+      "methodology_note": "SBV official May 2025 commercial bank customer-rate PDF: domestic-VND-commercial-bank-deposit-6-to-12-months, high endpoint; do not invent an average or present as current rate.",
+      "source_record_id": "sbv-archive-deposit-rate-vnd-6-12m-high-2025-05"
+    },
+    {
       "id": "sbv-archive-deposit-rate-vnd-6-12m-high-2025-06",
       "indicator_id": "deposit-rate-vnd-6-12m-high",
       "period": "2025-06",
@@ -374,6 +396,27 @@
       "rate_bound": "high",
       "methodology_note": "SBV bulletin 2025-07: average domestic VND commercial-bank deposit rate range for 6–12-month terms. Preserve low/high; no scalar average.",
       "source_record_id": "sbv-archive-deposit-rate-vnd-6-12m-high-2025-07"
+    },
+    {
+      "id": "sbv-archive-deposit-rate-vnd-6-12m-low-2025-05",
+      "indicator_id": "deposit-rate-vnd-6-12m-low",
+      "period": "2025-05",
+      "period_type": "month",
+      "data_date": null,
+      "value": 4.5,
+      "unit": "percent-per-year",
+      "source_id": "sbv-vietnam",
+      "source_url": "https://sbv.gov.vn/documents/d/sbv_portal/lai-suat-thang-5-2025-2-.pdf?download=true",
+      "source_release_period": "2025-06",
+      "published_at": null,
+      "evidence_status": "verified",
+      "observation_status": "final",
+      "historical_observation": true,
+      "source_reviewed_at": "2026-10-12",
+      "rate_basis": "domestic-VND-commercial-bank-deposit-6-to-12-months",
+      "rate_bound": "low",
+      "methodology_note": "SBV official May 2025 commercial bank customer-rate PDF: domestic-VND-commercial-bank-deposit-6-to-12-months, low endpoint; do not invent an average or present as current rate.",
+      "source_record_id": "sbv-archive-deposit-rate-vnd-6-12m-low-2025-05"
     },
     {
       "id": "sbv-archive-deposit-rate-vnd-6-12m-low-2025-06",
@@ -418,6 +461,27 @@
       "source_record_id": "sbv-archive-deposit-rate-vnd-6-12m-low-2025-07"
     },
     {
+      "id": "sbv-archive-lending-rate-vnd-average-high-2025-05",
+      "indicator_id": "lending-rate-vnd-average-high",
+      "period": "2025-05",
+      "period_type": "month",
+      "data_date": null,
+      "value": 8.9,
+      "unit": "percent-per-year",
+      "source_id": "sbv-vietnam",
+      "source_url": "https://sbv.gov.vn/documents/d/sbv_portal/lai-suat-thang-5-2025-2-.pdf?download=true",
+      "source_release_period": "2025-06",
+      "published_at": null,
+      "evidence_status": "verified",
+      "observation_status": "final",
+      "historical_observation": true,
+      "source_reviewed_at": "2026-10-12",
+      "rate_basis": "domestic-VND-commercial-bank-average-outstanding-lending-new-and-existing",
+      "rate_bound": "high",
+      "methodology_note": "SBV official May 2025 commercial bank customer-rate PDF: domestic-VND-commercial-bank-average-outstanding-lending-new-and-existing, high endpoint; do not invent an average or present as current rate.",
+      "source_record_id": "sbv-archive-lending-rate-vnd-average-high-2025-05"
+    },
+    {
       "id": "sbv-archive-lending-rate-vnd-average-high-2025-06",
       "indicator_id": "lending-rate-vnd-average-high",
       "period": "2025-06",
@@ -458,6 +522,27 @@
       "rate_bound": "high",
       "methodology_note": "SBV bulletin 2025-07: domestic VND commercial-bank average lending rate range for new and outstanding loans. Preserve low/high; not preferential short-term lending rate.",
       "source_record_id": "sbv-archive-lending-rate-vnd-average-high-2025-07"
+    },
+    {
+      "id": "sbv-archive-lending-rate-vnd-average-low-2025-05",
+      "indicator_id": "lending-rate-vnd-average-low",
+      "period": "2025-05",
+      "period_type": "month",
+      "data_date": null,
+      "value": 6.6,
+      "unit": "percent-per-year",
+      "source_id": "sbv-vietnam",
+      "source_url": "https://sbv.gov.vn/documents/d/sbv_portal/lai-suat-thang-5-2025-2-.pdf?download=true",
+      "source_release_period": "2025-06",
+      "published_at": null,
+      "evidence_status": "verified",
+      "observation_status": "final",
+      "historical_observation": true,
+      "source_reviewed_at": "2026-10-12",
+      "rate_basis": "domestic-VND-commercial-bank-average-outstanding-lending-new-and-existing",
+      "rate_bound": "low",
+      "methodology_note": "SBV official May 2025 commercial bank customer-rate PDF: domestic-VND-commercial-bank-average-outstanding-lending-new-and-existing, low endpoint; do not invent an average or present as current rate.",
+      "source_record_id": "sbv-archive-lending-rate-vnd-average-low-2025-05"
     },
     {
       "id": "sbv-archive-lending-rate-vnd-average-low-2025-06",
