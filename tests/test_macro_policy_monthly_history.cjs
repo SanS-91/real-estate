@@ -50,9 +50,9 @@ disallow(x=>{x.value='not-number'});
 disallow(x=>{x.snapshot_basis='made-up'});
 const integrated=api.integrateMacroObservations({data:[]},live,
     {repository_publish:true,final_record_count:live.data.length},cpi,fx,mon,data);
-assert.equal(integrated.historicalCount,119);
+assert.equal(integrated.historicalCount,123);
 assert.equal(integrated.currentProductionCount,live.data.length);
-assert.equal(integrated.productionRows.length,live.data.length+119);
+assert.equal(integrated.productionRows.length,live.data.length+123);
 const policy=integrated.productionRows.filter(x=>ids.includes(x.indicator_id));
 assert(policy.filter(x=>x._historical).length===18);
 assert(policy.filter(x=>x.period_type==='date').length===3);
