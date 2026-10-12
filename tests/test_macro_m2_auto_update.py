@@ -38,6 +38,13 @@ def parser_tests():
     assert ready["m2-growth-ytd"] == "ready-canonical", ready
 
     # Reject absence of explicit previous-year-end base; never relabel YoY as YTD.
+    policy=json.loads((ROOT / "config/monthly_auto_persistence_policy.json").read_text(encoding="utf-8"))
+    assert policy["max_period_lag_months"] == 2
+    assert policy["max_m2_period_lag_months"] == 8
+    workflow=(ROOT / ".github/workflows/macro-candidate.yml").read_text(encoding="utf-8")
+    assert workflow.count('55 3 * * 1') == 4
+    assert "github.event.schedule == '55 3 * * 1'" in workflow
+
     for altered in [
         html.replace("so với cuối năm 2024", "so với cùng kỳ năm 2024"),
         html.replace("so với cuối năm 2024", "so với cuối năm 2023"),
