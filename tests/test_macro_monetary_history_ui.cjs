@@ -38,12 +38,13 @@ const mismatch={...all,record_count:all.record_count-1};
 assert.equal(api.validOfficialMonetaryRows(mismatch,live.data,[]).length,0);
 const integrated=api.integrateMacroObservations({data:[]},live,
   {repository_publish:true,final_record_count:live.data.length},cpi,fx,all);
-assert.equal(integrated.currentProductionCount,24);
+assert.equal(integrated.currentProductionCount,live.data.length,
+  'live canonical record growth must not fail historical regression');
 assert.equal(integrated.historicalCount,101);
-assert.equal(integrated.productionRows.length,125);
+assert.equal(integrated.productionRows.length,live.data.length+integrated.historicalCount);
 assert.equal(integrated.productionRows.filter(x=>x.indicator_id==='m2-growth-ytd').length,7);
 const ranges=integrated.rows.filter(x=>x._range && x.period==='2025-06');
 assert.equal(ranges.length,2,'June 2025 must have two valid ranges');
 assert(ranges.every(x=>x.evidence_status==='verified'),'original SBV primary verification must be retained');
 assert.equal(integrated.rows.filter(x=>x.indicator_id==='m2-growth-yoy').length,0);
-console.log('PASS Monetary integration: 21 NSO quarterly YTD + 8 direct SBV rate bounds; total 125 official observations; no demo M2 YoY mixing');
+console.log('PASS Monetary integration: 21 NSO quarterly YTD + 8 direct SBV rate bounds; 101 historical + live official observations; no demo M2 YoY mixing');
