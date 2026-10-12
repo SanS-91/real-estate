@@ -106,6 +106,7 @@
     getProcessedMacroObservations: () => loadDirectJSON('./data/processed/macro/observations.json', 'processed macro observations'),
     getVerifiedMacroHistory: () => loadDirectJSON('./data/processed/macro/historical-observations.json', 'verified historical macro observations'),
     getVerifiedMacroMarketHistory: () => loadDirectJSON('./data/processed/macro/historical-fx-gold-observations.json', 'corroborated historical daily FX and gold observations'),
+    getVerifiedMonetaryHistory: () => loadDirectJSON('./data/processed/macro/historical-monetary-observations.json', 'official quarterly monetary and SBV customer rate history'),
     getProcessedMacroPublishMeta: () => loadDirectJSON('./data/processed/macro/repository-publish.json', 'processed macro publish metadata'),
     getEvents: () => loadJSON('events/events.json'),
     getArticles: () => loadJSON('articles/articles.json'),
