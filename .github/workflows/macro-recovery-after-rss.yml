@@ -1,0 +1,62 @@
+name: Macro Recovery After RSS
+
+on:
+  workflow_run:
+    workflows:
+      - Market News Multi-Source RSS
+    types:
+      - completed
+    branches:
+      - main
+  pull_request:
+    paths:
+      - '.github/workflows/macro-recovery-after-rss.yml'
+      - 'scripts/macro_rss_recovery_gate.py'
+      - 'tests/test_macro_rss_recovery_gate.py'
+
+permissions:
+  contents: read
+  actions: write
+
+concurrency:
+  group: macro-rss-recovery-${{ github.event.workflow_run.head_branch || github.ref }}
+  cancel-in-progress: false
+
+jobs:
+  verify:
+    if: github.event_name == 'pull_request'
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Test recovery decisions
+        run: python tests/test_macro_rss_recovery_gate.py
+
+  recover:
+    if: github.event_name == 'workflow_run' && github.event.workflow_run.conclusion == 'success' && github.event.workflow_run.head_branch == 'main'
+    runs-on: ubuntu-24.04
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+      - name: Inspect recent Macro workflow runs
+        env:
+          GH_TOKEN: ${{ github.token }}
+          GH_REPO: ${{ github.repository }}
+        run: |
+          gh run list --workflow macro-candidate.yml --branch main --limit 40 \
+            --json createdAt,event,status,conclusion,databaseId > "$RUNNER_TEMP/macro-runs.json"
+      - name: Determine if Macro recovery is needed
+        id: gate
+        run: python scripts/macro_rss_recovery_gate.py --runs-json "$RUNNER_TEMP/macro-runs.json"
+      - name: Dispatch existing verified Macro daily FX and gold workflow
+        if: steps.gate.outputs.dispatch == 'true'
+        env:
+          GH_TOKEN: ${{ github.token }}
+          GH_REPO: ${{ github.repository }}
+        run: |
+          gh workflow run macro-candidate.yml --ref main -f source=daily-markets-production
+          echo "Requested Macro recovery. Verified-source and production gates remain unchanged."
