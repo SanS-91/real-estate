@@ -1,9 +1,225 @@
 {
   "schema_version": 1,
-  "build_id": "market-news-rss-20261012T125103Z",
-  "generated_at": "2026-10-12T12:51:03.262249+00:00",
-  "record_count": 332,
+  "build_id": "market-news-rss-20261012T145102Z",
+  "generated_at": "2026-10-12T14:51:02.009737+00:00",
+  "record_count": 340,
   "data": [
+    {
+      "id": "article-market-rss-4c5033a1db3cfd89f51b",
+      "title": "Sau vé máy bay, đến lượt vé metro cũng đặt luôn được trên VNeID",
+      "url": "https://thanhnien.vn/sau-ve-may-bay-den-luot-ve-metro-cung-dat-luon-duoc-tren-vneid-185261012205952359.htm",
+      "category": "infrastructure",
+      "module_ids": [
+        "infrastructure"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-10-12T14:00:00+00:00",
+      "source_id": "thanhnien-policy",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [
+        "infrastructure"
+      ],
+      "importance": 2,
+      "summary": "Công ty TNHH MTV Đường sắt Đô thị số 1 vừa ban hành thông báo về việc bổ sung hình thức mua vé và sử dụng ứng dụng VNeID để lưu thông trên tuyến metro số 1 (Bến Thành - Suối Tiên).",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://thanhnien.vn/rss/kinh-te/chinh-sach-phat-trien.rss",
+        "publisher_host": "thanhnien.vn",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-08203e72e13e9a592316",
+      "title": "Thành ủy TPHCM thúc tiến độ giao mặt bằng các dự án lớn ở Cần Giờ",
+      "url": "https://dantri.com.vn/thoi-su/thanh-uy-tphcm-thuc-tien-do-giao-mat-bang-cac-du-an-lon-o-can-gio-20261012192504713.htm",
+      "category": "market",
+      "module_ids": [
+        "market"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-10-12T13:44:13+00:00",
+      "source_id": "dantri-current-affairs",
+      "region_ids": [
+        "hcmc"
+      ],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "(Dân trí) - Phó Bí thư Thành ủy TPHCM Đặng Minh Thông yêu cầu các địa phương đẩy nhanh bồi thường, giải phóng mặt bằng, phấn đấu hoàn thành 100% nhiệm vụ thuộc trách nhiệm địa phương trước ngày 30/10.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://dantri.com.vn/rss/thoi-su.rss",
+        "publisher_host": "dantri.com.vn",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-f9a4afa06b9372b634d1",
+      "title": "Báo Dân trí tổ chức tọa đàm tìm vốn cho doanh nghiệp khi lãi suất cao",
+      "url": "https://dantri.com.vn/kinh-doanh/bao-dan-tri-to-chuc-toa-dam-tim-von-cho-doanh-nghiep-khi-lai-suat-cao-20261012201246276.htm",
+      "category": "macro",
+      "module_ids": [
+        "macro"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-10-12T13:29:00+00:00",
+      "source_id": "dantri-business",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "(Dân trí) - Tín dụng ngân hàng vẫn là nguồn vốn quan trọng, nhưng doanh nghiệp cần chủ động hơn với cơ cấu vốn, quản trị dòng tiền và các kênh huy động khác…",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://dantri.com.vn/rss/kinh-doanh.rss",
+        "publisher_host": "dantri.com.vn",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-d51aa4cc5a835bd8aa0a",
+      "title": "Đề xuất giảm tỷ lệ tính giá thuê đất tại TP HCM sau sáp nhập",
+      "url": "https://vnexpress.net/de-xuat-giam-ty-le-tinh-gia-thue-dat-tai-tp-hcm-sau-sap-nhap-5131452.html",
+      "category": "market",
+      "module_ids": [
+        "market",
+        "legal"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-10-12T13:08:43+00:00",
+      "source_id": "vnexpress-real-estate",
+      "region_ids": [
+        "hcmc",
+        "binh-duong"
+      ],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [
+        "pricing"
+      ],
+      "importance": 2,
+      "summary": "Sở Tài chính TP HCM đề xuất giảm tỷ lệ tính đơn giá thuê đất tại Bình Dương và Bà Rịa - Vũng Tàu cũ, nhằm hạ nhiệt chi phí khi bảng giá đất tăng.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://vnexpress.net/rss/bat-dong-san.rss",
+        "publisher_host": "vnexpress.net",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-024a5c0e60cccb5ae29d",
+      "title": "Chính thức giảm tốc độ tối đa cao tốc Cầu Giẽ - Ninh Bình xuống 100km/h",
+      "url": "https://dantri.com.vn/thoi-su/chinh-thuc-giam-toc-do-toi-da-cao-toc-cau-gie-ninh-binh-xuong-100kmh-20261012190207332.htm",
+      "category": "infrastructure",
+      "module_ids": [
+        "infrastructure"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-10-12T12:21:10+00:00",
+      "source_id": "dantri-current-affairs",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [
+        "infrastructure"
+      ],
+      "importance": 2,
+      "summary": "(Dân trí) - Từ ngày 12/10, tốc độ tối đa trên cao tốc Cầu Giẽ - Ninh Bình được điều chỉnh từ 120km/h xuống 100km/h nhằm bảo đảm an toàn giao thông.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://dantri.com.vn/rss/thoi-su.rss",
+        "publisher_host": "dantri.com.vn",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-1349fde17b7a13d795e3",
+      "title": "Ngân hàng dồn dập rao bán bất động sản xử lý nợ, có tài sản giảm giá gần một nửa",
+      "url": "https://dantri.com.vn/kinh-doanh/ngan-hang-don-dap-rao-ban-bat-dong-san-xu-ly-no-co-tai-san-giam-gia-gan-mot-nua-20261012160019628.htm",
+      "category": "market",
+      "module_ids": [
+        "market"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-10-12T12:15:05+00:00",
+      "source_id": "dantri-business",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "(Dân trí) - Việc ngân hàng rao bán tài sản (phát mãi hoặc thanh lý tài sản bảo đảm) diễn ra khi khách hàng vay vốn không trả được nợ và khoản vay rơi vào nợ xấu. Gần đây, động thái rao bán hạ giá diễn ra ồ ạt.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://dantri.com.vn/rss/kinh-doanh.rss",
+        "publisher_host": "dantri.com.vn",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-35d9a48ac9325fca41ab",
+      "title": "Cao tốc TPHCM - Dầu Giây giảm lượng xe nhờ tuyến Bến Lức - Long Thành",
+      "url": "https://dantri.com.vn/thoi-su/cao-toc-tphcm-dau-giay-giam-luong-xe-nho-tuyen-ben-luc-long-thanh-20261012172817258.htm",
+      "category": "infrastructure",
+      "module_ids": [
+        "infrastructure"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-10-12T11:12:48+00:00",
+      "source_id": "dantri-current-affairs",
+      "region_ids": [
+        "hcmc"
+      ],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [
+        "infrastructure"
+      ],
+      "importance": 2,
+      "summary": "(Dân trí) - Sau 10 ngày đưa vào khai thác toàn tuyến, cao tốc Bến Lức - Long Thành ghi nhận gần 260.000 lượt xe lưu thông, góp phần giảm áp lực giao thông trên cao tốc TPHCM - Long Thành - Dầu Giây.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://dantri.com.vn/rss/thoi-su.rss",
+        "publisher_host": "dantri.com.vn",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-21506ea7c48ac2e4f69b",
+      "title": "Công bố thanh tra 2 dự án ở Phú Thọ",
+      "url": "https://dantri.com.vn/thoi-su/cong-bo-thanh-tra-2-du-an-o-phu-tho-20261012175330087.htm",
+      "category": "market",
+      "module_ids": [
+        "market"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-10-12T11:04:00+00:00",
+      "source_id": "dantri-current-affairs",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "(Dân trí) - Thanh tra Chính phủ công bố thanh tra 2 dự án xử lý sự cố sạt lở bờ sông và cấp nước sinh hoạt ở tỉnh Phú Thọ. Thời hạn thanh tra trong 30 ngày làm việc thực tế.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://dantri.com.vn/rss/thoi-su.rss",
+        "publisher_host": "dantri.com.vn",
+        "publication_date_from_feed": true
+      }
+    },
     {
       "id": "article-market-rss-a5deb703b901b5c28166",
       "title": "Bộ Xây dựng làm rõ thời điểm được bán lại nhà ở xã hội",
