@@ -310,7 +310,7 @@
       "enabled": true,
       "optional": true,
       "min_records": 2,
-      "max_records": 2,
+      "max_records": 3,
       "timeout_seconds": 30,
       "max_bytes": 5000000,
       "freshness_hours": 1100,
