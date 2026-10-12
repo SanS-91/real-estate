@@ -9,9 +9,9 @@
 - `lending-rate-vnd-average-low/high`: the **range** of domestic commercial-bank average VND rates on new AND outstanding loans; not the priority-sector short-term policy-controlled lending rate.
 - Month-like period `YYYY-MM` is the **statistical report period**, not a statement that the official figure was observed on the last calendar day. Every NSO record retains the actual `as_of_date` / `data_date`.
 
-## Published archive — 29 additional observations
+## Published archive — 33 additional observations
 
-The new standalone file is `data/processed/macro/historical-monetary-observations.json`, with 7 NSO reporting periods × 3 money/credit metrics (21 points) and 2 SBV bulletin months × 4 rate-bound components (8 points).
+The new standalone file is `data/processed/macro/historical-monetary-observations.json`, with 7 NSO reporting periods × 3 money/credit metrics (21 points) and 3 SBV bulletin months × 4 rate-bound components (12 points).
 
 | NSO reporting period | As-of date | M2 YTD | Funding YTD | Credit YTD | Official source |
 |---|---|---:|---:|---:|---|
@@ -27,6 +27,7 @@ Note: 2024-12 and 2025-12 figures are **as of 25 Dec / 22 Dec**, NOT full 31 Dec
 
 | SBV month | Deposit 6–12m VND p.a. | Average VND loan p.a. | SBV canonical source |
 |---|---|---|---|
+| 2025-05 | 4.5–5.5% | 6.6–8.9% | https://sbv.gov.vn/documents/d/sbv_portal/lai-suat-thang-5-2025-2-.pdf?download=true |
 | 2025-06 | 4.5–5.5% | 6.5–8.8% | https://www.sbv.gov.vn/documents/20117/0/Lai%2Bsuat%2Bthang%2B6.2025%2B%281%29.pdf/fb44102c-70d5-4913-1c5c-b45b837b7741?t=1753083536901 |
 | 2025-07 | 4.6–5.5% | 6.5–8.9% | https://sbv.gov.vn/documents/20117/2063149/Lai%20suat%20thang%207.2025.pdf.pdf/a680b271-5620-28e0-31a3-9ce6a0f5ce0b |
 
