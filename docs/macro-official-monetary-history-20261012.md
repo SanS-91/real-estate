@@ -39,7 +39,7 @@ The release day is not printed unambiguously in the rate-bulletin PDFs; `publish
 - Exact `(indicator_id, period_type, period)` keys cannot shadow live canonical records; on any later overlap live values always win.
 - Frontend accepts monetary history only when source domain is official NSO/SBV, observation basis and cutoff are consistent, period/units are correct, and verification flag is present. It preserves NSO reporting dates.
 - 4 SBV low/high components per period produce two **paired range charts**, not invented averages; primary official SBV ranges display as **Canonical**.
-- History is reviewed in a PR, not faked by quarterly interpolation. Existing monthly credit/funding candidate pipelines keep running automatically; M2 YTD quarterly history is **not yet** an auto-populated current-period series. Automatic incremental M2 collection is the next dedicated integration.
+- History is reviewed in a PR, not faked by quarterly interpolation. Existing monthly credit/funding candidate pipelines keep running automatically; M2 YTD has a separate verified NSO quarterly automatic candidate/persistence path (Phase 4L) and weekly delayed-release rechecks; absence of source-confirmed quarters remains explicitly visible in Maintenance.
 - For 2024–2026 `ALL` range shows all source-verified periods; `1Y` may show fewer since archived as-of records are quarterly.
 - The historical dates and rates remain source-period-specific. A rate for 2025-07 must not be described as the current rate in 2026.
 
