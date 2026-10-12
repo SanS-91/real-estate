@@ -178,6 +178,14 @@
     'thitruongtaichinhtiente.vn': 'thitruongtaichinhtiente',
     'nhipcaukinhte.com.vn': 'nhipcaukinhte'
   };
+  const VERIFIED_HISTORY_SOURCE_IDS = {
+    'vna-vietnamplus': 'vna', 'vietnamnet-gold': 'vietnamnet',
+    'vietnamnet': 'vietnamnet', 'banking-times-vn': 'banking-times',
+    'baonghean-gold': 'baonghean', 'vov': 'vov',
+    'vneconomy': 'vneconomy', 'vietnambiz': 'vietnambiz',
+    'thitruongtaichinhtiente': 'thitruongtaichinhtiente',
+    'nhipcaukinhte': 'nhipcaukinhte'
+  };
   function independentHistoryPublisher(url) {
     try {
       const parsed = new URL(url);
@@ -212,6 +220,7 @@
       const sources = row.corroboration_sources;
       if (!Array.isArray(sources) || sources.length < 2
           || sources.some(s => !s?.source_id || !independentHistoryPublisher(s.url)
+            || VERIFIED_HISTORY_SOURCE_IDS[s.source_id] !== independentHistoryPublisher(s.url)
             || Number(s.observed_value) !== Number(row.value))
           || new Set(sources.map(s => independentHistoryPublisher(s.url))).size < 2
           || sources[0].source_id !== row.source_id || sources[0].url !== row.source_url) return;
