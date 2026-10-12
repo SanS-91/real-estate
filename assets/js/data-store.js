@@ -104,6 +104,7 @@
     getMacroIndicators: () => loadJSON('macro/indicators.json'),
     getMacroObservations: () => loadJSON('macro/observations.json'),
     getProcessedMacroObservations: () => loadDirectJSON('./data/processed/macro/observations.json', 'processed macro observations'),
+    getVerifiedMacroHistory: () => loadDirectJSON('./data/processed/macro/historical-observations.json', 'verified historical macro observations'),
     getProcessedMacroPublishMeta: () => loadDirectJSON('./data/processed/macro/repository-publish.json', 'processed macro publish metadata'),
     getEvents: () => loadJSON('events/events.json'),
     getArticles: () => loadJSON('articles/articles.json'),
