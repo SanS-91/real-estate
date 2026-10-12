@@ -10,6 +10,11 @@ on:
       - 'tests/test_macro_maintenance_sync.py'
       - '.github/workflows/macro-candidate.yml'
       - 'workers/news-rss-fallback/**'
+      - 'data/processed/macro/historical-observations.json'
+      - 'assets/js/macro.js'
+      - 'assets/js/data-store.js'
+      - 'macro.html'
+      - 'tests/test_macro_official_history.py'
   push:
     branches: [main]
     paths:
@@ -39,6 +44,9 @@ jobs:
           python tests/test_phase4_5d_operational_qa.py
           node tests/test_macro_cloudflare_fallback.cjs
           python tests/test_macro_maintenance_sync.py
+          python tests/test_macro_official_history.py
+          node --check assets/js/macro.js
+          node --check assets/js/data-store.js
 
   verify-real-daily-pipeline:
     if: github.event_name != 'pull_request'
