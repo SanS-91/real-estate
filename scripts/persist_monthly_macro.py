@@ -222,7 +222,7 @@ def build_monthly_persistence(
             if (record.get("comparison_base") != "previous-year-end"
                     or record.get("reporting_cadence") != "quarterly"
                     or record.get("as_of_date") != actual_date
-                    or not re.fullmatch(r"20\\d{2}-(0[1-9]|1[0-2])-(0[1-9]|[12]\\d|3[01])", actual_date)
+                    or not re.fullmatch(r"20\d{2}-(0[1-9]|1[0-2])-(0[1-9]|[12]\d|3[01])", actual_date)
                     or actual_date[:7] != record.get("period")
                     or not str(record.get("period") or "").endswith(("-03", "-06", "-09", "-12"))
                     or not -30 <= float(record.get("value", float("inf"))) <= 100):
