@@ -82,6 +82,22 @@ def parse_nso_banking_activity(html: str, source_url: str, fetched_at: str):
         data_date = f"{date_m.group(3)}-{int(date_m.group(2)):02d}-{int(date_m.group(1)):02d}"
         period = f"{date_m.group(3)}-{int(date_m.group(2)):02d}"
 
+    # M2 is only canonical when the SAME dated banking paragraph explicitly
+    # says it is compared with the previous December. In particular do not
+    # select the parenthetical "cùng thời điểm năm trước" (YoY comparator).
+    m2_m = re.search(
+        r"tổng\s+phương\s+tiện\s+thanh\s+toán\s+tăng\s+([\\d.,]+)\\s*%"
+        r"\\s*so\\s+với\\s+cuối\\s+năm\\s+(20\\d{2})",
+        segment, re.I | re.S,
+    )
+    m2_value = _pct(m2_m.group(1)) if m2_m else None
+    m2_valid = bool(
+        m2_m and date_m and period and m2_value is not None
+        and -30 <= m2_value <= 100
+        and int(m2_m.group(2)) == int(date_m.group(3)) - 1
+        and int(date_m.group(2)) in (3, 6, 9, 12)
+    )
+
     funding_m = re.search(
         r"huy\s+động\s+vốn\s+của\s+các\s+tổ\s+chức\s+tín\s+dụng[^.;]{0,220}?"
         r"tăng\s+([\d.,]+)%",
@@ -97,6 +113,24 @@ def parse_nso_banking_activity(html: str, source_url: str, fetched_at: str):
 
     published_at = _published_at(soup, text)
     out = []
+    if m2_valid:
+        out.append({
+            "indicator_id": "m2-growth-ytd",
+            "period": period,
+            "period_type": "month",
+            "data_date": data_date,
+            "as_of_date": data_date,
+            "comparison_base": "previous-year-end",
+            "reporting_cadence": "quarterly",
+            "value": m2_value,
+            "unit": "percent",
+            "source_id": SOURCE_ID,
+            "source_url": source_url,
+            "published_at": published_at,
+            "fetched_at": fetched_at,
+            "evidence_status": "verified",
+            "methodology_note": "Official NSO quarterly M2 (total means of payment) growth relative to previous calendar year-end; explicitly dated and never treated as YoY or interpolated.",
+        })
     if funding_m:
         out.append({
             "indicator_id": "bank-funding-growth-ytd",
