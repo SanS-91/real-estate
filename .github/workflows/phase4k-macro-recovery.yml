@@ -17,6 +17,21 @@ on:
       - 'data/mock/macro/indicators.json'
       - 'tests/test_macro_official_monetary_history.py'
       - 'tests/test_macro_monetary_history_ui.cjs'
+      - 'scripts/collectors/nso_banking_activity.py'
+      - 'scripts/persist_monthly_macro.py'
+      - 'scripts/build_data_health.py'
+      - 'config/monthly_auto_persistence_policy.json'
+      - 'config/monthly_macro_production_gate.json'
+      - 'config/production_promotion_policy.json'
+      - 'config/source_pools.json'
+      - 'config/live_sources.json'
+      - 'config/frontend_indicator_map.json'
+      - 'config/operations_health.json'
+      - 'config/update_matrix.json'
+      - 'tests/test_macro_m2_auto_update.py'
+      - 'tests/test_macro_m2_health.py'
+      - 'tests/test_phase4_5a_monthly_macro_auto_update.py'
+      - 'tests/test_phase4_2i1_banking_activity.py'
       - 'assets/js/macro.js'
       - 'assets/js/data-store.js'
       - 'macro.html'
@@ -54,6 +69,10 @@ jobs:
           node tests/test_macro_historical_fx_gold.cjs
           python tests/test_macro_official_monetary_history.py
           node tests/test_macro_monetary_history_ui.cjs
+          python tests/test_phase4_2i1_banking_activity.py
+          python tests/test_phase4_5a_monthly_macro_auto_update.py
+          python tests/test_macro_m2_auto_update.py
+          python tests/test_macro_m2_health.py
           node --check assets/js/macro.js
           node --check assets/js/data-store.js
 
