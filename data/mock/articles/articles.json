@@ -1,9 +1,36 @@
 {
   "schema_version": 1,
-  "build_id": "market-news-rss-20261012T105055Z",
-  "generated_at": "2026-10-12T10:50:55.638142+00:00",
-  "record_count": 329,
+  "build_id": "market-news-rss-20261012T125103Z",
+  "generated_at": "2026-10-12T12:51:03.262249+00:00",
+  "record_count": 332,
   "data": [
+    {
+      "id": "article-market-rss-a5deb703b901b5c28166",
+      "title": "Bộ Xây dựng làm rõ thời điểm được bán lại nhà ở xã hội",
+      "url": "https://dantri.com.vn/bat-dong-san/bo-xay-dung-lam-ro-thoi-diem-duoc-ban-lai-nha-o-xa-hoi-20261012164337596.htm",
+      "category": "market",
+      "module_ids": [
+        "market"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-10-12T10:41:18+00:00",
+      "source_id": "dantri-real-estate",
+      "region_ids": [
+        "dong-nai"
+      ],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "(Dân trí) - Một doanh nghiệp tại Đồng Nai đề nghị Bộ Xây dựng hướng dẫn thời điểm được bán lại nhà ở xã hội sau 5 năm, cùng các quy định liên quan đến chuyển nhượng theo cơ chế thị trường.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://dantri.com.vn/rss/bat-dong-san.rss",
+        "publisher_host": "dantri.com.vn",
+        "publication_date_from_feed": true
+      }
+    },
     {
       "id": "article-market-rss-4a730f8adf837baf0e4b",
       "title": "Mã định danh bất động sản vẫn còn 'hoang sơ'",
@@ -26,6 +53,33 @@
         "method": "official-rss",
         "feed_url": "https://thanhnien.vn/rss/kinh-te/dia-oc.rss",
         "publisher_host": "thanhnien.vn",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-6ce8558f6ce5b7108e01",
+      "title": "Giữa ba dòng sông, Vũ Yên kiến tạo phong cách “sống xanh” cho cư dân Hải Phòng",
+      "url": "https://dantri.com.vn/bat-dong-san/giua-ba-dong-song-vu-yen-kien-tao-phong-cach-song-xanh-cho-cu-dan-hai-phong-20261012165157388.htm",
+      "category": "market",
+      "module_ids": [
+        "market"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-10-12T10:06:51+00:00",
+      "source_id": "dantri-real-estate",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [
+        "vinhomes"
+      ],
+      "tags": [],
+      "importance": 2,
+      "summary": "(Dân trí) - Tại Hải Phòng, Vinhomes Royal Island mở ra lựa chọn an cư trên đảo đô thị rộng 877ha, được ba dòng sông bao bọc, với hệ sinh thái cây xanh, mặt nước quy mô lớn.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://dantri.com.vn/rss/bat-dong-san.rss",
+        "publisher_host": "dantri.com.vn",
         "publication_date_from_feed": true
       }
     },
@@ -307,6 +361,31 @@
         "method": "official-rss",
         "feed_url": "https://dantri.com.vn/rss/bat-dong-san.rss",
         "publisher_host": "dantri.com.vn",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-c6ea709ae8c3183af987",
+      "title": "Khu tái thiết đô thị Vĩnh Hưng dự kiến dành một nửa diện tích cho đất ở",
+      "url": "https://vnexpress.net/khu-tai-thiet-do-thi-vinh-hung-du-kien-danh-mot-nua-dien-tich-cho-dat-o-5131274.html",
+      "category": "market",
+      "module_ids": [
+        "market"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-10-12T06:50:18+00:00",
+      "source_id": "vnexpress-real-estate",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "Công ty của Sun Group đề xuất khu vực Vĩnh Hưng có 225 ha đất nhà ở, tương đương 50% diện tích toàn dự án chỉnh trang, tái thiết đô thị.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://vnexpress.net/rss/bat-dong-san.rss",
+        "publisher_host": "vnexpress.net",
         "publication_date_from_feed": true
       }
     },
