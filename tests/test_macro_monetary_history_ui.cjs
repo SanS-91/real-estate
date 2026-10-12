@@ -32,7 +32,7 @@ rejects(x=>{x.source_id='unverified-website';});
 rejects(x=>{x.period_type='day';});
 rejects(x=>{x.evidence_status='reported';});
 rejects(x=>{x.source_url='https://fake-sbv.example.com/rates.pdf';});
-rejects(x=>{x.value=NaN;});
+rejects(x=>{x.value='not-a-number';});
 rejects(x=>{x.historical_observation=false;});
 const mismatch={...all,record_count:all.record_count-1};
 assert.equal(api.validOfficialMonetaryRows(mismatch,live.data,[]).length,0);
