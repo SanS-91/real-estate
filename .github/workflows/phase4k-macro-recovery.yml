@@ -5,10 +5,12 @@ on:
     paths:
       - '.github/workflows/phase4k-macro-recovery.yml'
       - 'tests/test_phase4_5b_customer_rates_auto_update.py'
+      - 'tests/test_phase4_5d_operational_qa.py'
   push:
     branches: [main]
     paths:
       - '.github/workflows/phase4k-macro-recovery.yml'
+      - 'tests/test_phase4_5d_operational_qa.py'
   workflow_dispatch:
 
 permissions:
@@ -30,6 +32,7 @@ jobs:
           python tests/test_phase4_5b_customer_rates_auto_update.py
           python tests/test_phase4_4f_production_hardening.py
           python tests/test_phase4_4e_daily_macro_auto_publish.py
+          python tests/test_phase4_5d_operational_qa.py
 
   verify-real-daily-pipeline:
     if: github.event_name != 'pull_request'
