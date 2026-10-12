@@ -169,7 +169,7 @@
   // FX and SJC history is sparse, review-backed and independent of the live
   // daily persistence policy. Exact quote sessions prevent intraday mixing.
   const VERIFIED_HISTORY_HOSTS = {
-    'infographics.vn': 'vna', 'www.vietnamplus.vn': 'vna',
+    'infographics.vn': 'vna', 'vietnamplus.vn': 'vna',
     'thoibaonganhang.vn': 'banking-times',
     'en.vneconomy.vn': 'vneconomy',
     'vietnamnet.vn': 'vietnamnet',
