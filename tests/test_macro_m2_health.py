@@ -23,7 +23,10 @@ def main():
         "comparison_base":"previous-year-end","value":1.04}]
 
     assert latest_due_quarter(asof("2026-10-12T08:00:00"))=="2026-06"
-    assert latest_due_quarter(asof("2026-10-16T08:00:00"))=="2026-09"
+    assert latest_due_quarter(asof("2026-08-14T08:00:00"))=="2026-03"
+    assert latest_due_quarter(asof("2026-08-15T08:00:00"))=="2026-06"
+    assert latest_due_quarter(asof("2026-11-14T08:00:00"))=="2026-06"
+    assert latest_due_quarter(asof("2026-11-15T08:00:00"))=="2026-09"
 
     status=m2_release_observation(asof("2026-10-12T08:00:00"),current,past)
     assert status["release_expected_period"]=="2026-06"
@@ -35,13 +38,13 @@ def main():
         "source_id":"nso-vietnam","evidence_status":"verified","observation_status":"final",
         "comparison_base":"previous-year-end","value":6.8}]
     # A source-reviewed new quarter clears the release gap without mutation of history.
-    recovered=m2_release_observation(asof("2026-10-16T08:00:00"),fake_success,past)
+    recovered=m2_release_observation(asof("2026-11-16T08:00:00"),fake_success,past)
     assert recovered["release_status"]=="current"
     assert recovered["release_latest_period"]=="2026-09"
 
     # An unapproved YoY or DEMO value cannot silence the missing-release alert.
     counterfeit={**fake_success[0],"comparison_base":"year-on-year"}
-    missing=m2_release_observation(asof("2026-10-16T08:00:00"),[counterfeit],past)
+    missing=m2_release_observation(asof("2026-11-16T08:00:00"),[counterfeit],past)
     assert missing["release_status"]=="missing-release"
 
     config=json.loads((ROOT/"config/operations_health.json").read_text())
