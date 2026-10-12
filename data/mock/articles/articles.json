@@ -1,9 +1,513 @@
 {
   "schema_version": 1,
-  "build_id": "market-news-rss-20261011T190045Z",
-  "generated_at": "2026-10-11T19:00:45.301413+00:00",
-  "record_count": 298,
+  "build_id": "market-news-rss-20261012T061128Z",
+  "generated_at": "2026-10-12T06:11:28.331243+00:00",
+  "record_count": 317,
   "data": [
+    {
+      "id": "article-market-rss-d70f7f6243c438f96686",
+      "title": "Đề xuất đầu tư 50.990 tỷ đồng xây cao tốc đến Lai Châu",
+      "url": "https://vnexpress.net/de-xuat-dau-tu-50-990-ty-dong-xay-cao-toc-den-lai-chau-5131180.html",
+      "category": "infrastructure",
+      "module_ids": [
+        "infrastructure"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-10-12T04:23:52+00:00",
+      "source_id": "vnexpress-current-affairs",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [
+        "infrastructure"
+      ],
+      "importance": 2,
+      "summary": "Đường cao tốc Bảo Hà - Lai Châu, đoạn Bảo Hà - Tân Phong nối tỉnh Lào Cai và tỉnh Lai Châu dài khoảng 119 km, quy mô 4 làn xe được đề xuất đầu tư với tổng vốn 50.990 tỷ đồng.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://vnexpress.net/rss/thoi-su.rss",
+        "publisher_host": "vnexpress.net",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-43302ac03722054e11a7",
+      "title": "Căn hộ bình dân ngày càng hiếm tại TPHCM và Hà Nội",
+      "url": "https://dantri.com.vn/bat-dong-san/can-ho-binh-dan-ngay-cang-hiem-tai-tphcm-va-ha-noi-20261012100227160.htm",
+      "category": "market",
+      "module_ids": [
+        "market"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-10-12T04:05:16+00:00",
+      "source_id": "dantri-real-estate",
+      "region_ids": [
+        "hcmc",
+        "ha-noi"
+      ],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [
+        "supply"
+      ],
+      "importance": 2,
+      "summary": "(Dân trí) - Quỹ đất khan hiếm và chi phí đầu vào cao tiếp tục đẩy mặt bằng giá lên cao, khiến nguồn cung căn hộ vừa túi tiền ngày càng vắng bóng trên thị trường.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://dantri.com.vn/rss/bat-dong-san.rss",
+        "publisher_host": "dantri.com.vn",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-9341ab2eb537780f77d2",
+      "title": "Dấu ấn nội thất từ các công trình biểu tượng tại showroom Uuviet Solutions Hà Nội",
+      "url": "https://dantri.com.vn/bat-dong-san/dau-an-noi-that-tu-cac-cong-trinh-bieu-tuong-tai-showroom-uuviet-solutions-ha-noi-20261012104630690.htm",
+      "category": "market",
+      "module_ids": [
+        "market"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-10-12T04:00:00+00:00",
+      "source_id": "dantri-real-estate",
+      "region_ids": [
+        "ha-noi"
+      ],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "(Dân trí) - Showroom mới của Uuviet Solutions tại Hà Nội hứa hẹn trở thành điểm đến nghệ thuật, quy tụ những bộ sưu tập nội thất đẳng cấp từng hiện diện trong các công trình biểu tượng hàng đầu thế giới.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://dantri.com.vn/rss/bat-dong-san.rss",
+        "publisher_host": "dantri.com.vn",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-5410d52948b181d28977",
+      "title": "Đề xuất cơ chế bồi thường mới cho chung cư cũ tại TP HCM",
+      "url": "https://vnexpress.net/de-xuat-co-che-boi-thuong-moi-cho-chung-cu-cu-tai-tp-hcm-5131026.html",
+      "category": "market",
+      "module_ids": [
+        "market"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-10-12T02:50:55+00:00",
+      "source_id": "vnexpress-real-estate",
+      "region_ids": [
+        "hcmc"
+      ],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "TP HCM đề xuất ấn định hệ số bồi thường khi nhà nước chỉ định thầu dự án chung cư cũ thay vì để nhà đầu tư và người dân tự thỏa thuận.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://vnexpress.net/rss/bat-dong-san.rss",
+        "publisher_host": "vnexpress.net",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-cfab2117fb39784a06be",
+      "title": "Tài xế phóng ô tô ngược chiều trên cao tốc bị CSGT xử phạt gần 40 triệu",
+      "url": "https://thanhnien.vn/tai-xe-phong-o-to-nguoc-chieu-tren-cao-toc-bi-csgt-xu-phat-gan-40-trieu-185261010183512614.htm",
+      "category": "infrastructure",
+      "module_ids": [
+        "infrastructure"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-10-12T02:04:00+00:00",
+      "source_id": "thanhnien-transport",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [
+        "infrastructure"
+      ],
+      "importance": 2,
+      "summary": "Sau khi tiếp nhận thông tin phản ánh về vụ ô tô chạy ngược chiều với tốc độ cao trên cao tốc Cao Bồ - Mai Sơn, lực lượng CSGT đã xác minh, lập biên bản đối với tài xế vi phạm. Người này đối diện mức phạt lên đến gần 40 triệu đồng.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://thanhnien.vn/rss/xe/xe-giao-thong.rss",
+        "publisher_host": "thanhnien.vn",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-ceaa9b3241b1b9c1db8d",
+      "title": "Phoenix Homes Bắc Ninh dự kiến giá từ 18,5 triệu đồng mỗi m2",
+      "url": "https://vnexpress.net/phoenix-homes-bac-ninh-du-kien-gia-tu-18-5-trieu-dong-moi-m2-5131098.html",
+      "category": "market",
+      "module_ids": [
+        "market"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-10-12T02:00:00+00:00",
+      "source_id": "vnexpress-real-estate",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "Dự án nhà ở xã hội Phoenix Homes tại Khu đô thị mới Phượng Hoàng, Bắc Ninh dự kiến ký hợp đồng mua bán căn hộ vào tháng 11/2026 với giá từ 18,5 triệu đồng mỗi m2 (đã gồm VAT).",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://vnexpress.net/rss/bat-dong-san.rss",
+        "publisher_host": "vnexpress.net",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-7f233c5e0210ce28d847",
+      "title": "Giá vàng hôm nay 12.10.2026: Vàng thế giới tăng nhanh",
+      "url": "https://thanhnien.vn/gia-vang-hom-nay-12102026-vang-the-gioi-tang-nhanh-185261012085247116.htm",
+      "category": "macro",
+      "module_ids": [
+        "macro"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-10-12T01:56:00+00:00",
+      "source_id": "thanhnien-banking",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "Giá vàng trong nước tăng giảm không đều giữa các công ty dù thế giới tăng mạnh đầu ngày.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://thanhnien.vn/rss/kinh-te/ngan-hang.rss",
+        "publisher_host": "thanhnien.vn",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-2db5a3afff1cf81de475",
+      "title": "Người mua nhà vẫn dè dặt xuống tiền",
+      "url": "https://vnexpress.net/nguoi-mua-nha-van-de-dat-xuong-tien-5128473.html",
+      "category": "market",
+      "module_ids": [
+        "market"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-10-12T01:27:08+00:00",
+      "source_id": "vnexpress-real-estate",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "Giá thứ cấp hạ nhiệt, chủ đầu tư tăng ưu đãi nhưng người mua nhà vẫn chưa vội xuống tiền vì lo áp lực tài chính và chờ giá tốt hơn.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://vnexpress.net/rss/bat-dong-san.rss",
+        "publisher_host": "vnexpress.net",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-cd97a95220370b0b9aab",
+      "title": "Tây Hồ Tây - khi hạ tầng giao thông và tiện ích đô thị dần thành hình",
+      "url": "https://dantri.com.vn/bat-dong-san/tay-ho-tay-khi-ha-tang-giao-thong-va-tien-ich-do-thi-dan-thanh-hinh-20261011095823012.htm",
+      "category": "market",
+      "module_ids": [
+        "infrastructure"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-10-12T01:00:00+00:00",
+      "source_id": "dantri-real-estate",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [
+        "supply",
+        "infrastructure"
+      ],
+      "importance": 2,
+      "summary": "(Dân trí) - Khi hạ tầng giao thông được cải thiện, các cơ sở thương mại lớn sắp khai trương, Tây Hồ Tây đang trở thành một điểm đến đô thị hoàn chỉnh. Trong bối cảnh đó, Starlake The Prime K8CT1 phiên bản West Lake Edition sắp ra mắt tại đô thị Starlake.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://dantri.com.vn/rss/bat-dong-san.rss",
+        "publisher_host": "dantri.com.vn",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-b81838422565f39ff3f5",
+      "title": "Nhà phố CATA House hút nhà đầu tư với chính sách bán hàng tối ưu dòng tiền",
+      "url": "https://dantri.com.vn/bat-dong-san/nha-pho-cata-house-hut-nha-dau-tu-voi-chinh-sach-ban-hang-toi-uu-dong-tien-20261010103202877.htm",
+      "category": "market",
+      "module_ids": [
+        "market"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-10-12T01:00:00+00:00",
+      "source_id": "dantri-real-estate",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [
+        "nam-long"
+      ],
+      "tags": [],
+      "importance": 2,
+      "summary": "(Dân trí) - Nhà phố CATA trên trục đại lộ 47m tại Nam Long II Central Lake - Nam Cần Thơ thu hút sự quan tâm nhờ vị trí trung tâm, thiết kế đa công năng và chính sách thanh toán được chia thành nhiều đợt kèm loạt ưu đãi thiết thực.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://dantri.com.vn/rss/bat-dong-san.rss",
+        "publisher_host": "dantri.com.vn",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-9badb3e29d1b255308af",
+      "title": "Tây Hồ Tây - IFC Hanoi và trung tâm kinh tế mới của Thủ đô",
+      "url": "https://dantri.com.vn/bat-dong-san/tay-ho-tay-ifc-hanoi-va-trung-tam-kinh-te-moi-cua-thu-do-20261010104759914.htm",
+      "category": "market",
+      "module_ids": [
+        "market"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-10-12T01:00:00+00:00",
+      "source_id": "dantri-real-estate",
+      "region_ids": [
+        "ha-noi"
+      ],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [
+        "sales",
+        "legal"
+      ],
+      "importance": 2,
+      "summary": "(Dân trí) - Hiện nay, khi các trục đại lộ huyết mạch đã kết nối hoàn chỉnh và những tòa tháp thương mại bắt đầu vươn lên, Tây Hồ Tây không còn là bản quy hoạch trên giấy, khu vực này đang chuyển mình trở thành trung tâm kinh tế, hành chính mới của Hà Nội.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://dantri.com.vn/rss/bat-dong-san.rss",
+        "publisher_host": "dantri.com.vn",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-8b2abb12b04fc9bb6c9e",
+      "title": "Cách tính khoản tiền chủ đầu tư HH Linh Đàm phải nộp vì sai phạm",
+      "url": "https://dantri.com.vn/bat-dong-san/cach-tinh-khoan-tien-chu-dau-tu-hh-linh-dam-phai-nop-vi-sai-pham-20261011234736790.htm",
+      "category": "market",
+      "module_ids": [
+        "market"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-10-11T23:25:27+00:00",
+      "source_id": "dantri-real-estate",
+      "region_ids": [
+        "ha-noi"
+      ],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "(Dân trí) - Hà Nội đề xuất cách tính khoản lợi bất hợp pháp từ phần xây dựng vi phạm tại 12 dự án liên quan ông Lê Thanh Thản, đồng thời yêu cầu chủ đầu tư tự chi trả toàn bộ kinh phí khắc phục hậu quả.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://dantri.com.vn/rss/bat-dong-san.rss",
+        "publisher_host": "dantri.com.vn",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-10df9d27d3c03ece720f",
+      "title": "Người trẻ 'làm cũ' nhà mới bằng nội thất hoài cổ",
+      "url": "https://vnexpress.net/nguoi-tre-lam-cu-nha-moi-bang-noi-that-hoai-co-5130791.html",
+      "category": "market",
+      "module_ids": [
+        "market"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-10-11T23:25:18+00:00",
+      "source_id": "vnexpress-real-estate",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "Xu hướng sử dụng vật liệu thủ công, đồ nội thất cũ và chi tiết trang trí cổ điển đang được nhiều người trẻ lựa chọn để tạo dấu ấn riêng cho không gian sống hiện đại.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://vnexpress.net/rss/bat-dong-san.rss",
+        "publisher_host": "vnexpress.net",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-c5c57365cdebc6e97d0e",
+      "title": "Giá vàng trong nước, quốc tế đồng loạt đi lên",
+      "url": "https://dantri.com.vn/kinh-doanh/gia-vang-trong-nuoc-quoc-te-dong-loat-di-len-20261011232623142.htm",
+      "category": "macro",
+      "module_ids": [
+        "macro"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-10-11T23:08:59+00:00",
+      "source_id": "dantri-business",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "(Dân trí) - Giá vàng miếng tăng 1,3 triệu đồng trong tuần qua, trong khi giá vàng thế giới phục hồi sau khi chạm đáy tuần. Diễn biến thị trường sẽ phụ thuộc nhiều vào các dữ liệu kinh tế Mỹ.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://dantri.com.vn/rss/kinh-doanh.rss",
+        "publisher_host": "dantri.com.vn",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-8407052f2f5364d66843",
+      "title": "Nhà mới xây bán chạy vượt xa nhà đã qua sử dụng ở Hong Kong",
+      "url": "https://dantri.com.vn/bat-dong-san/nha-moi-xay-ban-chay-vuot-xa-nha-da-qua-su-dung-o-hong-kong-20261011210245461.htm",
+      "category": "market",
+      "module_ids": [
+        "market"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-10-11T23:05:00+00:00",
+      "source_id": "dantri-real-estate",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [
+        "sales"
+      ],
+      "importance": 2,
+      "summary": "(Dân trí) - Nhà mới đang bán rất nhanh, trong khi giao dịch nhà đã qua sử dụng ở Hong Kong (Trung Quốc) vẫn trầm lắng. Theo giới phân tích, hai xu hướng này có liên quan đến nhau.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://dantri.com.vn/rss/bat-dong-san.rss",
+        "publisher_host": "dantri.com.vn",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-fcb009650fa6ced1f875",
+      "title": "Vì sao xe container né cao tốc?",
+      "url": "https://thanhnien.vn/vi-sao-xe-container-ne-cao-toc-185261011164831759.htm",
+      "category": "infrastructure",
+      "module_ids": [
+        "infrastructure"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-10-11T23:00:00+00:00",
+      "source_id": "thanhnien-policy",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [
+        "infrastructure"
+      ],
+      "importance": 2,
+      "summary": "Thuế phí cao cùng nhiều mức phạt nặng cho những lỗi khó tránh khỏi khiến tài xế xe container, xe tải chở hàng chọn cách đi theo tuyến quốc lộ thay vì cao tốc.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://thanhnien.vn/rss/kinh-te/chinh-sach-phat-trien.rss",
+        "publisher_host": "thanhnien.vn",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-e1c4681933a6b1544556",
+      "title": "6 thủ phạm vô hình khiến nhà cửa vừa dọn vẫn bừa bộn",
+      "url": "https://dantri.com.vn/bat-dong-san/6-thu-pham-vo-hinh-khien-nha-cua-vua-don-van-bua-bon-20261011170012205.htm",
+      "category": "market",
+      "module_ids": [
+        "market"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-10-11T23:00:00+00:00",
+      "source_id": "dantri-real-estate",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "(Dân trí) - Cảm giác ngột ngạt dù vừa dọn nhà thường đến từ những món đồ quen mắt bạn vô tình bỏ qua. Dọn sạch chúng, không gian sống sẽ lập tức thoáng đãng và an yên.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://dantri.com.vn/rss/bat-dong-san.rss",
+        "publisher_host": "dantri.com.vn",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-2f9fdcdd3f7ce69ea596",
+      "title": "Lãi vay tiêu dùng tăng mạnh",
+      "url": "https://thanhnien.vn/lai-vay-tieu-dung-tang-manh-185261011205252575.htm",
+      "category": "macro",
+      "module_ids": [
+        "macro"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-10-11T23:00:00+00:00",
+      "source_id": "thanhnien-banking",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "Lãi suất cho vay tiêu dùng của các ngân hàng thương mại tăng từ 2 - 3%/năm so với cuối năm 2025.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://thanhnien.vn/rss/kinh-te/ngan-hang.rss",
+        "publisher_host": "thanhnien.vn",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-06ce28b3254222979620",
+      "title": "Giới chuyên gia dự báo giá vàng tăng",
+      "url": "https://vnexpress.net/gioi-chuyen-gia-du-bao-gia-vang-tang-5131013.html",
+      "category": "macro",
+      "module_ids": [
+        "macro"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-10-11T21:18:28+00:00",
+      "source_id": "vnexpress-economy",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "Nhiều chuyên gia Wall Street đoán giá vàng tăng tuần này, nhờ lực mua quanh mốc 4.000 USD và kỳ vọng Fed không nâng lãi suất ngay trong tháng 10.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://vnexpress.net/rss/kinh-doanh.rss",
+        "publisher_host": "vnexpress.net",
+        "publication_date_from_feed": true
+      }
+    },
     {
       "id": "article-market-rss-423f6108ef2d15a2ce30",
       "title": "Hé lộ điều kiện để cư dân HH Linh Đàm được cấp sổ hồng",
