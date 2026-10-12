@@ -64,6 +64,29 @@
       "intelligence_mode": "previous-observation-delta-when-available"
     },
     {
+      "id": "macro-m2-ytd",
+      "module": "macro",
+      "label": "M2 YTD — Official Release Monitor",
+      "update_mode": "automated-controlled",
+      "check_frequency": "quarterly",
+      "update_trigger": "periodic-release",
+      "stale_after_hours": 1080,
+      "data_path": "data/processed/macro/observations.json",
+      "indicator_ids": [
+        "m2-growth-ytd"
+      ],
+      "source_health_mode": "release-schedule-gated",
+      "failure_behavior": "retain-last-good",
+      "repository_persistence": "automatic-narrow-gate",
+      "schedule_ict": [
+        "10:45 daily on days 1-10 of each month"
+      ],
+      "auto_publish_requires": "verified-official-nso, explicit previous-year-end basis and quarter date",
+      "notes": "Escalate as REVIEW after 14 calendar days past quarter end if no source-verified M2 YTD (from live or archived period); missing is not zero, stale data are not marked healthy.",
+      "history_strategy": "official NSO quarterly historical plus append-only canonical",
+      "intelligence_mode": "YTD changes compare only within same calendar year"
+    },
+    {
       "id": "macro-customer-rates",
       "module": "macro",
       "label": "Customer Deposit & Lending Rates",
