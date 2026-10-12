@@ -178,6 +178,16 @@
       "required_evidence_status": "corroborated",
       "required_period_type": "date",
       "required_min_independent_sources": 2
+    },
+    "m2-growth-ytd": {
+      "allowed_sources": [
+        "nso-vietnam"
+      ],
+      "required_readiness_statuses": [
+        "ready-canonical"
+      ],
+      "required_evidence_status": "verified",
+      "required_period_type": "month"
     }
   },
   "logical_key_fields": [
