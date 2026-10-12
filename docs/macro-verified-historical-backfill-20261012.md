@@ -34,3 +34,32 @@ Cục Thống kê / National Statistics Office (NSO) monthly releases, 2026:
 - 06/2026: https://www.nso.gov.vn/tin-tuc-thong-ke/2026/07/chi-so-gia-tieu-dung-chi-so-gia-vang-va-chi-so-gia-do-la-my-thang-sau-quy-ii-va-6-thang-dau-nam-2026/
 - 07/2026: https://www.nso.gov.vn/tin-tuc-thong-ke/2026/08/chi-so-gia-tieu-dung-chi-so-gia-vang-va-chi-so-gia-do-la-my-thang-bay-va-7-thang-nam-2026/
 - 08/2026: https://www.nso.gov.vn/tin-tuc-thong-ke/2026/09/chi-so-gia-tieu-dung-cpi-chi-so-gia-vang-va-chi-so-gia-do-la-my-thang-tam-va-8-thang-nam-2026/
+
+
+## Batch 2: all 2025 CPI months (12 October 2026)
+
+Added **36 independently cited, month-specific NSO observations**:
+- 12 national CPI year-on-year values, January–December 2025.
+- 12 national CPI month-on-month values, January–December 2025.
+- 12 national core CPI year-on-year values, January–December 2025.
+
+Historical archive now has **58** records: 36 from 2025 plus 22 from 2026.
+Live production observations stay in their separate file and retain their automatic update / validation pipeline.
+
+Unlike the statistical agency's cumulative CPI and core-CPI averages, these observations refer to each **specific month**. YTD averages and national statistical gold/USD indices must not be mixed with SJC buy/sell prices and the SBV central reference exchange rate. Historical gold and FX still require original, consistently defined dated quotes.
+
+Original monthly releases (all NSO):
+- 2025-01: https://www.nso.gov.vn/tin-tuc-thong-ke/2025/02/chi-so-gia-tieu-dung-chi-so-gia-vang-va-chi-so-gia-do-la-my-thang-mot-nam-2025/
+- 2025-02: https://www.nso.gov.vn/tin-tuc-thong-ke/2025/03/chi-so-gia-tieu-dung-chi-so-gia-vang-va-chi-so-gia-do-la-my-thang-hai-va-02-thang-nam-2025/
+- 2025-03: https://www.nso.gov.vn/du-lieu-va-so-lieu-thong-ke/2025/04/chi-so-gia-tieu-dung-chi-so-gia-vang-va-chi-so-gia-do-la-my-thang-ba-va-quy-i-nam-2025/
+- 2025-04: https://www.nso.gov.vn/du-lieu-va-so-lieu-thong-ke/2025/05/chi-so-gia-tieu-dung-chi-so-gia-vang-va-chi-so-gia-do-la-my-thang-tu-va-4-thang-dau-nam-2025/
+- 2025-05: https://www.nso.gov.vn/tin-tuc-thong-ke/2025/06/chi-so-gia-tieu-dung-chi-so-gia-vang-va-chi-so-gia-do-la-my-thang-nam-va-5-thang-dau-nam-2025/
+- 2025-06: https://www.nso.gov.vn/tin-tuc-thong-ke/2025/07/thong-cao-bao-chi-ve-tinh-hinh-gia-thang-sau-quy-ii-va-6-thang-dau-nam-2025/
+- 2025-07: https://www.nso.gov.vn/tin-tuc-thong-ke/2025/08/chi-so-gia-tieu-dung-chi-so-gia-vang-va-chi-so-gia-do-la-my-thang-bay-va-7-thang-nam-2025/
+- 2025-08: https://www.nso.gov.vn/tin-tuc-thong-ke/2025/09/chi-so-gia-tieu-dung-chi-so-gia-vang-va-chi-so-gia-do-la-my-thang-tam-va-8-thang-nam-2025/
+- 2025-09: https://www.nso.gov.vn/du-lieu-va-so-lieu-thong-ke/2025/10/thong-cao-bao-chi-ve-tinh-hinh-gia-thang-chin-quy-iii-va-9-thang-nam-2025/
+- 2025-10: https://www.nso.gov.vn/tin-tuc-thong-ke/2025/11/chi-so-gia-tieu-dung-chi-so-gia-vang-va-chi-so-gia-do-la-my-thang-muoi-va-10-thang-nam-2025/
+- 2025-11: https://www.nso.gov.vn/tin-tuc-thong-ke/2025/12/chi-so-gia-tieu-dung-chi-so-gia-vang-va-chi-so-gia-do-la-my-thang-muoi-mot-va-11-thang-nam-2025/
+- 2025-12: https://www.nso.gov.vn/du-lieu-va-so-lieu-thong-ke/2026/01/chi-so-gia-tieu-dung-chi-so-gia-vang-va-chi-so-gia-do-la-my-thang-muoi-hai-quy-iv-va-nam-2025/
+
+The regression test `tests/test_macro_official_history.py` checks every historical month/indicator, exact values, expected official publication URL, uniqueness and non-overlap with live production. The website's existing source-validation and demo-suppression logic is unchanged. Use **ALL** in Inflation to view all available months since Jan 2025.
