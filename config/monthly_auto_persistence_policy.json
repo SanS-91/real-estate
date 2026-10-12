@@ -34,6 +34,8 @@
     "Existing logical keys are immutable; revised/conflicting values stop the run instead of overwriting history.",
     "Partial official release bundles are allowed: verified CPI or banking-growth facts may append independently when available.",
     "Customer rates, policy rates, daily FX/gold and interbank rates remain governed by their separate paths.",
-    "M2 YTD must come from the same quarter-end NSO banking paragraph, with a dated as-of cutoff and an explicit prior December comparison; never auto-publish M2 YoY or unknown bases."
-  ]
+    "M2 YTD must come from the same quarter-end NSO banking paragraph, with a dated as-of cutoff and an explicit prior December comparison; never auto-publish M2 YoY or unknown bases.",
+    "Quarterly M2 may be released months after its as-of quarter; allow at most 8 months lag only for verified NSO M2, while CPI, credit and bank funding retain the strict 2-month limit."
+  ],
+  "max_m2_period_lag_months": 8
 }
