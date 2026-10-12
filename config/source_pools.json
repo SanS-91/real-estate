@@ -38,7 +38,7 @@
       "canonical_evidence_status": [
         "verified"
       ],
-      "corroboration_tolerance_abs": 1.0,
+      "corroboration_tolerance_abs": 1,
       "min_independent_sources_for_corroborated": 2,
       "minimum_records_for_pool": 1
     },
@@ -60,7 +60,7 @@
       "canonical_evidence_status": [
         "verified"
       ],
-      "corroboration_tolerance_abs": 500000.0,
+      "corroboration_tolerance_abs": 500000,
       "min_independent_sources_for_corroborated": 2,
       "minimum_records_for_pool": 1
     },
@@ -68,7 +68,8 @@
       "id": "banking-liquidity",
       "indicator_ids": [
         "credit-growth-ytd",
-        "bank-funding-growth-ytd"
+        "bank-funding-growth-ytd",
+        "m2-growth-ytd"
       ],
       "preferred_source_ids": [
         "nso-vietnam"
