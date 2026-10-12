@@ -74,6 +74,7 @@ const blended=context.window.__macroHistoryChecks.integrateMacroObservations(
   {data:[]},live,{repository_publish:true,final_record_count:live.data.length},cpi,rows
 );
 assert.equal(blended.historicalCount,72);
-assert.equal(blended.currentProductionCount,24);
-assert.equal(blended.productionRows.length,96);
-console.log('PASS independent FX/SJC history: 6 FX dates + 8 gold quotes, 2 publishers each, 72 historical + 24 live; rejection tests');
+assert.equal(blended.currentProductionCount,live.data.length,
+  'new automatically collected production records must not break historical QA');
+assert.equal(blended.productionRows.length,live.data.length+blended.historicalCount);
+console.log('PASS independent FX/SJC history: 6 FX dates + 8 gold quotes, 2 publishers each, 72 historical plus '+live.data.length+' live; rejection tests');
