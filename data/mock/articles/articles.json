@@ -1,9 +1,198 @@
 {
   "schema_version": 1,
-  "build_id": "market-news-rss-20261013T025135Z",
-  "generated_at": "2026-10-13T02:51:35.989572+00:00",
-  "record_count": 355,
+  "build_id": "market-news-rss-20261013T045137Z",
+  "generated_at": "2026-10-13T04:51:37.204232+00:00",
+  "record_count": 365,
   "data": [
+    {
+      "id": "article-market-rss-9d2ad7ef6ad2974dc660",
+      "title": "Thúc đẩy giải ngân vốn, bảo đảm tiến độ khai thác siêu sân bay Long Thành",
+      "url": "https://thanhnien.vn/thuc-day-giai-ngan-von-bao-dam-tien-do-khai-thac-sieu-san-bay-long-thanh-185261013104601923.htm",
+      "category": "infrastructure",
+      "module_ids": [
+        "infrastructure"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-10-13T03:49:00+00:00",
+      "source_id": "thanhnien-policy",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [
+        "infrastructure"
+      ],
+      "importance": 2,
+      "summary": "Tổng công ty Cảng hàng không Việt Nam (ACV) tổ chức chương trình triển khai hợp đồng cấp tín dụng cho Dự án thành phần 3 thuộc dự án đầu tư xây dựng Cảng hàng không quốc tế Long Thành giai đoạn 1.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://thanhnien.vn/rss/kinh-te/chinh-sach-phat-trien.rss",
+        "publisher_host": "thanhnien.vn",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-4500ec9e4e8fd9d0ba79",
+      "title": "Cao tốc Bến Lức - Long Thành vừa thông, nhiều tuyến đường đã giảm tải ùn tắc",
+      "url": "https://thanhnien.vn/cao-toc-ben-luc-long-thanh-vua-thong-nhieu-tuyen-duong-da-giam-tai-un-tac-185261013102104704.htm",
+      "category": "infrastructure",
+      "module_ids": [
+        "infrastructure"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-10-13T03:24:00+00:00",
+      "source_id": "thanhnien-policy",
+      "region_ids": [
+        "hcmc"
+      ],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [
+        "infrastructure"
+      ],
+      "importance": 2,
+      "summary": "10 ngày đầu vận hành toàn tuyến, cao tốc Bến Lức - Long Thành đã ghi nhận gần 260.000 lượt xe qua lại, góp phần giảm tải đáng kể cho cao tốc TP.HCM - Long Thành - Dầu Giây và cầu Phú Mỹ.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://thanhnien.vn/rss/kinh-te/chinh-sach-phat-trien.rss",
+        "publisher_host": "thanhnien.vn",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-e81e0c14e5a2ba0d47bf",
+      "title": "Lý do giá vàng thế giới đang giảm nhanh",
+      "url": "https://dantri.com.vn/kinh-doanh/ly-do-gia-vang-the-gioi-dang-giam-nhanh-20261013073837586.htm",
+      "category": "macro",
+      "module_ids": [
+        "macro"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-10-13T02:52:08+00:00",
+      "source_id": "dantri-business",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "(Dân trí) - Giá vàng thế giới giao ngay lúc 7h32 sáng giờ Singapore (tức 6h32 giờ Việt Nam) ở mức 4.173,05 USD/ounce.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://dantri.com.vn/rss/kinh-doanh.rss",
+        "publisher_host": "dantri.com.vn",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-5e7cc7f5914af1c01ed9",
+      "title": "Giá vàng giảm gần 1 triệu đồng",
+      "url": "https://vnexpress.net/gia-vang-moi-nhat-hom-nay-ngay-13-10-5131597.html",
+      "category": "macro",
+      "module_ids": [
+        "macro"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-10-13T02:51:46+00:00",
+      "source_id": "vnexpress-economy",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [
+        "pricing"
+      ],
+      "importance": 2,
+      "summary": "Các thương hiệu hạ giá bán vàng miếng và nhẫn trơn xuống khoảng 143,5 triệu đồng một lượng, giảm 800.000 đồng so với hôm qua, theo đà đi xuống của giá thế giới.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://vnexpress.net/rss/kinh-doanh.rss",
+        "publisher_host": "vnexpress.net",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-0c31f217c2d36051f82d",
+      "title": "Quy hoạch lại Công viên Thủ Lệ, hàng chục hộ dân có thể bị di dời",
+      "url": "https://dantri.com.vn/thoi-su/quy-hoach-lai-cong-vien-thu-le-hang-chuc-ho-dan-co-the-bi-di-doi-20261012233354841.htm",
+      "category": "market",
+      "module_ids": [
+        "market"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-10-13T02:31:44+00:00",
+      "source_id": "dantri-current-affairs",
+      "region_ids": [
+        "ha-noi"
+      ],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [
+        "legal"
+      ],
+      "importance": 2,
+      "summary": "(Dân trí) - Hà Nội đang nghiên cứu điều chỉnh tổng thể quy hoạch chi tiết Công viên Thủ Lệ, khu vực nghiên cứu quy hoạch có khoảng 37 hộ dân nằm trên đường Kim Mã và Cầu Giấy.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://dantri.com.vn/rss/thoi-su.rss",
+        "publisher_host": "dantri.com.vn",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-9be7589ed39af7bf5598",
+      "title": "The Westique Residences áp dụng chính sách giãn tiến độ thanh toán",
+      "url": "https://vnexpress.net/the-westique-residences-ap-dung-chinh-sach-gian-tien-do-thanh-toan-5131539.html",
+      "category": "market",
+      "module_ids": [
+        "market"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-10-13T02:30:00+00:00",
+      "source_id": "vnexpress-real-estate",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "Căn hộ hai phòng ngủ tại The Westique Residences áp dụng chính sách thanh toán 30% giá trị đến khi nhận nhà, sau đó giãn tiến độ 30 tháng, cho phép người mua tối ưu dòng tiền.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://vnexpress.net/rss/bat-dong-san.rss",
+        "publisher_host": "vnexpress.net",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-fb3601062f0b129d4fa7",
+      "title": "Hà Nội rà soát 250 dự án chậm triển khai, liên quan hơn 7.000ha đất",
+      "url": "https://dantri.com.vn/bat-dong-san/ha-noi-ra-soat-250-du-an-cham-trien-khai-lien-quan-hon-7000ha-dat-20261013080850427.htm",
+      "category": "market",
+      "module_ids": [
+        "market"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-10-13T01:51:35+00:00",
+      "source_id": "dantri-real-estate",
+      "region_ids": [
+        "ha-noi"
+      ],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "(Dân trí) - Khoảng 7.013ha đất liên quan đến 250 dự án ngoài ngân sách chậm triển khai nằm trong quỹ đất được rà soát để khai thác, tạo nguồn lực phát triển thành phố.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://dantri.com.vn/rss/bat-dong-san.rss",
+        "publisher_host": "dantri.com.vn",
+        "publication_date_from_feed": true
+      }
+    },
     {
       "id": "article-market-rss-708ab4cd847bbbd50241",
       "title": "Giá vàng hôm nay 13.10.2026: Vàng miếng SJC cao hơn thế giới 13 triệu đồng/lượng",
@@ -79,6 +268,81 @@
         "method": "official-rss",
         "feed_url": "https://vnexpress.net/rss/bat-dong-san.rss",
         "publisher_host": "vnexpress.net",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-c1857cf629a708868d16",
+      "title": "Món quà báo hiếu đắt giá là sự an tâm của cha mẹ",
+      "url": "https://dantri.com.vn/bat-dong-san/mon-qua-bao-hieu-dat-gia-la-su-an-tam-cua-cha-me-20261012170442384.htm",
+      "category": "market",
+      "module_ids": [
+        "market"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-10-13T01:00:00+00:00",
+      "source_id": "dantri-real-estate",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "(Dân trí) - Đi qua những năm tháng thanh xuân bận rộn với sự nghiệp, nhiều người chợt nhận ra món quà ý nghĩa nhất dành cho cha mẹ lúc xế chiều không phải là tiền bạc dư dả, mà là một nơi sống bình an, nơi sức khỏe được bảo vệ vẹn toàn.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://dantri.com.vn/rss/bat-dong-san.rss",
+        "publisher_host": "dantri.com.vn",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-3fd3a2de3f3dfbfe91ad",
+      "title": "Nobel Kinh tế 2026: Vì sao hạ lãi suất không đủ để chống suy thoái?",
+      "url": "https://dantri.com.vn/kinh-doanh/nobel-kinh-te-2026-vi-sao-ha-lai-suat-khong-du-de-chong-suy-thoai-20261012181052910.htm",
+      "category": "macro",
+      "module_ids": [
+        "macro"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-10-13T00:46:30+00:00",
+      "source_id": "dantri-business",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "(Dân trí) - Hai chủ nhân Nobel Kinh tế 2026 giúp giải thích vì sao chính sách chống suy thoái phải tính đến hành vi và kỳ vọng của người dân, doanh nghiệp.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://dantri.com.vn/rss/kinh-doanh.rss",
+        "publisher_host": "dantri.com.vn",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-ad73a92723e5559230cb",
+      "title": "Nhiều đồ dùng trong nhà chưa hỏng nhưng đã đến lúc phải thay",
+      "url": "https://dantri.com.vn/bat-dong-san/nhieu-do-dung-trong-nha-chua-hong-nhung-da-den-luc-phai-thay-20260725211351111.htm",
+      "category": "market",
+      "module_ids": [
+        "market"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-10-13T00:32:38+00:00",
+      "source_id": "dantri-real-estate",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "(Dân trí) - Nhiều vật dụng trong nhà vẫn dùng được nhưng thực tế đã qua thời điểm nên thay mới từ lâu. Việc chậm thay không chỉ ảnh hưởng đến sự tiện nghi mà còn tiềm ẩn rủi ro về sức khỏe và an toàn.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://dantri.com.vn/rss/bat-dong-san.rss",
+        "publisher_host": "dantri.com.vn",
         "publication_date_from_feed": true
       }
     },
