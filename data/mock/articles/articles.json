@@ -1,9 +1,119 @@
 {
   "schema_version": 1,
-  "build_id": "market-news-rss-20261013T045137Z",
-  "generated_at": "2026-10-13T04:51:37.204232+00:00",
-  "record_count": 365,
+  "build_id": "market-news-rss-20261013T065152Z",
+  "generated_at": "2026-10-13T06:51:52.740074+00:00",
+  "record_count": 370,
   "data": [
+    {
+      "id": "article-market-rss-59241d39a69f57bb8626",
+      "title": "Suýt chết vì xe tải dừng, đỗ ngược chiều trên quốc lộ",
+      "url": "https://thanhnien.vn/suyt-chet-vi-xe-tai-dung-do-nguoc-chieu-tren-quoc-lo-185261013115424672.htm",
+      "category": "infrastructure",
+      "module_ids": [
+        "infrastructure"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-10-13T06:26:00+00:00",
+      "source_id": "thanhnien-transport",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [
+        "infrastructure"
+      ],
+      "importance": 2,
+      "summary": "Không chỉ chạy ngược chiều, chiếc xe tải còn dừng, đỗ lấn nửa phần thùng ra lòng đường, suýt gây ra tai nạn nghiêm trọng cho một ô tô con cùng lưu thông.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://thanhnien.vn/rss/xe/xe-giao-thong.rss",
+        "publisher_host": "thanhnien.vn",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-8de50dd69e09951069d6",
+      "title": "TPHCM dồn lực giải ngân vốn cho dự án giao thông trọng điểm",
+      "url": "https://dantri.com.vn/thoi-su/tphcm-don-luc-giai-ngan-von-cho-du-an-giao-thong-trong-diem-20261013115217543.htm",
+      "category": "market",
+      "module_ids": [
+        "market",
+        "infrastructure"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-10-13T05:35:39+00:00",
+      "source_id": "dantri-current-affairs",
+      "region_ids": [
+        "hcmc"
+      ],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "(Dân trí) - Để đạt mục tiêu tăng trưởng, UBND TPHCM chỉ đạo đẩy nhanh tiến độ thi công và giải ngân các dự án giao thông trọng điểm từ nay đến cuối năm.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://dantri.com.vn/rss/thoi-su.rss",
+        "publisher_host": "dantri.com.vn",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-e25a23db03d56260d677",
+      "title": "Phó thủ tướng: Giá nhà vượt khả năng chi trả của công chức",
+      "url": "https://vnexpress.net/pho-thu-tuong-gia-nha-vuot-kha-nang-chi-tra-cua-cong-chuc-5131659.html",
+      "category": "market",
+      "module_ids": [
+        "market"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-10-13T04:56:54+00:00",
+      "source_id": "vnexpress-current-affairs",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [
+        "pricing"
+      ],
+      "importance": 2,
+      "summary": "Phó thủ tướng Thường trực Phạm Gia Túc nhận định giá nhà vẫn vượt khả năng chi trả của đại đa số người dân, kể cả một bộ phận cán bộ, công chức.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://vnexpress.net/rss/thoi-su.rss",
+        "publisher_host": "vnexpress.net",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-f194d44e9d52ae0f0054",
+      "title": "Hưng Yên quy hoạch 66 KCN: Lực đẩy từ đại lộ nối biển và hạ tầng xanh",
+      "url": "https://dantri.com.vn/kinh-doanh/hung-yen-quy-hoach-66-kcn-luc-day-tu-dai-lo-noi-bien-va-ha-tang-xanh-20261013085457032.htm",
+      "category": "market",
+      "module_ids": [
+        "market"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-10-13T04:38:48+00:00",
+      "source_id": "dantri-business",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [
+        "legal",
+        "infrastructure"
+      ],
+      "importance": 2,
+      "summary": "(Dân trí) - Cùng với bản quy hoạch mới kết nối thẳng ra biển, Hưng Yên đang thúc đẩy mạng lưới 66 khu công nghiệp theo hướng hiện đại, đón đầu làn sóng đầu tư công nghệ cao và phát triển bền vững.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://dantri.com.vn/rss/kinh-doanh.rss",
+        "publisher_host": "dantri.com.vn",
+        "publication_date_from_feed": true
+      }
+    },
     {
       "id": "article-market-rss-9d2ad7ef6ad2974dc660",
       "title": "Thúc đẩy giải ngân vốn, bảo đảm tiến độ khai thác siêu sân bay Long Thành",
@@ -57,6 +167,33 @@
         "method": "official-rss",
         "feed_url": "https://thanhnien.vn/rss/kinh-te/chinh-sach-phat-trien.rss",
         "publisher_host": "thanhnien.vn",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-d1efdb00d7dcd5246c06",
+      "title": "Sở Xây dựng Hà Nội nêu ý kiến về xử lý sai phạm tại chung cư HH Linh Đàm",
+      "url": "https://dantri.com.vn/bat-dong-san/so-xay-dung-ha-noi-neu-y-kien-ve-xu-ly-sai-pham-tai-chung-cu-hh-linh-dam-20261013074937543.htm",
+      "category": "market",
+      "module_ids": [
+        "market"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-10-13T03:12:45+00:00",
+      "source_id": "dantri-real-estate",
+      "region_ids": [
+        "ha-noi"
+      ],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "(Dân trí) - Theo dự thảo nghị quyết của Hà Nội, việc cho phép công trình vi phạm tiếp tục tồn tại không làm thay đổi bản chất hành vi vi phạm, là biện pháp khắc phục hậu quả, không phải hợp thức hóa sai phạm.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://dantri.com.vn/rss/bat-dong-san.rss",
+        "publisher_host": "dantri.com.vn",
         "publication_date_from_feed": true
       }
     },
