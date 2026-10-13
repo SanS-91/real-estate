@@ -1,9 +1,200 @@
 {
   "schema_version": 1,
-  "build_id": "market-news-rss-20261013T065439Z",
-  "generated_at": "2026-10-13T06:54:39.381691+00:00",
-  "record_count": 373,
+  "build_id": "market-news-rss-20261013T085201Z",
+  "generated_at": "2026-10-13T08:52:01.465002+00:00",
+  "record_count": 384,
   "data": [
+    {
+      "id": "article-market-rss-4b9b05d1fca3117051fb",
+      "title": "Cà Mau phê duyệt gần 3.000 tỉ đồng làm đường nối cao tốc với cửa Sông Đốc",
+      "url": "https://thanhnien.vn/ca-mau-phe-duyet-gan-3000-ti-dong-lam-duong-noi-cao-toc-voi-cua-song-doc-185261013141107113.htm",
+      "category": "infrastructure",
+      "module_ids": [
+        "infrastructure"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-10-13T08:41:00+00:00",
+      "source_id": "thanhnien-policy",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [
+        "infrastructure"
+      ],
+      "importance": 2,
+      "summary": "Cà Mau có quyết định phê duyệt gần 3.000 tỉ đồng đầu tư tuyến đường dài khoảng 50 km, kết nối Quản lộ Phụng Hiệp, cao tốc Cần Thơ - Cà Mau, cao tốc Cà Mau - Đất Mũi và đường ven biển cửa Sông Đốc.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://thanhnien.vn/rss/kinh-te/chinh-sach-phat-trien.rss",
+        "publisher_host": "thanhnien.vn",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-da580a3889c03f71208f",
+      "title": "TP HCM có thêm dự án nhà ở xã hội gần 192 ha tại xã Bà Điểm",
+      "url": "https://vnexpress.net/tp-hcm-co-them-du-an-nha-o-xa-hoi-gan-192-ha-tai-xa-ba-diem-5131655.html",
+      "category": "market",
+      "module_ids": [
+        "market"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-10-13T08:00:59+00:00",
+      "source_id": "vnexpress-real-estate",
+      "region_ids": [
+        "hcmc"
+      ],
+      "project_ids": [],
+      "developer_ids": [
+        "vinhomes"
+      ],
+      "tags": [],
+      "importance": 2,
+      "summary": "Công ty cổ phần Delta, doanh nghiệp thuộc hệ sinh thái Vinhomes, được giao làm dự án nhà ở xã hội gần 192 ha tại xã Bà Điểm, với tổng vốn đầu tư sơ bộ hơn 64.000 tỷ đồng.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://vnexpress.net/rss/bat-dong-san.rss",
+        "publisher_host": "vnexpress.net",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-d5c5fcef0e3ceba38415",
+      "title": "Bất động sản bước vào kỷ nguyên tái thiết",
+      "url": "https://thanhnien.vn/bat-dong-san-buoc-vao-ky-nguyen-tai-thiet-185261010163426618.htm",
+      "category": "market",
+      "module_ids": [
+        "market"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-10-13T07:12:00+00:00",
+      "source_id": "thanhnien-real-estate",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "Năm 2026, doanh nghiệp bất động sản bước vào cuộc chuyển mình để thích nghi với kỷ nguyên mà những giá trị mới dẫn dắt cuộc đua tăng trưởng thay cho các động lực cũ.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://thanhnien.vn/rss/kinh-te/dia-oc.rss",
+        "publisher_host": "thanhnien.vn",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-249834e27fc8d5a4fb7c",
+      "title": "Thêm dự án nhà ở xã hội TP HCM giá từ 24 triệu đồng mỗi m2",
+      "url": "https://vnexpress.net/them-du-an-nha-o-xa-hoi-tp-hcm-gia-tu-24-trieu-dong-moi-m2-5131691.html",
+      "category": "market",
+      "module_ids": [
+        "market"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-10-13T07:03:18+00:00",
+      "source_id": "vnexpress-real-estate",
+      "region_ids": [
+        "hcmc"
+      ],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [
+        "pricing"
+      ],
+      "importance": 2,
+      "summary": "Nhà ở xã hội tại dự án Thạnh Tân, phường Dĩ An, có giá bán dự kiến từ 24 triệu đồng mỗi m2 và giá thuê gần 158.000 đồng một m2 một tháng.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://vnexpress.net/rss/bat-dong-san.rss",
+        "publisher_host": "vnexpress.net",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-35298cd9f0adceb839e0",
+      "title": "Serena Riverside và giá trị từ tầm nhìn sông Sài Gòn",
+      "url": "https://dantri.com.vn/bat-dong-san/serena-riverside-va-gia-tri-tu-tam-nhin-song-sai-gon-20261013120651539.htm",
+      "category": "market",
+      "module_ids": [
+        "market"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-10-13T07:00:00+00:00",
+      "source_id": "dantri-real-estate",
+      "region_ids": [
+        "hcmc"
+      ],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "(Dân trí) - Bất động sản ở đô thị sầm uất sở hữu lợi thế từ thiên nhiên góp phần tạo nên không gian sống khác biệt. Serena Riverside nằm trong nhóm ấy khi thừa hưởng cảnh quan và khoảng mở từ sông Sài Gòn.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://dantri.com.vn/rss/bat-dong-san.rss",
+        "publisher_host": "dantri.com.vn",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-d08d8910cbbc8a5a5bc1",
+      "title": "Tổng Bí thư, Chủ tịch nước: Cần bố trí quỹ đất thể thao trong khu đô thị",
+      "url": "https://dantri.com.vn/thoi-su/tong-bi-thu-chu-tich-nuoc-can-bo-tri-quy-dat-the-thao-trong-khu-do-thi-20261013135238997.htm",
+      "category": "market",
+      "module_ids": [
+        "market"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-10-13T06:56:56+00:00",
+      "source_id": "dantri-current-affairs",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [
+        "legal"
+      ],
+      "importance": 2,
+      "summary": "(Dân trí) - Cùng với yêu cầu tổ chức quản lý và khai thác, sử dụng hiệu quả các thiết chế, thiết bị thể thao công, Tổng Bí thư, Chủ tịch nước đề nghị quan tâm bố trí quỹ đất thể thao trong quy hoạch khu đô thị.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://dantri.com.vn/rss/thoi-su.rss",
+        "publisher_host": "dantri.com.vn",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-bd0f3eee771862b508df",
+      "title": "Cư dân The Sun Avenue đề nghị làm rõ những bất thường tại hội nghị nhà chung cư",
+      "url": "https://dantri.com.vn/bat-dong-san/cu-dan-the-sun-avenue-de-nghi-lam-ro-nhung-bat-thuong-tai-hoi-nghi-nha-chung-cu-20261012212441734.htm",
+      "category": "market",
+      "module_ids": [
+        "market"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-10-13T06:45:24+00:00",
+      "source_id": "dantri-real-estate",
+      "region_ids": [
+        "hcmc"
+      ],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "(Dân trí) - Những bất thường trong hồ sơ Hội nghị nhà chung cư The Sun Avenue (TPHCM) khiến cư dân lo ngại về tính minh bạch, đồng thời đề nghị cơ quan chức năng vào cuộc làm rõ.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://dantri.com.vn/rss/bat-dong-san.rss",
+        "publisher_host": "dantri.com.vn",
+        "publication_date_from_feed": true
+      }
+    },
     {
       "id": "article-market-rss-59241d39a69f57bb8626",
       "title": "Suýt chết vì xe tải dừng, đỗ ngược chiều trên quốc lộ",
@@ -28,6 +219,91 @@
         "method": "official-rss",
         "feed_url": "https://thanhnien.vn/rss/xe/xe-giao-thong.rss",
         "publisher_host": "thanhnien.vn",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-26da5871f150b096a155",
+      "title": "Tranh luận quanh đề xuất đánh thuế đất bỏ hoang gấp gần 7 lần",
+      "url": "https://dantri.com.vn/bat-dong-san/tranh-luan-quanh-de-xuat-danh-thue-dat-bo-hoang-gap-gan-7-lan-20261013120327239.htm",
+      "category": "market",
+      "module_ids": [
+        "market"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-10-13T06:11:05+00:00",
+      "source_id": "dantri-real-estate",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "(Dân trí) - Đề xuất áp thuế 0,2% với đất bỏ hoang đang tiếp tục gây tranh luận về mức thuế và khả năng tạo sức ép buộc chủ đất đưa tài sản vào khai thác.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://dantri.com.vn/rss/bat-dong-san.rss",
+        "publisher_host": "dantri.com.vn",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-172fb8fc02696f2dfc57",
+      "title": "TPHCM có thêm dự án nhà ở xã hội hơn 64.000 tỷ đồng ở ngoại thành",
+      "url": "https://dantri.com.vn/bat-dong-san/tphcm-co-them-du-an-nha-o-xa-hoi-hon-64000-ty-dong-o-ngoai-thanh-20261013102714499.htm",
+      "category": "market",
+      "module_ids": [
+        "market"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-10-13T06:00:19+00:00",
+      "source_id": "dantri-real-estate",
+      "region_ids": [
+        "hcmc"
+      ],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [
+        "sales",
+        "infrastructure"
+      ],
+      "importance": 2,
+      "summary": "(Dân trí) - TPHCM đã chấp thuận dự án khu nhà ở xã hội tại xã Bà Điểm với diện tích gần 192ha, tổng vốn hơn 64.000 tỷ đồng. Dự án có quy mô dân số hơn 67.000 người và có hạ tầng kỹ thuật, công viên cây xanh.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://dantri.com.vn/rss/bat-dong-san.rss",
+        "publisher_host": "dantri.com.vn",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-36a5e9624dd57713e2cf",
+      "title": "Giao dịch chung cư mới ở Hà Nội giảm mạnh, giá vẫn trên 100 triệu/m2",
+      "url": "https://dantri.com.vn/bat-dong-san/giao-dich-chung-cu-moi-o-ha-noi-giam-manh-gia-van-tren-100-trieum2-20261013113021241.htm",
+      "category": "market",
+      "module_ids": [
+        "market"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-10-13T05:52:08+00:00",
+      "source_id": "dantri-real-estate",
+      "region_ids": [
+        "ha-noi"
+      ],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [
+        "pricing",
+        "sales"
+      ],
+      "importance": 2,
+      "summary": "(Dân trí) - Tỷ lệ hấp thụ căn hộ sơ cấp tại Hà Nội trong quý III chỉ đạt 31%, giảm mạnh so với mức 70-80% cùng kỳ năm trước, trong khi giá bán trung bình vẫn khoảng 108 triệu đồng/m2.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://dantri.com.vn/rss/bat-dong-san.rss",
+        "publisher_host": "dantri.com.vn",
         "publication_date_from_feed": true
       }
     },
@@ -79,6 +355,33 @@
       ],
       "importance": 2,
       "summary": "Phó thủ tướng Thường trực Phạm Gia Túc nhận định giá nhà vẫn vượt khả năng chi trả của đại đa số người dân, kể cả một bộ phận cán bộ, công chức.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://vnexpress.net/rss/thoi-su.rss",
+        "publisher_host": "vnexpress.net",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-5d291d97644ca7e0c6bb",
+      "title": "Phó thủ tướng: Nhà ở xã hội phát triển chậm, giá nhà vẫn cao",
+      "url": "https://vnexpress.net/pho-thu-tuong-nha-o-xa-hoi-phat-trien-cham-gia-nha-van-cao-5131659.html",
+      "category": "market",
+      "module_ids": [
+        "market"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-10-13T04:56:54+00:00",
+      "source_id": "vnexpress-current-affairs",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [
+        "pricing"
+      ],
+      "importance": 2,
+      "summary": "Phó thủ tướng Thường trực Phạm Gia Túc cho biết nhà ở xã hội mới đạt 48% kế hoạch năm, trong khi giá nhà vẫn vượt khả năng chi trả của đại đa số người dân.",
       "source_verification": {
         "method": "official-rss",
         "feed_url": "https://vnexpress.net/rss/thoi-su.rss",
