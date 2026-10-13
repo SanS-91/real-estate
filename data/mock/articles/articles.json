@@ -1,9 +1,63 @@
 {
   "schema_version": 1,
-  "build_id": "market-verified-official-news-20261013T093950Z",
-  "generated_at": "2026-10-13T09:39:50.656771+00:00",
-  "record_count": 385,
+  "build_id": "market-news-rss-20261013T105221Z",
+  "generated_at": "2026-10-13T10:52:21.972596+00:00",
+  "record_count": 392,
   "data": [
+    {
+      "id": "article-market-rss-0e70a0143b6b10da2bd9",
+      "title": "Hình ảnh bay hiệu chuẩn tại sân bay Long Thành giữa trời đêm",
+      "url": "https://thanhnien.vn/hinh-anh-bay-hieu-chuan-tai-san-bay-long-thanh-giua-troi-dem-185261013173503416.htm",
+      "category": "infrastructure",
+      "module_ids": [
+        "infrastructure"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-10-13T10:42:00+00:00",
+      "source_id": "thanhnien-policy",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [
+        "infrastructure"
+      ],
+      "importance": 2,
+      "summary": "Trong hai ngày 12 - 13.10, các đơn vị thuộc Tổng công ty Quản lý bay Việt Nam (VATM) phối hợp với Tổng công ty Cảng hàng không Việt Nam (ACV) và các đơn vị liên quan hoàn thành các bài bay kiểm tra, hiệu chuẩn tại Cảng hàng không quốc tế (HKQT) Long Thành theo kế hoạch.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://thanhnien.vn/rss/kinh-te/chinh-sach-phat-trien.rss",
+        "publisher_host": "thanhnien.vn",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-1295378b8056e97cbf72",
+      "title": "Hà Nội dự thu từ đất kỷ lục 146.000 tỷ đồng năm nay",
+      "url": "https://vnexpress.net/ha-noi-du-thu-tu-dat-ky-luc-146-000-ty-dong-nam-nay-5131619.html",
+      "category": "market",
+      "module_ids": [
+        "market"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-10-13T09:30:00+00:00",
+      "source_id": "vnexpress-real-estate",
+      "region_ids": [
+        "ha-noi"
+      ],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "TP Hà Nội ước tính thu ngân sách từ đất 146.000 tỷ đồng cả năm nay, tăng hơn 35% so với 2025 và cao nhất từ trước đến nay.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://vnexpress.net/rss/bat-dong-san.rss",
+        "publisher_host": "vnexpress.net",
+        "publication_date_from_feed": true
+      }
+    },
     {
       "id": "article-market-nam-long-discovered-49e33e91a1738f58",
       "title": "Bí thư Tỉnh ủy Nguyễn Văn Quyết làm việc với Công ty Cổ phần Đầu tư Nam Long",
@@ -64,6 +118,60 @@
       }
     },
     {
+      "id": "article-market-rss-56e0da1359703d3389b2",
+      "title": "Tiêu thụ nhà đất tiếp tục giảm sâu trong quý III",
+      "url": "https://vnexpress.net/tieu-thu-nha-dat-tiep-tuc-giam-sau-trong-quy-iii-5131551.html",
+      "category": "market",
+      "module_ids": [
+        "market"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-10-13T08:36:58+00:00",
+      "source_id": "vnexpress-real-estate",
+      "region_ids": [
+        "hcmc"
+      ],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [
+        "sales"
+      ],
+      "importance": 2,
+      "summary": "Lượng hấp thụ nhà ở sơ cấp cả nước giảm 36% so với cùng kỳ, trong khi sức mua đất nền, căn hộ tại TP HCM và vùng phụ cận giảm 66% so với quý trước, theo Datxanh Serviecs.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://vnexpress.net/rss/bat-dong-san.rss",
+        "publisher_host": "vnexpress.net",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-e49fc708f073d849b6f1",
+      "title": "Sức hút đầu tư thúc đẩy dư địa thị trường căn hộ cho thuê tại Vinh",
+      "url": "https://vnexpress.net/suc-hut-dau-tu-thuc-day-du-dia-thi-truong-can-ho-cho-thue-tai-vinh-5131758.html",
+      "category": "market",
+      "module_ids": [
+        "market"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-10-13T08:30:00+00:00",
+      "source_id": "vnexpress-real-estate",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "Kinh tế tăng trưởng, dòng vốn đầu tư mở rộng kéo theo nhu cầu nhà ở của chuyên gia và lao động chất lượng cao, tạo dư địa cho phân khúc căn hộ cho thuê tại Vinh.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://vnexpress.net/rss/bat-dong-san.rss",
+        "publisher_host": "vnexpress.net",
+        "publication_date_from_feed": true
+      }
+    },
+    {
       "id": "article-market-rss-da580a3889c03f71208f",
       "title": "TP HCM có thêm dự án nhà ở xã hội gần 192 ha tại xã Bà Điểm",
       "url": "https://vnexpress.net/tp-hcm-co-them-du-an-nha-o-xa-hoi-gan-192-ha-tai-xa-ba-diem-5131655.html",
@@ -93,6 +201,31 @@
       }
     },
     {
+      "id": "article-market-rss-9ae8b061fa16e6c953c3",
+      "title": "Doanh nghiệp Việt từ đáp ứng tiêu chuẩn đến làm chủ chất lượng",
+      "url": "https://dantri.com.vn/bat-dong-san/doanh-nghiep-viet-tu-dap-ung-tieu-chuan-den-lam-chu-chat-luong-20261013143540959.htm",
+      "category": "market",
+      "module_ids": [
+        "market"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-10-13T08:00:00+00:00",
+      "source_id": "dantri-real-estate",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "(Dân trí) - Ở những nấc cao hơn của chuỗi giá trị, chuẩn mực không còn đơn thuần là điều kiện để doanh nghiệp tham gia thị trường mà sẽ trở thành một phần quan trọng trong sức cạnh tranh của cả nền kinh tế.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://dantri.com.vn/rss/bat-dong-san.rss",
+        "publisher_host": "dantri.com.vn",
+        "publication_date_from_feed": true
+      }
+    },
+    {
       "id": "article-market-rss-d5c5fcef0e3ceba38415",
       "title": "Bất động sản bước vào kỷ nguyên tái thiết",
       "url": "https://thanhnien.vn/bat-dong-san-buoc-vao-ky-nguyen-tai-thiet-185261010163426618.htm",
@@ -118,6 +251,31 @@
       }
     },
     {
+      "id": "article-market-rss-b1cce2fd3d8f58d7ff69",
+      "title": "Giá vàng giằng co từng phiên: Vì sao dòng tiền lớn vẫn lặng lẽ gom?",
+      "url": "https://dantri.com.vn/kinh-doanh/gia-vang-giang-co-tung-phien-vi-sao-dong-tien-lon-van-lang-le-gom-20261013094913794.htm",
+      "category": "macro",
+      "module_ids": [
+        "macro"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-10-13T07:04:00+00:00",
+      "source_id": "dantri-business",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "(Dân trí) - Mỗi nhịp rung lắc của giá vàng đều khiến người lướt sóng thót tim. Thế nhưng, đằng sau các số liệu lạm phát ngắn hạn, dòng tiền lớn vẫn kiên trì gom hàng vì bài toán đường dài.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://dantri.com.vn/rss/kinh-doanh.rss",
+        "publisher_host": "dantri.com.vn",
+        "publication_date_from_feed": true
+      }
+    },
+    {
       "id": "article-market-rss-249834e27fc8d5a4fb7c",
       "title": "Thêm dự án nhà ở xã hội TP HCM giá từ 24 triệu đồng mỗi m2",
       "url": "https://vnexpress.net/them-du-an-nha-o-xa-hoi-tp-hcm-gia-tu-24-trieu-dong-moi-m2-5131691.html",
@@ -132,6 +290,33 @@
       "region_ids": [
         "hcmc"
       ],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [
+        "pricing"
+      ],
+      "importance": 2,
+      "summary": "Nhà ở xã hội tại dự án Thạnh Tân, phường Dĩ An, có giá bán dự kiến từ 24 triệu đồng mỗi m2 và giá thuê gần 158.000 đồng một m2 một tháng.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://vnexpress.net/rss/bat-dong-san.rss",
+        "publisher_host": "vnexpress.net",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-21d978b87bbc73fbd5d1",
+      "title": "Dự án nhà ở xã hội tại Dĩ An có giá từ 24 triệu đồng mỗi m2",
+      "url": "https://vnexpress.net/du-an-nha-o-xa-hoi-tai-di-an-co-gia-tu-24-trieu-dong-moi-m2-5131691.html",
+      "category": "market",
+      "module_ids": [
+        "market"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-10-13T07:03:18+00:00",
+      "source_id": "vnexpress-real-estate",
+      "region_ids": [],
       "project_ids": [],
       "developer_ids": [],
       "tags": [
