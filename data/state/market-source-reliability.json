@@ -11,15 +11,6 @@
       "price_metric": "popular-asking-price-per-sqm",
       "checks": [
         {
-          "run_id": "37897823483",
-          "observed_at": "2026-10-09T07:14:04.708202+00:00",
-          "status": "reachable-no-verifiable-metric",
-          "http_status": 200,
-          "publisher_periods": [
-            "2026-10"
-          ]
-        },
-        {
           "run_id": "37898652894",
           "observed_at": "2026-10-09T07:22:51.296354+00:00",
           "status": "same-period-unchanged",
@@ -109,10 +100,17 @@
           "status": "same-period-unchanged",
           "http_status": 200,
           "publisher_periods": []
+        },
+        {
+          "run_id": "38378178806",
+          "observed_at": "2026-10-13T09:42:23.568493+00:00",
+          "status": "same-period-unchanged",
+          "http_status": 200,
+          "publisher_periods": []
         }
       ],
       "check_count": 14,
-      "parseable_check_count": 13,
+      "parseable_check_count": 14,
       "classification": "repeatably-parseable"
     },
     {
@@ -123,13 +121,6 @@
       "price_metric": "single-listing-asking-price-per-sqm",
       "checks": [
         {
-          "run_id": "37897823483",
-          "observed_at": "2026-10-09T07:14:04.708202+00:00",
-          "status": "same-period-unchanged",
-          "http_status": 200,
-          "publisher_periods": []
-        },
-        {
           "run_id": "37898652894",
           "observed_at": "2026-10-09T07:22:51.296354+00:00",
           "status": "same-period-unchanged",
@@ -216,6 +207,13 @@
         {
           "run_id": "38275201235",
           "observed_at": "2026-10-12T16:07:53.993765+00:00",
+          "status": "same-period-unchanged",
+          "http_status": 200,
+          "publisher_periods": []
+        },
+        {
+          "run_id": "38378178806",
+          "observed_at": "2026-10-13T09:42:23.568493+00:00",
           "status": "same-period-unchanged",
           "http_status": 200,
           "publisher_periods": []
@@ -233,13 +231,6 @@
       "price_metric": "historical-launch-starting-price-per-sqm",
       "checks": [
         {
-          "run_id": "37897823483",
-          "observed_at": "2026-10-09T07:14:04.708202+00:00",
-          "status": "reachable-historical-reference-frozen",
-          "http_status": 200,
-          "publisher_periods": []
-        },
-        {
           "run_id": "37898652894",
           "observed_at": "2026-10-09T07:22:51.296354+00:00",
           "status": "reachable-historical-reference-frozen",
@@ -326,6 +317,13 @@
         {
           "run_id": "38275201235",
           "observed_at": "2026-10-12T16:07:53.993765+00:00",
+          "status": "reachable-historical-reference-frozen",
+          "http_status": 200,
+          "publisher_periods": []
+        },
+        {
+          "run_id": "38378178806",
+          "observed_at": "2026-10-13T09:42:23.568493+00:00",
           "status": "reachable-historical-reference-frozen",
           "http_status": 200,
           "publisher_periods": []
@@ -343,13 +341,6 @@
       "price_metric": "historical-launch-starting-price-per-sqm",
       "checks": [
         {
-          "run_id": "37897823483",
-          "observed_at": "2026-10-09T07:14:04.708202+00:00",
-          "status": "reachable-historical-reference-frozen",
-          "http_status": 200,
-          "publisher_periods": []
-        },
-        {
           "run_id": "37898652894",
           "observed_at": "2026-10-09T07:22:51.296354+00:00",
           "status": "reachable-historical-reference-frozen",
@@ -436,6 +427,13 @@
         {
           "run_id": "38275201235",
           "observed_at": "2026-10-12T16:07:53.993765+00:00",
+          "status": "reachable-historical-reference-frozen",
+          "http_status": 200,
+          "publisher_periods": []
+        },
+        {
+          "run_id": "38378178806",
+          "observed_at": "2026-10-13T09:42:23.568493+00:00",
           "status": "reachable-historical-reference-frozen",
           "http_status": 200,
           "publisher_periods": []
@@ -453,15 +451,6 @@
       "price_metric": "popular-asking-price-per-sqm",
       "checks": [
         {
-          "run_id": "37897823483",
-          "observed_at": "2026-10-09T07:14:04.708202+00:00",
-          "status": "reachable-no-verifiable-metric",
-          "http_status": 200,
-          "publisher_periods": [
-            "2026-10"
-          ]
-        },
-        {
           "run_id": "37898652894",
           "observed_at": "2026-10-09T07:22:51.296354+00:00",
           "status": "new-period-review-required",
@@ -551,10 +540,17 @@
           "status": "published-period-unchanged",
           "http_status": 200,
           "publisher_periods": []
+        },
+        {
+          "run_id": "38378178806",
+          "observed_at": "2026-10-13T09:42:23.568493+00:00",
+          "status": "published-period-unchanged",
+          "http_status": 200,
+          "publisher_periods": []
         }
       ],
       "check_count": 14,
-      "parseable_check_count": 13,
+      "parseable_check_count": 14,
       "classification": "repeatably-parseable"
     },
     {
@@ -565,13 +561,6 @@
       "price_metric": "popular-asking-price-per-sqm",
       "checks": [
         {
-          "run_id": "37897823483",
-          "observed_at": "2026-10-09T07:14:04.708202+00:00",
-          "status": "reachable-no-verifiable-metric",
-          "http_status": 200,
-          "publisher_periods": []
-        },
-        {
           "run_id": "37898652894",
           "observed_at": "2026-10-09T07:22:51.296354+00:00",
           "status": "reachable-no-verifiable-metric",
@@ -658,6 +647,13 @@
         {
           "run_id": "38275201235",
           "observed_at": "2026-10-12T16:07:53.993765+00:00",
+          "status": "reachable-no-verifiable-metric",
+          "http_status": 200,
+          "publisher_periods": []
+        },
+        {
+          "run_id": "38378178806",
+          "observed_at": "2026-10-13T09:42:23.568493+00:00",
           "status": "reachable-no-verifiable-metric",
           "http_status": 200,
           "publisher_periods": []
@@ -750,10 +746,17 @@
           "status": "same-period-unchanged",
           "http_status": 200,
           "publisher_periods": []
+        },
+        {
+          "run_id": "38378178806",
+          "observed_at": "2026-10-13T09:42:23.568493+00:00",
+          "status": "same-period-unchanged",
+          "http_status": 200,
+          "publisher_periods": []
         }
       ],
-      "check_count": 11,
-      "parseable_check_count": 11,
+      "check_count": 12,
+      "parseable_check_count": 12,
       "classification": "repeatably-parseable"
     }
   ]
