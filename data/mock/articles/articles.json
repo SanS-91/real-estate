@@ -1,9 +1,166 @@
 {
   "schema_version": 1,
-  "build_id": "market-news-rss-20261013T005140Z",
-  "generated_at": "2026-10-13T00:51:40.649209+00:00",
-  "record_count": 348,
+  "build_id": "market-news-rss-20261013T025135Z",
+  "generated_at": "2026-10-13T02:51:35.989572+00:00",
+  "record_count": 355,
   "data": [
+    {
+      "id": "article-market-rss-708ab4cd847bbbd50241",
+      "title": "Giá vàng hôm nay 13.10.2026: Vàng miếng SJC cao hơn thế giới 13 triệu đồng/lượng",
+      "url": "https://thanhnien.vn/gia-vang-hom-nay-13102026-vang-mieng-sjc-cao-hon-the-gioi-13-trieu-dong-luong-185261013083937947.htm",
+      "category": "macro",
+      "module_ids": [
+        "macro"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-10-13T01:43:00+00:00",
+      "source_id": "thanhnien-banking",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "Giá vàng thế giới giảm trở lại nhưng vẫn thấp hơn vàng miếng SIC 13 triệu đồng mỗi lượng.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://thanhnien.vn/rss/kinh-te/ngan-hang.rss",
+        "publisher_host": "thanhnien.vn",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-daa30fa6efb94f985d7b",
+      "title": "The Wellness Van Phuc phát triển không gian sống gắn với chăm sóc sức khỏe",
+      "url": "https://vnexpress.net/the-wellness-van-phuc-phat-trien-khong-gian-song-gan-voi-cham-soc-suc-khoe-5131340.html",
+      "category": "market",
+      "module_ids": [
+        "market"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-10-13T01:00:00+00:00",
+      "source_id": "vnexpress-real-estate",
+      "region_ids": [
+        "hcmc"
+      ],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "The Wellness Van Phuc gồm 24 căn nhà phố, đối diện Bệnh viện Đại học Quốc tế Hồng Bàng trong khu đô thị Vạn Phúc, kết hợp lợi thế kết nối y tế với không gian xanh ven sông Sài Gòn.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://vnexpress.net/rss/bat-dong-san.rss",
+        "publisher_host": "vnexpress.net",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-c92c9d3cb6f0cc014d9d",
+      "title": "Bắc Ninh sắp có thêm gần 2.900 căn nhà ở xã hội",
+      "url": "https://vnexpress.net/bac-ninh-sap-co-them-gan-2-900-can-nha-o-xa-hoi-5131353.html",
+      "category": "market",
+      "module_ids": [
+        "market",
+        "infrastructure"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-10-13T01:00:00+00:00",
+      "source_id": "vnexpress-real-estate",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "Dự án Hope Residences Bắc Ninh tại phường Tân Tiến gồm 12 tòa tháp với gần 2.900 căn hộ, dự kiến khởi công quý IV.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://vnexpress.net/rss/bat-dong-san.rss",
+        "publisher_host": "vnexpress.net",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-4723c68866c79a477131",
+      "title": "Giá vàng lại giảm, người mua từ đỉnh vẫn đang lỗ 50 triệu đồng/lượng",
+      "url": "https://dantri.com.vn/kinh-doanh/gia-vang-lai-giam-nguoi-mua-tu-dinh-van-dang-lo-50-trieu-dongluong-20261013070218568.htm",
+      "category": "macro",
+      "module_ids": [
+        "macro"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-10-13T00:16:48+00:00",
+      "source_id": "dantri-business",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "(Dân trí) - Giá vàng trong nước và thế giới cùng quay đầu. Giá vàng thế giới sáng nay lùi về 4.173 USD/ounce. Chênh lệch giữa vàng trong nước và thế giới nới rộng lên 13 triệu đồng mỗi lượng.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://dantri.com.vn/rss/kinh-doanh.rss",
+        "publisher_host": "dantri.com.vn",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-f75794ea50d5ab8e9962",
+      "title": "Khi hợp đồng 40 năm kết thúc, Trung Quốc xử lý ra sao với đất thương mại?",
+      "url": "https://dantri.com.vn/bat-dong-san/khi-hop-dong-40-nam-ket-thuc-trung-quoc-xu-ly-ra-sao-voi-dat-thuong-mai-20261013065031767.htm",
+      "category": "market",
+      "module_ids": [
+        "market"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-10-12T23:59:19+00:00",
+      "source_id": "dantri-real-estate",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "(Dân trí) - Nhiều hợp đồng thuê đất thương mại ở Trung Quốc sẽ hết hạn trong vài năm tới, làm dấy lên lo ngại về giá trị tài sản cũng như ảnh hưởng đến quyền và lợi ích hợp pháp của người sử dụng.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://dantri.com.vn/rss/bat-dong-san.rss",
+        "publisher_host": "dantri.com.vn",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-d8eddb8392eb02b50910",
+      "title": "Mua vé đi Metro số 1 TPHCM qua ứng dụng VNeID từ ngày 15/10",
+      "url": "https://dantri.com.vn/thoi-su/mua-ve-di-metro-so-1-tphcm-qua-ung-dung-vneid-tu-ngay-1510-20261012211518982.htm",
+      "category": "infrastructure",
+      "module_ids": [
+        "infrastructure"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-10-12T23:50:00+00:00",
+      "source_id": "dantri-current-affairs",
+      "region_ids": [
+        "hcmc"
+      ],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [
+        "infrastructure"
+      ],
+      "importance": 2,
+      "summary": "(Dân trí) - Từ ngày 15/10, hành khách đi tuyến Metro số 1 Bến Thành - Suối Tiên có thể mua vé và sử dụng tiện ích trên tàu qua ứng dụng định danh điện tử VNeID.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://dantri.com.vn/rss/thoi-su.rss",
+        "publisher_host": "dantri.com.vn",
+        "publication_date_from_feed": true
+      }
+    },
     {
       "id": "article-market-rss-80bb7c4492f4d0e8ec57",
       "title": "Công ty của ông Đặng Thành Tâm lãi đậm nhất gần 4 năm",
@@ -80,6 +237,35 @@
         "method": "official-rss",
         "feed_url": "https://vnexpress.net/rss/kinh-doanh.rss",
         "publisher_host": "vnexpress.net",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-92fe1f82bd00e94b9ee8",
+      "title": "Gần 300 hộ dân trên \"đất vàng\" ở Hà Nội được đưa ra khỏi quy hoạch dự án",
+      "url": "https://dantri.com.vn/thoi-su/gan-300-ho-dan-tren-dat-vang-o-ha-noi-duoc-dua-ra-khoi-quy-hoach-du-an-20261012225523609.htm",
+      "category": "market",
+      "module_ids": [
+        "market"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-10-12T23:08:00+00:00",
+      "source_id": "dantri-current-affairs",
+      "region_ids": [
+        "ha-noi"
+      ],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [
+        "legal"
+      ],
+      "importance": 2,
+      "summary": "(Dân trí) - Theo lãnh đạo phường Bạch Mai (Hà Nội), gần 300 hộ dân trong phạm vi nghiên cứu dự án Công viên Võ Thị Sáu đã được đưa ra khỏi quy hoạch dự kiến.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://dantri.com.vn/rss/thoi-su.rss",
+        "publisher_host": "dantri.com.vn",
         "publication_date_from_feed": true
       }
     },
