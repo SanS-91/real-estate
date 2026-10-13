@@ -1,9 +1,215 @@
 {
   "schema_version": 1,
-  "build_id": "market-news-rss-20261012T145102Z",
-  "generated_at": "2026-10-12T14:51:02.009737+00:00",
-  "record_count": 340,
+  "build_id": "market-news-rss-20261013T005140Z",
+  "generated_at": "2026-10-13T00:51:40.649209+00:00",
+  "record_count": 348,
   "data": [
+    {
+      "id": "article-market-rss-80bb7c4492f4d0e8ec57",
+      "title": "Công ty của ông Đặng Thành Tâm lãi đậm nhất gần 4 năm",
+      "url": "https://vnexpress.net/cong-ty-cua-ong-dang-thanh-tam-lai-dam-nhat-gan-4-nam-5131495.html",
+      "category": "market",
+      "module_ids": [
+        "market"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-10-12T23:26:39+00:00",
+      "source_id": "vnexpress-real-estate",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "Đô thị Kinh Bắc, công ty gắn liền với tên tuổi của doanh nhân Đặng Thành Tâm, lãi sau thuế hơn 937 tỷ đồng trong quý III, cao nhất từ quý I/2023.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://vnexpress.net/rss/bat-dong-san.rss",
+        "publisher_host": "vnexpress.net",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-9af4233fad2e38da0f4d",
+      "title": "Sức mua chung cư mới ở Hà Nội giảm đến 50%",
+      "url": "https://vnexpress.net/suc-mua-chung-cu-moi-o-ha-noi-giam-den-50-5131227.html",
+      "category": "market",
+      "module_ids": [
+        "market"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-10-12T23:22:11+00:00",
+      "source_id": "vnexpress-real-estate",
+      "region_ids": [
+        "ha-noi"
+      ],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [
+        "sales"
+      ],
+      "importance": 2,
+      "summary": "Quý III, sức hấp thụ chung cư mới ở Thủ đô chỉ đạt khoảng 30% trong khi cùng kỳ năm trước con số này là 70-80%.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://vnexpress.net/rss/bat-dong-san.rss",
+        "publisher_host": "vnexpress.net",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-5691c7b9867ce6cf193e",
+      "title": "Thủ tướng yêu cầu rà soát các dự án điện chậm tiến độ, không khả thi",
+      "url": "https://vnexpress.net/thu-tuong-yeu-cau-ra-soat-cac-du-an-dien-cham-tien-do-khong-kha-thi-5131475.html",
+      "category": "market",
+      "module_ids": [
+        "market"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-10-12T23:17:13+00:00",
+      "source_id": "vnexpress-economy",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "Thủ tướng yêu cầu làm rõ các dự án điện chậm tiến độ, không khả thi để đề xuất điều chỉnh, bổ sung hoặc thay thế, bảo đảm đủ điện phục vụ tăng trưởng hai chữ số.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://vnexpress.net/rss/kinh-doanh.rss",
+        "publisher_host": "vnexpress.net",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-5e73d01c101f4ff0d0ab",
+      "title": "Nhà một tầng miền Tây bố trí 3 giếng trời đón nắng",
+      "url": "https://vnexpress.net/nha-mot-tang-mien-tay-bo-tri-3-gieng-troi-don-nang-5131301.html",
+      "category": "market",
+      "module_ids": [
+        "market"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-10-12T23:06:36+00:00",
+      "source_id": "vnexpress-real-estate",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "Công trình rộng 75 m2 tại Vĩnh Long kết hợp giếng trời, hồ nước và cây xanh nhằm hạn chế tích nhiệt, tăng thông thoáng và tạo không gian nghỉ ngơi tại nhà.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://vnexpress.net/rss/bat-dong-san.rss",
+        "publisher_host": "vnexpress.net",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-b3b05ed5b5e7f53f77d8",
+      "title": "Doanh nghiệp đau đầu vì lãi suất vay cao bào mòn lợi nhuận",
+      "url": "https://dantri.com.vn/kinh-doanh/doanh-nghiep-dau-dau-vi-lai-suat-vay-cao-bao-mon-loi-nhuan-20261012184614690.htm",
+      "category": "macro",
+      "module_ids": [
+        "macro"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-10-12T23:00:00+00:00",
+      "source_id": "dantri-business",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "(Dân trí) - Với mức lãi vay trên 10%, doanh nghiệp vẫn cần vốn để hoạt động nhưng chi phí đầu vào cao có thể bào mòn phần lớn lợi nhuận dù mùa kinh doanh cao điểm Tết đang cận kề.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://dantri.com.vn/rss/kinh-doanh.rss",
+        "publisher_host": "dantri.com.vn",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-5a536b058c09ea1a646e",
+      "title": "Nhiều rào cản chuyển nhà tái định cư thành nhà ở cho thuê",
+      "url": "https://thanhnien.vn/nhieu-rao-can-chuyen-nha-tai-dinh-cu-thanh-nha-o-cho-thue-185261012223301132.htm",
+      "category": "market",
+      "module_ids": [
+        "market"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-10-12T22:58:00+00:00",
+      "source_id": "thanhnien-real-estate",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "Đề xuất chuyển một phần quỹ nhà tái định cư bỏ trống sang nhà ở cho thuê phục vụ công nhân là hướng đi đáng ủng hộ, nhưng cũng còn không ít rào cản để thực hiện.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://thanhnien.vn/rss/kinh-te/dia-oc.rss",
+        "publisher_host": "thanhnien.vn",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-116635905474a53e5060",
+      "title": "'Lãi suất càng tăng, nhà đầu tư càng rời bỏ chứng khoán'",
+      "url": "https://vnexpress.net/lai-suat-cang-tang-nha-dau-tu-cang-roi-bo-chung-khoan-5131247.html",
+      "category": "macro",
+      "module_ids": [
+        "macro"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-10-12T22:57:00+00:00",
+      "source_id": "vnexpress-economy",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "Lãi suất huy động neo cao, thanh khoản chứng khoán xuống đáy hơn một năm, trong khi dư nợ margin lớn khiến thị trường đối mặt làn sóng bán giải chấp.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://vnexpress.net/rss/kinh-doanh.rss",
+        "publisher_host": "vnexpress.net",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-8e9f7cd3836f708022aa",
+      "title": "Quy hoạch công viên Thủ Lệ theo mô hình 'vừa mở vừa đóng'",
+      "url": "https://vnexpress.net/quy-hoach-cong-vien-thu-le-theo-mo-hinh-vua-mo-vua-dong-5131480.html",
+      "category": "market",
+      "module_ids": [
+        "market"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-10-12T17:00:00+00:00",
+      "source_id": "vnexpress-current-affairs",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [
+        "legal"
+      ],
+      "importance": 2,
+      "summary": "Công viên Thủ Lệ được đề xuất dỡ rào, mở khoảng 70% diện tích cho người dân vui chơi, giữ 30% làm khu nuôi dưỡng, bảo tồn và trưng bày động vật có kiểm soát.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://vnexpress.net/rss/thoi-su.rss",
+        "publisher_host": "vnexpress.net",
+        "publication_date_from_feed": true
+      }
+    },
     {
       "id": "article-market-rss-4c5033a1db3cfd89f51b",
       "title": "Sau vé máy bay, đến lượt vé metro cũng đặt luôn được trên VNeID",
