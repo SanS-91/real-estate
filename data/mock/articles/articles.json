@@ -1,8 +1,8 @@
 {
   "schema_version": 1,
-  "build_id": "market-news-rss-20261013T065152Z",
-  "generated_at": "2026-10-13T06:51:52.740074+00:00",
-  "record_count": 370,
+  "build_id": "market-news-rss-20261013T065439Z",
+  "generated_at": "2026-10-13T06:54:39.381691+00:00",
+  "record_count": 373,
   "data": [
     {
       "id": "article-market-rss-59241d39a69f57bb8626",
@@ -87,6 +87,58 @@
       }
     },
     {
+      "id": "article-market-rss-c15c57f0f1f83254396b",
+      "title": "Xu hướng khách quốc tế định cư: Động lực mới cho thị trường địa ốc Nha Trang",
+      "url": "https://dantri.com.vn/bat-dong-san/xu-huong-khach-quoc-te-dinh-cu-dong-luc-moi-cho-thi-truong-dia-oc-nha-trang-20261013114107978.htm",
+      "category": "market",
+      "module_ids": [
+        "market"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-10-13T04:45:50+00:00",
+      "source_id": "dantri-real-estate",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "(Dân trí) - Nha Trang đang bứt phá thành trung tâm du lịch 4 mùa. Xu hướng trú đông, làm việc từ xa cùng an cư dài hạn của người nước ngoài đặt ra tiêu chuẩn mới về không gian sống, góp phần tái định hình thị trường bất động sản địa phương.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://dantri.com.vn/rss/bat-dong-san.rss",
+        "publisher_host": "dantri.com.vn",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-bbf8ee5a7b85b52a6211",
+      "title": "Giá nhà gấp 30 lần thu nhập, vì sao tỷ lệ sở hữu ở Việt Nam thuộc nhóm đầu?",
+      "url": "https://dantri.com.vn/bat-dong-san/gia-nha-gap-30-lan-thu-nhap-vi-sao-ty-le-so-huu-o-viet-nam-thuoc-nhom-dau-20261013093126023.htm",
+      "category": "market",
+      "module_ids": [
+        "market"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-10-13T04:43:05+00:00",
+      "source_id": "dantri-real-estate",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [
+        "pricing"
+      ],
+      "importance": 2,
+      "summary": "(Dân trí) - Phải mất hơn 30 năm thu nhập mới mua được nhà, nhưng tỷ lệ người đô thị có nhà tại Việt Nam lại thuộc top đầu thế giới. Các chuyên gia đã tìm ra lời giải cho nghịch lý này.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://dantri.com.vn/rss/bat-dong-san.rss",
+        "publisher_host": "dantri.com.vn",
+        "publication_date_from_feed": true
+      }
+    },
+    {
       "id": "article-market-rss-f194d44e9d52ae0f0054",
       "title": "Hưng Yên quy hoạch 66 KCN: Lực đẩy từ đại lộ nối biển và hạ tầng xanh",
       "url": "https://dantri.com.vn/kinh-doanh/hung-yen-quy-hoach-66-kcn-luc-day-tu-dai-lo-noi-bien-va-ha-tang-xanh-20261013085457032.htm",
@@ -110,6 +162,33 @@
       "source_verification": {
         "method": "official-rss",
         "feed_url": "https://dantri.com.vn/rss/kinh-doanh.rss",
+        "publisher_host": "dantri.com.vn",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-9208a18e7913105cc0a5",
+      "title": "Phó Thủ tướng: \"Giá nhà vẫn vượt khả năng chi trả của đại đa số người dân\"",
+      "url": "https://dantri.com.vn/bat-dong-san/pho-thu-tuong-gia-nha-van-vuot-kha-nang-chi-tra-cua-dai-da-so-nguoi-dan-20261013111935105.htm",
+      "category": "market",
+      "module_ids": [
+        "market"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-10-13T04:21:06+00:00",
+      "source_id": "dantri-real-estate",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [
+        "pricing"
+      ],
+      "importance": 2,
+      "summary": "(Dân trí) - Một trong những vấn đề lớn được Phó Thủ tướng chỉ ra là thực trạng giá nhà vẫn vượt khả năng chi trả của đại đa số người dân, trong khi đó, lượng bất động sản tồn kho có xu hướng tăng.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://dantri.com.vn/rss/bat-dong-san.rss",
         "publisher_host": "dantri.com.vn",
         "publication_date_from_feed": true
       }
