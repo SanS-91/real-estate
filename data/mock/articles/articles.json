@@ -1,9 +1,34 @@
 {
   "schema_version": 1,
-  "build_id": "market-news-rss-20261013T145103Z",
-  "generated_at": "2026-10-13T14:51:03.877979+00:00",
-  "record_count": 404,
+  "build_id": "market-news-rss-20261013T160741Z",
+  "generated_at": "2026-10-13T16:07:41.091937+00:00",
+  "record_count": 407,
   "data": [
+    {
+      "id": "article-market-rss-6f187013a32797e6bdcd",
+      "title": "Trước thềm VIS 2026: Đối thoại Việt Nam - quốc tế, nâng cao năng lực định chuẩn",
+      "url": "https://dantri.com.vn/bat-dong-san/truoc-them-vis-2026-doi-thoai-viet-nam-quoc-te-nang-cao-nang-luc-dinh-chuan-20261013204552173.htm",
+      "category": "market",
+      "module_ids": [
+        "market"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-10-13T14:37:00+00:00",
+      "source_id": "dantri-real-estate",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "(Dân trí) - Khi chi phí, quy mô sản xuất hay khả năng thích ứng không còn là lợi thế, năng lực cạnh tranh của các quốc gia được đo bằng một hệ tiêu chí mới: chất lượng, công nghệ, quản trị, bền vững và khả năng tạo ra những giá trị có sức tham chiếu.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://dantri.com.vn/rss/bat-dong-san.rss",
+        "publisher_host": "dantri.com.vn",
+        "publication_date_from_feed": true
+      }
+    },
     {
       "id": "article-market-rss-f239065bc39539b918f0",
       "title": "Thủ tướng thị sát, chỉ đạo tháng 12 phải xong dự án chống ngập 10.000 tỉ",
@@ -28,6 +53,31 @@
         "method": "official-rss",
         "feed_url": "https://thanhnien.vn/rss/kinh-te/chinh-sach-phat-trien.rss",
         "publisher_host": "thanhnien.vn",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-aaee0056f0dd91a057bc",
+      "title": "Sếp ngân hàng nói về biến động tỷ giá và dự báo mới nhất",
+      "url": "https://dantri.com.vn/dt360/sep-ngan-hang-noi-ve-bien-dong-ty-gia-va-du-bao-moi-nhat-20261013105535032.htm",
+      "category": "macro",
+      "module_ids": [
+        "macro"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-10-13T13:40:15+00:00",
+      "source_id": "dantri-business",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "(Dân trí) - Áp lực tỷ giá còn kéo dài đến cuối năm do nhu cầu ngoại tệ nhập khẩu có thể tăng khi kinh tế bước vào chu kỳ đầu tư mới. ACB sẵn sàng tư vấn giải pháp phái sinh tỷ giá phù hợp cho doanh nghiệp.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://dantri.com.vn/rss/kinh-doanh.rss",
+        "publisher_host": "dantri.com.vn",
         "publication_date_from_feed": true
       }
     },
@@ -273,6 +323,33 @@
         "method": "official-rss",
         "feed_url": "https://dantri.com.vn/rss/thoi-su.rss",
         "publisher_host": "dantri.com.vn",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-6066b803811a996d944a",
+      "title": "Hà Nội năm nay dự thu từ đất kỷ lục 146.000 tỷ đồng",
+      "url": "https://vnexpress.net/ha-noi-nam-nay-du-thu-tu-dat-ky-luc-146-000-ty-dong-5131619.html",
+      "category": "market",
+      "module_ids": [
+        "market"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-10-13T09:30:00+00:00",
+      "source_id": "vnexpress-real-estate",
+      "region_ids": [
+        "ha-noi"
+      ],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "TP Hà Nội ước tính thu ngân sách từ đất 146.000 tỷ đồng cả năm nay, tăng hơn 35% so với 2025 và cao nhất từ trước đến nay.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://vnexpress.net/rss/bat-dong-san.rss",
+        "publisher_host": "vnexpress.net",
         "publication_date_from_feed": true
       }
     },
