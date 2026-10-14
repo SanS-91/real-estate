@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "checked_at": "2026-10-14T12:30:22.199569+00:00",
+  "checked_at": "2026-10-14T14:51:43.528875+00:00",
   "feeds_configured": 16,
   "feeds_fetched": 16,
   "accepted_new": 0,
@@ -55,8 +55,8 @@
       "feed_items": 50,
       "new": 0,
       "skipped": 50,
-      "duplicates": 7,
-      "filtered": 43
+      "duplicates": 6,
+      "filtered": 44
     },
     {
       "source_id": "vnexpress-legal",
@@ -109,8 +109,8 @@
       "feed_items": 50,
       "new": 0,
       "skipped": 50,
-      "duplicates": 8,
-      "filtered": 42
+      "duplicates": 7,
+      "filtered": 43
     },
     {
       "source_id": "dantri-legal",
