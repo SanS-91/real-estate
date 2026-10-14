@@ -1,9 +1,117 @@
 {
   "schema_version": 1,
-  "build_id": "market-news-rss-20261014T085116Z",
-  "generated_at": "2026-10-14T08:51:16.840343+00:00",
-  "record_count": 438,
+  "build_id": "market-news-rss-20261014T105125Z",
+  "generated_at": "2026-10-14T10:51:25.438279+00:00",
+  "record_count": 445,
   "data": [
+    {
+      "id": "article-market-rss-dd9e44c702e73f7ba3b1",
+      "title": "Công an yêu cầu xác định giá trị quyền sử dụng bất động sản lớn ở TPHCM",
+      "url": "https://dantri.com.vn/thoi-su/cong-an-yeu-cau-xac-dinh-gia-tri-quyen-su-dung-bat-dong-san-lon-o-tphcm-20261014160943987.htm",
+      "category": "market",
+      "module_ids": [
+        "market"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-10-14T09:20:14+00:00",
+      "source_id": "dantri-current-affairs",
+      "region_ids": [
+        "hcmc"
+      ],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "(Dân trí) - Cơ quan Cảnh sát điều tra yêu cầu xác định giá trị quyền sử dụng đất của phân khu 4, phân khu 6 và giá trị quyền sử dụng khu đất có diện tích 87.720m2 của dự án Khu dân cư Phước Nguyên Hưng, TPHCM.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://dantri.com.vn/rss/thoi-su.rss",
+        "publisher_host": "dantri.com.vn",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-fdb47d01f950c06e5d8f",
+      "title": "HDBank dành 2.000 tỷ đồng cho doanh nghiệp nữ chủ, lãi suất từ 7,8%/năm đến hết quý I/2027",
+      "url": "https://dantri.com.vn/kinh-doanh/hdbank-danh-2000-ty-dong-cho-doanh-nghiep-nu-chu-lai-suat-tu-78nam-den-het-quy-i2027-20261014155844648.htm",
+      "category": "macro",
+      "module_ids": [
+        "macro"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-10-14T09:00:00+00:00",
+      "source_id": "dantri-business",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "(Dân trí) - HDBank triển khai chương trình “Tiếp sức vốn vay - Nâng tầm doanh nghiệp do phụ nữ làm chủ” với hạn mức 2.000 tỷ đồng, lãi suất từ 7,8%/năm, hỗ trợ doanh nghiệp nhỏ và vừa bổ sung vốn lưu động phục vụ sản xuất kinh doanh.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://dantri.com.vn/rss/kinh-doanh.rss",
+        "publisher_host": "dantri.com.vn",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-388c950ec3d90b1e9b00",
+      "title": "Cuộc đua hỗ trợ lãi suất: Phao cứu sinh hay áp lực cho người vay mua nhà?",
+      "url": "https://dantri.com.vn/kinh-doanh/cuoc-dua-ho-tro-lai-suat-phao-cuu-sinh-hay-ap-luc-cho-nguoi-vay-mua-nha-20261014140409493.htm",
+      "category": "macro",
+      "module_ids": [
+        "macro"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-10-14T08:37:28+00:00",
+      "source_id": "dantri-business",
+      "region_ids": [
+        "ha-noi"
+      ],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [
+        "sales"
+      ],
+      "importance": 2,
+      "summary": "(Dân trí) - Dù ngân hàng, chủ đầu tư tung ra loạt ưu đãi, giao dịch trên thị trường nhà ở vẫn giảm mạnh 36%. Rào cản lớn nhất theo các chuyên gia là lãi suất thả nổi đã lên đến 16-17%/năm.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://dantri.com.vn/rss/kinh-doanh.rss",
+        "publisher_host": "dantri.com.vn",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-7a055782a29707c94eed",
+      "title": "Tạm dừng lưu thông trên cao tốc Mỹ Thuận - Cần Thơ theo khung giờ",
+      "url": "https://dantri.com.vn/thoi-su/tam-dung-luu-thong-tren-cao-toc-my-thuan-can-tho-theo-khung-gio-20261014145351430.htm",
+      "category": "infrastructure",
+      "module_ids": [
+        "infrastructure"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-10-14T08:35:59+00:00",
+      "source_id": "dantri-current-affairs",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [
+        "infrastructure"
+      ],
+      "importance": 2,
+      "summary": "(Dân trí) - Để lao lắp dầm cầu vượt Võ Văn Kiệt tại km109+130 và lắp đặt giá long môn tại một số vị trí trên cao tốc Mỹ Thuận - Cần Thơ, ô tô tạm dừng lưu thông từ 22h đến 1h hôm sau vào các đêm 16 đến 20/10.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://dantri.com.vn/rss/thoi-su.rss",
+        "publisher_host": "dantri.com.vn",
+        "publication_date_from_feed": true
+      }
+    },
     {
       "id": "article-market-rss-30166dd676faabb24465",
       "title": "Hệ tiện ích đa tầng theo phong cách nghỉ dưỡng tại Bechtro Tower",
@@ -26,6 +134,36 @@
         "method": "official-rss",
         "feed_url": "https://vnexpress.net/rss/bat-dong-san.rss",
         "publisher_host": "vnexpress.net",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-10d9097c435c153b423b",
+      "title": "Dành dụm 10 triệu đồng/tháng, người trẻ cần hơn 30 năm mới đủ mua chung cư?",
+      "url": "https://dantri.com.vn/bat-dong-san/danh-dum-10-trieu-dongthang-nguoi-tre-can-hon-30-nam-moi-du-mua-chung-cu-20261014135351072.htm",
+      "category": "market",
+      "module_ids": [
+        "market"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-10-14T07:36:19+00:00",
+      "source_id": "dantri-real-estate",
+      "region_ids": [
+        "hcmc"
+      ],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [
+        "pricing",
+        "infrastructure"
+      ],
+      "importance": 2,
+      "summary": "(Dân trí) - Giá nhà tăng nhanh khiến giấc mơ an cư của người trẻ ngày càng xa. Với khoản tiết kiệm 10 triệu đồng mỗi tháng, họ cần hơn 30 năm mới đủ mua căn hộ chung cư 4 tỷ đồng tại TPHCM.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://dantri.com.vn/rss/bat-dong-san.rss",
+        "publisher_host": "dantri.com.vn",
         "publication_date_from_feed": true
       }
     },
@@ -53,6 +191,59 @@
         "method": "official-rss",
         "feed_url": "https://vnexpress.net/rss/bat-dong-san.rss",
         "publisher_host": "vnexpress.net",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-695878ea5c0629016a01",
+      "title": "Lãnh đạo TPHCM có chỉ đạo mới liên quan 8 chung cư lô số ở cư xá Thanh Đa",
+      "url": "https://dantri.com.vn/thoi-su/lanh-dao-tphcm-co-chi-dao-moi-lien-quan-8-chung-cu-lo-so-o-cu-xa-thanh-da-20261014131622109.htm",
+      "category": "market",
+      "module_ids": [
+        "market"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-10-14T07:22:07+00:00",
+      "source_id": "dantri-current-affairs",
+      "region_ids": [
+        "hcmc"
+      ],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "(Dân trí) - Đối với dự án đầu tư xây dựng cụm 8 chung cư lô số tại Cư xá Thanh Đa, UBND TPHCM giao phường Bình Quới nghiên cứu, xem xét ban hành quyết định cưỡng chế di dời theo thẩm quyền.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://dantri.com.vn/rss/thoi-su.rss",
+        "publisher_host": "dantri.com.vn",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-77db538ed99b1c232a75",
+      "title": "Sun Group nghiên cứu loạt dự án ở Quảng Trị với tổng vốn 200.000 tỷ đồng",
+      "url": "https://dantri.com.vn/bat-dong-san/sun-group-nghien-cuu-loat-du-an-o-quang-tri-voi-tong-von-200000-ty-dong-20261014114356910.htm",
+      "category": "market",
+      "module_ids": [
+        "market",
+        "infrastructure"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-10-14T06:57:38+00:00",
+      "source_id": "dantri-real-estate",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "(Dân trí) - Riêng quần thể du lịch núi U Bò - hồ Thác Chuối của Sun Group có tổng vốn đầu tư dự kiến hơn 16.234 tỷ đồng, đang hoàn thiện các thủ tục để dự kiến khởi công vào ngày 30/10.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://dantri.com.vn/rss/bat-dong-san.rss",
+        "publisher_host": "dantri.com.vn",
         "publication_date_from_feed": true
       }
     },
