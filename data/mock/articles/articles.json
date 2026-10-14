@@ -1,9 +1,61 @@
 {
   "schema_version": 1,
-  "build_id": "market-news-rss-20261014T050403Z",
-  "generated_at": "2026-10-14T05:04:03.569389+00:00",
-  "record_count": 433,
+  "build_id": "market-news-rss-20261014T065108Z",
+  "generated_at": "2026-10-14T06:51:08.354919+00:00",
+  "record_count": 435,
   "data": [
+    {
+      "id": "article-market-rss-cffca62b12215ac83f95",
+      "title": "Lãi suất gửi tiết kiệm tăng cao, nhiều nhà đầu tư rời bỏ chứng khoán?",
+      "url": "https://dantri.com.vn/kinh-doanh/lai-suat-gui-tiet-kiem-tang-cao-nhieu-nha-dau-tu-roi-bo-chung-khoan-20261014120639191.htm",
+      "category": "macro",
+      "module_ids": [
+        "macro"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-10-14T05:43:23+00:00",
+      "source_id": "dantri-business",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "(Dân trí) - Mặt bằng lãi suất tiết kiệm ngân hàng tăng và dự còn neo cao đang cạnh tranh trực diện với lợi nhuận cổ phiếu, khiến nhiều nhà đầu tư không còn mặn mà với chứng khoán ở hiện tại.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://dantri.com.vn/rss/kinh-doanh.rss",
+        "publisher_host": "dantri.com.vn",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-465631e2682f2c3d6ea7",
+      "title": "Diễn biến mới tại siêu dự án tổ hợp hóa dầu Long Sơn",
+      "url": "https://dantri.com.vn/kinh-doanh/dien-bien-moi-tai-sieu-du-an-to-hop-hoa-dau-long-son-20261014113543239.htm",
+      "category": "market",
+      "module_ids": [
+        "market"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-10-14T04:58:08+00:00",
+      "source_id": "dantri-business",
+      "region_ids": [
+        "hcmc"
+      ],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "(Dân trí) - UBND TPHCM vừa có văn bản chỉ đạo liên quan đến việc điều chỉnh tổng vốn đầu tư và vốn huy động thực hiện Dự án Tổ hợp Hóa dầu miền Nam Việt Nam lên 6,1 tỷ USD, tương đương 148.981 tỷ đồng.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://dantri.com.vn/rss/kinh-doanh.rss",
+        "publisher_host": "dantri.com.vn",
+        "publication_date_from_feed": true
+      }
+    },
     {
       "id": "article-market-rss-2b27d698720cd5ba5bc1",
       "title": "Capital Square kết hợp không gian sống và thương mại bên sông Hàn",
