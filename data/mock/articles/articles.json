@@ -1,9 +1,86 @@
 {
   "schema_version": 1,
-  "build_id": "market-news-rss-20261014T120718Z",
-  "generated_at": "2026-10-14T12:07:18.052183+00:00",
-  "record_count": 447,
+  "build_id": "market-news-rss-20261014T172200Z",
+  "generated_at": "2026-10-14T17:22:00.362943+00:00",
+  "record_count": 450,
   "data": [
+    {
+      "id": "article-market-rss-4a5cc95117bd3bd71b06",
+      "title": "Lạm phát Mỹ tháng 9 tăng lên 3,7%: Fed có thể tăng lãi suất ngay tháng 10",
+      "url": "https://dantri.com.vn/kinh-doanh/lam-phat-my-thang-9-tang-len-37-fed-co-the-tang-lai-suat-ngay-thang-10-20261014221238062.htm",
+      "category": "macro",
+      "module_ids": [
+        "macro"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-10-14T15:36:06+00:00",
+      "source_id": "dantri-business",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "(Dân trí) - Chi phí nhiên liệu leo thang khiến áp lực vật giá tại Mỹ quay trở lại, buộc Cục Dự trữ Liên bang Mỹ tính đến việc nâng lãi suất sớm hơn dự báo ngay trong cuộc họp cuối tháng này.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://dantri.com.vn/rss/kinh-doanh.rss",
+        "publisher_host": "dantri.com.vn",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-a3352e8ca7a0498941d9",
+      "title": "Tối 14/10, giá vàng, bạc đang giảm rất nhanh",
+      "url": "https://dantri.com.vn/kinh-doanh/toi-1410-gia-vang-bac-dang-giam-rat-nhanh-20261014215629571.htm",
+      "category": "macro",
+      "module_ids": [
+        "macro"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-10-14T15:03:17+00:00",
+      "source_id": "dantri-business",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "(Dân trí) - Giá vàng thế giới bất ngờ thủng mốc 4.100 USD/ounce trong khi bạc lao dốc mạnh hơn chỉ còn 56,4 USD/ounce.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://dantri.com.vn/rss/kinh-doanh.rss",
+        "publisher_host": "dantri.com.vn",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-65870c280bb86bc28498",
+      "title": "Thanh toán QR tăng mạnh, Ngân hàng Nhà nước yêu cầu đảm bảo an toàn",
+      "url": "https://dantri.com.vn/kinh-doanh/thanh-toan-qr-tang-manh-ngan-hang-nha-nuoc-yeu-cau-dam-bao-an-toan-20261014203004759.htm",
+      "category": "macro",
+      "module_ids": [
+        "macro"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-10-14T14:35:51+00:00",
+      "source_id": "dantri-business",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [
+        "sales"
+      ],
+      "importance": 2,
+      "summary": "(Dân trí) - Trong 8 tháng đầu năm, thanh toán qua mã QR đạt 311 triệu giao dịch. Cùng với đà tăng trưởng, Ngân hàng Nhà nước nhấn mạnh yêu cầu bảo đảm an toàn, bảo mật và bảo vệ người sử dụng.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://dantri.com.vn/rss/kinh-doanh.rss",
+        "publisher_host": "dantri.com.vn",
+        "publication_date_from_feed": true
+      }
+    },
     {
       "id": "article-market-rss-dd9e44c702e73f7ba3b1",
       "title": "Công an yêu cầu xác định giá trị quyền sử dụng bất động sản lớn ở TPHCM",
