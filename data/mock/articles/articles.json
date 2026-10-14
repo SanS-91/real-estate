@@ -1,9 +1,93 @@
 {
   "schema_version": 1,
-  "build_id": "market-news-rss-20261014T025139Z",
-  "generated_at": "2026-10-14T02:51:39.139565+00:00",
-  "record_count": 424,
+  "build_id": "market-news-rss-20261014T045201Z",
+  "generated_at": "2026-10-14T04:52:01.859173+00:00",
+  "record_count": 429,
   "data": [
+    {
+      "id": "article-market-rss-fdbc975acf25d39c5909",
+      "title": "Fed có thể không tăng lãi suất năm 2027",
+      "url": "https://vnexpress.net/fed-co-the-khong-tang-lai-suat-nam-2027-5132146.html",
+      "category": "macro",
+      "module_ids": [
+        "macro"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-10-14T04:15:24+00:00",
+      "source_id": "vnexpress-economy",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "Chủ tịch Fed New York John Williams cho rằng cơ quan này có thể chỉ cần nâng lãi suất thêm một lần nữa năm nay để hạ nhiệt lạm phát.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://vnexpress.net/rss/kinh-doanh.rss",
+        "publisher_host": "vnexpress.net",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-2027582bb087ceac966f",
+      "title": "TP HCM đề xuất mở rộng diện nhà ở được miễn giấy phép xây dựng",
+      "url": "https://vnexpress.net/tp-hcm-de-xuat-mo-rong-dien-nha-o-duoc-mien-giay-phep-xay-dung-5132047.html",
+      "category": "market",
+      "module_ids": [
+        "market"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-10-14T03:32:51+00:00",
+      "source_id": "vnexpress-real-estate",
+      "region_ids": [
+        "hcmc"
+      ],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [
+        "legal"
+      ],
+      "importance": 2,
+      "summary": "Sở Xây dựng TP HCM đề xuất miễn giấy phép xây dựng cho nhà ở riêng lẻ dưới 7 tầng, diện tích sàn dưới 500 m2 tại các khu vực có quy hoạch chi tiết hoặc quy chế quản lý kiến trúc được phê duyệt.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://vnexpress.net/rss/bat-dong-san.rss",
+        "publisher_host": "vnexpress.net",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-4043fa9b67439df8932d",
+      "title": "Vì sao giá nhà ở Hà Nội, TPHCM rất đắt đỏ, nhưng tỷ lệ sở hữu nhà lại cao?",
+      "url": "https://dantri.com.vn/bat-dong-san/vi-sao-gia-nha-o-ha-noi-tphcm-rat-dat-do-nhung-ty-le-so-huu-nha-lai-cao-20261014082446539.htm",
+      "category": "market",
+      "module_ids": [
+        "market"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-10-14T02:11:33+00:00",
+      "source_id": "dantri-real-estate",
+      "region_ids": [
+        "hcmc",
+        "ha-noi"
+      ],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [
+        "pricing"
+      ],
+      "importance": 2,
+      "summary": "(Dân trí) - Thị trường bất động sản có sự tồn tại song song của hai hiện tượng tưởng chừng mâu thuẫn: Giá nhà đô thị cực kỳ đắt đỏ so với thu nhập, nhưng tỷ lệ sở hữu nhà lại rất cao. Chuyên gia Huỳnh Thế Du lý giải vấn đề này như thế nào?",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://dantri.com.vn/rss/bat-dong-san.rss",
+        "publisher_host": "dantri.com.vn",
+        "publication_date_from_feed": true
+      }
+    },
     {
       "id": "article-market-rss-3a642f2b372e087a38ec",
       "title": "Hơn 15.000 km quốc lộ quá hạn sửa chữa định kỳ vì thiếu kinh phí",
@@ -28,6 +112,56 @@
         "method": "official-rss",
         "feed_url": "https://thanhnien.vn/rss/kinh-te/chinh-sach-phat-trien.rss",
         "publisher_host": "thanhnien.vn",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-e927aef4f010a770a40a",
+      "title": "Lãi suất neo cao, cách nào để doanh nghiệp giảm chi phí vốn?",
+      "url": "https://dantri.com.vn/kinh-doanh/lai-suat-neo-cao-cach-nao-de-doanh-nghiep-giam-chi-phi-von-20261013230807140.htm",
+      "category": "macro",
+      "module_ids": [
+        "macro"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-10-14T02:00:00+00:00",
+      "source_id": "dantri-business",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "(Dân trí) - Khi lãi suất cao, doanh nghiệp phải tính toán kỹ hơn đối với các khoản vay trung, dài hạn dựa trên triển vọng kinh doanh. Ngân hàng sẽ đồng hành để doanh nghiệp mở thêm kênh huy động vốn quốc tế...",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://dantri.com.vn/rss/kinh-doanh.rss",
+        "publisher_host": "dantri.com.vn",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-087a2af0c59eb0bd1bc3",
+      "title": "Xăng dầu đắt đỏ, nỗi lo lạm phát và bài toán lãi suất của Fed",
+      "url": "https://dantri.com.vn/kinh-doanh/xang-dau-dat-do-noi-lo-lam-phat-va-bai-toan-lai-suat-cua-fed-20261014080109746.htm",
+      "category": "macro",
+      "module_ids": [
+        "macro"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-10-14T01:59:30+00:00",
+      "source_id": "dantri-business",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "(Dân trí) - Giá xăng dầu leo thang đang đẩy chi phí sinh hoạt của người dân Mỹ tăng mạnh, khiến áp lực lạm phát quay lại và phủ bóng đen lên quyết định lãi suất sắp tới của Fed.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://dantri.com.vn/rss/kinh-doanh.rss",
+        "publisher_host": "dantri.com.vn",
         "publication_date_from_feed": true
       }
     },
