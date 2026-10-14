@@ -1,9 +1,243 @@
 {
   "schema_version": 1,
-  "build_id": "market-news-rss-20261013T160741Z",
-  "generated_at": "2026-10-13T16:07:41.091937+00:00",
-  "record_count": 407,
+  "build_id": "market-news-rss-20261014T005141Z",
+  "generated_at": "2026-10-14T00:51:41.861767+00:00",
+  "record_count": 419,
   "data": [
+    {
+      "id": "article-market-rss-503b8a6e595c0d562c1d",
+      "title": "Quan chức Fed: Tăng lãi suất một lần nữa trong năm nay là phù hợp",
+      "url": "https://dantri.com.vn/kinh-doanh/quan-chuc-fed-tang-lai-suat-mot-lan-nua-trong-nam-nay-la-phu-hop-20261014052818665.htm",
+      "category": "macro",
+      "module_ids": [
+        "macro"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-10-13T23:26:55+00:00",
+      "source_id": "dantri-business",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "(Dân trí) - Chủ tịch Fed New York John Williams cho rằng việc tăng lãi suất thêm một lần nữa trong năm nay là phù hợp, nhưng không cho rằng ngân hàng trung ương cần tăng lãi suất lần nữa vào năm 2027.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://dantri.com.vn/rss/kinh-doanh.rss",
+        "publisher_host": "dantri.com.vn",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-2ac41989894fe4491746",
+      "title": "5 thứ không nên đặt gần cửa sổ để tránh hỏng hóc và cháy nổ",
+      "url": "https://dantri.com.vn/bat-dong-san/5-thu-khong-nen-dat-gan-cua-so-de-tranh-hong-hoc-va-chay-no-20261013204503289.htm",
+      "category": "market",
+      "module_ids": [
+        "market"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-10-13T23:25:17+00:00",
+      "source_id": "dantri-real-estate",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "(Dân trí) - Bệ cửa sổ ngập nắng là góc trang trí yêu thích của nhiều gia đình. Dù vậy, đặt nhầm vài món quen thuộc có thể khiến đồ đạc nhanh hỏng và tiềm ẩn rủi ro cháy nổ bất ngờ.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://dantri.com.vn/rss/bat-dong-san.rss",
+        "publisher_host": "dantri.com.vn",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-52ff4a93cd4d8a845691",
+      "title": "UBS: Giá vàng có thể lùi về 4.000 USD rồi vọt lên 5.400 USD/ounce",
+      "url": "https://dantri.com.vn/kinh-doanh/ubs-gia-vang-co-the-lui-ve-4000-usd-roi-vot-len-5400-usdounce-20261013203010857.htm",
+      "category": "macro",
+      "module_ids": [
+        "macro"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-10-13T23:23:00+00:00",
+      "source_id": "dantri-business",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "(Dân trí) - Dù chịu sức ép giảm về vùng 4.000 USD/ounce trong ngắn hạn, giá vàng được UBS dự báo sẽ bước vào chu kỳ tăng tốc mạnh mẽ, chạm mốc 5.400 USD vào mùa thu năm 2027.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://dantri.com.vn/rss/kinh-doanh.rss",
+        "publisher_host": "dantri.com.vn",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-23e6c6827a927567d59e",
+      "title": "Lãnh đạo TPHCM lý giải nguyên nhân giá nhà hạ nhiệt",
+      "url": "https://dantri.com.vn/bat-dong-san/lanh-dao-tphcm-ly-giai-nguyen-nhan-gia-nha-ha-nhiet-20261013201334151.htm",
+      "category": "market",
+      "module_ids": [
+        "market"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-10-13T23:00:00+00:00",
+      "source_id": "dantri-real-estate",
+      "region_ids": [
+        "hcmc"
+      ],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [
+        "supply",
+        "pricing"
+      ],
+      "importance": 2,
+      "summary": "(Dân trí) - Chính sách tháo gỡ vướng mắc, thủ tục thông thoáng giúp nguồn cung tăng đã góp phần kéo mặt bằng giá nhà tại TPHCM hạ nhiệt.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://dantri.com.vn/rss/bat-dong-san.rss",
+        "publisher_host": "dantri.com.vn",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-0138a3493df9e3797f08",
+      "title": "Giá vàng trong nước, thế giới đồng loạt đi xuống",
+      "url": "https://dantri.com.vn/kinh-doanh/gia-vang-trong-nuoc-the-gioi-dong-loat-di-xuong-20261014010340259.htm",
+      "category": "macro",
+      "module_ids": [
+        "macro"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-10-13T23:00:00+00:00",
+      "source_id": "dantri-business",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "(Dân trí) - Giá vàng thế giới tiếp tục giảm. Trong nước, vàng miếng SJC có thời điểm giảm 800.000 đồng/lượng trước khi phục hồi.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://dantri.com.vn/rss/kinh-doanh.rss",
+        "publisher_host": "dantri.com.vn",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-c20300df4f5875859088",
+      "title": "Nên mua căn hộ tầng 5 hay tầng 30 khi giá bằng nhau?",
+      "url": "https://vnexpress.net/nen-mua-can-ho-tang-5-hay-tang-30-khi-gia-bang-nhau-5131775.html",
+      "category": "market",
+      "module_ids": [
+        "market"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-10-13T17:18:40+00:00",
+      "source_id": "vnexpress-real-estate",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [
+        "pricing"
+      ],
+      "importance": 2,
+      "summary": "Gia đình 5 người, gồm bố mẹ lớn tuổi và con nhỏ, đang cân nhắc giữa sự thuận tiện khi ở tầng thấp với độ thông thoáng, riêng tư của căn hộ tầng cao.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://vnexpress.net/rss/bat-dong-san.rss",
+        "publisher_host": "vnexpress.net",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-3f6fbe213edddbd6638e",
+      "title": "'Việt Nam có số căn hộ hàng hiệu nhiều thứ ba thế giới'",
+      "url": "https://vnexpress.net/viet-nam-co-so-can-ho-hang-hieu-nhieu-thu-ba-the-gioi-5131822.html",
+      "category": "market",
+      "module_ids": [
+        "market"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-10-13T17:03:45+00:00",
+      "source_id": "vnexpress-real-estate",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "Việt Nam có hơn 16.000 căn thuộc diện \"bất động sản hàng hiệu\" (gồm cả đã và đang hoàn thành) nhiều thứ ba thế giới, sau UAE và Mỹ, theo Global Branded Residences.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://vnexpress.net/rss/bat-dong-san.rss",
+        "publisher_host": "vnexpress.net",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-744813524ed0d8211925",
+      "title": "Chuyến bay đặc biệt kiểm tra hệ thống dẫn đường sân bay Long Thành",
+      "url": "https://vnexpress.net/chuyen-bay-dac-biet-kiem-tra-he-thong-dan-duong-san-bay-long-thanh-5131851.html",
+      "category": "infrastructure",
+      "module_ids": [
+        "infrastructure"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-10-13T17:00:00+00:00",
+      "source_id": "vnexpress-current-affairs",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [
+        "infrastructure"
+      ],
+      "importance": 2,
+      "summary": "Trong hai ngày 12-13/10, máy bay Beechcraft B300/B350 thực hiện các bài bay kiểm tra, hiệu chuẩn hệ thống dẫn đường và đèn tín hiệu tại sân bay Long Thành.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://vnexpress.net/rss/thoi-su.rss",
+        "publisher_host": "vnexpress.net",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-5ee6a53e333aa908606b",
+      "title": "Ngôi nhà đưa góc trưng bày xe cổ vào phòng khách",
+      "url": "https://vnexpress.net/ngoi-nha-dua-goc-trung-bay-xe-co-vao-phong-khach-5131183.html",
+      "category": "market",
+      "module_ids": [
+        "market"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-10-13T17:00:00+00:00",
+      "source_id": "vnexpress-real-estate",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "Để thỏa đam mê sưu tầm xe cổ của chủ nhà, kiến trúc sư thiết kế đường dẫn đưa ôtô vào thẳng phòng khách, làm điểm nhấn cho toàn bộ không gian sống.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://vnexpress.net/rss/bat-dong-san.rss",
+        "publisher_host": "vnexpress.net",
+        "publication_date_from_feed": true
+      }
+    },
     {
       "id": "article-market-rss-6f187013a32797e6bdcd",
       "title": "Trước thềm VIS 2026: Đối thoại Việt Nam - quốc tế, nâng cao năng lực định chuẩn",
@@ -57,6 +291,60 @@
       }
     },
     {
+      "id": "article-market-rss-5553d4da9d18adffabbc",
+      "title": "Duyệt dự án 1.730 tỷ đồng nối cao tốc vào đại lộ Đông Tây",
+      "url": "https://dantri.com.vn/thoi-su/duyet-du-an-1730-ty-dong-noi-cao-toc-vao-dai-lo-dong-tay-20261013191940515.htm",
+      "category": "market",
+      "module_ids": [
+        "market",
+        "infrastructure"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-10-13T13:48:25+00:00",
+      "source_id": "dantri-current-affairs",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [
+        "infrastructure"
+      ],
+      "importance": 2,
+      "summary": "(Dân trí) - Tuyến đường dài khoảng 5km có tổng vốn đầu tư 1.730 tỷ đồng, được kỳ vọng kết nối đồng bộ cao tốc Khánh Hòa - Buôn Ma Thuột với mạng lưới giao thông đô thị tỉnh Đắk Lắk.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://dantri.com.vn/rss/thoi-su.rss",
+        "publisher_host": "dantri.com.vn",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-31e3299ee2066dec26b9",
+      "title": "Bộ Công an khởi công dự án nhà ở xã hội 24 tầng ở Gia Lai",
+      "url": "https://dantri.com.vn/thoi-su/bo-cong-an-khoi-cong-du-an-nha-o-xa-hoi-24-tang-o-gia-lai-20261013202322590.htm",
+      "category": "market",
+      "module_ids": [
+        "market",
+        "infrastructure"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-10-13T13:44:45+00:00",
+      "source_id": "dantri-current-affairs",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "(Dân trí) - Dự án nhà ở cho lực lượng vũ trang Công an nhân dân tại phường Quy Nhơn (Gia Lai) có quy mô 24 tầng nổi với 419 căn hộ, góp phần giải quyết nhu cầu nhà ở của cán bộ, chiến sĩ công an.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://dantri.com.vn/rss/thoi-su.rss",
+        "publisher_host": "dantri.com.vn",
+        "publication_date_from_feed": true
+      }
+    },
+    {
       "id": "article-market-rss-aaee0056f0dd91a057bc",
       "title": "Sếp ngân hàng nói về biến động tỷ giá và dự báo mới nhất",
       "url": "https://dantri.com.vn/dt360/sep-ngan-hang-noi-ve-bien-dong-ty-gia-va-du-bao-moi-nhat-20261013105535032.htm",
@@ -77,6 +365,33 @@
       "source_verification": {
         "method": "official-rss",
         "feed_url": "https://dantri.com.vn/rss/kinh-doanh.rss",
+        "publisher_host": "dantri.com.vn",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-e01aa426b2ced4f89018",
+      "title": "Thủ tướng kiểm tra dự án chống ngập 10.000 tỷ đồng ở TPHCM",
+      "url": "https://dantri.com.vn/thoi-su/thu-tuong-kiem-tra-du-an-chong-ngap-10000-ty-dong-o-tphcm-20261013192638452.htm",
+      "category": "market",
+      "module_ids": [
+        "market"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-10-13T13:26:18+00:00",
+      "source_id": "dantri-current-affairs",
+      "region_ids": [
+        "hcmc"
+      ],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "(Dân trí) - Thủ tướng Lê Minh Hưng kiểm tra 2 dự án chống ngập trọng điểm tại TPHCM, trong đó dự án chống ngập do triều đạt hơn 95% tiến độ, đặt mục tiêu hoàn thành vào tháng 11.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://dantri.com.vn/rss/thoi-su.rss",
         "publisher_host": "dantri.com.vn",
         "publication_date_from_feed": true
       }
