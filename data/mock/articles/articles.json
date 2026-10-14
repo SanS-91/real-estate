@@ -1,9 +1,34 @@
 {
   "schema_version": 1,
-  "build_id": "market-news-rss-20261014T045201Z",
-  "generated_at": "2026-10-14T04:52:01.859173+00:00",
-  "record_count": 429,
+  "build_id": "market-news-rss-20261014T050403Z",
+  "generated_at": "2026-10-14T05:04:03.569389+00:00",
+  "record_count": 433,
   "data": [
+    {
+      "id": "article-market-rss-2b27d698720cd5ba5bc1",
+      "title": "Capital Square kết hợp không gian sống và thương mại bên sông Hàn",
+      "url": "https://vnexpress.net/capital-square-ket-hop-khong-gian-song-va-thuong-mai-ben-song-han-5131755.html",
+      "category": "market",
+      "module_ids": [
+        "market"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-10-14T04:30:00+00:00",
+      "source_id": "vnexpress-real-estate",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "Capital Square phát triển mô hình đô thị tích hợp tại trung tâm Đà Nẵng, kết hợp căn hộ, thương mại, giải trí và tiện ích cộng đồng trong cùng tổ hợp ven sông Hàn.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://vnexpress.net/rss/bat-dong-san.rss",
+        "publisher_host": "vnexpress.net",
+        "publication_date_from_feed": true
+      }
+    },
     {
       "id": "article-market-rss-fdbc975acf25d39c5909",
       "title": "Fed có thể không tăng lãi suất năm 2027",
@@ -25,6 +50,84 @@
       "source_verification": {
         "method": "official-rss",
         "feed_url": "https://vnexpress.net/rss/kinh-doanh.rss",
+        "publisher_host": "vnexpress.net",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-f4b9383b239daa424110",
+      "title": "Giá bất động sản giảm đến 20% trong quý III",
+      "url": "https://vnexpress.net/gia-bat-dong-san-giam-den-20-trong-quy-iii-5132076.html",
+      "category": "market",
+      "module_ids": [
+        "market"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-10-14T04:12:55+00:00",
+      "source_id": "vnexpress-real-estate",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "Giá bất động sản quý III giảm 5-20% tại nhiều khu vực, khi một số dự án mới điều chỉnh xuống thấp hơn mặt bằng khu vực, theo DXS-FERI.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://vnexpress.net/rss/bat-dong-san.rss",
+        "publisher_host": "vnexpress.net",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-e48316c3087893b6ecb1",
+      "title": "Sun Group sắp làm dự án du lịch 16.000 tỷ đồng ở Quảng Trị",
+      "url": "https://vnexpress.net/sun-group-sap-lam-du-an-du-lich-16-000-ty-dong-o-quang-tri-5132081.html",
+      "category": "market",
+      "module_ids": [
+        "market",
+        "infrastructure"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-10-14T04:09:43+00:00",
+      "source_id": "vnexpress-real-estate",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "Quần thể du lịch sinh thái vui chơi giải trí núi U Bò - hồ Thác Chuối hơn 167 ha dự kiến được khởi công vào cuối tháng này.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://vnexpress.net/rss/bat-dong-san.rss",
+        "publisher_host": "vnexpress.net",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-7de3e245885c86a64f15",
+      "title": "Sân bay Gia Bình nâng cấp hạ tầng cho APEC 2027",
+      "url": "https://vnexpress.net/san-bay-gia-binh-nang-cap-ha-tang-cho-apec-2027-5132120.html",
+      "category": "market",
+      "module_ids": [
+        "infrastructure"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-10-14T04:00:00+00:00",
+      "source_id": "vnexpress-real-estate",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [
+        "infrastructure"
+      ],
+      "importance": 2,
+      "summary": "Để chuẩn bị cho APEC 2027, sân bay Gia Bình đẩy nhanh xây dựng hạ tầng, ứng dụng công nghệ, AI, tuyển dụng, đào tạo nhân sự, hợp tác quốc tế, nhằm xây dựng hệ sinh thái hàng không hiện đại.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://vnexpress.net/rss/bat-dong-san.rss",
         "publisher_host": "vnexpress.net",
         "publication_date_from_feed": true
       }
