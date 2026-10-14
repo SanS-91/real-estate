@@ -1,9 +1,138 @@
 {
   "schema_version": 1,
-  "build_id": "market-news-rss-20261014T005141Z",
-  "generated_at": "2026-10-14T00:51:41.861767+00:00",
-  "record_count": 419,
+  "build_id": "market-news-rss-20261014T025139Z",
+  "generated_at": "2026-10-14T02:51:39.139565+00:00",
+  "record_count": 424,
   "data": [
+    {
+      "id": "article-market-rss-3a642f2b372e087a38ec",
+      "title": "Hơn 15.000 km quốc lộ quá hạn sửa chữa định kỳ vì thiếu kinh phí",
+      "url": "https://thanhnien.vn/hon-15000-km-quoc-lo-qua-han-sua-chua-dinh-ky-vi-thieu-kinh-phi-185261014085836127.htm",
+      "category": "infrastructure",
+      "module_ids": [
+        "infrastructure"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-10-14T02:02:00+00:00",
+      "source_id": "thanhnien-policy",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [
+        "infrastructure"
+      ],
+      "importance": 2,
+      "summary": "Hơn 60% tổng chiều dài hệ thống quốc lộ, tương đương hơn 15.000 km, đã quá thời hạn sửa chữa định kỳ nhưng chưa được triển khai do hạn chế về kinh phí.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://thanhnien.vn/rss/kinh-te/chinh-sach-phat-trien.rss",
+        "publisher_host": "thanhnien.vn",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-3e56bd71d56533e9103a",
+      "title": "Giá vàng hôm nay 14.10.2026: Lỗ 5 triệu đồng/lượng trong vòng một tháng",
+      "url": "https://thanhnien.vn/gia-vang-hom-nay-14102026-lo-5-trieu-dong-luong-trong-vong-mot-thang-185261014083624054.htm",
+      "category": "macro",
+      "module_ids": [
+        "macro"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-10-14T01:49:00+00:00",
+      "source_id": "thanhnien-banking",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "Những người nắm giữ vàng trong vòng một tháng trở lại đây đã lỗ 5 triệu đồng mỗi lượng. Vàng trong nước duy trì mức đắt hơn thế giới 13,2 triệu đồng/lượng.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://thanhnien.vn/rss/kinh-te/ngan-hang.rss",
+        "publisher_host": "thanhnien.vn",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-c1abefd7e43965a9f53b",
+      "title": "Hoàn thành bay hiệu chuẩn hệ thống dẫn đường tại sân bay Long Thành.",
+      "url": "https://dantri.com.vn/thoi-su/hoan-thanh-bay-hieu-chuan-he-thong-dan-duong-tai-san-bay-long-thanh-20261014064405092.htm",
+      "category": "infrastructure",
+      "module_ids": [
+        "infrastructure"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-10-14T00:38:37+00:00",
+      "source_id": "dantri-current-affairs",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [
+        "infrastructure"
+      ],
+      "importance": 2,
+      "summary": "(Dân trí) - Sân bay Long Thành vừa phối hợp các đơn vị liên quan thực hiện hoàn thành các bài bay kiểm tra, hiệu chuẩn hệ thống dẫn đường và đèn tín hiệu, không phát sinh tình huống bất thường.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://dantri.com.vn/rss/thoi-su.rss",
+        "publisher_host": "dantri.com.vn",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-3f79d642bfc7263b6722",
+      "title": "Nguyên nhân lãi suất neo cao, khó giảm mạnh từ nay tới cuối năm",
+      "url": "https://dantri.com.vn/kinh-doanh/nguyen-nhan-lai-suat-neo-cao-kho-giam-manh-tu-nay-toi-cuoi-nam-20261013224559166.htm",
+      "category": "macro",
+      "module_ids": [
+        "macro"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-10-14T00:00:00+00:00",
+      "source_id": "dantri-business",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "(Dân trí) - Mặt bằng lãi suất đang chịu sức ép duy trì ở mức cao hoặc nhích tăng cục bộ, thay vì có dư địa giảm trong thời gian gần. Chuyên gia nêu các kịch bản ứng phó cho doanh nghiệp.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://dantri.com.vn/rss/kinh-doanh.rss",
+        "publisher_host": "dantri.com.vn",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-a602a4ea8e3a669ae290",
+      "title": "Quên sofa da đắt đỏ, loại vải công nghệ này vừa bền vừa khó bám bẩn",
+      "url": "https://dantri.com.vn/bat-dong-san/quen-sofa-da-dat-do-loai-vai-cong-nghe-nay-vua-ben-vua-kho-bam-ban-20261013201739220.htm",
+      "category": "market",
+      "module_ids": [
+        "market"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-10-13T23:30:00+00:00",
+      "source_id": "dantri-real-estate",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "(Dân trí) - Sở hữu độ bền ấn tượng cùng khả năng chống thấm nước và kháng khuẩn, dòng vải công nghệ mới đang trở thành giải pháp thay thế sofa da lý tưởng cho không gian sống hiện đại.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://dantri.com.vn/rss/bat-dong-san.rss",
+        "publisher_host": "dantri.com.vn",
+        "publication_date_from_feed": true
+      }
+    },
     {
       "id": "article-market-rss-503b8a6e595c0d562c1d",
       "title": "Quan chức Fed: Tăng lãi suất một lần nữa trong năm nay là phù hợp",
