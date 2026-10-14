@@ -1,9 +1,61 @@
 {
   "schema_version": 1,
-  "build_id": "market-verified-official-news-20261014T075502Z",
-  "generated_at": "2026-10-14T07:55:02.308666+00:00",
-  "record_count": 436,
+  "build_id": "market-news-rss-20261014T085116Z",
+  "generated_at": "2026-10-14T08:51:16.840343+00:00",
+  "record_count": 438,
   "data": [
+    {
+      "id": "article-market-rss-30166dd676faabb24465",
+      "title": "Hệ tiện ích đa tầng theo phong cách nghỉ dưỡng tại Bechtro Tower",
+      "url": "https://vnexpress.net/he-tien-ich-da-tang-theo-phong-cach-nghi-duong-tai-bechtro-tower-5132291.html",
+      "category": "market",
+      "module_ids": [
+        "market"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-10-14T08:15:00+00:00",
+      "source_id": "vnexpress-real-estate",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "Sun Property kết hợp Kume Design Asia (KDA) phát triển căn hộ biển Beachtro Tower theo mô hình nghỉ dưỡng với hệ tiện ích đặc quyền \"Tro Collection\".",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://vnexpress.net/rss/bat-dong-san.rss",
+        "publisher_host": "vnexpress.net",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-1efe8fb92e20d6aebb3c",
+      "title": "Dự án nhà ở xã hội Long Trường nhận hồ sơ mua từ tháng 11",
+      "url": "https://vnexpress.net/du-an-nha-o-xa-hoi-long-truong-nhan-ho-so-mua-tu-thang-11-5132167.html",
+      "category": "market",
+      "module_ids": [
+        "market"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-10-14T07:23:46+00:00",
+      "source_id": "vnexpress-real-estate",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [
+        "pricing"
+      ],
+      "importance": 2,
+      "summary": "Dự án nhà ở xã hội tại phường Long Trường của chủ đầu tư Điền Phước Thành dự kiến nhận hồ sơ mua, thuê từ ngày 12/11 đến 14/12 với giá bán gần 24,5 triệu đồng mỗi m2.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://vnexpress.net/rss/bat-dong-san.rss",
+        "publisher_host": "vnexpress.net",
+        "publication_date_from_feed": true
+      }
+    },
     {
       "id": "article-market-rss-cffca62b12215ac83f95",
       "title": "Lãi suất gửi tiết kiệm tăng cao, nhiều nhà đầu tư rời bỏ chứng khoán?",
