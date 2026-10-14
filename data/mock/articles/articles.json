@@ -1,8 +1,8 @@
 {
   "schema_version": 1,
-  "build_id": "market-news-rss-20261014T105125Z",
-  "generated_at": "2026-10-14T10:51:25.438279+00:00",
-  "record_count": 445,
+  "build_id": "market-news-rss-20261014T120718Z",
+  "generated_at": "2026-10-14T12:07:18.052183+00:00",
+  "record_count": 447,
   "data": [
     {
       "id": "article-market-rss-dd9e44c702e73f7ba3b1",
@@ -32,6 +32,35 @@
       }
     },
     {
+      "id": "article-market-rss-83c33b0729d9f30c828b",
+      "title": "Ocean City trước những cột mốc mới",
+      "url": "https://dantri.com.vn/bat-dong-san/ocean-city-truoc-nhung-cot-moc-moi-20261014154844588.htm",
+      "category": "market",
+      "module_ids": [
+        "market"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-10-14T09:12:33+00:00",
+      "source_id": "dantri-real-estate",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [
+        "vinhomes"
+      ],
+      "tags": [
+        "legal"
+      ],
+      "importance": 2,
+      "summary": "(Dân trí) - Quy hoạch Hưng Yên thời kỳ 2021-2030 đặt tỉnh vào vị trí trung tâm Vùng Thủ đô, đồng thời mở rộng không gian phát triển công nghiệp, logistics và đô thị, trong khi Nghĩa Trụ - nơi tọa lạc Vinhomes Ocean Park 2 - dự kiến lên phường trong năm 2026.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://dantri.com.vn/rss/bat-dong-san.rss",
+        "publisher_host": "dantri.com.vn",
+        "publication_date_from_feed": true
+      }
+    },
+    {
       "id": "article-market-rss-fdb47d01f950c06e5d8f",
       "title": "HDBank dành 2.000 tỷ đồng cho doanh nghiệp nữ chủ, lãi suất từ 7,8%/năm đến hết quý I/2027",
       "url": "https://dantri.com.vn/kinh-doanh/hdbank-danh-2000-ty-dong-cho-doanh-nghiep-nu-chu-lai-suat-tu-78nam-den-het-quy-i2027-20261014155844648.htm",
@@ -52,6 +81,31 @@
       "source_verification": {
         "method": "official-rss",
         "feed_url": "https://dantri.com.vn/rss/kinh-doanh.rss",
+        "publisher_host": "dantri.com.vn",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-320d1a59e69e125ff0e7",
+      "title": "Liền kề Vịnh Mây: Bài toán dòng tiền và chính sách ưu đãi lãi suất tới 5 năm",
+      "url": "https://dantri.com.vn/bat-dong-san/lien-ke-vinh-may-bai-toan-dong-tien-va-chinh-sach-uu-dai-lai-suat-toi-5-nam-20261014152545155.htm",
+      "category": "market",
+      "module_ids": [
+        "macro"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-10-14T08:38:48+00:00",
+      "source_id": "dantri-real-estate",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "(Dân trí) - Tại Vịnh Mây, dòng liền kề Bayfront Collection kết nối với hệ tiện ích nghỉ dưỡng ven vịnh, mở ra phương án vừa sử dụng cho gia đình, vừa khai thác lưu trú khi chủ nhân vắng nhà.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://dantri.com.vn/rss/bat-dong-san.rss",
         "publisher_host": "dantri.com.vn",
         "publication_date_from_feed": true
       }
