@@ -1,16 +1,16 @@
 {
   "schema_version": 1,
-  "checked_at": "2026-10-15T10:51:51.610257+00:00",
+  "checked_at": "2026-10-15T11:44:06.420004+00:00",
   "feeds_configured": 16,
-  "feeds_fetched": 15,
-  "accepted_new": 6,
+  "feeds_fetched": 16,
+  "accepted_new": 2,
   "production_written": true,
-  "article_total": 490,
+  "article_total": 492,
   "published_by_module": {
     "market": 2,
     "legal": 0,
-    "infrastructure": 3,
-    "macro": 1
+    "infrastructure": 1,
+    "macro": 0
   },
   "feed_status": [
     {
@@ -35,9 +35,9 @@
       "source_id": "dantri-real-estate",
       "status": "parsed",
       "feed_items": 50,
-      "new": 1,
-      "skipped": 49,
-      "duplicates": 49,
+      "new": 2,
+      "skipped": 48,
+      "duplicates": 48,
       "filtered": 0
     },
     {
@@ -53,9 +53,9 @@
       "source_id": "vnexpress-current-affairs",
       "status": "parsed",
       "feed_items": 50,
-      "new": 2,
-      "skipped": 48,
-      "duplicates": 4,
+      "new": 0,
+      "skipped": 50,
+      "duplicates": 6,
       "filtered": 44
     },
     {
@@ -78,7 +78,12 @@
     },
     {
       "source_id": "tuoitre-current-affairs",
-      "status": "fetch-error"
+      "status": "parsed",
+      "feed_items": 50,
+      "new": 0,
+      "skipped": 50,
+      "duplicates": 0,
+      "filtered": 50
     },
     {
       "source_id": "tuoitre-legal",
@@ -93,18 +98,18 @@
       "source_id": "dantri-business",
       "status": "parsed",
       "feed_items": 50,
-      "new": 2,
-      "skipped": 48,
-      "duplicates": 10,
+      "new": 0,
+      "skipped": 50,
+      "duplicates": 12,
       "filtered": 38
     },
     {
       "source_id": "dantri-current-affairs",
       "status": "parsed",
       "feed_items": 50,
-      "new": 1,
-      "skipped": 49,
-      "duplicates": 10,
+      "new": 0,
+      "skipped": 50,
+      "duplicates": 11,
       "filtered": 39
     },
     {
@@ -153,10 +158,5 @@
       "filtered": 39
     }
   ],
-  "fetch_errors": [
-    {
-      "source_id": "tuoitre-current-affairs",
-      "error": "ConnectionError"
-    }
-  ]
+  "fetch_errors": []
 }
