@@ -1,9 +1,64 @@
 {
   "schema_version": 1,
-  "build_id": "market-news-rss-20261015T025204Z",
-  "generated_at": "2026-10-15T02:52:04.679282+00:00",
-  "record_count": 459,
+  "build_id": "market-news-rss-20261015T045115Z",
+  "generated_at": "2026-10-15T04:51:15.440770+00:00",
+  "record_count": 465,
   "data": [
+    {
+      "id": "article-market-rss-60e51f6a01ca1707221d",
+      "title": "FPT rót 1.300 tỷ đồng xây tòa nhà công nghệ số tại phía tây Hà Nội",
+      "url": "https://vnexpress.net/fpt-rot-1-300-ty-dong-xay-toa-nha-cong-nghe-so-tai-phia-tay-ha-noi-5132552.html",
+      "category": "market",
+      "module_ids": [
+        "market",
+        "infrastructure"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-10-15T04:19:18+00:00",
+      "source_id": "vnexpress-real-estate",
+      "region_ids": [
+        "ha-noi"
+      ],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "Sáng 15/10, Tập đoàn FPT khởi công tòa nhà làm việc cho 6.000 nhân sự công nghệ, hạng mục đầu tiên thuộc dự án khu đô thị công viên công nghệ số ở phía tây Hà Nội.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://vnexpress.net/rss/bat-dong-san.rss",
+        "publisher_host": "vnexpress.net",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-1bf04c798180883ef1a5",
+      "title": "Hà Nội yêu cầu gắn thu hồi đất với chuyển đổi nghề, bảo đảm sinh kế",
+      "url": "https://thanhnien.vn/ha-noi-yeu-cau-gan-thu-hoi-dat-voi-chuyen-doi-nghe-bao-dam-sinh-ke-185261015110557781.htm",
+      "category": "legal",
+      "module_ids": [
+        "legal"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-10-15T03:57:00+00:00",
+      "source_id": "thanhnien-policy",
+      "region_ids": [
+        "ha-noi"
+      ],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "Chủ tịch UBND thành phố Hà Nội Vũ Đại Thắng yêu cầu các địa phương khi triển khai dự án phải tính toán cụ thể việc làm, thu nhập của người dân sau thu hồi đất, đồng thời đẩy mạnh đào tạo nghề gắn với nhu cầu tuyển dụng thực tế.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://thanhnien.vn/rss/kinh-te/chinh-sach-phat-trien.rss",
+        "publisher_host": "thanhnien.vn",
+        "publication_date_from_feed": true
+      }
+    },
     {
       "id": "article-market-rss-5c7b6592db22899c7c44",
       "title": "Giá vàng hôm nay 15.10.2026: Tiếp tục đứng yên khiến người mua lỗ ngay 3 triệu đồng",
@@ -30,6 +85,87 @@
       }
     },
     {
+      "id": "article-market-rss-b6e667c37b04c617fdac",
+      "title": "Lập quy hoạch chi tiết Cảng hàng không quốc tế Ninh Bình",
+      "url": "https://dantri.com.vn/thoi-su/lap-quy-hoach-chi-tiet-cang-hang-khong-quoc-te-ninh-binh-20261015073336725.htm",
+      "category": "market",
+      "module_ids": [
+        "market"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-10-15T01:16:40+00:00",
+      "source_id": "dantri-current-affairs",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [
+        "legal"
+      ],
+      "importance": 2,
+      "summary": "(Dân trí) - Cục Hàng không Việt Nam được Bộ Xây dựng giao xây dựng đề cương, dự toán chi phí lập quy hoạch chi tiết các cảng hàng không được bổ sung quy hoạch, trong đó có Cảng hàng không quốc tế Ninh Bình.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://dantri.com.vn/rss/thoi-su.rss",
+        "publisher_host": "dantri.com.vn",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-6f427f4ecfaf6b98342a",
+      "title": "The Wellness Van Phuc: An tâm hơn khi nhà gần bệnh viện",
+      "url": "https://dantri.com.vn/bat-dong-san/the-wellness-van-phuc-an-tam-hon-khi-nha-gan-benh-vien-20261014111419725.htm",
+      "category": "market",
+      "module_ids": [
+        "market"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-10-15T01:00:00+00:00",
+      "source_id": "dantri-real-estate",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "(Dân trí) - Có những cuộc gọi khiến cả nhà đứng ngồi không yên: cha đau ngực, mẹ chóng mặt, ông bà có dấu hiệu bất thường giữa đêm. Khi ấy, điều quý nhất là có thể nhanh chóng đến được nơi cần thiết.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://dantri.com.vn/rss/bat-dong-san.rss",
+        "publisher_host": "dantri.com.vn",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-1968c88de4c811e6c663",
+      "title": "Norton Park in Sync: Cuối tuần khám phá thế giới đa giác quan giữa TPHCM",
+      "url": "https://dantri.com.vn/bat-dong-san/norton-park-in-sync-cuoi-tuan-kham-pha-the-gioi-da-giac-quan-giua-tphcm-20261014191033644.htm",
+      "category": "market",
+      "module_ids": [
+        "market"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-10-15T01:00:00+00:00",
+      "source_id": "dantri-real-estate",
+      "region_ids": [
+        "hcmc"
+      ],
+      "project_ids": [],
+      "developer_ids": [
+        "gamuda-land"
+      ],
+      "tags": [],
+      "importance": 2,
+      "summary": "(Dân trí) - Vào hai ngày cuối tuần 17-18/10, Gamuda Land tổ chức Norton Park in Sync - sự kiện cộng đồng mở cửa tự do với nhiều trải nghiệm, từ không gian immersive đa giác quan, trò chơi tương tác dành cho gia đình đến đêm nhạc acoustic giữa lòng TPHCM.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://dantri.com.vn/rss/bat-dong-san.rss",
+        "publisher_host": "dantri.com.vn",
+        "publication_date_from_feed": true
+      }
+    },
+    {
       "id": "article-market-rss-0d5241610735f9e70325",
       "title": "The Wellness Van Phuc đưa yếu tố sức khỏe vào lựa chọn an cư",
       "url": "https://vnexpress.net/the-wellness-van-phuc-dua-yeu-to-suc-khoe-vao-lua-chon-an-cu-5132264.html",
@@ -51,6 +187,31 @@
         "method": "official-rss",
         "feed_url": "https://vnexpress.net/rss/bat-dong-san.rss",
         "publisher_host": "vnexpress.net",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-2ad71a3f0d63bd3beecb",
+      "title": "Bao lâu nên giặt ga trải giường một lần để phòng ngủ luôn sạch khuẩn?",
+      "url": "https://dantri.com.vn/bat-dong-san/bao-lau-nen-giat-ga-trai-giuong-mot-lan-de-phong-ngu-luon-sach-khuan-20261014222857154.htm",
+      "category": "market",
+      "module_ids": [
+        "market"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-10-15T00:50:00+00:00",
+      "source_id": "dantri-real-estate",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "(Dân trí) - Chiếc giường êm ái có thể tích tụ gần 100 lít mồ hôi mỗi năm cùng vô số vi khuẩn. Nắm rõ lịch giặt ga giường đúng cách sẽ giúp bạn ngủ ngon hơn và bảo vệ sức khỏe cả nhà.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://dantri.com.vn/rss/bat-dong-san.rss",
+        "publisher_host": "dantri.com.vn",
         "publication_date_from_feed": true
       }
     },
