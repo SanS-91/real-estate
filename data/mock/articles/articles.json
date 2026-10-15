@@ -1,9 +1,111 @@
 {
   "schema_version": 1,
-  "build_id": "market-news-rss-20261015T085138Z",
-  "generated_at": "2026-10-15T08:51:38.913270+00:00",
-  "record_count": 484,
+  "build_id": "market-news-rss-20261015T105151Z",
+  "generated_at": "2026-10-15T10:51:51.610257+00:00",
+  "record_count": 490,
   "data": [
+    {
+      "id": "article-market-rss-51812f8d8f6b60c39295",
+      "title": "Đèo Lộ Diêu ven biển Gia Lai thông xe",
+      "url": "https://vnexpress.net/deo-lo-dieu-ven-bien-gia-lai-thong-xe-5132715.html",
+      "category": "infrastructure",
+      "module_ids": [
+        "infrastructure"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-10-15T09:34:07+00:00",
+      "source_id": "vnexpress-current-affairs",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "Cung đèo Lộ Diêu dài 4,5 km, vốn đầu tư 204 tỷ đồng, được đưa vào khai thác ngày 15/10 sau khi hoàn thiện hệ thống an toàn giao thông.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://vnexpress.net/rss/thoi-su.rss",
+        "publisher_host": "vnexpress.net",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-02bb5263fbbcc1281258",
+      "title": "Cầu vượt Phạm Tu - đường 70 lộ rõ hình hài",
+      "url": "https://dantri.com.vn/dt360/cau-vuot-pham-tu-duong-70-lo-ro-hinh-hai-20261015145822599.htm",
+      "category": "infrastructure",
+      "module_ids": [
+        "infrastructure"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-10-15T08:50:15+00:00",
+      "source_id": "dantri-current-affairs",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "(Dân trí) - Sau nhiều năm đình trệ, cầu vượt Phạm Tu - đường 70 dần thành hình, tăng tốc thi công để về đích năm 2026, kỳ vọng giảm ùn tắc giao thông khu vực Xa La, Nguyễn Xiển và Phúc La.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://dantri.com.vn/rss/thoi-su.rss",
+        "publisher_host": "dantri.com.vn",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-81d4c44958997785064c",
+      "title": "Hàn Quốc đầu tư gần 470 dự án vào Đồng Nai, tổng vốn 8,37 tỷ USD",
+      "url": "https://dantri.com.vn/kinh-doanh/han-quoc-dau-tu-gan-470-du-an-vao-dong-nai-tong-von-837-ty-usd-20261015142555328.htm",
+      "category": "market",
+      "module_ids": [
+        "market"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-10-15T08:50:05+00:00",
+      "source_id": "dantri-business",
+      "region_ids": [
+        "dong-nai"
+      ],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "(Dân trí) - Hàn Quốc là đối tác đầu tư lớn nhất của TP Đồng Nai với 469 dự án còn hiệu lực, tổng vốn đăng ký hơn 8,37 tỷ USD vào các ngành điện tử, kho vận, sản xuất, linh kiện, phụ tùng và các lĩnh vực khác.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://dantri.com.vn/rss/kinh-doanh.rss",
+        "publisher_host": "dantri.com.vn",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-977ee3c2056214dd1f34",
+      "title": "Bộ Xây dựng thông tin tiến độ hơn 910.000 căn nhà ở xã hội trên cả nước",
+      "url": "https://dantri.com.vn/bat-dong-san/bo-xay-dung-thong-tin-tien-do-hon-910000-can-nha-o-xa-hoi-tren-ca-nuoc-20261015154236153.htm",
+      "category": "market",
+      "module_ids": [
+        "market"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-10-15T08:47:50+00:00",
+      "source_id": "dantri-real-estate",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "(Dân trí) - Theo Bộ Xây dựng, cả nước có 947 dự án nhà ở xã hội với quy mô hơn 910.000 căn ở các giai đoạn triển khai. Trong đó, hơn 216.000 căn đã hoàn thành, hơn 363.000 căn đang xây dựng.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://dantri.com.vn/rss/bat-dong-san.rss",
+        "publisher_host": "dantri.com.vn",
+        "publication_date_from_feed": true
+      }
+    },
     {
       "id": "article-market-rss-1c1a8061d55c75f03d1c",
       "title": "Hodeco được chuyển hơn 4.000 m2 đất nông nghiệp làm khu nhà ở",
@@ -28,6 +130,58 @@
         "method": "official-rss",
         "feed_url": "https://vnexpress.net/rss/bat-dong-san.rss",
         "publisher_host": "vnexpress.net",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-237afd527ab493385a82",
+      "title": "Sân bay Quảng Trị hoàn thiện 80%, bắt đầu bay kỹ thuật",
+      "url": "https://vnexpress.net/san-bay-quang-tri-hoan-thien-80-bat-dau-bay-ky-thuat-5132639.html",
+      "category": "infrastructure",
+      "module_ids": [
+        "infrastructure"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-10-15T08:23:33+00:00",
+      "source_id": "vnexpress-current-affairs",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [
+        "infrastructure"
+      ],
+      "importance": 2,
+      "summary": "Sau hai năm thi công, cảng hàng không Quảng Trị thực hiện chuyến bay kỹ thuật đầu tiên ngày 15/10, chuẩn bị khai thác thương mại vào tháng 3/2027.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://vnexpress.net/rss/thoi-su.rss",
+        "publisher_host": "vnexpress.net",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-cd6e473f707ebcbf6eec",
+      "title": "Giá USD cao nhất 18 tháng, chuyên gia nêu dự báo tỷ giá tại Việt Nam",
+      "url": "https://dantri.com.vn/kinh-doanh/gia-usd-cao-nhat-18-thang-chuyen-gia-neu-du-bao-ty-gia-tai-viet-nam-20261015145034733.htm",
+      "category": "macro",
+      "module_ids": [
+        "macro"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-10-15T08:21:45+00:00",
+      "source_id": "dantri-business",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "(Dân trí) - Dù đồng USD quốc tế tăng giá gây sức ép nhưng tỷ giá tại Việt Nam phụ thuộc nhiều hơn vào cung cầu ngoại tệ, mức chênh lệch mặt bằng lãi suất giữa USD-VND, chính sách của Ngân hàng Nhà nước.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://dantri.com.vn/rss/kinh-doanh.rss",
+        "publisher_host": "dantri.com.vn",
         "publication_date_from_feed": true
       }
     },
