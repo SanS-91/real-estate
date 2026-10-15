@@ -1,9 +1,141 @@
 {
   "schema_version": 1,
-  "build_id": "market-news-rss-20261015T065132Z",
-  "generated_at": "2026-10-15T06:51:32.473665+00:00",
-  "record_count": 476,
+  "build_id": "market-news-rss-20261015T085138Z",
+  "generated_at": "2026-10-15T08:51:38.913270+00:00",
+  "record_count": 484,
   "data": [
+    {
+      "id": "article-market-rss-1c1a8061d55c75f03d1c",
+      "title": "Hodeco được chuyển hơn 4.000 m2 đất nông nghiệp làm khu nhà ở",
+      "url": "https://vnexpress.net/hodeco-duoc-chuyen-hon-4-000-m2-dat-nong-nghiep-lam-khu-nha-o-5132723.html",
+      "category": "market",
+      "module_ids": [
+        "market"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-10-15T08:42:39+00:00",
+      "source_id": "vnexpress-real-estate",
+      "region_ids": [
+        "hcmc"
+      ],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "TP HCM cho phép Hodeco chuyển hơn 4.097 m2 đất nông nghiệp sang đất ở đô thị và giao thông để làm dự án khu nhà ở Hải Đăng - The Light City.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://vnexpress.net/rss/bat-dong-san.rss",
+        "publisher_host": "vnexpress.net",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-f773960a49a4ecdcaac8",
+      "title": "Bí mật phía sau tốc độ thi công thần tốc của loạt siêu dự án APEC Phú Quốc",
+      "url": "https://thanhnien.vn/bi-mat-phia-sau-toc-do-thi-cong-than-toc-cua-loat-sieu-du-an-apec-phuquoc-185261015150108836.htm",
+      "category": "market",
+      "module_ids": [
+        "market"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-10-15T08:05:00+00:00",
+      "source_id": "thanhnien-policy",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "Giữa mùa mưa, hàng nghìn công nhân vẫn thi công xuyên đêm trên các công trình APEC 2027. Phía sau tốc độ ấy là nỗ lực của chính quyền, chủ đầu tư, nhà thầu và nguồn vốn tín dụng hàng chục nghìn tỉ đồng.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://thanhnien.vn/rss/kinh-te/chinh-sach-phat-trien.rss",
+        "publisher_host": "thanhnien.vn",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-81387fe22b89e0d820ea",
+      "title": "Rời Quốc Cường Gia Lai, ông Nguyễn Quốc Cường dồn lực cho 'đế chế' C - Holdings",
+      "url": "https://thanhnien.vn/roi-quoc-cuong-gia-lai-ong-nguyen-quoc-cuong-don-luc-cho-de-che-c-holdings-185261015142503506.htm",
+      "category": "market",
+      "module_ids": [
+        "market"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-10-15T07:52:00+00:00",
+      "source_id": "thanhnien-real-estate",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "Sau hai năm gác lại những hoài bão cá nhân để chèo lái con thuyền Quốc Cường Gia Lai (QCGL) vượt qua giai đoạn sóng gió, ông Nguyễn Quốc Cường đã chính thức từ chức Tổng giám đốc. Quyết định trao lại quyền điều hành không chỉ đánh dấu việc ông hoàn thành trách nhiệm với cơ ngơi của gia tộc, mà còn m",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://thanhnien.vn/rss/kinh-te/dia-oc.rss",
+        "publisher_host": "thanhnien.vn",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-c5eee91ace43090011fe",
+      "title": "Giá vàng trước quyết định lãi suất của Fed: Dự báo lập đỉnh hay còn giảm sâu?",
+      "url": "https://dantri.com.vn/kinh-doanh/gia-vang-truoc-quyet-dinh-lai-suat-cua-fed-du-bao-lap-dinh-hay-con-giam-sau-20261015102352995.htm",
+      "category": "macro",
+      "module_ids": [
+        "macro"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-10-15T07:06:01+00:00",
+      "source_id": "dantri-business",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "(Dân trí) - Áp lực thắt chặt tiền tệ từ Fed đang khiến thị trường kim loại quý rung lắc mạnh quanh mốc hỗ trợ then chốt, đặt nhà đầu tư giữa hai luồng dự báo trái chiều về tương lai giá vàng.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://dantri.com.vn/rss/kinh-doanh.rss",
+        "publisher_host": "dantri.com.vn",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-076c26f37cf859e7e489",
+      "title": "TPHCM lần đầu tiên quy hoạch tăng độ sâu khai thác mỏ đá, bảo đảm nguồn vật liệu xây dựng",
+      "url": "https://dantri.com.vn/thoi-su/tphcm-lan-dau-tien-quy-hoach-tang-do-sau-khai-thac-mo-da-bao-dam-nguon-vat-lieu-xay-dung-20261015114547240.htm",
+      "category": "market",
+      "module_ids": [
+        "market"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-10-15T06:14:25+00:00",
+      "source_id": "dantri-current-affairs",
+      "region_ids": [
+        "hcmc"
+      ],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [
+        "supply",
+        "legal"
+      ],
+      "importance": 2,
+      "summary": "(Dân trí) - Giám đốc Sở Nông nghiệp và Môi trường TPHCM cho biết, thành phố đang thực hiện 3 giải pháp để đảm bảo nguồn cung vật liệu cho các công trình xây dựng.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://dantri.com.vn/rss/thoi-su.rss",
+        "publisher_host": "dantri.com.vn",
+        "publication_date_from_feed": true
+      }
+    },
     {
       "id": "article-market-rss-60f6eb534d948226e0ab",
       "title": "'Cần giảm xây nhà cao cấp để tránh khủng hoảng thừa'",
@@ -57,6 +189,58 @@
       }
     },
     {
+      "id": "article-market-rss-1e380f979e3a3ce34eda",
+      "title": "Giá nhà điều chỉnh, đại diện Bộ Xây dựng gợi ý thời điểm nên xuống tiền",
+      "url": "https://dantri.com.vn/bat-dong-san/gia-nha-dieu-chinh-dai-dien-bo-xay-dung-goi-y-thoi-diem-nen-xuong-tien-20261015121434800.htm",
+      "category": "market",
+      "module_ids": [
+        "market"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-10-15T05:44:53+00:00",
+      "source_id": "dantri-real-estate",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [
+        "pricing"
+      ],
+      "importance": 2,
+      "summary": "(Dân trí) - Trước những dấu hiệu điều chỉnh của thị trường bất động sản, đại diện Bộ Xây dựng cho rằng người mua nhà để ở không nên chờ giá chạm đáy quá lâu, nhưng cần cân nhắc khả năng tài chính.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://dantri.com.vn/rss/bat-dong-san.rss",
+        "publisher_host": "dantri.com.vn",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-394346194bb4f45d477e",
+      "title": "Doanh nghiệp kể chuyện bán đất giá 12 triệu đồng/m2 để \"cắt lỗ sớm\"",
+      "url": "https://dantri.com.vn/bat-dong-san/doanh-nghiep-ke-chuyen-ban-dat-gia-12-trieu-dongm2-de-cat-lo-som-20261015115550090.htm",
+      "category": "market",
+      "module_ids": [
+        "market"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-10-15T05:43:57+00:00",
+      "source_id": "dantri-real-estate",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "(Dân trí) - Áp lực dòng tiền khiến một doanh nghiệp bất động sản chấp nhận bán đất nền với giá 10-12 triệu đồng/m2, dù giá thành gần 20 triệu đồng/m2, đồng thời sẵn sàng giảm giá tới 20% để thu hồi vốn.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://dantri.com.vn/rss/bat-dong-san.rss",
+        "publisher_host": "dantri.com.vn",
+        "publication_date_from_feed": true
+      }
+    },
+    {
       "id": "article-market-rss-4ad895fef7092687a782",
       "title": "Sacombank rao bán bất động sản 3.600 tỷ đồng để thu hồi nợ Bamboo Airways",
       "url": "https://dantri.com.vn/kinh-doanh/sacombank-rao-ban-bat-dong-san-3600-ty-dong-de-thu-hoi-no-bamboo-airways-20261015115738533.htm",
@@ -77,6 +261,31 @@
       "source_verification": {
         "method": "official-rss",
         "feed_url": "https://dantri.com.vn/rss/kinh-doanh.rss",
+        "publisher_host": "dantri.com.vn",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-d105e5a58b686fc1e493",
+      "title": "Diễn biến mới nhất của cổ phiếu QCG sau khi bà Như Loan trở lại ghế CEO",
+      "url": "https://dantri.com.vn/bat-dong-san/dien-bien-moi-nhat-cua-co-phieu-qcg-sau-khi-ba-nhu-loan-tro-lai-ghe-ceo-20261015120648464.htm",
+      "category": "market",
+      "module_ids": [
+        "market"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-10-15T05:22:57+00:00",
+      "source_id": "dantri-real-estate",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "(Dân trí) - Cổ phiếu QCG tăng trần 2 phiên liên tiếp sau thông tin bà Nguyễn Thị Như Loan trở lại điều hành Quốc Cường Gia Lai, đưa thị giá lên 11.000 đồng/cổ phiếu.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://dantri.com.vn/rss/bat-dong-san.rss",
         "publisher_host": "dantri.com.vn",
         "publication_date_from_feed": true
       }
