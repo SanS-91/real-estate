@@ -1,9 +1,195 @@
 {
   "schema_version": 1,
-  "build_id": "market-news-rss-20261014T172200Z",
-  "generated_at": "2026-10-14T17:22:00.362943+00:00",
-  "record_count": 450,
+  "build_id": "market-news-rss-20261015T005132Z",
+  "generated_at": "2026-10-15T00:51:32.416619+00:00",
+  "record_count": 457,
   "data": [
+    {
+      "id": "article-market-rss-6558bcc266d4812e86f4",
+      "title": "Giá vàng giảm sâu, chênh lệch trong nước và thế giới lên hơn 14 triệu đồng",
+      "url": "https://dantri.com.vn/kinh-doanh/gia-vang-giam-sau-chenh-lech-trong-nuoc-va-the-gioi-len-hon-14-trieu-dong-20261015070322439.htm",
+      "category": "macro",
+      "module_ids": [
+        "macro"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-10-15T00:13:46+00:00",
+      "source_id": "dantri-business",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "(Dân trí) - Giá vàng thế giới vừa trải qua phiên giảm mạnh. Hiện, vàng thế giới đang ở mức 4.105 USD/ounce, có lúc giảm về dưới 4.100 USD/ounce. Giá vàng trong nước cũng đồng loạt giảm 1 triệu đồng mỗi lượng.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://dantri.com.vn/rss/kinh-doanh.rss",
+        "publisher_host": "dantri.com.vn",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-a5469acacc797ca1d0c1",
+      "title": "Vàng mất mốc 4.100 USD vì lạm phát ở Mỹ: Nên giữ hay bán?",
+      "url": "https://dantri.com.vn/kinh-doanh/vang-mat-moc-4100-usd-vi-lam-phat-o-my-nen-giu-hay-ban-20261014225603341.htm",
+      "category": "macro",
+      "module_ids": [
+        "macro"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-10-14T23:28:52+00:00",
+      "source_id": "dantri-business",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "(Dân trí) - Báo cáo lạm phát ở Mỹ khiến giá vàng giao ngay lao dốc về sát 4.000 USD/ounce. Biến động này là rủi ro hay cơ hội tích sản dài hạn cho nhà đầu tư?",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://dantri.com.vn/rss/kinh-doanh.rss",
+        "publisher_host": "dantri.com.vn",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-8eb7677e14ce17f58286",
+      "title": "Đề xuất mở rộng miễn giấy phép xây dựng",
+      "url": "https://thanhnien.vn/de-xuat-mo-rong-mien-giay-phep-xay-dung-185261014222319174.htm",
+      "category": "market",
+      "module_ids": [
+        "market"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-10-14T23:06:00+00:00",
+      "source_id": "thanhnien-real-estate",
+      "region_ids": [
+        "hcmc"
+      ],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "Triển khai luật Phát triển đô thị, Sở Xây dựng đã trình UBND TP.HCM đề xuất mở rộng diện miễn giấy phép xây dựng đối với nhà ở riêng lẻ cho người dân so với quy định hiện hành.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://thanhnien.vn/rss/kinh-te/dia-oc.rss",
+        "publisher_host": "thanhnien.vn",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-319bf2e026015a0fb0a5",
+      "title": "Tiểu thương TPHCM tìm cách giữ khách bên rào chắn Metro số 2",
+      "url": "https://dantri.com.vn/doi-song/tieu-thuong-tphcm-tim-cach-giu-khach-ben-rao-chan-metro-so-2-20261013002429393.htm",
+      "category": "infrastructure",
+      "module_ids": [
+        "infrastructure"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-10-14T23:00:00+00:00",
+      "source_id": "dantri-current-affairs",
+      "region_ids": [
+        "hcmc"
+      ],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [
+        "sales",
+        "infrastructure"
+      ],
+      "importance": 2,
+      "summary": "(Dân trí) - Khi dự án metro thứ 2 của TPHCM tăng tốc thi công, nhiều hộ kinh doanh dọc đường Cách Mạng Tháng Tám bắt đầu chuỗi ngày thất thu vì rào chắn đặt sát cửa nhà.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://dantri.com.vn/rss/thoi-su.rss",
+        "publisher_host": "dantri.com.vn",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-9f3a8cbabbd8eb90552e",
+      "title": "Cao tốc Mỹ Thuận - Cần Thơ hạn chế xe để thi công cầu vượt",
+      "url": "https://vnexpress.net/cao-toc-my-thuan-can-tho-han-che-xe-de-thi-cong-cau-vuot-5132392.html",
+      "category": "infrastructure",
+      "module_ids": [
+        "infrastructure"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-10-14T22:00:00+00:00",
+      "source_id": "vnexpress-current-affairs",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [
+        "infrastructure"
+      ],
+      "importance": 2,
+      "summary": "Từ ngày 16 đến 19/10, ôtô qua một số đoạn cao tốc Mỹ Thuận - Cần Thơ có thể phải tạm dừng trong khung 22h-1h hôm sau để phục vụ lắp dầm cầu vượt.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://vnexpress.net/rss/thoi-su.rss",
+        "publisher_host": "vnexpress.net",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-f59dd71b74f2096b0ac3",
+      "title": "Biệt thự kết nối ba khoảng sân vườn bằng hệ cửa kính lớn",
+      "url": "https://vnexpress.net/biet-thu-ket-noi-ba-khoang-san-vuon-bang-he-cua-kinh-lon-5132179.html",
+      "category": "market",
+      "module_ids": [
+        "market"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-10-14T17:00:00+00:00",
+      "source_id": "vnexpress-real-estate",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "Ngôi nhà được cải tạo theo phong cách nhiệt đới hiện đại, kết hợp vật liệu gỗ, đá tự nhiên và các khoảng thông tầng để tạo không gian sống gần gũi thiên nhiên.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://vnexpress.net/rss/bat-dong-san.rss",
+        "publisher_host": "vnexpress.net",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-db4f6ea799e2185b40da",
+      "title": "Loạt đề xuất mới về biển báo, khoảng cách đặt biển cảnh báo trên cao tốc",
+      "url": "https://dantri.com.vn/thoi-su/loat-de-xuat-moi-ve-bien-bao-khoang-cach-dat-bien-canh-bao-tren-cao-toc-20261014231421414.htm",
+      "category": "infrastructure",
+      "module_ids": [
+        "infrastructure"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-10-14T17:00:00+00:00",
+      "source_id": "dantri-current-affairs",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [
+        "infrastructure"
+      ],
+      "importance": 2,
+      "summary": "(Dân trí) - Cục Đường bộ Việt Nam đề xuất nhiều thay đổi về biển báo, đèn tín hiệu, khoảng cách đặt biển cảnh báo và hệ thống chỉ dẫn trên đường cao tốc.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://dantri.com.vn/rss/thoi-su.rss",
+        "publisher_host": "dantri.com.vn",
+        "publication_date_from_feed": true
+      }
+    },
     {
       "id": "article-market-rss-4a5cc95117bd3bd71b06",
       "title": "Lạm phát Mỹ tháng 9 tăng lên 3,7%: Fed có thể tăng lãi suất ngay tháng 10",
