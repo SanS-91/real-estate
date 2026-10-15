@@ -1,13 +1,153 @@
 {
   "schema_version": 1,
-  "build_id": "market-news-rss-20261015T145142Z",
-  "generated_at": "2026-10-15T14:51:42.812299+00:00",
-  "record_count": 499,
+  "build_id": "market-news-rss-20261015T171118Z",
+  "generated_at": "2026-10-15T17:11:18.773432+00:00",
+  "record_count": 504,
   "data": [
+    {
+      "id": "article-market-rss-d7468231c269d60243e6",
+      "title": "Nhân rộng xử phạt tài xế vi phạm khoảng cách trên cao tốc",
+      "url": "https://vnexpress.net/nhan-rong-xu-phat-tai-xe-vi-pham-khoang-cach-tren-cao-toc-5132919.html",
+      "category": "infrastructure",
+      "module_ids": [
+        "infrastructure"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-10-15T15:52:52+00:00",
+      "source_id": "vnexpress-current-affairs",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [
+        "infrastructure"
+      ],
+      "importance": 2,
+      "summary": "Cục Đường bộ Việt Nam được giao phối hợp với Cục Cảnh sát giao thông chuẩn bị điều kiện để nhân rộng việc xử phạt vi phạm khoảng cách trên cao tốc.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://vnexpress.net/rss/thoi-su.rss",
+        "publisher_host": "vnexpress.net",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-3e5d8237cea1817679f0",
+      "title": "Phường Đông Hòa dự kiến thu hồi hơn 24ha đất làm metro ở TPHCM",
+      "url": "https://dantri.com.vn/thoi-su/phuong-dong-hoa-du-kien-thu-hoi-hon-24ha-dat-lam-metro-o-tphcm-20261015204519040.htm",
+      "category": "infrastructure",
+      "module_ids": [
+        "infrastructure"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-10-15T15:21:39+00:00",
+      "source_id": "dantri-current-affairs",
+      "region_ids": [
+        "hcmc",
+        "binh-duong"
+      ],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [
+        "infrastructure"
+      ],
+      "importance": 2,
+      "summary": "(Dân trí) - Phường Đông Hòa (TPHCM) dự kiến thu hồi hơn 24ha đất để triển khai dự án đường sắt đô thị số 1 thành phố mới Bình Dương - Suối Tiên.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://dantri.com.vn/rss/thoi-su.rss",
+        "publisher_host": "dantri.com.vn",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-072e29495e36335b36b2",
+      "title": "Ô tô tải va chạm xe con trên cao tốc Liên Khương - Prenn",
+      "url": "https://dantri.com.vn/thoi-su/o-to-tai-va-cham-xe-con-tren-cao-toc-lien-khuong-prenn-20261015201603029.htm",
+      "category": "infrastructure",
+      "module_ids": [
+        "infrastructure"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-10-15T15:01:00+00:00",
+      "source_id": "dantri-current-affairs",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [
+        "infrastructure"
+      ],
+      "importance": 2,
+      "summary": "(Dân trí) - Ô tô tải đang lưu thông trên cao tốc bất ngờ chuyển hướng, va vào đầu xe con chạy cùng chiều. Vụ va chạm làm 2 xe hư hỏng, giao thông qua khu vực bị ảnh hưởng.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://dantri.com.vn/rss/thoi-su.rss",
+        "publisher_host": "dantri.com.vn",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-0c84850f9cc3e945adac",
+      "title": "TPHCM phân luồng linh hoạt để giảm ùn tắc khi thi công Metro số 2",
+      "url": "https://dantri.com.vn/thoi-su/tphcm-phan-luong-linh-hoat-de-giam-un-tac-khi-thi-cong-metro-so-2-20261015171249610.htm",
+      "category": "infrastructure",
+      "module_ids": [
+        "infrastructure"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-10-15T14:09:38+00:00",
+      "source_id": "dantri-current-affairs",
+      "region_ids": [
+        "hcmc"
+      ],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [
+        "infrastructure"
+      ],
+      "importance": 2,
+      "summary": "(Dân trí) - Trước tình trạng ùn tắc trên nhiều tuyến đường do thi công Metro số 2 (Bến Thành - Tham Lương), TPHCM điều chỉnh làn xe linh hoạt theo khung giờ, tăng cường phân luồng để giảm áp lực giao thông.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://dantri.com.vn/rss/thoi-su.rss",
+        "publisher_host": "dantri.com.vn",
+        "publication_date_from_feed": true
+      }
+    },
     {
       "id": "article-market-rss-c0c0655a3f8c8f900c96",
       "title": "Thủ tướng: Sẽ có cơ chế, chính sách đáp ứng nhu cầu nhà ở cho người trẻ",
       "url": "https://vnexpress.net/thu-tuong-se-co-co-che-chinh-sach-dap-ung-nhu-cau-nha-o-cho-nguoi-tre-5132902.html",
+      "category": "market",
+      "module_ids": [
+        "market"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-10-15T14:00:00+00:00",
+      "source_id": "vnexpress-current-affairs",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [
+        "pricing"
+      ],
+      "importance": 2,
+      "summary": "Thủ tướng Lê Minh Hưng cho biết Chính phủ sẽ hỗ trợ người trẻ thuê, mua nhà với chi phí phù hợp, kiểm soát giá nhà ở xã hội, nhà cho thuê và hoàn thiện cơ chế cho vay thuê nhà dài hạn.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://vnexpress.net/rss/thoi-su.rss",
+        "publisher_host": "vnexpress.net",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-41558bf8d04ff28416f6",
+      "title": "Thủ tướng: Sẽ có cơ chế đáp ứng nhu cầu nhà ở cho người trẻ",
+      "url": "https://vnexpress.net/thu-tuong-se-co-co-che-dap-ung-nhu-cau-nha-o-cho-nguoi-tre-5132902.html",
       "category": "market",
       "module_ids": [
         "market"
