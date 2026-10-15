@@ -1,9 +1,198 @@
 {
   "schema_version": 1,
-  "build_id": "market-news-rss-20261015T045115Z",
-  "generated_at": "2026-10-15T04:51:15.440770+00:00",
-  "record_count": 465,
+  "build_id": "market-news-rss-20261015T065132Z",
+  "generated_at": "2026-10-15T06:51:32.473665+00:00",
+  "record_count": 476,
   "data": [
+    {
+      "id": "article-market-rss-60f6eb534d948226e0ab",
+      "title": "'Cần giảm xây nhà cao cấp để tránh khủng hoảng thừa'",
+      "url": "https://vnexpress.net/can-giam-xay-nha-cao-cap-de-tranh-khung-hoang-thua-5132559.html",
+      "category": "market",
+      "module_ids": [
+        "market"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-10-15T06:02:29+00:00",
+      "source_id": "vnexpress-real-estate",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [
+        "supply"
+      ],
+      "importance": 2,
+      "summary": "Chủ tịch Hội Môi giới Bất động sản Nguyễn Văn Đính khuyến nghị các nhà phát triển điều chỉnh cấu trúc sản phẩm, giảm xây nhà hạng sang trong bối cảnh nguồn cung lớn.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://vnexpress.net/rss/bat-dong-san.rss",
+        "publisher_host": "vnexpress.net",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-583d167d7d8b5a4d9920",
+      "title": "Tiềm năng dài hạn giúp Triton Crown hút nhóm khách hạng sang",
+      "url": "https://vnexpress.net/tiem-nang-dai-han-giup-triton-crown-hut-nhom-khach-hang-sang-5131082.html",
+      "category": "market",
+      "module_ids": [
+        "market"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-10-15T06:00:00+00:00",
+      "source_id": "vnexpress-real-estate",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "Nằm trên đất vàng Phú Mỹ Hưng, thiết kế đặc biệt với không gian hạng sang, cộng đồng cùng phong cách sống giúp căn hộ Triton Crown thu hút nhiều doanh nhân, người thành đạt.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://vnexpress.net/rss/bat-dong-san.rss",
+        "publisher_host": "vnexpress.net",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-4ad895fef7092687a782",
+      "title": "Sacombank rao bán bất động sản 3.600 tỷ đồng để thu hồi nợ Bamboo Airways",
+      "url": "https://dantri.com.vn/kinh-doanh/sacombank-rao-ban-bat-dong-san-3600-ty-dong-de-thu-hoi-no-bamboo-airways-20261015115738533.htm",
+      "category": "market",
+      "module_ids": [
+        "market"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-10-15T05:34:24+00:00",
+      "source_id": "dantri-business",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "(Dân trí) - Tài sản phát mãi là quyền khai thác với 6 tầng thương mại dự án Xi Grand Court. Giá khởi điểm Sacombank đưa ra là 3.600 tỷ đồng.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://dantri.com.vn/rss/kinh-doanh.rss",
+        "publisher_host": "dantri.com.vn",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-22ded84b1492704224ef",
+      "title": "Đất nền Lâm Đồng 'ngược dòng' thị trường bất động sản",
+      "url": "https://vnexpress.net/dat-nen-lam-dong-nguoc-dong-thi-truong-bat-dong-san-5132318.html",
+      "category": "market",
+      "module_ids": [
+        "market"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-10-15T05:14:30+00:00",
+      "source_id": "vnexpress-real-estate",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [
+        "sales"
+      ],
+      "importance": 2,
+      "summary": "Trong khi thị trường chung suy giảm, Lâm Đồng ghi nhận 7.103 giao dịch đất nền quý III, tăng 13% so với cùng kỳ năm ngoái.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://vnexpress.net/rss/bat-dong-san.rss",
+        "publisher_host": "vnexpress.net",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-c194b5c3c9a07c6271a8",
+      "title": "Tây Ninh khởi động dự án Vành đai 4 TPHCM hơn 43.000 tỷ đồng",
+      "url": "https://dantri.com.vn/thoi-su/tay-ninh-khoi-dong-du-an-vanh-dai-4-tphcm-hon-43000-ty-dong-20261015104257431.htm",
+      "category": "market",
+      "module_ids": [
+        "market",
+        "infrastructure"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-10-15T05:04:30+00:00",
+      "source_id": "dantri-current-affairs",
+      "region_ids": [
+        "hcmc"
+      ],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "(Dân trí) - Tây Ninh khởi động dự án Vành đai 4 TPHCM, đoạn tuyến dài gần 78km qua địa bàn tỉnh, với tổng mức đầu tư hơn 43.000 tỷ đồng, góp phần kết nối vùng và mở rộng không gian phát triển kinh tế.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://dantri.com.vn/rss/thoi-su.rss",
+        "publisher_host": "dantri.com.vn",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-7e7385fc9aded4ff378f",
+      "title": "Khởi công Vành đai 4 hơn 43.000 tỷ đồng qua Tây Ninh",
+      "url": "https://vnexpress.net/khoi-cong-vanh-dai-4-hon-43-000-ty-dong-qua-tay-ninh-5132523.html",
+      "category": "infrastructure",
+      "module_ids": [
+        "infrastructure"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-10-15T04:39:27+00:00",
+      "source_id": "vnexpress-current-affairs",
+      "region_ids": [
+        "hcmc"
+      ],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [
+        "infrastructure"
+      ],
+      "importance": 2,
+      "summary": "Tuyến Vành đai 4 TP HCM qua Tây Ninh có tổng vốn hơn 43.000 tỷ đồng, dự kiến hoàn thành sau 4 năm, mở thêm hướng kết nối cảng biển, sân bay.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://vnexpress.net/rss/thoi-su.rss",
+        "publisher_host": "vnexpress.net",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-1c76389dfb7414cb4a5d",
+      "title": "Giá bất động sản hạ nhiệt khắp cả nước, có nơi giảm tới 20%",
+      "url": "https://dantri.com.vn/bat-dong-san/gia-bat-dong-san-ha-nhiet-khap-ca-nuoc-co-noi-giam-toi-20-20261015104602368.htm",
+      "category": "market",
+      "module_ids": [
+        "market"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-10-15T04:29:21+00:00",
+      "source_id": "dantri-real-estate",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [
+        "supply",
+        "pricing"
+      ],
+      "importance": 2,
+      "summary": "(Dân trí) - Giá bán bất động sản sơ cấp tại nhiều khu vực trên cả nước đã giảm 5-20% trong quý III, trong bối cảnh nguồn cung tăng, sức mua suy yếu và chi phí vốn vẫn ở mức cao.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://dantri.com.vn/rss/bat-dong-san.rss",
+        "publisher_host": "dantri.com.vn",
+        "publication_date_from_feed": true
+      }
+    },
     {
       "id": "article-market-rss-60e51f6a01ca1707221d",
       "title": "FPT rót 1.300 tỷ đồng xây tòa nhà công nghệ số tại phía tây Hà Nội",
@@ -33,6 +222,33 @@
       }
     },
     {
+      "id": "article-market-rss-92474e1a9e357208a6ee",
+      "title": "Cessna 208 bay kỹ thuật kiểm tra đường cất hạ cánh sân bay Quảng Trị",
+      "url": "https://dantri.com.vn/thoi-su/cessna-208-bay-ky-thuat-kiem-tra-duong-cat-ha-canh-san-bay-quang-tri-20261015100842807.htm",
+      "category": "infrastructure",
+      "module_ids": [
+        "infrastructure"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-10-15T04:06:30+00:00",
+      "source_id": "dantri-current-affairs",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [
+        "infrastructure"
+      ],
+      "importance": 2,
+      "summary": "(Dân trí) - Máy bay Cessna 208 được sử dụng để thực hiện chuyến bay kỹ thuật đầu tiên kiểm tra an toàn tĩnh không, chướng ngại vật tại đường cất hạ cánh ở Cảng hàng không Quảng Trị.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://dantri.com.vn/rss/thoi-su.rss",
+        "publisher_host": "dantri.com.vn",
+        "publication_date_from_feed": true
+      }
+    },
+    {
       "id": "article-market-rss-1bf04c798180883ef1a5",
       "title": "Hà Nội yêu cầu gắn thu hồi đất với chuyển đổi nghề, bảo đảm sinh kế",
       "url": "https://thanhnien.vn/ha-noi-yeu-cau-gan-thu-hoi-dat-voi-chuyen-doi-nghe-bao-dam-sinh-ke-185261015110557781.htm",
@@ -56,6 +272,83 @@
         "method": "official-rss",
         "feed_url": "https://thanhnien.vn/rss/kinh-te/chinh-sach-phat-trien.rss",
         "publisher_host": "thanhnien.vn",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-779c1798aeb61b790e71",
+      "title": "Vụ đấu giá cát gần 1,1 triệu đồng/m3: Doanh nghiệp có động thái bất ngờ",
+      "url": "https://dantri.com.vn/bat-dong-san/vu-dau-gia-cat-gan-11-trieu-dongm3-doanh-nghiep-co-dong-thai-bat-ngo-20261015093131863.htm",
+      "category": "market",
+      "module_ids": [
+        "market"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-10-15T03:52:41+00:00",
+      "source_id": "dantri-real-estate",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "(Dân trí) - Một doanh nghiệp đã đưa ra mức giá gần 1,1 triệu đồng/m3 để trúng đấu giá quyền khai thác mỏ cát. Thế nhưng sau đó doanh nghiệp này cho rằng bị nhầm nên từ chối kết quả đấu giá.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://dantri.com.vn/rss/bat-dong-san.rss",
+        "publisher_host": "dantri.com.vn",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-4be296ae9985670c2eb7",
+      "title": "Nhờ đâu Việt Nam đứng thứ 3 thế giới về số bất động sản hàng hiệu, xa xỉ?",
+      "url": "https://dantri.com.vn/bat-dong-san/nho-dau-viet-nam-dung-thu-3-the-gioi-ve-so-bat-dong-san-hang-hieu-xa-xi-20261015102047189.htm",
+      "category": "market",
+      "module_ids": [
+        "market"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-10-15T03:42:49+00:00",
+      "source_id": "dantri-real-estate",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "(Dân trí) - Việt Nam có hơn 16.000 căn hộ hàng hiệu, đứng thứ 3 thế giới, trong bối cảnh tầng lớp giàu và siêu giàu gia tăng nhanh, kéo theo nhu cầu sở hữu bất động sản xa xỉ.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://dantri.com.vn/rss/bat-dong-san.rss",
+        "publisher_host": "dantri.com.vn",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-cd33994f977051c09954",
+      "title": "TPHCM mổ xẻ nguyên nhân một số dự án PPP chậm tiến độ",
+      "url": "https://dantri.com.vn/thoi-su/tphcm-mo-xe-nguyen-nhan-mot-so-du-an-ppp-cham-tien-do-20261015095859868.htm",
+      "category": "market",
+      "module_ids": [
+        "market"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-10-15T03:28:34+00:00",
+      "source_id": "dantri-current-affairs",
+      "region_ids": [
+        "hcmc"
+      ],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "(Dân trí) - Vướng mắc về phương án tài chính và tính chất phức tạp của thủ tục là những nguyên nhân khiến một số dự án PPP tại TPHCM chậm tiến độ. Luật Phát triển đô thị được kỳ vọng tháo gỡ các điểm nghẽn này.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://dantri.com.vn/rss/thoi-su.rss",
+        "publisher_host": "dantri.com.vn",
         "publication_date_from_feed": true
       }
     },
