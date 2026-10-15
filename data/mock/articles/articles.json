@@ -1,9 +1,59 @@
 {
   "schema_version": 1,
-  "build_id": "market-news-rss-20261015T005132Z",
-  "generated_at": "2026-10-15T00:51:32.416619+00:00",
-  "record_count": 457,
+  "build_id": "market-news-rss-20261015T025204Z",
+  "generated_at": "2026-10-15T02:52:04.679282+00:00",
+  "record_count": 459,
   "data": [
+    {
+      "id": "article-market-rss-5c7b6592db22899c7c44",
+      "title": "Giá vàng hôm nay 15.10.2026: Tiếp tục đứng yên khiến người mua lỗ ngay 3 triệu đồng",
+      "url": "https://thanhnien.vn/gia-vang-hom-nay-15102026-tiep-tuc-dung-yen-khien-nguoi-mua-lo-ngay-3-trieu-dong-185261015082727835.htm",
+      "category": "macro",
+      "module_ids": [
+        "macro"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-10-15T01:48:00+00:00",
+      "source_id": "thanhnien-banking",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "Giá vàng trong nước đứng yên dù thế giới đi xuống khiến người mua vào bị lỗ ngay 3 triệu đồng/lượng.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://thanhnien.vn/rss/kinh-te/ngan-hang.rss",
+        "publisher_host": "thanhnien.vn",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-0d5241610735f9e70325",
+      "title": "The Wellness Van Phuc đưa yếu tố sức khỏe vào lựa chọn an cư",
+      "url": "https://vnexpress.net/the-wellness-van-phuc-dua-yeu-to-suc-khoe-vao-lua-chon-an-cu-5132264.html",
+      "category": "market",
+      "module_ids": [
+        "market"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-10-15T01:00:00+00:00",
+      "source_id": "vnexpress-real-estate",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "The Wellness Van Phuc tại Van Phuc City hướng đến nhóm khách hàng quan tâm đến sức khỏe và chất lượng sống khi lựa chọn nơi ở lâu dài.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://vnexpress.net/rss/bat-dong-san.rss",
+        "publisher_host": "vnexpress.net",
+        "publication_date_from_feed": true
+      }
+    },
     {
       "id": "article-market-rss-6558bcc266d4812e86f4",
       "title": "Giá vàng giảm sâu, chênh lệch trong nước và thế giới lên hơn 14 triệu đồng",
