@@ -1,9 +1,65 @@
 {
   "schema_version": 1,
-  "build_id": "market-news-rss-20261015T114406Z",
-  "generated_at": "2026-10-15T11:44:06.420004+00:00",
-  "record_count": 492,
+  "build_id": "market-news-rss-20261015T125148Z",
+  "generated_at": "2026-10-15T12:51:48.904733+00:00",
+  "record_count": 494,
   "data": [
+    {
+      "id": "article-market-rss-134c8fdbc11d87c0f323",
+      "title": "Nhiều phường ở TP HCM được thưởng trăm tỷ đồng vì giải ngân đầu tư công tốt",
+      "url": "https://vnexpress.net/nhieu-phuong-o-tp-hcm-duoc-thuong-tram-ty-dong-vi-giai-ngan-dau-tu-cong-tot-5132868.html",
+      "category": "infrastructure",
+      "module_ids": [
+        "infrastructure"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-10-15T11:56:55+00:00",
+      "source_id": "vnexpress-current-affairs",
+      "region_ids": [
+        "hcmc"
+      ],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "Do giải ngân vốn đầu tư công nhanh, 4 phường An Lạc, Đông Hòa, Bình Đông và Dĩ An được thưởng 100-200 tỷ đồng để xây công trình dân sinh ở địa phương.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://vnexpress.net/rss/thoi-su.rss",
+        "publisher_host": "vnexpress.net",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-9418ea94bf8ce5ab3b9f",
+      "title": "Hà Nội ký hợp đồng chìa khóa trao tay 5 tuyến metro khoảng một triệu tỷ đồng",
+      "url": "https://vnexpress.net/ha-noi-ky-hop-dong-chia-khoa-trao-tay-5-tuyen-metro-khoang-mot-trieu-ty-dong-5132852.html",
+      "category": "infrastructure",
+      "module_ids": [
+        "infrastructure"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-10-15T11:26:11+00:00",
+      "source_id": "vnexpress-current-affairs",
+      "region_ids": [
+        "ha-noi"
+      ],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [
+        "infrastructure"
+      ],
+      "importance": 2,
+      "summary": "Chiều 15/10, UBND Hà Nội tổ chức Lễ ký kết hợp đồng thực hiện 5 tuyến đường sắt đô thị số 1, 2, 8, 10 và 14, tổng chiều dài 253 km, nhu cầu vốn khoảng một triệu tỷ đồng.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://vnexpress.net/rss/thoi-su.rss",
+        "publisher_host": "vnexpress.net",
+        "publication_date_from_feed": true
+      }
+    },
     {
       "id": "article-market-rss-65cd87afc5e27910eed4",
       "title": "Khởi động đường Vành Đai 4, Waterpoint gia tăng lợi thế kết nối liên vùng",
