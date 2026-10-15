@@ -1,9 +1,121 @@
 {
   "schema_version": 1,
-  "build_id": "market-news-rss-20261015T125148Z",
-  "generated_at": "2026-10-15T12:51:48.904733+00:00",
-  "record_count": 494,
+  "build_id": "market-news-rss-20261015T145142Z",
+  "generated_at": "2026-10-15T14:51:42.812299+00:00",
+  "record_count": 499,
   "data": [
+    {
+      "id": "article-market-rss-c0c0655a3f8c8f900c96",
+      "title": "Thủ tướng: Sẽ có cơ chế, chính sách đáp ứng nhu cầu nhà ở cho người trẻ",
+      "url": "https://vnexpress.net/thu-tuong-se-co-co-che-chinh-sach-dap-ung-nhu-cau-nha-o-cho-nguoi-tre-5132902.html",
+      "category": "market",
+      "module_ids": [
+        "market"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-10-15T14:00:00+00:00",
+      "source_id": "vnexpress-current-affairs",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [
+        "pricing"
+      ],
+      "importance": 2,
+      "summary": "Thủ tướng Lê Minh Hưng cho biết Chính phủ sẽ hỗ trợ người trẻ thuê, mua nhà với chi phí phù hợp, kiểm soát giá nhà ở xã hội, nhà cho thuê và hoàn thiện cơ chế cho vay thuê nhà dài hạn.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://vnexpress.net/rss/thoi-su.rss",
+        "publisher_host": "vnexpress.net",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-391b844a12bfe4b60500",
+      "title": "Lượng tiêu thụ condotel quý III tăng hơn 5 lần",
+      "url": "https://vnexpress.net/luong-tieu-thu-condotel-quy-iii-tang-hon-5-lan-5132771.html",
+      "category": "market",
+      "module_ids": [
+        "market"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-10-15T12:36:49+00:00",
+      "source_id": "vnexpress-real-estate",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [
+        "sales"
+      ],
+      "importance": 2,
+      "summary": "Giữa bối cảnh trầm lắng của bất động sản nghỉ dưỡng, phân khúc condotel (căn hộ du lịch) Quý III ghi nhận lượng tiêu thụ tăng hơn 5 lần so với quý trước.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://vnexpress.net/rss/bat-dong-san.rss",
+        "publisher_host": "vnexpress.net",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-49f5b5f0938b3a9abbb9",
+      "title": "Chủ đầu tư sân bay Long Thành lãi 9.184 tỷ đồng, vượt chỉ tiêu sau 9 tháng",
+      "url": "https://dantri.com.vn/kinh-doanh/chu-dau-tu-san-bay-long-thanh-lai-9184-ty-dong-vuot-chi-tieu-sau-9-thang-20261015192325014.htm",
+      "category": "market",
+      "module_ids": [
+        "market",
+        "infrastructure"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-10-15T12:26:15+00:00",
+      "source_id": "dantri-business",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [
+        "infrastructure"
+      ],
+      "importance": 2,
+      "summary": "(Dân trí) - Mục tiêu lợi nhuận trước thuế cả năm 2026 là 7.011 tỷ đồng, sau 9 tháng ước tính ACV đã đạt khoảng 9.184 tỷ đồng. Hiện, ACV đang tập trung nguồn lực cho dự án Cảng hàng không quốc tế Long Thành.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://dantri.com.vn/rss/kinh-doanh.rss",
+        "publisher_host": "dantri.com.vn",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-c804b43415ccc3f5715c",
+      "title": "Người mua tìm căn hộ 3 tỷ, thị trường TPHCM đa số nhà 7-8 tỷ",
+      "url": "https://dantri.com.vn/bat-dong-san/nguoi-mua-tim-can-ho-3-ty-thi-truong-tphcm-da-so-nha-7-8-ty-20261015190431060.htm",
+      "category": "market",
+      "module_ids": [
+        "market"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-10-15T12:24:26+00:00",
+      "source_id": "dantri-real-estate",
+      "region_ids": [
+        "hcmc"
+      ],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [
+        "supply",
+        "sales"
+      ],
+      "importance": 2,
+      "summary": "(Dân trí) - Căn hộ khoảng 3 tỷ đồng là nhu cầu phổ biến tại TPHCM, trong khi nguồn cung mới lại nghiêng về phân khúc cao cấp, kéo sức hấp thụ thị trường quý III suy giảm.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://dantri.com.vn/rss/bat-dong-san.rss",
+        "publisher_host": "dantri.com.vn",
+        "publication_date_from_feed": true
+      }
+    },
     {
       "id": "article-market-rss-134c8fdbc11d87c0f323",
       "title": "Nhiều phường ở TP HCM được thưởng trăm tỷ đồng vì giải ngân đầu tư công tốt",
@@ -57,6 +169,37 @@
         "method": "official-rss",
         "feed_url": "https://vnexpress.net/rss/thoi-su.rss",
         "publisher_host": "vnexpress.net",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-b9efd844ae3193fe38f1",
+      "title": "Hà Nội ký hợp đồng 5 tuyến đường sắt đô thị, mục tiêu hoàn thành năm 2030",
+      "url": "https://dantri.com.vn/thoi-su/ha-noi-ky-hop-dong-5-tuyen-duong-sat-do-thi-muc-tieu-hoan-thanh-nam-2030-20261015172130206.htm",
+      "category": "infrastructure",
+      "module_ids": [
+        "infrastructure"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-10-15T10:41:07+00:00",
+      "source_id": "dantri-current-affairs",
+      "region_ids": [
+        "ha-noi"
+      ],
+      "project_ids": [],
+      "developer_ids": [
+        "vinhomes"
+      ],
+      "tags": [
+        "infrastructure"
+      ],
+      "importance": 2,
+      "summary": "(Dân trí) - UBND TP Hà Nội đã tổ chức lễ ký kết hợp đồng thực hiện 5 tuyến đường sắt đô thị số 1, 2, 8, 10 và 14 với liên danh Vinhomes - SGC, tổng chiều dài khoảng 253km, tổng giá trị gần 900.000 tỷ đồng.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://dantri.com.vn/rss/thoi-su.rss",
+        "publisher_host": "dantri.com.vn",
         "publication_date_from_feed": true
       }
     },
