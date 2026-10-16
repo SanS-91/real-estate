@@ -1,9 +1,176 @@
 {
   "schema_version": 1,
-  "build_id": "market-news-rss-20261016T044403Z",
-  "generated_at": "2026-10-16T04:44:03.398876+00:00",
-  "record_count": 521,
+  "build_id": "market-news-rss-20261016T065145Z",
+  "generated_at": "2026-10-16T06:51:45.309368+00:00",
+  "record_count": 528,
   "data": [
+    {
+      "id": "article-market-rss-f2ef3654e1f7d3e8714c",
+      "title": "Chủ đầu tư The Metropole Thủ Thiêm bị phạt vì chậm báo cáo bán nhà cho người nước ngoài",
+      "url": "https://vnexpress.net/chu-dau-tu-the-metropole-thu-thiem-bi-phat-vi-cham-bao-cao-ban-nha-cho-nguoi-nuoc-ngoai-5133092.html",
+      "category": "market",
+      "module_ids": [
+        "market",
+        "infrastructure"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-10-16T05:33:24+00:00",
+      "source_id": "vnexpress-real-estate",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [
+        "sales",
+        "infrastructure"
+      ],
+      "importance": 2,
+      "summary": "Công ty Quốc Lộc Phát, chủ đầu tư dự án The Metropole Thủ Thiêm, bị phạt do chậm thông báo thông tin giao dịch 272 căn hộ với người nước ngoài tại dự án này.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://vnexpress.net/rss/bat-dong-san.rss",
+        "publisher_host": "vnexpress.net",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-88796a20d55697a6b682",
+      "title": "Thưởng tiến độ cho người dân bàn giao đất sớm xây sân bay Gia Bình",
+      "url": "https://dantri.com.vn/bat-dong-san/thuong-tien-do-cho-nguoi-dan-ban-giao-dat-som-xay-san-bay-gia-binh-20261016111757585.htm",
+      "category": "market",
+      "module_ids": [
+        "market",
+        "infrastructure"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-10-16T04:41:16+00:00",
+      "source_id": "dantri-real-estate",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [
+        "infrastructure"
+      ],
+      "importance": 2,
+      "summary": "(Dân trí) - 141 hộ gia đình, cá nhân tự nguyện bàn giao mặt bằng trước thời hạn để thực hiện dự án sân bay Gia Bình (Bắc Ninh) được phê duyệt thưởng tiến độ với tổng kinh phí 7,05 tỷ đồng.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://dantri.com.vn/rss/bat-dong-san.rss",
+        "publisher_host": "dantri.com.vn",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-f7c16624896f0b0f170f",
+      "title": "Hàng loạt dự án được gỡ vướng, giá căn hộ ở TPHCM vẫn giảm tiếp",
+      "url": "https://dantri.com.vn/bat-dong-san/hang-loat-du-an-duoc-go-vuong-gia-can-ho-o-tphcm-van-giam-tiep-20261016112546089.htm",
+      "category": "market",
+      "module_ids": [
+        "market"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-10-16T04:38:23+00:00",
+      "source_id": "dantri-real-estate",
+      "region_ids": [
+        "hcmc"
+      ],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [
+        "supply",
+        "pricing",
+        "infrastructure"
+      ],
+      "importance": 2,
+      "summary": "(Dân trí) - Nguồn cung căn hộ TPHCM tăng nhưng sức mua chưa cải thiện, tạo áp lực lên mặt bằng giá. Nhu cầu người mua cũng dần dịch chuyển về các khu vực hưởng lợi từ hạ tầng.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://dantri.com.vn/rss/bat-dong-san.rss",
+        "publisher_host": "dantri.com.vn",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-0bd4d93c319c57c48cf8",
+      "title": "7 xe va chạm liên hoàn trên cao tốc Hà Nội - Bắc Giang",
+      "url": "https://vnexpress.net/7-xe-va-cham-lien-hoan-tren-cao-toc-ha-noi-bac-giang-5133087.html",
+      "category": "infrastructure",
+      "module_ids": [
+        "infrastructure"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-10-16T04:28:33+00:00",
+      "source_id": "vnexpress-current-affairs",
+      "region_ids": [
+        "ha-noi"
+      ],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [
+        "infrastructure"
+      ],
+      "importance": 2,
+      "summary": "Hai xe tải, một xe khách và bốn xe 4-5 chỗ va chạm gần cầu Đại Phúc, Bắc Ninh, khiến giao thông ùn ứ sáng 16/10.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://vnexpress.net/rss/thoi-su.rss",
+        "publisher_host": "vnexpress.net",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-b8d4a92bf489791d7898",
+      "title": "Bác thông tin vùng heo hút được quảng bá dự án làng sinh thái vườn vải",
+      "url": "https://dantri.com.vn/bat-dong-san/bac-thong-tin-vung-heo-hut-duoc-quang-ba-du-an-lang-sinh-thai-vuon-vai-20261016084057199.htm",
+      "category": "market",
+      "module_ids": [
+        "market"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-10-16T04:27:07+00:00",
+      "source_id": "dantri-real-estate",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "(Dân trí) - Trước những quảng bá về \"Dự án làng sinh thái vườn vải cổ thụ 22 hộ dân\" tại xã Ea Kly (Đắk Lắk), chính quyền địa phương khẳng định không có dự án này và khuyến cáo người dân không tham gia góp vốn.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://dantri.com.vn/rss/bat-dong-san.rss",
+        "publisher_host": "dantri.com.vn",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-2326a7c1c6b734e5068e",
+      "title": "Giá vàng nín thở chờ tín hiệu lãi suất từ Chủ tịch Fed",
+      "url": "https://dantri.com.vn/kinh-doanh/gia-vang-nin-tho-cho-tin-hieu-lai-suat-tu-chu-tich-fed-20261016102123644.htm",
+      "category": "macro",
+      "module_ids": [
+        "macro"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-10-16T04:00:15+00:00",
+      "source_id": "dantri-business",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "(Dân trí) - Trước giờ Chủ tịch Fed Kevin Warsh phát biểu tại Bangkok (Thái Lan), giá vàng thế giới dao động quanh mốc 4.160 USD/ounce trong tâm thế ngóng chờ từng thông điệp về chính sách tiền tệ.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://dantri.com.vn/rss/kinh-doanh.rss",
+        "publisher_host": "dantri.com.vn",
+        "publication_date_from_feed": true
+      }
+    },
     {
       "id": "article-market-rss-1b2ebf895785cd64a87c",
       "title": "Giá sơ cấp nhà liền thổ TP HCM giảm 33%",
@@ -83,6 +250,33 @@
         "method": "official-rss",
         "feed_url": "https://vnexpress.net/rss/bat-dong-san.rss",
         "publisher_host": "vnexpress.net",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-0b8dd907e6a4129427c3",
+      "title": "The Theodore Hanoi: Dấu ấn từ vị trí, trải nghiệm từ tầm nhìn",
+      "url": "https://dantri.com.vn/bat-dong-san/the-theodore-hanoi-dau-an-tu-vi-tri-trai-nghiem-tu-tam-nhin-20261015221015226.htm",
+      "category": "market",
+      "module_ids": [
+        "market"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-10-16T03:00:00+00:00",
+      "source_id": "dantri-real-estate",
+      "region_ids": [
+        "ha-noi"
+      ],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "(Dân trí) - The Theodore Hanoi sở hữu tầm nhìn trực diện Hồ Hoàn Kiếm, mang đến trải nghiệm lưu trú cao cấp, gắn với văn hóa và lịch sử Hà Nội. Khách sạn theo đuổi triết lý “Hanoi, made personal”- một Hà Nội tinh tế và được dành riêng cho từng vị khách.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://dantri.com.vn/rss/bat-dong-san.rss",
+        "publisher_host": "dantri.com.vn",
         "publication_date_from_feed": true
       }
     },
