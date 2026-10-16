@@ -1,9 +1,85 @@
 {
   "schema_version": 1,
-  "build_id": "market-news-rss-20261016T005137Z",
-  "generated_at": "2026-10-16T00:51:37.562330+00:00",
-  "record_count": 510,
+  "build_id": "market-news-rss-20261016T025139Z",
+  "generated_at": "2026-10-16T02:51:39.265923+00:00",
+  "record_count": 513,
   "data": [
+    {
+      "id": "article-market-rss-cf55e284b6eaba742e98",
+      "title": "Giá vàng hôm nay 16.10.2026: Dậm chân tại chỗ nhưng cao hơn thế giới gần 13 triệu",
+      "url": "https://thanhnien.vn/gia-vang-hom-nay-16102026-dam-chan-tai-cho-nhung-cao-hon-the-gioi-gan-13-trieu-185261016075758329.htm",
+      "category": "macro",
+      "module_ids": [
+        "macro"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-10-16T01:43:00+00:00",
+      "source_id": "thanhnien-banking",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "Giá vàng trong nước tiếp tục đứng yên dù thế giới tăng nhẹ sau khi lạm phát của Mỹ lên cao.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://thanhnien.vn/rss/kinh-te/ngan-hang.rss",
+        "publisher_host": "thanhnien.vn",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-eba4acd74babe897ead6",
+      "title": "Thiên Quân Group sắp khởi công dự án 39 căn hộ tại Cần Thơ",
+      "url": "https://vnexpress.net/thien-quan-group-sap-khoi-cong-du-an-39-can-ho-tai-can-tho-5132901.html",
+      "category": "market",
+      "module_ids": [
+        "market",
+        "infrastructure"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-10-16T01:00:00+00:00",
+      "source_id": "vnexpress-real-estate",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "Dự án Thiên Quân Apartment với số lượng giới hạn 39 căn hộ nằm tại trung tâm Ninh Kiều, khởi công ngày 19/10.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://vnexpress.net/rss/bat-dong-san.rss",
+        "publisher_host": "vnexpress.net",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-e7ab1089c6ab796013af",
+      "title": "Vạn Xuân Group khai màn dự án mới – Happy One Elite",
+      "url": "https://thanhnien.vn/van-xuan-group-khai-man-du-an-moi-happy-one-elite-18526101521240246.htm",
+      "category": "market",
+      "module_ids": [
+        "market"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-10-16T01:00:00+00:00",
+      "source_id": "thanhnien-real-estate",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "Ngày 15.10.2026, Vạn Xuân Group tổ chức Lễ động thổ - ép cọc thử dự án Happy One Elite, đánh dấu bước chuyển từ giai đoạn chuẩn bị sang triển khai thực tế. Cột mốc diễn ra chỉ hai tuần sau khi dự án chính thức được công bố, tiếp nối lộ trình đưa Happy One Elite ra thị trường tại giao điểm cuối năm.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://thanhnien.vn/rss/kinh-te/dia-oc.rss",
+        "publisher_host": "thanhnien.vn",
+        "publication_date_from_feed": true
+      }
+    },
     {
       "id": "article-market-rss-3fee188dd63af3d11405",
       "title": "Giá vàng thế giới quay đầu tăng",
