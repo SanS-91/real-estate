@@ -1,16 +1,16 @@
 {
   "schema_version": 1,
-  "checked_at": "2026-10-16T11:45:34.907897+00:00",
+  "checked_at": "2026-10-16T12:51:40.983291+00:00",
   "feeds_configured": 16,
-  "feeds_fetched": 11,
-  "accepted_new": 0,
-  "production_written": false,
-  "article_total": 537,
+  "feeds_fetched": 16,
+  "accepted_new": 2,
+  "production_written": true,
+  "article_total": 539,
   "published_by_module": {
     "market": 0,
     "legal": 0,
-    "infrastructure": 0,
-    "macro": 0
+    "infrastructure": 1,
+    "macro": 1
   },
   "feed_status": [
     {
@@ -33,7 +33,12 @@
     },
     {
       "source_id": "dantri-real-estate",
-      "status": "fetch-error"
+      "status": "parsed",
+      "feed_items": 50,
+      "new": 0,
+      "skipped": 50,
+      "duplicates": 50,
+      "filtered": 0
     },
     {
       "source_id": "vnexpress-economy",
@@ -91,19 +96,39 @@
     },
     {
       "source_id": "dantri-business",
-      "status": "fetch-error"
+      "status": "parsed",
+      "feed_items": 50,
+      "new": 1,
+      "skipped": 49,
+      "duplicates": 8,
+      "filtered": 41
     },
     {
       "source_id": "dantri-current-affairs",
-      "status": "fetch-error"
+      "status": "parsed",
+      "feed_items": 50,
+      "new": 1,
+      "skipped": 49,
+      "duplicates": 5,
+      "filtered": 44
     },
     {
       "source_id": "dantri-legal",
-      "status": "fetch-error"
+      "status": "parsed",
+      "feed_items": 50,
+      "new": 0,
+      "skipped": 50,
+      "duplicates": 0,
+      "filtered": 50
     },
     {
       "source_id": "dantri-gold",
-      "status": "fetch-error"
+      "status": "empty-feed",
+      "feed_items": 0,
+      "new": 0,
+      "skipped": 0,
+      "duplicates": 0,
+      "filtered": 0
     },
     {
       "source_id": "thanhnien-banking",
@@ -133,26 +158,5 @@
       "filtered": 39
     }
   ],
-  "fetch_errors": [
-    {
-      "source_id": "dantri-real-estate",
-      "error": "ConnectTimeout"
-    },
-    {
-      "source_id": "dantri-business",
-      "error": "ConnectTimeout"
-    },
-    {
-      "source_id": "dantri-current-affairs",
-      "error": "ConnectTimeout"
-    },
-    {
-      "source_id": "dantri-legal",
-      "error": "ConnectTimeout"
-    },
-    {
-      "source_id": "dantri-gold",
-      "error": "ConnectTimeout"
-    }
-  ]
+  "fetch_errors": []
 }
