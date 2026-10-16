@@ -1,9 +1,169 @@
 {
   "schema_version": 1,
-  "build_id": "market-news-rss-20261015T171118Z",
-  "generated_at": "2026-10-15T17:11:18.773432+00:00",
-  "record_count": 504,
+  "build_id": "market-news-rss-20261016T005137Z",
+  "generated_at": "2026-10-16T00:51:37.562330+00:00",
+  "record_count": 510,
   "data": [
+    {
+      "id": "article-market-rss-3fee188dd63af3d11405",
+      "title": "Giá vàng thế giới quay đầu tăng",
+      "url": "https://dantri.com.vn/kinh-doanh/gia-vang-the-gioi-quay-dau-tang-20261016010336187.htm",
+      "category": "macro",
+      "module_ids": [
+        "macro"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-10-15T23:42:18+00:00",
+      "source_id": "dantri-business",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [
+        "sales"
+      ],
+      "importance": 2,
+      "summary": "(Dân trí) - Giá vàng thế giới tăng vọt sau khi dữ liệu giá sản xuất tại Mỹ cao hơn dự báo. Trong nước, vàng miếng SJC được giao dịch ở mức 143,3 triệu đồng/lượng chiều bán ra.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://dantri.com.vn/rss/kinh-doanh.rss",
+        "publisher_host": "dantri.com.vn",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-bde71679ab1c11f6e46d",
+      "title": "Ra sân bay 'xử lý' nợ thuế kịp không?",
+      "url": "https://thanhnien.vn/ra-san-bay-xu-ly-no-thue-kip-khong-185261015211729344.htm",
+      "category": "infrastructure",
+      "module_ids": [
+        "infrastructure"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-10-15T23:00:00+00:00",
+      "source_id": "thanhnien-policy",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [
+        "infrastructure"
+      ],
+      "importance": 2,
+      "summary": "Theo lãnh đạo Cục Thuế, hệ thống thuế sẽ hủy lệnh tạm hoãn xuất cảnh trong khoảng vài chục phút sau khi ghi nhận chủ thể đã nộp thuế nên người dân có thể nộp thuế ngay trên đường ra sân bay để xuất cảnh. Tuy nhiên, trên thực tế việc này không dễ.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://thanhnien.vn/rss/kinh-te/chinh-sach-phat-trien.rss",
+        "publisher_host": "thanhnien.vn",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-1054b1a13696abd5befd",
+      "title": "Báo động quốc lộ xuống cấp",
+      "url": "https://thanhnien.vn/bao-dong-quoc-lo-xuong-cap-185261015210908874.htm",
+      "category": "infrastructure",
+      "module_ids": [
+        "infrastructure"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-10-15T23:00:00+00:00",
+      "source_id": "thanhnien-policy",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [
+        "infrastructure"
+      ],
+      "importance": 2,
+      "summary": "Hơn 60% tổng chiều dài mạng lưới đường bộ trên cả nước hiện đã quá hạn bảo trì định kỳ nhưng chưa được bố trí nguồn vốn thực hiện. Con số thống kê của Cục Đường bộ Việt Nam khiến nhiều người \"giật mình\" bởi loạt tuyến quốc lộ huyết mạch rơi vào tình trạng xuống cấp nghiêm trọng kéo theo nguy cơ tai ",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://thanhnien.vn/rss/kinh-te/chinh-sach-phat-trien.rss",
+        "publisher_host": "thanhnien.vn",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-874cf71394dc6002b20e",
+      "title": "Chuỗi gym, giải trí thu hẹp khiến sức hấp thụ mặt bằng bán lẻ TP HCM giảm",
+      "url": "https://vnexpress.net/chuoi-gym-giai-tri-thu-hep-khien-suc-hap-thu-mat-bang-ban-le-tp-hcm-giam-5129454.html",
+      "category": "market",
+      "module_ids": [
+        "market"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-10-15T22:58:27+00:00",
+      "source_id": "vnexpress-real-estate",
+      "region_ids": [
+        "hcmc"
+      ],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [
+        "sales"
+      ],
+      "importance": 2,
+      "summary": "Làn sóng thu hẹp mặt bằng của nhóm thể thao, phong cách sống và giải trí khiến sức hấp thụ bán lẻ TP HCM giảm 26% trong quý III, theo Knight Frank.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://vnexpress.net/rss/bat-dong-san.rss",
+        "publisher_host": "vnexpress.net",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-cd8e54c74fdbd0456874",
+      "title": "Người Mỹ dần quen với lạm phát cao",
+      "url": "https://vnexpress.net/nguoi-my-dan-quen-voi-lam-phat-cao-5132773.html",
+      "category": "macro",
+      "module_ids": [
+        "macro"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-10-15T17:03:00+00:00",
+      "source_id": "vnexpress-economy",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "Người Mỹ đang trải qua một trong những giai đoạn lạm phát cao dài nhất thế kỷ, khiến không ít người bắt đầu coi đây là trạng thái bình thường mới.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://vnexpress.net/rss/kinh-doanh.rss",
+        "publisher_host": "vnexpress.net",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-453ef7821e707d62b43c",
+      "title": "Nhà mái ngói Trung Hoa đan xen kiến trúc cũ và mới",
+      "url": "https://vnexpress.net/nha-mai-ngoi-trung-hoa-dan-xen-kien-truc-cu-va-moi-5132640.html",
+      "category": "market",
+      "module_ids": [
+        "market"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-10-15T17:00:00+00:00",
+      "source_id": "vnexpress-real-estate",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "Công trình giữ lại hệ khung gỗ, mái ngói xám và bố cục nguyên bản, bổ sung các giải pháp không gian để phục vụ sinh hoạt gia đình, làm việc.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://vnexpress.net/rss/bat-dong-san.rss",
+        "publisher_host": "vnexpress.net",
+        "publication_date_from_feed": true
+      }
+    },
     {
       "id": "article-market-rss-d7468231c269d60243e6",
       "title": "Nhân rộng xử phạt tài xế vi phạm khoảng cách trên cao tốc",
