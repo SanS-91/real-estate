@@ -1,9 +1,59 @@
 {
   "schema_version": 1,
-  "build_id": "market-news-rss-20261016T145148Z",
-  "generated_at": "2026-10-16T14:51:48.554145+00:00",
-  "record_count": 544,
+  "build_id": "market-news-rss-20261016T164751Z",
+  "generated_at": "2026-10-16T16:47:51.898670+00:00",
+  "record_count": 547,
   "data": [
+    {
+      "id": "article-market-rss-ba9c49cf99d1b7c773d1",
+      "title": "Hai căn nhà ở Lâm Đồng bị lửa thiêu rụi",
+      "url": "https://vnexpress.net/hai-can-nha-o-lam-dong-bi-lua-thieu-rui-5133411.html",
+      "category": "market",
+      "module_ids": [
+        "market"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-10-16T15:16:30+00:00",
+      "source_id": "vnexpress-current-affairs",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "Đám cháy bùng phát lúc chập tối, lan từ một căn nhà sang nhà sát vách ở xã Lạc Dương, thiêu rụi cả hai cùng nhiều tài sản, tối 16/10.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://vnexpress.net/rss/thoi-su.rss",
+        "publisher_host": "vnexpress.net",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-e30e2b0747e971c384c5",
+      "title": "Đảng ủy ban quản lý dự án tại Huế bị kỷ luật cảnh cáo",
+      "url": "https://dantri.com.vn/thoi-su/dang-uy-ban-quan-ly-du-an-tai-hue-bi-ky-luat-canh-cao-20261016180758484.htm",
+      "category": "market",
+      "module_ids": [
+        "market"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-10-16T15:02:06+00:00",
+      "source_id": "dantri-current-affairs",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "(Dân trí) - Ủy ban Kiểm tra Thành ủy Huế đã quyết định thi hành kỷ luật cảnh cáo đối với Đảng ủy Ban Quản lý dự án đầu tư xây dựng và phát triển đô thị thành phố nhiệm kỳ 2020-2025.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://dantri.com.vn/rss/thoi-su.rss",
+        "publisher_host": "dantri.com.vn",
+        "publication_date_from_feed": true
+      }
+    },
     {
       "id": "article-market-rss-f336048012590a9f5bdb",
       "title": "Trung ương đặt mục tiêu tăng trưởng GDP năm 2027 từ 10% trở lên",
@@ -25,6 +75,35 @@
       "source_verification": {
         "method": "official-rss",
         "feed_url": "https://dantri.com.vn/rss/kinh-doanh.rss",
+        "publisher_host": "dantri.com.vn",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-c51ed08d4bae9074effa",
+      "title": "Lửa bao trùm xe tải dưới gầm cầu vượt Vành đai 3 TPHCM",
+      "url": "https://dantri.com.vn/thoi-su/lua-bao-trum-xe-tai-duoi-gam-cau-vuot-vanh-dai-3-tphcm-20261016203700433.htm",
+      "category": "infrastructure",
+      "module_ids": [
+        "infrastructure"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-10-16T13:46:41+00:00",
+      "source_id": "dantri-current-affairs",
+      "region_ids": [
+        "hcmc"
+      ],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [
+        "infrastructure"
+      ],
+      "importance": 2,
+      "summary": "(Dân trí) - Chiếc xe tải bốc cháy ngùn ngùn trên đường Mỹ Phước - Tân Vạn đoạn qua nút giao Bình Chuẩn đường Vành đai 3 TPHCM. Lửa nhanh chóng cháy lan bao trùm cả phương tiện.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://dantri.com.vn/rss/thoi-su.rss",
         "publisher_host": "dantri.com.vn",
         "publication_date_from_feed": true
       }
