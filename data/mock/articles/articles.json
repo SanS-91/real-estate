@@ -1,9 +1,118 @@
 {
   "schema_version": 1,
-  "build_id": "market-news-rss-20261016T025139Z",
-  "generated_at": "2026-10-16T02:51:39.265923+00:00",
-  "record_count": 513,
+  "build_id": "market-news-rss-20261016T044403Z",
+  "generated_at": "2026-10-16T04:44:03.398876+00:00",
+  "record_count": 521,
   "data": [
+    {
+      "id": "article-market-rss-1b2ebf895785cd64a87c",
+      "title": "Giá sơ cấp nhà liền thổ TP HCM giảm 33%",
+      "url": "https://vnexpress.net/gia-so-cap-nha-lien-tho-tp-hcm-giam-33-5132619.html",
+      "category": "market",
+      "module_ids": [
+        "market"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-10-16T04:00:06+00:00",
+      "source_id": "vnexpress-real-estate",
+      "region_ids": [
+        "hcmc"
+      ],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [
+        "supply",
+        "pricing"
+      ],
+      "importance": 2,
+      "summary": "Nguồn cung sơ cấp từ hai dự án đại đô thị tại khu Tây và Nam với mặt bằng thấp đã kéo giá nhà liền thổ tại TP HCM giảm gần 33% so với cùng kỳ năm ngoái, theo Savills.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://vnexpress.net/rss/bat-dong-san.rss",
+        "publisher_host": "vnexpress.net",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-1b4c107c26c93cfdc30c",
+      "title": "Đà Nẵng cắm biển cấm flycam quanh sân bay",
+      "url": "https://vnexpress.net/da-nang-cam-bien-cam-flycam-quanh-san-bay-5133042.html",
+      "category": "infrastructure",
+      "module_ids": [
+        "infrastructure"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-10-16T03:19:25+00:00",
+      "source_id": "vnexpress-current-affairs",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [
+        "infrastructure"
+      ],
+      "importance": 2,
+      "summary": "Hàng loạt biển báo tích hợp mã QR cảnh báo hành vi vi phạm và mức xử phạt được dựng quanh sân bay Đà Nẵng nhằm ngăn chặn nguy cơ uy hiếp an toàn hàng không từ thiết bị bay tự phát.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://vnexpress.net/rss/thoi-su.rss",
+        "publisher_host": "vnexpress.net",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-8712262867c04d7cb090",
+      "title": "Kiến trúc gắn với văn hoá xứ Nghệ của Sun Glory Residence",
+      "url": "https://vnexpress.net/kien-truc-gan-voi-van-hoa-xu-nghe-cua-sun-glory-residence-5133008.html",
+      "category": "market",
+      "module_ids": [
+        "market"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-10-16T03:00:00+00:00",
+      "source_id": "vnexpress-real-estate",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "Lấy cảm hứng từ tinh thần kiên cường, cần mẫn, trọng nghĩa tình, hiếu học và khí phách của người Nghệ An, Sun Glory Residence kết hợp bản sắc địa phương với kiến trúc hiện đại tại đô thị Vinh.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://vnexpress.net/rss/bat-dong-san.rss",
+        "publisher_host": "vnexpress.net",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-defcc5f87c7230f9d8d1",
+      "title": "Ngân hàng đua hút tiền gửi bằng lãi suất, kênh số ngày càng áp đảo",
+      "url": "https://dantri.com.vn/kinh-doanh/ngan-hang-dua-hut-tien-gui-bang-lai-suat-kenh-so-ngay-cang-ap-dao-20261016004911543.htm",
+      "category": "macro",
+      "module_ids": [
+        "macro"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-10-16T02:22:00+00:00",
+      "source_id": "dantri-business",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [
+        "sales"
+      ],
+      "importance": 2,
+      "summary": "(Dân trí) - Lãi suất hấp dẫn cùng khả năng giao dịch trực tuyến đang giúp ngân hàng số gia tăng sức hút, tăng cạnh tranh mới với kênh truyền thống trong cuộc đua huy động vốn.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://dantri.com.vn/rss/kinh-doanh.rss",
+        "publisher_host": "dantri.com.vn",
+        "publication_date_from_feed": true
+      }
+    },
     {
       "id": "article-market-rss-cf55e284b6eaba742e98",
       "title": "Giá vàng hôm nay 16.10.2026: Dậm chân tại chỗ nhưng cao hơn thế giới gần 13 triệu",
@@ -81,6 +190,85 @@
       }
     },
     {
+      "id": "article-market-rss-7029d4548cc262891728",
+      "title": "6 chi tiết nhỏ trong phòng tắm dễ làm mất điểm khi khách ghé nhà",
+      "url": "https://dantri.com.vn/bat-dong-san/6-chi-tiet-nho-trong-phong-tam-de-lam-mat-diem-khi-khach-ghe-nha-20261015155132290.htm",
+      "category": "market",
+      "module_ids": [
+        "market"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-10-16T01:00:00+00:00",
+      "source_id": "dantri-real-estate",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "(Dân trí) - Mỗi khi có khách ghé thăm, phòng tắm chính là nơi dễ để lộ sự thiếu chỉn chu nhất dù bạn vừa dọn dẹp nhà cửa gọn gàng.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://dantri.com.vn/rss/bat-dong-san.rss",
+        "publisher_host": "dantri.com.vn",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-52e06e3c9acfbec92e31",
+      "title": "A&K Tower ra mắt căn hộ mẫu - không gian sống trẻ và tiện nghi",
+      "url": "https://dantri.com.vn/bat-dong-san/ak-tower-ra-mat-can-ho-mau-khong-gian-song-tre-va-tien-nghi-20261014112435325.htm",
+      "category": "market",
+      "module_ids": [
+        "market"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-10-16T01:00:00+00:00",
+      "source_id": "dantri-real-estate",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [
+        "supply"
+      ],
+      "importance": 2,
+      "summary": "(Dân trí) - Với các loại hình căn hộ đa dạng diện tích từ Studio đến 3 phòng ngủ, căn hộ mẫu A&K Tower tại OBC Special Sales Gallery sẽ giúp khách hàng trải nghiệm trực tiếp công năng, cách bố trí không gian nhằm dễ hình dung tổ ấm tương lai với nhiều ưu đãi.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://dantri.com.vn/rss/bat-dong-san.rss",
+        "publisher_host": "dantri.com.vn",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-4bbd5f55d4da30e7f2a4",
+      "title": "Ciputra Hà Nội và sức hút sau ba thập kỷ",
+      "url": "https://dantri.com.vn/bat-dong-san/ciputra-ha-noi-va-suc-hut-sau-ba-thap-ky-20261015215757576.htm",
+      "category": "market",
+      "module_ids": [
+        "market"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-10-16T01:00:00+00:00",
+      "source_id": "dantri-real-estate",
+      "region_ids": [
+        "ha-noi"
+      ],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "(Dân trí) - Sau ba thập kỷ hình thành và phát triển, Ciputra Hà Nội vẫn giữ sức hút của một điểm đến an cư cao cấp.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://dantri.com.vn/rss/bat-dong-san.rss",
+        "publisher_host": "dantri.com.vn",
+        "publication_date_from_feed": true
+      }
+    },
+    {
       "id": "article-market-rss-3fee188dd63af3d11405",
       "title": "Giá vàng thế giới quay đầu tăng",
       "url": "https://dantri.com.vn/kinh-doanh/gia-vang-the-gioi-quay-dau-tang-20261016010336187.htm",
@@ -103,6 +291,33 @@
       "source_verification": {
         "method": "official-rss",
         "feed_url": "https://dantri.com.vn/rss/kinh-doanh.rss",
+        "publisher_host": "dantri.com.vn",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-2f1159020cb729f6b75f",
+      "title": "Phạt lỗi không giữ khoảng cách trên cao tốc: Sẽ lắp thêm biển báo",
+      "url": "https://dantri.com.vn/thoi-su/phat-loi-khong-giu-khoang-cach-tren-cao-toc-se-lap-them-bien-bao-20261016000041102.htm",
+      "category": "infrastructure",
+      "module_ids": [
+        "infrastructure"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-10-15T23:27:47+00:00",
+      "source_id": "dantri-current-affairs",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [
+        "infrastructure"
+      ],
+      "importance": 2,
+      "summary": "(Dân trí) - Cục Đường bộ Việt Nam đã yêu cầu các đơn vị liên quan bố trí, lắp đặt hệ thống báo hiệu tại những đoạn cao tốc dự kiến triển khai xử phạt lỗi không giữ khoảng cách an toàn.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://dantri.com.vn/rss/thoi-su.rss",
         "publisher_host": "dantri.com.vn",
         "publication_date_from_feed": true
       }
