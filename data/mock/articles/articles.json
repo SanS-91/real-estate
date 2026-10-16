@@ -1,9 +1,203 @@
 {
   "schema_version": 1,
-  "build_id": "market-news-rss-20261016T065145Z",
-  "generated_at": "2026-10-16T06:51:45.309368+00:00",
-  "record_count": 528,
+  "build_id": "market-news-rss-20261016T085146Z",
+  "generated_at": "2026-10-16T08:51:46.210362+00:00",
+  "record_count": 535,
   "data": [
+    {
+      "id": "article-market-rss-3082b6ddf1b48b3ff967",
+      "title": "Thêm dự án nhà xã hội gần 30 triệu đồng một m2 tại Hà Nội",
+      "url": "https://vnexpress.net/them-du-an-nha-xa-hoi-gan-30-trieu-dong-mot-m2-tai-ha-noi-5133167.html",
+      "category": "market",
+      "module_ids": [
+        "market"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-10-16T08:30:00+00:00",
+      "source_id": "vnexpress-real-estate",
+      "region_ids": [
+        "ha-noi"
+      ],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "Dự án nhà xã hội tại Phúc Thịnh, nơi dự kiến thí điểm phát triển mô hình xã xã hội chủ nghĩa ở Hà Nội, có giá 29,7 triệu đồng một m2.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://vnexpress.net/rss/bat-dong-san.rss",
+        "publisher_host": "vnexpress.net",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-3900037f02ed4a35bf77",
+      "title": "Hưng Yên sẽ có khu công nghiệp công nghệ cao hơn 200 ha",
+      "url": "https://vnexpress.net/hung-yen-se-co-khu-cong-nghiep-cong-nghe-cao-hon-200-ha-5132939.html",
+      "category": "market",
+      "module_ids": [
+        "infrastructure"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-10-16T07:27:59+00:00",
+      "source_id": "vnexpress-real-estate",
+      "region_ids": [
+        "ha-noi"
+      ],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [
+        "infrastructure"
+      ],
+      "importance": 2,
+      "summary": "Khu công nghiệp Green One của Viglacera nằm sát cao tốc Hà Nội - Hải Phòng, được khởi công sáng 16/10.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://vnexpress.net/rss/bat-dong-san.rss",
+        "publisher_host": "vnexpress.net",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-9912673f1131bdf2f307",
+      "title": "Giá khởi điểm đấu giá khu sân vận động Chi Lăng giảm 1.150 tỷ đồng",
+      "url": "https://vnexpress.net/gia-khoi-diem-dau-gia-khu-san-van-dong-chi-lang-giam-1-150-ty-dong-5133169.html",
+      "category": "market",
+      "module_ids": [
+        "market"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-10-16T07:25:19+00:00",
+      "source_id": "vnexpress-real-estate",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [
+        "supply"
+      ],
+      "importance": 2,
+      "summary": "Khu đất sân vận động Chi Lăng tiếp tục được đưa ra đấu giá lần thứ 7 với mức khởi điểm 8.550 tỷ đồng, thấp hơn 1.156 tỷ đồng so với đợt mở bán đầu tiên.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://vnexpress.net/rss/bat-dong-san.rss",
+        "publisher_host": "vnexpress.net",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-ebafadac15f24671a34f",
+      "title": "Tốc độ huy động vốn nhanh hơn cho vay khi lãi suất cao",
+      "url": "https://thanhnien.vn/toc-do-huy-dong-von-nhanh-hon-cho-vay-khi-lai-suat-cao-185261016085328487.htm",
+      "category": "macro",
+      "module_ids": [
+        "macro"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-10-16T07:12:00+00:00",
+      "source_id": "thanhnien-banking",
+      "region_ids": [
+        "hcmc"
+      ],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "Ngân hàng Nhà nước chi nhánh khu vực 2 cho biết, tăng trưởng huy động vốn trên địa bàn TP.HCM tính đến cuối tháng 9 nhanh hơn so với cho vay.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://thanhnien.vn/rss/kinh-te/ngan-hang.rss",
+        "publisher_host": "thanhnien.vn",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-275647f8d59711b7c42b",
+      "title": "4 dự án của SonKim Land đủ điều kiện bán nhà ở cho người nước ngoài",
+      "url": "https://thanhnien.vn/4-du-an-cua-sonkim-land-du-dieu-kien-ban-nha-o-cho-nguoi-nuoc-ngoai-185261016140002533.htm",
+      "category": "market",
+      "module_ids": [
+        "market"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-10-16T07:12:00+00:00",
+      "source_id": "thanhnien-real-estate",
+      "region_ids": [
+        "hcmc"
+      ],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "Mới đây, Sở Xây dựng TP.HCM đã công bố danh mục các dự án đầu tư xây dựng nhà ở trên địa bàn nằm trong khu vực mà tổ chức, cá nhân nước ngoài được phép sở hữu nhà ở, trong đó SonKim Land có 4 dự án.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://thanhnien.vn/rss/kinh-te/dia-oc.rss",
+        "publisher_host": "thanhnien.vn",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-2f2d2b3f9a3fd9c2f81d",
+      "title": "Giá đất dọc Metro số 1 tăng vọt, cần chính sách nhà ở vừa túi tiền gắn TOD",
+      "url": "https://dantri.com.vn/bat-dong-san/gia-dat-doc-metro-so-1-tang-vot-can-chinh-sach-nha-o-vua-tui-tien-gan-tod-20261016103627917.htm",
+      "category": "market",
+      "module_ids": [
+        "market",
+        "legal",
+        "infrastructure"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-10-16T06:38:28+00:00",
+      "source_id": "dantri-real-estate",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [
+        "pricing",
+        "infrastructure"
+      ],
+      "importance": 2,
+      "summary": "(Dân trí) - Kết quả khảo sát cho thấy giá đất dọc Metro số 1 tăng đến 300%, trong khi chỉ có 2/36 dự án quanh nhà ga là nhà ở vừa túi tiền.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://dantri.com.vn/rss/bat-dong-san.rss",
+        "publisher_host": "dantri.com.vn",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-ef92b8f5a0538319e035",
+      "title": "TPHCM thu hồi 4,3ha đất làm đường nối Phạm Văn Đồng với cầu vượt Sóng Thần",
+      "url": "https://dantri.com.vn/thoi-su/tphcm-thu-hoi-43ha-dat-lam-duong-noi-pham-van-dong-voi-cau-vuot-song-than-20261016121735586.htm",
+      "category": "infrastructure",
+      "module_ids": [
+        "infrastructure"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-10-16T05:36:51+00:00",
+      "source_id": "dantri-current-affairs",
+      "region_ids": [
+        "hcmc"
+      ],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "(Dân trí) - Dự án mở rộng đường An Bình, phường Dĩ An (TPHCM) kết nối cầu vượt Sóng Thần với đường Phạm Văn Đồng dự kiến thu hồi khoảng 4,32 ha đất; kinh phí bồi thường, tái định cư hơn 2.000 tỷ đồng.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://dantri.com.vn/rss/thoi-su.rss",
+        "publisher_host": "dantri.com.vn",
+        "publication_date_from_feed": true
+      }
+    },
     {
       "id": "article-market-rss-f2ef3654e1f7d3e8714c",
       "title": "Chủ đầu tư The Metropole Thủ Thiêm bị phạt vì chậm báo cáo bán nhà cho người nước ngoài",
