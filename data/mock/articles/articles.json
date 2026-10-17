@@ -1,9 +1,188 @@
 {
   "schema_version": 1,
-  "build_id": "market-news-rss-20261017T005136Z",
-  "generated_at": "2026-10-17T00:51:36.164174+00:00",
-  "record_count": 556,
+  "build_id": "market-news-rss-20261017T025130Z",
+  "generated_at": "2026-10-17T02:51:30.165836+00:00",
+  "record_count": 564,
   "data": [
+    {
+      "id": "article-market-rss-e29ce7153068873ccbe6",
+      "title": "Giá vàng hôm nay 17.10.2026: Người mua vàng nhẫn lỗ ngay 4 triệu đồng",
+      "url": "https://thanhnien.vn/gia-vang-hom-nay-17102026-nguoi-mua-vang-nhan-lo-ngay-4-trieu-dong-185261017080500971.htm",
+      "category": "macro",
+      "module_ids": [
+        "macro"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-10-17T02:01:00+00:00",
+      "source_id": "thanhnien-banking",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "Giá vàng trong nước đứng yên nhưng người mua vàng nhẫn bị lỗ ngay đến 4 triệu đồng một lượng.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://thanhnien.vn/rss/kinh-te/ngan-hang.rss",
+        "publisher_host": "thanhnien.vn",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-5ce00fdf1ffcbe450a64",
+      "title": "Nút giao Tân Hiệp nối 2 cao tốc lớn, mở thông cửa ngõ sân bay Long Thành",
+      "url": "https://dantri.com.vn/thoi-su/nut-giao-tan-hiep-noi-2-cao-toc-lon-mo-thong-cua-ngo-san-bay-long-thanh-20261016222519228.htm",
+      "category": "infrastructure",
+      "module_ids": [
+        "infrastructure"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-10-17T01:13:07+00:00",
+      "source_id": "dantri-current-affairs",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [
+        "infrastructure"
+      ],
+      "importance": 2,
+      "summary": "(Dân trí) - Nút giao Tân Hiệp là điểm kết nối giữa 2 cao tốc Bến Lức – Long Thành và Biên Hòa – Vũng Tàu, góp phần hoàn thiện mạng lưới giao thông kết nối sân bay Long Thành.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://dantri.com.vn/rss/thoi-su.rss",
+        "publisher_host": "dantri.com.vn",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-c3c80c5c029726b42e80",
+      "title": "Sai lầm cất khăn tắm khiến phòng tắm bừa bộn và mẹo xử lý nhanh",
+      "url": "https://dantri.com.vn/bat-dong-san/sai-lam-cat-khan-tam-khien-phong-tam-bua-bon-va-meo-xu-ly-nhanh-20261016200109272.htm",
+      "category": "market",
+      "module_ids": [
+        "market"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-10-17T01:09:00+00:00",
+      "source_id": "dantri-real-estate",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "(Dân trí) - Dù dọn dẹp kỹ đến đâu, phòng tắm vẫn tạo cảm giác lộn xộn chỉ vì thói quen xếp khăn sai cách. Đổi ngay mẹo lưu trữ này, không gian sẽ gọn gàng và thoáng mát hơn hẳn.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://dantri.com.vn/rss/bat-dong-san.rss",
+        "publisher_host": "dantri.com.vn",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-8146a93c0ae2ac126494",
+      "title": "Ecopark nhận ba giải thưởng về kiến trúc, không gian sống",
+      "url": "https://vnexpress.net/ecopark-nhan-ba-giai-thuong-ve-kien-truc-khong-gian-song-5133417.html",
+      "category": "market",
+      "module_ids": [
+        "market"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-10-17T01:00:00+00:00",
+      "source_id": "vnexpress-real-estate",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "Nhà sáng lập Ecopark nhận ba giải tại PropertyGuru Vietnam Property Awards 2026, với các hạng mục về thiết kế kiến trúc, căn hộ chăm sóc sức khỏe và nhà ở lấy cảm hứng từ thiên nhiên.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://vnexpress.net/rss/bat-dong-san.rss",
+        "publisher_host": "vnexpress.net",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-57a5a6cf844e904fd314",
+      "title": "Chất lượng không gian ảnh hưởng tính kết nối cộng đồng cư dân thế nào?",
+      "url": "https://vnexpress.net/chat-luong-khong-gian-anh-huong-tinh-ket-noi-cong-dong-cu-dan-the-nao-5132818.html",
+      "category": "market",
+      "module_ids": [
+        "market"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-10-17T01:00:00+00:00",
+      "source_id": "vnexpress-real-estate",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "Không gian chung, lối đi bộ và cảnh quan được tổ chức hợp lý tạo điều kiện để cư dân tương tác, góp phần tăng kết nối cộng đồng trong khu ở.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://vnexpress.net/rss/bat-dong-san.rss",
+        "publisher_host": "vnexpress.net",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-47fe7c8c872d1f5261da",
+      "title": "Kinh tế đêm mở hướng phát triển mới cho các đô thị công nghiệp",
+      "url": "https://thanhnien.vn/kinh-te-dem-mo-huong-phat-trien-moi-cho-cac-do-thi-cong-nghiep-185261016190534621.htm",
+      "category": "market",
+      "module_ids": [
+        "market"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-10-17T01:00:00+00:00",
+      "source_id": "thanhnien-real-estate",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "Nhu cầu tiêu dùng sau giờ làm tại các đô thị công nghiệp đang mở ra dư địa phát triển kinh tế đêm, đồng thời gia tăng cơ hội khai thác cho các mô hình bất động sản thương mại - dịch vụ.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://thanhnien.vn/rss/kinh-te/dia-oc.rss",
+        "publisher_host": "thanhnien.vn",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-2f5386ef3095b327ff58",
+      "title": "4 đơn vị đồng hành phát triển dự án Q'Terra",
+      "url": "https://vnexpress.net/4-don-vi-dong-hanh-phat-trien-du-an-q-terra-5133424.html",
+      "category": "market",
+      "module_ids": [
+        "market"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-10-17T01:00:00+00:00",
+      "source_id": "vnexpress-real-estate",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [
+        "supply"
+      ],
+      "importance": 2,
+      "summary": "Công ty Cổ phần Phát triển Bất động sản Phát Đạt (PDR) hợp tác Big Four, CBRE và MB Bank tại Q'Terra, bổ sung các cấu phần tư vấn chiến lược, quản lý vận hành và tài chính cho dự án.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://vnexpress.net/rss/bat-dong-san.rss",
+        "publisher_host": "vnexpress.net",
+        "publication_date_from_feed": true
+      }
+    },
     {
       "id": "article-market-rss-149822e90d6c4907f50e",
       "title": "Giá vàng biến động, người mua vàng từ đỉnh đang lỗ hơn 50 triệu đồng",
@@ -103,6 +282,33 @@
         "method": "official-rss",
         "feed_url": "https://thanhnien.vn/rss/kinh-te/chinh-sach-phat-trien.rss",
         "publisher_host": "thanhnien.vn",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-d71ecc788beae0e3569f",
+      "title": "Quốc hội khai mạc kỳ họp thứ 2, loạt dự án luật quan trọng lên bàn nghị sự",
+      "url": "https://dantri.com.vn/thoi-su/quoc-hoi-khai-mac-ky-hop-thu-2-loat-du-an-luat-quan-trong-len-ban-nghi-su-20261016212128496.htm",
+      "category": "market",
+      "module_ids": [
+        "market"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-10-16T22:32:00+00:00",
+      "source_id": "dantri-current-affairs",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [
+        "legal"
+      ],
+      "importance": 2,
+      "summary": "(Dân trí) - Tại kỳ họp cuối năm, Quốc hội dự kiến thông qua 43 dự án luật, nghị quyết và cho ý kiến về 4 dự án, trong đó có nhiều nội dung quan trọng liên quan sửa đổi Luật Đất đai, Luật Nhà ở, Bộ luật Hình sự...",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://dantri.com.vn/rss/thoi-su.rss",
+        "publisher_host": "dantri.com.vn",
         "publication_date_from_feed": true
       }
     },
