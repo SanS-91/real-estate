@@ -1,9 +1,145 @@
 {
   "schema_version": 1,
-  "build_id": "market-news-rss-20261017T065134Z",
-  "generated_at": "2026-10-17T06:51:34.912852+00:00",
-  "record_count": 574,
+  "build_id": "market-news-rss-20261017T085146Z",
+  "generated_at": "2026-10-17T08:51:46.431354+00:00",
+  "record_count": 580,
   "data": [
+    {
+      "id": "article-market-rss-0a77a7a8fa724a814d66",
+      "title": "Dự án Luvista Quy Nhơn nhận hai giải thưởng tại Vietnam Property",
+      "url": "https://vnexpress.net/du-an-luvista-quy-nhon-nhan-hai-giai-thuong-tai-vietnam-property-5133602.html",
+      "category": "market",
+      "module_ids": [
+        "market"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-10-17T08:00:00+00:00",
+      "source_id": "vnexpress-real-estate",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "Luvista Quy Nhơn được vinh danh là Dự án quần thể bất động sản xuất sắc nhất và Thiết kế kiến trúc cao tầng xuất sắc nhất tại PropertyGuru Vietnam Property Awards năm 2026.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://vnexpress.net/rss/bat-dong-san.rss",
+        "publisher_host": "vnexpress.net",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-92847d2728a35e6ebfa8",
+      "title": "Đà Nẵng có thêm dự án căn hộ, khách sạn nghìn tỷ ven sông Hàn",
+      "url": "https://vnexpress.net/da-nang-co-them-du-an-can-ho-khach-san-nghin-ty-ven-song-han-5133518.html",
+      "category": "market",
+      "module_ids": [
+        "market"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-10-17T07:49:33+00:00",
+      "source_id": "vnexpress-real-estate",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [
+        "sales"
+      ],
+      "importance": 2,
+      "summary": "UBND TP Đà Nẵng vừa chấp thuận chủ trương đầu tư Tổ hợp căn hộ và khách sạn Sông Hàn với quy mô vốn gần 1.200 tỷ đồng.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://vnexpress.net/rss/bat-dong-san.rss",
+        "publisher_host": "vnexpress.net",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-f830917abd7c1dae0289",
+      "title": "Festival Island: Mở rộng trải nghiệm về đêm, tăng sức hút cho du lịch Nha Trang",
+      "url": "https://dantri.com.vn/bat-dong-san/festival-island-mo-rong-trai-nghiem-ve-dem-tang-suc-hut-cho-du-lich-nha-trang-20261017124845845.htm",
+      "category": "market",
+      "module_ids": [
+        "market"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-10-17T07:00:00+00:00",
+      "source_id": "dantri-real-estate",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "(Dân trí) - Một gia đình Nga có thể chọn Nha Trang trú đông từ 1-2 tháng, nhóm khách Hàn Quốc sẵn sàng quay lại lần thứ năm. Bên cạnh cảnh quan, ẩm thực, những trải nghiệm về đêm góp phần tạo thêm sức hút, để lại dấu ấn đáng nhớ cho chuyến đi.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://dantri.com.vn/rss/bat-dong-san.rss",
+        "publisher_host": "dantri.com.vn",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-6eba1f754a10166d0428",
+      "title": "Thủ Thiêm trước cú hích 20 tỷ USD và bước nhảy 17 bậc của trung tâm tài chính TPHCM",
+      "url": "https://dantri.com.vn/bat-dong-san/thu-thiem-truoc-cu-hich-20-ty-usd-va-buoc-nhay-17-bac-cua-trung-tam-tai-chinh-tphcm-20261017130816171.htm",
+      "category": "market",
+      "module_ids": [
+        "market"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-10-17T06:35:57+00:00",
+      "source_id": "dantri-real-estate",
+      "region_ids": [
+        "hcmc"
+      ],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [
+        "infrastructure"
+      ],
+      "importance": 2,
+      "summary": "(Dân trí) - Hàng loạt dự án quy mô lớn đang được triển khai, cùng hạ tầng và hệ sinh thái tài chính ngày càng hoàn thiện, tạo cơ hội đưa Thủ Thiêm trở thành một trung tâm chiến lược của TPHCM.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://dantri.com.vn/rss/bat-dong-san.rss",
+        "publisher_host": "dantri.com.vn",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-21405b30db0e47581860",
+      "title": "Nhiều cao tốc được yêu cầu lắp biển báo xác định khoảng cách an toàn",
+      "url": "https://dantri.com.vn/thoi-su/nhieu-cao-toc-duoc-yeu-cau-lap-bien-bao-xac-dinh-khoang-cach-an-toan-20261017120007210.htm",
+      "category": "infrastructure",
+      "module_ids": [
+        "infrastructure"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-10-17T06:33:16+00:00",
+      "source_id": "dantri-current-affairs",
+      "region_ids": [
+        "hcmc",
+        "ha-noi"
+      ],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [
+        "infrastructure"
+      ],
+      "importance": 2,
+      "summary": "(Dân trí) - Các tuyến cao tốc được yêu cầu thực hiện gồm Hải Phòng - Móng Cái, Trung Lương - Mỹ Thuận, Hà Nội - Hải Phòng, Pháp Vân - Cầu Giẽ, Diễn Châu - Bãi Vọt, TPHCM - Trung Lương và đoạn Mỹ Thuận - Cần Thơ.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://dantri.com.vn/rss/thoi-su.rss",
+        "publisher_host": "dantri.com.vn",
+        "publication_date_from_feed": true
+      }
+    },
     {
       "id": "article-market-rss-7910cb19357c0a3e6416",
       "title": "Hệ sinh thái tiện ích của Bcons Aria",
@@ -30,6 +166,34 @@
         "method": "official-rss",
         "feed_url": "https://vnexpress.net/rss/bat-dong-san.rss",
         "publisher_host": "vnexpress.net",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-b8ae1d146112b1f9eee1",
+      "title": "Thanh tra Chính phủ nêu lý do 2 dự án cao tốc trọng điểm thiếu vật liệu",
+      "url": "https://dantri.com.vn/thoi-su/thanh-tra-chinh-phu-neu-ly-do-2-du-an-cao-toc-trong-diem-thieu-vat-lieu-20261017105829383.htm",
+      "category": "market",
+      "module_ids": [
+        "market",
+        "infrastructure"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-10-17T04:31:00+00:00",
+      "source_id": "dantri-current-affairs",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [
+        "infrastructure"
+      ],
+      "importance": 2,
+      "summary": "(Dân trí) - Thanh tra Chính phủ chỉ ra nhiều nguyên nhân khiến Dự án đầu tư xây dựng đường cao tốc Châu Đốc - Cần Thơ - Sóc Trăng và Dự án cao tốc Cần Thơ - Cà Mau thiếu nguồn cát, đá thi công với số lượng lớn.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://dantri.com.vn/rss/thoi-su.rss",
+        "publisher_host": "dantri.com.vn",
         "publication_date_from_feed": true
       }
     },

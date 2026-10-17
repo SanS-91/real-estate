@@ -1,16 +1,16 @@
 {
   "schema_version": 1,
-  "checked_at": "2026-10-17T06:51:34.912852+00:00",
+  "checked_at": "2026-10-17T08:51:46.431354+00:00",
   "feeds_configured": 16,
   "feeds_fetched": 16,
-  "accepted_new": 2,
+  "accepted_new": 6,
   "production_written": true,
-  "article_total": 574,
+  "article_total": 580,
   "published_by_module": {
-    "market": 1,
+    "market": 5,
     "legal": 0,
-    "infrastructure": 0,
-    "macro": 1
+    "infrastructure": 2,
+    "macro": 0
   },
   "feed_status": [
     {
@@ -35,9 +35,9 @@
       "source_id": "dantri-real-estate",
       "status": "parsed",
       "feed_items": 50,
-      "new": 0,
-      "skipped": 50,
-      "duplicates": 50,
+      "new": 2,
+      "skipped": 48,
+      "duplicates": 48,
       "filtered": 0
     },
     {
@@ -107,10 +107,10 @@
       "source_id": "dantri-current-affairs",
       "status": "parsed",
       "feed_items": 50,
-      "new": 0,
-      "skipped": 50,
+      "new": 2,
+      "skipped": 48,
       "duplicates": 8,
-      "filtered": 42
+      "filtered": 40
     },
     {
       "source_id": "dantri-legal",
@@ -154,8 +154,8 @@
       "feed_items": 50,
       "new": 0,
       "skipped": 50,
-      "duplicates": 11,
-      "filtered": 39
+      "duplicates": 10,
+      "filtered": 40
     }
   ],
   "fetch_errors": []
