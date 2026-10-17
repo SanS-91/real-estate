@@ -1,12 +1,12 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-10-16T13:25:10.905138+00:00",
+  "generated_at": "2026-10-17T06:53:13.144547+00:00",
   "scope": "individual-verified-apartment-asking-only",
   "project_registry_count": 13,
   "projects_monitored": 8,
   "projects_with_current_verified_unit_offers": 3,
   "projects_with_recent_unpublished_source_candidates": 0,
-  "current_verified_unit_ads": 5,
+  "current_verified_unit_ads": 4,
   "source_data_health": [
     {
       "source_id": "muaban-vn",
@@ -255,7 +255,7 @@
         }
       ],
       "recent_eligible_ads": 0,
-      "current_verified_ads": 2,
+      "current_verified_ads": 1,
       "published_source_ids": [
         "muaban-vn"
       ],
