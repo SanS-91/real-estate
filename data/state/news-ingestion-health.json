@@ -1,25 +1,25 @@
 {
   "schema_version": 1,
-  "checked_at": "2026-10-17T04:40:56.104827+00:00",
+  "checked_at": "2026-10-17T06:51:34.912852+00:00",
   "feeds_configured": 16,
   "feeds_fetched": 16,
-  "accepted_new": 8,
+  "accepted_new": 2,
   "production_written": true,
-  "article_total": 572,
+  "article_total": 574,
   "published_by_module": {
-    "market": 2,
+    "market": 1,
     "legal": 0,
-    "infrastructure": 4,
-    "macro": 2
+    "infrastructure": 0,
+    "macro": 1
   },
   "feed_status": [
     {
       "source_id": "vnexpress-real-estate",
       "status": "parsed",
       "feed_items": 50,
-      "new": 0,
-      "skipped": 50,
-      "duplicates": 50,
+      "new": 2,
+      "skipped": 48,
+      "duplicates": 48,
       "filtered": 0
     },
     {
@@ -35,28 +35,28 @@
       "source_id": "dantri-real-estate",
       "status": "parsed",
       "feed_items": 50,
-      "new": 1,
-      "skipped": 49,
-      "duplicates": 49,
+      "new": 0,
+      "skipped": 50,
+      "duplicates": 50,
       "filtered": 0
     },
     {
       "source_id": "vnexpress-economy",
       "status": "parsed",
       "feed_items": 50,
-      "new": 1,
-      "skipped": 49,
-      "duplicates": 3,
+      "new": 0,
+      "skipped": 50,
+      "duplicates": 4,
       "filtered": 46
     },
     {
       "source_id": "vnexpress-current-affairs",
       "status": "parsed",
       "feed_items": 50,
-      "new": 3,
-      "skipped": 47,
-      "duplicates": 8,
-      "filtered": 39
+      "new": 0,
+      "skipped": 50,
+      "duplicates": 10,
+      "filtered": 40
     },
     {
       "source_id": "vnexpress-legal",
@@ -98,18 +98,18 @@
       "source_id": "dantri-business",
       "status": "parsed",
       "feed_items": 50,
-      "new": 1,
-      "skipped": 49,
+      "new": 0,
+      "skipped": 50,
       "duplicates": 9,
-      "filtered": 40
+      "filtered": 41
     },
     {
       "source_id": "dantri-current-affairs",
       "status": "parsed",
       "feed_items": 50,
-      "new": 1,
-      "skipped": 49,
-      "duplicates": 7,
+      "new": 0,
+      "skipped": 50,
+      "duplicates": 8,
       "filtered": 42
     },
     {
@@ -143,9 +143,9 @@
       "source_id": "thanhnien-policy",
       "status": "parsed",
       "feed_items": 50,
-      "new": 1,
-      "skipped": 49,
-      "duplicates": 12,
+      "new": 0,
+      "skipped": 50,
+      "duplicates": 13,
       "filtered": 37
     },
     {
