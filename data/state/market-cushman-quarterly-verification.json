@@ -5,13 +5,6 @@
   "latest_status": "matched-source-quarter-and-metrics",
   "checks": [
     {
-      "run_id": "38056374896",
-      "checked_at": "2026-10-10T13:36:45.423958+00:00",
-      "status": "matched-source-quarter-and-metrics",
-      "period": "2026-Q2",
-      "signature": "02c49bad526c76d63dea0afc144eef24f78507f32b9c1de040a6c2ce9cbd678f"
-    },
-    {
       "run_id": "38120363701",
       "checked_at": "2026-10-11T07:08:36.867294+00:00",
       "status": "matched-source-quarter-and-metrics",
@@ -98,6 +91,13 @@
     {
       "run_id": "39006684927",
       "checked_at": "2026-10-17T05:33:28.827207+00:00",
+      "status": "matched-source-quarter-and-metrics",
+      "period": "2026-Q2",
+      "signature": "02c49bad526c76d63dea0afc144eef24f78507f32b9c1de040a6c2ce9cbd678f"
+    },
+    {
+      "run_id": "39029196841",
+      "checked_at": "2026-10-17T11:34:19.247475+00:00",
       "status": "matched-source-quarter-and-metrics",
       "period": "2026-Q2",
       "signature": "02c49bad526c76d63dea0afc144eef24f78507f32b9c1de040a6c2ce9cbd678f"
