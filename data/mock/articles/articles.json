@@ -1,9 +1,196 @@
 {
   "schema_version": 1,
-  "build_id": "market-news-rss-20261017T025130Z",
-  "generated_at": "2026-10-17T02:51:30.165836+00:00",
-  "record_count": 564,
+  "build_id": "market-news-rss-20261017T044056Z",
+  "generated_at": "2026-10-17T04:40:56.104827+00:00",
+  "record_count": 572,
   "data": [
+    {
+      "id": "article-market-rss-8be3a42a78c07d482d71",
+      "title": "Metro số 1 TP.HCM tạm ngưng gần 1 giờ vì mất điện đột ngột",
+      "url": "https://thanhnien.vn/metro-so-1-tphcm-tam-ngung-gan-1-gio-vi-mat-dien-dot-ngot-185261017103035649.htm",
+      "category": "infrastructure",
+      "module_ids": [
+        "infrastructure"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-10-17T03:46:00+00:00",
+      "source_id": "thanhnien-policy",
+      "region_ids": [
+        "hcmc"
+      ],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [
+        "infrastructure"
+      ],
+      "importance": 2,
+      "summary": "Lúc 7 giờ 4 phút sáng nay, một sự cố bất ngờ tên hệ thống truyền tải điện quốc gia đã gây mất điện toàn bộ Trạm biến áp 220kV Thủ Đức (do Công ty Truyền tải điện 4 quản lý). Sự cố này dẫn đến tình trạng gián đoạn cung cấp điện diện rộng trên địa bàn khu vực Thủ Đức, trong đó ảnh hưởng trực tiếp đến ",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://thanhnien.vn/rss/kinh-te/chinh-sach-phat-trien.rss",
+        "publisher_host": "thanhnien.vn",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-9ada5b0af1aef502135d",
+      "title": "Chính phủ trình mục tiêu tăng trưởng kinh tế 2027 từ 10% trở lên",
+      "url": "https://vnexpress.net/chinh-phu-trinh-muc-tieu-tang-truong-kinh-te-2027-tu-10-tro-len-5133468.html",
+      "category": "macro",
+      "module_ids": [
+        "macro"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-10-17T03:34:36+00:00",
+      "source_id": "vnexpress-economy",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "Chính phủ trình Quốc hội mục tiêu phấn đấu tăng trưởng GDP 2027 từ 10% trở lên gắn với giữ ổn định kinh tế vĩ mô, kiểm soát lạm phát.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://vnexpress.net/rss/kinh-doanh.rss",
+        "publisher_host": "vnexpress.net",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-8ff9db0c43baba67b13d",
+      "title": "Metro Bến Thành - Suối Tiên dừng chạy một giờ do sự cố điện",
+      "url": "https://vnexpress.net/metro-ben-thanh-suoi-tien-dung-chay-mot-gio-do-su-co-dien-5133490.html",
+      "category": "infrastructure",
+      "module_ids": [
+        "infrastructure"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-10-17T02:50:42+00:00",
+      "source_id": "vnexpress-current-affairs",
+      "region_ids": [
+        "hcmc"
+      ],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [
+        "infrastructure"
+      ],
+      "importance": 2,
+      "summary": "Sự cố kỹ thuật tại trạm điện 220 kV Thủ Đức khiến 14 đoàn tàu metro Bến Thành - Suối Tiên bị ảnh hưởng, nhiều hành khách phải xuống ga chờ, sáng 17/10.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://vnexpress.net/rss/thoi-su.rss",
+        "publisher_host": "vnexpress.net",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-dcf19ec968fc3bdf9cee",
+      "title": "Phó Thủ tướng yêu cầu giảm lãi suất cho vay 1,5-2% với sản xuất, kinh doanh",
+      "url": "https://dantri.com.vn/kinh-doanh/pho-thu-tuong-yeu-cau-giam-lai-suat-cho-vay-15-2-voi-san-xuat-kinh-doanh-20261017092740338.htm",
+      "category": "macro",
+      "module_ids": [
+        "macro"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-10-17T02:39:58+00:00",
+      "source_id": "dantri-business",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "(Dân trí) - Phó Thủ tướng Nguyễn Văn Thắng yêu cầu giảm lãi suất cho vay 1,5-2% với sản xuất, kinh doanh và lĩnh vực ưu tiên, hỗ trợ người dân, doanh nghiệp.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://dantri.com.vn/rss/kinh-doanh.rss",
+        "publisher_host": "dantri.com.vn",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-167e5ee492afb742aaa6",
+      "title": "Thủ tướng: Phấn đấu hoàn thành 176.000 căn nhà ở xã hội năm 2027",
+      "url": "https://vnexpress.net/thu-tuong-phan-dau-hoan-thanh-176-000-can-nha-o-xa-hoi-nam-2027-5133467.html",
+      "category": "market",
+      "module_ids": [
+        "market"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-10-17T02:31:05+00:00",
+      "source_id": "vnexpress-current-affairs",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "Thủ tướng Lê Minh Hưng cho biết Chính phủ sẽ đẩy nhanh phát triển nhà ở xã hội, nhà ở cho thuê, phấn đấu hoàn thành khoảng 176.000 căn hộ trong năm 2027.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://vnexpress.net/rss/thoi-su.rss",
+        "publisher_host": "vnexpress.net",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-7028aeae8ddc1f83c6dd",
+      "title": "14 chuyến tàu Metro Bến Thành - Suối Tiên bị ảnh hưởng do sự cố điện",
+      "url": "https://dantri.com.vn/thoi-su/14-chuyen-tau-metro-ben-thanh-suoi-tien-bi-anh-huong-do-su-co-dien-20261017092041138.htm",
+      "category": "infrastructure",
+      "module_ids": [
+        "infrastructure"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-10-17T02:30:58+00:00",
+      "source_id": "dantri-current-affairs",
+      "region_ids": [
+        "hcmc"
+      ],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [
+        "infrastructure"
+      ],
+      "importance": 2,
+      "summary": "(Dân trí) - Mất điện diện rộng tại khu vực Thủ Đức sáng 17/10 khiến 14 chuyến tàu Metro Bến Thành - Suối Tiên bị gián đoạn. HURC1 đã phối hợp ngành điện khôi phục toàn bộ hoạt động vận hành sau gần 1 tiếng.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://dantri.com.vn/rss/thoi-su.rss",
+        "publisher_host": "dantri.com.vn",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-357f65cfeb5a74b858bf",
+      "title": "Cuộc chiến khốc liệt giành quyền kiểm soát cách người Mỹ mua và bán nhà",
+      "url": "https://dantri.com.vn/bat-dong-san/cuoc-chien-khoc-liet-gianh-quyen-kiem-soat-cach-nguoi-my-mua-va-ban-nha-20261017090943190.htm",
+      "category": "market",
+      "module_ids": [
+        "market"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-10-17T02:23:22+00:00",
+      "source_id": "dantri-real-estate",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "(Dân trí) - Hãng môi giới khổng lồ Compass đang gỡ nhiều tin rao bán khỏi các trang web, khiến đối thủ phản ứng dữ dội vì cho rằng điều này phá vỡ sự minh bạch thị trường đã có hàng chục năm.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://dantri.com.vn/rss/bat-dong-san.rss",
+        "publisher_host": "dantri.com.vn",
+        "publication_date_from_feed": true
+      }
+    },
     {
       "id": "article-market-rss-e29ce7153068873ccbe6",
       "title": "Giá vàng hôm nay 17.10.2026: Người mua vàng nhẫn lỗ ngay 4 triệu đồng",
@@ -253,6 +440,33 @@
       ],
       "importance": 2,
       "summary": "Cục Cảnh sát giao thông đề nghị lắp biển báo, kẻ vạch tại 77 vị trí trên 16 tuyến cao tốc để xử phạt tài xế vi phạm quy định về khoảng cách an toàn.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://vnexpress.net/rss/thoi-su.rss",
+        "publisher_host": "vnexpress.net",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-834581f2441325f5993b",
+      "title": "Đề nghị lắp biển báo để xử phạt lỗi khoảng cách trên 16 cao tốc",
+      "url": "https://vnexpress.net/de-nghi-lap-bien-bao-de-xu-phat-loi-khoang-cach-tren-16-cao-toc-5133397.html",
+      "category": "infrastructure",
+      "module_ids": [
+        "infrastructure"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-10-16T23:00:00+00:00",
+      "source_id": "vnexpress-current-affairs",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [
+        "infrastructure"
+      ],
+      "importance": 2,
+      "summary": "Cục Cảnh sát giao thông đề nghị lắp biển báo, kẻ vạch tại 77 vị trí trên 16 cao tốc để xử phạt tài xế vi phạm quy định về khoảng cách an toàn.",
       "source_verification": {
         "method": "official-rss",
         "feed_url": "https://vnexpress.net/rss/thoi-su.rss",
