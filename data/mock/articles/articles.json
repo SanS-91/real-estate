@@ -1,9 +1,34 @@
 {
   "schema_version": 1,
-  "build_id": "market-news-rss-20261017T145146Z",
-  "generated_at": "2026-10-17T14:51:46.885706+00:00",
-  "record_count": 592,
+  "build_id": "market-news-rss-20261017T154410Z",
+  "generated_at": "2026-10-17T15:44:10.698431+00:00",
+  "record_count": 593,
   "data": [
+    {
+      "id": "article-market-rss-5516c79abcf742544eda",
+      "title": "Chủ tịch Vietcombank cam kết giảm tối thiểu 2% lãi suất cho vay",
+      "url": "https://vnexpress.net/chu-tich-vietcombank-cam-ket-giam-toi-thieu-2-lai-suat-cho-vay-5133686.html",
+      "category": "macro",
+      "module_ids": [
+        "macro"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-10-17T15:19:03+00:00",
+      "source_id": "vnexpress-economy",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "Chủ tịch Vietcombank Nguyễn Thanh Tùng cho biết ngân hàng này cam kết từ nay đến cuối năm giảm tối thiểu 2% lãi suất cho vay để hỗ trợ doanh nghiệp.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://vnexpress.net/rss/kinh-doanh.rss",
+        "publisher_host": "vnexpress.net",
+        "publication_date_from_feed": true
+      }
+    },
     {
       "id": "article-market-rss-68a4386b55c13b979475",
       "title": "BIDV giảm lãi suất cho vay tới 2%/năm",
