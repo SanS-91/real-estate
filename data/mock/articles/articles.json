@@ -1,9 +1,64 @@
 {
   "schema_version": 1,
-  "build_id": "market-news-rss-20261017T085146Z",
-  "generated_at": "2026-10-17T08:51:46.431354+00:00",
-  "record_count": 580,
+  "build_id": "market-news-rss-20261017T105138Z",
+  "generated_at": "2026-10-17T10:51:38.856537+00:00",
+  "record_count": 583,
   "data": [
+    {
+      "id": "article-market-rss-6f29deea5f10f3bace8a",
+      "title": "SkyWorld Vietnam cùng dự án SkySOLIS tạo dấu ấn kép tại PropertyGuru Vietnam 2026",
+      "url": "https://thanhnien.vn/skyworld-vietnam-cung-du-an-skysolis-tao-dau-an-kep-tai-propertyguru-vietnam-2026-18526101716562878.htm",
+      "category": "market",
+      "module_ids": [
+        "market"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-10-17T10:00:00+00:00",
+      "source_id": "thanhnien-real-estate",
+      "region_ids": [
+        "hcmc"
+      ],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "Vào ngày 16.10.2026 tại Lễ trao giải PropertyGuru Vietnam Property Awards 2026, SkyWorld Vietnam được vinh danh 'Best Transnational Developer' - SkySOLIS đã xuất sắc nhận giải 'Best Mid End Condo Development khu vực TPHCM mở rộng'. Hai giải thưởng tạo nên dấu ấn kép cho SkyWorld tại thị trường Việt ",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://thanhnien.vn/rss/kinh-te/dia-oc.rss",
+        "publisher_host": "thanhnien.vn",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-d8f792c9d1378a98cc9c",
+      "title": "Nhân lực chất lượng cao tạo nhu cầu nhà ở Bắc TP HCM",
+      "url": "https://vnexpress.net/nhan-luc-chat-luong-cao-tao-nhu-cau-nha-o-bac-tp-hcm-5133623.html",
+      "category": "market",
+      "module_ids": [
+        "market",
+        "infrastructure"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-10-17T09:30:00+00:00",
+      "source_id": "vnexpress-real-estate",
+      "region_ids": [
+        "hcmc"
+      ],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "Khu Bắc TP HCM định hưởng hút đầu tư công nghệ cao, kéo theo nhu cầu nhà ở cho đội ngũ chuyên gia quốc tế.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://vnexpress.net/rss/bat-dong-san.rss",
+        "publisher_host": "vnexpress.net",
+        "publication_date_from_feed": true
+      }
+    },
     {
       "id": "article-market-rss-0a77a7a8fa724a814d66",
       "title": "Dự án Luvista Quy Nhơn nhận hai giải thưởng tại Vietnam Property",
@@ -53,6 +108,31 @@
         "method": "official-rss",
         "feed_url": "https://vnexpress.net/rss/bat-dong-san.rss",
         "publisher_host": "vnexpress.net",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-bdf4b6102198e9eb34db",
+      "title": "\"Có tiền không tiêu\" phải hủy dự toán, chủ đầu tư chịu trách nhiệm",
+      "url": "https://dantri.com.vn/thoi-su/co-tien-khong-tieu-phai-huy-du-toan-chu-dau-tu-chiu-trach-nhiem-20261017111518767.htm",
+      "category": "market",
+      "module_ids": [
+        "market"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-10-17T07:32:00+00:00",
+      "source_id": "dantri-current-affairs",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "(Dân trí) - Chủ tịch UBND tỉnh Đắk Lắk yêu cầu chủ đầu tư đẩy nhanh tiến độ giải ngân vốn đầu tư công và phải chịu trách nhiệm nếu để vốn năm 2025 kéo dài sang năm 2026 nhưng không sử dụng buộc phải hủy dự toán.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://dantri.com.vn/rss/thoi-su.rss",
+        "publisher_host": "dantri.com.vn",
         "publication_date_from_feed": true
       }
     },
