@@ -1,9 +1,243 @@
 {
   "schema_version": 1,
-  "build_id": "market-news-rss-20261016T164751Z",
-  "generated_at": "2026-10-16T16:47:51.898670+00:00",
-  "record_count": 547,
+  "build_id": "market-news-rss-20261017T005136Z",
+  "generated_at": "2026-10-17T00:51:36.164174+00:00",
+  "record_count": 556,
   "data": [
+    {
+      "id": "article-market-rss-149822e90d6c4907f50e",
+      "title": "Giá vàng biến động, người mua vàng từ đỉnh đang lỗ hơn 50 triệu đồng",
+      "url": "https://dantri.com.vn/kinh-doanh/gia-vang-bien-dong-nguoi-mua-vang-tu-dinh-dang-lo-hon-50-trieu-dong-20261017070456587.htm",
+      "category": "macro",
+      "module_ids": [
+        "macro"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-10-17T00:21:43+00:00",
+      "source_id": "dantri-business",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "(Dân trí) - Giá vàng trong nước thời gian dài duy trì ở vùng thấp dưới 145 triệu đồng/lượng. So với đỉnh vào khoảng 191,3 triệu đồng/lượng hồi đầu năm, người mua vẫn đang lỗ hơn 50 triệu đồng mỗi lượng.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://dantri.com.vn/rss/kinh-doanh.rss",
+        "publisher_host": "dantri.com.vn",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-1f32b340eb036c588009",
+      "title": "Bitcoin rớt đáy một tháng vì lạm phát nóng, nỗi lo Fed tăng lãi suất",
+      "url": "https://dantri.com.vn/kinh-doanh/bitcoin-rot-day-mot-thang-vi-lam-phat-nong-noi-lo-fed-tang-lai-suat-20261016235408529.htm",
+      "category": "macro",
+      "module_ids": [
+        "macro"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-10-16T23:00:47+00:00",
+      "source_id": "dantri-business",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "(Dân trí) - Sự trở lại bất ngờ của lạm phát Mỹ khiến kỳ vọng nới lỏng tiền tệ tan biến. Đồng tiền mã hóa lớn nhất thế giới lập tức rơi vào nhịp giằng co đầy bất an, kéo tụt tâm lý giới đầu tư.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://dantri.com.vn/rss/kinh-doanh.rss",
+        "publisher_host": "dantri.com.vn",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-98adb12c748799cc2138",
+      "title": "Đề nghị lắp biển báo để xử phạt lỗi giữ khoảng cách trên 16 tuyến cao tốc",
+      "url": "https://vnexpress.net/de-nghi-lap-bien-bao-de-xu-phat-loi-giu-khoang-cach-tren-16-tuyen-cao-toc-5133397.html",
+      "category": "infrastructure",
+      "module_ids": [
+        "infrastructure"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-10-16T23:00:00+00:00",
+      "source_id": "vnexpress-current-affairs",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [
+        "infrastructure"
+      ],
+      "importance": 2,
+      "summary": "Cục Cảnh sát giao thông đề nghị lắp biển báo, kẻ vạch tại 77 vị trí trên 16 tuyến cao tốc để xử phạt tài xế vi phạm quy định về khoảng cách an toàn.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://vnexpress.net/rss/thoi-su.rss",
+        "publisher_host": "vnexpress.net",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-082efaa6cc56c6ab1e5e",
+      "title": "Loạt siêu dự án thúc đẩy tăng trưởng về đích",
+      "url": "https://thanhnien.vn/loat-sieu-du-an-thuc-day-tang-truong-ve-dich-18526101621545598.htm",
+      "category": "market",
+      "module_ids": [
+        "market"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-10-16T23:00:00+00:00",
+      "source_id": "thanhnien-policy",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "Sự tăng tốc đồng loạt và đưa vào vận hành của hàng loạt siêu dự án trọng điểm đang tạo cú hích quyết định, trực tiếp kéo nền kinh tế bứt phá về đích trong chặng đua nước rút cuối năm.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://thanhnien.vn/rss/kinh-te/chinh-sach-phat-trien.rss",
+        "publisher_host": "thanhnien.vn",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-728c995aa90c3bbd4c95",
+      "title": "Nhiều người bán nhà để thoát gánh nặng lãi vay thả nổi",
+      "url": "https://vnexpress.net/nhieu-nguoi-ban-nha-de-thoat-ganh-nang-lai-vay-tha-noi-5132650.html",
+      "category": "market",
+      "module_ids": [
+        "macro"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-10-16T22:00:00+00:00",
+      "source_id": "vnexpress-real-estate",
+      "region_ids": [
+        "ha-noi"
+      ],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "Hết thời gian hỗ trợ lãi suất, nhiều người vay mua nhà phải bán tài sản, chuyển sang căn nhỏ hơn hoặc xa trung tâm để giảm áp lực khi lãi suất thả nổi tăng cao.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://vnexpress.net/rss/bat-dong-san.rss",
+        "publisher_host": "vnexpress.net",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-39b985c482c8c3c60b65",
+      "title": "TP HCM cho chuyển đổi 3,3 ha đất sản xuất làm dự án căn hộ Phú Gia Khiêm",
+      "url": "https://vnexpress.net/tp-hcm-cho-chuyen-doi-3-3-ha-dat-san-xuat-lam-du-an-can-ho-phu-gia-khiem-5133442.html",
+      "category": "market",
+      "module_ids": [
+        "market",
+        "macro"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-10-16T20:09:54+00:00",
+      "source_id": "vnexpress-real-estate",
+      "region_ids": [
+        "hcmc"
+      ],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [
+        "legal"
+      ],
+      "importance": 2,
+      "summary": "UBND TP HCM tháo gỡ pháp lý cho phép Công ty Giang Nam chuyển mục đích hơn 3,3 ha đất sản xuất để làm dự án căn hộ Phú Gia Khiêm tại phường An Phú.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://vnexpress.net/rss/bat-dong-san.rss",
+        "publisher_host": "vnexpress.net",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-178dd2973ba1ea4dbcad",
+      "title": "Phó thủ tướng yêu cầu giảm lãi suất cho vay 1,5-2%",
+      "url": "https://vnexpress.net/pho-thu-tuong-yeu-cau-giam-lai-suat-cho-vay-1-5-2-5133422.html",
+      "category": "macro",
+      "module_ids": [
+        "macro"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-10-16T18:30:00+00:00",
+      "source_id": "vnexpress-economy",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "Phó thủ tướng Nguyễn Văn Thắng yêu cầu giảm lãi suất cho vay 1,5-2% với sản xuất, kinh doanh và lĩnh vực ưu tiên, hỗ trợ người dân, doanh nghiệp.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://vnexpress.net/rss/kinh-doanh.rss",
+        "publisher_host": "vnexpress.net",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-e09da572bbd95a7028e4",
+      "title": "Trái phiếu có thể thay thế cổ phiếu khi lãi suất tăng cao?",
+      "url": "https://vnexpress.net/trai-phieu-co-the-thay-the-co-phieu-khi-lai-suat-tang-cao-5132674.html",
+      "category": "macro",
+      "module_ids": [
+        "macro"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-10-16T17:05:00+00:00",
+      "source_id": "vnexpress-economy",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "Lãi suất tăng khiến trái phiếu hấp dẫn hơn, song việc rút vốn khỏi cổ phiếu để chuyển sang kênh này chưa hẳn luôn là lựa chọn tối ưu.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://vnexpress.net/rss/kinh-doanh.rss",
+        "publisher_host": "vnexpress.net",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-d6127f2b51577c459f20",
+      "title": "Nhà gỗ 'lơ lửng' trên sườn núi ở độ cao 1.530 m",
+      "url": "https://vnexpress.net/nha-go-lo-lung-tren-suon-nui-o-do-cao-1-530-m-5133157.html",
+      "category": "market",
+      "module_ids": [
+        "market"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-10-16T17:00:00+00:00",
+      "source_id": "vnexpress-real-estate",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "Công trình sử dụng kết cấu gỗ lắp ghép, nâng sàn khỏi mặt đất nhằm hạn chế tác động đến địa hình tự nhiên.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://vnexpress.net/rss/bat-dong-san.rss",
+        "publisher_host": "vnexpress.net",
+        "publication_date_from_feed": true
+      }
+    },
     {
       "id": "article-market-rss-ba9c49cf99d1b7c773d1",
       "title": "Hai căn nhà ở Lâm Đồng bị lửa thiêu rụi",
