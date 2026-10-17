@@ -1,9 +1,59 @@
 {
   "schema_version": 1,
-  "build_id": "market-news-rss-20261017T125134Z",
-  "generated_at": "2026-10-17T12:51:34.394059+00:00",
-  "record_count": 589,
+  "build_id": "market-news-rss-20261017T145146Z",
+  "generated_at": "2026-10-17T14:51:46.885706+00:00",
+  "record_count": 592,
   "data": [
+    {
+      "id": "article-market-rss-68a4386b55c13b979475",
+      "title": "BIDV giảm lãi suất cho vay tới 2%/năm",
+      "url": "https://dantri.com.vn/kinh-doanh/bidv-giam-lai-suat-cho-vay-toi-2nam-20261017192334111.htm",
+      "category": "macro",
+      "module_ids": [
+        "macro"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-10-17T14:00:00+00:00",
+      "source_id": "dantri-business",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "(Dân trí) - Ngân hàng TMCP Đầu tư và Phát triển Việt Nam (BIDV) vừa triển khai chương trình tín dụng ưu đãi với lãi suất cho vay chỉ từ 6%/năm (giảm tới 2%/năm so với mức lãi suất thông thường) tùy theo kỳ hạn và lĩnh vực vay vốn.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://dantri.com.vn/rss/kinh-doanh.rss",
+        "publisher_host": "dantri.com.vn",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-b5ba4a2ef87c52168f32",
+      "title": "Luvista Quy Nhơn nhận hai giải thưởng tại PropertyGuru Vietnam Property Awards 2026",
+      "url": "https://dantri.com.vn/bat-dong-san/luvista-quy-nhon-nhan-hai-giai-thuong-tai-propertyguru-vietnam-property-awards-2026-20261017190301906.htm",
+      "category": "market",
+      "module_ids": [
+        "market"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-10-17T12:30:00+00:00",
+      "source_id": "dantri-real-estate",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "(Dân trí) - Luvista Quy Nhơn ghi dấu tại PropertyGuru Vietnam Property Awards 2026 được vinh danh ở hai hạng mục phát triển quần thể bất động sản và thiết kế kiến trúc cao tầng.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://dantri.com.vn/rss/bat-dong-san.rss",
+        "publisher_host": "dantri.com.vn",
+        "publication_date_from_feed": true
+      }
+    },
     {
       "id": "article-market-rss-cf7b117048bd104a254d",
       "title": "Sức nóng thu hút từ Bcons Central Park căn hộ chuẩn xanh tại trung tâm Biên Hòa",
@@ -26,6 +76,33 @@
         "method": "official-rss",
         "feed_url": "https://thanhnien.vn/rss/kinh-te/dia-oc.rss",
         "publisher_host": "thanhnien.vn",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-11f4ba38907a52a5679f",
+      "title": "Đường sắt Bến Thành - Cần Giờ sẽ có 2 dải tốc độ",
+      "url": "https://dantri.com.vn/thoi-su/duong-sat-ben-thanh-can-gio-se-co-2-dai-toc-do-20261017181445898.htm",
+      "category": "infrastructure",
+      "module_ids": [
+        "infrastructure"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-10-17T11:38:45+00:00",
+      "source_id": "dantri-current-affairs",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [
+        "infrastructure"
+      ],
+      "importance": 2,
+      "summary": "(Dân trí) - 12km đầu tuyến sẽ được áp dụng dải tốc độ 120km/h, tương đương các tuyến đường sắt đô thị; trong khi đoạn còn lại tăng lên 350km/h theo mô hình đường sắt tốc độ cao.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://dantri.com.vn/rss/thoi-su.rss",
+        "publisher_host": "dantri.com.vn",
         "publication_date_from_feed": true
       }
     },
