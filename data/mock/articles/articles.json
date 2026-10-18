@@ -1,9 +1,151 @@
 {
   "schema_version": 1,
-  "build_id": "market-news-rss-20261018T025149Z",
-  "generated_at": "2026-10-18T02:51:49.974578+00:00",
-  "record_count": 604,
+  "build_id": "market-news-rss-20261018T044644Z",
+  "generated_at": "2026-10-18T04:46:44.826637+00:00",
+  "record_count": 611,
   "data": [
+    {
+      "id": "article-market-rss-c06986c3b22db4625e8a",
+      "title": "Chỉ 30% biệt thự liền kề sơ cấp có người mua",
+      "url": "https://vnexpress.net/chi-30-biet-thu-lien-ke-so-cap-co-nguoi-mua-5133703.html",
+      "category": "market",
+      "module_ids": [
+        "market"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-10-18T03:11:23+00:00",
+      "source_id": "vnexpress-real-estate",
+      "region_ids": [
+        "ha-noi"
+      ],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [
+        "supply",
+        "sales"
+      ],
+      "importance": 2,
+      "summary": "Nguồn cung biệt thự, liền kề sơ cấp tại Hà Nội tăng mạnh trong quý III, nhưng chỉ khoảng 30% số căn được thị trường hấp thụ do giá neo cao, theo CBRE.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://vnexpress.net/rss/bat-dong-san.rss",
+        "publisher_host": "vnexpress.net",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-7e5a583054fb7e46f628",
+      "title": "Bộ trưởng Bộ Nội vụ: Đường Hồ Chí Minh phải làm xong mới kết thúc dự án",
+      "url": "https://dantri.com.vn/thoi-su/bo-truong-bo-noi-vu-duong-ho-chi-minh-phai-lam-xong-moi-ket-thuc-du-an-20261018094532320.htm",
+      "category": "market",
+      "module_ids": [
+        "market"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-10-18T03:10:26+00:00",
+      "source_id": "dantri-current-affairs",
+      "region_ids": [
+        "hcmc"
+      ],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "(Dân trí) - Bộ trưởng Bộ Nội vụ Nguyễn Tiến Hải đề nghị hoàn thành các đoạn còn dang dở, nâng cấp những đoạn hư hỏng nặng trước khi kết thúc dự án đường Hồ Chí Minh.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://dantri.com.vn/rss/thoi-su.rss",
+        "publisher_host": "dantri.com.vn",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-ecc9a036afafe32ecf0c",
+      "title": "30 năm Ciputra: Từ vườn trồng đào đến cộng đồng đa quốc tịch",
+      "url": "https://vnexpress.net/30-nam-ciputra-tu-vuon-trong-dao-den-cong-dong-da-quoc-tich-5133426.html",
+      "category": "market",
+      "module_ids": [
+        "market",
+        "legal"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-10-18T03:00:00+00:00",
+      "source_id": "vnexpress-real-estate",
+      "region_ids": [
+        "ha-noi"
+      ],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [
+        "legal",
+        "infrastructure"
+      ],
+      "importance": 2,
+      "summary": "Không chỉ chuyển đổi hàng trăm ha đất ven đô thành khu nhà ở, Ciputra còn phát triển cùng hệ thống trường học quốc tế, không gian xanh và hạ tầng kết nối, mở giai đoạn mới trong quy hoạch đô thị Hà Nội.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://vnexpress.net/rss/bat-dong-san.rss",
+        "publisher_host": "vnexpress.net",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-84b615d6a6d58d3c4c78",
+      "title": "Chính phủ báo cáo tiến độ các đoạn cuối dự án đường Hồ Chí Minh",
+      "url": "https://dantri.com.vn/thoi-su/chinh-phu-bao-cao-tien-do-cac-doan-cuoi-du-an-duong-ho-chi-minh-20261018091241162.htm",
+      "category": "market",
+      "module_ids": [
+        "market"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-10-18T02:34:34+00:00",
+      "source_id": "dantri-current-affairs",
+      "region_ids": [
+        "hcmc"
+      ],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "(Dân trí) - Đoạn Chợ Chu - Ngã ba Trung Sơn đạt khoảng 99% sản lượng, Chơn Thành - Đức Hòa đạt 96%, còn Rạch Sỏi - Bến Nhất, Gò Quao - Vĩnh Thuận dự kiến khai thác quý I/2027.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://dantri.com.vn/rss/thoi-su.rss",
+        "publisher_host": "dantri.com.vn",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-cd1e42e74bde5e8b973f",
+      "title": "Cháy căn hộ tầng 3 chung cư ở TP HCM",
+      "url": "https://vnexpress.net/chay-can-ho-tang-3-chung-cu-o-tp-hcm-5133759.html",
+      "category": "market",
+      "module_ids": [
+        "market"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-10-18T02:32:58+00:00",
+      "source_id": "vnexpress-current-affairs",
+      "region_ids": [
+        "hcmc"
+      ],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "Đám cháy bùng lên từ căn hộ rộng 100 m2 ở tầng 3 chung cư nằm trong khu đô thị Phú Mỹ Hưng, khói đen lan lên 5 tầng phía trên.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://vnexpress.net/rss/thoi-su.rss",
+        "publisher_host": "vnexpress.net",
+        "publication_date_from_feed": true
+      }
+    },
     {
       "id": "article-market-rss-6b9ceb2c07b0841e8c33",
       "title": "Tập đoàn Lê Phong nhận cú đúp tại giải thưởng bất động sản",
@@ -26,6 +168,58 @@
         "method": "official-rss",
         "feed_url": "https://vnexpress.net/rss/bat-dong-san.rss",
         "publisher_host": "vnexpress.net",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-4d362cdfe8fa7c3bef63",
+      "title": "SJ Group được vinh danh Nhà phát triển khu đô thị xuất sắc nhất",
+      "url": "https://dantri.com.vn/bat-dong-san/sj-group-duoc-vinh-danh-nha-phat-trien-khu-do-thi-xuat-sac-nhat-20261017155556891.htm",
+      "category": "market",
+      "module_ids": [
+        "market"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-10-18T02:00:00+00:00",
+      "source_id": "dantri-real-estate",
+      "region_ids": [
+        "hcmc"
+      ],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "(Dân trí) - Tối 16/10, tại Gem Center, TPHCM, SJ Group được vinh danh “Nhà phát triển khu đô thị xuất sắc nhất” (Best Township Developer) tại Giải thưởng Bất động sản Việt Nam PropertyGuru 2026 (PropertyGuru Vietnam Property Awards 2026).",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://dantri.com.vn/rss/bat-dong-san.rss",
+        "publisher_host": "dantri.com.vn",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-b5cacc36f7e287a13af5",
+      "title": "Cảnh báo tình trạng rao bán đất công, đất rẫy ở “Đà Lạt thứ hai”",
+      "url": "https://dantri.com.vn/bat-dong-san/canh-bao-tinh-trang-rao-ban-dat-cong-dat-ray-o-da-lat-thu-hai-20261018073346139.htm",
+      "category": "market",
+      "module_ids": [
+        "market"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-10-18T01:15:27+00:00",
+      "source_id": "dantri-real-estate",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "(Dân trí) - Tại xã Măng Đen đang xuất hiện tình trạng phân lô, bán nền trên đất nông nghiệp, đất rẫy trái phép. Có trường hợp còn rao bán cả đất do Nhà nước quản lý.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://dantri.com.vn/rss/bat-dong-san.rss",
+        "publisher_host": "dantri.com.vn",
         "publication_date_from_feed": true
       }
     },
