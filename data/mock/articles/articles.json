@@ -1,9 +1,88 @@
 {
   "schema_version": 1,
-  "build_id": "market-news-rss-20261018T044644Z",
-  "generated_at": "2026-10-18T04:46:44.826637+00:00",
-  "record_count": 611,
+  "build_id": "market-news-rss-20261018T065139Z",
+  "generated_at": "2026-10-18T06:51:39.324575+00:00",
+  "record_count": 615,
   "data": [
+    {
+      "id": "article-market-rss-a29fa4ba11b11fd72b63",
+      "title": "Căn hộ hạng sang Phú Mỹ Hưng Triton Crown mở bán đợt đầu",
+      "url": "https://vnexpress.net/can-ho-hang-sang-phu-my-hung-triton-crown-mo-ban-dot-dau-5133626.html",
+      "category": "market",
+      "module_ids": [
+        "market"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-10-18T06:00:00+00:00",
+      "source_id": "vnexpress-real-estate",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [
+        "supply"
+      ],
+      "importance": 2,
+      "summary": "Hơn 400 người tham gia rút thăm thứ tự mua giỏ hàng tòa A, khu căn hộ hạng sang Triton Crown, sáng 18/10.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://vnexpress.net/rss/bat-dong-san.rss",
+        "publisher_host": "vnexpress.net",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-5477b3e246705e1da3c1",
+      "title": "Dự báo giá vàng sau tuần chật vật quanh mốc 4.200 USD/ounce",
+      "url": "https://dantri.com.vn/kinh-doanh/du-bao-gia-vang-sau-tuan-chat-vat-quanh-moc-4200-usdounce-20261018101030497.htm",
+      "category": "macro",
+      "module_ids": [
+        "macro"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-10-18T04:25:00+00:00",
+      "source_id": "dantri-business",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "(Dân trí) - Giá vàng thế giới giảm nhẹ sau tuần biến động mạnh. Giới chuyên gia và nhà đầu tư vẫn chia rẽ về xu hướng kim loại quý trong tuần tới.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://dantri.com.vn/rss/kinh-doanh.rss",
+        "publisher_host": "dantri.com.vn",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-2f86ea58b7c034dfaf22",
+      "title": "Nguy cơ tạo tiền lệ từ việc xử lý sai phạm tại HH Linh Đàm",
+      "url": "https://dantri.com.vn/bat-dong-san/nguy-co-tao-tien-le-tu-viec-xu-ly-sai-pham-tai-hh-linh-dam-20261018100559807.htm",
+      "category": "market",
+      "module_ids": [
+        "market"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-10-18T03:26:14+00:00",
+      "source_id": "dantri-real-estate",
+      "region_ids": [
+        "ha-noi"
+      ],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "(Dân trí) - Sở Xây dựng Hà Nội nêu ý kiến về xử lý sai phạm tại HH Linh Đàm; người dân Vĩnh Hưng góp ý dự án tái thiết đô thị gần 186.000 tỷ đồng là những tin nóng bất động sản tuần qua.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://dantri.com.vn/rss/bat-dong-san.rss",
+        "publisher_host": "dantri.com.vn",
+        "publication_date_from_feed": true
+      }
+    },
     {
       "id": "article-market-rss-c06986c3b22db4625e8a",
       "title": "Chỉ 30% biệt thự liền kề sơ cấp có người mua",
@@ -143,6 +222,34 @@
         "method": "official-rss",
         "feed_url": "https://vnexpress.net/rss/thoi-su.rss",
         "publisher_host": "vnexpress.net",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-f2fcadb832d2b0e3b03f",
+      "title": "Lãi suất tăng cao, giá bất động sản Australia giảm 6 tháng liên tiếp",
+      "url": "https://dantri.com.vn/bat-dong-san/lai-suat-tang-cao-gia-bat-dong-san-australia-giam-6-thang-lien-tiep-20261018092242857.htm",
+      "category": "market",
+      "module_ids": [
+        "market",
+        "macro"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-10-18T02:28:53+00:00",
+      "source_id": "dantri-real-estate",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [
+        "pricing"
+      ],
+      "importance": 2,
+      "summary": "(Dân trí) - Giá nhà Australia giảm tháng thứ 6 liên tiếp, thấp hơn 5,2% so với đỉnh tháng 3. Lãi suất lên mức cao nhất 15 năm cùng thay đổi chính sách thuế đang gây sức ép lên thị trường.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://dantri.com.vn/rss/bat-dong-san.rss",
+        "publisher_host": "dantri.com.vn",
         "publication_date_from_feed": true
       }
     },
