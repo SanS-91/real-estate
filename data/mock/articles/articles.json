@@ -1,8 +1,8 @@
 {
   "schema_version": 1,
-  "build_id": "market-news-rss-20261018T105138Z",
-  "generated_at": "2026-10-18T10:51:38.756952+00:00",
-  "record_count": 627,
+  "build_id": "market-news-rss-20261018T112326Z",
+  "generated_at": "2026-10-18T11:23:26.005702+00:00",
+  "record_count": 628,
   "data": [
     {
       "id": "article-market-rss-d2b06bd866abd22848cc",
@@ -103,6 +103,36 @@
         "method": "official-rss",
         "feed_url": "https://thanhnien.vn/rss/kinh-te/chinh-sach-phat-trien.rss",
         "publisher_host": "thanhnien.vn",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-53a200df6b4333d10458",
+      "title": "Giá căn hộ TPHCM, Hà Nội giảm nhưng vẫn quá sức đa số người mua",
+      "url": "https://dantri.com.vn/bat-dong-san/gia-can-ho-tphcm-ha-noi-giam-nhung-van-qua-suc-da-so-nguoi-mua-20261018132920999.htm",
+      "category": "market",
+      "module_ids": [
+        "market"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-10-18T08:20:06+00:00",
+      "source_id": "dantri-real-estate",
+      "region_ids": [
+        "hcmc",
+        "ha-noi"
+      ],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [
+        "pricing"
+      ],
+      "importance": 2,
+      "summary": "(Dân trí) - Giá căn hộ tại nhiều khu vực TPHCM tuy giảm nhưng vẫn ở mức cao. Với một gia đình thu nhập 40 triệu đồng/tháng, căn hộ khoảng 3 tỷ đồng được xem phù hợp hơn, thay vì những sản phẩm 5 tỷ đồng trở lên.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://dantri.com.vn/rss/bat-dong-san.rss",
+        "publisher_host": "dantri.com.vn",
         "publication_date_from_feed": true
       }
     },
