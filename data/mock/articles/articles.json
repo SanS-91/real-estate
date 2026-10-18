@@ -1,8 +1,8 @@
 {
   "schema_version": 1,
-  "build_id": "market-news-rss-20261018T065139Z",
-  "generated_at": "2026-10-18T06:51:39.324575+00:00",
-  "record_count": 615,
+  "build_id": "market-verified-official-news-20261018T072206Z",
+  "generated_at": "2026-10-18T07:22:06.797331+00:00",
+  "record_count": 617,
   "data": [
     {
       "id": "article-market-rss-a29fa4ba11b11fd72b63",
@@ -901,6 +901,65 @@
         "feed_url": "https://dantri.com.vn/rss/thoi-su.rss",
         "publisher_host": "dantri.com.vn",
         "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-nam-long-discovered-d81cb07b0131a822",
+      "title": "Hạ tầng liên vùng tăng tốc, Waterpoint gia tăng lợi thế an cư – đầu tư tại cửa ngõ phía Tây TP.HCM",
+      "url": "https://www.namlongvn.com/tin-tuc/ha-tang-lien-vung-tang-toc-waterpoint-gia-tang-loi-the-an-cu-dau-tu-tai-cua-ngo-phia-tay-tp-hcm/",
+      "category": "market",
+      "subcategory": "developer",
+      "content_type": "developer-update",
+      "published_at": "2026-10-17T09:00:00+07:00",
+      "source_id": "nam-long-official",
+      "region_ids": [
+        "long-an"
+      ],
+      "project_ids": [
+        "waterpoint"
+      ],
+      "developer_ids": [
+        "nam-long"
+      ],
+      "tags": [
+        "handover",
+        "project-update"
+      ],
+      "importance": 3,
+      "summary": "Sáng 15/10, UBND tỉnh Tây Ninh tổ chức Lễ khởi động Dự án thành phần 2-4 và Dự án thành phần 2-5 thuộc Dự án đầu tư xây dựng đường Vành đai 4 TPHCM, xây dựng đường cao tốc đoạn từ kênh Thầy Cai đến Cảng Hiệp Phước theo phương thức đối tác công tư (PPP). Sự kiện lễ khởi công được tổ chức trang trọng với sự tham gia của nguyên",
+      "structured_facts": [],
+      "candidate_note": "Official article publication date validated; strict review gate still applies.",
+      "source_verification": {
+        "publication_date_verified": true,
+        "article_page": "https://www.namlongvn.com/tin-tuc/ha-tang-lien-vung-tang-toc-waterpoint-gia-tang-loi-the-an-cu-dau-tu-tai-cua-ngo-phia-tay-tp-hcm/",
+        "discovery_url": "https://www.namlongvn.com/tin-tuc/"
+      }
+    },
+    {
+      "id": "article-market-nam-long-discovered-9e181bafc0f88906",
+      "title": "Nam Long dẫn đầu Top Doanh nghiệp được yêu thích nhất, nhóm ngành Bất động sản – Cho thuê tại Enterprise of Choice 2026",
+      "url": "https://www.namlongvn.com/tin-tuc/nam-long-dan-dau-top-doanh-nghiep-duoc-yeu-thich-nhat-nhom-nganh-bat-dong-san-cho-thue-tai-enterprise-of-choice-2026/",
+      "category": "market",
+      "subcategory": "developer",
+      "content_type": "developer-update",
+      "published_at": "2026-10-17T09:00:00+07:00",
+      "source_id": "nam-long-official",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [
+        "nam-long"
+      ],
+      "tags": [
+        "project-update"
+      ],
+      "importance": 3,
+      "summary": "Ở Khối Doanh nghiệp lớn, Tập đoàn Nam Long giữ vị trí dẫn đầu nhóm ngành Bất động sản – Cho thuê; đồng thời được vinh danh trong Top 30 Doanh nghiệp được yêu thích và Top 23 Doanh nghiệp mang đến trải nghiệm ứng tuyển ấn tượng. Đại diện Nam Long nhận giải tại Lễ vinh danh Enterprise of Choice 2026 ở TP.HCM. CareerViet tổ chức",
+      "structured_facts": [],
+      "candidate_note": "Official article publication date validated; strict review gate still applies.",
+      "source_verification": {
+        "publication_date_verified": true,
+        "article_page": "https://www.namlongvn.com/tin-tuc/nam-long-dan-dau-top-doanh-nghiep-duoc-yeu-thich-nhat-nhom-nganh-bat-dong-san-cho-thue-tai-enterprise-of-choice-2026/",
+        "discovery_url": "https://www.namlongvn.com/tin-tuc/"
       }
     },
     {
