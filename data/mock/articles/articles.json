@@ -1,9 +1,294 @@
 {
   "schema_version": 1,
-  "build_id": "market-news-rss-20261017T154410Z",
-  "generated_at": "2026-10-17T15:44:10.698431+00:00",
-  "record_count": 593,
+  "build_id": "market-news-rss-20261018T025149Z",
+  "generated_at": "2026-10-18T02:51:49.974578+00:00",
+  "record_count": 604,
   "data": [
+    {
+      "id": "article-market-rss-6b9ceb2c07b0841e8c33",
+      "title": "Tập đoàn Lê Phong nhận cú đúp tại giải thưởng bất động sản",
+      "url": "https://vnexpress.net/tap-doan-le-phong-nhan-cu-dup-tai-giai-thuong-bat-dong-san-5133736.html",
+      "category": "market",
+      "module_ids": [
+        "market"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-10-18T02:00:00+00:00",
+      "source_id": "vnexpress-real-estate",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "Tập đoàn Lê Phong được vinh danh hạng mục nhà phát triển bất động sản vừa túi tiền, trong khi dự án The Emerald Boulevard của đơn vị nhận giải căn hộ cao cấp tại PropertyGuru Vietnam Property Awards 2026.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://vnexpress.net/rss/bat-dong-san.rss",
+        "publisher_host": "vnexpress.net",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-cf601a174a8976d9f5b4",
+      "title": "Gladia Heights nhận cú đúp giải thưởng tại Vietnam Property Awards",
+      "url": "https://vnexpress.net/gladia-heights-nhan-cu-dup-giai-thuong-tai-vietnam-property-awards-5133629.html",
+      "category": "market",
+      "module_ids": [
+        "market"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-10-18T01:00:00+00:00",
+      "source_id": "vnexpress-real-estate",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [
+        "khang-dien"
+      ],
+      "tags": [],
+      "importance": 2,
+      "summary": "Gladia Heights, dự án căn hộ cao cấp ven sông do Keppel và Khang Điền phát triển, giành hai giải thưởng tại PropertyGuru Vietnam Property Awards 2026 về thiết kế cảnh quan và không gian sống.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://vnexpress.net/rss/bat-dong-san.rss",
+        "publisher_host": "vnexpress.net",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-99e409f7a34ca89afe8b",
+      "title": "Vị trí cạnh khách sạn quốc tế tạo lợi thế cho Q'Terra",
+      "url": "https://vnexpress.net/vi-tri-canh-khach-san-quoc-te-tao-loi-the-cho-q-terra-5133612.html",
+      "category": "market",
+      "module_ids": [
+        "market"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-10-18T01:00:00+00:00",
+      "source_id": "vnexpress-real-estate",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "Tọa lạc bên biển, gần quảng trường Nguyễn Tất Thành, Q'Terra nằm trong tổ hợp tháp đôi cùng khách sạn Courtyard by Marriott, kết hợp lợi thế vị trí, thiết kế bản địa và định hướng vận hành lưu trú.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://vnexpress.net/rss/bat-dong-san.rss",
+        "publisher_host": "vnexpress.net",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-29fe5de391229c00aabd",
+      "title": "Giá vàng hôm nay 18.10.2026: Lao dốc trong tuần, người mua lỗ hơn 5 triệu đồng",
+      "url": "https://thanhnien.vn/gia-vang-hom-nay-18102026-lao-doc-trong-tuan-nguoi-mua-lo-hon-5-trieu-dong-185261017180214081.htm",
+      "category": "macro",
+      "module_ids": [
+        "macro"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-10-18T00:07:00+00:00",
+      "source_id": "thanhnien-banking",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "Giá vàng trong nước ghi nhận một tuần sụt giảm khiến người mua lỗ hơn 5 triệu đồng một lượng.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://thanhnien.vn/rss/kinh-te/ngan-hang.rss",
+        "publisher_host": "thanhnien.vn",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-92a6970fe6c4f9ad985d",
+      "title": "5 xu hướng phụ kiện tủ bếp năm 2027 giúp gian bếp sang lên thấy rõ",
+      "url": "https://dantri.com.vn/bat-dong-san/5-xu-huong-phu-kien-tu-bep-nam-2027-giup-gian-bep-sang-len-thay-ro-20261016201923044.htm",
+      "category": "market",
+      "module_ids": [
+        "market"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-10-17T23:34:00+00:00",
+      "source_id": "dantri-real-estate",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "(Dân trí) - Thay vì tốn kém làm lại toàn bộ hệ tủ, đổi mới chi tiết tay nắm là cách đơn giản để nâng tầm không gian. Dưới đây là 5 xu hướng phụ kiện tủ bếp năm 2027 được các chuyên gia nội thất đánh giá cao.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://dantri.com.vn/rss/bat-dong-san.rss",
+        "publisher_host": "dantri.com.vn",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-2141d68e5d7ae05c4a01",
+      "title": "Chuyên gia nêu cách giảm thực chất lãi suất cho vay 1,5-2%",
+      "url": "https://dantri.com.vn/kinh-doanh/chuyen-gia-neu-cach-giam-thuc-chat-lai-suat-cho-vay-15-2-20261017224038263.htm",
+      "category": "macro",
+      "module_ids": [
+        "macro"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-10-17T23:31:00+00:00",
+      "source_id": "dantri-business",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "(Dân trí) - Nếu các ngân hàng có vốn Nhà nước chi phối giảm lãi suất và nới điều kiện cho vay, những ngân hàng khác cũng phải cạnh tranh để thu hút khách hàng. Và doanh nghiệp phải làm ăn được thì mới vay vốn.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://dantri.com.vn/rss/kinh-doanh.rss",
+        "publisher_host": "dantri.com.vn",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-7d9f237862329e51ea52",
+      "title": "Giá nhà giảm, thời điểm để người mua cân nhắc xuống tiền?",
+      "url": "https://thanhnien.vn/gia-nha-giam-vi-sao-nguoi-mua-chua-xuong-tien-185261017204214307.htm",
+      "category": "market",
+      "module_ids": [
+        "market"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-10-17T23:00:00+00:00",
+      "source_id": "thanhnien-real-estate",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [
+        "pricing"
+      ],
+      "importance": 2,
+      "summary": "Báo cáo từ các công ty nghiên cứu thị trường và ghi nhận thực tế cả thị trường sơ cấp và thứ cấp cho thấy giá bất động sản đang giảm từ Bắc vào Nam.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://thanhnien.vn/rss/kinh-te/dia-oc.rss",
+        "publisher_host": "thanhnien.vn",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-40d8527e8a6f419510af",
+      "title": "Đường xuyên đầm lầy nối cảng Cái Mép với cao tốc Biên Hòa",
+      "url": "https://vnexpress.net/duong-xuyen-dam-lay-noi-cang-cai-mep-voi-cao-toc-bien-hoa-5132360.html",
+      "category": "infrastructure",
+      "module_ids": [
+        "infrastructure"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-10-17T22:00:00+00:00",
+      "source_id": "vnexpress-current-affairs",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [
+        "infrastructure"
+      ],
+      "importance": 2,
+      "summary": "Tuyến 991B băng qua rừng ngập mặn, ruộng muối, vốn gần 4.000 tỷ đồng, kết nối cảng Cái Mép - Thị Vải hướng ra cao tốc Biên Hòa - Vũng Tàu, dự kiến thông xe tháng 12.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://vnexpress.net/rss/thoi-su.rss",
+        "publisher_host": "vnexpress.net",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-f07aa75995cdb6997a9a",
+      "title": "Biệt thự ba tầng mở tầm nhìn ra cây hoa sữa",
+      "url": "https://vnexpress.net/biet-thu-ba-tang-mo-tam-nhin-ra-cay-hoa-sua-5133404.html",
+      "category": "market",
+      "module_ids": [
+        "market"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-10-17T20:59:58+00:00",
+      "source_id": "vnexpress-real-estate",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "Căn nhà được thiết kế giật cấp theo vị trí cây hoa sữa, tạo các khoảng sân hiên và ban công kết nối với cảnh quan.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://vnexpress.net/rss/bat-dong-san.rss",
+        "publisher_host": "vnexpress.net",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-d3263fe30f1246f04df2",
+      "title": "Hai tuyến đường mòn mỏi chờ đấu nối đường tránh quốc lộ 1",
+      "url": "https://vnexpress.net/hai-tuyen-duong-mon-moi-cho-dau-noi-duong-tranh-quoc-lo-1-5133627.html",
+      "category": "infrastructure",
+      "module_ids": [
+        "infrastructure"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-10-17T17:00:00+00:00",
+      "source_id": "vnexpress-current-affairs",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [
+        "infrastructure"
+      ],
+      "importance": 2,
+      "summary": "Đường Điện Biên Phủ và Dinh Mười, tổng đầu tư hơn 250 tỷ đồng, cơ bản hoàn thành nhưng chưa thể kết nối với đường tránh quốc lộ 1 do vướng mặt bằng.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://vnexpress.net/rss/thoi-su.rss",
+        "publisher_host": "vnexpress.net",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-b0bbf7e4a9e6a05bf296",
+      "title": "Đất đá vùi lấp quốc lộ 55 ở Lâm Đồng",
+      "url": "https://dantri.com.vn/thoi-su/dat-da-vui-lap-quoc-lo-55-o-lam-dong-20261017220830358.htm",
+      "category": "infrastructure",
+      "module_ids": [
+        "infrastructure"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-10-17T16:04:03+00:00",
+      "source_id": "dantri-current-affairs",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [
+        "infrastructure"
+      ],
+      "importance": 2,
+      "summary": "(Dân trí) - Mưa lớn kéo dài làm nước từ thượng nguồn đổ về suối Đa Chos, cuốn đất đá vùi lấp bề mặt quốc lộ 55 khiến giao thông qua khu vực bị ảnh hưởng.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://dantri.com.vn/rss/thoi-su.rss",
+        "publisher_host": "dantri.com.vn",
+        "publication_date_from_feed": true
+      }
+    },
     {
       "id": "article-market-rss-5516c79abcf742544eda",
       "title": "Chủ tịch Vietcombank cam kết giảm tối thiểu 2% lãi suất cho vay",
