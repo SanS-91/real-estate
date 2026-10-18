@@ -1,9 +1,113 @@
 {
   "schema_version": 1,
-  "build_id": "market-verified-official-news-20261018T072206Z",
-  "generated_at": "2026-10-18T07:22:06.797331+00:00",
-  "record_count": 617,
+  "build_id": "market-news-rss-20261018T085135Z",
+  "generated_at": "2026-10-18T08:51:35.841096+00:00",
+  "record_count": 621,
   "data": [
+    {
+      "id": "article-market-rss-cc36a11a711d34b35abc",
+      "title": "Yêu cầu ngân hàng giảm lãi suất huy động 0,5% và cho vay 1,5 - 2%/năm",
+      "url": "https://thanhnien.vn/yeu-cau-ngan-hang-giam-lai-suat-huy-dong-05-va-cho-vay-15-2-nam-185261018150530553.htm",
+      "category": "macro",
+      "module_ids": [
+        "macro"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-10-18T08:26:00+00:00",
+      "source_id": "thanhnien-banking",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "Ngày 18.10, Ngân hàng Nhà nước Việt Nam (NHNN) vừa ban hành công văn 9608 về việc triển khai các giải pháp hoạt động của các tổ chức tín dụng nhằm tiếp tục góp phần tích cực thực hiện mục tiêu giữ vững ổn định kinh tế vĩ mô, kiểm soát lạm phát, hỗ trợ thúc đẩy tăng trưởng kinh tế và an toàn hệ thống",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://thanhnien.vn/rss/kinh-te/ngan-hang.rss",
+        "publisher_host": "thanhnien.vn",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-0c9f2524a67d26c6c58d",
+      "title": "Gia Lai chấp thuận 3 dự án hơn 5.327 tỉ đồng, có bệnh viện tại Quy Nhơn",
+      "url": "https://thanhnien.vn/gia-lai-chap-thuan-3-du-an-hon-5327-ti-dong-co-benh-vien-tai-quy-nhon-185261018143505631.htm",
+      "category": "market",
+      "module_ids": [
+        "market"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-10-18T08:26:00+00:00",
+      "source_id": "thanhnien-policy",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [
+        "sales"
+      ],
+      "importance": 2,
+      "summary": "Hơn 5.327 tỉ đồng dự kiến được đầu tư vào khu công nghiệp Phù Mỹ giai đoạn 2, Bệnh viện quốc tế Quy Nhơn và Bệnh viện đa khoa An Nhơn Đông ở Gia Lai.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://thanhnien.vn/rss/kinh-te/chinh-sach-phat-trien.rss",
+        "publisher_host": "thanhnien.vn",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-118ad3b00bfb4e516bdf",
+      "title": "Hà Nội thúc tiến độ bàn giao nhà ở xã hội NO1 Hạ Đình",
+      "url": "https://vnexpress.net/ha-noi-thuc-tien-do-ban-giao-nha-o-xa-hoi-no1-ha-dinh-5133814.html",
+      "category": "market",
+      "module_ids": [
+        "market"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-10-18T07:03:05+00:00",
+      "source_id": "vnexpress-real-estate",
+      "region_ids": [
+        "ha-noi"
+      ],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "Lãnh đạo thành phố Hà Nội yêu cầu chủ đầu tư dự án nhà ở xã hội NO1 Hạ Đình rút ngắn thời gian triển khai từ 3 đến 6 tháng, sớm bàn giao cho người dân để tái định cư.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://vnexpress.net/rss/bat-dong-san.rss",
+        "publisher_host": "vnexpress.net",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-fd66039b2dee5a743bc7",
+      "title": "Giá vàng thế giới khó dự báo diễn biến",
+      "url": "https://vnexpress.net/gia-vang-the-gioi-kho-du-bao-dien-bien-5133813.html",
+      "category": "macro",
+      "module_ids": [
+        "macro"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-10-18T06:50:42+00:00",
+      "source_id": "vnexpress-economy",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "Giới phân tích chia rẽ về triển vọng vàng tuần tới, khi một nửa cảm thấy khó quyết định sau tuần nhiều biến động.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://vnexpress.net/rss/kinh-doanh.rss",
+        "publisher_host": "vnexpress.net",
+        "publication_date_from_feed": true
+      }
+    },
     {
       "id": "article-market-rss-a29fa4ba11b11fd72b63",
       "title": "Căn hộ hạng sang Phú Mỹ Hưng Triton Crown mở bán đợt đầu",
