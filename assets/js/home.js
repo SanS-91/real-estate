@@ -136,6 +136,58 @@
     return sourceId && !String(sourceId).startsWith('demo-');
   }
 
+  // RSS publishers sometimes contain homographs (e.g. "số độc đắc"
+  // matching the unbounded keyword "sổ đỏ"). The homepage applies a
+  // headline-level topic gate to legacy RSS records; the ingestion pipeline
+  // independently validates new records.
+  function hasHomePhrase(value, phrase) {
+    const fold = text => String(text || '').toLowerCase().normalize('NFD')
+      .replace(/[\u0300-\u036f]/g, '').replace(/đ/g, 'd')
+      .replace(/[^a-z0-9]+/g, ' ').trim();
+    const title = fold(value), token = fold(phrase);
+    return Boolean(token) && (` ${title} `).includes(` ${token} `);
+  }
+
+  function newsRelevantForHome(row) {
+    if (row?.content_type !== 'publisher-rss') return true;
+    const title = row.title || '';
+    const has = phrases => phrases.some(phrase => hasHomePhrase(title, phrase));
+    const infrastructure = [
+      'cao toc','vanh dai','duong sat','metro','san bay','cau duong',
+      'giao thong','quoc lo','duong tinh','tuyen duong','nut giao',
+      'cau vuot','ham chui','thong xe','giai phong mat bang'
+    ];
+    const property = [
+      'bat dong san','nha dat','nha o','nha pho','chung cu','can ho',
+      'dat nen','khu do thi','biet thu','shophouse','chu dau tu',
+      'gia nha','gia dat','gia ban','du an nha','dia oc'
+    ];
+    const legal = [
+      'luat dat dai','luat nha o','luat kinh doanh bat dong san',
+      'nghi dinh','thong tu','phap ly','quy hoach','so hong','so do',
+      'bang gia dat','tien su dung dat','cap giay chung nhan',
+      'boi thuong tai dinh cu','chuyen muc dich su dung dat',
+      'thu hoi dat','dau gia dat','cap phep xay dung'
+    ];
+    if (row.category === 'legal') return has(legal);
+    if (row.category === 'infrastructure') return has(infrastructure);
+    if (row.category === 'market' && has(infrastructure) && !has(property)
+        && !(row.project_ids || []).length && !(row.developer_ids || []).length) {
+      return /-real-estate$/.test(String(row.source_id || ''));
+    }
+    return true;
+  }
+
+  function newestHomeCandidates(rows) {
+    return [...rows].sort((a, b) => {
+      const aDate = a.ranking_evidence?.evidence_date || dateKey(a.date);
+      const bDate = b.ranking_evidence?.evidence_date || dateKey(b.date);
+      return String(bDate).localeCompare(String(aDate))
+        || Number(b.attention_score || 0) - Number(a.attention_score || 0)
+        || String(a.id || '').localeCompare(String(b.id || ''));
+    });
+  }
+
   async function loadCanonicalHomeData() {
     if (canonicalHomePromise) return canonicalHomePromise;
     canonicalHomePromise = Promise.all([
@@ -214,7 +266,7 @@
     rows.push(...intelligence);
 
     data.articles
-      .filter(row=>['market','legal','infrastructure','macro'].includes(row.category) && nonDemoSource(row.source_id))
+      .filter(row=>['market','legal','infrastructure','macro'].includes(row.category) && nonDemoSource(row.source_id) && newsRelevantForHome(row))
       .forEach(row=>rows.push({
         id:`article:${row.id}`,
         category:row.category,
@@ -392,7 +444,7 @@
     return Object.keys(metaByCategory).map(category => {
       const picked = [], seen = new Set();
       for (const source of [recent, extended, older]) {
-        for (const row of source) {
+        for (const row of newestHomeCandidates(source)) {
           if (row.category !== category || picked.length >= 3) continue;
           const key = row.id || row.title || '';
           if (!key || seen.has(key)) continue;
@@ -696,8 +748,16 @@
 
   async function renderDataHealth() {
     try {
-      const payload = await DataStore.getDataHealth();
+      const [payload, news] = await Promise.all([
+        DataStore.getDataHealth(),
+        DataStore.getNewsHealth().catch(() => null)
+      ]);
       const rows = payload?.modules || [];
+      const vi = document.documentElement.lang !== 'en';
+      const rssLabel = news && Number.isFinite(Number(news.article_total))
+        ? (vi ? 'Tin RSS' : 'RSS news') + ': ' + Number(news.article_total).toLocaleString(vi ? 'vi-VN' : 'en-US')
+          + (news.checked_at ? ' · ' + App.formatDate(news.checked_at) : '')
+        : null;
       setHTML('[data-home-data-health]', rows.map(row => `
         <a class="data-health-card is-${Components.escapeHTML(row.status || 'review')}" href="maintenance.html">
           <div class="data-health-card__top">
@@ -708,6 +768,7 @@
             <span>${Components.escapeHTML(String(row.dataset_count || 0))} datasets</span>
             <span>${Components.escapeHTML(String(row.candidate_backlog || 0))} backlog</span>
           </div>
+          ${row.module === 'market' && rssLabel ? `<div class="data-health-card__rss">${Components.escapeHTML(rssLabel)}</div>` : ''}
         </a>
       `).join('') || Components.stateBox('Data health is not available yet.'));
     } catch (error) {
