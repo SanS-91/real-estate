@@ -1,9 +1,118 @@
 {
   "schema_version": 1,
-  "build_id": "market-news-rss-20261019T085138Z",
-  "generated_at": "2026-10-19T08:51:38.542766+00:00",
-  "record_count": 674,
+  "build_id": "market-news-rss-20261019T105204Z",
+  "generated_at": "2026-10-19T10:52:04.439934+00:00",
+  "record_count": 681,
   "data": [
+    {
+      "id": "article-market-rss-0b0878173993b238f9c3",
+      "title": "Dự án mở rộng cao tốc TP.HCM đi miền Tây nguy cơ chậm tiến độ",
+      "url": "https://thanhnien.vn/du-an-mo-rong-cao-toc-tphcm-di-mien-tay-nguy-co-cham-tien-do-185261019154442123.htm",
+      "category": "market",
+      "module_ids": [
+        "market",
+        "infrastructure"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-10-19T10:43:00+00:00",
+      "source_id": "thanhnien-policy",
+      "region_ids": [
+        "hcmc"
+      ],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [
+        "infrastructure"
+      ],
+      "importance": 2,
+      "summary": "Dự án mở rộng cao tốc TP.HCM - Trung Lương - Mỹ Thuận có tổng vốn đầu tư hơn 36.125 tỉ đồng đang chậm bàn giao mặt bằng và di dời hạ tầng kỹ thuật có nguy cơ ảnh hưởng đến tiến độ thi công.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://thanhnien.vn/rss/kinh-te/chinh-sach-phat-trien.rss",
+        "publisher_host": "thanhnien.vn",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-853d04a0e37a590c4f3f",
+      "title": "Lusso Saigon lớn nhất về quy mô trong danh mục WorldHotels châu Á - Thái Bình Dương",
+      "url": "https://vnexpress.net/lusso-saigon-lon-nhat-ve-quy-mo-trong-danh-muc-worldhotels-chau-a-thai-binh-duong-5134240.html",
+      "category": "market",
+      "module_ids": [
+        "market"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-10-19T10:00:00+00:00",
+      "source_id": "vnexpress-real-estate",
+      "region_ids": [
+        "binh-duong"
+      ],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "BWH Hotels chứng nhận Lusso Saigon WorldHotels Residences là tổ hợp khu căn hộ Branded Residences mang thương hiệu WorldHotels lớn nhất tại châu Á - Thái Bình Dương.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://vnexpress.net/rss/bat-dong-san.rss",
+        "publisher_host": "vnexpress.net",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-4285831d3da33f117ea9",
+      "title": "TP HCM thêm 4 dự án đủ điều kiện bán cho người nước ngoài",
+      "url": "https://vnexpress.net/tp-hcm-them-4-du-an-du-dieu-kien-ban-cho-nguoi-nuoc-ngoai-5134274.html",
+      "category": "market",
+      "module_ids": [
+        "market"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-10-19T09:58:05+00:00",
+      "source_id": "vnexpress-real-estate",
+      "region_ids": [
+        "hcmc"
+      ],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "TP HCM công bố 4 dự án của SonKim Land đủ điều kiện bán cho người nước ngoài.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://vnexpress.net/rss/bat-dong-san.rss",
+        "publisher_host": "vnexpress.net",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-568cd60f660ad0c343a8",
+      "title": "Thống đốc Ngân hàng Nhà nước: Giảm lãi suất chọn lọc, không cào bằng",
+      "url": "https://dantri.com.vn/kinh-doanh/thong-doc-ngan-hang-nha-nuoc-giam-lai-suat-chon-loc-khong-cao-bang-20261019151243862.htm",
+      "category": "macro",
+      "module_ids": [
+        "macro"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-10-19T08:35:11+00:00",
+      "source_id": "dantri-business",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "(Dân trí) - Thống đốc Phạm Đức Ấn nhấn mạnh việc giảm lãi suất cần đúng đối tượng, ưu tiên lĩnh vực sản xuất, kinh doanh và áp dụng với cả dư nợ hiện hữu lẫn khoản vay mới, thay vì thực hiện cào bằng.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://dantri.com.vn/rss/kinh-doanh.rss",
+        "publisher_host": "dantri.com.vn",
+        "publication_date_from_feed": true
+      }
+    },
     {
       "id": "article-market-rss-f88bcae27f6985ece209",
       "title": "LPBank giảm lãi suất cho vay hỗ trợ hộ kinh doanh, SME",
@@ -30,6 +139,31 @@
       }
     },
     {
+      "id": "article-market-rss-fdcb71a7f048534807e0",
+      "title": "“Muốn thu hút đầu tư công nghệ cao phải có nhân lực chất lượng cao”",
+      "url": "https://dantri.com.vn/thoi-su/muon-thu-hut-dau-tu-cong-nghe-cao-phai-co-nhan-luc-chat-luong-cao-20261019145947145.htm",
+      "category": "infrastructure",
+      "module_ids": [
+        "infrastructure"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-10-19T08:16:31+00:00",
+      "source_id": "dantri-current-affairs",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "(Dân trí) - Theo Phó Cục trưởng Cục Chuyển đổi số (Văn phòng Chính phủ), muốn thu hút đầu tư công nghệ cao phải có nhân lực chất lượng cao; đội ngũ tham mưu, hoạch định chính sách phải hiểu đầy đủ về công nghệ.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://dantri.com.vn/rss/thoi-su.rss",
+        "publisher_host": "dantri.com.vn",
+        "publication_date_from_feed": true
+      }
+    },
+    {
       "id": "article-market-rss-2246d994baf3b8418ae8",
       "title": "Thống đốc: 'Cần xem xét giảm lãi suất với cả khoản vay cũ'",
       "url": "https://vnexpress.net/thong-doc-can-xem-xet-giam-lai-suat-voi-ca-khoan-vay-cu-5134207.html",
@@ -51,6 +185,31 @@
         "method": "official-rss",
         "feed_url": "https://vnexpress.net/rss/kinh-doanh.rss",
         "publisher_host": "vnexpress.net",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-c4403a557228bf828a17",
+      "title": "5 bà nội trợ cùng trúng số độc đắc",
+      "url": "https://dantri.com.vn/thoi-su/5-ba-noi-tro-cung-trung-so-doc-dac-20261019095842807.htm",
+      "category": "legal",
+      "module_ids": [
+        "legal"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-10-19T07:52:12+00:00",
+      "source_id": "dantri-current-affairs",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "(Dân trí) - Trong khi cùng nhau dự một đám tiệc, một phụ nữ mua 6 tờ vé số rồi tặng bạn bè 4 vé, giữ lại 2 vé cho mình. May mắn cả 6 tờ vé số đều trúng giải độc đắc.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://dantri.com.vn/rss/thoi-su.rss",
+        "publisher_host": "dantri.com.vn",
         "publication_date_from_feed": true
       }
     },
@@ -348,6 +507,33 @@
         "method": "official-rss",
         "feed_url": "https://vnexpress.net/rss/thoi-su.rss",
         "publisher_host": "vnexpress.net",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-cb2e8b29c60ac0341a7c",
+      "title": "Thủ tướng: Quản lý chặt giá nhà ở xã hội và nhà cho thuê",
+      "url": "https://dantri.com.vn/thoi-su/thu-tuong-quan-ly-chat-gia-nha-o-xa-hoi-va-nha-cho-thue-20261019103929784.htm",
+      "category": "market",
+      "module_ids": [
+        "market"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-10-19T03:43:52+00:00",
+      "source_id": "dantri-current-affairs",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [
+        "pricing"
+      ],
+      "importance": 2,
+      "summary": "(Dân trí) - Để người thu nhập thấp và đối tượng chính sách có cơ hội tiếp cận nhà ở, Thủ tướng Lê Minh Hưng nêu yêu cầu xuyên suốt là phải quản lý, điều tiết giá đất và bất động sản, quản lý rất chặt giá nhà.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://dantri.com.vn/rss/thoi-su.rss",
+        "publisher_host": "dantri.com.vn",
         "publication_date_from_feed": true
       }
     },
