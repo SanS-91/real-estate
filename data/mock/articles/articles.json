@@ -1,9 +1,38 @@
 {
   "schema_version": 1,
-  "build_id": "market-news-rss-20261019T145139Z",
-  "generated_at": "2026-10-19T14:51:39.167339+00:00",
-  "record_count": 690,
+  "build_id": "market-news-rss-20261019T200112Z",
+  "generated_at": "2026-10-19T20:01:12.881273+00:00",
+  "record_count": 693,
   "data": [
+    {
+      "id": "article-market-rss-3362a266f802934bd854",
+      "title": "Giao mặt bằng mở rộng cao tốc TP HCM - Trung Lương - Mỹ Thuận trong tháng 11",
+      "url": "https://vnexpress.net/giao-mat-bang-mo-rong-cao-toc-tp-hcm-trung-luong-my-thuan-trong-thang-11-5134383.html",
+      "category": "infrastructure",
+      "module_ids": [
+        "infrastructure"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-10-19T17:00:00+00:00",
+      "source_id": "vnexpress-current-affairs",
+      "region_ids": [
+        "hcmc"
+      ],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [
+        "infrastructure"
+      ],
+      "importance": 2,
+      "summary": "Hơn 500 hộ bị ảnh hưởng bởi dự án mở rộng cao tốc TP HCM - Trung Lương - Mỹ Thuận đoạn qua Tây Ninh, địa phương đặt mục tiêu bàn giao toàn bộ mặt bằng trong tháng 11.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://vnexpress.net/rss/thoi-su.rss",
+        "publisher_host": "vnexpress.net",
+        "publication_date_from_feed": true
+      }
+    },
     {
       "id": "article-market-rss-5ab26c17cc773dcd9450",
       "title": "TP HCM giao hơn 4.800 m2 đất cho Địa ốc Thảo Điền làm nhà ở xã hội",
@@ -28,6 +57,58 @@
         "method": "official-rss",
         "feed_url": "https://vnexpress.net/rss/bat-dong-san.rss",
         "publisher_host": "vnexpress.net",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-598b4b8b38e9b643230d",
+      "title": "Ba lô đất Thủ Thiêm được đấu giá lại, tổng mức khởi điểm hơn 14.500 tỷ đồng",
+      "url": "https://dantri.com.vn/bat-dong-san/ba-lo-dat-thu-thiem-duoc-dau-gia-lai-tong-muc-khoi-diem-hon-14500-ty-dong-20261019205617265.htm",
+      "category": "market",
+      "module_ids": [
+        "market"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-10-19T14:25:44+00:00",
+      "source_id": "dantri-real-estate",
+      "region_ids": [
+        "hcmc"
+      ],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "(Dân trí) - TPHCM quyết định đấu giá lại 3 khu đất tại Thủ Thiêm có tổng diện tích hơn 23.600m2 và tổng giá khởi điểm hơn 14.500 tỷ đồng. Đây là các lô đất từng bị hủy kết quả đấu giá hồi năm 2021.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://dantri.com.vn/rss/bat-dong-san.rss",
+        "publisher_host": "dantri.com.vn",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-4c821773ad8dc93013f8",
+      "title": "Nhiều trụ sở dôi dư ở Đắk Lắk cho thuê, giá cao nhất hơn 1,2 tỷ đồng/năm",
+      "url": "https://dantri.com.vn/bat-dong-san/nhieu-tru-so-doi-du-o-dak-lak-cho-thue-gia-cao-nhat-hon-12-ty-dongnam-20261019144645425.htm",
+      "category": "market",
+      "module_ids": [
+        "legal"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-10-19T13:49:56+00:00",
+      "source_id": "dantri-real-estate",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "(Dân trí) - Nhiều trụ sở dôi dư tại Đắk Lắk được cho thuê với giá hàng chục triệu đến cả tỷ đồng mỗi năm mang lại nguồn thu cho tỉnh, góp phần khai thác hiệu quả tài sản công.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://dantri.com.vn/rss/bat-dong-san.rss",
+        "publisher_host": "dantri.com.vn",
         "publication_date_from_feed": true
       }
     },
