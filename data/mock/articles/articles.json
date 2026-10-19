@@ -1,9 +1,174 @@
 {
   "schema_version": 1,
-  "build_id": "market-news-rss-20261019T045135Z",
-  "generated_at": "2026-10-19T04:51:35.841916+00:00",
-  "record_count": 662,
+  "build_id": "market-news-rss-20261019T065144Z",
+  "generated_at": "2026-10-19T06:51:44.219422+00:00",
+  "record_count": 669,
   "data": [
+    {
+      "id": "article-market-rss-3de3fdb8544722bd4b91",
+      "title": "Giải pháp nào kéo giảm giá nhà về mức người dân có thể mua?",
+      "url": "https://dantri.com.vn/bat-dong-san/giai-phap-nao-keo-giam-gia-nha-ve-muc-nguoi-dan-co-the-mua-20261019114443867.htm",
+      "category": "market",
+      "module_ids": [
+        "market"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-10-19T05:50:15+00:00",
+      "source_id": "dantri-real-estate",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [
+        "supply",
+        "pricing"
+      ],
+      "importance": 2,
+      "summary": "(Dân trí) - Để giá nhà về gần khả năng chi trả, cần tăng nguồn cung vừa túi tiền, giảm chi phí phát triển, kiểm soát giá đất và tín dụng, đồng thời hạn chế đầu cơ, thổi giá.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://dantri.com.vn/rss/bat-dong-san.rss",
+        "publisher_host": "dantri.com.vn",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-7ec02ba7c44e6d4fdbe1",
+      "title": "“Đấu giá đất, với những người đầu cơ thì vài tỷ tiền cọc vẫn rất dễ dàng”",
+      "url": "https://dantri.com.vn/thoi-su/dau-gia-dat-voi-nhung-nguoi-dau-co-thi-vai-ty-tien-coc-van-rat-de-dang-20261019120318357.htm",
+      "category": "market",
+      "module_ids": [
+        "market",
+        "legal"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-10-19T05:16:43+00:00",
+      "source_id": "dantri-current-affairs",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [
+        "pricing"
+      ],
+      "importance": 2,
+      "summary": "(Dân trí) - Chính phủ đề xuất nâng mức cọc tiền đấu giá đất lên tối đa 50%, song nhiều đại biểu Quốc hội cho rằng mức này quá cao, có thể trở thành rào cản với người có nhu cầu thực sự muốn tham gia đấu giá.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://dantri.com.vn/rss/thoi-su.rss",
+        "publisher_host": "dantri.com.vn",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-13905322af348f560d34",
+      "title": "221.611 căn nhà đã được gỡ vướng cấp sổ hồng",
+      "url": "https://thanhnien.vn/221611-can-nha-da-duoc-go-vuong-cap-so-hong-185261019113900356.htm",
+      "category": "market",
+      "module_ids": [
+        "market",
+        "legal"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-10-19T05:01:00+00:00",
+      "source_id": "thanhnien-real-estate",
+      "region_ids": [
+        "hcmc"
+      ],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [
+        "legal"
+      ],
+      "importance": 2,
+      "summary": "Báo cáo với UBND TP.HCM về kết quả, khó khăn, vướng mắc trong công tác cấp sổ hồng cho người mua nhà tại các dự án nhà ở thương mại trên địa bàn TP.HCM, Tổ Công tác 1645 cho biết đã có 221.611 căn nhà được gỡ vướng cấp sổ.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://thanhnien.vn/rss/kinh-te/dia-oc.rss",
+        "publisher_host": "thanhnien.vn",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-484055e1018973bb8ee7",
+      "title": "Dự án Celesta Gold ghi dấu ấn tại Propertyguru Vietnam Property Awards 2026",
+      "url": "https://dantri.com.vn/bat-dong-san/du-an-celesta-gold-ghi-dau-an-tai-propertyguru-vietnam-property-awards-2026-20261019113436255.htm",
+      "category": "market",
+      "module_ids": [
+        "market"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-10-19T04:44:53+00:00",
+      "source_id": "dantri-real-estate",
+      "region_ids": [],
+      "project_ids": [
+        "celesta-gold"
+      ],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "(Dân trí) - Ngày 16/10, Celesta Gold - dự án do Keppel, Phú Long và Nomura Real Estate Vietnam hợp tác phát triển, được vinh danh với giải thưởng \"Best Well-being Condo Development\" tại PropertyGuru Vietnam Property Awards 2026.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://dantri.com.vn/rss/bat-dong-san.rss",
+        "publisher_host": "dantri.com.vn",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-148e97e44e54f8a666a1",
+      "title": "Khu đất nông thôn từng đấu giá gây xôn xao đồng loạt giảm cả tỷ đồng",
+      "url": "https://dantri.com.vn/bat-dong-san/khu-dat-nong-thon-tung-dau-gia-gay-xon-xao-dong-loat-giam-ca-ty-dong-20261019101514620.htm",
+      "category": "market",
+      "module_ids": [
+        "market"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-10-19T04:27:40+00:00",
+      "source_id": "dantri-real-estate",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "(Dân trí) - 15 lô đất ở khu vực nông thôn Hà Tĩnh từng gây xôn xao với giá khởi điểm 3-5,3 tỷ đồng/lô nay được đưa ra đấu giá lại. Giá khởi điểm giảm hơn 1-2,4 tỷ đồng/lô.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://dantri.com.vn/rss/bat-dong-san.rss",
+        "publisher_host": "dantri.com.vn",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-c08f61339f1608f18ed1",
+      "title": "Thủ tướng: Không để giá nhà ở xã hội, nhà cho thuê tăng đột biến",
+      "url": "https://vnexpress.net/thu-tuong-khong-de-gia-nha-o-xa-hoi-nha-cho-thue-tang-dot-bien-5134108.html",
+      "category": "market",
+      "module_ids": [
+        "market"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-10-19T04:26:13+00:00",
+      "source_id": "vnexpress-current-affairs",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [
+        "pricing"
+      ],
+      "importance": 2,
+      "summary": "Thủ tướng Lê Minh Hưng cho biết Nhà nước sẽ kiểm soát giá nhà ở xã hội, nhà cho thuê, không để tăng bất hợp lý, vượt khả năng chi trả của người thu nhập thấp và trung bình.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://vnexpress.net/rss/thoi-su.rss",
+        "publisher_host": "vnexpress.net",
+        "publication_date_from_feed": true
+      }
+    },
     {
       "id": "article-market-rss-99e3c617ba7f73887f9d",
       "title": "GDP Trung Quốc quý III tăng 4,5%, vượt dự báo thị trường",
@@ -184,6 +349,34 @@
       ],
       "importance": 2,
       "summary": "Chính phủ đề xuất nâng tiền đặt trước lên 20-50% giá khởi điểm khi đấu giá đất ở cho cá nhân, nhằm hạn chế tình trạng \"cò mồi\", trả giá cao rồi bỏ cọc.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://vnexpress.net/rss/thoi-su.rss",
+        "publisher_host": "vnexpress.net",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-0c1ebd5a5a178ed96a2a",
+      "title": "Bộ trưởng Tư pháp: Tăng tiền đặt trước lên 20-50% để ngăn trục lợi đấu giá đất",
+      "url": "https://vnexpress.net/bo-truong-tu-phap-tang-tien-dat-truoc-len-20-50-de-ngan-truc-loi-dau-gia-dat-5134001.html",
+      "category": "market",
+      "module_ids": [
+        "market",
+        "legal"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-10-19T02:29:31+00:00",
+      "source_id": "vnexpress-current-affairs",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [
+        "pricing"
+      ],
+      "importance": 2,
+      "summary": "Chính phủ đề xuất người tham gia đấu giá đất ở phải đặt trước 20-50% giá khởi điểm, thay mức 10-50% hiện hành, nhằm hạn chế bỏ cọc, thổi giá và trục lợi.",
       "source_verification": {
         "method": "official-rss",
         "feed_url": "https://vnexpress.net/rss/thoi-su.rss",
