@@ -1,9 +1,115 @@
 {
   "schema_version": 1,
-  "build_id": "market-news-rss-20261019T105204Z",
-  "generated_at": "2026-10-19T10:52:04.439934+00:00",
-  "record_count": 681,
+  "build_id": "market-news-rss-20261019T125141Z",
+  "generated_at": "2026-10-19T12:51:41.391076+00:00",
+  "record_count": 686,
   "data": [
+    {
+      "id": "article-market-rss-4dbd58ca1617e67c7f4c",
+      "title": "Dự án đường ĐT.857 gặp khó vì khan hiếm vật liệu",
+      "url": "https://thanhnien.vn/du-an-duong-dt857-gap-kho-vi-khan-hiem-vat-lieu-185261019151847681.htm",
+      "category": "market",
+      "module_ids": [
+        "market"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-10-19T12:44:00+00:00",
+      "source_id": "thanhnien-policy",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [
+        "infrastructure"
+      ],
+      "importance": 2,
+      "summary": "Dự án đường ĐT.857, đoạn quốc lộ 30 - ĐT.845 mới đạt 66,1% tổng giá trị khối lượng thực hiện do thiếu cát san lấp, đá làm đường.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://thanhnien.vn/rss/kinh-te/chinh-sach-phat-trien.rss",
+        "publisher_host": "thanhnien.vn",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-a0cc373a3c62d2a30ae5",
+      "title": "Nhà ở xã hội tại Hải Phòng có giá tạm tính gần 19,9 triệu đồng một m2",
+      "url": "https://vnexpress.net/nha-o-xa-hoi-tai-hai-phong-co-gia-tam-tinh-gan-19-9-trieu-dong-mot-m2-5134354.html",
+      "category": "market",
+      "module_ids": [
+        "market"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-10-19T11:30:05+00:00",
+      "source_id": "vnexpress-real-estate",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [
+        "pricing"
+      ],
+      "importance": 2,
+      "summary": "Mức giá bán bình quân tạm tính với 672 căn hộ thuộc dự án nhà ở xã hội tại Khu dân cư mới xã Cẩm Điền - Lương Điền được Sở Xây dựng tạm tính gần 19,9 triệu một m2.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://vnexpress.net/rss/bat-dong-san.rss",
+        "publisher_host": "vnexpress.net",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-7e1e16785da5d944f271",
+      "title": "Ba lô đất Thủ Thiêm có mức đấu giá khởi điểm vượt 14.500 tỷ đồng",
+      "url": "https://vnexpress.net/ba-lo-dat-thu-thiem-co-muc-dau-gia-khoi-diem-vuot-14-500-ty-dong-5134347.html",
+      "category": "market",
+      "module_ids": [
+        "market"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-10-19T11:05:51+00:00",
+      "source_id": "vnexpress-real-estate",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "Ba khu đất 3-12, 3-8 và 3-9 tại Khu đô thị Thủ Thiêm được duyệt giá khởi điểm gần 14.575 tỷ đồng, trong đó lô 3-12 có giá hơn 1 tỷ đồng mỗi m2.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://vnexpress.net/rss/bat-dong-san.rss",
+        "publisher_host": "vnexpress.net",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-7dbc56a31d0616c71796",
+      "title": "Lâm Đồng quy hoạch Công viên Ánh sáng cạnh chợ đêm Đà Lạt",
+      "url": "https://dantri.com.vn/thoi-su/lam-dong-quy-hoach-cong-vien-anh-sang-canh-cho-dem-da-lat-20261019172027916.htm",
+      "category": "market",
+      "module_ids": [
+        "market"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-10-19T10:45:27+00:00",
+      "source_id": "dantri-current-affairs",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [
+        "legal"
+      ],
+      "importance": 2,
+      "summary": "(Dân trí) - Theo kế hoạch, Công viên Ánh sáng nằm cạnh chợ đêm Đà Lạt sẽ trở thành điểm nhấn cảnh quan, không gian công cộng, góp phần thúc đẩy kinh tế đêm Đà Lạt.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://dantri.com.vn/rss/thoi-su.rss",
+        "publisher_host": "dantri.com.vn",
+        "publication_date_from_feed": true
+      }
+    },
     {
       "id": "article-market-rss-0b0878173993b238f9c3",
       "title": "Dự án mở rộng cao tốc TP.HCM đi miền Tây nguy cơ chậm tiến độ",
@@ -31,6 +137,35 @@
         "method": "official-rss",
         "feed_url": "https://thanhnien.vn/rss/kinh-te/chinh-sach-phat-trien.rss",
         "publisher_host": "thanhnien.vn",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-8895ef7d2f2fd0c2b82a",
+      "title": "Tây Ninh bàn giao mặt bằng mở rộng cao tốc TPHCM - Trung Lương vào tháng 11",
+      "url": "https://dantri.com.vn/thoi-su/tay-ninh-ban-giao-mat-bang-mo-rong-cao-toc-tphcm-trung-luong-vao-thang-11-20261019162719983.htm",
+      "category": "infrastructure",
+      "module_ids": [
+        "infrastructure"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-10-19T10:12:08+00:00",
+      "source_id": "dantri-current-affairs",
+      "region_ids": [
+        "hcmc"
+      ],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [
+        "infrastructure"
+      ],
+      "importance": 2,
+      "summary": "(Dân trí) - Tây Ninh đang đẩy nhanh công tác giải phóng mặt bằng dự án mở rộng cao tốc TPHCM - Trung Lương - Mỹ Thuận, với hơn 500 trường hợp bị ảnh hưởng trên đoạn tuyến dài hơn 28km qua địa bàn tỉnh.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://dantri.com.vn/rss/thoi-su.rss",
+        "publisher_host": "dantri.com.vn",
         "publication_date_from_feed": true
       }
     },

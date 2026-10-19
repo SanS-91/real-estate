@@ -1,16 +1,16 @@
 {
   "schema_version": 1,
-  "checked_at": "2026-10-19T10:52:04.439934+00:00",
+  "checked_at": "2026-10-19T12:51:41.391076+00:00",
   "feeds_configured": 16,
   "feeds_fetched": 16,
-  "accepted_new": 7,
+  "accepted_new": 5,
   "production_written": true,
-  "article_total": 681,
+  "article_total": 686,
   "published_by_module": {
     "market": 4,
-    "legal": 1,
-    "infrastructure": 2,
-    "macro": 1
+    "legal": 0,
+    "infrastructure": 1,
+    "macro": 0
   },
   "feed_status": [
     {
@@ -98,19 +98,19 @@
       "source_id": "dantri-business",
       "status": "parsed",
       "feed_items": 50,
-      "new": 1,
-      "skipped": 49,
-      "duplicates": 10,
+      "new": 0,
+      "skipped": 50,
+      "duplicates": 11,
       "filtered": 39
     },
     {
       "source_id": "dantri-current-affairs",
       "status": "parsed",
       "feed_items": 50,
-      "new": 3,
-      "skipped": 47,
-      "duplicates": 5,
-      "filtered": 42
+      "new": 2,
+      "skipped": 48,
+      "duplicates": 7,
+      "filtered": 41
     },
     {
       "source_id": "dantri-legal",
@@ -136,8 +136,8 @@
       "feed_items": 50,
       "new": 0,
       "skipped": 50,
-      "duplicates": 22,
-      "filtered": 28
+      "duplicates": 21,
+      "filtered": 29
     },
     {
       "source_id": "thanhnien-policy",
