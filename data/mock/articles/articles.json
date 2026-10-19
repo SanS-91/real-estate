@@ -1,9 +1,137 @@
 {
   "schema_version": 1,
-  "build_id": "market-news-rss-20261019T065144Z",
-  "generated_at": "2026-10-19T06:51:44.219422+00:00",
-  "record_count": 669,
+  "build_id": "market-news-rss-20261019T085138Z",
+  "generated_at": "2026-10-19T08:51:38.542766+00:00",
+  "record_count": 674,
   "data": [
+    {
+      "id": "article-market-rss-f88bcae27f6985ece209",
+      "title": "LPBank giảm lãi suất cho vay hỗ trợ hộ kinh doanh, SME",
+      "url": "https://vnexpress.net/lpbank-giam-lai-suat-cho-vay-ho-tro-ho-kinh-doanh-sme-5134256.html",
+      "category": "macro",
+      "module_ids": [
+        "macro"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-10-19T08:30:00+00:00",
+      "source_id": "vnexpress-economy",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "LPBank giảm lãi suất cho vay 1,6-2% mỗi năm với các khoản giải ngân mới phục vụ sản xuất, kinh doanh ngắn hạn, đồng thời điều chỉnh giảm lãi suất huy động.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://vnexpress.net/rss/kinh-doanh.rss",
+        "publisher_host": "vnexpress.net",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-2246d994baf3b8418ae8",
+      "title": "Thống đốc: 'Cần xem xét giảm lãi suất với cả khoản vay cũ'",
+      "url": "https://vnexpress.net/thong-doc-can-xem-xet-giam-lai-suat-voi-ca-khoan-vay-cu-5134207.html",
+      "category": "macro",
+      "module_ids": [
+        "macro"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-10-19T08:09:55+00:00",
+      "source_id": "vnexpress-economy",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "Thống đốc yêu cầu các ngân hàng ưu tiên giảm lãi suất cho vay sản xuất kinh doanh và xem xét áp dụng với cả dư nợ hiện hữu thay vì chỉ khoản vay mới.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://vnexpress.net/rss/kinh-doanh.rss",
+        "publisher_host": "vnexpress.net",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-11f85a8c3a2610beae56",
+      "title": "Thiên Quân Group khởi công dự án căn hộ chung cư hạng sang tại Cần Thơ",
+      "url": "https://thanhnien.vn/thien-quan-group-khoi-cong-du-an-can-ho-chung-cu-hang-sang-tai-can-tho-185261019143156473.htm",
+      "category": "market",
+      "module_ids": [
+        "market",
+        "infrastructure"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-10-19T07:41:00+00:00",
+      "source_id": "thanhnien-real-estate",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [
+        "legal"
+      ],
+      "importance": 2,
+      "summary": "Tọa lạc tại số 55 Nguyễn Việt Hồng, phường Ninh Kiều, TP.Cần Thơ, dự án Thiên Quân Apartment có tổng vốn đầu tư 179 tỉ đồng, được quy hoạch gồm 2 tầng hầm và 13 tầng nổi.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://thanhnien.vn/rss/kinh-te/dia-oc.rss",
+        "publisher_host": "thanhnien.vn",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-77f8fa1fbaa0dd6534b2",
+      "title": "Khải Hoàn Imperial thắng hạng mục dự án có khả năng kết nối tốt nhất",
+      "url": "https://vnexpress.net/khai-hoan-imperial-thang-hang-muc-du-an-co-kha-nang-ket-noi-tot-nhat-5134120.html",
+      "category": "market",
+      "module_ids": [
+        "market"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-10-19T07:00:00+00:00",
+      "source_id": "vnexpress-real-estate",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "Dự án Khải Hoàn Imperial của Chủ đầu tư Khải Hoàn Land được vinh danh hạng mục Dự án nhà ở có khả năng kết nối tốt nhất tại PropertyGuru Vietnam Property Awards 2026.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://vnexpress.net/rss/bat-dong-san.rss",
+        "publisher_host": "vnexpress.net",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-fb5d1fc1533aba431821",
+      "title": "Lãi suất cho vay bình quân vẫn neo cao, chỉ 6 ngân hàng giảm trong tháng 9",
+      "url": "https://dantri.com.vn/kinh-doanh/lai-suat-cho-vay-binh-quan-van-neo-cao-chi-6-ngan-hang-giam-trong-thang-9-20261019113010443.htm",
+      "category": "macro",
+      "module_ids": [
+        "macro"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-10-19T06:04:50+00:00",
+      "source_id": "dantri-business",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "(Dân trí) - Trong 20 ngân hàng công bố lãi suất cho vay bình quân tháng 9, có 6 nhà băng ghi nhận mức giảm so với tháng trước. Trong khi đó, Vikki Bank vừa công bố lãi suất bình quân tháng 10 tăng lên 11,06%/năm.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://dantri.com.vn/rss/kinh-doanh.rss",
+        "publisher_host": "dantri.com.vn",
+        "publication_date_from_feed": true
+      }
+    },
     {
       "id": "article-market-rss-3de3fdb8544722bd4b91",
       "title": "Giải pháp nào kéo giảm giá nhà về mức người dân có thể mua?",
