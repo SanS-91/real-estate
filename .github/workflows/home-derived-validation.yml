@@ -5,6 +5,7 @@ on:
     paths:
       - 'index.html'
       - 'assets/js/home.js'
+      - 'tests/test_home_fresh_news_20261019.cjs'
       - 'assets/js/localization-dynamic.js'
       - 'data/mock/home/**'
       - 'tests/test_phase4_3d_home_sync.py'
@@ -29,6 +30,7 @@ jobs:
         run: |
           node --check assets/js/home.js
           node --check assets/js/localization-dynamic.js
+          node tests/test_home_fresh_news_20261019.cjs
       - name: Home regression
         run: python tests/test_phase4_3d_home_sync.py
       - name: Phase 4.9.1 UI polish regression
