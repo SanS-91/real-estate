@@ -1,9 +1,86 @@
 {
   "schema_version": 1,
-  "build_id": "market-news-rss-20261019T134213Z",
-  "generated_at": "2026-10-19T13:42:13.606371+00:00",
-  "record_count": 687,
+  "build_id": "market-news-rss-20261019T145139Z",
+  "generated_at": "2026-10-19T14:51:39.167339+00:00",
+  "record_count": 690,
   "data": [
+    {
+      "id": "article-market-rss-5ab26c17cc773dcd9450",
+      "title": "TP HCM giao hơn 4.800 m2 đất cho Địa ốc Thảo Điền làm nhà ở xã hội",
+      "url": "https://vnexpress.net/tp-hcm-giao-hon-4-800-m2-dat-cho-dia-oc-thao-dien-lam-nha-o-xa-hoi-5134361.html",
+      "category": "market",
+      "module_ids": [
+        "market"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-10-19T14:39:09+00:00",
+      "source_id": "vnexpress-real-estate",
+      "region_ids": [
+        "hcmc"
+      ],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "Gần 4.820 m2 đất được TP HCM giao cho Công ty Địa ốc Thảo Điền để triển khai dự án nhà ở xã hội Nam Lý tại phường Phước Long, thời hạn sử dụng đất 50 năm.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://vnexpress.net/rss/bat-dong-san.rss",
+        "publisher_host": "vnexpress.net",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-dcc77ba29ae2688c3da0",
+      "title": "Rào cản lớn khiến giá vàng giằng co trước mốc 4.200 USD/ounce",
+      "url": "https://dantri.com.vn/kinh-doanh/rao-can-lon-khien-gia-vang-giang-co-truoc-moc-4200-usdounce-20261019195931763.htm",
+      "category": "macro",
+      "module_ids": [
+        "macro"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-10-19T13:31:27+00:00",
+      "source_id": "dantri-business",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "(Dân trí) - Bước vào phiên đầu tuần, giá vàng nỗ lực thử thách lại ngưỡng 4.200 USD/ounce sau nhịp giảm sâu. Thế nhưng, đà bứt phá bền vững vẫn đang phụ thuộc lớn vào diễn biến thị trường trái phiếu Mỹ.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://dantri.com.vn/rss/kinh-doanh.rss",
+        "publisher_host": "dantri.com.vn",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-352d3e6a9a0aea312194",
+      "title": "Nhiều sếp ngân hàng cam kết giảm lãi suất sau cuộc họp “nóng” với Thống đốc",
+      "url": "https://dantri.com.vn/kinh-doanh/nhieu-sep-ngan-hang-cam-ket-giam-lai-suat-sau-cuoc-hop-nong-voi-thong-doc-20261019200422002.htm",
+      "category": "macro",
+      "module_ids": [
+        "macro"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-10-19T13:18:19+00:00",
+      "source_id": "dantri-business",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "(Dân trí) - Lãnh đạo một loạt ngân hàng cam kết giảm lãi suất huy động và cho vay, trong đó mức giảm lãi vay có thể lên tới 2%, với nhiều gói tín dụng quy mô lớn hỗ trợ doanh nghiệp.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://dantri.com.vn/rss/kinh-doanh.rss",
+        "publisher_host": "dantri.com.vn",
+        "publication_date_from_feed": true
+      }
+    },
     {
       "id": "article-market-rss-4dbd58ca1617e67c7f4c",
       "title": "Dự án đường ĐT.857 gặp khó vì khan hiếm vật liệu",
