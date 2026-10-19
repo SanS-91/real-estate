@@ -1,9 +1,306 @@
 {
   "schema_version": 1,
-  "build_id": "market-news-rss-20261019T005158Z",
-  "generated_at": "2026-10-19T00:51:58.322406+00:00",
-  "record_count": 639,
+  "build_id": "market-news-rss-20261019T025138Z",
+  "generated_at": "2026-10-19T02:51:38.394630+00:00",
+  "record_count": 650,
   "data": [
+    {
+      "id": "article-market-rss-b54764ff5bdc9a1bb5cc",
+      "title": "Giá vàng hôm nay 19.10.2026: Vàng miếng SJC đắt hơn thế giới hơn 12 triệu đồng/lượng",
+      "url": "https://thanhnien.vn/gia-vang-hom-nay-19102026-vang-mieng-sjc-dat-hon-the-gioi-hon-12-trieu-dong-luong-185261019085654283.htm",
+      "category": "macro",
+      "module_ids": [
+        "macro"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-10-19T02:19:00+00:00",
+      "source_id": "thanhnien-banking",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "Giá vàng miếng SJC tăng giảm trái chiều trong bối cảnh kim loại quý biến động liên tục trong sáng đầu tuần. Sự biến động chậm chạp của vàng trong nước những ngày qua đã khiến mức đắt đỏ được rút ngắn, vàng miếng SJC cao hơn thế giới còn 12,2 triệu đồng/lượng thay vì hơn 13 triệu đồng/lượng trước đó.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://thanhnien.vn/rss/kinh-te/ngan-hang.rss",
+        "publisher_host": "thanhnien.vn",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-8b0ea981f65158f2a020",
+      "title": "Izumi City vận dụng kinh nghiệm phát triển đô thị từ Nhật Bản",
+      "url": "https://vnexpress.net/izumi-city-van-dung-kinh-nghiem-phat-trien-do-thi-tu-nhat-ban-5133883.html",
+      "category": "market",
+      "module_ids": [
+        "market"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-10-19T02:00:00+00:00",
+      "source_id": "vnexpress-real-estate",
+      "region_ids": [],
+      "project_ids": [
+        "izumi-city"
+      ],
+      "developer_ids": [
+        "nam-long"
+      ],
+      "tags": [],
+      "importance": 2,
+      "summary": "Từ kinh nghiệm triển khai những đô thị tại Nhật Bản, Hankyu Hanshin Properties và Tokyu Corporation đồng hành Nam Long, phát triển đô thị tích hợp Izumi City",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://vnexpress.net/rss/bat-dong-san.rss",
+        "publisher_host": "vnexpress.net",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-2a2bda0254bd75addd2e",
+      "title": "The Upper East Saigon được vinh danh với mô hình nhà ở đa thế hệ",
+      "url": "https://vnexpress.net/the-upper-east-saigon-duoc-vinh-danh-voi-mo-hinh-nha-o-da-the-he-5133613.html",
+      "category": "market",
+      "module_ids": [
+        "market"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-10-19T02:00:00+00:00",
+      "source_id": "vnexpress-real-estate",
+      "region_ids": [
+        "hcmc"
+      ],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "The Upper East Saigon do Bách Lộc phát triển nhận giải thưởng dành cho dự án căn hộ phát triển theo mô hình đa thế hệ tại PropertyGuru 2026, ngày 16/10, TP HCM.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://vnexpress.net/rss/bat-dong-san.rss",
+        "publisher_host": "vnexpress.net",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-a1619abc4192c28dc827",
+      "title": "TTC Phú Quốc tưng bừng khai trương Văn phòng bán hàng và nhà mẫu tại TP.HCM",
+      "url": "https://thanhnien.vn/ttc-phu-quoc-tung-bung-khai-truong-van-phong-ban-hang-va-nha-mau-tai-tphcm-185261019085649587.htm",
+      "category": "market",
+      "module_ids": [
+        "market"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-10-19T01:38:00+00:00",
+      "source_id": "thanhnien-real-estate",
+      "region_ids": [
+        "hcmc"
+      ],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "Ngày 17.10.2026, TTC Phú Quốc chính thức khai trương Văn phòng bán hàng và nhà mẫu tại 253 Hoàng Văn Thụ, phường Tân Sơn Hòa, TP.HCM.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://thanhnien.vn/rss/kinh-te/dia-oc.rss",
+        "publisher_host": "thanhnien.vn",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-ce15153d4c2fc7363e5a",
+      "title": "Sóng ngầm giảm giá chung cư mới",
+      "url": "https://vnexpress.net/song-ngam-giam-gia-chung-cu-moi-5133944.html",
+      "category": "market",
+      "module_ids": [
+        "market"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-10-19T01:09:37+00:00",
+      "source_id": "vnexpress-real-estate",
+      "region_ids": [
+        "ha-noi"
+      ],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "Áp lực thanh khoản yếu khiến nhiều chủ đầu tư tại Hà Nội tăng chiết khấu, ưu đãi, kéo mặt bằng giá chung cư mới hạ nhiệt lần đầu sau hai năm leo thang.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://vnexpress.net/rss/bat-dong-san.rss",
+        "publisher_host": "vnexpress.net",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-2464ec3141b06677fc32",
+      "title": "Không giảm lãi suất, ngân hàng có thể bị cắt room tín dụng năm tới",
+      "url": "https://dantri.com.vn/kinh-doanh/khong-giam-lai-suat-ngan-hang-co-the-bi-cat-room-tin-dung-nam-toi-20261019002120663.htm",
+      "category": "macro",
+      "module_ids": [
+        "macro"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-10-19T01:02:00+00:00",
+      "source_id": "dantri-business",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "(Dân trí) - Ngân hàng Nhà nước yêu cầu các tổ chức tín dụng giảm lãi suất huy động và cho vay; trường hợp không tuân thủ có thể bị xem xét giảm hạn mức tín dụng (room) còn lại năm nay.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://dantri.com.vn/rss/kinh-doanh.rss",
+        "publisher_host": "dantri.com.vn",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-6d3e98bd328eb1068546",
+      "title": "Sola phát triển hệ tiện ích phục vụ lối sống khỏe",
+      "url": "https://vnexpress.net/sola-phat-trien-he-tien-ich-phuc-vu-loi-song-khoe-5132265.html",
+      "category": "market",
+      "module_ids": [
+        "market"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-10-19T01:00:00+00:00",
+      "source_id": "vnexpress-real-estate",
+      "region_ids": [
+        "hcmc"
+      ],
+      "project_ids": [
+        "the-global-city"
+      ],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "Bán đảo Sola thuộc The Global City, TP HCM kết hợp cảnh quan ba mặt nước, 5 công viên và hệ tiện ích đô thị, hướng đến không gian sống cân bằng giữa thiên nhiên, vận động và tiện nghi.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://vnexpress.net/rss/bat-dong-san.rss",
+        "publisher_host": "vnexpress.net",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-1d7d22eb7f93b59ee322",
+      "title": "Khải Hoàn Prime tăng cạnh tranh với giá bán từ 66 triệu đồng một m2",
+      "url": "https://vnexpress.net/khai-hoan-prime-tang-canh-tranh-voi-gia-ban-tu-66-trieu-dong-mot-m2-5133007.html",
+      "category": "market",
+      "module_ids": [
+        "market"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-10-19T01:00:00+00:00",
+      "source_id": "vnexpress-real-estate",
+      "region_ids": [
+        "hcmc"
+      ],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [
+        "pricing"
+      ],
+      "importance": 2,
+      "summary": "Khải Hoàn Prime đưa ra mức giá từ 66 triệu đồng một m2, cùng chính sách hỗ trợ vay vốn và giãn tiến độ thanh toán, hướng đến người mua nhà tại khu Nam TP HCM.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://vnexpress.net/rss/bat-dong-san.rss",
+        "publisher_host": "vnexpress.net",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-b51136676693d81b4861",
+      "title": "Hồ sơ doanh nghiệp bắt tay tỷ phú Phạm Nhật Vượng làm 700.000 tấn thép/năm",
+      "url": "https://dantri.com.vn/kinh-doanh/ho-so-doanh-nghiep-bat-tay-ty-phu-pham-nhat-vuong-lam-700000-tan-thepnam-20261018100143794.htm",
+      "category": "legal",
+      "module_ids": [
+        "legal"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-10-19T00:52:34+00:00",
+      "source_id": "dantri-business",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [
+        "infrastructure"
+      ],
+      "importance": 2,
+      "summary": "(Dân trí) - Cung cấp dây chuyền làm ray tàu cao tốc cho VinMetal, Danieli - tập đoàn hơn 100 năm từ Italy - sở hữu quỹ đơn hàng trên 6 tỷ euro cùng năng lực luyện kim hàng đầu thế giới.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://dantri.com.vn/rss/kinh-doanh.rss",
+        "publisher_host": "dantri.com.vn",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-aad53f2a546c0367b01e",
+      "title": "Vàng SJC giảm mạnh, người \"đu đỉnh\" lỗ tới 50,7 triệu đồng/lượng",
+      "url": "https://dantri.com.vn/kinh-doanh/vang-sjc-giam-manh-nguoi-du-dinh-lo-toi-507-trieu-dongluong-20261019000502778.htm",
+      "category": "macro",
+      "module_ids": [
+        "macro"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-10-19T00:20:00+00:00",
+      "source_id": "dantri-business",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "(Dân trí) - Giá vàng miếng SJC giảm 1,2 triệu đồng/lượng trong tuần qua, khiến người mua ở đỉnh lịch sử lỗ hơn 50 triệu đồng/lượng. Với giá vàng thế giới, triển vọng tuần này chưa rõ ràng.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://dantri.com.vn/rss/kinh-doanh.rss",
+        "publisher_host": "dantri.com.vn",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-7b70c98acf5f606e361b",
+      "title": "Tai nạn liên hoàn giữa 3 ô tô, cao tốc Pháp Vân - Nghi Sơn ùn ứ 10km",
+      "url": "https://dantri.com.vn/thoi-su/tai-nan-lien-hoan-giua-3-o-to-cao-toc-phap-van-nghi-son-un-u-10km-20261019025026161.htm",
+      "category": "infrastructure",
+      "module_ids": [
+        "infrastructure"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-10-19T00:03:49+00:00",
+      "source_id": "dantri-current-affairs",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [
+        "infrastructure"
+      ],
+      "importance": 2,
+      "summary": "(Dân trí) - Nguyên nhân sơ bộ ban đầu do một tài xế ô tô không giữ khoảng cách an toàn với xe phía trước dẫn đến vụ va chạm liên hoàn giữa 3 ô tô.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://dantri.com.vn/rss/thoi-su.rss",
+        "publisher_host": "dantri.com.vn",
+        "publication_date_from_feed": true
+      }
+    },
     {
       "id": "article-market-rss-0754bee31323e8b9cf16",
       "title": "Hà Nội: Giá trông giữ xe ở chung cư, trung tâm thương mại có tăng không?",
