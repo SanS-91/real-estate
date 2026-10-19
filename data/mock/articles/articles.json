@@ -1,9 +1,188 @@
 {
   "schema_version": 1,
-  "build_id": "market-news-rss-20261018T145138Z",
-  "generated_at": "2026-10-18T14:51:38.502821+00:00",
-  "record_count": 632,
+  "build_id": "market-news-rss-20261019T005158Z",
+  "generated_at": "2026-10-19T00:51:58.322406+00:00",
+  "record_count": 639,
   "data": [
+    {
+      "id": "article-market-rss-0754bee31323e8b9cf16",
+      "title": "Hà Nội: Giá trông giữ xe ở chung cư, trung tâm thương mại có tăng không?",
+      "url": "https://dantri.com.vn/thoi-su/ha-noi-gia-trong-giu-xe-o-chung-cu-trung-tam-thuong-mai-co-tang-khong-20261018192004507.htm",
+      "category": "market",
+      "module_ids": [
+        "market"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-10-18T23:08:00+00:00",
+      "source_id": "dantri-current-affairs",
+      "region_ids": [
+        "ha-noi"
+      ],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "(Dân trí) - Theo Sở Xây dựng Hà Nội, thành phố không chủ trương để việc điều chỉnh giá dịch vụ tại một nhóm điểm trông giữ phương tiện trở thành lý do cho các cơ sở khác đồng loạt tăng giá tùy tiện, thiếu căn cứ.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://dantri.com.vn/rss/thoi-su.rss",
+        "publisher_host": "dantri.com.vn",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-c7394af7aa4f9bbfe611",
+      "title": "Cách khử mùi ghế sofa bằng baking soda hiệu quả tại nhà",
+      "url": "https://dantri.com.vn/bat-dong-san/cach-khu-mui-ghe-sofa-bang-baking-soda-hieu-qua-tai-nha-20261016232758189.htm",
+      "category": "market",
+      "module_ids": [
+        "market"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-10-18T23:00:00+00:00",
+      "source_id": "dantri-real-estate",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "(Dân trí) - Chỉ với một hộp muối nở quen thuộc trong bếp, chiếc ghế sofa bọc vải của gia đình bạn sẽ nhanh chóng sạch mùi khó chịu, lấy lại cảm giác thơm tho và êm ái cho phòng khách.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://dantri.com.vn/rss/bat-dong-san.rss",
+        "publisher_host": "dantri.com.vn",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-8c4716091584e6b4db8c",
+      "title": "Sức ép giảm lãi vay",
+      "url": "https://thanhnien.vn/suc-ep-giam-lai-vay-185261018224143476.htm",
+      "category": "macro",
+      "module_ids": [
+        "macro"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-10-18T22:53:00+00:00",
+      "source_id": "thanhnien-banking",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "Chính phủ vừa yêu cầu các ngân hàng giảm lãi suất cho vay 1,5 - 2% đối với lĩnh vực sản xuất, kinh doanh và các lĩnh vực ưu tiên. Một số ngân hàng đã có động thái giảm lãi vay và dự báo sẽ xuất hiện thêm nhiều nhà băng công bố giảm lãi trong thời gian tới.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://thanhnien.vn/rss/kinh-te/ngan-hang.rss",
+        "publisher_host": "thanhnien.vn",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-99161016aed6b27c53c5",
+      "title": "Diện tích tối thiểu để thường trú: Phải giúp người dân an cư",
+      "url": "https://thanhnien.vn/dien-tich-toi-thieu-de-thuong-tru-phai-giup-nguoi-dan-an-cu-185261018223818112.htm",
+      "category": "market",
+      "module_ids": [
+        "market"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-10-18T22:52:00+00:00",
+      "source_id": "thanhnien-real-estate",
+      "region_ids": [
+        "hcmc"
+      ],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "Dự thảo Nghị quyết diện tích nhà ở tối thiểu để được đăng ký thường trú tại TP.HCM đang được Sở Xây dựng lấy ý kiến là 8 m2 sàn/người.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://thanhnien.vn/rss/kinh-te/dia-oc.rss",
+        "publisher_host": "thanhnien.vn",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-084a488ebd41efdcf91d",
+      "title": "Nhà Bạch Tuộc chắn nắng Tây bằng cây xanh",
+      "url": "https://vnexpress.net/nha-bach-tuoc-chan-nang-tay-bang-cay-xanh-5130240.html",
+      "category": "market",
+      "module_ids": [
+        "market"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-10-18T21:00:00+00:00",
+      "source_id": "vnexpress-real-estate",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "\"Nhà Bạch Tuộc\" tích hợp không gian ở và làm việc, nổi bật với mặt tiền sinh thái giúp hóa giải nắng gắt hướng Tây một cách khéo léo.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://vnexpress.net/rss/bat-dong-san.rss",
+        "publisher_host": "vnexpress.net",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-e69530578d09acf50a9e",
+      "title": "Cần hơn 600 tỷ đồng sửa đường qua BOT Bến Thủy",
+      "url": "https://vnexpress.net/can-hon-600-ty-dong-sua-duong-qua-bot-ben-thuy-5133855.html",
+      "category": "market",
+      "module_ids": [
+        "market"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-10-18T17:00:00+00:00",
+      "source_id": "vnexpress-current-affairs",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "Doanh nghiệp quản lý hai trạm BOT Bến Thủy cho biết doanh thu thu phí giảm mạnh, trong khi việc đại tu khoảng 60 km đường cần hơn 600 tỷ đồng và phải hoàn tất nhiều thủ tục.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://vnexpress.net/rss/thoi-su.rss",
+        "publisher_host": "vnexpress.net",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-8bedead943e94ad04633",
+      "title": "Chi 18 tỷ đồng xây biệt thự ven hồ phong cách Địa Trung Hải",
+      "url": "https://vnexpress.net/chi-18-ty-dong-xay-biet-thu-ven-ho-phong-cach-dia-trung-hai-5133339.html",
+      "category": "market",
+      "module_ids": [
+        "market"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-10-18T17:00:00+00:00",
+      "source_id": "vnexpress-real-estate",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "Trên khu đất 750 m2, chủ nhà ưu tiên diện tích sân vườn, hệ cửa kính hướng hồ và không gian sinh hoạt chung đáp ứng nhu cầu của gia đình nhiều thế hệ.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://vnexpress.net/rss/bat-dong-san.rss",
+        "publisher_host": "vnexpress.net",
+        "publication_date_from_feed": true
+      }
+    },
     {
       "id": "article-market-rss-0c5e180c54d15497f2f8",
       "title": "Lãi suất biến động sau chỉ đạo nóng: Cho vay giảm, tiền gửi thế nào?",
