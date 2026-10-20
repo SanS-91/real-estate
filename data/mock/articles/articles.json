@@ -1,8 +1,8 @@
 {
   "schema_version": 1,
-  "build_id": "market-news-rss-20261020T045137Z",
-  "generated_at": "2026-10-20T04:51:37.730657+00:00",
-  "record_count": 712,
+  "build_id": "market-news-rss-20261020T050207Z",
+  "generated_at": "2026-10-20T05:02:07.346756+00:00",
+  "record_count": 713,
   "data": [
     {
       "id": "article-market-rss-93d1ae1f398583147eed",
@@ -75,6 +75,33 @@
       "source_verification": {
         "method": "official-rss",
         "feed_url": "https://dantri.com.vn/rss/kinh-doanh.rss",
+        "publisher_host": "dantri.com.vn",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-62b76447d5908cafce28",
+      "title": "Khu đô thị Waterpoint được vinh danh tại PropertyGuru Vietnam Property Awards 2026",
+      "url": "https://dantri.com.vn/bat-dong-san/khu-do-thi-waterpoint-duoc-vinh-danh-tai-propertyguru-vietnam-property-awards-2026-20261020092045407.htm",
+      "category": "market",
+      "module_ids": [
+        "market"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-10-20T03:00:00+00:00",
+      "source_id": "dantri-real-estate",
+      "region_ids": [],
+      "project_ids": [
+        "waterpoint"
+      ],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "(Dân trí) - Vượt qua những quy chuẩn khắt khe của hội đồng giám khảo, đại đô thị Waterpoint vừa được vinh danh ở hạng mục Best Mega Township Development - Dự án đô thị tích hợp quy mô lớn tốt nhất Việt Nam tại PropertyGuru Vietnam Property Awards 2026.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://dantri.com.vn/rss/bat-dong-san.rss",
         "publisher_host": "dantri.com.vn",
         "publication_date_from_feed": true
       }
