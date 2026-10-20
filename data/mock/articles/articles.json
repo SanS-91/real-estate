@@ -1,9 +1,141 @@
 {
   "schema_version": 1,
-  "build_id": "market-news-rss-20261020T085133Z",
-  "generated_at": "2026-10-20T08:51:33.906117+00:00",
-  "record_count": 723,
+  "build_id": "market-news-rss-20261020T105139Z",
+  "generated_at": "2026-10-20T10:51:39.170362+00:00",
+  "record_count": 728,
   "data": [
+    {
+      "id": "article-market-rss-2b3adfc1fb05c593ffba",
+      "title": "Loạt tiện ích dành cho cư dân nhí tại Beachtro Tower",
+      "url": "https://vnexpress.net/loat-tien-ich-danh-cho-cu-dan-nhi-tai-beachtro-tower-5134713.html",
+      "category": "market",
+      "module_ids": [
+        "market"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-10-20T09:30:00+00:00",
+      "source_id": "vnexpress-real-estate",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "Căn hộ biển Beachtro Tower phát triển nhiều tiện ích dành riêng cho trẻ từ vận động ngoài trời đến học tập, khám phá.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://vnexpress.net/rss/bat-dong-san.rss",
+        "publisher_host": "vnexpress.net",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-f87c2fca5037b258d228",
+      "title": "Khởi công Nhà máy nhiệt điện LNG Quảng Trạch 2, tổng đầu tư 40.123 tỉ đồng",
+      "url": "https://thanhnien.vn/khoi-cong-nha-may-nhiet-dien-lng-quang-trach-2-tong-dau-tu-40123-ti-dong-185261020145404893.htm",
+      "category": "infrastructure",
+      "module_ids": [
+        "infrastructure"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-10-20T09:28:00+00:00",
+      "source_id": "thanhnien-policy",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "Tập đoàn Điện lực Việt Nam (EVN) tổ chức khởi công Nhà máy nhiệt điện LNG Quảng Trạch 2, đồng thời công bố phát điện lên lưới điện quốc gia đối với Nhà máy nhiệt điện Quảng Trạch 1.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://thanhnien.vn/rss/kinh-te/chinh-sach-phat-trien.rss",
+        "publisher_host": "thanhnien.vn",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-5d6d693cb0370fbf1013",
+      "title": "UOA Group được vinh danh tại giải thưởng bất động sản PropertyGuru 2026",
+      "url": "https://dantri.com.vn/bat-dong-san/uoa-group-duoc-vinh-danh-tai-giai-thuong-bat-dong-san-propertyguru-2026-20261020152228540.htm",
+      "category": "market",
+      "module_ids": [
+        "market"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-10-20T09:00:00+00:00",
+      "source_id": "dantri-real-estate",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [
+        "sales"
+      ],
+      "importance": 2,
+      "summary": "(Dân trí) - United Overseas Australia Ltd (UOA), tập đoàn đang niêm yết đồng thời tại Sở Giao dịch Chứng khoán Australia và Singapore, được vinh danh “Nhà phát triển bất động sản thương mại bền vững” tại Giải thưởng Bất động sản Việt Nam PropertyGuru (VPA) 2026.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://dantri.com.vn/rss/bat-dong-san.rss",
+        "publisher_host": "dantri.com.vn",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-55401365fd4eb1aff40b",
+      "title": "Bắc Ninh mở bán loạt nhà xã hội từ 530 triệu đồng một căn",
+      "url": "https://vnexpress.net/bac-ninh-mo-ban-loat-nha-xa-hoi-tu-530-trieu-dong-mot-can-5134626.html",
+      "category": "market",
+      "module_ids": [
+        "market"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-10-20T08:59:47+00:00",
+      "source_id": "vnexpress-real-estate",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [
+        "supply",
+        "pricing"
+      ],
+      "importance": 2,
+      "summary": "Hơn nghìn căn nhà ở xã hội tại Bắc Ninh sắp nhận hồ sơ với giá bán dao động 10,4-22 triệu đồng mỗi m2.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://vnexpress.net/rss/bat-dong-san.rss",
+        "publisher_host": "vnexpress.net",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-349831eb85bd70c5b947",
+      "title": "TPHCM thu hồi hơn 19ha đất của dự án Công viên Thiên niên kỷ",
+      "url": "https://dantri.com.vn/bat-dong-san/tphcm-thu-hoi-hon-19ha-dat-cua-du-an-cong-vien-thien-nien-ky-20261020151314579.htm",
+      "category": "market",
+      "module_ids": [
+        "market"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-10-20T08:43:40+00:00",
+      "source_id": "dantri-real-estate",
+      "region_ids": [
+        "hcmc"
+      ],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "(Dân trí) - TPHCM đã thu hồi hơn 19ha đất thực hiện dự án đầu tư “Xây dựng Công viên Thiên niên kỷ” tại Khu Công nghệ cao. Dự án đã chấm dứt hoạt động và doanh nghiệp tự nguyện trả lại đất thuê.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://dantri.com.vn/rss/bat-dong-san.rss",
+        "publisher_host": "dantri.com.vn",
+        "publication_date_from_feed": true
+      }
+    },
     {
       "id": "article-market-rss-1c066d404cb528dcfab3",
       "title": "HDBank triển khai gói tín dụng 10.000 tỷ đồng, giảm lãi suất 1,5%/năm hỗ trợ doanh nghiệp",
