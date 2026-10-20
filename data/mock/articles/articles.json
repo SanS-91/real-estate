@@ -1,9 +1,62 @@
 {
   "schema_version": 1,
-  "build_id": "market-news-rss-20261020T105139Z",
-  "generated_at": "2026-10-20T10:51:39.170362+00:00",
-  "record_count": 728,
+  "build_id": "market-news-rss-20261020T115139Z",
+  "generated_at": "2026-10-20T11:51:39.844199+00:00",
+  "record_count": 731,
   "data": [
+    {
+      "id": "article-market-rss-b963f834c4adf14e86ef",
+      "title": "Trung Quốc giữ nguyên lãi suất 17 tháng liên tiếp",
+      "url": "https://vnexpress.net/trung-quoc-giu-nguyen-lai-suat-17-thang-lien-tiep-5134662.html",
+      "category": "macro",
+      "module_ids": [
+        "macro"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-10-20T11:00:00+00:00",
+      "source_id": "vnexpress-economy",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "Ngày 20/10, giới chức Trung Quốc thông báo giữ nguyên lãi suất cho vay tham chiếu (LPR) kỳ hạn một năm tại 3%.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://vnexpress.net/rss/kinh-doanh.rss",
+        "publisher_host": "vnexpress.net",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-5d05a7e19a5295d79cdd",
+      "title": "Hà Nội đề xuất dành hơn 22.000 căn nhà xã hội phục vụ tái định cư",
+      "url": "https://vnexpress.net/ha-noi-de-xuat-danh-hon-22-000-can-nha-xa-hoi-phuc-vu-tai-dinh-cu-5134716.html",
+      "category": "market",
+      "module_ids": [
+        "market",
+        "infrastructure"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-10-20T09:53:46+00:00",
+      "source_id": "vnexpress-real-estate",
+      "region_ids": [
+        "ha-noi"
+      ],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "Sở Xây dựng đề xuất sử dụng hơn 22.000 căn tại 64 dự án nhà xã hội để phục vụ tái định cư, ưu tiên gần vị trí giải phóng mặt bằng.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://vnexpress.net/rss/bat-dong-san.rss",
+        "publisher_host": "vnexpress.net",
+        "publication_date_from_feed": true
+      }
+    },
     {
       "id": "article-market-rss-2b3adfc1fb05c593ffba",
       "title": "Loạt tiện ích dành cho cư dân nhí tại Beachtro Tower",
@@ -51,6 +104,35 @@
         "method": "official-rss",
         "feed_url": "https://thanhnien.vn/rss/kinh-te/chinh-sach-phat-trien.rss",
         "publisher_host": "thanhnien.vn",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-8ad1fd288256cee587f9",
+      "title": "Diễn đàn Kinh tế Mùa thu 2026 dự kiến công bố 12 dự án, vốn hơn 13 tỷ USD",
+      "url": "https://dantri.com.vn/kinh-doanh/dien-dan-kinh-te-mua-thu-2026-du-kien-cong-bo-12-du-an-von-hon-13-ty-usd-20261020161146095.htm",
+      "category": "market",
+      "module_ids": [
+        "market"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-10-20T09:25:11+00:00",
+      "source_id": "dantri-business",
+      "region_ids": [
+        "hcmc"
+      ],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [
+        "infrastructure"
+      ],
+      "importance": 2,
+      "summary": "(Dân trí) - 12 dự án đầu tư dự kiến được công bố tại Diễn đàn Kinh tế Mùa thu 2026 ở TPHCM, với tổng vốn đăng ký hơn 13 tỷ USD, tập trung vào lĩnh vực như logistics, năng lượng, hạ tầng,..",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://dantri.com.vn/rss/kinh-doanh.rss",
+        "publisher_host": "dantri.com.vn",
         "publication_date_from_feed": true
       }
     },
