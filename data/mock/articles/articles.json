@@ -1,9 +1,88 @@
 {
   "schema_version": 1,
-  "build_id": "market-news-rss-20261020T125137Z",
-  "generated_at": "2026-10-20T12:51:37.888052+00:00",
-  "record_count": 734,
+  "build_id": "market-news-rss-20261020T145145Z",
+  "generated_at": "2026-10-20T14:51:45.654796+00:00",
+  "record_count": 741,
   "data": [
+    {
+      "id": "article-market-rss-0c2042de305c5bfb3be7",
+      "title": "Sắp ra mắt tổ hợp giải trí, nghỉ dưỡng Qtopia",
+      "url": "https://vnexpress.net/sap-ra-mat-to-hop-giai-tri-nghi-duong-qtopia-5134806.html",
+      "category": "market",
+      "module_ids": [
+        "market"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-10-20T13:00:00+00:00",
+      "source_id": "vnexpress-real-estate",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [
+        "supply"
+      ],
+      "importance": 2,
+      "summary": "Qtopia quy mô 7,3 ha với 9 tòa tháp căn hộ du lịch ven biển, được định vị điểm đến vui chơi, giải trí, ẩm thực 24/7... sẽ ra mắt chiều 21/10.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://vnexpress.net/rss/bat-dong-san.rss",
+        "publisher_host": "vnexpress.net",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-ef46a10b2e89bfc189de",
+      "title": "Chủ đầu tư Nutifood: Rạng sáng mai sẽ hợp long cầu đi bộ ngàn tỉ vượt sông Sài Gòn",
+      "url": "https://thanhnien.vn/rang-sang-mai-se-hop-long-cau-di-bo-ngan-ti-vuot-song-sai-gon-18526102019465209.htm",
+      "category": "market",
+      "module_ids": [
+        "market"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-10-20T12:48:00+00:00",
+      "source_id": "thanhnien-policy",
+      "region_ids": [
+        "hcmc"
+      ],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "Rạng sáng mai (21.10), các đơn vị thi công sẽ tiến hành công đoạn hợp long phiến dầm chính của cầu đi bộ vượt sông Sài Gòn, kết nối công viên bến Bạch Đằng với Khu đô thị mới Thủ Thiêm.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://thanhnien.vn/rss/kinh-te/chinh-sach-phat-trien.rss",
+        "publisher_host": "thanhnien.vn",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-52607c9596cb513a0618",
+      "title": "Trung Quốc giữ nguyên lãi suất cho vay cơ bản tháng thứ 17 liên tiếp",
+      "url": "https://dantri.com.vn/kinh-doanh/trung-quoc-giu-nguyen-lai-suat-cho-vay-co-ban-thang-thu-17-lien-tiep-20261020193322128.htm",
+      "category": "macro",
+      "module_ids": [
+        "macro"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-10-20T12:47:10+00:00",
+      "source_id": "dantri-business",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "(Dân trí) - Lãi suất cho vay cơ bản (LPR) kỳ hạn 1 năm của Trung Quốc - lãi suất tham chiếu cho vay dựa trên thị trường - được công bố ở mức 3% vào thứ ba (20/10), không đổi so với tháng trước.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://dantri.com.vn/rss/kinh-doanh.rss",
+        "publisher_host": "dantri.com.vn",
+        "publication_date_from_feed": true
+      }
+    },
     {
       "id": "article-market-rss-a9186fc23a887ff67487",
       "title": "MB giảm tới 2% lãi suất cho vay hỗ trợ doanh nghiệp",
@@ -55,6 +134,31 @@
       }
     },
     {
+      "id": "article-market-rss-df41c4a5917b21874500",
+      "title": "Sếp Coteccons nói \"không ngại cạnh tranh\" khi thị trường xuất hiện đối thủ lớn",
+      "url": "https://dantri.com.vn/bat-dong-san/sep-coteccons-noi-khong-ngai-canh-tranh-khi-thi-truong-xuat-hien-doi-thu-lon-20261020175811750.htm",
+      "category": "market",
+      "module_ids": [
+        "market"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-10-20T11:36:50+00:00",
+      "source_id": "dantri-real-estate",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "(Dân trí) - Sự tham gia của VinCons và Tân Minh Nhân được Coteccons nhìn nhận tích cực, khi cạnh tranh có thể giúp chủ đầu tư đánh giá đúng hơn giá trị nhà thầu.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://dantri.com.vn/rss/bat-dong-san.rss",
+        "publisher_host": "dantri.com.vn",
+        "publication_date_from_feed": true
+      }
+    },
+    {
       "id": "article-market-rss-cf7729e5deaafbd492a9",
       "title": "MSB triển khai đồng bộ giải pháp lãi suất đối với khách hàng cá nhân và doanh nghiệp",
       "url": "https://dantri.com.vn/kinh-doanh/msb-trien-khai-dong-bo-giai-phap-lai-suat-doi-voi-khach-hang-ca-nhan-va-doanh-nghiep-20261020172537267.htm",
@@ -75,6 +179,33 @@
       "source_verification": {
         "method": "official-rss",
         "feed_url": "https://dantri.com.vn/rss/kinh-doanh.rss",
+        "publisher_host": "dantri.com.vn",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-7c533347220891fc0348",
+      "title": "Vinhomes Green Paradise: Đưa thiên nhiên vào nhịp sống mỗi ngày",
+      "url": "https://dantri.com.vn/bat-dong-san/vinhomes-green-paradise-dua-thien-nhien-vao-nhip-song-moi-ngay-20261020175548494.htm",
+      "category": "market",
+      "module_ids": [
+        "market"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-10-20T11:20:01+00:00",
+      "source_id": "dantri-real-estate",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [
+        "vinhomes"
+      ],
+      "tags": [],
+      "importance": 2,
+      "summary": "(Dân trí) - Với những người đã có một nơi ở tiện nghi, giá trị của bất động sản tiếp theo đó là buổi sáng gần biển, cuộc hẹn trên sân golf hay một chương trình nghệ thuật cùng gia đình mà không cần đi xa.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://dantri.com.vn/rss/bat-dong-san.rss",
         "publisher_host": "dantri.com.vn",
         "publication_date_from_feed": true
       }
@@ -101,6 +232,56 @@
         "method": "official-rss",
         "feed_url": "https://vnexpress.net/rss/kinh-doanh.rss",
         "publisher_host": "vnexpress.net",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-411cfbf512d5066a2203",
+      "title": "10 năm làm thủ tục cho một dự án điện gió và yêu cầu của Thủ tướng",
+      "url": "https://dantri.com.vn/thoi-su/10-nam-lam-thu-tuc-cho-mot-du-an-dien-gio-va-yeu-cau-cua-thu-tuong-20261020172300345.htm",
+      "category": "market",
+      "module_ids": [
+        "market"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-10-20T10:32:20+00:00",
+      "source_id": "dantri-current-affairs",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "(Dân trí) - Dẫn thực tế thủ tục cho một dự án điện gió ngoài khơi mất tới 10 năm, nếu cải cách tốt cũng còn 5 năm, Thủ tướng Lê Minh Hưng nhấn mạnh để huy động được đầu tư, bắt buộc thủ tục phải rất đơn giản.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://dantri.com.vn/rss/thoi-su.rss",
+        "publisher_host": "dantri.com.vn",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-043a8a9ced8c8b31b68b",
+      "title": "Đề nghị dỡ biển 40km/h trên tuyến đường thoáng đẹp ven biển ở Nghệ An",
+      "url": "https://dantri.com.vn/thoi-su/de-nghi-do-bien-40kmh-tren-tuyen-duong-thoang-dep-ven-bien-o-nghe-an-20261020165152361.htm",
+      "category": "infrastructure",
+      "module_ids": [
+        "infrastructure"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-10-20T10:17:08+00:00",
+      "source_id": "dantri-current-affairs",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "(Dân trí) - Khu Quản lý đường bộ II đề nghị Ban Quản lý dự án công trình giao thông Nghệ An rà soát, tháo dỡ biển báo công trường, biển hạn chế tốc độ 40km/h trên tuyến đường ven biển.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://dantri.com.vn/rss/thoi-su.rss",
+        "publisher_host": "dantri.com.vn",
         "publication_date_from_feed": true
       }
     },
