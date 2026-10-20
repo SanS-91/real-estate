@@ -1,9 +1,84 @@
 {
   "schema_version": 1,
-  "build_id": "market-news-rss-20261020T115139Z",
-  "generated_at": "2026-10-20T11:51:39.844199+00:00",
-  "record_count": 731,
+  "build_id": "market-news-rss-20261020T125137Z",
+  "generated_at": "2026-10-20T12:51:37.888052+00:00",
+  "record_count": 734,
   "data": [
+    {
+      "id": "article-market-rss-a9186fc23a887ff67487",
+      "title": "MB giảm tới 2% lãi suất cho vay hỗ trợ doanh nghiệp",
+      "url": "https://vnexpress.net/mb-giam-toi-2-lai-suat-cho-vay-ho-tro-doanh-nghiep-5134734.html",
+      "category": "macro",
+      "module_ids": [
+        "macro"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-10-20T12:00:00+00:00",
+      "source_id": "vnexpress-economy",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "MB giảm lãi suất cho vay 1,5% một năm với 5 lĩnh vực ưu tiên, một số trường hợp được giảm đến 2%, nhằm hỗ trợ doanh nghiệp giảm chi phí vốn trong những tháng cuối năm.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://vnexpress.net/rss/kinh-doanh.rss",
+        "publisher_host": "vnexpress.net",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-77164e32272011ff639c",
+      "title": "Sacombank giảm 0,5%/năm lãi suất huy động",
+      "url": "https://dantri.com.vn/kinh-doanh/sacombank-giam-05nam-lai-suat-huy-dong-20261020184833822.htm",
+      "category": "macro",
+      "module_ids": [
+        "macro"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-10-20T11:49:18+00:00",
+      "source_id": "dantri-business",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "(Dân trí) - Hưởng ứng chủ trương của Chính phủ và Ngân hàng Nhà nước Việt Nam (NHNN) về giảm mặt bằng lãi suất, Sacombank điều chỉnh giảm 0,5%/năm lãi suất huy động đối với các kỳ hạn từ 6 tháng trở lên, áp dụng từ ngày 20/10.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://dantri.com.vn/rss/kinh-doanh.rss",
+        "publisher_host": "dantri.com.vn",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-cf7729e5deaafbd492a9",
+      "title": "MSB triển khai đồng bộ giải pháp lãi suất đối với khách hàng cá nhân và doanh nghiệp",
+      "url": "https://dantri.com.vn/kinh-doanh/msb-trien-khai-dong-bo-giai-phap-lai-suat-doi-voi-khach-hang-ca-nhan-va-doanh-nghiep-20261020172537267.htm",
+      "category": "macro",
+      "module_ids": [
+        "macro"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-10-20T11:30:00+00:00",
+      "source_id": "dantri-business",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "(Dân trí) - Ngân hàng TMCP Hàng Hải Việt Nam (mã MSB) triển khai đồng bộ các giải pháp trên cả hai phương diện huy động và cho vay, qua đó chia sẻ chi phí vốn và tăng cường hỗ trợ khách hàng cá nhân, doanh nghiệp.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://dantri.com.vn/rss/kinh-doanh.rss",
+        "publisher_host": "dantri.com.vn",
+        "publication_date_from_feed": true
+      }
+    },
     {
       "id": "article-market-rss-b963f834c4adf14e86ef",
       "title": "Trung Quốc giữ nguyên lãi suất 17 tháng liên tiếp",
