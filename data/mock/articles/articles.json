@@ -1,9 +1,61 @@
 {
   "schema_version": 1,
-  "build_id": "market-news-rss-20261020T050207Z",
-  "generated_at": "2026-10-20T05:02:07.346756+00:00",
-  "record_count": 713,
+  "build_id": "market-news-rss-20261020T065137Z",
+  "generated_at": "2026-10-20T06:51:37.216731+00:00",
+  "record_count": 718,
   "data": [
+    {
+      "id": "article-market-rss-ce02360e197c5acfa492",
+      "title": "TP HCM thu hồi hơn 19 ha đất dự án Công viên Thiên niên kỷ",
+      "url": "https://vnexpress.net/tp-hcm-thu-hoi-hon-19-ha-dat-du-an-cong-vien-thien-nien-ky-5134519.html",
+      "category": "market",
+      "module_ids": [
+        "market"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-10-20T05:28:18+00:00",
+      "source_id": "vnexpress-real-estate",
+      "region_ids": [
+        "hcmc"
+      ],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "Khu đất gần 19,2 ha tại Khu Công nghệ cao TP HCM được thu hồi sau khi dự án Công viên Thiên niên kỷ của Công ty cổ phần Dệt may Sài Gòn chấm dứt hoạt động.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://vnexpress.net/rss/bat-dong-san.rss",
+        "publisher_host": "vnexpress.net",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-d5b1b7f587365e15d776",
+      "title": "Tín hiệu từ lãi suất tiền gửi giúp chứng khoán sớm tạo đáy",
+      "url": "https://dantri.com.vn/kinh-doanh/tin-hieu-tu-lai-suat-tien-gui-giup-chung-khoan-som-tao-day-20261020111004066.htm",
+      "category": "macro",
+      "module_ids": [
+        "macro"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-10-20T04:56:02+00:00",
+      "source_id": "dantri-business",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "(Dân trí) - Khi lãi suất tiền gửi kỳ hạn dài đạt đỉnh, khoảng cách giữa tăng trưởng kinh tế và hiệu suất trên thị trường chứng khoán sẽ thu hẹp. Định giá P/E của VN-Index đang thấp nhất từ giai đoạn thuế quan.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://dantri.com.vn/rss/kinh-doanh.rss",
+        "publisher_host": "dantri.com.vn",
+        "publication_date_from_feed": true
+      }
+    },
     {
       "id": "article-market-rss-93d1ae1f398583147eed",
       "title": "CapitaLand thắng 7 giải thưởng bất động sản",
@@ -51,6 +103,86 @@
         "method": "official-rss",
         "feed_url": "https://vnexpress.net/rss/kinh-doanh.rss",
         "publisher_host": "vnexpress.net",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-5d7dcd45609072cd6753",
+      "title": "Các phường bắt đầu đo đạc, kiểm đếm đất làm Metro Thủ Dầu Một - TPHCM",
+      "url": "https://dantri.com.vn/thoi-su/cac-phuong-bat-dau-do-dac-kiem-dem-dat-lam-metro-thu-dau-mot-tphcm-20261020102057359.htm",
+      "category": "infrastructure",
+      "module_ids": [
+        "infrastructure"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-10-20T03:43:59+00:00",
+      "source_id": "dantri-current-affairs",
+      "region_ids": [
+        "hcmc",
+        "binh-duong"
+      ],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [
+        "infrastructure"
+      ],
+      "importance": 2,
+      "summary": "(Dân trí) - Các địa phương khu vực Bình Dương đang khẩn trương đo đạc, kiểm đếm phục vụ công tác thu hồi mặt bằng để Metro Thủ Dầu Một - TPHCM kịp khởi công vào cuối năm nay.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://dantri.com.vn/rss/thoi-su.rss",
+        "publisher_host": "dantri.com.vn",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-563204833a0cc2d04581",
+      "title": "Tây Ninh yêu cầu xử lý dứt điểm vướng mắc mặt bằng dự án ĐT830E",
+      "url": "https://dantri.com.vn/thoi-su/tay-ninh-yeu-cau-xu-ly-dut-diem-vuong-mac-mat-bang-du-an-dt830e-20261020101738377.htm",
+      "category": "market",
+      "module_ids": [
+        "market"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-10-20T03:26:48+00:00",
+      "source_id": "dantri-current-affairs",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "(Dân trí) - Dự án đường ĐT830E được UBND tỉnh Tây Ninh gia hạn thời gian hoàn thành đến hết tháng 12. Tuy nhiên, công trình còn 56 trường hợp chưa bàn giao mặt bằng tại 4 vị trí.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://dantri.com.vn/rss/thoi-su.rss",
+        "publisher_host": "dantri.com.vn",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-0b0f1a6ccbb09cc564e2",
+      "title": "Tập đoàn Hà Đô bị phạt, truy thu thuế hơn 3 tỷ đồng",
+      "url": "https://dantri.com.vn/bat-dong-san/tap-doan-ha-do-bi-phat-truy-thu-thue-hon-3-ty-dong-20261020102339751.htm",
+      "category": "market",
+      "module_ids": [
+        "market"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-10-20T03:26:09+00:00",
+      "source_id": "dantri-real-estate",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "(Dân trí) - Tập đoàn Hà Đô phải nộp hơn 3 tỷ đồng tiền truy thu thuế, xử phạt vi phạm hành chính và tiền chậm nộp do những sai phạm trong kê khai thuế và xuất hóa đơn.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://dantri.com.vn/rss/bat-dong-san.rss",
+        "publisher_host": "dantri.com.vn",
         "publication_date_from_feed": true
       }
     },
