@@ -1,9 +1,165 @@
 {
   "schema_version": 1,
-  "build_id": "market-news-rss-20261020T005147Z",
-  "generated_at": "2026-10-20T00:51:47.049656+00:00",
-  "record_count": 702,
+  "build_id": "market-news-rss-20261020T025138Z",
+  "generated_at": "2026-10-20T02:51:38.693209+00:00",
+  "record_count": 708,
   "data": [
+    {
+      "id": "article-market-rss-3f0808ff04e39259bd21",
+      "title": "Giá vàng miếng xuống mức thấp nhất hơn hai tháng",
+      "url": "https://vnexpress.net/gia-vang-mieng-xuong-muc-thap-nhat-hon-hai-thang-5134483.html",
+      "category": "macro",
+      "module_ids": [
+        "macro"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-10-20T02:41:30+00:00",
+      "source_id": "vnexpress-economy",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "Theo đà đi xuống quốc tế, các thương hiệu bán ra vàng miếng quanh 142 triệu đồng một lượng, mức thấp nhất kể từ ngày 5/8.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://vnexpress.net/rss/kinh-doanh.rss",
+        "publisher_host": "vnexpress.net",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-c666cbcbb504341a5085",
+      "title": "Giá vàng hôm nay 20.10.2026: Giảm hơn nửa triệu đồng mỗi lượng",
+      "url": "https://thanhnien.vn/gia-vang-hom-nay-20102026-giam-hon-nua-trieu-dong-moi-luong-185261020083921528.htm",
+      "category": "macro",
+      "module_ids": [
+        "macro"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-10-20T02:20:00+00:00",
+      "source_id": "thanhnien-banking",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "Giá vàng trong nước giảm nhẹ cùng chiều với kim loại quý thế giới. Vàng nhẫn có giá thấp hơn vàng miếng SJC khoảng 1 triệu đồng/lượng.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://thanhnien.vn/rss/kinh-te/ngan-hang.rss",
+        "publisher_host": "thanhnien.vn",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-4f11223fb8948ed84005",
+      "title": "Soho phát triển không gian thương mại từ tinh thần phố Việt",
+      "url": "https://vnexpress.net/soho-phat-trien-khong-gian-thuong-mai-tu-tinh-than-pho-viet-5133009.html",
+      "category": "market",
+      "module_ids": [
+        "market"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-10-20T01:00:00+00:00",
+      "source_id": "vnexpress-real-estate",
+      "region_ids": [],
+      "project_ids": [
+        "the-global-city"
+      ],
+      "developer_ids": [],
+      "tags": [
+        "legal"
+      ],
+      "importance": 2,
+      "summary": "Phố thương mại Soho tại The Global City kế thừa tinh thần giao thương phố Việt, kết hợp cấu trúc kết nối và tính cộng đồng với tư duy quy hoạch và nhịp sống quốc tế.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://vnexpress.net/rss/bat-dong-san.rss",
+        "publisher_host": "vnexpress.net",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-0d846717a190e0e91c33",
+      "title": "The Win City định hình dấu ấn kiến trúc mới với phân khu Prime Majestic",
+      "url": "https://thanhnien.vn/the-win-city-dinh-hinh-dau-an-kien-truc-moi-voi-phan-khu-prime-majestic-185261019215508853.htm",
+      "category": "market",
+      "module_ids": [
+        "market"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-10-20T01:00:00+00:00",
+      "source_id": "thanhnien-real-estate",
+      "region_ids": [
+        "hcmc"
+      ],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "Từ định hướng kiến tạo biểu tượng kiến trúc mới tại cửa ngõ phía tây TP.HCM, The Win City đang từng bước định hình diện mạo phân khu cao cấp Prime Majestic. Việc lựa chọn Liên danh Phú Mỹ - VERITAS với phương án đạt giải Nhất cuộc thi tuyển kiến trúc, đạt 90 điểm, đánh dấu bước tiến quan trọng trong",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://thanhnien.vn/rss/kinh-te/dia-oc.rss",
+        "publisher_host": "thanhnien.vn",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-2e6f3f793bc69f70d9d2",
+      "title": "Dự án như thế nào được xác định là xanh và đáp ứng tiêu chí tuần hoàn?",
+      "url": "https://dantri.com.vn/kinh-doanh/du-an-nhu-the-nao-duoc-xac-dinh-la-xanh-va-dap-ung-tieu-chi-tuan-hoan-20261017115029511.htm",
+      "category": "market",
+      "module_ids": [
+        "market"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-10-20T00:56:32+00:00",
+      "source_id": "dantri-business",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "(Dân trí) - Băn khoăn này của nhiều doanh nghiệp đã được đề cập trong Quyết định số 46/2026/QĐ-TTg của Thủ tướng Chính phủ, có hiệu lực từ ngày 1/11/2026 tới đây.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://dantri.com.vn/rss/kinh-doanh.rss",
+        "publisher_host": "dantri.com.vn",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-a19c67a0698c8c17a0a1",
+      "title": "Giá vàng tiếp đà giảm, người mua lỗ hơn 4 triệu đồng chỉ sau 1 tuần",
+      "url": "https://dantri.com.vn/kinh-doanh/gia-vang-tiep-da-giam-nguoi-mua-lo-hon-4-trieu-dong-chi-sau-1-tuan-20261020071000479.htm",
+      "category": "macro",
+      "module_ids": [
+        "macro"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-10-20T00:28:16+00:00",
+      "source_id": "dantri-business",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "(Dân trí) - Áp lực từ đồng USD và lợi suất trái phiếu Mỹ đẩy giá vàng thế giới lùi sâu. Tại thị trường trong nước, kim loại quý giảm nhanh khiến người mua tuần trước chịu lỗ nặng.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://dantri.com.vn/rss/kinh-doanh.rss",
+        "publisher_host": "dantri.com.vn",
+        "publication_date_from_feed": true
+      }
+    },
     {
       "id": "article-market-rss-891bb7db12f9227e6227",
       "title": "Lãi suất tiết kiệm giảm đồng loạt",
