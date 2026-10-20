@@ -1,9 +1,249 @@
 {
   "schema_version": 1,
-  "build_id": "market-news-rss-20261019T200112Z",
-  "generated_at": "2026-10-19T20:01:12.881273+00:00",
-  "record_count": 693,
+  "build_id": "market-news-rss-20261020T005147Z",
+  "generated_at": "2026-10-20T00:51:47.049656+00:00",
+  "record_count": 702,
   "data": [
+    {
+      "id": "article-market-rss-891bb7db12f9227e6227",
+      "title": "Lãi suất tiết kiệm giảm đồng loạt",
+      "url": "https://vnexpress.net/lai-suat-tiet-kiem-giam-dong-loat-5134403.html",
+      "category": "macro",
+      "module_ids": [
+        "macro"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-10-19T23:32:24+00:00",
+      "source_id": "vnexpress-economy",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "15 ngân hàng tư nhân cùng lúc giảm 0,5-0,7 điểm phần trăm lãi suất tiền gửi niêm yết từ 6 tháng trong ngày 19/10, ngay sau chỉ đạo của Ngân hàng Nhà nước.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://vnexpress.net/rss/kinh-doanh.rss",
+        "publisher_host": "vnexpress.net",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-bc4064a452a4ab041693",
+      "title": "Cổ phiếu NVL ngắt mạch giảm sau động thái mới của Novaland",
+      "url": "https://dantri.com.vn/bat-dong-san/co-phieu-nvl-ngat-mach-giam-sau-dong-thai-moi-cua-novaland-20261019224650738.htm",
+      "category": "market",
+      "module_ids": [
+        "market"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-10-19T23:15:00+00:00",
+      "source_id": "dantri-real-estate",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "(Dân trí) - Cổ phiếu NVL của Novaland đã tăng trở lại và ngắt chuỗi giảm 3 phiên liên tiếp trong ngày doanh nghiệp thông báo điều chỉnh thời gian thực hiện quyền mua hơn 800 triệu cổ phiếu.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://dantri.com.vn/rss/bat-dong-san.rss",
+        "publisher_host": "dantri.com.vn",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-06dd56e6734353683b66",
+      "title": "Máy giặt rung lắc dữ dội khi vắt và cách xử lý đơn giản tại nhà",
+      "url": "https://dantri.com.vn/bat-dong-san/may-giat-rung-lac-du-doi-khi-vat-va-cach-xu-ly-don-gian-tai-nha-20261018162953494.htm",
+      "category": "market",
+      "module_ids": [
+        "market"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-10-19T23:10:26+00:00",
+      "source_id": "dantri-real-estate",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "(Dân trí) - Máy giặt rung lắc mạnh khi vắt có thể khiến nhiều gia đình lo lắng. Tuy nhiên, trong một số trường hợp, bạn có thể tự khắc phục mà chưa cần gọi thợ sửa chữa.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://dantri.com.vn/rss/bat-dong-san.rss",
+        "publisher_host": "dantri.com.vn",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-7f6a481ab384bacbae43",
+      "title": "Công ty vàng SJC có tổng giám đốc mới",
+      "url": "https://dantri.com.vn/kinh-doanh/cong-ty-vang-sjc-co-tong-giam-doc-moi-20261020003056450.htm",
+      "category": "macro",
+      "module_ids": [
+        "macro"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-10-19T23:07:33+00:00",
+      "source_id": "dantri-business",
+      "region_ids": [
+        "hcmc"
+      ],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "(Dân trí) - Ông Nguyễn Trường Thi, Phó giám đốc Sở Công Thương TPHCM được điều động, bổ nhiệm giữ chức vụ thành viên không chuyên trách Hội đồng thành viên, Tổng giám đốc Công ty SJC.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://dantri.com.vn/rss/kinh-doanh.rss",
+        "publisher_host": "dantri.com.vn",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-a095bbf52cb23c84c81c",
+      "title": "Phát triển bất động sản cao cấp theo nhu cầu thị trường",
+      "url": "https://thanhnien.vn/phat-trien-bat-dong-san-cao-cap-theo-nhu-cau-thi-truong-18526101922252431.htm",
+      "category": "market",
+      "module_ids": [
+        "market"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-10-19T23:02:00+00:00",
+      "source_id": "thanhnien-real-estate",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "Sáng 19.10, Quốc hội thảo luận tại tổ về luật Đấu giá tài sản sửa đổi. Gợi ý các nội dung thảo luận, Thủ tướng Chính phủ Lê Minh Hưng nhấn mạnh, mục tiêu cuối cùng phải quản lý được giá đối với nhà ở xã hội và nhà ở cho thuê. Với phân khúc bất động sản cao cấp dành cho những người có điều kiện kinh ",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://thanhnien.vn/rss/kinh-te/dia-oc.rss",
+        "publisher_host": "thanhnien.vn",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-329901c87575d3e1b6cf",
+      "title": "Metro số 1 chạy gần 2 năm, giá chung cư dọc nhà ga tăng chóng mặt",
+      "url": "https://dantri.com.vn/bat-dong-san/metro-so-1-chay-gan-2-nam-gia-chung-cu-doc-nha-ga-tang-chong-mat-20261019200956757.htm",
+      "category": "market",
+      "module_ids": [
+        "market",
+        "infrastructure"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-10-19T23:00:00+00:00",
+      "source_id": "dantri-real-estate",
+      "region_ids": [
+        "hcmc"
+      ],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [
+        "pricing",
+        "infrastructure"
+      ],
+      "importance": 2,
+      "summary": "(Dân trí) - Sau gần 2 năm metro số 1 ở TPHCM vận hành, giá căn hộ dọc tuyến tăng mạnh, có dự án tăng hơn 400%, khiến nhà ở gần ga ngày càng khó tiếp cận với người có thu nhập trung thấp.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://dantri.com.vn/rss/bat-dong-san.rss",
+        "publisher_host": "dantri.com.vn",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-b1c1f7aa7299b6d63338",
+      "title": "Ngôi nhà lấy cảm hứng từ cây cổ thụ để kết nối gia đình",
+      "url": "https://vnexpress.net/ngoi-nha-lay-cam-hung-tu-cay-co-thu-de-ket-noi-gia-dinh-5134212.html",
+      "category": "market",
+      "module_ids": [
+        "market"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-10-19T21:00:00+00:00",
+      "source_id": "vnexpress-real-estate",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "Công trình với các không gian sinh hoạt chung và riêng đan xen, vừa đáp ứng nhu cầu hiện tại, vừa chuẩn bị cho những thành viên tương lai.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://vnexpress.net/rss/bat-dong-san.rss",
+        "publisher_host": "vnexpress.net",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-9864e904ea213b1d2418",
+      "title": "TP HCM sắp đấu giá 3 lô đất Thủ Thiêm làm trường học",
+      "url": "https://vnexpress.net/tp-hcm-sap-dau-gia-3-lo-dat-thu-thiem-lam-truong-hoc-5134364.html",
+      "category": "market",
+      "module_ids": [
+        "market"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-10-19T20:13:45+00:00",
+      "source_id": "vnexpress-real-estate",
+      "region_ids": [
+        "hcmc"
+      ],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "UBND TP HCM vừa duyệt phương án đấu giá quyền sử dụng ba lô đất tại Khu đô thị mới Thủ Thiêm, tổng diện tích hơn 2,1 ha, để xây trường học liên cấp.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://vnexpress.net/rss/bat-dong-san.rss",
+        "publisher_host": "vnexpress.net",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-5101fe1a37dd312232b6",
+      "title": "Làn sóng trả mặt bằng văn phòng tại TP HCM của nhóm công nghệ",
+      "url": "https://vnexpress.net/lan-song-tra-mat-bang-van-phong-tai-tp-hcm-cua-nhom-cong-nghe-5134365.html",
+      "category": "market",
+      "module_ids": [
+        "market"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-10-19T20:09:27+00:00",
+      "source_id": "vnexpress-real-estate",
+      "region_ids": [
+        "hcmc"
+      ],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [
+        "supply",
+        "sales"
+      ],
+      "importance": 2,
+      "summary": "Sau 6 năm, thị trường văn phòng TP HCM ghi nhận trở lại nhiều giao dịch trả mặt bằng từ ngành công nghệ do trí tuệ nhân tạo (AI) thay đổi kế hoạch tuyển dụng.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://vnexpress.net/rss/bat-dong-san.rss",
+        "publisher_host": "vnexpress.net",
+        "publication_date_from_feed": true
+      }
+    },
     {
       "id": "article-market-rss-3362a266f802934bd854",
       "title": "Giao mặt bằng mở rộng cao tốc TP HCM - Trung Lương - Mỹ Thuận trong tháng 11",
