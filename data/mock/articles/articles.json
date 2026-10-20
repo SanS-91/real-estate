@@ -1,9 +1,109 @@
 {
   "schema_version": 1,
-  "build_id": "market-news-rss-20261020T025138Z",
-  "generated_at": "2026-10-20T02:51:38.693209+00:00",
-  "record_count": 708,
+  "build_id": "market-news-rss-20261020T045137Z",
+  "generated_at": "2026-10-20T04:51:37.730657+00:00",
+  "record_count": 712,
   "data": [
+    {
+      "id": "article-market-rss-93d1ae1f398583147eed",
+      "title": "CapitaLand thắng 7 giải thưởng bất động sản",
+      "url": "https://vnexpress.net/capitaland-thang-7-giai-thuong-bat-dong-san-5134527.html",
+      "category": "market",
+      "module_ids": [
+        "market"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-10-20T04:00:00+00:00",
+      "source_id": "vnexpress-real-estate",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "CapitaLand Development Việt Nam được vinh danh hai hạng mục về phát triển bền vững và tác động xã hội tại bên cạnh 5 giải thưởng cho các dự án của doanh nghiệp tại PropertyGuru Vietnam Property Awards 2026.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://vnexpress.net/rss/bat-dong-san.rss",
+        "publisher_host": "vnexpress.net",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-db96ea4784da19cfeabc",
+      "title": "Nhân viên ngân hàng 'săn' khách gửi tiền trước khi hạ lãi suất",
+      "url": "https://vnexpress.net/nhan-vien-ngan-hang-san-khach-gui-tien-truoc-khi-ha-lai-suat-5134398.html",
+      "category": "macro",
+      "module_ids": [
+        "macro"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-10-20T03:44:03+00:00",
+      "source_id": "vnexpress-economy",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "Lấy lý do lãi suất huy động sắp giảm theo chỉ đạo của Ngân hàng Nhà nước, nhân viên nhiều nhà băng dồn dập đăng bài, gọi điện giục khách mở sổ \"phút chót\".",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://vnexpress.net/rss/kinh-doanh.rss",
+        "publisher_host": "vnexpress.net",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-a32bd2784eb71e9de2fc",
+      "title": "Hàng loạt ngân hàng giảm lãi suất, người vay chờ đón vốn rẻ",
+      "url": "https://dantri.com.vn/kinh-doanh/hang-loat-ngan-hang-giam-lai-suat-nguoi-vay-cho-don-von-re-20261020102242619.htm",
+      "category": "macro",
+      "module_ids": [
+        "macro"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-10-20T03:22:49+00:00",
+      "source_id": "dantri-business",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "(Dân trí) - Thực hiện chỉ đạo từ cơ quan điều hành, hệ thống ngân hàng đồng loạt hạ lãi suất tiền gửi và cho vay. Dòng vốn giá rẻ được kỳ vọng sẽ nhanh chóng thẩm thấu, tháo gỡ khó khăn cho các doanh nghiệp.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://dantri.com.vn/rss/kinh-doanh.rss",
+        "publisher_host": "dantri.com.vn",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-1b7b1bccd884621255cd",
+      "title": "MB giảm lãi suất cho vay tới 2%/năm, đồng hành cùng doanh nghiệp và người dân",
+      "url": "https://dantri.com.vn/kinh-doanh/mb-giam-lai-suat-cho-vay-toi-2nam-dong-hanh-cung-doanh-nghiep-va-nguoi-dan-20261020093142779.htm",
+      "category": "macro",
+      "module_ids": [
+        "macro"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-10-20T02:47:41+00:00",
+      "source_id": "dantri-business",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "(Dân trí) - Thực hiện chủ trương của Chính phủ và định hướng điều hành của Ngân hàng Nhà nước Việt Nam, Ngân hàng TMCP Quân đội (MB) triển khai đồng bộ các giải pháp giảm lãi suất cho vay, tập trung hỗ trợ các lĩnh vực ưu tiên.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://dantri.com.vn/rss/kinh-doanh.rss",
+        "publisher_host": "dantri.com.vn",
+        "publication_date_from_feed": true
+      }
+    },
     {
       "id": "article-market-rss-3f0808ff04e39259bd21",
       "title": "Giá vàng miếng xuống mức thấp nhất hơn hai tháng",
