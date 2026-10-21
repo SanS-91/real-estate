@@ -1,9 +1,136 @@
 {
   "schema_version": 1,
-  "build_id": "market-news-rss-20261021T025139Z",
-  "generated_at": "2026-10-21T02:51:39.733088+00:00",
-  "record_count": 760,
+  "build_id": "market-news-rss-20261021T045147Z",
+  "generated_at": "2026-10-21T04:51:47.359931+00:00",
+  "record_count": 765,
   "data": [
+    {
+      "id": "article-market-rss-bc404319a4dc0a6b2864",
+      "title": "Điều gì tại Beachtro Tower khiến trẻ nhỏ thích hơn màn hình điện tử?",
+      "url": "https://dantri.com.vn/bat-dong-san/dieu-gi-tai-beachtro-tower-khien-tre-nho-thich-hon-man-hinh-dien-tu-20261021095747685.htm",
+      "category": "market",
+      "module_ids": [
+        "market"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-10-21T03:32:16+00:00",
+      "source_id": "dantri-real-estate",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "(Dân trí) - Ngày nay, chọn nơi an cư không chỉ để ở, mà còn là môi trường sống tốt cho cả gia đình, đặc biệt là con trẻ. Tại Beachtro Tower, trẻ có 365 ngày ngập tràn niềm vui với những hoạt động ngoài trời, khám phá thiên nhiên và hòa mình cùng biển cả.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://dantri.com.vn/rss/bat-dong-san.rss",
+        "publisher_host": "dantri.com.vn",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-4b39eb24104ba3d5a7f2",
+      "title": "MSB giảm lãi suất cho khách hàng cá nhân và doanh nghiệp",
+      "url": "https://vnexpress.net/msb-giam-lai-suat-cho-khach-hang-ca-nhan-va-doanh-nghiep-5134976.html",
+      "category": "macro",
+      "module_ids": [
+        "macro"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-10-21T03:30:00+00:00",
+      "source_id": "vnexpress-economy",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "MSB giảm tối thiểu 2% lãi suất cho vay đối với khách hàng doanh nghiệp, đồng thời hạ 0,5% lãi suất huy động kỳ hạn từ 6 tháng đối với khách hàng cá nhân.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://vnexpress.net/rss/kinh-doanh.rss",
+        "publisher_host": "vnexpress.net",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-c2b5b2052bc1fe1f8211",
+      "title": "Mức khởi điểm 4 lô đất Thủ Thiêm thay đổi ra sao sau gần 5 năm đấu giá lại?",
+      "url": "https://vnexpress.net/muc-khoi-diem-4-lo-dat-thu-thiem-thay-doi-ra-sao-sau-gan-5-nam-dau-gia-lai-5134591.html",
+      "category": "market",
+      "module_ids": [
+        "market"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-10-21T03:26:34+00:00",
+      "source_id": "vnexpress-real-estate",
+      "region_ids": [
+        "hcmc"
+      ],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "Bốn lô đất tại Thủ Thiêm vừa được TP HCM đưa trở lại kế hoạch đấu giá với tổng mức khởi điểm gần 16.700 tỷ đồng, cao hơn 2,4-3,6 lần so với khởi điểm năm 2021.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://vnexpress.net/rss/bat-dong-san.rss",
+        "publisher_host": "vnexpress.net",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-e50f59f034016579bd96",
+      "title": "Cà Mau thông báo cho thuê 22 cơ sở nhà, đất dôi dư",
+      "url": "https://dantri.com.vn/bat-dong-san/ca-mau-thong-bao-cho-thue-22-co-so-nha-dat-doi-du-20261020105907856.htm",
+      "category": "market",
+      "module_ids": [
+        "legal"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-10-21T02:32:45+00:00",
+      "source_id": "dantri-real-estate",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "(Dân trí) - Nhiều cơ sở nhà, đất, trụ sở dôi dư được tỉnh Cà Mau cho thuê trong khoảng thời gian 3-5 năm.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://dantri.com.vn/rss/bat-dong-san.rss",
+        "publisher_host": "dantri.com.vn",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-09bbe61e25186d6f2d0f",
+      "title": "4 cách dùng đá và gạch ốp lát nâng tầm nhà đẹp, sang trọng",
+      "url": "https://dantri.com.vn/bat-dong-san/4-cach-dung-da-va-gach-op-lat-nang-tam-nha-dep-sang-trong-20261020103504921.htm",
+      "category": "market",
+      "module_ids": [
+        "market"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-10-21T02:16:00+00:00",
+      "source_id": "dantri-real-estate",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "(Dân trí) - Không cần chi tiền tỷ đập đi xây lại, bạn chỉ cần phối hợp khéo léo đá tự nhiên và gạch ốp lát theo 4 cách dưới đây để biến từng góc nhỏ trong nhà trở nên sang trọng, tinh tế hơn.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://dantri.com.vn/rss/bat-dong-san.rss",
+        "publisher_host": "dantri.com.vn",
+        "publication_date_from_feed": true
+      }
+    },
     {
       "id": "article-market-rss-f626332621b14c10a7ab",
       "title": "Giá vàng hôm nay 21.10.2026: Vàng miếng SJC cao hơn thế giới lên 13,6 triệu đồng/lượng",
