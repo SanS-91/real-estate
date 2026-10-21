@@ -1,9 +1,60 @@
 {
   "schema_version": 1,
-  "build_id": "market-news-rss-20261021T120327Z",
-  "generated_at": "2026-10-21T12:03:27.170745+00:00",
-  "record_count": 787,
+  "build_id": "market-news-rss-20261021T145140Z",
+  "generated_at": "2026-10-21T14:51:40.502393+00:00",
+  "record_count": 790,
   "data": [
+    {
+      "id": "article-market-rss-6c614e89b5e74022a78f",
+      "title": "Tây Ninh thúc tiến độ giải phóng mặt bằng gần 300 công trình, dự án",
+      "url": "https://dantri.com.vn/thoi-su/tay-ninh-thuc-tien-do-giai-phong-mat-bang-gan-300-cong-trinh-du-an-20261021171415833.htm",
+      "category": "market",
+      "module_ids": [
+        "market",
+        "infrastructure"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-10-21T10:51:34+00:00",
+      "source_id": "dantri-current-affairs",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "(Dân trí) - Lãnh đạo tỉnh Tây Ninh yêu cầu các sở, ngành, địa phương chủ động tháo gỡ vướng mắc, đẩy nhanh giải phóng mặt bằng, bảo đảm tiến độ thi công tại 282 công trình, dự án.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://dantri.com.vn/rss/thoi-su.rss",
+        "publisher_host": "dantri.com.vn",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-44231eec463da9bcf512",
+      "title": "Tuyến đường bị đất đá vùi lấp ở Nghệ An đã thông trở lại",
+      "url": "https://dantri.com.vn/thoi-su/tuyen-duong-bi-dat-da-vui-lap-o-nghe-an-da-thong-tro-lai-20261021163622901.htm",
+      "category": "infrastructure",
+      "module_ids": [
+        "infrastructure"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-10-21T10:41:20+00:00",
+      "source_id": "dantri-current-affairs",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "(Dân trí) - Sau gần một tháng bị khoảng 30.000m3 đất đá vùi lấp do mưa lớn, tuyến tỉnh lộ 543C qua xã Yên Na (Nghệ An) đã thông trở lại, giúp người dân đi lại, vận chuyển hàng hóa thuận tiện hơn.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://dantri.com.vn/rss/thoi-su.rss",
+        "publisher_host": "dantri.com.vn",
+        "publication_date_from_feed": true
+      }
+    },
     {
       "id": "article-market-rss-cbbbfce00f46474b7e98",
       "title": "Ngân hàng Nhà nước chỉ đạo các nhà băng giảm thực chất lãi suất",
@@ -53,6 +104,31 @@
         "method": "official-rss",
         "feed_url": "https://thanhnien.vn/rss/kinh-te/chinh-sach-phat-trien.rss",
         "publisher_host": "thanhnien.vn",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-92a451f23dadeaac22d3",
+      "title": "Nhiều công nhân xây dựng khó tiếp cận nhà ở xã hội",
+      "url": "https://dantri.com.vn/bat-dong-san/nhieu-cong-nhan-xay-dung-kho-tiep-can-nha-o-xa-hoi-20261021172135995.htm",
+      "category": "market",
+      "module_ids": [
+        "market"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-10-21T10:31:53+00:00",
+      "source_id": "dantri-real-estate",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "(Dân trí) - Gần một nửa trong 500 công nhân xây dựng được khảo sát chưa tiếp cận thông tin về nhà ở xã hội do hạn chế trong việc nắm quyền lợi, xác định đầu mối hỗ trợ và tìm hiểu thủ tục.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://dantri.com.vn/rss/bat-dong-san.rss",
+        "publisher_host": "dantri.com.vn",
         "publication_date_from_feed": true
       }
     },

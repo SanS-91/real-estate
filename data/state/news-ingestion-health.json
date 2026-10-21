@@ -1,15 +1,15 @@
 {
   "schema_version": 1,
-  "checked_at": "2026-10-21T12:29:20.040307+00:00",
+  "checked_at": "2026-10-21T14:51:40.502393+00:00",
   "feeds_configured": 16,
   "feeds_fetched": 16,
-  "accepted_new": 0,
-  "production_written": false,
-  "article_total": 787,
+  "accepted_new": 3,
+  "production_written": true,
+  "article_total": 790,
   "published_by_module": {
-    "market": 0,
+    "market": 2,
     "legal": 0,
-    "infrastructure": 0,
+    "infrastructure": 2,
     "macro": 0
   },
   "feed_status": [
@@ -35,9 +35,9 @@
       "source_id": "dantri-real-estate",
       "status": "parsed",
       "feed_items": 50,
-      "new": 0,
-      "skipped": 50,
-      "duplicates": 50,
+      "new": 1,
+      "skipped": 49,
+      "duplicates": 49,
       "filtered": 0
     },
     {
@@ -55,8 +55,8 @@
       "feed_items": 50,
       "new": 0,
       "skipped": 50,
-      "duplicates": 4,
-      "filtered": 46
+      "duplicates": 3,
+      "filtered": 47
     },
     {
       "source_id": "vnexpress-legal",
@@ -100,16 +100,16 @@
       "feed_items": 50,
       "new": 0,
       "skipped": 50,
-      "duplicates": 11,
-      "filtered": 39
+      "duplicates": 9,
+      "filtered": 41
     },
     {
       "source_id": "dantri-current-affairs",
       "status": "parsed",
       "feed_items": 50,
-      "new": 0,
-      "skipped": 50,
-      "duplicates": 7,
+      "new": 2,
+      "skipped": 48,
+      "duplicates": 5,
       "filtered": 43
     },
     {
