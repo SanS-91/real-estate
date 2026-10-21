@@ -1,9 +1,273 @@
 {
   "schema_version": 1,
-  "build_id": "market-news-rss-20261020T145145Z",
-  "generated_at": "2026-10-20T14:51:45.654796+00:00",
-  "record_count": 741,
+  "build_id": "market-news-rss-20261021T005145Z",
+  "generated_at": "2026-10-21T00:51:45.193828+00:00",
+  "record_count": 751,
   "data": [
+    {
+      "id": "article-market-rss-21fdb57b5638ca3edecd",
+      "title": "Đốn hạ, di dời nhiều cây xanh để xây dựng hầm chui 960 tỷ đồng ở Hà Nội",
+      "url": "https://dantri.com.vn/thoi-su/don-ha-di-doi-nhieu-cay-xanh-de-xay-dung-ham-chui-960-ty-dong-o-ha-noi-20261020145048621.htm",
+      "category": "infrastructure",
+      "module_ids": [
+        "infrastructure"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-10-20T23:38:19+00:00",
+      "source_id": "dantri-current-affairs",
+      "region_ids": [
+        "ha-noi"
+      ],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "(Dân trí) - Nhiều ngày qua TP Hà Nội đang triển khai di dời hàng loạt cây xanh trên trục đường Mễ Trì - Dương Đình Nghệ để chuẩn bị xây dựng hầm chui xuyên qua đường Phạm Hùng - Vành đai 3 trên cao.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://dantri.com.vn/rss/thoi-su.rss",
+        "publisher_host": "dantri.com.vn",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-d90bc951fe916185a2e1",
+      "title": "Giá vàng giảm đồng loạt",
+      "url": "https://dantri.com.vn/kinh-doanh/gia-vang-giam-dong-loat-20261021011922805.htm",
+      "category": "macro",
+      "module_ids": [
+        "macro"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-10-20T23:10:33+00:00",
+      "source_id": "dantri-business",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "(Dân trí) - Giá vàng trong nước và thế giới đồng loạt đi xuống, trong đó vàng miếng SJC có thời điểm giảm về mức thấp nhất hơn 2 tháng.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://dantri.com.vn/rss/kinh-doanh.rss",
+        "publisher_host": "dantri.com.vn",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-0e3b64e8fb480d28c2bc",
+      "title": "Trái phiếu bất động sản: Áp lực đáo hạn lớn, lãi suất cao",
+      "url": "https://dantri.com.vn/bat-dong-san/trai-phieu-bat-dong-san-ap-luc-dao-han-lon-lai-suat-cao-20261020232342789.htm",
+      "category": "market",
+      "module_ids": [
+        "market",
+        "macro"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-10-20T23:09:00+00:00",
+      "source_id": "dantri-real-estate",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "(Dân trí) - Trong quý IV, nhóm bất động sản tiếp tục là khu vực chịu áp lực lớn nhất với giá trị đáo hạn trái phiếu khoảng 46,9 nghìn tỷ đồng, tương đương gần một nửa tổng giá trị đáo hạn toàn thị trường.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://dantri.com.vn/rss/bat-dong-san.rss",
+        "publisher_host": "dantri.com.vn",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-33841c9e46818e41decc",
+      "title": "Doanh số bán nhà tại Mỹ giảm mạnh trong tháng 9, xuống mức thấp kỷ lục",
+      "url": "https://dantri.com.vn/bat-dong-san/doanh-so-ban-nha-tai-my-giam-manh-trong-thang-9-xuong-muc-thap-ky-luc-20261020221051491.htm",
+      "category": "market",
+      "module_ids": [
+        "macro"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-10-20T23:00:00+00:00",
+      "source_id": "dantri-real-estate",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [
+        "sales"
+      ],
+      "importance": 2,
+      "summary": "(Dân trí) - Doanh số bán nhà đã qua sử dụng chờ hoàn tất giao dịch tại Mỹ đã rơi xuống mức thấp kỷ lục trong tháng 9, khi lãi suất thế chấp cao tiếp tục đè nặng lên nhu cầu mua nhà.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://dantri.com.vn/rss/bat-dong-san.rss",
+        "publisher_host": "dantri.com.vn",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-4dfc2cac7ac720105e18",
+      "title": "Hàng loạt ngân hàng giảm lãi vay",
+      "url": "https://thanhnien.vn/hang-loat-ngan-hang-giam-lai-vay-185261020222306275.htm",
+      "category": "macro",
+      "module_ids": [
+        "macro"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-10-20T22:59:00+00:00",
+      "source_id": "thanhnien-banking",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "Các ngân hàng thương mại đang thực hiện giảm lãi suất cho vay theo yêu cầu từ Ngân hàng Nhà nước nhưng cần phải có nhiều giải pháp đồng bộ để chính sách này lan rộng hơn trên cả thị trường.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://thanhnien.vn/rss/kinh-te/ngan-hang.rss",
+        "publisher_host": "thanhnien.vn",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-3157702e9fefe018b62b",
+      "title": "Đất công nghiệp phía Nam 'tăng nhiệt' nhờ vốn FDI công nghệ cao",
+      "url": "https://vnexpress.net/dat-cong-nghiep-phia-nam-tang-nhiet-nho-von-fdi-cong-nghe-cao-5134820.html",
+      "category": "market",
+      "module_ids": [
+        "market"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-10-20T21:00:00+00:00",
+      "source_id": "vnexpress-real-estate",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [
+        "sales"
+      ],
+      "importance": 2,
+      "summary": "Đất công nghiệp phía Nam tăng diện tích hấp thụ 56% trong 9 tháng đầu năm nhờ dòng vốn FDI công nghệ cao.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://vnexpress.net/rss/bat-dong-san.rss",
+        "publisher_host": "vnexpress.net",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-148354a84c297888d17b",
+      "title": "Hà Nội quy hoạch cây xanh trên các tuyến phố chính thế nào?",
+      "url": "https://vnexpress.net/ha-noi-quy-hoach-cay-xanh-tren-cac-tuyen-pho-chinh-the-nao-5134811.html",
+      "category": "market",
+      "module_ids": [
+        "market"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-10-20T21:00:00+00:00",
+      "source_id": "vnexpress-current-affairs",
+      "region_ids": [
+        "ha-noi"
+      ],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [
+        "legal"
+      ],
+      "importance": 2,
+      "summary": "Các tuyến phố chính ở trung tâm Hà Nội được phân chia thành 6 nhóm đặc trưng, gắn với 1-2 loại cây xanh chủ đạo, thay thế dần cây già cỗi và không đúng chủng loài.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://vnexpress.net/rss/thoi-su.rss",
+        "publisher_host": "vnexpress.net",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-d1507205e94f142a448e",
+      "title": "Lãi suất trái phiếu doanh nghiệp gần vùng đỉnh",
+      "url": "https://vnexpress.net/lai-suat-trai-phieu-doanh-nghiep-gan-vung-dinh-5134769.html",
+      "category": "macro",
+      "module_ids": [
+        "macro"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-10-20T20:26:25+00:00",
+      "source_id": "vnexpress-economy",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "So với mức đáy vào năm 2025, lãi suất phát hành mới trái phiếu doanh nghiệp quý III đã tăng 2,5%, lên gần 9,5% mỗi năm và tiến dần đến mức đỉnh của giai đoạn 2022-2023.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://vnexpress.net/rss/kinh-doanh.rss",
+        "publisher_host": "vnexpress.net",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-a776ca06813163c14608",
+      "title": "Căn hộ 28 m2 'giấu' giường trong khối gỗ để tiết kiệm diện tích",
+      "url": "https://vnexpress.net/can-ho-28-m2-giau-giuong-trong-khoi-go-de-tiet-kiem-dien-tich-5134144.html",
+      "category": "market",
+      "module_ids": [
+        "market"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-10-20T19:29:23+00:00",
+      "source_id": "vnexpress-real-estate",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "Nhóm thiết kế sử dụng nội thất đa năng để bố trí đầy đủ các khu vực chức năng trên diện tích nhỏ.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://vnexpress.net/rss/bat-dong-san.rss",
+        "publisher_host": "vnexpress.net",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-6b362f2d58435228b5f0",
+      "title": "Vi phạm trong quản lý khoáng sản cung cấp cho dự án Vành đai 4 vùng Thủ đô",
+      "url": "https://dantri.com.vn/thoi-su/vi-pham-trong-quan-ly-khoang-san-cung-cap-cho-du-an-vanh-dai-4-vung-thu-do-20261020205647224.htm",
+      "category": "market",
+      "module_ids": [
+        "market",
+        "infrastructure"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-10-20T15:18:03+00:00",
+      "source_id": "dantri-current-affairs",
+      "region_ids": [
+        "ha-noi"
+      ],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "(Dân trí) - Thanh tra Chính phủ đề nghị Hà Nội, Bắc Ninh, Hưng Yên làm rõ tính chất, mức độ, trách nhiệm cụ thể của từng cá nhân, tổ chức theo từng thời kỳ để xử lý nghiêm các vi phạm.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://dantri.com.vn/rss/thoi-su.rss",
+        "publisher_host": "dantri.com.vn",
+        "publication_date_from_feed": true
+      }
+    },
     {
       "id": "article-market-rss-0c2042de305c5bfb3be7",
       "title": "Sắp ra mắt tổ hợp giải trí, nghỉ dưỡng Qtopia",
