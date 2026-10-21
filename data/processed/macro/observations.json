@@ -1,11 +1,11 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-10-20T03:45:35.076757+00:00",
-  "record_count": 46,
+  "generated_at": "2026-10-21T03:45:33.951854+00:00",
+  "record_count": 48,
   "production_write": true,
   "repository_publish": true,
   "frontend_publish": false,
-  "source_run_id": "20261020T034525Z",
+  "source_run_id": "20261021T034525Z",
   "data": [
     {
       "indicator_id": "bank-funding-growth-ytd",
@@ -645,6 +645,35 @@
       "promotion_run_id": "20261020T034525Z"
     },
     {
+      "period": "2026-10-21",
+      "period_type": "day",
+      "data_date": "2026-10-21",
+      "unit": "vnd-per-tael",
+      "source_id": "baonghean-gold",
+      "source_url": "https://baonghean.vn/gia-vang-hom-nay/gia-vang-sjc",
+      "published_at": "2026-10-21T10:19:00+07:00",
+      "fetched_at": "2026-10-21T03:45:28.871704+00:00",
+      "evidence_status": "corroborated",
+      "methodology_note": "Báo Nghệ An live SJC tracker aggregating public dealer quotes. Trusted-media fallback evidence; not a substitute for direct SJC verification.",
+      "indicator_id": "sjc-gold-buy",
+      "value": 139300000.0,
+      "id": "b1fbdb5430be6abf540e",
+      "source_indicator_id": "sjc-gold-bar-buy",
+      "source_record_id": "b1fbdb5430be6abf540e",
+      "corroboration_source_ids": [
+        "baonghean-gold",
+        "vietnamnet-gold"
+      ],
+      "corroboration_observation_ids": [
+        "b1fbdb5430be6abf540e",
+        "4c1be618607d3d1c02fb"
+      ],
+      "corroboration_reason": "2 independent fallback sources agree for latest period 2026-10-21 within tolerance 500000.0.",
+      "observation_status": "final",
+      "promoted_at": "2026-10-21T03:45:33.951854+00:00",
+      "promotion_run_id": "20261021T034525Z"
+    },
+    {
       "period": "2026-10-05",
       "period_type": "day",
       "data_date": "2026-10-05",
@@ -995,6 +1024,35 @@
       "promotion_run_id": "20261020T034525Z"
     },
     {
+      "period": "2026-10-21",
+      "period_type": "day",
+      "data_date": "2026-10-21",
+      "unit": "vnd-per-tael",
+      "source_id": "baonghean-gold",
+      "source_url": "https://baonghean.vn/gia-vang-hom-nay/gia-vang-sjc",
+      "published_at": "2026-10-21T10:19:00+07:00",
+      "fetched_at": "2026-10-21T03:45:28.871704+00:00",
+      "evidence_status": "corroborated",
+      "methodology_note": "Báo Nghệ An live SJC tracker aggregating public dealer quotes. Trusted-media fallback evidence; not a substitute for direct SJC verification.",
+      "indicator_id": "sjc-gold-sell",
+      "value": 142300000.0,
+      "id": "4c4b0c0a3780070cd8a6",
+      "source_indicator_id": "sjc-gold-bar-sell",
+      "source_record_id": "4c4b0c0a3780070cd8a6",
+      "corroboration_source_ids": [
+        "baonghean-gold",
+        "vietnamnet-gold"
+      ],
+      "corroboration_observation_ids": [
+        "4c4b0c0a3780070cd8a6",
+        "c640241392073cc555b8"
+      ],
+      "corroboration_reason": "2 independent fallback sources agree for latest period 2026-10-21 within tolerance 500000.0.",
+      "observation_status": "final",
+      "promoted_at": "2026-10-21T03:45:33.951854+00:00",
+      "promotion_run_id": "20261021T034525Z"
+    },
+    {
       "indicator_id": "usd-vnd-central-rate",
       "period": "2026-10-05",
       "period_type": "day",
@@ -1275,8 +1333,8 @@
       "promotion_run_id": "20261020T034525Z"
     }
   ],
-  "repository_published_at": "2026-10-20T03:45:55.025547+00:00",
-  "repository_source_run_number": 98,
-  "repository_source_run_database_id": "39365927251",
+  "repository_published_at": "2026-10-21T03:45:50.003783+00:00",
+  "repository_source_run_number": 102,
+  "repository_source_run_database_id": "39540291088",
   "repository_persistence_mode": "controlled-daily-auto-persistence-v1"
 }
