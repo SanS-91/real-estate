@@ -1,9 +1,86 @@
 {
   "schema_version": 1,
-  "build_id": "market-news-rss-20261021T065137Z",
-  "generated_at": "2026-10-21T06:51:37.520243+00:00",
-  "record_count": 770,
+  "build_id": "market-news-rss-20261021T085141Z",
+  "generated_at": "2026-10-21T08:51:41.490972+00:00",
+  "record_count": 774,
   "data": [
+    {
+      "id": "article-market-rss-dae0b19d44a0bd4bd3e4",
+      "title": "Hà Nội giao loạt đất ở Đông Anh để xây nhà ở cho công an",
+      "url": "https://vnexpress.net/ha-noi-giao-loat-dat-o-dong-anh-de-xay-nha-o-cho-cong-an-5134969.html",
+      "category": "market",
+      "module_ids": [
+        "market"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-10-21T07:34:51+00:00",
+      "source_id": "vnexpress-real-estate",
+      "region_ids": [
+        "ha-noi"
+      ],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "Hai lô đất rộng hơn 1 ha gần cầu Nhật Tân, Đông Anh được giao cho thành viên Amaccao để thực hiện dự án nhà ở cho công an.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://vnexpress.net/rss/bat-dong-san.rss",
+        "publisher_host": "vnexpress.net",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-b7108e7e75c8a0baee31",
+      "title": "VIB giảm lãi suất, đồng hành cùng doanh nghiệp và cá nhân",
+      "url": "https://dantri.com.vn/kinh-doanh/vib-giam-lai-suat-dong-hanh-cung-doanh-nghiep-va-ca-nhan-20261021135340933.htm",
+      "category": "macro",
+      "module_ids": [
+        "macro"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-10-21T07:01:37+00:00",
+      "source_id": "dantri-business",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "(Dân trí) - Ngân hàng Quốc Tế (VIB) triển khai gói tín dụng 15.000 tỷ đồng với lãi suất ưu đãi dành cho doanh nghiệp, đồng thời, tiếp tục mở rộng các giải pháp vay linh hoạt và ổn định lãi suất trong kỳ hạn dài cho khách hàng cá nhân.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://dantri.com.vn/rss/kinh-doanh.rss",
+        "publisher_host": "dantri.com.vn",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-9c06c060be6950f80cf6",
+      "title": "Giá vàng giằng co quanh 4.100 USD: Lộ diện mốc đảo chiều mới",
+      "url": "https://dantri.com.vn/kinh-doanh/gia-vang-giang-co-quanh-4100-usd-lo-dien-moc-dao-chieu-moi-20261021121204049.htm",
+      "category": "macro",
+      "module_ids": [
+        "macro"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-10-21T06:52:00+00:00",
+      "source_id": "dantri-business",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "(Dân trí) - Vàng thế giới giảm 4 phiên liền, rơi về sát mốc 4.100 USD/ounce. Dù hạ mạnh dự báo ngắn hạn, các định chế tài chính lớn vẫn đưa ra kịch bản phục hồi đáng chú ý trong 2 năm tới.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://dantri.com.vn/rss/kinh-doanh.rss",
+        "publisher_host": "dantri.com.vn",
+        "publication_date_from_feed": true
+      }
+    },
     {
       "id": "article-market-rss-b6dd526c2600941c43d2",
       "title": "VIB giảm lãi suất cho vay, đồng hành cùng doanh nghiệp và khách hàng cá nhân",
@@ -26,6 +103,33 @@
         "method": "official-rss",
         "feed_url": "https://thanhnien.vn/rss/kinh-te/ngan-hang.rss",
         "publisher_host": "thanhnien.vn",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-f4e916b4c2f6b691066e",
+      "title": "Bộ Xây dựng phản hồi đề xuất mở rộng quốc lộ 1 qua Tây Ninh lên 10 làn xe",
+      "url": "https://dantri.com.vn/thoi-su/bo-xay-dung-phan-hoi-de-xuat-mo-rong-quoc-lo-1-qua-tay-ninh-len-10-lan-xe-20261021130616658.htm",
+      "category": "infrastructure",
+      "module_ids": [
+        "infrastructure"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-10-21T06:28:57+00:00",
+      "source_id": "dantri-current-affairs",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [
+        "infrastructure"
+      ],
+      "importance": 2,
+      "summary": "(Dân trí) - Bộ Xây dựng ủng hộ đề xuất mở rộng quốc lộ 1 qua Tây Ninh lên 10 làn xe nhằm giảm ùn tắc. Tuy nhiên, tỉnh cần làm rõ nguồn vốn thực hiện và hoàn tất thủ tục giao quản lý trước khi triển khai.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://dantri.com.vn/rss/thoi-su.rss",
+        "publisher_host": "dantri.com.vn",
         "publication_date_from_feed": true
       }
     },
