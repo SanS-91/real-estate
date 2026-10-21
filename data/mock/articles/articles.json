@@ -1,9 +1,250 @@
 {
   "schema_version": 1,
-  "build_id": "market-news-rss-20261021T005145Z",
-  "generated_at": "2026-10-21T00:51:45.193828+00:00",
-  "record_count": 751,
+  "build_id": "market-news-rss-20261021T025139Z",
+  "generated_at": "2026-10-21T02:51:39.733088+00:00",
+  "record_count": 760,
   "data": [
+    {
+      "id": "article-market-rss-f626332621b14c10a7ab",
+      "title": "Giá vàng hôm nay 21.10.2026: Vàng miếng SJC cao hơn thế giới lên 13,6 triệu đồng/lượng",
+      "url": "https://thanhnien.vn/gia-vang-hom-nay-21102026-vang-mieng-sjc-cao-hon-the-gioi-len-136-trieu-dong-luong-185261021083457078.htm",
+      "category": "macro",
+      "module_ids": [
+        "macro"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-10-21T02:01:00+00:00",
+      "source_id": "thanhnien-banking",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "Giá vàng trong nước cao hơn thế giới 13,6 triệu đồng/lượng trong bối cảnh kim loại quý thế giới giảm suốt tháng qua.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://thanhnien.vn/rss/kinh-te/ngan-hang.rss",
+        "publisher_host": "thanhnien.vn",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-c8bbf2581f3afc8b482c",
+      "title": "Dự án của Keppel và Phú Long nhận giải thưởng về chất lượng sống",
+      "url": "https://vnexpress.net/du-an-cua-keppel-va-phu-long-nhan-giai-thuong-ve-chat-luong-song-5134259.html",
+      "category": "market",
+      "module_ids": [
+        "market"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-10-21T02:00:47+00:00",
+      "source_id": "vnexpress-real-estate",
+      "region_ids": [],
+      "project_ids": [
+        "celesta-gold"
+      ],
+      "developer_ids": [],
+      "tags": [
+        "supply"
+      ],
+      "importance": 2,
+      "summary": "Celesta Gold do liên doanh Keppel, Phú Long và Nomura Real Estate Vietnam phát triển nhận giải \"Phát triển dự án chú trọng sức khỏe tốt nhất\" (Best Well-being Condo Development) tại PropertyGuru Vietnam Property Awards 2026.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://vnexpress.net/rss/bat-dong-san.rss",
+        "publisher_host": "vnexpress.net",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-da66e437df3abe5252e2",
+      "title": "Senturia An Phú tái định nghĩa \"Home Resort\" giữa trung tâm TP.Hồ Chí Minh",
+      "url": "https://thanhnien.vn/senturia-an-phu-tai-dinh-nghia-home-resort-giua-trung-tam-tpho-chi-minh-185261016120127021.htm",
+      "category": "market",
+      "module_ids": [
+        "market"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-10-21T01:55:00+00:00",
+      "source_id": "thanhnien-real-estate",
+      "region_ids": [
+        "hcmc"
+      ],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "Một kỳ nghỉ thường bắt đầu bằng chuyến đi. Nhưng nếu sự thư thái hiện diện ngay sau cánh cửa nhà, nghỉ dưỡng sẽ trở thành một phần đời sống. Tại Senturia An Phú, nhà phát triển Tiến Phước hiện thực hóa tư duy ấy bằng năm mảnh ghép, đưa Home Resort đến Nam Rạch Chiếc - tọa độ trung tâm mới của TP.HCM",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://thanhnien.vn/rss/kinh-te/dia-oc.rss",
+        "publisher_host": "thanhnien.vn",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-f3f938a19baf5f3e9760",
+      "title": "Norton Park: Đón nhịp tăng trưởng tại phía Bắc TPHCM",
+      "url": "https://dantri.com.vn/bat-dong-san/norton-park-don-nhip-tang-truong-tai-phia-bac-tphcm-20261020192925970.htm",
+      "category": "market",
+      "module_ids": [
+        "market"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-10-21T01:00:00+00:00",
+      "source_id": "dantri-real-estate",
+      "region_ids": [
+        "hcmc"
+      ],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [
+        "legal",
+        "infrastructure"
+      ],
+      "importance": 2,
+      "summary": "(Dân trí) - Bên cạnh hạ tầng, phía Bắc TPHCM còn có nền tảng công nghiệp và tiện ích đô thị đã hình thành. Tọa lạc tại Thuận Giao, Norton Park thụ hưởng những lợi thế này với khác biệt bằng quy hoạch mật độ thấp, hệ tiện ích hướng đến cộng đồng chuyên gia.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://dantri.com.vn/rss/bat-dong-san.rss",
+        "publisher_host": "dantri.com.vn",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-e53f01e2a2f63c50bb55",
+      "title": "UOA Group nhận giải nhà phát triển bất động sản thương mại bền vững",
+      "url": "https://vnexpress.net/uoa-group-nhan-giai-nha-phat-trien-bat-dong-san-thuong-mai-ben-vung-5134731.html",
+      "category": "market",
+      "module_ids": [
+        "market"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-10-21T01:00:00+00:00",
+      "source_id": "vnexpress-real-estate",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "UOA Group được vinh danh Nhà phát triển bất động sản thương mại bền vững tại PropertyGuru Vietnam Property Awards 2026, đồng thời nhận ba giải thưởng cho các dự án do tập đoàn phát triển.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://vnexpress.net/rss/bat-dong-san.rss",
+        "publisher_host": "vnexpress.net",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-c70cdf77cfab5a43cbbd",
+      "title": "Quảng Trị và T&T Group bàn cách gỡ khó khăn, tăng tốc loạt dự án trọng điểm",
+      "url": "https://dantri.com.vn/kinh-doanh/quang-tri-va-tt-group-ban-cach-go-kho-khan-tang-toc-loat-du-an-trong-diem-20261020174712360.htm",
+      "category": "market",
+      "module_ids": [
+        "market"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-10-21T01:00:00+00:00",
+      "source_id": "dantri-business",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "(Dân trí) - Ngày 19/10, UBND tỉnh Quảng Trị đã có buổi làm việc với Tập đoàn T&T Group nhằm rà soát tiến độ các dự án đầu tư trên địa bàn, đồng thời trao đổi giải pháp tháo gỡ khó khăn, vướng mắc, thúc đẩy các dự án trọng điểm.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://dantri.com.vn/rss/kinh-doanh.rss",
+        "publisher_host": "dantri.com.vn",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-c00528cfe07803044164",
+      "title": "The Fullton Regal: Từ tổ ấm vững vàng đến tài sản đa tầng giá trị",
+      "url": "https://thanhnien.vn/the-fullton-regal-tu-to-am-vung-vang-den-tai-san-da-tang-gia-tri-185261020142826878.htm",
+      "category": "market",
+      "module_ids": [
+        "market"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-10-21T01:00:00+00:00",
+      "source_id": "thanhnien-real-estate",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "Patio Twin Villa và Terrace Townhouse tại The Fullton Regal đại diện cho hai cách kiến tạo giá trị từ tư gia thấp tầng: một vun đắp nền tảng an cư vững vàng, một mở rộng tiềm năng khai thác và tích lũy tài sản.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://thanhnien.vn/rss/kinh-te/dia-oc.rss",
+        "publisher_host": "thanhnien.vn",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-b9b07c7698eb1d046e9f",
+      "title": "Sắp khánh thành phố đi bộ Central Square ở trung tâm tỉnh Thái Nguyên",
+      "url": "https://dantri.com.vn/bat-dong-san/sap-khanh-thanh-pho-di-bo-central-square-o-trung-tam-tinh-thai-nguyen-20261020172152683.htm",
+      "category": "market",
+      "module_ids": [
+        "market"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-10-21T01:00:00+00:00",
+      "source_id": "dantri-real-estate",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "(Dân trí) - Dự kiến khánh thành ngày 31/10, phố đi bộ Central Square Thái Nguyên đang khẩn trương hoàn thiện những hạng mục cuối cùng, sẵn sàng trở thành điểm đến văn hóa, thương mại và trải nghiệm mới tại trung tâm tỉnh.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://dantri.com.vn/rss/bat-dong-san.rss",
+        "publisher_host": "dantri.com.vn",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-3bf7c33d98826bfbfe19",
+      "title": "Nhà thấp tầng khu vực Đông Bắc TPHCM tăng sức hút",
+      "url": "https://dantri.com.vn/bat-dong-san/nha-thap-tang-khu-vuc-dong-bac-tphcm-tang-suc-hut-20261020153452826.htm",
+      "category": "market",
+      "module_ids": [
+        "market"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-10-21T01:00:00+00:00",
+      "source_id": "dantri-real-estate",
+      "region_ids": [
+        "hcmc"
+      ],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [
+        "legal",
+        "infrastructure"
+      ],
+      "importance": 2,
+      "summary": "(Dân trí) - Giữa làn sóng đô thị hóa và sự bứt phá của hệ thống hạ tầng, thị trường bất động sản Đông Bắc TPHCM đang trải qua một cuộc chuyển mình. Dòng vốn đổ về các dự án quy mô lớn, quy hoạch chuẩn mực với hệ sinh thái tiện ích đa dạng.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://dantri.com.vn/rss/bat-dong-san.rss",
+        "publisher_host": "dantri.com.vn",
+        "publication_date_from_feed": true
+      }
+    },
     {
       "id": "article-market-rss-21fdb57b5638ca3edecd",
       "title": "Đốn hạ, di dời nhiều cây xanh để xây dựng hầm chui 960 tỷ đồng ở Hà Nội",
