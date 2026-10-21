@@ -1,9 +1,250 @@
 {
   "schema_version": 1,
-  "build_id": "market-news-rss-20261021T085141Z",
-  "generated_at": "2026-10-21T08:51:41.490972+00:00",
-  "record_count": 774,
+  "build_id": "market-news-rss-20261021T105138Z",
+  "generated_at": "2026-10-21T10:51:38.954141+00:00",
+  "record_count": 784,
   "data": [
+    {
+      "id": "article-market-rss-bf2d120c0a985b48dd87",
+      "title": "Chuyện lạ ở Tây Ninh: Hai cụm công nghiệp kín chỗ nhưng chưa có quy hoạch",
+      "url": "https://thanhnien.vn/chuyen-la-o-tay-ninh-hai-cum-cong-nghiep-kin-cho-nhung-chua-co-quy-hoach-185261021150912266.htm",
+      "category": "market",
+      "module_ids": [
+        "market"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-10-21T10:34:00+00:00",
+      "source_id": "thanhnien-policy",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [
+        "legal"
+      ],
+      "importance": 2,
+      "summary": "Hai cụm công nghiệp ở xã Long Cang, tỉnh Tây Ninh đã lấp đầy 100%. Thế nhưng, gần 20 năm qua, 2 cụm vẫn chưa có quy hoạch được duyệt, thậm chí một cụm chưa có quyết định thành lập.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://thanhnien.vn/rss/kinh-te/chinh-sach-phat-trien.rss",
+        "publisher_host": "thanhnien.vn",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-4b323bc4533bea0dc3ec",
+      "title": "Huế đấu giá 25 lô đất ở An Vân Dương, giá khởi điểm hơn 101 tỷ đồng",
+      "url": "https://vnexpress.net/hue-dau-gia-25-lo-dat-o-an-van-duong-gia-khoi-diem-hon-101-ty-dong-5135225.html",
+      "category": "market",
+      "module_ids": [
+        "market"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-10-21T10:30:00+00:00",
+      "source_id": "vnexpress-real-estate",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "Toàn bộ 25 lô đất thuộc khu đô thị An Vân Dương sắp được đưa ra đấu giá với mức khởi điểm từng lô từ 2,6 đến hơn 6,5 tỷ đồng.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://vnexpress.net/rss/bat-dong-san.rss",
+        "publisher_host": "vnexpress.net",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-5f2ea493d1eb1ce544e2",
+      "title": "Vinhomes có động thái mới tại siêu dự án 926.000 tỷ đồng ở Hà Nội",
+      "url": "https://dantri.com.vn/bat-dong-san/vinhomes-co-dong-thai-moi-tai-sieu-du-an-926000-ty-dong-o-ha-noi-20261021151937781.htm",
+      "category": "market",
+      "module_ids": [
+        "market"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-10-21T09:22:09+00:00",
+      "source_id": "dantri-real-estate",
+      "region_ids": [
+        "ha-noi"
+      ],
+      "project_ids": [],
+      "developer_ids": [
+        "vinhomes"
+      ],
+      "tags": [],
+      "importance": 2,
+      "summary": "(Dân trí) - Vinhomes vừa thông qua việc sửa đổi hợp đồng liên danh thực hiện dự án Khu đô thị thể thao quốc tế Hà Nội, bổ sung cơ chế huy động vốn và sử dụng tài sản dự án để bảo đảm nghĩa vụ.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://dantri.com.vn/rss/bat-dong-san.rss",
+        "publisher_host": "dantri.com.vn",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-3432669bddd98029702f",
+      "title": "Ngân hàng Nhà nước giục giảm lãi suất tiết kiệm trên tất cả kênh",
+      "url": "https://vnexpress.net/ngan-hang-nha-nuoc-giuc-giam-lai-suat-tiet-kiem-tren-tat-ca-kenh-5135186.html",
+      "category": "macro",
+      "module_ids": [
+        "macro"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-10-21T09:11:56+00:00",
+      "source_id": "vnexpress-economy",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "Nhà điều hành vừa tiếp tục ra yêu cầu các nhà băng giảm lãi suất trên tất cả kênh bán hàng một cách thực chất.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://vnexpress.net/rss/kinh-doanh.rss",
+        "publisher_host": "vnexpress.net",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-ee7647e854ee55605f8f",
+      "title": "Tuyến đường tại Gia Nghĩa xuất hiện vết nứt, sụt lún",
+      "url": "https://dantri.com.vn/thoi-su/tuyen-duong-tai-gia-nghia-xuat-hien-vet-nut-sut-lun-20261021154200907.htm",
+      "category": "infrastructure",
+      "module_ids": [
+        "infrastructure"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-10-21T09:07:00+00:00",
+      "source_id": "dantri-current-affairs",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "(Dân trí) - Cơ quan chức năng ghi nhận tuyến đường Trần Hưng Đạo xuất hiện nhiều vết nứt, sụt lún nên cấm người dân qua lại để đảm bảo an toàn.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://dantri.com.vn/rss/thoi-su.rss",
+        "publisher_host": "dantri.com.vn",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-e713be64280f5445e70a",
+      "title": "Hà Nội dự kiến có 11 tuyến đường sắt quốc gia, 39 nhà ga",
+      "url": "https://dantri.com.vn/thoi-su/ha-noi-du-kien-co-11-tuyen-duong-sat-quoc-gia-39-nha-ga-20261021155710208.htm",
+      "category": "infrastructure",
+      "module_ids": [
+        "infrastructure"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-10-21T09:03:17+00:00",
+      "source_id": "dantri-current-affairs",
+      "region_ids": [
+        "ha-noi"
+      ],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [
+        "legal",
+        "infrastructure"
+      ],
+      "importance": 2,
+      "summary": "(Dân trí) - Dự thảo quy hoạch đường sắt khu vực đầu mối Hà Nội đề xuất 11 tuyến đường sắt quốc gia với tổng chiều dài khoảng 477km, cùng 39 nhà ga, trong đó có 4 ga đầu mối.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://dantri.com.vn/rss/thoi-su.rss",
+        "publisher_host": "dantri.com.vn",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-d524040d2c549c1363fc",
+      "title": "Vista Nam An Khánh thêm điểm hẹn thể thao với Vista Pickleball",
+      "url": "https://dantri.com.vn/bat-dong-san/vista-nam-an-khanh-them-diem-hen-the-thao-voi-vista-pickleball-20261021132642522.htm",
+      "category": "market",
+      "module_ids": [
+        "market"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-10-21T09:00:00+00:00",
+      "source_id": "dantri-real-estate",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "(Dân trí) - Cụm 8 sân Vista Pickleball rộng 2.000m² khai trương ngày 17/10, bổ sung vào chuỗi tiện ích SJ Group đang hoàn thiện tại Vista Nam An Khánh.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://dantri.com.vn/rss/bat-dong-san.rss",
+        "publisher_host": "dantri.com.vn",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-ba15587c6ee448399b05",
+      "title": "3.000 người dự buổi giới thiệu tổ hợp Qtopia ven biển TP HCM",
+      "url": "https://vnexpress.net/3-000-nguoi-du-buoi-gioi-thieu-to-hop-qtopia-ven-bien-tp-hcm-5134805.html",
+      "category": "market",
+      "module_ids": [
+        "market"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-10-21T08:57:00+00:00",
+      "source_id": "vnexpress-real-estate",
+      "region_ids": [
+        "hcmc"
+      ],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "3,000 người từ 60 đại lý dự buổi giới thiệu Qtopia - tổ hợp quy mô 7,3 ha ven biển TP HCM, được định vị \"thành phố cuối tuần\", chiều 21/10.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://vnexpress.net/rss/bat-dong-san.rss",
+        "publisher_host": "vnexpress.net",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-378ec74c0077a5b86be8",
+      "title": "Chi hơn 3.760 tỷ bồi thường 2 cao tốc ở Lâm Đồng, còn vướng tái định cư",
+      "url": "https://dantri.com.vn/thoi-su/chi-hon-3760-ty-boi-thuong-2-cao-toc-o-lam-dong-con-vuong-tai-dinh-cu-20261021152205041.htm",
+      "category": "infrastructure",
+      "module_ids": [
+        "infrastructure"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-10-21T08:37:33+00:00",
+      "source_id": "dantri-current-affairs",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [
+        "pricing",
+        "infrastructure"
+      ],
+      "importance": 2,
+      "summary": "(Dân trí) - Lâm Đồng đã chi trả hơn 3.760 tỷ đồng bồi thường, nhận bàn giao phần lớn mặt bằng 2 dự án cao tốc Tân Phú - Bảo Lộc và Bảo Lộc - Liên Khương, song vẫn còn vướng mắc về giá đất và bố trí tái định cư.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://dantri.com.vn/rss/thoi-su.rss",
+        "publisher_host": "dantri.com.vn",
+        "publication_date_from_feed": true
+      }
+    },
     {
       "id": "article-market-rss-dae0b19d44a0bd4bd3e4",
       "title": "Hà Nội giao loạt đất ở Đông Anh để xây nhà ở cho công an",
@@ -129,6 +370,31 @@
       "source_verification": {
         "method": "official-rss",
         "feed_url": "https://dantri.com.vn/rss/thoi-su.rss",
+        "publisher_host": "dantri.com.vn",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-bb0dbff4b1cf20e03c7d",
+      "title": "Đất Thủ Thiêm hơn 1 tỷ đồng/m2, căn hộ xung quanh đắt cỡ nào?",
+      "url": "https://dantri.com.vn/bat-dong-san/dat-thu-thiem-hon-1-ty-dongm2-can-ho-xung-quanh-dat-co-nao-20261021130723320.htm",
+      "category": "market",
+      "module_ids": [
+        "market"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-10-21T06:20:11+00:00",
+      "source_id": "dantri-real-estate",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "(Dân trí) - Căn hộ tại Thủ Thiêm chủ yếu thuộc phân khúc cao cấp, hạng sang, giá phổ biến 200-500 triệu đồng/m2, nhiều căn có giá vượt 100 tỷ đồng.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://dantri.com.vn/rss/bat-dong-san.rss",
         "publisher_host": "dantri.com.vn",
         "publication_date_from_feed": true
       }
