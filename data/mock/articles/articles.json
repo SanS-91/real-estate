@@ -1,9 +1,120 @@
 {
   "schema_version": 1,
-  "build_id": "market-news-rss-20261022T045138Z",
-  "generated_at": "2026-10-22T04:51:38.447184+00:00",
-  "record_count": 812,
+  "build_id": "market-news-rss-20261022T050351Z",
+  "generated_at": "2026-10-22T05:03:51.047440+00:00",
+  "record_count": 817,
   "data": [
+    {
+      "id": "article-market-rss-9f026c506ee39b0857ec",
+      "title": "Đề xuất người mua nhà trên giấy được nhận lãi 5% đợt cuối",
+      "url": "https://vnexpress.net/de-xuat-nguoi-mua-nha-tren-giay-duoc-nhan-lai-5-dot-cuoi-5135509.html",
+      "category": "market",
+      "module_ids": [
+        "market"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-10-22T04:53:39+00:00",
+      "source_id": "vnexpress-real-estate",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [
+        "sales"
+      ],
+      "importance": 2,
+      "summary": "Chính phủ đề xuất chuyển 5% - số tiền giao dịch đợt cuối khi mua nhà hình thành trong tương lai - vào tài khoản đảm bảo và người mua được hưởng lãi.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://vnexpress.net/rss/bat-dong-san.rss",
+        "publisher_host": "vnexpress.net",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-77f8af1f6446f90791fd",
+      "title": "Giao dịch chung cư TP HCM lao dốc",
+      "url": "https://vnexpress.net/giao-dich-chung-cu-tp-hcm-lao-doc-5135388.html",
+      "category": "market",
+      "module_ids": [
+        "market",
+        "macro"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-10-22T04:46:33+00:00",
+      "source_id": "vnexpress-real-estate",
+      "region_ids": [
+        "hcmc"
+      ],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [
+        "sales"
+      ],
+      "importance": 2,
+      "summary": "Lượng giao dịch căn hộ sơ cấp quý III tại TP HCM giảm 72-83% so với cùng kỳ, trong bối cảnh lãi vay cao và người mua thận trọng trước mặt bằng giá tăng mạnh.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://vnexpress.net/rss/bat-dong-san.rss",
+        "publisher_host": "vnexpress.net",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-f70e9fcf0c392a8fe002",
+      "title": "Đoạn đường sắt Bắc Nam phía nam Hà Nội được dịch chuyển thế nào?",
+      "url": "https://vnexpress.net/doan-duong-sat-bac-nam-phia-nam-ha-noi-duoc-dich-chuyen-the-nao-5135447.html",
+      "category": "infrastructure",
+      "module_ids": [
+        "infrastructure"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-10-22T04:32:21+00:00",
+      "source_id": "vnexpress-current-affairs",
+      "region_ids": [
+        "ha-noi"
+      ],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [
+        "infrastructure"
+      ],
+      "importance": 2,
+      "summary": "Khác với tuyến đường sắt hiện hữu chạy dọc quốc lộ 1, tuyến cải dịch được nghiên cứu chuyển sang hành lang gần đường sắt tốc độ cao Bắc Nam.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://vnexpress.net/rss/thoi-su.rss",
+        "publisher_host": "vnexpress.net",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-2cbacc33fccffacbfae3",
+      "title": "Bộ trưởng Lâm Thị Phương Thanh: Cần tận dụng trụ sở dôi dư làm nhà văn hóa, thể thao",
+      "url": "https://vnexpress.net/bo-truong-lam-thi-phuong-thanh-can-tan-dung-tru-so-doi-du-lam-nha-van-hoa-the-thao-5135499.html",
+      "category": "legal",
+      "module_ids": [
+        "legal"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-10-22T04:29:26+00:00",
+      "source_id": "vnexpress-current-affairs",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "Bộ trưởng Văn hóa, Thể thao và Du lịch Lâm Thị Phương Thanh đề nghị ưu tiên sử dụng trụ sở công dôi dư để phát triển nhà văn hóa, thư viện và không gian sinh hoạt cộng đồng.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://vnexpress.net/rss/thoi-su.rss",
+        "publisher_host": "vnexpress.net",
+        "publication_date_from_feed": true
+      }
+    },
     {
       "id": "article-market-rss-5e08017fad749fb39983",
       "title": "Chủ căn hộ có thể bán phần quyền sử dụng đất khi xây lại chung cư",
@@ -25,6 +136,34 @@
       "source_verification": {
         "method": "official-rss",
         "feed_url": "https://vnexpress.net/rss/bat-dong-san.rss",
+        "publisher_host": "vnexpress.net",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-f71afbd7b1c2b0e04afc",
+      "title": "Đại biểu: Bỏ quy định công chứng trong Luật Đất đai có thể tăng tranh chấp",
+      "url": "https://vnexpress.net/dai-bieu-bo-quy-dinh-cong-chung-trong-luat-dat-dai-co-the-tang-tranh-chap-5135472.html",
+      "category": "legal",
+      "module_ids": [
+        "legal"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-10-22T04:06:19+00:00",
+      "source_id": "vnexpress-current-affairs",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [
+        "sales",
+        "legal"
+      ],
+      "importance": 2,
+      "summary": "Nhiều đại biểu lo ngại việc giao Chính phủ quy định các giao dịch đất đai phải công chứng, chứng thực có thể làm giảm an toàn pháp lý, gia tăng tranh chấp nếu thiếu cơ chế kiểm soát phù hợp.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://vnexpress.net/rss/thoi-su.rss",
         "publisher_host": "vnexpress.net",
         "publication_date_from_feed": true
       }
