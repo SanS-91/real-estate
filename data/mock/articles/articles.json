@@ -1,9 +1,109 @@
 {
   "schema_version": 1,
-  "build_id": "market-news-rss-20261021T172310Z",
-  "generated_at": "2026-10-21T17:23:10.428979+00:00",
-  "record_count": 792,
+  "build_id": "market-news-rss-20261022T005149Z",
+  "generated_at": "2026-10-22T00:51:49.327330+00:00",
+  "record_count": 796,
   "data": [
+    {
+      "id": "article-market-rss-025ea9b3f86b4cdb985c",
+      "title": "Giá vàng giảm liên tục",
+      "url": "https://dantri.com.vn/kinh-doanh/gia-vang-giam-lien-tuc-20261022001921708.htm",
+      "category": "macro",
+      "module_ids": [
+        "macro"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-10-21T23:26:19+00:00",
+      "source_id": "dantri-business",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "(Dân trí) - Giá vàng miếng SJC giảm 300.000 đồng/lượng trong bối cảnh giá vàng thế giới chịu sức ép từ triển vọng lãi suất Mỹ và những lo ngại về lạm phát.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://dantri.com.vn/rss/kinh-doanh.rss",
+        "publisher_host": "dantri.com.vn",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-c9017f41900263e0e329",
+      "title": "Nhiều ngân hàng cho vay bình quân trên 11% trước đợt hạ lãi suất",
+      "url": "https://vnexpress.net/nhieu-ngan-hang-cho-vay-binh-quan-tren-11-truoc-dot-ha-lai-suat-5135336.html",
+      "category": "macro",
+      "module_ids": [
+        "macro"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-10-21T23:00:00+00:00",
+      "source_id": "vnexpress-economy",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "Techcombank, OCB, TPBank, BVBank… cho khách hàng cá nhân vay lãi suất hơn 11% mỗi năm trước đợt điều chỉnh theo yêu cầu của Ngân hàng Nhà nước.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://vnexpress.net/rss/kinh-doanh.rss",
+        "publisher_host": "vnexpress.net",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-2726169fd1a3535127cb",
+      "title": "Loạt Chủ tịch, Tổng giám đốc ngân hàng cam kết giảm lãi suất",
+      "url": "https://dantri.com.vn/kinh-doanh/loat-chu-tich-tong-giam-doc-ngan-hang-cam-ket-giam-lai-suat-20261021182424098.htm",
+      "category": "macro",
+      "module_ids": [
+        "macro"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-10-21T22:27:00+00:00",
+      "source_id": "dantri-business",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "(Dân trí) - Một loạt Chủ tịch, Tổng giám đốc các ngân hàng đã cam kết giảm lãi suất tiền gửi và cho vay ngay sau chỉ đạo của Chính phủ, Ngân hàng Nhà nước.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://dantri.com.vn/rss/kinh-doanh.rss",
+        "publisher_host": "dantri.com.vn",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-d90b24ffed917af0dc47",
+      "title": "Jensen Huang 'không sợ đóng thuế, chỉ sợ nghèo'",
+      "url": "https://vnexpress.net/jensen-huang-khong-so-dong-thue-chi-so-ngheo-5134984.html",
+      "category": "legal",
+      "module_ids": [
+        "legal"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-10-21T17:05:00+00:00",
+      "source_id": "vnexpress-economy",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "CEO Nvidia coi việc đóng thuế 8 tỷ USD là một 'đặc quyền' khi nhắc đến đề xuất mới của bang California với các cư dân giàu có.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://vnexpress.net/rss/kinh-doanh.rss",
+        "publisher_host": "vnexpress.net",
+        "publication_date_from_feed": true
+      }
+    },
     {
       "id": "article-market-rss-cc5b11c2ac0ec95c396b",
       "title": "Đưa nếp nhà Bắc Bộ vào không gian sống hiện đại",

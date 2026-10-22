@@ -1,35 +1,30 @@
 {
   "schema_version": 1,
-  "checked_at": "2026-10-21T17:23:10.428979+00:00",
+  "checked_at": "2026-10-22T00:51:49.327330+00:00",
   "feeds_configured": 16,
-  "feeds_fetched": 16,
-  "accepted_new": 2,
+  "feeds_fetched": 12,
+  "accepted_new": 4,
   "production_written": true,
-  "article_total": 792,
+  "article_total": 796,
   "published_by_module": {
-    "market": 2,
-    "legal": 0,
+    "market": 0,
+    "legal": 1,
     "infrastructure": 0,
-    "macro": 0
+    "macro": 3
   },
   "feed_status": [
     {
       "source_id": "vnexpress-real-estate",
       "status": "parsed",
       "feed_items": 50,
-      "new": 1,
-      "skipped": 49,
-      "duplicates": 49,
-      "filtered": 0
-    },
-    {
-      "source_id": "thanhnien-real-estate",
-      "status": "parsed",
-      "feed_items": 50,
       "new": 0,
       "skipped": 50,
       "duplicates": 50,
       "filtered": 0
+    },
+    {
+      "source_id": "thanhnien-real-estate",
+      "status": "fetch-error"
     },
     {
       "source_id": "dantri-real-estate",
@@ -44,10 +39,10 @@
       "source_id": "vnexpress-economy",
       "status": "parsed",
       "feed_items": 50,
-      "new": 1,
-      "skipped": 49,
+      "new": 2,
+      "skipped": 48,
       "duplicates": 8,
-      "filtered": 41
+      "filtered": 40
     },
     {
       "source_id": "vnexpress-current-affairs",
@@ -98,10 +93,10 @@
       "source_id": "dantri-business",
       "status": "parsed",
       "feed_items": 50,
-      "new": 0,
-      "skipped": 50,
-      "duplicates": 9,
-      "filtered": 41
+      "new": 2,
+      "skipped": 48,
+      "duplicates": 8,
+      "filtered": 40
     },
     {
       "source_id": "dantri-current-affairs",
@@ -132,31 +127,33 @@
     },
     {
       "source_id": "thanhnien-banking",
-      "status": "parsed",
-      "feed_items": 50,
-      "new": 0,
-      "skipped": 50,
-      "duplicates": 22,
-      "filtered": 28
+      "status": "fetch-error"
     },
     {
       "source_id": "thanhnien-policy",
-      "status": "parsed",
-      "feed_items": 50,
-      "new": 0,
-      "skipped": 50,
-      "duplicates": 11,
-      "filtered": 39
+      "status": "fetch-error"
     },
     {
       "source_id": "thanhnien-transport",
-      "status": "parsed",
-      "feed_items": 50,
-      "new": 0,
-      "skipped": 50,
-      "duplicates": 10,
-      "filtered": 40
+      "status": "fetch-error"
     }
   ],
-  "fetch_errors": []
+  "fetch_errors": [
+    {
+      "source_id": "thanhnien-real-estate",
+      "error": "HTTPError"
+    },
+    {
+      "source_id": "thanhnien-banking",
+      "error": "HTTPError"
+    },
+    {
+      "source_id": "thanhnien-policy",
+      "error": "HTTPError"
+    },
+    {
+      "source_id": "thanhnien-transport",
+      "error": "HTTPError"
+    }
+  ]
 }
