@@ -1,9 +1,114 @@
 {
   "schema_version": 1,
-  "build_id": "market-news-rss-20261022T085147Z",
-  "generated_at": "2026-10-22T08:51:47.885435+00:00",
-  "record_count": 832,
+  "build_id": "market-news-rss-20261022T105142Z",
+  "generated_at": "2026-10-22T10:51:42.981360+00:00",
+  "record_count": 840,
   "data": [
+    {
+      "id": "article-market-rss-3f4df58aa558766d88b8",
+      "title": "Huế sắp đấu giá khu đất hơn 6.700 m2 làm tổ hợp khách sạn 5 sao",
+      "url": "https://vnexpress.net/hue-sap-dau-gia-khu-dat-hon-6-700-m2-lam-to-hop-khach-san-5-sao-5135540.html",
+      "category": "market",
+      "module_ids": [
+        "market"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-10-22T10:03:00+00:00",
+      "source_id": "vnexpress-real-estate",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "Khu đất hơn 6.700 m2 ở trung tâm TP Huế sắp được đưa ra đấu giá, với mức khởi điểm 281 tỷ đồng để làm khách sạn 5 sao.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://vnexpress.net/rss/bat-dong-san.rss",
+        "publisher_host": "vnexpress.net",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-d8db5eabca836d4f2e8e",
+      "title": "Chủ tịch Quốc hội: Tránh để bảng giá đất tăng đột biến",
+      "url": "https://vnexpress.net/chu-tich-quoc-hoi-tranh-de-bang-gia-dat-tang-dot-bien-5135614.html",
+      "category": "market",
+      "module_ids": [
+        "market",
+        "legal"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-10-22T09:33:46+00:00",
+      "source_id": "vnexpress-current-affairs",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [
+        "pricing"
+      ],
+      "importance": 2,
+      "summary": "Chủ tịch Quốc hội Trần Thanh Mẫn đề nghị xác định giá đất sát thị trường nhưng phải có cơ chế ổn định, tránh bảng giá tăng đột biến, gây thêm gánh nặng cho người dân, doanh nghiệp.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://vnexpress.net/rss/thoi-su.rss",
+        "publisher_host": "vnexpress.net",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-e6e053b1f9a9318b29dc",
+      "title": "Qtopia hướng đến mô hình 'thành phố cuối tuần'",
+      "url": "https://vnexpress.net/qtopia-huong-den-mo-hinh-thanh-pho-cuoi-tuan-5135670.html",
+      "category": "market",
+      "module_ids": [
+        "market"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-10-22T09:30:00+00:00",
+      "source_id": "vnexpress-real-estate",
+      "region_ids": [
+        "hcmc"
+      ],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "Tổ hợp hơn 7,3 ha do Phát Đạt phát triển tại TP HCM gồm 9 tòa tháp căn hộ du lịch, thương mại dịch vụ, kết hợp lưu trú với vui chơi, giải trí và nghỉ dưỡng ven biển.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://vnexpress.net/rss/bat-dong-san.rss",
+        "publisher_host": "vnexpress.net",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-e813522f569ecedd84b4",
+      "title": "Đại biểu Quốc hội: Nên để chủ đầu tư nhận tiền đặt cọc bất động sản sớm hơn",
+      "url": "https://vnexpress.net/dai-bieu-quoc-hoi-nen-de-chu-dau-tu-nhan-tien-dat-coc-bat-dong-san-som-hon-5135570.html",
+      "category": "market",
+      "module_ids": [
+        "market"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-10-22T08:16:08+00:00",
+      "source_id": "vnexpress-economy",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "Đại biểu Bùi Xuân Hải đề xuất cho doanh nghiệp được nhận 5% tiền đặt cọc bất động sản hình thành trong tương lai sớm hơn, thay vì chờ đến khi dự án khởi công.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://vnexpress.net/rss/kinh-doanh.rss",
+        "publisher_host": "vnexpress.net",
+        "publication_date_from_feed": true
+      }
+    },
     {
       "id": "article-market-rss-27cb2c5ac757218f7076",
       "title": "Phó Chủ tịch Quốc hội: Không để ưu đãi nhà ở xã hội biến thành khoản lợi nhuận đầu cơ",
@@ -28,6 +133,35 @@
         "method": "official-rss",
         "feed_url": "https://dantri.com.vn/rss/thoi-su.rss",
         "publisher_host": "dantri.com.vn",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-eef39cf564f178ef00a9",
+      "title": "TP HCM đã cấp sổ hồng cho hơn 43.000 căn nhà",
+      "url": "https://vnexpress.net/tp-hcm-da-cap-so-hong-cho-hon-43-000-can-nha-5135576.html",
+      "category": "market",
+      "module_ids": [
+        "legal"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-10-22T07:55:25+00:00",
+      "source_id": "vnexpress-real-estate",
+      "region_ids": [
+        "hcmc"
+      ],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [
+        "legal"
+      ],
+      "importance": 2,
+      "summary": "TP HCM đã cấp sổ hồng cho 43.200 căn nhà từ đầu năm đến nay và đang chờ người mua đóng lệ phí trước bạ với 13.949 hồ sơ.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://vnexpress.net/rss/bat-dong-san.rss",
+        "publisher_host": "vnexpress.net",
         "publication_date_from_feed": true
       }
     },
@@ -161,6 +295,83 @@
         "method": "official-rss",
         "feed_url": "https://thanhnien.vn/rss/kinh-te/dia-oc.rss",
         "publisher_host": "thanhnien.vn",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-1f1b4fee98931e682c2a",
+      "title": "Sacombank hạ lãi suất cho vay khách hàng cá nhân thấp nhất từ 1,5% đến 2%",
+      "url": "https://dantri.com.vn/kinh-doanh/sacombank-ha-lai-suat-cho-vay-khach-hang-ca-nhan-thap-nhat-tu-15-den-2-20261022121425733.htm",
+      "category": "macro",
+      "module_ids": [
+        "macro"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-10-22T07:00:00+00:00",
+      "source_id": "dantri-business",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "(Dân trí) - Thực hiện chủ trương của Chính phủ và Ngân hàng Nhà nước về giảm mặt bằng lãi suất, Sacombank triển khai thêm gói tín dụng ưu đãi với tổng quy mô 20.000 tỷ đồng, tập trung hỗ trợ nhóm khách hàng cá nhân với mức giảm lãi suất 1,5 -2%/năm.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://dantri.com.vn/rss/kinh-doanh.rss",
+        "publisher_host": "dantri.com.vn",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-12c64d3a5bc8f014f1d3",
+      "title": "Giá vàng, USD đồng loạt giảm mạnh",
+      "url": "https://dantri.com.vn/kinh-doanh/gia-vang-usd-dong-loat-giam-manh-20261022131122929.htm",
+      "category": "macro",
+      "module_ids": [
+        "macro"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-10-22T06:52:27+00:00",
+      "source_id": "dantri-business",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "(Dân trí) - Giá vàng thế giới mất mốc 4.100 USD/ounce; vàng miếng SJC giảm 1,4 triệu đồng/lượng từ đầu tuần. Cùng lúc, giá USD ngân hàng tiếp tục đi xuống, về sát 26.000 đồng/USD ở chiều bán.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://dantri.com.vn/rss/kinh-doanh.rss",
+        "publisher_host": "dantri.com.vn",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-e63600fab649c8f4c62e",
+      "title": "TPHCM sôi động mùa concert, ngành kinh doanh nào đang hưởng lợi?",
+      "url": "https://dantri.com.vn/bat-dong-san/tphcm-soi-dong-mua-concert-nganh-kinh-doanh-nao-dang-huong-loi-20261022124431968.htm",
+      "category": "market",
+      "module_ids": [
+        "market"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-10-22T06:37:35+00:00",
+      "source_id": "dantri-real-estate",
+      "region_ids": [
+        "hcmc"
+      ],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "(Dân trí) - Theo dữ liệu Trip.com, lượng đặt phòng khách sạn tại TPHCM cho hai đêm 16-17/10, thời gian diễn ra các chương trình nghệ thuật lớn, tăng hơn 7 lần so với bình thường.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://dantri.com.vn/rss/bat-dong-san.rss",
+        "publisher_host": "dantri.com.vn",
         "publication_date_from_feed": true
       }
     },
