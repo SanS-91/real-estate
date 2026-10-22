@@ -1,13 +1,174 @@
 {
   "schema_version": 1,
-  "build_id": "market-news-rss-20261022T050351Z",
-  "generated_at": "2026-10-22T05:03:51.047440+00:00",
-  "record_count": 817,
+  "build_id": "market-news-rss-20261022T065139Z",
+  "generated_at": "2026-10-22T06:51:39.153781+00:00",
+  "record_count": 826,
   "data": [
+    {
+      "id": "article-market-rss-a7625fd0c916670777b6",
+      "title": "Thủ tướng yêu cầu hoàn thiện nghị định kinh doanh xăng dầu trước ngày 10.11",
+      "url": "https://thanhnien.vn/thu-tuong-yeu-cau-hoan-thien-nghi-dinh-kinh-doanh-xang-dau-truoc-ngay-1011-185261022124609248.htm",
+      "category": "legal",
+      "module_ids": [
+        "legal"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-10-22T06:08:00+00:00",
+      "source_id": "thanhnien-policy",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "Văn phòng Chính phủ vừa có công văn gửi Bộ trưởng Bộ Công thương yêu cầu hoàn thiện dự thảo nghị định thay thế Nghị định số 83/2014 của Chính phủ về kinh doanh xăng dầu và các nghị định sửa đổi, bổ sung Nghị định 83. Thủ tướng yêu cầu chậm nhất trình dự thảo nghị định mới trước ngày 10.11 tới.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://thanhnien.vn/rss/kinh-te/chinh-sach-phat-trien.rss",
+        "publisher_host": "thanhnien.vn",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-57ec802e1a1c85ab1d00",
+      "title": "'Cần cho doanh nghiệp chưa nộp đủ tiền đất được chuyển nhượng dự án đình trệ'",
+      "url": "https://vnexpress.net/can-cho-doanh-nghiep-chua-nop-du-tien-dat-duoc-chuyen-nhuong-du-an-dinh-tre-5135547.html",
+      "category": "market",
+      "module_ids": [
+        "market"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-10-22T05:47:14+00:00",
+      "source_id": "vnexpress-economy",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "Đại biểu Nguyễn Thị Việt Nga đề xuất cho doanh nghiệp chưa nộp đủ tiền đất được bán dự án dang dở, nhằm đưa nguồn lực đóng băng trở lại nền kinh tế.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://vnexpress.net/rss/kinh-doanh.rss",
+        "publisher_host": "vnexpress.net",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-eabaf4d391099076cc7e",
+      "title": "TP HCM đề xuất thu 1% giá chuyển nhượng nhà đất vùng TOD",
+      "url": "https://vnexpress.net/tp-hcm-de-xuat-thu-1-gia-chuyen-nhuong-nha-dat-vung-tod-5135560.html",
+      "category": "market",
+      "module_ids": [
+        "market"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-10-22T05:42:47+00:00",
+      "source_id": "vnexpress-real-estate",
+      "region_ids": [
+        "hcmc"
+      ],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [
+        "sales"
+      ],
+      "importance": 2,
+      "summary": "Tổ chức, cá nhân chuyển nhượng nhà đất lần đầu trong khu vực TOD dự kiến nộp khoản thu bằng 1% giá trị giao dịch.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://vnexpress.net/rss/bat-dong-san.rss",
+        "publisher_host": "vnexpress.net",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-60c574bad763b0a6a93d",
+      "title": "Gần 160 ha đất cạnh sân bay Long Thành sắp được đấu giá",
+      "url": "https://vnexpress.net/gan-160-ha-dat-canh-san-bay-long-thanh-sap-duoc-dau-gia-5135515.html",
+      "category": "market",
+      "module_ids": [
+        "infrastructure"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-10-22T05:31:17+00:00",
+      "source_id": "vnexpress-real-estate",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [
+        "infrastructure"
+      ],
+      "importance": 2,
+      "summary": "Ba khu đất rộng tổng cộng hơn 159 ha tại phường Long Thành dự kiến đấu giá trong năm nay, phục vụ các hoạt động khai thác sân bay quốc tế Long Thành.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://vnexpress.net/rss/bat-dong-san.rss",
+        "publisher_host": "vnexpress.net",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-c75c55e38d664838f1b9",
+      "title": "Nhắc tâm lý \"cứ mua đất là thắng\", đại biểu đề nghị giữ công chứng đất đai",
+      "url": "https://dantri.com.vn/thoi-su/nhac-tam-ly-cu-mua-dat-la-thang-dai-bieu-de-nghi-giu-cong-chung-dat-dai-20261022115148613.htm",
+      "category": "market",
+      "module_ids": [
+        "market"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-10-22T05:18:38+00:00",
+      "source_id": "dantri-real-estate",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [
+        "sales",
+        "legal"
+      ],
+      "importance": 2,
+      "summary": "(Dân trí) - Nhắc thời điểm người mua đất chỉ nghĩ đến lợi nhuận, ít quan tâm pháp lý, đại biểu Trần Hoài Nam đề nghị cân nhắc kỹ việc thay đổi yêu cầu công chứng giao dịch đất đai.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://dantri.com.vn/rss/bat-dong-san.rss",
+        "publisher_host": "dantri.com.vn",
+        "publication_date_from_feed": true
+      }
+    },
     {
       "id": "article-market-rss-9f026c506ee39b0857ec",
       "title": "Đề xuất người mua nhà trên giấy được nhận lãi 5% đợt cuối",
       "url": "https://vnexpress.net/de-xuat-nguoi-mua-nha-tren-giay-duoc-nhan-lai-5-dot-cuoi-5135509.html",
+      "category": "market",
+      "module_ids": [
+        "market"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-10-22T04:53:39+00:00",
+      "source_id": "vnexpress-real-estate",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [
+        "sales"
+      ],
+      "importance": 2,
+      "summary": "Chính phủ đề xuất chuyển 5% - số tiền giao dịch đợt cuối khi mua nhà hình thành trong tương lai - vào tài khoản đảm bảo và người mua được hưởng lãi.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://vnexpress.net/rss/bat-dong-san.rss",
+        "publisher_host": "vnexpress.net",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-3e35ae6abc1b9937c7f2",
+      "title": "Đề xuất người mua nhà trên giấy được hưởng lãi từ 5% tiền đợt cuối",
+      "url": "https://vnexpress.net/de-xuat-nguoi-mua-nha-tren-giay-duoc-huong-lai-tu-5-tien-dot-cuoi-5135509.html",
       "category": "market",
       "module_ids": [
         "market"
@@ -169,6 +330,31 @@
       }
     },
     {
+      "id": "article-market-rss-44d02a4b6253d9a5d882",
+      "title": "Thiết kế bồn rửa bếp khiến nhiều người hối hận khi làm nhà",
+      "url": "https://dantri.com.vn/bat-dong-san/thiet-ke-bon-rua-bep-khien-nhieu-nguoi-hoi-han-khi-lam-nha-20261022092027118.htm",
+      "category": "market",
+      "module_ids": [
+        "market"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-10-22T03:31:35+00:00",
+      "source_id": "dantri-real-estate",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "(Dân trí) - Từng được xem là giải pháp tối ưu diện tích cho bàn bếp, bồn rửa hai ngăn hình cánh bướm dần bộc lộ nhiều điểm bất tiện trong sinh hoạt thường nhật của các gia đình.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://dantri.com.vn/rss/bat-dong-san.rss",
+        "publisher_host": "dantri.com.vn",
+        "publication_date_from_feed": true
+      }
+    },
+    {
       "id": "article-market-rss-bcbd98c14b81264a841f",
       "title": "Dịch vụ vận hành quốc tế tại Lusso Saigon WorldHotels Residences",
       "url": "https://vnexpress.net/dich-vu-van-hanh-quoc-te-tai-lusso-saigon-worldhotels-residences-5135195.html",
@@ -274,6 +460,35 @@
       }
     },
     {
+      "id": "article-market-rss-f11763c50e544adf0bd7",
+      "title": "Hạ tầng, tiện ích hoàn thiện 90%, Vinhomes Royal Island sẵn sàng nhịp sống mới",
+      "url": "https://dantri.com.vn/bat-dong-san/ha-tang-tien-ich-hoan-thien-90-vinhomes-royal-island-san-sang-nhip-song-moi-20261022093222397.htm",
+      "category": "market",
+      "module_ids": [
+        "market"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-10-22T03:06:20+00:00",
+      "source_id": "dantri-real-estate",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [
+        "vinhomes"
+      ],
+      "tags": [
+        "infrastructure"
+      ],
+      "importance": 2,
+      "summary": "(Dân trí) - Tại Vinhomes Royal Island, khoảng 90% hạ tầng và hệ sinh thái tiện ích đã hoàn thiện, cư dân tận hưởng nhịp sống thượng lưu trên đảo sinh thái giữa trung tâm Hải Phòng ngay từ ngày dọn về thay vì phải chờ đợi các tiện ích hình thành trong tương lai.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://dantri.com.vn/rss/bat-dong-san.rss",
+        "publisher_host": "dantri.com.vn",
+        "publication_date_from_feed": true
+      }
+    },
+    {
       "id": "article-market-rss-7dea8fdba05f3db9fae6",
       "title": "Bụi phủ trắng trên đoạn quốc lộ đang thi công, người dân căng bạt kín nhà",
       "url": "https://dantri.com.vn/thoi-su/bui-phu-trang-tren-doan-quoc-lo-dang-thi-cong-nguoi-dan-cang-bat-kin-nha-20261022082813323.htm",
@@ -346,6 +561,31 @@
       "source_verification": {
         "method": "official-rss",
         "feed_url": "https://dantri.com.vn/rss/thoi-su.rss",
+        "publisher_host": "dantri.com.vn",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-2d3c473c95433a17fe98",
+      "title": "Vợ ông Bùi Thành Nhơn đăng ký bán hơn 6 triệu cổ phiếu Novaland",
+      "url": "https://dantri.com.vn/bat-dong-san/vo-ong-bui-thanh-nhon-dang-ky-ban-hon-6-trieu-co-phieu-novaland-20261022093351224.htm",
+      "category": "market",
+      "module_ids": [
+        "market"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-10-22T02:37:25+00:00",
+      "source_id": "dantri-real-estate",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "(Dân trí) - Vợ ông Bùi Thành Nhơn đăng ký bán 6,3 triệu cổ phiếu Novaland từ ngày 26/10 đến 30/10, giảm tỷ lệ sở hữu tại doanh nghiệp xuống còn 1,89%.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://dantri.com.vn/rss/bat-dong-san.rss",
         "publisher_host": "dantri.com.vn",
         "publication_date_from_feed": true
       }
