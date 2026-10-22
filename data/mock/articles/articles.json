@@ -1,9 +1,198 @@
 {
   "schema_version": 1,
-  "build_id": "market-news-rss-20261022T005149Z",
-  "generated_at": "2026-10-22T00:51:49.327330+00:00",
-  "record_count": 796,
+  "build_id": "market-news-rss-20261022T025137Z",
+  "generated_at": "2026-10-22T02:51:37.347677+00:00",
+  "record_count": 804,
   "data": [
+    {
+      "id": "article-market-rss-66491d462261460147ef",
+      "title": "Đề nghị các ngân hàng giảm lãi suất thực chất",
+      "url": "https://thanhnien.vn/de-nghi-cac-ngan-hang-giam-lai-suat-thuc-chat-185261022091523656.htm",
+      "category": "market",
+      "module_ids": [
+        "macro"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-10-22T02:30:00+00:00",
+      "source_id": "thanhnien-real-estate",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "Trong văn bản gửi Thủ tướng Chính phủ, Ngân hàng nhà nước, Bộ Xây dựng..., HoREA đề nghị Ngân hàng Nhà nước quyết liệt đôn đốc, kiểm tra các ngân hàng thương mại thực hiện chủ trương giảm lãi suất cho vay thực chất để hỗ trợ nền kinh tế và cùng chia sẻ khó khăn với doanh nghiệp, khách hàng vay vốn t",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://thanhnien.vn/rss/kinh-te/dia-oc.rss",
+        "publisher_host": "thanhnien.vn",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-35c44a0dc039d3a0fa32",
+      "title": "Chính phủ đề xuất điều chỉnh bảng giá đất 3 năm một lần",
+      "url": "https://vnexpress.net/chinh-phu-de-xuat-dieu-chinh-bang-gia-dat-3-nam-mot-lan-5135369.html",
+      "category": "market",
+      "module_ids": [
+        "market",
+        "legal"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-10-22T02:19:13+00:00",
+      "source_id": "vnexpress-economy",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [
+        "pricing",
+        "legal"
+      ],
+      "importance": 2,
+      "summary": "Chính phủ đề xuất điều chỉnh bảng giá đất 3 năm một lần, thay vì sửa đổi hàng năm như Luật Đất đai hiện hành.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://vnexpress.net/rss/kinh-doanh.rss",
+        "publisher_host": "vnexpress.net",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-8e5d2e3b08aed1e4cd07",
+      "title": "Giá vàng hôm nay 22.10.2026: Dậm chân tại chỗ, người mua vẫn lỗ ngay 4 triệu đồng",
+      "url": "https://thanhnien.vn/gia-vang-hom-nay-22102026-dam-chan-tai-cho-nguoi-mua-van-lo-ngay-4-trieu-dong-185261022075411824.htm",
+      "category": "macro",
+      "module_ids": [
+        "macro"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-10-22T01:50:00+00:00",
+      "source_id": "thanhnien-banking",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "Giá vàng trong nước lẫn thế giới đều không thay đổi sau nhiều phiên giảm liên tiếp.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://thanhnien.vn/rss/kinh-te/ngan-hang.rss",
+        "publisher_host": "thanhnien.vn",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-3278d650ea7716893626",
+      "title": "Chính phủ trình Quốc hội đề xuất mới về giá đất, thu hồi đất",
+      "url": "https://dantri.com.vn/thoi-su/chinh-phu-trinh-quoc-hoi-de-xuat-moi-ve-gia-dat-thu-hoi-dat-20261022082916971.htm",
+      "category": "market",
+      "module_ids": [
+        "market",
+        "legal"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-10-22T01:32:59+00:00",
+      "source_id": "dantri-current-affairs",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [
+        "pricing",
+        "legal"
+      ],
+      "importance": 2,
+      "summary": "(Dân trí) - Dự thảo Luật Đất đai sửa đổi không còn quy định về giá đất cụ thể và tổ chức tư vấn xác định giá đất. Nhà nước sẽ quyết định giá đất bảo đảm nguyên tắc trung thực, khách quan, công khai, minh bạch.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://dantri.com.vn/rss/thoi-su.rss",
+        "publisher_host": "dantri.com.vn",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-f26557787a6776f8d9a4",
+      "title": "Happy One Elite chính thức xuất hiện với Savills và 22 đối tác phát triển dự án",
+      "url": "https://thanhnien.vn/happy-one-elite-chinh-thuc-xuat-hien-voi-savills-va-22-doi-tac-phat-trien-du-an-185261021214350729.htm",
+      "category": "market",
+      "module_ids": [
+        "market"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-10-22T01:00:00+00:00",
+      "source_id": "thanhnien-real-estate",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [
+        "supply"
+      ],
+      "importance": 2,
+      "summary": "Với chủ đề 'On Board with Happy One Elite', sự kiện 'lễ ký kết hợp tác phát triển dự án' đánh dấu sự đồng hành của Savills Việt Nam và 22 đơn vị, đối tác phân phối. Chương trình đồng thời công bố những thước phim đầu tiên của dự án.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://thanhnien.vn/rss/kinh-te/dia-oc.rss",
+        "publisher_host": "thanhnien.vn",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-89118481901eff0f9dea",
+      "title": "Phát triển Trung tâm tài chính quốc tế Việt Nam tại Đà Nẵng, quy mô 300ha",
+      "url": "https://dantri.com.vn/bat-dong-san/phat-trien-trung-tam-tai-chinh-quoc-te-viet-nam-tai-da-nang-quy-mo-300ha-20261022073313815.htm",
+      "category": "market",
+      "module_ids": [
+        "market"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-10-22T00:54:51+00:00",
+      "source_id": "dantri-real-estate",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [
+        "legal"
+      ],
+      "importance": 2,
+      "summary": "(Dân trí) - Phó Thủ tướng Thường trực Phạm Gia Túc vừa ký Quyết định 2016/QĐ-TTg ngày 21/10 phê duyệt Quy hoạch chung thành phố Đà Nẵng đến năm 2050, tầm nhìn đến năm 2075 (quy hoạch).",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://dantri.com.vn/rss/bat-dong-san.rss",
+        "publisher_host": "dantri.com.vn",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-fabbe6aafd738bbae568",
+      "title": "Khoan địa chất, cọc thử đường xuyên rừng Mã Đà kết nối Vành đai 4 TPHCM",
+      "url": "https://dantri.com.vn/thoi-su/khoan-dia-chat-coc-thu-duong-xuyen-rung-ma-da-ket-noi-vanh-dai-4-tphcm-20261021223250496.htm",
+      "category": "infrastructure",
+      "module_ids": [
+        "infrastructure"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-10-21T23:50:11+00:00",
+      "source_id": "dantri-current-affairs",
+      "region_ids": [
+        "hcmc"
+      ],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "(Dân trí) - Các đơn vị đang khẩn trương hoàn thành hạng mục khoan khảo sát địa chất, khoan cọc thử và nhiều hạng mục quan trọng tại dự án đường trên cao xuyên rừng từ cầu Mã Đà đến Vành đai 4 TPHCM.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://dantri.com.vn/rss/thoi-su.rss",
+        "publisher_host": "dantri.com.vn",
+        "publication_date_from_feed": true
+      }
+    },
     {
       "id": "article-market-rss-025ea9b3f86b4cdb985c",
       "title": "Giá vàng giảm liên tục",
@@ -51,6 +240,33 @@
         "method": "official-rss",
         "feed_url": "https://vnexpress.net/rss/kinh-doanh.rss",
         "publisher_host": "vnexpress.net",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-4de4bb5182e79fb235bf",
+      "title": "Sửa quy định BT mới huy động được nguồn lực tư nhân cho hạ tầng",
+      "url": "https://thanhnien.vn/sua-quy-dinh-bt-moi-huy-dong-duoc-nguon-luc-tu-nhan-cho-ha-tang-185261021220526252.htm",
+      "category": "market",
+      "module_ids": [
+        "market"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-10-21T22:53:00+00:00",
+      "source_id": "thanhnien-real-estate",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [
+        "infrastructure"
+      ],
+      "importance": 2,
+      "summary": "Theo GS Đặng Hùng Võ, nguyên Thứ trưởng Bộ TN-MT, bất cập trong quy định về thời điểm xác định giá trị quỹ đất thanh toán và khống chế trần giá trị thanh toán có thể làm suy giảm sức hút của mô hình BT (xây dựng - chuyển giao).",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://thanhnien.vn/rss/kinh-te/dia-oc.rss",
+        "publisher_host": "thanhnien.vn",
         "publication_date_from_feed": true
       }
     },
