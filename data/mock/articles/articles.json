@@ -1,9 +1,86 @@
 {
   "schema_version": 1,
-  "build_id": "market-news-rss-20261022T105142Z",
-  "generated_at": "2026-10-22T10:51:42.981360+00:00",
-  "record_count": 840,
+  "build_id": "market-news-rss-20261022T120610Z",
+  "generated_at": "2026-10-22T12:06:10.903981+00:00",
+  "record_count": 843,
   "data": [
+    {
+      "id": "article-market-rss-029d991da8d15f13324c",
+      "title": "Siêu sân bay Long Thành còn 4 hạng mục khó về đích tháng 12",
+      "url": "https://thanhnien.vn/sieu-san-bay-long-thanh-con-4-hang-muc-kho-ve-dich-thang-12-185261022181546818.htm",
+      "category": "infrastructure",
+      "module_ids": [
+        "infrastructure"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-10-22T11:20:00+00:00",
+      "source_id": "thanhnien-policy",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [
+        "infrastructure"
+      ],
+      "importance": 2,
+      "summary": "Bộ Xây dựng vừa báo cáo Thủ tướng Chính phủ và Phó thủ tướng Thường trực Chính phủ Phạm Gia Túc về tình hình triển khai Dự án đầu tư xây dựng Cảng hàng không quốc tế Long Thành giai đoạn 1.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://thanhnien.vn/rss/kinh-te/chinh-sach-phat-trien.rss",
+        "publisher_host": "thanhnien.vn",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-657ba94839011aebf64a",
+      "title": "Chuyên gia nêu điều kiện để lãi suất giảm thực chất, không chỉ cam kết",
+      "url": "https://dantri.com.vn/kinh-doanh/chuyen-gia-neu-dieu-kien-de-lai-suat-giam-thuc-chat-khong-chi-cam-ket-20261022161712697.htm",
+      "category": "macro",
+      "module_ids": [
+        "macro"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-10-22T10:28:00+00:00",
+      "source_id": "dantri-business",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "(Dân trí) - Ngân hàng Nhà nước yêu cầu giảm lãi suất huy động và cho vay, chuyên gia cho rằng muốn lãi suất giảm lâu dài, cần giảm được chi phí vốn, áp lực thanh khoản và rủi ro cho vay...",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://dantri.com.vn/rss/kinh-doanh.rss",
+        "publisher_host": "dantri.com.vn",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-9417ab02f974394f1a07",
+      "title": "Techcombank giảm lãi suất cho vay đến 2%",
+      "url": "https://dantri.com.vn/kinh-doanh/techcombank-giam-lai-suat-cho-vay-den-2-20261022171001377.htm",
+      "category": "macro",
+      "module_ids": [
+        "macro"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-10-22T10:14:29+00:00",
+      "source_id": "dantri-business",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "(Dân trí) - Sau chỉ đạo của Chính phủ và Ngân hàng Nhà nước, Techcombank triển khai giảm lãi suất cho vay, với mức giảm tối đa 2%/năm.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://dantri.com.vn/rss/kinh-doanh.rss",
+        "publisher_host": "dantri.com.vn",
+        "publication_date_from_feed": true
+      }
+    },
     {
       "id": "article-market-rss-3f4df58aa558766d88b8",
       "title": "Huế sắp đấu giá khu đất hơn 6.700 m2 làm tổ hợp khách sạn 5 sao",
