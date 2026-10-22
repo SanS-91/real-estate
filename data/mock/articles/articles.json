@@ -1,9 +1,140 @@
 {
   "schema_version": 1,
-  "build_id": "market-news-rss-20261022T120610Z",
-  "generated_at": "2026-10-22T12:06:10.903981+00:00",
-  "record_count": 843,
+  "build_id": "market-news-rss-20261022T123210Z",
+  "generated_at": "2026-10-22T12:32:10.113241+00:00",
+  "record_count": 855,
   "data": [
+    {
+      "id": "article-market-rss-8f585223e65bf072fb4b",
+      "title": "TP HCM sẽ chi 10.800 tỷ đồng bồi thường dự án Mả Lạng, chợ Gà - Gạo tuần sau",
+      "url": "https://vnexpress.net/tp-hcm-se-chi-10-800-ty-dong-boi-thuong-du-an-ma-lang-cho-ga-gao-tuan-sau-5135748.html",
+      "category": "market",
+      "module_ids": [
+        "market"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-10-22T12:13:34+00:00",
+      "source_id": "vnexpress-current-affairs",
+      "region_ids": [
+        "hcmc"
+      ],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "TP HCM bắt đầu chi bồi thường cho người dân sống ở Mả Lạng, chợ Gà - Gạo với tổng số tiền dự kiến là 10.800 tỷ đồng vào tuần sau để sớm có mặt bằng, thi công dự án.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://vnexpress.net/rss/thoi-su.rss",
+        "publisher_host": "vnexpress.net",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-91ad9a0e00d04be8d5a4",
+      "title": "Nhà đầu tư khai thác dòng tiền từ căn hộ Sun Urban City",
+      "url": "https://vnexpress.net/nha-dau-tu-khai-thac-dong-tien-tu-can-ho-sun-urban-city-5135744.html",
+      "category": "market",
+      "module_ids": [
+        "market"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-10-22T12:00:00+00:00",
+      "source_id": "vnexpress-real-estate",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "Nguồn cầu từ chuyên gia, người làm việc tại địa phương và khách du lịch cuối tuần mở ra hướng khai thác cho thuê căn hộ tại Sun Urban City sau khoảng một năm bàn giao.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://vnexpress.net/rss/bat-dong-san.rss",
+        "publisher_host": "vnexpress.net",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-fbf5782221b15f4f8b8c",
+      "title": "Lãnh đạo TPHCM: Chi trả bồi thường dự án Mả Lạng, Chợ Gà - Gạo từ tuần tới",
+      "url": "https://dantri.com.vn/thoi-su/lanh-dao-tphcm-chi-tra-boi-thuong-du-an-ma-lang-cho-ga-gao-tu-tuan-toi-20261022181057126.htm",
+      "category": "market",
+      "module_ids": [
+        "market"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-10-22T11:52:04+00:00",
+      "source_id": "dantri-current-affairs",
+      "region_ids": [
+        "hcmc"
+      ],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "(Dân trí) - Phó Chủ tịch UBND TPHCM cho biết, thành phố sẽ bắt đầu chi trả cho người dân ảnh hưởng bởi dự án chỉnh trang khu Mả Lạng và Chợ Gà - Gạo từ đầu tuần tới.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://dantri.com.vn/rss/thoi-su.rss",
+        "publisher_host": "dantri.com.vn",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-ba19e04e61e8a134980b",
+      "title": "Đại biểu đề nghị cưỡng chế chủ đầu tư chây ì bàn giao quỹ bảo trì chung cư",
+      "url": "https://dantri.com.vn/thoi-su/dai-bieu-de-nghi-cuong-che-chu-dau-tu-chay-i-ban-giao-quy-bao-tri-chung-cu-20261022170941578.htm",
+      "category": "market",
+      "module_ids": [
+        "market"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-10-22T11:50:23+00:00",
+      "source_id": "dantri-current-affairs",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "(Dân trí) - Đại biểu đề nghị quỹ bảo trì chung cư có tài khoản phong tỏa riêng, quy định rõ thời hạn, thẩm quyền cưỡng chế bàn giao và cấm dùng tiền này cho quản lý, vận hành.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://dantri.com.vn/rss/thoi-su.rss",
+        "publisher_host": "dantri.com.vn",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-8dd99970ebe6c8c2b5f5",
+      "title": "Thủ tướng: Giá đất cao gây hệ lụy rất lớn với phát triển kinh tế",
+      "url": "https://vnexpress.net/thu-tuong-gia-dat-cao-gay-he-luy-rat-lon-voi-phat-trien-kinh-te-5135718.html",
+      "category": "market",
+      "module_ids": [
+        "market"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-10-22T11:31:48+00:00",
+      "source_id": "vnexpress-economy",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [
+        "pricing"
+      ],
+      "importance": 2,
+      "summary": "Theo Thủ tướng Lê Minh Hưng, Nhà nước phải quản lý, điều tiết giá đất, vì giá bất động sản cao gây hệ lụy rất lớn cho phát triển kinh tế.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://vnexpress.net/rss/kinh-doanh.rss",
+        "publisher_host": "vnexpress.net",
+        "publication_date_from_feed": true
+      }
+    },
     {
       "id": "article-market-rss-029d991da8d15f13324c",
       "title": "Siêu sân bay Long Thành còn 4 hạng mục khó về đích tháng 12",
@@ -28,6 +159,60 @@
         "method": "official-rss",
         "feed_url": "https://thanhnien.vn/rss/kinh-te/chinh-sach-phat-trien.rss",
         "publisher_host": "thanhnien.vn",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-61e4fce566adddc7e08c",
+      "title": "“Nhà nước không bao cấp về nhà ở, nhưng không để thị trường tự điều tiết”",
+      "url": "https://dantri.com.vn/thoi-su/nha-nuoc-khong-bao-cap-ve-nha-o-nhung-khong-de-thi-truong-tu-dieu-tiet-20261022155127803.htm",
+      "category": "market",
+      "module_ids": [
+        "market"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-10-22T11:01:57+00:00",
+      "source_id": "dantri-current-affairs",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "(Dân trí) - Nhìn nhận cơ cấu nhà ở còn thiên về sở hữu và các loại hình nhà ở chưa được phân định rõ, Thủ tướng khẳng định quan điểm Nhà nước không bao cấp về nhà ở, nhưng không để thị trường tự điều tiết.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://dantri.com.vn/rss/thoi-su.rss",
+        "publisher_host": "dantri.com.vn",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-a9dd68dc009ab47385df",
+      "title": "Người dân khổ sở lưu thông trên quốc lộ 6 chi chít ổ gà, ổ voi",
+      "url": "https://dantri.com.vn/thoi-su/nguoi-dan-kho-so-luu-thong-tren-quoc-lo-6-chi-chit-o-ga-o-voi-20261022155134802.htm",
+      "category": "infrastructure",
+      "module_ids": [
+        "infrastructure"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-10-22T11:00:00+00:00",
+      "source_id": "dantri-current-affairs",
+      "region_ids": [
+        "ha-noi"
+      ],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [
+        "infrastructure"
+      ],
+      "importance": 2,
+      "summary": "(Dân trí) - Mặt đường quốc lộ 6 đoạn qua Hà Nội nhiều khu vực xuống cấp nghiêm trọng, chi chít ổ gà, ổ voi khiến người dân chật vật di chuyển, tiềm ẩn nguy cơ xảy ra tai nạn giao thông.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://dantri.com.vn/rss/thoi-su.rss",
+        "publisher_host": "dantri.com.vn",
         "publication_date_from_feed": true
       }
     },
@@ -82,6 +267,34 @@
       }
     },
     {
+      "id": "article-market-rss-df6e4226f6542a5c71c1",
+      "title": "Đề xuất thu hồi đất sau 60 tháng, cần làm rõ dự án nào ngoại lệ",
+      "url": "https://dantri.com.vn/bat-dong-san/de-xuat-thu-hoi-dat-sau-60-thang-can-lam-ro-du-an-nao-ngoai-le-20261022162854552.htm",
+      "category": "market",
+      "module_ids": [
+        "market",
+        "legal"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-10-22T10:06:29+00:00",
+      "source_id": "dantri-real-estate",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [
+        "legal"
+      ],
+      "importance": 2,
+      "summary": "(Dân trí) - Chuyên gia đánh giá đề xuất thu hồi đất dự án chậm sử dụng quá 60 tháng là hợp lý, song cần phân biệt chủ đầu tư cố tình chậm triển khai với trường hợp vướng mắc pháp lý.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://dantri.com.vn/rss/bat-dong-san.rss",
+        "publisher_host": "dantri.com.vn",
+        "publication_date_from_feed": true
+      }
+    },
+    {
       "id": "article-market-rss-3f4df58aa558766d88b8",
       "title": "Huế sắp đấu giá khu đất hơn 6.700 m2 làm tổ hợp khách sạn 5 sao",
       "url": "https://vnexpress.net/hue-sap-dau-gia-khu-dat-hon-6-700-m2-lam-to-hop-khach-san-5-sao-5135540.html",
@@ -103,6 +316,60 @@
         "method": "official-rss",
         "feed_url": "https://vnexpress.net/rss/bat-dong-san.rss",
         "publisher_host": "vnexpress.net",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-afb0c4226e086d7123e7",
+      "title": "Hà Nội giao hơn 11.400m2 đất tại Đông Anh làm nhà ở cho lực lượng công an",
+      "url": "https://dantri.com.vn/bat-dong-san/ha-noi-giao-hon-11400m2-dat-tai-dong-anh-lam-nha-o-cho-luc-luong-cong-an-20261022164909768.htm",
+      "category": "market",
+      "module_ids": [
+        "market"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-10-22T09:57:00+00:00",
+      "source_id": "dantri-real-estate",
+      "region_ids": [
+        "ha-noi"
+      ],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "(Dân trí) - Hà Nội giao hơn 11.400m2 đất tại xã Đông Anh cho hai doanh nghiệp thuộc hệ sinh thái Amaccao để xây dựng nhà ở xã hội cho cán bộ, chiến sĩ công an và nhà ở thương mại.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://dantri.com.vn/rss/bat-dong-san.rss",
+        "publisher_host": "dantri.com.vn",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-e17f59842c8661b82b54",
+      "title": "Lâm Đồng thống nhất mở rộng cao tốc Tân Phú - Bảo Lộc",
+      "url": "https://dantri.com.vn/thoi-su/lam-dong-thong-nhat-mo-rong-cao-toc-tan-phu-bao-loc-20261022161148213.htm",
+      "category": "infrastructure",
+      "module_ids": [
+        "infrastructure"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-10-22T09:55:38+00:00",
+      "source_id": "dantri-current-affairs",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [
+        "infrastructure"
+      ],
+      "importance": 2,
+      "summary": "(Dân trí) - Cao tốc Tân Phú - Bảo Lộc được đầu tư, xây dựng quy mô hoàn chỉnh với nền đường rộng 22m, hoàn thành và khai thác trong quý IV/2028.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://dantri.com.vn/rss/thoi-su.rss",
+        "publisher_host": "dantri.com.vn",
         "publication_date_from_feed": true
       }
     },
@@ -158,6 +425,58 @@
         "method": "official-rss",
         "feed_url": "https://vnexpress.net/rss/bat-dong-san.rss",
         "publisher_host": "vnexpress.net",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-b6628cbb4d5bff8f1b15",
+      "title": "Lãi suất giảm, nhiều khoản vẫn trên 11%/năm, người vay mua nhà chật vật",
+      "url": "https://dantri.com.vn/bat-dong-san/lai-suat-giam-nhieu-khoan-van-tren-11nam-nguoi-vay-mua-nha-chat-vat-20261022151323767.htm",
+      "category": "market",
+      "module_ids": [
+        "macro"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-10-22T09:20:30+00:00",
+      "source_id": "dantri-real-estate",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "(Dân trí) - Dù lãi suất đang hạ nhiệt sau chỉ đạo quyết liệt của Chính phủ, Ngân hàng Nhà nước, nhưng nhiều khoản vay vẫn trên 11%/năm. Người vay mua nhà đang tính toán để giảm nợ, chưa vội vay mới...",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://dantri.com.vn/rss/bat-dong-san.rss",
+        "publisher_host": "dantri.com.vn",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-8e0f4483b60b18bc7a02",
+      "title": "Dự án gần 1.700 tỷ đồng xây dựng nhà ở cho lực lượng CAND ở Phú Thọ",
+      "url": "https://dantri.com.vn/bat-dong-san/du-an-gan-1700-ty-dong-xay-dung-nha-o-cho-luc-luong-cand-o-phu-tho-20261022144951669.htm",
+      "category": "market",
+      "module_ids": [
+        "market"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-10-22T09:10:29+00:00",
+      "source_id": "dantri-real-estate",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [
+        "legal"
+      ],
+      "importance": 2,
+      "summary": "(Dân trí) - Dự án xây dựng nhà ở cho lực lượng Công an nhân dân tại phường Việt Trì (Phú Thọ) có tổng diện tích lập quy hoạch gần 5,36ha, tổng mức đầu tư khoảng 1.695 tỷ đồng, gồm 5 tòa nhà cao 9 tầng.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://dantri.com.vn/rss/bat-dong-san.rss",
+        "publisher_host": "dantri.com.vn",
         "publication_date_from_feed": true
       }
     },
