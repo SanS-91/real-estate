@@ -1,9 +1,169 @@
 {
   "schema_version": 1,
-  "build_id": "market-news-rss-20261022T065139Z",
-  "generated_at": "2026-10-22T06:51:39.153781+00:00",
-  "record_count": 826,
+  "build_id": "market-news-rss-20261022T085147Z",
+  "generated_at": "2026-10-22T08:51:47.885435+00:00",
+  "record_count": 832,
   "data": [
+    {
+      "id": "article-market-rss-27cb2c5ac757218f7076",
+      "title": "Phó Chủ tịch Quốc hội: Không để ưu đãi nhà ở xã hội biến thành khoản lợi nhuận đầu cơ",
+      "url": "https://dantri.com.vn/thoi-su/pho-chu-tich-quoc-hoi-khong-de-uu-dai-nha-o-xa-hoi-bien-thanh-khoan-loi-nhuan-dau-co-20261022144744699.htm",
+      "category": "market",
+      "module_ids": [
+        "market"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-10-22T07:56:13+00:00",
+      "source_id": "dantri-current-affairs",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [
+        "pricing"
+      ],
+      "importance": 2,
+      "summary": "(Dân trí) - Phó Chủ tịch Quốc hội đề nghị bổ sung nguyên tắc xác định giá bán lại nhà ở xã hội sau 5 năm, tính đến giá mua, biến động giá, chi phí cải tạo, không để ưu đãi nhà nước thành khoản thu lợi bất chính.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://dantri.com.vn/rss/thoi-su.rss",
+        "publisher_host": "dantri.com.vn",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-a4f9a566753e6d8b78b2",
+      "title": "Bộ Xây dựng nêu tình trạng thi công cầm chừng ở sân bay Long Thành",
+      "url": "https://dantri.com.vn/thoi-su/bo-xay-dung-neu-tinh-trang-thi-cong-cam-chung-o-san-bay-long-thanh-20261022134635582.htm",
+      "category": "infrastructure",
+      "module_ids": [
+        "infrastructure"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-10-22T07:42:32+00:00",
+      "source_id": "dantri-current-affairs",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [
+        "infrastructure"
+      ],
+      "importance": 2,
+      "summary": "(Dân trí) - Vướng mắc thủ tục thanh toán cùng tình trạng thiếu hụt nhân lực, vật liệu khiến nhiều gói thầu trọng điểm tại sân bay Long Thành phải thi công cầm chừng, nguy cơ ảnh hưởng mốc vận hành vào tháng 12.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://dantri.com.vn/rss/thoi-su.rss",
+        "publisher_host": "dantri.com.vn",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-6b0f44807192f474ca6a",
+      "title": "Vạn Xuân Group sắp ra mắt gần 800 căn hộ tại khu Đông TP HCM",
+      "url": "https://vnexpress.net/van-xuan-group-sap-ra-mat-gan-800-can-ho-tai-khu-dong-tp-hcm-5135486.html",
+      "category": "market",
+      "module_ids": [
+        "market"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-10-22T07:40:00+00:00",
+      "source_id": "vnexpress-real-estate",
+      "region_ids": [
+        "hcmc"
+      ],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [
+        "supply"
+      ],
+      "importance": 2,
+      "summary": "Dự án Happy One Elite tại phường Tam Bình (Thủ Đức cũ) được Vạn Xuân Group công bố nhận diện và ký kết hợp tác phát triển với 22 đơn vị đại lý ở hai miền Nam - Bắc, ngày 19/10.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://vnexpress.net/rss/bat-dong-san.rss",
+        "publisher_host": "vnexpress.net",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-cde17c0fe0c350e27b80",
+      "title": "ĐBQH nêu thủ đoạn bán bất động sản trên giấy, khiến người mua phải đi kiện",
+      "url": "https://dantri.com.vn/thoi-su/dbqh-neu-thu-doan-ban-bat-dong-san-tren-giay-khien-nguoi-mua-phai-di-kien-20261022135602421.htm",
+      "category": "market",
+      "module_ids": [
+        "market"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-10-22T07:10:04+00:00",
+      "source_id": "dantri-current-affairs",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "(Dân trí) - Đại biểu Bùi Xuân Hải phản ánh việc một số doanh nghiệp sử dụng công ty con, công ty liên quan để ký hợp đồng đặt cọc, thu tới 100% giá trị bất động sản chưa đủ điều kiện bán, người mua đối mặt nguy cơ phải kiện đòi tiền khi dự án không triển khai.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://dantri.com.vn/rss/thoi-su.rss",
+        "publisher_host": "dantri.com.vn",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-93daa0beb9625218b339",
+      "title": "Đường vành đai phía tây Cần Thơ đội vốn gần 2.600 tỷ đồng",
+      "url": "https://vnexpress.net/duong-vanh-dai-phia-tay-can-tho-doi-von-gan-2-600-ty-dong-5135573.html",
+      "category": "infrastructure",
+      "module_ids": [
+        "infrastructure"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-10-22T07:04:17+00:00",
+      "source_id": "vnexpress-current-affairs",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [
+        "infrastructure"
+      ],
+      "importance": 2,
+      "summary": "Dự án vành đai phía tây Cần Thơ tăng vốn từ 3.837 lên 6.408 tỷ đồng, kéo dài thời gian thực hiện đến cuối năm 2028 do vướng mặt bằng, phát sinh chi phí và thêm hạng mục.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://vnexpress.net/rss/thoi-su.rss",
+        "publisher_host": "vnexpress.net",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-7c54ec600c079354d5d3",
+      "title": "Bcons Aria khai mở giấc mơ cho người trẻ sở hữu nhà",
+      "url": "https://thanhnien.vn/bcons-aria-khai-mo-giac-mo-cho-nguoi-tre-so-huu-nha-185261022125334557.htm",
+      "category": "market",
+      "module_ids": [
+        "market"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-10-22T07:00:00+00:00",
+      "source_id": "thanhnien-real-estate",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "Bcons Aria mở cơ hội cho người trẻ thực hiện được giấc mơ an cư ổn định bằng sự tích hợp giữa nhiều yếu tố từ kiến trúc, lựa chọn vị trí đến chính sách tiếp cận.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://thanhnien.vn/rss/kinh-te/dia-oc.rss",
+        "publisher_host": "thanhnien.vn",
+        "publication_date_from_feed": true
+      }
+    },
     {
       "id": "article-market-rss-a7625fd0c916670777b6",
       "title": "Thủ tướng yêu cầu hoàn thiện nghị định kinh doanh xăng dầu trước ngày 10.11",
