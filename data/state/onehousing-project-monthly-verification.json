@@ -7,15 +7,6 @@
       "source_url": "https://onehousing.vn/phan-tich/du-an/can-ho-chung-cu-du-an-Vinhomes-Grand-Park.1012",
       "checks": [
         {
-          "run_id": "38900689201",
-          "checked_at": "2026-10-16T12:28:04.960750+00:00",
-          "status": "existing-month-unchanged",
-          "period": "2026-10",
-          "signature": "5a481d87110ae44fb14945b99d07b59768e97238717939b09c847f815d07e5f1",
-          "http_status": 200,
-          "source_host": "onehousing.vn"
-        },
-        {
           "run_id": "39012792256",
           "checked_at": "2026-10-17T07:13:01.394577+00:00",
           "status": "existing-month-unchanged",
@@ -108,6 +99,15 @@
         {
           "run_id": "39744382864",
           "checked_at": "2026-10-22T07:59:21.523134+00:00",
+          "status": "existing-month-unchanged",
+          "period": "2026-10",
+          "signature": "5a481d87110ae44fb14945b99d07b59768e97238717939b09c847f815d07e5f1",
+          "http_status": 200,
+          "source_host": "onehousing.vn"
+        },
+        {
+          "run_id": "39782933690",
+          "checked_at": "2026-10-22T12:59:34.180760+00:00",
           "status": "existing-month-unchanged",
           "period": "2026-10",
           "signature": "5a481d87110ae44fb14945b99d07b59768e97238717939b09c847f815d07e5f1",
@@ -123,15 +123,6 @@
       "source_url": "https://onehousing.vn/phan-tich/du-an/can-ho-chung-cu-du-an-Lumiere-Riverside.625",
       "checks": [
         {
-          "run_id": "38900689201",
-          "checked_at": "2026-10-16T12:28:04.960750+00:00",
-          "status": "existing-month-unchanged",
-          "period": "2026-10",
-          "signature": "05d573bf50df6d47ea104dae7a215f89ce770f87c3995bcbbbb0ba90c7d452e4",
-          "http_status": 200,
-          "source_host": "onehousing.vn"
-        },
-        {
           "run_id": "39012792256",
           "checked_at": "2026-10-17T07:13:01.394577+00:00",
           "status": "existing-month-unchanged",
@@ -224,6 +215,15 @@
         {
           "run_id": "39744382864",
           "checked_at": "2026-10-22T07:59:21.523134+00:00",
+          "status": "existing-month-unchanged",
+          "period": "2026-10",
+          "signature": "05d573bf50df6d47ea104dae7a215f89ce770f87c3995bcbbbb0ba90c7d452e4",
+          "http_status": 200,
+          "source_host": "onehousing.vn"
+        },
+        {
+          "run_id": "39782933690",
+          "checked_at": "2026-10-22T12:59:34.180760+00:00",
           "status": "existing-month-unchanged",
           "period": "2026-10",
           "signature": "05d573bf50df6d47ea104dae7a215f89ce770f87c3995bcbbbb0ba90c7d452e4",
