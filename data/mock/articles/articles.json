@@ -1,8 +1,8 @@
 {
   "schema_version": 1,
-  "build_id": "market-news-rss-20261022T123210Z",
-  "generated_at": "2026-10-22T12:32:10.113241+00:00",
-  "record_count": 855,
+  "build_id": "market-news-rss-20261022T145151Z",
+  "generated_at": "2026-10-22T14:51:51.292431+00:00",
+  "record_count": 856,
   "data": [
     {
       "id": "article-market-rss-8f585223e65bf072fb4b",
@@ -104,6 +104,36 @@
       "source_verification": {
         "method": "official-rss",
         "feed_url": "https://dantri.com.vn/rss/thoi-su.rss",
+        "publisher_host": "dantri.com.vn",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-170ffdd7e7253aefb418",
+      "title": "TPHCM đẩy nhanh cấp sổ hồng, hơn 43.000 căn nhà đã được giải quyết",
+      "url": "https://dantri.com.vn/bat-dong-san/tphcm-day-nhanh-cap-so-hong-hon-43000-can-nha-da-duoc-giai-quyet-20261022174922484.htm",
+      "category": "market",
+      "module_ids": [
+        "market",
+        "legal"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-10-22T11:36:50+00:00",
+      "source_id": "dantri-real-estate",
+      "region_ids": [
+        "hcmc"
+      ],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [
+        "legal"
+      ],
+      "importance": 2,
+      "summary": "(Dân trí) - TPHCM đã giải quyết cấp sổ hồng cho 43.200 căn nhà trong dự án, đạt 84% mục tiêu năm nay; 13.949 hồ sơ đang chờ đóng lệ phí trước bạ.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://dantri.com.vn/rss/bat-dong-san.rss",
         "publisher_host": "dantri.com.vn",
         "publication_date_from_feed": true
       }
