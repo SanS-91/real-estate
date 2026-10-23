@@ -1,9 +1,93 @@
 {
   "schema_version": 1,
-  "build_id": "market-news-rss-20261023T105325Z",
-  "generated_at": "2026-10-23T10:53:25.146860+00:00",
-  "record_count": 909,
+  "build_id": "market-news-rss-20261023T125143Z",
+  "generated_at": "2026-10-23T12:51:43.388896+00:00",
+  "record_count": 912,
   "data": [
+    {
+      "id": "article-market-rss-96c2e6ea0e72878b3dd7",
+      "title": "Khơi thông vốn tín dụng, thúc đẩy tăng trưởng kinh tế vùng Đông Nam bộ",
+      "url": "https://thanhnien.vn/khoi-thong-von-tin-dung-thuc-day-tang-truong-kinh-te-vung-dong-nam-bo-185261023175131623.htm",
+      "category": "macro",
+      "module_ids": [
+        "macro"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-10-23T12:12:00+00:00",
+      "source_id": "thanhnien-banking",
+      "region_ids": [
+        "hcmc"
+      ],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "Tại hội nghị \"Ngành ngân hàng đồng hành khơi thông nguồn lực tài chính - ngân hàng phục vụ tăng trưởng vùng Đông Nam bộ giai đoạn 2026 - 2030\" do Ngân hàng Nhà nước phối hợp UBND TP.HCM tổ chức chiều 22.10, các hiệp hội, doanh nghiệp (DN) chia sẻ về tiếp cận vốn tín dụng, lãi suất vay còn cao… Đồng ",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://thanhnien.vn/rss/kinh-te/ngan-hang.rss",
+        "publisher_host": "thanhnien.vn",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-3570ba69a287f73fe843",
+      "title": "TPHCM dự kiến ban hành bảng giá đất mới, gỡ vướng về vốn cho doanh nghiệp",
+      "url": "https://dantri.com.vn/bat-dong-san/tphcm-du-kien-ban-hanh-bang-gia-dat-moi-go-vuong-ve-von-cho-doanh-nghiep-20261023184437559.htm",
+      "category": "market",
+      "module_ids": [
+        "market",
+        "legal",
+        "infrastructure"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-10-23T11:54:06+00:00",
+      "source_id": "dantri-real-estate",
+      "region_ids": [
+        "hcmc"
+      ],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [
+        "pricing",
+        "legal"
+      ],
+      "importance": 2,
+      "summary": "(Dân trí) - Quốc hội đang xem xét dự án Luật Đất đai (sửa đổi). Nếu Luật được thông qua, TPHCM sẽ có quy định mới về bồi thường giải phóng mặt bằng, ban hành bảng giá đất mới phù hợp thực tiễn.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://dantri.com.vn/rss/bat-dong-san.rss",
+        "publisher_host": "dantri.com.vn",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-bdf33be97137528d2f25",
+      "title": "Lãi suất huy động tăng 11 tháng liên tiếp, lãi cho vay lên 10,9%/năm",
+      "url": "https://dantri.com.vn/kinh-doanh/lai-suat-huy-dong-tang-11-thang-lien-tiep-lai-cho-vay-len-109nam-20261023162204937.htm",
+      "category": "macro",
+      "module_ids": [
+        "macro"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-10-23T09:31:09+00:00",
+      "source_id": "dantri-business",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "(Dân trí) - Lãi suất huy động đã tăng liên tiếp 11 tháng, trong khi lãi suất cho vay bình quân của các ngân hàng cũng tăng lên 8,4-10,9%/năm, cao hơn cuối năm ngoái 1,7-1,9 điểm phần trăm.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://dantri.com.vn/rss/kinh-doanh.rss",
+        "publisher_host": "dantri.com.vn",
+        "publication_date_from_feed": true
+      }
+    },
     {
       "id": "article-market-rss-f57341e34c8b2e02fec6",
       "title": "Đấu giá bất thành 4 nhà đất liên quan bà Trương Mỹ Lan",
