@@ -1,8 +1,8 @@
 {
   "schema_version": 1,
-  "build_id": "market-news-rss-20261023T045141Z",
-  "generated_at": "2026-10-23T04:51:41.201213+00:00",
-  "record_count": 885,
+  "build_id": "market-news-rss-20261023T050341Z",
+  "generated_at": "2026-10-23T05:03:41.043834+00:00",
+  "record_count": 886,
   "data": [
     {
       "id": "article-market-rss-b51200fdc6b0ac0a8d56",
@@ -58,6 +58,35 @@
         "method": "official-rss",
         "feed_url": "https://thanhnien.vn/rss/kinh-te/chinh-sach-phat-trien.rss",
         "publisher_host": "thanhnien.vn",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-17685460e54ddb9a5355",
+      "title": "Cư dân Palm Heights nhận sổ hồng",
+      "url": "https://vnexpress.net/cu-dan-palm-heights-nhan-so-hong-5135913.html",
+      "category": "market",
+      "module_ids": [
+        "market",
+        "legal",
+        "infrastructure"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-10-23T04:00:00+00:00",
+      "source_id": "vnexpress-real-estate",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [
+        "legal"
+      ],
+      "importance": 2,
+      "summary": "Đơn vị phát triển Hướng Việt Properties cùng chủ đầu tư Công ty Nam Rạch Chiếc trao sổ hồng đợt một cho cư dân Palm Heights, khu đô thị Palm City ngày 21/10.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://vnexpress.net/rss/bat-dong-san.rss",
+        "publisher_host": "vnexpress.net",
         "publication_date_from_feed": true
       }
     },
