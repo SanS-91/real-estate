@@ -1,9 +1,94 @@
 {
   "schema_version": 1,
-  "build_id": "market-news-rss-20261023T065216Z",
-  "generated_at": "2026-10-23T06:52:16.638776+00:00",
-  "record_count": 899,
+  "build_id": "market-news-rss-20261023T085141Z",
+  "generated_at": "2026-10-23T08:51:41.889104+00:00",
+  "record_count": 903,
   "data": [
+    {
+      "id": "article-market-rss-fa8686b1585f5f1cbd03",
+      "title": "Dự án tái thiết Vĩnh Hưng: Tái định cư tại chỗ là chính sách tuyệt vời",
+      "url": "https://thanhnien.vn/du-an-tai-thiet-vinh-hung-tai-dinh-cu-tai-cho-la-chinh-sach-tuyet-voi-185261023104822313.htm",
+      "category": "market",
+      "module_ids": [
+        "market"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-10-23T08:15:00+00:00",
+      "source_id": "thanhnien-policy",
+      "region_ids": [
+        "ha-noi"
+      ],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [
+        "legal"
+      ],
+      "importance": 2,
+      "summary": "Đó là nhận định của GS Đặng Hùng Võ, nguyên Thứ trưởng Bộ Tài nguyên và Môi trường tại tọa đàm \"Tái thiết đô thị Vĩnh Hưng: Từ quy hoạch đến nâng cao chất lượng đời sống người dân\" do Báo Thanh Niên tổ chức sáng 23.10, tại Hà Nội.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://thanhnien.vn/rss/kinh-te/chinh-sach-phat-trien.rss",
+        "publisher_host": "thanhnien.vn",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-ebbbe8656ddf02181fca",
+      "title": "Dự án tái thiết Vĩnh Hưng sẽ trở thành đô thị kiểu mẫu của Việt Nam",
+      "url": "https://thanhnien.vn/du-an-tai-thiet-vinh-hung-se-tro-thanh-do-thi-kieu-mau-cua-viet-nam-185261023101129289.htm",
+      "category": "market",
+      "module_ids": [
+        "market"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-10-23T08:10:00+00:00",
+      "source_id": "thanhnien-policy",
+      "region_ids": [
+        "ha-noi"
+      ],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [
+        "legal"
+      ],
+      "importance": 2,
+      "summary": "Tại tọa đàm \"Tái thiết đô thị Vĩnh Hưng: Từ quy hoạch đến nâng cao chất lượng đời sống người dân\" do Báo Thanh Niên tổ chức sáng 23.10, tại Hà Nội, KTS Phan Đăng Sơn, Chủ tịch Hội Kiến trúc sư Việt Nam khẳng định: Tái thiết đô thị Vĩnh Hưng không chỉ nhằm thay đổi diện mạo đô thị mà phải bảo đảm sin",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://thanhnien.vn/rss/kinh-te/chinh-sach-phat-trien.rss",
+        "publisher_host": "thanhnien.vn",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-1a3c14ee665ecee66144",
+      "title": "Sân bay Long Thành thiếu thợ lành nghề khi gần về đích",
+      "url": "https://vnexpress.net/san-bay-long-thanh-thieu-tho-lanh-nghe-khi-gan-ve-dich-5136008.html",
+      "category": "infrastructure",
+      "module_ids": [
+        "infrastructure"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-10-23T07:16:42+00:00",
+      "source_id": "vnexpress-current-affairs",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [
+        "infrastructure"
+      ],
+      "importance": 2,
+      "summary": "Bốn gói thầu sân bay Long Thành có nguy cơ trễ hẹn do thiếu nhân lực, chậm thanh toán, khi còn hai tháng tới ngày dự kiến khai thác.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://vnexpress.net/rss/thoi-su.rss",
+        "publisher_host": "vnexpress.net",
+        "publication_date_from_feed": true
+      }
+    },
     {
       "id": "article-market-rss-70ea8686cadb73edfc04",
       "title": "TPHCM chuyển một phần Khu công nghiệp Lê Minh Xuân thành dự án nhà ở xã hội",
@@ -187,6 +272,33 @@
       "tags": [],
       "importance": 2,
       "summary": "Phường Cầu Giấy rộng 3,93 km2, dân số 104.000 với 58 chung cư, song mới có một tòa lắp được trạm sạc xe điện trong khi nhu cầu sử dụng rất lớn.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://vnexpress.net/rss/thoi-su.rss",
+        "publisher_host": "vnexpress.net",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-8f6491646400b2736fe8",
+      "title": "Rào cản lắp trạm sạc xe điện ở chung cư",
+      "url": "https://vnexpress.net/rao-can-lap-tram-sac-xe-dien-o-chung-cu-5135991.html",
+      "category": "market",
+      "module_ids": [
+        "market"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-10-23T05:23:18+00:00",
+      "source_id": "vnexpress-current-affairs",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [
+        "legal"
+      ],
+      "importance": 2,
+      "summary": "Thiết kế ban đầu của chung cư không có chỗ để trạm sạc xe điện, muốn cải tạo thì lại thiếu mặt bằng và hướng dẫn pháp lý rõ ràng.",
       "source_verification": {
         "method": "official-rss",
         "feed_url": "https://vnexpress.net/rss/thoi-su.rss",
