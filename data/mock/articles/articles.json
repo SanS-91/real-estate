@@ -1,9 +1,306 @@
 {
   "schema_version": 1,
-  "build_id": "market-news-rss-20261023T050341Z",
-  "generated_at": "2026-10-23T05:03:41.043834+00:00",
-  "record_count": 886,
+  "build_id": "market-news-rss-20261023T065216Z",
+  "generated_at": "2026-10-23T06:52:16.638776+00:00",
+  "record_count": 899,
   "data": [
+    {
+      "id": "article-market-rss-70ea8686cadb73edfc04",
+      "title": "TPHCM chuyển một phần Khu công nghiệp Lê Minh Xuân thành dự án nhà ở xã hội",
+      "url": "https://dantri.com.vn/bat-dong-san/tphcm-chuyen-mot-phan-khu-cong-nghiep-le-minh-xuan-thanh-du-an-nha-o-xa-hoi-20261023130256259.htm",
+      "category": "market",
+      "module_ids": [
+        "market",
+        "legal"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-10-23T06:21:09+00:00",
+      "source_id": "dantri-real-estate",
+      "region_ids": [
+        "hcmc"
+      ],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "(Dân trí) - Khu đất có diện tích gần 110ha tại Khu công nghiệp Lê Minh Xuân mở rộng được TPHCM chuyển sang phát triển nhà ở xã hội. Thành phố sẽ chấm dứt dự án cũ và cấp phép xây dựng dự án mới vào đầu năm 2027.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://dantri.com.vn/rss/bat-dong-san.rss",
+        "publisher_host": "dantri.com.vn",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-1fbcd7a8c456332bd2a3",
+      "title": "Lý do phường Vĩnh Hưng được đề xuất tái thiết đô thị với gần 450ha",
+      "url": "https://dantri.com.vn/bat-dong-san/ly-do-phuong-vinh-hung-duoc-de-xuat-tai-thiet-do-thi-voi-gan-450ha-20261023130413677.htm",
+      "category": "market",
+      "module_ids": [
+        "market"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-10-23T06:12:24+00:00",
+      "source_id": "dantri-real-estate",
+      "region_ids": [
+        "ha-noi"
+      ],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [
+        "infrastructure"
+      ],
+      "importance": 2,
+      "summary": "(Dân trí) - Theo lãnh đạo phường, Vĩnh Hưng (Hà Nội) được lựa chọn nghiên cứu tái thiết đô thị nhằm cải thiện hạ tầng, mở rộng giao thông, bổ sung không gian xanh và nâng cao chất lượng sống của người dân.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://dantri.com.vn/rss/bat-dong-san.rss",
+        "publisher_host": "dantri.com.vn",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-0bb78e62860d2852834c",
+      "title": "Lotte và Phát Đạt khởi công tổ hợp 1,43 tỷ USD tại Thủ Thiêm",
+      "url": "https://vnexpress.net/lotte-va-phat-dat-khoi-cong-to-hop-1-43-ty-usd-tai-thu-thiem-5135928.html",
+      "category": "market",
+      "module_ids": [
+        "infrastructure"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-10-23T06:02:10+00:00",
+      "source_id": "vnexpress-real-estate",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [
+        "legal"
+      ],
+      "importance": 2,
+      "summary": "Sau nhiều năm đình trệ vì vướng mắc pháp lý và nghĩa vụ tài chính, tổ hợp Lotte Eco Smart City Thu Thiem với vốn đầu tư 60.000 tỷ đồng được khởi công lại sáng 23/10.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://vnexpress.net/rss/bat-dong-san.rss",
+        "publisher_host": "vnexpress.net",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-9a474c2caada328288c4",
+      "title": "Lãi suất tiết kiệm đã tăng 11 tháng liên tiếp",
+      "url": "https://vnexpress.net/lai-suat-tiet-kiem-da-tang-11-thang-lien-tiep-5135955.html",
+      "category": "macro",
+      "module_ids": [
+        "macro"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-10-23T05:54:57+00:00",
+      "source_id": "vnexpress-economy",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "Lãi suất huy động tiền gửi bình quân đã tăng liên tục từ tháng 10/2025, lên 8,1% với kỳ hạn 6-12 tháng, trước khi hạ nhiệt theo yêu cầu của Ngân hàng Nhà nước.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://vnexpress.net/rss/kinh-doanh.rss",
+        "publisher_host": "vnexpress.net",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-58f89878cf9ec95c194b",
+      "title": "Loạt tài xế vượt rào chắn đường sắt bị CSGT Hà Nội xử phạt",
+      "url": "https://dantri.com.vn/thoi-su/loat-tai-xe-vuot-rao-chan-duong-sat-bi-csgt-ha-noi-xu-phat-20261023121440980.htm",
+      "category": "infrastructure",
+      "module_ids": [
+        "infrastructure"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-10-23T05:35:30+00:00",
+      "source_id": "dantri-current-affairs",
+      "region_ids": [
+        "ha-noi"
+      ],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [
+        "infrastructure"
+      ],
+      "importance": 2,
+      "summary": "(Dân trí) - Theo cảnh sát, việc luồn lách qua khe hở của cần chắn hoặc cố vượt khi rào chắn đang hạ sẽ khiến phương tiện bị mắc kẹt giữa đường ray, tiềm ẩn nguy cơ cao gây tai nạn giao thông đường sắt.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://dantri.com.vn/rss/thoi-su.rss",
+        "publisher_host": "dantri.com.vn",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-dcf096a18ace88233100",
+      "title": "Cư dân Palm Heights đón nhận sổ hồng sau 7 năm chờ đợi",
+      "url": "https://thanhnien.vn/cu-dan-palm-heights-don-nhan-so-hong-sau-7-nam-cho-doi-185261023120732487.htm",
+      "category": "market",
+      "module_ids": [
+        "legal"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-10-23T05:30:00+00:00",
+      "source_id": "thanhnien-real-estate",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [
+        "legal"
+      ],
+      "importance": 2,
+      "summary": "Sau nhiều năm chờ đợi, cư dân Palm Heights đã đón nhận giấy chứng nhận quyền sử dụng đất, quyền sở hữu tài sản gắn liền với đất.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://thanhnien.vn/rss/kinh-te/dia-oc.rss",
+        "publisher_host": "thanhnien.vn",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-cdca8c11c03c591ecaed",
+      "title": "Chung cư gặp khó khi lắp trạm sạc xe điện",
+      "url": "https://vnexpress.net/chung-cu-gap-kho-khi-lap-tram-sac-xe-dien-5135991.html",
+      "category": "market",
+      "module_ids": [
+        "market"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-10-23T05:23:18+00:00",
+      "source_id": "vnexpress-current-affairs",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "Phường Cầu Giấy rộng 3,93 km2, dân số 104.000 với 58 chung cư, song mới có một tòa lắp được trạm sạc xe điện trong khi nhu cầu sử dụng rất lớn.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://vnexpress.net/rss/thoi-su.rss",
+        "publisher_host": "vnexpress.net",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-bb0ca230394fc42f0198",
+      "title": "Khởi công tổ hợp 60.000 tỷ đồng ở Thủ Thiêm",
+      "url": "https://dantri.com.vn/bat-dong-san/khoi-cong-to-hop-60000-ty-dong-o-thu-thiem-20261023121337919.htm",
+      "category": "market",
+      "module_ids": [
+        "market",
+        "infrastructure"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-10-23T05:22:50+00:00",
+      "source_id": "dantri-real-estate",
+      "region_ids": [
+        "hcmc"
+      ],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "(Dân trí) - Dự án Lotte Eco Smart City Thu Thiem quy mô 60.000 tỷ đồng được kỳ vọng góp phần hoàn thiện diện mạo kiến trúc của khu trung tâm, gia tăng sức hấp dẫn của TPHCM đối với các nhà đầu tư toàn cầu.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://dantri.com.vn/rss/bat-dong-san.rss",
+        "publisher_host": "dantri.com.vn",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-83431b5ab30d5a6a7122",
+      "title": "4 bất động sản trung tâm TPHCM của bà Trương Mỹ Lan chưa tìm được chủ mới",
+      "url": "https://dantri.com.vn/bat-dong-san/4-bat-dong-san-trung-tam-tphcm-cua-ba-truong-my-lan-chua-tim-duoc-chu-moi-20261023104650123.htm",
+      "category": "market",
+      "module_ids": [
+        "market"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-10-23T05:11:41+00:00",
+      "source_id": "dantri-real-estate",
+      "region_ids": [
+        "hcmc"
+      ],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "(Dân trí) - Bốn bất động sản tại khu vực trung tâm TPHCM liên quan đến bà Trương Mỹ Lan có giá khởi điểm từ hơn 37 tỷ đồng đến hơn 202 tỷ đồng nhưng không có người đăng ký mua.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://dantri.com.vn/rss/bat-dong-san.rss",
+        "publisher_host": "dantri.com.vn",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-f6fe769fee2f304fe1ef",
+      "title": "Chênh lệch giá vàng trong nước và thế giới lên 16 triệu đồng",
+      "url": "https://vnexpress.net/chenh-lech-gia-vang-trong-nuoc-va-the-gioi-len-16-trieu-dong-5135985.html",
+      "category": "macro",
+      "module_ids": [
+        "macro"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-10-23T05:05:59+00:00",
+      "source_id": "vnexpress-economy",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "Giá vàng trong nước chỉ hạ vài trăm nghìn đồng trong khi thế giới giảm sâu, chênh lệch giữa hai thị trường nới rộng từ 12 triệu lên 16 triệu một lượng.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://vnexpress.net/rss/kinh-doanh.rss",
+        "publisher_host": "vnexpress.net",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-6a5eaf2738eaa2e67225",
+      "title": "Diện mạo Vinhomes Hải Vân Bay qua lộ trình tiện ích 2027-2028",
+      "url": "https://dantri.com.vn/bat-dong-san/dien-mao-vinhomes-hai-van-bay-qua-lo-trinh-tien-ich-2027-2028-20261023113031444.htm",
+      "category": "market",
+      "module_ids": [
+        "market"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-10-23T04:40:14+00:00",
+      "source_id": "dantri-real-estate",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [
+        "vinhomes"
+      ],
+      "tags": [],
+      "importance": 2,
+      "summary": "(Dân trí) - Từ công viên đến tổ hợp chăm sóc sức khỏe và ẩm thực, các cột mốc hoàn thành trong giai đoạn 2027-2028 giúp người mua hình dung những trải nghiệm dần hình thành tại Vinhomes Hải Vân Bay - Đà Nẵng, đồng thời chủ động kế hoạch nghỉ dưỡng và cho thuê.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://dantri.com.vn/rss/bat-dong-san.rss",
+        "publisher_host": "dantri.com.vn",
+        "publication_date_from_feed": true
+      }
+    },
     {
       "id": "article-market-rss-b51200fdc6b0ac0a8d56",
       "title": "Khu đô thị 60.000 tỉ đồng tại Thủ Thiêm chính thức khởi công",
@@ -58,6 +355,33 @@
         "method": "official-rss",
         "feed_url": "https://thanhnien.vn/rss/kinh-te/chinh-sach-phat-trien.rss",
         "publisher_host": "thanhnien.vn",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-45bfd43fca214851b7ee",
+      "title": "Gắn mã định danh cho đất đai: Người mua hết lo bị hớ giá, đầu cơ hết thời?",
+      "url": "https://dantri.com.vn/bat-dong-san/gan-ma-dinh-danh-cho-dat-dai-nguoi-mua-het-lo-bi-ho-gia-dau-co-het-thoi-20261023110137816.htm",
+      "category": "market",
+      "module_ids": [
+        "market"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-10-23T04:07:30+00:00",
+      "source_id": "dantri-real-estate",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [
+        "sales"
+      ],
+      "importance": 2,
+      "summary": "(Dân trí) - Mã định danh cho từng thửa đất có thể giúp truy xuất lịch sử giao dịch, kiểm chứng giá bất động sản và hạn chế tình trạng kê khai “hai giá”, nếu các cơ sở dữ liệu được kết nối đồng bộ.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://dantri.com.vn/rss/bat-dong-san.rss",
+        "publisher_host": "dantri.com.vn",
         "publication_date_from_feed": true
       }
     },
@@ -614,6 +938,33 @@
         "method": "official-rss",
         "feed_url": "https://vnexpress.net/rss/bat-dong-san.rss",
         "publisher_host": "vnexpress.net",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-ac24ea7b7310feba1087",
+      "title": "Đề xuất thêm phân khúc nhà ở 60-70 triệu đồng/m2 cho người thu nhập trung bình và thấp",
+      "url": "https://dantri.com.vn/bat-dong-san/de-xuat-them-phan-khuc-nha-o-60-70-trieu-dongm2-cho-nguoi-thu-nhap-trung-binh-va-thap-20261022223945678.htm",
+      "category": "market",
+      "module_ids": [
+        "market"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-10-22T23:00:00+00:00",
+      "source_id": "dantri-real-estate",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [
+        "supply"
+      ],
+      "importance": 2,
+      "summary": "(Dân trí) - Nguồn cung nhà ở vừa túi tiền ngày càng thiếu hụt, khiến người thu nhập trung bình, thấp khó tìm chỗ ở phù hợp và cần thêm phân khúc 60-70 triệu đồng/m2.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://dantri.com.vn/rss/bat-dong-san.rss",
+        "publisher_host": "dantri.com.vn",
         "publication_date_from_feed": true
       }
     },
