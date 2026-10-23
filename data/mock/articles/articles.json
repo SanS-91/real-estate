@@ -1,9 +1,66 @@
 {
   "schema_version": 1,
-  "build_id": "market-news-rss-20261023T025136Z",
-  "generated_at": "2026-10-23T02:51:36.995501+00:00",
-  "record_count": 879,
+  "build_id": "market-news-rss-20261023T045141Z",
+  "generated_at": "2026-10-23T04:51:41.201213+00:00",
+  "record_count": 885,
   "data": [
+    {
+      "id": "article-market-rss-b51200fdc6b0ac0a8d56",
+      "title": "Khu đô thị 60.000 tỉ đồng tại Thủ Thiêm chính thức khởi công",
+      "url": "https://thanhnien.vn/khu-do-thi-60000-ti-dong-tai-thu-thiem-chinh-thuc-khoi-cong-185261023103815442.htm",
+      "category": "market",
+      "module_ids": [
+        "market",
+        "infrastructure"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-10-23T04:30:00+00:00",
+      "source_id": "thanhnien-real-estate",
+      "region_ids": [
+        "hcmc"
+      ],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "Ngày 23.10, Liên doanh Tập đoàn Lotte và Công ty cổ phần Phát triển Bất động sản Phát Đạt (PDR: HOSE) chính thức khởi công dự án Lotte Eco Smart City Thu Thiem tại khu đô thị mới Thủ Thiêm (TP.HCM), trên diện tích khoảng 7,45 ha, tổng vốn đầu tư khoảng 60.000 tỉ đồng.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://thanhnien.vn/rss/kinh-te/dia-oc.rss",
+        "publisher_host": "thanhnien.vn",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-f1660c514bcf18f8df6f",
+      "title": "Từ nay đến cuối năm sẽ thi công thêm 6 nhà ga metro số 2 TP.HCM",
+      "url": "https://thanhnien.vn/tu-nay-den-cuoi-nam-se-thi-cong-them-6-nha-ga-metro-so-2-tphcm-185261023112759106.htm",
+      "category": "infrastructure",
+      "module_ids": [
+        "infrastructure"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-10-23T04:29:00+00:00",
+      "source_id": "thanhnien-policy",
+      "region_ids": [
+        "hcmc"
+      ],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [
+        "infrastructure"
+      ],
+      "importance": 2,
+      "summary": "Tuyến metro số 2 (Bến Thành - Tham Lương) đang được đẩy nhanh tiến độ, với mục tiêu triển khai thi công tại cả 11 nhà ga trong năm 2026.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://thanhnien.vn/rss/kinh-te/chinh-sach-phat-trien.rss",
+        "publisher_host": "thanhnien.vn",
+        "publication_date_from_feed": true
+      }
+    },
     {
       "id": "article-market-rss-2434e4a2f810ce1a7470",
       "title": "Xem chiêu trò taxi “dù” trà trộn vào sân bay Cát Bi hoạt động",
@@ -84,6 +141,56 @@
       }
     },
     {
+      "id": "article-market-rss-42c347f6a8d09aa326e0",
+      "title": "Chính phủ đề xuất đánh thuế 0,2% với đất bỏ hoang",
+      "url": "https://dantri.com.vn/bat-dong-san/chinh-phu-de-xuat-danh-thue-02-voi-dat-bo-hoang-20261023084829422.htm",
+      "category": "market",
+      "module_ids": [
+        "market"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-10-23T01:52:52+00:00",
+      "source_id": "dantri-real-estate",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "(Dân trí) - Đất bỏ hoang, không đưa vào sử dụng, chậm đưa vào sử dụng áp dụng mức thuế suất 0,2%, theo đề xuất của Chính phủ. Quy định này nhằm thể chế hóa tinh thần Nghị quyết 21 của Trung ương.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://dantri.com.vn/rss/bat-dong-san.rss",
+        "publisher_host": "dantri.com.vn",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-731d1aaf1ba56e60d53d",
+      "title": "Mẹo dùng viên rửa bát làm sạch bồn rửa sáng bóng không cần cọ",
+      "url": "https://dantri.com.vn/bat-dong-san/meo-dung-vien-rua-bat-lam-sach-bon-rua-sang-bong-khong-can-co-20261020102110437.htm",
+      "category": "market",
+      "module_ids": [
+        "market"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-10-23T01:29:00+00:00",
+      "source_id": "dantri-real-estate",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "(Dân trí) - Chỉ với một viên rửa bát và nước nóng, góc bếp của bạn sẽ sạch bong mà không tốn công chà rửa. Đây là mẹo chăm sóc nhà cửa tiện lợi được nhiều gia đình hiện đại yêu thích.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://dantri.com.vn/rss/bat-dong-san.rss",
+        "publisher_host": "dantri.com.vn",
+        "publication_date_from_feed": true
+      }
+    },
+    {
       "id": "article-market-rss-d41d1ba5c81b3582b9d9",
       "title": "Eco Retreat ra mắt phân khu thấp tầng cảm hứng từ hoa hồng",
       "url": "https://vnexpress.net/eco-retreat-ra-mat-phan-khu-thap-tang-cam-hung-tu-hoa-hong-5135761.html",
@@ -111,6 +218,34 @@
       }
     },
     {
+      "id": "article-market-rss-a5f6ab7ed696a98bc451",
+      "title": "Ecopark ra mắt Rừng Hồng - trung tâm của phân khu Mùa Lễ Hội tại Eco Retreat",
+      "url": "https://dantri.com.vn/bat-dong-san/ecopark-ra-mat-rung-hong-trung-tam-cua-phan-khu-mua-le-hoi-tai-eco-retreat-20261022184418032.htm",
+      "category": "market",
+      "module_ids": [
+        "market",
+        "infrastructure"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-10-23T01:00:00+00:00",
+      "source_id": "dantri-real-estate",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [
+        "supply"
+      ],
+      "importance": 2,
+      "summary": "(Dân trí) - Đại đô thị Eco Retreat được khởi công từ tháng 4/2025, lần lượt ra mắt thị trường các phân khu nhà phố, biệt thự, căn hộ cao tầng. Mới đây nhất, phân khu thấp tầng tại vị trí trung tâm đại đô thị mang tên Rừng Hồng được Ecopark chính thức ra mắt.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://dantri.com.vn/rss/bat-dong-san.rss",
+        "publisher_host": "dantri.com.vn",
+        "publication_date_from_feed": true
+      }
+    },
+    {
       "id": "article-market-rss-930c736e630fb64c2ce4",
       "title": "Ba lợi thế cộng hưởng tại Lusso Saigon WorldHotels Residences",
       "url": "https://vnexpress.net/ba-loi-the-cong-huong-tai-lusso-saigon-worldhotels-residences-5135578.html",
@@ -134,6 +269,37 @@
         "method": "official-rss",
         "feed_url": "https://vnexpress.net/rss/bat-dong-san.rss",
         "publisher_host": "vnexpress.net",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-38912199d4417f947b81",
+      "title": "Từ chuẩn mực quốc tế đến nhịp sống thực tế: Điều làm nên sức sống của The Global City",
+      "url": "https://dantri.com.vn/bat-dong-san/tu-chuan-muc-quoc-te-den-nhip-song-thuc-te-dieu-lam-nen-suc-song-cua-the-global-city-20261022151855796.htm",
+      "category": "market",
+      "module_ids": [
+        "market"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-10-23T01:00:00+00:00",
+      "source_id": "dantri-real-estate",
+      "region_ids": [
+        "hcmc"
+      ],
+      "project_ids": [
+        "the-global-city"
+      ],
+      "developer_ids": [],
+      "tags": [
+        "legal"
+      ],
+      "importance": 2,
+      "summary": "(Dân trí) - Giữa quá trình chuyển mình của khu Đông TPHCM, một diện mạo đô thị khác biệt đang dần hiện diện. Ở đó, tiêu chuẩn quy hoạch không chỉ nằm trên bản vẽ, mà đã được chuyển hóa thành những trải nghiệm sống động trong thực tế.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://dantri.com.vn/rss/bat-dong-san.rss",
+        "publisher_host": "dantri.com.vn",
         "publication_date_from_feed": true
       }
     },
