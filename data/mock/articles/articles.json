@@ -1,9 +1,65 @@
 {
   "schema_version": 1,
-  "build_id": "market-news-rss-20261023T125143Z",
-  "generated_at": "2026-10-23T12:51:43.388896+00:00",
-  "record_count": 912,
+  "build_id": "market-news-rss-20261023T145144Z",
+  "generated_at": "2026-10-23T14:51:44.161189+00:00",
+  "record_count": 915,
   "data": [
+    {
+      "id": "article-market-rss-031aa27a2916508407e0",
+      "title": "NCB chính thức ký kết thu xếp vốn cho 2 dự án trọng điểm của TP.HCM",
+      "url": "https://thanhnien.vn/ncb-chinh-thuc-ky-ket-thu-xep-von-cho-2-du-an-trong-diem-cua-tphcm-185261023200750361.htm",
+      "category": "market",
+      "module_ids": [
+        "market"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-10-23T12:54:00+00:00",
+      "source_id": "thanhnien-banking",
+      "region_ids": [
+        "hcmc"
+      ],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "Ngày 23.10.2026, tại Hội nghị giải pháp tài chính ngân hàng phục vụ tăng trưởng kinh tế vùng Đông Nam bộ giai đoạn 2026 - 2030, Ngân hàng TMCP Quốc Dân (NCB) đã chính thức ký kết Thỏa thuận hợp tác chiến lược và Biên bản ghi nhớ hợp tác nhằm thu xếp vốn và cung cấp các giải pháp tài chính ngân hàng ",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://thanhnien.vn/rss/kinh-te/ngan-hang.rss",
+        "publisher_host": "thanhnien.vn",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-5ea5c4c9be66d2e32ff9",
+      "title": "Hà Nội điều chỉnh giao thông qua nút giao La Thành - Nguyễn Chí Thanh",
+      "url": "https://vnexpress.net/ha-noi-dieu-chinh-giao-thong-qua-nut-giao-la-thanh-nguyen-chi-thanh-5136191.html",
+      "category": "infrastructure",
+      "module_ids": [
+        "infrastructure"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-10-23T12:37:52+00:00",
+      "source_id": "vnexpress-current-affairs",
+      "region_ids": [
+        "ha-noi"
+      ],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [
+        "infrastructure"
+      ],
+      "importance": 2,
+      "summary": "Sở Xây dựng điều chỉnh phương án tổ chức giao thông qua nút giao La Thành - Nguyễn Chí Thanh nhằm phục vụ thi công cầu vượt thuộc vành đai 1.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://vnexpress.net/rss/thoi-su.rss",
+        "publisher_host": "vnexpress.net",
+        "publication_date_from_feed": true
+      }
+    },
     {
       "id": "article-market-rss-96c2e6ea0e72878b3dd7",
       "title": "Khơi thông vốn tín dụng, thúc đẩy tăng trưởng kinh tế vùng Đông Nam bộ",
@@ -59,6 +115,31 @@
       "source_verification": {
         "method": "official-rss",
         "feed_url": "https://dantri.com.vn/rss/bat-dong-san.rss",
+        "publisher_host": "dantri.com.vn",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-55278411e0fd2ae5b8f0",
+      "title": "Giá vàng về mốc 4.000 USD: Chuyện gì đang xảy ra với kim loại quý?",
+      "url": "https://dantri.com.vn/kinh-doanh/gia-vang-ve-moc-4000-usd-chuyen-gi-dang-xay-ra-voi-kim-loai-quy-20261023174806187.htm",
+      "category": "macro",
+      "module_ids": [
+        "macro"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-10-23T11:24:30+00:00",
+      "source_id": "dantri-business",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "(Dân trí) - Giá vàng trượt sâu về mốc 4.000 USD/ounce ngay cả khi lợi suất trái phiếu Mỹ hạ nhiệt. Giới phân tích chỉ ra những áp lực ngầm đang chi phối thị trường kim loại quý.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://dantri.com.vn/rss/kinh-doanh.rss",
         "publisher_host": "dantri.com.vn",
         "publication_date_from_feed": true
       }
