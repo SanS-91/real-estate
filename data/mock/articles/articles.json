@@ -1,9 +1,324 @@
 {
   "schema_version": 1,
-  "build_id": "market-news-rss-20261022T145151Z",
-  "generated_at": "2026-10-22T14:51:51.292431+00:00",
-  "record_count": 856,
+  "build_id": "market-news-rss-20261023T005154Z",
+  "generated_at": "2026-10-23T00:51:54.862685+00:00",
+  "record_count": 868,
   "data": [
+    {
+      "id": "article-market-rss-a6168d2e0c6a5871e642",
+      "title": "TP.HCM trình 125 khu đất thí điểm thực hiện theo Nghị quyết 171",
+      "url": "https://thanhnien.vn/tphcm-trinh-125-khu-dat-thi-diem-thuc-hien-theo-nghi-quyet-171-185261023064051023.htm",
+      "category": "market",
+      "module_ids": [
+        "market"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-10-23T00:37:00+00:00",
+      "source_id": "thanhnien-real-estate",
+      "region_ids": [
+        "hcmc"
+      ],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "Sở Nông nghiệp và Môi trường TP.HCM đã có tờ trình UBND TP.HCM thông qua danh mục khu đất dự kiến thực hiện dự án thí điểm trên địa bàn TP.HCM năm 2026 theo Nghị quyết 171.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://thanhnien.vn/rss/kinh-te/dia-oc.rss",
+        "publisher_host": "thanhnien.vn",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-6fb68931723ff264b31c",
+      "title": "Giá vàng lao dốc, \"bốc hơi\" cả trăm USD",
+      "url": "https://dantri.com.vn/kinh-doanh/gia-vang-lao-doc-boc-hoi-ca-tram-usd-20261023012524451.htm",
+      "category": "macro",
+      "module_ids": [
+        "macro"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-10-22T23:28:00+00:00",
+      "source_id": "dantri-business",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "(Dân trí) - Giá vàng thế giới giảm mạnh 103 USD/ounce, xuống dưới ngưỡng 4.100 USD/ounce trong bối cảnh giá dầu tăng cao làm dấy lên lo ngại lạm phát và lãi suất duy trì ở mức cao, gây sức ép lên kim loại quý.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://dantri.com.vn/rss/kinh-doanh.rss",
+        "publisher_host": "dantri.com.vn",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-03e3d0043ee258e0337f",
+      "title": "Đề nghị quy trách nhiệm \"bán bất động sản nhưng thiếu công trình công cộng\"",
+      "url": "https://dantri.com.vn/thoi-su/de-nghi-quy-trach-nhiem-ban-bat-dong-san-nhung-thieu-cong-trinh-cong-cong-20261022225106327.htm",
+      "category": "market",
+      "module_ids": [
+        "market"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-10-22T23:24:14+00:00",
+      "source_id": "dantri-current-affairs",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "(Dân trí) - Đại biểu Triệu Thế Hùng đề nghị quy định rõ trách nhiệm và phương án xử lý chủ đầu tư đã hoàn thành việc bán bất động sản nhưng các công trình phục vụ cộng đồng vẫn chưa được đầu tư tương xứng.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://dantri.com.vn/rss/thoi-su.rss",
+        "publisher_host": "dantri.com.vn",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-359f485c4e8c765b6db4",
+      "title": "\"Siêu nút giao\" gần 2.400 tỷ đồng dần lộ diện trên Đại lộ Thăng Long",
+      "url": "https://dantri.com.vn/thoi-su/sieu-nut-giao-gan-2400-ty-dong-dan-lo-dien-tren-dai-lo-thang-long-20261022175658258.htm",
+      "category": "infrastructure",
+      "module_ids": [
+        "infrastructure"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-10-22T23:12:00+00:00",
+      "source_id": "dantri-current-affairs",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [
+        "infrastructure"
+      ],
+      "importance": 2,
+      "summary": "(Dân trí) - Dự án nút giao Vành đai 3,5 - Đại lộ Thăng Long được đầu tư gần 2.400 tỷ đồng. Sau gần 2 năm thi công, những làn cầu vượt uốn lượn dần lộ rõ hình hài.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://dantri.com.vn/rss/thoi-su.rss",
+        "publisher_host": "dantri.com.vn",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-4e6c947d1e6065e2c863",
+      "title": "Lãi suất đồng loạt giảm: Mở rộng từ doanh nghiệp sang khách hàng cá nhân",
+      "url": "https://dantri.com.vn/kinh-doanh/lai-suat-dong-loat-giam-mo-rong-tu-doanh-nghiep-sang-khach-hang-ca-nhan-20261022224729207.htm",
+      "category": "macro",
+      "module_ids": [
+        "macro"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-10-22T23:03:00+00:00",
+      "source_id": "dantri-business",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "(Dân trí) - Lãi suất cho vay với khách hàng cá nhân và doanh nghiệp đồng loạt giảm sau chỉ đạo, mức giảm tối đa tới 3%. Sau làn sóng giảm lãi suất là áp lực lên các ngân hàng với bài toán về chi phí, lợi nhuận.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://dantri.com.vn/rss/kinh-doanh.rss",
+        "publisher_host": "dantri.com.vn",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-e163cca09a08de3b1a64",
+      "title": "Người thuê nhà Nha Trang chật vật vì giá tăng",
+      "url": "https://vnexpress.net/nguoi-thue-nha-nha-trang-chat-vat-vi-gia-tang-5134289.html",
+      "category": "market",
+      "module_ids": [
+        "market"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-10-22T23:00:00+00:00",
+      "source_id": "vnexpress-real-estate",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "Hai tháng qua, anh Nguyên Giáp tìm thuê căn hộ tại Nha Trang qua mạng xã hội và môi giới nhưng chưa dám chốt vì giá tăng 30-40% so với đầu năm.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://vnexpress.net/rss/bat-dong-san.rss",
+        "publisher_host": "vnexpress.net",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-86049cc559533477fb3f",
+      "title": "Lãi suất tiết kiệm quay đầu giảm",
+      "url": "https://thanhnien.vn/lai-suat-tiet-kiem-quay-dau-giam-185261022203635085.htm",
+      "category": "macro",
+      "module_ids": [
+        "macro"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-10-22T23:00:00+00:00",
+      "source_id": "thanhnien-banking",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "Sau động thái công bố giảm lãi vay, hàng loạt ngân hàng tiếp tục giảm lãi suất tiết kiệm.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://thanhnien.vn/rss/kinh-te/ngan-hang.rss",
+        "publisher_host": "thanhnien.vn",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-6ea57b2aae6cc8db3cb0",
+      "title": "Giao dịch bất động sản dự báo tăng gấp đôi trong quý IV",
+      "url": "https://vnexpress.net/giao-dich-bat-dong-san-du-bao-tang-gap-doi-trong-quy-iv-5135412.html",
+      "category": "market",
+      "module_ids": [
+        "market"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-10-22T22:00:00+00:00",
+      "source_id": "vnexpress-real-estate",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [
+        "sales",
+        "infrastructure"
+      ],
+      "importance": 2,
+      "summary": "Nhu cầu mua nhà tăng cùng lượng sản phẩm dồi dào và chính sách kích cầu có thể thúc đẩy giao dịch bất động sản quý IV khả quan hơn.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://vnexpress.net/rss/bat-dong-san.rss",
+        "publisher_host": "vnexpress.net",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-cc9c7843abc95e335fe2",
+      "title": "Hiện trạng công viên Thủ Lệ trước khi quy hoạch lại",
+      "url": "https://vnexpress.net/hien-trang-cong-vien-thu-le-truoc-khi-quy-hoach-lai-5135589.html",
+      "category": "market",
+      "module_ids": [
+        "market"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-10-22T21:00:00+00:00",
+      "source_id": "vnexpress-current-affairs",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [
+        "legal"
+      ],
+      "importance": 2,
+      "summary": "Sở hữu hồ nước rộng, hệ thống cây xanh đa dạng, nhiều loài thú quý hiếm, công viên Thủ Lệ là điểm đến của nhiều người, tuy nhiên nhiều hạng mục đang xuống cấp.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://vnexpress.net/rss/thoi-su.rss",
+        "publisher_host": "vnexpress.net",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-25ce8f65ac27f67e7b77",
+      "title": "Khu đô thị lớn nhất Việt Nam đủ điều kiện huy động vốn",
+      "url": "https://vnexpress.net/khu-do-thi-lon-nhat-viet-nam-du-dieu-kien-huy-dong-von-5135792.html",
+      "category": "market",
+      "module_ids": [
+        "market"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-10-22T20:51:35+00:00",
+      "source_id": "vnexpress-real-estate",
+      "region_ids": [
+        "ha-noi"
+      ],
+      "project_ids": [],
+      "developer_ids": [
+        "vinhomes"
+      ],
+      "tags": [
+        "sales"
+      ],
+      "importance": 2,
+      "summary": "Hà Nội chấp thuận cho liên danh nhà đầu tư Vinhomes huy động vốn để đầu tư khu đô thị thể thao quốc tế gần 9.000 ha, thuộc quy mô lớn nhất Việt Nam.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://vnexpress.net/rss/bat-dong-san.rss",
+        "publisher_host": "vnexpress.net",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-046f99469ed22a255304",
+      "title": "Bên trong căn duplex gần 100 năm tuổi của diễn viên Julianne Moore",
+      "url": "https://vnexpress.net/ben-trong-can-duplex-gan-100-nam-tuoi-cua-dien-vien-julianne-moore-5133214.html",
+      "category": "market",
+      "module_ids": [
+        "market"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-10-22T17:00:00+00:00",
+      "source_id": "vnexpress-real-estate",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "Không gian sống của Julianne Moore, nữ diễn viên đảm nhiệm vai chính trong phim The Debut sắp công chiếu, là sự kết hợp tinh tế giữa kiến trúc cổ điển và nội thất hiện đại, ngập tràn ánh sáng tự nhiên",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://vnexpress.net/rss/bat-dong-san.rss",
+        "publisher_host": "vnexpress.net",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-a8d5fe69e59aaea0e093",
+      "title": "Tối 22/10, giá vàng, bạc đồng loạt bị bán tháo",
+      "url": "https://dantri.com.vn/kinh-doanh/toi-2210-gia-vang-bac-dong-loat-bi-ban-thao-20261022220040562.htm",
+      "category": "macro",
+      "module_ids": [
+        "macro"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-10-22T16:07:19+00:00",
+      "source_id": "dantri-business",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "(Dân trí) - Đà tăng của giá năng lượng khiến mối lo lạm phát quay lại, đẩy giá vàng giảm phiên thứ tư liên tiếp về sát mốc 4.000 USD/ounce trước thềm cuộc họp chính sách của Fed.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://dantri.com.vn/rss/kinh-doanh.rss",
+        "publisher_host": "dantri.com.vn",
+        "publication_date_from_feed": true
+      }
+    },
     {
       "id": "article-market-rss-8f585223e65bf072fb4b",
       "title": "TP HCM sẽ chi 10.800 tỷ đồng bồi thường dự án Mả Lạng, chợ Gà - Gạo tuần sau",
