@@ -1,9 +1,63 @@
 {
   "schema_version": 1,
-  "build_id": "market-news-rss-20261023T085141Z",
-  "generated_at": "2026-10-23T08:51:41.889104+00:00",
-  "record_count": 903,
+  "build_id": "market-news-rss-20261023T105325Z",
+  "generated_at": "2026-10-23T10:53:25.146860+00:00",
+  "record_count": 909,
   "data": [
+    {
+      "id": "article-market-rss-f57341e34c8b2e02fec6",
+      "title": "Đấu giá bất thành 4 nhà đất liên quan bà Trương Mỹ Lan",
+      "url": "https://vnexpress.net/dau-gia-bat-thanh-4-nha-dat-lien-quan-ba-truong-my-lan-5136123.html",
+      "category": "market",
+      "module_ids": [
+        "market"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-10-23T09:09:24+00:00",
+      "source_id": "vnexpress-real-estate",
+      "region_ids": [
+        "hcmc"
+      ],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "Bốn bất động sản tại trung tâm TP HCM, liên quan bà Trương Mỹ Lan, có tổng giá khởi điểm hơn 375 tỷ đồng đấu giá bất thành do không có người mua.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://vnexpress.net/rss/bat-dong-san.rss",
+        "publisher_host": "vnexpress.net",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-e1718940a09fee506ad3",
+      "title": "TP HCM chuyển đổi khu công nghiệp gần 110 ha làm nhà ở xã hội",
+      "url": "https://vnexpress.net/tp-hcm-chuyen-doi-khu-cong-nghiep-gan-110-ha-lam-nha-o-xa-hoi-5136051.html",
+      "category": "market",
+      "module_ids": [
+        "market"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-10-23T08:36:56+00:00",
+      "source_id": "vnexpress-real-estate",
+      "region_ids": [
+        "hcmc"
+      ],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "TP HCM sẽ chuyển đổi Khu công nghiệp Lê Minh Xuân mở rộng thuộc huyện Bình Chánh cũ, diện tích gần 110 ha, sang phát triển nhà xã hội, dự kiến hoàn thành thủ tục đầu năm sau.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://vnexpress.net/rss/bat-dong-san.rss",
+        "publisher_host": "vnexpress.net",
+        "publication_date_from_feed": true
+      }
+    },
     {
       "id": "article-market-rss-fa8686b1585f5f1cbd03",
       "title": "Dự án tái thiết Vĩnh Hưng: Tái định cư tại chỗ là chính sách tuyệt vời",
@@ -63,6 +117,33 @@
       }
     },
     {
+      "id": "article-market-rss-f14f51b0a087f39d2928",
+      "title": "58 chung cư nhưng chỉ một tòa nhà được lắp đặt trạm sạc xe điện",
+      "url": "https://dantri.com.vn/thoi-su/58-chung-cu-nhung-chi-mot-toa-nha-duoc-lap-dat-tram-sac-xe-dien-20261023143313927.htm",
+      "category": "market",
+      "module_ids": [
+        "market"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-10-23T07:42:40+00:00",
+      "source_id": "dantri-current-affairs",
+      "region_ids": [
+        "ha-noi"
+      ],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "(Dân trí) - Theo ông Lương Mậu Hùng, Phó Chủ tịch UBND phường Cầu Giấy (Hà Nội), địa bàn có 58 chung cư, tòa nhà nhưng chỉ một tòa được lắp đặt, trang bị trạm sạc điện.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://dantri.com.vn/rss/thoi-su.rss",
+        "publisher_host": "dantri.com.vn",
+        "publication_date_from_feed": true
+      }
+    },
+    {
       "id": "article-market-rss-1a3c14ee665ecee66144",
       "title": "Sân bay Long Thành thiếu thợ lành nghề khi gần về đích",
       "url": "https://vnexpress.net/san-bay-long-thanh-thieu-tho-lanh-nghe-khi-gan-ve-dich-5136008.html",
@@ -118,6 +199,35 @@
       }
     },
     {
+      "id": "article-market-rss-ec6f22990f9479fec9d5",
+      "title": "Dự án tái thiết khu đô thị gần 450ha ở Hà Nội, chuyên gia đề xuất ưu tiên tái định cư tại chỗ",
+      "url": "https://dantri.com.vn/bat-dong-san/du-an-tai-thiet-khu-do-thi-gan-450ha-o-ha-noi-chuyen-gia-de-xuat-uu-tien-tai-dinh-cu-tai-cho-20261023130413677.htm",
+      "category": "market",
+      "module_ids": [
+        "market"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-10-23T06:12:24+00:00",
+      "source_id": "dantri-real-estate",
+      "region_ids": [
+        "ha-noi"
+      ],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [
+        "infrastructure"
+      ],
+      "importance": 2,
+      "summary": "(Dân trí) - Theo lãnh đạo phường, Vĩnh Hưng (Hà Nội) được lựa chọn nghiên cứu tái thiết đô thị nhằm cải thiện hạ tầng, mở rộng giao thông, bổ sung không gian xanh và nâng cao chất lượng sống của người dân.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://dantri.com.vn/rss/bat-dong-san.rss",
+        "publisher_host": "dantri.com.vn",
+        "publication_date_from_feed": true
+      }
+    },
+    {
       "id": "article-market-rss-1fbcd7a8c456332bd2a3",
       "title": "Lý do phường Vĩnh Hưng được đề xuất tái thiết đô thị với gần 450ha",
       "url": "https://dantri.com.vn/bat-dong-san/ly-do-phuong-vinh-hung-duoc-de-xuat-tai-thiet-do-thi-voi-gan-450ha-20261023130413677.htm",
@@ -143,6 +253,33 @@
         "method": "official-rss",
         "feed_url": "https://dantri.com.vn/rss/bat-dong-san.rss",
         "publisher_host": "dantri.com.vn",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-7ae25460f78751797032",
+      "title": "Lotte và Phát Đạt khởi công tổ hợp hơn 2,3 tỷ USD tại Thủ Thiêm",
+      "url": "https://vnexpress.net/lotte-va-phat-dat-khoi-cong-to-hop-hon-2-3-ty-usd-tai-thu-thiem-5135928.html",
+      "category": "market",
+      "module_ids": [
+        "infrastructure"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-10-23T06:02:10+00:00",
+      "source_id": "vnexpress-real-estate",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [
+        "legal"
+      ],
+      "importance": 2,
+      "summary": "Sau nhiều năm đình trệ vì vướng mắc pháp lý và nghĩa vụ tài chính, tổ hợp Lotte Eco Smart City Thu Thiem với vốn đầu tư 60.000 tỷ đồng được khởi công lại sáng 23/10.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://vnexpress.net/rss/bat-dong-san.rss",
+        "publisher_host": "vnexpress.net",
         "publication_date_from_feed": true
       }
     },
@@ -844,6 +981,33 @@
         "method": "official-rss",
         "feed_url": "https://dantri.com.vn/rss/thoi-su.rss",
         "publisher_host": "dantri.com.vn",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-8f70d6db34912636b85b",
+      "title": "Shophouse khối đế chung cư TP HCM thoát cảnh bỏ trống hàng loạt",
+      "url": "https://vnexpress.net/shophouse-khoi-de-chung-cu-tp-hcm-thoat-canh-bo-trong-hang-loat-5133952.html",
+      "category": "market",
+      "module_ids": [
+        "market"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-10-23T00:00:00+00:00",
+      "source_id": "vnexpress-real-estate",
+      "region_ids": [
+        "hcmc"
+      ],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "Chủ nhà chủ động giảm giá thuê giúp loạt shophouse khối đế chung cư ở TP HCM lấp đầy, thu hút nhiều hộ kinh doanh mở dịch vụ, buôn bán.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://vnexpress.net/rss/bat-dong-san.rss",
+        "publisher_host": "vnexpress.net",
         "publication_date_from_feed": true
       }
     },
