@@ -1,9 +1,142 @@
 {
   "schema_version": 1,
-  "build_id": "market-news-rss-20261023T005154Z",
-  "generated_at": "2026-10-23T00:51:54.862685+00:00",
-  "record_count": 868,
+  "build_id": "market-news-rss-20261023T025136Z",
+  "generated_at": "2026-10-23T02:51:36.995501+00:00",
+  "record_count": 879,
   "data": [
+    {
+      "id": "article-market-rss-2434e4a2f810ce1a7470",
+      "title": "Xem chiêu trò taxi “dù” trà trộn vào sân bay Cát Bi hoạt động",
+      "url": "https://dantri.com.vn/thoi-su/xem-chieu-tro-taxi-du-tra-tron-vao-san-bay-cat-bi-hoat-dong-20261022084053252.htm",
+      "category": "infrastructure",
+      "module_ids": [
+        "infrastructure"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-10-23T02:16:02+00:00",
+      "source_id": "dantri-current-affairs",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [
+        "infrastructure"
+      ],
+      "importance": 2,
+      "summary": "(Dân trí) - Ô tô biển màu trắng không được phép kinh doanh vận tải hành khách nhưng đã núp bóng xe gia đình để trà trộn vào sân bay Cát Bi đón khách. Tại đây, nhiều taxi biển vàng cũng vi phạm nội quy sân bay.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://dantri.com.vn/rss/thoi-su.rss",
+        "publisher_host": "dantri.com.vn",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-6de3372af5f99d703029",
+      "title": "Tái thiết đô thị Vĩnh Hưng: Từ quy hoạch đến nâng cao chất lượng đời sống người dân",
+      "url": "https://thanhnien.vn/tai-thiet-do-thi-vinh-hung-tu-quy-hoach-den-nang-cao-chat-luong-doi-song-nguoi-dan-185261023083946072.htm",
+      "category": "market",
+      "module_ids": [
+        "market"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-10-23T02:09:00+00:00",
+      "source_id": "thanhnien-policy",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [
+        "legal"
+      ],
+      "importance": 2,
+      "summary": "Câu chuyện tái thiết đô thị Vĩnh Hưng không chỉ là những bản vẽ quy hoạch hay những công trình sẽ được xây dựng, mà còn là tương lai của một vùng đất, là chất lượng sống của cộng đồng dân cư, là những ngôi nhà, sinh kế và mối gắn bó của người dân với nơi mình đã sống qua nhiều năm tháng.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://thanhnien.vn/rss/kinh-te/chinh-sach-phat-trien.rss",
+        "publisher_host": "thanhnien.vn",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-fa7c7a256c9eea2b6e5a",
+      "title": "Giá vàng hôm nay 23.10.2026: Vàng nhẫn giảm mạnh nhưng chênh lệch mua bán tăng cao",
+      "url": "https://thanhnien.vn/gia-vang-hom-nay-23102026-vang-nhan-giam-manh-nhung-chenh-lech-mua-ban-tang-cao-185261023075250546.htm",
+      "category": "macro",
+      "module_ids": [
+        "macro"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-10-23T02:06:00+00:00",
+      "source_id": "thanhnien-banking",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "Giá vàng trong nước lẫn thế giới đồng loạt giảm nhưng chênh lệch mua bán bị đẩy lên cao.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://thanhnien.vn/rss/kinh-te/ngan-hang.rss",
+        "publisher_host": "thanhnien.vn",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-d41d1ba5c81b3582b9d9",
+      "title": "Eco Retreat ra mắt phân khu thấp tầng cảm hứng từ hoa hồng",
+      "url": "https://vnexpress.net/eco-retreat-ra-mat-phan-khu-thap-tang-cam-hung-tu-hoa-hong-5135761.html",
+      "category": "market",
+      "module_ids": [
+        "market"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-10-23T01:00:00+00:00",
+      "source_id": "vnexpress-real-estate",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [
+        "supply"
+      ],
+      "importance": 2,
+      "summary": "Rừng Hồng nằm tại trung tâm phân khu Mùa Lễ Hội của Eco Retreat, gồm hơn 300 sản phẩm thấp tầng, kết nối các trục đại lộ, quảng trường, khu thương mại.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://vnexpress.net/rss/bat-dong-san.rss",
+        "publisher_host": "vnexpress.net",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-930c736e630fb64c2ce4",
+      "title": "Ba lợi thế cộng hưởng tại Lusso Saigon WorldHotels Residences",
+      "url": "https://vnexpress.net/ba-loi-the-cong-huong-tai-lusso-saigon-worldhotels-residences-5135578.html",
+      "category": "market",
+      "module_ids": [
+        "infrastructure"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-10-23T01:00:00+00:00",
+      "source_id": "vnexpress-real-estate",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [
+        "infrastructure"
+      ],
+      "importance": 2,
+      "summary": "Lusso Saigon WorldHotels Residences kết hợp tiêu chuẩn quản lý vận hành quốc tế, hệ tiện ích nội khu đồng bộ và lợi thế kết nối Quốc lộ 13, metro, hướng đến nhu cầu an cư và khai thác cho thuê dài hạn.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://vnexpress.net/rss/bat-dong-san.rss",
+        "publisher_host": "vnexpress.net",
+        "publication_date_from_feed": true
+      }
+    },
     {
       "id": "article-market-rss-a6168d2e0c6a5871e642",
       "title": "TP.HCM trình 125 khu đất thí điểm thực hiện theo Nghị quyết 171",
@@ -32,6 +165,85 @@
       }
     },
     {
+      "id": "article-market-rss-8993f3b5661185a6154a",
+      "title": "Giá vàng thế giới lao dốc, xuống thấp nhất 2 tháng",
+      "url": "https://vnexpress.net/gia-vang-the-gioi-lao-doc-xuong-thap-nhat-2-thang-5135837.html",
+      "category": "macro",
+      "module_ids": [
+        "macro"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-10-23T00:32:54+00:00",
+      "source_id": "vnexpress-economy",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "Mỗi ounce vàng mất hơn 100 USD một phiên, hiện xuống sát 4.000 USD do lo ngại lãi suất duy trì ở mức cao.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://vnexpress.net/rss/kinh-doanh.rss",
+        "publisher_host": "vnexpress.net",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-12c866ba6bba68356379",
+      "title": "Lật tẩy chiêu trò \"taxi dù” trà trộn vào sân bay Cát Bi hoạt động",
+      "url": "https://dantri.com.vn/thoi-su/lat-tay-chieu-tro-taxi-du-tra-tron-vao-san-bay-cat-bi-hoat-dong-20261022003930774.htm",
+      "category": "infrastructure",
+      "module_ids": [
+        "infrastructure"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-10-23T00:03:54+00:00",
+      "source_id": "dantri-current-affairs",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [
+        "infrastructure"
+      ],
+      "importance": 2,
+      "summary": "(Dân trí) - Ô tô biển màu trắng không được phép kinh doanh vận tải hành khách nhưng đã núp bóng xe gia đình để trà trộn vào sân bay Cát Bi đón khách. Tại đây, nhiều taxi biển vàng cũng vi phạm nội quy sân bay.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://dantri.com.vn/rss/thoi-su.rss",
+        "publisher_host": "dantri.com.vn",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-4ac91c254ad7ceab93c8",
+      "title": "Shophouse khối đế chung cư TP HCM thoát cảnh bỏ trống",
+      "url": "https://vnexpress.net/shophouse-khoi-de-chung-cu-tp-hcm-thoat-canh-bo-trong-5133952.html",
+      "category": "market",
+      "module_ids": [
+        "market"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-10-23T00:00:00+00:00",
+      "source_id": "vnexpress-real-estate",
+      "region_ids": [
+        "hcmc"
+      ],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "Chủ nhà chủ động giảm giá thuê giúp loạt shophouse khối đế chung cư ở TP HCM lấp đầy, thu hút nhiều hộ kinh doanh mở dịch vụ, buôn bán.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://vnexpress.net/rss/bat-dong-san.rss",
+        "publisher_host": "vnexpress.net",
+        "publication_date_from_feed": true
+      }
+    },
+    {
       "id": "article-market-rss-6fb68931723ff264b31c",
       "title": "Giá vàng lao dốc, \"bốc hơi\" cả trăm USD",
       "url": "https://dantri.com.vn/kinh-doanh/gia-vang-lao-doc-boc-hoi-ca-tram-usd-20261023012524451.htm",
@@ -52,6 +264,31 @@
       "source_verification": {
         "method": "official-rss",
         "feed_url": "https://dantri.com.vn/rss/kinh-doanh.rss",
+        "publisher_host": "dantri.com.vn",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-348c9b1e674eb6f97bc9",
+      "title": "Đề nghị quy trách nhiệm \"bán bất động sản nhưng thiếu thiết chế văn hóa\"",
+      "url": "https://dantri.com.vn/thoi-su/de-nghi-quy-trach-nhiem-ban-bat-dong-san-nhung-thieu-thiet-che-van-hoa-20261022225106327.htm",
+      "category": "market",
+      "module_ids": [
+        "market"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-10-22T23:24:14+00:00",
+      "source_id": "dantri-current-affairs",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "(Dân trí) - Đại biểu Triệu Thế Hùng đề nghị quy định rõ trách nhiệm và phương án xử lý chủ đầu tư đã hoàn thành việc bán bất động sản nhưng các công trình phục vụ cộng đồng vẫn chưa được đầu tư tương xứng.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://dantri.com.vn/rss/thoi-su.rss",
         "publisher_host": "dantri.com.vn",
         "publication_date_from_feed": true
       }
@@ -129,6 +366,33 @@
       "source_verification": {
         "method": "official-rss",
         "feed_url": "https://dantri.com.vn/rss/kinh-doanh.rss",
+        "publisher_host": "dantri.com.vn",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-f6101adabd083728584f",
+      "title": "Đề xuất thêm phân khúc nhà ở 60-70 triệu đồng/m2 cho người thu nhập thấp",
+      "url": "https://dantri.com.vn/bat-dong-san/de-xuat-them-phan-khuc-nha-o-60-70-trieu-dongm2-cho-nguoi-thu-nhap-thap-20261022223945678.htm",
+      "category": "market",
+      "module_ids": [
+        "market"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-10-22T23:00:00+00:00",
+      "source_id": "dantri-real-estate",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [
+        "supply"
+      ],
+      "importance": 2,
+      "summary": "(Dân trí) - Nguồn cung nhà ở vừa túi tiền ngày càng thiếu hụt, khiến người thu nhập trung bình, thấp khó tìm chỗ ở phù hợp và cần thêm phân khúc 60-70 triệu đồng/m2.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://dantri.com.vn/rss/bat-dong-san.rss",
         "publisher_host": "dantri.com.vn",
         "publication_date_from_feed": true
       }
@@ -262,6 +526,31 @@
       ],
       "importance": 2,
       "summary": "Hà Nội chấp thuận cho liên danh nhà đầu tư Vinhomes huy động vốn để đầu tư khu đô thị thể thao quốc tế gần 9.000 ha, thuộc quy mô lớn nhất Việt Nam.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://vnexpress.net/rss/bat-dong-san.rss",
+        "publisher_host": "vnexpress.net",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-ed8ce69cabb4a140e8b1",
+      "title": "Bên trong căn duplex gần 100 năm tuổi của nữ chính phim The Debut",
+      "url": "https://vnexpress.net/ben-trong-can-duplex-gan-100-nam-tuoi-cua-nu-chinh-phim-the-debut-5133214.html",
+      "category": "market",
+      "module_ids": [
+        "market"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-10-22T17:00:00+00:00",
+      "source_id": "vnexpress-real-estate",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "Không gian sống của Julianne Moore, vai nữ chính trong phim The Debut sắp công chiếu, là sự kết hợp tinh tế giữa kiến trúc cổ điển và nội thất hiện đại, ngập tràn ánh sáng tự nhiên.",
       "source_verification": {
         "method": "official-rss",
         "feed_url": "https://vnexpress.net/rss/bat-dong-san.rss",
