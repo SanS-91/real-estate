@@ -1,9 +1,36 @@
 {
   "schema_version": 1,
-  "build_id": "market-news-rss-20261024T125154Z",
-  "generated_at": "2026-10-24T12:51:54.116195+00:00",
-  "record_count": 940,
+  "build_id": "market-news-rss-20261024T145131Z",
+  "generated_at": "2026-10-24T14:51:31.966874+00:00",
+  "record_count": 943,
   "data": [
+    {
+      "id": "article-market-rss-510b2cccda4658e994f2",
+      "title": "Quy hoạch Buôn Ma Thuột định hướng giữ nét \"buôn trong phố, phố trong buôn\"",
+      "url": "https://dantri.com.vn/thoi-su/quy-hoach-buon-ma-thuot-dinh-huong-giu-net-buon-trong-pho-pho-trong-buon-20261024184810733.htm",
+      "category": "market",
+      "module_ids": [
+        "market"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-10-24T13:09:44+00:00",
+      "source_id": "dantri-current-affairs",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [
+        "legal"
+      ],
+      "importance": 2,
+      "summary": "(Dân trí) - Định hướng quy hoạch Buôn Ma Thuột đến năm 2050 vừa hướng tới đô thị xanh, thông minh, hiện đại vừa đặt mục tiêu gìn giữ 33 buôn làng, phát huy bản sắc giữ đặc trưng \"buôn trong phố, phố trong buôn\".",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://dantri.com.vn/rss/thoi-su.rss",
+        "publisher_host": "dantri.com.vn",
+        "publication_date_from_feed": true
+      }
+    },
     {
       "id": "article-market-rss-d5fa9cf87c692ae5b6e9",
       "title": "Cảnh sát xử lý tài xế quay xe trên cao tốc Liên Khương - Prenn",
@@ -27,6 +54,31 @@
       "source_verification": {
         "method": "official-rss",
         "feed_url": "https://dantri.com.vn/rss/thoi-su.rss",
+        "publisher_host": "dantri.com.vn",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-8b8a809cac86f3e1e563",
+      "title": "Thừa tiền mua đứt, vì sao người giàu Mỹ vẫn chuộng đi thuê nhà?",
+      "url": "https://dantri.com.vn/bat-dong-san/thua-tien-mua-dut-vi-sao-nguoi-giau-my-van-chuong-di-thue-nha-20261024174117723.htm",
+      "category": "market",
+      "module_ids": [
+        "market"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-10-24T11:02:19+00:00",
+      "source_id": "dantri-real-estate",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "(Dân trí) - Nhiều người có tài sản hàng triệu USD vẫn chọn đi thuê thay vì mua đứt bất động sản, nhằm tối ưu hóa dòng tiền và duy trì phong cách sống linh hoạt.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://dantri.com.vn/rss/bat-dong-san.rss",
         "publisher_host": "dantri.com.vn",
         "publication_date_from_feed": true
       }
@@ -587,6 +639,33 @@
         "method": "official-rss",
         "feed_url": "https://thanhnien.vn/rss/kinh-te/chinh-sach-phat-trien.rss",
         "publisher_host": "thanhnien.vn",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-dff697eb20feaf34cae9",
+      "title": "Nhiều yếu tố ảnh hưởng tiến độ cao tốc Tuyên Quang - Hà Giang",
+      "url": "https://vnexpress.net/nhieu-yeu-to-anh-huong-tien-do-cao-toc-tuyen-quang-ha-giang-5136206.html",
+      "category": "infrastructure",
+      "module_ids": [
+        "infrastructure"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-10-23T21:00:00+00:00",
+      "source_id": "vnexpress-current-affairs",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [
+        "infrastructure"
+      ],
+      "importance": 2,
+      "summary": "Mưa kéo dài, vướng giải phóng mặt bằng, giá nhiên liệu biến động khiến Ban Quản lý dự án đề xuất gia hạn 7 gói thầu cao tốc Tuyên Quang - Hà Giang từ 30/10 đến hết năm 2026.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://vnexpress.net/rss/thoi-su.rss",
+        "publisher_host": "vnexpress.net",
         "publication_date_from_feed": true
       }
     },
