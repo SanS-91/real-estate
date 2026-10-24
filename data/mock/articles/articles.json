@@ -1,9 +1,120 @@
 {
   "schema_version": 1,
-  "build_id": "market-news-rss-20261024T025153Z",
-  "generated_at": "2026-10-24T02:51:53.849359+00:00",
-  "record_count": 925,
+  "build_id": "market-news-rss-20261024T044830Z",
+  "generated_at": "2026-10-24T04:48:30.165464+00:00",
+  "record_count": 929,
   "data": [
+    {
+      "id": "article-market-rss-44e1f9d7448ca1fa6114",
+      "title": "Tai nạn trên cao tốc TPHCM - Long Thành khiến phụ xe tử vong",
+      "url": "https://dantri.com.vn/thoi-su/tai-nan-tren-cao-toc-tphcm-long-thanh-khien-phu-xe-tu-vong-20261024100303443.htm",
+      "category": "infrastructure",
+      "module_ids": [
+        "infrastructure"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-10-24T03:15:20+00:00",
+      "source_id": "dantri-current-affairs",
+      "region_ids": [
+        "hcmc"
+      ],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [
+        "infrastructure"
+      ],
+      "importance": 2,
+      "summary": "(Dân trí) - Vụ tai nạn giữa xe tải và xe đầu kéo trên cao tốc cửa ngõ phía Đông TPHCM khiến một phụ xe tử vong, 2 phương tiện hư hỏng nặng, giao thông trên tuyến ùn tắc.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://dantri.com.vn/rss/thoi-su.rss",
+        "publisher_host": "dantri.com.vn",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-25ef56185cda2bafe566",
+      "title": "Giá vàng miếng về dưới 142 triệu đồng một lượng",
+      "url": "https://vnexpress.net/gia-vang-moi-nhat-hom-nay-ngay-24-10-5136327.html",
+      "category": "macro",
+      "module_ids": [
+        "macro"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-10-24T03:09:29+00:00",
+      "source_id": "vnexpress-economy",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "Các thương hiệu hiện bán ra vàng miếng quanh mức 141,7 triệu đồng một lượng, thấp nhất hơn hai tháng.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://vnexpress.net/rss/kinh-doanh.rss",
+        "publisher_host": "vnexpress.net",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-ab9ef435a3668e30a9f6",
+      "title": "Ôtô tải tông xe container trên cao tốc, một người chết",
+      "url": "https://vnexpress.net/oto-tai-tong-xe-container-tren-cao-toc-mot-nguoi-chet-5136323.html",
+      "category": "infrastructure",
+      "module_ids": [
+        "infrastructure"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-10-24T02:59:49+00:00",
+      "source_id": "vnexpress-current-affairs",
+      "region_ids": [
+        "hcmc"
+      ],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [
+        "infrastructure"
+      ],
+      "importance": 2,
+      "summary": "Sau cú tông đuôi xe container trên cao tốc TP HCM - Long Thành - Dầu Giây, phụ xe tải tử vong, rạng sáng 24/10.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://vnexpress.net/rss/thoi-su.rss",
+        "publisher_host": "vnexpress.net",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-cf031fe7b3ff355ff776",
+      "title": "Đà Nẵng quy hoạch đô thị Bà Nà rộng hơn 13.600 ha",
+      "url": "https://vnexpress.net/da-nang-quy-hoach-do-thi-ba-na-rong-hon-13-600-ha-5136227.html",
+      "category": "market",
+      "module_ids": [
+        "market",
+        "legal"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-10-24T02:46:30+00:00",
+      "source_id": "vnexpress-real-estate",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [
+        "legal"
+      ],
+      "importance": 2,
+      "summary": "Đô thị Bà Nà được quy hoạch trên toàn bộ diện tích xã Bà Nà, định hướng thành cực tăng trưởng phía tây với quy mô hơn 87.000 dân vào năm 2050.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://vnexpress.net/rss/bat-dong-san.rss",
+        "publisher_host": "vnexpress.net",
+        "publication_date_from_feed": true
+      }
+    },
     {
       "id": "article-market-rss-ebf32717f529d4d3d572",
       "title": "Giá vàng hôm nay 24.10.2026: Vàng nhẫn lao dốc xuống dưới ngưỡng 140 triệu đồng",
