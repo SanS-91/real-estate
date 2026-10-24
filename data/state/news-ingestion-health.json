@@ -1,11 +1,11 @@
 {
   "schema_version": 1,
-  "checked_at": "2026-10-24T10:51:43.984246+00:00",
+  "checked_at": "2026-10-24T11:17:09.969063+00:00",
   "feeds_configured": 16,
   "feeds_fetched": 16,
   "accepted_new": 1,
   "production_written": true,
-  "article_total": 938,
+  "article_total": 939,
   "published_by_module": {
     "market": 1,
     "legal": 0,
@@ -26,18 +26,18 @@
       "source_id": "thanhnien-real-estate",
       "status": "parsed",
       "feed_items": 50,
-      "new": 1,
-      "skipped": 49,
-      "duplicates": 49,
+      "new": 0,
+      "skipped": 50,
+      "duplicates": 50,
       "filtered": 0
     },
     {
       "source_id": "dantri-real-estate",
       "status": "parsed",
       "feed_items": 50,
-      "new": 0,
-      "skipped": 50,
-      "duplicates": 50,
+      "new": 1,
+      "skipped": 49,
+      "duplicates": 49,
       "filtered": 0
     },
     {

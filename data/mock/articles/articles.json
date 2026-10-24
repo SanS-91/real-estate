@@ -1,8 +1,8 @@
 {
   "schema_version": 1,
-  "build_id": "market-news-rss-20261024T105143Z",
-  "generated_at": "2026-10-24T10:51:43.984246+00:00",
-  "record_count": 938,
+  "build_id": "market-news-rss-20261024T111709Z",
+  "generated_at": "2026-10-24T11:17:09.969063+00:00",
+  "record_count": 939,
   "data": [
     {
       "id": "article-market-rss-99c1494c8a193c3d2930",
@@ -28,6 +28,31 @@
         "method": "official-rss",
         "feed_url": "https://thanhnien.vn/rss/kinh-te/dia-oc.rss",
         "publisher_host": "thanhnien.vn",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-31fe250fe679169ecb56",
+      "title": "Mẹo dùng chanh và muối làm sạch dầu mỡ tủ bếp an toàn, tiết kiệm",
+      "url": "https://dantri.com.vn/bat-dong-san/meo-dung-chanh-va-muoi-lam-sach-dau-mo-tu-bep-an-toan-tiet-kiem-20261024093709036.htm",
+      "category": "market",
+      "module_ids": [
+        "market"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-10-24T09:43:35+00:00",
+      "source_id": "dantri-real-estate",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "(Dân trí) - Dầu mỡ bám lâu ngày khiến cánh tủ bếp nhờn dính, mất thẩm mỹ. Chanh và muối có thể giúp xử lý những vết bẩn nhẹ, nhưng cần dùng đúng cách để tránh làm hỏng bề mặt.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://dantri.com.vn/rss/bat-dong-san.rss",
+        "publisher_host": "dantri.com.vn",
         "publication_date_from_feed": true
       }
     },
