@@ -1,9 +1,137 @@
 {
   "schema_version": 1,
-  "build_id": "market-news-rss-20261024T005145Z",
-  "generated_at": "2026-10-24T00:51:45.303473+00:00",
-  "record_count": 920,
+  "build_id": "market-news-rss-20261024T025153Z",
+  "generated_at": "2026-10-24T02:51:53.849359+00:00",
+  "record_count": 925,
   "data": [
+    {
+      "id": "article-market-rss-ebf32717f529d4d3d572",
+      "title": "Giá vàng hôm nay 24.10.2026: Vàng nhẫn lao dốc xuống dưới ngưỡng 140 triệu đồng",
+      "url": "https://thanhnien.vn/gia-vang-hom-nay-24102026-vang-nhan-lao-doc-xuong-duoi-nguong-140-trieu-dong-185261024083305337.htm",
+      "category": "macro",
+      "module_ids": [
+        "macro"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-10-24T02:14:00+00:00",
+      "source_id": "thanhnien-banking",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "Giá vàng thế giới lao dốc đẩy vàng nhẫn trong nước giảm mạnh sau một ngày.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://thanhnien.vn/rss/kinh-te/ngan-hang.rss",
+        "publisher_host": "thanhnien.vn",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-8bb4d033ec6e5cce13a5",
+      "title": "Cảnh báo tình trạng thị trường '3 giảm' trên thị trường bất động sản",
+      "url": "https://thanhnien.vn/canh-bao-tinh-trang-thi-truong-3-giam-tren-thi-truong-bat-dong-san-185261023081346147.htm",
+      "category": "market",
+      "module_ids": [
+        "market",
+        "macro"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-10-24T01:35:00+00:00",
+      "source_id": "thanhnien-real-estate",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [
+        "pricing"
+      ],
+      "importance": 2,
+      "summary": "Trong văn bản gửi Thủ tướng Chính phủ, Ngân hàng nhà nước, Bộ Xây dựng..., HoREA đưa ra một cảnh báo đáng lo ngại, dù giá nhà có xu hướng giảm, nhưng kéo theo đó là sức mua giảm, tổng cầu giảm.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://thanhnien.vn/rss/kinh-te/dia-oc.rss",
+        "publisher_host": "thanhnien.vn",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-860847c79ab8f8a47e36",
+      "title": "Giá vàng thế giới tiếp tục giảm, xuống thấp nhất 3 tháng",
+      "url": "https://vnexpress.net/gia-vang-the-gioi-tiep-tuc-giam-xuong-thap-nhat-3-thang-5136287.html",
+      "category": "macro",
+      "module_ids": [
+        "macro"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-10-24T01:23:40+00:00",
+      "source_id": "vnexpress-economy",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "Mỗi ounce vàng mất mốc 4.000 USD lần đầu tiên kể từ tháng 7, do giá dầu thô tăng cao.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://vnexpress.net/rss/kinh-doanh.rss",
+        "publisher_host": "vnexpress.net",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-18031fb22edea1533d6a",
+      "title": "Agribank giảm lãi suất cho vay hỗ trợ phát triển sản xuất kinh doanh",
+      "url": "https://vnexpress.net/agribank-giam-lai-suat-cho-vay-ho-tro-phat-trien-san-xuat-kinh-doanh-5136224.html",
+      "category": "macro",
+      "module_ids": [
+        "macro"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-10-24T01:00:00+00:00",
+      "source_id": "vnexpress-economy",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "Agribank giảm lãi suất cho vay đến 2,5% mỗi năm đối với dư nợ hiện hữu, đồng thời điều chỉnh lãi suất các khoản vay mới nhằm hỗ trợ khách hàng sản xuất kinh doanh.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://vnexpress.net/rss/kinh-doanh.rss",
+        "publisher_host": "vnexpress.net",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-3d04bf78958f69e13458",
+      "title": "Lãi suất giảm vẫn trên 10%, việc doanh nghiệp cần làm ngay nếu vay nhiều",
+      "url": "https://dantri.com.vn/kinh-doanh/lai-suat-giam-van-tren-10-viec-doanh-nghiep-can-lam-ngay-neu-vay-nhieu-20261023183625085.htm",
+      "category": "macro",
+      "module_ids": [
+        "macro"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-10-24T00:39:20+00:00",
+      "source_id": "dantri-business",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "(Dân trí) - Sau chỉ đạo của Chính phủ, nhiều ngân hàng đồng loạt giảm nhưng chuyên gia dự báo từ năm 2027 mới có thể kỳ vọng sức ép lãi suất hạ nhiệt mạnh. Doanh nghiệp vay nợ nhiều cần làm gì?",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://dantri.com.vn/rss/kinh-doanh.rss",
+        "publisher_host": "dantri.com.vn",
+        "publication_date_from_feed": true
+      }
+    },
     {
       "id": "article-market-rss-c9f682abf75e52b82e33",
       "title": "Giá vàng tiếp đà giảm sâu, người mua lỗ 5 triệu đồng sau 1 tuần",
