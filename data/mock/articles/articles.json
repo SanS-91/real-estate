@@ -1,9 +1,36 @@
 {
   "schema_version": 1,
-  "build_id": "market-news-rss-20261024T111709Z",
-  "generated_at": "2026-10-24T11:17:09.969063+00:00",
-  "record_count": 939,
+  "build_id": "market-news-rss-20261024T125154Z",
+  "generated_at": "2026-10-24T12:51:54.116195+00:00",
+  "record_count": 940,
   "data": [
+    {
+      "id": "article-market-rss-d5fa9cf87c692ae5b6e9",
+      "title": "Cảnh sát xử lý tài xế quay xe trên cao tốc Liên Khương - Prenn",
+      "url": "https://dantri.com.vn/thoi-su/canh-sat-xu-ly-tai-xe-quay-xe-tren-cao-toc-lien-khuong-prenn-20261024190532289.htm",
+      "category": "infrastructure",
+      "module_ids": [
+        "infrastructure"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-10-24T12:13:40+00:00",
+      "source_id": "dantri-current-affairs",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [
+        "infrastructure"
+      ],
+      "importance": 2,
+      "summary": "(Dân trí) - Tài xế cho ô tô tải chuyển hướng, lách qua khoảng hở dải phân cách để qua làn đối diện cao tốc vừa bị lực lượng chức năng lập hồ sơ, xử lý.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://dantri.com.vn/rss/thoi-su.rss",
+        "publisher_host": "dantri.com.vn",
+        "publication_date_from_feed": true
+      }
+    },
     {
       "id": "article-market-rss-99c1494c8a193c3d2930",
       "title": "Rà soát nhà, đất của các doanh nghiệp Nhà nước",
