@@ -1,9 +1,113 @@
 {
   "schema_version": 1,
-  "build_id": "market-news-rss-20261024T044830Z",
-  "generated_at": "2026-10-24T04:48:30.165464+00:00",
-  "record_count": 929,
+  "build_id": "market-news-rss-20261024T065140Z",
+  "generated_at": "2026-10-24T06:51:40.684934+00:00",
+  "record_count": 935,
   "data": [
+    {
+      "id": "article-market-rss-66417fd3d8c5bf15f946",
+      "title": "Đã giải ngân 577 tỷ đồng cho người dưới 35 tuổi mua nhà xã hội",
+      "url": "https://vnexpress.net/da-giai-ngan-577-ty-dong-cho-nguoi-duoi-35-tuoi-mua-nha-xa-hoi-5136057.html",
+      "category": "market",
+      "module_ids": [
+        "market",
+        "macro"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-10-24T05:09:10+00:00",
+      "source_id": "vnexpress-real-estate",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "Đến ngày 31/8, nhóm khách hàng dưới 35 tuổi chỉ nhận giải ngân khoảng 577 tỷ đồng để mua nhà ở xã hội do rào cản lãi suất và điều kiện vay vốn.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://vnexpress.net/rss/bat-dong-san.rss",
+        "publisher_host": "vnexpress.net",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-f34f8498aa4285eb2354",
+      "title": "Động thái đáng chú ý của \"ông lớn\" khi giá vàng liên tục giảm",
+      "url": "https://dantri.com.vn/kinh-doanh/dong-thai-dang-chu-y-cua-ong-lon-khi-gia-vang-lien-tuc-giam-20261024101844621.htm",
+      "category": "macro",
+      "module_ids": [
+        "macro"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-10-24T05:06:14+00:00",
+      "source_id": "dantri-business",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "(Dân trí) - Giá vàng giảm mạnh xuống mức 3.995 USD/ounce, giảm 4% chỉ sau 1 tuần. Quỹ vàng lớn của thế giới liên tục bán ra, trong khi Trung Quốc mua vào 23 tháng liên tiếp.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://dantri.com.vn/rss/kinh-doanh.rss",
+        "publisher_host": "dantri.com.vn",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-331ce365d3bee32cfb89",
+      "title": "Tây Ninh sắp đấu thầu tìm nhà đầu tư khu đô thị hơn 10 tỷ USD",
+      "url": "https://vnexpress.net/tay-ninh-sap-dau-thau-tim-nha-dau-tu-khu-do-thi-hon-10-ty-usd-5136316.html",
+      "category": "market",
+      "module_ids": [
+        "market"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-10-24T05:05:00+00:00",
+      "source_id": "vnexpress-real-estate",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "Tây Ninh chuẩn bị đấu thầu lựa chọn nhà đầu tư cho khu đô thị mới Long Hựu rộng gần 2.610 ha, quy mô khoảng 200.000 dân.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://vnexpress.net/rss/bat-dong-san.rss",
+        "publisher_host": "vnexpress.net",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-3303f7339f7b4735b01a",
+      "title": "Bỏ quy định giá đất cụ thể, người mua nhà có thêm cơ hội",
+      "url": "https://dantri.com.vn/bat-dong-san/bo-quy-dinh-gia-dat-cu-the-nguoi-mua-nha-co-them-co-hoi-20261024102503840.htm",
+      "category": "market",
+      "module_ids": [
+        "market"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-10-24T04:33:29+00:00",
+      "source_id": "dantri-real-estate",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [
+        "supply",
+        "pricing"
+      ],
+      "importance": 2,
+      "summary": "(Dân trí) - Nếu được thông qua và triển khai đồng bộ, bỏ giá đất cụ thể có thể góp phần thúc đẩy nguồn cung và tác động đến giá nhà, qua đó giúp người dân có thêm cơ hội tiếp cận nhà ở.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://dantri.com.vn/rss/bat-dong-san.rss",
+        "publisher_host": "dantri.com.vn",
+        "publication_date_from_feed": true
+      }
+    },
     {
       "id": "article-market-rss-44e1f9d7448ca1fa6114",
       "title": "Tai nạn trên cao tốc TPHCM - Long Thành khiến phụ xe tử vong",
@@ -112,6 +216,64 @@
         "method": "official-rss",
         "feed_url": "https://vnexpress.net/rss/bat-dong-san.rss",
         "publisher_host": "vnexpress.net",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-71e14e5433907958b70a",
+      "title": "Ngân hàng tăng cho vay loạt dự án đường sắt, hạ tầng trọng điểm Đông Nam Bộ",
+      "url": "https://dantri.com.vn/bat-dong-san/ngan-hang-tang-cho-vay-loat-du-an-duong-sat-ha-tang-trong-diem-dong-nam-bo-20261024090911436.htm",
+      "category": "market",
+      "module_ids": [
+        "market",
+        "infrastructure"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-10-24T02:34:08+00:00",
+      "source_id": "dantri-real-estate",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [
+        "infrastructure"
+      ],
+      "importance": 2,
+      "summary": "(Dân trí) - Vùng Đông Nam Bộ có 15 dự án trọng điểm với tổng nhu cầu vốn vay khoảng 757.000 tỷ đồng, trong đó nhiều dự án đang được ngân hàng đẩy nhanh tiến độ giải ngân.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://dantri.com.vn/rss/bat-dong-san.rss",
+        "publisher_host": "dantri.com.vn",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-000e074d7a4bc731c11e",
+      "title": "Đất nền Đà Nẵng bắt đầu hạ giá, căn hộ TPHCM \"ngóng\" người mua",
+      "url": "https://dantri.com.vn/bat-dong-san/dat-nen-da-nang-bat-dau-ha-gia-can-ho-tphcm-ngong-nguoi-mua-20261024090144171.htm",
+      "category": "market",
+      "module_ids": [
+        "market",
+        "macro"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-10-24T02:24:33+00:00",
+      "source_id": "dantri-real-estate",
+      "region_ids": [
+        "hcmc"
+      ],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [
+        "sales"
+      ],
+      "importance": 2,
+      "summary": "(Dân trí) - Đất nền Đà Nẵng bắt đầu giảm giá; giao dịch căn hộ TPHCM giảm 66% trong quý III khi người mua vẫn thận trọng trước lãi suất cao.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://dantri.com.vn/rss/bat-dong-san.rss",
+        "publisher_host": "dantri.com.vn",
         "publication_date_from_feed": true
       }
     },
