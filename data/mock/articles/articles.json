@@ -1,9 +1,113 @@
 {
   "schema_version": 1,
-  "build_id": "market-news-rss-20261023T171757Z",
-  "generated_at": "2026-10-23T17:17:57.935039+00:00",
-  "record_count": 916,
+  "build_id": "market-news-rss-20261024T005145Z",
+  "generated_at": "2026-10-24T00:51:45.303473+00:00",
+  "record_count": 920,
   "data": [
+    {
+      "id": "article-market-rss-c9f682abf75e52b82e33",
+      "title": "Giá vàng tiếp đà giảm sâu, người mua lỗ 5 triệu đồng sau 1 tuần",
+      "url": "https://dantri.com.vn/kinh-doanh/gia-vang-tiep-da-giam-sau-nguoi-mua-lo-5-trieu-dong-sau-1-tuan-20261019220239273.htm",
+      "category": "macro",
+      "module_ids": [
+        "macro"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-10-23T23:27:13+00:00",
+      "source_id": "dantri-business",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "(Dân trí) - Giá vàng thế giới giảm xuống mức thấp nhất kể từ tháng 7, chỉ vài ngày trước cuộc họp chính sách tiếp theo của Cục Dự trữ Liên bang Mỹ (Fed). Giá vàng mua vào trong nước cũng đánh mất mốc 140 triệu đồng/lượng.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://dantri.com.vn/rss/kinh-doanh.rss",
+        "publisher_host": "dantri.com.vn",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-f35e0ed232a351e086be",
+      "title": "Lo sân bay Long Thành 'hụt hơi' giai đoạn nước rút",
+      "url": "https://thanhnien.vn/lo-san-bay-long-thanh-hut-hoi-giai-doan-nuoc-rut-185261023225253493.htm",
+      "category": "infrastructure",
+      "module_ids": [
+        "infrastructure"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-10-23T23:03:00+00:00",
+      "source_id": "thanhnien-policy",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [
+        "infrastructure"
+      ],
+      "importance": 2,
+      "summary": "Dù toàn bộ dự án đã hoàn thành khoảng 86,03% tổng giá trị sản lượng và nhiều hợp phần trọng yếu đã sẵn sàng đưa vào vận hành trong tháng 12, song khả năng về đích của siêu sân bay Long Thành vẫn đang vô cùng chênh vênh khi còn 4 gói thầu then chốt nguy cơ vỡ tiến độ.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://thanhnien.vn/rss/kinh-te/chinh-sach-phat-trien.rss",
+        "publisher_host": "thanhnien.vn",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-5b1156fe25383327adca",
+      "title": "7 gói thầu thi công cao tốc Tuyên Quang - Hà Giang phải gia hạn",
+      "url": "https://vnexpress.net/7-goi-thau-thi-cong-cao-toc-tuyen-quang-ha-giang-phai-gia-han-5136206.html",
+      "category": "infrastructure",
+      "module_ids": [
+        "infrastructure"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-10-23T21:00:00+00:00",
+      "source_id": "vnexpress-current-affairs",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [
+        "infrastructure"
+      ],
+      "importance": 2,
+      "summary": "Mưa kéo dài, vướng giải phóng mặt bằng, giá nhiên liệu biến động khiến Ban Quản lý dự án đề xuất gia hạn 7 gói thầu cao tốc Tuyên Quang - Hà Giang từ 30/10 đến hết năm 2026.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://vnexpress.net/rss/thoi-su.rss",
+        "publisher_host": "vnexpress.net",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-331acd9abe6a45896cb5",
+      "title": "Các dự án trọng điểm vùng Đông Nam Bộ cần vay 757.000 tỷ đồng",
+      "url": "https://vnexpress.net/cac-du-an-trong-diem-vung-dong-nam-bo-can-vay-757-000-ty-dong-5136194.html",
+      "category": "market",
+      "module_ids": [
+        "market"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-10-23T17:10:00+00:00",
+      "source_id": "vnexpress-economy",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "15 dự án trọng điểm ở khu vực Đông Nam Bộ có nhu cầu vốn vay 757.000 tỷ đồng và đã được các ngân hàng giải ngân hơn 39.000 tỷ.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://vnexpress.net/rss/kinh-doanh.rss",
+        "publisher_host": "vnexpress.net",
+        "publication_date_from_feed": true
+      }
+    },
     {
       "id": "article-market-rss-70e9fc9238f4369544ef",
       "title": "Bỏ hai phòng ngủ để \"nới\" căn hộ 120 m2 cho bố mẹ nghỉ hưu",
