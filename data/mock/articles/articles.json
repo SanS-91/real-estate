@@ -1,9 +1,63 @@
 {
   "schema_version": 1,
-  "build_id": "market-news-rss-20261024T065140Z",
-  "generated_at": "2026-10-24T06:51:40.684934+00:00",
-  "record_count": 935,
+  "build_id": "market-news-rss-20261024T085144Z",
+  "generated_at": "2026-10-24T08:51:44.123182+00:00",
+  "record_count": 937,
   "data": [
+    {
+      "id": "article-market-rss-0bc94b7dfd4ede10b39b",
+      "title": "Xử lý nghiêm người dùng UAV quanh sân bay Long Thành",
+      "url": "https://dantri.com.vn/thoi-su/xu-ly-nghiem-nguoi-dung-uav-quanh-san-bay-long-thanh-20261024142749711.htm",
+      "category": "infrastructure",
+      "module_ids": [
+        "infrastructure"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-10-24T08:07:47+00:00",
+      "source_id": "dantri-current-affairs",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [
+        "infrastructure"
+      ],
+      "importance": 2,
+      "summary": "(Dân trí) - UBND phường Long Thành sẽ xử lý nghiêm các hoạt động sử dụng thiết bị bay không người lái khi sân bay Long Thành đưa vào khai thác.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://dantri.com.vn/rss/thoi-su.rss",
+        "publisher_host": "dantri.com.vn",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-c516e8e5e6a889cd51d3",
+      "title": "Quy hoạch chiến lược địa phương phải kiến tạo cho phát triển bền vững",
+      "url": "https://dantri.com.vn/thoi-su/quy-hoach-chien-luoc-dia-phuong-phai-kien-tao-cho-phat-trien-ben-vung-20261024130823116.htm",
+      "category": "market",
+      "module_ids": [
+        "market"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-10-24T06:50:44+00:00",
+      "source_id": "dantri-current-affairs",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [
+        "legal"
+      ],
+      "importance": 2,
+      "summary": "(Dân trí) - Theo Trưởng Ban Chính sách, Chiến lược Trung ương Nguyễn Thanh Nghị, quy hoạch phải trở thành công cụ kiến tạo mô hình phát triển, tổ chức lại các nguồn lực và định hình năng lực cạnh tranh dài hạn.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://dantri.com.vn/rss/thoi-su.rss",
+        "publisher_host": "dantri.com.vn",
+        "publication_date_from_feed": true
+      }
+    },
     {
       "id": "article-market-rss-66417fd3d8c5bf15f946",
       "title": "Đã giải ngân 577 tỷ đồng cho người dưới 35 tuổi mua nhà xã hội",
