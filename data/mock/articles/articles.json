@@ -1,9 +1,34 @@
 {
   "schema_version": 1,
-  "build_id": "market-news-rss-20261025T045139Z",
-  "generated_at": "2026-10-25T04:51:39.911883+00:00",
-  "record_count": 951,
+  "build_id": "market-news-rss-20261025T065145Z",
+  "generated_at": "2026-10-25T06:51:45.582098+00:00",
+  "record_count": 953,
   "data": [
+    {
+      "id": "article-market-rss-f4457142c20cac0cb03e",
+      "title": "Nhà ở xã hội dự kiến không được bán lại tự do sau 5 năm",
+      "url": "https://vnexpress.net/nha-o-xa-hoi-du-kien-khong-duoc-ban-lai-tu-do-sau-5-nam-5136578.html",
+      "category": "market",
+      "module_ids": [
+        "market"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-10-25T06:05:28+00:00",
+      "source_id": "vnexpress-real-estate",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "Thay vì chuyển nhượng tự do sau 5 năm, nhà ở xã hội dự kiến chỉ được bán lại cho người đủ điều kiện hưởng chính sách về loại nhà này.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://vnexpress.net/rss/bat-dong-san.rss",
+        "publisher_host": "vnexpress.net",
+        "publication_date_from_feed": true
+      }
+    },
     {
       "id": "article-market-rss-3d7ea1403a1cad0a0855",
       "title": "Hải Phòng sắp đấu giá khu đất 2.000 tỷ đồng gần trung tâm hành chính mới",
@@ -26,6 +51,33 @@
         "method": "official-rss",
         "feed_url": "https://vnexpress.net/rss/bat-dong-san.rss",
         "publisher_host": "vnexpress.net",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-6e17fc42634e9294bdb4",
+      "title": "Hilltop Collection Vịnh Mây: Nơi trải nghiệm sống rộng hơn không gian dinh thự",
+      "url": "https://dantri.com.vn/bat-dong-san/hilltop-collection-vinh-may-noi-trai-nghiem-song-rong-hon-khong-gian-dinh-thu-20261025110329271.htm",
+      "category": "market",
+      "module_ids": [
+        "market"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-10-25T04:18:28+00:00",
+      "source_id": "dantri-real-estate",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [
+        "vinhomes"
+      ],
+      "tags": [],
+      "importance": 2,
+      "summary": "(Dân trí) - Tại Hilltop Collection thuộc khu Vịnh Mây, địa hình sườn đồi hướng vịnh, sân vườn riêng và kiến trúc mở về hệ sinh thái tiện ích của Vinhomes Hải Vân Bay.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://dantri.com.vn/rss/bat-dong-san.rss",
+        "publisher_host": "dantri.com.vn",
         "publication_date_from_feed": true
       }
     },
