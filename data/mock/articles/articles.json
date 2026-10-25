@@ -1,9 +1,36 @@
 {
   "schema_version": 1,
-  "build_id": "market-news-rss-20261025T005141Z",
-  "generated_at": "2026-10-25T00:51:41.928139+00:00",
-  "record_count": 946,
+  "build_id": "market-news-rss-20261025T025132Z",
+  "generated_at": "2026-10-25T02:51:32.958818+00:00",
+  "record_count": 947,
   "data": [
+    {
+      "id": "article-market-rss-519639825629ed1c3a13",
+      "title": "Khó khăn bủa vây doanh nghiệp môi giới địa ốc",
+      "url": "https://vnexpress.net/kho-khan-bua-vay-doanh-nghiep-moi-gioi-dia-oc-5136407.html",
+      "category": "market",
+      "module_ids": [
+        "market"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-10-25T01:05:00+00:00",
+      "source_id": "vnexpress-real-estate",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [
+        "sales"
+      ],
+      "importance": 2,
+      "summary": "Nhiều doanh nghiệp môi giới phải cắt giảm nhân sự và thu hẹp mảng phân phối để duy trì hoạt động trong bối cảnh nghẽn dòng tiền, giao dịch sụt giảm.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://vnexpress.net/rss/bat-dong-san.rss",
+        "publisher_host": "vnexpress.net",
+        "publication_date_from_feed": true
+      }
+    },
     {
       "id": "article-market-rss-a37a28653e76bcedb154",
       "title": "Giá vàng hôm nay 25.10.2026: Người mua vàng nhẫn lỗ hơn 8 triệu đồng sau một tuần",
