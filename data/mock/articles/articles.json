@@ -1,9 +1,84 @@
 {
   "schema_version": 1,
-  "build_id": "market-news-rss-20261025T025132Z",
-  "generated_at": "2026-10-25T02:51:32.958818+00:00",
-  "record_count": 947,
+  "build_id": "market-news-rss-20261025T045139Z",
+  "generated_at": "2026-10-25T04:51:39.911883+00:00",
+  "record_count": 951,
   "data": [
+    {
+      "id": "article-market-rss-3d7ea1403a1cad0a0855",
+      "title": "Hải Phòng sắp đấu giá khu đất 2.000 tỷ đồng gần trung tâm hành chính mới",
+      "url": "https://vnexpress.net/hai-phong-sap-dau-gia-khu-dat-2-000-ty-dong-gan-trung-tam-hanh-chinh-moi-5136572.html",
+      "category": "market",
+      "module_ids": [
+        "market"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-10-25T04:29:26+00:00",
+      "source_id": "vnexpress-real-estate",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "TP Hải Phòng đã duyệt kế hoạch đấu giá khu đất 3 ha gần trung tâm hành chính bắc sông Cấm, dự thu trên 2.000 tỷ đồng.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://vnexpress.net/rss/bat-dong-san.rss",
+        "publisher_host": "vnexpress.net",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-41d44488833edc0e07d3",
+      "title": "Lãi suất Fed tuần tới: Thị trường dự báo kịch bản điều hành mới",
+      "url": "https://dantri.com.vn/kinh-doanh/lai-suat-fed-tuan-toi-thi-truong-du-bao-kich-ban-dieu-hanh-moi-20261025082417044.htm",
+      "category": "macro",
+      "module_ids": [
+        "macro"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-10-25T03:27:59+00:00",
+      "source_id": "dantri-business",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "(Dân trí) - Trước thềm cuộc họp vào thứ tư, thị trường nghiêng về kịch bản Fed tạm dừng nâng lãi suất, song thông điệp điều hành cho chặng đường cuối năm mới là ẩn số quyết định dòng tiền.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://dantri.com.vn/rss/kinh-doanh.rss",
+        "publisher_host": "dantri.com.vn",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-05818511ded05f682714",
+      "title": "Bảng màu từng được ưa chuộng khiến nhà lỗi thời và mẹo phối màu chuẩn đẹp",
+      "url": "https://dantri.com.vn/bat-dong-san/bang-mau-tung-duoc-ua-chuong-khien-nha-loi-thoi-va-meo-phoi-mau-chuan-dep-20261024181601873.htm",
+      "category": "market",
+      "module_ids": [
+        "market"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-10-25T01:42:00+00:00",
+      "source_id": "dantri-real-estate",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "(Dân trí) - Sơn tường trắng, xám hoặc be từng là lựa chọn an toàn khi trang trí nhà cửa. Tuy nhiên, nếu sử dụng đơn điệu, những gam màu này có thể khiến không gian thiếu sức sống.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://dantri.com.vn/rss/bat-dong-san.rss",
+        "publisher_host": "dantri.com.vn",
+        "publication_date_from_feed": true
+      }
+    },
     {
       "id": "article-market-rss-519639825629ed1c3a13",
       "title": "Khó khăn bủa vây doanh nghiệp môi giới địa ốc",
@@ -28,6 +103,31 @@
         "method": "official-rss",
         "feed_url": "https://vnexpress.net/rss/bat-dong-san.rss",
         "publisher_host": "vnexpress.net",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-a118d4728791159d0e1b",
+      "title": "Khải Hoàn Land chia sẻ định hướng phát triển Khải Hoàn Imperial trong giai đoạn mới",
+      "url": "https://dantri.com.vn/bat-dong-san/khai-hoan-land-chia-se-dinh-huong-phat-trien-khai-hoan-imperial-trong-giai-doan-moi-20261024230724284.htm",
+      "category": "market",
+      "module_ids": [
+        "market"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-10-25T01:00:00+00:00",
+      "source_id": "dantri-real-estate",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "(Dân trí) - Ngày 23/10, tại Sales Gallery Khải Hoàn Imperial, chủ đầu tư Khải Hoàn Land tổ chức chương trình đào tạo chuyên sâu với chủ đề “The Art Of Imperial Living - Nghệ thuật sống xứng tầm”.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://dantri.com.vn/rss/bat-dong-san.rss",
+        "publisher_host": "dantri.com.vn",
         "publication_date_from_feed": true
       }
     },
