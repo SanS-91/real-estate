@@ -1,9 +1,84 @@
 {
   "schema_version": 1,
-  "build_id": "market-news-rss-20261024T145131Z",
-  "generated_at": "2026-10-24T14:51:31.966874+00:00",
-  "record_count": 943,
+  "build_id": "market-news-rss-20261025T005141Z",
+  "generated_at": "2026-10-25T00:51:41.928139+00:00",
+  "record_count": 946,
   "data": [
+    {
+      "id": "article-market-rss-a37a28653e76bcedb154",
+      "title": "Giá vàng hôm nay 25.10.2026: Người mua vàng nhẫn lỗ hơn 8 triệu đồng sau một tuần",
+      "url": "https://thanhnien.vn/gia-vang-hom-nay-25102026-nguoi-mua-vang-nhan-lo-hon-8-trieu-dong-sau-mot-tuan-185261024173152571.htm",
+      "category": "macro",
+      "module_ids": [
+        "macro"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-10-25T00:45:00+00:00",
+      "source_id": "thanhnien-banking",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "Giá vàng giảm mạnh trong tuần cả trên thế giới lẫn trong nước khiến người mua lỗ nặng sau một tuần.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://thanhnien.vn/rss/kinh-te/ngan-hang.rss",
+        "publisher_host": "thanhnien.vn",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-2c0410bb96a2860dbe1a",
+      "title": "Bất động sản hàng trăm tỷ đồng của ba thành viên BigBang",
+      "url": "https://vnexpress.net/bat-dong-san-hang-tram-ty-dong-cua-ba-thanh-vien-bigbang-5136483.html",
+      "category": "market",
+      "module_ids": [
+        "market"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-10-24T17:00:00+00:00",
+      "source_id": "vnexpress-real-estate",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "G-Dragon, Taeyang và Daesung đầu tư vào nhiều căn hộ cao cấp, biệt thự và tòa nhà thương mại tại Seoul, với giá trị từ hàng chục đến hàng trăm tỷ đồng.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://vnexpress.net/rss/bat-dong-san.rss",
+        "publisher_host": "vnexpress.net",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-22917cbd6e809ecc600b",
+      "title": "4 bất động sản của bà Trương Mỹ Lan ế khách, nhà đất lân cận giá ra sao?",
+      "url": "https://dantri.com.vn/bat-dong-san/4-bat-dong-san-cua-ba-truong-my-lan-e-khach-nha-dat-lan-can-gia-ra-sao-20261024200214773.htm",
+      "category": "market",
+      "module_ids": [
+        "market"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-10-24T13:36:50+00:00",
+      "source_id": "dantri-real-estate",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "(Dân trí) - Bốn bất động sản liên quan bà Trương Mỹ Lan chưa có người đăng ký đấu giá. Trong khi đó, nhà đất lân cận được rao bán với giá lên tới gần 2 tỷ đồng/m2.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://dantri.com.vn/rss/bat-dong-san.rss",
+        "publisher_host": "dantri.com.vn",
+        "publication_date_from_feed": true
+      }
+    },
     {
       "id": "article-market-rss-510b2cccda4658e994f2",
       "title": "Quy hoạch Buôn Ma Thuột định hướng giữ nét \"buôn trong phố, phố trong buôn\"",
