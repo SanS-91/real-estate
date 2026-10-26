@@ -1,9 +1,170 @@
 {
   "schema_version": 1,
-  "build_id": "market-news-rss-20261026T065140Z",
-  "generated_at": "2026-10-26T06:51:40.417471+00:00",
-  "record_count": 974,
+  "build_id": "market-news-rss-20261026T085144Z",
+  "generated_at": "2026-10-26T08:51:44.849600+00:00",
+  "record_count": 982,
   "data": [
+    {
+      "id": "article-market-rss-16e34c8a03c0f862a584",
+      "title": "Nữ tài xế bị CSGT xử phạt vì dừng ô tô ngược chiều trên quốc lộ",
+      "url": "https://thanhnien.vn/nu-tai-xe-bi-csgt-xu-phat-vi-dung-o-to-nguoc-chieu-tren-quoc-lo-18526102612051621.htm",
+      "category": "infrastructure",
+      "module_ids": [
+        "infrastructure"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-10-26T08:48:00+00:00",
+      "source_id": "thanhnien-transport",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [
+        "infrastructure"
+      ],
+      "importance": 2,
+      "summary": "Bất chấp đường nhỏ và đông phương tiện, nữ tài xế vẫn cố tình lái ô tô dừng ngay trên làn đường ngược chiều, gây cản trở lưu thông.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://thanhnien.vn/rss/xe/xe-giao-thong.rss",
+        "publisher_host": "thanhnien.vn",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-e0091c3c49f4734fc2fa",
+      "title": "TP HCM giao hơn 7.300 m2 đất phường Thủ Đức làm nhà ở cho lực lượng công an",
+      "url": "https://vnexpress.net/tp-hcm-giao-hon-7-300-m2-dat-phuong-thu-duc-lam-nha-o-cho-luc-luong-cong-an-5137001.html",
+      "category": "market",
+      "module_ids": [
+        "market"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-10-26T08:26:49+00:00",
+      "source_id": "vnexpress-real-estate",
+      "region_ids": [
+        "hcmc"
+      ],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "UBND TP HCM giao 7.393 m2 đất đợt đầu tại đường Đặng Văn Bi cho Công ty Confitech Thủ Đức làm dự án nhà ở của lực lượng Công an nhân dân.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://vnexpress.net/rss/bat-dong-san.rss",
+        "publisher_host": "vnexpress.net",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-9ce08bb06b372fa0a4e3",
+      "title": "Chuyển khu công nghiệp Lê Minh Xuân làm nhà ở xã hội",
+      "url": "https://thanhnien.vn/chuyen-khu-cong-nghiep-le-minh-xuan-lam-nha-o-xa-hoi-185261026100617948.htm",
+      "category": "market",
+      "module_ids": [
+        "market"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-10-26T07:20:00+00:00",
+      "source_id": "thanhnien-real-estate",
+      "region_ids": [
+        "hcmc"
+      ],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "Khu công nghiệp Lê Minh Xuân mở rộng có diện tích lên đến gần 100 ha trên địa bàn hai xã Tân Nhựt và Bình Lợi (huyện Bình Chánh, TP.HCM cũ) sẽ được chuyển sang làm nhà ở xã hội.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://thanhnien.vn/rss/kinh-te/dia-oc.rss",
+        "publisher_host": "thanhnien.vn",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-1f57dea7ac9387df7f05",
+      "title": "Dự án của Vingroup ở Hà Tĩnh được tăng vốn lên hơn 23.000 tỷ đồng",
+      "url": "https://vnexpress.net/du-an-cua-vingroup-o-ha-tinh-duoc-tang-von-len-hon-23-000-ty-dong-5136859.html",
+      "category": "market",
+      "module_ids": [
+        "market"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-10-26T06:48:46+00:00",
+      "source_id": "vnexpress-real-estate",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [
+        "vinhomes"
+      ],
+      "tags": [],
+      "importance": 2,
+      "summary": "Khu công nghiệp Vinhomes Vũng Áng được mở rộng quy mô lên hơn 1.400 ha, vốn đầu tư nâng lên hơn 23.000 tỷ đồng.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://vnexpress.net/rss/bat-dong-san.rss",
+        "publisher_host": "vnexpress.net",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-b8f3eec05fdebcb0dd5c",
+      "title": "Meypearl Harmony Phú Quốc chiết khấu đến 13,5% giá bán căn hộ",
+      "url": "https://vnexpress.net/meypearl-harmony-phu-quoc-chiet-khau-den-13-5-gia-ban-can-ho-5136489.html",
+      "category": "market",
+      "module_ids": [
+        "market",
+        "macro"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-10-26T06:00:00+00:00",
+      "source_id": "vnexpress-real-estate",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [
+        "pricing"
+      ],
+      "importance": 2,
+      "summary": "Chủ đầu tư Meypearl Harmony Phú Quốc đưa ra nhiều phương án tài chính cho người mua căn hộ biển như chiết khấu thanh toán sớm tới 13,5% hỗ trợ lãi suất tối đa 48 tháng…",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://vnexpress.net/rss/bat-dong-san.rss",
+        "publisher_host": "vnexpress.net",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-d548a5c71d6fd165987f",
+      "title": "6 món đồ không nên giữ trong nhà để tránh ẩm mốc và cháy nổ",
+      "url": "https://dantri.com.vn/bat-dong-san/6-mon-do-khong-nen-giu-trong-nha-de-tranh-am-moc-va-chay-no-20261026082850348.htm",
+      "category": "market",
+      "module_ids": [
+        "market"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-10-26T05:05:24+00:00",
+      "source_id": "dantri-real-estate",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "(Dân trí) - Nhiều thói quen lưu trữ tưởng chừng tiện lợi lại biến ngôi nhà thành nơi ẩm mốc, tiềm ẩn nguy cơ cháy nổ. Chuyên gia khuyên bạn nên xử lý ngay những món đồ này để giữ an toàn cho gia đình.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://dantri.com.vn/rss/bat-dong-san.rss",
+        "publisher_host": "dantri.com.vn",
+        "publication_date_from_feed": true
+      }
+    },
     {
       "id": "article-market-rss-6c262dbb5e5aaa971511",
       "title": "Ra mắt sa bàn và căn hộ mẫu dự án nghỉ dưỡng Qtopia",
@@ -31,6 +192,35 @@
         "method": "official-rss",
         "feed_url": "https://vnexpress.net/rss/bat-dong-san.rss",
         "publisher_host": "vnexpress.net",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-569df39ca8b8c010d7d2",
+      "title": "Vì sao tài xế xe container chọn quốc lộ 5 thay cao tốc Hà Nội - Hải Phòng?",
+      "url": "https://dantri.com.vn/thoi-su/vi-sao-tai-xe-xe-container-chon-quoc-lo-5-thay-cao-toc-ha-noi-hai-phong-20261026111756148.htm",
+      "category": "infrastructure",
+      "module_ids": [
+        "infrastructure"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-10-26T04:51:55+00:00",
+      "source_id": "dantri-current-affairs",
+      "region_ids": [
+        "ha-noi"
+      ],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [
+        "infrastructure"
+      ],
+      "importance": 2,
+      "summary": "(Dân trí) - Nhiều tài xế xe container chọn quốc lộ 5 thay vì cao tốc Hà Nội - Hải Phòng do thuận tiện kết nối cảng, khu công nghiệp và chi phí vận chuyển thấp hơn.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://dantri.com.vn/rss/thoi-su.rss",
+        "publisher_host": "dantri.com.vn",
         "publication_date_from_feed": true
       }
     },
@@ -87,6 +277,31 @@
         "method": "official-rss",
         "feed_url": "https://vnexpress.net/rss/thoi-su.rss",
         "publisher_host": "vnexpress.net",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-c435014a565b6d6fd816",
+      "title": "Hai cha con tử vong trong vụ cháy nhà ở Gia Lai",
+      "url": "https://dantri.com.vn/thoi-su/hai-cha-con-tu-vong-trong-vu-chay-nha-o-gia-lai-20261026095740787.htm",
+      "category": "market",
+      "module_ids": [
+        "market"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-10-26T03:21:01+00:00",
+      "source_id": "dantri-current-affairs",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "(Dân trí) - Vụ cháy xảy ra tại một ngôi nhà ở thôn Vĩnh Thái, xã Vĩnh Thịnh rạng sáng 26/10 làm hai cha con tử vong. Công an tỉnh Gia Lai đang điều tra làm rõ nguyên nhân.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://dantri.com.vn/rss/thoi-su.rss",
+        "publisher_host": "dantri.com.vn",
         "publication_date_from_feed": true
       }
     },
