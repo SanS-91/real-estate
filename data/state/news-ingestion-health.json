@@ -1,25 +1,25 @@
 {
   "schema_version": 1,
-  "checked_at": "2026-10-26T02:51:47.152674+00:00",
+  "checked_at": "2026-10-26T04:51:45.154920+00:00",
   "feeds_configured": 16,
   "feeds_fetched": 16,
-  "accepted_new": 9,
+  "accepted_new": 2,
   "production_written": true,
-  "article_total": 970,
+  "article_total": 972,
   "published_by_module": {
-    "market": 6,
+    "market": 1,
     "legal": 0,
     "infrastructure": 1,
-    "macro": 3
+    "macro": 0
   },
   "feed_status": [
     {
       "source_id": "vnexpress-real-estate",
       "status": "parsed",
       "feed_items": 50,
-      "new": 2,
-      "skipped": 48,
-      "duplicates": 48,
+      "new": 0,
+      "skipped": 50,
+      "duplicates": 50,
       "filtered": 0
     },
     {
@@ -35,9 +35,9 @@
       "source_id": "dantri-real-estate",
       "status": "parsed",
       "feed_items": 50,
-      "new": 4,
-      "skipped": 46,
-      "duplicates": 46,
+      "new": 0,
+      "skipped": 50,
+      "duplicates": 50,
       "filtered": 0
     },
     {
@@ -53,10 +53,10 @@
       "source_id": "vnexpress-current-affairs",
       "status": "parsed",
       "feed_items": 50,
-      "new": 0,
-      "skipped": 50,
-      "duplicates": 6,
-      "filtered": 44
+      "new": 2,
+      "skipped": 48,
+      "duplicates": 5,
+      "filtered": 43
     },
     {
       "source_id": "vnexpress-legal",
@@ -98,18 +98,18 @@
       "source_id": "dantri-business",
       "status": "parsed",
       "feed_items": 50,
-      "new": 1,
-      "skipped": 49,
-      "duplicates": 7,
+      "new": 0,
+      "skipped": 50,
+      "duplicates": 8,
       "filtered": 42
     },
     {
       "source_id": "dantri-current-affairs",
       "status": "parsed",
       "feed_items": 50,
-      "new": 1,
-      "skipped": 49,
-      "duplicates": 3,
+      "new": 0,
+      "skipped": 50,
+      "duplicates": 4,
       "filtered": 46
     },
     {
@@ -134,9 +134,9 @@
       "source_id": "thanhnien-banking",
       "status": "parsed",
       "feed_items": 50,
-      "new": 1,
-      "skipped": 49,
-      "duplicates": 24,
+      "new": 0,
+      "skipped": 50,
+      "duplicates": 25,
       "filtered": 25
     },
     {
