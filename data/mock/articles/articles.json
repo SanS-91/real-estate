@@ -1,9 +1,241 @@
 {
   "schema_version": 1,
-  "build_id": "market-news-rss-20261026T005139Z",
-  "generated_at": "2026-10-26T00:51:39.084246+00:00",
-  "record_count": 961,
+  "build_id": "market-news-rss-20261026T025147Z",
+  "generated_at": "2026-10-26T02:51:47.152674+00:00",
+  "record_count": 970,
   "data": [
+    {
+      "id": "article-market-rss-bb77f57aa9b6a5436ebb",
+      "title": "Sun Property ra quân dự án căn hộ ven biển đầu tiên tại Đà Nẵng",
+      "url": "https://vnexpress.net/sun-property-ra-quan-du-an-can-ho-ven-bien-dau-tien-tai-da-nang-5136647.html",
+      "category": "market",
+      "module_ids": [
+        "market"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-10-26T02:30:00+00:00",
+      "source_id": "vnexpress-real-estate",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "Khoảng 1.500 chuyên viên kinh doanh tham dự sự kiện khởi động dự án Sun Saphia Residence, tổ hợp căn hộ gần 800 sản phẩm do Sun Property phát triển ngày 23/10.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://vnexpress.net/rss/bat-dong-san.rss",
+        "publisher_host": "vnexpress.net",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-eb6373f2cc26ca1add33",
+      "title": "Giá vàng hôm nay 26.10.2026: Vàng miếng SJC cao hơn thế giới lên 16,7 triệu đồng/lượng",
+      "url": "https://thanhnien.vn/gia-vang-hom-nay-26102026-vang-mieng-sjc-cao-hon-the-gioi-len-167-trieu-dong-luong-185261026085342915.htm",
+      "category": "macro",
+      "module_ids": [
+        "macro"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-10-26T02:04:00+00:00",
+      "source_id": "thanhnien-banking",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "Giá vàng thế giới vẫn tiếp tục giảm trước cuộc họp về lãi suất của Mỹ trong tuần này. Vì thế, giá kim loại quý trong nước vốn ít thay đổi trong những ngày qua hiện gia tăng thêm mức đắt đỏ.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://thanhnien.vn/rss/kinh-te/ngan-hang.rss",
+        "publisher_host": "thanhnien.vn",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-ee6267bf984a2bcea46e",
+      "title": "Onsen Wellness Center: Nghệ thuật khoáng nóng giữa miền thông reo Thanh Xuan Valley",
+      "url": "https://dantri.com.vn/bat-dong-san/onsen-wellness-center-nghe-thuat-khoang-nong-giua-mien-thong-reo-thanh-xuan-valley-20261025233903341.htm",
+      "category": "market",
+      "module_ids": [
+        "market"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-10-26T01:00:00+00:00",
+      "source_id": "dantri-real-estate",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "(Dân trí) - Nương theo địa hình nguyên bản của Thanh Xuan Valley, tổ hợp khoáng nóng bốn mùa Onsen Wellness Center hội tụ tinh thần kiến trúc, nghệ thuật Onsen Nhật Bản và thiên nhiên trong hành trình sống khỏe toàn diện giữa miền thông reo.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://dantri.com.vn/rss/bat-dong-san.rss",
+        "publisher_host": "dantri.com.vn",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-187b4d337d4afcc0e514",
+      "title": "Sun Group ra mắt dự án căn hộ mặt biển đầu tiên tại Đà Nẵng",
+      "url": "https://dantri.com.vn/bat-dong-san/sun-group-ra-mat-du-an-can-ho-mat-bien-dau-tien-tai-da-nang-20261025171445887.htm",
+      "category": "market",
+      "module_ids": [
+        "market"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-10-26T01:00:00+00:00",
+      "source_id": "dantri-real-estate",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [
+        "supply"
+      ],
+      "importance": 2,
+      "summary": "(Dân trí) - Là dự án căn hộ mặt biển đầu tiên của Sun Group tại “thành phố đáng sống\", Sun Saphia Residence hướng đến phong cách sống “đón ánh dương, chạm đại dương, sống nghỉ dưỡng”.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://dantri.com.vn/rss/bat-dong-san.rss",
+        "publisher_host": "dantri.com.vn",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-00d8aa18aed64a24135d",
+      "title": "Hệ tiện ích mở rộng khả năng khai thác Newtown Legend Đà Nẵng",
+      "url": "https://vnexpress.net/he-tien-ich-mo-rong-kha-nang-khai-thac-newtown-legend-da-nang-5135766.html",
+      "category": "market",
+      "module_ids": [
+        "market"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-10-26T01:00:00+00:00",
+      "source_id": "vnexpress-real-estate",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "Sân golf 36 hố quốc tế, khách sạn 5 sao, tiện ích nội khu và trục du lịch Trường Sa - Hội An bao quanh Newtown Legend giúp mở rộng trải nghiệm nghỉ dưỡng, lưu trú, thương mại.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://vnexpress.net/rss/bat-dong-san.rss",
+        "publisher_host": "vnexpress.net",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-a347a11bf0c1b666a433",
+      "title": "Thuê chỗ ngồi làm việc: Từ giá ngang ly cà phê vỉa hè tới vài triệu đồng mỗi tháng",
+      "url": "https://dantri.com.vn/bat-dong-san/thue-cho-ngoi-lam-viec-tu-gia-ngang-ly-ca-phe-via-he-toi-vai-trieu-dong-moi-thang-20261025225732283.htm",
+      "category": "market",
+      "module_ids": [
+        "market"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-10-26T00:41:38+00:00",
+      "source_id": "dantri-real-estate",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "(Dân trí) - Từ chỗ ngồi 25.000 đồng cho 3 giờ đến gói thuê lên đến vài triệu đồng mỗi tháng, không gian làm việc chung đáp ứng nhu cầu làm việc linh hoạt nhưng vẫn có rào cản về chi phí, tiện ích.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://dantri.com.vn/rss/bat-dong-san.rss",
+        "publisher_host": "dantri.com.vn",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-fd9b74a0d15947591e13",
+      "title": "Giá vàng lao dốc, người mua lỗ 5 triệu đồng/lượng sau một tuần",
+      "url": "https://dantri.com.vn/kinh-doanh/gia-vang-lao-doc-nguoi-mua-lo-5-trieu-dongluong-sau-mot-tuan-20261026004141321.htm",
+      "category": "macro",
+      "module_ids": [
+        "macro"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-10-26T00:09:00+00:00",
+      "source_id": "dantri-business",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "(Dân trí) - Giá vàng miếng SJC giảm tổng cộng 1,9 triệu đồng/lượng trong tuần qua. Nếu mua vàng ở mức giá cao nhất đầu tuần, nhà đầu tư hiện có thể lỗ gần 5 triệu đồng/lượng khi bán ra.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://dantri.com.vn/rss/kinh-doanh.rss",
+        "publisher_host": "dantri.com.vn",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-0c9a78482d78c4fa51bb",
+      "title": "Lãi suất giảm, VN-Index tăng, cổ phiếu bất động sản có hưởng lợi?",
+      "url": "https://dantri.com.vn/bat-dong-san/lai-suat-giam-vn-index-tang-co-phieu-bat-dong-san-co-huong-loi-20261026003956350.htm",
+      "category": "market",
+      "module_ids": [
+        "market",
+        "macro"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-10-26T00:07:26+00:00",
+      "source_id": "dantri-real-estate",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "(Dân trí) - VN-Index tăng ba phiên liên tiếp và đóng cửa tuần ở vùng cao nhất trong gần một tháng, trong đó cổ phiếu bất động sản hưởng lợi từ lãi suất hạ nhiệt và loạt chính sách tháo gỡ vướng mắc.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://dantri.com.vn/rss/bat-dong-san.rss",
+        "publisher_host": "dantri.com.vn",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-e6231331510f7afbc431",
+      "title": "Quốc lộ 5 oằn mình cõng xe container, cao tốc Hà Nội - Hải Phòng thảnh thơi",
+      "url": "https://dantri.com.vn/thoi-su/quoc-lo-5-oan-minh-cong-xe-container-cao-toc-ha-noi-hai-phong-thanh-thoi-20261025161125496.htm",
+      "category": "infrastructure",
+      "module_ids": [
+        "infrastructure"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-10-25T22:58:00+00:00",
+      "source_id": "dantri-current-affairs",
+      "region_ids": [
+        "ha-noi"
+      ],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [
+        "infrastructure"
+      ],
+      "importance": 2,
+      "summary": "(Dân trí) - Bình quân mỗi ngày có hơn 11.500 lượt ô tô tải trọng lớn và xe container di chuyển trên quốc lộ 5 qua 2 trạm thu phí; trong khi đó trên cao tốc Hà Nội - Hải Phòng xe này chỉ có 4.300 lượt/ngày.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://dantri.com.vn/rss/thoi-su.rss",
+        "publisher_host": "dantri.com.vn",
+        "publication_date_from_feed": true
+      }
+    },
     {
       "id": "article-market-rss-3bb2515c0022ea57f2bb",
       "title": "Siêu dự án bứt tốc, TP.HCM chạy nước rút tăng trưởng",
