@@ -1,9 +1,93 @@
 {
   "schema_version": 1,
-  "build_id": "market-news-rss-20261026T131907Z",
-  "generated_at": "2026-10-26T13:19:07.676230+00:00",
-  "record_count": 992,
+  "build_id": "market-news-rss-20261026T145144Z",
+  "generated_at": "2026-10-26T14:51:44.278985+00:00",
+  "record_count": 995,
   "data": [
+    {
+      "id": "article-market-rss-79beb7ba858c42d9ae0b",
+      "title": "Rào chắn đường sắt đang hạ, dừng xe cách bao nhiêu mét để tránh bị phạt?",
+      "url": "https://thanhnien.vn/rao-chan-duong-sat-dang-ha-dung-xe-cach-bao-nhieu-met-de-tranh-bi-phat-185261026120118468.htm",
+      "category": "infrastructure",
+      "module_ids": [
+        "infrastructure"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-10-26T14:25:00+00:00",
+      "source_id": "thanhnien-transport",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [
+        "infrastructure"
+      ],
+      "importance": 2,
+      "summary": "Khi đến nơi đường bộ giao cắt với đường sắt, không ít tài xế băn khoăn phải dừng xe ở đâu nếu rào chắn đang hạ. Quy định hiện hành xác định rõ vị trí dừng và khoảng cách an toàn với đường ray.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://thanhnien.vn/rss/xe/xe-giao-thong.rss",
+        "publisher_host": "thanhnien.vn",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-09f8d07093282986467c",
+      "title": "Hải Phòng đổi đất làm đoạn Vành đai 3 hơn 8.100 tỷ",
+      "url": "https://vnexpress.net/hai-phong-doi-dat-lam-doan-vanh-dai-3-hon-8-100-ty-5137143.html",
+      "category": "market",
+      "module_ids": [
+        "market",
+        "infrastructure"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-10-26T14:02:20+00:00",
+      "source_id": "vnexpress-real-estate",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [
+        "infrastructure"
+      ],
+      "importance": 2,
+      "summary": "TP Hải Phòng đang tìm kiếm nhà đầu tư quan tâm, đề xuất thực hiện dự án hoàn thiện đường vành đai 3 theo phương thức hợp đồng BT.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://vnexpress.net/rss/bat-dong-san.rss",
+        "publisher_host": "vnexpress.net",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-20541ee37a69df0515bb",
+      "title": "'Cách hạ tầng kết nối với nhau quan trọng hơn dự án nào sẽ triển khai'",
+      "url": "https://vnexpress.net/cach-ha-tang-ket-noi-voi-nhau-quan-trong-hon-du-an-nao-se-trien-khai-5137155.html",
+      "category": "market",
+      "module_ids": [
+        "market"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-10-26T12:54:31+00:00",
+      "source_id": "vnexpress-current-affairs",
+      "region_ids": [
+        "hcmc"
+      ],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [
+        "infrastructure"
+      ],
+      "importance": 2,
+      "summary": "TP HCM cần phát triển hệ sinh thái hạ tầng đồng bộ, kết nối giao thông, công nghiệp, đô thị và năng lượng để thu hút dòng vốn đầu tư dài hạn, theo đại diện doanh nghiệp.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://vnexpress.net/rss/thoi-su.rss",
+        "publisher_host": "vnexpress.net",
+        "publication_date_from_feed": true
+      }
+    },
     {
       "id": "article-market-rss-36bd91d89b14537a93ee",
       "title": "Doanh nhân Hàn Quốc thôi làm CEO Sunshine Homes",
