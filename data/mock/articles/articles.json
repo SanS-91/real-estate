@@ -1,9 +1,92 @@
 {
   "schema_version": 1,
-  "build_id": "market-news-rss-20261026T085144Z",
-  "generated_at": "2026-10-26T08:51:44.849600+00:00",
-  "record_count": 982,
+  "build_id": "market-news-rss-20261026T105205Z",
+  "generated_at": "2026-10-26T10:52:05.488414+00:00",
+  "record_count": 990,
   "data": [
+    {
+      "id": "article-market-rss-62e5dacb73ccf152b4f4",
+      "title": "Hơn 20 ngân hàng giảm lãi suất tiết kiệm",
+      "url": "https://thanhnien.vn/hon-20-ngan-hang-giam-lai-suat-tiet-kiem-185261026145251678.htm",
+      "category": "macro",
+      "module_ids": [
+        "macro"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-10-26T09:27:00+00:00",
+      "source_id": "thanhnien-banking",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "Khoảng 20 ngân hàng giảm lãi suất tiết kiệm trong vòng 5 ngày qua. Lãi suất cho vay bình quân tiền đồng tháng 9 tăng gần sát 11%/năm.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://thanhnien.vn/rss/kinh-te/ngan-hang.rss",
+        "publisher_host": "thanhnien.vn",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-d032780d7bc600017ab5",
+      "title": "“Khóa trần” lãi suất tới 5 năm, người mua nhà Vinhomes yên tâm nắm giữ tài sản",
+      "url": "https://dantri.com.vn/bat-dong-san/khoa-tran-lai-suat-toi-5-nam-nguoi-mua-nha-vinhomes-yen-tam-nam-giu-tai-san-20261026154851703.htm",
+      "category": "market",
+      "module_ids": [
+        "macro"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-10-26T09:10:00+00:00",
+      "source_id": "dantri-real-estate",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [
+        "vinhomes"
+      ],
+      "tags": [],
+      "importance": 2,
+      "summary": "(Dân trí) - Với gói ưu đãi “khóa trần” lãi suất 9%/năm trong 60 tháng, Vinhomes trao cho khách hàng quyền chủ động kiểm soát chi phí vay để an tâm tích sản, đón đầu cơ hội gia tăng giá trị khi các đại đô thị bước vào giai đoạn phát triển mới.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://dantri.com.vn/rss/bat-dong-san.rss",
+        "publisher_host": "dantri.com.vn",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-a83fbb46a6a534f8b862",
+      "title": "TP HCM chấn chỉnh tiến độ đấu giá đất",
+      "url": "https://vnexpress.net/tp-hcm-chan-chinh-tien-do-dau-gia-dat-5137026.html",
+      "category": "market",
+      "module_ids": [
+        "market",
+        "legal"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-10-26T09:02:58+00:00",
+      "source_id": "vnexpress-real-estate",
+      "region_ids": [
+        "hcmc"
+      ],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [
+        "pricing",
+        "legal"
+      ],
+      "importance": 2,
+      "summary": "Chủ tịch UBND TP HCM yêu cầu các cơ quan rà soát pháp lý, xác định trách nhiệm và thời hạn xử lý từng khu đất, ưu tiên đấu giá những vị trí đủ điều kiện.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://vnexpress.net/rss/bat-dong-san.rss",
+        "publisher_host": "vnexpress.net",
+        "publication_date_from_feed": true
+      }
+    },
     {
       "id": "article-market-rss-16e34c8a03c0f862a584",
       "title": "Nữ tài xế bị CSGT xử phạt vì dừng ô tô ngược chiều trên quốc lộ",
@@ -28,6 +111,31 @@
         "method": "official-rss",
         "feed_url": "https://thanhnien.vn/rss/xe/xe-giao-thong.rss",
         "publisher_host": "thanhnien.vn",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-1e4958a6973cab7eed38",
+      "title": "Siết bán lại nhà ở xã hội sau 5 năm: Nguy cơ ách tắc khâu xét duyệt",
+      "url": "https://dantri.com.vn/bat-dong-san/siet-ban-lai-nha-o-xa-hoi-sau-5-nam-nguy-co-ach-tac-khau-xet-duyet-20261026141224892.htm",
+      "category": "market",
+      "module_ids": [
+        "market"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-10-26T08:47:04+00:00",
+      "source_id": "dantri-real-estate",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "(Dân trí) - Việc siết chặt tệp khách hàng được quyền mua lại nhà ở xã hội sau 5 năm nhận được sự đồng thuận lớn. Dù vậy, quy trình thẩm định hồ sơ, chứng minh thu nhập của người mua vẫn còn nhiều vướng mắc.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://dantri.com.vn/rss/bat-dong-san.rss",
+        "publisher_host": "dantri.com.vn",
         "publication_date_from_feed": true
       }
     },
@@ -113,6 +221,35 @@
       }
     },
     {
+      "id": "article-market-rss-94b3d50b621280339c77",
+      "title": "Đề xuất xây tuyến đường sắt mới Hà Nội - Đồng Đăng tốc độ 160km/h",
+      "url": "https://dantri.com.vn/thoi-su/de-xuat-xay-tuyen-duong-sat-moi-ha-noi-dong-dang-toc-do-160kmh-20261026124925375.htm",
+      "category": "infrastructure",
+      "module_ids": [
+        "infrastructure"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-10-26T06:14:25+00:00",
+      "source_id": "dantri-current-affairs",
+      "region_ids": [
+        "ha-noi"
+      ],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [
+        "infrastructure"
+      ],
+      "importance": 2,
+      "summary": "(Dân trí) - Tuyến đường sắt Hà Nội - Đồng Đăng mới được đề xuất xây dựng đường đôi, khổ ray 1.435mm, tốc độ thiết kế 160km/h, trong đó một số đoạn dự kiến đi trên cao.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://dantri.com.vn/rss/thoi-su.rss",
+        "publisher_host": "dantri.com.vn",
+        "publication_date_from_feed": true
+      }
+    },
+    {
       "id": "article-market-rss-b8f3eec05fdebcb0dd5c",
       "title": "Meypearl Harmony Phú Quốc chiết khấu đến 13,5% giá bán căn hộ",
       "url": "https://vnexpress.net/meypearl-harmony-phu-quoc-chiet-khau-den-13-5-gia-ban-can-ho-5136489.html",
@@ -137,6 +274,96 @@
         "method": "official-rss",
         "feed_url": "https://vnexpress.net/rss/bat-dong-san.rss",
         "publisher_host": "vnexpress.net",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-bdd7721930d5e8b82e19",
+      "title": "Lãnh đạo TPHCM chấn chỉnh việc đấu giá đất",
+      "url": "https://dantri.com.vn/bat-dong-san/lanh-dao-tphcm-chan-chinh-viec-dau-gia-dat-20261026120820598.htm",
+      "category": "market",
+      "module_ids": [
+        "market",
+        "legal"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-10-26T05:47:14+00:00",
+      "source_id": "dantri-real-estate",
+      "region_ids": [
+        "hcmc"
+      ],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [
+        "pricing"
+      ],
+      "importance": 2,
+      "summary": "(Dân trí) - Chủ tịch UBND TPHCM yêu cầu các đơn vị tập trung nguồn lực, xây dựng tiến độ cụ thể, tháo gỡ khó khăn; ưu tiên hoàn thiện hồ sơ và tổ chức đấu giá những khu đất đủ điều kiện theo quy định.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://dantri.com.vn/rss/bat-dong-san.rss",
+        "publisher_host": "dantri.com.vn",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-00d05e5281f179b147b3",
+      "title": "Mạng lưới metro TPHCM thay đổi ra sao trong tầm nhìn 100 năm?",
+      "url": "https://dantri.com.vn/thoi-su/mang-luoi-metro-tphcm-thay-doi-ra-sao-trong-tam-nhin-100-nam-20261026115234595.htm",
+      "category": "infrastructure",
+      "module_ids": [
+        "infrastructure"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-10-26T05:41:43+00:00",
+      "source_id": "dantri-current-affairs",
+      "region_ids": [
+        "hcmc"
+      ],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [
+        "legal",
+        "infrastructure"
+      ],
+      "importance": 2,
+      "summary": "(Dân trí) - Mạng lưới metro TPHCM đang trải qua bước điều chỉnh quan trọng cả về tư duy tổ chức không gian lẫn thiết kế hướng tuyến để tích hợp vào đồ án Quy hoạch tổng thể tầm nhìn 100 năm.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://dantri.com.vn/rss/thoi-su.rss",
+        "publisher_host": "dantri.com.vn",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-410169d8fedea085c170",
+      "title": "Bắt đầu thảm nhựa tuyến cao tốc TPHCM - Chơn Thành đoạn qua TP Đồng Nai",
+      "url": "https://dantri.com.vn/thoi-su/bat-dau-tham-nhua-tuyen-cao-toc-tphcm-chon-thanh-doan-qua-tp-dong-nai-20261025234049168.htm",
+      "category": "infrastructure",
+      "module_ids": [
+        "infrastructure"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-10-26T05:13:47+00:00",
+      "source_id": "dantri-current-affairs",
+      "region_ids": [
+        "hcmc",
+        "dong-nai"
+      ],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [
+        "infrastructure"
+      ],
+      "importance": 2,
+      "summary": "(Dân trí) - Các đơn vị đang đẩy nhanh lu nền đường và bắt đầu thảm nhựa tuyến chính cao tốc TPHCM - Thủ Dầu Một - Chơn Thành đoạn qua TP Đồng Nai với quyết tâm hoàn thành 6,6km vào cuối năm.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://dantri.com.vn/rss/thoi-su.rss",
+        "publisher_host": "dantri.com.vn",
         "publication_date_from_feed": true
       }
     },
