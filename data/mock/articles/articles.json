@@ -1,9 +1,86 @@
 {
   "schema_version": 1,
-  "build_id": "market-news-rss-20261026T145144Z",
-  "generated_at": "2026-10-26T14:51:44.278985+00:00",
-  "record_count": 995,
+  "build_id": "market-news-rss-20261026T200036Z",
+  "generated_at": "2026-10-26T20:00:36.107182+00:00",
+  "record_count": 998,
   "data": [
+    {
+      "id": "article-market-rss-54d89ec255ddc020a804",
+      "title": "Lãi suất tiết kiệm thế nào sau chỉ đạo của Ngân hàng Nhà nước",
+      "url": "https://vnexpress.net/lai-suat-tiet-kiem-the-nao-sau-chi-dao-cua-ngan-hang-nha-nuoc-5136844.html",
+      "category": "macro",
+      "module_ids": [
+        "macro"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-10-26T17:06:00+00:00",
+      "source_id": "vnexpress-economy",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "Lãi suất niêm yết đồng loạt giảm, mức ưu đãi thực tế tại nhiều ngân hàng \"hạ nhiệt\" nhưng vẫn neo cao phổ biến 8-9% một năm.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://vnexpress.net/rss/kinh-doanh.rss",
+        "publisher_host": "vnexpress.net",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-49a55a293670e8bf071b",
+      "title": "Người bán nhà tại Mỹ dần yếu thế",
+      "url": "https://vnexpress.net/nguoi-ban-nha-tai-my-dan-yeu-the-5137055.html",
+      "category": "market",
+      "module_ids": [
+        "market"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-10-26T17:03:00+00:00",
+      "source_id": "vnexpress-real-estate",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [
+        "sales"
+      ],
+      "importance": 2,
+      "summary": "Thị trường nhà ở Mỹ đang đảo chiều khi người bán phải hạ giá, thậm chí hỗ trợ bên mua để chốt giao dịch.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://vnexpress.net/rss/bat-dong-san.rss",
+        "publisher_host": "vnexpress.net",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-352b7a6596171626763f",
+      "title": "Nhà gần 200 m2 không dùng điều hòa nhờ thông gió tự nhiên",
+      "url": "https://vnexpress.net/nha-gan-200-m2-khong-dung-dieu-hoa-nho-thong-gio-tu-nhien-5137076.html",
+      "category": "market",
+      "module_ids": [
+        "market"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-10-26T17:00:00+00:00",
+      "source_id": "vnexpress-real-estate",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "Công trình hai tầng sử dụng gỗ tái chế, mái che rộng và khoảng thông tầng để đón gió biển, hạn chế nắng nóng.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://vnexpress.net/rss/bat-dong-san.rss",
+        "publisher_host": "vnexpress.net",
+        "publication_date_from_feed": true
+      }
+    },
     {
       "id": "article-market-rss-79beb7ba858c42d9ae0b",
       "title": "Rào chắn đường sắt đang hạ, dừng xe cách bao nhiêu mét để tránh bị phạt?",
