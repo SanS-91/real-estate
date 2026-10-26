@@ -1,9 +1,116 @@
 {
   "schema_version": 1,
-  "build_id": "market-news-rss-20261025T145141Z",
-  "generated_at": "2026-10-25T14:51:41.206399+00:00",
-  "record_count": 957,
+  "build_id": "market-news-rss-20261026T005139Z",
+  "generated_at": "2026-10-26T00:51:39.084246+00:00",
+  "record_count": 961,
   "data": [
+    {
+      "id": "article-market-rss-3bb2515c0022ea57f2bb",
+      "title": "Siêu dự án bứt tốc, TP.HCM chạy nước rút tăng trưởng",
+      "url": "https://thanhnien.vn/sieu-du-an-but-toc-tphcm-chay-nuoc-rut-tang-truong-185261025211402197.htm",
+      "category": "market",
+      "module_ids": [
+        "market"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-10-25T22:48:00+00:00",
+      "source_id": "thanhnien-policy",
+      "region_ids": [
+        "hcmc"
+      ],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [
+        "infrastructure"
+      ],
+      "importance": 2,
+      "summary": "Đồng loạt các siêu công trình hạ tầng chiến lược được khởi công và khánh thành không chỉ tạo đà bứt tốc tăng trưởng quý cuối năm cho TP.HCM mà còn mở không gian phát triển, định hình tầm vóc siêu đô thị toàn cầu trong tương lai.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://thanhnien.vn/rss/kinh-te/chinh-sach-phat-trien.rss",
+        "publisher_host": "thanhnien.vn",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-6601fb625b5cd09e832b",
+      "title": "Nhiều 'chiêu' ưu đãi mua nhà dần mất tác dụng",
+      "url": "https://vnexpress.net/nhieu-chieu-uu-dai-mua-nha-dan-mat-tac-dung-5134178.html",
+      "category": "market",
+      "module_ids": [
+        "market",
+        "macro"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-10-25T21:00:00+00:00",
+      "source_id": "vnexpress-real-estate",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [
+        "pricing"
+      ],
+      "importance": 2,
+      "summary": "Chiết khấu 20-30%, hỗ trợ lãi vay và giãn tiến độ thanh toán, các chủ đầu tư vẫn khó kéo sức mua khi nhiều người thận trọng hơn với giá nhà, chi phí vốn và triển vọng đầu tư.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://vnexpress.net/rss/bat-dong-san.rss",
+        "publisher_host": "vnexpress.net",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-ac759cb1734183ce8944",
+      "title": "Căn hộ 200 m2 'thay áo' bằng những đường cong",
+      "url": "https://vnexpress.net/can-ho-200-m2-thay-ao-bang-nhung-duong-cong-5136574.html",
+      "category": "market",
+      "module_ids": [
+        "market"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-10-25T19:18:49+00:00",
+      "source_id": "vnexpress-real-estate",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "Nhóm thiết kế tập trung thay đổi nội thất, sử dụng đường cong, màu sắc và ánh sáng để tạo sự đồng bộ cho không gian sống.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://vnexpress.net/rss/bat-dong-san.rss",
+        "publisher_host": "vnexpress.net",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-332285c40fe34598d2cf",
+      "title": "Phố Wall dự báo giá vàng khó bật lên sau nhịp giảm sâu",
+      "url": "https://vnexpress.net/pho-wall-du-bao-gia-vang-kho-bat-len-sau-nhip-giam-sau-5136715.html",
+      "category": "macro",
+      "module_ids": [
+        "macro"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-10-25T18:08:13+00:00",
+      "source_id": "vnexpress-economy",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "Nhiều chuyên gia phố Wall dự báo giá vàng sẽ đi xuống hoặc nhận định khó tăng giá trở lại vào tuần tới.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://vnexpress.net/rss/kinh-doanh.rss",
+        "publisher_host": "vnexpress.net",
+        "publication_date_from_feed": true
+      }
+    },
     {
       "id": "article-market-rss-cd5a8d6c03311a9821b0",
       "title": "Giảm lãi suất cho sản xuất kinh doanh, bất động sản vẫn phải chờ?",
