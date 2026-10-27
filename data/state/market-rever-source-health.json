@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-10-26T14:30:04.773295+00:00",
+  "generated_at": "2026-10-27T08:01:42.631068+00:00",
   "source_id": "rever-vn",
   "scope": "individual-apartment-asking-only",
   "targets_checked": 8,
@@ -9,8 +9,8 @@
   "details_checked": 86,
   "exact_project_matches": 24,
   "source_updates_within_30_days": 0,
-  "source_updates_within_90_days": 1,
-  "published_current_individual_listings": 1,
+  "source_updates_within_90_days": 0,
+  "published_current_individual_listings": 0,
   "source_runs_seen": 8,
   "projects": [
     {
@@ -40,7 +40,7 @@
       "details_checked": 12,
       "exact_project_matches": 6,
       "recent_30_days": 0,
-      "recent_90_days": 1,
+      "recent_90_days": 0,
       "latest_publisher_listing_update_date": "2026-07-28"
     },
     {
