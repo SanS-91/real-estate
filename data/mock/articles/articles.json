@@ -1,9 +1,165 @@
 {
   "schema_version": 1,
-  "build_id": "market-news-rss-20261027T005141Z",
-  "generated_at": "2026-10-27T00:51:41.273581+00:00",
-  "record_count": 999,
+  "build_id": "market-news-rss-20261027T025142Z",
+  "generated_at": "2026-10-27T02:51:42.137367+00:00",
+  "record_count": 1005,
   "data": [
+    {
+      "id": "article-market-rss-e9358289b1205200453a",
+      "title": "Giá vàng hôm nay 27.10.2026: Vàng trong nước bất động ngày thứ 3 liên tiếp",
+      "url": "https://thanhnien.vn/gia-vang-hom-nay-27102026-vang-trong-nuoc-bat-dong-ngay-thu-3-lien-tiep-185261027085912304.htm",
+      "category": "macro",
+      "module_ids": [
+        "macro"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-10-27T02:14:00+00:00",
+      "source_id": "thanhnien-banking",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "Giá vàng trong nước không biến động nhiều trước sự đi lên của kim loại quý thế giới. Điều này khiến mức đắt đỏ của vàng miếng SJC được rút ngắn, còn 15,7 triệu đồng/lượng thay vì 16,7 triệu đồng/lượng trước đó.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://thanhnien.vn/rss/kinh-te/ngan-hang.rss",
+        "publisher_host": "thanhnien.vn",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-6ede42b31c37268385d5",
+      "title": "Chuyên gia 48 năm kinh nghiệm thừa nhận sai, rút dự báo giá vàng 6.000 USD/ounce",
+      "url": "https://dantri.com.vn/kinh-doanh/chuyen-gia-48-nam-kinh-nghiem-thua-nhan-sai-rut-du-bao-gia-vang-6000-usdounce-20261027074513828.htm",
+      "category": "macro",
+      "module_ids": [
+        "macro"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-10-27T02:00:00+00:00",
+      "source_id": "dantri-business",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "(Dân trí) - Từng được kỳ vọng vọt lên 6.000 USD/ounce, giá vàng hiện quay về dao động quanh mốc 4.000 USD. Điều gì đã làm đảo lộn kịch bản tăng giá đầy tham vọng của giới phân tích quốc tế?",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://dantri.com.vn/rss/kinh-doanh.rss",
+        "publisher_host": "dantri.com.vn",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-34e476d029db7f9dc5b5",
+      "title": "Van Phuc Group đưa căn hộ gần 8 tỷ đồng vào chương trình ưu đãi",
+      "url": "https://vnexpress.net/van-phuc-group-dua-can-ho-gan-8-ty-dong-vao-chuong-trinh-uu-dai-5137250.html",
+      "category": "market",
+      "module_ids": [
+        "market"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-10-27T01:00:00+00:00",
+      "source_id": "vnexpress-real-estate",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "Van Phuc Group đưa một căn hộ trị giá gần 8 tỷ đồng vào chương trình ưu đãi dành cho người mua Diamond Sky, áp dụng từ 1/11 đến 1/11/2027.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://vnexpress.net/rss/bat-dong-san.rss",
+        "publisher_host": "vnexpress.net",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-0942db359bf84aff415b",
+      "title": "Chủ đầu tư A&K Tower dành 60 tỉ đồng hỗ trợ 300 suất ‘mua nhà 3 không’",
+      "url": "https://thanhnien.vn/chu-dau-tu-ak-tower-danh-60-ti-dong-ho-tro-300-suat-mua-nha-3-khong-185261026220415517.htm",
+      "category": "market",
+      "module_ids": [
+        "market",
+        "legal"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-10-27T01:00:00+00:00",
+      "source_id": "thanhnien-real-estate",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "Đại diện chủ đầu tư OBC Holdings cho biết đã chuẩn bị sẵn sàng gần 60 tỉ đồng song song với việc kết hợp các ngân hàng đẩy nhanh tốc độ thẩm định hồ sơ đối với nhóm khách hàng chọn chính sách thanh toán 'mua nhà 3 không' tại dự án A&K Tower.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://thanhnien.vn/rss/kinh-te/dia-oc.rss",
+        "publisher_host": "thanhnien.vn",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-623edcda0375aec799e2",
+      "title": "Chênh lệch giá vàng trong nước và thế giới lên 16 triệu đồng, rủi ro tăng",
+      "url": "https://dantri.com.vn/kinh-doanh/chenh-lech-gia-vang-trong-nuoc-va-the-gioi-len-16-trieu-dong-rui-ro-tang-20261027065740824.htm",
+      "category": "macro",
+      "module_ids": [
+        "macro"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-10-27T00:12:43+00:00",
+      "source_id": "dantri-business",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "(Dân trí) - Giá vàng thế giới hồi phục, lấy lại gần mốc 4.000 USD/ounce. Trong khi đó, giá vàng SJC vẫn đứng yên. Hiện, chênh lệch giữa vàng trong nước và thế giới ở mức cao 16 triệu đồng/lượng.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://dantri.com.vn/rss/kinh-doanh.rss",
+        "publisher_host": "dantri.com.vn",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-1169548de1db68f92e27",
+      "title": "Hồ sơ Quy hoạch tổng thể TPHCM tầm nhìn 100 năm được đồng thuận cao",
+      "url": "https://dantri.com.vn/thoi-su/ho-so-quy-hoach-tong-the-tphcm-tam-nhin-100-nam-duoc-dong-thuan-cao-20261026224952002.htm",
+      "category": "market",
+      "module_ids": [
+        "market"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-10-27T00:03:29+00:00",
+      "source_id": "dantri-current-affairs",
+      "region_ids": [
+        "hcmc"
+      ],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [
+        "legal",
+        "infrastructure"
+      ],
+      "importance": 2,
+      "summary": "(Dân trí) - Đồ án Quy hoạch tổng thể TPHCM vừa được trải qua bước thẩm định quan trọng; đặt mục tiêu hoàn thiện mạng lưới metro vào năm 2050 và tổ chức không gian phát triển đa tầng trên toàn địa bàn sau sáp nhập.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://dantri.com.vn/rss/thoi-su.rss",
+        "publisher_host": "dantri.com.vn",
+        "publication_date_from_feed": true
+      }
+    },
     {
       "id": "article-market-rss-42a8409fbfc337acb9d7",
       "title": "Đề xuất chỉ được bán lại nhà ở xã hội cho đúng đối tượng",
