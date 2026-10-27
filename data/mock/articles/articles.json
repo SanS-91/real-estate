@@ -1,9 +1,36 @@
 {
   "schema_version": 1,
-  "build_id": "market-news-rss-20261027T065151Z",
-  "generated_at": "2026-10-27T06:51:51.522553+00:00",
-  "record_count": 1018,
+  "build_id": "market-news-rss-20261027T085138Z",
+  "generated_at": "2026-10-27T08:51:38.824417+00:00",
+  "record_count": 1021,
   "data": [
+    {
+      "id": "article-market-rss-b7e06d512f714fbfcc97",
+      "title": "TP HCM thu hồi gần 9.300 m2 đất do doanh nghiệp nợ tiền thuê",
+      "url": "https://vnexpress.net/tp-hcm-thu-hoi-gan-9-300-m2-dat-do-doanh-nghiep-no-tien-thue-5137412.html",
+      "category": "market",
+      "module_ids": [
+        "market"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-10-27T07:44:36+00:00",
+      "source_id": "vnexpress-real-estate",
+      "region_ids": [
+        "hcmc"
+      ],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "Khu đất gần 9.300 m2 tại số 127 An Dương Vương, phường Bình Phú, do Công ty cổ phần Bất động sản Thành Ngân sử dụng, thuộc diện thu hồi do vi phạm nghĩa vụ tài chính.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://vnexpress.net/rss/bat-dong-san.rss",
+        "publisher_host": "vnexpress.net",
+        "publication_date_from_feed": true
+      }
+    },
     {
       "id": "article-market-rss-e5c721c6bdb87b4383da",
       "title": "Biệt thự gần 26,7 triệu USD của Quả Bóng Vàng Harry Kane",
@@ -55,6 +82,60 @@
         "method": "official-rss",
         "feed_url": "https://vnexpress.net/rss/bat-dong-san.rss",
         "publisher_host": "vnexpress.net",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-28132527bcfec87ec9ed",
+      "title": "Ba ô tô \"dồn toa\" trên cầu vượt Ngã Tư Sở ở Hà Nội",
+      "url": "https://dantri.com.vn/thoi-su/ba-o-to-don-toa-tren-cau-vuot-nga-tu-so-o-ha-noi-20261027115759824.htm",
+      "category": "infrastructure",
+      "module_ids": [
+        "infrastructure"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-10-27T05:03:39+00:00",
+      "source_id": "dantri-current-affairs",
+      "region_ids": [
+        "ha-noi"
+      ],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "(Dân trí) - Tại hiện trường, chiếc xe màu đỏ kẹp giữa bị xe tải đâm móp đuôi, hư hỏng phần hông; xe tải bị móp nhẹ đầu; xe taxi bị móp nhẹ phần đuôi xe.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://dantri.com.vn/rss/thoi-su.rss",
+        "publisher_host": "dantri.com.vn",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-e16d87c9d7add2817086",
+      "title": "Gửi lại nửa thế kỷ ký ức ở chung cư Vĩnh Hội tại TPHCM",
+      "url": "https://dantri.com.vn/thoi-su/gui-lai-nua-the-ky-ky-uc-o-chung-cu-vinh-hoi-tai-tphcm-20261025155821206.htm",
+      "category": "market",
+      "module_ids": [
+        "market"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-10-27T04:59:55+00:00",
+      "source_id": "dantri-current-affairs",
+      "region_ids": [
+        "hcmc"
+      ],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "(Dân trí) - Đứng trước rủi ro của chung cư cấp D đã xuống cấp nghiêm trọng, hơn 140 hộ dân chung cư Vĩnh Hội đang gạt dần trăn trở, gửi lại nửa thế kỷ ký ức để di dời, bảo đảm an toàn tính mạng.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://dantri.com.vn/rss/thoi-su.rss",
+        "publisher_host": "dantri.com.vn",
         "publication_date_from_feed": true
       }
     },
