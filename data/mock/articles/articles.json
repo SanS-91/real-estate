@@ -1,9 +1,113 @@
 {
   "schema_version": 1,
-  "build_id": "market-news-rss-20261027T045144Z",
-  "generated_at": "2026-10-27T04:51:44.839213+00:00",
-  "record_count": 1010,
+  "build_id": "market-news-rss-20261027T065151Z",
+  "generated_at": "2026-10-27T06:51:51.522553+00:00",
+  "record_count": 1018,
   "data": [
+    {
+      "id": "article-market-rss-e5c721c6bdb87b4383da",
+      "title": "Biệt thự gần 26,7 triệu USD của Quả Bóng Vàng Harry Kane",
+      "url": "https://vnexpress.net/biet-thu-gan-26-7-trieu-usd-cua-qua-bong-vang-harry-kane-5137365.html",
+      "category": "market",
+      "module_ids": [
+        "market"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-10-27T05:53:06+00:00",
+      "source_id": "vnexpress-real-estate",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "Biệt thự của Harry Kane tại Surrey được thiết kế theo phong cách Neo-Georgian, tích hợp hồ bơi, rạp chiếu phim, phòng gym và gara ngầm chứa 5 ôtô.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://vnexpress.net/rss/bat-dong-san.rss",
+        "publisher_host": "vnexpress.net",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-4dea5447e0315211f9ec",
+      "title": "Dự án Vingroup đề xuất có thể chuyển một phần đất thấp tầng sang nhà xã hội",
+      "url": "https://vnexpress.net/du-an-vingroup-de-xuat-co-the-chuyen-mot-phan-dat-thap-tang-sang-nha-xa-hoi-5137299.html",
+      "category": "market",
+      "module_ids": [
+        "market"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-10-27T05:09:00+00:00",
+      "source_id": "vnexpress-real-estate",
+      "region_ids": [
+        "ha-noi"
+      ],
+      "project_ids": [],
+      "developer_ids": [
+        "vinhomes"
+      ],
+      "tags": [],
+      "importance": 2,
+      "summary": "Khu đô thị Bắc Hồng ở phía bắc Hà Nội đang được nghiên cứu chuyển một phần đất xây nhà thấp tầng sang khu nhà xã hội cao 8 tầng.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://vnexpress.net/rss/bat-dong-san.rss",
+        "publisher_host": "vnexpress.net",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-43a15722115f57da4720",
+      "title": "Dự án nuôi bò hơn 4.500 tỷ đồng được đem đấu giá gần 284 tỷ",
+      "url": "https://vnexpress.net/du-an-nuoi-bo-hon-4-500-ty-dong-duoc-dem-dau-gia-gan-284-ty-5137359.html",
+      "category": "market",
+      "module_ids": [
+        "market"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-10-27T04:48:34+00:00",
+      "source_id": "vnexpress-current-affairs",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "Sau nhiều năm bỏ hoang, dự án chăn nuôi bò Bình Hà được đưa ra đấu giá tài sản thế chấp, trong bối cảnh hoạt động chăn nuôi chưa thể khôi phục.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://vnexpress.net/rss/thoi-su.rss",
+        "publisher_host": "vnexpress.net",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-610d60583e9156c34510",
+      "title": "Lãi suất ngân hàng đồng loạt giảm, các kỳ hạn tiết kiệm hiện ở mức nào?",
+      "url": "https://dantri.com.vn/kinh-doanh/lai-suat-ngan-hang-dong-loat-giam-cac-ky-han-tiet-kiem-hien-o-muc-nao-20261027102440972.htm",
+      "category": "macro",
+      "module_ids": [
+        "macro"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-10-27T04:13:32+00:00",
+      "source_id": "dantri-business",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "(Dân trí) - Loạt nhà băng đã công bố giảm lãi suất huy động. Mức giảm phổ biến là 0,5 điểm phần trăm ở kỳ hạn từ 6 tháng, một số ngân hàng giảm 0,6-0,7 điểm phần trăm.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://dantri.com.vn/rss/kinh-doanh.rss",
+        "publisher_host": "dantri.com.vn",
+        "publication_date_from_feed": true
+      }
+    },
     {
       "id": "article-market-rss-33378edff6453b7de7a7",
       "title": "Nút giao Cổ Linh ở Hà Nội ùn tắc triền miên",
@@ -30,6 +134,58 @@
         "method": "official-rss",
         "feed_url": "https://vnexpress.net/rss/thoi-su.rss",
         "publisher_host": "vnexpress.net",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-eddf658e13cfc498c997",
+      "title": "Tài xế \"taxi dù” ở sân bay Cát Bi bị phạt 13 triệu đồng",
+      "url": "https://dantri.com.vn/thoi-su/tai-xe-taxi-du-o-san-bay-cat-bi-bi-phat-13-trieu-dong-20261027100437540.htm",
+      "category": "infrastructure",
+      "module_ids": [
+        "infrastructure"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-10-27T03:13:41+00:00",
+      "source_id": "dantri-current-affairs",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [
+        "infrastructure"
+      ],
+      "importance": 2,
+      "summary": "(Dân trí) - Sau phản ánh của báo Dân trí về tình trạng \"taxi dù” tại sân bay Cát Bi, CSGT Hải Phòng xác minh, làm việc với tài xế N.V.D. và xử phạt người này 13 triệu đồng.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://dantri.com.vn/rss/thoi-su.rss",
+        "publisher_host": "dantri.com.vn",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-016aff7fbcea443c2529",
+      "title": "Cơ hội nhận thêm căn hộ gần 8 tỷ đồng khi mua Diamond Sky",
+      "url": "https://dantri.com.vn/bat-dong-san/co-hoi-nhan-them-can-ho-gan-8-ty-dong-khi-mua-diamond-sky-20261027081743272.htm",
+      "category": "market",
+      "module_ids": [
+        "market"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-10-27T03:00:00+00:00",
+      "source_id": "dantri-real-estate",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "(Dân trí) - Bên cạnh không gian sống sang trọng, Van Phuc Group gia tăng sức hút cho Diamond Sky bằng chương trình “Mua nhà trúng nhà - Nhân đôi tổ ấm” diễn ra từ 1/11/2026 đến 1/11/2027. Khách hàng có cơ hội nhận thêm căn hộ trị giá gần 8 tỷ đồng.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://dantri.com.vn/rss/bat-dong-san.rss",
+        "publisher_host": "dantri.com.vn",
         "publication_date_from_feed": true
       }
     },
@@ -106,6 +262,58 @@
       "source_verification": {
         "method": "official-rss",
         "feed_url": "https://dantri.com.vn/rss/kinh-doanh.rss",
+        "publisher_host": "dantri.com.vn",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-0f4b8a2431d60e22ac65",
+      "title": "Vlasta Premier - Phú Thuận: Lời giải kép cho bài toán an cư và dòng tiền bền vững",
+      "url": "https://dantri.com.vn/bat-dong-san/vlasta-premier-phu-thuan-loi-giai-kep-cho-bai-toan-an-cu-va-dong-tien-ben-vung-20261026151442032.htm",
+      "category": "market",
+      "module_ids": [
+        "market"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-10-27T02:00:00+00:00",
+      "source_id": "dantri-real-estate",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [
+        "infrastructure"
+      ],
+      "importance": 2,
+      "summary": "(Dân trí) - Trước sự bứt phá mạnh mẽ của hạ tầng và nhu cầu nhà ở cao cấp gia tăng, Vlasta Premier - Phú Thuận mở ra lựa chọn đáng chú ý cho cả 2 bài toán: không gian an cư tinh tuyển và khả năng khai thác dòng tiền.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://dantri.com.vn/rss/bat-dong-san.rss",
+        "publisher_host": "dantri.com.vn",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-99f51dbb7240996c6b7d",
+      "title": "Mẹo dọn sạch bụi trong nhà và ngăn bụi quay trở lại cực đơn giản",
+      "url": "https://dantri.com.vn/bat-dong-san/meo-don-sach-bui-trong-nha-va-ngan-bui-quay-tro-lai-cuc-don-gian-20261027001327293.htm",
+      "category": "market",
+      "module_ids": [
+        "market"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-10-27T01:54:00+00:00",
+      "source_id": "dantri-real-estate",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "(Dân trí) - Dù vừa lau dọn hôm trước nhưng hôm sau bụi đã phủ mờ mặt bàn? Vài thay đổi nhỏ trong thói quen chăm sóc nhà cửa sẽ giúp tổ ấm của bạn luôn sáng bóng, thoáng mát và sạch bụi lâu dài.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://dantri.com.vn/rss/bat-dong-san.rss",
         "publisher_host": "dantri.com.vn",
         "publication_date_from_feed": true
       }
