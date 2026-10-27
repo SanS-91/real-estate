@@ -1,9 +1,38 @@
 {
   "schema_version": 1,
-  "build_id": "market-news-rss-20261027T105138Z",
-  "generated_at": "2026-10-27T10:51:38.375407+00:00",
-  "record_count": 1035,
+  "build_id": "market-news-rss-20261027T122717Z",
+  "generated_at": "2026-10-27T12:27:17.077610+00:00",
+  "record_count": 1037,
   "data": [
+    {
+      "id": "article-market-rss-1827fc93d6f0391bdf48",
+      "title": "Siêu sân bay Long Thành sắp khai thác thương mại, từ TP.HCM đi đường nào?",
+      "url": "https://thanhnien.vn/sieu-san-bay-long-thanh-sap-khai-thac-thuong-mai-tu-tphcm-di-duong-nao-185261027165945625.htm",
+      "category": "infrastructure",
+      "module_ids": [
+        "infrastructure"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-10-27T10:55:00+00:00",
+      "source_id": "thanhnien-policy",
+      "region_ids": [
+        "hcmc"
+      ],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [
+        "infrastructure"
+      ],
+      "importance": 2,
+      "summary": "Trong giai đoạn đầu khi các tuyến đường sắt kết nối chưa được đưa vào vận hành, vận tải hành khách giữa TP.CM và sân bay Long Thành sẽ chủ yếu dựa vào hệ thống giao thông đường bộ.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://thanhnien.vn/rss/kinh-te/chinh-sach-phat-trien.rss",
+        "publisher_host": "thanhnien.vn",
+        "publication_date_from_feed": true
+      }
+    },
     {
       "id": "article-market-rss-1167340ad7d7f8a56eff",
       "title": "Hà Nội muốn tăng thêm nghìn căn nhà cho thuê phường Việt Hưng",
@@ -53,6 +82,33 @@
         "method": "official-rss",
         "feed_url": "https://vnexpress.net/rss/kinh-doanh.rss",
         "publisher_host": "vnexpress.net",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-5ec54cfeb0bbf0fb53c7",
+      "title": "Nữ tướng mới của MIK Group từng đầu quân công ty tỷ phú Phạm Nhật Vượng",
+      "url": "https://dantri.com.vn/bat-dong-san/nu-tuong-moi-cua-mik-group-tung-dau-quan-cong-ty-ty-phu-pham-nhat-vuong-20261027160106216.htm",
+      "category": "market",
+      "module_ids": [
+        "market"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-10-27T09:47:00+00:00",
+      "source_id": "dantri-real-estate",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [
+        "vinhomes"
+      ],
+      "tags": [],
+      "importance": 2,
+      "summary": "(Dân trí) - MIK Group vừa bổ nhiệm bà Trần Thị Minh Thúy làm Tổng giám đốc. Nữ lãnh đạo sinh năm 1974 từng đảm nhiệm nhiều vị trí cấp cao tại Vinhomes, T&T Homes và Virex.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://dantri.com.vn/rss/bat-dong-san.rss",
+        "publisher_host": "dantri.com.vn",
         "publication_date_from_feed": true
       }
     },
