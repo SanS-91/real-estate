@@ -1,9 +1,111 @@
 {
   "schema_version": 1,
-  "build_id": "market-news-rss-20261027T122717Z",
-  "generated_at": "2026-10-27T12:27:17.077610+00:00",
-  "record_count": 1037,
+  "build_id": "market-news-rss-20261027T145148Z",
+  "generated_at": "2026-10-27T14:51:48.725162+00:00",
+  "record_count": 1041,
   "data": [
+    {
+      "id": "article-market-rss-96244cfc31c3502ed0fb",
+      "title": "SCB giảm lãi suất tiết kiệm xuống gần 0%",
+      "url": "https://vnexpress.net/scb-giam-lai-suat-tiet-kiem-xuong-gan-0-5137507.html",
+      "category": "macro",
+      "module_ids": [
+        "macro"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-10-27T13:18:26+00:00",
+      "source_id": "vnexpress-economy",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "Từ ngân hàng thường xuyên dẫn đầu lãi suất tiền gửi giai đoạn 2020-2022, SCB hiện chỉ trả lãi 0,1-0,7% một năm cho hầu hết kỳ hạn, thấp hơn nhiều so với mặt bằng chung.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://vnexpress.net/rss/kinh-doanh.rss",
+        "publisher_host": "vnexpress.net",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-d60a111ccff41772c36c",
+      "title": "Bất động sản 650 tỷ đồng như cung điện của quả bóng vàng Harry Kane",
+      "url": "https://dantri.com.vn/bat-dong-san/bat-dong-san-650-ty-dong-nhu-cung-dien-cua-qua-bong-vang-harry-kane-20261027175334109.htm",
+      "category": "market",
+      "module_ids": [
+        "market"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-10-27T12:31:34+00:00",
+      "source_id": "dantri-real-estate",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "(Dân trí) - Chủ nhân Quả bóng vàng 2026 chi 20 triệu bảng Anh (khoảng 650 tỷ đồng) đập đi xây lại toàn bộ cơ ngơi ở Surrey, làm cả bàn xoay ôtô để tiện đưa xe ra vào.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://dantri.com.vn/rss/bat-dong-san.rss",
+        "publisher_host": "dantri.com.vn",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-c9c8755c32e3a86f27b8",
+      "title": "Cư dân HH Linh Đàm quan tâm các tiêu chí để chung cư được phép tồn tại",
+      "url": "https://dantri.com.vn/bat-dong-san/cu-dan-hh-linh-dam-quan-tam-cac-tieu-chi-de-chung-cu-duoc-phep-ton-tai-20261027182917898.htm",
+      "category": "market",
+      "module_ids": [
+        "market"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-10-27T12:21:26+00:00",
+      "source_id": "dantri-real-estate",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "(Dân trí) - Trước đề xuất 5 tiêu chí xem xét công trình vi phạm được phép tồn tại, nhiều cư dân HH Linh Đàm chưa rõ tòa nhà mình ở đáp ứng bao nhiêu điều kiện, song vẫn mong được tiếp tục sinh sống tại đây.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://dantri.com.vn/rss/bat-dong-san.rss",
+        "publisher_host": "dantri.com.vn",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-65a7494977c7bd9cb267",
+      "title": "Triều cường nhấn chìm nhiều tuyến đường ở TP HCM",
+      "url": "https://vnexpress.net/trieu-cuong-nhan-chim-nhieu-tuyen-duong-o-tp-hcm-5137591.html",
+      "category": "infrastructure",
+      "module_ids": [
+        "infrastructure"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-10-27T11:42:13+00:00",
+      "source_id": "vnexpress-current-affairs",
+      "region_ids": [
+        "hcmc"
+      ],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "Đỉnh triều đạt 1,75 m khiến nhiều tuyến đường ở quận 7 và 2 cũ ngập sâu, hàng loạt xe chết máy, giao thông ùn ứ, chiều 27/10.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://vnexpress.net/rss/thoi-su.rss",
+        "publisher_host": "vnexpress.net",
+        "publication_date_from_feed": true
+      }
+    },
     {
       "id": "article-market-rss-1827fc93d6f0391bdf48",
       "title": "Siêu sân bay Long Thành sắp khai thác thương mại, từ TP.HCM đi đường nào?",
