@@ -1,9 +1,198 @@
 {
   "schema_version": 1,
-  "build_id": "market-news-rss-20261027T085138Z",
-  "generated_at": "2026-10-27T08:51:38.824417+00:00",
-  "record_count": 1021,
+  "build_id": "market-news-rss-20261027T105138Z",
+  "generated_at": "2026-10-27T10:51:38.375407+00:00",
+  "record_count": 1035,
   "data": [
+    {
+      "id": "article-market-rss-1167340ad7d7f8a56eff",
+      "title": "Hà Nội muốn tăng thêm nghìn căn nhà cho thuê phường Việt Hưng",
+      "url": "https://vnexpress.net/ha-noi-muon-tang-them-nghin-can-nha-cho-thue-phuong-viet-hung-5137520.html",
+      "category": "market",
+      "module_ids": [
+        "market"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-10-27T09:53:15+00:00",
+      "source_id": "vnexpress-real-estate",
+      "region_ids": [
+        "ha-noi"
+      ],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "Dự án nhà ở cho thuê tại phường Việt Hưng, Hà Nội, được đề xuất tăng quy mô triển khai, bổ sung hơn 1.100 căn hộ.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://vnexpress.net/rss/bat-dong-san.rss",
+        "publisher_host": "vnexpress.net",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-e4bd330ac79671d98e2f",
+      "title": "EY: Chi phí logistics Việt Nam có thể giảm về 12% GDP nhờ xanh hóa",
+      "url": "https://vnexpress.net/ey-chi-phi-logistics-viet-nam-co-the-giam-ve-12-gdp-nho-xanh-hoa-5137457.html",
+      "category": "macro",
+      "module_ids": [
+        "macro"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-10-27T09:48:36+00:00",
+      "source_id": "vnexpress-economy",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "Xanh hóa chuỗi cung ứng và liên thông dữ liệu số có thể giúp Việt Nam tiết kiệm hàng tỷ USD chi phí logistics, đưa tỷ lệ này về 12% GDP.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://vnexpress.net/rss/kinh-doanh.rss",
+        "publisher_host": "vnexpress.net",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-1ee05bfc7f482269b4df",
+      "title": "Vì sao Hà Nội chọn Sun Group triển khai dự án tái thiết Vĩnh Hưng?",
+      "url": "https://thanhnien.vn/vi-sao-ha-noi-chon-sun-group-trien-khai-du-an-tai-thiet-vinh-hung-185261027161118725.htm",
+      "category": "market",
+      "module_ids": [
+        "market"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-10-27T09:19:00+00:00",
+      "source_id": "thanhnien-policy",
+      "region_ids": [
+        "ha-noi"
+      ],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [
+        "legal"
+      ],
+      "importance": 2,
+      "summary": "Hà Nội không thiếu chủ trương hay những bản đồ án quy hoạch đầy tham vọng, nhưng giữa bài toán tái thiết đô thị ngốn hàng trăm ngàn tỉ đồng, việc tìm kiếm nhà đầu tư chiến lược đủ tiềm lực và tâm huyết sẵn sàng bước ra gánh vác mới là \"chìa khóa\" mở lối cho cuộc lột xác tại Vĩnh Hưng.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://thanhnien.vn/rss/kinh-te/chinh-sach-phat-trien.rss",
+        "publisher_host": "thanhnien.vn",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-768c068617a34913254d",
+      "title": "Lãi suất hạ nhiệt, thị trường bất động sản liệu có khởi sắc?",
+      "url": "https://thanhnien.vn/lai-suat-ha-nhiet-thi-truong-bat-dong-san-lieu-co-khoi-sac-185261027142818546.htm",
+      "category": "market",
+      "module_ids": [
+        "market",
+        "macro"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-10-27T09:09:00+00:00",
+      "source_id": "thanhnien-real-estate",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "Ngay sau chỉ đạo Ngân hàng Nhà nước, một số nhà băng thông tin giảm tới 2%/năm lãi suất cho vay đối với các khoản giải ngân mới. Điều này đã giúp thị trường bất động sản phấn chấn trở lại.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://thanhnien.vn/rss/kinh-te/dia-oc.rss",
+        "publisher_host": "thanhnien.vn",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-e19a4c23b9c3cab8f144",
+      "title": "Cần Thơ khởi công dự án giao thông hơn 1.596 tỉ đồng",
+      "url": "https://thanhnien.vn/can-tho-khoi-cong-du-an-giao-thong-hon-1596-ti-dong-185261027145909599.htm",
+      "category": "market",
+      "module_ids": [
+        "market",
+        "infrastructure"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-10-27T09:04:00+00:00",
+      "source_id": "thanhnien-real-estate",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "Dự án đường Nguyễn Văn Cừ nối dài giai đoạn 2 góp phần nâng cao năng lực kết nối giao thông, mở rộng không gian phát triển đô thị, thương mại, dịch vụ, du lịch sinh thái của TP.Cần Thơ.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://thanhnien.vn/rss/kinh-te/dia-oc.rss",
+        "publisher_host": "thanhnien.vn",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-3165d2c7fbc09e90f388",
+      "title": "Ngôi nhà cho mọi chặng đời và lời giải an cư ở cửa ngõ phía Tây",
+      "url": "https://dantri.com.vn/bat-dong-san/ngoi-nha-cho-moi-chang-doi-va-loi-giai-an-cu-o-cua-ngo-phia-tay-20261027144750184.htm",
+      "category": "market",
+      "module_ids": [
+        "market"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-10-27T08:29:00+00:00",
+      "source_id": "dantri-real-estate",
+      "region_ids": [
+        "ha-noi"
+      ],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [
+        "infrastructure"
+      ],
+      "importance": 2,
+      "summary": "(Dân trí) - Một mái nhà đủ rộng để ông bà an dưỡng, cha mẹ tiện đi làm và con cái có khoảng sân chạy nhảy đang trở thành bài toán khó trong nội đô Hà Nội. Xu hướng tìm kiếm đang dịch chuyển về hướng Tây, nơi hạ tầng ngày càng được cải thiện.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://dantri.com.vn/rss/bat-dong-san.rss",
+        "publisher_host": "dantri.com.vn",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-554d3c5e8b2f98efeac6",
+      "title": "Hà Nội dự kiến cần thu hồi thêm hơn 10.300 ha đất",
+      "url": "https://vnexpress.net/ha-noi-du-kien-can-thu-hoi-them-hon-10-300-ha-dat-5137327.html",
+      "category": "market",
+      "module_ids": [
+        "market"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-10-27T08:17:01+00:00",
+      "source_id": "vnexpress-real-estate",
+      "region_ids": [
+        "ha-noi"
+      ],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "Hà Nội cần thu hồi thêm hơn 10.300 ha đất để làm 578 dự án phát triển kinh tế - xã hội vì lợi ích quốc gia, công cộng.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://vnexpress.net/rss/bat-dong-san.rss",
+        "publisher_host": "vnexpress.net",
+        "publication_date_from_feed": true
+      }
+    },
     {
       "id": "article-market-rss-b7e06d512f714fbfcc97",
       "title": "TP HCM thu hồi gần 9.300 m2 đất do doanh nghiệp nợ tiền thuê",
@@ -32,6 +221,167 @@
       }
     },
     {
+      "id": "article-market-rss-18cd83970ff73c76c3e3",
+      "title": "TPHCM thu hồi gần 9.300m2 đất của doanh nghiệp vi phạm nghĩa vụ tài chính",
+      "url": "https://dantri.com.vn/bat-dong-san/tphcm-thu-hoi-gan-9300m2-dat-cua-doanh-nghiep-vi-pham-nghia-vu-tai-chinh-20261027130051502.htm",
+      "category": "market",
+      "module_ids": [
+        "market"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-10-27T06:48:40+00:00",
+      "source_id": "dantri-real-estate",
+      "region_ids": [
+        "hcmc"
+      ],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "(Dân trí) - UBND TPHCM thông báo thu hồi 9.300m2 đất của một doanh nghiệp bất động sản do đơn vị này chưa thực hiện đầy đủ nghĩa vụ tài chính, đã bị cơ quan thuế áp dụng biện pháp cưỡng chế nhưng không chấp hành.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://dantri.com.vn/rss/bat-dong-san.rss",
+        "publisher_host": "dantri.com.vn",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-b9656c4834b26dbde64a",
+      "title": "5 xe tông liên hoàn trên cao tốc TPHCM - Trung Lương",
+      "url": "https://dantri.com.vn/thoi-su/5-xe-tong-lien-hoan-tren-cao-toc-tphcm-trung-luong-20261027124813531.htm",
+      "category": "infrastructure",
+      "module_ids": [
+        "infrastructure"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-10-27T06:39:01+00:00",
+      "source_id": "dantri-current-affairs",
+      "region_ids": [
+        "hcmc"
+      ],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [
+        "infrastructure"
+      ],
+      "importance": 2,
+      "summary": "(Dân trí) - Tai nạn liên hoàn giữa 5 phương tiện trên cao tốc TPHCM - Trung Lương, đoạn qua Đồng Tháp, khiến một tài xế gãy chân, nhiều xe hư hỏng, giao thông ùn tắc.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://dantri.com.vn/rss/thoi-su.rss",
+        "publisher_host": "dantri.com.vn",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-2763553d88fd035378f3",
+      "title": "Đề xuất đầu tư 2.770 tỷ đồng nâng cấp quốc lộ 55 ở Lâm Đồng",
+      "url": "https://dantri.com.vn/thoi-su/de-xuat-dau-tu-2770-ty-dong-nang-cap-quoc-lo-55-o-lam-dong-20261027112418308.htm",
+      "category": "infrastructure",
+      "module_ids": [
+        "infrastructure"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-10-27T06:31:03+00:00",
+      "source_id": "dantri-current-affairs",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [
+        "infrastructure"
+      ],
+      "importance": 2,
+      "summary": "(Dân trí) - Cơ quan chức năng tỉnh Lâm Đồng đề xuất đầu tư 2.770 tỷ đồng nâng cấp, cải tạo 70km quốc lộ 55 nhằm tăng kết nối giao thông, phát triển kinh tế.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://dantri.com.vn/rss/thoi-su.rss",
+        "publisher_host": "dantri.com.vn",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-f7965c525ed40b67cbe8",
+      "title": "Tập đoàn An Lạc đặt tiêu chuẩn chất lượng công trình lên hàng đầu tại Moonlight 2",
+      "url": "https://dantri.com.vn/bat-dong-san/tap-doan-an-lac-dat-tieu-chuan-chat-luong-cong-trinh-len-hang-dau-tai-moonlight-2-20261027093211269.htm",
+      "category": "market",
+      "module_ids": [
+        "market"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-10-27T06:30:00+00:00",
+      "source_id": "dantri-real-estate",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "(Dân trí) - Để tạo nên không gian sống cao cấp và bền vững với thời gian, mỗi giai đoạn xây dựng tại Tòa căn hộ cao cấp Moonlight 2 đều được Tập đoàn An Lạc ưu tiên đầu tư nguồn lực và kiểm soát chặt chẽ.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://dantri.com.vn/rss/bat-dong-san.rss",
+        "publisher_host": "dantri.com.vn",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-7a82b67649ec09c84827",
+      "title": "Công nhân lội triều cường chuẩn bị thi công đường sắt Bến Thành - Cần Giờ",
+      "url": "https://dantri.com.vn/thoi-su/cong-nhan-loi-trieu-cuong-chuan-bi-thi-cong-duong-sat-ben-thanh-can-gio-20261027121125779.htm",
+      "category": "infrastructure",
+      "module_ids": [
+        "infrastructure"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-10-27T06:21:59+00:00",
+      "source_id": "dantri-current-affairs",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [
+        "infrastructure"
+      ],
+      "importance": 2,
+      "summary": "(Dân trí) - Máy móc hạng nặng được tập kết về cảng Nhà Rồng - Khánh Hội để sẵn sàng thi công đồng loạt dự án đường sắt Bến Thành - Cần Giờ từ ngày 30/10.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://dantri.com.vn/rss/thoi-su.rss",
+        "publisher_host": "dantri.com.vn",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-a26a1fddabfc44d75c43",
+      "title": "Sếp ngân hàng nói điều kiện để giảm lãi suất vay bất động sản",
+      "url": "https://dantri.com.vn/bat-dong-san/sep-ngan-hang-noi-dieu-kien-de-giam-lai-suat-vay-bat-dong-san-20261027123513381.htm",
+      "category": "market",
+      "module_ids": [
+        "market",
+        "macro"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-10-27T06:00:51+00:00",
+      "source_id": "dantri-real-estate",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "(Dân trí) - Để giảm lãi suất bất động sản, lãnh đạo ngân hàng cho rằng không chỉ cần giảm lãi suất huy động mà còn phải giữ kỷ luật thị trường và phân bổ tín dụng hiệu quả.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://dantri.com.vn/rss/bat-dong-san.rss",
+        "publisher_host": "dantri.com.vn",
+        "publication_date_from_feed": true
+      }
+    },
+    {
       "id": "article-market-rss-e5c721c6bdb87b4383da",
       "title": "Biệt thự gần 26,7 triệu USD của Quả Bóng Vàng Harry Kane",
       "url": "https://vnexpress.net/biet-thu-gan-26-7-trieu-usd-cua-qua-bong-vang-harry-kane-5137365.html",
@@ -53,6 +403,33 @@
         "method": "official-rss",
         "feed_url": "https://vnexpress.net/rss/bat-dong-san.rss",
         "publisher_host": "vnexpress.net",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-f89ba73e751cd898232a",
+      "title": "Điều kiện để các chung cư của Tập đoàn Mường Thanh ở Hà Nội không bị phá dỡ",
+      "url": "https://dantri.com.vn/thoi-su/dieu-kien-de-cac-chung-cu-cua-tap-doan-muong-thanh-o-ha-noi-khong-bi-pha-do-20261027123201201.htm",
+      "category": "market",
+      "module_ids": [
+        "market"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-10-27T05:41:04+00:00",
+      "source_id": "dantri-current-affairs",
+      "region_ids": [
+        "ha-noi"
+      ],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "(Dân trí) - CT6 Kiến Hưng, CT5 Tân Triều, VP3, VP5, VP6, HH1, HH2, HH3, HH4 Linh Đàm, CT8, CT10 Đại Thanh, CT11, CT12 Kim Văn Kim Lũ, Khu nhà ở Xa La là những dự án được Hà Nội xác định có vi phạm nghiêm trọng.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://dantri.com.vn/rss/thoi-su.rss",
+        "publisher_host": "dantri.com.vn",
         "publication_date_from_feed": true
       }
     },
