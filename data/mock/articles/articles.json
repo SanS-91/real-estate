@@ -1,9 +1,65 @@
 {
   "schema_version": 1,
-  "build_id": "market-news-rss-20261027T025142Z",
-  "generated_at": "2026-10-27T02:51:42.137367+00:00",
-  "record_count": 1005,
+  "build_id": "market-news-rss-20261027T045144Z",
+  "generated_at": "2026-10-27T04:51:44.839213+00:00",
+  "record_count": 1010,
   "data": [
+    {
+      "id": "article-market-rss-33378edff6453b7de7a7",
+      "title": "Nút giao Cổ Linh ở Hà Nội ùn tắc triền miên",
+      "url": "https://vnexpress.net/nut-giao-co-linh-o-ha-noi-un-tac-trien-mien-5137093.html",
+      "category": "infrastructure",
+      "module_ids": [
+        "infrastructure"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-10-27T03:49:18+00:00",
+      "source_id": "vnexpress-current-affairs",
+      "region_ids": [
+        "ha-noi"
+      ],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [
+        "infrastructure"
+      ],
+      "importance": 2,
+      "summary": "Một năm qua, nút giao Cổ Linh - đường dẫn cầu Vĩnh Tuy - đường Đàm Quang Trung, phường Long Biên, trở thành nỗi ám ảnh với hàng nghìn người dân.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://vnexpress.net/rss/thoi-su.rss",
+        "publisher_host": "vnexpress.net",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-05ee30e3019ab948cfa2",
+      "title": "MIK Group có Tổng giám đốc mới",
+      "url": "https://vnexpress.net/mik-group-co-tong-giam-doc-moi-5137309.html",
+      "category": "market",
+      "module_ids": [
+        "market"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-10-27T02:56:16+00:00",
+      "source_id": "vnexpress-real-estate",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [
+        "vinhomes"
+      ],
+      "tags": [],
+      "importance": 2,
+      "summary": "MIK Group bổ nhiệm Tổng giám đốc mới là bà Trần Thị Minh Thúy - người từng làm lãnh đạo tại các chủ đầu tư lớn như Alphanam, T&T Homes, Vinhomes.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://vnexpress.net/rss/bat-dong-san.rss",
+        "publisher_host": "vnexpress.net",
+        "publication_date_from_feed": true
+      }
+    },
     {
       "id": "article-market-rss-e9358289b1205200453a",
       "title": "Giá vàng hôm nay 27.10.2026: Vàng trong nước bất động ngày thứ 3 liên tiếp",
@@ -50,6 +106,57 @@
       "source_verification": {
         "method": "official-rss",
         "feed_url": "https://dantri.com.vn/rss/kinh-doanh.rss",
+        "publisher_host": "dantri.com.vn",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-99e8030b3e87159ee253",
+      "title": "Tây Ninh trước những chuyển động mới của thị trường bất động sản",
+      "url": "https://dantri.com.vn/bat-dong-san/tay-ninh-truoc-nhung-chuyen-dong-moi-cua-thi-truong-bat-dong-san-20261026163109870.htm",
+      "category": "market",
+      "module_ids": [
+        "market",
+        "infrastructure"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-10-27T01:00:00+00:00",
+      "source_id": "dantri-real-estate",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "(Dân trí) - Từ các dự án giao thông liên vùng đến sự tăng trưởng của công nghiệp, thương mại và du lịch, Tây Ninh đang ghi nhận những chuyển động đáng chú ý về kinh tế. Điều này mở ra góc nhìn mới về nhu cầu nhà ở, không gian kinh doanh, dịch vụ tại địa phương.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://dantri.com.vn/rss/bat-dong-san.rss",
+        "publisher_host": "dantri.com.vn",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-98067bf0fcf6d396dfd8",
+      "title": "The Windsor Collection: Nối tiếp hành trình 30 năm Ciputra với cảm hứng kiến trúc Anh quốc",
+      "url": "https://dantri.com.vn/bat-dong-san/the-windsor-collection-noi-tiep-hanh-trinh-30-nam-ciputra-voi-cam-hung-kien-truc-anh-quoc-20261026124351499.htm",
+      "category": "market",
+      "module_ids": [
+        "market"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-10-27T01:00:00+00:00",
+      "source_id": "dantri-real-estate",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "(Dân trí) - Giữa lòng Ciputra Hanoi, The Windsor Collection mở ra một không gian sống với kiến trúc lấy cảm hứng từ tinh thần Anh quốc.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://dantri.com.vn/rss/bat-dong-san.rss",
         "publisher_host": "dantri.com.vn",
         "publication_date_from_feed": true
       }
@@ -156,6 +263,31 @@
       "source_verification": {
         "method": "official-rss",
         "feed_url": "https://dantri.com.vn/rss/thoi-su.rss",
+        "publisher_host": "dantri.com.vn",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-89f50323d7d62f1e4bd6",
+      "title": "Thuê chỗ ngồi làm việc: Thương hiệu nội tăng tốc, ngoại đổi chiến lược",
+      "url": "https://dantri.com.vn/bat-dong-san/thue-cho-ngoi-lam-viec-thuong-hieu-noi-tang-toc-ngoai-doi-chien-luoc-20261026203339913.htm",
+      "category": "market",
+      "module_ids": [
+        "market"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-10-27T00:00:00+00:00",
+      "source_id": "dantri-real-estate",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "(Dân trí) - Thị trường coworking (không gian làm việc chung) tại Việt Nam phân hóa mạnh khi thương hiệu nội địa mở rộng, còn các nhà vận hành quốc tế đẩy mạnh hợp tác và nhượng quyền, khách thêm lựa chọn.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://dantri.com.vn/rss/bat-dong-san.rss",
         "publisher_host": "dantri.com.vn",
         "publication_date_from_feed": true
       }
