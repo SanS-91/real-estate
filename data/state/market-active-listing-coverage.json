@@ -1,11 +1,11 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-10-27T07:46:13.893423+00:00",
+  "generated_at": "2026-10-27T08:02:36.245979+00:00",
   "scope": "individual-verified-apartment-asking-only",
   "project_registry_count": 13,
   "projects_monitored": 8,
   "projects_with_current_verified_unit_offers": 1,
-  "projects_with_recent_unpublished_source_candidates": 1,
+  "projects_with_recent_unpublished_source_candidates": 0,
   "current_verified_unit_ads": 1,
   "source_data_health": [
     {
@@ -18,7 +18,7 @@
       "source_id": "rever-vn",
       "report_available": true,
       "report_fresh": true,
-      "checked_at": "2026-10-26T14:30:04.773295+00:00"
+      "checked_at": "2026-10-27T08:01:42.631068+00:00"
     }
   ],
   "projects": [
@@ -97,7 +97,35 @@
           "source_health_recent": true,
           "recent_eligible_ads": 0,
           "discovered_links": 12,
-          "last_checked_at": "2026-10-26T14:30:04.773295+00:00"
+          "last_checked_at": "2026-10-27T08:01:42.631068+00:00"
+        }
+      ],
+      "recent_eligible_ads": 0,
+      "current_verified_ads": 0,
+      "published_source_ids": [],
+      "latest_source_listed_or_updated": null
+    },
+    {
+      "project_id": "eaton-park",
+      "project_name": "Eaton Park",
+      "status": "monitored-no-current-verified-offer",
+      "sources_monitored": 2,
+      "sources": [
+        {
+          "source_id": "muaban-vn",
+          "access_status": "not-measured-recently",
+          "source_health_recent": false,
+          "recent_eligible_ads": null,
+          "discovered_links": null,
+          "last_checked_at": "2026-10-10T08:26:43.694778+00:00"
+        },
+        {
+          "source_id": "rever-vn",
+          "access_status": "reachable",
+          "source_health_recent": true,
+          "recent_eligible_ads": 0,
+          "discovered_links": 12,
+          "last_checked_at": "2026-10-27T08:01:42.631068+00:00"
         }
       ],
       "recent_eligible_ads": 0,
@@ -117,7 +145,7 @@
           "source_health_recent": true,
           "recent_eligible_ads": 0,
           "discovered_links": 24,
-          "last_checked_at": "2026-10-26T14:30:04.773295+00:00"
+          "last_checked_at": "2026-10-27T08:01:42.631068+00:00"
         }
       ],
       "recent_eligible_ads": 0,
@@ -145,7 +173,7 @@
           "source_health_recent": true,
           "recent_eligible_ads": 0,
           "discovered_links": 12,
-          "last_checked_at": "2026-10-26T14:30:04.773295+00:00"
+          "last_checked_at": "2026-10-27T08:01:42.631068+00:00"
         }
       ],
       "recent_eligible_ads": 0,
@@ -165,7 +193,7 @@
           "source_health_recent": true,
           "recent_eligible_ads": 0,
           "discovered_links": 8,
-          "last_checked_at": "2026-10-26T14:30:04.773295+00:00"
+          "last_checked_at": "2026-10-27T08:01:42.631068+00:00"
         }
       ],
       "recent_eligible_ads": 0,
@@ -193,7 +221,7 @@
           "source_health_recent": true,
           "recent_eligible_ads": 0,
           "discovered_links": 6,
-          "last_checked_at": "2026-10-26T14:30:04.773295+00:00"
+          "last_checked_at": "2026-10-27T08:01:42.631068+00:00"
         }
       ],
       "recent_eligible_ads": 0,
@@ -221,38 +249,10 @@
           "source_health_recent": true,
           "recent_eligible_ads": 0,
           "discovered_links": 24,
-          "last_checked_at": "2026-10-26T14:30:04.773295+00:00"
+          "last_checked_at": "2026-10-27T08:01:42.631068+00:00"
         }
       ],
       "recent_eligible_ads": 0,
-      "current_verified_ads": 0,
-      "published_source_ids": [],
-      "latest_source_listed_or_updated": null
-    },
-    {
-      "project_id": "eaton-park",
-      "project_name": "Eaton Park",
-      "status": "source-qualified-awaiting-verification",
-      "sources_monitored": 2,
-      "sources": [
-        {
-          "source_id": "muaban-vn",
-          "access_status": "not-measured-recently",
-          "source_health_recent": false,
-          "recent_eligible_ads": null,
-          "discovered_links": null,
-          "last_checked_at": "2026-10-10T08:26:43.694778+00:00"
-        },
-        {
-          "source_id": "rever-vn",
-          "access_status": "reachable",
-          "source_health_recent": true,
-          "recent_eligible_ads": 1,
-          "discovered_links": 12,
-          "last_checked_at": "2026-10-26T14:30:04.773295+00:00"
-        }
-      ],
-      "recent_eligible_ads": 1,
       "current_verified_ads": 0,
       "published_source_ids": [],
       "latest_source_listed_or_updated": null
@@ -277,7 +277,7 @@
           "source_health_recent": true,
           "recent_eligible_ads": 0,
           "discovered_links": 12,
-          "last_checked_at": "2026-10-26T14:30:04.773295+00:00"
+          "last_checked_at": "2026-10-27T08:01:42.631068+00:00"
         }
       ],
       "recent_eligible_ads": 0,
