@@ -1,9 +1,176 @@
 {
   "schema_version": 1,
-  "build_id": "market-news-rss-20261027T145148Z",
-  "generated_at": "2026-10-27T14:51:48.725162+00:00",
-  "record_count": 1041,
+  "build_id": "market-news-rss-20261027T192949Z",
+  "generated_at": "2026-10-27T19:29:49.482402+00:00",
+  "record_count": 1047,
   "data": [
+    {
+      "id": "article-market-rss-aef19c3f25129e86596d",
+      "title": "Đề xuất làn ưu tiên xe buýt kết nối TP HCM - sân bay Long Thành",
+      "url": "https://vnexpress.net/de-xuat-lan-uu-tien-xe-buyt-ket-noi-tp-hcm-san-bay-long-thanh-5137601.html",
+      "category": "infrastructure",
+      "module_ids": [
+        "infrastructure"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-10-27T18:00:00+00:00",
+      "source_id": "vnexpress-current-affairs",
+      "region_ids": [
+        "hcmc"
+      ],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [
+        "infrastructure"
+      ],
+      "importance": 2,
+      "summary": "Xe buýt kết nối TP HCM với sân bay Long Thành được đề xuất ưu tiên tại các trục đường chính, nút giao quan trọng nhằm hạn chế ùn tắc, ổn định thời gian di chuyển.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://vnexpress.net/rss/thoi-su.rss",
+        "publisher_host": "vnexpress.net",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-a4ce31904bc4b9c8a83d",
+      "title": "Hơn 900 hộ dân phố cổ Hà Nội dự kiến được ưu tiên mua nhà ở xã hội",
+      "url": "https://vnexpress.net/hon-900-ho-dan-pho-co-ha-noi-du-kien-duoc-uu-tien-mua-nha-o-xa-hoi-5137635.html",
+      "category": "market",
+      "module_ids": [
+        "market"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-10-27T17:31:49+00:00",
+      "source_id": "vnexpress-current-affairs",
+      "region_ids": [
+        "ha-noi"
+      ],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "Những hộ thường trú và đang sinh sống tại phố cổ, phố cũ thuộc phường Hoàn Kiếm, có diện tích nhà ở dưới 5 m2 sàn/người dự kiến được mua, thuê mua nhà ở xã hội không qua bốc thăm.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://vnexpress.net/rss/thoi-su.rss",
+        "publisher_host": "vnexpress.net",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-e057d41026d14bacc860",
+      "title": "Nhà phố 4 tầng thiết kế không gian riêng cho từng thành viên",
+      "url": "https://vnexpress.net/nha-pho-4-tang-thiet-ke-khong-gian-rieng-cho-tung-thanh-vien-5137487.html",
+      "category": "market",
+      "module_ids": [
+        "market"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-10-27T17:00:00+00:00",
+      "source_id": "vnexpress-real-estate",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [
+        "legal"
+      ],
+      "importance": 2,
+      "summary": "Công trình giữ nguyên kiến trúc mặt tiền theo quy hoạch, trong khi tổ chức lại không gian bên trong để đáp ứng nhu cầu sinh hoạt của gia đình.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://vnexpress.net/rss/bat-dong-san.rss",
+        "publisher_host": "vnexpress.net",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-65be03c00d5e40d7f90d",
+      "title": "Dỡ bỏ sân khấu Sen Hồng làm ga đường sắt Bến Thành - Cần Giờ",
+      "url": "https://vnexpress.net/do-bo-san-khau-sen-hong-lam-ga-duong-sat-ben-thanh-can-gio-5137556.html",
+      "category": "infrastructure",
+      "module_ids": [
+        "infrastructure"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-10-27T17:00:00+00:00",
+      "source_id": "vnexpress-current-affairs",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [
+        "infrastructure"
+      ],
+      "importance": 2,
+      "summary": "Sân khấu Sen Hồng và khu thương mại ngầm tại Công viên 23/9 sẽ được tháo dỡ để xây ga Bến Thành của tuyến đường sắt đi Cần Giờ.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://vnexpress.net/rss/thoi-su.rss",
+        "publisher_host": "vnexpress.net",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-fbef32e10554c5cdaf56",
+      "title": "Đề xuất xe trung chuyển riêng nối 2 sân bay Tân Sơn Nhất và Long Thành",
+      "url": "https://dantri.com.vn/thoi-su/de-xuat-xe-trung-chuyen-rieng-noi-2-san-bay-tan-son-nhat-va-long-thanh-20261027201039858.htm",
+      "category": "infrastructure",
+      "module_ids": [
+        "infrastructure"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-10-27T15:13:22+00:00",
+      "source_id": "dantri-current-affairs",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [
+        "infrastructure"
+      ],
+      "importance": 2,
+      "summary": "(Dân trí) - Giai đoạn đầu khai thác sân bay Long Thành, hành khách chuyển tiếp giữa Tân Sơn Nhất và Long Thành sẽ có dàn xe trung chuyển riêng chạy thẳng trên cao tốc 24/7.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://dantri.com.vn/rss/thoi-su.rss",
+        "publisher_host": "dantri.com.vn",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-79d8758226a2b2a7df45",
+      "title": "Đồng Nai dừng hợp đồng 2 nhà thầu thi công chậm tiến độ dự án trọng điểm",
+      "url": "https://dantri.com.vn/thoi-su/dong-nai-dung-hop-dong-2-nha-thau-thi-cong-cham-tien-do-du-an-trong-diem-20261027204220552.htm",
+      "category": "market",
+      "module_ids": [
+        "market"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-10-27T14:40:03+00:00",
+      "source_id": "dantri-current-affairs",
+      "region_ids": [
+        "hcmc",
+        "dong-nai"
+      ],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [
+        "infrastructure"
+      ],
+      "importance": 2,
+      "summary": "(Dân trí) - Ban Quản lý dự án đầu tư xây dựng công trình giao thông TP Đồng Nai vừa chấm dứt hợp đồng với 2 nhà thầu thi công chậm tiến độ cao tốc Biên Hòa - Vũng Tàu và Vành đai 3 TPHCM.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://dantri.com.vn/rss/thoi-su.rss",
+        "publisher_host": "dantri.com.vn",
+        "publication_date_from_feed": true
+      }
+    },
     {
       "id": "article-market-rss-96244cfc31c3502ed0fb",
       "title": "SCB giảm lãi suất tiết kiệm xuống gần 0%",
