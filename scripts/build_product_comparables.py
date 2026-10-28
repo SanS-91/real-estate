@@ -115,6 +115,12 @@ def verified_unit_auto_rows(projects, sources, now, muaban, rever, muaban_health
                 continue
             if len({str(x) for x in r.get("verification_run_ids",[])})<2:
                 continue
+            try:
+                verified=datetime.fromisoformat(r["verified_at"].replace("Z","+00:00"))
+            except (KeyError, ValueError, TypeError):
+                continue
+            if verified.tzinfo is None or not timedelta(0)<=(now-verified)<=timedelta(hours=48):
+                continue
             amount=r.get("listing_price_vnd")
             area=r.get("listed_area_sqm")
             if not positive_number(amount) or not positive_number(area) or not positive_number(r.get("value_vnd_per_m2")):
