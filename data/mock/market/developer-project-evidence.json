@@ -1,0 +1,89 @@
+{
+  "schema_version": 1,
+  "build_id": "phase8b-official-project-milestones-20261028",
+  "generated_at": "2026-10-28",
+  "collection_mode": "reviewed-first-party-developer-facts",
+  "record_count": 2,
+  "disclaimer": "Developer-reported forecasts and product description are not observed sales, absorption, transaction ASP, legal certification, or completed handovers.",
+  "data": [
+    {
+      "id": "aqua-city-2026-developer-construction-handover-plan",
+      "project_id": "aqua-city",
+      "source_id": "novaland-official",
+      "source_url": "https://www.novaland.com.vn/tin-tuc-1/thong-tin-novaland/tin-du-an/aqua-city-chinh-thuc-mo-ban-tro-lai-tu-3110-khoi-thong-dong-thu-hang-tram-nghin-ty-dong",
+      "source_publication_date": "2026-10-16",
+      "review_date": "2026-10-28",
+      "category": "developer-forward-plan",
+      "metric_scope": "entire-developer-reported-aqua-city",
+      "period": "2026",
+      "status": "company-stated-forward-looking",
+      "facts": [
+        {
+          "metric_id": "planned-construction-units-lower-bound",
+          "value": 1000,
+          "comparison": "greater-than",
+          "unit": "units",
+          "label_vi": "Kế hoạch xây dựng trong 2026",
+          "not_actual": true
+        },
+        {
+          "metric_id": "planned-handover-units-lower-bound",
+          "value": 500,
+          "comparison": "greater-than",
+          "unit": "units",
+          "label_vi": "Kế hoạch bàn giao trong 2026",
+          "not_actual": true
+        }
+      ],
+      "milestone": {
+        "type": "planned-sales-restart",
+        "date": "2026-10-31",
+        "is_future_at_review": true
+      },
+      "methodology_note": "Developer's 16 Oct 2026 announcement says more than 1,000 homes planned for construction and more than 500 expected for handover in 2026; sales scheduled to resume on 31 Oct. These are plans, not realized construction, delivery or presales. Do not estimate absorption from this row."
+    },
+    {
+      "id": "springville-developer-official-product-scope-20261028",
+      "project_id": "springville",
+      "source_id": "gamuda-land-official",
+      "source_url": "https://www.gamudaland.com.vn/vn/developments/township/springville",
+      "source_publication_date": null,
+      "review_date": "2026-10-28",
+      "category": "first-party-product-profile",
+      "metric_scope": "mixed-township",
+      "period": null,
+      "status": "developer-description-no-official-price",
+      "facts": [
+        {
+          "metric_id": "project-total-area",
+          "value": 18.2,
+          "comparison": "equal",
+          "unit": "hectare",
+          "label_vi": "Quy mô khu đô thị"
+        },
+        {
+          "metric_id": "advertised-unit-area-min",
+          "value": 66.7,
+          "comparison": "equal",
+          "unit": "sqm",
+          "label_vi": "Đầu dưới diện tích sản phẩm công bố"
+        },
+        {
+          "metric_id": "advertised-unit-area-max",
+          "value": 183.1,
+          "comparison": "equal",
+          "unit": "sqm",
+          "label_vi": "Đầu trên diện tích sản phẩm công bố"
+        }
+      ],
+      "product_types": [
+        "commercial-townhouse",
+        "townhouse",
+        "apartment",
+        "retail"
+      ],
+      "price_publication_status": "not-published-on-developer-page",
+      "methodology_note": "First-party Gamuda project page lists 18.2 ha, product types and 66.7–183.1 m² area without binding the range to one specific product type. Price is displayed as VND TBU (to be updated). No implied official selling price, unit count or absorption."
+    }
+  ]
+}
