@@ -25,6 +25,7 @@ on:
       - 'tests/test_phase4_7_market_coverage.py'
       - 'tests/test_phase8b_market_region_expansion.py'
       - 'config/market-automation-targets.json'
+      - 'config/market_coverage_targets.json'
       - 'scripts/collectors/namlong_official.py'
       - '.github/workflows/registry-market-validation.yml'
   schedule:
@@ -123,3 +124,40 @@ jobs:
             data/candidate/registry/watch-report.json
             data/candidate/registry/review-queue.json
           if-no-files-found: error
+
+  publish-market-coverage:
+    # This is a derived QA snapshot, not a new source assertion.
+    if: github.event_name == 'push'
+    needs: validate
+    runs-on: ubuntu-24.04
+    timeout-minutes: 8
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@v7
+      - uses: actions/setup-python@v7
+        with:
+          python-version: '3.12'
+      - name: Rebuild coverage from latest published project registry
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          for attempt in 1 2 3 4 5; do
+            git fetch origin main
+            git reset --hard origin/main
+            python scripts/build_market_coverage.py --output data/state/market-coverage.json
+            if git diff --quiet -- data/state/market-coverage.json; then
+              echo "Coverage snapshot matches latest registry."
+              exit 0
+            fi
+            git add data/state/market-coverage.json
+            git commit -m "ops(market): sync verified project coverage snapshot"
+            if git push origin HEAD:main; then
+              echo "Published Market coverage on attempt $attempt."
+              exit 0
+            fi
+            echo "Concurrent update; rebuilding coverage from newest main."
+            sleep $((attempt * 2))
+          done
+          echo "Market coverage could not be synchronized after five attempts."
+          exit 1
