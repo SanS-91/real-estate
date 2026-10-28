@@ -65,6 +65,35 @@ def extract_price_rows(html):
                "eligible_for_fs_asp":False,"eligible_for_net_price":False,
                "eligible_for_pv":False})
             seen.add(key)
+    # Some publisher articles render pricing as paragraphs/cards rather than
+    # literal HTML table rows. Scan only a named *price-list* section and
+    # associate each named product/zone with its FIRST nearby 'tỷ' amount.
+    if len(candidates)<len(PRODUCTS):
+        full=re.sub(r"\\s+"," ",soup.get_text(" ",strip=True))
+        markers=list(re.finditer(r"(?:giá niêm yết theo bảng tính|bảng tính giá.{0,55}tháng 10/2026)",full,re.I))
+        if markers:
+            text=full[markers[0].start():markers[0].start()+2600]
+            for key,pattern in PRODUCTS.items():
+                if key in seen:continue
+                for m in pattern.finditer(text):
+                    # Product must be followed by a quote before the next
+                    # unrelated product row, and must not be an example discount.
+                    ahead=text[m.end():m.end()+220]
+                    amount_match=AMOUNT.search(ahead)
+                    if not amount_match:continue
+                    prior=text[max(0,m.start()-60):m.start()].lower()
+                    if "ví dụ" in prior and "giá" in prior:continue
+                    amount=float(amount_match.group(1).replace(",","."))
+                    if not 5<=amount<=200:continue
+                    candidates.append({"project_id":"izumi-city","subproject":"Izumi Canaria",
+                       "product_type":key[0],"zone":key[1],"reported_start_price_vnd":round(amount*1e9),
+                       "price_unit":"VND/unit","source_url":PRICE_URL,
+                       "price_basis":"broker-reported-starting-list-price-not-specific-unit",
+                       "original_signed_price_sheet_verified":False,
+                       "eligible_for_fs_asp":False,"eligible_for_net_price":False,
+                       "eligible_for_pv":False})
+                    seen.add(key)
+                    break
     return candidates
 
 def extract_policy_alert(html):
