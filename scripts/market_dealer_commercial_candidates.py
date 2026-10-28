@@ -113,12 +113,23 @@ def build(now=None,getter=None):
     policy=fetch(POLICY_URL,getter)
     leads=extract_price_rows(price["text"]) if price["text"] else []
     alert=extract_policy_alert(policy["text"]) if policy["text"] else None
+    priceSoup=BeautifulSoup(price["text"] or "", "html.parser")
+    readable=re.sub(r"\\s+"," ",priceSoup.get_text(" ",strip=True))
+    diagnostics={"price_html_length":len(price["text"] or ""),
+                 "visible_text_length":len(readable),
+                 "html_table_rows":len(priceSoup.select("tr")),
+                 "has_table_price_heading":bool(re.search(r"giá niêm yết.{0,35}bảng tính",readable,re.I)),
+                 "has_zone1_label":bool(re.search(r"nhà phố vườn\\s*zone\\s*1",readable,re.I)),
+                 "has_zone2_label":bool(re.search(r"nhà phố vườn\\s*zone\\s*2",readable,re.I)),
+                 "has_zone3_label":bool(re.search(r"nhà phố vườn\\s*zone\\s*3",readable,re.I)),
+                 "has_price_855":bool(re.search(r"8[,.]55\\s*tỷ",readable,re.I))}
     digest=hashlib.sha256(json.dumps([leads,alert],sort_keys=True,ensure_ascii=False).encode()).hexdigest()[:16]
     return {"schema_version":1,"checked_at":now.isoformat(),
       "source_type":"third-party-broker-candidate-only",
       "price_page_status":price["status"],"policy_page_status":policy["status"],
       "source_page_http_statuses":{"price":price["http_status"],"policy":policy["http_status"]},
-      "source_revision":digest,"price_table_records_recognized":len(leads),
+      "source_revision":digest,"price_parser_diagnostics":diagnostics,
+      "price_table_records_recognized":len(leads),
       "expected_price_groups":4,"completeness":"reviewable-full-table" if len(leads)==4 else "partial-or-unavailable",
       "price_candidates":leads,"policy_candidate":alert,
       "auto_promoted_prices":0,"approved_payment_schemes":0,"net_price_pv_published":False,
