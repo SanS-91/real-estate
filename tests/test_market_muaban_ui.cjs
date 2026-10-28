@@ -33,7 +33,7 @@ assert.equal(verified.record_count,verified.data.length);
 assert(verified.data.every(row=>
   row.source_id==='muaban-vn' &&
   row.source_date_basis==='publisher-listing-start-not-update' &&
-  /^\\d{4}-\\d{2}-\\d{2}$/.test(row.source_expiration_date) &&
+  /^\d{4}-\d{2}-\d{2}$/.test(row.source_expiration_date) &&
   row.market_layer==='individual-listing-asking' &&
   row.review_status==='automated-two-hosted-checks'
 ));
