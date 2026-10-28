@@ -11,6 +11,10 @@ on:
       - 'scripts/build_product_comparables.py'
       - 'tests/test_phase8b_product_benchmark.py'
       - 'assets/js/market.js'
+      - 'assets/js/data-store.js'
+      - 'assets/css/market-listing-evidence.css'
+      - 'market.html'
+      - 'tests/test_phase8b_product_benchmark_ui.cjs'
       - '.github/workflows/market-product-benchmark.yml'
   schedule:
     # Every day 10:30 ICT. Rebuild remains unchanged unless source facts change.
@@ -39,6 +43,34 @@ jobs:
         run: |
           python tests/test_phase8b_product_benchmark.py
           node --check assets/js/market.js
+          node --check assets/js/data-store.js
+          if test -f data/processed/market/product-comparables.json; then
+            node tests/test_phase8b_product_benchmark_ui.cjs
+          fi
+      - name: Browser smoke - benchmark tab at desktop and mobile widths
+        run: |
+          set -eu
+          BROWSER="$(command -v google-chrome || command -v chromium || command -v chromium-browser || true)"
+          test -n "$BROWSER"
+          python -m http.server 8767 --bind 127.0.0.1 > /tmp/market-product-benchmark.log 2>&1 &
+          PID=$!
+          trap 'kill "$PID" || true' EXIT
+          sleep 3
+          for width in 1440,900 390,844; do
+            "$BROWSER" --headless --no-sandbox --disable-gpu --disable-dev-shm-usage --window-size="$width" --virtual-time-budget=9000 --dump-dom 'http://127.0.0.1:8767/market.html?view=benchmark' > "/tmp/benchmark-$width.html"
+          done
+          python - <<'PY'
+          from pathlib import Path
+          for wh in ("1440,900","390,844"):
+              page=Path("/tmp/benchmark-"+wh+".html").read_text(encoding="utf-8")
+              assert "Benchmark theo sản phẩm" in page,wh
+              assert "Giá rao theo từng căn" in page,wh
+              assert "River Park 2" in page,wh
+              assert "Stella Mega City" in page,wh
+              assert "Chưa xác minh" in page,wh
+              assert "Unable to load Market registry data" not in page,wh
+          print("PASS product benchmark browser render on desktop and 390px mobile.")
+          PY
       - name: Rebuild comparables from the latest main without rebase conflicts
         run: |
           git config user.name "github-actions[bot]"
