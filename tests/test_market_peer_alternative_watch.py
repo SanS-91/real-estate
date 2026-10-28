@@ -24,15 +24,15 @@ def fetch(url):
     return SimpleNamespace(status_code=200,url=url,text="<html><main>"+pages[project]+"</main></html>")
 
 a=mod.build(cfg,{},now,fetch)
-assert a["targets_checked"]==6
+assert a["targets_checked"]==8
 assert a["target_coverage_projects"]==5
-assert a["status_counts"]["baseline-created"]==6
+assert a["status_counts"]["baseline-created"]==8
 assert a["source_prices_updated"] is False and a["price_candidates_promoted"]==0
 assert not any(row["review_required"] for row in a["targets"])
 spring=next(row for row in a["targets"] if row["target_id"]=="springville-gamuda")
 assert spring["price_publication_status"]=="official-price-not-disclosed-vnd-tbu"
 b=mod.build(cfg,a,now+timedelta(hours=4),fetch)
-assert b["status_counts"]["unchanged"]==6
+assert b["status_counts"]["unchanged"]==8
 pages["springville"] += " Latest source webpage updated."
 c=mod.build(cfg,b,now+timedelta(days=1),fetch)
 assert c["status_counts"]["content-changed-review"]==2
@@ -41,7 +41,7 @@ assert c["price_candidates_promoted"]==0 and c["source_prices_updated"] is False
 def blocked(url):
     return SimpleNamespace(status_code=403,url=url,text="")
 d=mod.build(cfg,c,now+timedelta(days=2),blocked)
-assert d["status_counts"]["blocked"]==6
+assert d["status_counts"]["blocked"]==8
 assert all(x["last_valid_fingerprint"] for x in d["targets"])
 assert all(x["new_prices_verified"]==0 for x in d["targets"])
 assert mod.valid_target({**cfg["targets"][0],"url":"https://evil.example/aqua-city"}) is False
