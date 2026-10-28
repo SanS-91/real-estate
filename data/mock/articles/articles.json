@@ -1,9 +1,220 @@
 {
   "schema_version": 1,
-  "build_id": "market-news-rss-20261027T192949Z",
-  "generated_at": "2026-10-27T19:29:49.482402+00:00",
-  "record_count": 1047,
+  "build_id": "market-news-rss-20261028T005138Z",
+  "generated_at": "2026-10-28T00:51:38.469598+00:00",
+  "record_count": 1055,
   "data": [
+    {
+      "id": "article-market-rss-8a1446577a9c686bd877",
+      "title": "Giá vàng đồng loạt tăng",
+      "url": "https://dantri.com.vn/kinh-doanh/gia-vang-dong-loat-tang-20261027230141610.htm",
+      "category": "macro",
+      "module_ids": [
+        "macro"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-10-27T23:49:10+00:00",
+      "source_id": "dantri-business",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "(Dân trí) - Giá vàng miếng SJC tăng 300.000 đồng/lượng trong phiên 27/10, trong khi vàng thế giới phục hồi lên 4.060 USD/ounce. Thị trường đang hướng sự chú ý đến quyết định lãi suất của Fed.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://dantri.com.vn/rss/kinh-doanh.rss",
+        "publisher_host": "dantri.com.vn",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-c1569029103ee65b5a04",
+      "title": "Thuê chỗ ngồi làm việc: Khách hàng trả tiền cho sự linh hoạt",
+      "url": "https://dantri.com.vn/bat-dong-san/thue-cho-ngoi-lam-viec-khach-hang-tra-tien-cho-su-linh-hoat-20261027173531482.htm",
+      "category": "market",
+      "module_ids": [
+        "market"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-10-27T23:00:00+00:00",
+      "source_id": "dantri-real-estate",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "(Dân trí) - Từ người làm việc tự do đến doanh nghiệp hàng chục nhân sự, khách thuê không gian làm việc chung không chỉ tìm chỗ ngồi giá hợp lý mà còn cân nhắc khả năng linh hoạt về thời gian, quy mô và chi phí đầu tư ban đầu.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://dantri.com.vn/rss/bat-dong-san.rss",
+        "publisher_host": "dantri.com.vn",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-1edf0d87343d0688531a",
+      "title": "Nhiều tài sản thế chấp tại dự án trại bò 4.500 tỷ đồng được đưa ra đấu giá",
+      "url": "https://dantri.com.vn/kinh-doanh/nhieu-tai-san-the-chap-tai-du-an-trai-bo-4500-ty-dong-duoc-dua-ra-dau-gia-20261027170717886.htm",
+      "category": "market",
+      "module_ids": [
+        "market"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-10-27T23:00:00+00:00",
+      "source_id": "dantri-business",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "(Dân trí) - Một loạt tài sản thế chấp của dự án chăn nuôi bò và trồng cây nguyên liệu hơn 4.500 tỷ đồng tại Hà Tĩnh sắp được đưa ra đấu giá với mức khởi điểm hơn 283 tỷ đồng.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://dantri.com.vn/rss/kinh-doanh.rss",
+        "publisher_host": "dantri.com.vn",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-08527b46f71bf05856d4",
+      "title": "Căn hộ cao cấp chiếm hơn 73% nguồn cung nhà ở TP HCM",
+      "url": "https://vnexpress.net/can-ho-cao-cap-chiem-hon-73-nguon-cung-nha-o-tp-hcm-5137644.html",
+      "category": "market",
+      "module_ids": [
+        "market"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-10-27T23:00:00+00:00",
+      "source_id": "vnexpress-real-estate",
+      "region_ids": [
+        "hcmc"
+      ],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [
+        "supply"
+      ],
+      "importance": 2,
+      "summary": "Phân khúc cao cấp tiếp tục chiếm hơn 73% nguồn cung nhà ở thương mại 9 tháng đầu năm tại TP HCM, trong khi căn hộ bình dân hoàn toàn biến mất khỏi thị trường.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://vnexpress.net/rss/bat-dong-san.rss",
+        "publisher_host": "vnexpress.net",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-97c064e90bd793e57167",
+      "title": "Lãi suất giảm, lại lo tiếp cận vốn khó",
+      "url": "https://thanhnien.vn/lai-suat-giam-lai-lo-tiep-can-von-kho-185261027221320493.htm",
+      "category": "macro",
+      "module_ids": [
+        "macro"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-10-27T22:54:00+00:00",
+      "source_id": "thanhnien-banking",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "Làn sóng giảm lãi suất đang diễn ra trên diện rộng từ lãi tiết kiệm đến lãi vay nhưng nhiều doanh nghiệp lại đứng trước nỗi lo khó tiếp cận vốn vay.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://thanhnien.vn/rss/kinh-te/ngan-hang.rss",
+        "publisher_host": "thanhnien.vn",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-7dee289082430b074bf3",
+      "title": "Loạt chung cư của Tập đoàn Mường Thanh vi phạm: Không phá dỡ sẽ cưỡng chế",
+      "url": "https://dantri.com.vn/thoi-su/loat-chung-cu-cua-tap-doan-muong-thanh-vi-pham-khong-pha-do-se-cuong-che-20261027215347283.htm",
+      "category": "market",
+      "module_ids": [
+        "market"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-10-27T22:30:00+00:00",
+      "source_id": "dantri-current-affairs",
+      "region_ids": [
+        "ha-noi"
+      ],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "(Dân trí) - Với các dự án của Tập đoàn Mường Thanh được xác định có vi phạm, Hà Nội dự kiến giao Chủ tịch UBND cấp xã ban hành quyết định buộc phá dỡ công trình, hạng mục công trình trên địa bàn quản lý.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://dantri.com.vn/rss/thoi-su.rss",
+        "publisher_host": "dantri.com.vn",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-1d1257e8b1ff82a80bbb",
+      "title": "Phó thủ tướng yêu cầu gỡ vướng chồng lấn quy hoạch bô xít",
+      "url": "https://vnexpress.net/pho-thu-tuong-yeu-cau-go-vuong-chong-lan-quy-hoach-bo-xit-5137643.html",
+      "category": "market",
+      "module_ids": [
+        "market"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-10-27T20:35:36+00:00",
+      "source_id": "vnexpress-economy",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [
+        "legal",
+        "infrastructure"
+      ],
+      "importance": 2,
+      "summary": "Phó thủ tướng Thường trực Phạm Gia Túc yêu cầu rà soát quy hoạch bô xít chồng lấn khu dân cư, hạ tầng và dự án đầu tư để tháo gỡ, tránh lãng phí nguồn lực.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://vnexpress.net/rss/kinh-doanh.rss",
+        "publisher_host": "vnexpress.net",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-dd1f44c1f4b9b298bb53",
+      "title": "Hơn 30.000 sản phẩm nhà ở dự kiến mở bán trong quý IV",
+      "url": "https://vnexpress.net/hon-30-000-san-pham-nha-o-du-kien-mo-ban-trong-quy-iv-5137547.html",
+      "category": "market",
+      "module_ids": [
+        "market"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-10-27T20:35:20+00:00",
+      "source_id": "vnexpress-real-estate",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [
+        "supply"
+      ],
+      "importance": 2,
+      "summary": "Thị trường bất động sản dự kiến đón khoảng 30.300 sản phẩm nhà ở mới trong quý IV, tập trung chủ yếu tại khu vực phía Nam, theo Đatxanh Services.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://vnexpress.net/rss/bat-dong-san.rss",
+        "publisher_host": "vnexpress.net",
+        "publication_date_from_feed": true
+      }
+    },
     {
       "id": "article-market-rss-aef19c3f25129e86596d",
       "title": "Đề xuất làn ưu tiên xe buýt kết nối TP HCM - sân bay Long Thành",
