@@ -31,7 +31,12 @@ def fetch(url, getter=None):
             return {"status":"untrusted-redirect","text":None,"http_status":getattr(r,"status_code",None)}
         if r.status_code!=200:return {"status":"blocked" if r.status_code in (401,403,429) else "http-error",
                                       "text":None,"http_status":r.status_code}
-        body=getattr(r,"text","")
+        # The publisher serves UTF-8 bytes while some HTTP clients assume
+        # ISO-8859-1 when Content-Type omits charset. Using r.text destroys
+        # Vietnamese product labels (Nhà phố → NhÃ  phá»), silently yielding
+        # zero source candidates despite HTTP 200.
+        raw=getattr(r,"content",None)
+        body=raw.decode("utf-8",errors="replace") if isinstance(raw,bytes) else getattr(r,"text","")
         if len(body)<100:return {"status":"empty-document","text":None,"http_status":200}
         return {"status":"fetched","text":body,"http_status":200}
     except requests.RequestException:
