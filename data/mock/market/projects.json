@@ -1,8 +1,8 @@
 {
   "schema_version": 1,
-  "build_id": "phase8b-source-backed-project-expansion-20261028",
-  "generated_at": "2026-10-28T15:18:00+07:00",
-  "record_count": 15,
+  "build_id": "phase8b2-comparable-project-registry-20261028",
+  "generated_at": "2026-10-28T15:19:00+07:00",
+  "record_count": 18,
   "data": [
     {
       "id": "izumi-city",
@@ -507,6 +507,110 @@
       "related_infrastructure_ids": [],
       "official_url": "https://www.gamudaland.com.vn/vn/developments/township/springville",
       "primary_source_id": "gamuda-land-official",
+      "source_date": null,
+      "source_review_date": "2026-10-28",
+      "related_legal_topic_ids": [
+        "housing",
+        "real-estate-business",
+        "planning"
+      ]
+    },
+    {
+      "id": "aqua-city",
+      "name": "Aqua City",
+      "developer_ids": [
+        "novaland"
+      ],
+      "lead_developer_id": "novaland",
+      "region_ids": [
+        "dong-nai"
+      ],
+      "segment_ids": [
+        "township",
+        "landed"
+      ],
+      "status": "ongoing",
+      "location_text": "Long Hưng – Tam Phước, Đồng Nai",
+      "total_area_sqm": 10000000,
+      "total_area_note": "Quy mô khoảng 1.000 ha theo Novaland; không phải diện tích pháp lý riêng của một phân khu.",
+      "planned_units": null,
+      "launch_date": null,
+      "summary": "Đại đô thị sinh thái khoảng 1.000 ha do Novaland phát triển, với nhà phố, biệt thự và shophouse. Thông báo của Novaland ngày 16/10/2026 nêu kế hoạch mở bán trở lại từ 31/10/2026; đó là kế hoạch chưa diễn ra tại ngày rà soát 28/10. Các chỉ số ký HĐMB, bàn giao và tiến độ là thông tin doanh nghiệp công bố, không đồng nghĩa giao dịch thực tế.",
+      "related_infrastructure_ids": [
+        "ben-luc-long-thanh-expressway",
+        "bien-hoa-vung-tau-expressway",
+        "long-thanh-airport"
+      ],
+      "official_url": "https://www.novaland.com.vn/tin-tuc-1/thong-tin-novaland/tin-du-an/aqua-city-chinh-thuc-mo-ban-tro-lai-tu-3110-khoi-thong-dong-thu-hang-tram-nghin-ty-dong",
+      "primary_source_id": "novaland-official",
+      "source_date": "2026-10-16",
+      "source_review_date": "2026-10-28",
+      "related_legal_topic_ids": [
+        "housing",
+        "real-estate-business",
+        "land",
+        "planning"
+      ]
+    },
+    {
+      "id": "kita-airport-city",
+      "name": "KITA Airport City (Stella Mega City)",
+      "developer_ids": [
+        "kita-group"
+      ],
+      "lead_developer_id": "kita-group",
+      "region_ids": [
+        "can-tho"
+      ],
+      "segment_ids": [
+        "township",
+        "landed",
+        "apartment"
+      ],
+      "status": "ongoing",
+      "location_text": "Khu vực Bình Thủy, Cần Thơ",
+      "total_area_sqm": 1500000,
+      "total_area_note": "150 ha là quy mô thương hiệu khu đô thị do KITA Group công bố; không suy ra cùng một phạm vi pháp lý với các khu/dự án thành phần.",
+      "planned_units": null,
+      "launch_date": null,
+      "summary": "KITA Airport City tại Bình Thủy, Cần Thơ, là tên thương mại được KITA Group giới thiệu thay Stella Mega City. Công bố của KITA mô tả quy mô đô thị 150 ha, có phân khu Stella Premier 35 ha với sản phẩm căn hộ và shophouse. Phải phân biệt nhà phát triển KITA Invest, pháp nhân chủ đầu tư và giấy tờ từng phân khu khi đánh giá nguồn cung.",
+      "related_infrastructure_ids": [],
+      "official_url": "https://kita-group.com.vn/ra-mat-phan-khu-trung-tam-du-an-kita-airport-city/",
+      "primary_source_id": "kita-group-official",
+      "source_date": "2025-08-05",
+      "source_review_date": "2026-10-28",
+      "related_legal_topic_ids": [
+        "housing",
+        "real-estate-business",
+        "land",
+        "planning"
+      ]
+    },
+    {
+      "id": "elyse-island",
+      "name": "Elyse Island",
+      "developer_ids": [
+        "nam-long"
+      ],
+      "lead_developer_id": "nam-long",
+      "region_ids": [
+        "dong-nai"
+      ],
+      "segment_ids": [
+        "township",
+        "landed"
+      ],
+      "status": "ongoing",
+      "location_text": "Đảo Đại Phước, Nhơn Trạch, Đồng Nai",
+      "total_area_sqm": 450000,
+      "planned_units": null,
+      "launch_date": null,
+      "summary": "Khu đô thị đảo 45 ha do Nam Long hợp tác Nishi-Nippon Railroad phát triển tại Đại Phước, Nhơn Trạch. Sản phẩm chính là biệt thự đơn lập và song lập, phù hợp tham chiếu phân khúc biệt thự ven sông nhưng không đồng nhất với toàn bộ cơ cấu sản phẩm Izumi.",
+      "related_infrastructure_ids": [
+        "long-thanh-airport"
+      ],
+      "official_url": "https://www.namlongvn.com/en/township-residential/elyse-island/",
+      "primary_source_id": "nam-long-official",
       "source_date": null,
       "source_review_date": "2026-10-28",
       "related_legal_topic_ids": [
