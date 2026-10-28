@@ -1,9 +1,86 @@
 {
   "schema_version": 1,
-  "build_id": "market-news-rss-20261028T145147Z",
-  "generated_at": "2026-10-28T14:51:47.738521+00:00",
-  "record_count": 1102,
+  "build_id": "market-news-rss-20261028T194054Z",
+  "generated_at": "2026-10-28T19:40:54.806057+00:00",
+  "record_count": 1105,
   "data": [
+    {
+      "id": "article-market-rss-f3208fa7fe7247d8e242",
+      "title": "Fed giữ nguyên lãi suất",
+      "url": "https://vnexpress.net/fed-giu-nguyen-lai-suat-5138091.html",
+      "category": "macro",
+      "module_ids": [
+        "macro"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-10-28T18:22:10+00:00",
+      "source_id": "vnexpress-economy",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "Cục Dự trữ Liên bang Mỹ (Fed) không điều chỉnh lãi suất sau lần tăng tháng trước, đúng như dự báo của thị trường.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://vnexpress.net/rss/kinh-doanh.rss",
+        "publisher_host": "vnexpress.net",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-149f57d5d75c58bbc7b8",
+      "title": "Nhà hai tầng có phòng khách thấp hơn mặt sân nửa mét",
+      "url": "https://vnexpress.net/nha-hai-tang-co-phong-khach-thap-hon-mat-san-nua-met-5137952.html",
+      "category": "market",
+      "module_ids": [
+        "market"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-10-28T17:05:00+00:00",
+      "source_id": "vnexpress-real-estate",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "Giải pháp hạ thấp sàn phòng khách kết hợp mái phủ cỏ giúp duy trì diện tích sân vườn, tạo sự kết nối giữa không gian sinh hoạt và cảnh quan bên ngoài.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://vnexpress.net/rss/bat-dong-san.rss",
+        "publisher_host": "vnexpress.net",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-c86986a40159fa9f2d82",
+      "title": "Có 2 tỷ đồng, nên mua chung cư Hà Nội hay đất nền Hưng Yên?",
+      "url": "https://vnexpress.net/co-2-ty-dong-nen-mua-chung-cu-ha-noi-hay-dat-nen-hung-yen-5138001.html",
+      "category": "market",
+      "module_ids": [
+        "market"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-10-28T17:00:00+00:00",
+      "source_id": "vnexpress-real-estate",
+      "region_ids": [
+        "ha-noi"
+      ],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "Người mua nhà lần đầu nên ưu tiên nơi an cư thay vì đầu tư đất theo kỳ vọng sinh lời, và lưu ý khả năng chi trả khi vay ngân hàng, theo chuyên gia.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://vnexpress.net/rss/bat-dong-san.rss",
+        "publisher_host": "vnexpress.net",
+        "publication_date_from_feed": true
+      }
+    },
     {
       "id": "article-market-rss-60cd396fd01abaf58c08",
       "title": "Tăng 361 tỷ đồng, Lâm Đồng chốt làm hoàn chỉnh cao tốc Tân Phú - Bảo Lộc",
