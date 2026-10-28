@@ -445,6 +445,54 @@
     }
   }
 
+  async function renderPeerPriceWatch() {
+    const node = document.querySelector('[data-peer-price-monitor]');
+    if (!node) return;
+    const vi = language() !== 'en';
+    try {
+      const payload = await fetchJSON('data/state/market-peer-price-watch.json');
+      if (payload?.monitor_type !== 'source-access-and-evidence-age-only' ||
+          !Array.isArray(payload.projects) || payload.production_prices_written !== false)
+        throw new Error('Invalid source-only peer watch payload');
+      const labels = vi
+        ? { project:'Dự án', scope:'Phạm vi', activity:'Tin nguồn gần nhất',
+            checked:'Kết quả kiểm tra', evidence:'Bằng chứng giá', aged:'Cũ / cần xác minh',
+            current:'Đã rà soát theo sản phẩm', historic:'Chỉ có dữ liệu lịch sử',
+            missing:'Chưa có giá', blocked:'Nguồn chặn tự động', reachable:'Truy cập được (chưa có giá mới)',
+            unknown:'Chưa kiểm tra được' }
+        : { project:'Project', scope:'Product', activity:'Last listed ad',
+            checked:'Source check', evidence:'Price evidence', aged:'Old / recheck',
+            current:'Product-scoped review', historic:'Historical only',
+            missing:'No price evidence', blocked:'Automated access blocked',
+            reachable:'Reachable (no new price)', unknown:'Not checked' };
+      const statusLabel = (row) => row.publisher_access === 'blocked' ? labels.blocked
+        : row.publisher_access === 'reachable-unverified-price' ? labels.reachable
+        : labels.unknown;
+      const evidenceLabel = (row) => row.price_evidence === 'historical-only' ? labels.historic
+        : row.price_evidence === 'reviewed-scope-only' ? labels.current : labels.missing;
+      const ageLabel = (row) => row.price_caution === 'source-activity-old'
+        || row.price_caution === 'historic-only' ? ' · ' + labels.aged : '';
+      const body = payload.projects.map(row => `<tr>
+        <td><a href="market.html?view=project-detail&id=${encodeURIComponent(row.project_id)}">${esc(row.project_name)}</a></td>
+        <td>${esc(row.source_product_scope || '—')}</td>
+        <td>${esc(row.last_publisher_listing_date || '—')}${esc(ageLabel(row))}</td>
+        <td>${esc(statusLabel(row))}</td>
+        <td>${esc(evidenceLabel(row))} · ${esc(row.last_review_date || '—')}</td>
+      </tr>`).join('');
+      node.innerHTML = `<div class="table-wrap"><table class="data-table mobile-record-table">
+        <thead><tr><th>${esc(labels.project)}</th><th>${esc(labels.scope)}</th>
+        <th>${esc(labels.activity)}</th><th>${esc(labels.checked)}</th><th>${esc(labels.evidence)}</th></tr></thead>
+        <tbody>${body}</tbody></table></div>
+        <p class="muted-text">${esc(vi ? 'Kiểm tra gần nhất' : 'Last check')}: ${esc(formatDateTime(payload.generated_at))}.
+        ${esc(vi ? 'Không tự cập nhật số giá khi trang nguồn truy cập được; chỉ xuất bản sau khi xác minh đúng sản phẩm, kỳ và nguồn.' :
+         'HTTP access alone never updates published prices; product, period and source must be independently verified.')}</p>`;
+    } catch (error) {
+      console.warn('[maintenance] price peer watch unavailable', error);
+      node.innerHTML = `<div class="state-box">${esc(vi ? 'Chưa có báo cáo kiểm tra nguồn giá. Không kết luận giá đã cập nhật.' :
+        'Price-source monitor not yet published; cannot confirm freshness.')}</div>`;
+    }
+  }
+
   async function renderActiveListingCoverage() {
     const node = document.querySelector('[data-market-active-coverage]');
     if (!node) return;
@@ -692,6 +740,7 @@
       render(await buildModel());
       await renderOperations();
       await renderMarketSourceHealth();
+      await renderPeerPriceWatch();
       await renderActiveListingCoverage();
       await renderOfficialRegistryWatch();
       await renderNewsAutomationHealth();
@@ -703,6 +752,7 @@
       else renderRules();
       renderOperations();
       renderMarketSourceHealth();
+      renderPeerPriceWatch();
       renderActiveListingCoverage();
       renderOfficialRegistryWatch();
       renderNewsAutomationHealth();
