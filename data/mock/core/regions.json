@@ -1,8 +1,8 @@
 {
   "schema_version": 1,
-  "build_id": "demo-step3-20261003",
-  "generated_at": "2026-10-03T12:00:00+07:00",
-  "record_count": 4,
+  "build_id": "phase8b-market-regions-20261028",
+  "generated_at": "2026-10-28T15:15:00+07:00",
+  "record_count": 5,
   "data": [
     {
       "id": "hcmc",
@@ -34,6 +34,16 @@
       "short_name": "Binh Duong",
       "aliases": [
         "Binh Duong"
+      ]
+    },
+    {
+      "id": "can-tho",
+      "name": "Cần Thơ",
+      "short_name": "Can Tho",
+      "aliases": [
+        "Can Tho",
+        "TP Cần Thơ",
+        "Cantho"
       ]
     }
   ]
