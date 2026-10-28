@@ -1,8 +1,8 @@
 {
   "schema_version": 1,
   "build_id": "phase8b2-project-peer-expansion-20261028",
-  "generated_at": "2026-10-28T15:18:00+07:00",
-  "record_count": 62,
+  "generated_at": "2026-10-28T17:02:00+07:00",
+  "record_count": 63,
   "data": [
     {
       "id": "demo-official",
@@ -747,6 +747,18 @@
       "source_priority": 2,
       "active": true,
       "notes": "First-party KITA project information; distinguish marketed KITA Airport City from legal subprojects and KITA Invest versus Ngân Thuận responsibilities."
+    },
+    {
+      "id": "tapdoannamlong-secondary",
+      "name": "Tapdoannamlong.com (kênh thương mại thứ cấp, chưa xác minh thuộc Nam Long Group)",
+      "source_type": "commercial-third-party",
+      "base_url": "https://tapdoannamlong.com/",
+      "language": "vi",
+      "collection_method": "manual-source-attribution-only",
+      "fetch_frequency": "review-only",
+      "source_priority": 5,
+      "active": true,
+      "notes": "Not namlongvn.com official corporate domain; no official sale policy or financial cash flow status inferred. Statements must be verified with developer price/term documents."
     }
   ]
 }
