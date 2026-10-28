@@ -24,6 +24,10 @@ on:
       - 'data/mock/core/developers.json'
       - 'data/mock/core/sources.json'
       - 'data/mock/market/projects.json'
+      - 'data/mock/market/developer-project-evidence.json'
+      - 'assets/js/data-store.js'
+      - 'assets/js/maintenance.js'
+      - 'tests/test_phase8b_official_peer_evidence.py'
       - 'assets/js/market.js'
       - 'tests/test_phase4_3c_market_registry.py'
       - 'tests/test_phase4_7_market_coverage.py'
@@ -69,8 +73,13 @@ jobs:
         run: python tests/test_phase4_7_market_coverage.py
       - name: Phase 8B source-backed market expansion
         run: python tests/test_phase8b_market_region_expansion.py
+      - name: Phase 8B developer official evidence QA
+        run: python tests/test_phase8b_official_peer_evidence.py
       - name: Project peer benchmark interface syntax
-        run: node --check assets/js/market.js
+        run: |
+          node --check assets/js/market.js
+          node --check assets/js/data-store.js
+          node --check assets/js/maintenance.js
       - name: Verified Muaban history regression
         run: node tests/test_market_muaban_ui.cjs
       - name: Build market coverage artifact
