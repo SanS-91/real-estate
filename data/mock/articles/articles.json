@@ -1,9 +1,165 @@
 {
   "schema_version": 1,
-  "build_id": "market-news-rss-20261028T125141Z",
-  "generated_at": "2026-10-28T12:51:41.574206+00:00",
-  "record_count": 1096,
+  "build_id": "market-news-rss-20261028T145147Z",
+  "generated_at": "2026-10-28T14:51:47.738521+00:00",
+  "record_count": 1102,
   "data": [
+    {
+      "id": "article-market-rss-60cd396fd01abaf58c08",
+      "title": "Tăng 361 tỷ đồng, Lâm Đồng chốt làm hoàn chỉnh cao tốc Tân Phú - Bảo Lộc",
+      "url": "https://dantri.com.vn/thoi-su/tang-361-ty-dong-lam-dong-chot-lam-hoan-chinh-cao-toc-tan-phu-bao-loc-20261028192238249.htm",
+      "category": "infrastructure",
+      "module_ids": [
+        "infrastructure"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-10-28T12:39:25+00:00",
+      "source_id": "dantri-current-affairs",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [
+        "infrastructure"
+      ],
+      "importance": 2,
+      "summary": "(Dân trí) - HĐND tỉnh Lâm Đồng vừa thông qua nghi quyết điều chỉnh chủ trương đầu tư hoàn chỉnh cao tốc Tân Phú - Bảo Lộc, đưa vào sử dụng trong quý IV/2028.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://dantri.com.vn/rss/thoi-su.rss",
+        "publisher_host": "dantri.com.vn",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-d26cbdc255a10d61f0cf",
+      "title": "Chính sách lương giúp Vinhomes giữ chân môi giới bất động sản",
+      "url": "https://dantri.com.vn/bat-dong-san/chinh-sach-luong-giup-vinhomes-giu-chan-moi-gioi-bat-dong-san-20261028192346055.htm",
+      "category": "market",
+      "module_ids": [
+        "market"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-10-28T12:38:50+00:00",
+      "source_id": "dantri-real-estate",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [
+        "vinhomes"
+      ],
+      "tags": [],
+      "importance": 2,
+      "summary": "(Dân trí) - Tại hệ thống đại lý độc quyền Vinhomes, chính sách hỗ trợ lương cứng lên tới 8,5 triệu đồng/tháng từ chủ đầu tư cùng lộ trình huấn luyện thực chiến 90 ngày sẽ giúp môi giới bất động sản gắn bó và phát triển lâu dài với nghề.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://dantri.com.vn/rss/bat-dong-san.rss",
+        "publisher_host": "dantri.com.vn",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-7195c9c0a5fa4a5401bb",
+      "title": "Tài xế xe tải dương tính với ma túy khi lưu thông qua Lâm Đồng",
+      "url": "https://dantri.com.vn/thoi-su/tai-xe-xe-tai-duong-tinh-voi-ma-tuy-khi-luu-thong-qua-lam-dong-20261028155440475.htm",
+      "category": "infrastructure",
+      "module_ids": [
+        "infrastructure"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-10-28T12:32:02+00:00",
+      "source_id": "dantri-current-affairs",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "(Dân trí) - Kiểm tra xe tải trên đường tỉnh 718, lực lượng Cảnh sát giao thông Lâm Đồng phát hiện tài xế dương tính với ma túy đá.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://dantri.com.vn/rss/thoi-su.rss",
+        "publisher_host": "dantri.com.vn",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-e96df7baf545c6ee3934",
+      "title": "Cơ chế đặc thù với dự án HH Linh Đàm: Người mua nhà được bảo vệ như thế nào?",
+      "url": "https://dantri.com.vn/bat-dong-san/co-che-dac-thu-voi-du-an-hh-linh-dam-nguoi-mua-nha-duoc-bao-ve-nhu-the-nao-20261028180817004.htm",
+      "category": "market",
+      "module_ids": [
+        "market"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-10-28T12:28:23+00:00",
+      "source_id": "dantri-real-estate",
+      "region_ids": [
+        "ha-noi"
+      ],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "(Dân trí) - Sau khi Hà Nội thông qua cơ chế xử lý sai phạm tại các dự án Mường Thanh, chuyên gia cho rằng cần ưu tiên bảo vệ người mua nhà ngay tình, tránh để họ gánh chịu hậu quả từ sai phạm.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://dantri.com.vn/rss/bat-dong-san.rss",
+        "publisher_host": "dantri.com.vn",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-4d49412a00421f3431cf",
+      "title": "Tuổi thọ nhà ở xã hội 100 năm, không thể sau 5 năm đã bán giá thị trường",
+      "url": "https://dantri.com.vn/thoi-su/tuoi-tho-nha-o-xa-hoi-100-nam-khong-the-sau-5-nam-da-ban-gia-thi-truong-20261028181353850.htm",
+      "category": "market",
+      "module_ids": [
+        "market"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-10-28T12:07:28+00:00",
+      "source_id": "dantri-current-affairs",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "(Dân trí) - Bộ trưởng Bộ Xây dựng cho rằng nhà ở xã hội có tuổi thọ tới 100 năm, được Nhà nước ưu đãi để người dân an cư lâu dài nên sau 5 năm không thể bán lại theo giá thị trường để trục lợi chính sách.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://dantri.com.vn/rss/thoi-su.rss",
+        "publisher_host": "dantri.com.vn",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-a9572d70a77a7851dd39",
+      "title": "Cần Thơ xin kéo dài thời hạn hoàn thành chỉ tiêu nhà ở xã hội",
+      "url": "https://dantri.com.vn/bat-dong-san/can-tho-xin-keo-dai-thoi-han-hoan-thanh-chi-tieu-nha-o-xa-hoi-20261028164552286.htm",
+      "category": "market",
+      "module_ids": [
+        "market"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-10-28T11:27:58+00:00",
+      "source_id": "dantri-real-estate",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "(Dân trí) - Cần Thơ mới hoàn thành 724/3.000 căn nhà ở xã hội theo chỉ tiêu năm 2026. Thành phố kiến nghị kéo dài thời gian thực hiện đến hết quý I/2027, đồng thời cam kết đẩy nhanh tiến độ các dự án.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://dantri.com.vn/rss/bat-dong-san.rss",
+        "publisher_host": "dantri.com.vn",
+        "publication_date_from_feed": true
+      }
+    },
     {
       "id": "article-market-rss-4a8e5577c1e931fd08de",
       "title": "Đại biểu Quốc hội hiến kế gỡ điểm nghẽn trong cải tạo chung cư cũ",
