@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-10-28T08:33:24.518244+00:00",
+  "generated_at": "2026-10-28T08:34:06.946672+00:00",
   "overall_status": "stale",
   "modules": [
     {
@@ -309,7 +309,7 @@
       "record_count": 18,
       "last_production_at": "2026-10-28T15:19:00+07:00",
       "last_data_change_at": "2026-10-28T15:19:00+07:00",
-      "age_hours": 0.2,
+      "age_hours": 0.3,
       "stale_after_hours": 192,
       "freshness": "fresh",
       "latest_source_period": null,
@@ -319,12 +319,18 @@
       "candidate_backlog": 0,
       "candidate_conflicts": 0,
       "last_candidate_at": "2026-10-08T12:36:04.335455+00:00",
-      "workflow_status": "healthy",
-      "last_workflow_run_at": "2026-10-28T08:22:57Z",
+      "workflow_status": "running",
+      "last_workflow_run_at": "2026-10-28T08:33:40Z",
       "last_successful_run_at": "2026-10-28T08:22:57Z",
-      "last_workflow_run_url": "https://github.com/SanS-91/real-estate/actions/runs/40656296534",
-      "last_workflow_conclusion": "success",
+      "last_workflow_run_url": "https://github.com/SanS-91/real-estate/actions/runs/40657663587",
+      "last_workflow_conclusion": null,
       "recent_attempts": [
+        {
+          "status": "in_progress",
+          "conclusion": null,
+          "at": "2026-10-28T08:33:40Z",
+          "url": "https://github.com/SanS-91/real-estate/actions/runs/40657663587"
+        },
         {
           "status": "completed",
           "conclusion": "success",
@@ -336,15 +342,9 @@
           "conclusion": "failure",
           "at": "2026-10-28T08:21:41Z",
           "url": "https://github.com/SanS-91/real-estate/actions/runs/40656137018"
-        },
-        {
-          "status": "completed",
-          "conclusion": "failure",
-          "at": "2026-10-28T08:21:28Z",
-          "url": "https://github.com/SanS-91/real-estate/actions/runs/40656119150"
         }
       ],
-      "status": "healthy",
+      "status": "running",
       "failure_behavior": "retain-last-good"
     },
     {
@@ -369,12 +369,18 @@
       "candidate_backlog": 0,
       "candidate_conflicts": 0,
       "last_candidate_at": "2026-10-08T12:36:04.335455+00:00",
-      "workflow_status": "healthy",
-      "last_workflow_run_at": "2026-10-28T08:22:57Z",
+      "workflow_status": "running",
+      "last_workflow_run_at": "2026-10-28T08:33:40Z",
       "last_successful_run_at": "2026-10-28T08:22:57Z",
-      "last_workflow_run_url": "https://github.com/SanS-91/real-estate/actions/runs/40656296534",
-      "last_workflow_conclusion": "success",
+      "last_workflow_run_url": "https://github.com/SanS-91/real-estate/actions/runs/40657663587",
+      "last_workflow_conclusion": null,
       "recent_attempts": [
+        {
+          "status": "in_progress",
+          "conclusion": null,
+          "at": "2026-10-28T08:33:40Z",
+          "url": "https://github.com/SanS-91/real-estate/actions/runs/40657663587"
+        },
         {
           "status": "completed",
           "conclusion": "success",
@@ -386,15 +392,9 @@
           "conclusion": "failure",
           "at": "2026-10-28T08:21:41Z",
           "url": "https://github.com/SanS-91/real-estate/actions/runs/40656137018"
-        },
-        {
-          "status": "completed",
-          "conclusion": "failure",
-          "at": "2026-10-28T08:21:28Z",
-          "url": "https://github.com/SanS-91/real-estate/actions/runs/40656119150"
         }
       ],
-      "status": "healthy",
+      "status": "running",
       "failure_behavior": "retain-last-good"
     },
     {
@@ -460,7 +460,7 @@
       "record_count": 16,
       "last_production_at": "2026-10-07T21:55:00+07:00",
       "last_data_change_at": "2026-10-07T21:55:00+07:00",
-      "age_hours": 497.6,
+      "age_hours": 497.7,
       "stale_after_hours": 192,
       "freshness": "stale",
       "latest_source_period": null,
