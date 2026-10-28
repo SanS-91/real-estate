@@ -99,6 +99,10 @@ def evaluate(row,source_ids,project_ids,as_of):
                   row.get("verified_contract",{}).get("is_current") and
                   row.get("verified_full_instalments") and
                   row.get("valid_from") and row.get("valid_until"))
+    rate=row.get("comparison_discount_rate_annual")
+    pv=(calc_pv_if_complete(row,rate,as_of)
+        if eligible and type(rate) in (int,float) and 0<=rate<=1
+        else None)
     return {
       "id":row["id"],"project_id":row["project_id"],"phase_name":row.get("phase_name"),
       "product_types":row.get("product_types",[]),"source_id":sid,"source_url":row["source_url"],
@@ -107,11 +111,14 @@ def evaluate(row,source_ids,project_ids,as_of):
       "status":row["status"],"evidence_type":row["evidence_type"],"scope":row["scope"],
       "published_terms":terms,"methodology_note":row["methodology_note"],
       "verified_net_selling_price_vnd":row.get("verified_net_price_vnd") if eligible else None,
-      "customer_payment_pv_vnd":None,
-      "fs_comparison_ready":False,
-      "missing_evidence":requested if not eligible else [],
+      "customer_payment_pv_vnd":pv,
+      "fs_comparison_ready":pv is not None,
+      "missing_evidence":requested if not eligible else ([] if pv is not None else
+          ["explicit-comparison-discount-rate","complete-verified-net-payment-schedule"]),
       "historical_or_unverified":row["status"]!="verified-current-contractual-policy",
-      "pv_block_reason":"Incomplete or unverified contractual net price, dates, discounts or receipts" if not eligible else "No explicit annual discount rate supplied"
+      "pv_block_reason":(None if pv is not None else
+        ("Incomplete or unverified contractual net price, dates, discounts or receipts" if not eligible
+         else "Missing explicit discount rate or invalid complete dated net buyer payments"))
     }
 
 def build(payload,projects,sources,as_of):
@@ -131,13 +138,15 @@ def build(payload,projects,sources,as_of):
         coverage.append({"project_id":project,"policy_claims":len(matches),
             "verified_current_schemes":sum(x["fs_comparison_ready"] for x in matches),
             "verified_net_price_count":sum(x["verified_net_selling_price_vnd"] is not None for x in matches),
-            "pv_eligible_count":0,
+            "pv_eligible_count":sum(x["fs_comparison_ready"] for x in matches),
             "missing_approved_terms":not bool(matches)})
     digest=hashlib.sha256(json.dumps(rows,sort_keys=True,ensure_ascii=False).encode()).hexdigest()[:16]
     return {"schema_version":1,"build_revision":digest,"evidence_as_of":max(x["review_date"] for x in rows) if rows else None,
             "generated_from":"data/mock/market/sales-policy-evidence.json",
             "source_refresh_is_price_refresh":False,
-            "record_count":len(rows),"ready_for_fs_pv":0,"current_approved_official_schemes":0,
+            "record_count":len(rows),
+            "ready_for_fs_pv":sum(x["fs_comparison_ready"] for x in rows),
+            "current_approved_official_schemes":sum(x["fs_comparison_ready"] for x in rows),
             "watchlist":coverage,"data":rows,
             "methodology":"Reported 60/35/5 or 10% +5% every six months does not specify a complete, effective, contractual, unit-specific schedule. Net price and PV stay null. A full verified schedule would require explicit discount rate and cash-recipient mapping; do not substitute buyer loan/grace period for developer revenue."}
 
