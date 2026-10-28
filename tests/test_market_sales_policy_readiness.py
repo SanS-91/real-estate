@@ -58,6 +58,31 @@ bad=deepcopy(fixture);bad["verified_contract"]["is_current"]=False
 assert m.calc_pv_if_complete(bad,.12,date(2026,10,28)) is None
 bad=deepcopy(fixture);bad["verified_vat_basis"]=None
 assert m.calc_pv_if_complete(bad,.12,date(2026,10,28)) is None
+# Synthetic first-party contractual scheme: only complete source + exact dates + explicit
+# discount assumption may promote net price and customer PV. NEVER persisted in real data.
+complete=deepcopy(raw["data"][0])
+complete.update({"id":"synthetic-test-only-not-production",
+                 "status":"verified-current-contractual-policy",
+                 "source_publication_date":"2026-10-01",
+                 "official_price_list_verified":True,"net_price_verified":True,
+                 "discount_stacking_verified":True,"verified_net_price_vnd":100_000_000,
+                 "verified_vat_basis":"VAT-inclusive-contract",
+                 "verified_contract":{"is_current":True},
+                 "valid_from":"2026-10-01","valid_until":"2027-12-31",
+                 "comparison_discount_rate_annual":0.12,
+                 "verified_full_instalments":deepcopy(fixture["verified_full_instalments"])})
+ready=m.build({"record_count":1,"data":[complete]},projects,sources,date(2026,10,28))
+assert ready["ready_for_fs_pv"]==1
+assert ready["current_approved_official_schemes"]==1
+assert ready["data"][0]["customer_payment_pv_vnd"]==94642857
+assert ready["data"][0]["fs_comparison_ready"] is True
+assert ready["data"][0]["verified_net_selling_price_vnd"]==100_000_000
+assert next(r for r in ready["watchlist"] if r["project_id"]=="izumi-city")["pv_eligible_count"]==1
+uncomplete=deepcopy(complete);uncomplete["comparison_discount_rate_annual"]=None
+notready=m.build({"record_count":1,"data":[uncomplete]},projects,sources,date(2026,10,28))
+assert notready["ready_for_fs_pv"]==0
+assert notready["data"][0]["customer_payment_pv_vnd"] is None
+
 bad=deepcopy(raw);bad["data"][0]["source_url"]="https://tapdoannamlong.com/official"
 try:m.build(bad,projects,sources,date(2026,10,28))
 except ValueError:pass
