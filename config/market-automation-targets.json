@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "updated_at": "2026-10-08",
+  "updated_at": "2026-10-28",
   "targets": [
     {
       "target_id": "cbre-hcmc-q2-2026",
@@ -77,6 +77,30 @@
       "period_type": "date",
       "scope": "developer-project-updates",
       "collector": "namlong_official",
+      "enabled": true
+    },
+    {
+      "target_id": "nam-long-central-lake-project-official",
+      "source_id": "developer-official",
+      "observation_source_id": "nam-long-official",
+      "url": "https://namlongcentrallake.vn/gioi-thieu.html",
+      "period": null,
+      "period_type": null,
+      "scope": "can-tho-project-official-source-watch",
+      "project_id": "nam-long-ii-central-lake",
+      "collector": "metadata_only",
+      "enabled": true
+    },
+    {
+      "target_id": "gamuda-springville-project-official",
+      "source_id": "developer-official",
+      "observation_source_id": "gamuda-land-official",
+      "url": "https://www.gamudaland.com.vn/vn/developments/township/springville",
+      "period": null,
+      "period_type": null,
+      "scope": "dong-nai-project-official-source-watch",
+      "project_id": "springville",
+      "collector": "metadata_only",
       "enabled": true
     }
   ]
