@@ -9,7 +9,7 @@ obs=json.loads((ROOT/'data/mock/market/observations.json').read_text(encoding='u
 ids={x['id'] for x in projects['data']}
 assert projects['record_count']==len(projects['data'])>=14
 assert {'vinhomes-grand-park','the-9-stellars','celesta-gold','essensia-parkway','nam-long-ii-central-lake'} <= ids
-assert devs['record_count']==len(devs['data'])==9
+assert devs['record_count']==len(devs['data'])>=11
 source_ids={x['id'] for x in sources['data']}
 assert {'vinhomes-official','sonkim-land-official','keppel-real-estate-vietnam','phu-long-official','nomura-real-estate-vietnam'} <= source_ids
 assert all(x.get('primary_source_id') in source_ids for x in projects['data'])
@@ -23,6 +23,6 @@ assert cp.returncode==0,cp.stdout+'\n'+cp.stderr
 out=json.loads(tmp.read_text(encoding='utf-8'))
 assert out['status']=='pass'
 assert out['counts']['projects']==len(projects['data'])
-assert out['counts']['developers']==9
+assert out['counts']['developers']==len(devs['data'])
 assert out['first_party_project_share']==1.0
 print('Phase 4.7 market coverage tests PASS')
