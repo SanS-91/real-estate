@@ -23,6 +23,12 @@
           "checked_at": "2026-10-10T08:26:43.694778+00:00",
           "fingerprint": "7a2437e83823a8e616a59c27316a8b3b4a4c587953dacc450640aa000efe6214",
           "expiry": "2026-10-21"
+        },
+        {
+          "run_id": "40706122910",
+          "checked_at": "2026-10-28T14:27:43.640344+00:00",
+          "fingerprint": "4b91fe2ce898aa7fafdb1662e30ed37bc92217f15a0a61da78e60a491e3b832b",
+          "expiry": "2026-11-22"
         }
       ]
     },
@@ -42,6 +48,12 @@
           "checked_at": "2026-10-10T08:26:43.694778+00:00",
           "fingerprint": "e9c544d0745778700f2cc6597b6aea2981f6f5965f8f306ea69f5e56f95b2a47",
           "expiry": "2026-10-16"
+        },
+        {
+          "run_id": "40706122910",
+          "checked_at": "2026-10-28T14:27:43.640344+00:00",
+          "fingerprint": "7e702c4079ba616f27efa3d111c9c89da3724056117f2783636f22bf64b316aa",
+          "expiry": "2026-11-05"
         }
       ]
     },
@@ -61,6 +73,12 @@
           "checked_at": "2026-10-10T08:26:43.694778+00:00",
           "fingerprint": "dd55e9dd1c65c7e147bc10396cce7d09e76512197f537924c2e1ce7b10d26088",
           "expiry": "2026-10-20"
+        },
+        {
+          "run_id": "40706122910",
+          "checked_at": "2026-10-28T14:27:43.640344+00:00",
+          "fingerprint": "5b49490db06460cbbc627eadb1bca1bf152a8d83de19b7cda1a5b5cccc161c3b",
+          "expiry": "2026-11-04"
         }
       ]
     },
@@ -105,6 +123,12 @@
           "checked_at": "2026-10-10T08:26:43.694778+00:00",
           "fingerprint": "1aebf665d13e659c6fec2cfdf80c37af026c75586cfe3cd17d0788a594d65e5f",
           "expiry": "2026-11-04"
+        },
+        {
+          "run_id": "40706122910",
+          "checked_at": "2026-10-28T14:27:43.640344+00:00",
+          "fingerprint": "1aebf665d13e659c6fec2cfdf80c37af026c75586cfe3cd17d0788a594d65e5f",
+          "expiry": "2026-11-04"
         }
       ]
     },
@@ -130,6 +154,58 @@
           "checked_at": "2026-10-10T08:26:43.694778+00:00",
           "fingerprint": "33022f6f5e681acd7b1af8755a8e72d7d8502fa138e620db22ed485b6f34eb61",
           "expiry": "2026-10-15"
+        }
+      ]
+    },
+    {
+      "listing_id": "71287812",
+      "project_id": "mizuki-park",
+      "source_url": "https://muaban.net/bat-dong-san/ban-can-ho-chung-cu-du-an-mizuki-park-5598-huyen-binh-chanh-ho-chi-minh/can-ho-ven-song-trellia-vista-mizuki-park-moi-truong-song-xanh-id71287812",
+      "checks": [
+        {
+          "run_id": "40706122910",
+          "checked_at": "2026-10-28T14:27:43.640344+00:00",
+          "fingerprint": "89ac6e56d84abe224322a6e7c963af6b736bf1b0d997f82680859e39a0b836b0",
+          "expiry": "2026-11-25"
+        }
+      ]
+    },
+    {
+      "listing_id": "71297776",
+      "project_id": "akari-city",
+      "source_url": "https://muaban.net/bat-dong-san/ban-can-ho-chung-cu-du-an-akari-city-quan-binh-tan-ho-chi-minh/akari-city-nang-cap-muc-song-cua-ban-id71297776",
+      "checks": [
+        {
+          "run_id": "40706122910",
+          "checked_at": "2026-10-28T14:27:43.640344+00:00",
+          "fingerprint": "8f43fb9cba52c15f5c564465566d32b578118fa847d79b9d832e6aef486caef4",
+          "expiry": "2026-11-05"
+        }
+      ]
+    },
+    {
+      "listing_id": "71306811",
+      "project_id": "akari-city",
+      "source_url": "https://muaban.net/bat-dong-san/ban-can-ho-chung-cu-du-an-akari-city-quan-binh-tan-ho-chi-minh/em-chinh-chu-ban-can-ho-akari-city-thap-ak7-gia-full-102-4-8-ty-id71306811",
+      "checks": [
+        {
+          "run_id": "40706122910",
+          "checked_at": "2026-10-28T14:27:43.640344+00:00",
+          "fingerprint": "81539fe48057e8f3dde091fb959639509275f36ab2b7b7739d69becad3d578de",
+          "expiry": "2026-11-03"
+        }
+      ]
+    },
+    {
+      "listing_id": "71316674",
+      "project_id": "mizuki-park",
+      "source_url": "https://muaban.net/bat-dong-san/ban-can-ho-chung-cu-du-an-mizuki-park-5598-huyen-binh-chanh-ho-chi-minh/can-ban-can-ho-tai-thap-mp1-noi-that-day-du-so-hong-chinh-chu-id71316674",
+      "checks": [
+        {
+          "run_id": "40706122910",
+          "checked_at": "2026-10-28T14:27:43.640344+00:00",
+          "fingerprint": "6b1d6f0042f0b8c2ae028ff3dde98f271ac9d192e6fdf5895c33aae0d82c4190",
+          "expiry": "2026-11-11"
         }
       ]
     }

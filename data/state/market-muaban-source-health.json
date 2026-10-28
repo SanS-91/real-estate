@@ -1,35 +1,35 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-10-10T08:26:43.694778+00:00",
+  "generated_at": "2026-10-28T14:27:43.640344+00:00",
   "source_id": "muaban-vn",
   "targets_checked": 6,
-  "listing_urls_discovered": 21,
-  "details_checked": 21,
-  "valid_unexpired_project_ads": 6,
-  "newly_published": 6,
-  "published_current_individual_listings": 6,
+  "listing_urls_discovered": 16,
+  "details_checked": 16,
+  "valid_unexpired_project_ads": 8,
+  "newly_published": 0,
+  "published_current_individual_listings": 1,
   "sources": [
     {
       "project_id": "akari-city",
       "source_url": "https://muaban.net/bat-dong-san/ban-can-ho-chung-cu-du-an-akari-city-quan-binh-tan-ho-chi-minh",
       "access": "reachable",
-      "discovered": 1,
-      "checked": 1,
-      "qualified": 0,
+      "discovered": 2,
+      "checked": 2,
+      "qualified": 2,
       "reasons": {
-        "publisher-expired": 1
+        "qualified-unexpired-listing": 2
       }
     },
     {
       "project_id": "vinhomes-grand-park",
       "source_url": "https://muaban.net/bat-dong-san/ban-can-ho-chung-cu-du-an-vinhomes-grand-park-quan-9-ho-chi-minh",
       "access": "reachable",
-      "discovered": 6,
-      "checked": 6,
-      "qualified": 3,
+      "discovered": 4,
+      "checked": 4,
+      "qualified": 2,
       "reasons": {
-        "qualified-unexpired-listing": 3,
-        "publisher-expired": 3
+        "qualified-unexpired-listing": 2,
+        "publisher-expired": 2
       }
     },
     {
@@ -58,13 +58,13 @@
       "project_id": "mizuki-park",
       "source_url": "https://muaban.net/bat-dong-san/ban-can-ho-chung-cu-du-an-mizuki-park-5598-huyen-binh-chanh-ho-chi-minh",
       "access": "reachable",
-      "discovered": 12,
-      "checked": 12,
-      "qualified": 3,
+      "discovered": 8,
+      "checked": 8,
+      "qualified": 4,
       "reasons": {
-        "qualified-unexpired-listing": 3,
+        "qualified-unexpired-listing": 4,
         "multiple-sale-price-claims": 1,
-        "publisher-expired": 8
+        "publisher-expired": 3
       }
     },
     {
