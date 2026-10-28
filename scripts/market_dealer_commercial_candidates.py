@@ -124,14 +124,14 @@ def build(now=None,getter=None):
                  "visible_text_length":len(readable),
                  "html_table_rows":len(priceSoup.select("tr")),
                  "has_table_price_heading":bool(re.search(r"giá niêm yết.{0,35}bảng tính",readable,re.I)),
-                 "has_zone1_label":bool(re.search(r"nhà phố vườn\\s*zone\\s*1",readable,re.I)),
-                 "has_zone2_label":bool(re.search(r"nhà phố vườn\\s*zone\\s*2",readable,re.I)),
-                 "has_zone3_label":bool(re.search(r"nhà phố vườn\\s*zone\\s*3",readable,re.I)),
-                 "has_price_855":bool(re.search(r"8[,.]55\\s*tỷ",readable,re.I)),
+                 "has_zone1_label":bool(re.search(r"nhà phố vườn\s*zone\s*1",readable,re.I)),
+                 "has_zone2_label":bool(re.search(r"nhà phố vườn\s*zone\s*2",readable,re.I)),
+                 "has_zone3_label":bool(re.search(r"nhà phố vườn\s*zone\s*3",readable,re.I)),
+                 "has_price_855":bool(re.search(r"8[,.]55\s*tỷ",readable,re.I)),
                  "html_title":(priceSoup.title.get_text(" ",strip=True)[:110] if priceSoup.title else None),
                  "table_first_cell_labels":[tr.find_all(["td","th"])[0].get_text(" ",strip=True)[:65]
                     for tr in priceSoup.select("tr")[:8] if tr.find_all(["td","th"])],
-                 "has_izumi_canaria":bool(re.search(r"Izumi\\s*Canaria",readable,re.I))}
+                 "has_izumi_canaria":bool(re.search(r"Izumi\s*Canaria",readable,re.I))}
     digest=hashlib.sha256(json.dumps([leads,alert],sort_keys=True,ensure_ascii=False).encode()).hexdigest()[:16]
     return {"schema_version":1,"checked_at":now.isoformat(),
       "source_type":"third-party-broker-candidate-only",
