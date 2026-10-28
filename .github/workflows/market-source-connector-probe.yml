@@ -2,6 +2,13 @@ name: Market Source Connector Probe
 
 on:
   workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - 'scripts/market_peer_price_watch.py'
+      - 'data/mock/market/listing-scope-evidence.json'
+      - 'tests/test_market_peer_price_watch.py'
+      - '.github/workflows/market-source-connector-probe.yml'
   schedule:
     - cron: '15 2 * * 2,5'
 
@@ -44,3 +51,42 @@ jobs:
           name: market-source-connector-report
           path: data/candidate/market/market-source-connector-report.json
           retention-days: 14
+
+  publish-price-health:
+    needs: probe
+    if: github.event_name != 'pull_request'
+    runs-on: ubuntu-24.04
+    timeout-minutes: 10
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@v7
+      - uses: actions/setup-python@v7
+        with:
+          python-version: '3.12'
+      - name: Install dependencies
+        run: pip install -r requirements.txt
+      - name: Validate access-only monitoring logic
+        run: python tests/test_market_peer_price_watch.py
+      - name: Publish access/age report without touching source prices
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          for attempt in 1 2 3 4 5; do
+            git fetch origin main
+            git reset --hard origin/main
+            python scripts/market_peer_price_watch.py
+            if git diff --quiet -- data/state/market-peer-price-watch.json; then
+              echo "No monitoring change."
+              exit 0
+            fi
+            git add data/state/market-peer-price-watch.json
+            git commit -m "ops(market): refresh peer price evidence monitoring"
+            if git push origin HEAD:main; then
+              echo "Published source-access report; no price data mutated."
+              exit 0
+            fi
+            echo "Concurrent repository writer: regenerate on latest main."
+            sleep $((attempt * 2))
+          done
+          exit 1
