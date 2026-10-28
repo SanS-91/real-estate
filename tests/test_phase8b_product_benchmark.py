@@ -60,14 +60,19 @@ rever_health=mod.read(mod.REVER_HEALTH)
 assert mod.verified_unit_auto_rows(projects,sources,now,muaban,rever,muaban_health,rever_health)==[], "Old source-check reports cannot certify current ads"
 fresh_health=deepcopy(muaban_health)
 fresh_health["generated_at"]=now.isoformat()
-live=mod.verified_unit_auto_rows(projects,sources,now,muaban,rever,fresh_health,rever_health)
+# A fresh aggregate project scan does NOT refresh 18-day-old listing proofs.
+assert mod.verified_unit_auto_rows(projects,sources,now,muaban,rever,fresh_health,rever_health)==[]
+recent_muaban=deepcopy(muaban)
+for row in recent_muaban["data"]:
+    row["verified_at"]=now.isoformat()
+live=mod.verified_unit_auto_rows(projects,sources,now,recent_muaban,rever,fresh_health,rever_health)
 assert live and all(r["is_verified_live_offer"] and r["source_id"]=="muaban-vn" for r in live)
 assert all(r["price_area_basis"]=="publisher-stated-apartment-area-not-verified-net" for r in live)
 combined=mod.build(raw,projects,sources,now.date(),live)
 assert combined["verified_live_count"]==len(live)
 assert combined["record_count"]==len(raw["records"])+len(live)
 assert all(r["fs_asp_eligible"] is False and not r["verified_payment_milestones"] for r in live)
-broken=deepcopy(muaban);broken["data"][0]["verification_run_ids"]=["same","same"]
+broken=deepcopy(recent_muaban);broken["data"][0]["verification_run_ids"]=["same","same"]
 fresh_rows=mod.verified_unit_auto_rows(projects,sources,now,broken,rever,fresh_health,rever_health)
 assert all(r["source_listing_id"]!=str(broken["data"][0]["listing_id"]) for r in fresh_rows)
 
