@@ -9,6 +9,11 @@ on:
       - 'data/mock/core/sources.json'
       - 'scripts/build_market_sales_policy_readiness.py'
       - 'tests/test_market_sales_policy_readiness.py'
+      - 'tests/test_market_sales_policy_ui.cjs'
+      - 'assets/js/market.js'
+      - 'assets/js/data-store.js'
+      - 'assets/css/market-listing-evidence.css'
+      - 'market.html'
       - '.github/workflows/market-sales-policy-readiness.yml'
   schedule:
     # 10:55 ICT every day. Do not turn source check into new commercial terms.
@@ -30,8 +35,36 @@ jobs:
       - uses: actions/setup-python@v7
         with:
           python-version: '3.12'
-      - name: Verify source attribution and strict PV gating
-        run: python tests/test_market_sales_policy_readiness.py
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Verify source attribution, PV gate and responsive UI contract
+        run: |
+          python tests/test_market_sales_policy_readiness.py
+          node tests/test_market_sales_policy_ui.cjs
+          node --check assets/js/market.js
+          node --check assets/js/data-store.js
+      - name: Browser smoke - finance policy context across screen sizes
+        run: |
+          set -eu
+          BROWSER="$(command -v google-chrome || command -v chromium || command -v chromium-browser || true)"
+          test -n "$BROWSER"
+          python -m http.server 8770 --bind 127.0.0.1 > /tmp/market-sales-policy.log 2>&1 &
+          PID=$!
+          trap 'kill "$PID" || true' EXIT
+          sleep 3
+          for width in 1440,900 390,844; do
+            "$BROWSER" --headless --no-sandbox --disable-gpu --disable-dev-shm-usage --window-size="$width" --virtual-time-budget=9000 --dump-dom 'http://127.0.0.1:8770/market.html?view=benchmark' > "/tmp/market-policy-$width.html"
+          done
+          python - <<'PY'
+          from pathlib import Path
+          for viewport in ('1440,900','390,844'):
+              doc=Path('/tmp/market-policy-'+viewport+'.html').read_text(encoding='utf-8')
+              for text in ('Chính sách bán hàng','Nguồn thứ cấp','60%','35%','Chưa đủ điều kiện'):
+                  assert text in doc,(viewport,text)
+              assert 'Unable to load Market registry data' not in doc
+          print('PASS policy claims visible, blocked PV, desktop/mobile.')
+          PY
       - name: Publish source-readiness without automatic terms or prices
         run: |
           git config user.name "github-actions[bot]"
