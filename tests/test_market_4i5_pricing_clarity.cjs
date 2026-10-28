@@ -18,7 +18,7 @@ assert.ok(market.includes('maintenance.html#market-source-health-title'));
 const status=fs.readFileSync('assets/js/maintenance.js','utf8');
 assert.ok(status.includes('listing-source-coverage.json') && status.includes('HTTP 403'));
 const markup=fs.readFileSync('market.html','utf8');
-assert.ok(markup.includes('charts.js?v=4I5B') && /market\\.js\\?v=[^"']+/.test(markup),
+assert.ok(markup.includes('charts.js?v=4I5B') && markup.includes('assets/js/market.js?v='),
   'Price range chart and versioned Market page script must remain loaded');
 
 assert.ok(market.includes('fullLabels: listingChart.fullLabels'));
