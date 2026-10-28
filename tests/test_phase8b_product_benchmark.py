@@ -49,6 +49,28 @@ assert sum(r["historical_individual_offers"] for r in result["watchlist_coverage
 assert sum(r["live_offers_verified"] for r in result["watchlist_coverage"])==0
 assert next(r for r in result["watchlist_coverage"] if r["project_id"]=="springville")["historical_individual_offers"]>=0
 assert mod.build(raw,projects,sources,date(2026,10,28))["build_revision"]==result["build_revision"]
+# Hosted publisher feeds can enter only with BOTH independent verification
+# and a fresh, reachable source-health report; expired ads never enter.
+from datetime import datetime, timezone
+now=datetime(2026,10,28,9,0,tzinfo=timezone.utc)
+muaban=mod.read(mod.MUABAN)
+rever=mod.read(mod.REVER)
+muaban_health=mod.read(mod.MUABAN_HEALTH)
+rever_health=mod.read(mod.REVER_HEALTH)
+assert mod.verified_unit_auto_rows(projects,sources,now,muaban,rever,muaban_health,rever_health)==[], "Old source-check reports cannot certify current ads"
+fresh_health=deepcopy(muaban_health)
+fresh_health["generated_at"]=now.isoformat()
+live=mod.verified_unit_auto_rows(projects,sources,now,muaban,rever,fresh_health,rever_health)
+assert live and all(r["is_verified_live_offer"] and r["source_id"]=="muaban-vn" for r in live)
+assert all(r["price_area_basis"]=="publisher-stated-apartment-area-not-verified-net" for r in live)
+combined=mod.build(raw,projects,sources,now.date(),live)
+assert combined["verified_live_count"]==len(live)
+assert combined["record_count"]==len(raw["records"])+len(live)
+assert all(r["fs_asp_eligible"] is False and not r["verified_payment_milestones"] for r in live)
+broken=deepcopy(muaban);broken["data"][0]["verification_run_ids"]=["same","same"]
+fresh_rows=mod.verified_unit_auto_rows(projects,sources,now,broken,rever,fresh_health,rever_health)
+assert all(r["source_listing_id"]!=str(broken["data"][0]["listing_id"]) for r in fresh_rows)
+
 # Invalid assumptions must fail closed.
 def reject(update):
     b=deepcopy(raw);b["records"][0].update(update)
