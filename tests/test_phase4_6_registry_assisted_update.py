@@ -19,8 +19,18 @@ assert 'changed_since_previous_check' in watch
 assert 'new_since_previous_check' in watch
 assert 'auto_publish' in review
 assert 'never overwritten' in review
-assert 'contents: read' in wf
-assert 'contents: write' not in wf
+# The Legal/Infrastructure registry watcher is still read-only.
+# A separate push-only job may publish a derived Market coverage QA snapshot;
+# it must never have permission or logic to mutate Legal/Infrastructure registries.
+assert '\npermissions:\n  contents: read\n' in wf
+watch_job=wf.split('\n  watch:\n',1)[1].split('\n  publish-market-coverage:\n',1)[0]
+assert 'contents: write' not in watch_job
+coverage_job=wf.split('\n  publish-market-coverage:\n',1)[1]
+assert "if: github.event_name == 'push'" in coverage_job
+assert 'contents: write' in coverage_job
+assert 'git add data/state/market-coverage.json' in coverage_job
+assert 'git add data/mock/legal/' not in coverage_job
+assert 'git add data/mock/infrastructure/' not in coverage_job
 assert 'actions/cache@v6' in wf
 assert 'registry-review-' in wf
 assert 'python scripts/watch_registries.py' in wf
