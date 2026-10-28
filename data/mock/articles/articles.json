@@ -1,8 +1,8 @@
 {
   "schema_version": 1,
-  "build_id": "market-news-rss-20261028T081600Z",
-  "generated_at": "2026-10-28T08:16:00.887722+00:00",
-  "record_count": 1076,
+  "build_id": "market-verified-official-news-20261028T082250Z",
+  "generated_at": "2026-10-28T08:22:50.259923+00:00",
+  "record_count": 1078,
   "data": [
     {
       "id": "article-market-rss-f6bc0ef6e82b3bf21c25",
@@ -2369,6 +2369,38 @@
         "feed_url": "https://vnexpress.net/rss/bat-dong-san.rss",
         "publisher_host": "vnexpress.net",
         "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-nam-long-discovered-e6a3bfb95586646a",
+      "title": "Hạ tầng tăng tốc, loạt dự án bất động sản ở Đồng Nai hưởng lợi",
+      "url": "https://www.namlongvn.com/tin-tuc/ha-tang-tang-toc-loat-du-an-bat-dong-san-o-dong-nai-huong-loi/",
+      "category": "market",
+      "subcategory": "developer",
+      "content_type": "developer-update",
+      "published_at": "2026-10-26T09:00:00+07:00",
+      "source_id": "nam-long-official",
+      "region_ids": [
+        "dong-nai"
+      ],
+      "project_ids": [
+        "izumi-city"
+      ],
+      "developer_ids": [
+        "nam-long"
+      ],
+      "tags": [
+        "sales",
+        "project-update"
+      ],
+      "importance": 3,
+      "summary": "– Nam Long Group Tin tức chung 26/10/2026 Hạ tầng tăng tốc, loạt dự án bất động sản ở Đồng Nai hưởng lợi Hạ tầng TP.HCM – Đồng Nai liên tục được bổ sung các tuyến đường, cây cầu mới, rút ngắn thời gian di chuyển, qua đó mở thêm dư địa cho loạt dự án bất động sản tại Đồng Nai. Cuối tháng 9 vừa qua, cầu Cát Lái và cầu Long Hưng",
+      "structured_facts": [],
+      "candidate_note": "Official article publication date validated; strict review gate still applies.",
+      "source_verification": {
+        "publication_date_verified": true,
+        "article_page": "https://www.namlongvn.com/tin-tuc/ha-tang-tang-toc-loat-du-an-bat-dong-san-o-dong-nai-huong-loi/",
+        "discovery_url": "https://www.namlongvn.com/tin-tuc/"
       }
     },
     {
@@ -26431,6 +26463,37 @@
         "feed_url": "https://thanhnien.vn/rss/kinh-te/chinh-sach-phat-trien.rss",
         "publisher_host": "thanhnien.vn",
         "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-nam-long-discovered-3bcea84a1961520d",
+      "title": "Dấu ấn sống xanh qua 3 trạm dừng ý nghĩa của Nam Long Fresh 2026",
+      "url": "https://www.namlongvn.com/tin-tuc/dau-an-song-xanh-qua-3-tram-dung-y-nghia-cua-nam-long-fresh-2026/",
+      "category": "market",
+      "subcategory": "developer",
+      "content_type": "developer-update",
+      "published_at": "2026-10-01T09:00:00+07:00",
+      "source_id": "nam-long-official",
+      "region_ids": [
+        "long-an"
+      ],
+      "project_ids": [
+        "waterpoint"
+      ],
+      "developer_ids": [
+        "nam-long"
+      ],
+      "tags": [
+        "project-update"
+      ],
+      "importance": 3,
+      "summary": "– Nam Long Group Tin tức chung 01/10/2026 Dấu ấn sống xanh qua 3 trạm dừng ý nghĩa của Nam Long Fresh 2026 Qua 3 trạm xanh tại khu đô thị tích hợp Waterpoint, trung tâm thương mại Thiso Mall Sala và triển lãm Nam Long Experience 2026, hành trình Nam Long Fresh 2026 lan tỏa thông điệp bảo vệ môi trường đến gần hơn với cộng đồng.",
+      "structured_facts": [],
+      "candidate_note": "Official article publication date validated; strict review gate still applies.",
+      "source_verification": {
+        "publication_date_verified": true,
+        "article_page": "https://www.namlongvn.com/tin-tuc/dau-an-song-xanh-qua-3-tram-dung-y-nghia-cua-nam-long-fresh-2026/",
+        "discovery_url": "https://www.namlongvn.com/tin-tuc/"
       }
     },
     {
