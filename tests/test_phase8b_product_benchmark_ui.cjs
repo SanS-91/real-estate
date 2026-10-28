@@ -8,7 +8,7 @@ const css=read('assets/css/market-listing-evidence.css');
 const benchmark=JSON.parse(read('data/processed/market/product-comparables.json'));
 assert.equal(benchmark.schema_version,1);
 assert.equal(benchmark.record_count,benchmark.data.length);
-assert.equal(benchmark.verified_live_count,0);
+assert.equal(benchmark.verified_live_count,benchmark.data.filter(row=>row.is_verified_live_offer).length);
 assert.equal(benchmark.official_payment_schedules,0);
 assert.deepEqual(new Set(benchmark.watchlist_coverage.map(x=>x.project_id)),new Set([
   'izumi-city','aqua-city','springville','elyse-island',
@@ -19,7 +19,7 @@ assert(ui.includes("function renderProductBenchmark()"));
 assert(ui.includes("function projectProductBenchmarkHTML(project)"));
 assert(ui.includes("function benchmarkRecordTable(rows)"));
 assert(ui.includes("renderProductBenchmark();"));
-assert(ui.includes("is_verified_live_offer")===false, 'Listing must not accidentally be labeled as a verified live offer');
+assert(ui.includes("row.is_verified_live_offer") && ui.includes("Đã đối soát tin và nguồn gần đây"), 'Current source-verified unit ads must be visibly distinguished from historic ads');
 assert(ui.includes("Tin đã hết hạn"));
 assert(ui.includes("Chưa xác minh còn hiệu lực"));
 assert(ui.includes("Chưa xác minh"));
