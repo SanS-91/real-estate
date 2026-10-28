@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "checked_at": "2026-10-28T10:30:38.555104+00:00",
+  "checked_at": "2026-10-28T10:32:16.298539+00:00",
   "source_type": "third-party-broker-candidate-only",
   "price_page_status": "fetched",
   "policy_page_status": "fetched",
@@ -14,10 +14,10 @@
     "visible_text_length": 24085,
     "html_table_rows": 5,
     "has_table_price_heading": true,
-    "has_zone1_label": false,
-    "has_zone2_label": false,
-    "has_zone3_label": false,
-    "has_price_855": false,
+    "has_zone1_label": true,
+    "has_zone2_label": true,
+    "has_zone3_label": true,
+    "has_price_855": true,
     "html_title": "Giá Izumi Canaria tháng 10/2026: nhà phố vườn từ 8,55 tỷ đồng | HPR",
     "table_first_cell_labels": [
       "Loại sản phẩm",
@@ -26,7 +26,7 @@
       "Nhà phố vườn zone 3",
       "Biệt thự song lập"
     ],
-    "has_izumi_canaria": false
+    "has_izumi_canaria": true
   },
   "price_table_records_recognized": 4,
   "expected_price_groups": 4,
