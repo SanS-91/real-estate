@@ -1,0 +1,184 @@
+{
+  "schema_version": 1,
+  "build_revision": "f43d5ced58525224",
+  "evidence_as_of": "2026-10-28",
+  "generated_from": "data/mock/market/sales-policy-evidence.json",
+  "source_refresh_is_price_refresh": false,
+  "record_count": 3,
+  "ready_for_fs_pv": 0,
+  "current_approved_official_schemes": 0,
+  "watchlist": [
+    {
+      "project_id": "izumi-city",
+      "policy_claims": 2,
+      "verified_current_schemes": 0,
+      "verified_net_price_count": 0,
+      "pv_eligible_count": 0,
+      "missing_approved_terms": false
+    },
+    {
+      "project_id": "aqua-city",
+      "policy_claims": 1,
+      "verified_current_schemes": 0,
+      "verified_net_price_count": 0,
+      "pv_eligible_count": 0,
+      "missing_approved_terms": false
+    },
+    {
+      "project_id": "springville",
+      "policy_claims": 0,
+      "verified_current_schemes": 0,
+      "verified_net_price_count": 0,
+      "pv_eligible_count": 0,
+      "missing_approved_terms": true
+    },
+    {
+      "project_id": "elyse-island",
+      "policy_claims": 0,
+      "verified_current_schemes": 0,
+      "verified_net_price_count": 0,
+      "pv_eligible_count": 0,
+      "missing_approved_terms": true
+    },
+    {
+      "project_id": "kita-airport-city",
+      "policy_claims": 0,
+      "verified_current_schemes": 0,
+      "verified_net_price_count": 0,
+      "pv_eligible_count": 0,
+      "missing_approved_terms": true
+    },
+    {
+      "project_id": "nam-long-ii-central-lake",
+      "policy_claims": 0,
+      "verified_current_schemes": 0,
+      "verified_net_price_count": 0,
+      "pv_eligible_count": 0,
+      "missing_approved_terms": true
+    }
+  ],
+  "data": [
+    {
+      "id": "izumi-canaria-launch-official-sep2026",
+      "project_id": "izumi-city",
+      "phase_name": "Izumi Canaria",
+      "product_types": [
+        "landed"
+      ],
+      "source_id": "nam-long-official",
+      "source_url": "https://www.namlongvn.com/tin-tuc/trien-lam-nam-long-experience-2026-hut-hon-10-000-luot-khach/",
+      "source_role": "developer-primary",
+      "review_date": "2026-10-28",
+      "source_publication_date": null,
+      "status": "official-milestone-only",
+      "evidence_type": "launch-activity",
+      "scope": "Izumi Canaria",
+      "published_terms": {
+        "launch_date": "2026-09-20",
+        "stated_price_vnd": null,
+        "discount_rate": null,
+        "advertised_upfront_pct": null,
+        "guaranteed_post_handover_pct": null,
+        "retention_title_pct": null,
+        "max_months_after_handover": null
+      },
+      "methodology_note": "Nam Long official company article reports 20 September sales event for Izumi Canaria. It does NOT itself supply a unit-specific price list, buyer payment policy, incentive stacking, Handover (HO) date or contract instalments.",
+      "verified_net_selling_price_vnd": null,
+      "customer_payment_pv_vnd": null,
+      "fs_comparison_ready": false,
+      "missing_evidence": [
+        "official-current-campaign-and-applicable-unit",
+        "verified-unit-price-and-VAT-basis",
+        "verified-discounts-and-stacking",
+        "100pct-net-buyer-payments-with-exact-dates",
+        "contractual-HO-and-title-milestones",
+        "bank-support-cash-flow-terms-if-applicable"
+      ],
+      "historical_or_unverified": true,
+      "pv_block_reason": "Incomplete or unverified contractual net price, dates, discounts or receipts"
+    },
+    {
+      "id": "izumi-bank-guarantee-secondary-report-2026",
+      "project_id": "izumi-city",
+      "phase_name": null,
+      "product_types": [
+        "landed"
+      ],
+      "source_id": "tapdoannamlong-secondary",
+      "source_url": "https://tapdoannamlong.com/izumi-city-ra-chinh-sach-giam-ap-luc-dong-tien/",
+      "source_role": "third-party-commercial-site-not-verified-corporate-domain",
+      "review_date": "2026-10-28",
+      "source_publication_date": null,
+      "status": "third-party-claim-unverified-current-applicability",
+      "evidence_type": "partial-payment-policy-claim",
+      "scope": "Reported bank-guaranteed home delivery (specific lot, phase and campaign not verified)",
+      "published_terms": {
+        "launch_date": null,
+        "stated_price_vnd": null,
+        "discount_rate": null,
+        "advertised_upfront_pct": 60,
+        "guaranteed_post_handover_pct": 35,
+        "retention_title_pct": 5,
+        "max_months_after_handover": 24
+      },
+      "methodology_note": "Commercial site with Nam Long-sounding name is NOT independently verified as namlongvn.com official corporate domain. Claims buyer pays 60% at handover, 35% guaranteed by bank paid over 24 months, 5% at title. Exact timing of each installment, eligibility, price, VAT, contract signatures and source effective date are unknown. These percentages are NOT an FS cash schedule or developer-received receipts.",
+      "verified_net_selling_price_vnd": null,
+      "customer_payment_pv_vnd": null,
+      "fs_comparison_ready": false,
+      "missing_evidence": [
+        "official-current-campaign-and-applicable-unit",
+        "verified-unit-price-and-VAT-basis",
+        "verified-discounts-and-stacking",
+        "100pct-net-buyer-payments-with-exact-dates",
+        "contractual-HO-and-title-milestones",
+        "bank-support-cash-flow-terms-if-applicable"
+      ],
+      "historical_or_unverified": true,
+      "pv_block_reason": "Incomplete or unverified contractual net price, dates, discounts or receipts"
+    },
+    {
+      "id": "aqua-historical-developer-financing-undated",
+      "project_id": "aqua-city",
+      "phase_name": null,
+      "product_types": [
+        "landed"
+      ],
+      "source_id": "novaland-official",
+      "source_url": "https://www.novaland.com.vn/tin-tuc-1/thong-tin-novaland/tin-du-an/trong-trang-thai-binh-thuong-moi-bat-dong-san-sinh-thai-tang-toc-hut-dong-von-nha-dau-tuu",
+      "source_role": "developer-primary",
+      "review_date": "2026-10-28",
+      "source_publication_date": null,
+      "status": "historical-unknown-validity",
+      "evidence_type": "historical-financing-marketing",
+      "scope": "Aqua City general marketing disclosure with unspecified campaign dates and units",
+      "published_terms": {
+        "launch_date": null,
+        "stated_price_vnd": null,
+        "discount_rate": null,
+        "advertised_upfront_pct": 10,
+        "guaranteed_post_handover_pct": null,
+        "retention_title_pct": null,
+        "max_months_after_handover": null,
+        "historical_subsequent_instalment_pct": 5,
+        "historical_subsequent_frequency_months": 6,
+        "historical_bank_grace_months_min": 24,
+        "historical_bank_grace_months_max": 36
+      },
+      "methodology_note": "Novaland's first-party historical article describes a 10% upfront buyer commitment, subsequent 5% every six months, and bank financing grace 24–36 months. Publication date and campaign eligibility not established. It is NOT the current October 2026 sales policy, full instalment schedule or developer cash receipt timetable.",
+      "verified_net_selling_price_vnd": null,
+      "customer_payment_pv_vnd": null,
+      "fs_comparison_ready": false,
+      "missing_evidence": [
+        "official-current-campaign-and-applicable-unit",
+        "verified-unit-price-and-VAT-basis",
+        "verified-discounts-and-stacking",
+        "100pct-net-buyer-payments-with-exact-dates",
+        "contractual-HO-and-title-milestones",
+        "bank-support-cash-flow-terms-if-applicable"
+      ],
+      "historical_or_unverified": true,
+      "pv_block_reason": "Incomplete or unverified contractual net price, dates, discounts or receipts"
+    }
+  ],
+  "methodology": "Reported 60/35/5 or 10% +5% every six months does not specify a complete, effective, contractual, unit-specific schedule. Net price and PV stay null. A full verified schedule would require explicit discount rate and cash-recipient mapping; do not substitute buyer loan/grace period for developer revenue."
+}
