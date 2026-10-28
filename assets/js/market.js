@@ -14,7 +14,7 @@
     priceLayer: 'listing',
     benchmarkProduct: ''
   };
-  let data = { regions: [], developers: [], projects: [], phases: [], observations: [], listingObservations: [], listingScopeEvidence: [], alternativePriceEvidence: [], secondaryListingEvidence: [], oneHousingSubprojectEvidence: [], oneHousingSubprojectHistory: [], oneHousingProjectHistory: [], peerMonthlyVerified: [], peerMonthlyTargets: [], peerMonthlyHealth: null, developerProjectEvidence: [], productComparables: null, reverVerifiedUnitListings: [], muabanVerifiedUnitListings: [], listingSourceCoverage: null, listingComparables: [], articles: [], allArticles: [], infrastructureProjects: [], infrastructureSchedules: [], legalTopics: [], legalDocuments: [], events: [], macroIndicators: [], macroRows: [] };
+  let data = { regions: [], developers: [], projects: [], phases: [], observations: [], listingObservations: [], listingScopeEvidence: [], alternativePriceEvidence: [], secondaryListingEvidence: [], oneHousingSubprojectEvidence: [], oneHousingSubprojectHistory: [], oneHousingProjectHistory: [], peerMonthlyVerified: [], peerMonthlyTargets: [], peerMonthlyHealth: null, developerProjectEvidence: [], productComparables: null, salesPolicyReadiness: null, reverVerifiedUnitListings: [], muabanVerifiedUnitListings: [], listingSourceCoverage: null, listingComparables: [], articles: [], allArticles: [], infrastructureProjects: [], infrastructureSchedules: [], legalTopics: [], legalDocuments: [], events: [], macroIndicators: [], macroRows: [] };
 
   function payloadData(payload) { return payload?.data || []; }
   function byId(records) { return new Map(records.map(item => [item.id, item])); }
@@ -927,6 +927,62 @@
       </tr>`).join('')}</tbody></table></div>`;
   }
 
+  // Commercial terms are displayed as sourced claims, not approved FS cash flows.
+  function marketSalesPolicyHTML(projectId = null) {
+    const payload=data.salesPolicyReadiness;
+    if (!payload || !Array.isArray(payload.data)) {
+      return '<div class="state-box">Chưa xuất bản trạng thái xác minh chính sách bán hàng; không thể kết luận giá thuần hoặc PV.</div>';
+    }
+    const relevant=projectId ? payload.data.filter(r=>r.project_id===projectId) : payload.data;
+    const named=pid => data.projects.find(r=>r.id===pid)?.name || pid;
+    const terms=row => {
+      const v=row.published_terms || {};
+      const parts=[];
+      if (v.launch_date) parts.push('Mở bán theo nguồn: '+v.launch_date);
+      if (Number.isFinite(v.advertised_upfront_pct)) parts.push('Thanh toán trước/bàn giao được nêu: '+v.advertised_upfront_pct+'%');
+      if (Number.isFinite(v.guaranteed_post_handover_pct)) parts.push('Khoản được mô tả có bảo lãnh: '+v.guaranteed_post_handover_pct+'%');
+      if (Number.isFinite(v.retention_title_pct)) parts.push('Khi có giấy chứng nhận: '+v.retention_title_pct+'%');
+      if (Number.isFinite(v.max_months_after_handover)) parts.push('Thời gian trả sau nêu trong nguồn: '+v.max_months_after_handover+' tháng');
+      if (Number.isFinite(v.historical_subsequent_instalment_pct) && Number.isFinite(v.historical_subsequent_frequency_months))
+        parts.push('Chương trình lịch sử: '+v.historical_subsequent_instalment_pct+'% mỗi '+v.historical_subsequent_frequency_months+' tháng');
+      if (Number.isFinite(v.historical_bank_grace_months_min)) parts.push('Hỗ trợ ngân hàng lịch sử: '+v.historical_bank_grace_months_min+'–'+v.historical_bank_grace_months_max+' tháng');
+      return parts.length ? parts.join(' · ') : 'Chưa có giá và lịch thu tiền hợp đồng được xác minh';
+    };
+    const rows=relevant.map(row => `<tr>
+      <td data-label-vi="Dự án"><a href="market.html?view=project-detail&id=${encodeURIComponent(row.project_id)}">${esc(named(row.project_id))}</a>
+        <span class="table-subtext">${esc(row.phase_name || 'Chưa xác minh phân khu áp dụng')}</span></td>
+      <td data-label-vi="Tính xác thực"><strong>${esc(row.source_role==='developer-primary' ? 'Nguồn doanh nghiệp' : 'Nguồn thứ cấp — chưa xác minh')}</strong>
+        <span class="table-subtext">${esc(row.status === 'historical-unknown-validity' ? 'Chính sách cũ, không có hiệu lực hiện hành được xác nhận' :
+          row.status === 'official-milestone-only' ? 'Chỉ xác nhận sự kiện mở bán' : 'Chưa xác nhận áp dụng theo căn / thời điểm')}</span></td>
+      <td data-label-vi="Điều khoản nguồn nêu">${esc(terms(row))}</td>
+      <td data-label-vi="Net Price / PV"><strong>Chưa đủ điều kiện</strong>
+        <span class="table-subtext">Thiếu giá và chính sách hợp đồng, lịch thu theo ngày; không nội suy</span></td>
+      <td data-label-vi="Nguồn & ngày">${sourceRef(row.source_id,{sourceUrl:row.source_url,sourceDate:row.source_publication_date || row.review_date,methodology:row.methodology_note})}
+        <span class="table-subtext">Rà soát ${esc(row.review_date)}</span></td>
+      </tr>`).join('');
+    return `<div class="policy-readiness-summary">
+      <span>${esc(String(relevant.length))} công bố/đề cập</span>
+      <strong>${esc(String(relevant.filter(x=>x.fs_comparison_ready).length))} đủ điều kiện tính Net Price / PV</strong>
+      <small>Giá bán, ưu đãi, điều kiện theo căn và ngày thanh toán phải được xác minh trước khi sử dụng cho FS.</small>
+      </div>
+      ${relevant.length ? `<div class="table-wrap"><table class="data-table mobile-record-table market-policy-readiness-table">
+        <thead><tr><th>Dự án</th><th>Mức độ xác minh</th><th>Nội dung nguồn nêu</th><th>Net Price / PV</th><th>Nguồn</th></tr></thead>
+        <tbody>${rows}</tbody></table></div>` :
+        '<div class="state-box">Chưa có chính sách bán hàng được xác minh cho dự án này. Không suy diễn từ chương trình của dự án khác.</div>'}
+      <p class="research-disclaimer">Tỷ lệ 60/35/5 hoặc tài trợ ngân hàng không thay thế lịch thu tiền của chủ đầu tư. PV chỉ được xác định sau khi có giá thuần hợp đồng, thuế, ưu đãi và đủ 100% đợt thanh toán với ngày cụ thể; lãi suất chiết khấu phải được khai báo tường minh.</p>`;
+  }
+
+  function projectSalesPolicyHTML(project) {
+    const watched=data.salesPolicyReadiness?.watchlist?.some(row=>row.project_id===project.id);
+    if (!watched) return '';
+    return `<section class="section project-detail-anchor" id="project-sales-policy">
+      <div class="section-header"><div><span class="eyebrow">Phase 8B · Financial comparability</span>
+        <h2 class="section-title">Chính sách bán hàng &amp; khả năng so sánh FS</h2></div>
+        <a class="text-link" href="market.html?view=benchmark">Benchmark</a></div>
+      <div class="section-body">${marketSalesPolicyHTML(project.id)}</div>
+    </section>`;
+  }
+
   function projectProductBenchmarkHTML(project) {
     const payload = data.productComparables;
     if (!payload) return '';
@@ -985,6 +1041,9 @@
         <div class="section-body">${status}${benchmarkRecordTable(filtered)}
           <p class="research-disclaimer">Giá/m² đất và giá/m² căn hộ sử dụng mẫu số khác nhau. Không suy ra giá/m² sàn xây dựng nếu nguồn không có diện tích sàn đáng tin cậy. Khoản trả trước do người đăng tin nêu không phải chính sách bán hàng hay dòng tiền FS.</p>
         </div></section>
+      <section class="section"><div class="section-header"><div><span class="eyebrow">FS readiness</span>
+        <h2 class="section-title">Chính sách bán hàng &amp; kiểm tra Net Price / PV</h2></div></div>
+        <div class="section-body">${marketSalesPolicyHTML()}</div></section>
       <section class="section"><div class="section-header"><div><span class="eyebrow">Data gaps</span>
         <h2 class="section-title">Các dự án chưa có tin theo căn đạt chuẩn</h2></div></div>
         <div class="section-body">
@@ -1060,6 +1119,7 @@
         <a href="#project-overview">Tổng quan</a>
         ${(project.benchmark_peer_ids || []).length ? '<a href="#project-comparables">Tham chiếu</a>' : ''}
         ${data.productComparables && ((data.productComparables.data || []).some(row => row.project_id === project.id) || (data.productComparables.watchlist_coverage || []).some(row => row.project_id === project.id)) ? '<a href="#project-product-comparables">Theo căn</a>' : ''}
+        ${data.salesPolicyReadiness?.watchlist?.some(row=>row.project_id===project.id) ? '<a href="#project-sales-policy">CSBH / PV</a>' : ''}
         <a href="#project-pricing">Giá &amp; lịch sử</a>
         ${data.developerProjectEvidence.some(row => row.project_id === project.id) ? '<a href="#project-developer-facts">Công bố CĐT</a>' : ''}
         <a href="#project-updates">Tin tức</a>
@@ -1097,6 +1157,7 @@
       ${projectPeerReferencesHTML(project)}
       ${developerFirstPartyEvidenceHTML(project)}
       ${projectProductBenchmarkHTML(project)}
+      ${projectSalesPolicyHTML(project)}
 
       <section class="section project-detail-anchor" id="project-pricing">
         <div class="section-header"><div><span class="eyebrow">Secondary market</span><h2 class="section-title">Listing Price History</h2></div><span class="section-meta">${listingRows.length} snapshot${listingRows.length===1?'':'s'}</span></div>
@@ -1617,14 +1678,14 @@
   async function load() {
     try {
       await window.Provenance?.load?.();
-      const [productComparables, developerProjectEvidence, regions, developers, projects, phases, observations, listingObservations, listingScopeEvidence, alternativePriceEvidence, secondaryListingEvidence, oneHousingSubprojectEvidence, oneHousingSubprojectHistory, oneHousingProjectHistory, reverVerifiedUnitListings, muabanVerifiedUnitListings, listingSourceCoverage, listingComparables, articles, infrastructureProjects, infrastructureSchedules, legalTopics, legalDocuments, events, macroIndicators, macroRows, meta, peerMonthlyVerified, peerMonthlyTargets, peerMonthlyHealth] = await Promise.all([
-        DataStore.getProductComparables().catch(() => null), DataStore.getDeveloperProjectEvidence().catch(() => ({data:[]})), DataStore.getRegions(), DataStore.getDevelopers(), DataStore.getProjects(), DataStore.getProjectPhases(), DataStore.getMarketObservations(), DataStore.getListingObservations(), DataStore.getListingScopeEvidence(), DataStore.getAlternativePriceEvidence(), DataStore.getSecondaryListingEvidence(), DataStore.getOneHousingSubprojectEvidence(), DataStore.getOneHousingSubprojectHistory(), DataStore.getOneHousingProjectHistory().catch(() => ({data:[]})), DataStore.getReverVerifiedUnitListings().catch(() => ({data:[]})), DataStore.getMuabanVerifiedUnitListings().catch(() => ({data:[]})), DataStore.getListingSourceCoverage().catch(() => null), DataStore.getListingComparables(), DataStore.getArticles(), DataStore.getInfrastructureProjects(), DataStore.getInfrastructureSchedules(), DataStore.getLegalTopics(), DataStore.getLegalDocuments(), DataStore.getEvents(), DataStore.getMacroIndicators(), DataStore.getProcessedMacroObservations(), DataStore.getMeta(),
+      const [salesPolicyReadiness, productComparables, developerProjectEvidence, regions, developers, projects, phases, observations, listingObservations, listingScopeEvidence, alternativePriceEvidence, secondaryListingEvidence, oneHousingSubprojectEvidence, oneHousingSubprojectHistory, oneHousingProjectHistory, reverVerifiedUnitListings, muabanVerifiedUnitListings, listingSourceCoverage, listingComparables, articles, infrastructureProjects, infrastructureSchedules, legalTopics, legalDocuments, events, macroIndicators, macroRows, meta, peerMonthlyVerified, peerMonthlyTargets, peerMonthlyHealth] = await Promise.all([
+        DataStore.getSalesPolicyReadiness().catch(() => null), DataStore.getProductComparables().catch(() => null), DataStore.getDeveloperProjectEvidence().catch(() => ({data:[]})), DataStore.getRegions(), DataStore.getDevelopers(), DataStore.getProjects(), DataStore.getProjectPhases(), DataStore.getMarketObservations(), DataStore.getListingObservations(), DataStore.getListingScopeEvidence(), DataStore.getAlternativePriceEvidence(), DataStore.getSecondaryListingEvidence(), DataStore.getOneHousingSubprojectEvidence(), DataStore.getOneHousingSubprojectHistory(), DataStore.getOneHousingProjectHistory().catch(() => ({data:[]})), DataStore.getReverVerifiedUnitListings().catch(() => ({data:[]})), DataStore.getMuabanVerifiedUnitListings().catch(() => ({data:[]})), DataStore.getListingSourceCoverage().catch(() => null), DataStore.getListingComparables(), DataStore.getArticles(), DataStore.getInfrastructureProjects(), DataStore.getInfrastructureSchedules(), DataStore.getLegalTopics(), DataStore.getLegalDocuments(), DataStore.getEvents(), DataStore.getMacroIndicators(), DataStore.getProcessedMacroObservations(), DataStore.getMeta(),
         DataStore.getPeerMonthlyVerified().catch(() => ({data:[]})),
         DataStore.getPeerMonthlyTargets().catch(() => ({targets:[]})),
         DataStore.getPeerMonthlySourceHealth().catch(() => null)
       ]);
       data = {
-        productComparables, developerProjectEvidence: payloadData(developerProjectEvidence), regions: payloadData(regions), developers: payloadData(developers), projects: payloadData(projects), phases: payloadData(phases), observations: payloadData(observations), listingObservations: payloadData(listingObservations), listingScopeEvidence: payloadData(listingScopeEvidence), alternativePriceEvidence: payloadData(alternativePriceEvidence), secondaryListingEvidence: payloadData(secondaryListingEvidence), oneHousingSubprojectEvidence: payloadData(oneHousingSubprojectEvidence), oneHousingSubprojectHistory: payloadData(oneHousingSubprojectHistory), oneHousingProjectHistory: payloadData(oneHousingProjectHistory), peerMonthlyVerified:payloadData(peerMonthlyVerified), peerMonthlyTargets:peerMonthlyTargets?.targets || [], peerMonthlyHealth, reverVerifiedUnitListings: payloadData(reverVerifiedUnitListings), muabanVerifiedUnitListings: payloadData(muabanVerifiedUnitListings), listingSourceCoverage, listingComparables: payloadData(listingComparables), articles: payloadData(articles), allArticles: payloadData(articles), infrastructureProjects: payloadData(infrastructureProjects), infrastructureSchedules: payloadData(infrastructureSchedules), legalTopics: payloadData(legalTopics), legalDocuments: payloadData(legalDocuments), events: payloadData(events), macroIndicators: payloadData(macroIndicators), macroRows: payloadData(macroRows)
+        salesPolicyReadiness, productComparables, developerProjectEvidence: payloadData(developerProjectEvidence), regions: payloadData(regions), developers: payloadData(developers), projects: payloadData(projects), phases: payloadData(phases), observations: payloadData(observations), listingObservations: payloadData(listingObservations), listingScopeEvidence: payloadData(listingScopeEvidence), alternativePriceEvidence: payloadData(alternativePriceEvidence), secondaryListingEvidence: payloadData(secondaryListingEvidence), oneHousingSubprojectEvidence: payloadData(oneHousingSubprojectEvidence), oneHousingSubprojectHistory: payloadData(oneHousingSubprojectHistory), oneHousingProjectHistory: payloadData(oneHousingProjectHistory), peerMonthlyVerified:payloadData(peerMonthlyVerified), peerMonthlyTargets:peerMonthlyTargets?.targets || [], peerMonthlyHealth, reverVerifiedUnitListings: payloadData(reverVerifiedUnitListings), muabanVerifiedUnitListings: payloadData(muabanVerifiedUnitListings), listingSourceCoverage, listingComparables: payloadData(listingComparables), articles: payloadData(articles), allArticles: payloadData(articles), infrastructureProjects: payloadData(infrastructureProjects), infrastructureSchedules: payloadData(infrastructureSchedules), legalTopics: payloadData(legalTopics), legalDocuments: payloadData(legalDocuments), events: payloadData(events), macroIndicators: payloadData(macroIndicators), macroRows: payloadData(macroRows)
       };
       Resolver.setData('region', data.regions);
       Resolver.setData('developer', data.developers);
