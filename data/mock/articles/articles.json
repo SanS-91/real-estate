@@ -1,9 +1,38 @@
 {
   "schema_version": 1,
-  "build_id": "market-news-rss-20261028T092941Z",
-  "generated_at": "2026-10-28T09:29:41.301794+00:00",
-  "record_count": 1089,
+  "build_id": "market-news-rss-20261028T102637Z",
+  "generated_at": "2026-10-28T10:26:37.082831+00:00",
+  "record_count": 1090,
   "data": [
+    {
+      "id": "article-market-rss-a77191d6f4e8b40b9e50",
+      "title": "Nhà đầu tư cam kết rót hơn 16 tỷ USD vào 12 dự án ở TP HCM",
+      "url": "https://vnexpress.net/nha-dau-tu-cam-ket-rot-hon-16-ty-usd-vao-12-du-an-o-tp-hcm-5137947.html",
+      "category": "market",
+      "module_ids": [
+        "market"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-10-28T09:35:57+00:00",
+      "source_id": "vnexpress-economy",
+      "region_ids": [
+        "hcmc"
+      ],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [
+        "sales"
+      ],
+      "importance": 2,
+      "summary": "Các dự án được chấp thuận hoặc cấp phép đầu tư vào TP HCM có tổng vốn đăng ký khoảng 16,4 tỷ USD tập trung vào cảng biển, logistics, phát triển đô thị và sản xuất công nghệ cao.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://vnexpress.net/rss/kinh-doanh.rss",
+        "publisher_host": "vnexpress.net",
+        "publication_date_from_feed": true
+      }
+    },
     {
       "id": "article-market-rss-5561b9c9780cf3295c1a",
       "title": "Dẫn dự án sai phạm của Mường Thanh, ĐBQH đề nghị bảo vệ người mua nhà",
