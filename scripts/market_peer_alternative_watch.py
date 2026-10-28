@@ -22,7 +22,7 @@ TARGETS = ROOT / "config/market-peer-alternative-targets.json"
 STATE = ROOT / "data/state/market-peer-alternative-health.json"
 HEADER = {"User-Agent": "RealEstateMarketIntelligence/1.0 (source availability & change watch)"}
 IDENTITIES = {
-    "izumi-city": re.compile(r"Izumi\\s*(?:City|Canaria)", re.I),
+    "izumi-city": re.compile(r"Izumi\s*(?:City|Canaria)", re.I),
     "aqua-city": re.compile(r"Aqua\s*City", re.I),
     "springville": re.compile(r"Spring\s*Ville", re.I),
     "elyse-island": re.compile(r"Elyse\s*Island", re.I),
