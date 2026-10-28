@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-10-28T09:45:10.957338+00:00",
+  "generated_at": "2026-10-28T14:23:28.109091+00:00",
   "scope": "individual-verified-apartment-asking-only",
   "project_registry_count": 18,
   "projects_monitored": 8,
@@ -18,7 +18,7 @@
       "source_id": "rever-vn",
       "report_available": true,
       "report_fresh": true,
-      "checked_at": "2026-10-28T08:43:27.037270+00:00"
+      "checked_at": "2026-10-28T14:22:33.643160+00:00"
     }
   ],
   "projects": [
@@ -152,7 +152,7 @@
           "source_health_recent": true,
           "recent_eligible_ads": 0,
           "discovered_links": 12,
-          "last_checked_at": "2026-10-28T08:43:27.037270+00:00"
+          "last_checked_at": "2026-10-28T14:22:33.643160+00:00"
         }
       ],
       "recent_eligible_ads": 0,
@@ -180,7 +180,7 @@
           "source_health_recent": true,
           "recent_eligible_ads": 0,
           "discovered_links": 12,
-          "last_checked_at": "2026-10-28T08:43:27.037270+00:00"
+          "last_checked_at": "2026-10-28T14:22:33.643160+00:00"
         }
       ],
       "recent_eligible_ads": 0,
@@ -200,7 +200,7 @@
           "source_health_recent": true,
           "recent_eligible_ads": 0,
           "discovered_links": 24,
-          "last_checked_at": "2026-10-28T08:43:27.037270+00:00"
+          "last_checked_at": "2026-10-28T14:22:33.643160+00:00"
         }
       ],
       "recent_eligible_ads": 0,
@@ -228,7 +228,7 @@
           "source_health_recent": true,
           "recent_eligible_ads": 0,
           "discovered_links": 12,
-          "last_checked_at": "2026-10-28T08:43:27.037270+00:00"
+          "last_checked_at": "2026-10-28T14:22:33.643160+00:00"
         }
       ],
       "recent_eligible_ads": 0,
@@ -248,7 +248,7 @@
           "source_health_recent": true,
           "recent_eligible_ads": 0,
           "discovered_links": 8,
-          "last_checked_at": "2026-10-28T08:43:27.037270+00:00"
+          "last_checked_at": "2026-10-28T14:22:33.643160+00:00"
         }
       ],
       "recent_eligible_ads": 0,
@@ -276,7 +276,7 @@
           "source_health_recent": true,
           "recent_eligible_ads": 0,
           "discovered_links": 6,
-          "last_checked_at": "2026-10-28T08:43:27.037270+00:00"
+          "last_checked_at": "2026-10-28T14:22:33.643160+00:00"
         }
       ],
       "recent_eligible_ads": 0,
@@ -304,7 +304,7 @@
           "source_health_recent": true,
           "recent_eligible_ads": 0,
           "discovered_links": 24,
-          "last_checked_at": "2026-10-28T08:43:27.037270+00:00"
+          "last_checked_at": "2026-10-28T14:22:33.643160+00:00"
         }
       ],
       "recent_eligible_ads": 0,
@@ -332,7 +332,7 @@
           "source_health_recent": true,
           "recent_eligible_ads": 0,
           "discovered_links": 12,
-          "last_checked_at": "2026-10-28T08:43:27.037270+00:00"
+          "last_checked_at": "2026-10-28T14:22:33.643160+00:00"
         }
       ],
       "recent_eligible_ads": 0,
