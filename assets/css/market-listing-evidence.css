@@ -206,3 +206,22 @@
   .market-policy-readiness-table .table-subtext{max-width:220px;margin-left:auto}
   .policy-readiness-summary{align-items:flex-start}
 }
+
+
+/* Phase 8B source-dealer quote and superseded-policy alert. */
+.market-policy-version{margin:12px 0;padding:12px 14px;border:1px solid #e8c6b5;border-radius:8px;background:#fff9f5;color:#7a482d;font-size:12px;line-height:1.55}
+.market-policy-version strong{display:block;font-size:13px;margin-bottom:4px}
+.market-policy-version p{margin:0 0 8px}
+.market-commercial-leads{min-width:730px;font-size:12px;line-height:1.45}
+.market-commercial-leads td{vertical-align:top}
+.market-commercial-leads th{white-space:normal}
+.market-commercial-leads .table-subtext{display:block;margin-top:5px;color:#667085;font-size:11px;line-height:1.5}
+@media(max-width:640px){
+  .market-commercial-leads{min-width:0}
+  .market-commercial-leads thead{display:none}
+  .market-commercial-leads,.market-commercial-leads tbody,.market-commercial-leads tr,.market-commercial-leads td{display:block;width:100%}
+  .market-commercial-leads tr{padding:11px;border:1px solid #e1e5ea;border-radius:9px;margin-bottom:9px;background:#fff}
+  .market-commercial-leads td{display:flex;justify-content:space-between;align-items:flex-start;gap:10px;text-align:right;padding:6px 0!important;border:0!important}
+  .market-commercial-leads td::before{content:attr(data-label-vi);flex:0 0 90px;text-align:left;font-size:11px;font-weight:600;color:#667085}
+  .market-commercial-leads .table-subtext{max-width:220px;margin-left:auto}
+}
