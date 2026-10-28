@@ -102,6 +102,42 @@
       "project_id": "springville",
       "collector": "metadata_only",
       "enabled": true
+    },
+    {
+      "target_id": "novaland-aqua-city-official",
+      "source_id": "developer-official",
+      "observation_source_id": "novaland-official",
+      "url": "https://www.novaland.com.vn/tin-tuc-1/thong-tin-novaland/tin-du-an/aqua-city-chinh-thuc-mo-ban-tro-lai-tu-3110-khoi-thong-dong-thu-hang-tram-nghin-ty-dong",
+      "period": null,
+      "period_type": null,
+      "scope": "dong-nai-project-official-source-watch",
+      "project_id": "aqua-city",
+      "collector": "metadata_only",
+      "enabled": true
+    },
+    {
+      "target_id": "kita-airport-city-official",
+      "source_id": "developer-official",
+      "observation_source_id": "kita-group-official",
+      "url": "https://kita-group.com.vn/ra-mat-phan-khu-trung-tam-du-an-kita-airport-city/",
+      "period": null,
+      "period_type": null,
+      "scope": "can-tho-project-official-source-watch",
+      "project_id": "kita-airport-city",
+      "collector": "metadata_only",
+      "enabled": true
+    },
+    {
+      "target_id": "nam-long-elyse-island-official",
+      "source_id": "developer-official",
+      "observation_source_id": "nam-long-official",
+      "url": "https://www.namlongvn.com/en/township-residential/elyse-island/",
+      "period": null,
+      "period_type": null,
+      "scope": "dong-nai-project-official-source-watch",
+      "project_id": "elyse-island",
+      "collector": "metadata_only",
+      "enabled": true
     }
   ]
 }
