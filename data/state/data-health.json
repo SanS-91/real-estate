@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-10-28T08:32:44.223948+00:00",
+  "generated_at": "2026-10-28T08:33:04.013330+00:00",
   "overall_status": "stale",
   "modules": [
     {
@@ -9,8 +9,8 @@
       "dataset_count": 3,
       "candidate_backlog": 0,
       "last_successful_run_at": "2026-10-28T08:22:57Z",
-      "last_production_at": "2026-10-28T15:18:00+07:00",
-      "last_data_change_at": "2026-10-28T15:18:00+07:00"
+      "last_production_at": "2026-10-28T15:19:00+07:00",
+      "last_data_change_at": "2026-10-28T15:19:00+07:00"
     },
     {
       "module": "legal",
@@ -306,9 +306,9 @@
       "candidate_path": "data/candidate/market/articles.json",
       "workflow_file": "market-source-candidate-collector.yml",
       "production_path": "data/mock/market/projects.json",
-      "record_count": 15,
-      "last_production_at": "2026-10-28T15:18:00+07:00",
-      "last_data_change_at": "2026-10-28T15:18:00+07:00",
+      "record_count": 18,
+      "last_production_at": "2026-10-28T15:19:00+07:00",
+      "last_data_change_at": "2026-10-28T15:19:00+07:00",
       "age_hours": 0.2,
       "stale_after_hours": 192,
       "freshness": "fresh",
