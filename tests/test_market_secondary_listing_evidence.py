@@ -38,6 +38,6 @@ assert "data.secondaryListingEvidence" not in market[market.index("function list
 listing=json.loads((ROOT/"data/mock/market/listing-observations.json").read_text(encoding="utf-8"))
 scope=json.loads((ROOT/"data/mock/market/listing-scope-evidence.json").read_text(encoding="utf-8"))
 assert listing["record_count"]==18
-assert scope["record_count"]==4
+assert scope["record_count"]==len(scope["data"])>=8
 assert len({r["project_id"] for r in rows})==3
-print("PASS: 3 source-priced individual units, 3 projects, unchanged 18 portal observations and 4 scoped references.")
+print("PASS: 3 source-priced individual units, 3 projects, unchanged 18 portal observations, expanded source-scoped references.")
