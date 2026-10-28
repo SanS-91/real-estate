@@ -1,9 +1,90 @@
 {
   "schema_version": 1,
-  "build_id": "market-news-rss-20261028T085140Z",
-  "generated_at": "2026-10-28T08:51:40.619202+00:00",
-  "record_count": 1082,
+  "build_id": "market-news-rss-20261028T092941Z",
+  "generated_at": "2026-10-28T09:29:41.301794+00:00",
+  "record_count": 1089,
   "data": [
+    {
+      "id": "article-market-rss-5561b9c9780cf3295c1a",
+      "title": "Dẫn dự án sai phạm của Mường Thanh, ĐBQH đề nghị bảo vệ người mua nhà",
+      "url": "https://dantri.com.vn/thoi-su/dan-du-an-sai-pham-cua-muong-thanh-dbqh-de-nghi-bao-ve-nguoi-mua-nha-20261028153026116.htm",
+      "category": "market",
+      "module_ids": [
+        "market"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-10-28T09:01:09+00:00",
+      "source_id": "dantri-current-affairs",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [
+        "legal"
+      ],
+      "importance": 2,
+      "summary": "(Dân trí) - Từ các dự án liên quan Mường Thanh, đại biểu Trịnh Xuân An đặt vấn đề: Dự án chưa hoàn thiện pháp lý, chủ đầu tư vi phạm bị xử lý hoặc mất khả năng thanh toán, người dân được bảo vệ bằng cơ chế nào?",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://dantri.com.vn/rss/thoi-su.rss",
+        "publisher_host": "dantri.com.vn",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-3f93450e7a6c192a5499",
+      "title": "Hạ tầng kết nốt tạo lực đẩy cho bất động sản Quy Nhơn",
+      "url": "https://vnexpress.net/ha-tang-ket-not-tao-luc-day-cho-bat-dong-san-quy-nhon-5137940.html",
+      "category": "market",
+      "module_ids": [
+        "market"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-10-28T09:00:00+00:00",
+      "source_id": "vnexpress-real-estate",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [
+        "infrastructure"
+      ],
+      "importance": 2,
+      "summary": "Cảng biển, hàng không và các tuyến giao thông liên vùng mở rộng kết nối cho Quy Nhơn, tạo thêm dư địa cho thị trường bất động sản.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://vnexpress.net/rss/bat-dong-san.rss",
+        "publisher_host": "vnexpress.net",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-edfe3164c9990589be4d",
+      "title": "Đại biểu Quốc hội: Cần siết giá bán lại nhà ở xã hội sau 5 năm",
+      "url": "https://vnexpress.net/dai-bieu-quoc-hoi-can-siet-gia-ban-lai-nha-o-xa-hoi-sau-5-nam-5137906.html",
+      "category": "market",
+      "module_ids": [
+        "market"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-10-28T08:49:53+00:00",
+      "source_id": "vnexpress-economy",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [
+        "pricing"
+      ],
+      "importance": 2,
+      "summary": "Đại biểu Lý Anh Thư đề nghị Nhà nước cần có cơ chế quản lý giá bán lại nhà ở xã hội sau 5 năm cùng với việc siết nhóm người được mua.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://vnexpress.net/rss/kinh-doanh.rss",
+        "publisher_host": "vnexpress.net",
+        "publication_date_from_feed": true
+      }
+    },
     {
       "id": "article-market-rss-c4637e3a0c2a1758469b",
       "title": "Người dân TP.HCM khi xây nhà cần nắm rõ quy định này",
@@ -28,6 +109,36 @@
         "method": "official-rss",
         "feed_url": "https://thanhnien.vn/rss/kinh-te/dia-oc.rss",
         "publisher_host": "thanhnien.vn",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-0c11fa51fbf768b2fb1a",
+      "title": "Nhiều tuyến đường quanh sân bay Tân Sơn Nhất đổi cách lưu thông từ 30/10",
+      "url": "https://dantri.com.vn/thoi-su/nhieu-tuyen-duong-quanh-san-bay-tan-son-nhat-doi-cach-luu-thong-tu-3010-20261028151643786.htm",
+      "category": "legal",
+      "module_ids": [
+        "legal",
+        "infrastructure"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-10-28T08:28:08+00:00",
+      "source_id": "dantri-current-affairs",
+      "region_ids": [
+        "hcmc"
+      ],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [
+        "infrastructure"
+      ],
+      "importance": 2,
+      "summary": "(Dân trí) - Từ ngày 30/10, Sở Xây dựng TPHCM điều chỉnh phương án lưu thông tại hàng loạt giao lộ, tuyến đường quanh sân bay Tân Sơn Nhất để giảm ùn tắc và tăng cường an toàn giao thông.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://dantri.com.vn/rss/thoi-su.rss",
+        "publisher_host": "dantri.com.vn",
         "publication_date_from_feed": true
       }
     },
@@ -57,6 +168,60 @@
         "method": "official-rss",
         "feed_url": "https://vnexpress.net/rss/thoi-su.rss",
         "publisher_host": "vnexpress.net",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-474e2ae013b01e274989",
+      "title": "Đề nghị kiểm soát giá mua đi bán lại nhà ở xã hội",
+      "url": "https://dantri.com.vn/thoi-su/de-nghi-kiem-soat-gia-mua-di-ban-lai-nha-o-xa-hoi-20261028150510362.htm",
+      "category": "market",
+      "module_ids": [
+        "market"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-10-28T08:14:06+00:00",
+      "source_id": "dantri-current-affairs",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [
+        "pricing"
+      ],
+      "importance": 2,
+      "summary": "(Dân trí) - Đại biểu Quốc hội đề nghị xác định giá bán lại nhà ở xã hội sau 5 năm dựa trên giá mua ban đầu và hệ số điều chỉnh, nhằm bảo đảm mục tiêu an sinh.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://dantri.com.vn/rss/thoi-su.rss",
+        "publisher_host": "dantri.com.vn",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-eae9b60bfbb361b8101e",
+      "title": "\"Nhiều nhà ở thương mại nhưng giá vượt xa khả năng chi trả của người dân\"",
+      "url": "https://dantri.com.vn/thoi-su/nhieu-nha-o-thuong-mai-nhung-gia-vuot-xa-kha-nang-chi-tra-cua-nguoi-dan-20261028145533819.htm",
+      "category": "market",
+      "module_ids": [
+        "market"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-10-28T08:02:42+00:00",
+      "source_id": "dantri-current-affairs",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [
+        "pricing"
+      ],
+      "importance": 2,
+      "summary": "(Dân trí) - Vấn đề lớn nhất được đại biểu Nguyễn Ngọc Sơn chỉ ra là sự mất cân đối về cơ cấu sản phẩm nhà ở và khả năng tiếp cận của người dân, nhà ở thương mại nhiều nhưng giá bán vượt xa khả năng chi trả.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://dantri.com.vn/rss/thoi-su.rss",
+        "publisher_host": "dantri.com.vn",
         "publication_date_from_feed": true
       }
     },
@@ -106,6 +271,35 @@
       "source_verification": {
         "method": "official-rss",
         "feed_url": "https://dantri.com.vn/rss/kinh-doanh.rss",
+        "publisher_host": "dantri.com.vn",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-9c17e95f068edbe3f7c1",
+      "title": "Diện mạo tuyến đường rộng 120m nối sân bay Gia Bình với Hà Nội",
+      "url": "https://dantri.com.vn/thoi-su/dien-mao-tuyen-duong-rong-120m-noi-san-bay-gia-binh-voi-ha-noi-20261028135306040.htm",
+      "category": "infrastructure",
+      "module_ids": [
+        "infrastructure"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-10-28T07:16:16+00:00",
+      "source_id": "dantri-current-affairs",
+      "region_ids": [
+        "ha-noi"
+      ],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [
+        "infrastructure"
+      ],
+      "importance": 2,
+      "summary": "(Dân trí) - Tuyến đường nối sân bay Gia Bình với Hà Nội qua địa bàn Thủ đô dài 13,55km, tổng vốn gần 33.000 tỷ đồng, đang được thi công đồng loạt nhiều hạng mục.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://dantri.com.vn/rss/thoi-su.rss",
         "publisher_host": "dantri.com.vn",
         "publication_date_from_feed": true
       }
