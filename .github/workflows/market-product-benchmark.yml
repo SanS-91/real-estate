@@ -1,0 +1,64 @@
+name: Market 8B - Source-Verified Product Benchmark
+
+on:
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - 'data/mock/market/individual-product-evidence.json'
+      - 'data/mock/market/projects.json'
+      - 'data/mock/core/sources.json'
+      - 'scripts/build_product_comparables.py'
+      - 'tests/test_phase8b_product_benchmark.py'
+      - 'assets/js/market.js'
+      - '.github/workflows/market-product-benchmark.yml'
+  schedule:
+    # Every day 10:30 ICT. Rebuild remains unchanged unless source facts change.
+    - cron: '30 3 * * *'
+
+permissions:
+  contents: write
+
+concurrency:
+  group: market-product-benchmark-writer
+  cancel-in-progress: false
+
+jobs:
+  validate-and-publish:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 12
+    steps:
+      - uses: actions/checkout@v7
+      - uses: actions/setup-python@v7
+        with:
+          python-version: '3.12'
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Validate denominator, dates, provenance and payment restrictions
+        run: |
+          python tests/test_phase8b_product_benchmark.py
+          node --check assets/js/market.js
+      - name: Rebuild comparables from the latest main without rebase conflicts
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          for attempt in 1 2 3 4 5; do
+            git fetch origin main
+            git reset --hard origin/main
+            python tests/test_phase8b_product_benchmark.py
+            python scripts/build_product_comparables.py
+            git add data/processed/market/product-comparables.json
+            if git diff --cached --quiet -- data/processed/market/product-comparables.json; then
+              echo "No new source product evidence: production remains unchanged."
+              exit 0
+            fi
+            git commit -m "data(market): publish source-dated individual product comparables"
+            if git push origin HEAD:main; then
+              echo "Published verified normalized historical product dataset; no live offers implied."
+              exit 0
+            fi
+            echo "Concurrent update; recomputing product benchmark from main."
+            sleep $((attempt * 2))
+          done
+          exit 1
