@@ -802,6 +802,36 @@
     setActive(sections[0].id);
   }
 
+  function projectPeerReferencesHTML(project) {
+    const ids = Array.isArray(project.benchmark_peer_ids) ? project.benchmark_peer_ids : [];
+    if (!ids.length) return '';
+    const peers = ids.map(id => data.projects.find(item => item.id === id)).filter(Boolean);
+    if (!peers.length) return '';
+    return `<section class="section project-detail-anchor" id="project-comparables">
+      <div class="section-header">
+        <div><span class="eyebrow">Market 8B · verified registry</span><h2 class="section-title">Dự án tham chiếu</h2></div>
+        <span class="section-meta">${peers.length} dự án · theo dõi nguồn</span>
+      </div>
+      <div class="section-body">
+        <p class="muted-text">${esc(project.benchmark_scope_note || 'Dự án so sánh được chọn để nghiên cứu riêng theo sản phẩm, phạm vi và kỳ dữ liệu.')}</p>
+        <div class="project-evidence-list">${peers.map(peer => {
+          const snapshots = data.listingObservations.filter(row => row.project_id === peer.id);
+          const latest = snapshots.sort((a,b) => String(b.observation_date || '').localeCompare(String(a.observation_date || '')))[0];
+          const priceEvidence = latest
+            ? `Giá rao tham khảo có snapshot ${esc(latest.observation_date)}; cần kiểm tra tính hiện hành`
+            : 'Chưa có snapshot giá rao đủ điều kiện';
+          return `<a href="market.html?view=project-detail&id=${encodeURIComponent(peer.id)}">
+            <div><strong>${esc(peer.name)}</strong>
+              <span>${esc(peer.location_text || '')} · ${esc((peer.segment_ids || []).join(', '))}</span>
+            </div>
+            <small>${priceEvidence}</small>
+          </a>`;
+        }).join('')}</div>
+        <p class="research-disclaimer">Dự án tham chiếu không đồng nghĩa cùng loại sản phẩm hoặc cùng giá. Giá chào bán không phải giá giao dịch; không suy ra ASP hay absorption khi thiếu dữ liệu xác minh.</p>
+      </div>
+    </section>`;
+  }
+
   function renderProjectDetail() {
     const projectId = App.getQueryParam('id');
     const project = Resolver.getEntity('project', projectId);
@@ -862,6 +892,7 @@
 
       <nav class="project-detail-nav" data-project-detail-nav aria-label="Project sections">
         <a href="#project-overview">Tổng quan</a>
+        ${(project.benchmark_peer_ids || []).length ? '<a href="#project-comparables">Tham chiếu</a>' : ''}
         <a href="#project-pricing">Giá &amp; lịch sử</a>
         <a href="#project-updates">Tin tức</a>
         <a href="#project-legal">Pháp lý</a>
@@ -894,6 +925,8 @@
           </div>
         </aside>
       </div>
+
+      ${projectPeerReferencesHTML(project)}
 
       <section class="section project-detail-anchor" id="project-pricing">
         <div class="section-header"><div><span class="eyebrow">Secondary market</span><h2 class="section-title">Listing Price History</h2></div><span class="section-meta">${listingRows.length} snapshot${listingRows.length===1?'':'s'}</span></div>
