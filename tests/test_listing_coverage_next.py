@@ -20,6 +20,8 @@ config=json.loads((ROOT/"config/listing-reviewed-captures-20261009-part2.json").
 rows=json.loads((ROOT/"data/mock/market/listing-observations.json").read_text())["data"]
 projects={x["id"] for x in json.loads((ROOT/"data/mock/market/projects.json").read_text())["data"]}
 scoped=json.loads((ROOT/"data/mock/market/listing-scope-evidence.json").read_text())["data"]
+# This is a 09-Oct fixture regression: review only records available by then.
+scoped=[row for row in scoped if row["review_date"]<=today.isoformat()]
 pre=[r for r in rows if not (r["project_id"] in ("waterpoint","eaton-park") and r["observation_date"]=="2026-10-09")]
 
 assert len(config["records"])==2
