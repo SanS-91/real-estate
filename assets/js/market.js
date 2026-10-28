@@ -817,9 +817,18 @@
         <div class="project-evidence-list">${peers.map(peer => {
           const snapshots = data.listingObservations.filter(row => row.project_id === peer.id);
           const latest = snapshots.sort((a,b) => String(b.observation_date || '').localeCompare(String(a.observation_date || '')))[0];
-          const priceEvidence = latest
-            ? `Giá rao tham khảo có snapshot ${esc(latest.observation_date)}; cần kiểm tra tính hiện hành`
-            : 'Chưa có snapshot giá rao đủ điều kiện';
+          const scoped = data.listingScopeEvidence.filter(row => row.project_id === peer.id &&
+            Number.isFinite(row.asking_price_low_vnd_per_m2) &&
+            Number.isFinite(row.asking_price_high_vnd_per_m2))
+            .sort((a,b) => String(b.review_date || '').localeCompare(String(a.review_date || '')))[0];
+          const scopedAge = scoped?.review_date
+            ? Math.floor((Date.now() - Date.parse(scoped.review_date + 'T23:59:59+07:00')) / 86400000) : null;
+          const priceEvidence = scoped
+            ? `Giá rao ${esc(scoped.price_scope === 'landed-only' ? 'thấp tầng' : 'theo loại sản phẩm')}
+               ${esc(formatListingRange(scoped))} · rà soát ${esc(scoped.review_date)}
+               ${scopedAge > 30 ? ' · CẦN KIỂM TRA LẠI' : ''} · không phải ASP`
+            : (latest ? `Có snapshot giá rao ${esc(latest.observation_date)}; cần xác minh độ mới`
+              : 'Chưa có giá rao theo sản phẩm đủ điều kiện');
           return `<a href="market.html?view=project-detail&id=${encodeURIComponent(peer.id)}">
             <div><strong>${esc(peer.name)}</strong>
               <span>${esc(peer.location_text || '')} · ${esc((peer.segment_ids || []).join(', '))}</span>
