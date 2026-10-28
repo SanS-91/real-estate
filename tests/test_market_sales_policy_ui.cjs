@@ -20,7 +20,7 @@ assert(code.includes('DataStore.getSalesPolicyReadiness()'));
 assert(code.includes('Nguồn thứ cấp — chưa xác minh'));
 assert(code.includes('Tỷ lệ 60/35/5'));
 assert(store.includes("getSalesPolicyReadiness: () => loadDirectJSON"));
-assert(html.includes("market.js?v=PHASE8B-POLICY28"));
+assert(html.includes("market.js?v=PHASE8B-IZUMI-TB153"));
 const css=get('assets/css/market-listing-evidence.css');
 assert(css.includes('.market-policy-readiness-table') && css.includes('@media(max-width:640px)'));
 console.log('PASS: official/third-party policy labels and PV blocks available in Market and project dossier');
