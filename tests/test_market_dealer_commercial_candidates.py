@@ -30,6 +30,17 @@ assert out["net_price_pv_published"] is False
 assert all(x["eligible_for_pv"] is False and x["eligible_for_net_price"] is False
            and x["eligible_for_fs_asp"] is False for x in out["price_candidates"])
 assert all("land_area_sqm" not in x for x in out["price_candidates"])
+# A source may render its quotation as cards/paragraphs, not a semantic table.
+paragraphs="""<html><body><h2>Giá niêm yết theo bảng tính tháng 10/2026</h2>
+<p>Nhà phố vườn zone 1: 114 m², giá từ 8,55 tỷ đồng</p>
+<p>Nhà phố vườn zone 2: 114 m², giá từ 9,18 tỷ đồng</p>
+<p>Nhà phố vườn zone 3: 114 m², giá từ 9,52 tỷ đồng</p>
+<p>Biệt thự song lập: 234 m², giá từ 16,4 tỷ đồng</p>
+<h2>Ví dụ giá sau ưu đãi</h2><p>zone 3 còn khoảng 7,73 tỷ</p></body></html>"""
+paragraph_rows=m.extract_price_rows(paragraphs)
+assert len(paragraph_rows)==4,paragraph_rows
+assert {(x["zone"],x["reported_start_price_vnd"]) for x in paragraph_rows}=={
+    ("Zone 1",8550000000),("Zone 2",9180000000),("Zone 3",9520000000),(None,16400000000)}
 # Ad text or a new paragraph may mention an amount, but only source product rows count.
 bad="<html><body><div>Nhà phố vườn zone 1 2 tỷ</div><p>7,73 tỷ sau ưu đãi</p></body></html>"
 assert not m.extract_price_rows(bad)
