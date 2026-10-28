@@ -6,6 +6,9 @@ on:
     branches: [main]
     paths:
       - 'data/mock/market/sales-policy-evidence.json'
+      - 'data/mock/market/commercial-offer-leads.json'
+      - 'scripts/build_market_commercial_leads.py'
+      - 'tests/test_market_commercial_leads.py'
       - 'data/mock/core/sources.json'
       - 'scripts/build_market_sales_policy_readiness.py'
       - 'tests/test_market_sales_policy_readiness.py'
@@ -41,6 +44,7 @@ jobs:
       - name: Verify source attribution, PV gate and responsive UI contract
         run: |
           python tests/test_market_sales_policy_readiness.py
+          python tests/test_market_commercial_leads.py
           node tests/test_market_sales_policy_ui.cjs
           node --check assets/js/market.js
           node --check assets/js/data-store.js
@@ -73,9 +77,11 @@ jobs:
             git fetch origin main
             git reset --hard origin/main
             python tests/test_market_sales_policy_readiness.py
+            python tests/test_market_commercial_leads.py
             python scripts/build_market_sales_policy_readiness.py
-            git add data/processed/market/sales-policy-readiness.json
-            if git diff --cached --quiet -- data/processed/market/sales-policy-readiness.json; then
+            python scripts/build_market_commercial_leads.py
+            git add data/processed/market/sales-policy-readiness.json data/processed/market/commercial-offer-review.json
+            if git diff --cached --quiet -- data/processed/market/sales-policy-readiness.json data/processed/market/commercial-offer-review.json; then
               echo "No new verified policy facts to publish."
               exit 0
             fi
