@@ -37,7 +37,13 @@
         "real-estate-business",
         "planning",
         "investment"
-      ]
+      ],
+      "benchmark_peer_ids": [
+        "aqua-city",
+        "springville",
+        "elyse-island"
+      ],
+      "benchmark_scope_note": "Bộ dự án tham chiếu Đồng Nai: Aqua City và Springville để xem nguồn cung thấp tầng/khu đô thị; Elyse Island tham chiếu biệt thự ven sông. Không lấy giá của một dự án làm ASP của Izumi và không so sánh sản phẩm khác loại như tương đương."
     },
     {
       "id": "waterpoint",
@@ -481,7 +487,11 @@
         "real-estate-business",
         "land",
         "planning"
-      ]
+      ],
+      "benchmark_peer_ids": [
+        "kita-airport-city"
+      ],
+      "benchmark_scope_note": "Đối chiếu KITA Airport City theo phân khu và loại sản phẩm, tách rõ Landlot/Valora/EHomeS của Nam Long với shophouse/căn hộ KITA; chưa có giá so sánh đủ xác minh."
     },
     {
       "id": "springville",
