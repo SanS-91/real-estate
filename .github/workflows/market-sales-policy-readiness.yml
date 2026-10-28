@@ -9,6 +9,7 @@ on:
       - 'data/mock/market/commercial-offer-leads.json'
       - 'scripts/build_market_commercial_leads.py'
       - 'tests/test_market_commercial_leads.py'
+      - 'tests/test_market_commercial_leads_ui.cjs'
       - 'data/mock/core/sources.json'
       - 'scripts/build_market_sales_policy_readiness.py'
       - 'tests/test_market_sales_policy_readiness.py'
@@ -46,6 +47,7 @@ jobs:
           python tests/test_market_sales_policy_readiness.py
           python tests/test_market_commercial_leads.py
           node tests/test_market_sales_policy_ui.cjs
+          node tests/test_market_commercial_leads_ui.cjs
           node --check assets/js/market.js
           node --check assets/js/data-store.js
       - name: Browser smoke - finance policy context across screen sizes
@@ -64,7 +66,7 @@ jobs:
           from pathlib import Path
           for viewport in ('1440,900','390,844'):
               doc=Path('/tmp/market-policy-'+viewport+'.html').read_text(encoding='utf-8')
-              for text in ('Chính sách bán hàng','Nguồn thứ cấp','60%','35%','Chưa đủ điều kiện'):
+              for text in ('Chính sách bán hàng','Nguồn thứ cấp','60%','35%','Chưa đủ điều kiện','TB153','Giá chào theo zone'):
                   assert text in doc,(viewport,text)
               assert 'Unable to load Market registry data' not in doc
           print('PASS policy claims visible, blocked PV, desktop/mobile.')
