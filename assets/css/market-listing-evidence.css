@@ -183,3 +183,26 @@
   .product-benchmark-table td:first-child{border-bottom:1px solid #eceff3!important;margin-bottom:6px;padding-bottom:10px!important}
   .product-benchmark-table .table-subtext{max-width:230px}
 }
+
+
+/* Phase 8B — explicitly source-scoped commercial policy / PV readiness. */
+.policy-readiness-summary{display:flex;align-items:center;flex-wrap:wrap;gap:10px;padding:10px 12px;margin:0 0 13px;
+  border:1px solid #e2e7ec;background:#f8fafc;border-radius:8px;font-size:12px;color:#475467}
+.policy-readiness-summary strong{font-weight:700;color:#823c4b}
+.policy-readiness-summary small{flex:1 1 100%;color:#667085;line-height:1.5}
+.market-policy-readiness-table{min-width:930px;font-size:12px;line-height:1.55}
+.market-policy-readiness-table th{white-space:normal}
+.market-policy-readiness-table td{vertical-align:top}
+.market-policy-readiness-table td:nth-child(3){max-width:320px;min-width:230px;white-space:normal}
+.market-policy-readiness-table .table-subtext{display:block;margin-top:5px;color:#667085;font-size:11px;max-width:250px;line-height:1.45}
+@media(max-width:640px){
+  .market-policy-readiness-table{min-width:0}
+  .market-policy-readiness-table thead{display:none}
+  .market-policy-readiness-table,.market-policy-readiness-table tbody,.market-policy-readiness-table tr,.market-policy-readiness-table td{display:block;width:100%}
+  .market-policy-readiness-table tr{margin:0 0 12px;padding:10px 12px;border:1px solid #e2e7ec;border-radius:9px;background:#fff}
+  .market-policy-readiness-table td{display:flex;gap:8px;justify-content:space-between;align-items:flex-start;text-align:right;padding:6px 0!important;border:0!important}
+  .market-policy-readiness-table td::before{content:attr(data-label-vi);flex:0 0 96px;font-size:11px;text-align:left;color:#667085;font-weight:600}
+  .market-policy-readiness-table td:nth-child(3){max-width:none;min-width:0}
+  .market-policy-readiness-table .table-subtext{max-width:220px;margin-left:auto}
+  .policy-readiness-summary{align-items:flex-start}
+}
