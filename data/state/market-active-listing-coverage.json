@@ -1,8 +1,8 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-10-27T14:47:51.899594+00:00",
+  "generated_at": "2026-10-28T08:23:55.332050+00:00",
   "scope": "individual-verified-apartment-asking-only",
-  "project_registry_count": 13,
+  "project_registry_count": 15,
   "projects_monitored": 8,
   "projects_with_current_verified_unit_offers": 1,
   "projects_with_recent_unpublished_source_candidates": 0,
@@ -58,6 +58,28 @@
     {
       "project_id": "izumi-city",
       "project_name": "Izumi City",
+      "status": "no-verified-unit-source-target",
+      "sources_monitored": 0,
+      "sources": [],
+      "recent_eligible_ads": 0,
+      "current_verified_ads": 0,
+      "published_source_ids": [],
+      "latest_source_listed_or_updated": null
+    },
+    {
+      "project_id": "nam-long-ii-central-lake",
+      "project_name": "Nam Long II Central Lake",
+      "status": "no-verified-unit-source-target",
+      "sources_monitored": 0,
+      "sources": [],
+      "recent_eligible_ads": 0,
+      "current_verified_ads": 0,
+      "published_source_ids": [],
+      "latest_source_listed_or_updated": null
+    },
+    {
+      "project_id": "springville",
+      "project_name": "Springville",
       "status": "no-verified-unit-source-target",
       "sources_monitored": 0,
       "sources": [],
