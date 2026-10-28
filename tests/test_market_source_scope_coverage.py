@@ -62,7 +62,7 @@ for pid in ("izumi-city", "essensia-parkway"):
         ("asset_type", "apartment"),
         ("source_url", "https://badactor.invalid/price"),
         ("asking_price_high_vnd_per_m2", 999999999),
-        ("review_date", "2026-10-20"),
+        ("review_date", "2026-11-20"),
     ]:
         tampered = copy.deepcopy(row)
         tampered[field] = wrong
