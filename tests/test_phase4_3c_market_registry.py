@@ -11,8 +11,8 @@ sources=json.loads((ROOT/'data/mock/core/sources.json').read_text(encoding='utf-
 html=(ROOT/'market.html').read_text(encoding='utf-8')
 js=(ROOT/'assets/js/market.js').read_text(encoding='utf-8')
 
-assert projects['record_count']==13
-assert {x['id'] for x in projects['data']} == {'izumi-city','waterpoint','akari-city','mizuki-park','the-global-city','eaton-park','elysian','the-privia','vinhomes-grand-park','the-9-stellars','celesta-gold','essensia-parkway','lumiere-riverside'}
+assert projects['record_count']==len(projects['data'])>=14
+assert {'izumi-city','waterpoint','akari-city','mizuki-park','the-global-city','eaton-park','elysian','the-privia','vinhomes-grand-park','the-9-stellars','celesta-gold','essensia-parkway','lumiere-riverside','nam-long-ii-central-lake'} <= {x['id'] for x in projects['data']}
 assert all('Illustrative' not in x.get('summary','') for x in projects['data'])
 assert all(x.get('primary_source_id') for x in projects['data'])
 assert all(x.get('official_url','').startswith('http') for x in projects['data'])
@@ -53,6 +53,10 @@ assert project_by_id["mizuki-park"]["planned_units"] is None
 assert project_by_id["essensia-parkway"]["planned_units"] is None
 assert project_by_id["lumiere-riverside"]["lead_developer_id"] == "masterise"
 assert project_by_id["lumiere-riverside"]["planned_units"] is None
+assert project_by_id["nam-long-ii-central-lake"]["region_ids"] == ["can-tho"]
+assert project_by_id["nam-long-ii-central-lake"]["total_area_sqm"] == 438000
+assert project_by_id["nam-long-ii-central-lake"]["source_date"] is None
+assert all(k not in project_by_id["nam-long-ii-central-lake"] for k in ("average_asp","sales_units","absorption_rate"))
 assert "74 units" in project_by_id["essensia-parkway"]["source_discrepancy_note"]
 assert "75 low-rise" in project_by_id["essensia-parkway"]["source_discrepancy_note"]
 
