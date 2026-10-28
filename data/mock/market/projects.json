@@ -1,8 +1,8 @@
 {
   "schema_version": 1,
-  "build_id": "phase4.7-market-registry-20261007",
-  "generated_at": "2026-10-07T21:55:00+07:00",
-  "record_count": 13,
+  "build_id": "phase8b-official-can-tho-project-20261028",
+  "generated_at": "2026-10-28T15:16:00+07:00",
+  "record_count": 14,
   "data": [
     {
       "id": "izumi-city",
@@ -448,6 +448,39 @@
         "housing",
         "real-estate-business",
         "construction"
+      ]
+    },
+    {
+      "id": "nam-long-ii-central-lake",
+      "name": "Nam Long II Central Lake",
+      "developer_ids": [
+        "nam-long"
+      ],
+      "lead_developer_id": "nam-long",
+      "region_ids": [
+        "can-tho"
+      ],
+      "segment_ids": [
+        "township",
+        "landed",
+        "apartment"
+      ],
+      "status": "ongoing",
+      "location_text": "Phường Cái Răng (khu vực Hưng Thạnh cũ), TP. Cần Thơ",
+      "total_area_sqm": 438000,
+      "planned_units": null,
+      "launch_date": null,
+      "summary": "Khu đô thị tích hợp Nam Long II Central Lake quy mô khoảng 43,8 ha tại Cần Thơ, gồm nhà ở thấp tầng, đất nền và căn hộ. Dữ liệu giá, số lượng bán và tỷ lệ hấp thụ chưa được ghi nhận là số liệu xác minh; cần theo dõi riêng theo sản phẩm và kỳ công bố.",
+      "related_infrastructure_ids": [],
+      "official_url": "https://namlongcentrallake.vn/gioi-thieu.html",
+      "primary_source_id": "nam-long-official",
+      "source_date": null,
+      "source_review_date": "2026-10-28",
+      "related_legal_topic_ids": [
+        "housing",
+        "real-estate-business",
+        "land",
+        "planning"
       ]
     }
   ]
