@@ -1,0 +1,59 @@
+{
+  "schema_version": 1,
+  "mode": "first-party-and-secondary-landing-page-access-with-change-alerts",
+  "updated_at": "2026-10-28",
+  "schedule": "daily-02:25-UTC",
+  "purpose": "Discover changes in source-authored project/product pages. No price or sales metric is auto-promoted on a generic page change.",
+  "targets": [
+    {
+      "id": "aqua-city-novaland",
+      "project_id": "aqua-city",
+      "source_id": "novaland-official",
+      "source_role": "developer-primary",
+      "url": "https://www.novaland.com.vn/tin-tuc-1/thong-tin-novaland/tin-du-an/aqua-city-chinh-thuc-mo-ban-tro-lai-tu-3110-khoi-thong-dong-thu-hang-tram-nghin-ty-dong",
+      "allowed_host": "www.novaland.com.vn",
+      "watch_scope": "sales-restart-and-handover-plan",
+      "price_metric_allowed": false
+    },
+    {
+      "id": "springville-gamuda",
+      "project_id": "springville",
+      "source_id": "gamuda-land-official",
+      "source_role": "developer-primary",
+      "url": "https://www.gamudaland.com.vn/vn/developments/township/springville",
+      "allowed_host": "www.gamudaland.com.vn",
+      "watch_scope": "official-product-mix-and-price-publication-status",
+      "price_metric_allowed": false
+    },
+    {
+      "id": "elyse-island-namlong",
+      "project_id": "elyse-island",
+      "source_id": "nam-long-official",
+      "source_role": "developer-primary",
+      "url": "https://www.namlongvn.com/en/township-residential/elyse-island/",
+      "allowed_host": "www.namlongvn.com",
+      "watch_scope": "product-description",
+      "price_metric_allowed": false
+    },
+    {
+      "id": "kita-airport-city-kita",
+      "project_id": "kita-airport-city",
+      "source_id": "kita-group-official",
+      "source_role": "developer-primary",
+      "url": "https://kita-group.com.vn/ra-mat-phan-khu-trung-tam-du-an-kita-airport-city/",
+      "allowed_host": "kita-group.com.vn",
+      "watch_scope": "product-phase-disclosure",
+      "price_metric_allowed": false
+    },
+    {
+      "id": "springville-rever-listing",
+      "project_id": "springville",
+      "source_id": "rever-vn",
+      "source_role": "secondary-brokerage",
+      "url": "https://rever.vn/s/spring-ville/mua/shop-house",
+      "allowed_host": "rever.vn",
+      "watch_scope": "category-listing-availability-only",
+      "price_metric_allowed": false
+    }
+  ]
+}
