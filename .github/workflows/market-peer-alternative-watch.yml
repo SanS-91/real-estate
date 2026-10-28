@@ -7,6 +7,8 @@ on:
     paths:
       - 'config/market-peer-alternative-targets.json'
       - 'scripts/market_peer_alternative_watch.py'
+      - 'scripts/market_dealer_commercial_candidates.py'
+      - 'tests/test_market_dealer_commercial_candidates.py'
       - 'tests/test_market_peer_alternative_watch.py'
       - '.github/workflows/market-peer-alternative-watch.yml'
   schedule:
@@ -32,7 +34,9 @@ jobs:
       - name: Install libraries
         run: pip install -r requirements.txt
       - name: Validate source identity and price non-promotion contract
-        run: python tests/test_market_peer_alternative_watch.py
+        run: |
+          python tests/test_market_peer_alternative_watch.py
+          python tests/test_market_dealer_commercial_candidates.py
       - name: Publish alternative source status from latest main
         run: |
           git config user.name "github-actions[bot]"
@@ -41,8 +45,9 @@ jobs:
             git fetch origin main
             git reset --hard origin/main
             python scripts/market_peer_alternative_watch.py
-            git add data/state/market-peer-alternative-health.json
-            if git diff --cached --quiet -- data/state/market-peer-alternative-health.json; then
+            python scripts/market_dealer_commercial_candidates.py
+            git add data/state/market-peer-alternative-health.json data/state/market-dealer-commercial-candidates.json
+            if git diff --cached --quiet -- data/state/market-peer-alternative-health.json data/state/market-dealer-commercial-candidates.json; then
               echo "Alternative source report already matches main."
               exit 0
             fi
@@ -60,6 +65,8 @@ jobs:
         uses: actions/upload-artifact@v7
         with:
           name: market-peer-alternative-source-watch
-          path: data/state/market-peer-alternative-health.json
+          path: |
+            data/state/market-peer-alternative-health.json
+            data/state/market-dealer-commercial-candidates.json
           retention-days: 14
           if-no-files-found: ignore
