@@ -26,5 +26,15 @@ assert(scanner.includes('now.date() > expiry'));
 assert(scanner.includes('start > now.date()'));
 assert(workflow.includes("if: github.event_name == 'pull_request'"));
 assert(workflow.includes("git diff --exit-code -- data/mock/market/verified-muaban-unit-listings.json"));
-assert(!JSON.parse(fs.readFileSync('data/mock/market/verified-muaban-unit-listings.json')).record_count);
+// Historic verified listings can remain in the repository; the Market UI
+// excludes expired ads at display time. A zero-record assertion goes stale.
+const verified=JSON.parse(fs.readFileSync('data/mock/market/verified-muaban-unit-listings.json','utf8'));
+assert.equal(verified.record_count,verified.data.length);
+assert(verified.data.every(row=>
+  row.source_id==='muaban-vn' &&
+  row.source_date_basis==='publisher-listing-start-not-update' &&
+  /^\\d{4}-\\d{2}-\\d{2}$/.test(row.source_expiration_date) &&
+  row.market_layer==='individual-listing-asking' &&
+  row.review_status==='automated-two-hosted-checks'
+));
 console.log('PASS: Muaban source strictly expiry-gated, per-unit only, no PR publication, no project ASP contamination');
