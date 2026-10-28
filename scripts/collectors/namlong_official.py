@@ -8,6 +8,7 @@ PROJECT_PATTERNS={
     "mizuki-park": re.compile(r"\bMizuki Park\b",re.I),
     "izumi-city": re.compile(r"\bIzumi City\b",re.I),
     "akari-city": re.compile(r"\bAkari City\b",re.I),
+    "nam-long-ii-central-lake": re.compile(r"\bNam Long\s*(?:II|2)(?:\s*Central Lake)?\b|\bCentral Lake\s*Cần Thơ\b",re.I),
 }
 
 def parse_article(html: str, source_url: str, fetched_at: str):
