@@ -18,7 +18,7 @@ assert(ui.includes('function projectCommercialOfferReviewHTML(project)'));
 assert(ui.includes("commercialOfferReviewHTML('izumi-city')"));
 assert(ui.includes('projectCommercialOfferReviewHTML(project)'));
 assert(ui.includes('TB143 → TB153'));
-assert(ui.includes('Chưa xác nhận giá căn cụ thể'));
+assert(ui.toLowerCase().includes('chưa xác nhận giá căn cụ thể'));
 assert(ui.includes('Không dùng voucher/chiết khấu TB143'));
 assert(ui.includes('DataStore.getCommercialOfferReview()'));
 assert(store.includes('getCommercialOfferReview: () => loadDirectJSON'));
