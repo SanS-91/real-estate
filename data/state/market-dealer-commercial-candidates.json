@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "checked_at": "2026-10-28T10:28:33.883428+00:00",
+  "checked_at": "2026-10-28T10:29:31.118892+00:00",
   "source_type": "third-party-broker-candidate-only",
   "price_page_status": "fetched",
   "policy_page_status": "fetched",
@@ -17,7 +17,16 @@
     "has_zone1_label": false,
     "has_zone2_label": false,
     "has_zone3_label": false,
-    "has_price_855": false
+    "has_price_855": false,
+    "html_title": "GiÃ¡ Izumi Canaria thÃ¡ng 10/2026: nhÃ  phá» vÆ°á»n tá»« 8,55 tá»· Äá»ng | HPR",
+    "table_first_cell_labels": [
+      "Loáº¡i sáº£n pháº©m",
+      "NhÃ  phá» vÆ°á»n zone 1",
+      "NhÃ  phá» vÆ°á»n zone 2",
+      "NhÃ  phá» vÆ°á»n zone 3",
+      "Biá»t thá»± song láº­p"
+    ],
+    "has_izumi_canaria": false
   },
   "price_table_records_recognized": 0,
   "expected_price_groups": 4,
