@@ -445,6 +445,47 @@
     }
   }
 
+  async function renderPeerAlternativeWatch() {
+    const node = document.querySelector('[data-peer-alternative-watch]');
+    if (!node) return;
+    const vi = language() !== 'en';
+    try {
+      const report = await fetchJSON('data/state/market-peer-alternative-health.json');
+      if (report?.mode !== 'alternative-source-access-and-content-change-review' ||
+          !Array.isArray(report.targets) || report.source_prices_updated !== false)
+        throw new Error('Invalid alternative watch contract');
+      const textStatus = {
+        'baseline-created': vi ? 'Đã lưu mốc đầu tiên' : 'Baseline saved',
+        'unchanged': vi ? 'Không có thay đổi' : 'Unchanged',
+        'content-changed-review': vi ? 'Trang thay đổi — cần kiểm tra' : 'Page changed — review',
+        'blocked': vi ? 'Bị chặn truy cập tự động' : 'Blocked',
+        'identity-unverified': vi ? 'Chưa xác minh đúng nội dung dự án' : 'Project identity unverified',
+        'fetch-error': vi ? 'Lỗi truy cập nguồn' : 'Fetch failed',
+        'unexpected-redirect': vi ? 'Chuyển hướng khác nguồn' : 'Untrusted redirect',
+        'http-error': vi ? 'Nguồn trả lỗi' : 'HTTP error',
+        'invalid-target': vi ? 'Đường dẫn không hợp lệ' : 'Invalid target'
+      };
+      const trs = report.targets.map(row => `<tr>
+        <td><a href="market.html?view=project-detail&id=${encodeURIComponent(row.project_id)}">${esc(row.project_id)}</a></td>
+        <td>${esc(row.source_role === 'developer-primary' ? (vi ? 'Chủ đầu tư' : 'Developer') : (vi ? 'Môi giới' : 'Brokerage'))}</td>
+        <td>${esc(textStatus[row.status] || row.status)}</td>
+        <td>${esc(row.last_valid_page_at ? formatDateTime(row.last_valid_page_at) : '—')}</td>
+        <td>${esc(row.review_required ? (vi ? 'Cần rà soát' : 'Review') : (vi ? 'Chưa có giá mới được xác minh' : 'No verified new price'))}</td>
+      </tr>`).join('');
+      node.innerHTML = `<div class="table-wrap"><table class="data-table mobile-record-table">
+        <thead><tr><th>${vi ? 'Dự án' : 'Project'}</th><th>${vi ? 'Loại nguồn' : 'Source type'}</th>
+        <th>${vi ? 'Trạng thái' : 'Status'}</th><th>${vi ? 'Lần đọc hợp lệ' : 'Last valid fetch'}</th>
+        <th>${vi ? 'Hành động' : 'Action'}</th></tr></thead><tbody>${trs}</tbody></table></div>
+        <p class="muted-text">${vi ? 'Kiểm tra lúc' : 'Checked'} ${esc(formatDateTime(report.generated_at))}.
+        ${vi ? 'Mốc đầu tiên chỉ là baseline; nguồn truy cập được không có nghĩa là đã xác nhận giá hoặc thay đổi thực tế.' :
+          'A baseline only verifies the source page identity, not a transaction or current developer selling price.'}</p>`;
+    } catch (error) {
+      console.warn('[maintenance] alternative peer source watch unavailable', error);
+      node.innerHTML = `<div class="state-box">${esc(vi ? 'Chưa có kết quả kiểm tra nguồn thay thế hợp lệ.' :
+        'Alternative source watch is not yet available.')}</div>`;
+    }
+  }
+
   async function renderPeerPriceWatch() {
     const node = document.querySelector('[data-peer-price-monitor]');
     if (!node) return;
@@ -741,6 +782,7 @@
       await renderOperations();
       await renderMarketSourceHealth();
       await renderPeerPriceWatch();
+      await renderPeerAlternativeWatch();
       await renderActiveListingCoverage();
       await renderOfficialRegistryWatch();
       await renderNewsAutomationHealth();
@@ -753,6 +795,7 @@
       renderOperations();
       renderMarketSourceHealth();
       renderPeerPriceWatch();
+      renderPeerAlternativeWatch();
       renderActiveListingCoverage();
       renderOfficialRegistryWatch();
       renderNewsAutomationHealth();
