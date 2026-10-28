@@ -60,13 +60,18 @@ rever_health=mod.read(mod.REVER_HEALTH)
 assert mod.verified_unit_auto_rows(projects,sources,now,muaban,rever,muaban_health,rever_health)==[], "Old source-check reports cannot certify current ads"
 fresh_health=deepcopy(muaban_health)
 fresh_health["generated_at"]=now.isoformat()
+assert mod.recently_checked(fresh_health,now)
+assert any(x.get("project_id")=="vinhomes-grand-park" and x.get("access")=="reachable" and x.get("qualified",0)>0
+           for x in fresh_health["sources"])
+assert next(x for x in muaban["data"] if x.get("listing_id")=="71270297")["source_expiration_date"]>"2026-10-28"
 # A fresh aggregate project scan does NOT refresh 18-day-old listing proofs.
 assert mod.verified_unit_auto_rows(projects,sources,now,muaban,rever,fresh_health,rever_health)==[]
 recent_muaban=deepcopy(muaban)
 for row in recent_muaban["data"]:
     row["verified_at"]=now.isoformat()
 live=mod.verified_unit_auto_rows(projects,sources,now,recent_muaban,rever,fresh_health,rever_health)
-assert live and all(r["is_verified_live_offer"] and r["source_id"]=="muaban-vn" for r in live)
+assert live and all(r["is_verified_live_offer"] and r["source_id"]=="muaban-vn" for r in live), (
+    "Controlled recent independent verification must be recognized; scan and listing date gates checked above")
 assert all(r["price_area_basis"]=="publisher-stated-apartment-area-not-verified-net" for r in live)
 combined=mod.build(raw,projects,sources,now.date(),live)
 assert combined["verified_live_count"]==len(live)
