@@ -14,6 +14,9 @@ on:
       - 'assets/js/market.js'
       - 'assets/css/market-listing-evidence.css'
       - 'market.html'
+      - 'tests/test_market_alternative_sources.py'
+      - 'tests/test_market_secondary_listing_evidence.py'
+      - 'data/mock/market/listing-scope-evidence.json'
       - '.github/workflows/market-pricing-compact-references.yml'
   workflow_dispatch:
 
