@@ -187,12 +187,17 @@
   // Keep the legacy local calculator only as an explicitly marked fallback.
   async function buildModel() {
     try {
-      const payload = await DataStore.getDataHealth();
+      const [payload, matrix] = await Promise.all([
+        DataStore.getDataHealth(), fetchJSON('config/update_matrix.json')
+      ]);
       if (payload?.schema_version !== 1 || !Array.isArray(payload.datasets)
-          || !Array.isArray(payload.modules) || !payload.generated_at) {
-        throw new Error('Invalid canonical data-health snapshot');
+          || !Array.isArray(payload.modules) || !payload.generated_at
+          || !Array.isArray(matrix?.datasets)) {
+        throw new Error('Invalid canonical data-health snapshot or metadata');
       }
+      const metadata = new Map(matrix.datasets.map(row => [row.id, row]));
       const rows = payload.datasets.map(entry => ({
+        ...(metadata.get(entry.id) || {}),
         ...entry,
         latest_observation_period: entry.latest_source_period || null,
         last_updated_at: entry.last_data_change_at || entry.last_production_at || null,
