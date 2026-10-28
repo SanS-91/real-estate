@@ -1,8 +1,8 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-10-28T08:23:55.332050+00:00",
+  "generated_at": "2026-10-28T08:44:15.895608+00:00",
   "scope": "individual-verified-apartment-asking-only",
-  "project_registry_count": 15,
+  "project_registry_count": 18,
   "projects_monitored": 8,
   "projects_with_current_verified_unit_offers": 1,
   "projects_with_recent_unpublished_source_candidates": 0,
@@ -18,13 +18,35 @@
       "source_id": "rever-vn",
       "report_available": true,
       "report_fresh": true,
-      "checked_at": "2026-10-27T13:30:36.570644+00:00"
+      "checked_at": "2026-10-28T08:43:27.037270+00:00"
     }
   ],
   "projects": [
     {
+      "project_id": "aqua-city",
+      "project_name": "Aqua City",
+      "status": "no-verified-unit-source-target",
+      "sources_monitored": 0,
+      "sources": [],
+      "recent_eligible_ads": 0,
+      "current_verified_ads": 0,
+      "published_source_ids": [],
+      "latest_source_listed_or_updated": null
+    },
+    {
       "project_id": "celesta-gold",
       "project_name": "Celesta Gold",
+      "status": "no-verified-unit-source-target",
+      "sources_monitored": 0,
+      "sources": [],
+      "recent_eligible_ads": 0,
+      "current_verified_ads": 0,
+      "published_source_ids": [],
+      "latest_source_listed_or_updated": null
+    },
+    {
+      "project_id": "elyse-island",
+      "project_name": "Elyse Island",
       "status": "no-verified-unit-source-target",
       "sources_monitored": 0,
       "sources": [],
@@ -58,6 +80,17 @@
     {
       "project_id": "izumi-city",
       "project_name": "Izumi City",
+      "status": "no-verified-unit-source-target",
+      "sources_monitored": 0,
+      "sources": [],
+      "recent_eligible_ads": 0,
+      "current_verified_ads": 0,
+      "published_source_ids": [],
+      "latest_source_listed_or_updated": null
+    },
+    {
+      "project_id": "kita-airport-city",
+      "project_name": "KITA Airport City (Stella Mega City)",
       "status": "no-verified-unit-source-target",
       "sources_monitored": 0,
       "sources": [],
@@ -119,7 +152,7 @@
           "source_health_recent": true,
           "recent_eligible_ads": 0,
           "discovered_links": 12,
-          "last_checked_at": "2026-10-27T13:30:36.570644+00:00"
+          "last_checked_at": "2026-10-28T08:43:27.037270+00:00"
         }
       ],
       "recent_eligible_ads": 0,
@@ -147,7 +180,7 @@
           "source_health_recent": true,
           "recent_eligible_ads": 0,
           "discovered_links": 12,
-          "last_checked_at": "2026-10-27T13:30:36.570644+00:00"
+          "last_checked_at": "2026-10-28T08:43:27.037270+00:00"
         }
       ],
       "recent_eligible_ads": 0,
@@ -167,7 +200,7 @@
           "source_health_recent": true,
           "recent_eligible_ads": 0,
           "discovered_links": 24,
-          "last_checked_at": "2026-10-27T13:30:36.570644+00:00"
+          "last_checked_at": "2026-10-28T08:43:27.037270+00:00"
         }
       ],
       "recent_eligible_ads": 0,
@@ -195,7 +228,7 @@
           "source_health_recent": true,
           "recent_eligible_ads": 0,
           "discovered_links": 12,
-          "last_checked_at": "2026-10-27T13:30:36.570644+00:00"
+          "last_checked_at": "2026-10-28T08:43:27.037270+00:00"
         }
       ],
       "recent_eligible_ads": 0,
@@ -215,7 +248,7 @@
           "source_health_recent": true,
           "recent_eligible_ads": 0,
           "discovered_links": 8,
-          "last_checked_at": "2026-10-27T13:30:36.570644+00:00"
+          "last_checked_at": "2026-10-28T08:43:27.037270+00:00"
         }
       ],
       "recent_eligible_ads": 0,
@@ -243,7 +276,7 @@
           "source_health_recent": true,
           "recent_eligible_ads": 0,
           "discovered_links": 6,
-          "last_checked_at": "2026-10-27T13:30:36.570644+00:00"
+          "last_checked_at": "2026-10-28T08:43:27.037270+00:00"
         }
       ],
       "recent_eligible_ads": 0,
@@ -271,7 +304,7 @@
           "source_health_recent": true,
           "recent_eligible_ads": 0,
           "discovered_links": 24,
-          "last_checked_at": "2026-10-27T13:30:36.570644+00:00"
+          "last_checked_at": "2026-10-28T08:43:27.037270+00:00"
         }
       ],
       "recent_eligible_ads": 0,
@@ -299,7 +332,7 @@
           "source_health_recent": true,
           "recent_eligible_ads": 0,
           "discovered_links": 12,
-          "last_checked_at": "2026-10-27T13:30:36.570644+00:00"
+          "last_checked_at": "2026-10-28T08:43:27.037270+00:00"
         }
       ],
       "recent_eligible_ads": 0,
