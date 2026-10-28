@@ -1,15 +1,15 @@
 {
   "schema_version": 1,
-  "checked_at": "2026-10-28T12:51:41.574206+00:00",
+  "checked_at": "2026-10-28T13:13:18.391057+00:00",
   "feeds_configured": 16,
   "feeds_fetched": 16,
-  "accepted_new": 6,
-  "production_written": true,
+  "accepted_new": 0,
+  "production_written": false,
   "article_total": 1096,
   "published_by_module": {
-    "market": 4,
+    "market": 0,
     "legal": 0,
-    "infrastructure": 2,
+    "infrastructure": 0,
     "macro": 0
   },
   "feed_status": [
@@ -53,9 +53,9 @@
       "source_id": "vnexpress-current-affairs",
       "status": "parsed",
       "feed_items": 50,
-      "new": 2,
-      "skipped": 48,
-      "duplicates": 11,
+      "new": 0,
+      "skipped": 50,
+      "duplicates": 13,
       "filtered": 37
     },
     {
@@ -107,9 +107,9 @@
       "source_id": "dantri-current-affairs",
       "status": "parsed",
       "feed_items": 50,
-      "new": 4,
-      "skipped": 46,
-      "duplicates": 12,
+      "new": 0,
+      "skipped": 50,
+      "duplicates": 16,
       "filtered": 34
     },
     {
