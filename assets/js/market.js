@@ -117,6 +117,7 @@
     const labels = {
       'apartment-only': 'Chỉ căn hộ',
       'landed-only': 'Biệt thự / liền kề',
+      'landlot-only': 'Đất nền',
       'publisher-faq-indicative': 'Tham khảo FAQ'
     };
     return labels[row.price_scope] || 'Nguồn theo phân khúc';
@@ -128,6 +129,12 @@
     }
     if (row.price_scope === 'landed-only') {
       return 'Nguồn dành riêng cho biệt thự/nhà liền kề. Không bao gồm shophouse có đơn giá khác biệt.';
+    }
+    if (row.coverage_status === 'historical-segment-reference-not-current') {
+      return 'CHỈ THAM CHIẾU LỊCH SỬ: trang nguồn từ kỳ trước, không xác minh giá hiện tại. Không sử dụng làm giá hiện hành hay tính xu hướng.';
+    }
+    if (row.price_scope === 'landlot-only') {
+      return 'Chỉ đất nền chưa xây nhà; không so sánh trực tiếp VND/m² với giá căn nhà xây sẵn, biệt thự hoặc căn hộ.';
     }
     if (row.price_scope === 'apartment-only') {
       return 'Chỉ áp dụng cho căn hộ, không đại diện biệt thự và nhà phố của dự án.';
@@ -282,6 +289,10 @@
       <div class="market-listing-scope-item__price">${esc(formatListingRange(row))}</div>
       <p>${esc(listingScopeDescription(row))}</p>
       ${row.data_quality_flag ? '<p class="market-listing-scope-warning">Lưu ý: trang rao bán căn hộ trước đây có tin ngoài phạm vi Izumi. Không sử dụng để tính giá căn hộ Izumi.</p>' : ''}
+      ${row.coverage_status === 'historical-segment-reference-not-current'
+        ? '<p class="market-listing-scope-warning">Nguồn giá lịch sử; không đưa vào độ phủ giá hiện tại hoặc dùng để điều chỉnh FS.</p>' : ''}
+      ${row.latest_listing_date && Math.floor((Date.now() - Date.parse(row.latest_listing_date + 'T23:59:59+07:00')) / 86400000) > 30
+        ? '<p class="market-listing-scope-warning">Tin đăng gần nhất trên nguồn đã quá 30 ngày; kiểm tra lại trước khi sử dụng.</p>' : ''}
       <div class="provenance-inline-row">${sourceRef(row.source_id,{sourceDate:row.review_date,sourceUrl:row.source_url,methodology:row.methodology_note})}<span>Kiểm tra ${esc(row.review_date)} · Tin gần nhất ${esc(row.latest_listing_date || '—')}</span></div>
     </article>`).join('');
     return `<div class="market-listing-scope" role="note"><h4>Giá chào bán theo phạm vi sản phẩm</h4>${cards}</div>` + alternativePriceCardsHTML([projectId]);
@@ -818,13 +829,16 @@
           const snapshots = data.listingObservations.filter(row => row.project_id === peer.id);
           const latest = snapshots.sort((a,b) => String(b.observation_date || '').localeCompare(String(a.observation_date || '')))[0];
           const scoped = data.listingScopeEvidence.filter(row => row.project_id === peer.id &&
+            row.coverage_status !== 'historical-segment-reference-not-current' &&
             Number.isFinite(row.asking_price_low_vnd_per_m2) &&
             Number.isFinite(row.asking_price_high_vnd_per_m2))
             .sort((a,b) => String(b.review_date || '').localeCompare(String(a.review_date || '')))[0];
-          const scopedAge = scoped?.review_date
-            ? Math.floor((Date.now() - Date.parse(scoped.review_date + 'T23:59:59+07:00')) / 86400000) : null;
+          const sourceActivityDate = scoped?.latest_listing_date || scoped?.review_date;
+          const scopedAge = sourceActivityDate
+            ? Math.floor((Date.now() - Date.parse(sourceActivityDate + 'T23:59:59+07:00')) / 86400000) : null;
           const priceEvidence = scoped
-            ? `Giá rao ${esc(scoped.price_scope === 'landed-only' ? 'thấp tầng' : 'theo loại sản phẩm')}
+            ? `Giá rao ${esc(scoped.price_scope === 'landed-only' ? 'thấp tầng' :
+                scoped.price_scope === 'landlot-only' ? 'đất nền' : 'theo loại sản phẩm')}
                ${esc(formatListingRange(scoped))} · rà soát ${esc(scoped.review_date)}
                ${scopedAge > 30 ? ' · CẦN KIỂM TRA LẠI' : ''} · không phải ASP`
             : (latest ? `Có snapshot giá rao ${esc(latest.observation_date)}; cần xác minh độ mới`
@@ -869,7 +883,8 @@
       : priceCoverage?.row ? formatListingRange(priceCoverage.row) : '—';
     const priceCoverageNote = priceCoverage?.tier === 'aggregate-asking' ? 'Giá rao tổng hợp · ' + (priceCoverage.as_of || '—') :
       priceCoverage?.tier === 'scoped-asking' ? 'Chỉ ' + (priceCoverage.product === 'landed' ? 'thấp tầng' :
-        priceCoverage.product === 'apartment' ? 'căn hộ' : 'FAQ') + ', không phải ASP' :
+        priceCoverage.product === 'apartment' ? 'căn hộ' :
+        priceCoverage.product === 'landlot' ? 'đất nền' : 'FAQ') + ', không phải ASP' :
       priceCoverage?.tier === 'monthly-popular' ? 'OneHousing · không phải ASP · ' + (priceCoverage.as_of || '—') :
       'Chưa có dữ liệu giá phù hợp';
 
