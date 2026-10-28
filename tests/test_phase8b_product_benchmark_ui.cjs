@@ -26,7 +26,7 @@ assert(ui.includes("Chưa xác minh"));
 assert(ui.includes("Không nội suy"));
 assert(ui.includes("Không suy ra giá/m² sàn xây dựng"));
 assert(html.includes('data-view="benchmark" href="market.html?view=benchmark"'));
-assert(html.includes('assets/js/market.js?v=PHASE8B-POLICY28'));
+assert(html.includes('assets/js/market.js?v=PHASE8B-IZUMI-TB153'));
 assert(store.includes('getProductComparables: () => loadDirectJSON'));
 assert(css.includes('.benchmark-summary-grid'));
 assert(css.includes('.product-benchmark-table'));
