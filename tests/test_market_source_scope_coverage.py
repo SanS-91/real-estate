@@ -22,11 +22,12 @@ scoped_payload = json.loads((ROOT / "data/mock/market/listing-scope-evidence.jso
 scope = scoped_payload["data"]
 listing = json.loads((ROOT / "data/mock/market/listing-observations.json").read_text(encoding="utf-8"))["data"]
 projects = {x["id"] for x in json.loads((ROOT / "data/mock/market/projects.json").read_text(encoding="utf-8"))["data"]}
-today = date(2026, 10, 9)
+today = date(2026, 10, 28)
 
-assert len(scope) == scoped_payload["record_count"] == 4
-assert len({x["project_id"] for x in scope}) == 4
-assert not gate.check(scope, listing, projects, today)
+assert len(scope) == scoped_payload["record_count"] == 8
+assert len({x["project_id"] for x in scope}) == 8
+assert not gate.check(scope, listing, projects, today), gate.check(scope, listing, projects, today)
+assert {x["project_id"] for x in scope if x["coverage_status"]=="historical-segment-reference-not-current"} == {"springville"}
 
 refs = {x["project_id"]: x for x in scope}
 izumi = refs["izumi-city"]
@@ -41,11 +42,16 @@ assert "/ban-nha-biet-thu-lien-ke-izumi-city" in izumi["source_url"]
 assert essensia["price_scope"] == "landed-only"
 assert (essensia["asking_price_low_vnd_per_m2"], essensia["asking_price_high_vnd_per_m2"]) == (196_100_000, 225_000_000)
 assert essensia["asking_price_change_1y_pct"] == -0.05
+assert refs["aqua-city"]["asking_price_low_vnd_per_m2"] == 45_300_000
+assert refs["kita-airport-city"]["price_scope"] == "landlot-only"
+assert refs["kita-airport-city"]["asking_price_high_vnd_per_m2"] == 26_000_000
+assert refs["elyse-island"]["asking_price_high_vnd_per_m2"] == 141_500_000
 assert "/ban-nha-biet-thu-lien-ke-essensia-parkway" in essensia["source_url"]
 
 by_project = {x["project_id"]: x for x in sorted(listing, key=lambda o: (o["project_id"], o["observation_date"]))}
 assert len(listing) >= 18
-assert all(by_project[pid]["asking_price_low_vnd_per_m2"] is None for pid in refs)
+assert all(by_project[pid]["asking_price_low_vnd_per_m2"] is None
+           for pid in refs if pid in by_project)
 assert by_project["izumi-city"]["asset_type"] == "apartment"  # original misleading portal mapping stays historical
 assert by_project["essensia-parkway"]["asset_type"] == "villa-townhouse-shophouse"
 
@@ -100,4 +106,4 @@ assert "review-project-aggregate-with-correct-product-class" in (ROOT / "scripts
 assert "DataStore.getListingSourceCoverage().catch(() => null)" in js
 assert "filteredProjects.some(project=>project.id === row.project_id)" in js
 assert "Không sử dụng để tính giá căn hộ Izumi" in js
-print("PASS: 4 category-specific, non-chartable evidence records; 8/12 aggregate; 6 with 2 captures; blocked collection disclosed.")
+print("PASS: 8 product-scoped records (1 historic-only), legacy source baselines preserved, 8/12 aggregate and blocked collection disclosed.")
