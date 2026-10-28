@@ -15,6 +15,10 @@ EXPECTED={
     "celesta-gold":("https://batdongsan.com.vn/ban-can-ho-chung-cu-celesta-gold","publisher-faq-indicative","apartment"),
     "izumi-city":("https://batdongsan.com.vn/ban-nha-biet-thu-lien-ke-izumi-city","landed-only","villa-townhouse"),
     "essensia-parkway":("https://batdongsan.com.vn/ban-nha-biet-thu-lien-ke-essensia-parkway","landed-only","villa-townhouse"),
+    "aqua-city":("https://batdongsan.com.vn/ban-nha-biet-thu-lien-ke-aqua-city","landed-only","villa-townhouse"),
+    "elyse-island":("https://batdongsan.com.vn/ban-nha-biet-thu-lien-ke-elyse-island","landed-only","villa-townhouse"),
+    "kita-airport-city":("https://batdongsan.com.vn/ban-dat-nen-du-an-stella-mega-city","landlot-only","landlot"),
+    "springville":("https://batdongsan.com.vn/ban-nha-biet-thu-lien-ke-spring-ville","landed-only","villa-townhouse"),
 }
 NUM=r"(\d+(?:[.,]\d+)?)"
 RANGE_PATTERNS=(
@@ -67,15 +71,20 @@ def check(rows, observations, project_ids, today):
             continue
         if urlsplit(uri).scheme!="https" or urlsplit(uri).hostname!="batdongsan.com.vn":
             errors.append(f"{pid}: source must use official HTTPS domain")
-        if x.get("coverage_status") not in ("segment-only-not-project-aggregate","reference-only-not-chartable"):
+        if x.get("coverage_status") not in ("segment-only-not-project-aggregate","reference-only-not-chartable","historical-segment-reference-not-current"):
             errors.append(f"{pid}: invalid scope-only coverage")
         if x.get("source_id")!="batdongsan-com-vn":
             errors.append(f"{pid}: unknown source")
         try:
             reviewed=date.fromisoformat(x["review_date"])
             last=date.fromisoformat(x["latest_listing_date"])
-            if reviewed>today or last>reviewed or (reviewed-last).days>35:
-                errors.append(f"{pid}: future or stale source dates")
+            historic = x.get("coverage_status") == "historical-segment-reference-not-current"
+            if reviewed > today or last > reviewed:
+                errors.append(f"{pid}: future source dates")
+            elif (reviewed-last).days > 35 and not historic:
+                errors.append(f"{pid}: old publisher activity must be historical, not current")
+            elif historic and (reviewed-last).days <= 35:
+                errors.append(f"{pid}: historic-only flag requires an actually old source date")
         except (KeyError,ValueError):
             errors.append(f"{pid}: invalid source dates")
         evidence=x.get("evidence") or {}
@@ -88,7 +97,11 @@ def check(rows, observations, project_ids, today):
             errors.append(f"{pid}: last-listing date not evidenced")
         if evidence_trend(evidence.get("trend"))!=x.get("asking_price_change_1y_pct"):
             errors.append(f"{pid}: quoted segment 1Y trend mismatch")
-        if x.get("price_scope")=="landed-only" and x.get("coverage_status")!="segment-only-not-project-aggregate":
+        if x.get("price_scope")=="landlot-only" and x.get("coverage_status")!="segment-only-not-project-aggregate":
+            errors.append(f"{pid}: landlot must be segment-only, never built-unit or project ASP")
+        if x.get("price_scope")=="landlot-only" and x.get("asset_type")!="landlot":
+            errors.append(f"{pid}: landlot price may not be relabeled as built property")
+        if x.get("price_scope")=="landed-only" and x.get("coverage_status") not in ("segment-only-not-project-aggregate","historical-segment-reference-not-current"):
             errors.append(f"{pid}: landed category is not a comparable project-wide series")
         if x.get("price_scope")=="publisher-faq-indicative" and x.get("coverage_status")!="reference-only-not-chartable":
             errors.append(f"{pid}: FAQ prices must be non-chartable")
@@ -101,7 +114,7 @@ def check(rows, observations, project_ids, today):
         previous=latest.get(pid) or {}
         if previous.get("asking_price_low_vnd_per_m2") is not None:
             errors.append(f"{pid}: scoped evidence intended only for unpriced project-level datasets")
-        if previous.get("coverage_status")!="partial":
+        if previous and previous.get("coverage_status")!="partial":
             errors.append(f"{pid}: source scope mixed into full project history")
     return errors
 
