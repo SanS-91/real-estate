@@ -3,7 +3,7 @@
   "mode": "first-party-and-secondary-landing-page-access-with-change-alerts",
   "updated_at": "2026-10-28",
   "schedule": "daily-02:25-UTC",
-  "purpose": "Discover changes in source-authored project/product pages. No price or sales metric is auto-promoted on a generic page change.",
+  "purpose": "Detect site-level first-party changes for official Izumi and direct competitors; any financing claims remain unverified until documentary validation.",
   "targets": [
     {
       "id": "aqua-city-novaland",
@@ -53,6 +53,16 @@
       "url": "https://rever.vn/s/spring-ville/mua/shop-house",
       "allowed_host": "rever.vn",
       "watch_scope": "category-listing-availability-only",
+      "price_metric_allowed": false
+    },
+    {
+      "id": "izumi-canaria-namlong-official",
+      "project_id": "izumi-city",
+      "source_id": "nam-long-official",
+      "source_role": "developer-primary",
+      "url": "https://www.namlongvn.com/tin-tuc/trien-lam-nam-long-experience-2026-hut-hon-10-000-luot-khach/",
+      "allowed_host": "www.namlongvn.com",
+      "watch_scope": "official-izumi-canaria-sales-launch-and-possible-policy-change",
       "price_metric_allowed": false
     }
   ]
