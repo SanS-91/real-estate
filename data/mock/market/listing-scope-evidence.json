@@ -1,8 +1,8 @@
 {
   "schema_version": 1,
   "generated_at": "2026-10-28",
-  "methodology": "Curated category-specific portal review records (9 and 28 Oct 2026) with explicit page, price scope and review date. Not project ASP, transaction price or automatically refreshed history; retain each actual source observation date.",
-  "record_count": 5,
+  "methodology": "Source-scoped and dated portal category prices. Review dates differ from publisher listing dates, and historical references are excluded from current price coverage. Not project ASP, transactions, or fabricated time-series.",
+  "record_count": 8,
   "data": [
     {
       "id": "scope-celesta-gold-apartment-faq-2026-10-09",
@@ -110,6 +110,72 @@
         "last_listing": "Cập nhật tin đăng gần đây nhất | 25-10-2026, 23:28"
       },
       "methodology_note": "Source-indexed Batdongsan.com.vn category-specific villa/townhouse asking-price range as reviewed 28 Oct 2026. 59 advertisements displayed in this category at review time. Not Novaland's developer price, not a transaction average, not the price of Aqua City's shophouses or total mixed product portfolio. The source-reported -4.9% 1Y change is not computed from repository snapshots. Source listing recency (25 Oct) does not date the aggregate range. If portal access is blocked later, retain this dated snapshot without implying refresh."
+    },
+    {
+      "id": "scope-kita-airport-city-landlot-2026-10-28",
+      "project_id": "kita-airport-city",
+      "asset_type": "landlot",
+      "project_asset_type": "township-mixed",
+      "price_scope": "landlot-only",
+      "source_id": "batdongsan-com-vn",
+      "source_url": "https://batdongsan.com.vn/ban-dat-nen-du-an-stella-mega-city",
+      "review_date": "2026-10-28",
+      "latest_listing_date": "2026-10-21",
+      "asking_price_low_vnd_per_m2": 17000000,
+      "asking_price_high_vnd_per_m2": 26000000,
+      "asking_price_change_1y_pct": -0.202,
+      "coverage_status": "segment-only-not-project-aggregate",
+      "evidence": {
+        "price": "Giá bán đất nền dự án Stella Mega City | 17 - 26 tr/m²",
+        "portal_ad_count_at_review": 20,
+        "trend": "20,2% Giá bán đã giảm trong 1 năm qua",
+        "last_listing": "Cập nhật tin đăng gần đây nhất | 21-10-2026, 11:19"
+      },
+      "methodology_note": "Verified indexed portal price for land plots ONLY, under former Stella Mega City name. Not KITA's developer price; not built townhouse, shophouse or apartment pricing. No assumption that 150ha marketing district corresponds exactly to the legal plot-price scope. Source 1Y change is portal-reported, not derived from time-series."
+    },
+    {
+      "id": "scope-elyse-island-villa-2026-10-28",
+      "project_id": "elyse-island",
+      "asset_type": "villa-townhouse",
+      "project_asset_type": "township-mixed",
+      "price_scope": "landed-only",
+      "source_id": "batdongsan-com-vn",
+      "source_url": "https://batdongsan.com.vn/ban-nha-biet-thu-lien-ke-elyse-island",
+      "review_date": "2026-10-28",
+      "latest_listing_date": "2026-09-23",
+      "asking_price_low_vnd_per_m2": 100000000,
+      "asking_price_high_vnd_per_m2": 141500000,
+      "asking_price_change_1y_pct": -0.042,
+      "coverage_status": "segment-only-not-project-aggregate",
+      "evidence": {
+        "price": "Giá bán nhà biệt thự, liền kề Elyse Island | 100 - 141,5 tr/m²",
+        "portal_ad_count_at_review": 27,
+        "trend": "4,2% Giá bán đã giảm trong 1 năm qua",
+        "last_listing": "Cập nhật tin đăng gần đây nhất | 23-09-2026, 14:03"
+      },
+      "methodology_note": "Indexed Batdongsan villa/townhouse category, with last listing date 23 Sep 2026: older than 30 days at review, not an up-to-date launch price. Do not use as current comparable for Izumi FS without independent confirmation. Portal-reported 1Y trend is not local temporal evolution."
+    },
+    {
+      "id": "scope-springville-landed-historical-2026-08",
+      "project_id": "springville",
+      "asset_type": "villa-townhouse",
+      "project_asset_type": "mixed-residential",
+      "price_scope": "landed-only",
+      "source_id": "batdongsan-com-vn",
+      "source_url": "https://batdongsan.com.vn/ban-nha-biet-thu-lien-ke-spring-ville",
+      "review_date": "2026-10-28",
+      "latest_listing_date": "2026-07-31",
+      "asking_price_low_vnd_per_m2": 87900000,
+      "asking_price_high_vnd_per_m2": 108800000,
+      "asking_price_change_1y_pct": null,
+      "coverage_status": "historical-segment-reference-not-current",
+      "evidence": {
+        "price": "Giá bán nhà biệt thự, liền kề Spring Ville | 87,9 - 108,8 tr/m²",
+        "portal_ad_count_in_index": 20,
+        "last_listing": "Cập nhật tin đăng gần đây nhất | 31-07-2026, 12:27",
+        "source_index_period": "2026-08 (publisher page T8/2026)"
+      },
+      "methodology_note": "Historical indexed portal category price from August 2026 page (most recent listed ad 31 Jul). NOT confirmed as current on 28 Oct. Kept as a dated historic point; excluded from current source-scoped coverage, from current-peer price cards, and from project-wide ASP/trend."
     }
   ]
 }
