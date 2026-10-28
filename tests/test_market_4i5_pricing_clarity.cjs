@@ -4,7 +4,7 @@ const projects=JSON.parse(fs.readFileSync('data/mock/market/projects.json','utf8
 const coverage=JSON.parse(fs.readFileSync('data/state/listing-source-coverage.json','utf8'));
 assert.ok(coverage.projects_tracked <= projects.length, 'Portal coverage is a source subset');
 assert.equal(coverage.projects_tracked,12, 'Portal baseline subset stays 12, not fabricated to 13');
-assert.equal(projects.length,13, 'New project registry stays separate');
+assert.ok(projects.length>=18, 'Source-backed project registry can expand independently of 12 publisher-covered projects');
 const market=fs.readFileSync('assets/js/market.js','utf8');
 assert.ok(market.includes('C\u00f3 kho\u1ea3ng gi\u00e1 t\u1ed5ng h\u1ee3p tr\u00ean Batdongsan'));
 assert.ok(market.includes('${esc(data.projects.length)} d\u1ef1 \u00e1n to\u00e0n danh m\u1ee5c'));
@@ -65,4 +65,4 @@ assert.equal(last.options.plugins.tooltip.callbacks.title([{dataIndex:1}]),'Vinh
 assert.ok(last.options.plugins.tooltip.callbacks.label({raw:[38200000,60200000]}).includes('60.2 tr/m²'));
 chart.renderRangeSeries('overview-price',{...rows,horizontal:false});
 assert.equal(last.options.indexAxis,'x','Existing overview still retains vertical category bars');
-console.log('PASS: 13-project registry vs 12-portal baseline, readable horizontal source range and unblended unit facts');
+console.log('PASS: expanded registry vs 12-portal source subset, readable horizontal ranges and unblended unit facts');
