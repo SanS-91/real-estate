@@ -1,9 +1,192 @@
 {
   "schema_version": 1,
-  "build_id": "market-news-rss-20261028T025149Z",
-  "generated_at": "2026-10-28T02:51:49.257114+00:00",
-  "record_count": 1064,
+  "build_id": "market-news-rss-20261028T045140Z",
+  "generated_at": "2026-10-28T04:51:40.727440+00:00",
+  "record_count": 1071,
   "data": [
+    {
+      "id": "article-market-rss-b8e7eb960549a5b9a6fb",
+      "title": "Dự án Thị Nại Eco Bay gần 5.000 tỉ đồng được điều chỉnh quy hoạch",
+      "url": "https://thanhnien.vn/du-an-thi-nai-eco-bay-gan-5000-ti-dong-duoc-dieu-chinh-quy-hoach-185261028110239277.htm",
+      "category": "market",
+      "module_ids": [
+        "market"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-10-28T04:39:00+00:00",
+      "source_id": "thanhnien-real-estate",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [
+        "legal"
+      ],
+      "importance": 2,
+      "summary": "Dự án Thị Nại Eco Bay ven đầm Thị Nại (Gia Lai) được điều chỉnh quy hoạch trên diện tích gần 118 ha, chuyển một phần đất biệt thự du lịch sang đất nhà ở thấp tầng.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://thanhnien.vn/rss/kinh-te/dia-oc.rss",
+        "publisher_host": "thanhnien.vn",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-1a24042df96a6172fc22",
+      "title": "Công bố 12 dự án có tổng vốn đầu tư đến 13 tỉ USD",
+      "url": "https://thanhnien.vn/cong-bo-12-du-an-co-tong-von-dau-tu-den-13-ti-usd-185261028104555473.htm",
+      "category": "market",
+      "module_ids": [
+        "market"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-10-28T04:19:00+00:00",
+      "source_id": "thanhnien-policy",
+      "region_ids": [
+        "hcmc"
+      ],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "Trong khuôn khổ phiên toàn thể lãnh đạo cấp cao của Diễn đàn Kinh tế mùa thu 2026 (AEF 2026), UBND TP.HCM đã công bố 12 dự án đầu tư với tổng vốn dự kiến khoảng 13 tỉ USD.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://thanhnien.vn/rss/kinh-te/chinh-sach-phat-trien.rss",
+        "publisher_host": "thanhnien.vn",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-0a00f2514425249ab075",
+      "title": "The Elite: Đặc quyền khoáng nóng tại dinh thự Nha Trang",
+      "url": "https://dantri.com.vn/bat-dong-san/the-elite-dac-quyen-khoang-nong-tai-dinh-thu-nha-trang-20261028095104506.htm",
+      "category": "market",
+      "module_ids": [
+        "market"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-10-28T03:15:00+00:00",
+      "source_id": "dantri-real-estate",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "(Dân trí) - Là phân khu tiên phong đưa tiện ích khoáng nóng tự nhiên vào không gian sống tại Nha Trang, bộ sưu tập bất động sản thấp tầng The Elite (Charmora City) đang được quan tâm.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://dantri.com.vn/rss/bat-dong-san.rss",
+        "publisher_host": "dantri.com.vn",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-a27fdcc3e53179ff3070",
+      "title": "Giá vàng đảo chiều tăng 1 triệu đồng",
+      "url": "https://vnexpress.net/gia-vang-dao-chieu-tang-1-trieu-dong-5137742.html",
+      "category": "macro",
+      "module_ids": [
+        "macro"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-10-28T03:11:31+00:00",
+      "source_id": "vnexpress-economy",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "Mỗi lượng vàng trong nước tăng 1 triệu đồng lên 143 triệu, theo đà phục hồi của thị trường quốc tế.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://vnexpress.net/rss/kinh-doanh.rss",
+        "publisher_host": "vnexpress.net",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-b4ce9e3dfd1cc1680400",
+      "title": "Hà Nội chốt cơ chế phá dỡ hoặc cho tồn tại 12 dự án của Mường Thanh",
+      "url": "https://dantri.com.vn/thoi-su/ha-noi-chot-co-che-pha-do-hoac-cho-ton-tai-12-du-an-cua-muong-thanh-20261028095817889.htm",
+      "category": "market",
+      "module_ids": [
+        "market"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-10-28T03:03:09+00:00",
+      "source_id": "dantri-current-affairs",
+      "region_ids": [
+        "ha-noi"
+      ],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "(Dân trí) - Với 12 dự án của Tập đoàn Mường Thanh có vi phạm, Hà Nội dự kiến buộc phá dỡ những công trình không đáp ứng tiêu chí, không đảm bảo an toàn chịu lực, không khắc phục PCCC và vi phạm chỉ giới.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://dantri.com.vn/rss/thoi-su.rss",
+        "publisher_host": "dantri.com.vn",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-143adfc0d4b791f53630",
+      "title": "Những yếu tố quyết định giá vàng thế giới lên xuống trong tuần này",
+      "url": "https://dantri.com.vn/kinh-doanh/nhung-yeu-to-quyet-dinh-gia-vang-the-gioi-len-xuong-trong-tuan-nay-20261028065434954.htm",
+      "category": "macro",
+      "module_ids": [
+        "macro"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-10-28T03:00:00+00:00",
+      "source_id": "dantri-business",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "(Dân trí) - Giá vàng thế giới bất ngờ quay đầu khởi sắc, xác lập đà tăng ngay trước thềm quyết định chính sách tiền tệ quan trọng từ Cục Dự trữ Liên bang Mỹ (Fed).",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://dantri.com.vn/rss/kinh-doanh.rss",
+        "publisher_host": "dantri.com.vn",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-069349dd73c071bdf556",
+      "title": "Hà Nội thông qua cơ chế xử lý 12 dự án của tập đoàn Mường Thanh",
+      "url": "https://vnexpress.net/ha-noi-thong-qua-co-che-xu-ly-12-du-an-cua-tap-doan-muong-thanh-5137716.html",
+      "category": "market",
+      "module_ids": [
+        "market"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-10-28T02:56:04+00:00",
+      "source_id": "vnexpress-current-affairs",
+      "region_ids": [
+        "ha-noi"
+      ],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "Thành phố rà soát để phân 12 dự án thành hai nhóm, nhóm 1 được tồn tại có điều kiện, nhóm 2 phải phá dỡ, cư dân được bồi thường và ưu đãi thỏa thuận mua căn hộ, nhà ở.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://vnexpress.net/rss/thoi-su.rss",
+        "publisher_host": "vnexpress.net",
+        "publication_date_from_feed": true
+      }
+    },
     {
       "id": "article-market-rss-d8551ae9bb1b455adbf3",
       "title": "Sân bay Long Thành dự kiến khai thác 366 chuyến bay mỗi tuần từ tháng 12",
