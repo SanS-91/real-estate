@@ -1,9 +1,225 @@
 {
   "schema_version": 1,
-  "build_id": "market-news-rss-20261028T005138Z",
-  "generated_at": "2026-10-28T00:51:38.469598+00:00",
-  "record_count": 1055,
+  "build_id": "market-news-rss-20261028T025149Z",
+  "generated_at": "2026-10-28T02:51:49.257114+00:00",
+  "record_count": 1064,
   "data": [
+    {
+      "id": "article-market-rss-d8551ae9bb1b455adbf3",
+      "title": "Sân bay Long Thành dự kiến khai thác 366 chuyến bay mỗi tuần từ tháng 12",
+      "url": "https://thanhnien.vn/san-bay-long-thanh-du-kien-khai-thac-366-chuyen-bay-moi-tuan-tu-thang-12-185261028091201746.htm",
+      "category": "infrastructure",
+      "module_ids": [
+        "infrastructure"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-10-28T02:13:00+00:00",
+      "source_id": "thanhnien-policy",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [
+        "legal",
+        "infrastructure"
+      ],
+      "importance": 2,
+      "summary": "Để bảo đảm mục tiêu đưa sân bay Long Thành vào khai thác thương mại tháng 12, các cơ quan quản lý nhà nước, chủ đầu tư và đơn vị liên quan đang tập trung hoàn thành đồng bộ các thủ tục pháp lý, kỹ thuật và vận hành theo lộ trình đã đề ra.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://thanhnien.vn/rss/kinh-te/chinh-sach-phat-trien.rss",
+        "publisher_host": "thanhnien.vn",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-7af5db10ff95845a3737",
+      "title": "Dỡ sân khấu Sen Hồng và khu thương mại ngầm Công viên 23.9 làm ga metro",
+      "url": "https://thanhnien.vn/do-san-khau-sen-hong-va-khu-thuong-mai-ngam-cong-vien-239-lam-ga-metro-185261028085912314.htm",
+      "category": "infrastructure",
+      "module_ids": [
+        "infrastructure"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-10-28T02:11:00+00:00",
+      "source_id": "thanhnien-policy",
+      "region_ids": [
+        "hcmc"
+      ],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [
+        "infrastructure"
+      ],
+      "importance": 2,
+      "summary": "Sở Xây dựng TP.HCM cho biết đang hoàn thiện phương án bố trí ga Bến Thành của tuyến đường sắt đi Cần Giờ, trong đó yêu cầu tháo dỡ toàn bộ sân khấu Sen Hồng và khu thương mại ngầm Công viên 23.9.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://thanhnien.vn/rss/kinh-te/chinh-sach-phat-trien.rss",
+        "publisher_host": "thanhnien.vn",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-8742ce08ce13ada59963",
+      "title": "Giá vàng hôm nay 28.10.2026: Vàng miếng SJC tăng mạnh",
+      "url": "https://thanhnien.vn/gia-vang-hom-nay-28102026-vang-mieng-sjc-tang-manh-185261028084610884.htm",
+      "category": "macro",
+      "module_ids": [
+        "macro"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-10-28T02:04:00+00:00",
+      "source_id": "thanhnien-banking",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "Giá vàng miếng SJC ghi nhận mức tăng mạnh nhất trong những ngày qua. Kim loại quý thế giới lên mức cao trước khi Mỹ công bố thông tin lãi suất trong hôm nay.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://thanhnien.vn/rss/kinh-te/ngan-hang.rss",
+        "publisher_host": "thanhnien.vn",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-b7dce7fd4838e9e4b940",
+      "title": "6 loại cây cảnh độc đáo giúp nâng tầm không gian sống",
+      "url": "https://dantri.com.vn/bat-dong-san/6-loai-cay-canh-doc-dao-giup-nang-tam-khong-gian-song-20261028082340539.htm",
+      "category": "market",
+      "module_ids": [
+        "market"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-10-28T01:32:51+00:00",
+      "source_id": "dantri-real-estate",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "(Dân trí) - Thay vì mua sắm thêm đồ đạc đắt tiền, một vài chậu cây có dáng hình độc đáo sẽ biến góc nhỏ trong căn nhà của bạn thành không gian nghệ thuật đầy sức sống.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://dantri.com.vn/rss/bat-dong-san.rss",
+        "publisher_host": "dantri.com.vn",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-c9d5ebb86e7e35bb8b1e",
+      "title": "Quy hoạch Rừng Hồng định hình trải nghiệm sống tại trung tâm Eco Retreat",
+      "url": "https://dantri.com.vn/bat-dong-san/quy-hoach-rung-hong-dinh-hinh-trai-nghiem-song-tai-trung-tam-eco-retreat-20261027152448907.htm",
+      "category": "market",
+      "module_ids": [
+        "market"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-10-28T01:00:00+00:00",
+      "source_id": "dantri-real-estate",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [
+        "legal"
+      ],
+      "importance": 2,
+      "summary": "(Dân trí) - Lợi thế của phân khu Rừng Hồng không chỉ đến từ vị trí trung tâm Mùa Lễ Hội, Eco Retreat mà còn từ mối liên kết giữa nhà ở với hệ thống quảng trường, tuyến phố, cảnh quan và tiện ích.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://dantri.com.vn/rss/bat-dong-san.rss",
+        "publisher_host": "dantri.com.vn",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-43190b53f0a01fd4c961",
+      "title": "An Phước Riverside Cần Giuộc: Sức hút bất động sản đô thị ven sông phía Nam TP.HCM",
+      "url": "https://thanhnien.vn/an-phuoc-riverside-can-giuoc-suc-hut-bat-dong-san-do-thi-ven-song-phia-nam-tphcm-185261027193216673.htm",
+      "category": "market",
+      "module_ids": [
+        "market"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-10-28T01:00:00+00:00",
+      "source_id": "thanhnien-real-estate",
+      "region_ids": [
+        "hcmc"
+      ],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "Sở hữu quy mô 31,1 ha, khoảng 1,4 km cảnh quan ven sông và vị trí liền kề các khu đô thị lớn, An Phước Riverside Cần Giuộc tạo dấu ấn với định hướng phát triển không gian sống xanh, kết hợp tiện ích hiện đại giữa vùng đô thị đang chuyển mình ở phía Nam TP.HCM.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://thanhnien.vn/rss/kinh-te/dia-oc.rss",
+        "publisher_host": "thanhnien.vn",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-85de013db9839671fb7b",
+      "title": "Thu hồi dự án bỏ hoang sau 60 tháng: Hết thời \"găm đất\" chờ lên giá?",
+      "url": "https://dantri.com.vn/bat-dong-san/thu-hoi-du-an-bo-hoang-sau-60-thang-het-thoi-gam-dat-cho-len-gia-20261026111651317.htm",
+      "category": "market",
+      "module_ids": [
+        "market"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-10-28T00:30:00+00:00",
+      "source_id": "dantri-real-estate",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [
+        "supply",
+        "legal"
+      ],
+      "importance": 2,
+      "summary": "(Dân trí) - Những khu đất nằm im nhiều năm có thể được đưa trở lại thị trường nếu chính sách vừa tạo sức ép với chủ đầu tư chậm triển khai, vừa tháo gỡ các vướng mắc pháp lý, qua đó tăng nguồn cung nhà ở.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://dantri.com.vn/rss/bat-dong-san.rss",
+        "publisher_host": "dantri.com.vn",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-20f5993f5f52e9884a3f",
+      "title": "Người dân sống giữa bụi mù trên tuyến đường chưa đầy 3km ở Hà Nội",
+      "url": "https://dantri.com.vn/thoi-su/nguoi-dan-song-giua-bui-mu-tren-tuyen-duong-chua-day-3km-o-ha-noi-20261027214707482.htm",
+      "category": "infrastructure",
+      "module_ids": [
+        "infrastructure"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-10-27T23:57:29+00:00",
+      "source_id": "dantri-current-affairs",
+      "region_ids": [
+        "ha-noi"
+      ],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "(Dân trí) - Xe tải nối đuôi nhau trên đường Hoàng Tăng Bí (Hà Nội), cuốn bụi đất mù mịt. Bụi bặm, ùn tắc bủa vây, đảo lộn sinh hoạt của người dân hai bên đường.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://dantri.com.vn/rss/thoi-su.rss",
+        "publisher_host": "dantri.com.vn",
+        "publication_date_from_feed": true
+      }
+    },
     {
       "id": "article-market-rss-8a1446577a9c686bd877",
       "title": "Giá vàng đồng loạt tăng",
@@ -25,6 +241,33 @@
       "source_verification": {
         "method": "official-rss",
         "feed_url": "https://dantri.com.vn/rss/kinh-doanh.rss",
+        "publisher_host": "dantri.com.vn",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-1e134ba256487888ae24",
+      "title": "Hơn 900 hộ dân phố cổ Hà Nội dự kiến di dời, được ưu tiên mua nhà ở xã hội",
+      "url": "https://dantri.com.vn/thoi-su/hon-900-ho-dan-pho-co-ha-noi-du-kien-di-doi-duoc-uu-tien-mua-nha-o-xa-hoi-20261028062831511.htm",
+      "category": "market",
+      "module_ids": [
+        "market"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-10-27T23:34:42+00:00",
+      "source_id": "dantri-current-affairs",
+      "region_ids": [
+        "ha-noi"
+      ],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "(Dân trí) - 902 hộ với 3.621 nhân khẩu ở phố cổ Hà Nội đang sinh sống trong điều kiện chật chội, thành phố dự kiến cho các hộ này được mua, thuê mua nhà ở xã hội không qua bốc thăm.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://dantri.com.vn/rss/thoi-su.rss",
         "publisher_host": "dantri.com.vn",
         "publication_date_from_feed": true
       }

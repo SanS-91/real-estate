@@ -1,29 +1,20 @@
 {
   "schema_version": 1,
-  "checked_at": "2026-10-28T00:51:38.469598+00:00",
+  "checked_at": "2026-10-28T02:51:49.257114+00:00",
   "feeds_configured": 16,
   "feeds_fetched": 16,
-  "accepted_new": 8,
+  "accepted_new": 9,
   "production_written": true,
-  "article_total": 1055,
+  "article_total": 1064,
   "published_by_module": {
-    "market": 6,
+    "market": 5,
     "legal": 0,
-    "infrastructure": 0,
-    "macro": 2
+    "infrastructure": 3,
+    "macro": 1
   },
   "feed_status": [
     {
       "source_id": "vnexpress-real-estate",
-      "status": "parsed",
-      "feed_items": 50,
-      "new": 2,
-      "skipped": 48,
-      "duplicates": 48,
-      "filtered": 0
-    },
-    {
-      "source_id": "thanhnien-real-estate",
       "status": "parsed",
       "feed_items": 50,
       "new": 0,
@@ -32,7 +23,7 @@
       "filtered": 0
     },
     {
-      "source_id": "dantri-real-estate",
+      "source_id": "thanhnien-real-estate",
       "status": "parsed",
       "feed_items": 50,
       "new": 1,
@@ -41,12 +32,21 @@
       "filtered": 0
     },
     {
+      "source_id": "dantri-real-estate",
+      "status": "parsed",
+      "feed_items": 50,
+      "new": 3,
+      "skipped": 47,
+      "duplicates": 47,
+      "filtered": 0
+    },
+    {
       "source_id": "vnexpress-economy",
       "status": "parsed",
       "feed_items": 50,
-      "new": 1,
-      "skipped": 49,
-      "duplicates": 4,
+      "new": 0,
+      "skipped": 50,
+      "duplicates": 5,
       "filtered": 45
     },
     {
@@ -98,19 +98,19 @@
       "source_id": "dantri-business",
       "status": "parsed",
       "feed_items": 50,
-      "new": 2,
-      "skipped": 48,
-      "duplicates": 3,
+      "new": 0,
+      "skipped": 50,
+      "duplicates": 5,
       "filtered": 45
     },
     {
       "source_id": "dantri-current-affairs",
       "status": "parsed",
       "feed_items": 50,
-      "new": 1,
-      "skipped": 49,
-      "duplicates": 10,
-      "filtered": 39
+      "new": 2,
+      "skipped": 48,
+      "duplicates": 11,
+      "filtered": 37
     },
     {
       "source_id": "dantri-legal",
@@ -143,10 +143,10 @@
       "source_id": "thanhnien-policy",
       "status": "parsed",
       "feed_items": 50,
-      "new": 0,
-      "skipped": 50,
+      "new": 2,
+      "skipped": 48,
       "duplicates": 10,
-      "filtered": 40
+      "filtered": 38
     },
     {
       "source_id": "thanhnien-transport",
