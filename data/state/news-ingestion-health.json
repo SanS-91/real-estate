@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "checked_at": "2026-10-28T06:22:29.306395+00:00",
+  "checked_at": "2026-10-28T07:05:53.161052+00:00",
   "feeds_configured": 16,
   "feeds_fetched": 16,
   "accepted_new": 0,
@@ -46,8 +46,8 @@
       "feed_items": 50,
       "new": 0,
       "skipped": 50,
-      "duplicates": 6,
-      "filtered": 44
+      "duplicates": 5,
+      "filtered": 45
     },
     {
       "source_id": "vnexpress-current-affairs",
