@@ -1,8 +1,8 @@
 {
   "schema_version": 1,
   "build_id": "phase8b2-project-peer-expansion-20261028",
-  "generated_at": "2026-10-28T17:02:00+07:00",
-  "record_count": 63,
+  "generated_at": "2026-10-28T17:30:00+07:00",
+  "record_count": 64,
   "data": [
     {
       "id": "demo-official",
@@ -759,6 +759,18 @@
       "source_priority": 5,
       "active": true,
       "notes": "Not namlongvn.com official corporate domain; no official sale policy or financial cash flow status inferred. Statements must be verified with developer price/term documents."
+    },
+    {
+      "id": "hpr-izumi-broker",
+      "name": "HPR Bất động sản — kênh phân phối Izumi",
+      "source_type": "commercial-third-party",
+      "base_url": "https://batdongsanhpr.com/",
+      "language": "vi",
+      "collection_method": "curated-external-dealer-review",
+      "fetch_frequency": "daily-source-change-watch",
+      "source_priority": 4,
+      "active": true,
+      "notes": "Third-party broker website. Claimed quotations from DNWF's Oct 2026 price list and policy TB153 are NOT primary-source-verified official commercial terms. Historical TB143 must not be used for current net price or PV."
     }
   ]
 }
