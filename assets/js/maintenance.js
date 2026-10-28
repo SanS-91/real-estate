@@ -291,7 +291,8 @@
             <div><dt>Workflow</dt><dd>${esc(c.statuses[workflow] || workflow)}</dd></div>
             <div><dt>Source mode</dt><dd>${esc(access)}</dd></div>
             <div><dt>Candidate backlog</dt><dd>${esc(module.candidate_backlog || 0)}</dd></div>
-            <div><dt>Last success</dt><dd>${esc(lastSuccess)}</dd></div>
+            <div><dt>${esc(vi ? 'Kiểm tra thành công' : 'Last successful check')}</dt><dd>${esc(lastSuccess)}</dd></div>
+             <div><dt>${esc(vi ? 'Dữ liệu xuất bản' : 'Last data publication')}</dt><dd>${esc(formatDateTime(module.last_production_at))}</dd></div>
           </dl>
           ${detail}
         </article>`;
