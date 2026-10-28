@@ -18,7 +18,9 @@ for row in sorted(rows,key=lambda x:(x['project_id'],x['observation_date'])):
     latest[row['project_id']]=row
 baseline={x['project_id']:x for x in rows if x['observation_date']=='2026-10-08'}
 assert len(baseline)==12
-assert set(latest) == {x['id'] for x in projects} - {'lumiere-riverside'}
+assert set(latest) == set(baseline), 'Legacy 12-project portal dataset must not grow through invented snapshots'
+assert set(latest) <= {x['id'] for x in projects}
+assert all(pid not in latest for pid in ('aqua-city','springville','elyse-island','kita-airport-city','nam-long-ii-central-lake')), 'New registry projects must not inherit invented portal history'
 assert 'lumiere-riverside' in {x['id'] for x in projects}  # Newly added project needs no fabricated legacy portal snapshot.
 assert all(x['market_layer']=='listing-asking' for x in rows)
 assert all(x['source_id']=='batdongsan-com-vn' for x in rows)
