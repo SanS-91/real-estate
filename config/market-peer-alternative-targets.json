@@ -64,6 +64,26 @@
       "allowed_host": "www.namlongvn.com",
       "watch_scope": "official-izumi-canaria-sales-launch-and-possible-policy-change",
       "price_metric_allowed": false
+    },
+    {
+      "id": "izumi-dealer-reported-price-watch",
+      "project_id": "izumi-city",
+      "source_id": "hpr-izumi-broker",
+      "source_role": "secondary-brokerage",
+      "url": "https://batdongsanhpr.com/izumi-city-gia-chinh-sach-phap-ly/",
+      "allowed_host": "batdongsanhpr.com",
+      "watch_scope": "Izumi Canaria quoted zone prices and TB153 supersession; human-source-document-review-only",
+      "price_metric_allowed": false
+    },
+    {
+      "id": "izumi-dealer-reported-policy-watch",
+      "project_id": "izumi-city",
+      "source_id": "hpr-izumi-broker",
+      "source_role": "secondary-brokerage",
+      "url": "https://batdongsanhpr.com/chinh-sach-ban-hang-izumi-canaria-tb143-den-31-12-2026/",
+      "allowed_host": "batdongsanhpr.com",
+      "watch_scope": "TB143/TB153 policy update alert; never promote without signed original",
+      "price_metric_allowed": false
     }
   ]
 }
