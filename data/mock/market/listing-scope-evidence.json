@@ -1,8 +1,8 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-10-09",
-  "methodology": "Category-specific 2026-10-09 source evidence from Batdongsan.com.vn. Scope-only figures are not the price of an entire mixed-use development. Keeping original snapshots unchanged (no invented 2nd dates) and publication caveats explicit.",
-  "record_count": 4,
+  "generated_at": "2026-10-28",
+  "methodology": "Curated category-specific portal review records (9 and 28 Oct 2026) with explicit page, price scope and review date. Not project ASP, transaction price or automatically refreshed history; retain each actual source observation date.",
+  "record_count": 5,
   "data": [
     {
       "id": "scope-celesta-gold-apartment-faq-2026-10-09",
@@ -87,6 +87,29 @@
         "last_listing": "Cập nhật tin đăng gần đây nhất | 04-10-2026, 19:57"
       },
       "methodology_note": "Official portal apartment-only category; excludes villas, landed and other residential units. The main mixed-residential historical series remains unpriced. 1Y rate applies to apartments and must not replace the mixed-project trend."
+    },
+    {
+      "id": "scope-aqua-city-landed-2026-10-28",
+      "project_id": "aqua-city",
+      "asset_type": "villa-townhouse",
+      "project_asset_type": "mixed-residential",
+      "price_scope": "landed-only",
+      "source_id": "batdongsan-com-vn",
+      "source_url": "https://batdongsan.com.vn/ban-nha-biet-thu-lien-ke-aqua-city",
+      "review_date": "2026-10-28",
+      "latest_listing_date": "2026-10-25",
+      "asking_price_low_vnd_per_m2": 45300000,
+      "asking_price_high_vnd_per_m2": 75200000,
+      "asking_price_change_1y_pct": -0.049,
+      "coverage_status": "segment-only-not-project-aggregate",
+      "evidence": {
+        "price": "Giá bán nhà biệt thự, liền kề Aqua City | 45.3 - 75,2 tr/m²",
+        "price_range_basis": "Trang thông tin bán nhà biệt thự, liền kề Aqua City; không phải toàn bộ dự án",
+        "portal_ad_count_at_review": 59,
+        "trend": "4,9% Giá bán đã giảm trong 1 năm qua",
+        "last_listing": "Cập nhật tin đăng gần đây nhất | 25-10-2026, 23:28"
+      },
+      "methodology_note": "Source-indexed Batdongsan.com.vn category-specific villa/townhouse asking-price range as reviewed 28 Oct 2026. 59 advertisements displayed in this category at review time. Not Novaland's developer price, not a transaction average, not the price of Aqua City's shophouses or total mixed product portfolio. The source-reported -4.9% 1Y change is not computed from repository snapshots. Source listing recency (25 Oct) does not date the aggregate range. If portal access is blocked later, retain this dated snapshot without implying refresh."
     }
   ]
 }
