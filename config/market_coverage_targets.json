@@ -2,8 +2,8 @@
   "schema_version": 1,
   "mode": "market-coverage-qa-v1",
   "minimums": {
-    "projects": 15,
-    "developers": 8,
+    "projects": 18,
+    "developers": 11,
     "first_party_project_share": 1,
     "regions_with_projects": 4,
     "segments_with_projects": 3
@@ -13,6 +13,6 @@
     "developer_claims": "label-first-party",
     "research_benchmarks": "keep-separate-from-project-claims",
     "synthetic_history": false,
-    "reviewed_project_baseline": "15-source-backed-projects-as-of-2026-10-28"
+    "reviewed_project_baseline": "18-source-backed-projects-as-of-2026-10-28"
   }
 }
