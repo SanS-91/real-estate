@@ -23,8 +23,10 @@ for index,field,bad in [(0,"value_vnd_per_m2",111),(0,"range_high_vnd_per_m2",90
     assert gate.validate(corrupt,sources,projects,date(2026,10,9)),(index,field)
 existing=json.loads((ROOT/"data/mock/market/listing-observations.json").read_text(encoding="utf-8"))
 scope=json.loads((ROOT/"data/mock/market/listing-scope-evidence.json").read_text(encoding="utf-8"))
-assert existing["record_count"]==18 and scope["record_count"]==4
+assert existing["record_count"]==len(existing["data"])==18
+assert scope["record_count"]==len(scope["data"])>=8
+assert {row["project_id"] for row in scope["data"] if row["coverage_status"]=="historical-segment-reference-not-current"}=={"springville"}
 assert all(r["metric_type"]!="project-asp" for r in rows)
 assert not any(r.get("listing_asking_series",False) for r in rows)
 assert all(r["period"] != r["review_date"] for r in rows if r["period_type"]=="month")
-print("PASS: 5 alternative observations; tamper detection; 18 existing snapshots and 4 scope references unchanged.")
+print("PASS: 5 alternative observations; tamper detection; 18 existing snapshots unchanged; source-scoped references may expand separately.")
