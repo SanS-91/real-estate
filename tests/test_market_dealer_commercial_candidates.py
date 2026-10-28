@@ -16,7 +16,12 @@ prices="""<html><body><h1>Izumi Canaria tháng 10/2026</h1><table>
 policy="""<html><body><h1>Izumi Canaria TB153</h1><p>Cập nhật 27/10/2026:
 Thông báo TB153 ngày 02/10/2026 đã thay hoàn toàn TB143, áp dụng 05/10 tới 31/12/2026.</p></body></html>"""
 def fetch(url):
-    return SimpleNamespace(status_code=200,url=url,text=policy if url==m.POLICY_URL else prices)
+    content=policy if url==m.POLICY_URL else prices
+    # Simulate third-party HTML lacking charset header: requests.text would
+    # decode UTF-8 as ISO-8859-1 (mojibake), hiding Vietnamese price rows.
+    raw=content.encode("utf-8")
+    return SimpleNamespace(status_code=200,url=url,content=raw,
+                           text=raw.decode("latin-1"))
 stamp=datetime(2026,10,28,12,0,tzinfo=timezone.utc)
 out=m.build(stamp,fetch)
 assert out["completeness"]=="reviewable-full-table"
