@@ -82,6 +82,7 @@
     getSources: () => loadJSON('core/sources.json'),
     getProjects: () => loadJSON('market/projects.json'),
     getDeveloperProjectEvidence: () => loadJSON('market/developer-project-evidence.json'),
+    getProductComparables: () => loadDirectJSON('./data/processed/market/product-comparables.json', 'source-dated product comparables'),
     getProjectPhases: () => loadJSON('market/project-phases.json'),
     getMarketObservations: () => loadJSON('market/observations.json'),
     getListingObservations: () => loadJSON('market/listing-observations.json'),
