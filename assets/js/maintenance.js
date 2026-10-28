@@ -21,7 +21,7 @@
         derived: 'Derived',
         'derived-runtime': 'Derived · runtime'
       },
-      labels: { datasets: 'Datasets', healthy: 'Healthy', due: 'Due / Review', stale: 'Stale' },
+      labels: { datasets: 'Datasets', healthy: 'Healthy', due: 'Review / Degraded', stale: 'Stale' },
       latestPeriod: 'Latest period', records: 'Records', lastUpdated: 'Last updated', reviewBy: 'Review by', mode: 'Mode', cadenceLabel: 'Cadence',
       noAttention: 'No dataset currently needs maintenance review.',
       noAttentionNote: 'All source datasets are within their configured freshness windows. Derived Home and Search follow the health of their dependencies.',
@@ -51,7 +51,7 @@
         derived: 'Dẫn xuất',
         'derived-runtime': 'Dẫn xuất · runtime'
       },
-      labels: { datasets: 'Bộ dữ liệu', healthy: 'Tốt', due: 'Đến hạn / Cần xem', stale: 'Quá hạn' },
+      labels: { datasets: 'Bộ dữ liệu', healthy: 'Tốt', due: 'Cần xem / Suy giảm', stale: 'Quá hạn' },
       latestPeriod: 'Kỳ mới nhất', records: 'Bản ghi', lastUpdated: 'Cập nhật cuối', reviewBy: 'Rà soát trước', mode: 'Cách cập nhật', cadenceLabel: 'Tần suất',
       noAttention: 'Hiện không có bộ dữ liệu nào cần rà soát bảo trì.',
       noAttentionNote: 'Tất cả dữ liệu nguồn đang nằm trong ngưỡng freshness đã cấu hình. Trang chủ và Tìm kiếm kế thừa trạng thái từ các dữ liệu nguồn.',
@@ -154,7 +154,7 @@
     };
   }
 
-  async function buildModel() {
+  async function buildLegacyModel() {
     const matrix = await fetchJSON('config/update_matrix.json');
     const now = new Date();
     const sourceEntries = matrix.datasets.filter(entry => entry.data_path);
@@ -183,6 +183,34 @@
     return { matrix, now, rows, counts, overall };
   }
 
+  // The site and Home now use the same published canonical health snapshot.
+  // Keep the legacy local calculator only as an explicitly marked fallback.
+  async function buildModel() {
+    try {
+      const payload = await DataStore.getDataHealth();
+      if (payload?.schema_version !== 1 || !Array.isArray(payload.datasets)
+          || !Array.isArray(payload.modules) || !payload.generated_at) {
+        throw new Error('Invalid canonical data-health snapshot');
+      }
+      const rows = payload.datasets.map(entry => ({
+        ...entry,
+        latest_observation_period: entry.latest_source_period || null,
+        last_updated_at: entry.last_data_change_at || entry.last_production_at || null,
+        freshness: entry.source_freshness === 'release-missing' ? 'unknown' : entry.freshness,
+        review_by: null
+      }));
+      rows.sort((a, b) => MODULE_ORDER.indexOf(a.module) - MODULE_ORDER.indexOf(b.module));
+      const counts = { healthy: 0, due: 0, review: 0, degraded: 0, stale: 0, running: 0 };
+      rows.forEach(row => { counts[row.status] = (counts[row.status] || 0) + 1; });
+      return { matrix: null, now: new Date(), rows, counts,
+        overall: payload.overall_status, canonical: true, generated_at: payload.generated_at };
+    } catch (error) {
+      console.warn('[maintenance] canonical health unavailable; using local fallback', error);
+      const legacy = await buildLegacyModel();
+      return { ...legacy, canonical: false };
+    }
+  }
+
   function statusBadge(status, freshness) {
     const c = copy();
     const statusText = c.statuses[status] || status;
@@ -196,7 +224,7 @@
 
   function renderSummary(model) {
     const c = copy();
-    const dueCount = (model.counts.due || 0) + (model.counts.review || 0);
+    const dueCount = (model.counts.due || 0) + (model.counts.review || 0) + (model.counts.degraded || 0) + (model.counts.running || 0);
     document.querySelector('[data-maintenance-summary]').innerHTML = [
       summaryCard(c.labels.datasets, model.rows.length, 'neutral', language() === 'vi' ? 'đang theo dõi' : 'tracked'),
       summaryCard(c.labels.healthy, model.counts.healthy || 0, 'healthy', language() === 'vi' ? 'trong ngưỡng cập nhật' : 'within freshness window'),
@@ -208,7 +236,7 @@
   function renderAttention(model) {
     const c = copy();
     const node = document.querySelector('[data-maintenance-attention]');
-    const attention = model.rows.filter(row => ['due', 'review', 'stale'].includes(row.status));
+    const attention = model.rows.filter(row => ['due', 'review', 'degraded', 'stale', 'running'].includes(row.status));
     if (!attention.length) {
       node.innerHTML = `<div class="maintenance-clear"><span class="maintenance-clear__icon">✓</span><div><strong>${esc(c.noAttention)}</strong><p>${esc(c.noAttentionNote)}</p></div></div>`;
       return;
@@ -225,7 +253,9 @@
   function renderTable(model) {
     const c = copy();
     const rows = model.rows.map(row => {
-      const reviewNote = row.review_by ? `${c.reviewBy} ${formatDateTime(row.review_by)}` : (row.freshness === 'derived' ? (language() === 'vi' ? 'Theo trạng thái dữ liệu nguồn' : 'Follows source datasets') : '');
+      const reviewNote = row.source_freshness === 'release-missing'
+        ? (language() === 'vi' ? 'Thiếu kỳ nguồn cần xác minh: ' : 'Missing verified source period: ') + (row.release_expected_period || '—')
+        : (row.review_by ? `${c.reviewBy} ${formatDateTime(row.review_by)}` : (row.freshness === 'derived' ? (language() === 'vi' ? 'Theo trạng thái dữ liệu nguồn' : 'Follows source datasets') : ''));
       return `<tr>
         <td data-label-vi="Module" data-label-en="Module"><span class="maintenance-module">${esc(c.modules[row.module] || row.module)}</span></td>
         <td data-label-vi="Bộ dữ liệu" data-label-en="Dataset"><strong class="maintenance-dataset-name">${esc(row.label)}</strong><span class="table-subtext">${esc(c.modes[row.update_mode] || row.update_mode)}</span></td>
@@ -631,15 +661,15 @@
     lastModel = model;
     const c = copy();
     const legend = document.querySelector('[data-maintenance-legend]');
-    if (legend) legend.innerHTML = `<span class="maintenance-dot is-healthy"></span> ${esc(c.statuses.healthy)} <span class="maintenance-dot is-due"></span> ${esc(c.statuses.due)} <span class="maintenance-dot is-stale"></span> ${esc(c.statuses.stale)}`;
+    if (legend) legend.innerHTML = `<span class="maintenance-dot is-healthy"></span> ${esc(c.statuses.healthy)} <span class="maintenance-dot is-due"></span> ${esc(c.statuses.review)} / ${esc(c.statuses.degraded)} <span class="maintenance-dot is-stale"></span> ${esc(c.statuses.stale)}`;
     renderSummary(model);
     renderAttention(model);
     renderTable(model);
     renderRules();
     const updated = document.querySelector('[data-maintenance-updated]');
-    if (updated) updated.textContent = `${c.generated} · ${model.rows.length} ${language() === 'vi' ? 'bộ dữ liệu' : 'datasets'}`;
+    if (updated) updated.textContent = `${model.canonical ? (language() === 'vi' ? 'Báo cáo trạng thái thống nhất' : 'Unified health snapshot') : c.generated} · ${model.rows.length} ${language() === 'vi' ? 'bộ dữ liệu' : 'datasets'}`;
     const asof = document.querySelector('[data-maintenance-asof]');
-    if (asof) asof.textContent = `${language() === 'vi' ? 'Tại' : 'As of'} ${formatDateTime(model.now)}`;
+    if (asof) asof.textContent = `${language() === 'vi' ? 'Báo cáo lúc' : 'Snapshot at'} ${formatDateTime(model.generated_at || model.now)}`;
   }
 
   function renderError(error) {
