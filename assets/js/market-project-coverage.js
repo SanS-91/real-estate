@@ -16,6 +16,7 @@
         x.coverage_status==='full' && priced(x.asking_price_low_vnd_per_m2) &&
         priced(x.asking_price_high_vnd_per_m2)), 'observation_date');
       const scoped = latest(scopes.filter(x=>x.project_id===project.id &&
+        x.coverage_status !== 'historical-segment-reference-not-current' &&
         priced(x.asking_price_low_vnd_per_m2) &&
         priced(x.asking_price_high_vnd_per_m2)), 'review_date');
       const popular = latest(monthly.filter(x=>x.project_id===project.id &&
@@ -32,6 +33,7 @@
         asp_row:asp, phase_count:phaseRows.length,
         product:full?.asset_type || (scoped?.price_scope === 'landed-only' ? 'landed' :
           scoped?.price_scope === 'apartment-only' ? 'apartment' :
+          scoped?.price_scope === 'landlot-only' ? 'landlot' :
           scoped?.price_scope === 'publisher-faq-indicative' ? 'indicative' : popular?.asset_type || null),
         as_of:full?.source_data_as_of || full?.observation_date ||
           scoped?.review_date || popular?.period || null
