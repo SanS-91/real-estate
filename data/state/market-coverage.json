@@ -1,30 +1,31 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-10-09T03:21:16.090071+00:00",
+  "generated_at": "2026-10-28T08:26:00.238333+00:00",
   "mode": "market-coverage-qa-v1",
   "status": "pass",
   "counts": {
-    "projects": 12,
+    "projects": 15,
     "developers": 9,
     "observations": 26
   },
   "first_party_project_share": 1.0,
   "by_region": {
-    "dong-nai": 1,
-    "hcmc": 10,
+    "can-tho": 1,
+    "dong-nai": 2,
+    "hcmc": 11,
     "long-an": 1
   },
   "by_segment": {
-    "apartment": 10,
-    "landed": 7,
-    "township": 6
+    "apartment": 13,
+    "landed": 9,
+    "township": 8
   },
   "by_developer": {
-    "gamuda-land": 2,
+    "gamuda-land": 3,
     "keppel": 1,
     "khang-dien": 1,
-    "masterise": 1,
-    "nam-long": 4,
+    "masterise": 2,
+    "nam-long": 5,
     "nomura-real-estate-vietnam": 1,
     "phu-long": 2,
     "sonkim-land": 1,
