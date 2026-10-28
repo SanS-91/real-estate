@@ -445,6 +445,36 @@
     }
   }
 
+  async function renderIzumiCommercialReview() {
+    const node=document.querySelector('[data-izumi-commercial-review]');
+    if (!node) return;
+    const vi=language()!=='en';
+    try {
+      const payload=await fetchJSON('data/state/market-dealer-commercial-candidates.json');
+      if (payload.schema_version!==1 || payload.source_type!=='third-party-broker-candidate-only' ||
+          payload.net_price_pv_published!==false || !Array.isArray(payload.price_candidates))
+        throw new Error('Invalid dealer candidate state');
+      const accessible=payload.price_page_status==='fetched' && payload.policy_page_status==='fetched';
+      const okPrice=payload.completeness==='reviewable-full-table';
+      const valid=payload.price_candidates;
+      node.innerHTML=`<div class="policy-readiness-summary">
+        <span>${vi ? 'Đọc nguồn lúc' : 'Checked'}: ${esc(formatDateTime(payload.checked_at))}</span>
+        <strong>${vi ? 'Nhận diện' : 'Recognized'} ${esc(String(payload.price_table_records_recognized))}/4 ${vi?'mức giá phân khu':'zone asking prices'}</strong>
+        <small>${vi ? 'Trạng thái trang giá: ' : 'Price source: '}${esc(payload.price_page_status)} · ${vi ? 'trang chính sách: ' : 'Policy page: '}${esc(payload.policy_page_status)}</small>
+      </div>
+      ${okPrice ? '<p class="muted-text">Bốn dòng giá nguồn phân phối đã được đọc; không phải bảng giá CĐT hoặc giá bán được xác minh.</p>'
+        : '<div class="state-box">Nguồn không đọc đủ bảng giá theo phân khu; cần rà soát thủ công, không nội suy.</div>'}
+      <p class="muted-text">${payload.policy_candidate?.supersession_detected
+        ? 'Nguồn phân phối có đề cập TB153 thay TB143; phải xin thông báo ký gốc để xác nhận điều khoản.'
+        : 'Chưa tự xác nhận được thông báo thay chính sách TB143/TB153 từ trang nguồn.'}
+      ${accessible ? '' : (vi ? ' Một hoặc nhiều trang chưa truy cập được.' : ' One or more sources could not be read.')}</p>
+      <p class="research-disclaimer">Không có giá được xuất bản tự động vào benchmark chính thức hoặc FS; Net Price/PV vẫn chưa đủ dữ liệu.</p>`;
+    } catch(error) {
+      console.warn('[maintenance] dealer candidate feed unavailable',error);
+      node.innerHTML='<div class="state-box">Chưa có trạng thái tự thu thập bảng giá nguồn phân phối; không thể kết luận có giá mới.</div>';
+    }
+  }
+
   async function renderPeerAlternativeWatch() {
     const node = document.querySelector('[data-peer-alternative-watch]');
     if (!node) return;
@@ -783,6 +813,7 @@
       await renderMarketSourceHealth();
       await renderPeerPriceWatch();
       await renderPeerAlternativeWatch();
+      await renderIzumiCommercialReview();
       await renderActiveListingCoverage();
       await renderOfficialRegistryWatch();
       await renderNewsAutomationHealth();
@@ -796,6 +827,7 @@
       renderMarketSourceHealth();
       renderPeerPriceWatch();
       renderPeerAlternativeWatch();
+      renderIzumiCommercialReview();
       renderActiveListingCoverage();
       renderOfficialRegistryWatch();
       renderNewsAutomationHealth();
