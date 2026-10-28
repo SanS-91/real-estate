@@ -153,11 +153,20 @@ def prod_info(entry,matrix_by_id,as_of):
     elif dt and age<=stale*1.25: freshness="due"
     elif dt: freshness="stale"
     observed=source_observation(entry,rows,as_of)
+    # Record-level promotion/update time is different from a repository JSON
+    # regeneration: a successful check must not masquerade as a new fact.
+    record_changes = [parse_dt(r.get("promoted_at") or r.get("updated_at") or r.get("created_at"))
+                      for r in rows if isinstance(r, dict)]
+    record_changes = [v for v in record_changes if v]
+    last_data_change = (max(record_changes).isoformat() if record_changes else
+                        stamp if rows else None)
     if entry.get("id") == "macro-m2-ytd":
         archive=load(ROOT/"data/processed/macro/historical-monetary-observations.json",{"data":[]})
         archives=archive.get("data",[]) if isinstance(archive,dict) else []
         observed.update(m2_release_observation(as_of,rows,archives))
-    return {"production_path":path,"record_count":len(rows),"last_production_at":stamp,"age_hours":age,"stale_after_hours":stale,"freshness":freshness,**observed}
+    return {"production_path":path,"record_count":len(rows),"last_production_at":stamp,
+            "last_data_change_at":last_data_change,
+            "age_hours":age,"stale_after_hours":stale,"freshness":freshness,**observed}
 
 def market_obs_backlog(candidate_path):
     cand=load(ROOT/candidate_path,{"data":[]}).get("data",[])
@@ -267,7 +276,8 @@ def main():
     for mod in ops["modules"]:
         rs=[x for x in rows if x["module"]==mod]
         worst=max(rs,key=lambda x:rank.get(x["status"],2))["status"] if rs else "review"
-        modules.append({"module":mod,"status":worst,"dataset_count":len(rs),"candidate_backlog":sum(x.get("candidate_backlog") or 0 for x in rs),"last_successful_run_at":max([x.get("last_successful_run_at") or "" for x in rs] or [""]) or None,"last_production_at":max([x.get("last_production_at") or "" for x in rs] or [""]) or None})
+        modules.append({"module":mod,"status":worst,"dataset_count":len(rs),"candidate_backlog":sum(x.get("candidate_backlog") or 0 for x in rs),"last_successful_run_at":max([x.get("last_successful_run_at") or "" for x in rs] or [""]) or None,"last_production_at":max([x.get("last_production_at") or "" for x in rs] or [""]) or None,
+                        "last_data_change_at":max([x.get("last_data_change_at") or "" for x in rs] or [""]) or None})
     overall=max(modules,key=lambda x:rank.get(x["status"],2))["status"] if modules else "review"
     out={"schema_version":1,"generated_at":as_of.isoformat(),"overall_status":overall,"modules":modules,"datasets":rows}
     dump(args.output,out)
