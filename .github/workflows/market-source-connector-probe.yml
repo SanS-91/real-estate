@@ -76,11 +76,11 @@ jobs:
             git fetch origin main
             git reset --hard origin/main
             python scripts/market_peer_price_watch.py
-            if git diff --quiet -- data/state/market-peer-price-watch.json; then
+            git add data/state/market-peer-price-watch.json
+            if git diff --cached --quiet -- data/state/market-peer-price-watch.json; then
               echo "No monitoring change."
               exit 0
             fi
-            git add data/state/market-peer-price-watch.json
             git commit -m "ops(market): refresh peer price evidence monitoring"
             if git push origin HEAD:main; then
               echo "Published source-access report; no price data mutated."
