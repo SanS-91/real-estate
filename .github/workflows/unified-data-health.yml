@@ -65,26 +65,32 @@ jobs:
           for x in r.get("modules",[]):
               print(f"| {x['module']} | {x['status']} | {x['dataset_count']} | {x['candidate_backlog']} | {x.get('last_successful_run_at') or '—'} |")
           PY
-      - name: Commit health snapshot
+      - name: Publish health snapshot from current main
+        # Each attempt regenerates the snapshot on the newest main commit.
+        # Never rebase a generated JSON commit: the same file may have
+        # changed since checkout, causing conflicts and stale health data.
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
-          if git diff --quiet -- data/state/data-health.json; then
-            echo "No health snapshot change."
-            exit 0
-          fi
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add data/state/data-health.json
-          git commit -m "ops: refresh unified data health"
-          # Other source collectors may have appended reviewed Market data while
-          # this health snapshot was running. Rebase the single health commit.
-          git restore --worktree -- .
-          for attempt in 1 2 3; do
+          for attempt in 1 2 3 4 5; do
             git fetch origin main
-            git rebase origin/main
-            if git push origin HEAD:main; then
+            git reset --hard origin/main
+            python scripts/build_data_health.py --output data/state/data-health.json > /tmp/data-health-build.log
+            if git diff --quiet -- data/state/data-health.json; then
+              echo "Health snapshot already matches current main."
               exit 0
             fi
+            git add data/state/data-health.json
+            git commit -m "ops: refresh unified data health"
+            if git push origin HEAD:main; then
+              echo "Published health snapshot on attempt $attempt."
+              exit 0
+            fi
+            echo "Concurrent repository update; recomputing from latest main (attempt $attempt)."
             sleep $((attempt * 2))
           done
-          echo "Failed to publish health after concurrent updates."
+          echo "Failed to publish health after five fresh rebuild attempts."
+          cat /tmp/data-health-build.log
           exit 1
