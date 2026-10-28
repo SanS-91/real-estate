@@ -1,0 +1,57 @@
+name: Market 8B - FS Sales Policy Evidence Readiness
+
+on:
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - 'data/mock/market/sales-policy-evidence.json'
+      - 'data/mock/core/sources.json'
+      - 'scripts/build_market_sales_policy_readiness.py'
+      - 'tests/test_market_sales_policy_readiness.py'
+      - '.github/workflows/market-sales-policy-readiness.yml'
+  schedule:
+    # 10:55 ICT every day. Do not turn source check into new commercial terms.
+    - cron: '55 3 * * *'
+
+permissions:
+  contents: write
+
+concurrency:
+  group: market-sales-policy-readiness
+  cancel-in-progress: false
+
+jobs:
+  verify-and-publish:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 12
+    steps:
+      - uses: actions/checkout@v7
+      - uses: actions/setup-python@v7
+        with:
+          python-version: '3.12'
+      - name: Verify source attribution and strict PV gating
+        run: python tests/test_market_sales_policy_readiness.py
+      - name: Publish source-readiness without automatic terms or prices
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          for attempt in 1 2 3 4 5; do
+            git fetch origin main
+            git reset --hard origin/main
+            python tests/test_market_sales_policy_readiness.py
+            python scripts/build_market_sales_policy_readiness.py
+            git add data/processed/market/sales-policy-readiness.json
+            if git diff --cached --quiet -- data/processed/market/sales-policy-readiness.json; then
+              echo "No new verified policy facts to publish."
+              exit 0
+            fi
+            git commit -m "ops(market): publish source-gated sales policy readiness"
+            if git push origin HEAD:main; then
+              echo "Published policy readiness; net price/PV withheld pending contracts."
+              exit 0
+            fi
+            echo "Concurrent change; rebuild readiness from new main."
+            sleep $((attempt * 2))
+          done
+          exit 1
