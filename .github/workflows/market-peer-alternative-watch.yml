@@ -1,0 +1,65 @@
+name: Market 8B - Alternative Peer Source Watch
+
+on:
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - 'config/market-peer-alternative-targets.json'
+      - 'scripts/market_peer_alternative_watch.py'
+      - 'tests/test_market_peer_alternative_watch.py'
+      - '.github/workflows/market-peer-alternative-watch.yml'
+  schedule:
+    # 09:25 ICT daily. Source availability and review queue only.
+    - cron: '25 2 * * *'
+
+permissions:
+  contents: write
+
+concurrency:
+  group: market-peer-alternative-watch
+  cancel-in-progress: false
+
+jobs:
+  monitor:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 12
+    steps:
+      - uses: actions/checkout@v7
+      - uses: actions/setup-python@v7
+        with:
+          python-version: '3.12'
+      - name: Install libraries
+        run: pip install -r requirements.txt
+      - name: Validate source identity and price non-promotion contract
+        run: python tests/test_market_peer_alternative_watch.py
+      - name: Publish alternative source status from latest main
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          for attempt in 1 2 3 4 5; do
+            git fetch origin main
+            git reset --hard origin/main
+            python scripts/market_peer_alternative_watch.py
+            git add data/state/market-peer-alternative-health.json
+            if git diff --cached --quiet -- data/state/market-peer-alternative-health.json; then
+              echo "Alternative source report already matches main."
+              exit 0
+            fi
+            git commit -m "ops(market): refresh alternative source access and change watch"
+            if git push origin HEAD:main; then
+              echo "Published read-only source watch, no market prices changed."
+              exit 0
+            fi
+            echo "Concurrent writer; rerun source checks against latest main."
+            sleep $((attempt * 2))
+          done
+          exit 1
+      - name: Upload reviewed source status
+        if: always()
+        uses: actions/upload-artifact@v7
+        with:
+          name: market-peer-alternative-source-watch
+          path: data/state/market-peer-alternative-health.json
+          retention-days: 14
+          if-no-files-found: ignore
