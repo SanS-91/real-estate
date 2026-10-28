@@ -1,8 +1,8 @@
 {
   "schema_version": 1,
-  "build_id": "phase8b-market-region-expansion-20261028",
-  "generated_at": "2026-10-28T15:15:00+07:00",
-  "record_count": 9,
+  "build_id": "phase8b2-project-peer-expansion-20261028",
+  "generated_at": "2026-10-28T15:18:00+07:00",
+  "record_count": 11,
   "data": [
     {
       "id": "nam-long",
@@ -176,6 +176,48 @@
       "summary": "Công ty thuộc Nomura Real Estate Group hoạt động tại Việt Nam và tham gia các dự án nhà ở, trong đó có Celesta Gold.",
       "official_url": "https://nomura-re-vn.com/",
       "primary_source_id": "nomura-real-estate-vietnam"
+    },
+    {
+      "id": "novaland",
+      "name": "Novaland",
+      "aliases": [
+        "NVL",
+        "NovaGroup"
+      ],
+      "region_ids": [
+        "dong-nai",
+        "hcmc"
+      ],
+      "segment_ids": [
+        "township",
+        "landed",
+        "apartment"
+      ],
+      "status": "active",
+      "summary": "Nhà phát triển Aqua City tại Đồng Nai; trạng thái pháp lý, mở bán, bàn giao và kế hoạch xây dựng cần được ghi theo ngày và theo thông báo chính thức.",
+      "official_url": "https://www.novaland.com.vn/",
+      "primary_source_id": "novaland-official"
+    },
+    {
+      "id": "kita-group",
+      "name": "KITA Group",
+      "aliases": [
+        "KITA Invest",
+        "KITA Airport City",
+        "Stella Mega City"
+      ],
+      "region_ids": [
+        "can-tho"
+      ],
+      "segment_ids": [
+        "township",
+        "landed",
+        "apartment"
+      ],
+      "status": "active",
+      "summary": "Đơn vị phát triển và giới thiệu KITA Airport City (tên trước đây Stella Mega City) tại Cần Thơ. Phân biệt pháp nhân dự án từng khu với thương hiệu khu đô thị.",
+      "official_url": "https://kita-group.com.vn/",
+      "primary_source_id": "kita-group-official"
     }
   ]
 }
