@@ -1,0 +1,30 @@
+{
+  "schema_version": 1,
+  "checked_at": "2026-10-28T10:25:11.362933+00:00",
+  "source_type": "third-party-broker-candidate-only",
+  "price_page_status": "fetched",
+  "policy_page_status": "fetched",
+  "source_page_http_statuses": {
+    "price": 200,
+    "policy": 200
+  },
+  "source_revision": "307bc31a134e2f50",
+  "price_table_records_recognized": 0,
+  "expected_price_groups": 4,
+  "completeness": "partial-or-unavailable",
+  "price_candidates": [],
+  "policy_candidate": {
+    "reported_notice_id": "TB153/2026/DNWF/TB",
+    "reported_supersedes": "TB143/2026/DNWF/TB",
+    "supersession_detected": true,
+    "source_url": "https://batdongsanhpr.com/chinh-sach-ban-hang-izumi-canaria-tb143-den-31-12-2026/",
+    "signed_document_verified": false,
+    "discount_terms_verified": false,
+    "status": "third-party-policy-alert-only"
+  },
+  "auto_promoted_prices": 0,
+  "approved_payment_schemes": 0,
+  "net_price_pv_published": false,
+  "needs_primary_document_review": true,
+  "notes": "Page accessibility and parsing success do not verify signed TB153, unit-specific price or discount eligibility. Never copy these candidates into approved FS data."
+}
