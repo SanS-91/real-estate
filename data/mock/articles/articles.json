@@ -1,9 +1,144 @@
 {
   "schema_version": 1,
-  "build_id": "market-news-rss-20261028T102637Z",
-  "generated_at": "2026-10-28T10:26:37.082831+00:00",
-  "record_count": 1090,
+  "build_id": "market-news-rss-20261028T125141Z",
+  "generated_at": "2026-10-28T12:51:41.574206+00:00",
+  "record_count": 1096,
   "data": [
+    {
+      "id": "article-market-rss-4a8e5577c1e931fd08de",
+      "title": "Đại biểu Quốc hội hiến kế gỡ điểm nghẽn trong cải tạo chung cư cũ",
+      "url": "https://dantri.com.vn/thoi-su/dai-bieu-quoc-hoi-hien-ke-go-diem-nghen-trong-cai-tao-chung-cu-cu-20261028173657867.htm",
+      "category": "market",
+      "module_ids": [
+        "market"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-10-28T10:59:35+00:00",
+      "source_id": "dantri-current-affairs",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "(Dân trí) - Đại biểu Nguyễn Ngọc Việt đề nghị công khai căn cứ lựa chọn và quyết định giao chủ đầu tư thực hiện cải tạo chung cư cũ, xác định trách nhiệm giám sát, xử lý khi nhà đầu tư không thực hiện cam kết.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://dantri.com.vn/rss/thoi-su.rss",
+        "publisher_host": "dantri.com.vn",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-0e7f3b1c80f4ef086983",
+      "title": "Đề nghị bảo vệ người mua nhà tại dự án vi phạm",
+      "url": "https://vnexpress.net/de-nghi-bao-ve-nguoi-mua-nha-tai-du-an-vi-pham-5137991.html",
+      "category": "market",
+      "module_ids": [
+        "market"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-10-28T10:36:42+00:00",
+      "source_id": "vnexpress-current-affairs",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "Từ những dự án liên quan Mường Thanh, đại biểu Trịnh Xuân An đề nghị bổ sung cơ chế bảo vệ người mua nhà, không để họ gánh chi phí khắc phục vi phạm của chủ đầu tư.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://vnexpress.net/rss/thoi-su.rss",
+        "publisher_host": "vnexpress.net",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-a795a84114ffcf6db28e",
+      "title": "Xe tải cháy trơ khung trên cao tốc TPHCM - Trung Lương",
+      "url": "https://dantri.com.vn/thoi-su/xe-tai-chay-tro-khung-tren-cao-toc-tphcm-trung-luong-20261028172613501.htm",
+      "category": "infrastructure",
+      "module_ids": [
+        "infrastructure"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-10-28T10:35:20+00:00",
+      "source_id": "dantri-current-affairs",
+      "region_ids": [
+        "hcmc"
+      ],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [
+        "infrastructure"
+      ],
+      "importance": 2,
+      "summary": "(Dân trí) - Đang lưu thông trên cao tốc TPHCM - Trung Lương hướng về miền Tây, xe tải bất ngờ bốc cháy dữ dội khi đến địa phận xã Bình Đức (Tây Ninh). Vụ việc khiến giao thông qua khu vực ùn ứ.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://dantri.com.vn/rss/thoi-su.rss",
+        "publisher_host": "dantri.com.vn",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-51de4ab12c9490420a20",
+      "title": "Hà Nội bố trí nhà ở xã hội cho 902 hộ dân phố cổ không cần bốc thăm",
+      "url": "https://dantri.com.vn/thoi-su/ha-noi-bo-tri-nha-o-xa-hoi-cho-902-ho-dan-pho-co-khong-can-boc-tham-20261028165837887.htm",
+      "category": "market",
+      "module_ids": [
+        "market"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-10-28T10:05:06+00:00",
+      "source_id": "dantri-current-affairs",
+      "region_ids": [
+        "ha-noi"
+      ],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "(Dân trí) - 902 hộ dân với 3.621 nhân khẩu thuộc nhóm đối tượng khó khăn về nhà ở tại khu vực phố cổ, phố cũ được Hà Nội cho mua, thuê mua nhà ở xã hội không qua bốc thăm.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://dantri.com.vn/rss/thoi-su.rss",
+        "publisher_host": "dantri.com.vn",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-b57db014e93f616b7e3e",
+      "title": "Xe tải bốc cháy, cao tốc TP HCM - Trung Lương ùn ứ hơn 10 km",
+      "url": "https://vnexpress.net/xe-tai-boc-chay-cao-toc-tp-hcm-trung-luong-un-u-hon-10-km-5137992.html",
+      "category": "infrastructure",
+      "module_ids": [
+        "infrastructure"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-10-28T09:54:24+00:00",
+      "source_id": "vnexpress-current-affairs",
+      "region_ids": [
+        "hcmc"
+      ],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [
+        "infrastructure"
+      ],
+      "importance": 2,
+      "summary": "Xe tải chạy trên cao tốc TP HCM - Trung Lương bốc cháy khiến hàng hóa cùng phương tiện bị thiêu rụi, tuyến đường ùn tắc kéo dài, chiều 28/10.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://vnexpress.net/rss/thoi-su.rss",
+        "publisher_host": "vnexpress.net",
+        "publication_date_from_feed": true
+      }
+    },
     {
       "id": "article-market-rss-a77191d6f4e8b40b9e50",
       "title": "Nhà đầu tư cam kết rót hơn 16 tỷ USD vào 12 dự án ở TP HCM",
@@ -30,6 +165,33 @@
         "method": "official-rss",
         "feed_url": "https://vnexpress.net/rss/kinh-doanh.rss",
         "publisher_host": "vnexpress.net",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-100ae779a94c6784b723",
+      "title": "Hà Nội chốt hoàn thành toàn bộ dự án tái thiết khu vực hồ Gươm năm 2029",
+      "url": "https://dantri.com.vn/thoi-su/ha-noi-chot-hoan-thanh-toan-bo-du-an-tai-thiet-khu-vuc-ho-guom-nam-2029-20261028161243545.htm",
+      "category": "market",
+      "module_ids": [
+        "market"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-10-28T09:12:00+00:00",
+      "source_id": "dantri-current-affairs",
+      "region_ids": [
+        "ha-noi"
+      ],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "(Dân trí) - HĐND TP Hà Nội quyết nghị hoàn thành toàn bộ dự án cải tạo, chỉnh trang, tái thiết, tái cấu trúc không gian khu vực hồ Hoàn Kiếm và vùng phụ cận trong năm 2029.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://dantri.com.vn/rss/thoi-su.rss",
+        "publisher_host": "dantri.com.vn",
         "publication_date_from_feed": true
       }
     },
