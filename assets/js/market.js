@@ -955,8 +955,11 @@
         <span class="table-subtext">${esc(row.status === 'historical-unknown-validity' ? 'Chính sách cũ, không có hiệu lực hiện hành được xác nhận' :
           row.status === 'official-milestone-only' ? 'Chỉ xác nhận sự kiện mở bán' : 'Chưa xác nhận áp dụng theo căn / thời điểm')}</span></td>
       <td data-label-vi="Điều khoản nguồn nêu">${esc(terms(row))}</td>
-      <td data-label-vi="Net Price / PV"><strong>Chưa đủ điều kiện</strong>
-        <span class="table-subtext">Thiếu giá và chính sách hợp đồng, lịch thu theo ngày; không nội suy</span></td>
+      <td data-label-vi="Net Price / PV"><strong>${esc(row.fs_comparison_ready && Number.isFinite(row.verified_net_selling_price_vnd)
+          ? 'Net: '+Formatters.number(row.verified_net_selling_price_vnd/1e9,{min:2,max:2})+' tỷ' : 'Chưa đủ điều kiện')}</strong>
+        <span class="table-subtext">${esc(row.fs_comparison_ready && Number.isFinite(row.customer_payment_pv_vnd)
+          ? 'PV dòng thanh toán khách hàng: '+Formatters.number(row.customer_payment_pv_vnd/1e9,{min:2,max:2})+' tỷ; không phải CF dự án'
+          : 'Thiếu giá và chính sách hợp đồng, lịch thu theo ngày; không nội suy')}</span></td>
       <td data-label-vi="Nguồn & ngày">${sourceRef(row.source_id,{sourceUrl:row.source_url,sourceDate:row.source_publication_date || row.review_date,methodology:row.methodology_note})}
         <span class="table-subtext">Rà soát ${esc(row.review_date)}</span></td>
       </tr>`).join('');
@@ -969,7 +972,7 @@
         <thead><tr><th>Dự án</th><th>Mức độ xác minh</th><th>Nội dung nguồn nêu</th><th>Net Price / PV</th><th>Nguồn</th></tr></thead>
         <tbody>${rows}</tbody></table></div>` :
         '<div class="state-box">Chưa có chính sách bán hàng được xác minh cho dự án này. Không suy diễn từ chương trình của dự án khác.</div>'}
-      <p class="research-disclaimer">Tỷ lệ 60/35/5 hoặc tài trợ ngân hàng không thay thế lịch thu tiền của chủ đầu tư. PV chỉ được xác định sau khi có giá thuần hợp đồng, thuế, ưu đãi và đủ 100% đợt thanh toán với ngày cụ thể; lãi suất chiết khấu phải được khai báo tường minh.</p>`;
+      <p class="research-disclaimer">Tỷ lệ 60/35/5 hoặc tài trợ ngân hàng không thay thế lịch thu tiền của chủ đầu tư. PV người mua chỉ được xác định sau khi có giá thuần hợp đồng, thuế, ưu đãi và đủ 100% đợt thanh toán với ngày cụ thể; lãi suất chiết khấu phải được khai báo tường minh. Khoản thu của chủ đầu tư và hỗ trợ ngân hàng cần mô hình CF riêng.</p>`;
   }
 
   function projectSalesPolicyHTML(project) {
