@@ -48,4 +48,41 @@ for target_id, project_id in (
 
 parser = (ROOT / "scripts/collectors/namlong_official.py").read_text(encoding="utf-8")
 assert '"nam-long-ii-central-lake"' in parser
+# All newly tracked comparables are first-party source-backed,
+# with sales figures explicitly absent rather than invented.
+expected={
+    "aqua-city":("dong-nai","novaland","novaland-official",10000000),
+    "kita-airport-city":("can-tho","kita-group","kita-group-official",1500000),
+    "elyse-island":("dong-nai","nam-long","nam-long-official",450000),
+}
+for pid,(region,developer,source,area) in expected.items():
+    row=by_project[pid]
+    assert row["region_ids"] == [region]
+    assert row["developer_ids"] == [developer]
+    assert row["primary_source_id"] == source
+    assert by_source[source]["source_type"] == "developer"
+    assert row["total_area_sqm"] == area
+    assert row["source_review_date"] == "2026-10-28"
+    assert row["planned_units"] is None
+    assert row["official_url"].startswith("https://")
+    assert all(key not in row for key in ("average_asp","sales_units","absorption_rate"))
+    assert any(t.get("project_id") == pid and t["collector"] == "metadata_only"
+               and t["enabled"] for t in targets)
+
+assert by_project["izumi-city"]["benchmark_peer_ids"] == [
+    "aqua-city","springville","elyse-island"
+]
+assert by_project["nam-long-ii-central-lake"]["benchmark_peer_ids"] == ["kita-airport-city"]
+assert set(by_project["izumi-city"]["benchmark_peer_ids"]) <= set(by_project)
+assert by_project["aqua-city"]["source_date"] == "2026-10-16"
+assert "31/10/2026" in by_project["aqua-city"]["summary"]
+assert by_project["kita-airport-city"]["total_area_note"]
+
+ui=(ROOT/"assets/js/market.js").read_text(encoding="utf-8")
+assert "function projectPeerReferencesHTML(project)" in ui
+assert "projectPeerReferencesHTML(project)" in ui
+assert "benchmark_peer_ids" in ui and "project-comparables" in ui
+assert "Giá chào bán không phải giá giao dịch" in ui
+assert len(projects) >= 18
+assert len(developers) >= 11
 print("PASS Phase 8B Can Tho and Dong Nai registry expansion with source watches")
