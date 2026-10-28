@@ -22,6 +22,7 @@ on:
       - 'scripts/listing_scope_evidence_gate.py'
       - 'tests/test_market_source_scope_coverage.py'
       - 'tests/test_listing_coverage_next.py'
+      - 'tests/test_phase5_5b_listing_coverage.py'
       - 'tests/test_market_secondary_listing_evidence.py'
       - '.github/workflows/market-source-scope-coverage.yml'
   workflow_dispatch:
