@@ -2,10 +2,19 @@ name: Market 8B - Source-Verified Product Benchmark
 
 on:
   workflow_dispatch:
+  workflow_run:
+    workflows:
+      - Market 4I.4 - Rever Verified Apartment Listing Discovery
+      - Market 4I.6 - Muaban Unexpired Apartment Listing Verification
+    types: [completed]
   push:
     branches: [main]
     paths:
       - 'data/mock/market/individual-product-evidence.json'
+      - 'data/mock/market/verified-unit-listings.json'
+      - 'data/mock/market/verified-muaban-unit-listings.json'
+      - 'data/state/market-rever-source-health.json'
+      - 'data/state/market-muaban-source-health.json'
       - 'data/mock/market/projects.json'
       - 'data/mock/core/sources.json'
       - 'scripts/build_product_comparables.py'
@@ -29,6 +38,7 @@ concurrency:
 
 jobs:
   validate-and-publish:
+    if: github.event_name != 'workflow_run' || (github.event.workflow_run.conclusion == 'success' && github.event.workflow_run.head_branch == 'main')
     runs-on: ubuntu-24.04
     timeout-minutes: 12
     steps:
