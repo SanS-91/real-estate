@@ -16,7 +16,7 @@ assert {'izumi-city','waterpoint','akari-city','mizuki-park','the-global-city','
 assert all('Illustrative' not in x.get('summary','') for x in projects['data'])
 assert all(x.get('primary_source_id') for x in projects['data'])
 assert all(x.get('official_url','').startswith('http') for x in projects['data'])
-assert devs['record_count']==9
+assert devs['record_count']==len(devs['data'])>=11
 assert 'ecopark' not in {x['id'] for x in devs['data']}
 assert all(x.get('primary_source_id') for x in devs['data'])
 assert obs['record_count']>=7
