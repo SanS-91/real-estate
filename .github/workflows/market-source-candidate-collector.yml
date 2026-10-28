@@ -100,18 +100,39 @@ jobs:
       - name: Promote only verified CBRE quarterly supply on main
         if: github.ref == 'refs/heads/main' && github.event_name != 'pull_request'
         run: python scripts/market_verified_metric_promotion.py --mode promote
-      - name: Commit only verified official news to main
+      - name: Publish verified market data with concurrent-write recovery
         if: github.ref == 'refs/heads/main' && github.event_name != 'pull_request'
         run: |
-          if git diff --quiet -- data/mock/articles/articles.json data/mock/market/observations.json; then
-            echo "No eligible verified news."
-            exit 0
-          fi
+          # Keep source evidence outside the working tree while taking the
+          # latest production state. Re-run the strict promotion gates after
+          # each rejected push; never rebase a stale generated JSON result.
+          mkdir -p /tmp/market-verified-candidates
+          cp data/candidate/market/articles.json /tmp/market-verified-candidates/articles.json
+          cp data/candidate/market/observations.json /tmp/market-verified-candidates/observations.json
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add data/mock/articles/articles.json data/mock/market/observations.json
-          git commit -m "data(market): append verified developer news and quarterly supply"
-          git push
+          for attempt in 1 2 3 4 5; do
+            git fetch origin main
+            git reset --hard origin/main
+            cp /tmp/market-verified-candidates/articles.json data/candidate/market/articles.json
+            cp /tmp/market-verified-candidates/observations.json data/candidate/market/observations.json
+            python scripts/market_verified_auto_promotion.py --mode promote > /tmp/market-news-promote.log
+            python scripts/market_verified_metric_promotion.py --mode promote > /tmp/market-metric-promote.log
+            if git diff --quiet -- data/mock/articles/articles.json data/mock/market/observations.json; then
+              echo "No new eligible verified news or quarterly metric on latest main."
+              exit 0
+            fi
+            git add data/mock/articles/articles.json data/mock/market/observations.json
+            git commit -m "data(market): append verified developer news and quarterly supply"
+            if git push origin HEAD:main; then
+              echo "Published verified market data on attempt $attempt."
+              exit 0
+            fi
+            echo "Concurrent update: retrying from newest main (attempt $attempt)."
+            sleep $((attempt * 2))
+          done
+          echo "Verified market publication unsuccessful after five fresh rebuild attempts."
+          exit 1
       - name: Upload candidates
         uses: actions/upload-artifact@v7
         with:
