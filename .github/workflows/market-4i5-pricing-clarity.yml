@@ -15,6 +15,9 @@ on:
     paths:
       - 'assets/js/market.js'
       - 'assets/js/charts.js'
+      - 'data/mock/market/projects.json'
+      - 'tests/test_market_project_price_coverage.cjs'
+      - 'tests/test_market_4i5_pricing_clarity.cjs'
       - '.github/workflows/market-4i5-pricing-clarity.yml'
   workflow_dispatch:
 
