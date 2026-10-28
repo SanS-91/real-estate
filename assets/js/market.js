@@ -918,7 +918,8 @@
         <td data-label-vi="Giá theo diện tích"><strong>${esc(benchmarkPriceUnit(row))}</strong>
           <span class="table-subtext">${esc(row.price_unit_label_vi)}</span></td>
         <td data-label-vi="Ngày đăng · tình trạng">${esc(row.source_listed_date)}
-          <span class="table-subtext">${esc(row.listing_status === 'expired-at-review' ? 'Tin đã hết hạn' : 'Chưa xác minh còn hiệu lực')}</span>
+          <span class="table-subtext">${esc(row.is_verified_live_offer ? 'Đã đối soát tin và nguồn gần đây' :
+          row.listing_status === 'expired-at-review' ? 'Tin đã hết hạn' : 'Chưa xác minh còn hiệu lực')}</span>
           ${sourceRef(row.source_id,{sourceDate:row.source_listed_date,sourceUrl:row.source_url,methodology:row.methodology_note})}</td>
         <td data-label-vi="Chính sách TT"><strong>Chưa xác minh</strong>
           <span class="table-subtext">${row.upfront_claim_vnd ? 'Người bán nêu trả trước ' + esc(benchmarkPriceTotal({price_vnd_per_unit:row.upfront_claim_vnd})) : 'Chưa có lịch thanh toán từ CĐT'}</span>
@@ -937,7 +938,7 @@
       <h2 class="section-title">Giá theo căn &amp; loại sản phẩm</h2></div>
       <a class="text-link" href="market.html?view=benchmark&region=${encodeURIComponent(project.region_ids?.[0] || '')}">So sánh sản phẩm</a></div>
       <div class="section-body">
-        <p class="research-disclaimer">Tin rao theo căn có ngày đăng riêng và chưa xác minh còn hiệu lực; không phải giá bán CĐT, giá giao dịch, ASP hoặc lịch thu tiền hợp đồng.</p>
+        <p class="research-disclaimer">Tin theo căn và trạng thái đối soát nguồn được ghi riêng; không phải giá bán CĐT, giao dịch, ASP hoặc lịch thu tiền hợp đồng.</p>
         ${benchmarkRecordTable(related)}
       </div></section>`;
   }
@@ -947,6 +948,7 @@
     const records = Array.isArray(payload?.data) ? payload.data : [];
     const watched = payload?.watchlist_coverage || [];
     const available = [...new Set(records.map(row => row.product_type))].sort();
+    const currentCount = records.filter(row => row.is_verified_live_offer).length;
     const filtered = records.filter(row => {
       if (state.region && row.region_id !== state.region) return false;
       if (state.benchmarkProduct && row.product_type !== state.benchmarkProduct) return false;
@@ -958,8 +960,8 @@
     const gaps = filteredWatch.filter(row => !row.historical_individual_offers);
     const status = payload ? `<p class="benchmark-provenance-note">Nguồn ghi nhận đến ${esc(payload.evidence_as_of || '—')}
        · Revision ${esc(payload.build_revision || '—')}.
-       Các tin rao đều được xem là bằng chứng lịch sử, không xác nhận đang chào bán.
-       Tái chạy workflow không phải là phát sinh giá mới.</p>`
+       Các tin cũ không được coi là đang bán. Tin tự động chỉ nhận khi có hai lượt xác minh độc lập và báo cáo nguồn còn mới.
+       Tái chạy workflow không đồng nghĩa có giá mới. Tin theo căn không phải giá giao dịch.</p>`
        : '<div class="state-box">Chưa có dữ liệu benchmark được xuất bản. Không tự tạo giá giả định.</div>';
     setView(`<div class="view-intro"><div><span class="eyebrow">Phase 8B · Product Intelligence</span>
       <h2>Benchmark theo sản phẩm</h2>
@@ -974,7 +976,7 @@
       </div>
       <div class="benchmark-summary-grid">
         <div><strong>${esc(String(filtered.length))}</strong><span>Tin rao có nguồn (lịch sử)</span></div>
-        <div><strong>0</strong><span>Tin đang bán đã xác minh</span></div>
+        <div><strong>${esc(String(currentCount))}</strong><span>Tin theo căn đủ điều kiện đối soát nguồn gần đây</span></div>
         <div><strong>0</strong><span>Lịch thanh toán CĐT được xác minh</span></div>
         <div><strong>${esc(String(filteredWatch.length))}</strong><span>Dự án trong nhóm so sánh</span></div>
       </div>
