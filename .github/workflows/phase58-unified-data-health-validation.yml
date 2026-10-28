@@ -21,6 +21,15 @@ on:
       - 'config/master-roadmap.json'
       - 'docs/MASTER_ROADMAP.md'
       - 'README.md'
+  push:
+    branches: [main]
+    paths:
+      - 'assets/js/maintenance.js'
+      - 'assets/js/home.js'
+      - 'scripts/build_data_health.py'
+      - 'tests/test_phase8a_unified_health.py'
+      - '.github/workflows/unified-data-health.yml'
+      - '.github/workflows/phase58-unified-data-health-validation.yml'
   workflow_dispatch:
 
 permissions:
@@ -49,6 +58,7 @@ jobs:
           python tests/test_phase5_8_data_health_build.py
           python tests/test_phase5_8_data_health_ui.py
           python tests/test_phase4k1_source_lag.py
+          python tests/test_phase8a_unified_health.py
       - name: Roadmap regression
         run: python tests/test_phase5_6b_master_roadmap_alignment.py
       - name: Core regressions
