@@ -1,9 +1,274 @@
 {
   "schema_version": 1,
-  "build_id": "market-news-rss-20261029T005137Z",
-  "generated_at": "2026-10-29T00:51:37.509798+00:00",
-  "record_count": 1113,
+  "build_id": "market-news-rss-20261029T025148Z",
+  "generated_at": "2026-10-29T02:51:48.775532+00:00",
+  "record_count": 1124,
   "data": [
+    {
+      "id": "article-market-rss-080d7d662af64dd6ed3a",
+      "title": "Vĩnh Hưng được kỳ vọng trở thành hình mẫu quy hoạch tương lai của Hà Nội",
+      "url": "https://thanhnien.vn/vinh-hung-duoc-ky-vong-tro-thanh-hinh-mau-quy-hoach-tuong-lai-cua-ha-noi-185261029092005151.htm",
+      "category": "market",
+      "module_ids": [
+        "market"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-10-29T02:24:00+00:00",
+      "source_id": "thanhnien-policy",
+      "region_ids": [
+        "ha-noi"
+      ],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [
+        "legal",
+        "infrastructure"
+      ],
+      "importance": 2,
+      "summary": "Với quy mô nghiên cứu khoảng 447 ha, dự án tái thiết Vĩnh Hưng được kỳ vọng tái cấu trúc không gian đô thị theo mô hình TOD và “đô thị 15 phút”, hướng tới mục tiêu cao nhất là cải thiện môi trường, hạ tầng giao thông khu vực, nâng cao chất lượng sống cho người dân.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://thanhnien.vn/rss/kinh-te/chinh-sach-phat-trien.rss",
+        "publisher_host": "thanhnien.vn",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-829487cc2ffe6725f131",
+      "title": "Giá vàng hôm nay 29.10.2026: Đứng yên khi Fed giữ nguyên lãi suất",
+      "url": "https://thanhnien.vn/gia-vang-hom-nay-29102026-dung-yen-khi-fed-giu-nguyen-lai-suat-185261029083819216.htm",
+      "category": "macro",
+      "module_ids": [
+        "macro"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-10-29T02:05:00+00:00",
+      "source_id": "thanhnien-banking",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "Giá vàng thế giới lẫn trong nước không thay đổi khi Fed thông báo giữ nguyên lãi suất.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://thanhnien.vn/rss/kinh-te/ngan-hang.rss",
+        "publisher_host": "thanhnien.vn",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-bcffb920d576c7a2cf4c",
+      "title": "Keppel dự kiến huy động 1 tỷ USD tại Trung tâm Tài chính quốc tế",
+      "url": "https://vnexpress.net/keppel-du-kien-huy-dong-1-ty-usd-tai-trung-tam-tai-chinh-quoc-te-5137973.html",
+      "category": "market",
+      "module_ids": [
+        "market"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-10-29T02:00:00+00:00",
+      "source_id": "vnexpress-real-estate",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "Với vai trò thành viên Trung tâm Tài chính quốc tế Việt Nam, Keppel nghiên cứu các nền tảng đồng đầu tư với đối tác toàn cầu, hướng tới huy động 1 tỷ USD.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://vnexpress.net/rss/bat-dong-san.rss",
+        "publisher_host": "vnexpress.net",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-c4c69b1601dbdf344315",
+      "title": "HĐND TPHCM xem xét quy hoạch tổng thể tầm nhìn 100 năm",
+      "url": "https://dantri.com.vn/thoi-su/hdnd-tphcm-xem-xet-quy-hoach-tong-the-tam-nhin-100-nam-20261029081014493.htm",
+      "category": "market",
+      "module_ids": [
+        "market"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-10-29T01:23:24+00:00",
+      "source_id": "dantri-current-affairs",
+      "region_ids": [
+        "hcmc"
+      ],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [
+        "legal"
+      ],
+      "importance": 2,
+      "summary": "(Dân trí) - Tại kỳ họp HĐND vừa khai mạc, các đại biểu sẽ xem xét, thông qua quy hoạch tổng thể TPHCM thời kỳ 2025-2050, tầm nhìn 100 năm và cụ thể hóa các cơ chế, chính sách của Luật Phát triển đô thị.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://dantri.com.vn/rss/thoi-su.rss",
+        "publisher_host": "dantri.com.vn",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-6a29ed9ef88ec6f03b8b",
+      "title": "Bé gái khoảng 1 tháng tuổi bị bỏ rơi bên quốc lộ 1 ở Lâm Đồng",
+      "url": "https://dantri.com.vn/thoi-su/be-gai-khoang-1-thang-tuoi-bi-bo-roi-ben-quoc-lo-1-o-lam-dong-20261029072115598.htm",
+      "category": "infrastructure",
+      "module_ids": [
+        "infrastructure"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-10-29T01:11:23+00:00",
+      "source_id": "dantri-current-affairs",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [
+        "infrastructure"
+      ],
+      "importance": 2,
+      "summary": "(Dân trí) - Người dân phát hiện một bé gái khoảng 1 tháng tuổi bị bỏ rơi bên lề quốc lộ 1. Chính quyền địa phương đang tạm thời chăm sóc sức khỏe cho cháu bé và phát thông báo tìm người thân.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://dantri.com.vn/rss/thoi-su.rss",
+        "publisher_host": "dantri.com.vn",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-f925d0239096d86603b9",
+      "title": "Quy hoạch tạo trải nghiệm cộng đồng giữa Eco Retreat",
+      "url": "https://vnexpress.net/quy-hoach-tao-trai-nghiem-cong-dong-giua-eco-retreat-5137932.html",
+      "category": "market",
+      "module_ids": [
+        "market"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-10-29T01:00:00+00:00",
+      "source_id": "vnexpress-real-estate",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [
+        "legal"
+      ],
+      "importance": 2,
+      "summary": "Phân khu Rừng Hồng nằm trong Eco Retreat, kết nối nhà ở với không gian công cộng hơn 3 ha, tạo nhiều trải nghiệm, tăng sức hút cho thương mại - dịch vụ.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://vnexpress.net/rss/bat-dong-san.rss",
+        "publisher_host": "vnexpress.net",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-dd3115c04ebefe897324",
+      "title": "Diamond Sky: Thêm cơ hội sở hữu tổ ấm thứ hai gần 8 tỷ đồng",
+      "url": "https://dantri.com.vn/bat-dong-san/diamond-sky-them-co-hoi-so-huu-to-am-thu-hai-gan-8-ty-dong-20261028114206451.htm",
+      "category": "market",
+      "module_ids": [
+        "market"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-10-29T01:00:00+00:00",
+      "source_id": "dantri-real-estate",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "(Dân trí) - Từ ngày 1/11/2026 đến 1/11/2027, Van Phuc Group triển khai chương trình “Mua nhà trúng nhà - Nhân đôi tổ ấm” dành cho khách hàng mua căn hộ Diamond Sky, mở ra cơ hội sở hữu thêm căn nhà thứ hai trị giá gần 8 tỷ đồng.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://dantri.com.vn/rss/bat-dong-san.rss",
+        "publisher_host": "dantri.com.vn",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-97bef9413fafcd8f8ba9",
+      "title": "Người mua căn hộ Diamond Sky có cơ hội trúng nhà gần 8 tỷ đồng",
+      "url": "https://vnexpress.net/nguoi-mua-can-ho-diamond-sky-co-co-hoi-trung-nha-gan-8-ty-dong-5137970.html",
+      "category": "market",
+      "module_ids": [
+        "market"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-10-29T01:00:00+00:00",
+      "source_id": "vnexpress-real-estate",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "Van Phuc Group triển khai chương trình \"Mua nhà trúng nhà - Nhân đôi tổ ấm\" từ ngày 1/11 đến 1/11/2027, với giải thưởng là căn hộ Diamond Sky trị giá gần 8 tỷ đồng.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://vnexpress.net/rss/bat-dong-san.rss",
+        "publisher_host": "vnexpress.net",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-003eec154a0db4f55b19",
+      "title": "An Cường - Central - Thắng Lợi Homes kick-off The Win City, khuấy động thị trường phía tây",
+      "url": "https://thanhnien.vn/an-cuong-central-thang-loi-homes-kick-off-the-win-city-khuay-dong-thi-truong-phia-tay-185261028214804261.htm",
+      "category": "market",
+      "module_ids": [
+        "market"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-10-29T01:00:00+00:00",
+      "source_id": "thanhnien-real-estate",
+      "region_ids": [
+        "hcmc"
+      ],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "Ngày 26.10.2026, tại White Palace Hoàng Văn Thụ (TP.HCM), Gỗ An Cường - Central - Thắng Lợi Homes hội quân 1.200 chiến binh từ 35 đại lý chiến lược, chính thức kích hoạt chiến dịch tăng tốc cuối năm tại The Win City.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://thanhnien.vn/rss/kinh-te/dia-oc.rss",
+        "publisher_host": "thanhnien.vn",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-2db5d6cb533f57f36718",
+      "title": "Giá vàng SJC thấp nhất trong nhiều tháng",
+      "url": "https://dantri.com.vn/kinh-doanh/gia-vang-sjc-thap-nhat-trong-nhieu-thang-20261029070439342.htm",
+      "category": "macro",
+      "module_ids": [
+        "macro"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-10-29T00:55:16+00:00",
+      "source_id": "dantri-business",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "(Dân trí) - Giá vàng thế giới giảm trở lại khi Fed vừa giữ nguyên lãi suất. Trong nước, vàng SJC thấp nhiều tháng qua.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://dantri.com.vn/rss/kinh-doanh.rss",
+        "publisher_host": "dantri.com.vn",
+        "publication_date_from_feed": true
+      }
+    },
     {
       "id": "article-market-rss-6762a7bc84a5bd487aad",
       "title": "Chuyên gia dự báo giá vàng giảm tiếp trước sức ép lãi suất Fed",
@@ -50,6 +315,33 @@
       "source_verification": {
         "method": "official-rss",
         "feed_url": "https://dantri.com.vn/rss/kinh-doanh.rss",
+        "publisher_host": "dantri.com.vn",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-8f98eac8edd40f34c549",
+      "title": "Cuộc đua bất động sản hạng sang tại Hà Nội ngày càng \"nóng\"",
+      "url": "https://dantri.com.vn/bat-dong-san/cuoc-dua-bat-dong-san-hang-sang-tai-ha-noi-ngay-cang-nong-20261029014003688.htm",
+      "category": "market",
+      "module_ids": [
+        "market"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-10-28T23:28:39+00:00",
+      "source_id": "dantri-real-estate",
+      "region_ids": [
+        "ha-noi"
+      ],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "(Dân trí) - Thị trường bất động sản hạng sang Hà Nội ngày càng sôi động khi nhiều doanh nghiệp trong và ngoài nước tiếp tục mở rộng danh mục dự án, cùng sự xuất hiện của những thương hiệu mới.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://dantri.com.vn/rss/bat-dong-san.rss",
         "publisher_host": "dantri.com.vn",
         "publication_date_from_feed": true
       }
