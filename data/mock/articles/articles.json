@@ -1,9 +1,144 @@
 {
   "schema_version": 1,
-  "build_id": "market-news-rss-20261029T060044Z",
-  "generated_at": "2026-10-29T06:00:44.726448+00:00",
-  "record_count": 1145,
+  "build_id": "market-news-rss-20261029T085141Z",
+  "generated_at": "2026-10-29T08:51:41.373176+00:00",
+  "record_count": 1150,
   "data": [
+    {
+      "id": "article-market-rss-ecffcd712cc262748573",
+      "title": "Agribank rao bán biệt thự Ciputra giá 170 tỷ đồng",
+      "url": "https://dantri.com.vn/bat-dong-san/agribank-rao-ban-biet-thu-ciputra-gia-170-ty-dong-20261029135042638.htm",
+      "category": "market",
+      "module_ids": [
+        "market"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-10-29T07:07:34+00:00",
+      "source_id": "dantri-real-estate",
+      "region_ids": [
+        "ha-noi"
+      ],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "(Dân trí) - Agribank chi nhánh Tràng An rao bán đấu giá căn biệt thự tại khu đô thị Ciputra (Hà Nội) với giá khởi điểm 170 tỷ đồng, giảm 14 tỷ đồng so với lần rao bán hồi tháng 9/2024.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://dantri.com.vn/rss/bat-dong-san.rss",
+        "publisher_host": "dantri.com.vn",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-3e352f3f4540d31115bd",
+      "title": "TTC Hospitality khai trương và vận hành khách sạn đầu tiên tại Phú Quốc",
+      "url": "https://thanhnien.vn/ttc-hospitality-khai-truong-va-van-hanh-khach-san-dau-tien-tai-phu-quoc-185261029140859105.htm",
+      "category": "market",
+      "module_ids": [
+        "market"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-10-29T06:56:00+00:00",
+      "source_id": "thanhnien-real-estate",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "Ngày 28.10.2026, Công ty cổ phần Du lịch Thành Thành Công (TTC Hospitality, MCK: VNG, thành viên Tập đoàn TTC) chính thức khai trương TTC Lotus Hotel sau thời gian vận hành giai đoạn 1 từ tháng 8.2026.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://thanhnien.vn/rss/kinh-te/dia-oc.rss",
+        "publisher_host": "thanhnien.vn",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-6b3bba4a4e37704f2eae",
+      "title": "Hai tuyến đường phía Tây Bắc TPHCM được đề xuất mở rộng lên 30m",
+      "url": "https://dantri.com.vn/thoi-su/hai-tuyen-duong-phia-tay-bac-tphcm-duoc-de-xuat-mo-rong-len-30m-20261029122140684.htm",
+      "category": "infrastructure",
+      "module_ids": [
+        "infrastructure"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-10-29T06:51:51+00:00",
+      "source_id": "dantri-current-affairs",
+      "region_ids": [
+        "hcmc"
+      ],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [
+        "infrastructure"
+      ],
+      "importance": 2,
+      "summary": "(Dân trí) - TPHCM đề xuất đầu tư hơn 10.800 tỷ đồng mở rộng đường Tân Kỳ Tân Quý và Phan Anh - An Dương Vương lên 30m, nhằm giảm ùn tắc và cải thiện hạ tầng giao thông khu vực phía Tây Bắc thành phố.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://dantri.com.vn/rss/thoi-su.rss",
+        "publisher_host": "dantri.com.vn",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-6e6c4fc4067f33bbc2b4",
+      "title": "Đại biểu đề nghị phân rõ quyền quyết định bảng giá và hệ số giá đất",
+      "url": "https://dantri.com.vn/thoi-su/dai-bieu-de-nghi-phan-ro-quyen-quyet-dinh-bang-gia-va-he-so-gia-dat-20261029131441323.htm",
+      "category": "market",
+      "module_ids": [
+        "market"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-10-29T06:28:16+00:00",
+      "source_id": "dantri-current-affairs",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [
+        "pricing"
+      ],
+      "importance": 2,
+      "summary": "(Dân trí) - Đại biểu đề nghị HĐND cấp tỉnh quyết định bảng giá đất, nguyên tắc điều chỉnh; UBND cấp tỉnh được chủ động quyết định hệ số trong phạm vi đã được thông qua.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://dantri.com.vn/rss/thoi-su.rss",
+        "publisher_host": "dantri.com.vn",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-5caa3511550fda369277",
+      "title": "Bộ trưởng Trịnh Việt Hùng: Không lạm dụng thu hồi đất",
+      "url": "https://vnexpress.net/bo-truong-trinh-viet-hung-khong-lam-dung-thu-hoi-dat-5138298.html",
+      "category": "legal",
+      "module_ids": [
+        "legal"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-10-29T05:32:17+00:00",
+      "source_id": "vnexpress-current-affairs",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [
+        "legal"
+      ],
+      "importance": 2,
+      "summary": "Bộ trưởng Nông nghiệp và Môi trường Trịnh Việt Hùng khẳng định dự thảo Luật Đất đai quy định chặt chẽ các trường hợp thu hồi đất, tránh lạm dụng nhưng không gây khó khăn cho việc triển khai dự án.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://vnexpress.net/rss/thoi-su.rss",
+        "publisher_host": "vnexpress.net",
+        "publication_date_from_feed": true
+      }
+    },
     {
       "id": "article-market-rss-5aa13548ce673d10e337",
       "title": "Bổ sung cầu vượt tại nút giao từng vướng 5 lô cốt quân sự cũ",
