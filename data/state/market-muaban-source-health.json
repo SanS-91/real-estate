@@ -1,13 +1,13 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-10-28T14:27:43.640344+00:00",
+  "generated_at": "2026-10-29T08:24:29.442980+00:00",
   "source_id": "muaban-vn",
   "targets_checked": 6,
   "listing_urls_discovered": 16,
   "details_checked": 16,
-  "valid_unexpired_project_ads": 8,
-  "newly_published": 0,
-  "published_current_individual_listings": 1,
+  "valid_unexpired_project_ads": 9,
+  "newly_published": 7,
+  "published_current_individual_listings": 8,
   "sources": [
     {
       "project_id": "akari-city",
@@ -36,12 +36,10 @@
       "project_id": "the-global-city",
       "source_url": "https://muaban.net/bat-dong-san/ban-can-ho-chung-cu-du-an-the-global-city-quan-2-ho-chi-minh",
       "access": "reachable",
-      "discovered": 1,
-      "checked": 1,
+      "discovered": 0,
+      "checked": 0,
       "qualified": 0,
-      "reasons": {
-        "multiple-sale-price-claims": 1
-      }
+      "reasons": {}
     },
     {
       "project_id": "the-privia",
@@ -58,11 +56,11 @@
       "project_id": "mizuki-park",
       "source_url": "https://muaban.net/bat-dong-san/ban-can-ho-chung-cu-du-an-mizuki-park-5598-huyen-binh-chanh-ho-chi-minh",
       "access": "reachable",
-      "discovered": 8,
-      "checked": 8,
-      "qualified": 4,
+      "discovered": 9,
+      "checked": 9,
+      "qualified": 5,
       "reasons": {
-        "qualified-unexpired-listing": 4,
+        "qualified-unexpired-listing": 5,
         "multiple-sale-price-claims": 1,
         "publisher-expired": 3
       }
