@@ -1,9 +1,222 @@
 {
   "schema_version": 1,
-  "build_id": "market-news-rss-20261028T194054Z",
-  "generated_at": "2026-10-28T19:40:54.806057+00:00",
-  "record_count": 1105,
+  "build_id": "market-news-rss-20261029T005137Z",
+  "generated_at": "2026-10-29T00:51:37.509798+00:00",
+  "record_count": 1113,
   "data": [
+    {
+      "id": "article-market-rss-6762a7bc84a5bd487aad",
+      "title": "Chuyên gia dự báo giá vàng giảm tiếp trước sức ép lãi suất Fed",
+      "url": "https://dantri.com.vn/kinh-doanh/chuyen-gia-du-bao-gia-vang-giam-tiep-truoc-suc-ep-lai-suat-fed-20261029014050992.htm",
+      "category": "macro",
+      "module_ids": [
+        "macro"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-10-28T23:59:02+00:00",
+      "source_id": "dantri-business",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "(Dân trí) - Sau động thái giữ nguyên lãi suất của Fed, áp lực lạm phát năng lượng khiến giá vàng đối diện rủi ro lùi về vùng 3.900 USD/ounce trước khi tìm lại đà phục hồi vào đầu năm 2027.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://dantri.com.vn/rss/kinh-doanh.rss",
+        "publisher_host": "dantri.com.vn",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-543c21a88d5c1a8b6769",
+      "title": "Chủ tịch Fed: “Liều thuốc” tiền tệ đang ngấm, sẽ giảm số cuộc họp lãi suất",
+      "url": "https://dantri.com.vn/kinh-doanh/chu-tich-fed-lieu-thuoc-tien-te-dang-ngam-se-giam-so-cuoc-hop-lai-suat-20261029021200206.htm",
+      "category": "macro",
+      "module_ids": [
+        "macro"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-10-28T23:30:00+00:00",
+      "source_id": "dantri-business",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "(Dân trí) - Khép lại cuộc họp tháng 10, Fed quyết định giữ nguyên lãi suất ở mức 3,75-4%, đồng thời Chủ tịch Fed công bố kế hoạch bất ngờ về việc giảm bớt số cuộc họp bàn lãi suất trong tương lai.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://dantri.com.vn/rss/kinh-doanh.rss",
+        "publisher_host": "dantri.com.vn",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-a51f9dce303b016e6a99",
+      "title": "Đấu giá đất chậm, vì sao?",
+      "url": "https://thanhnien.vn/dau-gia-dat-cham-vi-sao-185261028203731339.htm",
+      "category": "market",
+      "module_ids": [
+        "market",
+        "legal"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-10-28T23:00:00+00:00",
+      "source_id": "thanhnien-real-estate",
+      "region_ids": [
+        "hcmc"
+      ],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [
+        "pricing"
+      ],
+      "importance": 2,
+      "summary": "Dù lãnh đạo UBND TP.HCM nhiều lần chỉ đạo rà soát và báo cáo kết quả đấu giá đất trên địa bàn TP, thế nhưng đến nay tiến độ triển khai kế hoạch đấu giá quyền sử dụng đất năm 2026 còn chậm, chưa đáp ứng yêu cầu.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://thanhnien.vn/rss/kinh-te/dia-oc.rss",
+        "publisher_host": "thanhnien.vn",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-103d1b27d2b02b15a767",
+      "title": "Xử lý vi phạm ở HH Linh Đàm: Chủ đầu tư phải nộp và chi trả những khoản nào?",
+      "url": "https://dantri.com.vn/bat-dong-san/xu-ly-vi-pham-o-hh-linh-dam-chu-dau-tu-phai-nop-va-chi-tra-nhung-khoan-nao-20261028234622298.htm",
+      "category": "market",
+      "module_ids": [
+        "market"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-10-28T23:00:00+00:00",
+      "source_id": "dantri-real-estate",
+      "region_ids": [
+        "ha-noi"
+      ],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "(Dân trí) - Nghị quyết vừa được HĐND TP Hà Nội thông qua áp dụng cho 12 dự án của Tập đoàn Mường Thanh, trong đó có HH Linh Đàm, buộc chủ đầu tư chi trả từ tiền bồi thường cư dân di dời, số lợi bất hợp pháp, tiền đất cho đến chi phí phá dỡ.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://dantri.com.vn/rss/bat-dong-san.rss",
+        "publisher_host": "dantri.com.vn",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-dca04d78edd29ea6e31d",
+      "title": "12 dự án \"dính\" vi phạm của Tập đoàn Mường Thanh nằm ở đâu?",
+      "url": "https://dantri.com.vn/thoi-su/12-du-an-dinh-vi-pham-cua-tap-doan-muong-thanh-nam-o-dau-20261028215824208.htm",
+      "category": "market",
+      "module_ids": [
+        "market"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-10-28T22:37:00+00:00",
+      "source_id": "dantri-current-affairs",
+      "region_ids": [
+        "ha-noi"
+      ],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "(Dân trí) - Một số dự án do các doanh nghiệp thuộc Tập đoàn Mường Thanh làm chủ đầu tư mà Hà Nội xác định có vi phạm nghiêm trọng sẽ bị phá dỡ hoặc cho tồn tại có điều kiện trong thời gian tới.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://dantri.com.vn/rss/thoi-su.rss",
+        "publisher_host": "dantri.com.vn",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-8ad067752cde1fcfbc49",
+      "title": "Thiết kế nút giao nhiều tầng nối ba đường huyết mạch phía đông TP HCM",
+      "url": "https://vnexpress.net/thiet-ke-nut-giao-nhieu-tang-noi-ba-duong-huyet-mach-phia-dong-tp-hcm-5137806.html",
+      "category": "infrastructure",
+      "module_ids": [
+        "infrastructure"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-10-28T22:00:00+00:00",
+      "source_id": "vnexpress-current-affairs",
+      "region_ids": [
+        "hcmc"
+      ],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [
+        "infrastructure"
+      ],
+      "importance": 2,
+      "summary": "Tháp dáng xoắn vươn giữa các tầng cầu, xen kẽ hồ nước và mảng xanh trong phương án nút giao nối đường liên cảng, Vành đai 3 và cao tốc TP HCM - Long Thành - Dầu Giây.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://vnexpress.net/rss/thoi-su.rss",
+        "publisher_host": "vnexpress.net",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-80ad6adf858f07aa6645",
+      "title": "Căn hộ dịch vụ cho thuê hút khách",
+      "url": "https://vnexpress.net/can-ho-dich-vu-cho-thue-hut-khach-5138095.html",
+      "category": "market",
+      "module_ids": [
+        "market"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-10-28T20:52:30+00:00",
+      "source_id": "vnexpress-real-estate",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "Khách quốc tế và chuyên gia tăng giúp căn hộ dịch vụ, loại cho thuê đầy đủ nội thất, kèm theo các tiện ích, luôn hút khách, tỷ lệ lấp đầy lên đến 85%.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://vnexpress.net/rss/bat-dong-san.rss",
+        "publisher_host": "vnexpress.net",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-67d5109fd991a29827c2",
+      "title": "Fed giữ nguyên lãi suất, hai thành viên bỏ phiếu ngược",
+      "url": "https://dantri.com.vn/kinh-doanh/fed-giu-nguyen-lai-suat-hai-thanh-vien-bo-phieu-nguoc-20261029011557538.htm",
+      "category": "macro",
+      "module_ids": [
+        "macro"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-10-28T18:42:38+00:00",
+      "source_id": "dantri-business",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "(Dân trí) - Cục Dự trữ Liên bang Mỹ (Fed) vừa quyết định giữ nguyên lãi suất ở mức 3,75-4%. Động thái này giúp thị trường tạm thở phào, song áp lực tăng lãi suất vào cuối năm vẫn rất lớn.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://dantri.com.vn/rss/kinh-doanh.rss",
+        "publisher_host": "dantri.com.vn",
+        "publication_date_from_feed": true
+      }
+    },
     {
       "id": "article-market-rss-f3208fa7fe7247d8e242",
       "title": "Fed giữ nguyên lãi suất",
