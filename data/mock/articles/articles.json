@@ -1,9 +1,161 @@
 {
   "schema_version": 1,
-  "build_id": "market-news-rss-20261029T085141Z",
-  "generated_at": "2026-10-29T08:51:41.373176+00:00",
-  "record_count": 1150,
+  "build_id": "market-news-rss-20261029T105141Z",
+  "generated_at": "2026-10-29T10:51:41.465861+00:00",
+  "record_count": 1156,
   "data": [
+    {
+      "id": "article-market-rss-8923edccab15aa6fc13f",
+      "title": "Canada nâng lãi suất lần đầu tiên sau hơn 3 năm",
+      "url": "https://vnexpress.net/canada-nang-lai-suat-lan-dau-tien-sau-hon-3-nam-5138437.html",
+      "category": "macro",
+      "module_ids": [
+        "macro"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-10-29T09:24:13+00:00",
+      "source_id": "vnexpress-economy",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "Lạm phát cao do giá năng lượng khiến Canada phải nâng lãi suất lần đầu tiên kể từ giữa năm 2023.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://vnexpress.net/rss/kinh-doanh.rss",
+        "publisher_host": "vnexpress.net",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-4054741863b04c092ae7",
+      "title": "Chủ chuỗi Vincom lãi gần 17 tỷ đồng mỗi ngày",
+      "url": "https://vnexpress.net/chu-chuoi-vincom-lai-gan-17-ty-dong-moi-ngay-5138388.html",
+      "category": "market",
+      "module_ids": [
+        "market"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-10-29T08:57:59+00:00",
+      "source_id": "vnexpress-real-estate",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "Vincom Retail, chủ của các trung tâm thương mại Vincom, báo lãi sau thuế 1.522 tỷ đồng trong quý III, tương đương gần 17 tỷ đồng mỗi ngày.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://vnexpress.net/rss/bat-dong-san.rss",
+        "publisher_host": "vnexpress.net",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-a9c74836590a10ebdff3",
+      "title": "Đấu giá trực tuyến bốn lô đất Thủ Thiêm ngày 27/11",
+      "url": "https://vnexpress.net/dau-gia-truc-tuyen-bon-lo-dat-thu-thiem-ngay-27-11-5138385.html",
+      "category": "market",
+      "module_ids": [
+        "market"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-10-29T08:15:35+00:00",
+      "source_id": "vnexpress-real-estate",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "Bốn lô đất Thủ Thiêm sẽ đấu giá trực tuyến vào ngày 27/11 với tổng mức khởi điểm hơn 16.600 tỷ đồng, đi kèm các yêu cầu về tài chính.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://vnexpress.net/rss/bat-dong-san.rss",
+        "publisher_host": "vnexpress.net",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-d5674c95c46e09c2d527",
+      "title": "Cư dân HH Linh Đàm canh cánh nỗi lo rời nơi an cư nhiều năm",
+      "url": "https://dantri.com.vn/dt360/cu-dan-hh-linh-dam-canh-canh-noi-lo-roi-noi-an-cu-nhieu-nam-20261029144609044.htm",
+      "category": "market",
+      "module_ids": [
+        "market"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-10-29T08:09:28+00:00",
+      "source_id": "dantri-real-estate",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "(Dân trí) - Trước phương án xử lý các sai phạm tại dự án, nhiều người không khỏi lo lắng, tiếc nuối trước khả năng phải rời đi, đồng thời mong muốn quyền lợi chính đáng của mình được bảo đảm.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://dantri.com.vn/rss/bat-dong-san.rss",
+        "publisher_host": "dantri.com.vn",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-64d431448690274b1045",
+      "title": "Đề xuất cho thuê nhà, đất dôi dư tối đa 5 năm trong thời gian chờ thủ tục",
+      "url": "https://dantri.com.vn/bat-dong-san/de-xuat-cho-thue-nha-dat-doi-du-toi-da-5-nam-trong-thoi-gian-cho-thu-tuc-20261029140935261.htm",
+      "category": "market",
+      "module_ids": [
+        "market"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-10-29T07:47:01+00:00",
+      "source_id": "dantri-real-estate",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "(Dân trí) - Bộ Tài chính đề xuất cho thuê một số cơ sở nhà, đất dôi dư tối đa 5 năm trong thời gian chờ hoàn tất thủ tục, nhằm sớm đưa tài sản công vào khai thác, sử dụng.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://dantri.com.vn/rss/bat-dong-san.rss",
+        "publisher_host": "dantri.com.vn",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-b82c2c599c5d22ebcb16",
+      "title": "Các trường hợp bị mất cọc, truất quyền khi đấu giá 4 lô \"đất vàng\" Thủ Thiêm",
+      "url": "https://dantri.com.vn/bat-dong-san/cac-truong-hop-bi-mat-coc-truat-quyen-khi-dau-gia-4-lo-dat-vang-thu-thiem-20261029140806081.htm",
+      "category": "market",
+      "module_ids": [
+        "market"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-10-29T07:44:35+00:00",
+      "source_id": "dantri-real-estate",
+      "region_ids": [
+        "hcmc"
+      ],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "(Dân trí) - Các đơn vị tham gia đấu giá 4 lô \"đất vàng\" tại Thủ Thiêm cần đặt trước 20% số tiền ở mức giá khởi điểm. Quy chế đấu giá của TPHCM quy định các trường hợp bị truất quyền tham gia đấu giá hoặc mất cọc nếu vi phạm.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://dantri.com.vn/rss/bat-dong-san.rss",
+        "publisher_host": "dantri.com.vn",
+        "publication_date_from_feed": true
+      }
+    },
     {
       "id": "article-market-rss-ecffcd712cc262748573",
       "title": "Agribank rao bán biệt thự Ciputra giá 170 tỷ đồng",
