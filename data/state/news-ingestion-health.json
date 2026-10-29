@@ -1,13 +1,13 @@
 {
   "schema_version": 1,
-  "checked_at": "2026-10-29T13:20:40.691712+00:00",
+  "checked_at": "2026-10-29T14:51:41.027052+00:00",
   "feeds_configured": 16,
   "feeds_fetched": 16,
-  "accepted_new": 0,
-  "production_written": false,
-  "article_total": 1161,
+  "accepted_new": 1,
+  "production_written": true,
+  "article_total": 1162,
   "published_by_module": {
-    "market": 0,
+    "market": 1,
     "legal": 0,
     "infrastructure": 0,
     "macro": 0
@@ -35,9 +35,9 @@
       "source_id": "dantri-real-estate",
       "status": "parsed",
       "feed_items": 50,
-      "new": 0,
-      "skipped": 50,
-      "duplicates": 50,
+      "new": 1,
+      "skipped": 49,
+      "duplicates": 49,
       "filtered": 0
     },
     {
