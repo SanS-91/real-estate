@@ -1,9 +1,198 @@
 {
   "schema_version": 1,
-  "build_id": "market-news-rss-20261029T045150Z",
-  "generated_at": "2026-10-29T04:51:50.166766+00:00",
-  "record_count": 1136,
+  "build_id": "market-news-rss-20261029T060044Z",
+  "generated_at": "2026-10-29T06:00:44.726448+00:00",
+  "record_count": 1145,
   "data": [
+    {
+      "id": "article-market-rss-5aa13548ce673d10e337",
+      "title": "Bổ sung cầu vượt tại nút giao từng vướng 5 lô cốt quân sự cũ",
+      "url": "https://dantri.com.vn/thoi-su/bo-sung-cau-vuot-tai-nut-giao-tung-vuong-5-lo-cot-quan-su-cu-20261029114845437.htm",
+      "category": "infrastructure",
+      "module_ids": [
+        "infrastructure"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-10-29T05:20:53+00:00",
+      "source_id": "dantri-current-affairs",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [
+        "infrastructure"
+      ],
+      "importance": 2,
+      "summary": "(Dân trí) - Nút giao tỉnh lộ 12B trên tuyến cao tốc Cam Lộ - La Sơn, đoạn qua thành phố Huế sẽ được bổ sung cầu vượt kết hợp đảo vòng xuyến để khắc phục các tồn tại về an toàn giao thông.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://dantri.com.vn/rss/thoi-su.rss",
+        "publisher_host": "dantri.com.vn",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-d68eba6ec6a2b4725cad",
+      "title": "Bộ trưởng Trịnh Việt Hùng: “Không lạm dụng việc thu hồi đất”",
+      "url": "https://dantri.com.vn/thoi-su/bo-truong-trinh-viet-hung-khong-lam-dung-viec-thu-hoi-dat-20261029111923252.htm",
+      "category": "legal",
+      "module_ids": [
+        "legal"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-10-29T05:03:41+00:00",
+      "source_id": "dantri-current-affairs",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [
+        "legal"
+      ],
+      "importance": 2,
+      "summary": "(Dân trí) - Việc thu hồi đất để phát triển kinh tế xã hội trong dự án Luật Đất đai sửa đổi, theo Bộ trưởng Trịnh Việt Hùng, bảo đảm chặt chẽ, không lạm dụng thu hồi đất và không tạo khó khăn cho triển khai dự án.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://dantri.com.vn/rss/thoi-su.rss",
+        "publisher_host": "dantri.com.vn",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-4e88b4c4f51ee6df04cc",
+      "title": "Q'Terra đưa chất liệu bản địa vào không gian nghỉ dưỡng cao cấp",
+      "url": "https://vnexpress.net/q-terra-dua-chat-lieu-ban-dia-vao-khong-gian-nghi-duong-cao-cap-5138294.html",
+      "category": "market",
+      "module_ids": [
+        "market"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-10-29T05:00:00+00:00",
+      "source_id": "vnexpress-real-estate",
+      "region_ids": [
+        "ha-noi"
+      ],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [
+        "supply"
+      ],
+      "importance": 2,
+      "summary": "Phát Đạt ra mắt căn hộ mẫu Q'Terra tại Hà Nội, giới thiệu thiết kế kết hợp sắc đất nung Terracotta, họa tiết thổ cẩm Chăm H'Roi trong không gian phục vụ nghỉ dưỡng.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://vnexpress.net/rss/bat-dong-san.rss",
+        "publisher_host": "vnexpress.net",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-263781cd437558368d8a",
+      "title": "Những chuyến bay đầu tiên cất hạ cánh trên đường băng số 2 sân bay Phú Quốc",
+      "url": "https://dantri.com.vn/thoi-su/nhung-chuyen-bay-dau-tien-cat-ha-canh-tren-duong-bang-so-2-san-bay-phu-quoc-20261029113744061.htm",
+      "category": "infrastructure",
+      "module_ids": [
+        "infrastructure"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-10-29T04:51:02+00:00",
+      "source_id": "dantri-current-affairs",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [
+        "infrastructure"
+      ],
+      "importance": 2,
+      "summary": "(Dân trí) - Sáng 29/10, Cảng hàng không quốc tế Phú Quốc đã chính thức khai thác đường băng cất hạ cánh số 2 sau 8 tháng thi công, dần đồng bộ hạ tầng hàng không phục vụ Tuần lễ cấp cao APEC diễn ra vào năm 2027.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://dantri.com.vn/rss/thoi-su.rss",
+        "publisher_host": "dantri.com.vn",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-1972e9877a395266b3f8",
+      "title": "Các thương hiệu châu Á tạo sức cầu cho mặt bằng bán lẻ TP HCM",
+      "url": "https://vnexpress.net/cac-thuong-hieu-chau-a-tao-suc-cau-cho-mat-bang-ban-le-tp-hcm-5137789.html",
+      "category": "market",
+      "module_ids": [
+        "market"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-10-29T04:48:08+00:00",
+      "source_id": "vnexpress-real-estate",
+      "region_ids": [
+        "hcmc"
+      ],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "Sự mở rộng của các thương hiệu châu Á, nhất là trong lĩnh vực ăn uống và thời trang, giúp thị trường bán lẻ TP HCM duy trì tỷ lệ lấp đầy ổn định.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://vnexpress.net/rss/bat-dong-san.rss",
+        "publisher_host": "vnexpress.net",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-d36e11b7bae99a15378c",
+      "title": "Cư dân HH Linh Đàm vừa mừng vừa lo: Nhà được ở hay phải di dời?",
+      "url": "https://dantri.com.vn/bat-dong-san/cu-dan-hh-linh-dam-vua-mung-vua-lo-nha-duoc-o-hay-phai-di-doi-20261029110504284.htm",
+      "category": "market",
+      "module_ids": [
+        "market"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-10-29T04:38:08+00:00",
+      "source_id": "dantri-real-estate",
+      "region_ids": [
+        "ha-noi"
+      ],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "(Dân trí) - Sau khi Hà Nội thông qua cơ chế xử lý sai phạm tại các dự án Mường Thanh, nhiều cư dân HH Linh Đàm mong sớm biết căn hộ của mình có được giữ lại hay phải di dời.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://dantri.com.vn/rss/bat-dong-san.rss",
+        "publisher_host": "dantri.com.vn",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-4d2bb58c39c0bc6f0ce4",
+      "title": "Ngân hàng rao bán biệt thự Ciputra khởi điểm 170 tỷ đồng",
+      "url": "https://vnexpress.net/ngan-hang-rao-ban-biet-thu-ciputra-khoi-diem-170-ty-dong-5138133.html",
+      "category": "market",
+      "module_ids": [
+        "market"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-10-29T04:37:10+00:00",
+      "source_id": "vnexpress-real-estate",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "Căn biệt thự rộng 400 m2 tại \"khu nhà giàu\" Ciputra được ngân hàng rao bán với giá khởi điểm khoảng 424 triệu đồng mỗi m2.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://vnexpress.net/rss/bat-dong-san.rss",
+        "publisher_host": "vnexpress.net",
+        "publication_date_from_feed": true
+      }
+    },
     {
       "id": "article-market-rss-a4d1e8e4ad0406e2ab4b",
       "title": "5 khu vực phát triển chủ lực của TP HCM trong quy hoạch 100 năm",
@@ -57,6 +246,31 @@
         "method": "official-rss",
         "feed_url": "https://vnexpress.net/rss/kinh-doanh.rss",
         "publisher_host": "vnexpress.net",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-8450c592a52651433a60",
+      "title": "Thu hồi đất phải đảm bảo sinh kế cho dân, không phải chi bồi thường là xong",
+      "url": "https://dantri.com.vn/thoi-su/thu-hoi-dat-phai-dam-bao-sinh-ke-cho-dan-khong-phai-chi-boi-thuong-la-xong-20261029095404523.htm",
+      "category": "legal",
+      "module_ids": [
+        "legal"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-10-29T03:37:51+00:00",
+      "source_id": "dantri-current-affairs",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "(Dân trí) - Đại biểu Quốc hội đề nghị giá bồi thường tiệm cận thực tế, tính đến khả năng tạo lập chỗ ở và khôi phục sinh kế, thay vì coi chi trả xong là hết trách nhiệm.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://dantri.com.vn/rss/thoi-su.rss",
+        "publisher_host": "dantri.com.vn",
         "publication_date_from_feed": true
       }
     },
@@ -163,6 +377,31 @@
         "method": "official-rss",
         "feed_url": "https://vnexpress.net/rss/thoi-su.rss",
         "publisher_host": "vnexpress.net",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-dc05d436b73fa5cdf6bd",
+      "title": "Sun Glory Residence: Cơ hội tích lũy tài sản cho người con xứ Nghệ xa quê",
+      "url": "https://dantri.com.vn/bat-dong-san/sun-glory-residence-co-hoi-tich-luy-tai-san-cho-nguoi-con-xu-nghe-xa-que-20261028212724850.htm",
+      "category": "market",
+      "module_ids": [
+        "market"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-10-29T03:00:00+00:00",
+      "source_id": "dantri-real-estate",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "(Dân trí) - Với người Nghệ An đang học tập, làm việc xa quê, tổ hợp Sun Glory Residence với hơn 37 tiện ích mang đến lựa chọn ngôi nhà thứ hai tiện nghi ngay quê hương, đồng thời mở ra cơ hội tích lũy tài sản.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://dantri.com.vn/rss/bat-dong-san.rss",
+        "publisher_host": "dantri.com.vn",
         "publication_date_from_feed": true
       }
     },
