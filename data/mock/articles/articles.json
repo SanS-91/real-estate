@@ -1,9 +1,258 @@
 {
   "schema_version": 1,
-  "build_id": "market-news-rss-20261029T025148Z",
-  "generated_at": "2026-10-29T02:51:48.775532+00:00",
-  "record_count": 1124,
+  "build_id": "market-news-rss-20261029T045150Z",
+  "generated_at": "2026-10-29T04:51:50.166766+00:00",
+  "record_count": 1136,
   "data": [
+    {
+      "id": "article-market-rss-a4d1e8e4ad0406e2ab4b",
+      "title": "5 khu vực phát triển chủ lực của TP HCM trong quy hoạch 100 năm",
+      "url": "https://vnexpress.net/5-khu-vuc-phat-trien-chu-luc-cua-tp-hcm-trong-quy-hoach-100-nam-5138186.html",
+      "category": "market",
+      "module_ids": [
+        "market"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-10-29T03:53:02+00:00",
+      "source_id": "vnexpress-current-affairs",
+      "region_ids": [
+        "hcmc"
+      ],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [
+        "legal"
+      ],
+      "importance": 2,
+      "summary": "Quy hoạch TP HCM tầm nhìn 100 năm xác định lõi tài chính cùng các cực công nghệ cao phía Đông, logistics phía Bắc, cảng biển phía Nam, đô thị, giáo dục, y tế phía Tây.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://vnexpress.net/rss/thoi-su.rss",
+        "publisher_host": "vnexpress.net",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-310264c9851cea6fc06b",
+      "title": "Đại biểu Quốc hội: Cần rà soát hệ số điều chỉnh giá đất hàng năm",
+      "url": "https://vnexpress.net/dai-bieu-quoc-hoi-can-ra-soat-he-so-dieu-chinh-gia-dat-hang-nam-5138144.html",
+      "category": "market",
+      "module_ids": [
+        "market"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-10-29T03:42:03+00:00",
+      "source_id": "vnexpress-economy",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [
+        "pricing"
+      ],
+      "importance": 2,
+      "summary": "Đại biểu Lê Văn Thế đề nghị rà soát hệ số điều chỉnh giá đất (hệ số K) ít nhất mỗi năm một lần dựa trên biến động giá, thực tế từng địa phương.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://vnexpress.net/rss/kinh-doanh.rss",
+        "publisher_host": "vnexpress.net",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-e9eea5281604ba8a8ff2",
+      "title": "Khai thác thương mại đường băng số 2 sân bay Phú Quốc",
+      "url": "https://vnexpress.net/khai-thac-thuong-mai-duong-bang-so-2-san-bay-phu-quoc-5138045.html",
+      "category": "infrastructure",
+      "module_ids": [
+        "infrastructure"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-10-29T03:30:25+00:00",
+      "source_id": "vnexpress-current-affairs",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [
+        "infrastructure"
+      ],
+      "importance": 2,
+      "summary": "Sáng 29/10, cảng hàng không quốc tế Phú Quốc đưa đường cất hạ cánh số 2 dài 3.300 m vào khai thác thương mại sau 8 tháng thi công.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://vnexpress.net/rss/thoi-su.rss",
+        "publisher_host": "vnexpress.net",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-54aade1c37f23774a888",
+      "title": "Tài sản dự án trại bò 4.500 tỷ đồng được chốt hơn 286 tỷ đồng",
+      "url": "https://dantri.com.vn/kinh-doanh/tai-san-du-an-trai-bo-4500-ty-dong-duoc-chot-hon-286-ty-dong-20261029100605264.htm",
+      "category": "market",
+      "module_ids": [
+        "market"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-10-29T03:26:01+00:00",
+      "source_id": "dantri-business",
+      "region_ids": [
+        "ha-noi"
+      ],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "(Dân trí) - Tài sản thế chấp tại dự án trại bò 4.500 tỷ đồng ở Hà Tĩnh được đấu giá thành công với mức hơn 286 tỷ đồng. Doanh nghiệp trúng đấu giá có địa chỉ tại Hà Nội.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://dantri.com.vn/rss/kinh-doanh.rss",
+        "publisher_host": "dantri.com.vn",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-b290457095a2ad8d4591",
+      "title": "Đề xuất bổ sung nguyên tắc bồi thường tối thiểu khi thu hồi đất",
+      "url": "https://vnexpress.net/de-xuat-bo-sung-nguyen-tac-boi-thuong-toi-thieu-khi-thu-hoi-dat-5138166.html",
+      "category": "legal",
+      "module_ids": [
+        "legal"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-10-29T03:14:55+00:00",
+      "source_id": "vnexpress-current-affairs",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [
+        "legal"
+      ],
+      "importance": 2,
+      "summary": "Đại biểu Nguyễn Bình Tân cho rằng dự thảo Luật Đất đai sửa đổi cần bổ sung nguyên tắc bồi thường tối thiểu, tương xứng với giá trị thực tế của đất bị thu hồi, giúp người dân có đủ điều kiện ổn định cuộc sống.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://vnexpress.net/rss/thoi-su.rss",
+        "publisher_host": "vnexpress.net",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-f41da67aec6122ad956c",
+      "title": "Dự án nuôi bò 4.500 tỷ đồng được bán hơn 286 tỷ đồng",
+      "url": "https://vnexpress.net/du-an-nuoi-bo-4-500-ty-dong-duoc-ban-hon-286-ty-dong-5138170.html",
+      "category": "market",
+      "module_ids": [
+        "market"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-10-29T03:08:46+00:00",
+      "source_id": "vnexpress-current-affairs",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "Sau nhiều năm bỏ hoang, dự án chăn nuôi bò Bình Hà được bán cho Công ty Cổ phần Đầu tư Năng lượng và Mỏ VN với giá 286 tỷ đồng.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://vnexpress.net/rss/thoi-su.rss",
+        "publisher_host": "vnexpress.net",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-b3dcc4a88231d29c7bc4",
+      "title": "Aqua City tăng tốc hoàn thiện, liên tục đón thêm cư dân",
+      "url": "https://vnexpress.net/aqua-city-tang-toc-hoan-thien-lien-tuc-don-them-cu-dan-5138192.html",
+      "category": "market",
+      "module_ids": [
+        "market"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-10-29T03:00:00+00:00",
+      "source_id": "vnexpress-real-estate",
+      "region_ids": [],
+      "project_ids": [
+        "aqua-city"
+      ],
+      "developer_ids": [],
+      "tags": [
+        "supply"
+      ],
+      "importance": 2,
+      "summary": "Hơn 4.000 kỹ sư, công nhân đang thi công tại Aqua City, 1.300 căn nhà đã bàn giao, nhiều tiện ích hoạt động phục vụ nhu cầu cư dân. Dự án sẵn sàng mở bán từ ngày 31/10.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://vnexpress.net/rss/bat-dong-san.rss",
+        "publisher_host": "vnexpress.net",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-8b6fdcab95db42e5f23a",
+      "title": "TPHCM có 5 trung tâm vệ tinh, 5 cực động lực với bản quy hoạch 100 năm",
+      "url": "https://dantri.com.vn/thoi-su/tphcm-co-5-trung-tam-ve-tinh-5-cuc-dong-luc-voi-ban-quy-hoach-100-nam-20261029090031597.htm",
+      "category": "market",
+      "module_ids": [
+        "market"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-10-29T02:55:58+00:00",
+      "source_id": "dantri-current-affairs",
+      "region_ids": [
+        "hcmc"
+      ],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [
+        "legal"
+      ],
+      "importance": 2,
+      "summary": "(Dân trí) - Quy hoạch tầm nhìn 100 năm xác định TPHCM phát triển với cấu trúc 5 cực động lực, 5 trung tâm vệ tinh, 5 hệ liên kết chiến lược và 10 vùng quản trị phát triển.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://dantri.com.vn/rss/thoi-su.rss",
+        "publisher_host": "dantri.com.vn",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-857ce2ae11548930314f",
+      "title": "Chủ tịch HĐND TPHCM: \"Quy hoạch mở tầm nhìn, thể chế mở đường đổi mới\"",
+      "url": "https://dantri.com.vn/thoi-su/chu-tich-hdnd-tphcm-quy-hoach-mo-tam-nhin-the-che-mo-duong-doi-moi-20261029083508121.htm",
+      "category": "market",
+      "module_ids": [
+        "market"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-10-29T02:54:35+00:00",
+      "source_id": "dantri-current-affairs",
+      "region_ids": [
+        "hcmc"
+      ],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [
+        "legal"
+      ],
+      "importance": 2,
+      "summary": "(Dân trí) - Chủ tịch HĐND TPHCM cho biết, kỳ họp thứ 6 của TPHCM sẽ kết nối 3 yếu tố không thể tách rời. Trong đó, quy hoạch mở ra tầm nhìn, thể chế mở đường cho đổi mới, nguồn lực đưa chủ trương vào thực tiễn.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://dantri.com.vn/rss/thoi-su.rss",
+        "publisher_host": "dantri.com.vn",
+        "publication_date_from_feed": true
+      }
+    },
     {
       "id": "article-market-rss-080d7d662af64dd6ed3a",
       "title": "Vĩnh Hưng được kỳ vọng trở thành hình mẫu quy hoạch tương lai của Hà Nội",
@@ -31,6 +280,31 @@
         "method": "official-rss",
         "feed_url": "https://thanhnien.vn/rss/kinh-te/chinh-sach-phat-trien.rss",
         "publisher_host": "thanhnien.vn",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-abbc863b5e3f1df13e2a",
+      "title": "Lãi suất tiết kiệm 29/10: Xuất hiện ngân hàng giảm mạnh kỳ hạn dài dưới 1%",
+      "url": "https://dantri.com.vn/kinh-doanh/lai-suat-tiet-kiem-2910-xuat-hien-ngan-hang-giam-manh-ky-han-dai-duoi-1-20261029080922066.htm",
+      "category": "macro",
+      "module_ids": [
+        "macro"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-10-29T02:06:36+00:00",
+      "source_id": "dantri-business",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "(Dân trí) - Ngân hàng đã đồng loạt điều chỉnh biểu lãi suất, trong đó có đơn vị hạ xuống mức 0,6%/năm kỳ hạn 12 tháng, chênh lệch với mặt bằng chung hơn 6 điểm phần trăm.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://dantri.com.vn/rss/kinh-doanh.rss",
+        "publisher_host": "dantri.com.vn",
         "publication_date_from_feed": true
       }
     },
@@ -81,6 +355,56 @@
         "method": "official-rss",
         "feed_url": "https://vnexpress.net/rss/bat-dong-san.rss",
         "publisher_host": "vnexpress.net",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-636629b70de73fcb799e",
+      "title": "3 lỗi bố trí nội thất khiến nhà luôn chật chội và cách khắc phục",
+      "url": "https://dantri.com.vn/bat-dong-san/3-loi-bo-tri-noi-that-khien-nha-luon-chat-choi-va-cach-khac-phuc-20261029000021113.htm",
+      "category": "market",
+      "module_ids": [
+        "market"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-10-29T01:56:00+00:00",
+      "source_id": "dantri-real-estate",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "(Dân trí) - Nhiều gia đình chăm dọn dẹp nhưng nhà cửa vẫn lộn xộn, bí bách. Các chuyên gia nội thất chỉ ra 3 lỗi sắp đặt đồ đạc quen thuộc làm không gian sống mất cân đối.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://dantri.com.vn/rss/bat-dong-san.rss",
+        "publisher_host": "dantri.com.vn",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-e6d226254cb1ae3e169a",
+      "title": "Đề xuất trẻ dưới 18 tuổi được hiến mô, bộ phận cơ thể: Cần Hội đồng Y khoa",
+      "url": "https://dantri.com.vn/thoi-su/de-xuat-tre-duoi-18-tuoi-duoc-hien-mo-bo-phan-co-the-can-hoi-dong-y-khoa-20261029082413292.htm",
+      "category": "market",
+      "module_ids": [
+        "market"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-10-29T01:43:50+00:00",
+      "source_id": "dantri-current-affairs",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "(Dân trí) - Cùng với các quy định chặt chẽ trong dự thảo luật liên quan việc hiến mô, bộ phận cơ thể với trẻ dưới 18 tuổi, đại biểu Trịnh Xuân An đề nghị phải có đánh giá của Hội đồng Y khoa.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://dantri.com.vn/rss/thoi-su.rss",
+        "publisher_host": "dantri.com.vn",
         "publication_date_from_feed": true
       }
     },
