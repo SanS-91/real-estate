@@ -1,9 +1,161 @@
 {
   "schema_version": 1,
-  "build_id": "market-news-rss-20261030T005148Z",
-  "generated_at": "2026-10-30T00:51:48.517165+00:00",
-  "record_count": 1170,
+  "build_id": "market-news-rss-20261030T025145Z",
+  "generated_at": "2026-10-30T02:51:45.993024+00:00",
+  "record_count": 1177,
   "data": [
+    {
+      "id": "article-market-rss-1fd72884f0c20161672b",
+      "title": "Giá vàng hôm nay 30.10.2026: Bốc hơi 1,3 triệu đồng sau một đêm",
+      "url": "https://thanhnien.vn/gia-vang-hom-nay-30102026-boc-hoi-13-trieu-dong-sau-mot-dem-18526103008101458.htm",
+      "category": "macro",
+      "module_ids": [
+        "macro"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-10-30T02:13:00+00:00",
+      "source_id": "thanhnien-banking",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "Giá vàng quay đầu giảm mạnh trên thế giới đẩy thị trường trong nước đi xuống khi nỗi lo lạm phát lên cao.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://thanhnien.vn/rss/kinh-te/ngan-hang.rss",
+        "publisher_host": "thanhnien.vn",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-54c89750013913c43d94",
+      "title": "Méo mặt vì nhận bàn giao chung cư sớm",
+      "url": "https://vnexpress.net/meo-mat-vi-nhan-ban-giao-chung-cu-som-5138423.html",
+      "category": "market",
+      "module_ids": [
+        "market"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-10-30T01:26:07+00:00",
+      "source_id": "vnexpress-real-estate",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "Bất ngờ nhận thông báo bàn giao nhà sớm hơn 4 tháng, anh Toàn hạ giá rao bán hai căn chung cư, chấp nhận lỗ để thoát áp lực trả gần 50% giá trị còn lại.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://vnexpress.net/rss/bat-dong-san.rss",
+        "publisher_host": "vnexpress.net",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-0cb85401464be1668792",
+      "title": "Quốc lộ 28 nối Đà Lạt - Gia Nghĩa xuất hiện sạt lở",
+      "url": "https://dantri.com.vn/thoi-su/quoc-lo-28-noi-da-lat-gia-nghia-xuat-hien-sat-lo-20261030074941415.htm",
+      "category": "infrastructure",
+      "module_ids": [
+        "infrastructure"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-10-30T01:15:00+00:00",
+      "source_id": "dantri-current-affairs",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [
+        "infrastructure"
+      ],
+      "importance": 2,
+      "summary": "(Dân trí) - Tuyến đường nối Đà Lạt - Gia Nghĩa xuất hiện điểm sụt lún đất, nguy cơ đứt gãy. Lực lượng chức năng cấm phương tiện lưu thông qua khu vực nguy hiểm.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://dantri.com.vn/rss/thoi-su.rss",
+        "publisher_host": "dantri.com.vn",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-dbb75f7b17aa0d773180",
+      "title": "Du lịch mở thêm dư địa phát triển đô thị tại Tây Ninh",
+      "url": "https://vnexpress.net/du-lich-mo-them-du-dia-phat-trien-do-thi-tai-tay-ninh-5137560.html",
+      "category": "market",
+      "module_ids": [
+        "market"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-10-30T01:00:00+00:00",
+      "source_id": "vnexpress-real-estate",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "Lượng khách và doanh thu du lịch tăng tạo thêm cơ hội phát triển dịch vụ tại Tây Ninh, đặt ra nhu cầu kết nối điểm đến với không gian lưu trú, thương mại và sinh hoạt đô thị.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://vnexpress.net/rss/bat-dong-san.rss",
+        "publisher_host": "vnexpress.net",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-cd2ea8acd4bde114a46b",
+      "title": "Giá vàng thế giới giảm mạnh, chênh lệch với giá trong nước 17 triệu đồng/lượng",
+      "url": "https://dantri.com.vn/kinh-doanh/gia-vang-the-gioi-giam-manh-chenh-lech-voi-gia-trong-nuoc-17-trieu-dongluong-20261030010231215.htm",
+      "category": "macro",
+      "module_ids": [
+        "macro"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-10-29T23:54:34+00:00",
+      "source_id": "dantri-business",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "(Dân trí) - Giá vàng thế giới giảm về sát 4.000 USD, trong khi vàng miếng SJC đi ngang ở mức 142,7 triệu đồng/lượng chiều bán ra. Chênh lệch giữa giá vàng trong nước và thế giới nới rộng lên 17 triệu đồng/lượng.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://dantri.com.vn/rss/kinh-doanh.rss",
+        "publisher_host": "dantri.com.vn",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-40252b359778fd35c84f",
+      "title": "Khoảng lặng trước “cơn sóng” tăng lãi suất toàn cầu",
+      "url": "https://dantri.com.vn/kinh-doanh/khoang-lang-truoc-con-song-tang-lai-suat-toan-cau-20261029231827762.htm",
+      "category": "macro",
+      "module_ids": [
+        "macro"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-10-29T23:45:38+00:00",
+      "source_id": "dantri-business",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "(Dân trí) - Các ngân hàng trung ương lớn tạm dừng tăng lãi suất, nhưng sức ép thắt chặt tiền tệ vẫn chưa hạ nhiệt. Nhiều đợt tăng mới có thể đang ở phía trước.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://dantri.com.vn/rss/kinh-doanh.rss",
+        "publisher_host": "dantri.com.vn",
+        "publication_date_from_feed": true
+      }
+    },
     {
       "id": "article-market-rss-0dbb60a2fb90d342a60c",
       "title": "Ngân hàng Thế giới: Giá vàng có thể hạ nhiệt năm 2027 nhưng vẫn neo cao",
@@ -103,6 +255,35 @@
         "method": "official-rss",
         "feed_url": "https://vnexpress.net/rss/bat-dong-san.rss",
         "publisher_host": "vnexpress.net",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-ad1ab88b66edd88ab614",
+      "title": "Hà Nội mời nhà đầu tư tham gia làm ngay các bãi đỗ xe từ Vành đai 3 trở vào",
+      "url": "https://dantri.com.vn/thoi-su/ha-noi-moi-nha-dau-tu-tham-gia-lam-ngay-cac-bai-do-xe-tu-vanh-dai-3-tro-vao-20261026120009576.htm",
+      "category": "infrastructure",
+      "module_ids": [
+        "infrastructure"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-10-29T22:30:00+00:00",
+      "source_id": "dantri-current-affairs",
+      "region_ids": [
+        "ha-noi"
+      ],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [
+        "legal"
+      ],
+      "importance": 2,
+      "summary": "(Dân trí) - Trong 1.690 bãi đỗ xe công cộng theo quy hoạch của Hà Nội, đến nay mới có 72 bãi được đưa vào khai thác, 61 bãi đang triển khai đầu tư xây dựng, còn 1.557 bãi chưa thực hiện.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://dantri.com.vn/rss/thoi-su.rss",
+        "publisher_host": "dantri.com.vn",
         "publication_date_from_feed": true
       }
     },
