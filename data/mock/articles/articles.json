@@ -1,9 +1,90 @@
 {
   "schema_version": 1,
-  "build_id": "market-news-rss-20261030T125155Z",
-  "generated_at": "2026-10-30T12:51:55.335791+00:00",
-  "record_count": 1227,
+  "build_id": "market-news-rss-20261030T145148Z",
+  "generated_at": "2026-10-30T14:51:48.120804+00:00",
+  "record_count": 1232,
   "data": [
+    {
+      "id": "article-market-rss-e8a9e5a6e3fe598878bd",
+      "title": "Mua nhà Vinhomes Hải Vân Bay: Mở rộng trải nghiệm sống cùng sự trưởng thành của con",
+      "url": "https://dantri.com.vn/bat-dong-san/mua-nha-vinhomes-hai-van-bay-mo-rong-trai-nghiem-song-cung-su-truong-thanh-cua-con-20261030190402971.htm",
+      "category": "market",
+      "module_ids": [
+        "market"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-10-30T12:33:26+00:00",
+      "source_id": "dantri-real-estate",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [
+        "vinhomes"
+      ],
+      "tags": [],
+      "importance": 2,
+      "summary": "(Dân trí) - Từ những trò chơi gia đình đến các hoạt động vận động, khám phá thiên nhiên, VinWonders và Công viên Rừng Hải Vân quy mô 225ha mang đến nhiều lớp trải nghiệm phù hợp theo từng độ tuổi.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://dantri.com.vn/rss/bat-dong-san.rss",
+        "publisher_host": "dantri.com.vn",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-5bf44bed2ce67db4b2f4",
+      "title": "Nhân viên gác chắn đường sắt kịp ngăn nữ sinh lao vào điểm mù xe container",
+      "url": "https://dantri.com.vn/thoi-su/nhan-vien-gac-chan-duong-sat-kip-ngan-nu-sinh-lao-vao-diem-mu-xe-container-20261030162846262.htm",
+      "category": "infrastructure",
+      "module_ids": [
+        "infrastructure"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-10-30T11:44:10+00:00",
+      "source_id": "dantri-current-affairs",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [
+        "infrastructure"
+      ],
+      "importance": 2,
+      "summary": "(Dân trí) - Phát hiện nữ sinh ở Đà Nẵng đi xe đạp điện lọt vào điểm mù của xe container trong lúc trời mưa, anh Thành lập tức lao tới ngăn lại, giúp em này thoát khỏi một tình huống nguy hiểm.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://dantri.com.vn/rss/thoi-su.rss",
+        "publisher_host": "dantri.com.vn",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-7f17901f6de4462d3bfa",
+      "title": "Masterise Group đồng hành cùng Học viện Kỹ thuật và Công nghệ an ninh xây mới Học viện",
+      "url": "https://dantri.com.vn/bat-dong-san/masterise-group-dong-hanh-cung-hoc-vien-ky-thuat-va-cong-nghe-an-ninh-xay-moi-hoc-vien-20261030174245166.htm",
+      "category": "market",
+      "module_ids": [
+        "market"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-10-30T11:06:27+00:00",
+      "source_id": "dantri-real-estate",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [
+        "masterise"
+      ],
+      "tags": [],
+      "importance": 2,
+      "summary": "(Dân trí) - Ngày 30/10, tại trụ sở Bộ Công An diễn ra lễ công bố Hợp đồng nguyên tắc tài trợ Dự án giữa Học viện Kỹ thuật và Công nghệ an ninh và Masterise Group.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://dantri.com.vn/rss/bat-dong-san.rss",
+        "publisher_host": "dantri.com.vn",
+        "publication_date_from_feed": true
+      }
+    },
     {
       "id": "article-market-rss-83f2e3d916616431aca2",
       "title": "Bộ trưởng hé lộ kế hoạch xây cao tốc phục vụ 6,5 triệu người dân Tây Nguyên",
@@ -28,6 +109,35 @@
         "method": "official-rss",
         "feed_url": "https://dantri.com.vn/rss/thoi-su.rss",
         "publisher_host": "dantri.com.vn",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-49bda95ae001e79b6c91",
+      "title": "Bộ trưởng Xây dựng: Bộ không quyết đầu tư đường sắt Hà Nội - Thái Nguyên",
+      "url": "https://vnexpress.net/bo-truong-xay-dung-bo-khong-quyet-dau-tu-duong-sat-ha-noi-thai-nguyen-5138846.html",
+      "category": "infrastructure",
+      "module_ids": [
+        "infrastructure"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-10-30T10:51:48+00:00",
+      "source_id": "vnexpress-current-affairs",
+      "region_ids": [
+        "ha-noi"
+      ],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [
+        "infrastructure"
+      ],
+      "importance": 2,
+      "summary": "Bộ trưởng Xây dựng Trần Hồng Minh cho biết việc đầu tư tuyến đường sắt đô thị nối Hà Nội với Thái Nguyên không thuộc thẩm quyền của Bộ mà do hai địa phương tự quyết.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://vnexpress.net/rss/thoi-su.rss",
+        "publisher_host": "vnexpress.net",
         "publication_date_from_feed": true
       }
     },
@@ -3688,6 +3798,33 @@
         "method": "official-rss",
         "feed_url": "https://dantri.com.vn/rss/thoi-su.rss",
         "publisher_host": "dantri.com.vn",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-ea37ea3c07db057302b9",
+      "title": "Hạ tầng kết nối tạo lực đẩy cho bất động sản Quy Nhơn",
+      "url": "https://vnexpress.net/ha-tang-ket-noi-tao-luc-day-cho-bat-dong-san-quy-nhon-5137940.html",
+      "category": "market",
+      "module_ids": [
+        "market"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-10-28T09:00:00+00:00",
+      "source_id": "vnexpress-real-estate",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [
+        "infrastructure"
+      ],
+      "importance": 2,
+      "summary": "Cảng biển, hàng không và các tuyến giao thông liên vùng mở rộng kết nối cho Quy Nhơn, tạo thêm dư địa cho thị trường bất động sản.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://vnexpress.net/rss/bat-dong-san.rss",
+        "publisher_host": "vnexpress.net",
         "publication_date_from_feed": true
       }
     },
