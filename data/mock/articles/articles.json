@@ -1,9 +1,34 @@
 {
   "schema_version": 1,
-  "build_id": "market-news-rss-20261030T085143Z",
-  "generated_at": "2026-10-30T08:51:43.661829+00:00",
-  "record_count": 1207,
+  "build_id": "market-verified-official-news-20261030T085250Z",
+  "generated_at": "2026-10-30T08:52:50.829059+00:00",
+  "record_count": 1208,
   "data": [
+    {
+      "id": "article-market-nam-long-discovered-b8440e12aae61f84",
+      "title": "Tri ân KTS Cao Tấn Bửu – Quý Nhân của Nam Long",
+      "url": "https://www.namlongvn.com/tin-tuc/tri-an-kts-cao-tan-buu-quy-nhan-cua-nam-long/",
+      "category": "market",
+      "subcategory": "developer",
+      "content_type": "developer-update",
+      "published_at": "2026-10-30T09:00:00+07:00",
+      "source_id": "nam-long-official",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [
+        "nam-long"
+      ],
+      "tags": [],
+      "importance": 3,
+      "summary": "– Nam Long Group Tin tức chung 30/10/2026 Tri ân KTS Cao Tấn Bửu – Quý Nhân của Nam Long “Mấy độ phong trần xô sóng vỗ Một đời hào sảng khép mây bay” Xin tưởng niệm tri ân một “Trưởng Tràng”, một thủ lĩnh, một QUÝ NHÂN vô cùng trân quý của Nam Long! Là thành viên sáng lập Nam Long từ những ngày đầu khởi nghiệp năm 1992 đầy gian",
+      "structured_facts": [],
+      "candidate_note": "Official article publication date validated; strict review gate still applies.",
+      "source_verification": {
+        "publication_date_verified": true,
+        "article_page": "https://www.namlongvn.com/tin-tuc/tri-an-kts-cao-tan-buu-quy-nhan-cua-nam-long/",
+        "discovery_url": "https://www.namlongvn.com/tin-tuc/"
+      }
+    },
     {
       "id": "article-market-rss-098cef40b7f28b1898a5",
       "title": "Bất động sản du lịch Gia Lai chờ phục hồi, bài toán doanh thu vẫn khó",
