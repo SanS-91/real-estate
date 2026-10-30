@@ -1,9 +1,165 @@
 {
   "schema_version": 1,
-  "build_id": "market-news-rss-20261030T025145Z",
-  "generated_at": "2026-10-30T02:51:45.993024+00:00",
-  "record_count": 1177,
+  "build_id": "market-news-rss-20261030T045138Z",
+  "generated_at": "2026-10-30T04:51:38.373969+00:00",
+  "record_count": 1185,
   "data": [
+    {
+      "id": "article-market-rss-bc22c294c0e23ce9b6ea",
+      "title": "Metro Bến Thành - Cần Giờ thi công đồng loạt",
+      "url": "https://vnexpress.net/metro-ben-thanh-can-gio-thi-cong-dong-loat-5138707.html",
+      "category": "infrastructure",
+      "module_ids": [
+        "infrastructure"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-10-30T04:07:16+00:00",
+      "source_id": "vnexpress-current-affairs",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [
+        "infrastructure"
+      ],
+      "importance": 2,
+      "summary": "Nhà đầu tư sẽ huy động 10.000 công nhân, kỹ sư và nhân lực kỹ thuật vào cao điểm thi công đường sắt Bến Thành - Cần Giờ dài 54 km, dự kiến vận hành năm 2029.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://vnexpress.net/rss/thoi-su.rss",
+        "publisher_host": "vnexpress.net",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-e8f8a6c535b555a70219",
+      "title": "The Harbor Skyline khai thác lợi thế cảnh quan đảo Vũ Yên",
+      "url": "https://vnexpress.net/the-harbor-skyline-khai-thac-loi-the-canh-quan-dao-vu-yen-5138704.html",
+      "category": "market",
+      "module_ids": [
+        "market"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-10-30T04:00:00+00:00",
+      "source_id": "vnexpress-real-estate",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "The Harbor Skyline do MIK Group phát triển tại đảo Vũ Yên kết hợp căn hộ cao tầng với cảnh quan sông nước, không gian xanh và hệ tiện ích phục vụ nhu cầu sinh hoạt của cư dân.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://vnexpress.net/rss/bat-dong-san.rss",
+        "publisher_host": "vnexpress.net",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-26315d1f69fa3b220f4b",
+      "title": "Giông lốc làm sập, tốc mái 87 căn nhà ở An Giang",
+      "url": "https://vnexpress.net/giong-loc-lam-sap-toc-mai-87-can-nha-o-an-giang-5138697.html",
+      "category": "market",
+      "module_ids": [
+        "market"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-10-30T03:49:42+00:00",
+      "source_id": "vnexpress-current-affairs",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "Mưa lớn kèm giông lốc làm sập, tốc mái 87 căn nhà, gãy 22 trụ điện trên địa bàn tỉnh An Giang, thiệt hại hơn 1,4 tỷ đồng, khuya 29/10.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://vnexpress.net/rss/thoi-su.rss",
+        "publisher_host": "vnexpress.net",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-c43d51ce8e1b2715be75",
+      "title": "Metro Bến Thành - Cần Giờ mục tiêu chạy thử cuối 2028, kỷ lục chưa từng có",
+      "url": "https://thanhnien.vn/metro-ben-thanh-can-gio-muc-tieu-chay-thu-cuoi-2028-ky-luc-chua-tung-co-185261030072137556.htm",
+      "category": "infrastructure",
+      "module_ids": [
+        "infrastructure"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-10-30T03:35:00+00:00",
+      "source_id": "thanhnien-policy",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [
+        "vinhomes"
+      ],
+      "tags": [
+        "infrastructure"
+      ],
+      "importance": 2,
+      "summary": "Sáng nay (30.10), Công ty CP Đầu tư và Phát triển Đường sắt cao tốc VinSpeed cùng liên danh tổng thầu Vinhomes - SGC tổ chức lễ thi công đồng loạt các hạng mục trọng điểm thuộc tuyến đường sắt đô thị - metro Bến Thành - Cần Giờ.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://thanhnien.vn/rss/kinh-te/chinh-sach-phat-trien.rss",
+        "publisher_host": "thanhnien.vn",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-ce5b94edd3965ace43ae",
+      "title": "Đại biểu Quốc hội: Cần cấm 'lướt sóng' hợp đồng mua nhà ở trên giấy",
+      "url": "https://vnexpress.net/dai-bieu-quoc-hoi-can-cam-luot-song-hop-dong-mua-nha-o-tren-giay-5138623.html",
+      "category": "market",
+      "module_ids": [
+        "market"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-10-30T03:23:44+00:00",
+      "source_id": "vnexpress-real-estate",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "Đại biểu Lê Thanh Hoàn đề nghị cấm chuyển nhượng hợp đồng mua nhà ở hình thành trong tương lai (nhà trên giấy) để ngăn đầu cơ, lướt sóng.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://vnexpress.net/rss/bat-dong-san.rss",
+        "publisher_host": "vnexpress.net",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-0037e975055c97d6b54a",
+      "title": "12 căn hộ tích hợp thiết kế sân vườn tại Pearl Residence",
+      "url": "https://vnexpress.net/12-can-ho-tich-hop-thiet-ke-san-vuon-tai-pearl-residence-5137717.html",
+      "category": "market",
+      "module_ids": [
+        "market"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-10-30T03:00:00+00:00",
+      "source_id": "vnexpress-real-estate",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "Bộ sưu tập 12 căn hộ tầng 3 tại Pearl Residence Cửa Lò có ban công thiết kế thành sân vườn riêng, mở rộng không gian sinh hoạt ngoài trời cho gia chủ.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://vnexpress.net/rss/bat-dong-san.rss",
+        "publisher_host": "vnexpress.net",
+        "publication_date_from_feed": true
+      }
+    },
     {
       "id": "article-market-rss-1fd72884f0c20161672b",
       "title": "Giá vàng hôm nay 30.10.2026: Bốc hơi 1,3 triệu đồng sau một đêm",
@@ -103,6 +259,56 @@
         "method": "official-rss",
         "feed_url": "https://vnexpress.net/rss/bat-dong-san.rss",
         "publisher_host": "vnexpress.net",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-743649743b4f353941bc",
+      "title": "Điểm nhấn tạo sức hút của tháp văn phòng IFC Hanoi",
+      "url": "https://dantri.com.vn/bat-dong-san/diem-nhan-tao-suc-hut-cua-thap-van-phong-ifc-hanoi-20261029224807775.htm",
+      "category": "market",
+      "module_ids": [
+        "market"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-10-30T01:00:00+00:00",
+      "source_id": "dantri-real-estate",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "(Dân trí) - Từ cảm hứng tà áo dài và ruộng bậc thang Việt Nam đến quy mô văn phòng hàng đầu khu vực Tây Hồ Tây, IFC Hanoi kết nối bản sắc địa phương với chuẩn mực quốc tế, hướng đến hệ sinh thái làm việc tích hợp và trải nghiệm doanh nghiệp.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://dantri.com.vn/rss/bat-dong-san.rss",
+        "publisher_host": "dantri.com.vn",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-3321ca0588982e8caf90",
+      "title": "7 việc nhà bạn nên làm vào thứ sáu để cuối tuần thảnh thơi",
+      "url": "https://dantri.com.vn/bat-dong-san/7-viec-nha-ban-nen-lam-vao-thu-sau-de-cuoi-tuan-thanh-thoi-20261023141754506.htm",
+      "category": "market",
+      "module_ids": [
+        "market"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-10-30T00:58:00+00:00",
+      "source_id": "dantri-real-estate",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "(Dân trí) - Chỉ cần tranh thủ xử lý nhanh vài vị trí quen thuộc vào chiều hoặc tối thứ sáu, bạn sẽ giải phóng bản thân khỏi việc nhà để tận hưởng trọn vẹn hai ngày nghỉ cuối tuần bên gia đình.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://dantri.com.vn/rss/bat-dong-san.rss",
+        "publisher_host": "dantri.com.vn",
         "publication_date_from_feed": true
       }
     },
