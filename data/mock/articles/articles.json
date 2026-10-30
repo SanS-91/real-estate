@@ -1,9 +1,90 @@
 {
   "schema_version": 1,
-  "build_id": "market-news-rss-20261030T045138Z",
-  "generated_at": "2026-10-30T04:51:38.373969+00:00",
-  "record_count": 1185,
+  "build_id": "market-news-rss-20261030T060214Z",
+  "generated_at": "2026-10-30T06:02:14.739933+00:00",
+  "record_count": 1191,
   "data": [
+    {
+      "id": "article-market-rss-836809bdba9b8cf4242d",
+      "title": "TP HCM thông qua quy hoạch tầm nhìn 100 năm",
+      "url": "https://vnexpress.net/tp-hcm-thong-qua-quy-hoach-tam-nhin-100-nam-5138694.html",
+      "category": "market",
+      "module_ids": [
+        "market"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-10-30T05:23:05+00:00",
+      "source_id": "vnexpress-current-affairs",
+      "region_ids": [
+        "hcmc"
+      ],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [
+        "legal"
+      ],
+      "importance": 2,
+      "summary": "Ngoài 5 cực tăng trưởng, quy hoạch TP HCM tầm nhìn 100 năm xác định 5 trung tâm vệ tinh là Côn Đảo, Long Hải - Hồ Tràm, Hóc Môn - Củ Chi, Bàu Bàng và Bắc Tân Uyên.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://vnexpress.net/rss/thoi-su.rss",
+        "publisher_host": "vnexpress.net",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-0ac3bf3ad6f8f7d28c49",
+      "title": "TP HCM có 64 chung cư cũ phải tháo dỡ trước năm 2030",
+      "url": "https://vnexpress.net/tp-hcm-co-64-chung-cu-cu-phai-thao-do-truoc-nam-2030-5138650.html",
+      "category": "market",
+      "module_ids": [
+        "market"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-10-30T05:07:41+00:00",
+      "source_id": "vnexpress-real-estate",
+      "region_ids": [
+        "hcmc"
+      ],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "TP HCM có 64 chung cư với 8.577 căn hộ thuộc diện di dời, tháo dỡ, mục tiêu cải tạo, xây dựng lại toàn bộ số công trình này trong giai đoạn 2026-2030.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://vnexpress.net/rss/bat-dong-san.rss",
+        "publisher_host": "vnexpress.net",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-802d6a05bea88c83343f",
+      "title": "Đề xuất cho chuyển nhượng dự án bỏ hoang chưa hoàn thành nghĩa vụ tài chính",
+      "url": "https://vnexpress.net/de-xuat-cho-chuyen-nhuong-du-an-bo-hoang-chua-hoan-thanh-nghia-vu-tai-chinh-5138682.html",
+      "category": "market",
+      "module_ids": [
+        "market"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-10-30T04:20:53+00:00",
+      "source_id": "vnexpress-economy",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "Đại biểu Hoàng Văn Nghĩa đề xuất các dự án bất động sản bỏ hoang, chưa nộp đủ tiền đất được bán cho nhà đầu tư khác để khơi thông nguồn lực.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://vnexpress.net/rss/kinh-doanh.rss",
+        "publisher_host": "vnexpress.net",
+        "publication_date_from_feed": true
+      }
+    },
     {
       "id": "article-market-rss-bc22c294c0e23ce9b6ea",
       "title": "Metro Bến Thành - Cần Giờ thi công đồng loạt",
@@ -136,6 +217,64 @@
       }
     },
     {
+      "id": "article-market-rss-ed37178c66051d0b61d6",
+      "title": "Nhà trong khu vực TOD có bị giải tỏa với quy hoạch 100 năm của TPHCM?",
+      "url": "https://dantri.com.vn/thoi-su/nha-trong-khu-vuc-tod-co-bi-giai-toa-voi-quy-hoach-100-nam-cua-tphcm-20261030091703253.htm",
+      "category": "market",
+      "module_ids": [
+        "market"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-10-30T03:18:53+00:00",
+      "source_id": "dantri-current-affairs",
+      "region_ids": [
+        "hcmc"
+      ],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [
+        "legal"
+      ],
+      "importance": 2,
+      "summary": "(Dân trí) - Trước băn khoăn về khả năng phải di dời, giải tỏa nhà ở hiện hữu trong khu vực TOD, Giám đốc Sở Quy hoạch - Kiến trúc TPHCM cho biết, nội dung này sẽ được xác định ở bước lập quy hoạch chi tiết.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://dantri.com.vn/rss/thoi-su.rss",
+        "publisher_host": "dantri.com.vn",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-6a8b00a7ffbec94e169f",
+      "title": "Ngày đầu điều chỉnh giao thông, cửa ngõ sân bay Tân Sơn Nhất thông thoáng",
+      "url": "https://dantri.com.vn/thoi-su/ngay-dau-dieu-chinh-giao-thong-cua-ngo-san-bay-tan-son-nhat-thong-thoang-20261030094533936.htm",
+      "category": "infrastructure",
+      "module_ids": [
+        "infrastructure"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-10-30T03:04:39+00:00",
+      "source_id": "dantri-current-affairs",
+      "region_ids": [
+        "hcmc"
+      ],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [
+        "infrastructure"
+      ],
+      "importance": 2,
+      "summary": "(Dân trí) - Ngày đầu điều chỉnh giao thông quanh khu vực sân bay Tân Sơn Nhất (TPHCM), nhiều tuyến đường thông thoáng, phương tiện lưu thông ổn định dù một số tài xế còn lúng túng với biển báo mới.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://dantri.com.vn/rss/thoi-su.rss",
+        "publisher_host": "dantri.com.vn",
+        "publication_date_from_feed": true
+      }
+    },
+    {
       "id": "article-market-rss-0037e975055c97d6b54a",
       "title": "12 căn hộ tích hợp thiết kế sân vườn tại Pearl Residence",
       "url": "https://vnexpress.net/12-can-ho-tich-hop-thiet-ke-san-vuon-tai-pearl-residence-5137717.html",
@@ -157,6 +296,31 @@
         "method": "official-rss",
         "feed_url": "https://vnexpress.net/rss/bat-dong-san.rss",
         "publisher_host": "vnexpress.net",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-2885bc9efcbb572de98f",
+      "title": "“Hồ sơ duyệt một đằng, căn hộ bán một nẻo”, để dân mua phải nhà sai phạm",
+      "url": "https://dantri.com.vn/thoi-su/ho-so-duyet-mot-dang-can-ho-ban-mot-neo-de-dan-mua-phai-nha-sai-pham-20261030091357153.htm",
+      "category": "market",
+      "module_ids": [
+        "market"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-10-30T02:30:54+00:00",
+      "source_id": "dantri-current-affairs",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "(Dân trí) - Từ bài học xử lý các dự án của Mường Thanh, đại biểu Vũ Văn Tiến nhấn mạnh yêu cầu kiểm soát chặt chẽ khi bất động sản được đưa ra bán, không để dân bỏ tiền mua, vào sinh sống mới tìm cách xử lý.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://dantri.com.vn/rss/thoi-su.rss",
+        "publisher_host": "dantri.com.vn",
         "publication_date_from_feed": true
       }
     },
