@@ -1,9 +1,89 @@
 {
   "schema_version": 1,
-  "build_id": "market-news-rss-20261030T145148Z",
-  "generated_at": "2026-10-30T14:51:48.120804+00:00",
-  "record_count": 1232,
+  "build_id": "market-news-rss-20261030T192954Z",
+  "generated_at": "2026-10-30T19:29:54.895006+00:00",
+  "record_count": 1235,
   "data": [
+    {
+      "id": "article-market-rss-322e75741bc8085b332c",
+      "title": "Biệt thự 23,5 triệu USD của ông trùm môi giới bất động sản",
+      "url": "https://vnexpress.net/biet-thu-23-5-trieu-usd-cua-ong-trum-moi-gioi-bat-dong-san-5138291.html",
+      "category": "market",
+      "module_ids": [
+        "market"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-10-30T17:03:00+00:00",
+      "source_id": "vnexpress-real-estate",
+      "region_ids": [
+        "binh-duong"
+      ],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "Công trình rộng gần 800 m2 tại Beverly Hills mở tầm nhìn ra thành phố Los Angeles (Mỹ) và Thái Bình Dương.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://vnexpress.net/rss/bat-dong-san.rss",
+        "publisher_host": "vnexpress.net",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-650278590909b9e70973",
+      "title": "Chuyên gia: Tối ưu thiết kế, quy hoạch TOD giúp giá nhà về vừa túi tiền",
+      "url": "https://vnexpress.net/chuyen-gia-toi-uu-thiet-ke-quy-hoach-tod-giup-gia-nha-ve-vua-tui-tien-5138948.html",
+      "category": "market",
+      "module_ids": [
+        "market"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-10-30T17:01:00+00:00",
+      "source_id": "vnexpress-real-estate",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [
+        "pricing",
+        "legal"
+      ],
+      "importance": 2,
+      "summary": "Tối ưu thiết kế, diện tích căn hộ và phát triển đô thị gắn với giao thông công cộng (TOD) là những giải pháp được chuyên gia đề xuất để đưa giá nhà về mức vừa túi tiền.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://vnexpress.net/rss/bat-dong-san.rss",
+        "publisher_host": "vnexpress.net",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-12ee975e14d8cdcb35a5",
+      "title": "Tối 30/10, giá vàng, bạc đồng loạt giảm sốc",
+      "url": "https://dantri.com.vn/kinh-doanh/toi-3010-gia-vang-bac-dong-loat-giam-soc-20261030222217292.htm",
+      "category": "macro",
+      "module_ids": [
+        "macro"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-10-30T15:27:11+00:00",
+      "source_id": "dantri-business",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "(Dân trí) - Giá vàng, bạc thế giới lao dốc tối 30/10 khi giá dầu tăng mạnh, làm dấy lên lo ngại lạm phát và giảm kỳ vọng Fed sớm nới lỏng chính sách tiền tệ.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://dantri.com.vn/rss/kinh-doanh.rss",
+        "publisher_host": "dantri.com.vn",
+        "publication_date_from_feed": true
+      }
+    },
     {
       "id": "article-market-rss-e8a9e5a6e3fe598878bd",
       "title": "Mua nhà Vinhomes Hải Vân Bay: Mở rộng trải nghiệm sống cùng sự trưởng thành của con",
