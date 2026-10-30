@@ -1,9 +1,111 @@
 {
   "schema_version": 1,
-  "build_id": "market-news-rss-20261030T063249Z",
-  "generated_at": "2026-10-30T06:32:49.651392+00:00",
-  "record_count": 1195,
+  "build_id": "market-news-rss-20261030T085143Z",
+  "generated_at": "2026-10-30T08:51:43.661829+00:00",
+  "record_count": 1207,
   "data": [
+    {
+      "id": "article-market-rss-098cef40b7f28b1898a5",
+      "title": "Bất động sản du lịch Gia Lai chờ phục hồi, bài toán doanh thu vẫn khó",
+      "url": "https://thanhnien.vn/bat-dong-san-du-lich-gia-lai-cho-phuc-hoi-bai-toan-doanh-thu-van-kho-18526103013270673.htm",
+      "category": "market",
+      "module_ids": [
+        "market"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-10-30T07:35:00+00:00",
+      "source_id": "thanhnien-real-estate",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "Thị trường bất động sản du lịch Gia Lai được kỳ vọng phục hồi, song khả năng khai thác và thu hút khách vẫn là thách thức lớn.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://thanhnien.vn/rss/kinh-te/dia-oc.rss",
+        "publisher_host": "thanhnien.vn",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-016a46ab9da2a34a2590",
+      "title": "Mỗi ngày, chủ chuỗi trung tâm thương mại Vincom báo lãi hơn 16 tỷ đồng",
+      "url": "https://dantri.com.vn/bat-dong-san/moi-ngay-chu-chuoi-trung-tam-thuong-mai-vincom-bao-lai-hon-16-ty-dong-20261030120727680.htm",
+      "category": "market",
+      "module_ids": [
+        "market"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-10-30T07:23:00+00:00",
+      "source_id": "dantri-real-estate",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "(Dân trí) - Vincom Retail ghi nhận lợi nhuận sau thuế hơn 1.500 tỷ đồng trong quý III, tương đương gần hơn 16 tỷ đồng mỗi ngày. Lũy kế 9 tháng năm 2026, doanh nghiệp lãi 4.737 tỷ đồng.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://dantri.com.vn/rss/bat-dong-san.rss",
+        "publisher_host": "dantri.com.vn",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-fef99f568545ce3dcdde",
+      "title": "Mô hình nghỉ dưỡng kết hợp giải trí, ẩm thực tại Qtopia",
+      "url": "https://vnexpress.net/mo-hinh-nghi-duong-ket-hop-giai-tri-am-thuc-tai-qtopia-5138769.html",
+      "category": "market",
+      "module_ids": [
+        "market"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-10-30T07:00:00+00:00",
+      "source_id": "vnexpress-real-estate",
+      "region_ids": [
+        "hcmc"
+      ],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "Qtopia tích hợp chuỗi tiện ích phục vụ nhu cầu vui chơi, giải trí, ẩm thực và nghỉ dưỡng trong tổ hợp ven biển, cách trung tâm TP HCM khoảng 75 phút di chuyển.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://vnexpress.net/rss/bat-dong-san.rss",
+        "publisher_host": "vnexpress.net",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-031ddef38d518da3457c",
+      "title": "Giảm giá lần thứ 7, nhiều cơ sở nhà đất dôi dư vẫn chưa có người thuê",
+      "url": "https://dantri.com.vn/bat-dong-san/giam-gia-lan-thu-7-nhieu-co-so-nha-dat-doi-du-van-chua-co-nguoi-thue-20261030000125618.htm",
+      "category": "market",
+      "module_ids": [
+        "market"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-10-30T06:02:00+00:00",
+      "source_id": "dantri-real-estate",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "(Dân trí) - Sau 7 lần thông báo cho thuê đối với 9 cơ sở nhà đất thuộc Trung tâm Phát triển quỹ đất tỉnh Nghệ An quản lý, chỉ có một cơ sở có người đăng ký thuê.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://dantri.com.vn/rss/bat-dong-san.rss",
+        "publisher_host": "dantri.com.vn",
+        "publication_date_from_feed": true
+      }
+    },
     {
       "id": "article-market-rss-3da0434d07059c3f8c77",
       "title": "Thiết kế tối ưu năng lượng trong dự án Triton Crown",
@@ -26,6 +128,60 @@
         "method": "official-rss",
         "feed_url": "https://vnexpress.net/rss/bat-dong-san.rss",
         "publisher_host": "vnexpress.net",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-a676bfe0bc922b1dcd32",
+      "title": "Hơn 2.500 tỷ cải tạo kênh thoát nước sân bay Tân Sơn Nhất",
+      "url": "https://vnexpress.net/hon-2-500-ty-cai-tao-kenh-thoat-nuoc-san-bay-tan-son-nhat-5138541.html",
+      "category": "infrastructure",
+      "module_ids": [
+        "infrastructure"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-10-30T05:39:19+00:00",
+      "source_id": "vnexpress-current-affairs",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [
+        "infrastructure"
+      ],
+      "importance": 2,
+      "summary": "Kênh Hy Vọng dài hơn 1 km được đầu tư cải tạo, tăng khả năng thoát nước, giảm ngập khu vực sân bay Tân Sơn Nhất với tổng vốn hơn 2.500 tỷ đồng.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://vnexpress.net/rss/thoi-su.rss",
+        "publisher_host": "vnexpress.net",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-8d61984437d9408462c9",
+      "title": "Dàn máy móc khổng lồ đồng loạt thi công Metro Bến Thành - Cần Giờ",
+      "url": "https://dantri.com.vn/thoi-su/dan-may-moc-khong-lo-dong-loat-thi-cong-metro-ben-thanh-can-gio-20261030120515179.htm",
+      "category": "infrastructure",
+      "module_ids": [
+        "infrastructure"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-10-30T05:35:44+00:00",
+      "source_id": "dantri-current-affairs",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [
+        "infrastructure"
+      ],
+      "importance": 2,
+      "summary": "(Dân trí) - Dây chuyền đúc dầm hàng trăm tấn và dàn máy móc siêu trường, siêu trọng đồng loạt khởi động phục vụ thi công tuyến Metro Bến Thành - Cần Giờ.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://dantri.com.vn/rss/thoi-su.rss",
+        "publisher_host": "dantri.com.vn",
         "publication_date_from_feed": true
       }
     },
@@ -86,6 +242,35 @@
       }
     },
     {
+      "id": "article-market-rss-09a17a596565e72049aa",
+      "title": "HĐND TP HCM thông qua quy hoạch tầm nhìn 100 năm",
+      "url": "https://vnexpress.net/hdnd-tp-hcm-thong-qua-quy-hoach-tam-nhin-100-nam-5138694.html",
+      "category": "market",
+      "module_ids": [
+        "market"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-10-30T05:23:05+00:00",
+      "source_id": "vnexpress-current-affairs",
+      "region_ids": [
+        "hcmc"
+      ],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [
+        "legal"
+      ],
+      "importance": 2,
+      "summary": "Ngoài 5 cực tăng trưởng, quy hoạch TP HCM tầm nhìn 100 năm xác định 5 trung tâm vệ tinh là Côn Đảo, Long Hải - Hồ Tràm, Hóc Môn - Củ Chi, Bàu Bàng và Bắc Tân Uyên.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://vnexpress.net/rss/thoi-su.rss",
+        "publisher_host": "vnexpress.net",
+        "publication_date_from_feed": true
+      }
+    },
+    {
       "id": "article-market-rss-56774e671fd4e5de0394",
       "title": "Loạt dự án giao thông trọng điểm TPHCM có nguy cơ đình trệ vì thiếu cát",
       "url": "https://dantri.com.vn/bat-dong-san/loat-du-an-giao-thong-trong-diem-tphcm-co-nguy-co-dinh-tre-vi-thieu-cat-20261030112120751.htm",
@@ -109,6 +294,35 @@
       "source_verification": {
         "method": "official-rss",
         "feed_url": "https://dantri.com.vn/rss/bat-dong-san.rss",
+        "publisher_host": "dantri.com.vn",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-3a2f9edf9981caac7e06",
+      "title": "HĐND TPHCM thông qua quy hoạch tổng thể với tầm nhìn 100 năm",
+      "url": "https://dantri.com.vn/thoi-su/hdnd-tphcm-thong-qua-quy-hoach-tong-the-voi-tam-nhin-100-nam-20261030120025239.htm",
+      "category": "market",
+      "module_ids": [
+        "market"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-10-30T05:10:19+00:00",
+      "source_id": "dantri-current-affairs",
+      "region_ids": [
+        "hcmc"
+      ],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [
+        "legal"
+      ],
+      "importance": 2,
+      "summary": "(Dân trí) - Với quy hoạch 100 năm, TPHCM từ đô thị nổi trội ở Đông Nam Á được định hướng thành trung tâm kinh tế, văn hóa, xã hội, khoa học, công nghệ và đổi mới sáng tạo của châu Á, hướng tới đô thị toàn cầu.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://dantri.com.vn/rss/thoi-su.rss",
         "publisher_host": "dantri.com.vn",
         "publication_date_from_feed": true
       }
@@ -162,6 +376,83 @@
         "method": "official-rss",
         "feed_url": "https://dantri.com.vn/rss/kinh-doanh.rss",
         "publisher_host": "dantri.com.vn",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-d6bdae7aa60c0ca0d5d0",
+      "title": "Quảng Trị sắp có thêm quần thể du lịch nghỉ dưỡng hơn 16.230 tỷ đồng",
+      "url": "https://vnexpress.net/quang-tri-sap-co-them-quan-the-du-lich-nghi-duong-hon-16-230-ty-dong-5138668.html",
+      "category": "market",
+      "module_ids": [
+        "infrastructure"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-10-30T04:56:51+00:00",
+      "source_id": "vnexpress-real-estate",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "Quần thể du lịch sinh thái núi U Bò - hồ Thác Chuối rộng hơn 167 ha, vốn đầu tư hơn 16.230 tỷ đồng được khởi công ngày 30/10.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://vnexpress.net/rss/bat-dong-san.rss",
+        "publisher_host": "vnexpress.net",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-f00b208046d4e4aa4820",
+      "title": "Bộ trưởng: Sẽ siết quản lý để dân yên tâm giao dịch, không lo \"dự án ma\"",
+      "url": "https://dantri.com.vn/thoi-su/bo-truong-se-siet-quan-ly-de-dan-yen-tam-giao-dich-khong-lo-du-an-ma-20261030113420707.htm",
+      "category": "market",
+      "module_ids": [
+        "market"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-10-30T04:40:13+00:00",
+      "source_id": "dantri-current-affairs",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [
+        "sales"
+      ],
+      "importance": 2,
+      "summary": "(Dân trí) - Ghi nhận băn khoăn của đại biểu Quốc hội về “dự án ma”, song Bộ trưởng Trần Hồng Minh khẳng định tới đây sẽ siết chặt quản lý để người dân, doanh nghiệp yên tâm giao dịch mà không gặp vướng mắc.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://dantri.com.vn/rss/thoi-su.rss",
+        "publisher_host": "dantri.com.vn",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-b7c8d40a2994cdd4e532",
+      "title": "Đề xuất cho bán dự án bỏ hoang chưa hoàn thành nghĩa vụ tài chính",
+      "url": "https://vnexpress.net/de-xuat-cho-ban-du-an-bo-hoang-chua-hoan-thanh-nghia-vu-tai-chinh-5138682.html",
+      "category": "market",
+      "module_ids": [
+        "market"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-10-30T04:20:53+00:00",
+      "source_id": "vnexpress-economy",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "Đại biểu Hoàng Văn Nghĩa đề xuất các dự án bất động sản bỏ hoang, chưa nộp đủ tiền đất được bán cho nhà đầu tư khác để khơi thông nguồn lực.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://vnexpress.net/rss/kinh-doanh.rss",
+        "publisher_host": "vnexpress.net",
         "publication_date_from_feed": true
       }
     },
@@ -314,6 +605,31 @@
       "tags": [],
       "importance": 2,
       "summary": "Đại biểu Lê Thanh Hoàn đề nghị cấm chuyển nhượng hợp đồng mua nhà ở hình thành trong tương lai (nhà trên giấy) để ngăn đầu cơ, lướt sóng.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://vnexpress.net/rss/bat-dong-san.rss",
+        "publisher_host": "vnexpress.net",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-9ce7fc2857b924e9c335",
+      "title": "Đại biểu Quốc hội: Cần cấm 'lướt sóng' hợp đồng mua nhà ở hình thành trong tương lai",
+      "url": "https://vnexpress.net/dai-bieu-quoc-hoi-can-cam-luot-song-hop-dong-mua-nha-o-hinh-thanh-trong-tuong-lai-5138623.html",
+      "category": "market",
+      "module_ids": [
+        "market"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-10-30T03:23:44+00:00",
+      "source_id": "vnexpress-real-estate",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "Đại biểu Lê Thanh Hoàn đề nghị cấm chuyển nhượng hợp đồng mua nhà ở hình thành trong tương lai (nhà trên giấy) khi sửa luật, để ngăn đầu cơ, lướt sóng.",
       "source_verification": {
         "method": "official-rss",
         "feed_url": "https://vnexpress.net/rss/bat-dong-san.rss",
