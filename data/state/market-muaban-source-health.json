@@ -1,12 +1,12 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-10-29T14:38:17.714592+00:00",
+  "generated_at": "2026-10-30T08:33:49.211378+00:00",
   "source_id": "muaban-vn",
   "targets_checked": 6,
-  "listing_urls_discovered": 16,
-  "details_checked": 16,
+  "listing_urls_discovered": 15,
+  "details_checked": 15,
   "valid_unexpired_project_ads": 9,
-  "newly_published": 1,
+  "newly_published": 0,
   "published_current_individual_listings": 9,
   "sources": [
     {
@@ -56,13 +56,13 @@
       "project_id": "mizuki-park",
       "source_url": "https://muaban.net/bat-dong-san/ban-can-ho-chung-cu-du-an-mizuki-park-5598-huyen-binh-chanh-ho-chi-minh",
       "access": "reachable",
-      "discovered": 9,
-      "checked": 9,
+      "discovered": 8,
+      "checked": 8,
       "qualified": 5,
       "reasons": {
         "qualified-unexpired-listing": 5,
         "multiple-sale-price-claims": 1,
-        "publisher-expired": 3
+        "publisher-expired": 2
       }
     },
     {
