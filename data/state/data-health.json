@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-10-30T09:59:53.790525+00:00",
+  "generated_at": "2026-10-30T10:00:17.763240+00:00",
   "overall_status": "stale",
   "modules": [
     {
@@ -359,7 +359,7 @@
       "record_count": 26,
       "last_production_at": "2026-10-09T03:21:16.025473+00:00",
       "last_data_change_at": "2026-10-09T03:21:16.025473+00:00",
-      "age_hours": 510.6,
+      "age_hours": 510.7,
       "stale_after_hours": 1080,
       "freshness": "fresh",
       "latest_source_period": "2026-Q2",
@@ -411,7 +411,7 @@
       "record_count": 18,
       "last_production_at": "2026-10-09T04:15:03.529948+00:00",
       "last_data_change_at": "2026-10-09T04:15:03.529948+00:00",
-      "age_hours": 509.7,
+      "age_hours": 509.8,
       "freshness": "stale",
       "latest_source_period": null,
       "source_business_day_lag": null,
@@ -510,7 +510,7 @@
       "record_count": 8,
       "last_production_at": "2026-10-08T15:08:55.288Z",
       "last_data_change_at": "2026-10-08T15:08:55.288Z",
-      "age_hours": 522.8,
+      "age_hours": 522.9,
       "stale_after_hours": 192,
       "freshness": "stale",
       "latest_source_period": null,
