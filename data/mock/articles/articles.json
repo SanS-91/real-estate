@@ -1,9 +1,111 @@
 {
   "schema_version": 1,
-  "build_id": "market-news-rss-20261029T194336Z",
-  "generated_at": "2026-10-29T19:43:36.392420+00:00",
-  "record_count": 1165,
+  "build_id": "market-news-rss-20261030T005148Z",
+  "generated_at": "2026-10-30T00:51:48.517165+00:00",
+  "record_count": 1170,
   "data": [
+    {
+      "id": "article-market-rss-0dbb60a2fb90d342a60c",
+      "title": "Ngân hàng Thế giới: Giá vàng có thể hạ nhiệt năm 2027 nhưng vẫn neo cao",
+      "url": "https://dantri.com.vn/kinh-doanh/ngan-hang-the-gioi-gia-vang-co-the-ha-nhiet-nam-2027-nhung-van-neo-cao-20261029225457326.htm",
+      "category": "macro",
+      "module_ids": [
+        "macro"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-10-29T23:31:00+00:00",
+      "source_id": "dantri-business",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "(Dân trí) - Ngân hàng Thế giới dự báo nhóm kim loại quý có thể hạ nhiệt vào năm 2027, song mặt bằng giá vẫn cao gấp 3 lần giai đoạn trước và khó quay lại vùng đáy cũ.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://dantri.com.vn/rss/kinh-doanh.rss",
+        "publisher_host": "dantri.com.vn",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-5386b863bfc949953c12",
+      "title": "Bên trong cụm HH Linh Đàm, nơi cư dân thấp thỏm chờ số phận căn hộ",
+      "url": "https://dantri.com.vn/bat-dong-san/ben-trong-cum-hh-linh-dam-noi-cu-dan-thap-thom-cho-so-phan-can-ho-20261029201735375.htm",
+      "category": "market",
+      "module_ids": [
+        "market"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-10-29T23:29:24+00:00",
+      "source_id": "dantri-real-estate",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "(Dân trí) - Sau khi cơ chế, chính sách đặc thù để xử lý các dự án vi phạm về đất đai, trật tự xây dựng của Tập đoàn Mường Thanh được thông qua, nhiều cư dân mừng vì đã có hướng giải quyết, song lo lắng trước khả năng phải di dời.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://dantri.com.vn/rss/bat-dong-san.rss",
+        "publisher_host": "dantri.com.vn",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-b365cce932b3e87edba2",
+      "title": "Sân bay Long Thành trước ngày khai thác",
+      "url": "https://thanhnien.vn/san-bay-long-thanh-truoc-ngay-khai-thac-185261029224823348.htm",
+      "category": "infrastructure",
+      "module_ids": [
+        "infrastructure"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-10-29T23:05:00+00:00",
+      "source_id": "thanhnien-policy",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [
+        "infrastructure"
+      ],
+      "importance": 2,
+      "summary": "Những ngày này, không khí tại công trường Cảng hàng không quốc tế Long Thành vô cùng hối hả. \"Siêu sân bay\" đang bước vào giai đoạn nước rút để chuẩn bị cho ngày chính thức đi vào vận hành.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://thanhnien.vn/rss/kinh-te/chinh-sach-phat-trien.rss",
+        "publisher_host": "thanhnien.vn",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-02f5f384025323928f87",
+      "title": "Thái Nguyên có thêm khu công nghiệp gần 500 ha",
+      "url": "https://vnexpress.net/thai-nguyen-co-them-khu-cong-nghiep-gan-500-ha-5138452.html",
+      "category": "market",
+      "module_ids": [
+        "infrastructure"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-10-29T22:59:40+00:00",
+      "source_id": "vnexpress-real-estate",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "Khu công nghiệp Tây Phổ Yên giai đoạn 1 của Viglacera nằm giáp vành đai 5 vùng Thủ đô, được khởi công ngày 29/10.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://vnexpress.net/rss/bat-dong-san.rss",
+        "publisher_host": "vnexpress.net",
+        "publication_date_from_feed": true
+      }
+    },
     {
       "id": "article-market-rss-f51787ea3617942510e3",
       "title": "Không gian sống ở Hội An lấy cảm hứng từ nhà Hobbit",
@@ -33,6 +135,31 @@
       "id": "article-market-rss-ccac082da8c33e10c133",
       "title": "Mượn sổ đỏ khởi nghiệp, gây dựng thương hiệu cá thát lát 28 tỷ",
       "url": "https://vnexpress.net/muon-so-do-khoi-nghiep-gay-dung-thuong-hieu-ca-that-lat-28-ty-5138528.html",
+      "category": "legal",
+      "module_ids": [
+        "legal"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-10-29T17:00:00+00:00",
+      "source_id": "vnexpress-current-affairs",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "Từ khoản vay 2,5 triệu đồng, bà Nguyễn Kim Thùy trải qua nhiều lần thất bại trước khi gây dựng thương hiệu cá thát lát doanh thu 28 tỷ đồng mỗi năm.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://vnexpress.net/rss/thoi-su.rss",
+        "publisher_host": "vnexpress.net",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-c22acf7da1f314833efc",
+      "title": "Mượn sổ đỏ khởi nghiệp, gây dựng thương hiệu cá 28 tỷ đồng",
+      "url": "https://vnexpress.net/muon-so-do-khoi-nghiep-gay-dung-thuong-hieu-ca-28-ty-dong-5138528.html",
       "category": "legal",
       "module_ids": [
         "legal"
