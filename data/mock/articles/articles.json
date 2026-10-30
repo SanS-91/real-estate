@@ -1,9 +1,117 @@
 {
   "schema_version": 1,
-  "build_id": "market-news-rss-20261030T105140Z",
-  "generated_at": "2026-10-30T10:51:40.310160+00:00",
-  "record_count": 1219,
+  "build_id": "market-news-rss-20261030T125155Z",
+  "generated_at": "2026-10-30T12:51:55.335791+00:00",
+  "record_count": 1227,
   "data": [
+    {
+      "id": "article-market-rss-83f2e3d916616431aca2",
+      "title": "Bộ trưởng hé lộ kế hoạch xây cao tốc phục vụ 6,5 triệu người dân Tây Nguyên",
+      "url": "https://dantri.com.vn/thoi-su/bo-truong-he-lo-ke-hoach-xay-cao-toc-phuc-vu-65-trieu-nguoi-dan-tay-nguyen-20261030175438727.htm",
+      "category": "infrastructure",
+      "module_ids": [
+        "infrastructure"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-10-30T11:03:40+00:00",
+      "source_id": "dantri-current-affairs",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [
+        "infrastructure"
+      ],
+      "importance": 2,
+      "summary": "(Dân trí) - Theo Bộ trưởng Xây dựng, một tập đoàn đang xin đầu tư cao tốc Buôn Ma Thuột - Gia Nghĩa, để bảo đảm nhu cầu đi lại cho 6,5 triệu đồng bào Tây Nguyên. Bộ sẽ nhận hồ sơ, báo cáo Chính phủ.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://dantri.com.vn/rss/thoi-su.rss",
+        "publisher_host": "dantri.com.vn",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-1c4e833f06d4b1910112",
+      "title": "Bộ trưởng Xây dựng: Đường sắt Hà Nội - Thái Nguyên do hai địa phương quyết",
+      "url": "https://vnexpress.net/bo-truong-xay-dung-duong-sat-ha-noi-thai-nguyen-do-hai-dia-phuong-quyet-5138846.html",
+      "category": "infrastructure",
+      "module_ids": [
+        "infrastructure"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-10-30T10:51:48+00:00",
+      "source_id": "vnexpress-current-affairs",
+      "region_ids": [
+        "ha-noi"
+      ],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [
+        "infrastructure"
+      ],
+      "importance": 2,
+      "summary": "Bộ trưởng Xây dựng Trần Hồng Minh cho biết việc đầu tư tuyến đường sắt đô thị nối Hà Nội với Thái Nguyên thuộc thẩm quyền hai địa phương, sau kiến nghị của đại biểu Quốc hội.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://vnexpress.net/rss/thoi-su.rss",
+        "publisher_host": "vnexpress.net",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-911e4c86b369c92a3951",
+      "title": "Đại biểu Thích Thanh Quyết: Dự án luật hiến mô, tạng \"rất nhân đạo, từ bi\"",
+      "url": "https://dantri.com.vn/thoi-su/dai-bieu-thich-thanh-quyet-du-an-luat-hien-mo-tang-rat-nhan-dao-tu-bi-20261030164447989.htm",
+      "category": "market",
+      "module_ids": [
+        "market"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-10-30T10:33:56+00:00",
+      "source_id": "dantri-current-affairs",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "(Dân trí) - Hòa thượng Thích Thanh Quyết cho rằng hiến mô, hiến tạng mang ý nghĩa nhân đạo, phù hợp với giá trị từ bi, cứu khổ, cứu nạn của nhà Phật.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://dantri.com.vn/rss/thoi-su.rss",
+        "publisher_host": "dantri.com.vn",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-87e73dedb754e31252b3",
+      "title": "64 chung cư cũ tại TPHCM thuộc diện phải di dời, tháo dỡ",
+      "url": "https://dantri.com.vn/bat-dong-san/64-chung-cu-cu-tai-tphcm-thuoc-dien-phai-di-doi-thao-do-20261030162245371.htm",
+      "category": "market",
+      "module_ids": [
+        "market"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-10-30T09:55:58+00:00",
+      "source_id": "dantri-real-estate",
+      "region_ids": [
+        "hcmc"
+      ],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "(Dân trí) - TPHCM có 64 chung cư, gồm 106 lô với tổng cộng 8.577 căn hộ, thuộc diện phải di dời, tháo dỡ. Kết quả rà soát hoàn thành trong tháng 10 và không ghi nhận trường hợp nào phải tháo dỡ khẩn cấp.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://dantri.com.vn/rss/bat-dong-san.rss",
+        "publisher_host": "dantri.com.vn",
+        "publication_date_from_feed": true
+      }
+    },
     {
       "id": "article-market-rss-4a121439ae38745a0e58",
       "title": "TP HCM cho chuyển hơn 15 ha đất nông nghiệp làm khu nhà ở Bình Trưng",
@@ -55,6 +163,63 @@
         "method": "official-rss",
         "feed_url": "https://vnexpress.net/rss/bat-dong-san.rss",
         "publisher_host": "vnexpress.net",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-9be12864d3b51c0772dd",
+      "title": "Yêu cầu theo dõi chặt chẽ vị trí lún trên cao tốc Bến Lức - Long Thành",
+      "url": "https://dantri.com.vn/thoi-su/yeu-cau-theo-doi-chat-che-vi-tri-lun-tren-cao-toc-ben-luc-long-thanh-20261030154426257.htm",
+      "category": "infrastructure",
+      "module_ids": [
+        "infrastructure"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-10-30T09:06:29+00:00",
+      "source_id": "dantri-current-affairs",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [
+        "sales",
+        "infrastructure"
+      ],
+      "importance": 2,
+      "summary": "(Dân trí) - Chấp thuận cho cao tốc Bến Lức - Long Thành thông xe, Hội đồng kiểm tra Nhà nước yêu cầu chủ đầu tư khắc phục triệt để hư hỏng mặt đường và theo dõi chặt chẽ các vị trí lún, nứt tại công trình.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://dantri.com.vn/rss/thoi-su.rss",
+        "publisher_host": "dantri.com.vn",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-3770e4e5910d2e010d8b",
+      "title": "Loạt dự án trọng điểm ở TPHCM sắp có thêm nguồn tiền để xây dựng",
+      "url": "https://dantri.com.vn/bat-dong-san/loat-du-an-trong-diem-o-tphcm-sap-co-them-nguon-tien-de-xay-dung-20261030154139763.htm",
+      "category": "market",
+      "module_ids": [
+        "market"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-10-30T09:04:28+00:00",
+      "source_id": "dantri-real-estate",
+      "region_ids": [
+        "hcmc"
+      ],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [
+        "infrastructure"
+      ],
+      "importance": 2,
+      "summary": "(Dân trí) - TPHCM vừa thông qua cơ chế phát hành trái phiếu đô thị, trái phiếu công trình tại Trung tâm tài chính quốc tế để huy động thêm nguồn lực cho các dự án hạ tầng trọng điểm.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://dantri.com.vn/rss/bat-dong-san.rss",
+        "publisher_host": "dantri.com.vn",
         "publication_date_from_feed": true
       }
     },
@@ -113,6 +278,35 @@
       }
     },
     {
+      "id": "article-market-rss-33383d14a6917035fbd3",
+      "title": "Nhập 16.000 tấn nhựa đường hoàn thiện cao tốc TPHCM - Long Thành",
+      "url": "https://dantri.com.vn/thoi-su/nhap-16000-tan-nhua-duong-hoan-thien-cao-toc-tphcm-long-thanh-20261030143850596.htm",
+      "category": "infrastructure",
+      "module_ids": [
+        "infrastructure"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-10-30T08:32:36+00:00",
+      "source_id": "dantri-current-affairs",
+      "region_ids": [
+        "hcmc"
+      ],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [
+        "infrastructure"
+      ],
+      "importance": 2,
+      "summary": "(Dân trí) - Để đảm bảo tiến độ, các đơn vị sẽ nhập khoảng 16.000 tấn nhựa đường từ Singapore và Malaysia, phục vụ giai đoạn hoàn thiện dự án mở rộng cao tốc TPHCM - Long Thành.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://dantri.com.vn/rss/thoi-su.rss",
+        "publisher_host": "dantri.com.vn",
+        "publication_date_from_feed": true
+      }
+    },
+    {
       "id": "article-market-rss-85af5a8f702f847c0c99",
       "title": "Đại biểu Quốc hội: “Người dân còn giữ khoảng 500 tấn vàng, xấp xỉ 12% GDP”",
       "url": "https://dantri.com.vn/kinh-doanh/dai-bieu-quoc-hoi-nguoi-dan-con-giu-khoang-500-tan-vang-xap-xi-12-gdp-20261030151942807.htm",
@@ -161,6 +355,33 @@
         "method": "official-rss",
         "feed_url": "https://vnexpress.net/rss/thoi-su.rss",
         "publisher_host": "vnexpress.net",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-b9a7d9c4c98ace526938",
+      "title": "Người dân TPHCM mua bán, thừa kế đất không còn vướng địa giới",
+      "url": "https://dantri.com.vn/bat-dong-san/nguoi-dan-tphcm-mua-ban-thua-ke-dat-khong-con-vuong-dia-gioi-20261030145745691.htm",
+      "category": "market",
+      "module_ids": [
+        "market"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-10-30T08:16:21+00:00",
+      "source_id": "dantri-real-estate",
+      "region_ids": [
+        "hcmc"
+      ],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "(Dân trí) - TPHCM cho phép giải quyết thủ tục chuyển nhượng, thừa kế, tặng cho quyền sử dụng đất và đăng ký tài sản gắn liền với đất không phụ thuộc địa giới hành chính.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://dantri.com.vn/rss/bat-dong-san.rss",
+        "publisher_host": "dantri.com.vn",
         "publication_date_from_feed": true
       }
     },
