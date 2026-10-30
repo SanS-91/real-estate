@@ -1,9 +1,63 @@
 {
   "schema_version": 1,
-  "build_id": "market-verified-official-news-20261030T085250Z",
-  "generated_at": "2026-10-30T08:52:50.829059+00:00",
-  "record_count": 1208,
+  "build_id": "market-news-rss-20261030T105140Z",
+  "generated_at": "2026-10-30T10:51:40.310160+00:00",
+  "record_count": 1219,
   "data": [
+    {
+      "id": "article-market-rss-4a121439ae38745a0e58",
+      "title": "TP HCM cho chuyển hơn 15 ha đất nông nghiệp làm khu nhà ở Bình Trưng",
+      "url": "https://vnexpress.net/tp-hcm-cho-chuyen-hon-15-ha-dat-nong-nghiep-lam-khu-nha-o-binh-trung-5138845.html",
+      "category": "market",
+      "module_ids": [
+        "market"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-10-30T09:31:28+00:00",
+      "source_id": "vnexpress-real-estate",
+      "region_ids": [
+        "hcmc"
+      ],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "UBND TP HCM cho phép Công ty bất động sản Bình Trưng chuyển mục đích sử dụng hơn 15,6 ha đất nông nghiệp để làm dự án khu nhà ở tại phường Bình Trưng và Cát Lái.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://vnexpress.net/rss/bat-dong-san.rss",
+        "publisher_host": "vnexpress.net",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-50fad050ff1b2870a2d0",
+      "title": "Tiền thuê đất khu công nghiệp có nơi tăng hơn 1.000%",
+      "url": "https://vnexpress.net/tien-thue-dat-khu-cong-nghiep-co-noi-tang-hon-1-000-5138804.html",
+      "category": "market",
+      "module_ids": [
+        "market"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-10-30T09:22:13+00:00",
+      "source_id": "vnexpress-real-estate",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [
+        "infrastructure"
+      ],
+      "importance": 2,
+      "summary": "Tiền thuê đất tăng đột biến, có nơi hơn 1.000% cùng yêu cầu đầu tư hạ tầng xanh ngày càng cao đang tạo thêm áp lực tài chính cho các chủ đầu tư khu công nghiệp.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://vnexpress.net/rss/bat-dong-san.rss",
+        "publisher_host": "vnexpress.net",
+        "publication_date_from_feed": true
+      }
+    },
     {
       "id": "article-market-nam-long-discovered-b8440e12aae61f84",
       "title": "Tri ân KTS Cao Tấn Bửu – Quý Nhân của Nam Long",
@@ -27,6 +81,87 @@
         "publication_date_verified": true,
         "article_page": "https://www.namlongvn.com/tin-tuc/tri-an-kts-cao-tan-buu-quy-nhan-cua-nam-long/",
         "discovery_url": "https://www.namlongvn.com/tin-tuc/"
+      }
+    },
+    {
+      "id": "article-market-rss-3eecc3cb70f5092cfd22",
+      "title": "Động thổ cao tốc Gò Dầu - Xa Mát hơn 10.200 tỷ đồng",
+      "url": "https://vnexpress.net/dong-tho-cao-toc-go-dau-xa-mat-hon-10-200-ty-dong-5138815.html",
+      "category": "infrastructure",
+      "module_ids": [
+        "infrastructure"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-10-30T08:55:34+00:00",
+      "source_id": "vnexpress-current-affairs",
+      "region_ids": [
+        "hcmc"
+      ],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [
+        "infrastructure"
+      ],
+      "importance": 2,
+      "summary": "Cao tốc Gò Dầu - Xa Mát dài 28 km, vốn hơn 10.200 tỷ đồng, sẽ mở thêm hướng kết nối TP HCM với núi Bà Đen, dự kiến hoàn thành sau 3 năm.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://vnexpress.net/rss/thoi-su.rss",
+        "publisher_host": "vnexpress.net",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-85af5a8f702f847c0c99",
+      "title": "Đại biểu Quốc hội: “Người dân còn giữ khoảng 500 tấn vàng, xấp xỉ 12% GDP”",
+      "url": "https://dantri.com.vn/kinh-doanh/dai-bieu-quoc-hoi-nguoi-dan-con-giu-khoang-500-tan-vang-xap-xi-12-gdp-20261030151942807.htm",
+      "category": "macro",
+      "module_ids": [
+        "macro"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-10-30T08:25:16+00:00",
+      "source_id": "dantri-business",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "(Dân trí) - Đại biểu Lê Hoàng Anh chỉ ra nghịch lý vốn có sẵn, nhưng không chảy vào sản xuất. Ông cho biết tiền gửi dân cư đã vượt 11,2 triệu tỷ đồng; người dân còn giữ khoảng 500 tấn vàng, xấp xỉ 12% GDP.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://dantri.com.vn/rss/kinh-doanh.rss",
+        "publisher_host": "dantri.com.vn",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-63018dfc56151fb832c8",
+      "title": "Sân bay Long Thành dự kiến khai thác từ 0h ngày 24/12",
+      "url": "https://vnexpress.net/san-bay-long-thanh-du-kien-khai-thac-tu-0h-ngay-24-12-5138000.html",
+      "category": "infrastructure",
+      "module_ids": [
+        "infrastructure"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-10-30T08:20:32+00:00",
+      "source_id": "vnexpress-current-affairs",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [
+        "infrastructure"
+      ],
+      "importance": 2,
+      "summary": "ACV thông báo sân bay Long Thành dự kiến khai thác từ 0h ngày 24/12, giai đoạn đầu tối đa khoảng 366 chuyến bay mỗi tuần.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://vnexpress.net/rss/thoi-su.rss",
+        "publisher_host": "vnexpress.net",
+        "publication_date_from_feed": true
       }
     },
     {
@@ -107,6 +242,88 @@
       }
     },
     {
+      "id": "article-market-rss-08846525521b1876e353",
+      "title": "Sân bay Long Thành vận hành thử nghiệm toàn hệ thống trong tháng 11",
+      "url": "https://dantri.com.vn/thoi-su/san-bay-long-thanh-van-hanh-thu-nghiem-toan-he-thong-trong-thang-11-20261030112800088.htm",
+      "category": "infrastructure",
+      "module_ids": [
+        "infrastructure"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-10-30T06:39:50+00:00",
+      "source_id": "dantri-current-affairs",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [
+        "infrastructure"
+      ],
+      "importance": 2,
+      "summary": "(Dân trí) - ACV dự kiến vận hành thử nghiệm, đánh giá rủi ro và hoàn tất nghiệm thu toàn bộ hạ tầng, nhân sự sân bay Long Thành trong tháng 11, đảm bảo sẵn sàng khai thác thương mại an toàn.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://dantri.com.vn/rss/thoi-su.rss",
+        "publisher_host": "dantri.com.vn",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-b1f15a845f28f61500d3",
+      "title": "TPHCM thống nhất diện tích nhà ở tối thiểu 8m2/người để đăng ký thường trú",
+      "url": "https://dantri.com.vn/thoi-su/tphcm-thong-nhat-dien-tich-nha-o-toi-thieu-8m2nguoi-de-dang-ky-thuong-tru-20261030082349452.htm",
+      "category": "market",
+      "module_ids": [
+        "market"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-10-30T06:32:37+00:00",
+      "source_id": "dantri-current-affairs",
+      "region_ids": [
+        "hcmc"
+      ],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "(Dân trí) - TPHCM thống nhất mức diện tích nhà ở tối thiểu 8m2 sàn/người để đăng ký thường trú tại nhà thuê, mượn, ở nhờ, tạo thuận lợi cho người lao động, công nhân và người dân sinh sống trên địa bàn.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://dantri.com.vn/rss/thoi-su.rss",
+        "publisher_host": "dantri.com.vn",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-47885e6982996f7f11e0",
+      "title": "Tây Ninh động thổ dự án cao tốc Gò Dầu - Xa Mát hơn 10.000 tỷ đồng",
+      "url": "https://dantri.com.vn/thoi-su/tay-ninh-dong-tho-du-an-cao-toc-go-dau-xa-mat-hon-10000-ty-dong-20261030123141505.htm",
+      "category": "market",
+      "module_ids": [
+        "market",
+        "infrastructure"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-10-30T06:32:28+00:00",
+      "source_id": "dantri-current-affairs",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [
+        "infrastructure"
+      ],
+      "importance": 2,
+      "summary": "(Dân trí) - Tây Ninh động thổ giai đoạn 1 cao tốc Gò Dầu - Xa Mát dài hơn 28km, tổng vốn đầu tư 10.279 tỷ đồng, kỳ vọng tăng kết nối giao thông, thúc đẩy phát triển kinh tế - xã hội địa phương.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://dantri.com.vn/rss/thoi-su.rss",
+        "publisher_host": "dantri.com.vn",
+        "publication_date_from_feed": true
+      }
+    },
+    {
       "id": "article-market-rss-031ddef38d518da3457c",
       "title": "Giảm giá lần thứ 7, nhiều cơ sở nhà đất dôi dư vẫn chưa có người thuê",
       "url": "https://dantri.com.vn/bat-dong-san/giam-gia-lan-thu-7-nhieu-co-so-nha-dat-doi-du-van-chua-co-nguoi-thue-20261030000125618.htm",
@@ -153,6 +370,63 @@
         "method": "official-rss",
         "feed_url": "https://vnexpress.net/rss/bat-dong-san.rss",
         "publisher_host": "vnexpress.net",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-37529a8839b056adbf2e",
+      "title": "Tài xế loay hoay ngày đầu phân luồng giao thông quanh sân bay Tân Sơn Nhất",
+      "url": "https://dantri.com.vn/thoi-su/tai-xe-loay-hoay-ngay-dau-phan-luong-giao-thong-quanh-san-bay-tan-son-nhat-20261030113702793.htm",
+      "category": "infrastructure",
+      "module_ids": [
+        "infrastructure"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-10-30T05:59:06+00:00",
+      "source_id": "dantri-current-affairs",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [
+        "infrastructure"
+      ],
+      "importance": 2,
+      "summary": "(Dân trí) - Ngày 30/10, nhiều tuyến đường quanh sân bay Tân Sơn Nhất chính thức áp dụng phương án phân luồng mới. Một số tài xế tỏ ra lúng túng khi gặp các biển cấm vừa được lắp đặt.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://dantri.com.vn/rss/thoi-su.rss",
+        "publisher_host": "dantri.com.vn",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-511fb78c14bd9f184ef0",
+      "title": "Hoàn trả tiền cho doanh nghiệp bỏ cọc 135 tỷ đồng đấu giá đất vàng ở Hà Nội",
+      "url": "https://dantri.com.vn/thoi-su/hoan-tra-tien-cho-doanh-nghiep-bo-coc-135-ty-dong-dau-gia-dat-vang-o-ha-noi-20261030110845730.htm",
+      "category": "market",
+      "module_ids": [
+        "market",
+        "legal"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-10-30T05:52:40+00:00",
+      "source_id": "dantri-current-affairs",
+      "region_ids": [
+        "ha-noi"
+      ],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [
+        "pricing"
+      ],
+      "importance": 2,
+      "summary": "(Dân trí) - Thuế thành phố Hà Nội thông tin về diễn biến xử lý vụ việc Công ty TNHH Duyên Hà bỏ cọc 135 tỷ đồng sau khi trúng đấu giá lô đất vàng ở 18 phố Cao Bá Quát (phường Ba Đình, Hà Nội).",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://dantri.com.vn/rss/thoi-su.rss",
+        "publisher_host": "dantri.com.vn",
         "publication_date_from_feed": true
       }
     },
@@ -530,6 +804,31 @@
         "method": "official-rss",
         "feed_url": "https://vnexpress.net/rss/thoi-su.rss",
         "publisher_host": "vnexpress.net",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-b18d911bb5308032c2f7",
+      "title": "Đại biểu Quốc hội đề xuất giải pháp ngăn chặn đầu cơ bất động sản",
+      "url": "https://dantri.com.vn/thoi-su/dai-bieu-quoc-hoi-de-xuat-giai-phap-ngan-chan-dau-co-bat-dong-san-20261030105731203.htm",
+      "category": "market",
+      "module_ids": [
+        "market"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-10-30T04:05:39+00:00",
+      "source_id": "dantri-current-affairs",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "(Dân trí) - Việc cho phép chuyển nhượng hợp đồng bán nhà ở hình thành trong tương lai, theo đại biểu Lê Thanh Hoàn, đã tạo ra cơ chế lướt sóng, hợp đồng qua nhiều nấc trung gian, đẩy chi phí giá tăng cao.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://dantri.com.vn/rss/thoi-su.rss",
+        "publisher_host": "dantri.com.vn",
         "publication_date_from_feed": true
       }
     },
