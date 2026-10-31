@@ -1,8 +1,8 @@
 {
   "schema_version": 1,
-  "build_id": "market-news-rss-20261031T055709Z",
-  "generated_at": "2026-10-31T05:57:09.027260+00:00",
-  "record_count": 1262,
+  "build_id": "market-news-rss-20261031T062251Z",
+  "generated_at": "2026-10-31T06:22:51.419709+00:00",
+  "record_count": 1263,
   "data": [
     {
       "id": "article-market-rss-0112d35112b541d54c90",
@@ -91,6 +91,33 @@
       "id": "article-market-rss-9b1731037a6676a84ff2",
       "title": "Đấu giá ế ẩm, 2 nhà đất liên quan bà Trương Mỹ Lan tiếp tục được giảm giá",
       "url": "https://dantri.com.vn/bat-dong-san/dau-gia-e-am-2-nha-dat-lien-quan-ba-truong-my-lan-tiep-tuc-duoc-giam-gia-20261031085847348.htm",
+      "category": "market",
+      "module_ids": [
+        "market"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-10-31T03:32:00+00:00",
+      "source_id": "dantri-real-estate",
+      "region_ids": [
+        "hcmc"
+      ],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "(Dân trí) - Hai bất động sản nằm ở \"đất vàng\" Đồng Khởi (TPHCM) liên quan bà Trương Mỹ Lan vừa được cơ quan thi hành án hạ giá gần 9%, do lần đấu giá trước đó không có người đăng ký mua.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://dantri.com.vn/rss/bat-dong-san.rss",
+        "publisher_host": "dantri.com.vn",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-54672e5b98d479770aed",
+      "title": "Đấu giá ế ẩm, 2 nhà đất liên quan bà Trương Mỹ Lan giảm gần 9%",
+      "url": "https://dantri.com.vn/bat-dong-san/dau-gia-e-am-2-nha-dat-lien-quan-ba-truong-my-lan-giam-gan-9-20261031085847348.htm",
       "category": "market",
       "module_ids": [
         "market"
