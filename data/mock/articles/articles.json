@@ -1,9 +1,170 @@
 {
   "schema_version": 1,
-  "build_id": "market-news-rss-20261031T062251Z",
-  "generated_at": "2026-10-31T06:22:51.419709+00:00",
-  "record_count": 1263,
+  "build_id": "market-news-rss-20261031T085136Z",
+  "generated_at": "2026-10-31T08:51:36.389261+00:00",
+  "record_count": 1270,
   "data": [
+    {
+      "id": "article-market-rss-f6a73ed8255784e81d9e",
+      "title": "VARS: Hệ số K có thể khiến tiền sử dụng đất tăng gấp 2–2,6 lần",
+      "url": "https://dantri.com.vn/bat-dong-san/vars-he-so-k-co-the-khien-tien-su-dung-dat-tang-gap-226-lan-20261031125417769.htm",
+      "category": "market",
+      "module_ids": [
+        "market",
+        "legal"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-10-31T07:29:46+00:00",
+      "source_id": "dantri-real-estate",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [
+        "pricing"
+      ],
+      "importance": 2,
+      "summary": "(Dân trí) - Cơ chế bảng giá đất nhân hệ số K có thể khiến tiền sử dụng đất tăng 2-2,6 lần, làm tăng chi phí doanh nghiệp và nghĩa vụ tài chính của người dân.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://dantri.com.vn/rss/bat-dong-san.rss",
+        "publisher_host": "dantri.com.vn",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-1d594330f94d0352e065",
+      "title": "Aqua City hút hàng nghìn khách tham quan, trải nghiệm",
+      "url": "https://vnexpress.net/aqua-city-hut-hang-nghin-khach-tham-quan-trai-nghiem-5139136.html",
+      "category": "market",
+      "module_ids": [
+        "market"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-10-31T07:00:00+00:00",
+      "source_id": "vnexpress-real-estate",
+      "region_ids": [],
+      "project_ids": [
+        "aqua-city"
+      ],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "Gần 1.000 khách hàng dự sự kiện \"Aqua City - Trải nghiệm giá trị thực\", trực tiếp tham quan tiến độ xây dựng, cảnh quan, tiện ích và không gian sống đã hình thành tại dự án.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://vnexpress.net/rss/bat-dong-san.rss",
+        "publisher_host": "vnexpress.net",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-44ef5dbe1704853f3212",
+      "title": "Bộ trưởng Tài chính: Kiểm soát lạm phát xung quanh mức 4,5%",
+      "url": "https://dantri.com.vn/kinh-doanh/bo-truong-tai-chinh-kiem-soat-lam-phat-xung-quanh-muc-45-20261031131559425.htm",
+      "category": "macro",
+      "module_ids": [
+        "macro"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-10-31T06:54:56+00:00",
+      "source_id": "dantri-business",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "(Dân trí) - Bộ trưởng Tài chính cho biết sẽ tính toán phương án giá điện; Thống đốc nêu yêu cầu cân bằng giữa kiểm soát lạm phát, ổn định tỷ giá và hỗ trợ tăng trưởng.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://dantri.com.vn/rss/kinh-doanh.rss",
+        "publisher_host": "dantri.com.vn",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-7096ca4b25171a4e6120",
+      "title": "Hà Nội chuẩn bị mở bán loạt nhà xã hội từ 880 triệu đồng một căn",
+      "url": "https://vnexpress.net/ha-noi-chuan-bi-mo-ban-loat-nha-xa-hoi-tu-880-trieu-dong-mot-can-5139101.html",
+      "category": "market",
+      "module_ids": [
+        "market"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-10-31T05:45:12+00:00",
+      "source_id": "vnexpress-real-estate",
+      "region_ids": [
+        "ha-noi"
+      ],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [
+        "supply"
+      ],
+      "importance": 2,
+      "summary": "Hơn 300 căn nhà xã hội gần khu công nghệ cao Hòa Lạc nhận hồ sơ từ ngày 2/12, giá từ 880 triệu đồng một căn.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://vnexpress.net/rss/bat-dong-san.rss",
+        "publisher_host": "vnexpress.net",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-bc6aeec4b400eff4eca0",
+      "title": "Chưa thể thông nút giao cuối cao tốc Bến Lức - Long Thành trong tháng 10",
+      "url": "https://dantri.com.vn/thoi-su/chua-the-thong-nut-giao-cuoi-cao-toc-ben-luc-long-thanh-trong-thang-10-20261031112339768.htm",
+      "category": "infrastructure",
+      "module_ids": [
+        "infrastructure"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-10-31T04:50:23+00:00",
+      "source_id": "dantri-current-affairs",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [
+        "infrastructure"
+      ],
+      "importance": 2,
+      "summary": "(Dân trí) - Dự kiến thông nút giao Tân Hiệp vào cuối tháng 10, tuy nhiên, chủ đầu tư vẫn cần thêm thời gian làm việc với nhà chức trách để thống nhất các điều kiện an toàn và phương án tổ chức giao thông.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://dantri.com.vn/rss/thoi-su.rss",
+        "publisher_host": "dantri.com.vn",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-bcd88d6f16ff06f0d8f9",
+      "title": "Tuyến đường trăm tỷ không thể thông xe vì nhà đầu tư BOT không cho đấu nối",
+      "url": "https://dantri.com.vn/thoi-su/tuyen-duong-tram-ty-khong-the-thong-xe-vi-nha-dau-tu-bot-khong-cho-dau-noi-20261031105928920.htm",
+      "category": "infrastructure",
+      "module_ids": [
+        "infrastructure"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-10-31T04:20:52+00:00",
+      "source_id": "dantri-current-affairs",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "(Dân trí) - Đại biểu Nguyễn Khánh Vũ nêu thực trạng nhiều tuyến đường địa phương đầu tư hàng trăm tỷ đồng không thể thông xe vì nhà đầu tư BOT không cho đấu nối. Ông kiến nghị giải pháp tháo gỡ nút thắt này.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://dantri.com.vn/rss/thoi-su.rss",
+        "publisher_host": "dantri.com.vn",
+        "publication_date_from_feed": true
+      }
+    },
     {
       "id": "article-market-rss-0112d35112b541d54c90",
       "title": "Vàng SJC giảm sâu, người mua lỗ 6 triệu đồng chỉ sau một tuần",
@@ -374,6 +535,33 @@
       "tags": [],
       "importance": 2,
       "summary": "(Dân trí) - Đôi nam nữ chở nhau bằng xe máy chạy trong hầm chui Phan Thúc Duyện (TPHCM) xảy ra va chạm với xe ben khiến hai nạn nhân tử vong.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://dantri.com.vn/rss/thoi-su.rss",
+        "publisher_host": "dantri.com.vn",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-97373f7008d7891d30b7",
+      "title": "Xe khách giường nằm va chạm cực mạnh với ô tô con trên quốc lộ 32",
+      "url": "https://dantri.com.vn/thoi-su/xe-khach-giuong-nam-va-cham-cuc-manh-voi-o-to-con-tren-quoc-lo-32-20261031095933476.htm",
+      "category": "infrastructure",
+      "module_ids": [
+        "infrastructure"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-10-31T02:01:00+00:00",
+      "source_id": "dantri-current-affairs",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [
+        "infrastructure"
+      ],
+      "importance": 2,
+      "summary": "(Dân trí) - Chiếc xe khách giường nằm khi di chuyển trên quốc lộ 32 (địa phận tỉnh Lào Cai) đã xảy ra va chạm cực mạnh với một ô tô con, khiến 2 người bị thương.",
       "source_verification": {
         "method": "official-rss",
         "feed_url": "https://dantri.com.vn/rss/thoi-su.rss",
