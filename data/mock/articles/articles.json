@@ -1,9 +1,34 @@
 {
   "schema_version": 1,
-  "build_id": "market-news-rss-20261031T145142Z",
-  "generated_at": "2026-10-31T14:51:42.077196+00:00",
-  "record_count": 1280,
+  "build_id": "market-news-rss-20261031T183908Z",
+  "generated_at": "2026-10-31T18:39:08.473376+00:00",
+  "record_count": 1282,
   "data": [
+    {
+      "id": "article-market-rss-b62708a3ad0be5c542e1",
+      "title": "Nhà dưỡng già thiết kế xoay quanh cây cao 30 m",
+      "url": "https://vnexpress.net/nha-duong-gia-thiet-ke-xoay-quanh-cay-cao-30-m-5139085.html",
+      "category": "market",
+      "module_ids": [
+        "market"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-10-31T17:08:59+00:00",
+      "source_id": "vnexpress-real-estate",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "Khu nhà bỏ hoang ở ngoại ô Bắc Kinh được cải tạo thành nơi ở cho hai người cao tuổi, giữ kết cũ và bổ sung bếp, vườn rau phục vụ sinh hoạt.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://vnexpress.net/rss/bat-dong-san.rss",
+        "publisher_host": "vnexpress.net",
+        "publication_date_from_feed": true
+      }
+    },
     {
       "id": "article-market-rss-d454762b4415940fc348",
       "title": "Hà Nội công bố ranh giới lập quy hoạch Safari Ba Vì",
@@ -30,6 +55,35 @@
         "method": "official-rss",
         "feed_url": "https://vnexpress.net/rss/thoi-su.rss",
         "publisher_host": "vnexpress.net",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-ebf07358b92e0572cace",
+      "title": "Hà Nội công bố ranh giới dự án công viên Safari Ba Vì rộng gần 300ha",
+      "url": "https://dantri.com.vn/bat-dong-san/ha-noi-cong-bo-ranh-gioi-du-an-cong-vien-safari-ba-vi-rong-gan-300ha-20261031204742311.htm",
+      "category": "market",
+      "module_ids": [
+        "market"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-10-31T13:50:08+00:00",
+      "source_id": "dantri-real-estate",
+      "region_ids": [
+        "ha-noi"
+      ],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [
+        "legal"
+      ],
+      "importance": 2,
+      "summary": "(Dân trí) - Hà Nội vừa công bố ranh giới lập quy hoạch dự án công viên Safari Ba Vì với diện tích khoảng 299,5ha, đồng thời làm rõ thông tin về quy mô dự án được đăng tải trên mạng xã hội.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://dantri.com.vn/rss/bat-dong-san.rss",
+        "publisher_host": "dantri.com.vn",
         "publication_date_from_feed": true
       }
     },
