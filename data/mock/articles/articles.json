@@ -1,9 +1,167 @@
 {
   "schema_version": 1,
-  "build_id": "market-news-rss-20261031T005148Z",
-  "generated_at": "2026-10-31T00:51:48.411370+00:00",
-  "record_count": 1239,
+  "build_id": "market-news-rss-20261031T025138Z",
+  "generated_at": "2026-10-31T02:51:38.374807+00:00",
+  "record_count": 1247,
   "data": [
+    {
+      "id": "article-market-rss-f3be449b829754ecadd4",
+      "title": "Đôi nam nữ tử vong sau tai nạn trong hầm chui gần sân bay Tân Sơn Nhất",
+      "url": "https://vnexpress.net/doi-nam-nu-tu-vong-sau-tai-nan-trong-ham-chui-gan-san-bay-tan-son-nhat-5139064.html",
+      "category": "infrastructure",
+      "module_ids": [
+        "infrastructure"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-10-31T02:39:12+00:00",
+      "source_id": "vnexpress-current-affairs",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [
+        "infrastructure"
+      ],
+      "importance": 2,
+      "summary": "Nam thanh niên 19 tuổi chở cô gái bằng xe SH350i va chạm với xe ben trong hầm chui gần sân bay Tân Sơn Nhất, khiến cả hai tử vong, rạng sáng 31/10.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://vnexpress.net/rss/thoi-su.rss",
+        "publisher_host": "vnexpress.net",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-719b396fe30b70bfd17e",
+      "title": "Giá vàng hôm nay 31.10.2026: Lao dốc gần 3 triệu, rời xa ngưỡng 140 triệu đồng",
+      "url": "https://thanhnien.vn/gia-vang-hom-nay-31102026-lao-doc-gan-3-trieu-roi-xa-nguong-140-trieu-dong-185261031085218272.htm",
+      "category": "macro",
+      "module_ids": [
+        "macro"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-10-31T02:00:00+00:00",
+      "source_id": "thanhnien-banking",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "Giá vàng lao dốc trên thế giới kéo thị trường trong nước rời khỏi mốc 140 triệu đồng một lượng.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://thanhnien.vn/rss/kinh-te/ngan-hang.rss",
+        "publisher_host": "thanhnien.vn",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-019212b0b0ddf10dfa6a",
+      "title": "6 chi tiết khiến phòng ngủ lỗi thời và mẹo khắc phục hiệu quả",
+      "url": "https://dantri.com.vn/bat-dong-san/6-chi-tiet-khien-phong-ngu-loi-thoi-va-meo-khac-phuc-hieu-qua-20261030141056348.htm",
+      "category": "market",
+      "module_ids": [
+        "market"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-10-31T01:42:00+00:00",
+      "source_id": "dantri-real-estate",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "(Dân trí) - Phòng ngủ có thể trở nên lỗi thời bởi những chi tiết tưởng chừng quen thuộc. Các nhà thiết kế chỉ ra 6 lỗi bài trí phổ biến và gợi ý cách làm mới không gian nghỉ ngơi.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://dantri.com.vn/rss/bat-dong-san.rss",
+        "publisher_host": "dantri.com.vn",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-7273c6e9d0c66eb83c75",
+      "title": "VARS cảnh báo hệ số K có thể khiến chi phí đất tăng 2,6 lần",
+      "url": "https://vnexpress.net/vars-canh-bao-he-so-k-co-the-khien-chi-phi-dat-tang-2-6-lan-5138839.html",
+      "category": "market",
+      "module_ids": [
+        "market",
+        "legal"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-10-31T01:00:00+00:00",
+      "source_id": "vnexpress-real-estate",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [
+        "supply",
+        "pricing"
+      ],
+      "importance": 2,
+      "summary": "VARS cho rằng áp dụng bảng giá đất nhân hệ số K có thể làm tăng 2-2,6 lần tiền sử dụng đất tại một số dự án, gây áp lực lên chi phí đầu tư và nguồn cung bất động sản.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://vnexpress.net/rss/bat-dong-san.rss",
+        "publisher_host": "vnexpress.net",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-551926ce300745032d5c",
+      "title": "Chiến lược bất động sản giá trị thực của SkyWorld",
+      "url": "https://vnexpress.net/chien-luoc-bat-dong-san-gia-tri-thuc-cua-skyworld-5134330.html",
+      "category": "market",
+      "module_ids": [
+        "market"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-10-31T01:00:00+00:00",
+      "source_id": "vnexpress-real-estate",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "Thị trường bất động sản thanh lọc là thời điểm doanh nghiệp xây dựng niềm tin bằng chất lượng có thể đo lường, theo ông Trần Mai Văn Thảo, Giám đốc Khối Kinh doanh thị trường Việt Nam, SkyWorld Development.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://vnexpress.net/rss/bat-dong-san.rss",
+        "publisher_host": "vnexpress.net",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-0f91bdecb200e29e6653",
+      "title": "Qtopia đón nhu cầu nghỉ dưỡng và giải trí cuối tuần tại phía Nam",
+      "url": "https://vnexpress.net/qtopia-don-nhu-cau-nghi-duong-va-giai-tri-cuoi-tuan-tai-phia-nam-5138875.html",
+      "category": "market",
+      "module_ids": [
+        "market"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-10-31T01:00:00+00:00",
+      "source_id": "vnexpress-real-estate",
+      "region_ids": [
+        "hcmc"
+      ],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "Qtopia kết hợp căn hộ du lịch với tổ hợp vui chơi, giải trí, ẩm thực ngày đêm, hướng đến nhu cầu nghỉ dưỡng của cư dân TP HCM và các tỉnh phía Nam.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://vnexpress.net/rss/bat-dong-san.rss",
+        "publisher_host": "vnexpress.net",
+        "publication_date_from_feed": true
+      }
+    },
     {
       "id": "article-market-rss-353732ca74a47c35943f",
       "title": "Giá vàng thế giới lao dốc, xuống thấp nhất một năm",
@@ -26,6 +184,62 @@
         "method": "official-rss",
         "feed_url": "https://vnexpress.net/rss/kinh-doanh.rss",
         "publisher_host": "vnexpress.net",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-8a31fec8721a22227ab6",
+      "title": "TPHCM phân 5 cực phát triển theo quy hoạch mới ra sao?",
+      "url": "https://dantri.com.vn/thoi-su/tphcm-phan-5-cuc-phat-trien-theo-quy-hoach-moi-ra-sao-20261030215949704.htm",
+      "category": "market",
+      "module_ids": [
+        "market"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-10-31T00:09:00+00:00",
+      "source_id": "dantri-current-affairs",
+      "region_ids": [
+        "hcmc"
+      ],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [
+        "legal"
+      ],
+      "importance": 2,
+      "summary": "(Dân trí) - Đồ án Quy hoạch tổng thể TPHCM tầm nhìn 100 năm định hình cấu trúc siêu đô thị đa cực, nơi mỗi người dân được thụ hưởng cơ hội việc làm, nhà ở và tiện ích xã hội theo chuẩn “đô thị 15 phút”.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://dantri.com.vn/rss/thoi-su.rss",
+        "publisher_host": "dantri.com.vn",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-b338b2cb872b4064ed7a",
+      "title": "Chuyên gia nêu cách có thể làm căn hộ 2-3 tỷ đồng",
+      "url": "https://dantri.com.vn/bat-dong-san/chuyen-gia-neu-cach-co-the-lam-can-ho-2-3-ty-dong-20261030211758707.htm",
+      "category": "market",
+      "module_ids": [
+        "market"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-10-30T23:45:29+00:00",
+      "source_id": "dantri-real-estate",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [
+        "pricing"
+      ],
+      "importance": 2,
+      "summary": "(Dân trí) - Để giải quyết bài toán nhà ở giá hợp lý, KTS Ngô Viết Nam Sơn cho rằng cần thay đổi tư duy làm dự án, hướng tới mô hình đô thị TOD thay vì chỉ tìm cách giảm giá bán đơn thuần.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://dantri.com.vn/rss/bat-dong-san.rss",
+        "publisher_host": "dantri.com.vn",
         "publication_date_from_feed": true
       }
     },
