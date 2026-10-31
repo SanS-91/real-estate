@@ -1,9 +1,63 @@
 {
   "schema_version": 1,
-  "build_id": "market-news-rss-20261031T045137Z",
-  "generated_at": "2026-10-31T04:51:37.005801+00:00",
-  "record_count": 1257,
+  "build_id": "market-news-rss-20261031T055709Z",
+  "generated_at": "2026-10-31T05:57:09.027260+00:00",
+  "record_count": 1262,
   "data": [
+    {
+      "id": "article-market-rss-0112d35112b541d54c90",
+      "title": "Vàng SJC giảm sâu, người mua lỗ 6 triệu đồng chỉ sau một tuần",
+      "url": "https://dantri.com.vn/kinh-doanh/vang-sjc-giam-sau-nguoi-mua-lo-6-trieu-dong-chi-sau-mot-tuan-20261031102814813.htm",
+      "category": "macro",
+      "module_ids": [
+        "macro"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-10-31T04:14:03+00:00",
+      "source_id": "dantri-business",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "(Dân trí) - Sáng 31/10, giá vàng trong nước đồng loạt giảm mạnh theo thế giới. Giá mua vào vàng miếng SJC chỉ còn 136 triệu đồng/lượng, bán ra 139 triệu đồng/lượng.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://dantri.com.vn/rss/kinh-doanh.rss",
+        "publisher_host": "dantri.com.vn",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-a2532458219ad2d1590f",
+      "title": "TP HCM định hình mạng lưới trung tâm logistics tại 10 đầu mối lớn",
+      "url": "https://vnexpress.net/tp-hcm-dinh-hinh-mang-luoi-trung-tam-logistics-tai-10-dau-moi-lon-5139061.html",
+      "category": "market",
+      "module_ids": [
+        "infrastructure"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-10-31T04:11:14+00:00",
+      "source_id": "vnexpress-real-estate",
+      "region_ids": [
+        "hcmc"
+      ],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [
+        "infrastructure"
+      ],
+      "importance": 2,
+      "summary": "TP HCM định hướng phát triển mạng lưới trung tâm logistics hạt nhân tại 10 khu vực từ Cát Lái, Long Bình, Linh Trung đến Hiệp Phước, Củ Chi, Hóc Môn và sân bay Tân Sơn Nhất.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://vnexpress.net/rss/bat-dong-san.rss",
+        "publisher_host": "vnexpress.net",
+        "publication_date_from_feed": true
+      }
+    },
     {
       "id": "article-market-rss-53c5d8dcf9598fac5387",
       "title": "Vinhomes Sài Gòn Park: Tiện tích y tế ngay nội khu",
@@ -56,6 +110,85 @@
       "source_verification": {
         "method": "official-rss",
         "feed_url": "https://dantri.com.vn/rss/bat-dong-san.rss",
+        "publisher_host": "dantri.com.vn",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-4cfed15567f5542c0806",
+      "title": "Bên trong nhà ga T2 - \"cánh chim phượng hoàng lửa\" ở sân bay Phú Quốc",
+      "url": "https://dantri.com.vn/thoi-su/ben-trong-nha-ga-t2-canh-chim-phuong-hoang-lua-o-san-bay-phu-quoc-20261030221926724.htm",
+      "category": "infrastructure",
+      "module_ids": [
+        "infrastructure"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-10-31T03:31:54+00:00",
+      "source_id": "dantri-current-affairs",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [
+        "infrastructure"
+      ],
+      "importance": 2,
+      "summary": "(Dân trí) - Nhà ga T2 Cảng Hàng không quốc tế Phú Quốc dần thành hình, đang được đẩy nhanh tiến độ để kịp thời hạn vận hành đồng bộ vào tháng 5/2027 phục vụ Tuần lễ cấp cao APEC 2027.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://dantri.com.vn/rss/thoi-su.rss",
+        "publisher_host": "dantri.com.vn",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-b70bbda784264fa2e442",
+      "title": "Tình trạng ngập tại TPHCM thay đổi ra sao khi dự án 10.000 tỷ hoạt động?",
+      "url": "https://dantri.com.vn/thoi-su/tinh-trang-ngap-tai-tphcm-thay-doi-ra-sao-khi-du-an-10000-ty-hoat-dong-20261031100644743.htm",
+      "category": "market",
+      "module_ids": [
+        "market"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-10-31T03:21:27+00:00",
+      "source_id": "dantri-current-affairs",
+      "region_ids": [
+        "hcmc"
+      ],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "(Dân trí) - Sau khi dự án chống ngập 10.000 tỷ đi vào hoạt động, TPHCM dự kiến không còn phát sinh ngập do mưa và triều cường khi vũ lượng tương ứng với khả năng thiết kế 85,36mm/3 giờ và mực triều đạt +1,32m.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://dantri.com.vn/rss/thoi-su.rss",
+        "publisher_host": "dantri.com.vn",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-2ff2b33aac10b8cf537e",
+      "title": "Siêu dự án điện mặt trời 1,4 tỷ USD của doanh nghiệp Việt Nam ở Kyrgyzstan",
+      "url": "https://dantri.com.vn/kinh-doanh/sieu-du-an-dien-mat-troi-14-ty-usd-cua-doanh-nghiep-viet-nam-o-kyrgyzstan-20261030095330110.htm",
+      "category": "market",
+      "module_ids": [
+        "market"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-10-31T03:13:20+00:00",
+      "source_id": "dantri-business",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "(Dân trí) - Một doanh nghiệp đa ngành Việt Nam đang triển khai nhiều dự án tại Kyrgyzstan, trong đó có nhà máy điện mặt trời 1.900 MW, trong định hướng Go Global của doanh nghiệp Việt.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://dantri.com.vn/rss/kinh-doanh.rss",
         "publisher_host": "dantri.com.vn",
         "publication_date_from_feed": true
       }
