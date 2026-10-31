@@ -1,9 +1,146 @@
 {
   "schema_version": 1,
-  "build_id": "market-news-rss-20261031T025138Z",
-  "generated_at": "2026-10-31T02:51:38.374807+00:00",
-  "record_count": 1247,
+  "build_id": "market-news-rss-20261031T045137Z",
+  "generated_at": "2026-10-31T04:51:37.005801+00:00",
+  "record_count": 1257,
   "data": [
+    {
+      "id": "article-market-rss-53c5d8dcf9598fac5387",
+      "title": "Vinhomes Sài Gòn Park: Tiện tích y tế ngay nội khu",
+      "url": "https://dantri.com.vn/bat-dong-san/vinhomes-sai-gon-park-tien-tich-y-te-ngay-noi-khu-20261031103149536.htm",
+      "category": "market",
+      "module_ids": [
+        "market"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-10-31T03:39:57+00:00",
+      "source_id": "dantri-real-estate",
+      "region_ids": [
+        "hcmc"
+      ],
+      "project_ids": [],
+      "developer_ids": [
+        "vinhomes"
+      ],
+      "tags": [],
+      "importance": 2,
+      "summary": "(Dân trí) - Bệnh viện Đa khoa Quốc tế Vinmec quy mô 6,9ha ngay nội khu, cùng hệ sinh thái gần 200ha cây xanh và mặt nước, giúp cư dân tại Vinhomes Sài Gòn Park thuận tiện tiếp cận dịch vụ y tế, an tâm chăm sóc sức khỏe và duy trì lối sống lành mạnh.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://dantri.com.vn/rss/bat-dong-san.rss",
+        "publisher_host": "dantri.com.vn",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-9b1731037a6676a84ff2",
+      "title": "Đấu giá ế ẩm, 2 nhà đất liên quan bà Trương Mỹ Lan tiếp tục được giảm giá",
+      "url": "https://dantri.com.vn/bat-dong-san/dau-gia-e-am-2-nha-dat-lien-quan-ba-truong-my-lan-tiep-tuc-duoc-giam-gia-20261031085847348.htm",
+      "category": "market",
+      "module_ids": [
+        "market"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-10-31T03:32:00+00:00",
+      "source_id": "dantri-real-estate",
+      "region_ids": [
+        "hcmc"
+      ],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "(Dân trí) - Hai bất động sản nằm ở \"đất vàng\" Đồng Khởi (TPHCM) liên quan bà Trương Mỹ Lan vừa được cơ quan thi hành án hạ giá gần 9%, do lần đấu giá trước đó không có người đăng ký mua.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://dantri.com.vn/rss/bat-dong-san.rss",
+        "publisher_host": "dantri.com.vn",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-910e0d9523ad11f8716b",
+      "title": "Giá vàng miếng giảm hơn 2 triệu đồng",
+      "url": "https://vnexpress.net/gia-vang-moi-nhat-hom-nay-ngay-31-10-5139058.html",
+      "category": "macro",
+      "module_ids": [
+        "macro"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-10-31T03:06:57+00:00",
+      "source_id": "vnexpress-economy",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [
+        "pricing"
+      ],
+      "importance": 2,
+      "summary": "Theo đà lao dốc của giá thế giới, các thương hiệu trong nước đồng loạt hạ giá bán vàng miếng 2,4 triệu đồng so với cuối ngày hôm qua, còn 139 triệu đồng một lượng.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://vnexpress.net/rss/kinh-doanh.rss",
+        "publisher_host": "vnexpress.net",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-ea197864091f93f80f8d",
+      "title": "Cách kinh tế tri thức tạo thêm giá trị cho bất động sản",
+      "url": "https://vnexpress.net/cach-kinh-te-tri-thuc-tao-them-gia-tri-cho-bat-dong-san-5139050.html",
+      "category": "market",
+      "module_ids": [
+        "market"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-10-31T03:00:00+00:00",
+      "source_id": "vnexpress-real-estate",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [
+        "vinhomes"
+      ],
+      "tags": [],
+      "importance": 2,
+      "summary": "Tại Vinhomes Global Gate Hạ Long, giáo dục, việc làm, thương mại và dịch vụ được kết nối, tạo nhu cầu sử dụng và dòng tiền cho hệ sinh thái đô thị.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://vnexpress.net/rss/bat-dong-san.rss",
+        "publisher_host": "vnexpress.net",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-0269a1638033f66e3e49",
+      "title": "Đầu tư 110 tỷ đồng xóa 71 \"điểm đen\" trên quốc lộ 49",
+      "url": "https://dantri.com.vn/thoi-su/dau-tu-110-ty-dong-xoa-71-diem-den-tren-quoc-lo-49-20261031090454592.htm",
+      "category": "infrastructure",
+      "module_ids": [
+        "infrastructure"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-10-31T02:40:23+00:00",
+      "source_id": "dantri-current-affairs",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [
+        "infrastructure"
+      ],
+      "importance": 2,
+      "summary": "(Dân trí) - Qua rà soát toàn tuyến quốc lộ 49 kết nối trung tâm thành phố Huế với các xã vùng cao biên giới A Lưới, cơ quan chức năng xác định có 71 \"điểm đen\" cần xử lý.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://dantri.com.vn/rss/thoi-su.rss",
+        "publisher_host": "dantri.com.vn",
+        "publication_date_from_feed": true
+      }
+    },
     {
       "id": "article-market-rss-f3be449b829754ecadd4",
       "title": "Đôi nam nữ tử vong sau tai nạn trong hầm chui gần sân bay Tân Sơn Nhất",
@@ -32,6 +169,84 @@
       }
     },
     {
+      "id": "article-market-rss-c9963562ee1ac38fef1f",
+      "title": "Cổ phiếu bất động sản biến động trái chiều, Novaland gây chú ý",
+      "url": "https://dantri.com.vn/bat-dong-san/co-phieu-bat-dong-san-bien-dong-trai-chieu-novaland-gay-chu-y-20261031090114667.htm",
+      "category": "market",
+      "module_ids": [
+        "market",
+        "macro"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-10-31T02:25:13+00:00",
+      "source_id": "dantri-real-estate",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "(Dân trí) - Sau động thái giảm lãi suất của nhiều ngân hàng, cổ phiếu bất động sản diễn biến trái chiều, một số mã giảm 3-6% trong tuần qua. Novaland gây chú ý khi lợi nhuận 9 tháng vượt 155% kế hoạch năm.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://dantri.com.vn/rss/bat-dong-san.rss",
+        "publisher_host": "dantri.com.vn",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-110e22e5a14df273fe7a",
+      "title": "Đôi nam nữ bị xe ben cán tử vong trong hầm chui ở TPHCM",
+      "url": "https://dantri.com.vn/thoi-su/doi-nam-nu-bi-xe-ben-can-tu-vong-trong-ham-chui-o-tphcm-20261031090102468.htm",
+      "category": "infrastructure",
+      "module_ids": [
+        "infrastructure"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-10-31T02:07:04+00:00",
+      "source_id": "dantri-current-affairs",
+      "region_ids": [
+        "hcmc"
+      ],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "(Dân trí) - Đôi nam nữ chở nhau bằng xe máy chạy trong hầm chui Phan Thúc Duyện (TPHCM) xảy ra va chạm với xe ben khiến hai nạn nhân tử vong.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://dantri.com.vn/rss/thoi-su.rss",
+        "publisher_host": "dantri.com.vn",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-f410ce57701280a7559d",
+      "title": "C-Holdings đưa trải nghiệm cá nhân hóa vào sự kiện bất động sản",
+      "url": "https://vnexpress.net/c-holdings-dua-trai-nghiem-ca-nhan-hoa-vao-su-kien-bat-dong-san-5138954.html",
+      "category": "market",
+      "module_ids": [
+        "market"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-10-31T02:00:00+00:00",
+      "source_id": "vnexpress-real-estate",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "Quy tụ hơn 100 khách mời, sự kiện giới thiệu Solina Signature by Wyndham tạo điểm nhấn với không gian nghệ thuật cùng cách tổ chức đề cao tính riêng tư, cá nhân hóa trải nghiệm.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://vnexpress.net/rss/bat-dong-san.rss",
+        "publisher_host": "vnexpress.net",
+        "publication_date_from_feed": true
+      }
+    },
+    {
       "id": "article-market-rss-719b396fe30b70bfd17e",
       "title": "Giá vàng hôm nay 31.10.2026: Lao dốc gần 3 triệu, rời xa ngưỡng 140 triệu đồng",
       "url": "https://thanhnien.vn/gia-vang-hom-nay-31102026-lao-doc-gan-3-trieu-roi-xa-nguong-140-trieu-dong-185261031085218272.htm",
@@ -53,6 +268,61 @@
         "method": "official-rss",
         "feed_url": "https://thanhnien.vn/rss/kinh-te/ngan-hang.rss",
         "publisher_host": "thanhnien.vn",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-12cf03f64127c3f02b99",
+      "title": "Những khu đô thị 'đồng kiến tạo' giữa Nam Long và đối tác Nhật",
+      "url": "https://vnexpress.net/nhung-khu-do-thi-dong-kien-tao-giua-nam-long-va-doi-tac-nhat-5138966.html",
+      "category": "market",
+      "module_ids": [
+        "market"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-10-31T02:00:00+00:00",
+      "source_id": "vnexpress-real-estate",
+      "region_ids": [],
+      "project_ids": [
+        "waterpoint",
+        "mizuki-park"
+      ],
+      "developer_ids": [
+        "nam-long"
+      ],
+      "tags": [],
+      "importance": 2,
+      "summary": "Các khu đô thị Mizuki Park, Waterpoint… là nơi an cư của hàng nghìn gia đình, phát triển dựa trên sự am hiểu bất động sản địa phương của Nam Long và kinh nghiệm hơn 100 năm của đối tác Nhật.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://vnexpress.net/rss/bat-dong-san.rss",
+        "publisher_host": "vnexpress.net",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-09b06ba93044467f86e2",
+      "title": "Keppel nhận hai giải thưởng bất động sản",
+      "url": "https://vnexpress.net/keppel-nhan-hai-giai-thuong-bat-dong-san-5138724.html",
+      "category": "market",
+      "module_ids": [
+        "market"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-10-31T02:00:00+00:00",
+      "source_id": "vnexpress-real-estate",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "Keppel Ltd. (Keppel) được vinh danh ở hai hạng mục về phát triển bất động sản cao cấp và công trình xanh tại Vietnam Property Value Chain Awards 2026.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://vnexpress.net/rss/bat-dong-san.rss",
+        "publisher_host": "vnexpress.net",
         "publication_date_from_feed": true
       }
     },
