@@ -208,6 +208,44 @@ def evaluate(cfg, feeds, existing, projects, known_sources, now):
     additions=additions[:cfg.get("max_new_per_run",75)]
     return additions, source_reports
 
+
+def summarize_archive_activity(articles, now):
+    """Actual source publication activity, independent of the latest RSS check."""
+    modules = ("market", "legal", "infrastructure", "macro")
+    seven = {module: 0 for module in modules}
+    thirty = {module: 0 for module in modules}
+    latest = {module: None for module in modules}
+    for article in articles:
+        if article.get("content_type") != "publisher-rss":
+            continue
+        try:
+            published = datetime.fromisoformat(
+                str(article.get("published_at", "")).replace("Z", "+00:00")
+            )
+            if published.tzinfo is None:
+                continue
+            published = published.astimezone(timezone.utc)
+        except (ValueError, TypeError, OverflowError):
+            continue
+        if published > now + timedelta(hours=2):
+            continue
+        days = (now - published).total_seconds() / 86400
+        routes = set(article.get("module_ids") or [])
+        routes.add(article.get("category"))
+        routes.update(article.get("tags") or [])
+        for module in routes.intersection(modules):
+            if latest[module] is None or published.isoformat() > latest[module]:
+                latest[module] = published.isoformat()
+            if 0 <= days <= 7:
+                seven[module] += 1
+            if 0 <= days <= 30:
+                thirty[module] += 1
+    return {
+        "recent_by_module_7d": seven,
+        "recent_by_module_30d": thirty,
+        "latest_published_by_module": latest,
+    }
+
 def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("--mode", choices=("preview","promote"), default="preview")
@@ -252,7 +290,9 @@ def main():
                   "feeds_configured": len(cfg["feeds"]), "feeds_fetched": len(snapshots),
                   "accepted_new": len(candidates), "production_written": report["production_written"],
                   "article_total": len(payload["data"]),
-                  "published_by_module": counts, "feed_status": checked, "fetch_errors": fetch_errors}
+                  "published_by_module": counts,
+                  **summarize_archive_activity(payload["data"], now),
+                  "feed_status": checked, "fetch_errors": fetch_errors}
         HEALTH.parent.mkdir(parents=True, exist_ok=True)
         HEALTH.write_text(json.dumps(health, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
     print(json.dumps(report,ensure_ascii=False,indent=2))
