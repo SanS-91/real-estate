@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "record_count": 2,
+  "record_count": 4,
   "data": [
     {
       "id": "peer-onehousing-masteri-thao-dien-2026-10",
@@ -26,6 +26,29 @@
       "methodology_note": "Source-authored apartment popular asking rate per m² for this exact separate HCMC peer. Two matching GitHub-hosted checks >=1h apart. Not transaction ASP or a core registry project."
     },
     {
+      "id": "peer-onehousing-masteri-thao-dien-2026-11",
+      "target_id": "masteri-thao-dien",
+      "project_name": "Masteri Thảo Điền",
+      "source_id": "onehousing-vn",
+      "source_url": "https://onehousing.vn/phan-tich/du-an/can-ho-chung-cu-du-an-Masteri-Thao-Dien.946",
+      "asset_type": "apartment",
+      "metric_type": "popular-asking-price-per-sqm",
+      "scope_type": "separate-hcm-peer-comparable",
+      "period": "2026-11",
+      "period_type": "month",
+      "value_vnd_per_m2": 117890000,
+      "range_low_vnd_per_m2": 99640000,
+      "range_high_vnd_per_m2": 204190000,
+      "fingerprint": "3208edeb6be5c923e2bfa338be2d199541d8ecf714962bd45e185e0768f0a4b0",
+      "review_status": "automated-two-hosted-checks",
+      "verified_at": "2026-11-01T14:31:14.511850+00:00",
+      "verification_run_ids": [
+        "41292968103",
+        "41316585521"
+      ],
+      "methodology_note": "Source-authored apartment popular asking rate per m² for this exact separate HCMC peer. Two matching GitHub-hosted checks >=1h apart. Not transaction ASP or a core registry project."
+    },
+    {
       "id": "peer-onehousing-the-panorama-2026-10",
       "target_id": "the-panorama",
       "project_name": "The Panorama",
@@ -45,6 +68,29 @@
       "verification_run_ids": [
         "38023524222",
         "38057794452"
+      ],
+      "methodology_note": "Source-authored apartment popular asking rate per m² for this exact separate HCMC peer. Two matching GitHub-hosted checks >=1h apart. Not transaction ASP or a core registry project."
+    },
+    {
+      "id": "peer-onehousing-the-panorama-2026-11",
+      "target_id": "the-panorama",
+      "project_name": "The Panorama",
+      "source_id": "onehousing-vn",
+      "source_url": "https://onehousing.vn/phan-tich/du-an/can-ho-chung-cu-du-an-The-Panorama.744",
+      "asset_type": "apartment",
+      "metric_type": "popular-asking-price-per-sqm",
+      "scope_type": "separate-hcm-peer-comparable",
+      "period": "2026-11",
+      "period_type": "month",
+      "value_vnd_per_m2": 64240000,
+      "range_low_vnd_per_m2": 60390000,
+      "range_high_vnd_per_m2": 69890000,
+      "fingerprint": "119dc91f7ddf9f671a60484eacf9b40f8472e5eb563b4a175a9ca3f23c9dfb8a",
+      "review_status": "automated-two-hosted-checks",
+      "verified_at": "2026-11-01T14:31:14.511850+00:00",
+      "verification_run_ids": [
+        "41292968103",
+        "41316585521"
       ],
       "methodology_note": "Source-authored apartment popular asking rate per m² for this exact separate HCMC peer. Two matching GitHub-hosted checks >=1h apart. Not transaction ASP or a core registry project."
     }

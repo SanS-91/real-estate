@@ -1,17 +1,16 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-11-01T09:24:07.628766+00:00",
+  "generated_at": "2026-11-01T14:31:14.511850+00:00",
   "targets_checked": 3,
   "exact_publisher_months_parsed": 2,
-  "new_verified_months": 0,
-  "published_months": 2,
+  "new_verified_months": 2,
+  "published_months": 4,
   "projects_with_verified_month": 2,
   "checks": [
     {
       "id": "masteri-thao-dien",
-      "status": "awaiting-independent-hosted-check",
-      "source_period": "2026-11",
-      "check_count": 1
+      "status": "new-month-verified",
+      "source_period": "2026-11"
     },
     {
       "id": "estella-heights",
@@ -21,9 +20,8 @@
     },
     {
       "id": "the-panorama",
-      "status": "awaiting-independent-hosted-check",
-      "source_period": "2026-11",
-      "check_count": 1
+      "status": "new-month-verified",
+      "source_period": "2026-11"
     }
   ],
   "candidate_only_unless_two_hosted_checks": true,
