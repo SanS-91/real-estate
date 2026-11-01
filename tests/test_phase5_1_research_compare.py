@@ -26,8 +26,8 @@ assert 'No synthetic scoring' in js
 assert 'do not establish legal applicability' in js
 assert 'Common context, not used to score subjects.' in js
 
-assert 'research.html?type=project&ids=${encodeURIComponent(project.id)}' in market
-assert 'research.html?type=developer&ids=${encodeURIComponent(dev.id)}' in market
+assert 'research.html?type=project&ids=' not in market
+assert 'research.html?type=developer&ids=' not in market  # Research links removed from Market by product decision
 assert 'assets/js/market.js' in market_html
 assert len(production)>=18
 

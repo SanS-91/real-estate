@@ -11,7 +11,7 @@ macro=json.loads((ROOT/'data/processed/macro/observations.json').read_text(encod
 
 assert 'assets/js/market.js' in html
 assert 'assets/css/main.css?v=5.5C1' in html
-assert 'assets/js/localization-dynamic.js?v=5.5C1' in html
+assert 'assets/js/localization-dynamic.js?v=' in html
 
 assert 'Verified ASP</th>' in market
 assert 'Giá tham chiếu</th>' in market

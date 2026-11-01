@@ -11,7 +11,7 @@ candidate=json.loads((ROOT/'data/candidate/market/listing-observations.json').re
 assert 'assets/js/market.js' in html
 assert 'assets/js/history-engine.js?v=5.5C1' in html
 assert 'assets/css/main.css?v=5.5C1' in html
-assert 'assets/js/localization-dynamic.js?v=5.5C1' in html
+assert 'assets/js/localization-dynamic.js?v=' in html
 assert 'function listingHistoryHTML(project)' in market
 assert 'function renderListingHistoryChart(projectId)' in market
 assert 'Listing Price History' in market

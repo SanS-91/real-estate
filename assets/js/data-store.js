@@ -100,6 +100,7 @@
     getPeerMonthlyTargets: () => loadDirectJSON('./config/market-onehousing-peer-monthly-targets.json', 'peer monthly targets'),
     getPeerMonthlySourceHealth: () => loadDirectJSON('./data/state/market-onehousing-peer-monthly-health.json', 'peer monthly source health'),
     getListingSourceCoverage: () => loadDirectJSON('./data/state/listing-source-coverage.json', 'listing source coverage'),
+    getActiveListingCoverage: () => loadDirectJSON('./data/state/market-active-listing-coverage.json', 'verified single-offer monitoring coverage'),
     getListingComparables: () => loadJSON('market/listing-comparables.json'),
     getLegalTopics: () => loadJSON('legal/topics.json'),
     getLegalDocuments: () => loadJSON('legal/documents.json'),

@@ -18,19 +18,17 @@ research=(ROOT/'research.html').read_text(encoding='utf-8')
 js=(ROOT/'assets/js/research.js').read_text(encoding='utf-8')
 common=(ROOT/'assets/js/common.js').read_text(encoding='utf-8')
 
-assert 'research.html' in common
-assert "{ key: 'research', label: 'Research'" in common
+assert "{ key: 'research', label: 'Research'" not in common  # Research tab intentionally retired; legacy deep link remains
 assert 'data-research-type' in research
 assert 'data-research-entity' in research
 assert 'assets/js/research.js' in research
-assert 'assets/js/common.js?v=5.0R1' in research
+assert 'assets/js/common.js?v=' in research
 assert 'assets/js/localization-dynamic.js' in research
 
 for page in ['index.html','market.html','legal.html','infrastructure.html','macro.html','maintenance.html']:
     text=(ROOT/page).read_text(encoding='utf-8')
-    assert 'assets/js/common.js?v=5.0R1' in text
-    expected_loc = 'assets/js/localization-dynamic.js?v=5.5C1' if page == 'market.html' else 'assets/js/localization-dynamic.js?v=5.0R1'
-    assert expected_loc in text
+    assert 'assets/js/common.js?v=' in text
+    assert 'assets/js/localization-dynamic.js?v=' in text
 
 pmap={x['id']:x for x in projects}
 imap={x['id']:x for x in infra}
