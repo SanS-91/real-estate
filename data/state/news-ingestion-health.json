@@ -1,15 +1,15 @@
 {
   "schema_version": 1,
-  "checked_at": "2026-11-01T00:51:56.520570+00:00",
+  "checked_at": "2026-11-01T02:51:38.429473+00:00",
   "feeds_configured": 16,
   "feeds_fetched": 16,
-  "accepted_new": 3,
+  "accepted_new": 5,
   "production_written": true,
-  "article_total": 1285,
+  "article_total": 1290,
   "published_by_module": {
-    "market": 1,
+    "market": 3,
     "legal": 0,
-    "infrastructure": 1,
+    "infrastructure": 2,
     "macro": 1
   },
   "feed_status": [
@@ -35,19 +35,19 @@
       "source_id": "dantri-real-estate",
       "status": "parsed",
       "feed_items": 50,
-      "new": 1,
-      "skipped": 49,
-      "duplicates": 49,
+      "new": 2,
+      "skipped": 48,
+      "duplicates": 48,
       "filtered": 0
     },
     {
       "source_id": "vnexpress-economy",
       "status": "parsed",
       "feed_items": 50,
-      "new": 0,
-      "skipped": 50,
+      "new": 1,
+      "skipped": 49,
       "duplicates": 5,
-      "filtered": 45
+      "filtered": 44
     },
     {
       "source_id": "vnexpress-current-affairs",
@@ -98,9 +98,9 @@
       "source_id": "dantri-business",
       "status": "parsed",
       "feed_items": 50,
-      "new": 0,
-      "skipped": 50,
-      "duplicates": 6,
+      "new": 1,
+      "skipped": 49,
+      "duplicates": 5,
       "filtered": 44
     },
     {
@@ -134,9 +134,9 @@
       "source_id": "thanhnien-banking",
       "status": "parsed",
       "feed_items": 50,
-      "new": 1,
-      "skipped": 49,
-      "duplicates": 19,
+      "new": 0,
+      "skipped": 50,
+      "duplicates": 20,
       "filtered": 30
     },
     {

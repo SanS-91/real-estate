@@ -1,9 +1,141 @@
 {
   "schema_version": 1,
-  "build_id": "market-news-rss-20261101T005156Z",
-  "generated_at": "2026-11-01T00:51:56.520570+00:00",
-  "record_count": 1285,
+  "build_id": "market-news-rss-20261101T025138Z",
+  "generated_at": "2026-11-01T02:51:38.429473+00:00",
+  "record_count": 1290,
   "data": [
+    {
+      "id": "article-market-rss-83b008bb715bd13b0599",
+      "title": "Chủ đầu tư sân bay Long Thành giảm gần 1.400 nhân sự trong ba tháng",
+      "url": "https://vnexpress.net/chu-dau-tu-san-bay-long-thanh-giam-gan-1-400-nhan-su-trong-ba-thang-5139256.html",
+      "category": "market",
+      "module_ids": [
+        "market",
+        "infrastructure"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-11-01T02:30:00+00:00",
+      "source_id": "vnexpress-economy",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [
+        "infrastructure"
+      ],
+      "importance": 2,
+      "summary": "ACV giảm 1.360 nhân sự trong quý III, nâng tổng số lao động rời công ty từ đầu năm lên gần 3.700 người.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://vnexpress.net/rss/kinh-doanh.rss",
+        "publisher_host": "vnexpress.net",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-4a25613e36191b28de95",
+      "title": "3 mẹo nâng cấp nội thất giá rẻ trông sang trọng ít tốn kém",
+      "url": "https://dantri.com.vn/bat-dong-san/3-meo-nang-cap-noi-that-gia-re-trong-sang-trong-it-ton-kem-20261030135307035.htm",
+      "category": "market",
+      "module_ids": [
+        "market"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-11-01T01:44:00+00:00",
+      "source_id": "dantri-real-estate",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "(Dân trí) - Chẳng cần tốn tiền triệu đổi đồ mới, bạn hoàn toàn có thể nâng tầm không gian sống nhờ những thay đổi nhỏ trong cách làm sạch, sắp xếp và tân trang.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://dantri.com.vn/rss/bat-dong-san.rss",
+        "publisher_host": "dantri.com.vn",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-116fd2899ead998c5578",
+      "title": "Chốt phương án xử lý sai phạm ở HH Linh Đàm: Ai phải di dời, ai được ở lại?",
+      "url": "https://dantri.com.vn/bat-dong-san/chot-phuong-an-xu-ly-sai-pham-o-hh-linh-dam-ai-phai-di-doi-ai-duoc-o-lai-20261101005207737.htm",
+      "category": "market",
+      "module_ids": [
+        "market"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-11-01T01:02:00+00:00",
+      "source_id": "dantri-real-estate",
+      "region_ids": [
+        "ha-noi"
+      ],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "(Dân trí) - Tuần qua, thông tin Hà Nội thông qua nghị quyết xử lý sai phạm tại các dự án của Tập đoàn Mường Thanh, trong đó có chung cư HH Linh Đàm, tiếp tục nhận được nhiều sự quan tâm của độc giả.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://dantri.com.vn/rss/bat-dong-san.rss",
+        "publisher_host": "dantri.com.vn",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-5f5151d3a41f5edc5fef",
+      "title": "Phố Wall chờ tín hiệu từ Fed, dự báo tăng lãi suất vào tháng 12",
+      "url": "https://dantri.com.vn/kinh-doanh/pho-wall-cho-tin-hieu-tu-fed-du-bao-tang-lai-suat-vao-thang-12-20261101000820828.htm",
+      "category": "macro",
+      "module_ids": [
+        "macro"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-11-01T01:00:00+00:00",
+      "source_id": "dantri-business",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "(Dân trí) - Dù Fed tạm ngừng tăng lãi suất, phố Wall vẫn chia rẽ sâu sắc trước áp lực lạm phát dai dẳng, kéo theo cuộc tháo chạy âm thầm khỏi nhóm cổ phiếu công nghệ.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://dantri.com.vn/rss/kinh-doanh.rss",
+        "publisher_host": "dantri.com.vn",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-cae938e1ed594383f00e",
+      "title": "Cầu Cần Thơ 2 được thiết kế cho cả đường bộ và đường sắt",
+      "url": "https://vnexpress.net/cau-can-tho-2-duoc-thiet-ke-cho-ca-duong-bo-va-duong-sat-5139218.html",
+      "category": "infrastructure",
+      "module_ids": [
+        "infrastructure"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-11-01T00:30:00+00:00",
+      "source_id": "vnexpress-current-affairs",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [
+        "infrastructure"
+      ],
+      "importance": 2,
+      "summary": "Cầu Cần Thơ 2 được thiết kế dạng dây văng hai tầng, với 6 làn cao tốc phía trên và đường sắt phía dưới, tổng vốn đầu tư dự kiến hơn 27.000 tỷ đồng.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://vnexpress.net/rss/thoi-su.rss",
+        "publisher_host": "vnexpress.net",
+        "publication_date_from_feed": true
+      }
+    },
     {
       "id": "article-market-rss-89b1d0e933abcc959c28",
       "title": "Giá vàng hôm nay 1.11.2026: Lao dốc đẩy người mua lỗ hơn 11 triệu sau 2 tuần",
