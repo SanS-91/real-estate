@@ -1,10 +1,25 @@
 name: Home Live-Derived Validation
 
 on:
+  push:
+    branches: [main]
+    paths:
+      - 'index.html'
+      - 'assets/js/home.js'
+      - 'assets/js/home-editorial.js'
+      - 'assets/js/components.js'
+      - 'assets/css/main.css'
+      - 'tests/test_home_editorial_20261101.cjs'
+      - 'tests/test_home_fresh_news_20261019.cjs'
+      - '.github/workflows/home-derived-validation.yml'
   pull_request:
     paths:
       - 'index.html'
       - 'assets/js/home.js'
+      - 'assets/js/home-editorial.js'
+      - 'assets/js/components.js'
+      - 'assets/css/main.css'
+      - 'tests/test_home_editorial_20261101.cjs'
       - 'tests/test_home_fresh_news_20261019.cjs'
       - 'assets/js/localization-dynamic.js'
       - 'data/mock/home/**'
@@ -28,9 +43,50 @@ jobs:
           python-version: '3.12'
       - name: JavaScript syntax
         run: |
+          node --check assets/js/home-editorial.js
+          node --check assets/js/components.js
           node --check assets/js/home.js
+          node tests/test_home_editorial_20261101.cjs
           node --check assets/js/localization-dynamic.js
           node tests/test_home_fresh_news_20261019.cjs
+      - name: Browser smoke — sourced 4-module Home digest (desktop / mobile)
+        run: |
+          set -eu
+          BROWSER="$(command -v google-chrome || command -v chromium || command -v chromium-browser || true)"
+          test -n "$BROWSER"
+          mkdir -p artifacts
+          python3 -m http.server 8784 --bind 127.0.0.1 >/tmp/home-editorial-server.log 2>&1 &
+          SERVER_PID=$!
+          trap 'kill "$SERVER_PID" || true' EXIT
+          sleep 3
+          "$BROWSER" --headless --no-sandbox --disable-gpu --disable-dev-shm-usage --window-size=1440,950 --virtual-time-budget=12000 --dump-dom "http://127.0.0.1:8784/index.html" > artifacts/home-desktop.html
+          "$BROWSER" --headless --no-sandbox --disable-gpu --disable-dev-shm-usage --window-size=390,844 --virtual-time-budget=12000 --dump-dom "http://127.0.0.1:8784/index.html" > artifacts/home-mobile.html
+          "$BROWSER" --headless --no-sandbox --disable-gpu --disable-dev-shm-usage --window-size=1440,950 --virtual-time-budget=12000 --screenshot=artifacts/home-desktop.png "http://127.0.0.1:8784/index.html"
+          "$BROWSER" --headless --no-sandbox --disable-gpu --disable-dev-shm-usage --window-size=390,844 --virtual-time-budget=12000 --screenshot=artifacts/home-mobile.png "http://127.0.0.1:8784/index.html"
+          python3 - <<'PY'
+          from pathlib import Path
+          for view in ("desktop", "mobile"):
+              page=Path(f"artifacts/home-{view}.html").read_text(encoding="utf-8")
+              cut=page.split('data-home-today="',1)
+              if len(cut)<2:cut=page.split('data-home-today>',1)
+              assert len(cut)==2,(view,"Missing Home digest element")
+              excerpt=cut[1].split("</section>",1)[0]
+              for category in ("market","legal","infrastructure","macro"):
+                  assert f"today-card--{category}" in excerpt,(view,category,"card did not render")
+              assert "compact-link__topic" in excerpt,(view,"Editorial tags absent")
+              for blocked in ("3 mẹo nâng cấp nội thất", "bị xe ben cán tử vong",
+                              "xóa 71", "giảm gần 1.400 nhân sự"):
+                  assert blocked not in excerpt,(view,blocked,"irrelevant article reached Home")
+          print("PASS: Live Home 4 modules, editorial topic labels, no screenshot off-topic headlines")
+          PY
+      - name: Upload Home visual QA
+        if: always()
+        uses: actions/upload-artifact@v7
+        with:
+          name: home-editorial-desktop-mobile
+          path: artifacts/
+          retention-days: 10
+          if-no-files-found: ignore
       - name: Home regression
         run: python tests/test_phase4_3d_home_sync.py
       - name: Phase 4.9.1 UI polish regression
