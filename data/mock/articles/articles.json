@@ -1,9 +1,90 @@
 {
   "schema_version": 1,
-  "build_id": "market-news-rss-20261101T085136Z",
-  "generated_at": "2026-11-01T08:51:36.123005+00:00",
-  "record_count": 1295,
+  "build_id": "market-news-rss-20261101T125136Z",
+  "generated_at": "2026-11-01T12:51:36.479173+00:00",
+  "record_count": 1298,
   "data": [
+    {
+      "id": "article-market-rss-7b4813112c9fdfe22448",
+      "title": "Khách sạn ở TPHCM vào mùa cao điểm, giá phòng neo cao",
+      "url": "https://dantri.com.vn/bat-dong-san/khach-san-o-tphcm-vao-mua-cao-diem-gia-phong-neo-cao-20261101171658779.htm",
+      "category": "market",
+      "module_ids": [
+        "market"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-11-01T11:14:28+00:00",
+      "source_id": "dantri-real-estate",
+      "region_ids": [
+        "hcmc"
+      ],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "(Dân trí) - Gần 17.000 phòng khách sạn TPHCM ghi nhận công suất thuê 70%, giá bình quân 2,4 triệu đồng/đêm trong quý III, cao hơn cùng kỳ năm ngoái.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://dantri.com.vn/rss/bat-dong-san.rss",
+        "publisher_host": "dantri.com.vn",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-d6121892293894f77a51",
+      "title": "Bất động sản ảm đạm, loạt doanh nghiệp vẫn lãi nghìn tỷ nhờ đâu?",
+      "url": "https://dantri.com.vn/bat-dong-san/bat-dong-san-am-dam-loat-doanh-nghiep-van-lai-nghin-ty-nho-dau-20261101165756415.htm",
+      "category": "market",
+      "module_ids": [
+        "market"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-11-01T10:19:24+00:00",
+      "source_id": "dantri-real-estate",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [
+        "vinhomes"
+      ],
+      "tags": [],
+      "importance": 2,
+      "summary": "(Dân trí) - Thị trường bất động sản chưa hết ảm đạm, nhiều “ông lớn” vẫn ghi nhận kết quả tích cực, trong đó Vinhomes lãi tăng 390%, Novaland chuyển từ lỗ sang lãi nghìn tỷ đồng.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://dantri.com.vn/rss/bat-dong-san.rss",
+        "publisher_host": "dantri.com.vn",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-a4f736d70bc52558bd45",
+      "title": "Hơn 866 tỷ đồng nâng cấp tuyến đường 18km đến sân bay Phù Cát",
+      "url": "https://dantri.com.vn/thoi-su/hon-866-ty-dong-nang-cap-tuyen-duong-18km-den-san-bay-phu-cat-20261101165335607.htm",
+      "category": "infrastructure",
+      "module_ids": [
+        "infrastructure"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-11-01T10:17:07+00:00",
+      "source_id": "dantri-current-affairs",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [
+        "infrastructure"
+      ],
+      "importance": 2,
+      "summary": "(Dân trí) - Tuyến đường phía Tây tỉnh Gia Lai (ĐT.638) dài khoảng 18km, kết nối quốc lộ 19 với Cảng Hàng không Phù Cát, sẽ được đầu tư hơn 866 tỷ đồng, trong đó có xây dựng cầu vượt sông Kôn dài gần 600m.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://dantri.com.vn/rss/thoi-su.rss",
+        "publisher_host": "dantri.com.vn",
+        "publication_date_from_feed": true
+      }
+    },
     {
       "id": "article-market-rss-f8cc4ad19a5d72d0a3c4",
       "title": "Khu đô thị đa mục tiêu Đông Anh dành gần 50 ha xây nhà tái định cư",
