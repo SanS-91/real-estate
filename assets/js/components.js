@@ -30,17 +30,18 @@
   }
 
   function todayCard(group) {
-    const items = (group.items || []).slice(0, 3).map(item => `
-      <li>
+    const items = (group.items || []).slice(0, 3).map((item,index) => `
+      <li class="home-news-item${index===0?' home-news-item--lead':''}">
         <a class="compact-link" href="${escapeHTML(item.href || '#')}">
-          <span>${escapeHTML(item.title)}</span>
-          <span class="compact-link__meta"><time>${escapeHTML(item.date_label || '')}</time>${item.date_label && item.meta ? ' · ' : ''}${escapeHTML(item.meta || '')}</span>
+          ${item.topic_label ? `<span class="compact-link__topic">${escapeHTML(item.topic_label)}</span>` : ''}
+          <span class="compact-link__title">${escapeHTML(item.title)}</span>
+          <span class="compact-link__meta"><time>${escapeHTML(item.date_label || '')}</time>${item.date_label && item.meta ? ' · ' : ''}${escapeHTML(item.meta || '')}${item.older ? ' · ' + escapeHTML('Kỳ trước') : ''}</span>
         </a>
       </li>
     `).join('');
 
     return `
-      <article class="today-card">
+      <article class="today-card today-card--${escapeHTML(group.category || 'other')}">
         <div class="today-card__header">
           <div>
             <div class="eyebrow">${escapeHTML(group.label)}</div>
@@ -48,7 +49,7 @@
           </div>
           <a class="text-link" href="${escapeHTML(group.href || '#')}">View all</a>
         </div>
-        <ul class="compact-list">${items || '<li class="muted-text">No updates.</li>'}</ul>
+        <ul class="compact-list">${items || '<li class="muted-text">Chưa có tin phù hợp. Xem chuyên mục để đọc toàn bộ nguồn.</li>'}</ul>
       </article>
     `;
   }
