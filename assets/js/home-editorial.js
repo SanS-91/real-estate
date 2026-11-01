@@ -1,5 +1,5 @@
 /* Home editorial ranking — source-backed headlines, not generic publisher recency.
- * Applies to the Home digest only; source archives and original articles stay intact.
+ * Shared by Home and four news tabs; source archives and original articles stay intact.
  * Browser/CommonJS for automated headline QA.
  */
 ((root) => {
@@ -182,10 +182,47 @@
     }
     return selected;
   }
+  // Apply the same editorial eligibility to each module archive as to Home.
+  // This never changes or deletes underlying RSS data. Duplicate copies
+  // with the same normalized headline appear once, preferring first seen.
+  function filterArchive(rows,module) {
+    const seen=new Set();
+    const accepted=[];
+    for (const article of rows || []) {
+      const result=inspect({...article,category:module});
+      if (!result.eligible)continue;
+      const key=normalize(article.display_title||article.title||'');
+      if (!key||seen.has(key))continue;
+      seen.add(key);
+      accepted.push({...result,article});
+    }
+    return accepted;
+  }
+  // Three featured headlines should represent different research subtopics,
+  // not three "gold today" stories. Keep all other qualifying stories in
+  // the paginated archive, including additional gold articles.
+  function featureArchive(rows,module,count=3) {
+    const chosen=[],seen=new Set(),topics=new Set(),sources=new Set();
+    const inspected=rows.map(article=>({...inspect({...article,category:module}),article}))
+      .filter(row=>row.eligible);
+    const queue=inspected.slice(0,Math.max(40,count*5));
+    for (const pass of [0,1,2]) {
+      for (const row of queue) {
+        const id=row.article.id||row.article.url||normalize(row.article.title);
+        if (seen.has(id))continue;
+        if (pass===0 && (topics.has(row.topic)||sources.has(row.article.source_id)))continue;
+        if (pass===1 && topics.has(row.topic))continue;
+        if (row.topic==='gold'&&topics.has('gold'))continue;
+        chosen.push(row.article);seen.add(id);topics.add(row.topic);sources.add(row.article.source_id);
+        if(chosen.length>=count)return chosen;
+      }
+    }
+    return chosen;
+  }
   function label(topicId,lang='vi') {
     const l=lang==='en'?'en':'vi';return topicNames[l][topicId]||topicId||'';
   }
-  const api={normalize,inspect,curated,label,topic};
+  const api={normalize,inspect,curated,filterArchive,featureArchive,label,topic};
   if(typeof module!=='undefined'&&module.exports)module.exports=api;
   root.HomeEditorial=api;
 })(typeof window!=='undefined' ? window : globalThis);
