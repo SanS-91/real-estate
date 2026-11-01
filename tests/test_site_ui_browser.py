@@ -30,6 +30,7 @@ CASES=[
     "maintenance.html",
 ]
 WIDTHS=[360,390,820,1366]
+PROJECT_COUNT=len(json.loads(Path("data/mock/market/projects.json").read_text(encoding="utf-8"))["data"])
 ARTIFACTS=Path("artifacts/ui-audit")
 ARTIFACTS.mkdir(parents=True,exist_ok=True)
 
@@ -149,7 +150,7 @@ async def run():
                         await audit.locator("summary").click()
                         assert await audit.get_attribute("open") is not None
                         rows=audit.locator(".data-table--history-readiness tbody tr")
-                        assert await rows.count()==13,(width,"all 13 projects have history coverage")
+                        assert await rows.count()==PROJECT_COUNT,(width,"all registered projects have history readiness entries")
                         grand=rows.filter(has=page.locator('[data-project-id="vinhomes-grand-park"]')).first
                         assert await grand.count()==1,(width,"Grand Park pricing-history entry")
                         grand_text=await grand.inner_text()
@@ -180,7 +181,7 @@ async def run():
                         table=page.locator(".data-table--market-projects")
                         await table.wait_for(timeout=12000)
                         total=await table.locator("tbody tr").count()
-                        assert total==(8 if "overview" in path else 13),(width,path,total)
+                        assert total==(8 if "overview" in path else PROJECT_COUNT),(width,path,total)
                         asks=table.locator(".market-asking-range")
                         assert await asks.count()==total,(width,path,"price range markers")
                         trend=table.locator(".market-trend")
