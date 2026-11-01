@@ -3,7 +3,6 @@
 
   const NAV_ITEMS = [
     { key: 'home', label: 'Home', href: 'index.html' },
-    { key: 'research', label: 'Research', href: 'research.html' },
     { key: 'market', label: 'Market', href: 'market.html' },
     { key: 'legal', label: 'Legal', href: 'legal.html' },
     { key: 'infrastructure', label: 'Infrastructure', href: 'infrastructure.html' },
@@ -98,8 +97,8 @@
           </nav>
 
           <div class="header-actions">
-            <button class="button global-search-trigger" type="button" data-search-open aria-label="Open global research search">
-              <span>Search research...</span><span>⌕</span>
+            <button class="button global-search-trigger" type="button" data-search-open aria-label="Open global data search">
+              <span>Search data...</span><span>⌕</span>
             </button>
             <button class="icon-button" type="button" aria-label="Search" data-search-open>⌕</button>
           </div>
@@ -142,7 +141,7 @@
         </aside>
       </div>
       <div class="search-overlay" data-search-overlay aria-hidden="true">
-        <div class="search-panel" role="dialog" aria-modal="true" aria-label="Global research search">
+        <div class="search-panel" role="dialog" aria-modal="true" aria-label="Global data search">
           <div class="search-row">
             <input class="search-input" type="search" placeholder="Search projects, developers, legal, infrastructure, macro..." aria-label="Global search" autocomplete="off" spellcheck="false" data-global-search-input>
             <button class="icon-button" type="button" aria-label="Close search" data-search-close>×</button>
