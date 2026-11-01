@@ -281,9 +281,12 @@
         importance:row.importance,
         display_title:row.title,
         display_summary:row.summary,
-        display_href:row.category==='market' ? 'market.html?view=news'
+        // Headlines link directly to the publisher article when URL was
+        // verified by RSS ingestion; section header still opens module news.
+        display_href:typeof row.url==='string' && /^https:\/\//i.test(row.url) ? row.url
+          : (row.category==='market' ? 'market.html?view=news'
           : row.category==='legal' ? 'legal.html?view=news'
-          : row.category==='macro' ? 'macro.html?view=news' : 'infrastructure.html?view=news'
+          : row.category==='macro' ? 'macro.html?view=news' : 'infrastructure.html?view=news')
       }));
 
     data.legal.forEach(row=>{
