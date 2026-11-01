@@ -34,6 +34,32 @@
         }
       ],
       "conflict": false
+    },
+    "masteri-thao-dien|2026-11": {
+      "fingerprint": "3208edeb6be5c923e2bfa338be2d199541d8ecf714962bd45e185e0768f0a4b0",
+      "period": "2026-11",
+      "target_id": "masteri-thao-dien",
+      "first_checked_at": "2026-11-01T09:24:07.628766+00:00",
+      "checks": [
+        {
+          "run_id": "41292968103",
+          "checked_at": "2026-11-01T09:24:07.628766+00:00"
+        }
+      ],
+      "conflict": false
+    },
+    "the-panorama|2026-11": {
+      "fingerprint": "119dc91f7ddf9f671a60484eacf9b40f8472e5eb563b4a175a9ca3f23c9dfb8a",
+      "period": "2026-11",
+      "target_id": "the-panorama",
+      "first_checked_at": "2026-11-01T09:24:07.628766+00:00",
+      "checks": [
+        {
+          "run_id": "41292968103",
+          "checked_at": "2026-11-01T09:24:07.628766+00:00"
+        }
+      ],
+      "conflict": false
     }
   }
 }
