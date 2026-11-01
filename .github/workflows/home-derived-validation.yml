@@ -16,6 +16,7 @@ on:
       - 'tests/test_home_editorial_20261101.cjs'
       - 'tests/test_home_fresh_news_20261019.cjs'
       - 'tests/test_phase4_3d_home_sync.py'
+      - 'tests/test_phase4_9_1_ui_polish.py'
       - '.github/workflows/home-derived-validation.yml'
   pull_request:
     paths:
