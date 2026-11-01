@@ -30,7 +30,8 @@ assert indicators['fallback_only'] is True
 assert all(x['display_value'] == '—' for x in indicators['data'])
 
 by_cat = {x['category']: x for x in today['data']}
-assert by_cat['market']['count'] == len(projects['data']) == 13
+assert by_cat['market']['count'] == 13
+assert len(projects['data']) >= by_cat['market']['count'], 'Home fallback seed is historic, not a live registry count'
 assert by_cat['legal']['count'] == len(legal['data']) == 16
 assert by_cat['infrastructure']['count'] == len(infra['data']) == 8
 assert by_cat['macro']['count'] == 18
