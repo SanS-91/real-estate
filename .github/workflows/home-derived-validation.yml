@@ -6,11 +6,16 @@ on:
     paths:
       - 'index.html'
       - 'assets/js/home.js'
+      - 'assets/js/common.js'
+      - 'assets/js/search.js'
+      - 'assets/js/localization-static.js'
+      - 'assets/js/localization-dynamic.js'
       - 'assets/js/home-editorial.js'
       - 'assets/js/components.js'
       - 'assets/css/main.css'
       - 'tests/test_home_editorial_20261101.cjs'
       - 'tests/test_home_fresh_news_20261019.cjs'
+      - 'tests/test_phase4_3d_home_sync.py'
       - '.github/workflows/home-derived-validation.yml'
   pull_request:
     paths:
