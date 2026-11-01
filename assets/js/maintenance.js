@@ -719,6 +719,9 @@
             noNew: 'No new eligible articles in this check; this is not a failure.',
             newArticles: 'New articles were published in the latest check.',
             schedule: 'Scheduled checks (Vietnam time)', expected: 'Most recent expected slot' };
+      const sevenDayCounts = snapshot.recent_by_module_7d || {};
+      const latestPublications = snapshot.latest_published_by_module || {};
+      const hasActivity = !!snapshot.recent_by_module_7d;
       const feeds = Array.isArray(snapshot.feed_status) ? snapshot.feed_status : [];
       const feedIssue = item => item.status !== 'parsed';
       const ordered = [...feeds].sort((a, b) => Number(feedIssue(b)) - Number(feedIssue(a)) ||
@@ -754,6 +757,8 @@
           </div>
           <div class="news-health-big">${esc(counts[id] || 0)}</div>
           <div class="news-health-card-caption">${esc(labels.perRun)}</div>
+          ${hasActivity ? `<div class="news-health-card-caption">${vi ? 'Tin xuất bản 7 ngày' : 'Published in 7 days'}: <strong>${esc(sevenDayCounts[id] || 0)}</strong></div>` : ''}
+          ${latestPublications[id] ? `<div class="news-health-card-caption">${vi ? 'Tin gần nhất' : 'Latest story'}: ${esc(formatDateTime(latestPublications[id]))}</div>` : ''}
         </div>`).join('')}
         <div class="news-health-summary">
           <span><strong>${esc(model.parsed)}/${esc(model.configured)}</strong> ${esc(labels.checked)}</span>
