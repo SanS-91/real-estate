@@ -435,40 +435,34 @@
       market: { label: vi ? 'Thị trường' : 'Market', href: 'market.html?view=news' },
       legal: { label: vi ? 'Pháp lý' : 'Legal', href: 'legal.html?view=news' },
       infrastructure: { label: vi ? 'Hạ tầng' : 'Infrastructure', href: 'infrastructure.html?view=news' },
-      macro: { label: vi ? 'Vĩ mô' : 'Macro', href: 'macro.html?view=overview' }
+      macro: { label: vi ? 'Vĩ mô' : 'Macro', href: 'macro.html?view=news' }
     };
-    // Rank within a recent window first, then backfill with real older
-    // evidence if necessary. Never create or date a synthetic headline.
-    const within = days => window.IntelligenceSurfaces?.withinDays?.(ranked, ref, days) || [];
-    const recent = within(7), extended = within(90), older = within(365);
+    // A qualified source headline beats an unrelated, newer one. Fill from
+    // the last 30 real publication days, never backfill 90/365 days with noise.
+    // Keep newestHomeCandidates for deterministic tie ordering and the
+    // legacy regression, but use an independent editorial quality/diversity pass.
     return Object.keys(metaByCategory).map(category => {
-      const picked = [], seen = new Set();
-      for (const source of [recent, extended, older]) {
-        for (const row of newestHomeCandidates(source)) {
-          if (row.category !== category || picked.length >= 3) continue;
-          const key = row.id || row.title || '';
-          if (!key || seen.has(key)) continue;
-          seen.add(key);
-          picked.push(row);
-        }
-      }
-      const items = picked.map(row => {
+      const source = newestHomeCandidates(ranked.filter(row => row.category === category));
+      const chosen = window.HomeEditorial?.curated?.(source, ref, { max: 3, minWindow: 7, extendedWindow: 30 }) || [];
+      const items = chosen.map(({row, topic, age}) => {
         const item = formatRankedItem(row, data);
         const sourceIds = row.ranking_evidence?.source_ids || [];
         return {
           title: item.title,
           date_label: item.date_label || App.formatDate(item.sort_date),
-          meta: sourceIds.length ? sourceName(data.sources, sourceIds[0]) : (vi ? 'Dữ liệu có nguồn' : 'Source-backed'),
-          href: item.href
+          meta: sourceIds.length ? sourceName(data.sources, sourceIds[0])
+            : sourceName(data.sources, row.source_id),
+          href: item.href,
+          topic_label: window.HomeEditorial?.label?.(topic,vi ? 'vi' : 'en') || '',
+          older: age >= 7
         };
       });
-      const withinWeek = picked.filter(row =>
-        recent.some(current => current.id === row.id)).length;
+      const older = chosen.some(x=>x.age>=7);
       const countLabel = !items.length
-        ? (vi ? 'Chưa có tin có nguồn trong 12 tháng' : 'No sourced updates in 12 months')
+        ? (vi ? 'Chưa có tin phù hợp trong 30 ngày' : 'No qualifying news in 30 days')
         : vi
-          ? `${items.length} cập nhật gần nhất${withinWeek < items.length ? ' · có tin kỳ trước' : ''}`
-          : `${items.length} latest updates${withinWeek < items.length ? ' · includes older dates' : ''}`;
+          ? `${items.length} cập nhật chọn lọc · ${older?'30':'7'} ngày`
+          : `${items.length} curated updates · ${older?'30':'7'} days`;
       return {
         category, label: metaByCategory[category].label,
         count: items.length, count_label: countLabel,
