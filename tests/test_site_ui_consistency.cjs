@@ -29,7 +29,7 @@ assert.match(localization, /Quy tắc & nguồn dữ liệu/);
 assert.doesNotMatch(common, /key: 'research'.*href: 'research\\.html'/);
 assert.doesNotMatch(localization, /\\.main-nav a\\[href="research\\.html"\\]/);
 assert.match(common, /key: 'market', label: 'Market'/);
-assert.match(localization, /'Search data\\.\\.\\.', 'Tìm kiếm dữ liệu\\.\\.\\.'/);
+assert(localization.includes("'Search data...', 'Tìm kiếm dữ liệu...'"));
 assert.match(css, /@media \(max-width: 1199px\)/);
 assert.match(css, /\.mobile-nav-panel\s*\{[\s\S]*?max-height: calc\(100dvh/);
 assert.match(css, /\.tabs \{[\s\S]*?scroll-snap-type: x proximity;/);
