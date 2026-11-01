@@ -15,17 +15,19 @@ const window = {
   },
   FilterEngine: { textMatch: (a, q, fields) => fields.map(k => a[k] || '').join(' ').toLowerCase().includes(q.toLowerCase()) }
 };
+window.HomeEditorial = require('../assets/js/home-editorial.js');
 vm.runInNewContext(fs.readFileSync('assets/js/market-news-ui.js','utf8'), {window, console});
 
 const articles = Array.from({length:32}, (_, i) => ({
   id:'article-' + i,
   category:'market',
-  title: 'Tin tức bất động sản số ' + i,
+  title: 'Thị trường bất động sản: dự án nhà ở số ' + i,
   summary: 'Nội dung tóm tắt dài về tin tức thị trường bất động sản tại Việt Nam và khu vực.',
   url:'https://vnexpress.net/news-' + i + '.html',
   source_id: i % 2 ? 'vnexpress-real-estate' : 'dantri-real-estate',
   published_at: new Date(Date.UTC(2026,9,9-i/2)).toISOString(),
   tags: i % 2 ? ['pricing'] : ['legal'],
+  content_type: 'publisher-rss',
   project_ids: i === 0 ? ['izumi-city'] : [],
   region_ids: ['hcmc'], developer_ids:[]
 }));
@@ -50,7 +52,7 @@ assert.match(html,/<strong>16<\/strong> bài phù hợp/);
 params['news-topic']='legal';
 html=window.MarketNewsUI.render(args);
 assert.equal(cards(html),0);
-assert.match(html,/Không có tin phù hợp/);
+assert.match(html,/Không có tin đạt tiêu chí nghiên cứu/);
 delete params['news-source']; delete params['news-topic'];
 
 state.q='unmatched query';
@@ -58,7 +60,7 @@ html=window.MarketNewsUI.render(args);
 assert.equal(cards(html),0);
 state.q='';
 
-articles[0].title='<img src=x onerror=alert(1)> malicious';
+articles[0].title='Thị trường bất động sản tăng: <img src=x onerror=alert(1)> malicious';
 html=window.MarketNewsUI.render(args);
 assert.doesNotMatch(html,/<img src=x/);
 assert.match(html,/&lt;img/);
@@ -93,6 +95,24 @@ for (const [module, heading, topic] of [
   assert.ok(page.includes(topic),module + ' correct topic');
 }
 
+/* Reject mixed broad RSS headlines even if an upstream feed tagged them to a module. */
+const offTopic=[
+  {id:'bad-decor',category:'market',content_type:'publisher-rss',title:'3 mẹo nâng cấp nội thất giá rẻ trong sáng',
+    summary:'Mẹo trang trí',source_id:'dantri-real-estate',url:'https://example.com/interior',published_at:'2026-11-01T07:00:00Z'},
+  {id:'bad-accident',category:'infrastructure',content_type:'publisher-rss',
+    title:'Đôi nam nữ bị xe ben cán tử vong trong hầm chui TPHCM',summary:'Tai nạn giao thông',
+    source_id:'dantri-current-affairs',url:'https://example.com/accident',published_at:'2026-11-01T07:00:00Z'},
+  {id:'bad-fake-legal',category:'legal',content_type:'publisher-rss',title:'Giải trí ca sĩ mới nổi',
+    summary:'Tin tức',source_id:'vnexpress-current-affairs',url:'https://example.com/entertainment',
+    published_at:'2026-11-01T07:00:00Z'}
+];
+for(const [mod,bad] of [['market','bad-decor'],['infrastructure','bad-accident'],['legal','bad-fake-legal']]){
+  const filtered=window.MarketNewsUI.render({module:mod,
+    articles:[...offTopic,...moduleStories],regions:[],developers:[],state:{q:'',region:'',developer:''}});
+  assert(!filtered.includes('href="https://example.com/'+(mod==='market'?'interior':mod==='legal'?'entertainment':'accident')+'"'),
+    mod+' off-topic RSS should be filtered');
+  assert(filtered.includes('market-news-editorial-note'),mod+' should disclose source screening');
+}
 const css=fs.readFileSync('assets/css/market-news.css','utf8');
 assert.match(css,/@media \(max-width: 640px\)/);
 assert.match(css,/@media \(max-width: 1120px\)/);
