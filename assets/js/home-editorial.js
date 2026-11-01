@@ -144,7 +144,7 @@
     let score=50 + (subject?14:0)+(material?10:0)+(has(t,p.high)?14:0);
     if (category==='market' && has(t,['nam long','izumi','aqua city','springville',
       'can tho','dong nai','binh duong','long an']))score+=8;
-    if (category==='macro' && tp==='gold')score-=22;
+    if (category==='macro' && tp==='gold')score-=12; // Lower priority, not categorically excluded: one gold story in featured
     if (category==='macro' && tp==='global-rates')score-=12;
     if (category==='infrastructure' && tp==='airport' && has(t,['nhan su','cong nhan']))score-=24;
     return {eligible:score>=58,score,topic:tp,reason:'editorial-qualification'};
