@@ -755,6 +755,8 @@
         ? (vi ? 'Tin RSS' : 'RSS news') + ': ' + Number(news.article_total).toLocaleString(vi ? 'vi-VN' : 'en-US')
           + (news.checked_at ? ' · ' + App.formatDate(news.checked_at) : '')
         : null;
+      const recent = news?.recent_by_module_7d || null;
+      const latest = news?.latest_published_by_module || null;
       setHTML('[data-home-data-health]', rows.map(row => `
         <a class="data-health-card is-${Components.escapeHTML(row.status || 'review')}" href="maintenance.html">
           <div class="data-health-card__top">
@@ -765,6 +767,8 @@
             <span>${Components.escapeHTML(String(row.dataset_count || 0))} datasets</span>
             <span>${Components.escapeHTML(String(row.candidate_backlog || 0))} backlog</span>
           </div>
+          ${recent && Number.isFinite(Number(recent[row.module])) ? `<div class="data-health-card__rss">${Components.escapeHTML(vi ? 'Tin xuất bản 7 ngày' : 'Published in 7 days')}: ${Components.escapeHTML(String(recent[row.module]))}</div>` : ''}
+          ${latest && latest[row.module] ? `<div class="data-health-card__rss">${Components.escapeHTML(vi ? 'Tin mới nhất' : 'Latest story')}: ${Components.escapeHTML(App.formatDate(latest[row.module]))}</div>` : ''}
           ${row.module === 'market' && rssLabel ? `<div class="data-health-card__rss">${Components.escapeHTML(rssLabel)}</div>` : ''}
         </a>
       `).join('') || Components.stateBox('Data health is not available yet.'));
@@ -777,7 +781,12 @@
 
   async function renderMeta() {
     try {
-      const [payload, production] = await Promise.all([DataStore.getMeta(), loadHomeProduction()]);
+      const [payload, production, health] = await Promise.all([DataStore.getMeta(), loadHomeProduction(), DataStore.getDataHealth().catch(() => null)]);
+      if (health?.generated_at) {
+        const vi = (window.AppLocalization?.getLanguage?.() || document.documentElement.lang) !== 'en';
+        setText('[data-home-updated]', (vi ? 'Kiểm tra hệ thống ' : 'System checked ') + App.formatDate(health.generated_at));
+        return;
+      }
       if (production.active) {
         setText('[data-home-updated]', `Integrated data · 4 curated modules · ${production.totalRecordCount} macro records`);
         return;
