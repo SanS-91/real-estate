@@ -14,7 +14,7 @@
     priceLayer: 'listing',
     benchmarkProduct: ''
   };
-  let data = { regions: [], developers: [], projects: [], phases: [], observations: [], listingObservations: [], listingScopeEvidence: [], alternativePriceEvidence: [], secondaryListingEvidence: [], oneHousingSubprojectEvidence: [], oneHousingSubprojectHistory: [], oneHousingProjectHistory: [], peerMonthlyVerified: [], peerMonthlyTargets: [], peerMonthlyHealth: null, developerProjectEvidence: [], productComparables: null, salesPolicyReadiness: null, commercialOfferReview: null, reverVerifiedUnitListings: [], muabanVerifiedUnitListings: [], listingSourceCoverage: null, listingComparables: [], articles: [], allArticles: [], infrastructureProjects: [], infrastructureSchedules: [], legalTopics: [], legalDocuments: [], events: [], macroIndicators: [], macroRows: [] };
+  let data = { regions: [], developers: [], projects: [], phases: [], observations: [], listingObservations: [], listingScopeEvidence: [], alternativePriceEvidence: [], secondaryListingEvidence: [], oneHousingSubprojectEvidence: [], oneHousingSubprojectHistory: [], oneHousingProjectHistory: [], peerMonthlyVerified: [], peerMonthlyTargets: [], peerMonthlyHealth: null, developerProjectEvidence: [], productComparables: null, salesPolicyReadiness: null, commercialOfferReview: null, reverVerifiedUnitListings: [], muabanVerifiedUnitListings: [], listingSourceCoverage: null, activeListingCoverage: null, listingComparables: [], articles: [], allArticles: [], infrastructureProjects: [], infrastructureSchedules: [], legalTopics: [], legalDocuments: [], events: [], macroIndicators: [], macroRows: [] };
 
   function payloadData(payload) { return payload?.data || []; }
   function byId(records) { return new Map(records.map(item => [item.id, item])); }
@@ -529,6 +529,7 @@
 
   function projectCoverageStatusHTML(records, expanded = false) {
     const result = projectPriceCoverage(records);
+    const monitoring = window.MarketProjectCoverage?.monitoring?.(result, data.activeListingCoverage);
     if (!result || !result.count) return '';
     const item = (value, label) => '<div class="market-project-coverage__stat"><strong>' +
       esc(value) + '</strong><span>' + esc(label) + '</span></div>';
@@ -537,10 +538,23 @@
       item(result.aggregate,'Có khoảng giá rao') +
       item(result.scoped,'Chỉ giá theo sản phẩm') +
       item(result.popular,'Chỉ giá phổ biến tháng') +
-      item(result.asp,'Giá TB dự án theo nguồn') + '</div>';
+      item(result.asp,'Giá TB dự án theo nguồn') +
+      (monitoring?.available ? item(monitoring.monitored + '/' + result.count,'Có nguồn giám sát tin rao') +
+        item(monitoring.withCurrent,'Có tin rao từng căn đã xác minh') : '') + '</div>';
     if (!expanded) return '<div class="market-project-coverage" data-market-project-coverage>' +
       summary + '<p>Giá rao tổng hợp, giá theo phân khúc, giá phổ biến và ASP là các chỉ tiêu khác nhau. ' +
       '<a href="market.html?view=pricing">Xem độ phủ giá bán</a>.</p></div>';
+    const monitorNote = monitoring?.available
+      ? '<p class="chart-note">Giám sát tin rao từng căn: ' + esc(monitoring.generated_at || '—') +
+        (monitoring.freshness === 'stale' ? ' · Báo cáo quá 72 giờ, cần kiểm tra lại.' : ' · Báo cáo trong 72 giờ.') +
+        ' Số tin rao đã xác minh là bằng chứng theo căn, không suy thành giá chung dự án.</p>'
+      : '<p class="chart-note">Chưa đọc được báo cáo giám sát tin rao từng căn.</p>';
+    const monitorLabels = {
+      'not-monitored':'Chưa có nguồn theo dõi',
+      'monitored-no-offers':'Đang theo dõi · chưa có tin đạt chuẩn',
+      'awaiting-verification':'Có tin nguồn · chờ xác minh',
+      'verified-single-offers':'Có tin rao đã xác minh'
+    };
     const statuses = { 'aggregate-asking':'Khoảng giá rao tổng hợp',
       'scoped-asking':'Chỉ một loại sản phẩm / FAQ',
       'monthly-popular':'Giá phổ biến tháng', 'no-price':'Chưa có giá có nguồn' };
@@ -549,18 +563,24 @@
         p.row ? formatListingRange(p.row) : '—';
       const link = p.row?.source_url ? '<a href="' + esc(p.row.source_url) +
         '" target="_blank" rel="noopener noreferrer">Nguồn ↗</a>' : '—';
+      const watched = monitoring?.byId[p.project_id];
+      const watchText = watched
+        ? (monitorLabels[watched.status] || 'Chưa có báo cáo') +
+          (watched.verified_ads ? ' (' + watched.verified_ads + ' tin)' : '')
+        : 'Chưa có báo cáo';
       return '<tr><td data-label-vi="Dự án" data-label-en="Project"><button class="table-link" type="button" data-project-id="' +
         esc(p.project_id) + '">' + esc(p.project_name) + '</button></td><td data-label-vi="Phạm vi" data-label-en="Scope">' +
         esc(statuses[p.tier]) + '</td><td data-label-vi="Sản phẩm" data-label-en="Product">' + esc(p.product || '—') +
         '</td><td class="numeric" data-label-vi="Giá tham chiếu" data-label-en="Price">' + esc(price) + '</td><td data-label-vi="Kỳ nguồn" data-label-en="Source period">' +
-        esc(p.as_of || '—') + '</td><td data-label-vi="Nguồn" data-label-en="Source">' + link + '</td></tr>';
+        esc(p.as_of || '—') + '</td><td data-label-vi="Theo dõi tin rao" data-label-en="Listing monitoring">' +
+        esc(watchText) + '</td><td data-label-vi="Nguồn" data-label-en="Source">' + link + '</td></tr>';
     }).join('');
     return '<section class="market-project-coverage" data-market-project-coverage>' +
-      summary + '<p>Giá được hiển thị theo đúng phạm vi nguồn, không tự suy ra ASP hoặc nối các snapshot thành xu hướng.</p>' +
+      summary + '<p>Giá được hiển thị theo đúng phạm vi nguồn, không tự suy ra ASP hoặc nối các snapshot thành xu hướng.</p>' + monitorNote +
       '<details class="market-project-coverage__details"><summary>Xem đầy đủ độ phủ giá theo ' +
       result.count + ' dự án</summary><div class="table-wrap"><table class="data-table mobile-record-table data-table--market-coverage">' +
       '<thead><tr><th>Dự án</th><th>Phạm vi giá</th><th>Sản phẩm</th><th class="numeric">Giá tham chiếu</th>' +
-      '<th>Kỳ nguồn</th><th>Nguồn gốc</th></tr></thead><tbody>' + details +
+      '<th>Kỳ nguồn</th><th>Theo dõi tin rao</th><th>Nguồn gốc</th></tr></thead><tbody>' + details +
       '</tbody></table></div></details></section>';
   }
 
@@ -592,7 +612,13 @@
   }
 
   function renderOverview() {
-    const recent = [...data.articles].sort((a,b) => String(b.published_at).localeCompare(String(a.published_at))).slice(0,4);
+    const latestMarketNews = data.articles.filter(article =>
+      article.url && article.title && (window.DataStore?.isNewsFor?.(article, 'market') ?? article.category === 'market'));
+    const screenedMarketNews = window.HomeEditorial?.filterArchive
+      ? window.HomeEditorial.filterArchive(latestMarketNews, 'market').map(item => item.article)
+      : latestMarketNews;
+    const recent = screenedMarketNews.sort((a,b) =>
+      String(b.published_at || '').localeCompare(String(a.published_at || ''))).slice(0,4);
     const overviewMarketRows = hcmcSeries();
     const overviewMarketSource = overviewMarketRows[overviewMarketRows.length - 1] || null;
     const overviewPriceSource = data.observations.find(item => item.average_asp && item.source_id) || null;
@@ -605,7 +631,9 @@
         </section>
         <section class="section market-panel">
           <div class="section-header"><div><span class="eyebrow">Latest activity</span><h2 class="section-title">Market Developments</h2></div><a class="text-link" href="market.html?view=news">View all</a></div>
-          <div class="section-body market-news-compact">${recent.map(article => `<article><span>${esc(App.formatDate(article.published_at))}</span><strong>${esc(article.title)}</strong></article>`).join('')}</div>
+          <div class="section-body market-news-compact">${recent.length
+            ? recent.map(article => `<article><time datetime="${esc(article.published_at)}">${esc(App.formatDate(article.published_at))}</time><strong><a href="${esc(article.url)}" target="_blank" rel="noopener noreferrer">${esc(article.title)}</a></strong></article>`).join('')
+            : '<p class="muted-text">Chưa có tin thị trường đạt tiêu chí lọc. Xem tab Tin tức để tra cứu nguồn.</p>'}</div>
         </section>
       </div>
       <section class="section">
@@ -1723,14 +1751,14 @@
   async function load() {
     try {
       await window.Provenance?.load?.();
-      const [commercialOfferReview, salesPolicyReadiness, productComparables, developerProjectEvidence, regions, developers, projects, phases, observations, listingObservations, listingScopeEvidence, alternativePriceEvidence, secondaryListingEvidence, oneHousingSubprojectEvidence, oneHousingSubprojectHistory, oneHousingProjectHistory, reverVerifiedUnitListings, muabanVerifiedUnitListings, listingSourceCoverage, listingComparables, articles, infrastructureProjects, infrastructureSchedules, legalTopics, legalDocuments, events, macroIndicators, macroRows, meta, peerMonthlyVerified, peerMonthlyTargets, peerMonthlyHealth] = await Promise.all([
-        DataStore.getCommercialOfferReview().catch(() => null), DataStore.getSalesPolicyReadiness().catch(() => null), DataStore.getProductComparables().catch(() => null), DataStore.getDeveloperProjectEvidence().catch(() => ({data:[]})), DataStore.getRegions(), DataStore.getDevelopers(), DataStore.getProjects(), DataStore.getProjectPhases(), DataStore.getMarketObservations(), DataStore.getListingObservations(), DataStore.getListingScopeEvidence(), DataStore.getAlternativePriceEvidence(), DataStore.getSecondaryListingEvidence(), DataStore.getOneHousingSubprojectEvidence(), DataStore.getOneHousingSubprojectHistory(), DataStore.getOneHousingProjectHistory().catch(() => ({data:[]})), DataStore.getReverVerifiedUnitListings().catch(() => ({data:[]})), DataStore.getMuabanVerifiedUnitListings().catch(() => ({data:[]})), DataStore.getListingSourceCoverage().catch(() => null), DataStore.getListingComparables(), DataStore.getArticles(), DataStore.getInfrastructureProjects(), DataStore.getInfrastructureSchedules(), DataStore.getLegalTopics(), DataStore.getLegalDocuments(), DataStore.getEvents(), DataStore.getMacroIndicators(), DataStore.getProcessedMacroObservations(), DataStore.getMeta(),
+      const [commercialOfferReview, salesPolicyReadiness, productComparables, developerProjectEvidence, regions, developers, projects, phases, observations, listingObservations, listingScopeEvidence, alternativePriceEvidence, secondaryListingEvidence, oneHousingSubprojectEvidence, oneHousingSubprojectHistory, oneHousingProjectHistory, reverVerifiedUnitListings, muabanVerifiedUnitListings, listingSourceCoverage, activeListingCoverage, listingComparables, articles, infrastructureProjects, infrastructureSchedules, legalTopics, legalDocuments, events, macroIndicators, macroRows, meta, peerMonthlyVerified, peerMonthlyTargets, peerMonthlyHealth] = await Promise.all([
+        DataStore.getCommercialOfferReview().catch(() => null), DataStore.getSalesPolicyReadiness().catch(() => null), DataStore.getProductComparables().catch(() => null), DataStore.getDeveloperProjectEvidence().catch(() => ({data:[]})), DataStore.getRegions(), DataStore.getDevelopers(), DataStore.getProjects(), DataStore.getProjectPhases(), DataStore.getMarketObservations(), DataStore.getListingObservations(), DataStore.getListingScopeEvidence(), DataStore.getAlternativePriceEvidence(), DataStore.getSecondaryListingEvidence(), DataStore.getOneHousingSubprojectEvidence(), DataStore.getOneHousingSubprojectHistory(), DataStore.getOneHousingProjectHistory().catch(() => ({data:[]})), DataStore.getReverVerifiedUnitListings().catch(() => ({data:[]})), DataStore.getMuabanVerifiedUnitListings().catch(() => ({data:[]})), DataStore.getListingSourceCoverage().catch(() => null), DataStore.getActiveListingCoverage().catch(() => null), DataStore.getListingComparables(), DataStore.getArticles(), DataStore.getInfrastructureProjects(), DataStore.getInfrastructureSchedules(), DataStore.getLegalTopics(), DataStore.getLegalDocuments(), DataStore.getEvents(), DataStore.getMacroIndicators(), DataStore.getProcessedMacroObservations(), DataStore.getMeta(),
         DataStore.getPeerMonthlyVerified().catch(() => ({data:[]})),
         DataStore.getPeerMonthlyTargets().catch(() => ({targets:[]})),
         DataStore.getPeerMonthlySourceHealth().catch(() => null)
       ]);
       data = {
-        commercialOfferReview, salesPolicyReadiness, productComparables, developerProjectEvidence: payloadData(developerProjectEvidence), regions: payloadData(regions), developers: payloadData(developers), projects: payloadData(projects), phases: payloadData(phases), observations: payloadData(observations), listingObservations: payloadData(listingObservations), listingScopeEvidence: payloadData(listingScopeEvidence), alternativePriceEvidence: payloadData(alternativePriceEvidence), secondaryListingEvidence: payloadData(secondaryListingEvidence), oneHousingSubprojectEvidence: payloadData(oneHousingSubprojectEvidence), oneHousingSubprojectHistory: payloadData(oneHousingSubprojectHistory), oneHousingProjectHistory: payloadData(oneHousingProjectHistory), peerMonthlyVerified:payloadData(peerMonthlyVerified), peerMonthlyTargets:peerMonthlyTargets?.targets || [], peerMonthlyHealth, reverVerifiedUnitListings: payloadData(reverVerifiedUnitListings), muabanVerifiedUnitListings: payloadData(muabanVerifiedUnitListings), listingSourceCoverage, listingComparables: payloadData(listingComparables), articles: payloadData(articles), allArticles: payloadData(articles), infrastructureProjects: payloadData(infrastructureProjects), infrastructureSchedules: payloadData(infrastructureSchedules), legalTopics: payloadData(legalTopics), legalDocuments: payloadData(legalDocuments), events: payloadData(events), macroIndicators: payloadData(macroIndicators), macroRows: payloadData(macroRows)
+        commercialOfferReview, salesPolicyReadiness, productComparables, developerProjectEvidence: payloadData(developerProjectEvidence), regions: payloadData(regions), developers: payloadData(developers), projects: payloadData(projects), phases: payloadData(phases), observations: payloadData(observations), listingObservations: payloadData(listingObservations), listingScopeEvidence: payloadData(listingScopeEvidence), alternativePriceEvidence: payloadData(alternativePriceEvidence), secondaryListingEvidence: payloadData(secondaryListingEvidence), oneHousingSubprojectEvidence: payloadData(oneHousingSubprojectEvidence), oneHousingSubprojectHistory: payloadData(oneHousingSubprojectHistory), oneHousingProjectHistory: payloadData(oneHousingProjectHistory), peerMonthlyVerified:payloadData(peerMonthlyVerified), peerMonthlyTargets:peerMonthlyTargets?.targets || [], peerMonthlyHealth, reverVerifiedUnitListings: payloadData(reverVerifiedUnitListings), muabanVerifiedUnitListings: payloadData(muabanVerifiedUnitListings), listingSourceCoverage, activeListingCoverage, listingComparables: payloadData(listingComparables), articles: payloadData(articles), allArticles: payloadData(articles), infrastructureProjects: payloadData(infrastructureProjects), infrastructureSchedules: payloadData(infrastructureSchedules), legalTopics: payloadData(legalTopics), legalDocuments: payloadData(legalDocuments), events: payloadData(events), macroIndicators: payloadData(macroIndicators), macroRows: payloadData(macroRows)
       };
       Resolver.setData('region', data.regions);
       Resolver.setData('developer', data.developers);
