@@ -11,7 +11,7 @@
     'infrastructure-project': 'Infrastructure',
     'macro-indicator': 'Macro Indicators',
     event: 'Events',
-    article: 'Articles & Research'
+    article: 'Articles'
   };
   const ENTITY_BOOST = {
     project: 45,
@@ -336,7 +336,7 @@
       return;
     }
 
-    status.textContent = `${results.length} best matches across the integrated research registry.`;
+    status.textContent = `${results.length} best matches across the Market Intelligence data.`;
     const grouped = new Map();
     results.forEach(item => {
       if (!grouped.has(item.type)) grouped.set(item.type, []);
@@ -357,7 +357,7 @@
       return;
     }
     status.textContent = 'Searching structured datasets…';
-    container.innerHTML = '<div class="search-loading">Loading research index…</div>';
+    container.innerHTML = '<div class="search-loading">Loading data index…</div>';
     try {
       await buildIndex();
       renderResults(search(query), query);
