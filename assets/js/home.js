@@ -774,15 +774,6 @@
     }
   }
 
-  function renderQuickResearch() {
-    const items = [
-      { label: 'Region', title: 'Dong Nai', description: 'Projects, infrastructure and recent developments.', href: 'market.html?region=dong-nai' },
-      { label: 'Developer', title: 'Nam Long', description: 'Developer profile, projects and recent activity.', href: 'market.html?view=developers&developer=nam-long' },
-      { label: 'Legal topic', title: 'Land', description: 'Official documents, effective dates and analysis.', href: 'legal.html?view=documents&topic=land' },
-      { label: 'Macro', title: 'Interest Rates', description: 'Deposit, lending and interbank rate views.', href: 'macro.html?view=rates' }
-    ];
-    setHTML('[data-home-quick-research]', items.map(Components.quickLink).join(''));
-  }
 
   async function renderMeta() {
     try {
@@ -800,7 +791,6 @@
   }
 
   document.addEventListener('DOMContentLoaded', () => {
-    renderQuickResearch();
     renderDataHealth();
     renderMeta();
     renderToday();
