@@ -336,3 +336,15 @@
   .market-news-topic { min-height:38px; font-size:12px; }
   .market-news-card__topic { overflow-wrap:normal; white-space:nowrap; }
 }
+
+
+/* Shared Home/section-news editorial qualification: small, neutral provenance note. */
+.market-news-editorial-note {
+  color: #667085;
+  font-size: 11.5px;
+  line-height: 1.5;
+  margin: 1px 0 16px;
+}
+@media (max-width: 640px) {
+  .market-news-editorial-note { font-size: 11px; margin-bottom: 12px; }
+}
