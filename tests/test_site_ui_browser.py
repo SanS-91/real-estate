@@ -2,7 +2,8 @@
 
 Uses the runner's system Chromium; never mutates production data.
 Checks visual overflow, navigable Data Status, touch-scrolled tables,
-correct article tags and language toggling across all seven pages.
+correct article tags and language toggling across six primary pages
+and the archived Research page for compatibility.
 """
 import asyncio
 import json
@@ -70,7 +71,9 @@ async def run():
                           !x.closest('.table-wrap,.tabs,.market-news-topics');
                       }).slice(0,5).map(x=>x.tagName+'.'+String(x.className).slice(0,70))
                     })""")
-                    assert len(measurements["navItems"])==7,(path,measurements["navItems"])
+                    assert len(measurements["navItems"])==6,(path,measurements["navItems"])
+                    assert "research.html" not in measurements["navItems"],(path,"retired Research must not appear in nav")
+                    assert await page.locator("[data-mobile-nav] a[href='research.html']").count()==0
                     assert "maintenance.html" in measurements["navItems"],path
                     # Same explicit tab label in both primary and touch menu;
                     # article/data pages translate their content separately.
