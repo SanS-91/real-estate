@@ -739,7 +739,7 @@
       ['Macro context series',latestMacroContextRows(contextual.macroObservations || []).length]
     ];
     return `<section class="section project-intelligence-summary">
-      <div class="section-header"><div><span class="eyebrow">Cross-module dossier</span><h2 class="section-title">Intelligence Coverage</h2></div><a class="text-link" href="research.html?type=project&ids=${encodeURIComponent(intel.subject.id)}">Open Research workspace</a></div>
+      <div class="section-header"><div><span class="eyebrow">Cross-module dossier</span><h2 class="section-title">Intelligence Coverage</h2></div></div>
       <div class="section-body">
         <div class="project-intelligence-counts">${counts.map(([label,value])=>`<div><strong>${esc(String(value))}</strong><span>${esc(label)}</span></div>`).join('')}</div>
         <p class="research-disclaimer">Direct project evidence is separated from contextual evidence. Legal documents are linked by controlled topic relevance only; macro data is broad context and is not a project-specific fact.</p>
@@ -1148,7 +1148,6 @@
         </div>
         <div class="project-detail-actions">
           ${project.official_url ? `<a class="button" href="${esc(project.official_url)}" target="_blank" rel="noopener noreferrer">Official source</a>` : ''}
-          <a class="button" href="research.html?type=project&ids=${encodeURIComponent(project.id)}">Open Research</a>
         </div>
       </div>
 
@@ -1514,7 +1513,7 @@
       return `<article class="developer-card">
         <div><span class="eyebrow">Developer</span><h3>${esc(dev.name)}</h3><p>${esc(dev.summary)}</p><div>${sourceRef(dev.primary_source_id,{sourceUrl:dev.official_url})}</div></div>
         <div class="developer-card__stats"><span><strong>${projects.length}</strong> tracked projects</span><span><strong>${selling}</strong> selling</span></div>
-        <div class="developer-card__links"><a class="text-link" href="market.html?view=projects&developer=${encodeURIComponent(dev.id)}">View projects</a><a class="text-link" href="research.html?type=developer&ids=${encodeURIComponent(dev.id)}">Open Research</a></div>
+        <div class="developer-card__links"><a class="text-link" href="market.html?view=projects&developer=${encodeURIComponent(dev.id)}">View projects</a></div>
       </article>`;
     }).join('');
     setView(`<div class="view-intro"><div><span class="eyebrow">Developer registry</span><h2>${data.developers.length} developers</h2><p>Developer records resolve to project relationships instead of storing duplicate project lists.</p></div></div><div class="developer-grid">${cards}</div>`);
@@ -1652,7 +1651,7 @@
         <h2>${esc(project.name)}</h2>
         <p>${esc(project.location_text)} · ${esc(developerName(project))}</p>
         ${Components.statusBadge(project.status)}
-        <div class="drawer-actions"><a class="button" href="market.html?view=project-detail&id=${encodeURIComponent(project.id)}">Xem chi tiết dự án</a><a class="button" href="research.html?type=project&ids=${encodeURIComponent(project.id)}">Open Research</a></div>
+        <div class="drawer-actions"><a class="button" href="market.html?view=project-detail&id=${encodeURIComponent(project.id)}">Xem chi tiết dự án</a></div>
       </div>
       <div class="drawer-metrics">
         ${Components.compactMetric({label:'Planned units',value:Number.isFinite(project.planned_units) ? formatCompact(project.planned_units) : '—',note:project.known_units_note || 'No exact comparable count published'})}
