@@ -52,5 +52,38 @@
       needsReview:records.filter(x=>!x.full)
     };
   }
-  window.MarketProjectCoverage = { build };
+  // Monitoring is a separate evidence layer: individual verified apartment
+  // listings never become a representative project price or absorption metric.
+  function monitoring(coverage, snapshot, now = Date.now()) {
+    const records = coverage?.records || [];
+    const sourceRows = Array.isArray(snapshot?.projects) ? snapshot.projects : null;
+    if (!sourceRows) return { available:false, records:[], byId:{}, monitored:0, withCurrent:0 };
+    const bySource = new Map(sourceRows.map(row => [row.project_id, row]));
+    const checked = Date.parse(snapshot.generated_at || '');
+    const age = now - checked;
+    const freshness = Number.isFinite(checked) && age >= 0 && age <= 72 * 3600000
+      ? 'recent' : 'stale';
+    const joined = records.map(price => {
+      const row = bySource.get(price.project_id);
+      const monitors = Math.max(0, Number(row?.sources_monitored) || 0);
+      const units = Math.max(0, Number(row?.current_verified_ads) || 0);
+      return {
+        project_id:price.project_id,
+        sources_monitored:monitors,
+        verified_ads:units,
+        status:monitors === 0 ? 'not-monitored'
+          : units > 0 ? 'verified-single-offers'
+          : row?.status === 'source-qualified-awaiting-verification' ? 'awaiting-verification'
+          : 'monitored-no-offers'
+      };
+    });
+    return {
+      available:true, freshness, generated_at:snapshot.generated_at || null,
+      records:joined, byId:Object.fromEntries(joined.map(row => [row.project_id,row])),
+      monitored:joined.filter(row => row.sources_monitored > 0).length,
+      withCurrent:joined.filter(row => row.verified_ads > 0).length
+    };
+  }
+
+  window.MarketProjectCoverage = { build, monitoring };
 })();
