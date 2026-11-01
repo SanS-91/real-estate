@@ -6,6 +6,9 @@ on:
       - 'assets/js/common.js'
       - 'assets/js/home.js'
       - 'assets/js/market.js'
+      - 'assets/js/market-project-coverage.js'
+      - 'tests/test_market_monitoring_20261101.cjs'
+      - 'tests/test_market_news_quality_20261101.cjs'
       - 'assets/js/data-store.js'
       - 'tests/test_phase6_3f_peer_ui.cjs'
       - 'config/market-onehousing-peer-monthly-targets.json'
@@ -92,6 +95,8 @@ jobs:
           node --check assets/js/market-news-ui.js
           node tests/test_site_ui_consistency.cjs
           node tests/test_market_news_ui.cjs
+          node tests/test_market_monitoring_20261101.cjs
+          node tests/test_market_news_quality_20261101.cjs
           python tests/test_phase4_4d_maintenance_dashboard.py
       - name: Install browser driver (system Chromium only)
         run: pip install playwright==1.55.0
