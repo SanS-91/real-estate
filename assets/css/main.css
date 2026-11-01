@@ -3086,3 +3086,90 @@ body[data-page="home"] .metric-grid {
   .market-project-coverage__stat:nth-child(3) {border-right:1px solid var(--color-border);}
   .market-project-coverage__stat:nth-child(2n) {border-right:0;}
 }
+
+
+/* Home editorial digest — easier scanning, balanced desktop and mobile.
+   Source quality is enforced by home-editorial.js, not by color or layout. */
+body[data-page="home"] .today-grid {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 14px;
+}
+body[data-page="home"] .today-card {
+  min-width: 0;
+  padding: 16px 19px 12px;
+  border-radius: 10px;
+}
+body[data-page="home"] .today-card__header {
+  align-items: center;
+  padding-bottom: 10px;
+  gap: 12px;
+}
+body[data-page="home"] .today-card__header .eyebrow {
+  font-size: 10px;
+  letter-spacing: .07em;
+}
+body[data-page="home"] .today-card__count {
+  color: var(--color-text-secondary);
+  font-size: 11px;
+  font-weight: 550;
+  margin-top: 4px;
+  letter-spacing: 0;
+}
+body[data-page="home"] .today-card .compact-list {
+  padding: 0;
+}
+body[data-page="home"] .today-card .compact-list li + li {
+  border-top: 1px solid #eef0f3;
+}
+body[data-page="home"] .today-card .compact-link {
+  padding: 11px 0;
+  display: block;
+  min-width: 0;
+  font-weight: 550;
+  line-height: 1.47;
+}
+body[data-page="home"] .compact-link__topic {
+  display: block;
+  color: #687589;
+  font-size: 10px;
+  font-weight: 750;
+  letter-spacing: .02em;
+  margin-bottom: 4px;
+}
+body[data-page="home"] .compact-link__title {
+  display: block;
+  font-size: 13.5px;
+  line-height: 1.48;
+  font-weight: 680;
+  color: var(--color-text);
+  overflow-wrap: anywhere;
+}
+body[data-page="home"] .home-news-item--lead .compact-link__title {
+  font-weight: 760;
+}
+body[data-page="home"] .compact-link:hover .compact-link__title {
+  color: var(--color-primary-dark);
+}
+body[data-page="home"] .today-card .compact-link__meta {
+  display: block;
+  font-size: 11px;
+  line-height: 1.45;
+  margin-top: 5px;
+  font-weight: 450;
+  color: var(--color-text-secondary);
+}
+body[data-page="home"] .today-card .muted-text {
+  padding: 16px 0;
+  font-size: 12px;
+  line-height: 1.5;
+}
+body[data-page="home"] .today-card .text-link { 
+  font-size: 11.5px;
+  white-space: nowrap;
+}
+@media (max-width: 760px) {
+  body[data-page="home"] .today-grid { grid-template-columns: 1fr; gap: 11px; }
+  body[data-page="home"] .today-card { padding: 14px 15px 10px; }
+  body[data-page="home"] .compact-link__title { font-size: 13px; }
+  body[data-page="home"] .today-card__header { align-items: flex-start; }
+}
