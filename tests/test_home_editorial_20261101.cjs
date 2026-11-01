@@ -51,6 +51,8 @@ const gold=editorial.curated([...noise.slice(-2),
   make('macro','Tăng trưởng tín dụng ngân hàng Việt Nam cải thiện')
 ],'2026-11-01',{max:3});
 assert(gold.filter(x=>x.topic==='gold').length<=1);
+assert(editorial.inspect(make('macro','Giá vàng trong nước giảm mạnh hôm nay')).eligible,
+  'Valid gold market reporting should be de-prioritized, not removed from the archive');
 assert(gold.some(x=>x.topic==='credit'));
 assert.equal(editorial.label('credit','vi'),'Tín dụng');
 assert.equal(editorial.label('rail','en'),'Rail');
