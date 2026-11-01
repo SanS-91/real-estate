@@ -539,18 +539,18 @@
       item(result.scoped,'Chỉ giá theo sản phẩm') +
       item(result.popular,'Chỉ giá phổ biến tháng') +
       item(result.asp,'Giá TB dự án theo nguồn') +
-      (monitoring?.available ? item(monitoring.monitored + '/' + result.count,'Có nguồn giám sát tin rao') +
-        item(monitoring.withCurrent,'Có tin rao từng căn đã xác minh') : '') + '</div>';
+      (monitoring?.available ? item(monitoring.monitored + '/' + result.count,'Có nguồn theo dõi tin rao căn hộ') +
+        item(monitoring.withCurrent,'Có tin rao căn hộ đã xác minh') : '') + '</div>';
     if (!expanded) return '<div class="market-project-coverage" data-market-project-coverage>' +
       summary + '<p>Giá rao tổng hợp, giá theo phân khúc, giá phổ biến và ASP là các chỉ tiêu khác nhau. ' +
       '<a href="market.html?view=pricing">Xem độ phủ giá bán</a>.</p></div>';
     const monitorNote = monitoring?.available
       ? '<p class="chart-note">Giám sát tin rao từng căn: ' + esc(monitoring.generated_at || '—') +
         (monitoring.freshness === 'stale' ? ' · Báo cáo quá 72 giờ, cần kiểm tra lại.' : ' · Báo cáo trong 72 giờ.') +
-        ' Số tin rao đã xác minh là bằng chứng theo căn, không suy thành giá chung dự án.</p>'
+        ' Bộ theo dõi chỉ kiểm tra tin rao căn hộ từng căn, không phải toàn bộ sản phẩm thấp tầng; tin xác minh không suy thành giá chung dự án.</p>'
       : '<p class="chart-note">Chưa đọc được báo cáo giám sát tin rao từng căn.</p>';
     const monitorLabels = {
-      'not-monitored':'Chưa có nguồn theo dõi',
+      'not-monitored':'Chưa theo dõi tin rao căn hộ',
       'monitored-no-offers':'Đang theo dõi · chưa có tin đạt chuẩn',
       'awaiting-verification':'Có tin nguồn · chờ xác minh',
       'verified-single-offers':'Có tin rao đã xác minh'
