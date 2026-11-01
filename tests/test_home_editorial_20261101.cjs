@@ -42,7 +42,7 @@ for(const category of ['market','legal','infrastructure','macro']){
 const m=editorial.curated([noise[0],...good.filter(x=>x.category==='market')],'2026-11-01',{max:3});
 assert(!m.some(x=>x.row.title.includes('nội thất')));
 const late=editorial.curated([
-  make('market','Giá bán căn hộ Đồng Nai tăng mạnh','2026-10-01'),
+  make('market','Giá bán căn hộ Đồng Nai tăng mạnh','2026-10-04'),
   make('market','Nguồn cung dự án nhà ở xã hội mới','2026-09-10')
 ],'2026-11-01',{max:3});
 assert(late.length===1 && late[0].age>=7,'Only genuine updates <=30 days, no 90-day padding');
