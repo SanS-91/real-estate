@@ -24,7 +24,10 @@ const ordered = newestHomeCandidates([
   {id:'newest-high',date:'2026-10-19',attention_score:50}
 ]).map(row => row.id);
 assert.equal(ordered.join(','), 'newest-high,new,old');
-assert(script.includes('newestHomeCandidates(source)'));
+assert(script.includes('newestHomeCandidates(ranked.filter(row => row.category === category))'));
+assert(script.includes('HomeEditorial?.curated'));
+assert(script.includes('extendedWindow: 30'));
+assert(!script.includes('within(365)'));
 assert(script.includes('newsRelevantForHome(row)'));
 assert(script.includes('DataStore.getNewsHealth()'));
 console.log('PASS homepage freshness, relevance and RSS status regression checks');
