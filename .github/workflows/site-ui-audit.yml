@@ -34,6 +34,12 @@ on:
   push:
     branches: [main]
     paths:
+      - 'index.html'
+      - 'assets/js/home.js'
+      - 'assets/js/home-editorial.js'
+      - 'assets/js/components.js'
+      - 'tests/test_home_4j1.cjs'
+      - 'tests/test_home_editorial_20261101.cjs'
       - 'assets/js/common.js'
       - 'assets/js/localization-static.js'
       - 'assets/js/market-news-ui.js'
@@ -57,8 +63,10 @@ jobs:
         with: {python-version: '3.12'}
       - name: Validate shared markup and news tags
         run: |
+          node --check assets/js/home-editorial.js
           node --check assets/js/home.js
           node --check assets/js/components.js
+          node tests/test_home_editorial_20261101.cjs
           node tests/test_home_4j1.cjs
           node --check assets/js/market.js
           node tests/test_market_4j2.cjs
