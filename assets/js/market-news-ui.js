@@ -167,7 +167,7 @@
         <span class="market-news-card__source">${esc(sourceName(article.source_id))}</span>
         <span class="market-news-card__dot" aria-hidden="true">·</span>
         <time datetime="${esc(published)}">${esc(window.App.formatDate(published))}</time>
-        ${topics.length ? `<span class="market-news-card__topics">${topics.map(topic => `<button type="button" class="market-news-card__topic" data-news-topic="${esc(topic)}" data-topic="${esc(topic)}" aria-label="Lọc tin: ${esc(names[topic])}">${esc(TOPIC_NAMES[topic])}</button>`).join('')}</span>` : ''}
+        ${topics.length ? `<span class="market-news-card__topics">${topics.map(topic => `<button type="button" class="market-news-card__topic" data-news-topic="${esc(topic)}" data-topic="${esc(topic)}" aria-label="Lọc tin: ${esc(names[topic])}">${esc(names[topic] || TOPIC_NAMES[topic] || topic)}</button>`).join('')}</span>` : ''}
       </div>
       <h3><a href="${url}" target="_blank" rel="noopener noreferrer">${esc(article.title)}</a></h3>
       ${summary ? `<p class="market-news-card__excerpt">${esc(summary)}</p>` : ''}
@@ -240,9 +240,17 @@
     const days = DATE_WINDOWS.some(([id]) => id === daysParam) ? daysParam : 'all';
     const topics = availableTopics(module);
     const topicId = topics.some(([id]) => id === topicParam) ? topicParam : 'all';
-    const visibleArticles = articles.filter(a => a.url && a.title && (window.DataStore?.isNewsFor ? window.DataStore.isNewsFor(a, module) : a.category === module) &&
+    const sourceArticles = articles.filter(a => a.url && a.title &&
+      (window.DataStore?.isNewsFor ? window.DataStore.isNewsFor(a, module) : a.category === module) &&
       !String(a.source_id || '').startsWith('demo-') &&
       !/^(demo|illustrative)[\s:–-]/i.test(String(a.title || '')));
+    // Use the exact Home editorial relevance rules before counting, searching,
+    // classifying or featuring news. Source records are never deleted.
+    const editorial = window.HomeEditorial;
+    const visibleArticles = editorial?.filterArchive
+      ? editorial.filterArchive(sourceArticles,module).map(item => item.article)
+      : sourceArticles;
+    const omittedCount = sourceArticles.length-visibleArticles.length;
     const publishers = new Set(visibleArticles.map(a => sourceName(a.source_id)).filter(Boolean)).size;
     const latestDate = visibleArticles.map(a => a.published_at || '').filter(Boolean).sort().at(-1) || '';
     const sourceRestricted = visibleArticles.filter(a => {
@@ -254,12 +262,20 @@
       return true;
     });
     const counts = Object.fromEntries(topics.map(([id]) => [id, sourceRestricted.filter(a => topicMatch(a, id, module)).length]));
-    const list = sourceRestricted.filter(a => topicMatch(a, topicId, module))
+    const chronological = sourceRestricted.filter(a => topicMatch(a, topicId, module))
       .sort((a, b) => String(b.published_at || '').localeCompare(String(a.published_at || '')));
-    const shown = list.slice(0, visibleCount);
     const focused = !!(state.q || state.region || state.developer || sourceId || topicId !== 'all' || days !== 'all');
-    const featured = !focused && shown.length >= 3 ? diverseFeatured(shown) : [];
-    const rest = featured.length ? shown.filter(a => !featured.includes(a)) : shown;
+    const featured = !focused && chronological.length >= 3
+      ? (editorial?.featureArchive?.(chronological,module,3) || diverseFeatured(chronological))
+      : [];
+    // Keep featured stories at the start of the same paginated list; additional
+    // qualifying stories (including same-topic news) remain visible below.
+    const list = featured.length === 3
+      ? [...featured, ...chronological.filter(a => !featured.includes(a))]
+      : chronological;
+    const shown = list.slice(0, visibleCount);
+    const displayFeatured = featured.length === 3 ? featured : [];
+    const rest = displayFeatured.length ? shown.filter(a => !displayFeatured.includes(a)) : shown;
     const pills = topics.filter(([id]) => id === 'all' || counts[id] > 0 || topicId === id)
       .map(([id, label]) => `<button type="button" class="market-news-topic" data-news-topic="${esc(id)}" data-topic="${esc(id)}" aria-pressed="${id === topicId}">
         ${esc(label)} <span>${counts[id]}</span>
@@ -271,8 +287,8 @@
           <h2 data-news-view-label="${esc(module)}.title">${esc(window.App.newsViewCopy?.(module)?.title || MODULE_CONFIG[module]?.title || MODULE_CONFIG.market.title)}</h2>
           <p data-news-view-label="${esc(module)}.description">${esc(window.App.newsViewCopy?.(module)?.description || MODULE_CONFIG[module]?.description || MODULE_CONFIG.market.description)}</p>
         </div>
-        <div class="market-news-heading__total" aria-label="${visibleArticles.length} bài viết từ ${publishers} nguồn">
-          <strong>${visibleArticles.length}</strong><span>bài · ${publishers} nguồn</span>
+        <div class="market-news-heading__total" aria-label="${visibleArticles.length} bài phù hợp nghiên cứu từ ${publishers} nguồn">
+          <strong>${visibleArticles.length}</strong><span>bài chọn lọc · ${publishers} nguồn</span>
           ${latestDate ? `<small style="display:block;font-size:11px;font-weight:400;margin-top:4px">Tin mới nhất: ${esc(window.App.formatDate(latestDate))}</small>` : ''}
         </div>
       </div>
@@ -282,15 +298,18 @@
         <span><strong>${list.length}</strong> bài phù hợp</span>
         <span>Đang xem ${shown.length}/${list.length}</span>
       </div>
-      ${featured.length ? `<section aria-label="Tin mới nhất" class="market-news-feature">
-        ${card(featured[0], 'lead', module)}
+      <p class="market-news-editorial-note">Bài phù hợp nghiên cứu bất động sản và đầu tư ·
+        ${omittedCount ? `đã lọc ${omittedCount} tin lạc chủ đề hoặc trùng tiêu đề · ` : ''}
+        bài gốc vẫn được giữ trong kho dữ liệu.</p>
+      ${displayFeatured.length ? `<section aria-label="Tin nổi bật có chọn lọc" class="market-news-feature">
+        ${card(displayFeatured[0], 'lead', module)}
         <div class="market-news-feature__side">
-          ${card(featured[1], 'side', module)}
-          ${card(featured[2], 'side', module)}
+          ${card(displayFeatured[1], 'side', module)}
+          ${card(displayFeatured[2], 'side', module)}
         </div>
       </section>` : ''}
       ${rest.length ? `<div class="market-news-grid" aria-label="Danh sách tin tức">${rest.map(a => card(a, 'compact', module)).join('')}</div>` :
-        (!featured.length ? '<div class="market-news-empty">Không có tin phù hợp. Hãy thử từ khóa hoặc bộ lọc khác.</div>' : '')}
+        (!displayFeatured.length ? '<div class="market-news-empty">Không có tin đạt tiêu chí nghiên cứu trong bộ lọc này. Hãy thử từ khóa hoặc khoảng thời gian khác.</div>' : '')}
       ${shown.length < list.length ? `<div class="market-news-more"><button type="button" data-news-more>
         Xem thêm ${Math.min(NEXT_PAGE, list.length - shown.length)} tin <span aria-hidden="true">↓</span>
       </button></div>` : ''}
