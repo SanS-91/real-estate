@@ -26,7 +26,10 @@ assert.match(common, /maintenance.html#maintenance-rules-title/);
 assert.ok(!common.includes('<a href="#">Methodology'));
 assert.match(localization, /Maintenance · Trạng thái dữ liệu/);
 assert.match(localization, /Quy tắc & nguồn dữ liệu/);
-assert.match(localization, /'Research', 'Nghiên cứu'/);
+assert.doesNotMatch(common, /key: 'research'.*href: 'research\\.html'/);
+assert.doesNotMatch(localization, /\\.main-nav a\\[href="research\\.html"\\]/);
+assert.match(common, /key: 'market', label: 'Market'/);
+assert.match(localization, /'Search data\\.\\.\\.', 'Tìm kiếm dữ liệu\\.\\.\\.'/);
 assert.match(css, /@media \(max-width: 1199px\)/);
 assert.match(css, /\.mobile-nav-panel\s*\{[\s\S]*?max-height: calc\(100dvh/);
 assert.match(css, /\.tabs \{[\s\S]*?scroll-snap-type: x proximity;/);
@@ -88,4 +91,4 @@ assert.match(css,/\.news-kind-chip\[data-news-kind="official-update"\]/);
 assert.match(css,/\.news-kind-chip\[data-news-kind="data-release"\]/);
 console.log('PASS: shared News topic filter and responsive components across four modules');
 
-console.log('PASS: 7-site shared navigation, VI/EN terminology, auto-swipe tabs and distinct news topic chips');
+console.log('PASS: six active sections, no Research menu, VI/EN navigation and distinct news topics');
