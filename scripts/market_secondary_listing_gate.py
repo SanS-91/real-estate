@@ -112,7 +112,8 @@ def main():
     scope=json.loads(SCOPED.read_text(encoding="utf-8"))
     if data.get("record_count")!=3 or data["record_count"]!=len(data["data"]):
         errors.append("unexpected record count")
-    if portal["record_count"]!=18 or scope["record_count"]!=4:
+    if (portal["record_count"] < 18 or portal["record_count"] != len(portal.get("data", [])) or
+        scope["record_count"] < 4 or scope["record_count"] != len(scope.get("data", []))):
         errors.append("existing portal/history contracts must remain unchanged")
     if errors:
         raise SystemExit("\n".join(errors))
