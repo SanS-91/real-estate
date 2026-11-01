@@ -1,0 +1,42 @@
+name: Pages Recovery - Cancel Confirmed Stuck Deployment
+
+# A recovery-only workflow. Never runs on a schedule or ordinary data commits.
+# The default SHA below is the exact blocked deployment reported by GitHub Pages
+# on 2026-11-01, not the current site content or latest source commit.
+on:
+  push:
+    branches: [main]
+    paths:
+      - '.github/workflows/pages-stuck-recovery.yml'
+  workflow_dispatch:
+    inputs:
+      stuck_commit_sha:
+        description: 'Full 40-character SHA reported as in-progress by Pages'
+        required: true
+        type: string
+
+permissions:
+  contents: read
+  pages: write
+
+jobs:
+  cancel-stuck-pages-deployment:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 3
+    steps:
+      - name: Cancel only the identified stuck Pages deployment
+        env:
+          GH_TOKEN: ${{ github.token }}
+          DISPATCH_SHA: ${{ inputs.stuck_commit_sha }}
+          INITIAL_STUCK_SHA: b6a87821e9ac717dc27466812261e7bc4ae9da32
+        shell: bash
+        run: |
+          set -euo pipefail
+          SHA="${DISPATCH_SHA:-$INITIAL_STUCK_SHA}"
+          if [[ ! "$SHA" =~ ^[0-9a-f]{40}$ ]]; then
+            echo "::error::Expected an exact 40-character SHA; no deployment cancelled."
+            exit 1
+          fi
+          echo "Cancel confirmed stuck Pages deployment: $SHA"
+          gh api -X POST "repos/${GITHUB_REPOSITORY}/pages/deployments/${SHA}/cancel"
+          echo "Pages cancellation request accepted. A separate latest Pages rerun is still required."
