@@ -1,9 +1,38 @@
 {
   "schema_version": 1,
-  "build_id": "market-news-rss-20261101T025138Z",
-  "generated_at": "2026-11-01T02:51:38.429473+00:00",
-  "record_count": 1290,
+  "build_id": "market-news-rss-20261101T045139Z",
+  "generated_at": "2026-11-01T04:51:39.123161+00:00",
+  "record_count": 1291,
   "data": [
+    {
+      "id": "article-market-rss-2f1631945b46d9f20150",
+      "title": "Thị trường khách sạn Hà Nội dự kiến đón thêm 7.000 phòng",
+      "url": "https://vnexpress.net/thi-truong-khach-san-ha-noi-du-kien-don-them-7-000-phong-5139293.html",
+      "category": "market",
+      "module_ids": [
+        "market"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-11-01T03:35:17+00:00",
+      "source_id": "vnexpress-real-estate",
+      "region_ids": [
+        "ha-noi"
+      ],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [
+        "supply"
+      ],
+      "importance": 2,
+      "summary": "Nguồn cung khách sạn tại Thủ đô có thể bùng nổ từ 2027 với 48 dự án mới, cung cấp hơn 7.000 phòng, theo Savills.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://vnexpress.net/rss/bat-dong-san.rss",
+        "publisher_host": "vnexpress.net",
+        "publication_date_from_feed": true
+      }
+    },
     {
       "id": "article-market-rss-83b008bb715bd13b0599",
       "title": "Chủ đầu tư sân bay Long Thành giảm gần 1.400 nhân sự trong ba tháng",
