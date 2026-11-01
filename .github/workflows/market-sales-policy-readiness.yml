@@ -1,6 +1,13 @@
 name: Market 8B - FS Sales Policy Evidence Readiness
 
 on:
+  pull_request:
+    paths:
+      - 'tests/test_market_sales_policy_ui.cjs'
+      - 'tests/test_market_sales_policy_readiness.py'
+      - 'assets/js/market.js'
+      - 'market.html'
+      - '.github/workflows/market-sales-policy-readiness.yml'
   workflow_dispatch:
   push:
     branches: [main]
@@ -72,6 +79,7 @@ jobs:
           print('PASS policy claims visible, blocked PV, desktop/mobile.')
           PY
       - name: Publish source-readiness without automatic terms or prices
+        if: github.event_name != 'pull_request'
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
