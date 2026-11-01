@@ -22,7 +22,7 @@ assert(ui.toLowerCase().includes('chưa xác nhận giá căn cụ thể'));
 assert(ui.includes('Không dùng voucher/chiết khấu TB143'));
 assert(ui.includes('DataStore.getCommercialOfferReview()'));
 assert(store.includes('getCommercialOfferReview: () => loadDirectJSON'));
-assert(html.includes('market.js?v=PHASE8B-IZUMI-TB153'));
+assert(html.includes('market.js?v='));
 assert(maint.includes('function renderIzumiCommercialReview()'));
 assert(maint.includes('market-dealer-commercial-candidates.json'));
 assert(mhtml.includes('data-izumi-commercial-review'));

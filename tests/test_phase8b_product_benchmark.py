@@ -77,9 +77,16 @@ combined=mod.build(raw,projects,sources,now.date(),live)
 assert combined["verified_live_count"]==len(live)
 assert combined["record_count"]==len(raw["records"])+len(live)
 assert all(r["fs_asp_eligible"] is False and not r["verified_payment_milestones"] for r in live)
-broken=deepcopy(recent_muaban);broken["data"][0]["verification_run_ids"]=["same","same"]
+broken=deepcopy(recent_muaban)
+# An individual listing can have several independently captured revisions.
+# Invalidate every revision for this listing ID, not just one duplicate row.
+invalid_listing_id=str(broken["data"][0]["listing_id"])
+for item in broken["data"]:
+    if str(item.get("listing_id")) == invalid_listing_id:
+        item["verification_run_ids"]=["same","same"]
 fresh_rows=mod.verified_unit_auto_rows(projects,sources,now,broken,rever,fresh_health,rever_health)
-assert all(r["source_listing_id"]!=str(broken["data"][0]["listing_id"]) for r in fresh_rows)
+assert all(not (r["source_id"]=="muaban-vn" and r["source_listing_id"]==invalid_listing_id)
+           for r in fresh_rows), "No listing without two independent proof runs may be promoted"
 
 # Invalid assumptions must fail closed.
 def reject(update):

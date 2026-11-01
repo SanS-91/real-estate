@@ -1,6 +1,13 @@
 name: Market 8B - Source-Verified Product Benchmark
 
 on:
+  pull_request:
+    paths:
+      - 'tests/test_phase8b_product_benchmark.py'
+      - 'tests/test_phase8b_product_benchmark_ui.cjs'
+      - 'assets/js/market.js'
+      - 'market.html'
+      - '.github/workflows/market-product-benchmark.yml'
   workflow_dispatch:
   workflow_run:
     workflows:
@@ -82,6 +89,7 @@ jobs:
           print("PASS product benchmark browser render on desktop and 390px mobile.")
           PY
       - name: Rebuild comparables from the latest main without rebase conflicts
+        if: github.event_name != 'pull_request'
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
