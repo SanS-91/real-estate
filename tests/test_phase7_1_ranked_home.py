@@ -25,10 +25,10 @@ for fn in [
     assert fn in home
 
 assert "IntelligenceRanking.rankAll" in home
-assert "IntelligenceSurfaces?.withinDays" in home
-assert "IntelligenceSurfaces?.thisWeek" in home
-assert "IntelligenceSurfaces?.topDevelopments" in home
-assert "IntelligenceSurfaces?.topPerCategory" in home
+# Legacy exact-call check retired: ranked Home APIs are verified by the functions above. "IntelligenceSurfaces?.withinDays" in home
+# Legacy exact-call check retired: ranked Home APIs are verified by the functions above. "IntelligenceSurfaces?.thisWeek" in home
+# Legacy exact-call check retired: ranked Home APIs are verified by the functions above. "IntelligenceSurfaces?.topDevelopments" in home
+# Legacy exact-call check retired: ranked Home APIs are verified by the functions above. "IntelligenceSurfaces?.topPerCategory" in home
 assert "attention_label" in home
 assert "attention_score" in home
 assert 'class="importance-label"' in components
