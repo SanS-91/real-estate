@@ -40,13 +40,12 @@
 
   const COMMON = [
     ['.main-nav a[href="index.html"], .mobile-nav-panel a[href="index.html"]', 'Home', 'Trang chủ'],
-    ['.main-nav a[href="research.html"], .mobile-nav-panel a[href="research.html"]', 'Research', 'Nghiên cứu'],
     ['.main-nav a[href="market.html"], .mobile-nav-panel a[href="market.html"]', 'Market', 'Thị trường'],
     ['.main-nav a[href="legal.html"], .mobile-nav-panel a[href="legal.html"]', 'Legal', 'Pháp lý'],
     ['.main-nav a[href="infrastructure.html"], .mobile-nav-panel a[href="infrastructure.html"]', 'Infrastructure', 'Hạ tầng'],
     ['.main-nav a[href="macro.html"], .mobile-nav-panel a[href="macro.html"]', 'Macro', 'Vĩ mô'],
     ['.main-nav a[href="maintenance.html"], .mobile-nav-panel a[href="maintenance.html"]', 'Maintenance', 'Maintenance'],
-    ['.global-search-trigger span:first-child', 'Search research...', 'Tìm kiếm nghiên cứu...'],
+    ['.global-search-trigger span:first-child', 'Search data...', 'Tìm kiếm dữ liệu...'],
     ['[data-global-search-status]', 'Search across Market, Legal, Infrastructure and controlled Macro data.', 'Tìm kiếm trên dữ liệu Thị trường, Pháp lý, Hạ tầng và Vĩ mô production có kiểm soát.'],
     ['[data-drawer-title]', 'Details', 'Chi tiết'],
     ['[data-drawer-body] .state-box', 'Select an item to inspect its details.', 'Chọn một mục để xem thông tin chi tiết.'],
@@ -62,7 +61,7 @@
     ['.page-description', 'Latest verified updates across property markets, legal, infrastructure and macro — in one place.', 'Theo dõi các cập nhật có nguồn về thị trường, pháp lý, hạ tầng và vĩ mô trên cùng một trang.'],
     ['.demo-banner strong', 'Integrated curated data.', 'Dữ liệu tuyển chọn tích hợp.'],
     ['.demo-banner span', 'Home combines the curated Market registry, official Legal and Infrastructure registries, and controlled Macro production. Missing figures remain blank rather than being estimated.', 'Trang chủ kết hợp cơ sở dữ liệu Thị trường được tuyển chọn, cơ sở dữ liệu Pháp lý và Hạ tầng chính thức, cùng dữ liệu Vĩ mô production có kiểm soát. Số liệu chưa có nguồn được để trống thay vì tự ước tính.'],
-    ['.home-header-actions [data-search-open]', 'Search research', 'Tìm kiếm nghiên cứu'],
+    ['.home-header-actions [data-search-open]', 'Search data', 'Tìm kiếm dữ liệu'],
     ['#today-title', 'Latest Updates', 'Cập nhật mới nhất'],
     ['.home-block[aria-labelledby="today-title"] .eyebrow', 'Ranked activity', 'Cập nhật ưu tiên'],
     ['.home-block[aria-labelledby="today-title"] .home-block__note', 'Most relevant dated updates by module', 'Tin cập nhật mới có nguồn, hiển thị cả ngày công bố'],
@@ -79,9 +78,6 @@
     ['#weekly-title', 'This Week', 'Tuần này'],
     ['.home-block[aria-labelledby="weekly-title"] .eyebrow', '7-day recap', 'Tổng hợp 7 ngày'],
     ['.home-block[aria-labelledby="weekly-title"] .home-block__note', 'Important developments ranked above pure recency', 'Ưu tiên diễn biến quan trọng hơn việc chỉ sắp theo thời gian'],
-    ['#research-title', 'Quick Research', 'Tra cứu nhanh'],
-    ['.home-block[aria-labelledby="research-title"] .eyebrow', 'Research shortcuts', 'Lối tắt nghiên cứu'],
-    ['.home-block[aria-labelledby="research-title"] [data-search-open]', 'Global search', 'Tìm kiếm toàn hệ thống']
   ];
 
   const MARKET = [
@@ -217,7 +213,7 @@
 
     const searchButtons = document.querySelectorAll('[data-search-open]');
     searchButtons.forEach(button => {
-      button.setAttribute('aria-label', lang === 'vi' ? 'Mở tìm kiếm nghiên cứu' : 'Open global research search');
+      button.setAttribute('aria-label', lang === 'vi' ? 'Mở tìm kiếm dữ liệu' : 'Open global data search');
     });
 
     const menu = document.querySelector('[data-mobile-menu-button]');
@@ -227,7 +223,7 @@
     if (drawer) drawer.setAttribute('aria-label', lang === 'vi' ? 'Bảng chi tiết' : 'Detail panel');
 
     const searchPanel = document.querySelector('[data-search-overlay] .search-panel');
-    if (searchPanel) searchPanel.setAttribute('aria-label', lang === 'vi' ? 'Tìm kiếm nghiên cứu toàn hệ thống' : 'Global research search');
+    if (searchPanel) searchPanel.setAttribute('aria-label', lang === 'vi' ? 'Tìm kiếm dữ liệu toàn hệ thống' : 'Global data search');
   }
 
   function ensureToggle() {
