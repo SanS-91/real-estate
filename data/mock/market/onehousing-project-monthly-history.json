@@ -26,6 +26,35 @@
       "verification_mode": "existing-reviewed-source-reference"
     },
     {
+      "id": "onehousing-lumiere-riverside-apartment-2026-11",
+      "project_id": "lumiere-riverside",
+      "source_id": "onehousing-vn",
+      "source_url": "https://onehousing.vn/phan-tich/du-an/can-ho-chung-cu-du-an-Lumiere-Riverside.625",
+      "metric_type": "popular-asking-price-per-sqm",
+      "asset_type": "apartment",
+      "period_type": "month",
+      "period": "2026-11",
+      "value_vnd_per_m2": 178170000,
+      "range_low_vnd_per_m2": 149910000,
+      "range_high_vnd_per_m2": 356550000,
+      "evidence": {
+        "period": "Căn hộ chung cư dự án Lumière Riverside tháng 11/2026",
+        "metric": "178.17 triệu/m²",
+        "range": "Khoảng giá: 149.91 - 356.55 triệu"
+      },
+      "series_key": "onehousing-parent-lumiere-riverside-apartment-popular-asking",
+      "source_record_id": "onehousing-lumiere-riverside-apartment-2026-10",
+      "source_publication_date": null,
+      "review_status": "automated-source-verified",
+      "verification_mode": "two-independent-live-publisher-checks",
+      "verification_run_ids": [
+        "41294635719",
+        "41315432144"
+      ],
+      "verified_at": "2026-11-01T14:17:23.097699+00:00",
+      "methodology_note": "Original-source monthly modal apartment asking price, not a project-wide transacted ASP. Two independently matching OneHousing GitHub runs >=1 hour apart. Not combined with any subproject figures."
+    },
+    {
       "id": "onehousing-vinhomes-grand-park-apartment-2026-10",
       "project_id": "vinhomes-grand-park",
       "source_id": "onehousing-vn",
@@ -49,9 +78,38 @@
       "source_record_id": "onehousing-vinhomes-grand-park-apartment-2026-10",
       "review_status": "source-indexed-baseline",
       "verification_mode": "existing-reviewed-source-reference"
+    },
+    {
+      "id": "onehousing-vinhomes-grand-park-apartment-2026-11",
+      "project_id": "vinhomes-grand-park",
+      "source_id": "onehousing-vn",
+      "source_url": "https://onehousing.vn/phan-tich/du-an/can-ho-chung-cu-du-an-Vinhomes-Grand-Park.1012",
+      "metric_type": "popular-asking-price-per-sqm",
+      "asset_type": "apartment",
+      "period_type": "month",
+      "period": "2026-11",
+      "value_vnd_per_m2": 54470000,
+      "range_low_vnd_per_m2": 36810000,
+      "range_high_vnd_per_m2": 331190000,
+      "evidence": {
+        "period": "Căn hộ chung cư dự án Vinhomes Grand Park tháng 11/2026",
+        "metric": "54.47 triệu/m²",
+        "range": "Khoảng giá: 36.81 - 331.19 triệu"
+      },
+      "series_key": "onehousing-parent-vinhomes-grand-park-apartment-popular-asking",
+      "source_record_id": "onehousing-vinhomes-grand-park-apartment-2026-10",
+      "source_publication_date": null,
+      "review_status": "automated-source-verified",
+      "verification_mode": "two-independent-live-publisher-checks",
+      "verification_run_ids": [
+        "41294635719",
+        "41315432144"
+      ],
+      "verified_at": "2026-11-01T14:17:23.097699+00:00",
+      "methodology_note": "Original-source monthly modal apartment asking price, not a project-wide transacted ASP. Two independently matching OneHousing GitHub runs >=1 hour apart. Not combined with any subproject figures."
     }
   ],
   "schema_version": 1,
-  "record_count": 2,
+  "record_count": 4,
   "collection_mode": "source-indexed-reference-plus-future-verified-months"
 }
