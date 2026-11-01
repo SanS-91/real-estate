@@ -41,6 +41,7 @@ on:
       - 'tests/test_home_4j1.cjs'
       - 'tests/test_home_editorial_20261101.cjs'
       - 'tests/test_phase6_3f_peer_ui.cjs'
+      - 'tests/test_site_ui_browser.py'
       - 'assets/js/common.js'
       - 'assets/js/localization-static.js'
       - 'assets/js/market-news-ui.js'
