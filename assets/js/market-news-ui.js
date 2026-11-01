@@ -8,9 +8,11 @@
   const DAY_MS = 86400000;
   const DATE_WINDOWS = [['all', 'Tất cả thời gian'], ['7', '7 ngày'], ['30', '30 ngày'], ['90', '90 ngày']];
   function isWithinDays(article, days, now = Date.now()) {
-    if (days === 'all') return true;
+    // An undated or future-dated RSS story must not appear as a "latest" article.
     const date = Date.parse(article.published_at || '');
-    return Number.isFinite(date) && date <= now + DAY_MS && date >= now - Number(days) * DAY_MS;
+    if (!Number.isFinite(date) || date > now + DAY_MS) return false;
+    if (days === 'all') return true;
+    return date >= now - Number(days) * DAY_MS;
   }
   function diverseFeatured(rows, count = 3) {
     const selected = [], sources = new Set();
@@ -113,7 +115,7 @@
       if (topic === 'all') return true;
       const definition = availableTopics(module).find(([id]) => id === topic);
       if (!definition || !definition[2]) return false;
-      const text = foldNews([article.title, article.summary, ...(article.tags || [])].join(' '));
+      const text = foldNews(article.content_type === 'publisher-rss' ? article.title : [article.title, article.summary, ...(article.tags || [])].join(' '));
       return definition[2].test(text);
     }
     if (topic === 'all') return true;
@@ -240,7 +242,7 @@
     const days = DATE_WINDOWS.some(([id]) => id === daysParam) ? daysParam : 'all';
     const topics = availableTopics(module);
     const topicId = topics.some(([id]) => id === topicParam) ? topicParam : 'all';
-    const sourceArticles = articles.filter(a => a.url && a.title &&
+    const sourceArticles = articles.filter(a => a.url && a.title && isWithinDays(a, 'all') &&
       (window.DataStore?.isNewsFor ? window.DataStore.isNewsFor(a, module) : a.category === module) &&
       !String(a.source_id || '').startsWith('demo-') &&
       !/^(demo|illustrative)[\s:–-]/i.test(String(a.title || '')));
