@@ -5,6 +5,7 @@ on:
     paths:
       - 'scripts/market_news_rss.py'
       - 'scripts/test_market_news_rss.py'
+      - 'tests/test_news_recent_activity.py'
       - 'scripts/news_schedule_gate.py'
       - 'tests/test_news_schedule_gate.py'
       - 'workers/news-rss-fallback/**'
@@ -21,6 +22,7 @@ on:
     paths:
       - 'scripts/market_news_rss.py'
       - 'scripts/test_market_news_rss.py'
+      - 'tests/test_news_recent_activity.py'
       - 'scripts/news_schedule_gate.py'
       - 'tests/test_news_schedule_gate.py'
       - 'workers/news-rss-fallback/**'
@@ -81,6 +83,7 @@ jobs:
         if: steps.gate.outputs.run == 'true'
         run: |
           python scripts/test_market_news_rss.py
+          python tests/test_news_recent_activity.py
           python tests/test_news_automation_schedule.py
           python tests/test_news_schedule_gate.py
           node --check assets/js/news-automation-health.js
