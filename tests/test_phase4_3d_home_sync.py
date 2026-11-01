@@ -66,7 +66,7 @@ assert 'buildChanges(data)' in home_js
 assert 'buildWeekly(data)' in home_js
 assert 'buildTopDevelopments(data)' in home_js
 assert 'data-home-top-developments' in index
-assert 'assets/js/localization-dynamic.js?v=5.0R1' in index
+assert 'assets/js/localization-dynamic.js?v=NO-RESEARCH-NAV-1101' in index
 
 # Weekly recap contains only observations inside 01-07 Oct 2026 in this curated build.
 assert [x['date_label'] for x in weekly['data']] == ['07 Oct', '07 Oct', '03 Oct', '01 Oct']
