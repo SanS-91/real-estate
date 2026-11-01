@@ -3091,12 +3091,12 @@ body[data-page="home"] .metric-grid {
 /* Home editorial digest — easier scanning, balanced desktop and mobile.
    Source quality is enforced by home-editorial.js, not by color or layout. */
 body[data-page="home"] .today-grid {
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 14px;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 12px;
 }
 body[data-page="home"] .today-card {
   min-width: 0;
-  padding: 16px 19px 12px;
+  padding: 14px 14px 10px;
   border-radius: 10px;
 }
 body[data-page="home"] .today-card__header {
@@ -3138,7 +3138,7 @@ body[data-page="home"] .compact-link__topic {
 }
 body[data-page="home"] .compact-link__title {
   display: block;
-  font-size: 13.5px;
+  font-size: 12.5px;
   line-height: 1.48;
   font-weight: 680;
   color: var(--color-text);
@@ -3166,6 +3166,9 @@ body[data-page="home"] .today-card .muted-text {
 body[data-page="home"] .today-card .text-link { 
   font-size: 11.5px;
   white-space: nowrap;
+}
+@media (max-width: 1120px) and (min-width: 761px) {
+  body[data-page="home"] .today-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
 }
 @media (max-width: 760px) {
   body[data-page="home"] .today-grid { grid-template-columns: 1fr; gap: 11px; }
