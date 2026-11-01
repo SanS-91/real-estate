@@ -77,8 +77,11 @@ for(const module of ['legal','infrastructure','macro']) {
   const html=fs.readFileSync(module+'.html','utf8');
   assert.ok(js.includes("module: '"+module+"'"),module+' must route to its own news');
   assert.ok(js.includes('MarketNewsUI.render'),module+' must use shared topic/card layout');
-  assert.ok(html.includes('assets/js/market-news-ui.js?v=NEWS-UNIFIED-20261010'),module+' must load the common News renderer');
-  assert.ok(html.includes('assets/css/market-news.css?v=NEWS-UNIFIED-20261010'),module+' must load mobile-responsive News CSS');
+  assert.ok(html.includes('assets/js/market-news-ui.js?v='),module+' must load the versioned common News renderer');
+  assert.ok(html.includes('assets/css/market-news.css?v='),module+' must load versioned mobile-responsive News CSS');
+  assert.ok(html.includes('assets/js/home-editorial.js?v='),module+' must load the same source-quality filter as Home');
+  assert.ok(html.indexOf('assets/js/home-editorial.js')<html.indexOf('assets/js/market-news-ui.js'),
+    module+' must load editorial rules before news renderer');
 }
 assert.match(css,/\.article-row__meta \.news-kind-chip/);
 assert.match(css,/\.news-kind-chip\[data-news-kind="official-update"\]/);
