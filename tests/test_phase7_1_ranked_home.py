@@ -11,7 +11,7 @@ assert 'data-home-top-developments' in index
 assert 'class="home-more-history"' in index
 assert 'assets/js/intelligence-ranking.js?v=7.0' in index
 assert 'assets/js/intelligence-surfaces.js?v=7.1' in index
-assert 'assets/js/home.js?v=7.1&home4J1=1' in index
+assert 'assets/js/home.js?v=' in index  # Runtime cache revision is independent of ranking integration
 
 for fn in [
     "function homeReferenceDate()",
