@@ -4,7 +4,7 @@
   "candidate_only": true,
   "review_required": true,
   "description": "Persistent review queue: source-authored new periods only, never automatically promoted to site or canonical price history. Blocked fetches do not delete queued evidence.",
-  "record_count": 1,
+  "record_count": 4,
   "data": [
     {
       "project_id": "vinhomes-grand-park",
@@ -31,6 +31,83 @@
       "collection_mode": "github-runner-public-html",
       "baseline_record_id": "onehousing-lumiere-boulevard-apartment-2026-09",
       "methodology_note": "New independent publisher period requires human evidence review. Never blend source metrics or use single listing as project ASP."
+    },
+    {
+      "project_id": "vinhomes-grand-park",
+      "source_id": "onehousing-vn",
+      "source_url": "https://onehousing.vn/phan-tich/du-an/can-ho-chung-cu-du-an-Vinhomes-Grand-Park.1012",
+      "asset_type": "apartment",
+      "metric_type": "popular-asking-price-per-sqm",
+      "period_type": "month",
+      "period": "2026-11",
+      "value_vnd_per_m2": 54470000,
+      "range_low_vnd_per_m2": 36810000,
+      "range_high_vnd_per_m2": 331190000,
+      "evidence": {
+        "period": "Căn hộ chung cư dự án Vinhomes Grand Park tháng 11/2026",
+        "metric": "54.47 triệu/m²",
+        "range": "Khoảng giá: 36.81 - 331.19 triệu"
+      },
+      "id": "candidate-onehousing-vinhomes-grand-park-apartment-2026-11",
+      "source_publication_date": null,
+      "review_date": null,
+      "candidate_only": true,
+      "review_required": true,
+      "collection_mode": "github-runner-public-html",
+      "baseline_record_id": "onehousing-vinhomes-grand-park-apartment-2026-10",
+      "methodology_note": "Only a publisher-authored later month is a candidate, requiring independent original-source rechecks; never a project ASP."
+    },
+    {
+      "project_id": "vinhomes-grand-park",
+      "source_id": "onehousing-vn",
+      "source_url": "https://onehousing.vn/phan-tich/du-an/can-ho-chung-cu-du-an-Lumiere-Boulevard.34",
+      "asset_type": "apartment",
+      "metric_type": "popular-asking-price-per-sqm",
+      "period_type": "month",
+      "subproject_name": "Lumière Boulevard",
+      "subproject_id": "lumiere-boulevard",
+      "period": "2026-11",
+      "value_vnd_per_m2": 73740000,
+      "range_low_vnd_per_m2": 57000000,
+      "range_high_vnd_per_m2": 100190000,
+      "evidence": {
+        "period": "Căn hộ chung cư dự án Lumière Boulevard tháng 11/2026",
+        "metric": "73.74 triệu/m²",
+        "range": "Khoảng giá: 57 - 100.19 triệu"
+      },
+      "id": "candidate-onehousing-lumiere-boulevard-apartment-2026-11",
+      "source_publication_date": null,
+      "review_date": null,
+      "candidate_only": true,
+      "review_required": true,
+      "collection_mode": "github-runner-public-html",
+      "baseline_record_id": "onehousing-lumiere-boulevard-apartment-2026-09",
+      "methodology_note": "Only a publisher-authored later month is a candidate, requiring independent original-source rechecks; never a project ASP."
+    },
+    {
+      "project_id": "lumiere-riverside",
+      "source_id": "onehousing-vn",
+      "source_url": "https://onehousing.vn/phan-tich/du-an/can-ho-chung-cu-du-an-Lumiere-Riverside.625",
+      "asset_type": "apartment",
+      "metric_type": "popular-asking-price-per-sqm",
+      "period_type": "month",
+      "period": "2026-11",
+      "value_vnd_per_m2": 178170000,
+      "range_low_vnd_per_m2": 149910000,
+      "range_high_vnd_per_m2": 356550000,
+      "evidence": {
+        "period": "Căn hộ chung cư dự án Lumière Riverside tháng 11/2026",
+        "metric": "178.17 triệu/m²",
+        "range": "Khoảng giá: 149.91 - 356.55 triệu"
+      },
+      "id": "candidate-onehousing-lumiere-riverside-apartment-2026-11",
+      "source_publication_date": null,
+      "review_date": null,
+      "candidate_only": true,
+      "review_required": true,
+      "collection_mode": "github-runner-public-html",
+      "baseline_record_id": "onehousing-lumiere-riverside-apartment-2026-10",
+      "methodology_note": "Only a publisher-authored later month is a candidate, requiring independent original-source rechecks; never a project ASP."
     }
   ]
 }

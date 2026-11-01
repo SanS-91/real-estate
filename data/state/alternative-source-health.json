@@ -1,19 +1,19 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-10-31T13:05:01.378056+00:00",
+  "generated_at": "2026-11-01T09:37:48.126551+00:00",
   "targets_checked": 7,
-  "candidate_count": 0,
-  "queue_backlog": 0,
-  "queue_historical_total": 1,
+  "candidate_count": 3,
+  "queue_backlog": 3,
+  "queue_historical_total": 4,
   "queue_published_matched": 1,
   "queue_published_conflicts": 0,
   "queue_conflicts": 0,
   "production_updated": false,
   "counts": {
-    "published-period-unchanged": 1,
+    "new-period-review-required": 3,
     "reachable-historical-reference-frozen": 2,
     "reachable-no-verifiable-metric": 1,
-    "same-period-unchanged": 3
+    "same-period-unchanged": 1
   },
   "checks": [
     {
@@ -25,7 +25,7 @@
       "latest_published_period": "2026-10",
       "http_status": 200,
       "final_host": "onehousing.vn",
-      "status": "same-period-unchanged",
+      "status": "new-period-review-required",
       "checked_url": "https://onehousing.vn/phan-tich/du-an/can-ho-chung-cu-du-an-Vinhomes-Grand-Park.1012",
       "source_variants": [
         {
@@ -35,13 +35,13 @@
           "source_url": "https://onehousing.vn/phan-tich/du-an/can-ho-chung-cu-du-an-Vinhomes-Grand-Park.1012",
           "exact_project_header": true,
           "publisher_periods": [
-            "2026-10"
+            "2026-11"
           ],
           "other_project_headers": 1,
           "page_price_section_count": 1,
           "login_wall_visible": true,
           "verified_source_scope": true,
-          "verified_source_period": "2026-10"
+          "verified_source_period": "2026-11"
         }
       ]
     },
@@ -111,7 +111,7 @@
       "latest_published_period": "2026-10",
       "http_status": 200,
       "final_host": "onehousing.vn",
-      "status": "published-period-unchanged",
+      "status": "new-period-review-required",
       "checked_url": "https://onehousing.vn/phan-tich/du-an/can-ho-chung-cu-du-an-Lumiere-Boulevard.34",
       "source_variants": [
         {
@@ -121,13 +121,13 @@
           "source_url": "https://onehousing.vn/phan-tich/du-an/can-ho-chung-cu-du-an-Lumiere-Boulevard.34",
           "exact_project_header": true,
           "publisher_periods": [
-            "2026-10"
+            "2026-11"
           ],
           "other_project_headers": 1,
           "page_price_section_count": 1,
           "login_wall_visible": true,
           "verified_source_scope": true,
-          "verified_source_period": "2026-10"
+          "verified_source_period": "2026-11"
         }
       ]
     },
@@ -192,7 +192,7 @@
       "latest_published_period": "2026-10",
       "http_status": 200,
       "final_host": "onehousing.vn",
-      "status": "same-period-unchanged",
+      "status": "new-period-review-required",
       "checked_url": "https://onehousing.vn/phan-tich/du-an/can-ho-chung-cu-du-an-Lumiere-Riverside.625",
       "source_variants": [
         {
@@ -202,13 +202,13 @@
           "source_url": "https://onehousing.vn/phan-tich/du-an/can-ho-chung-cu-du-an-Lumiere-Riverside.625",
           "exact_project_header": true,
           "publisher_periods": [
-            "2026-10"
+            "2026-11"
           ],
           "other_project_headers": 1,
           "page_price_section_count": 1,
           "login_wall_visible": true,
           "verified_source_scope": true,
-          "verified_source_period": "2026-10"
+          "verified_source_period": "2026-11"
         }
       ]
     }
