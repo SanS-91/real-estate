@@ -32,10 +32,10 @@
   function todayCard(group) {
     const items = (group.items || []).slice(0, 3).map((item,index) => `
       <li class="home-news-item${index===0?' home-news-item--lead':''}">
-        <a class="compact-link" href="${escapeHTML(item.href || '#')}">
+        <a class="compact-link" href="${escapeHTML(item.href || '#')}"${/^https:\/\//i.test(String(item.href || '')) ? ' target="_blank" rel="noopener noreferrer"' : ''}>
           ${item.topic_label ? `<span class="compact-link__topic">${escapeHTML(item.topic_label)}</span>` : ''}
           <span class="compact-link__title">${escapeHTML(item.title)}</span>
-          <span class="compact-link__meta"><time>${escapeHTML(item.date_label || '')}</time>${item.date_label && item.meta ? ' · ' : ''}${escapeHTML(item.meta || '')}${item.older ? ' · ' + escapeHTML('Kỳ trước') : ''}</span>
+          <span class="compact-link__meta"><time>${escapeHTML(item.date_label || '')}</time>${item.date_label && item.meta ? ' · ' : ''}${escapeHTML(item.meta || '')}${item.older ? ' · ' + escapeHTML(document.documentElement.lang==='en'?'Earlier':'Kỳ trước') : ''}</span>
         </a>
       </li>
     `).join('');
