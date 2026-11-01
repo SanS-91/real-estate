@@ -4,6 +4,7 @@ on:
   pull_request:
     paths:
       - 'tests/test_market_sales_policy_ui.cjs'
+      - 'tests/test_market_commercial_leads_ui.cjs'
       - 'tests/test_market_sales_policy_readiness.py'
       - 'assets/js/market.js'
       - 'market.html'
