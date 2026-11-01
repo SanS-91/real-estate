@@ -183,7 +183,9 @@ async def run():
                         total=await table.locator("tbody tr").count()
                         assert total==(8 if "overview" in path else PROJECT_COUNT),(width,path,total)
                         asks=table.locator(".market-asking-range")
-                        assert await asks.count()==total,(width,path,"price range markers")
+                        missing=table.locator(".market-listing-cell .table-muted")
+                        assert await asks.count()+await missing.count()==total,(
+                            width,path,"every project must show sourced price or an explicit missing-price status")
                         trend=table.locator(".market-trend")
                         assert await trend.count()==total,(width,path,"trend markers")
                         for kind in ("up","down"):
