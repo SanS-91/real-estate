@@ -1,7 +1,7 @@
 (() => {
   'use strict';
 
-  const VALID_VIEWS = ['overview', 'projects', 'regions', 'timeline', 'news'];
+  const VALID_VIEWS = ['overview', 'regions', 'types', 'projects', 'timeline', 'news'];
   const FILTER_KEYS = ['q', 'region', 'type', 'status', 'completion', 'projectFilter', 'event'];
 
   let state = {
@@ -232,6 +232,38 @@
     }).join('');
   }
 
+
+  const INFRA_GROUPS = [
+    {id:'expressway',label:'Cao tốc',types:['expressway']},
+    {id:'ring-road',label:'Vành đai',types:['ring-road']},
+    {id:'metro',label:'Metro / đường sắt',types:['metro','rail']},
+    {id:'airport',label:'Sân bay',types:['airport']},
+    {id:'seaport',label:'Cảng biển',types:['seaport','port']},
+    {id:'bridge',label:'Cầu và đường đô thị',types:['bridge','road']}
+  ];
+  function groupCards() {
+    return INFRA_GROUPS.map(group=>{
+      const projects=data.infrastructureProjects.filter(p=>group.types.includes(p.infrastructure_type));
+      if(!projects.length)return '';
+      return '<a class="infra-directory-card" href="infrastructure.html?view=types&group='+encodeURIComponent(group.id)+'"><span class="eyebrow">Nhóm công trình</span><strong>'+esc(group.label)+'</strong><span>'+projects.length+' dự án</span></a>';
+    }).join('');
+  }
+  function regionalDirectory() {
+    return data.regions.map(region=>{
+      const projects=data.infrastructureProjects.filter(p=>(p.region_ids||[]).includes(region.id));
+      if(!projects.length)return '';
+      const names=projects.slice(0,2).map(p=>p.name).join(' · ');
+      return '<a class="infra-directory-card" href="infrastructure.html?view=projects&region='+encodeURIComponent(region.id)+'"><span class="eyebrow">Khu vực</span><strong>'+esc(region.name)+'</strong><span>'+projects.length+' dự án</span><small>'+esc(names)+'</small></a>';
+    }).join('');
+  }
+  function renderTypes() {
+    const group=App.getQueryParam('group')||'';
+    const groups=INFRA_GROUPS.filter(g=>!group||g.id===group);
+    setView('<div class="view-intro"><div><span class="eyebrow">Phân loại hạ tầng</span><h2>Nhóm công trình</h2><p>Chọn cao tốc, vành đai, metro, sân bay, cảng biển hoặc cầu đường để xem các dự án liên quan.</p></div></div>'+
+      '<div class="infra-directory-grid">'+groupCards()+'</div>'+
+      groups.map(g=>{const rows=data.infrastructureProjects.filter(p=>g.types.includes(p.infrastructure_type));
+        return rows.length?'<section class="section"><div class="section-header"><h2 class="section-title">'+esc(g.label)+' · '+rows.length+' dự án</h2></div><div class="section-body section-body--table">'+projectTable(rows)+'</div></section>':'';}).join(''));
+  }
   function renderOverview() {
     const metrics = overviewMetrics().map(Components.compactMetric).join('');
     const latestEvents = [...data.events].sort((a,b) => String(b.event_date).localeCompare(String(a.event_date)));
@@ -243,6 +275,8 @@
 
     setView(`
       <div class="market-metric-grid">${metrics}</div>
+      <section class="section"><div class="section-header"><div><span class="eyebrow">Theo khu vực</span><h2 class="section-title">Bản đồ danh mục theo khu vực</h2></div><a class="text-link" href="infrastructure.html?view=regions">Xem tất cả</a></div><div class="section-body"><div class="infra-directory-grid">${regionalDirectory()}</div></div></section>
+      <section class="section"><div class="section-header"><div><span class="eyebrow">Theo loại công trình</span><h2 class="section-title">Cao tốc · Metro · Sân bay · Cảng biển</h2></div><a class="text-link" href="infrastructure.html?view=types">Xem phân loại</a></div><div class="section-body"><div class="infra-directory-grid">${groupCards()}</div></div></section>
       <div class="market-layout market-layout--overview market-layout--infra-overview">
         <section class="section market-panel market-panel--wide">
           <div class="section-header"><div><span class="eyebrow">Current situation</span><h2 class="section-title">Key Infrastructure Projects</h2></div><a class="text-link" href="infrastructure.html?view=projects">Open database</a></div>
@@ -337,6 +371,7 @@
     updateTabs();
     if (state.view === 'projects') renderProjects();
     else if (state.view === 'regions') renderRegions();
+    else if (state.view === 'types') renderTypes();
     else if (state.view === 'timeline') renderTimeline();
     else if (state.view === 'news') renderNews();
     else renderOverview();
