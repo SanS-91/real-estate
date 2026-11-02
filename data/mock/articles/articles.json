@@ -1,9 +1,194 @@
 {
   "schema_version": 1,
-  "build_id": "market-news-rss-20261102T005145Z",
-  "generated_at": "2026-11-02T00:51:45.530929+00:00",
-  "record_count": 1305,
+  "build_id": "market-news-rss-20261102T025142Z",
+  "generated_at": "2026-11-02T02:51:42.677821+00:00",
+  "record_count": 1313,
   "data": [
+    {
+      "id": "article-market-rss-2a72ce6b99f775aac447",
+      "title": "Giá vàng hôm nay 2.11.2026: Vàng miếng SJC tăng đầu tuần",
+      "url": "https://thanhnien.vn/gia-vang-hom-nay-2112026-vang-mieng-sjc-tang-dau-tuan-185261102085230611.htm",
+      "category": "macro",
+      "module_ids": [
+        "macro"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-11-02T02:02:00+00:00",
+      "source_id": "thanhnien-banking",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "Giá vàng thế giới đột ngột quay đầu khiến kim loại quý trong nước tăng trở lại. Dù vậy, vàng miếng SJC vẫn chưa vượt qua được mức giá 140 triệu đồng/lượng.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://thanhnien.vn/rss/kinh-te/ngan-hang.rss",
+        "publisher_host": "thanhnien.vn",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-5b18b87c952204cc7935",
+      "title": "Elyse Island: Sống riêng tư, trọn nhịp kết nối trên đảo tự nhiên",
+      "url": "https://dantri.com.vn/bat-dong-san/elyse-island-song-rieng-tu-tron-nhip-ket-noi-tren-dao-tu-nhien-20261031110736399.htm",
+      "category": "market",
+      "module_ids": [
+        "market"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-11-02T02:00:00+00:00",
+      "source_id": "dantri-real-estate",
+      "region_ids": [],
+      "project_ids": [
+        "elyse-island"
+      ],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "(Dân trí) - Với những chủ nhân có khả năng sở hữu gần như mọi thứ, một chốn an trú xứng tầm không chỉ được định nghĩa bằng kiến trúc hay tiện nghi, mà còn ở đặc quyền tự do lựa chọn nhịp sống theo cách riêng.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://dantri.com.vn/rss/bat-dong-san.rss",
+        "publisher_host": "dantri.com.vn",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-3cc68c5d526933842d21",
+      "title": "Clubhouse Izumi Canaria: Điểm hẹn bên dòng kênh xanh",
+      "url": "https://dantri.com.vn/bat-dong-san/clubhouse-izumi-canaria-diem-hen-ben-dong-kenh-xanh-20261101153355885.htm",
+      "category": "market",
+      "module_ids": [
+        "market"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-11-02T02:00:00+00:00",
+      "source_id": "dantri-real-estate",
+      "region_ids": [
+        "dong-nai"
+      ],
+      "project_ids": [
+        "izumi-city"
+      ],
+      "developer_ids": [],
+      "tags": [
+        "supply"
+      ],
+      "importance": 2,
+      "summary": "(Dân trí) - Một không gian bên dòng kênh xanh sắp ra mắt tại Izumi Canaria thuộc đô thị Izumi City, Đồng Nai.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://dantri.com.vn/rss/bat-dong-san.rss",
+        "publisher_host": "dantri.com.vn",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-c9136968c0ef8eac86e7",
+      "title": "5 loại cây có múi trồng trong nhà vừa làm đẹp nội thất vừa thơm phòng",
+      "url": "https://dantri.com.vn/bat-dong-san/5-loai-cay-co-mui-trong-trong-nha-vua-lam-dep-noi-that-vua-thom-phong-20261102072008745.htm",
+      "category": "market",
+      "module_ids": [
+        "market"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-11-02T01:40:00+00:00",
+      "source_id": "dantri-real-estate",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "(Dân trí) - Mang sắc xanh tươi mới và hương tinh dầu dịu nhẹ vào phòng khách, những chậu cây có múi nhỏ xinh đang trở thành xu hướng trang trí nhà cửa được nhiều gia đình ưa chuộng.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://dantri.com.vn/rss/bat-dong-san.rss",
+        "publisher_host": "dantri.com.vn",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-2c56d25955467b756658",
+      "title": "Anh sẽ thu thuế bất động sản giá cao, phạt nặng nhà bỏ trống",
+      "url": "https://dantri.com.vn/bat-dong-san/anh-se-thu-thue-bat-dong-san-gia-cao-phat-nang-nha-bo-trong-20261102000742452.htm",
+      "category": "market",
+      "module_ids": [
+        "market"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-11-02T01:16:49+00:00",
+      "source_id": "dantri-real-estate",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "(Dân trí) - Anh sẽ áp phụ thu lên tới 7.500 bảng/năm với nhà đắt tiền. Đặc biệt, bất động sản bỏ hoang hơn một năm phải chịu mức phạt nhân đôi nhằm minh bạch hóa thị trường.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://dantri.com.vn/rss/bat-dong-san.rss",
+        "publisher_host": "dantri.com.vn",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-d36505aeb6902db0fbc6",
+      "title": "Thuận An cần những công trình mang tính biểu tượng",
+      "url": "https://dantri.com.vn/bat-dong-san/thuan-an-can-nhung-cong-trinh-mang-tinh-bieu-tuong-20261030153939711.htm",
+      "category": "market",
+      "module_ids": [
+        "market"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-11-02T01:00:00+00:00",
+      "source_id": "dantri-real-estate",
+      "region_ids": [
+        "hcmc"
+      ],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "(Dân trí) - Thuận An phát triển mạnh mẽ nhưng chưa có nhiều công trình nổi bật tương xứng nâng tầm diện mạo của cực tăng trưởng mới ở cửa ngõ Đông Bắc TPHCM. Khải Hoàn Imperial tọa lạc ngay lõi trung tâm Thuận An nhận được nhiều kỳ vọng.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://dantri.com.vn/rss/bat-dong-san.rss",
+        "publisher_host": "dantri.com.vn",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-a5835dc34fbc7421118f",
+      "title": "Hệ tiện ích đa tầng tăng trải nghiệm nghỉ dưỡng tại Q'Terra",
+      "url": "https://vnexpress.net/he-tien-ich-da-tang-tang-trai-nghiem-nghi-duong-tai-q-terra-5138601.html",
+      "category": "market",
+      "module_ids": [
+        "market"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-11-02T01:00:00+00:00",
+      "source_id": "vnexpress-real-estate",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "Không chỉ gắn với sự sang trọng, hệ tiện ích đa tầng mang phong cách nghỉ dưỡng \"wild luxury\" tại Q'Terra còn hướng đến trải nghiệm gần gũi thiên nhiên và kết nối bản sắc địa phương.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://vnexpress.net/rss/bat-dong-san.rss",
+        "publisher_host": "vnexpress.net",
+        "publication_date_from_feed": true
+      }
+    },
     {
       "id": "article-market-rss-864cd5fc15a92c0f261a",
       "title": "Lo thị trường tắc thanh khoản nếu siết chuyển nhượng nhà trên giấy",
@@ -47,6 +232,34 @@
       "tags": [],
       "importance": 2,
       "summary": "(Dân trí) - Giá vàng miếng SJC giảm 2,7 triệu đồng/lượng trong tuần qua, mất tới 4 triệu đồng/lượng so với mức cao nhất tuần. Giá vàng thế giới cũng giảm 3,5%.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://dantri.com.vn/rss/kinh-doanh.rss",
+        "publisher_host": "dantri.com.vn",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-6787d72fa9fc2ce75a52",
+      "title": "Giá xăng, điện đồng loạt giảm: Cần thêm giải pháp dài hạn kiểm soát lạm phát",
+      "url": "https://dantri.com.vn/kinh-doanh/gia-xang-dien-dong-loat-giam-can-them-giai-phap-dai-han-kiem-soat-lam-phat-20261101221548465.htm",
+      "category": "macro",
+      "module_ids": [
+        "macro"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-11-01T23:15:00+00:00",
+      "source_id": "dantri-business",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [
+        "pricing",
+        "sales"
+      ],
+      "importance": 2,
+      "summary": "(Dân trí) - Giá xăng giảm khi thuế tiêu thụ đặc biệt được đưa về 0%, giá bán lẻ điện bình quân cũng đi xuống. Theo chuyên gia, cần thêm giải pháp điều hành đồng bộ để chính sách hiệu quả thực chất trong dài hạn.",
       "source_verification": {
         "method": "official-rss",
         "feed_url": "https://dantri.com.vn/rss/kinh-doanh.rss",
