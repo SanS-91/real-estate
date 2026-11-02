@@ -1429,7 +1429,7 @@
         && item.data_basis && item.title;
     }).sort((a,b)=>String(b.source_date).localeCompare(String(a.source_date)));
     if(!rows.length)return '';
-    const reportQuarter=rows.filter(r=>r.period_type==='quarter' && /^\\d{4}-Q[1-4]$/.test(r.period||''))
+    const reportQuarter=rows.filter(r=>r.period_type==='quarter' && /^\d{4}-Q[1-4]$/.test(r.period||''))
       .map(r=>r.period).sort().at(-1);
     const metricQuarter=(data.observations||[]).filter(r=>
       r.scope_type==='region-segment' && r.period_type==='quarter' &&
