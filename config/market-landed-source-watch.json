@@ -1,0 +1,43 @@
+{
+  "schema_version": 1,
+  "updated_at": "2026-11-02",
+  "collection_mode": "source-change-monitor-only",
+  "notes": "Trusted developer/source pages for landed townships. Detect page changes, NEVER infer listing price, developer ASP, sales volume or absorb rates. Manual review required for any new monetary claims.",
+  "targets": [
+    {
+      "project_id": "izumi-city",
+      "asset_type": "landed",
+      "source_id": "nam-long-official",
+      "source_url": "https://www.namlongvn.com/en/township-residential/izumi-city-township/",
+      "allowed_host": "namlongvn.com"
+    },
+    {
+      "project_id": "aqua-city",
+      "asset_type": "landed",
+      "source_id": "novaland-official",
+      "source_url": "https://www.novaland.com.vn/tin-tuc-1/thong-tin-novaland/tin-du-an/aqua-city-chinh-thuc-mo-ban-tro-lai-tu-3110-khoi-thong-dong-thu-hang-tram-nghin-ty-dong",
+      "allowed_host": "novaland.com.vn"
+    },
+    {
+      "project_id": "springville",
+      "asset_type": "landed",
+      "source_id": "gamuda-land-official",
+      "source_url": "https://www.gamudaland.com.vn/vn/developments/township/springville",
+      "allowed_host": "gamudaland.com.vn"
+    },
+    {
+      "project_id": "waterpoint",
+      "asset_type": "landed",
+      "source_id": "nam-long-official",
+      "source_url": "https://www.namlongvn.com/en/township-residential/waterpoint-township/",
+      "allowed_host": "namlongvn.com"
+    },
+    {
+      "project_id": "elyse-island",
+      "asset_type": "landed",
+      "source_id": "nam-long-official",
+      "source_url": "https://www.namlongvn.com/en/township-residential/elyse-island/",
+      "allowed_host": "namlongvn.com"
+    }
+  ]
+}
