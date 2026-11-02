@@ -1,9 +1,196 @@
 {
   "schema_version": 1,
-  "build_id": "market-news-rss-20261102T025142Z",
-  "generated_at": "2026-11-02T02:51:42.677821+00:00",
-  "record_count": 1313,
+  "build_id": "market-news-rss-20261102T045143Z",
+  "generated_at": "2026-11-02T04:51:43.461079+00:00",
+  "record_count": 1320,
   "data": [
+    {
+      "id": "article-market-rss-9db9744193bdffe99f84",
+      "title": "One Era giới thiệu hơn 350 sản phẩm thấp tầng",
+      "url": "https://vnexpress.net/one-era-gioi-thieu-hon-350-san-pham-thap-tang-5139642.html",
+      "category": "market",
+      "module_ids": [
+        "market"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-11-02T04:30:00+00:00",
+      "source_id": "vnexpress-real-estate",
+      "region_ids": [
+        "hcmc"
+      ],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [
+        "supply"
+      ],
+      "importance": 2,
+      "summary": "One Era - khu đô thị quy mô gần 50 ha, giới thiệu 357 sản phẩm nhà phố (townhouse) và nhà phố thương mại (shophouse), thêm nguồn cung thấp tầng Đông Bắc TP HCM.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://vnexpress.net/rss/bat-dong-san.rss",
+        "publisher_host": "vnexpress.net",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-3cf364750a711b00212d",
+      "title": "Vì sao căn hộ giá trung bình ngày càng khan hiếm?",
+      "url": "https://dantri.com.vn/bat-dong-san/vi-sao-can-ho-gia-trung-binh-ngay-cang-khan-hiem-20261102084226675.htm",
+      "category": "market",
+      "module_ids": [
+        "market",
+        "legal"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-11-02T04:30:00+00:00",
+      "source_id": "dantri-real-estate",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [
+        "supply",
+        "legal"
+      ],
+      "importance": 2,
+      "summary": "(Dân trí) - Chi phí đầu vào tăng cao cùng những nút thắt pháp lý đang khiến các dự án căn hộ vừa túi tiền dần biến mất. Để giải bài toán này, quy hoạch đô thị và tư duy phát triển dự án cần thay đổi toàn diện.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://dantri.com.vn/rss/bat-dong-san.rss",
+        "publisher_host": "dantri.com.vn",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-3a4278929400e85c6fc0",
+      "title": "Giá vàng miếng đảo chiều lên 140 triệu đồng một lượng",
+      "url": "https://vnexpress.net/gia-vang-mieng-dao-chieu-len-140-trieu-dong-mot-luong-5139574.html",
+      "category": "macro",
+      "module_ids": [
+        "macro"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-11-02T03:57:58+00:00",
+      "source_id": "vnexpress-economy",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "Sau phiên giảm mạnh vào cuối tuần, mỗi lượng vàng đảo chiều tăng 1 triệu đồng, chênh lệch với thế giới vẫn hơn 17 triệu đồng.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://vnexpress.net/rss/kinh-doanh.rss",
+        "publisher_host": "vnexpress.net",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-c217b6b76ba1a2ae7346",
+      "title": "Kim Oanh Group khai trương không gian trải nghiệm 1ha tại đô thị One Era",
+      "url": "https://dantri.com.vn/bat-dong-san/kim-oanh-group-khai-truong-khong-gian-trai-nghiem-1ha-tai-do-thi-one-era-20261102104112983.htm",
+      "category": "market",
+      "module_ids": [
+        "market"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-11-02T03:48:03+00:00",
+      "source_id": "dantri-real-estate",
+      "region_ids": [
+        "hcmc"
+      ],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "(Dân trí) - Ngày 31/10, chủ đầu tư Kim Oanh Group và nhà phát triển Kinera đã tổ chức lễ khai trương văn phòng bán hàng One Era Galleria cùng không gian trải nghiệm với diện tích 1ha tại đô thị One Era, phường Thuận Giao, TPHCM.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://dantri.com.vn/rss/bat-dong-san.rss",
+        "publisher_host": "dantri.com.vn",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-35b15783dbc8e4b191ec",
+      "title": "Bắc Ninh sắp có thêm khu đô thị 1,1 tỷ USD",
+      "url": "https://dantri.com.vn/bat-dong-san/bac-ninh-sap-co-them-khu-do-thi-11-ty-usd-20261102104438076.htm",
+      "category": "market",
+      "module_ids": [
+        "market"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-11-02T03:48:00+00:00",
+      "source_id": "dantri-real-estate",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "(Dân trí) - Bắc Ninh đang mời thầu lựa chọn nhà đầu tư thực hiện khu đô thị mới Vân Trung rộng khoảng 102ha, với tổng vốn đầu tư dự kiến hơn 28.300 tỷ đồng.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://dantri.com.vn/rss/bat-dong-san.rss",
+        "publisher_host": "dantri.com.vn",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-1fea1d47629e90aea841",
+      "title": "Giá vàng trong nước, thế giới đồng loạt đi lên",
+      "url": "https://dantri.com.vn/kinh-doanh/gia-vang-trong-nuoc-the-gioi-dong-loat-di-len-20261102094629112.htm",
+      "category": "macro",
+      "module_ids": [
+        "macro"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-11-02T02:50:54+00:00",
+      "source_id": "dantri-business",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "(Dân trí) - Giá vàng thế giới bật tăng 40 USD/ounce trong phiên đầu tuần, kéo vàng miếng SJC tăng 1 triệu đồng/lượng, lên 140 triệu đồng/lượng ở chiều bán ra.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://dantri.com.vn/rss/kinh-doanh.rss",
+        "publisher_host": "dantri.com.vn",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-8374ac001a1829affde9",
+      "title": "Chạy ngang qua đường cao tốc, người đàn ông bị ô tô tông tử vong",
+      "url": "https://dantri.com.vn/thoi-su/chay-ngang-qua-duong-cao-toc-nguoi-dan-ong-bi-o-to-tong-tu-vong-20261102090159619.htm",
+      "category": "infrastructure",
+      "module_ids": [
+        "infrastructure"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-11-02T02:07:45+00:00",
+      "source_id": "dantri-current-affairs",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [
+        "infrastructure"
+      ],
+      "importance": 2,
+      "summary": "(Dân trí) - Một người đàn ông chạy ngang qua đường cao tốc Pháp Vân - Cầu Giẽ thì bị một ô tô tông trúng, hất văng xa và tử vong tại chỗ.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://dantri.com.vn/rss/thoi-su.rss",
+        "publisher_host": "dantri.com.vn",
+        "publication_date_from_feed": true
+      }
+    },
     {
       "id": "article-market-rss-2a72ce6b99f775aac447",
       "title": "Giá vàng hôm nay 2.11.2026: Vàng miếng SJC tăng đầu tuần",
