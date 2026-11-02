@@ -321,7 +321,7 @@ def main():
                 official_savills = (t["collector"] == "savills_research"
                     and (urlsplit(final_url).hostname or "").lower() in
                     ("savills.com.vn", "www.savills.com.vn", "vn.savills.com.vn")
-                    and fullmatch(r"/research_articles/\\d+/\\d+-\\d+(?:/[^?#]+)?/?", path) is not None
+                    and fullmatch(r"/research_articles/\d+/\d+-\d+(?:/[^?#]+)?/?", path) is not None
                     and publication_evidence["date"] is not None
                     and evidence["status"] == "single-period")
                 if not official_savills:
