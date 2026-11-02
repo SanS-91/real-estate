@@ -1653,6 +1653,8 @@
         const ms=Date.parse(date+'T00:00:00+07:00');
         const age=(now-ms)/86400000;
         if(!Number.isFinite(age)||age<0||age>45)return false;
+        const lastCheck=Date.parse(row.last_source_verified_at||row.verified_at||'');
+        if(!Number.isFinite(lastCheck)||lastCheck>now+3600000||now-lastCheck>48*3600000)return false;
         if(row.source_expiration_date && row.source_expiration_date<today)return false;
         return Number.isFinite(row.listed_land_area_sqm) && row.listed_land_area_sqm>0 &&
           Number.isFinite(row.listing_price_vnd) && row.listing_price_vnd>0 &&
@@ -1675,7 +1677,7 @@
     return '<section class="section market-landed-verified"><div class="section-header"><div>'+
       '<span class="eyebrow">Giá chào theo căn đã kiểm tra nguồn</span>'+
       '<h2 class="section-title">Nhà phố / Biệt thự — tin còn hiệu lực</h2></div></div>'+
-      '<div class="section-body section-body--table"><p class="chart-note">Chỉ tin có hai lượt kiểm tra độc lập, giá tổng và diện tích ĐẤT có nguồn, cùng ngày đăng/hết hạn hợp lệ. Đơn giá trên m² đất, không phải m² sàn. Đây không phải giá bán chủ đầu tư, ASP hay giao dịch.</p>'+
+      '<div class="section-body section-body--table"><p class="chart-note">Chỉ tin có hai lượt kiểm tra độc lập và được đối soát lại trong 48 giờ gần nhất; có ngày đăng/hết hạn, giá tổng và diện tích ĐẤT xác nhận trên nguồn. Đơn giá trên m² đất, không phải m² sàn. Đây không phải giá bán chủ đầu tư, ASP hay giao dịch.</p>'+
       '<div class="table-wrap"><table class="data-table"><thead><tr><th>Dự án</th><th>Sản phẩm</th><th class="numeric">Đất (m²)</th><th class="numeric">Giá chào (tỷ)</th><th class="numeric">Triệu/m² đất</th><th>Ngày nguồn</th><th>Tin gốc</th></tr></thead><tbody>'+
       body+'</tbody></table></div></div></section>';
   }
