@@ -1,10 +1,10 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-11-02T10:19:54+00:00",
+  "generated_at": "2026-11-02T20:29:36+00:00",
   "description": "Derived market article-to-project index and evidence freshness; not live price or transactions.",
   "source_scope": "existing publisher articles + dated project and market JSON",
   "project_count": 18,
-  "articles_screened_30d": 1231,
+  "articles_screened_30d": 1242,
   "inferred_headline_associations_30d": 1,
   "projects_with_articles_30d": 8,
   "project_updates": [
@@ -400,7 +400,7 @@
       "metric_basis": "publisher quarterly/annual reports, NOT daily statistics"
     },
     "unit_listing_monitor": {
-      "last_checked_at": "2026-11-02T09:40:07.991574+00:00",
+      "last_checked_at": "2026-11-02T18:40:28.209643+00:00",
       "projects_monitored": 8,
       "projects_with_current_verified_offers": 3,
       "current_verified_unit_ads": 9,
