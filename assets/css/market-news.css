@@ -396,3 +396,12 @@
 .market-landed-source-progress>span strong{color:var(--color-text)}
 .market-landed-source-progress>small{flex-basis:100%;font-size:11px;color:var(--color-text-secondary);line-height:1.5}
 @media(max-width:650px){.market-landed-source-progress>span{min-width:0;width:100%}}
+
+/* Four-up project-by-project landed monitoring; data-backed, no prices inferred. */
+.market-landed-coverage-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:11px}
+.market-landed-coverage-card{display:flex;flex-direction:column;gap:7px;min-width:0;padding:12px;border:1px solid var(--color-border);border-radius:var(--radius-md);background:var(--color-surface)}
+.market-landed-coverage-card strong{font-size:13px;line-height:1.35}
+.market-landed-coverage-card span{font-size:12px;font-weight:600;line-height:1.45;color:var(--color-text)}
+.market-landed-coverage-card small{font-size:11px;line-height:1.4;color:var(--color-text-secondary)}
+@media(max-width:1040px){.market-landed-coverage-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:600px){.market-landed-coverage-grid{grid-template-columns:minmax(0,1fr)}}
