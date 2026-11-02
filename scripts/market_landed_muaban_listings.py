@@ -80,14 +80,21 @@ def parse_detail(html,url,project,now,publisher_project_name=None):
     if "Thông tin chi tiết" not in raw or "Thông tin cơ bản" not in raw:
         return None,"missing-listing-detail"
     first=raw.split("Thông tin chi tiết",1)[0]
-    if HEAD_RX.search(first[:700]):
+    # The heading can mention a DEPOSIT or a price incentive. The listing
+    # source's own sale price starts AFTER the H1. Never count title amounts
+    # as an additional header offer or use them as the total asking price.
+    first_lines=first.splitlines()
+    if not first_lines or first_lines[0].strip()!=title:
+        return None,"unverifiable-heading-boundary"
+    header_body="\n".join(first_lines[1:])[:1000]
+    if re.search(r"giá từ|chỉ từ|giỏ hàng|nhiều căn",title,re.I):
+        return None,"non-single-unit-sale-heading"
+    if HEAD_RX.search(header_body[:700]):
         return None,"multiple-or-price-from-offer"
-    prices=PRICE.findall(first[:1000])
+    prices=PRICE.findall(header_body)
     if len(prices)!=1:
         return None,"missing-or-ambiguous-header-total"
     total=int(round(float(prices[0].replace(",","."))*1_000_000_000))
-    if re.search(r"giá từ|chỉ từ|giỏ hàng|nhiều căn",title,re.I):
-        return None,"non-single-unit-sale-heading"
     if re.search(r"chỉ đóng|chỉ thanh toán|trả trước|đóng trước|cọc|thanh toán ban đầu",title,re.I):
         title_amounts=PRICE.findall(title)
         if any(abs(float(v.replace(",","."))*1_000_000_000-total)/total < .025
