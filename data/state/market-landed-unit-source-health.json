@@ -1,0 +1,36 @@
+{
+  "schema_version": 1,
+  "generated_at": "2026-11-02T08:53:48+00:00",
+  "sources_checked": 2,
+  "qualified_offers": 0,
+  "released_new_individual_offers": 0,
+  "historical_verified_offers": 0,
+  "candidates_with_missing_date_not_published": 0,
+  "price_published_only_after_two_dated_checks": true,
+  "no_market_asp_or_transactions": true,
+  "sources": [
+    {
+      "project_id": "izumi-city",
+      "catalog_status": "http-403",
+      "urls_checked": 3,
+      "source_qualified": 0,
+      "reasons": {
+        "http-403": 3
+      },
+      "ads_with_absolute_source_date": 0,
+      "price_records_released": 0
+    },
+    {
+      "project_id": "aqua-city",
+      "catalog_status": "http-403",
+      "urls_checked": 3,
+      "source_qualified": 0,
+      "reasons": {
+        "http-403": 3
+      },
+      "ads_with_absolute_source_date": 0,
+      "price_records_released": 0
+    }
+  ],
+  "decisions": []
+}
