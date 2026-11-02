@@ -1,0 +1,57 @@
+{
+  "schema_version": 1,
+  "build_id": "market-research-briefs-q3-2026-20261102",
+  "record_count": 2,
+  "data": [
+    {
+      "id": "savills-hcmc-residential-q3-2026",
+      "region_ids": [
+        "hcmc"
+      ],
+      "segment_ids": [
+        "apartment"
+      ],
+      "period": "2026-Q3",
+      "period_type": "quarter",
+      "source_id": "savills-vietnam-market",
+      "source_date": "2026-10-15",
+      "source_url": "https://www.savills.com.vn/research_articles/226576/239329-0",
+      "title": "Nguồn cung căn hộ TP.HCM tăng theo quý, sức mua vẫn thận trọng",
+      "summary": "Savills ghi nhận nguồn cung căn hộ mới tăng so với Q2/2026; chi phí vay và khả năng chi trả tiếp tục ảnh hưởng quyết định mua. Báo cáo này chưa cung cấp chuỗi số lượng bán được xác minh để ghép vào biểu đồ.",
+      "evidence_scope": "savills-hcmc-q3-2026-report",
+      "data_basis": "qualitative-publisher-report",
+      "not_equivalent_to": [
+        "new_supply_units",
+        "sales_units",
+        "absorption_rate",
+        "developer_asp"
+      ],
+      "geography_note": "Phạm vi TP.HCM theo báo cáo Savills; không tự ghép nối với chuỗi TP.HCM cũ."
+    },
+    {
+      "id": "savills-hcmc-eligibility-jul-2026",
+      "region_ids": [
+        "hcmc"
+      ],
+      "segment_ids": [
+        "apartment"
+      ],
+      "period": "2026-07",
+      "period_type": "year-to-date-7m",
+      "source_id": "savills-vietnam-market",
+      "source_date": "2026-10-21",
+      "source_url": "https://vn.savills.com.vn/blog/article/239397/vietnam-viet/thi-truong-can-ho-tp-ho-chi-minh-quy-3-2026.aspx",
+      "title": "7 tháng đầu 2026: 30 dự án căn hộ với 21.165 căn đủ điều kiện bán",
+      "summary": "Savills dẫn danh sách Sở Xây dựng TP.HCM: 37 dự án đủ điều kiện bán, cho thuê mua nhà ở hình thành trong tương lai, gồm 30 dự án căn hộ với 21.165 căn. Đây là điều kiện pháp lý mở bán, KHÔNG phải số căn thực tế tung ra thị trường hay giao dịch.",
+      "evidence_scope": "savills-summary-of-hcmc-department-eligibility-as-of-july-2026",
+      "data_basis": "legally-sale-eligible-pipeline-not-market-launches",
+      "not_equivalent_to": [
+        "actual_new_launches",
+        "sales_units",
+        "absorption_rate",
+        "developer_asp"
+      ],
+      "geography_note": "Theo phạm vi danh sách Sở Xây dựng được Savills trích dẫn."
+    }
+  ]
+}
