@@ -1429,12 +1429,23 @@
         && item.data_basis && item.title;
     }).sort((a,b)=>String(b.source_date).localeCompare(String(a.source_date)));
     if(!rows.length)return '';
+    const reportQuarter=rows.filter(r=>r.period_type==='quarter' && /^\\d{4}-Q[1-4]$/.test(r.period||''))
+      .map(r=>r.period).sort().at(-1);
+    const metricQuarter=(data.observations||[]).filter(r=>
+      r.scope_type==='region-segment' && r.period_type==='quarter' &&
+      (r.region_ids||[]).includes(region) && (r.segment_ids||[]).includes(segment))
+      .map(r=>r.period).sort().at(-1);
+    const newerReport=reportQuarter && (!metricQuarter || reportQuarter>metricQuarter);
+    const freshnessNote=newerReport
+      ? '<p class="market-data-freshness"><strong>Khoảng trống dữ liệu:</strong> Đã có nghiên cứu '+esc(reportQuarter)+
+        ', nhưng chuỗi thống kê định lượng mới nhất là '+esc(metricQuarter||'chưa có')+
+        '. Không tự tính nguồn cung hay giao dịch từ nhận định thị trường.</p>' : '';
     return '<section class="section market-research-briefs"><div class="section-header"><div><span class="eyebrow">Nghiên cứu mới có nguồn</span><h2 class="section-title">Báo cáo thị trường đã công bố</h2></div></div>'+
       '<div class="section-body"><div class="market-project-news-grid">'+rows.slice(0,3).map(item=>
         '<article class="market-project-news-card"><strong>'+esc(item.period)+' · '+esc(item.source_date)+'</strong>'+
         '<a href="'+esc(item.source_url)+'" target="_blank" rel="noopener noreferrer">'+esc(item.title)+'</a>'+
         '<p>'+esc(item.summary||'')+'</p><small>Chỉ là báo cáo nghiên cứu theo kỳ; không thay thế số liệu mở bán, giao dịch hay ASP dự án.</small></article>'
-      ).join('')+'</div></div></section>';
+      ).join('')+'</div>'+freshnessNote+'</div></section>';
   }
 
   function renderSupplySales() {
