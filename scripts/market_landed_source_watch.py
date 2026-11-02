@@ -45,8 +45,8 @@ def text_fingerprint(html: str, project_name: str = "", page_type: str = "projec
     for node in soup(["script", "style", "nav", "footer", "noscript"]):
         node.decompose()
     main = soup.find("main") or soup.find("article") or soup.body or soup
-    body = re.sub(r"\\s+", " ", main.get_text(" ", strip=True))
-    headings = [re.sub(r"\\s+", " ", h.get_text(" ", strip=True))
+    body = re.sub(r"\s+", " ", main.get_text(" ", strip=True))
+    headings = [re.sub(r"\s+", " ", h.get_text(" ", strip=True))
                 for h in main.find_all(["h1", "h2", "h3"], limit=15)]
     name = project_name.casefold()
     if page_type == "project-news-article" and title_hint:
