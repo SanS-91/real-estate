@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-11-02T10:14:52+00:00",
+  "generated_at": "2026-11-02T10:15:47+00:00",
   "sources_checked": 4,
   "qualified_offers": 3,
   "published_new_offers": 0,
@@ -27,18 +27,22 @@
     {
       "project_id": "waterpoint",
       "catalog_status": "reachable",
-      "catalog_scope": "regional-broad-only",
+      "catalog_scope": "two-regional-landed-categories; exact-project-field-required",
       "catalogs": [
         {
           "url": "https://muaban.net/bat-dong-san/ban-nha-mat-tien-huyen-ben-luc-long-an",
           "status": "reachable"
+        },
+        {
+          "url": "https://muaban.net/bat-dong-san/ban-biet-thu-villa-penthouse-huyen-ben-luc-long-an",
+          "status": "reachable"
         }
       ],
-      "detail_checked": 6,
+      "detail_checked": 10,
       "qualified": 0,
       "reasons": {
         "missing-or-ambiguous-header-total": 1,
-        "project-not-explicit-in-basic-info": 5
+        "project-not-explicit-in-basic-info": 9
       }
     },
     {
