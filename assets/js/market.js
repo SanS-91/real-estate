@@ -1681,6 +1681,9 @@
         const ms=Date.parse(date+'T00:00:00+07:00');
         const age=(now-ms)/86400000;
         if(!Number.isFinite(age)||age<0||age>45)return false;
+        // A publisher listing that changed price/expiry or disappeared is
+        // historical evidence, never a current offer.
+        if(row.source_id==='muaban-vn' && row.source_status!=='confirmed-match')return false;
         const lastCheck=Date.parse(row.last_source_verified_at||row.verified_at||'');
         if(!Number.isFinite(lastCheck)||lastCheck>now+3600000||now-lastCheck>48*3600000)return false;
         if(row.source_expiration_date && row.source_expiration_date<today)return false;
