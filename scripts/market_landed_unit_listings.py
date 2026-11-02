@@ -205,9 +205,10 @@ def evaluate(old,existing,offers,now,run_id):
                 prior_at=datetime.fromisoformat(prior["checked_at"])
         except ValueError:
             pass
-        same=bool(prior and prior.get("fingerprint")==digest and
+        same_evidence=bool(prior and prior.get("fingerprint")==digest and
             prior.get("run_id")!=run_id and prior_at and prior_at.tzinfo and
-            timedelta(hours=1)<=now-prior_at<=timedelta(days=10))
+            timedelta(0)<=now-prior_at<=timedelta(days=10))
+        same=bool(same_evidence and now-prior_at>=timedelta(hours=1))
         if (row["source_id"],row["listing_id"],digest) in previously:
             decisions.append({"listing_id":row["listing_id"],"decision":"already-recorded"})
             continue
@@ -221,7 +222,13 @@ def evaluate(old,existing,offers,now,run_id):
             decisions.append({"listing_id":row["listing_id"],"decision":"independent-dated-checks-matched"})
         else:
             decisions.append({"listing_id":row["listing_id"],"decision":"awaiting-independent-source-check"})
-        proofs[token]={"fingerprint":digest,"checked_at":now.isoformat(),"run_id":run_id}
+        # Early retries must NOT slide the first valid proof forward.
+        # Otherwise frequent pushes or checks can prevent ever reaching 60m.
+        # Any changed amount/area/date gets a new proof immediately.
+        if same_evidence and not same:
+            proofs[token]=prior
+        else:
+            proofs[token]={"fingerprint":digest,"checked_at":now.isoformat(),"run_id":run_id}
     return {"schema_version":1,"checked_at":now.isoformat(),"proofs":proofs},published,decisions
 
 def run(config,projects,prior,existing,session,now,run_id):
