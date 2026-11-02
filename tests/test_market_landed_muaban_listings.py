@@ -108,5 +108,40 @@ class MuabanLandedTests(unittest.TestCase):
         self.assertEqual(health["sources"][0]["reasons"],{"http-403":1})
         self.assertEqual(health["published_new_offers"],0)
 
+
+    def test_waterpoint_publisher_alias_exact_not_aqua_city(self):
+        waterpoint={"id":"waterpoint","name":"Waterpoint","segment_ids":["landed"]}
+        listing=page(project="Khu Đô Thị Waterpoint")
+        row,status=parse_detail(listing,URL,waterpoint,NOW,"Khu Đô Thị Waterpoint")
+        self.assertEqual(status,"qualified-unexpired-landed-offer")
+        self.assertEqual(row["project_id"],"waterpoint")
+        other=page(project="Aqua City")
+        self.assertEqual(parse_detail(other,URL,waterpoint,NOW,"Khu Đô Thị Waterpoint")[1],
+                         "project-not-explicit-in-basic-info")
+        self.assertEqual(parse_detail(listing,URL,waterpoint,NOW)[1],
+                         "project-not-explicit-in-basic-info")
+
+    def test_global_city_villa_category_allowed_only_correct_project(self):
+        catalog="https://muaban.net/bat-dong-san/ban-biet-thu-villa-penthouse-du-an-the-global-city-quan-2-ho-chi-minh"
+        url=catalog+"/can-biet-thu-the-global-city-song-lap-id71299999"
+        self.assertEqual(safe_url(catalog),catalog)
+        self.assertEqual(safe_url(url,True),url)
+        global_city={"id":"the-global-city","name":"The Global City","segment_ids":["landed"]}
+        html=page(project="The Global City",kind="Biệt thự").replace("Mã tin 71272223","Mã tin 71299999")
+        row,status=parse_detail(html,url,global_city,NOW)
+        self.assertEqual(status,"qualified-unexpired-landed-offer")
+        self.assertEqual(row["product_type"],"villa")
+
+    def test_regional_discovery_cannot_override_exact_project_card(self):
+        catalog="https://muaban.net/bat-dong-san/ban-nha-mat-tien-huyen-ben-luc-long-an"
+        self.assertEqual(safe_url(catalog),catalog)
+        other="https://muaban.net/bat-dong-san/ban-nha-mat-tien-huyen-ben-luc-long-an/other-project-id71289999"
+        sample='<a href="'+other+'">Giá rẻ Waterpoint</a>'
+        self.assertEqual(discover(sample,catalog),[other])
+        waterpoint={"id":"waterpoint","name":"Waterpoint","segment_ids":["landed"]}
+        row,status=parse_detail(page(project="Other Project"),URL,waterpoint,NOW,"Khu Đô Thị Waterpoint")
+        self.assertIsNone(row)
+        self.assertEqual(status,"project-not-explicit-in-basic-info")
+
 if __name__=="__main__":
     unittest.main()
