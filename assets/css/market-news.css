@@ -348,3 +348,25 @@
 @media (max-width: 640px) {
   .market-news-editorial-note { font-size: 11px; margin-bottom: 12px; }
 }
+
+/* Market overview source-backed news pulse: compact and responsive */
+.market-pulse .section-body{padding-top:12px}
+.market-pulse__note{font-size:12px;color:var(--color-text-secondary);margin:0 0 12px}
+.market-pulse-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px}
+.market-pulse-card{border:1px solid var(--color-border);border-radius:var(--radius-md);padding:13px;background:var(--color-surface);min-width:0}
+.market-pulse-card__top{display:flex;align-items:center;justify-content:space-between;gap:8px;padding-bottom:10px;border-bottom:1px solid var(--color-border)}
+.market-pulse-card__top strong{font-size:13px}
+.market-pulse-card__top span{font-size:11px;color:var(--color-text-secondary);white-space:nowrap}
+.market-pulse-card article{padding:10px 0 4px;min-width:0}
+.market-pulse-card article+article{border-top:1px solid var(--color-border)}
+.market-pulse-card article a{font-size:12.5px;line-height:1.5;font-weight:650;display:block;overflow-wrap:anywhere}
+.market-pulse-card article a:hover,.market-project-news-card a:hover{text-decoration:underline;color:var(--color-primary-dark)}
+.market-pulse-card article small,.market-project-news-card small{display:block;margin-top:6px;color:var(--color-text-secondary);font-size:11px;overflow-wrap:anywhere}
+.market-project-news-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px}
+.market-project-news-card{border:1px solid var(--color-border);border-radius:var(--radius-md);background:var(--color-surface);padding:14px;min-width:0}
+.market-project-news-card strong{display:block;font-size:12px;color:var(--color-primary-dark);margin-bottom:7px}
+.market-project-news-card a{display:block;font-size:13px;font-weight:650;line-height:1.45;overflow-wrap:anywhere}
+.market-data-freshness{margin:0 0 12px;font-size:12px;color:var(--color-text-secondary);line-height:1.55}
+.market-data-freshness strong{color:var(--color-text)}
+@media(max-width:1050px){.market-pulse-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.market-project-news-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:600px){.market-pulse-grid,.market-project-news-grid{grid-template-columns:minmax(0,1fr)}.market-pulse-card{padding:12px}}
