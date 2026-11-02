@@ -9,7 +9,7 @@ from datetime import datetime, timezone
 from market_period_evidence import extract_period_evidence
 from market_quarterly_source_period import source_quarter
 from market_publication_evidence import extract_publication_date
-from market_source_discovery import discover_namlong_links, namlong_target, discover_cbre_hcmc_reports
+from market_source_discovery import discover_namlong_links, namlong_target, discover_cbre_hcmc_reports, discover_savills_reports
 import requests
 
 ROOT=Path(__file__).resolve().parents[1]
@@ -228,6 +228,31 @@ def main():
                 discovery_reports.append({"index":index_url,"status":"http-error","http_status":http})
         except Exception as exc:
             discovery_reports.append({"index":index_url,"status":"discovery-error","error":f"{type(exc).__name__}: {exc}"[:300]})
+    if not args.target:
+        # Only stage source-verified research REPORT links. The report
+        # publisher's index is not a research report and supplies no metrics.
+        savills_index = "https://www.savills.com.vn/insight-and-opinion/research.aspx?f=date&p=&page=0&q=&rc=Vietnam&t="
+        try:
+            http, final_index, index_html = fetch(savills_index)
+            if http == 200:
+                found = discover_savills_reports(index_html, final_index, max_items=6)
+                existing_periods = {x.get("period") for x in selected
+                    if x.get("collector") == "savills_research"}
+                additions = 0
+                for report in found:
+                    if report["period"] not in existing_periods:
+                        selected.append(report)
+                        existing_periods.add(report["period"])
+                        additions += 1
+                discovery_reports.append({"index": final_index, "status": "discovered",
+                    "links_found": len(found), "targets_added": additions,
+                    "promotion": "candidate-only"})
+            else:
+                discovery_reports.append({"index": savills_index, "status": "http-error",
+                    "http_status": http})
+        except Exception as exc:
+            discovery_reports.append({"index": savills_index, "status": "discovery-error",
+                "error": f"{type(exc).__name__}: {exc}"[:300]})
     if args.target:
         wanted=set(args.target)
         selected=[x for x in selected if x.get("target_id") in wanted]
