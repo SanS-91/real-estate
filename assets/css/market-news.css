@@ -370,3 +370,9 @@
 .market-data-freshness strong{color:var(--color-text)}
 @media(max-width:1050px){.market-pulse-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.market-project-news-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
 @media(max-width:600px){.market-pulse-grid,.market-project-news-grid{grid-template-columns:minmax(0,1fr)}.market-pulse-card{padding:12px}}
+
+/* Developer cards display sourced, explicitly linked recent updates only. */
+.market-developer-activity{margin-top:12px;padding-top:10px;border-top:1px solid var(--color-border)}
+.market-developer-activity small{display:block;color:var(--color-text-secondary);font-size:11px;margin-bottom:6px}
+.market-developer-activity a{display:block;font-size:12px;font-weight:650;line-height:1.45;overflow-wrap:anywhere}
+.market-developer-activity a:hover{text-decoration:underline;color:var(--color-primary-dark)}
