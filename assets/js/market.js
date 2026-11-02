@@ -611,30 +611,88 @@
       </div>`;
   }
 
+
+  // Market intelligence pulse: selected from live RSS-backed articles, NOT
+  // inferred price movements or claims about transactions.
+  function qualifiedMarketArticles(days = 30) {
+    const now=Date.now();
+    const relevant=data.articles.filter(article=>{
+      if (!article?.title || !/^https:\/\//i.test(String(article.url || ''))) return false;
+      if (!window.DataStore?.isNewsFor?.(article,'market') && article.category!=='market') return false;
+      const ms=Date.parse(article.published_at||'');
+      return Number.isFinite(ms) && ms<=now+3600000 && ms>=now-days*86400000;
+    });
+    const screened=window.HomeEditorial?.filterArchive
+      ? window.HomeEditorial.filterArchive(relevant,'market').map(x=>x.article)
+      : relevant;
+    return screened.sort((a,b)=>String(b.published_at||'').localeCompare(String(a.published_at||'')));
+  }
+
+  function marketPulseHTML() {
+    const last7=qualifiedMarketArticles(7);
+    const recent=last7.length>=4?last7:qualifiedMarketArticles(30);
+    const windowDays=last7.length>=4?7:30;
+    if(!recent.length) return '';
+    const buckets=[
+      {label:'Giá bán & giá chào', topics:['prices']},
+      {label:'Nguồn cung & giao dịch', topics:['transactions']},
+      {label:'Dự án & mở bán', topics:['projects']},
+      {label:'Diễn biến khác', topics:['market-general','affordable']}
+    ];
+    const editorial=window.HomeEditorial;
+    const topic=row=>editorial?.topic?.('market',row.title||'')||'market-general';
+    const used=new Set();
+    const tiles=buckets.map(bucket=>{
+      const news=recent.filter(row=>bucket.topics.includes(topic(row))&&!used.has(row.url)).slice(0,2);
+      news.forEach(row=>used.add(row.url));
+      if(!news.length)return '';
+      return '<div class="market-pulse-card"><div class="market-pulse-card__top"><strong>'+esc(bucket.label)+'</strong><span>'+news.length+' tin</span></div>'+
+        news.map(row=>'<article><a href="'+esc(row.url)+'" target="_blank" rel="noopener noreferrer">'+esc(row.title)+'</a><small>'+esc(App.formatDate(row.published_at))+' · '+esc(String(row.source_id||'Nguồn báo').replaceAll('-',' '))+'</small></article>').join('')+'</div>';
+    }).filter(Boolean).join('');
+    return '<section class="section market-pulse"><div class="section-header"><div><span class="eyebrow">Dữ liệu tin tức cập nhật</span><h2 class="section-title">Diễn biến thị trường · '+windowDays+' ngày</h2></div><a class="text-link" href="market.html?view=news">Xem tin tức</a></div><div class="section-body"><p class="market-pulse__note">'+recent.length+' tin đạt bộ lọc liên quan trong '+windowDays+' ngày · Dẫn đến bài gốc, không suy diễn thay đổi giá hoặc lượng giao dịch.</p><div class="market-pulse-grid">'+tiles+'</div></div></section>';
+  }
+
+  function projectNewsHTML(projects) {
+    const byProject=new Set(projects.map(p=>p.id));
+    if(!byProject.size)return '';
+    const articles=qualifiedMarketArticles(30)
+      .filter(row=>Array.isArray(row.project_ids)&&row.project_ids.some(id=>byProject.has(id)));
+    const selected=[],seen=new Set();
+    articles.forEach(row=>{
+      const id=row.project_ids.find(id=>byProject.has(id)&&!seen.has(id));
+      if(!id||selected.length>=6)return;
+      const project=projects.find(p=>p.id===id);
+      if(!project)return;
+      selected.push({row,project});seen.add(id);
+    });
+    if(!selected.length)return '';
+    return '<section class="section market-project-news"><div class="section-header"><div><span class="eyebrow">Tin liên kết rõ dự án</span><h2 class="section-title">Dự án có cập nhật trong 30 ngày</h2></div><a class="text-link" href="market.html?view=news">Tin thị trường</a></div><div class="section-body"><div class="market-project-news-grid">'+
+      selected.map(({row,project})=>'<article class="market-project-news-card"><strong>'+esc(project.name)+'</strong><a href="'+esc(row.url)+'" target="_blank" rel="noopener noreferrer">'+esc(row.title)+'</a><small>'+esc(App.formatDate(row.published_at))+' · '+esc(String(row.source_id||'Nguồn báo').replaceAll('-',' '))+'</small></article>').join('')+
+      '</div><p class="chart-note">Chỉ liên kết bài có mã dự án trong dữ liệu; tin bài không xác nhận mức giá, giao dịch hoặc tiến độ của dự án.</p></div></section>';
+  }
+
+  function priceFreshnessNote(rows, label) {
+    const dated=(rows||[]).map(row=>row?.observation_date||row?.source_date||'').filter(value=>/^\d{4}-\d{2}-\d{2}$/.test(value)).sort();
+    if(!dated.length)return '';
+    const latest=dated.at(-1);
+    const age=Math.floor((Date.now()-Date.parse(latest+'T00:00:00+07:00'))/86400000);
+    return '<p class="market-data-freshness">'+esc(label)+' · Ngày thu thập/nguồn mới nhất: <strong>'+esc(latest)+'</strong>'+
+      (age>14?' · <strong>Chỉ tham khảo lịch sử, chưa xác minh giá hiện tại</strong>':' · Không phải dữ liệu giao dịch thời gian thực')+'</p>';
+  }
+
   function renderOverview() {
-    const latestMarketNews = data.articles.filter(article =>
-      article.url && article.title && (window.DataStore?.isNewsFor?.(article, 'market') ?? article.category === 'market'));
-    const screenedMarketNews = window.HomeEditorial?.filterArchive
-      ? window.HomeEditorial.filterArchive(latestMarketNews, 'market').map(item => item.article)
-      : latestMarketNews;
-    const recent = screenedMarketNews.sort((a,b) =>
-      String(b.published_at || '').localeCompare(String(a.published_at || ''))).slice(0,4);
     const overviewMarketRows = hcmcSeries();
     const overviewMarketSource = overviewMarketRows[overviewMarketRows.length - 1] || null;
     const overviewPriceSource = data.observations.find(item => item.average_asp && item.source_id) || null;
     const html = `
+      ${marketPulseHTML()}
       <div class="market-metric-grid">${summaryMetrics().map(Components.compactMetric).join('')}</div>
       <div class="market-layout market-layout--overview">
         <section class="section market-panel market-panel--wide">
           <div class="section-header"><div><span class="eyebrow">HCMC apartment</span><h2 class="section-title">Supply &amp; Sales</h2></div><a class="text-link" href="market.html?view=supply-sales">Open view</a></div>
-          <div class="section-body"><div class="chart-frame"><canvas id="market-overview-supply"></canvas></div><p class="chart-note">One publisher per chart; publisher lower bounds marked >; absorption uses right % axis, missing values remain blank · ${sourceRef(overviewMarketSource?.source_id,{sourceDate:overviewMarketSource?.source_date,period:overviewMarketSource?.period,sourceUrl:overviewMarketSource?.source_url})}</p></div>
+          <div class="section-body"><p class="market-data-freshness">Chuỗi dữ liệu đã công bố theo quý · Kỳ gần nhất: <strong>${esc(overviewMarketSource?.period||'Chưa có số liệu')}</strong> · Không phải số liệu giao dịch cập nhật hằng ngày.</p><div class="chart-frame"><canvas id="market-overview-supply"></canvas></div><p class="chart-note">One publisher per chart; publisher lower bounds marked >; absorption uses right % axis, missing values remain blank · ${sourceRef(overviewMarketSource?.source_id,{sourceDate:overviewMarketSource?.source_date,period:overviewMarketSource?.period,sourceUrl:overviewMarketSource?.source_url})}</p></div>
         </section>
-        <section class="section market-panel">
-          <div class="section-header"><div><span class="eyebrow">Latest activity</span><h2 class="section-title">Market Developments</h2></div><a class="text-link" href="market.html?view=news">View all</a></div>
-          <div class="section-body market-news-compact">${recent.length
-            ? recent.map(article => `<article><time datetime="${esc(article.published_at)}">${esc(App.formatDate(article.published_at))}</time><strong><a href="${esc(article.url)}" target="_blank" rel="noopener noreferrer">${esc(article.title)}</a></strong></article>`).join('')
-            : '<p class="muted-text">Chưa có tin thị trường đạt tiêu chí lọc. Xem tab Tin tức để tra cứu nguồn.</p>'}</div>
-        </section>
+
       </div>
       <section class="section">
         <div class="section-header"><div><span class="eyebrow">Tracked projects</span><h2 class="section-title">Key Projects · ${Math.min(data.projects.length,8)}/${data.projects.length}</h2></div><a class="text-link" href="market.html?view=projects">View all ${data.projects.length} projects</a></div>
@@ -642,7 +700,7 @@
       </section>
       <section class="section">
         <div class="section-header"><div><span class="eyebrow">Project pricing</span><h2 class="section-title">Pricing Snapshot</h2></div><div class="section-header__actions">${priceLayerControls()}<a class="text-link" href="market.html?view=pricing">Open Pricing</a></div></div>
-        <div class="section-body"><div class="chart-frame"><canvas id="market-overview-price"></canvas></div><p class="chart-note">${state.priceLayer === 'listing' ? 'Listing-market asking ranges from mapped portal snapshots; not transaction prices.' : 'Only source-stated verified project pricing is shown; no synthetic history · ' + sourceRef(overviewPriceSource?.source_id,{sourceDate:overviewPriceSource?.source_date,period:overviewPriceSource?.period,sourceUrl:overviewPriceSource?.source_url})}</p></div>
+        <div class="section-body">${priceFreshnessNote(data.listingObservations,'Khoảng giá chào bán từ nguồn đã lưu')}<div class="chart-frame"><canvas id="market-overview-price"></canvas></div><p class="chart-note">${state.priceLayer === 'listing' ? 'Listing-market asking ranges from mapped portal snapshots; not transaction prices.' : 'Only source-stated verified project pricing is shown; no synthetic history · ' + sourceRef(overviewPriceSource?.source_id,{sourceDate:overviewPriceSource?.source_date,period:overviewPriceSource?.period,sourceUrl:overviewPriceSource?.source_url})}</p></div>
       </section>`;
     setView(html);
     requestAnimationFrame(() => {
@@ -1289,6 +1347,7 @@
       <div class="view-intro"><div><span class="eyebrow">Project database</span><h2>${records.length} projects</h2><p>Filter structured project records, then open a project for metrics, phases and related market updates.</p></div></div>
       ${filterToolbar()}
       ${projectCoverageStatusHTML(records)}
+      ${projectNewsHTML(records)}
       <section class="section"><div class="section-body section-body--table">${projectTable(records)}</div></section>`;
     setView(html);
     bindFilters();
@@ -1501,6 +1560,7 @@
       <div class="view-intro"><div><span class="eyebrow">Evidence-backed price observations</span><h2>Pricing</h2><p>Verified project prices and listing-market asking ranges are shown as separate layers. Missing fields remain blank.</p></div></div>
       ${filterToolbar({ includeStatus:false })}
       ${projectCoverageStatusHTML(filteredProjects, true)}
+      ${state.priceLayer==='listing' ? priceFreshnessNote(listingRows.map(item=>item.row),'Dữ liệu giá chào bán theo dự án') : ''}
       <section class="section">
         <div class="section-header"><div><h2 class="section-title">${state.priceLayer === 'listing' ? 'Listing Market Asking Ranges' : 'Verified Project Pricing'}</h2></div>${priceLayerControls()}</div>
         <div class="section-body">${chartBody}</div>
