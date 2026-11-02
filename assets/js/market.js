@@ -14,7 +14,7 @@
     priceLayer: 'listing',
     benchmarkProduct: ''
   };
-  let data = { regions: [], developers: [], projects: [], phases: [], observations: [], listingObservations: [], listingScopeEvidence: [], alternativePriceEvidence: [], secondaryListingEvidence: [], oneHousingSubprojectEvidence: [], oneHousingSubprojectHistory: [], oneHousingProjectHistory: [], peerMonthlyVerified: [], peerMonthlyTargets: [], peerMonthlyHealth: null, marketDailyPulse:null, researchBriefs:[], landedNhatotOffers:[], landedMuabanOffers:[], developerProjectEvidence: [], productComparables: null, salesPolicyReadiness: null, commercialOfferReview: null, reverVerifiedUnitListings: [], muabanVerifiedUnitListings: [], listingSourceCoverage: null, activeListingCoverage: null, listingComparables: [], articles: [], allArticles: [], infrastructureProjects: [], infrastructureSchedules: [], legalTopics: [], legalDocuments: [], events: [], macroIndicators: [], macroRows: [] };
+  let data = { regions: [], developers: [], projects: [], phases: [], observations: [], listingObservations: [], listingScopeEvidence: [], alternativePriceEvidence: [], secondaryListingEvidence: [], oneHousingSubprojectEvidence: [], oneHousingSubprojectHistory: [], oneHousingProjectHistory: [], peerMonthlyVerified: [], peerMonthlyTargets: [], peerMonthlyHealth: null, marketDailyPulse:null, researchBriefs:[], landedNhatotOffers:[], landedMuabanOffers:[], landedMuabanHealth:null, landedNhatotHealth:null, developerProjectEvidence: [], productComparables: null, salesPolicyReadiness: null, commercialOfferReview: null, reverVerifiedUnitListings: [], muabanVerifiedUnitListings: [], listingSourceCoverage: null, activeListingCoverage: null, listingComparables: [], articles: [], allArticles: [], infrastructureProjects: [], infrastructureSchedules: [], legalTopics: [], legalDocuments: [], events: [], macroIndicators: [], macroRows: [] };
 
   function payloadData(payload) { return payload?.data || []; }
   function byId(records) { return new Map(records.map(item => [item.id, item])); }
@@ -1637,6 +1637,34 @@
   }
 
 
+  function landedSourceProgressHTML(projects) {
+    const selected=new Set((projects||[]).map(row=>row.id));
+    const healths=[
+      {name:'Muaban',data:data.landedMuabanHealth,list:data.landedMuabanOffers||[]},
+      {name:'Nhà Tốt',data:data.landedNhatotHealth,list:data.landedNhatotOffers||[]}
+    ];
+    const lines=healths.map(provider=>{
+      const report=provider.data;
+      const selectedSources=(report?.sources||[]).filter(row=>selected.has(row.project_id));
+      if(!selectedSources.length)return '';
+      const latest=Date.parse(report.generated_at||'');
+      const ageHours=(Date.now()-latest)/3600000;
+      if(!Number.isFinite(latest)||ageHours<0||ageHours>72)return '';
+      const candidates=selectedSources.reduce((n,row)=>n+Number(row.qualified??row.source_qualified??0),0);
+      const checked=selectedSources.reduce((n,row)=>n+Number(row.detail_checked??row.urls_checked??0),0);
+      const validated=(provider.list||[]).filter(row=>selected.has(row.project_id)&&
+        row.review_status==='automated-two-hosted-dated-checks').length;
+      const denied=selectedSources.reduce((n,row)=>n+Number(row.reasons?.['http-403']||0),0);
+      return '<span><strong>'+esc(provider.name)+'</strong> · '+checked+' tin kiểm tra · '+
+        candidates+' đạt điều kiện nguồn · '+validated+' đã qua hai lượt'+
+        (denied?' · '+denied+' bị chặn 403':'')+'</span>';
+    }).filter(Boolean);
+    if(!lines.length)return '';
+    return '<div class="market-coverage-note market-landed-source-progress"><strong>Theo dõi giá nhà phố / biệt thự</strong>'+
+      lines.join('')+
+      '<small>“Đạt điều kiện nguồn” chưa phải giá đã xác minh; chỉ công bố giá theo căn khi hai lượt độc lập khớp nhau và nguồn còn hiệu lực.</small></div>';
+  }
+
   function verifiedLandedOffersHTML(projects) {
     const allowed=new Set((projects||[]).map(x=>x.id));
     const today=new Date(Date.now()+7*3600000).toISOString().slice(0,10);
@@ -1725,6 +1753,7 @@
       ${filterToolbar({ includeStatus:false })}
       ${projectCoverageStatusHTML(filteredProjects, true)}
       ${marketCoverageNoteHTML()}
+      ${state.priceLayer==='listing' ? landedSourceProgressHTML(filteredProjects) : ''}
       ${state.priceLayer==='listing' ? priceFreshnessNote(listingRows.map(item=>item.row),'Dữ liệu giá chào bán theo dự án') : '<p class="market-data-freshness">Chỉ hiển thị giá công bố có chứng cứ trực tiếp, không thay thế bằng giá rao hoặc giá từng căn.</p>'}
       <section class="section">
         <div class="section-header"><div><h2 class="section-title">${state.priceLayer === 'listing' ? 'Listing Market Asking Ranges' : 'Verified Project Pricing'}</h2></div>${priceLayerControls()}</div>
@@ -1986,7 +2015,7 @@
   async function load() {
     try {
       await window.Provenance?.load?.();
-      const [commercialOfferReview, salesPolicyReadiness, productComparables, developerProjectEvidence, regions, developers, projects, phases, observations, listingObservations, listingScopeEvidence, alternativePriceEvidence, secondaryListingEvidence, oneHousingSubprojectEvidence, oneHousingSubprojectHistory, oneHousingProjectHistory, reverVerifiedUnitListings, muabanVerifiedUnitListings, listingSourceCoverage, activeListingCoverage, listingComparables, articles, infrastructureProjects, infrastructureSchedules, legalTopics, legalDocuments, events, macroIndicators, macroRows, meta, peerMonthlyVerified, peerMonthlyTargets, peerMonthlyHealth, marketDailyPulse, researchBriefs, landedNhatotOffers, landedMuabanOffers] = await Promise.all([
+      const [commercialOfferReview, salesPolicyReadiness, productComparables, developerProjectEvidence, regions, developers, projects, phases, observations, listingObservations, listingScopeEvidence, alternativePriceEvidence, secondaryListingEvidence, oneHousingSubprojectEvidence, oneHousingSubprojectHistory, oneHousingProjectHistory, reverVerifiedUnitListings, muabanVerifiedUnitListings, listingSourceCoverage, activeListingCoverage, listingComparables, articles, infrastructureProjects, infrastructureSchedules, legalTopics, legalDocuments, events, macroIndicators, macroRows, meta, peerMonthlyVerified, peerMonthlyTargets, peerMonthlyHealth, marketDailyPulse, researchBriefs, landedNhatotOffers, landedMuabanOffers, landedMuabanHealth, landedNhatotHealth] = await Promise.all([
         DataStore.getCommercialOfferReview().catch(() => null), DataStore.getSalesPolicyReadiness().catch(() => null), DataStore.getProductComparables().catch(() => null), DataStore.getDeveloperProjectEvidence().catch(() => ({data:[]})), DataStore.getRegions(), DataStore.getDevelopers(), DataStore.getProjects(), DataStore.getProjectPhases(), DataStore.getMarketObservations(), DataStore.getListingObservations(), DataStore.getListingScopeEvidence(), DataStore.getAlternativePriceEvidence(), DataStore.getSecondaryListingEvidence(), DataStore.getOneHousingSubprojectEvidence(), DataStore.getOneHousingSubprojectHistory(), DataStore.getOneHousingProjectHistory().catch(() => ({data:[]})), DataStore.getReverVerifiedUnitListings().catch(() => ({data:[]})), DataStore.getMuabanVerifiedUnitListings().catch(() => ({data:[]})), DataStore.getListingSourceCoverage().catch(() => null), DataStore.getActiveListingCoverage().catch(() => null), DataStore.getListingComparables(), DataStore.getArticles(), DataStore.getInfrastructureProjects(), DataStore.getInfrastructureSchedules(), DataStore.getLegalTopics(), DataStore.getLegalDocuments(), DataStore.getEvents(), DataStore.getMacroIndicators(), DataStore.getProcessedMacroObservations(), DataStore.getMeta(),
         DataStore.getPeerMonthlyVerified().catch(() => ({data:[]})),
         DataStore.getPeerMonthlyTargets().catch(() => ({targets:[]})),
@@ -1994,10 +2023,12 @@
         DataStore.getMarketDailyPulse().catch(() => null),
         DataStore.getMarketResearchBriefs().catch(() => ({data:[]})),
         DataStore.getVerifiedLandedNhatotOffers().catch(() => ({data:[]})),
-        DataStore.getVerifiedLandedMuabanOffers().catch(() => ({data:[]}))
+        DataStore.getVerifiedLandedMuabanOffers().catch(() => ({data:[]})),
+        DataStore.getLandedMuabanSourceHealth().catch(() => null),
+        DataStore.getLandedNhatotSourceHealth().catch(() => null)
       ]);
       data = {
-        commercialOfferReview, salesPolicyReadiness, productComparables, developerProjectEvidence: payloadData(developerProjectEvidence), regions: payloadData(regions), developers: payloadData(developers), projects: payloadData(projects), phases: payloadData(phases), observations: payloadData(observations), listingObservations: payloadData(listingObservations), listingScopeEvidence: payloadData(listingScopeEvidence), alternativePriceEvidence: payloadData(alternativePriceEvidence), secondaryListingEvidence: payloadData(secondaryListingEvidence), oneHousingSubprojectEvidence: payloadData(oneHousingSubprojectEvidence), oneHousingSubprojectHistory: payloadData(oneHousingSubprojectHistory), oneHousingProjectHistory: payloadData(oneHousingProjectHistory), peerMonthlyVerified:payloadData(peerMonthlyVerified), peerMonthlyTargets:peerMonthlyTargets?.targets || [], peerMonthlyHealth, marketDailyPulse, researchBriefs:payloadData(researchBriefs), landedNhatotOffers:payloadData(landedNhatotOffers), landedMuabanOffers:payloadData(landedMuabanOffers), reverVerifiedUnitListings: payloadData(reverVerifiedUnitListings), muabanVerifiedUnitListings: payloadData(muabanVerifiedUnitListings), listingSourceCoverage, activeListingCoverage, listingComparables: payloadData(listingComparables), articles: payloadData(articles), allArticles: payloadData(articles), infrastructureProjects: payloadData(infrastructureProjects), infrastructureSchedules: payloadData(infrastructureSchedules), legalTopics: payloadData(legalTopics), legalDocuments: payloadData(legalDocuments), events: payloadData(events), macroIndicators: payloadData(macroIndicators), macroRows: payloadData(macroRows)
+        commercialOfferReview, salesPolicyReadiness, productComparables, developerProjectEvidence: payloadData(developerProjectEvidence), regions: payloadData(regions), developers: payloadData(developers), projects: payloadData(projects), phases: payloadData(phases), observations: payloadData(observations), listingObservations: payloadData(listingObservations), listingScopeEvidence: payloadData(listingScopeEvidence), alternativePriceEvidence: payloadData(alternativePriceEvidence), secondaryListingEvidence: payloadData(secondaryListingEvidence), oneHousingSubprojectEvidence: payloadData(oneHousingSubprojectEvidence), oneHousingSubprojectHistory: payloadData(oneHousingSubprojectHistory), oneHousingProjectHistory: payloadData(oneHousingProjectHistory), peerMonthlyVerified:payloadData(peerMonthlyVerified), peerMonthlyTargets:peerMonthlyTargets?.targets || [], peerMonthlyHealth, marketDailyPulse, researchBriefs:payloadData(researchBriefs), landedNhatotOffers:payloadData(landedNhatotOffers), landedMuabanOffers:payloadData(landedMuabanOffers), landedMuabanHealth, landedNhatotHealth, reverVerifiedUnitListings: payloadData(reverVerifiedUnitListings), muabanVerifiedUnitListings: payloadData(muabanVerifiedUnitListings), listingSourceCoverage, activeListingCoverage, listingComparables: payloadData(listingComparables), articles: payloadData(articles), allArticles: payloadData(articles), infrastructureProjects: payloadData(infrastructureProjects), infrastructureSchedules: payloadData(infrastructureSchedules), legalTopics: payloadData(legalTopics), legalDocuments: payloadData(legalDocuments), events: payloadData(events), macroIndicators: payloadData(macroIndicators), macroRows: payloadData(macroRows)
       };
       Resolver.setData('region', data.regions);
       Resolver.setData('developer', data.developers);
