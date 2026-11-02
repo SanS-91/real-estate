@@ -808,7 +808,7 @@
   const validAsking = row => Number.isFinite(Number(row.asking_price_low_vnd_per_m2)) &&
     Number.isFinite(Number(row.asking_price_high_vnd_per_m2)) &&
     Number(row.asking_price_low_vnd_per_m2)>0 && Number(row.asking_price_high_vnd_per_m2)>=Number(row.asking_price_low_vnd_per_m2) &&
-    row.market_layer === 'listing-asking' && row.source_url && !String(row.source_id||'').startsWith('demo-');
+    row.market_layer === 'listing-asking' && row.status === 'reviewed' && row.source_url && !String(row.source_id||'').startsWith('demo-');
   function latestAsking(rows) {
     const map=new Map();
     (rows||[]).filter(validAsking).forEach(row=>{
@@ -817,14 +817,26 @@
     });
     return map;
   }
-  function watchCard(project, evidence) {
+  function sameScopePriceMovement(rows, current) {
+    if (!current) return null;
+    const prior=(rows||[]).filter(row=>validAsking(row) && row.project_id===current.project_id &&
+      row.source_id===current.source_id && row.asset_type===current.asset_type &&
+      row.market_layer===current.market_layer && row.observation_date<current.observation_date)
+      .sort((a,b)=>String(b.observation_date).localeCompare(String(a.observation_date)))[0];
+    if (!prior) return null;
+    const oldMid=(Number(prior.asking_price_low_vnd_per_m2)+Number(prior.asking_price_high_vnd_per_m2))/2;
+    const newMid=(Number(current.asking_price_low_vnd_per_m2)+Number(current.asking_price_high_vnd_per_m2))/2;
+    if (!(oldMid>0)) return null;
+    return {pct:(newMid/oldMid-1)*100,from:prior.observation_date};
+  }
+  function watchCard(project, evidence, movement) {
     const vi=homeVn(), date=evidence?.source_data_as_of||evidence?.observation_date;
     const price=evidence ? fmtMoney(evidence.asking_price_low_vnd_per_m2)+'–'+fmtMoney(evidence.asking_price_high_vnd_per_m2)+' '+(vi?'triệu đ/m²':'mn VND/m²') : (vi?'Chưa có giá đủ điều kiện':'No qualified price');
     const source=evidence?.source_id||project.primary_source_id||'';
     const href=typeof project.official_url==='string' && /^https:\/\//.test(project.official_url) ? project.official_url : 'market.html?view=projects';
     return '<article class="home-intelligence-card"><div class="home-intelligence-card__meta"><span>'+homeEscape(project.location_text||project.region_ids?.[0]||'')+'</span><span>'+homeEscape(date||project.source_date||'')+'</span></div>'+
       '<h3>'+homeEscape(project.name)+'</h3><strong class="home-intelligence-card__value">'+homeEscape(price)+'</strong>'+
-      '<p>'+homeEscape(evidence ? (vi?'Giá chào bán tham khảo · Không phải giá giao dịch':'Historical asking range · Not a transacted price') : (vi?'Theo dõi dự án; chưa đủ dữ liệu giá bán xác minh':'Project tracked; qualified price unavailable'))+'</p>'+
+      '<p>'+homeEscape(evidence ? (vi?'Giá chào bán đã rà soát · Không phải giá giao dịch':'Reviewed listing ask · Not a transacted price') : (vi?'Theo dõi dự án; chưa đủ dữ liệu giá bán xác minh':'Project tracked; qualified price unavailable'))+'</p>'+ (movement ? '<p class="home-price-movement">'+homeEscape((movement.pct>=0?'+':'')+movement.pct.toFixed(1)+'% '+(vi?'trung điểm khoảng giá so với ':'range midpoint vs ')+movement.from)+'</p>' : '')+
       '<div class="home-intelligence-card__footer"><span>'+homeEscape(source)+'</span><a href="'+homeEscape(evidence?.source_url||href)+'" target="_blank" rel="noopener noreferrer">'+(vi?'Xem nguồn':'Source')+'</a></div></article>';
   }
   async function renderMarketSnapshot() {
@@ -848,7 +860,7 @@
       const [projects,listings]=await Promise.all([DataStore.getProjects(),DataStore.getListingObservations()]);
       const catalog=new Map(payloadData(projects).map(row=>[row.id,row]));
       const asks=latestAsking(payloadData(listings));
-      const cards=HOME_WATCHLIST_IDS.map(id=>catalog.get(id)).filter(Boolean).map(project=>watchCard(project,asks.get(project.id)));
+      const cards=HOME_WATCHLIST_IDS.map(id=>catalog.get(id)).filter(Boolean).map(project=>watchCard(project,asks.get(project.id),sameScopePriceMovement(payloadData(listings),asks.get(project.id))));
       setHTML('[data-home-projects-watchlist]',cards.join('')||Components.stateBox('No watchlist projects available.'));
     }catch(error){console.warn('[home] watchlist',error);setHTML('[data-home-projects-watchlist]',Components.stateBox('Project evidence unavailable.'));}
   }
