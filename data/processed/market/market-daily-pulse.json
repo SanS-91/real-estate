@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-11-02T07:52:28+00:00",
+  "generated_at": "2026-11-02T07:54:08+00:00",
   "description": "Derived market article-to-project index and evidence freshness; not live price or transactions.",
   "source_scope": "existing publisher articles + dated project and market JSON",
   "project_count": 18,
@@ -393,6 +393,9 @@
       "latest_source_date": "2026-08-12",
       "age_days": 82,
       "stale": false,
+      "latest_quantitative_quarter": null,
+      "latest_published_qualitative_report_quarter": null,
+      "newer_research_report_pending_verified_metrics": false,
       "record_count": 26,
       "metric_basis": "publisher quarterly/annual reports, NOT daily statistics"
     },
