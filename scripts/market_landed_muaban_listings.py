@@ -237,19 +237,27 @@ def run(config,registry,previous,already,session,now,run_id):
     new_state,new,decisions=evaluate(previous,already.get("data",[]),candidates,now,run_id)
     # Never release/retain an expired offer as currently live. Keep its history
     # but expiry must be checked at display time.
-    # Refresh proof recency ONLY for a listing directly re-read with its
-    # current publisher details. A blocked or missing source must never renew
-    # a previously released offer.
+    # A previously published offer remains in history, but is CURRENT only
+    # if the publisher page was directly rechecked and its full price/area/
+    # validity evidence still matches. A changed price invalidates the old
+    # offer immediately, not 48 hours later. Unreachable is also not live.
     observed={(x["source_id"],x["listing_id"]):x for x in candidates}
+    compare_keys=("source_id","project_id","listing_id","product_type",
+                  "listed_land_area_sqm","listing_price_vnd",
+                  "value_vnd_per_land_m2","source_updated_date",
+                  "source_listed_date","source_expiration_date","source_url")
     saved={}
     for record in already.get("data",[])+new:
         item=dict(record)
         matching=observed.get((item.get("source_id"),item.get("listing_id")))
-        if matching and all(item.get(key)==matching.get(key) for key in
-            ("project_id","product_type","listed_land_area_sqm","listing_price_vnd",
-             "value_vnd_per_land_m2","source_listed_date","source_expiration_date","source_url")):
+        if matching and all(item.get(key)==matching.get(key) for key in compare_keys):
             item["last_source_verified_at"]=now.isoformat()
-        elif "last_source_verified_at" not in item:
+            item["source_status"]="confirmed-match"
+        elif matching:
+            item["source_status"]="changed-pending-verification"
+        else:
+            item["source_status"]="not-reconfirmed"
+        if "last_source_verified_at" not in item:
             item["last_source_verified_at"]=item.get("verified_at")
         saved[item["id"]]=item
     out={"schema_version":1,"collection_mode":"dated-unexpired-individual-landed-asking-only",
