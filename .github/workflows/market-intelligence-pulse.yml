@@ -12,6 +12,11 @@ on:
       - "data/mock/market/projects.json"
       - "data/mock/market/observations.json"
       - "data/mock/market/listing-observations.json"
+      - "data/mock/market/research-briefs.json"
+      - "market.html"
+      - "assets/js/market.js"
+      - "assets/js/data-store.js"
+      - "scripts/check_market_web_integrity.py"
       - "data/state/market-active-listing-coverage.json"
       - "data/state/listing-source-coverage.json"
       - "scripts/build_market_daily_pulse.py"
@@ -38,6 +43,11 @@ jobs:
           python-version: "3.12"
       - name: Verify source attribution and freshness logic
         run: python -m unittest discover -s tests -p 'test_market_daily_pulse.py' -v
+      - name: Validate public Market assets and report provenance
+        run: |
+          python scripts/check_market_web_integrity.py
+          node --check assets/js/market.js
+          node --check assets/js/data-store.js
       - name: Build derived market pulse (no price estimates)
         run: python scripts/build_market_daily_pulse.py
       - name: Publish changed index only
