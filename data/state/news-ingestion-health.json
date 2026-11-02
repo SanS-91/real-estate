@@ -1,32 +1,32 @@
 {
   "schema_version": 1,
-  "checked_at": "2026-11-02T06:26:42.892690+00:00",
+  "checked_at": "2026-11-02T08:51:46.781478+00:00",
   "feeds_configured": 16,
   "feeds_fetched": 16,
-  "accepted_new": 2,
+  "accepted_new": 3,
   "production_written": true,
-  "article_total": 1322,
+  "article_total": 1325,
   "published_by_module": {
-    "market": 1,
-    "legal": 0,
-    "infrastructure": 1,
+    "market": 3,
+    "legal": 1,
+    "infrastructure": 0,
     "macro": 0
   },
   "recent_by_module_7d": {
-    "market": 216,
-    "legal": 42,
-    "infrastructure": 90,
+    "market": 215,
+    "legal": 43,
+    "infrastructure": 89,
     "macro": 51
   },
   "recent_by_module_30d": {
-    "market": 809,
-    "legal": 134,
-    "infrastructure": 305,
+    "market": 812,
+    "legal": 135,
+    "infrastructure": 304,
     "macro": 221
   },
   "latest_published_by_module": {
-    "market": "2026-11-02T05:30:55+00:00",
-    "legal": "2026-11-02T05:30:55+00:00",
+    "market": "2026-11-02T08:09:00+00:00",
+    "legal": "2026-11-02T08:09:00+00:00",
     "infrastructure": "2026-11-02T03:49:29+00:00",
     "macro": "2026-11-02T03:57:58+00:00"
   },
@@ -44,18 +44,18 @@
       "source_id": "thanhnien-real-estate",
       "status": "parsed",
       "feed_items": 50,
-      "new": 0,
-      "skipped": 50,
-      "duplicates": 50,
+      "new": 1,
+      "skipped": 49,
+      "duplicates": 49,
       "filtered": 0
     },
     {
       "source_id": "dantri-real-estate",
       "status": "parsed",
       "feed_items": 50,
-      "new": 0,
-      "skipped": 50,
-      "duplicates": 50,
+      "new": 1,
+      "skipped": 49,
+      "duplicates": 49,
       "filtered": 0
     },
     {
@@ -64,8 +64,8 @@
       "feed_items": 50,
       "new": 0,
       "skipped": 50,
-      "duplicates": 8,
-      "filtered": 42
+      "duplicates": 6,
+      "filtered": 44
     },
     {
       "source_id": "vnexpress-current-affairs",
@@ -118,17 +118,17 @@
       "feed_items": 50,
       "new": 0,
       "skipped": 50,
-      "duplicates": 8,
-      "filtered": 42
+      "duplicates": 6,
+      "filtered": 44
     },
     {
       "source_id": "dantri-current-affairs",
       "status": "parsed",
       "feed_items": 50,
-      "new": 1,
-      "skipped": 49,
-      "duplicates": 4,
-      "filtered": 45
+      "new": 0,
+      "skipped": 50,
+      "duplicates": 3,
+      "filtered": 47
     },
     {
       "source_id": "dantri-legal",
@@ -172,8 +172,8 @@
       "feed_items": 50,
       "new": 0,
       "skipped": 50,
-      "duplicates": 7,
-      "filtered": 43
+      "duplicates": 6,
+      "filtered": 44
     }
   ],
   "fetch_errors": []

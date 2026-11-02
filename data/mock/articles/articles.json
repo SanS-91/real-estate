@@ -1,9 +1,90 @@
 {
   "schema_version": 1,
-  "build_id": "market-news-rss-20261102T062642Z",
-  "generated_at": "2026-11-02T06:26:42.892690+00:00",
-  "record_count": 1322,
+  "build_id": "market-news-rss-20261102T085146Z",
+  "generated_at": "2026-11-02T08:51:46.781478+00:00",
+  "record_count": 1325,
   "data": [
+    {
+      "id": "article-market-rss-7b2a8d086f6afbaeb4f1",
+      "title": "Giá đất cao, hệ lụy lớn",
+      "url": "https://thanhnien.vn/gia-dat-cao-he-luy-lon-185261102143054145.htm",
+      "category": "market",
+      "module_ids": [
+        "market",
+        "legal"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-11-02T08:09:00+00:00",
+      "source_id": "thanhnien-real-estate",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [
+        "pricing",
+        "legal"
+      ],
+      "importance": 2,
+      "summary": "Phát biểu tại thảo luận tổ về luật Đất đai, luật Kinh doanh bất động sản và luật Nhà ở, Thủ tướng Chính phủ Lê Minh Hưng cho rằng, giá đất quá cao có thể giúp các địa phương tăng thu ngân sách trong một thời điểm, nhưng gây ra những hệ lụy rất lớn đối với phát triển kinh tế và khả năng tiếp",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://thanhnien.vn/rss/kinh-te/dia-oc.rss",
+        "publisher_host": "thanhnien.vn",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-55e5f2f8b83e7e81c6c9",
+      "title": "Hà Nội chuyển đổi hơn 6 ha đất Hoàng Mai làm trung tâm thương mại",
+      "url": "https://vnexpress.net/ha-noi-chuyen-doi-hon-6-ha-dat-hoang-mai-lam-trung-tam-thuong-mai-5139720.html",
+      "category": "market",
+      "module_ids": [
+        "market"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-11-02T07:38:39+00:00",
+      "source_id": "vnexpress-real-estate",
+      "region_ids": [
+        "ha-noi"
+      ],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "Hơn 6 ha đất gần bến xe Giáp Bát, nơi Aeon Mall từng muốn rót vốn, được chuyển đổi mục đích sử dụng để làm trung tâm thương mại, bãi đỗ xe.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://vnexpress.net/rss/bat-dong-san.rss",
+        "publisher_host": "vnexpress.net",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-322a3e5b8d71cd999ac7",
+      "title": "34 triệu người dân châu Âu phải dành hơn 40% thu nhập trả tiền nhà",
+      "url": "https://dantri.com.vn/bat-dong-san/34-trieu-nguoi-dan-chau-au-phai-danh-hon-40-thu-nhap-tra-tien-nha-20261102110207664.htm",
+      "category": "market",
+      "module_ids": [
+        "market"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-11-02T05:41:00+00:00",
+      "source_id": "dantri-real-estate",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "(Dân trí) - Giá mua, thuê nhà cùng chi phí năng lượng leo thang khiến hơn 34 triệu người dân châu Âu lao đao khi phải trích trên 40% thu nhập chỉ để duy trì chỗ ở.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://dantri.com.vn/rss/bat-dong-san.rss",
+        "publisher_host": "dantri.com.vn",
+        "publication_date_from_feed": true
+      }
+    },
     {
       "id": "article-market-rss-8a83ad4c7ad72be61bca",
       "title": "TP HCM đề xuất rút ngắn thủ tục duyệt dự án nhà ở xã hội",
