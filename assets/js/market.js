@@ -1665,6 +1665,42 @@
       '<small>“Đạt điều kiện nguồn” chưa phải giá đã xác minh; chỉ công bố giá theo căn khi hai lượt độc lập khớp nhau và nguồn còn hiệu lực.</small></div>';
   }
 
+  function landedProjectCoverageHTML(projects) {
+    const providers=[{name:'Muaban',report:data.landedMuabanHealth},
+                     {name:'Nhà Tốt',report:data.landedNhatotHealth}];
+    const now=Date.now();
+    const cards=projects.map(project=>{
+      const sources=providers.flatMap(provider=>{
+        const report=provider.report,checked=Date.parse(report?.generated_at||'');
+        if(!Number.isFinite(checked)||checked>now+3600000||now-checked>72*3600000)return [];
+        return (report.sources||[]).filter(item=>item.project_id===project.id);
+      });
+      if(!sources.length)return '';
+      const total=sources.reduce((n,item)=>n+Number(item.detail_checked??item.urls_checked??0),0);
+      const valid=sources.reduce((n,item)=>n+Number(item.qualified??item.source_qualified??0),0);
+      const expired=sources.reduce((n,item)=>n+Number(item.reasons?.['publisher-expired']||0),0);
+      const blocked=sources.reduce((n,item)=>n+Number(item.reasons?.['http-403']||0),0);
+      const published=[...(data.landedMuabanOffers||[]),...(data.landedNhatotOffers||[])]
+        .filter(item=>item.project_id===project.id&&item.review_status==='automated-two-hosted-dated-checks'
+          &&(item.source_id!=='muaban-vn'||item.source_status==='confirmed-match')
+          &&Number.isFinite(Date.parse(item.last_source_verified_at||item.verified_at||''))
+          &&now-Date.parse(item.last_source_verified_at||item.verified_at||'')<=48*3600000
+          &&(!item.source_expiration_date||item.source_expiration_date>=new Date(now+7*3600000).toISOString().slice(0,10)));
+      const status=published.length?'Có tin đủ điều kiện hiển thị'
+        :valid?'Chờ lượt xác minh độc lập'
+        :expired?'Chỉ có tin hết hạn'
+        :blocked?'Nguồn bị chặn truy cập':'Chưa có tin đạt chuẩn';
+      return '<article class="market-landed-coverage-card"><strong>'+esc(project.name)+'</strong>'+
+        '<span>'+esc(status)+'</span><small>'+total+' tin kiểm tra · '+valid+
+        ' đạt nguồn · '+published.length+' đủ điều kiện hiển thị</small></article>';
+    }).filter(Boolean);
+    if(!cards.length)return '';
+    return '<section class="section market-landed-project-coverage"><div class="section-header"><div>'+
+      '<span class="eyebrow">Nguồn theo dự án</span><h2 class="section-title">Độ phủ tin nhà phố / biệt thự</h2>'+
+      '</div></div><div class="section-body"><div class="market-landed-coverage-grid">'+cards.join('')+
+      '</div><p class="chart-note">Chỉ tính tin đúng dự án và sản phẩm; số tin đạt nguồn chưa phải giá giao dịch hoặc giá đã xác minh.</p></div></section>';
+  }
+
   function verifiedLandedOffersHTML(projects) {
     const allowed=new Set((projects||[]).map(x=>x.id));
     const today=new Date(Date.now()+7*3600000).toISOString().slice(0,10);
