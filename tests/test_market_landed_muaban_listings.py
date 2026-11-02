@@ -177,6 +177,28 @@ class MuabanLandedTests(unittest.TestCase):
                         records,blocked,NOW+timedelta(hours=2),"blocked")
         self.assertEqual(records["data"][0]["source_status"],"not-reconfirmed")
 
+    def test_aqua_city_catalog_and_unrelated_recommendations_are_isolated(self):
+        aqua={"id":"aqua-city","name":"Aqua City","segment_ids":["landed"]}
+        catalog="https://muaban.net/bat-dong-san/ban-nha-mat-tien-du-an-aqua-city-tp-bien-hoa-dong-nai"
+        villa_catalog="https://muaban.net/bat-dong-san/ban-biet-thu-villa-penthouse-du-an-aqua-city-tp-bien-hoa-dong-nai"
+        ad="https://muaban.net/bat-dong-san/ban-nha-mat-tien-tp-bien-hoa-dong-nai/ban-shophouse-aquacity-truc-duong-chinh-45m-khu-stella-id69617830"
+        self.assertEqual(safe_url(catalog),catalog)
+        self.assertEqual(safe_url(villa_catalog),villa_catalog)
+        self.assertEqual(safe_url(ad,True),ad)
+        # A matching headline is NOT project identity. It must appear in the
+        # listing's structured 'Dự án' field, with matching property class.
+        wrong=page(project="Khu Nhà Ở Cao Cấp Hưng Phú 2",
+                   title="Gần Aqua City - nhà đẹp, view thoáng")
+        self.assertEqual(parse_detail(wrong,URL,aqua,NOW)[1],
+                         "project-not-explicit-in-basic-info")
+        actual=page(project="Aqua City",kind="Biệt thự")
+        listing,status=parse_detail(actual,URL,aqua,NOW)
+        self.assertEqual(status,"qualified-unexpired-landed-offer")
+        self.assertEqual(listing["project_id"],"aqua-city")
+        self.assertEqual(listing["product_type"],"villa")
+        self.assertEqual(parse_detail(page(project="Aqua City",kind="Căn hộ"),
+            URL,aqua,NOW)[1],"non-landed-or-ambiguous-product")
+
     def test_source_recheck_heartbeat_requires_live_publisher_page(self):
         original,_=parse_detail(page(),URL,PROJECT,NOW)
         stored={**original,"id":"saved-one","verified_at":"2026-10-31T08:00:00+00:00",
