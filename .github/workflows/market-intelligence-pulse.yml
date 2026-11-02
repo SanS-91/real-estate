@@ -1,0 +1,54 @@
+name: Market intelligence pulse and quality
+
+on:
+  workflow_dispatch:
+  schedule:
+    # 09:40 and 17:40 Asia/Ho_Chi_Minh.
+    - cron: "40 2,10 * * *"
+  push:
+    branches: [main]
+    paths:
+      - "data/mock/articles/articles.json"
+      - "data/mock/market/projects.json"
+      - "data/mock/market/observations.json"
+      - "data/mock/market/listing-observations.json"
+      - "data/state/market-active-listing-coverage.json"
+      - "data/state/listing-source-coverage.json"
+      - "scripts/build_market_daily_pulse.py"
+      - "tests/test_market_daily_pulse.py"
+      - ".github/workflows/market-intelligence-pulse.yml"
+
+permissions:
+  contents: write
+
+concurrency:
+  group: market-intelligence-pulse-main
+  cancel-in-progress: false
+
+jobs:
+  build-market-index:
+    runs-on: ubuntu-latest
+    timeout-minutes: 12
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: true
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Verify source attribution and freshness logic
+        run: python -m unittest discover -s tests -p 'test_market_daily_pulse.py' -v
+      - name: Build derived market pulse (no price estimates)
+        run: python scripts/build_market_daily_pulse.py
+      - name: Publish changed index only
+        run: |
+          if git diff --quiet -- data/processed/market/market-daily-pulse.json; then
+            echo "No derived index update"
+            exit 0
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data/processed/market/market-daily-pulse.json
+          git commit -m "data(market): refresh source-dated project news index and freshness"
+          git pull --rebase origin main
+          git push origin HEAD:main
