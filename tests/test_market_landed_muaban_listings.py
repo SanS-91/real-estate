@@ -143,5 +143,28 @@ class MuabanLandedTests(unittest.TestCase):
         self.assertIsNone(row)
         self.assertEqual(status,"project-not-explicit-in-basic-info")
 
+
+    def test_source_recheck_heartbeat_requires_live_publisher_page(self):
+        original,_=parse_detail(page(),URL,PROJECT,NOW)
+        stored={**original,"id":"saved-one","verified_at":"2026-10-31T08:00:00+00:00",
+                "last_source_verified_at":"2026-10-31T08:00:00+00:00"}
+        target={"project_id":"izumi-city","publisher_project_name":"Izumi City",
+                "catalog_url":CATALOG,"seed_urls":[URL]}
+        good=Session({CATALOG:Response("",url=CATALOG,status=403),
+                      URL:Response(page(),url=URL)})
+        _state,output,health=run({"targets":[target]},{"data":[PROJECT]},{"proofs":{}},
+                                 {"data":[stored]},good,NOW,"hosted-1")
+        self.assertEqual(output["record_count"],1)
+        self.assertEqual(output["data"][0]["last_source_verified_at"],NOW.isoformat())
+        self.assertEqual(health["qualified_offers"],1)
+
+        missing=Session({CATALOG:Response("",url=CATALOG,status=403),
+                         URL:Response("",url=URL,status=403)})
+        _,stale,health=run({"targets":[target]},{"data":[PROJECT]},{"proofs":{}},
+                           output,missing,NOW+timedelta(hours=2),"hosted-2")
+        self.assertEqual(stale["record_count"],1)
+        self.assertEqual(stale["data"][0]["last_source_verified_at"],NOW.isoformat())
+        self.assertEqual(health["qualified_offers"],0)
+
 if __name__=="__main__":
     unittest.main()
