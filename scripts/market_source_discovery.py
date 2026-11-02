@@ -113,10 +113,10 @@ def discover_savills_reports(html: str, index_url: str, max_items: int = 6) -> l
     ):
         return []
     brief = re.compile(
-        r"(?:Viet\\s*Nam\\s+Real\\s+Estate\\s+Market\\s+Brief|"
-        r"Báo\\s+cáo\\s+Thị\\s+trường\\s+Bất\\s+động\\s+sản\\s+Việt\\s+Nam)"
-        r"\\s*Q([1-4])\\s*[/\\- ]?\\s*(20\\d{2})", re.I)
-    article = re.compile(r"^/research_articles/\\d+/\\d+-\\d+(?:/[^?#]*)?/?$", re.I)
+        r"(?:Viet\s*Nam\s+Real\s+Estate\s+Market\s+Brief|"
+        r"Báo\s+cáo\s+Thị\s+trường\s+Bất\s+động\s+sản\s+Việt\s+Nam)"
+        r"\s*Q([1-4])\s*[/\- ]?\s*(20\d{2})", re.I)
+    article = re.compile(r"^/research_articles/\d+/\d+-\d+(?:/[^?#]*)?/?$", re.I)
     soup = BeautifulSoup(html, "lxml")
     found = []
     seen = set()
