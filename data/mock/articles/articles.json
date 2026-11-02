@@ -1,13 +1,67 @@
 {
   "schema_version": 1,
-  "build_id": "market-news-rss-20261102T125142Z",
-  "generated_at": "2026-11-02T12:51:42.843573+00:00",
-  "record_count": 1334,
+  "build_id": "market-news-rss-20261102T145148Z",
+  "generated_at": "2026-11-02T14:51:48.718444+00:00",
+  "record_count": 1336,
   "data": [
+    {
+      "id": "article-market-rss-52d5f6c0908754a86a7c",
+      "title": "Giá vàng lao dốc, ngân hàng Thụy Sĩ vẫn dự báo mốc 5.000 USD",
+      "url": "https://dantri.com.vn/kinh-doanh/gia-vang-lao-doc-ngan-hang-thuy-si-van-du-bao-moc-5000-usd-20261102085225679.htm",
+      "category": "macro",
+      "module_ids": [
+        "macro"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-11-02T12:55:50+00:00",
+      "source_id": "dantri-business",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "(Dân trí) - Dù đợt lao dốc gần 30% từ đỉnh khiến nhiều người mua vàng lỗ nặng, ngân hàng Thụy Sĩ UBS vẫn không đổi dự báo kim loại quý sẽ chạm mốc 5.000 USD/ounce vào năm 2027.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://dantri.com.vn/rss/kinh-doanh.rss",
+        "publisher_host": "dantri.com.vn",
+        "publication_date_from_feed": true
+      }
+    },
     {
       "id": "article-market-rss-f0348325130578cff76d",
       "title": "Người dân Hà Nội mang va li đi nhận tiền bồi thường mở rộng quốc lộ 1A",
       "url": "https://dantri.com.vn/thoi-su/nguoi-dan-ha-noi-mang-va-li-di-nhan-tien-boi-thuong-mo-rong-quoc-lo-1a-20261102183701446.htm",
+      "category": "market",
+      "module_ids": [
+        "infrastructure"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-11-02T12:19:41+00:00",
+      "source_id": "dantri-real-estate",
+      "region_ids": [
+        "ha-noi"
+      ],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [
+        "infrastructure"
+      ],
+      "importance": 2,
+      "summary": "(Dân trí) - Chiều 2/11, 32 hộ dân ở xã Ngọc Hồi (Hà Nội) nhận tiền bồi thường mở rộng quốc lộ 1A. Nhiều gia đình mang va li, túi lớn để đựng số tiền hàng tỷ đồng, có hộ nhận hàng chục tỷ đồng.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://dantri.com.vn/rss/bat-dong-san.rss",
+        "publisher_host": "dantri.com.vn",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-e271f040bb40276a880a",
+      "title": "Nhiều người dân Hà Nội mang va li đi nhận tiền bồi thường mở rộng quốc lộ 1A",
+      "url": "https://dantri.com.vn/thoi-su/nhieu-nguoi-dan-ha-noi-mang-va-li-di-nhan-tien-boi-thuong-mo-rong-quoc-lo-1a-20261102183701446.htm",
       "category": "market",
       "module_ids": [
         "infrastructure"
