@@ -1,8 +1,8 @@
 {
   "schema_version": 1,
-  "build_id": "infrastructure-coverage-expansion-20261102",
+  "build_id": "infrastructure-hai-phong-20261102",
   "generated_at": "2026-10-08T15:08:55.288Z",
-  "record_count": 13,
+  "record_count": 18,
   "data": [
     {
       "id": "long-thanh-airport",
@@ -305,6 +305,101 @@
       "summary": "Theo dõi kết nối vùng công nghiệp và khu đô thị phía Bắc TPHCM.",
       "source_date": "2026-07-20",
       "source_url": "https://tphcm.baochinhphu.vn/tphcm-tim-loi-giai-de-tang-toc-dot-pha-ha-tang-giao-thong-101260720094147879.htm"
+    },
+    {
+      "id": "hai-phong-ring-road-2",
+      "name": "Vành đai 2 Hải Phòng – Tân Vũ, Hưng Đạo, Bùi Viện",
+      "infrastructure_type": "ring-road",
+      "region_ids": [
+        "hai-phong"
+      ],
+      "status": "under-construction",
+      "location_text": "Tân Vũ – Hưng Đạo – Bùi Viện, Hải Phòng",
+      "scale_text": "Tuyến khoảng 11 km; thời gian thực hiện dự án theo chủ trương điều chỉnh 2021–2028.",
+      "current_expected_completion": "2028",
+      "completion_date_precision": "year",
+      "current_progress_percent": null,
+      "current_progress_note": "Chưa có tỷ lệ tiến độ toàn dự án đủ điều kiện; kiểm tra theo nguồn và ngày công bố.",
+      "related_real_estate_project_ids": [],
+      "summary": "Dự án trọng điểm Hải Phòng; theo dõi tiến độ, kết nối đô thị và tác động đến thị trường bất động sản.",
+      "source_date": "2025-06-11",
+      "source_url": "https://moc.gov.vn/vn/Pages/chitiettin.aspx?ChuyenmucID=1184&IDNews=85919&tieude=hai-phong-can-doi-nguon-luc-trien-khai-cac-du-an-giao-thong--trong-diem-cua-thanh-pho-giai-doan-2026-2030.aspx"
+    },
+    {
+      "id": "hai-phong-ninh-binh-expressway-van-uc-2",
+      "name": "Cao tốc Ninh Bình – Hải Phòng / cầu Văn Úc 2",
+      "infrastructure_type": "expressway",
+      "region_ids": [
+        "hai-phong"
+      ],
+      "status": "under-construction",
+      "location_text": "Kiến Hải – Hùng Thắng, Hải Phòng",
+      "scale_text": "Cầu Văn Úc 2 dài 2.217 m; dự án thực hiện 2026–2028, đã khởi công 14/05/2026.",
+      "current_expected_completion": "2028",
+      "completion_date_precision": "year",
+      "current_progress_percent": null,
+      "current_progress_note": "Chưa có tỷ lệ tiến độ toàn dự án đủ điều kiện; kiểm tra theo nguồn và ngày công bố.",
+      "related_real_estate_project_ids": [],
+      "summary": "Dự án trọng điểm Hải Phòng; theo dõi tiến độ, kết nối đô thị và tác động đến thị trường bất động sản.",
+      "source_date": "2026-05-14",
+      "source_url": "https://kienhai.haiphong.gov.vn/du-an-de-tai/le-khoi-cong-du-an-dau-tu-xay-dung-tuyen-duong-bo-cao-toc-ninh-binh-hai-phong-ct-08-xay-dung-cau-899259"
+    },
+    {
+      "id": "hai-phong-lach-huyen-berths-7-8",
+      "name": "Cảng Lạch Huyện – bến số 7 và 8",
+      "infrastructure_type": "seaport",
+      "region_ids": [
+        "hai-phong"
+      ],
+      "status": "planning",
+      "location_text": "Lạch Huyện, Hải Phòng",
+      "scale_text": "Dự án cảng nước sâu trong danh mục trọng điểm 2026, tổng vốn dự kiến hơn 12.792 tỷ đồng.",
+      "current_expected_completion": null,
+      "completion_date_precision": null,
+      "current_progress_percent": null,
+      "current_progress_note": "Chưa có tỷ lệ tiến độ toàn dự án đủ điều kiện; kiểm tra theo nguồn và ngày công bố.",
+      "related_real_estate_project_ids": [],
+      "summary": "Dự án trọng điểm Hải Phòng; theo dõi tiến độ, kết nối đô thị và tác động đến thị trường bất động sản.",
+      "source_date": "2026-01-01",
+      "source_url": "https://baodautu.vn/hai-phong-tang-toc-trien-khai-loat-du-an-trong-diem-nam-2026-d548880.html"
+    },
+    {
+      "id": "hai-phong-tan-vu-lach-huyen-2",
+      "name": "Tuyến đường Tân Vũ – Lạch Huyện 2",
+      "infrastructure_type": "road",
+      "region_ids": [
+        "hai-phong"
+      ],
+      "status": "planning",
+      "location_text": "Hải Phòng – Cát Hải",
+      "scale_text": "Nằm trong danh mục 48 công trình trọng điểm giai đoạn 2026–2030; chưa xác minh tiến độ thi công.",
+      "current_expected_completion": null,
+      "completion_date_precision": null,
+      "current_progress_percent": null,
+      "current_progress_note": "Chưa có tỷ lệ tiến độ toàn dự án đủ điều kiện; kiểm tra theo nguồn và ngày công bố.",
+      "related_real_estate_project_ids": [],
+      "summary": "Dự án trọng điểm Hải Phòng; theo dõi tiến độ, kết nối đô thị và tác động đến thị trường bất động sản.",
+      "source_date": "2025-11-25",
+      "source_url": "https://hatay.haiphong.gov.vn/thong-tin-chuyen-de/48-du-an-cong-trinh-trong-diem-giai-doan-2026-2030-cua-hai-phong-822630"
+    },
+    {
+      "id": "hai-phong-nguyen-trai-bridge",
+      "name": "Cầu Nguyễn Trãi và chỉnh trang đô thị phụ cận",
+      "infrastructure_type": "bridge",
+      "region_ids": [
+        "hai-phong"
+      ],
+      "status": "under-construction",
+      "location_text": "Khu vực cầu Nguyễn Trãi, Hải Phòng",
+      "scale_text": "Công trình kết nối và chỉnh trang đô thị trọng điểm; tiến độ các gói cầu, đường dẫn và hầm chui khác nhau.",
+      "current_expected_completion": null,
+      "completion_date_precision": null,
+      "current_progress_percent": null,
+      "current_progress_note": "Chưa có tỷ lệ tiến độ toàn dự án đủ điều kiện; kiểm tra theo nguồn và ngày công bố.",
+      "related_real_estate_project_ids": [],
+      "summary": "Dự án trọng điểm Hải Phòng; theo dõi tiến độ, kết nối đô thị và tác động đến thị trường bất động sản.",
+      "source_date": "2026-09-01",
+      "source_url": "https://congnghiepnongthon.vn/hai-phong-chot-moc-thong-xe-cho-5-du-an-ha-tang-trong-diem-tri-gia-hon-21-000-ty-dong-4275.htm"
     }
   ]
 }
