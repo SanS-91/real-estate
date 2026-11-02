@@ -1,0 +1,82 @@
+name: Market Landed Muaban Dated Offers
+on:
+  workflow_dispatch:
+  schedule:
+    # 10:45 and 16:45 Vietnam (UTC+7)
+    - cron: '45 3,9 * * *'
+  push:
+    branches: [main]
+    paths:
+      - 'config/market-landed-muaban-targets.json'
+      - 'scripts/market_landed_muaban_listings.py'
+      - 'scripts/market_landed_unit_listings.py'
+      - 'tests/test_market_landed_muaban_listings.py'
+      - '.github/workflows/market-landed-muaban-listings.yml'
+permissions:
+  contents: write
+concurrency:
+  group: market-landed-muaban-independent
+  cancel-in-progress: false
+jobs:
+  verify-landed-muaban:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Install source dependencies
+        run: python -m pip install requests beautifulsoup4 lxml
+      - name: Test price, land area, source dates and expiry evidence
+        run: |
+          python -m py_compile scripts/market_landed_muaban_listings.py scripts/market_landed_unit_listings.py
+          python -m unittest discover -s tests -p 'test_market_landed_muaban_listings.py' -v
+      - name: Independently inspect and save publisher proofs
+        run: |
+          set -eu
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          for attempt in 1 2 3; do
+            git fetch origin main
+            git reset --hard origin/main
+            python scripts/market_landed_muaban_listings.py
+            python - <<'PY'
+          import json
+          from pathlib import Path
+          data=json.loads(Path('data/mock/market/verified-landed-muaban-listings.json').read_text())
+          health=json.loads(Path('data/state/market-landed-muaban-source-health.json').read_text())
+          assert data['record_count']==len(data['data'])
+          assert health['sources_checked']>=1 and health['no_project_asp_or_deals']
+          for row in data['data']:
+              assert row['source_id']=='muaban-vn' and row['asset_type']=='landed'
+              assert row['review_status']=='automated-two-hosted-dated-checks'
+              assert len(set(row['verification_run_ids']))==2
+              assert row['source_expiration_date']>=row['source_listed_date']
+              assert row['value_vnd_per_land_m2']>0 and row['listed_land_area_sqm']>0
+              assert 'average_asp' not in row and 'sales_units' not in row
+          print('PASS: Muaban landed source evidence isolated and dated')
+          PY
+            git add data/state/market-landed-muaban-verification.json data/mock/market/verified-landed-muaban-listings.json data/state/market-landed-muaban-source-health.json
+            if git diff --cached --quiet; then
+              echo 'No source evidence changed'
+              exit 0
+            fi
+            git commit -m 'data(market): verify dated Muaban landed offer evidence'
+            if git push origin HEAD:main; then
+              echo 'Saved Muaban landed evidence'
+              exit 0
+            fi
+            sleep 3
+          done
+          exit 1
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: market-landed-muaban-dated-offer-proof
+          path: |
+            data/state/market-landed-muaban-verification.json
+            data/mock/market/verified-landed-muaban-listings.json
+            data/state/market-landed-muaban-source-health.json
+          retention-days: 21
+          if-no-files-found: warn
