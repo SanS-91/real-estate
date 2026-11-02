@@ -5,7 +5,7 @@
   "source_host": "muaban.net",
   "scope": "landed-individual-sale-offers",
   "release_policy": "source-id/start-expiry/land-area/total-price exact and two independent hosted runs >=1h apart",
-  "description": "Muaban dated individual landed ads, separate from current apartment pipeline. Expired, miscategorized, multiple-offer or undated listings are never published. Current seed is a provider-specific project detail, not a developer price.",
+  "description": "Exact publisher project field, land area, total asking amount, listing validity and two independent checks required. Broad regional catalogs are discovery only and never prove project identity. No project averages.",
   "targets": [
     {
       "project_id": "izumi-city",
@@ -14,7 +14,27 @@
       "seed_urls": [
         "https://muaban.net/bat-dong-san/ban-nha-mat-tien-du-an-izumi-city-tp-bien-hoa-dong-nai/nha-pho-izumi-city-mat-tien-kenh-canh-quan-lon-song-giua-mang-xanh-id71272223",
         "https://muaban.net/bat-dong-san/ban-nha-mat-tien-du-an-izumi-city-tp-bien-hoa-dong-nai/mua-nha-izumi-city-nhan-nha-11-2026-chi-dong-tong-4-8-ty-id71146157"
-      ]
+      ],
+      "publisher_project_name": "Izumi City"
+    },
+    {
+      "project_id": "waterpoint",
+      "project_name": "Waterpoint",
+      "publisher_project_name": "Khu Đô Thị Waterpoint",
+      "catalog_url": "https://muaban.net/bat-dong-san/ban-nha-mat-tien-huyen-ben-luc-long-an",
+      "catalog_scope": "regional-broad-only",
+      "seed_urls": []
+    },
+    {
+      "project_id": "the-global-city",
+      "project_name": "The Global City",
+      "publisher_project_name": "The Global City",
+      "catalog_url": "https://muaban.net/bat-dong-san/ban-nha-mat-tien-du-an-the-global-city-quan-2-ho-chi-minh",
+      "catalog_urls": [
+        "https://muaban.net/bat-dong-san/ban-biet-thu-villa-penthouse-du-an-the-global-city-quan-2-ho-chi-minh"
+      ],
+      "catalog_scope": "publisher-project-category",
+      "seed_urls": []
     }
   ]
 }
