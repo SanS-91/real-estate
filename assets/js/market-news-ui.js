@@ -119,14 +119,23 @@
       return definition[2].test(text);
     }
     if (topic === 'all') return true;
-    const tags = article.tags || [];
+    const tags=Array.isArray(article.tags)?article.tags:[];
+    const title=foldNews(article.title||'');
+    const editorTopic=window.HomeEditorial?.topic?.('market',article.title||'');
     if (topic === 'projects') {
-      return (article.project_ids || []).length > 0 ||
-        article.content_type === 'developer-update' ||
-        tags.includes('project-update') || tags.includes('launch');
+      return (article.project_ids||[]).length>0 || editorTopic==='projects' ||
+        article.content_type==='developer-update' || tags.includes('project-update') || tags.includes('launch');
     }
-    if (topic === 'research') return article.content_type === 'research';
-    return tags.includes(topic);
+    if (topic === 'research') return article.content_type==='research';
+    if (tags.includes(topic)) return true;
+    // RSS often lacks precise topic tags: classify from headline only, not
+    // body text. Avoid implying numeric changes without verified observations.
+    if (topic==='pricing') return editorTopic==='prices' || /gia ban|gia can ho|gia nha|gia dat|gia thue|giam gia/.test(title);
+    if (topic==='supply') return /nguon cung|mo ban|can ho moi|san pham moi|hang moi ra/.test(title);
+    if (topic==='sales') return editorTopic==='transactions' || /giao dich|hap thu|tieu thu|thanh khoan|ton kho|doanh so/.test(title);
+    if (topic==='legal') return /phap ly|quy hoach|luat dat dai|nghi dinh|thong tu|tien su dung dat|bang gia dat/.test(title);
+    if (topic==='infrastructure') return /cao toc|vanh dai|metro|san bay|duong sat|cau duong|ha tang/.test(title);
+    return false;
   }
   function articleTopic(article, module = 'market') {
     if (module !== 'market') return availableTopics(module).find(([id]) => id !== 'all' && topicMatch(article, id, module))?.[0] || 'all';
