@@ -68,6 +68,18 @@ class MuabanLandedTests(unittest.TestCase):
         self.assertEqual(status,"qualified-unexpired-landed-offer")
         self.assertEqual(row["listing_price_vnd"],11_300_000_000)
 
+    def test_upfront_amount_equal_header_price_rejected(self):
+        row,status=parse_detail(
+            page(price="4,8 tỷ",title="Mua Izumi City chỉ đóng tổng 4,8 tỷ ban đầu"),
+            URL,PROJECT,NOW)
+        self.assertIsNone(row)
+        self.assertEqual(status,"header-total-matches-upfront-only-title")
+        row,status=parse_detail(
+            page(title="Giá từ 7 tỷ, giỏ hàng nhiều căn Izumi City"),
+            URL,PROJECT,NOW)
+        self.assertIsNone(row)
+        self.assertEqual(status,"non-single-unit-sale-heading")
+
     def test_wrong_project_and_landed_type_rejected(self):
         self.assertEqual(parse_detail(page(project="Aqua City"),URL,PROJECT,NOW)[1],"project-not-explicit-in-basic-info")
         self.assertEqual(parse_detail(page(kind="Nhà ở xã hội"),URL,PROJECT,NOW)[1],"non-landed-or-ambiguous-product")
