@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "build_id": "market-research-briefs-q3-2026-20261102",
-  "record_count": 2,
+  "record_count": 3,
   "data": [
     {
       "id": "savills-hcmc-residential-q3-2026",
@@ -52,6 +52,45 @@
         "developer_asp"
       ],
       "geography_note": "Theo phạm vi danh sách Sở Xây dựng được Savills trích dẫn."
+    },
+    {
+      "id": "savills-hcmc-press-q3-2026-quantified",
+      "region_ids": [
+        "hcmc"
+      ],
+      "segment_ids": [
+        "apartment"
+      ],
+      "period": "2026-Q3",
+      "period_type": "quarter",
+      "source_id": "savills-vietnam-market",
+      "source_date": "2026-10-17",
+      "source_url": "https://www.tinnhanhchungkhoan.vn/thi-truong-nha-o-tphcm-quy-iii2026-nguon-cau-suy-yeu-post399627.html",
+      "publisher_report_url": "https://www.savills.com.vn/research_articles/226576/239329-0",
+      "supporting_source_urls": [
+        "https://bnews.vn/bat-dong-san-tp-ho-chi-minh-nhu-cau-thuc-dan-dat-thi-truong/440973.html",
+        "https://www.tinnhanhchungkhoan.vn/thi-truong-nha-o-tphcm-quy-iii2026-nguon-cau-suy-yeu-post399627.html"
+      ],
+      "title": "Q3/2026 · Savills qua hai nguồn báo chí: mở bán 1.900 căn, giao dịch khoảng 1.400 căn",
+      "summary": "Báo Đầu tư Chứng khoán và Bnews cùng dẫn Savills: khoảng 1.900 căn mở bán mới, nguồn cung sơ cấp khoảng 5.800 căn, xấp xỉ 1.400 giao dịch; tỷ lệ hấp thụ thị trường khoảng 25%. Chưa đối chiếu bảng dữ liệu gốc Savills. Không ghép tự động với chuỗi CBRE/Cushman hoặc địa giới khác.",
+      "reported_indicators": {
+        "new_launches_units_approx": 1900,
+        "primary_stock_units_approx": 5800,
+        "transactions_units_approx": 1400,
+        "market_absorption_rate_approx": 0.25,
+        "note": "Approximate press-reported Savills market data; denominator is total primary stock, not new launches; do not recompute rate from reported counts."
+      },
+      "data_basis": "press-attributed-secondary-confirmation-only",
+      "verification_status": "secondary-corroborated-not-publisher-table-verified",
+      "evidence_scope": "Savills HCMC apartment Q3/2026 as reported by two publications",
+      "not_equivalent_to": [
+        "cbre-series",
+        "cushman-series",
+        "verified-publisher-quarter",
+        "developer-asp",
+        "absorption-of-new-launches"
+      ],
+      "geography_note": "Giới hạn phạm vi theo báo cáo Savills, không suy rộng sang địa giới TP.HCM mở rộng sau sáp nhập."
     }
   ]
 }
