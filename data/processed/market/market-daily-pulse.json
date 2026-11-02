@@ -1,21 +1,392 @@
 {
   "schema_version": 1,
-  "build_status": "bootstrap-article-index-pending-workflow",
-  "generated_at": null,
+  "generated_at": "2026-11-02T07:52:28+00:00",
   "description": "Derived market article-to-project index and evidence freshness; not live price or transactions.",
   "source_scope": "existing publisher articles + dated project and market JSON",
   "project_count": 18,
-  "articles_screened_30d": null,
-  "inferred_headline_associations_30d": null,
-  "projects_with_articles_30d": null,
-  "project_updates": [],
-  "article_index": [],
+  "articles_screened_30d": 1230,
+  "inferred_headline_associations_30d": 1,
+  "projects_with_articles_30d": 8,
+  "project_updates": [
+    {
+      "project_id": "waterpoint",
+      "project_name": "Waterpoint",
+      "region_ids": [
+        "long-an"
+      ],
+      "matched_articles_30d": 9,
+      "matched_articles_7d": 1,
+      "last_article_at": "2026-10-31T02:00:00+00:00"
+    },
+    {
+      "project_id": "the-global-city",
+      "project_name": "The Global City",
+      "region_ids": [
+        "hcmc"
+      ],
+      "matched_articles_30d": 5,
+      "matched_articles_7d": 0,
+      "last_article_at": "2026-10-23T01:00:00+00:00"
+    },
+    {
+      "project_id": "aqua-city",
+      "project_name": "Aqua City",
+      "region_ids": [
+        "dong-nai"
+      ],
+      "matched_articles_30d": 4,
+      "matched_articles_7d": 3,
+      "last_article_at": "2026-10-31T10:14:00+00:00"
+    },
+    {
+      "project_id": "izumi-city",
+      "project_name": "Izumi City",
+      "region_ids": [
+        "dong-nai"
+      ],
+      "matched_articles_30d": 3,
+      "matched_articles_7d": 1,
+      "last_article_at": "2026-11-02T02:00:00+00:00"
+    },
+    {
+      "project_id": "mizuki-park",
+      "project_name": "Mizuki Park",
+      "region_ids": [
+        "hcmc"
+      ],
+      "matched_articles_30d": 3,
+      "matched_articles_7d": 1,
+      "last_article_at": "2026-10-31T02:00:00+00:00"
+    },
+    {
+      "project_id": "celesta-gold",
+      "project_name": "Celesta Gold",
+      "region_ids": [
+        "hcmc"
+      ],
+      "matched_articles_30d": 2,
+      "matched_articles_7d": 0,
+      "last_article_at": "2026-10-21T02:00:47+00:00"
+    },
+    {
+      "project_id": "elyse-island",
+      "project_name": "Elyse Island",
+      "region_ids": [
+        "dong-nai"
+      ],
+      "matched_articles_30d": 1,
+      "matched_articles_7d": 1,
+      "last_article_at": "2026-11-02T02:00:00+00:00"
+    },
+    {
+      "project_id": "akari-city",
+      "project_name": "Akari City",
+      "region_ids": [
+        "hcmc"
+      ],
+      "matched_articles_30d": 1,
+      "matched_articles_7d": 0,
+      "last_article_at": "2026-10-13T09:00:00+07:00"
+    },
+    {
+      "project_id": "eaton-park",
+      "project_name": "Eaton Park",
+      "region_ids": [
+        "hcmc"
+      ],
+      "matched_articles_30d": 0,
+      "matched_articles_7d": 0,
+      "last_article_at": null
+    },
+    {
+      "project_id": "elysian",
+      "project_name": "Elysian",
+      "region_ids": [
+        "hcmc"
+      ],
+      "matched_articles_30d": 0,
+      "matched_articles_7d": 0,
+      "last_article_at": null
+    },
+    {
+      "project_id": "the-privia",
+      "project_name": "The Privia",
+      "region_ids": [
+        "hcmc"
+      ],
+      "matched_articles_30d": 0,
+      "matched_articles_7d": 0,
+      "last_article_at": null
+    },
+    {
+      "project_id": "vinhomes-grand-park",
+      "project_name": "Vinhomes Grand Park",
+      "region_ids": [
+        "hcmc"
+      ],
+      "matched_articles_30d": 0,
+      "matched_articles_7d": 0,
+      "last_article_at": null
+    },
+    {
+      "project_id": "the-9-stellars",
+      "project_name": "The 9 Stellars",
+      "region_ids": [
+        "hcmc"
+      ],
+      "matched_articles_30d": 0,
+      "matched_articles_7d": 0,
+      "last_article_at": null
+    },
+    {
+      "project_id": "essensia-parkway",
+      "project_name": "Essensia Parkway",
+      "region_ids": [
+        "hcmc"
+      ],
+      "matched_articles_30d": 0,
+      "matched_articles_7d": 0,
+      "last_article_at": null
+    },
+    {
+      "project_id": "lumiere-riverside",
+      "project_name": "Lumière Riverside",
+      "region_ids": [
+        "hcmc"
+      ],
+      "matched_articles_30d": 0,
+      "matched_articles_7d": 0,
+      "last_article_at": null
+    },
+    {
+      "project_id": "nam-long-ii-central-lake",
+      "project_name": "Nam Long II Central Lake",
+      "region_ids": [
+        "can-tho"
+      ],
+      "matched_articles_30d": 0,
+      "matched_articles_7d": 0,
+      "last_article_at": null
+    },
+    {
+      "project_id": "springville",
+      "project_name": "Springville",
+      "region_ids": [
+        "dong-nai"
+      ],
+      "matched_articles_30d": 0,
+      "matched_articles_7d": 0,
+      "last_article_at": null
+    },
+    {
+      "project_id": "kita-airport-city",
+      "project_name": "KITA Airport City (Stella Mega City)",
+      "region_ids": [
+        "can-tho"
+      ],
+      "matched_articles_30d": 0,
+      "matched_articles_7d": 0,
+      "last_article_at": null
+    }
+  ],
+  "article_index": [
+    {
+      "project_id": "izumi-city",
+      "article_id": "article-market-rss-3cc68c5d526933842d21",
+      "title": "Clubhouse Izumi Canaria: Điểm hẹn bên dòng kênh xanh",
+      "url": "https://dantri.com.vn/bat-dong-san/clubhouse-izumi-canaria-diem-hen-ben-dong-kenh-xanh-20261101153355885.htm",
+      "source_id": "dantri-real-estate",
+      "published_at": "2026-11-02T02:00:00+00:00",
+      "match_method": "source-project-id",
+      "category": "market"
+    },
+    {
+      "project_id": "elyse-island",
+      "article_id": "article-market-rss-5b18b87c952204cc7935",
+      "title": "Elyse Island: Sống riêng tư, trọn nhịp kết nối trên đảo tự nhiên",
+      "url": "https://dantri.com.vn/bat-dong-san/elyse-island-song-rieng-tu-tron-nhip-ket-noi-tren-dao-tu-nhien-20261031110736399.htm",
+      "source_id": "dantri-real-estate",
+      "published_at": "2026-11-02T02:00:00+00:00",
+      "match_method": "source-project-id",
+      "category": "market"
+    },
+    {
+      "project_id": "aqua-city",
+      "article_id": "article-market-rss-b7d77648751ea29c64bb",
+      "title": "Gần 1.000 khách hàng đổ về dự án Aqua City",
+      "url": "https://thanhnien.vn/gan-1000-khach-hang-do-ve-du-an-aqua-city-185261031155513096.htm",
+      "source_id": "thanhnien-real-estate",
+      "published_at": "2026-10-31T10:14:00+00:00",
+      "match_method": "source-project-id",
+      "category": "market"
+    },
+    {
+      "project_id": "aqua-city",
+      "article_id": "article-market-rss-1d594330f94d0352e065",
+      "title": "Aqua City hút hàng nghìn khách tham quan, trải nghiệm",
+      "url": "https://vnexpress.net/aqua-city-hut-hang-nghin-khach-tham-quan-trai-nghiem-5139136.html",
+      "source_id": "vnexpress-real-estate",
+      "published_at": "2026-10-31T07:00:00+00:00",
+      "match_method": "source-project-id",
+      "category": "market"
+    },
+    {
+      "project_id": "waterpoint",
+      "article_id": "article-market-rss-12cf03f64127c3f02b99",
+      "title": "Những khu đô thị 'đồng kiến tạo' giữa Nam Long và đối tác Nhật",
+      "url": "https://vnexpress.net/nhung-khu-do-thi-dong-kien-tao-giua-nam-long-va-doi-tac-nhat-5138966.html",
+      "source_id": "vnexpress-real-estate",
+      "published_at": "2026-10-31T02:00:00+00:00",
+      "match_method": "source-project-id",
+      "category": "market"
+    },
+    {
+      "project_id": "mizuki-park",
+      "article_id": "article-market-rss-12cf03f64127c3f02b99",
+      "title": "Những khu đô thị 'đồng kiến tạo' giữa Nam Long và đối tác Nhật",
+      "url": "https://vnexpress.net/nhung-khu-do-thi-dong-kien-tao-giua-nam-long-va-doi-tac-nhat-5138966.html",
+      "source_id": "vnexpress-real-estate",
+      "published_at": "2026-10-31T02:00:00+00:00",
+      "match_method": "source-project-id",
+      "category": "market"
+    },
+    {
+      "project_id": "aqua-city",
+      "article_id": "article-market-rss-b3dcc4a88231d29c7bc4",
+      "title": "Aqua City tăng tốc hoàn thiện, liên tục đón thêm cư dân",
+      "url": "https://vnexpress.net/aqua-city-tang-toc-hoan-thien-lien-tuc-don-them-cu-dan-5138192.html",
+      "source_id": "vnexpress-real-estate",
+      "published_at": "2026-10-29T03:00:00+00:00",
+      "match_method": "source-project-id",
+      "category": "market"
+    },
+    {
+      "project_id": "izumi-city",
+      "article_id": "article-market-nam-long-discovered-e6a3bfb95586646a",
+      "title": "Hạ tầng tăng tốc, loạt dự án bất động sản ở Đồng Nai hưởng lợi",
+      "url": "https://www.namlongvn.com/tin-tuc/ha-tang-tang-toc-loat-du-an-bat-dong-san-o-dong-nai-huong-loi/",
+      "source_id": "nam-long-official",
+      "published_at": "2026-10-26T09:00:00+07:00",
+      "match_method": "source-project-id",
+      "category": "market"
+    },
+    {
+      "project_id": "the-global-city",
+      "article_id": "article-market-rss-38912199d4417f947b81",
+      "title": "Từ chuẩn mực quốc tế đến nhịp sống thực tế: Điều làm nên sức sống của The Global City",
+      "url": "https://dantri.com.vn/bat-dong-san/tu-chuan-muc-quoc-te-den-nhip-song-thuc-te-dieu-lam-nen-suc-song-cua-the-global-city-20261022151855796.htm",
+      "source_id": "dantri-real-estate",
+      "published_at": "2026-10-23T01:00:00+00:00",
+      "match_method": "source-project-id",
+      "category": "market"
+    },
+    {
+      "project_id": "celesta-gold",
+      "article_id": "article-market-rss-c8bbf2581f3afc8b482c",
+      "title": "Dự án của Keppel và Phú Long nhận giải thưởng về chất lượng sống",
+      "url": "https://vnexpress.net/du-an-cua-keppel-va-phu-long-nhan-giai-thuong-ve-chat-luong-song-5134259.html",
+      "source_id": "vnexpress-real-estate",
+      "published_at": "2026-10-21T02:00:47+00:00",
+      "match_method": "source-project-id",
+      "category": "market"
+    },
+    {
+      "project_id": "waterpoint",
+      "article_id": "article-market-rss-62b76447d5908cafce28",
+      "title": "Khu đô thị Waterpoint được vinh danh tại PropertyGuru Vietnam Property Awards 2026",
+      "url": "https://dantri.com.vn/bat-dong-san/khu-do-thi-waterpoint-duoc-vinh-danh-tai-propertyguru-vietnam-property-awards-2026-20261020092045407.htm",
+      "source_id": "dantri-real-estate",
+      "published_at": "2026-10-20T03:00:00+00:00",
+      "match_method": "source-project-id",
+      "category": "market"
+    },
+    {
+      "project_id": "the-global-city",
+      "article_id": "article-market-rss-4f11223fb8948ed84005",
+      "title": "Soho phát triển không gian thương mại từ tinh thần phố Việt",
+      "url": "https://vnexpress.net/soho-phat-trien-khong-gian-thuong-mai-tu-tinh-than-pho-viet-5133009.html",
+      "source_id": "vnexpress-real-estate",
+      "published_at": "2026-10-20T01:00:00+00:00",
+      "match_method": "source-project-id",
+      "category": "market"
+    },
+    {
+      "project_id": "waterpoint",
+      "article_id": "article-market-nam-long-discovered-fde6e1a9a70a7572",
+      "title": "Waterpoint vừa được xướng tên tại PropertyGuru Vietnam Property Awards 2026: Khi tầm nhìn quy hoạch hóa thành sức sống thực",
+      "url": "https://www.namlongvn.com/tin-tuc/waterpoint-vua-duoc-xuong-ten-tai-propertyguru-vietnam-property-awards-2026-khi-tam-nhin-quy-hoach-hoa-thanh-suc-song-thuc/",
+      "source_id": "nam-long-official",
+      "published_at": "2026-10-19T09:00:00+07:00",
+      "match_method": "source-project-id",
+      "category": "market"
+    },
+    {
+      "project_id": "celesta-gold",
+      "article_id": "article-market-rss-484055e1018973bb8ee7",
+      "title": "Dự án Celesta Gold ghi dấu ấn tại Propertyguru Vietnam Property Awards 2026",
+      "url": "https://dantri.com.vn/bat-dong-san/du-an-celesta-gold-ghi-dau-an-tai-propertyguru-vietnam-property-awards-2026-20261019113436255.htm",
+      "source_id": "dantri-real-estate",
+      "published_at": "2026-10-19T04:44:53+00:00",
+      "match_method": "source-project-id",
+      "category": "market"
+    },
+    {
+      "project_id": "izumi-city",
+      "article_id": "article-market-rss-8b0ea981f65158f2a020",
+      "title": "Izumi City vận dụng kinh nghiệm phát triển đô thị từ Nhật Bản",
+      "url": "https://vnexpress.net/izumi-city-van-dung-kinh-nghiem-phat-trien-do-thi-tu-nhat-ban-5133883.html",
+      "source_id": "vnexpress-real-estate",
+      "published_at": "2026-10-19T02:00:00+00:00",
+      "match_method": "source-project-id",
+      "category": "market"
+    },
+    {
+      "project_id": "the-global-city",
+      "article_id": "article-market-rss-6d3e98bd328eb1068546",
+      "title": "Sola phát triển hệ tiện ích phục vụ lối sống khỏe",
+      "url": "https://vnexpress.net/sola-phat-trien-he-tien-ich-phuc-vu-loi-song-khoe-5132265.html",
+      "source_id": "vnexpress-real-estate",
+      "published_at": "2026-10-19T01:00:00+00:00",
+      "match_method": "source-project-id",
+      "category": "market"
+    },
+    {
+      "project_id": "mizuki-park",
+      "article_id": "article-market-nam-long-discovered-75839f03ae4c873f",
+      "title": "Chủ tịch Nam Long NGUYỄN XUÂN QUANG: Làm kinh doanh, doanh nghiệp phải chịu thiệt, có như thế mới giữ được lòng tin khách hàng",
+      "url": "https://www.namlongvn.com/tin-tuc/chu-tich-nam-long-nguyen-xuan-quang-lam-kinh-doanh-doanh-nghiep-phai-chiu-thiet-co-nhu-the-moi-giu-duoc-long-tin-khach-hang/",
+      "source_id": "nam-long-official",
+      "published_at": "2026-10-13T09:00:00+07:00",
+      "match_method": "source-project-id",
+      "category": "market"
+    },
+    {
+      "project_id": "akari-city",
+      "article_id": "article-market-nam-long-discovered-75839f03ae4c873f",
+      "title": "Chủ tịch Nam Long NGUYỄN XUÂN QUANG: Làm kinh doanh, doanh nghiệp phải chịu thiệt, có như thế mới giữ được lòng tin khách hàng",
+      "url": "https://www.namlongvn.com/tin-tuc/chu-tich-nam-long-nguyen-xuan-quang-lam-kinh-doanh-doanh-nghiep-phai-chiu-thiet-co-nhu-the-moi-giu-duoc-long-tin-khach-hang/",
+      "source_id": "nam-long-official",
+      "published_at": "2026-10-13T09:00:00+07:00",
+      "match_method": "source-project-id",
+      "category": "market"
+    },
+    {
+      "project_id": "mizuki-park",
+      "article_id": "article-market-rss-4a048dfa2b3363079aea",
+      "title": "Diện mạo của một khu đô thị hạnh phúc nhìn từ nụ cười trẻ thơ",
+      "url": "https://thanhnien.vn/dien-mao-cua-mot-khu-do-thi-hanh-phuc-nhin-tu-nu-cuoi-tre-tho-185261009153949439.htm",
+      "source_id": "thanhnien-real-estate",
+      "published_at": "2026-10-09T09:30:00+00:00",
+      "match_method": "source-project-id",
+      "category": "market"
+    }
+  ],
   "data_freshness": {
     "listing_aggregate": {
       "observation_date": "2026-10-09",
       "age_days": 24,
       "stale": true,
-      "record_count": 18,
+      "record_count": 14,
       "metric_basis": "historical portal asking ranges, not transactions"
     },
     "supply_sales_research": {
