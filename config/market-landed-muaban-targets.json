@@ -1,0 +1,20 @@
+{
+  "schema_version": 1,
+  "updated_at": "2026-11-02",
+  "source_id": "muaban-vn",
+  "source_host": "muaban.net",
+  "scope": "landed-individual-sale-offers",
+  "release_policy": "source-id/start-expiry/land-area/total-price exact and two independent hosted runs >=1h apart",
+  "description": "Muaban dated individual landed ads, separate from current apartment pipeline. Expired, miscategorized, multiple-offer or undated listings are never published. Current seed is a provider-specific project detail, not a developer price.",
+  "targets": [
+    {
+      "project_id": "izumi-city",
+      "project_name": "Izumi City",
+      "catalog_url": "https://muaban.net/bat-dong-san/ban-nha-mat-tien-du-an-izumi-city-tp-bien-hoa-dong-nai",
+      "seed_urls": [
+        "https://muaban.net/bat-dong-san/ban-nha-mat-tien-du-an-izumi-city-tp-bien-hoa-dong-nai/nha-pho-izumi-city-mat-tien-kenh-canh-quan-lon-song-giua-mang-xanh-id71272223",
+        "https://muaban.net/bat-dong-san/ban-nha-mat-tien-du-an-izumi-city-tp-bien-hoa-dong-nai/mua-nha-izumi-city-nhan-nha-11-2026-chi-dong-tong-4-8-ty-id71146157"
+      ]
+    }
+  ]
+}
