@@ -18,6 +18,10 @@ on:
       - 'scripts/collectors/jll_research.py'
       - 'scripts/collectors/savills_research.py'
       - 'scripts/market_source_candidate_collector.py'
+      - 'scripts/market_source_discovery.py'
+      - 'scripts/market_publication_evidence.py'
+      - 'scripts/collectors/savills_research.py'
+      - 'scripts/test_market_savills_source_gate.py'
       - 'config/market-automation-targets.json'
       - '.github/workflows/market-source-candidate-collector.yml'
   workflow_dispatch:
