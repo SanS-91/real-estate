@@ -676,6 +676,19 @@
       '<a href="market.html?view=pricing">Chi tiết giá</a></div>';
   }
 
+  function headlineNamesProject(title, projectName) {
+    const fold=window.HomeEditorial?.normalize || (v=>String(v||'').toLowerCase());
+    const words=[projectName];
+    if(projectName.includes('(')&&projectName.includes(')')) {
+      words.push(projectName.split('(')[0].trim(),projectName.split('(')[1].split(')')[0].trim());
+    }
+    const whole=' '+fold(title)+' ';
+    return words.some(name=>{
+      const key=fold(name);
+      return key.replaceAll(' ','').length>=6 && whole.includes(' '+key+' ');
+    });
+  }
+
   function projectNewsHTML(projects) {
     const projectMap=new Map(projects.map(p=>[p.id,p]));
     if(!projectMap.size)return '';
@@ -689,7 +702,12 @@
         })
       : [];
     const fallback=qualifiedMarketArticles(30).flatMap(row=>
-      (row.project_ids||[]).filter(id=>projectMap.has(id)).map(id=>({...row,project_id:id,match_method:'source-project-id'})));
+      projects.filter(project=>(row.project_ids||[]).includes(project.id) ||
+        headlineNamesProject(row.title||'',project.name)).map(project=>({
+          ...row,project_id:project.id,
+          match_method:(row.project_ids||[]).includes(project.id)
+            ? 'source-project-id' : 'exact-headline-name'
+        })));
     const rows=pulseRows.length?pulseRows:fallback;
     const selected=[],seen=new Set();
     rows.sort((x,y)=>String(y.published_at||'').localeCompare(String(x.published_at||'')));
