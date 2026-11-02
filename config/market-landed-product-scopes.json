@@ -1,0 +1,100 @@
+{
+  "schema_version": 1,
+  "updated_at": "2026-11-02",
+  "collection_mode": "official-product-label-verification-without-price-extraction",
+  "description": "Source-specified landed products and subdivisions. Every product label must appear in the exact official page. Price monitoring is NOT enabled until unit-level evidence and dated offer verification are available.",
+  "sources": [
+    {
+      "id": "izumi-gardenia",
+      "project_id": "izumi-city",
+      "subproject_name": "Izumi Gardenia",
+      "expected_headline": "Izumi Gardenia",
+      "source_id": "nam-long-official",
+      "source_url": "https://www.namlongvn.com/en/township-residential/izumi-gardenia/",
+      "allowed_host": "namlongvn.com",
+      "product_types": [
+        {
+          "id": "commercial-townhouse",
+          "source_phrase": "commercial townhouses",
+          "label": "Nhà phố thương mại"
+        },
+        {
+          "id": "garden-townhouse",
+          "source_phrase": "garden townhouses",
+          "label": "Nhà phố vườn"
+        }
+      ]
+    },
+    {
+      "id": "waterpoint-the-pearl",
+      "project_id": "waterpoint",
+      "subproject_name": "The Pearl",
+      "expected_headline": "The Pearl",
+      "source_id": "nam-long-official",
+      "source_url": "https://www.namlongvn.com/en/township-residential/the-pearl/",
+      "allowed_host": "namlongvn.com",
+      "product_types": [
+        {
+          "id": "garden-villa",
+          "source_phrase": "Garden Villa",
+          "label": "Biệt thự vườn"
+        },
+        {
+          "id": "canal-villa",
+          "source_phrase": "Canal Villa",
+          "label": "Biệt thự ven kênh"
+        },
+        {
+          "id": "river-villa",
+          "source_phrase": "River Villa",
+          "label": "Biệt thự ven sông"
+        }
+      ]
+    },
+    {
+      "id": "elyse-island-villas",
+      "project_id": "elyse-island",
+      "subproject_name": "Elyse Island",
+      "expected_headline": "Elyse Island",
+      "source_id": "nam-long-official",
+      "source_url": "https://www.namlongvn.com/en/township-residential/elyse-island/",
+      "allowed_host": "namlongvn.com",
+      "product_types": [
+        {
+          "id": "detached-villa",
+          "source_phrase": "Detached Villas",
+          "label": "Biệt thự đơn lập"
+        },
+        {
+          "id": "semi-detached-villa",
+          "source_phrase": "Semi-Detached Villas",
+          "label": "Biệt thự song lập"
+        }
+      ]
+    },
+    {
+      "id": "springville-lowrise",
+      "project_id": "springville",
+      "subproject_name": "Springville",
+      "expected_headline": "Springville",
+      "source_id": "gamuda-land-official",
+      "source_url": "https://gamudaland.com.vn/en/developments/springville",
+      "allowed_host": "gamudaland.com.vn",
+      "product_types": [
+        {
+          "id": "townhouse",
+          "source_phrase": "Townhouse",
+          "label": "Nhà phố"
+        },
+        {
+          "id": "shophouse",
+          "source_phrase": "Shophouse",
+          "label": "Nhà phố thương mại"
+        }
+      ]
+    }
+  ],
+  "no_products_without_source": [
+    "aqua-city"
+  ]
+}
