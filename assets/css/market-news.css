@@ -383,3 +383,9 @@
 .market-coverage-note span{color:var(--color-text-secondary);flex:1}
 .market-coverage-note a{white-space:nowrap;color:var(--color-primary-dark);font-weight:650}
 @media(max-width:600px){.market-coverage-note{align-items:flex-start;flex-direction:column}}
+
+/* Q3 press-reported indicators are contextual research, not chart series. */
+.market-research-candidate-metrics{font-size:12px;line-height:1.55;padding:8px 0;margin:8px 0 4px;border-top:1px solid var(--color-border);border-bottom:1px solid var(--color-border)}
+.market-research-sources{margin-top:7px;font-size:11px}
+.market-research-sources a{text-decoration:underline;text-underline-offset:2px;color:var(--color-primary-dark)}
+.market-research-briefs .market-project-news-card p{font-size:12px;line-height:1.5;overflow-wrap:anywhere}
