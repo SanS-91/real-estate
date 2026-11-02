@@ -144,6 +144,21 @@ class MuabanLandedTests(unittest.TestCase):
         self.assertEqual(status,"qualified-unexpired-landed-offer")
         self.assertEqual(row["product_type"],"villa")
 
+    def test_regional_index_preselects_waterpoint_links_not_nearby_projects(self):
+        catalog="https://muaban.net/bat-dong-san/ban-nha-mat-tien-huyen-ben-luc-long-an"
+        good=catalog+"/ban-nha-pho-waterpoint-id71288001"
+        unrelated=catalog+"/nha-pho-du-an-khac-id71288002"
+        html=('<a href="'+unrelated+'">Nhà tại Bến Lức</a>'+
+              '<a href="'+good+'">BÁN nhà phố vườn Waterpoint</a>'+
+              '<a href="'+unrelated+'">Waterpoint gần khu vực này</a>')
+        self.assertEqual(discover(html,catalog,project_name="Waterpoint",regional=True),[good])
+        # A match on a catalog link is only a candidate; the offer still
+        # fails if its structured project field is missing or belongs elsewhere.
+        house={"id":"waterpoint","name":"Waterpoint","segment_ids":["landed"]}
+        _,decision=parse_detail(page(project="Another Residence"),URL,house,NOW,
+                                "Khu Đô Thị Waterpoint")
+        self.assertEqual(decision,"project-not-explicit-in-basic-info")
+
     def test_regional_discovery_cannot_override_exact_project_card(self):
         catalog="https://muaban.net/bat-dong-san/ban-nha-mat-tien-huyen-ben-luc-long-an"
         self.assertEqual(safe_url(catalog),catalog)
