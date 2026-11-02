@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "updated_at": "2026-11-02",
+  "source_id": "nhatot-vn",
+  "source_host": "nhatot.com",
+  "max_source_age_days": 45,
+  "release_policy": "two-source-dated-identical-hosted-checks>=60m; individual-offer-only; no-project-ASP",
+  "notes": "Public project sale listing pages. Only detail pages with explicit project attribution, landed product, land area, total asking price and absolute publisher date qualify. Price cannot be inferred from installment/downpayment in title; generic project ranges and expired ads excluded.",
+  "targets": [
+    {
+      "project_id": "izumi-city",
+      "project_name": "Izumi City",
+      "catalog_url": "https://www.nhatot.com/mua-ban-du-an-izumi-city-thanh-pho-bien-hoa-pj655547752",
+      "seed_urls": [
+        "https://www.nhatot.com/mua-ban-nha-dat-thanh-pho-bien-hoa-dong-nai/134089812.htm",
+        "https://www.nhatot.com/mua-ban-nha-dat-thanh-pho-bien-hoa-dong-nai/135246356.htm",
+        "https://www.nhatot.com/mua-ban-nha-dat-thanh-pho-bien-hoa-dong-nai/135367550.htm"
+      ]
+    },
+    {
+      "project_id": "aqua-city",
+      "project_name": "Aqua City",
+      "catalog_url": "https://www.nhatot.com/mua-ban-du-an-aqua-city-thanh-pho-bien-hoa-pj124197437",
+      "seed_urls": [
+        "https://www.nhatot.com/mua-ban-nha-dat-thanh-pho-bien-hoa-dong-nai/133140664.htm",
+        "https://www.nhatot.com/mua-ban-nha-dat-thanh-pho-bien-hoa-dong-nai/133957325.htm",
+        "https://www.nhatot.com/mua-ban-can-ho-chung-cu-thanh-pho-bien-hoa-dong-nai/135405361.htm"
+      ]
+    }
+  ]
+}
