@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-11-02T10:15:47+00:00",
+  "generated_at": "2026-11-02T10:17:17+00:00",
   "sources_checked": 4,
   "qualified_offers": 3,
   "published_new_offers": 0,
@@ -38,11 +38,10 @@
           "status": "reachable"
         }
       ],
-      "detail_checked": 10,
+      "detail_checked": 1,
       "qualified": 0,
       "reasons": {
-        "missing-or-ambiguous-header-total": 1,
-        "project-not-explicit-in-basic-info": 9
+        "project-not-explicit-in-basic-info": 1
       }
     },
     {
