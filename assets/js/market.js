@@ -324,10 +324,17 @@
   }
 
   function projectActivityDate(projectId) {
-    const article = data.articles
-      .filter(item => (item.project_ids || []).includes(projectId))
-      .sort((a,b) => String(b.published_at).localeCompare(String(a.published_at)))[0];
-    return article?.published_at || null;
+    const now=Date.now();
+    const validDate=value=>{
+      const ms=Date.parse(value||'');
+      return Number.isFinite(ms)&&ms<=now+3600000&&ms>=now-30*86400000;
+    };
+    const indexed=(data.marketDailyPulse?.article_index||[]).filter(row=>
+      row.project_id===projectId && validDate(row.published_at));
+    const direct=data.articles.filter(row=>
+      (row.project_ids||[]).includes(projectId) && validDate(row.published_at));
+    return [...indexed,...direct]
+      .map(row=>row.published_at).sort().at(-1)||null;
   }
 
   function developerName(project) {
@@ -725,7 +732,7 @@
       </div>
       <section class="section">
         <div class="section-header"><div><span class="eyebrow">Tracked projects</span><h2 class="section-title">Key Projects · ${Math.min(data.projects.length,8)}/${data.projects.length}</h2></div><a class="text-link" href="market.html?view=projects">View all ${data.projects.length} projects</a></div>
-        <div class="section-body section-body--table">${projectTable(data.projects, 8)}</div>
+        <div class="section-body section-body--table">${projectTable([...data.projects].sort((a,b)=>String(projectActivityDate(b.id)||'').localeCompare(String(projectActivityDate(a.id)||''))), 8)}</div>
       </section>
       <section class="section">
         <div class="section-header"><div><span class="eyebrow">Project pricing</span><h2 class="section-title">Pricing Snapshot</h2></div><div class="section-header__actions">${priceLayerControls()}<a class="text-link" href="market.html?view=pricing">Open Pricing</a></div></div>
