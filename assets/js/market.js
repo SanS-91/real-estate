@@ -1441,11 +1441,22 @@
         ', nhưng chuỗi thống kê định lượng mới nhất là '+esc(metricQuarter||'chưa có')+
         '. Không tự tính nguồn cung hay giao dịch từ nhận định thị trường.</p>' : '';
     return '<section class="section market-research-briefs"><div class="section-header"><div><span class="eyebrow">Nghiên cứu mới có nguồn</span><h2 class="section-title">Báo cáo thị trường đã công bố</h2></div></div>'+
-      '<div class="section-body"><div class="market-project-news-grid">'+rows.slice(0,3).map(item=>
-        '<article class="market-project-news-card"><strong>'+esc(item.period)+' · '+esc(item.source_date)+'</strong>'+
-        '<a href="'+esc(item.source_url)+'" target="_blank" rel="noopener noreferrer">'+esc(item.title)+'</a>'+
-        '<p>'+esc(item.summary||'')+'</p><small>Chỉ là báo cáo nghiên cứu theo kỳ; không thay thế số liệu mở bán, giao dịch hay ASP dự án.</small></article>'
-      ).join('')+'</div>'+freshnessNote+'</div></section>';
+      '<div class="section-body"><div class="market-project-news-grid">'+rows.slice(0,3).map(item=>{
+        const press=item.data_basis==='press-attributed-secondary-confirmation-only';
+        const metric=item.reported_indicators||{};
+        const numeric=press
+          ? '<p class="market-research-candidate-metrics"><strong>'+Number(metric.new_launches_units_approx||0).toLocaleString('vi-VN')+' căn mở bán · '+Number(metric.transactions_units_approx||0).toLocaleString('vi-VN')+' giao dịch · '+Math.round(100*(metric.market_absorption_rate_approx||0))+'% hấp thụ</strong></p>'
+          : '';
+        const second=press&&Array.isArray(item.supporting_source_urls)
+          ? '<div class="market-research-sources">'+item.supporting_source_urls.filter(url=>/^https:\/\//.test(url)).slice(1).map(url=>
+              '<a href="'+esc(url)+'" target="_blank" rel="noopener noreferrer">Đối chiếu nguồn thứ hai</a>').join('')+'</div>'
+          : '';
+        return '<article class="market-project-news-card"><strong>'+esc(item.period)+' · '+esc(item.source_date)+'</strong>'+
+          '<a href="'+esc(item.source_url)+'" target="_blank" rel="noopener noreferrer">'+esc(item.title)+'</a>'+
+          numeric+'<p>'+esc(item.summary||'')+'</p><small>'+(press
+            ? 'Số liệu báo chí dẫn từ Savills; chưa xác minh trên bảng thống kê gốc. Không nhập vào chuỗi CBRE/Cushman, không tính lại tỷ lệ hấp thụ.'
+            : 'Báo cáo nghiên cứu theo kỳ; không thay thế nguồn cung, giao dịch hay ASP dự án.')+'</small>'+second+'</article>';
+      }).join('')+'</div>'+freshnessNote+'</div></section>';
   }
 
   function renderSupplySales() {
