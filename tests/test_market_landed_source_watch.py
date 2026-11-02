@@ -12,12 +12,18 @@ PROJECT={"id":"izumi-city","name":"Izumi City","official_url":URL,"segment_ids":
 TARGET={"project_id":"izumi-city","asset_type":"landed","source_id":"nam-long-official","source_url":URL,"allowed_host":"namlongvn.com"}
 HTML="<html><body><main><h1>Izumi City</h1><p>"+("An integrated developer township with amenities and landscape. "*5)+"</p></main></body></html>"
 
+class RawBytes:
+    def __init__(self, body):
+        self.buffer=io.BytesIO(body.encode("utf-8"))
+    def read(self, size, decode_content=False):
+        return self.buffer.read(size)
+
 class Response:
     def __init__(self, body=HTML, code=200,url=URL):
         self.url=url
         self.status_code=code
         self.encoding="utf-8"
-        self.raw=io.BytesIO(body.encode("utf-8"))
+        self.raw=RawBytes(body)
 
 class Session:
     def __init__(self,response):
