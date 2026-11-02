@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-11-02T10:06:57+00:00",
-  "sources_checked": 3,
+  "generated_at": "2026-11-02T10:13:57+00:00",
+  "sources_checked": 4,
   "qualified_offers": 3,
   "published_new_offers": 0,
   "historical_offers": 0,
@@ -59,6 +59,26 @@
       "qualified": 0,
       "reasons": {
         "publisher-expired": 1
+      }
+    },
+    {
+      "project_id": "aqua-city",
+      "catalog_status": "reachable",
+      "catalog_scope": "publisher-project-category-with-unrelated-suggestions",
+      "catalogs": [
+        {
+          "url": "https://muaban.net/bat-dong-san/ban-nha-mat-tien-du-an-aqua-city-tp-bien-hoa-dong-nai",
+          "status": "reachable"
+        },
+        {
+          "url": "https://muaban.net/bat-dong-san/ban-biet-thu-villa-penthouse-du-an-aqua-city-tp-bien-hoa-dong-nai",
+          "status": "reachable"
+        }
+      ],
+      "detail_checked": 1,
+      "qualified": 0,
+      "reasons": {
+        "http-404": 1
       }
     }
   ],
