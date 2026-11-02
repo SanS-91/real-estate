@@ -80,6 +80,9 @@ def check_target(target, project, previous, session, checked_at):
         if not digest:
             row["status"] = "missing-page-evidence"
             return row
+        if project.get("name", "").casefold() not in headline.casefold():
+            row["status"] = "project-headline-not-confirmed"
+            return row
         # Headline is diagnostic only, not a claim that the whole page is a
         # current developer product brochure or current selling price.
         row["status"] = "source-page-reachable"
