@@ -86,6 +86,13 @@ def parse_detail(html,url,project,now,publisher_project_name=None):
     if len(prices)!=1:
         return None,"missing-or-ambiguous-header-total"
     total=int(round(float(prices[0].replace(",","."))*1_000_000_000))
+    if re.search(r"giá từ|chỉ từ|giỏ hàng|nhiều căn",title,re.I):
+        return None,"non-single-unit-sale-heading"
+    if re.search(r"chỉ đóng|chỉ thanh toán|trả trước|đóng trước|cọc|thanh toán ban đầu",title,re.I):
+        title_amounts=PRICE.findall(title)
+        if any(abs(float(v.replace(",","."))*1_000_000_000-total)/total < .025
+               for v in title_amounts):
+            return None,"header-total-matches-upfront-only-title"
     if not 1_000_000_000<=total<=250_000_000_000:
         return None,"implausible-sale-amount"
     description=raw.split("Thông tin chi tiết",1)[1].split("Thông tin cơ bản",1)[0]
