@@ -275,8 +275,6 @@
 
     setView(`
       <div class="market-metric-grid">${metrics}</div>
-      <section class="section"><div class="section-header"><div><span class="eyebrow">Theo khu vực</span><h2 class="section-title">Bản đồ danh mục theo khu vực</h2></div><a class="text-link" href="infrastructure.html?view=regions">Xem tất cả</a></div><div class="section-body"><div class="infra-directory-grid">${regionalDirectory()}</div></div></section>
-      <section class="section"><div class="section-header"><div><span class="eyebrow">Theo loại công trình</span><h2 class="section-title">Cao tốc · Metro · Sân bay · Cảng biển</h2></div><a class="text-link" href="infrastructure.html?view=types">Xem phân loại</a></div><div class="section-body"><div class="infra-directory-grid">${groupCards()}</div></div></section>
       <div class="market-layout market-layout--overview market-layout--infra-overview">
         <section class="section market-panel market-panel--wide">
           <div class="section-header"><div><span class="eyebrow">Current situation</span><h2 class="section-title">Key Infrastructure Projects</h2></div><a class="text-link" href="infrastructure.html?view=projects">Open database</a></div>
