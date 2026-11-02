@@ -34,14 +34,29 @@ def permitted(url: str, expected_host: str):
     return (x.scheme == "https" and not x.username and not x.password
             and not x.query and not x.fragment and actual == expected_host)
 
-def text_fingerprint(html: str):
+def text_fingerprint(html: str, project_name: str = "", page_type: str = "project-landing",
+                     title_hint: str = ""):
+    """Return stable body fingerprint and the matching publisher heading.
+
+    For a developer news article, permit a project-specific H2/H3 when the
+    publisher's generic H1 is a site category. Never infer price from text.
+    """
     soup = BeautifulSoup(html, "lxml")
     for node in soup(["script", "style", "nav", "footer", "noscript"]):
         node.decompose()
-    header = soup.find("h1")
-    headline = re.sub(r"\s+", " ", header.get_text(" ", strip=True))[:240] if header else ""
     main = soup.find("main") or soup.find("article") or soup.body or soup
-    body = re.sub(r"\s+", " ", main.get_text(" ", strip=True))
+    body = re.sub(r"\\s+", " ", main.get_text(" ", strip=True))
+    headings = [re.sub(r"\\s+", " ", h.get_text(" ", strip=True))
+                for h in main.find_all(["h1", "h2", "h3"], limit=15)]
+    name = project_name.casefold()
+    if page_type == "project-news-article" and title_hint:
+        matching = [h for h in headings if name in h.casefold()
+                    and title_hint.casefold() in h.casefold()]
+    elif project_name:
+        matching = [h for h in headings if name in h.casefold()]
+    else:
+        matching = headings[:1]
+    headline = matching[0][:240] if matching else ""
     if len(body) < 150 or not headline:
         return None, headline
     return hashlib.sha256(body[:35000].encode("utf-8")).hexdigest(), headline
@@ -55,46 +70,69 @@ def check_target(target, project, previous, session, checked_at):
         "checked_at": checked_at, "status": "not-checked",
         "last_verified_source_at": previous.get("last_verified_source_at"),
         "content_changed": False, "needs_manual_review": False,
-        "candidate_price_records": 0,
-        "price_data_published": False,
+        "candidate_price_records": 0, "price_data_published": False,
+        "attempts": [],
     }
     if not permitted(url,host) or url != project.get("official_url"):
         row["status"] = "unapproved-source-identity"
         return row
-    try:
-        response = session.get(url, headers=HEADERS, timeout=16, allow_redirects=True, stream=True)
-        final = response.url
-        if not permitted(final,host):
-            row["status"] = "redirect-outside-approved-publisher"
+    fallbacks = target.get("fallback_urls", [])
+    if not isinstance(fallbacks, list) or any(not permitted(candidate, host) for candidate in fallbacks):
+        row["status"] = "unapproved-fallback"
+        return row
+    candidates = [url] + [f for f in fallbacks if f != url]
+    for i, candidate in enumerate(candidates):
+        try:
+            # Requests performs normal TLS verification. Never verify=False.
+            response = session.get(candidate, headers=HEADERS, timeout=16,
+                                   allow_redirects=True, stream=True)
+            final = response.url
+            if not permitted(final,host):
+                row["attempts"].append({"url": candidate, "status": "untrusted-redirect"})
+                row["status"] = "redirect-outside-approved-publisher"
+                return row
+            row["attempts"].append({"url": candidate, "status": "http-response",
+                                     "http_status": response.status_code})
+            row["http_status"] = response.status_code
+            if response.status_code != 200:
+                row["status"] = "access-unavailable"
+                return row
+            raw = response.raw.read(MAX_BYTES + 1, decode_content=True)
+            if len(raw) > MAX_BYTES:
+                row["status"] = "over-size"
+                return row
+            html = raw.decode(response.encoding or "utf-8", errors="replace")
+            digest, headline = text_fingerprint(
+                html, project["name"], target.get("page_type","project-landing"),
+                target.get("source_title_hint", ""))
+            if not digest:
+                row["status"] = "project-headline-not-confirmed"
+                return row
+            row["status"] = "source-page-reachable"
+            row["effective_source_url"] = final
+            row["page_headline"] = headline
+            row["last_verified_source_at"] = checked_at
+            # Compare with previous *same publisher page*. Changing fallback
+            # host/path does not constitute a project update.
+            prior_digest = previous.get("content_sha256") if (
+                previous.get("effective_source_url", previous.get("source_url")) == final) else None
+            row["content_sha256"] = digest
+            row["content_changed"] = bool(prior_digest and prior_digest != digest)
+            row["needs_manual_review"] = row["content_changed"]
             return row
-        row["http_status"] = response.status_code
-        if response.status_code != 200:
-            row["status"] = "access-unavailable"
+        except requests.exceptions.SSLError:
+            row["attempts"].append({"url":candidate,"status":"ssl-error"})
+            row["status"]="ssl-error"
+        except requests.exceptions.ConnectionError:
+            row["attempts"].append({"url":candidate,"status":"connection-error"})
+            row["status"]="connection-error"
+        except requests.RequestException as exc:
+            row["attempts"].append({"url":candidate,"status":"network-error",
+                                     "error_class":type(exc).__name__})
+            row["status"] = "network-error"
             return row
-        raw = response.raw.read(MAX_BYTES + 1, decode_content=True)
-        if len(raw) > MAX_BYTES:
-            row["status"] = "over-size"
-            return row
-        html = raw.decode(response.encoding or "utf-8", errors="replace")
-        digest, headline = text_fingerprint(html)
-        if not digest:
-            row["status"] = "missing-page-evidence"
-            return row
-        if project.get("name", "").casefold() not in headline.casefold():
-            row["status"] = "project-headline-not-confirmed"
-            return row
-        # Headline is diagnostic only, not a claim that the whole page is a
-        # current developer product brochure or current selling price.
-        row["status"] = "source-page-reachable"
-        row["page_headline"] = headline
-        row["last_verified_source_at"] = checked_at
-        prior_digest = previous.get("content_sha256")
-        row["content_sha256"] = digest
-        row["content_changed"] = bool(prior_digest and prior_digest != digest)
-        row["needs_manual_review"] = row["content_changed"]
-    except requests.RequestException as exc:
-        row["status"] = "network-error"
-        row["error_class"] = type(exc).__name__
+        # Only an explicitly configured official host fallback is allowed;
+        # retrying failed TLS on another hostname is NOT a TLS bypass.
     return row
 
 def run(config, registry, old, session, checked_at):
