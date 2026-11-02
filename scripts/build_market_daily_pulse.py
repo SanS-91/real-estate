@@ -155,14 +155,14 @@ def build(projects, articles, observations, listings, active, source, now=None, 
          if row.get("scope_type") == "region-segment"
          and row.get("period_type") == "quarter"
          and isinstance(row.get("period"), str)
-         and re.fullmatch(r"20\\d{2}-Q[1-4]", row["period"])),
+         and re.fullmatch(r"20\d{2}-Q[1-4]", row["period"])),
         default=None)
     latest_published_quarter = max(
         (row.get("period") for row in (research_briefs or [])
          if row.get("period_type") == "quarter"
          and row.get("data_basis") == "qualitative-publisher-report"
          and isinstance(row.get("period"), str)
-         and re.fullmatch(r"20\\d{2}-Q[1-4]", row["period"])
+         and re.fullmatch(r"20\d{2}-Q[1-4]", row["period"])
          and age_days(row.get("source_date"), now) is not None),
         default=None)
     newer_report_pending_metrics = bool(
