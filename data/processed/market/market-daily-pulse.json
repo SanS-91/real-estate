@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-11-02T09:06:08+00:00",
+  "generated_at": "2026-11-02T09:06:21+00:00",
   "description": "Derived market article-to-project index and evidence freshness; not live price or transactions.",
   "source_scope": "existing publisher articles + dated project and market JSON",
   "project_count": 18,
