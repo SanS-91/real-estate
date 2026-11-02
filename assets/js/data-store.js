@@ -83,6 +83,7 @@
     getProjects: () => loadJSON('market/projects.json'),
     getDeveloperProjectEvidence: () => loadJSON('market/developer-project-evidence.json'),
     getProductComparables: () => loadDirectJSON('./data/processed/market/product-comparables.json', 'source-dated product comparables'),
+    getMarketDailyPulse: () => loadDirectJSON('./data/processed/market/market-daily-pulse.json', 'derived market project news and data freshness'),
     getSalesPolicyReadiness: () => loadDirectJSON('./data/processed/market/sales-policy-readiness.json', 'source-gated sales policy readiness'),
     getCommercialOfferReview: () => loadDirectJSON('./data/processed/market/commercial-offer-review.json', 'unverified dealer price and policy change leads'),
     getProjectPhases: () => loadJSON('market/project-phases.json'),
