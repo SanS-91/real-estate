@@ -1,9 +1,39 @@
 {
   "schema_version": 1,
-  "build_id": "market-news-rss-20261102T045143Z",
-  "generated_at": "2026-11-02T04:51:43.461079+00:00",
-  "record_count": 1320,
+  "build_id": "market-news-rss-20261102T062642Z",
+  "generated_at": "2026-11-02T06:26:42.892690+00:00",
+  "record_count": 1322,
   "data": [
+    {
+      "id": "article-market-rss-8a83ad4c7ad72be61bca",
+      "title": "TP HCM đề xuất rút ngắn thủ tục duyệt dự án nhà ở xã hội",
+      "url": "https://vnexpress.net/tp-hcm-de-xuat-rut-ngan-thu-tuc-duyet-du-an-nha-o-xa-hoi-5139663.html",
+      "category": "market",
+      "module_ids": [
+        "market"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-11-02T05:30:55+00:00",
+      "source_id": "vnexpress-real-estate",
+      "region_ids": [
+        "hcmc"
+      ],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [
+        "supply",
+        "legal"
+      ],
+      "importance": 2,
+      "summary": "TP HCM đề xuất duyệt chủ trương dự án nhà ở xã hội không cần quy hoạch phân khu, giảm thời gian chờ đợi, tăng quỹ đất cho nguồn cung phân khúc này.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://vnexpress.net/rss/bat-dong-san.rss",
+        "publisher_host": "vnexpress.net",
+        "publication_date_from_feed": true
+      }
+    },
     {
       "id": "article-market-rss-9db9744193bdffe99f84",
       "title": "One Era giới thiệu hơn 350 sản phẩm thấp tầng",
@@ -84,6 +114,33 @@
         "method": "official-rss",
         "feed_url": "https://vnexpress.net/rss/kinh-doanh.rss",
         "publisher_host": "vnexpress.net",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-db0d5425cdb41417ccae",
+      "title": "Lộ trình nước rút đưa sân bay Long Thành vào khai thác cuối tháng 12",
+      "url": "https://dantri.com.vn/thoi-su/lo-trinh-nuoc-rut-dua-san-bay-long-thanh-vao-khai-thac-cuoi-thang-12-20261101124302146.htm",
+      "category": "infrastructure",
+      "module_ids": [
+        "infrastructure"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-11-02T03:49:29+00:00",
+      "source_id": "dantri-current-affairs",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [
+        "infrastructure"
+      ],
+      "importance": 2,
+      "summary": "(Dân trí) - Cục Hàng không Việt Nam đã xác định các mốc hoàn thành kiểm định kỹ thuật, cấp phép chuyên ngành và vận hành thử nghiệm, sẵn sàng cho phương án khai thác sân bay Long Thành từ ngày 24/12.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://dantri.com.vn/rss/thoi-su.rss",
+        "publisher_host": "dantri.com.vn",
         "publication_date_from_feed": true
       }
     },

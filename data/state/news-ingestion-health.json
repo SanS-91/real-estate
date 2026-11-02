@@ -1,33 +1,33 @@
 {
   "schema_version": 1,
-  "checked_at": "2026-11-02T04:51:43.461079+00:00",
+  "checked_at": "2026-11-02T06:26:42.892690+00:00",
   "feeds_configured": 16,
   "feeds_fetched": 16,
-  "accepted_new": 7,
+  "accepted_new": 2,
   "production_written": true,
-  "article_total": 1320,
+  "article_total": 1322,
   "published_by_module": {
-    "market": 4,
-    "legal": 1,
+    "market": 1,
+    "legal": 0,
     "infrastructure": 1,
-    "macro": 2
+    "macro": 0
   },
   "recent_by_module_7d": {
-    "market": 219,
-    "legal": 44,
-    "infrastructure": 93,
-    "macro": 52
+    "market": 216,
+    "legal": 42,
+    "infrastructure": 90,
+    "macro": 51
   },
   "recent_by_module_30d": {
-    "market": 808,
-    "legal": 133,
-    "infrastructure": 304,
+    "market": 809,
+    "legal": 134,
+    "infrastructure": 305,
     "macro": 221
   },
   "latest_published_by_module": {
-    "market": "2026-11-02T04:30:00+00:00",
-    "legal": "2026-11-02T04:30:00+00:00",
-    "infrastructure": "2026-11-02T02:07:45+00:00",
+    "market": "2026-11-02T05:30:55+00:00",
+    "legal": "2026-11-02T05:30:55+00:00",
+    "infrastructure": "2026-11-02T03:49:29+00:00",
     "macro": "2026-11-02T03:57:58+00:00"
   },
   "feed_status": [
@@ -53,18 +53,18 @@
       "source_id": "dantri-real-estate",
       "status": "parsed",
       "feed_items": 50,
-      "new": 3,
-      "skipped": 47,
-      "duplicates": 47,
+      "new": 0,
+      "skipped": 50,
+      "duplicates": 50,
       "filtered": 0
     },
     {
       "source_id": "vnexpress-economy",
       "status": "parsed",
       "feed_items": 50,
-      "new": 1,
-      "skipped": 49,
-      "duplicates": 7,
+      "new": 0,
+      "skipped": 50,
+      "duplicates": 8,
       "filtered": 42
     },
     {
@@ -73,8 +73,8 @@
       "feed_items": 50,
       "new": 0,
       "skipped": 50,
-      "duplicates": 8,
-      "filtered": 42
+      "duplicates": 6,
+      "filtered": 44
     },
     {
       "source_id": "vnexpress-legal",
@@ -116,9 +116,9 @@
       "source_id": "dantri-business",
       "status": "parsed",
       "feed_items": 50,
-      "new": 1,
-      "skipped": 49,
-      "duplicates": 7,
+      "new": 0,
+      "skipped": 50,
+      "duplicates": 8,
       "filtered": 42
     },
     {
