@@ -156,6 +156,27 @@ class MuabanLandedTests(unittest.TestCase):
         self.assertEqual(status,"project-not-explicit-in-basic-info")
 
 
+    def test_changed_price_deactivates_old_offer_immediately(self):
+        old_row,_=parse_detail(page(),URL,PROJECT,NOW)
+        stored={**old_row,"id":"old-record","verified_at":NOW.isoformat(),
+                "review_status":"automated-two-hosted-dated-checks",
+                "verification_run_ids":["earlier","later"],
+                "source_status":"confirmed-match"}
+        target={"project_id":"izumi-city","publisher_project_name":"Izumi City",
+                "catalog_url":CATALOG,"seed_urls":[URL]}
+        changed=Session({CATALOG:Response("",url=CATALOG,status=403),
+                         URL:Response(page(price="12,1 tỷ"),url=URL)})
+        _,records,health=run({"targets":[target]},{"data":[PROJECT]},{"proofs":{}},
+                             {"data":[stored]},changed,NOW+timedelta(hours=1),"changed-price")
+        self.assertEqual(records["record_count"],1)
+        self.assertEqual(records["data"][0]["source_status"],"changed-pending-verification")
+        self.assertEqual(health["qualified_offers"],1)
+        blocked=Session({CATALOG:Response("",url=CATALOG,status=403),
+                         URL:Response("",url=URL,status=403)})
+        _,records,_=run({"targets":[target]},{"data":[PROJECT]},{"proofs":{}},
+                        records,blocked,NOW+timedelta(hours=2),"blocked")
+        self.assertEqual(records["data"][0]["source_status"],"not-reconfirmed")
+
     def test_source_recheck_heartbeat_requires_live_publisher_page(self):
         original,_=parse_detail(page(),URL,PROJECT,NOW)
         stored={**original,"id":"saved-one","verified_at":"2026-10-31T08:00:00+00:00",
@@ -168,6 +189,7 @@ class MuabanLandedTests(unittest.TestCase):
                                  {"data":[stored]},good,NOW,"hosted-1")
         self.assertEqual(output["record_count"],1)
         self.assertEqual(output["data"][0]["last_source_verified_at"],NOW.isoformat())
+        self.assertEqual(output["data"][0]["source_status"],"confirmed-match")
         self.assertEqual(health["qualified_offers"],1)
 
         missing=Session({CATALOG:Response("",url=CATALOG,status=403),
@@ -176,6 +198,7 @@ class MuabanLandedTests(unittest.TestCase):
                            output,missing,NOW+timedelta(hours=2),"hosted-2")
         self.assertEqual(stale["record_count"],1)
         self.assertEqual(stale["data"][0]["last_source_verified_at"],NOW.isoformat())
+        self.assertEqual(stale["data"][0]["source_status"],"not-reconfirmed")
         self.assertEqual(health["qualified_offers"],0)
 
 if __name__=="__main__":
