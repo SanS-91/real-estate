@@ -88,6 +88,7 @@
     getCommercialOfferReview: () => loadDirectJSON('./data/processed/market/commercial-offer-review.json', 'unverified dealer price and policy change leads'),
     getProjectPhases: () => loadJSON('market/project-phases.json'),
     getMarketObservations: () => loadJSON('market/observations.json'),
+    getMarketResearchBriefs: () => loadJSON('market/research-briefs.json'),
     getListingObservations: () => loadJSON('market/listing-observations.json'),
     getListingScopeEvidence: () => loadJSON('market/listing-scope-evidence.json'),
     getAlternativePriceEvidence: () => loadJSON('market/alternative-price-evidence.json'),
