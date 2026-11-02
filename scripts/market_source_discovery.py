@@ -144,7 +144,7 @@ def discover_savills_reports(html: str, index_url: str, max_items: int = 6) -> l
         if not match:
             continue
         period = f"{match.group(2)}-Q{match.group(1)}"
-        identity = (target.path.split("/")[2], period)
+        identity = (target.path.split("/")[3], period)
         if identity in seen:
             continue
         seen.add(identity)
