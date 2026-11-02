@@ -376,3 +376,10 @@
 .market-developer-activity small{display:block;color:var(--color-text-secondary);font-size:11px;margin-bottom:6px}
 .market-developer-activity a{display:block;font-size:12px;font-weight:650;line-height:1.45;overflow-wrap:anywhere}
 .market-developer-activity a:hover{text-decoration:underline;color:var(--color-primary-dark)}
+
+/* Compact quality strip; never confuse collector execution with market price freshness. */
+.market-coverage-note{display:flex;align-items:center;flex-wrap:wrap;gap:6px 16px;padding:12px 15px;border:1px solid var(--color-border);border-radius:var(--radius-md);background:var(--color-surface);font-size:12px;margin:12px 0}
+.market-coverage-note strong{font-size:12px;color:var(--color-text)}
+.market-coverage-note span{color:var(--color-text-secondary);flex:1}
+.market-coverage-note a{white-space:nowrap;color:var(--color-primary-dark);font-weight:650}
+@media(max-width:600px){.market-coverage-note{align-items:flex-start;flex-direction:column}}
