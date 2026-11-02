@@ -34,11 +34,27 @@ def check():
         ids.add(item["id"])
         assert item["source_id"] == "savills-vietnam-market"
         parsed = urlsplit(item["source_url"])
-        assert parsed.scheme == "https" and (parsed.hostname or "").endswith(".savills.com.vn")
+        assert parsed.scheme == "https"
         assert date(2024, 1, 1) <= date.fromisoformat(item["source_date"]) <= date.today()
         assert item["data_basis"] and item["not_equivalent_to"]
         assert "sales_units" not in item and "new_supply" not in item
         assert item["region_ids"] and item["segment_ids"]
+        if item["data_basis"] == "press-attributed-secondary-confirmation-only":
+            urls = item.get("supporting_source_urls", [])
+            hosts = {(urlsplit(link).hostname or "").lower().removeprefix("www.") for link in urls
+                     if urlsplit(link).scheme == "https"}
+            assert len(hosts) >= 2 and (parsed.hostname or "").lower().removeprefix("www.") in hosts
+            publisher = urlsplit(item.get("publisher_report_url", ""))
+            assert publisher.scheme == "https" and (publisher.hostname or "").endswith(".savills.com.vn")
+            assert item.get("verification_status") == "secondary-corroborated-not-publisher-table-verified"
+            metrics = item["reported_indicators"]
+            assert metrics["new_launches_units_approx"] > 0
+            assert metrics["transactions_units_approx"] > 0
+            assert 0 < metrics["market_absorption_rate_approx"] < 1
+            assert metrics["primary_stock_units_approx"] > metrics["new_launches_units_approx"]
+        else:
+            assert (parsed.hostname or "").endswith(".savills.com.vn")
+            assert "reported_indicators" not in item
 
     listings = json.loads(read("data/mock/market/listing-observations.json"))
     assert listings["record_count"] == len(listings["data"])
