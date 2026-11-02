@@ -97,29 +97,44 @@ def build_cushman_rows(target, parsed, final_url):
     return rows
 
 def build_research_article(target, parsed, final_url):
-    date=parsed.get("published_date") or target.get("period")
-    sid=target["observation_source_id"]
-    source_label={
-        "savills-vietnam-market":"Savills",
-        "jll-vietnam-market":"JLL",
-        "cushman-wakefield-vietnam-market":"Cushman & Wakefield",
-    }.get(sid,sid)
+    from datetime import date
+    from urllib.parse import urlsplit
+    published = parsed.get("published_date")
+    quarter = parsed.get("report_period")
+    if not published or quarter != target.get("period"):
+        raise ValueError("missing-or-conflicting-source-period-or-date")
+    try:
+        dt = date.fromisoformat(published)
+        if dt.year < 2024 or dt > date.today():
+            raise ValueError("invalid-research-publication-date")
+    except (ValueError, TypeError):
+        raise ValueError("invalid-research-publication-date")
+    host = (urlsplit(final_url).hostname or "").lower()
+    if target.get("collector") == "savills_research" and host not in (
+        "www.savills.com.vn", "vn.savills.com.vn", "savills.com.vn"):
+        raise ValueError("unexpected-research-host")
+    sid = target["observation_source_id"]
     return {
-        "id":f"article-market-{slug(target['target_id'])}",
-        "title":parsed.get("title") or f"{source_label} market research update",
-        "url":final_url,
-        "category":"market",
-        "subcategory":"research",
-        "content_type":"research",
-        "published_at":f"{date}T09:00:00+07:00" if date and len(date)==10 else "2026-08-01T09:00:00+07:00",
-        "source_id":sid,
-        "region_ids":["hcmc"] if "hcmc" in (target.get("scope") or "") or sid=="jll-vietnam-market" else [],
-        "project_ids":[],
-        "developer_ids":[],
-        "tags":parsed.get("tags") or ["research"],
-        "importance":4,
-        "summary":parsed.get("summary") or f"{source_label} market research update.",
-        "candidate_note":"Automatically parsed from research source; review before production promotion."
+        "id": f"article-market-{slug(target['target_id'])}",
+        "title": parsed["title"],
+        "url": final_url,
+        "category": "market",
+        "subcategory": "research",
+        "content_type": "research",
+        "published_at": published + "T09:00:00+07:00",
+        "source_id": sid,
+        "region_ids": ["hcmc"] if "hcmc" in (target.get("scope") or "") else [],
+        "project_ids": [],
+        "developer_ids": [],
+        "tags": parsed.get("tags") or ["research"],
+        "importance": 4,
+        "summary": parsed.get("summary") or "",
+        "source_verification": {
+            "verified_source_period": quarter,
+            "publication_date_method": parsed.get("publication_date_method"),
+            "source_page": final_url,
+        },
+        "candidate_note": "Official report verified for date and period; candidate only. No numeric market metrics inferred."
     }
 
 def project_regions(project_ids):
@@ -272,8 +287,23 @@ def main():
                 })
                 continue
             if t.get("period_type") == "quarter" and t["collector"] in ("jll_research", "savills_research"):
-                target_reports.append({"target_id":t["target_id"],"status":"manual-review-required","reason":"Research landing page is not a verified individual quarterly report","detected_period":evidence["period"],"url":final_url})
-                continue
+                # Savills has an individual, source-dated report; it may be
+                # staged as a candidate only. Generic landing pages and JLL
+                # remain manual review. Never promote research text as metrics.
+                from urllib.parse import urlsplit
+                from re import fullmatch
+                path = urlsplit(final_url).path
+                official_savills = (t["collector"] == "savills_research"
+                    and (urlsplit(final_url).hostname or "").lower() in
+                    ("savills.com.vn", "www.savills.com.vn", "vn.savills.com.vn")
+                    and fullmatch(r"/research_articles/\\d+/\\d+-\\d+(?:/[^?#]+)?/?", path) is not None
+                    and publication_evidence["date"] is not None
+                    and evidence["status"] == "single-period")
+                if not official_savills:
+                    target_reports.append({"target_id":t["target_id"],"status":"manual-review-required",
+                        "reason":"Research report identity, quarter or date not verified",
+                        "detected_period":evidence["period"],"url":final_url})
+                    continue
             module=importlib.import_module("collectors."+t["collector"])
             if t["collector"] in {"cbre_market","cushman_market"}:
                 parsed=module.parse(html,final_url,datetime.now(timezone.utc).isoformat())
@@ -337,7 +367,11 @@ def main():
                 state="unchanged" if key in art_keys else "new"
                 if state=="new":
                     article_candidates.append(row)
-                target_reports.append({"target_id":t["target_id"],"status":"parsed","type":"research-evidence","records":1,"decision":state})
+                target_reports.append({"target_id":t["target_id"],"status":"parsed",
+                    "type":"research-evidence-candidate-only","records":1,"decision":state,
+                    "verified_source_period":parsed.get("report_period"),
+                    "verified_source_date":parsed.get("published_date"),
+                    "production_written":False})
         except Exception as exc:
             target_reports.append({"target_id":t["target_id"],"status":"parse-error","error":f"{type(exc).__name__}: {exc}"[:400]})
 
