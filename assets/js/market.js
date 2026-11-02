@@ -1448,7 +1448,7 @@
           ? '<p class="market-research-candidate-metrics"><strong>'+Number(metric.new_launches_units_approx||0).toLocaleString('vi-VN')+' căn mở bán · '+Number(metric.transactions_units_approx||0).toLocaleString('vi-VN')+' giao dịch · '+Math.round(100*(metric.market_absorption_rate_approx||0))+'% hấp thụ</strong></p>'
           : '';
         const second=press&&Array.isArray(item.supporting_source_urls)
-          ? '<div class="market-research-sources">'+item.supporting_source_urls.filter(url=>/^https:\/\//.test(url)).slice(1).map(url=>
+          ? '<div class="market-research-sources">'+item.supporting_source_urls.filter(url=>/^https:\/\//.test(url) && url!==item.source_url).slice(0,2).map(url=>
               '<a href="'+esc(url)+'" target="_blank" rel="noopener noreferrer">Đối chiếu nguồn thứ hai</a>').join('')+'</div>'
           : '';
         return '<article class="market-project-news-card"><strong>'+esc(item.period)+' · '+esc(item.source_date)+'</strong>'+
