@@ -89,9 +89,22 @@ class LandedPriceTests(unittest.TestCase):
         self.assertFalse(published)
         next_state,published,_=evaluate(same,[],[row],NOW+timedelta(hours=2),"run-c")
         self.assertEqual(len(published),1)
-        self.assertEqual(published[0]["verification_run_ids"],["run-b","run-c"])
+        # The first unchanged proof survives a short intermediate run.
+        self.assertEqual(same["proofs"]["nhatot-vn:134089812"]["run_id"],"run-a")
+        self.assertEqual(published[0]["verification_run_ids"],["run-a","run-c"])
         _,again,_=evaluate(next_state,published,[row],NOW+timedelta(hours=3),"run-d")
         self.assertFalse(again)
+
+    def test_many_early_retries_do_not_starve_second_proof(self):
+        row,_=parse_detail(HTML,URL,PROJECT,NOW)
+        state,_,_=evaluate({"proofs":{}},[],[row],NOW,"first")
+        for minute in (10,20,35,50):
+            state,offers,_=evaluate(state,[],[row],NOW+timedelta(minutes=minute),f"early-{minute}")
+            self.assertFalse(offers)
+            self.assertEqual(state["proofs"]["nhatot-vn:134089812"]["run_id"],"first")
+        _,offers,_=evaluate(state,[],[row],NOW+timedelta(minutes=65),"second")
+        self.assertEqual(len(offers),1)
+        self.assertEqual(offers[0]["verification_run_ids"],["first","second"])
 
     def test_price_revision_resets_evidence(self):
         row,_=parse_detail(HTML,URL,PROJECT,NOW)
