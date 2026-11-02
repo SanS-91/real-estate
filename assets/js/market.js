@@ -62,8 +62,15 @@
   }
 
   function latestListingObservation(projectId) {
+    // Primary comparisons use only reviewed snapshots. Earlier coverage/pilot
+    // observations remain accessible via project history, never as live prices.
     return data.listingObservations
-      .filter(item => item.project_id === projectId)
+      .filter(item => item.project_id === projectId && item.status === 'reviewed' &&
+        typeof item.asking_price_low_vnd_per_m2 === 'number' &&
+        typeof item.asking_price_high_vnd_per_m2 === 'number' &&
+        item.asking_price_low_vnd_per_m2 > 0 &&
+        item.asking_price_high_vnd_per_m2 >= item.asking_price_low_vnd_per_m2 &&
+        /^https:\/\//.test(String(item.source_url || '')))
       .sort((a,b) => String(b.observation_date || '').localeCompare(String(a.observation_date || '')))[0] || null;
   }
 
@@ -520,6 +527,10 @@
   function projectPriceCell(coverage, listing) {
     if (!coverage || coverage.tier === 'no-price') return '<span class="table-muted">Chưa có giá tham chiếu</span>';
     if (coverage.tier === 'aggregate-asking') {
+      if (coverage.row?.status !== 'reviewed') {
+        return '<span class="table-muted">Chưa có giá đã rà soát</span>'+
+          '<span class="table-subtext">Có snapshot lịch sử: '+esc(coverage.as_of||'—')+'</span>';
+      }
       const date=String(coverage.as_of||'');
       const days=/^\d{4}-\d{2}-\d{2}$/.test(date)
         ? Math.floor((Date.now()-Date.parse(date+'T00:00:00+07:00'))/86400000) : null;
@@ -546,7 +557,7 @@
       esc(value) + '</strong><span>' + esc(label) + '</span></div>';
     const summary = '<div class="market-project-coverage__stats">' +
       item(result.count,'Dự án theo dõi') +
-      item(result.aggregate,'Có khoảng giá rao') +
+      item(result.aggregate,'Có snapshot giá rao (gồm lịch sử)') +
       item(result.scoped,'Chỉ giá theo sản phẩm') +
       item(result.popular,'Chỉ giá phổ biến tháng') +
       item(result.asp,'Giá TB dự án theo nguồn') +
