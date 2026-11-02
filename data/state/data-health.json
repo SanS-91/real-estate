@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-11-02T06:31:42.076729+00:00",
+  "generated_at": "2026-11-02T06:32:15.942739+00:00",
   "overall_status": "stale",
   "modules": [
     {
@@ -507,7 +507,7 @@
       "candidate_path": "data/candidate/infrastructure/updates.json",
       "workflow_file": "infrastructure-candidate-collector.yml",
       "production_path": "data/mock/infrastructure/projects.json",
-      "record_count": 13,
+      "record_count": 18,
       "last_production_at": "2026-10-08T15:08:55.288Z",
       "last_data_change_at": "2026-10-08T15:08:55.288Z",
       "age_hours": 591.4,
