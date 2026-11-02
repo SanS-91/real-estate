@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "updated_at": "2026-10-28",
+  "updated_at": "2026-11-02",
   "targets": [
     {
       "target_id": "cbre-hcmc-q2-2026",
@@ -36,15 +36,16 @@
       "enabled": true
     },
     {
-      "target_id": "savills-vietnam-q2-2026-market-brief",
+      "target_id": "savills-vietnam-market-brief-q3-2026",
       "source_id": "savills-vietnam",
       "observation_source_id": "savills-vietnam-market",
-      "url": "https://www.savills.com.vn/insight-and-opinion/",
-      "period": "2026-Q2",
+      "url": "https://www.savills.com.vn/research_articles/226576/239332-0/viet-nam-real-estate-market-brief-q3-2026",
+      "period": "2026-Q3",
       "period_type": "quarter",
-      "scope": "vietnam-market-research",
+      "scope": "vietnam-quarterly-residential-research",
       "collector": "savills_research",
-      "enabled": true
+      "enabled": true,
+      "review_policy": "report-candidate-only; no numeric promotion"
     },
     {
       "target_id": "nam-long-news",
