@@ -3205,3 +3205,17 @@ body[data-page="market"] .market-news-compact strong a:hover {
     border-right: 0;
   }
 }
+
+/* Home investment evidence panels: 4-column desktop, 2 tablet, 1 mobile */
+.home-intelligence-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px;margin-top:12px}
+.home-intelligence-card{border:1px solid var(--color-border);border-radius:var(--radius-md);background:var(--color-surface);padding:16px;min-width:0;display:flex;flex-direction:column;gap:10px;box-shadow:var(--shadow-sm)}
+.home-intelligence-card__meta,.home-intelligence-card__footer{display:flex;align-items:center;justify-content:space-between;gap:8px;color:var(--color-text-secondary);font-size:11px;overflow-wrap:anywhere}
+.home-intelligence-card__meta span:last-child{white-space:nowrap}
+.home-intelligence-card h3{font-size:14px;line-height:1.4;margin:0}
+.home-intelligence-card__value{font-size:19px;line-height:1.35;font-weight:780;overflow-wrap:anywhere}
+.home-intelligence-card__value small{font-size:11px}
+.home-intelligence-card p{font-size:12px;color:var(--color-text-secondary);line-height:1.5;margin:0;flex:1}
+.home-intelligence-card__footer{border-top:1px solid var(--color-border);padding-top:9px}
+.home-intelligence-card__footer a{color:var(--color-primary-dark);font-weight:700}
+@media(max-width:1100px){.home-intelligence-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:600px){.home-intelligence-grid{grid-template-columns:minmax(0,1fr)}}
