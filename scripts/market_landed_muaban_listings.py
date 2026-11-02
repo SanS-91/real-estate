@@ -173,14 +173,26 @@ def parse_detail(html,url,project,now,publisher_project_name=None):
         "methodology_note":"Muaban individual asking offer only, valid from explicit publisher start to expiry; unit rate derives from asking total divided by land area, never project ASP."
     },"qualified-unexpired-landed-offer"
 
-def discover(html,catalog):
+def discover(html,catalog,project_name=None,regional=False):
     if not safe_url(catalog):
         return []
     urls=[]
     for a in BeautifulSoup(html,"lxml").select("a[href]"):
         u=safe_url(urljoin(catalog,a.get("href","")),detail=True)
-        if u and u not in urls:
-            urls.append(u)
+        if not u or u in urls:
+            continue
+        if regional and project_name:
+            # Regional category pages contain dozens of unrelated projects.
+            # Search only the link's OWN text/image/URL, not the whole page
+            # (which can mention Waterpoint in an unrelated recommendation).
+            title=" ".join([a.get_text(" ",strip=True),
+                            str(a.get("title","")),
+                            str(a.find("img").get("alt","") if a.find("img") else ""),
+                            u])
+            if not re.search(r"(?<![a-z])"+re.escape(project_name)+r"(?![a-z])",
+                             title,re.I):
+                continue
+        urls.append(u)
     return urls[:MAX_LISTINGS]
 
 def fetch(session,url,detail=False):
@@ -217,7 +229,10 @@ def run(config,registry,previous,already,session,now,run_id):
         for catalog_url in catalogs[:3]:
             page,status=fetch(session,catalog_url)
             catalog_statuses.append({"url":catalog_url,"status":status})
-            if page:urls.extend(discover(page,catalog_url))
+            if page:urls.extend(discover(
+                page,catalog_url,project_name=project["name"],
+                regional=target.get("catalog_scope","").startswith("two-regional") or
+                target.get("catalog_scope","").startswith("regional-broad")))
         status="reachable" if any(x["status"]=="reachable" for x in catalog_statuses) else catalog_statuses[0]["status"]
         urls=list(dict.fromkeys(urls+target.get("seed_urls",[])))
         result={"project_id":project["id"],"catalog_status":status,
