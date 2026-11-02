@@ -1,0 +1,73 @@
+name: Market Landed Developer Source Watch
+on:
+  workflow_dispatch:
+  schedule:
+    # 10:05 and 16:05 Vietnam time (UTC+7)
+    - cron: '05 3,9 * * *'
+  push:
+    branches: [main]
+    paths:
+      - 'config/market-landed-source-watch.json'
+      - 'scripts/market_landed_source_watch.py'
+      - 'tests/test_market_landed_source_watch.py'
+      - '.github/workflows/market-landed-source-watch.yml'
+permissions:
+  contents: write
+concurrency:
+  group: market-landed-developer-sources
+  cancel-in-progress: false
+jobs:
+  monitor-sources:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Dependencies
+        run: python -m pip install requests beautifulsoup4 lxml
+      - name: Fail-closed source and product contract tests
+        run: |
+          python -m py_compile scripts/market_landed_source_watch.py
+          python -m unittest discover -s tests -p 'test_market_landed_source_watch.py' -v
+      - name: Publish source-status and manual-review leads only
+        run: |
+          set -eu
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          for attempt in 1 2 3; do
+            git fetch origin main
+            git reset --hard origin/main
+            python scripts/market_landed_source_watch.py
+            python - <<'PY'
+          import json
+          p='data/state/market-landed-source-health.json'
+          data=json.load(open(p,encoding='utf-8'))
+          assert data['published_prices']==0
+          assert data['projects_monitored']==len(data['projects'])
+          assert all(row['asset_type']=='landed' for row in data['projects'])
+          assert all(row['price_data_published'] is False for row in data['projects'])
+          print('Validated landed source monitoring without price publication')
+          PY
+            git add data/state/market-landed-source-health.json
+            if git diff --cached --quiet; then
+              echo 'No source health change'
+              exit 0
+            fi
+            git commit -m 'data(market): refresh official landed source watch (no price estimates)'
+            if git push origin HEAD:main; then
+              echo 'Published verified monitoring status'
+              exit 0
+            fi
+            echo 'Retrying with latest source state'
+            sleep 3
+          done
+          exit 1
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: market-landed-official-source-health
+          path: data/state/market-landed-source-health.json
+          retention-days: 14
+          if-no-files-found: warn
