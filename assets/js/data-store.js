@@ -97,6 +97,8 @@
     getMuabanVerifiedUnitListings: () => loadJSON('market/verified-muaban-unit-listings.json'),
     getVerifiedLandedNhatotOffers: () => loadJSON('market/verified-landed-unit-listings.json'),
     getVerifiedLandedMuabanOffers: () => loadJSON('market/verified-landed-muaban-listings.json'),
+    getLandedMuabanSourceHealth: () => loadDirectJSON('./data/state/market-landed-muaban-source-health.json', 'landed Muaban offer health'),
+    getLandedNhatotSourceHealth: () => loadDirectJSON('./data/state/market-landed-unit-source-health.json', 'landed NhaTot offer health'),
     getOneHousingSubprojectEvidence: () => loadJSON('market/alternative-subproject-monthly-evidence.json'),
     getOneHousingSubprojectHistory: () => loadJSON('market/alternative-subproject-monthly-history.json'),
     getOneHousingProjectHistory: () => loadJSON('market/onehousing-project-monthly-history.json'),
