@@ -114,6 +114,10 @@ def parse_detail(html,url,project,now):
     if pos<0:
         return None,"missing-header-block"
     near=text[pos+len(heading):pos+len(heading)+480]
+    # Never include the seller's marketing description; it may mention a
+    # downpayment, old price, discount or unrelated project as a second offer.
+    near=re.split(r"Cập nhật|Đặc điểm bất động sản|Mô tả chi tiết|Thông tin dự án",
+                  near, maxsplit=1, flags=re.I)[0]
     # Source project card is a distinct listing attribute. A project named
     # solely in the marketing paragraph is not valid project attribution.
     project_match=re.search(r"Thông tin dự án\s+(.{0,110})",text,re.I)
