@@ -41,7 +41,7 @@ def safe_url(url,detail=False):
     if z.scheme!="https" or z.hostname not in ("muaban.net","www.muaban.net") or z.username or z.password or z.query or z.fragment or z.port not in (None,443):
         return None
     path=z.path.rstrip("/")
-    if not re.fullmatch(r"/bat-dong-san/ban-nha-[a-z0-9-]+(?:/[a-z0-9-]+-id\d{7,12})?",path):
+    if not re.fullmatch(r"/bat-dong-san/(?:ban-nha-[a-z0-9-]+|ban-biet-thu-villa-penthouse-[a-z0-9-]+)(?:/[a-z0-9-]+-id\d{7,12})?",path):
         return None
     is_detail=bool(ID_RX.search(path))
     if is_detail!=detail:
@@ -63,7 +63,7 @@ def basic_value(block,label):
     matches=rx.findall(block)
     return matches[0].strip() if len(matches)==1 else None
 
-def parse_detail(html,url,project,now):
+def parse_detail(html,url,project,now,publisher_project_name=None):
     safe=safe_url(url,detail=True)
     if not safe:
         return None,"invalid-source-url"
@@ -97,7 +97,8 @@ def parse_detail(html,url,project,now):
     basic=raw.split("Thông tin cơ bản",1)[1].split("Thông tin dự án",1)[0]
     flat=re.sub(r"\s+"," ",basic).strip()
     project_name=basic_value(flat,"Dự án")
-    if not project_name or project_name.casefold()!=project["name"].casefold():
+    expected=publisher_project_name or project["name"]
+    if not project_name or project_name.casefold()!=expected.casefold():
         return None,"project-not-explicit-in-basic-info"
     typ=basic_value(flat,"Loại hình nhà ở") or basic_value(flat,"Loại hình bất động sản")
     if not typ:
@@ -194,17 +195,25 @@ def run(config,registry,previous,already,session,now,run_id):
         if not project or "landed" not in project.get("segment_ids",[]):
             raise ValueError("unknown or non-landed project")
         catalog=target["catalog_url"]
-        if not safe_url(catalog) or any(not safe_url(u,detail=True) for u in target.get("seed_urls",[])):
+        catalogs=list(dict.fromkeys([catalog]+target.get("catalog_urls",[])))
+        if not catalogs or any(not safe_url(u) for u in catalogs) or any(not safe_url(u,detail=True) for u in target.get("seed_urls",[])):
             raise ValueError("unsafe approved source URL")
-        page,status=fetch(session,catalog)
-        urls=discover(page,catalog) if page else []
+        urls=[]
+        catalog_statuses=[]
+        for catalog_url in catalogs[:3]:
+            page,status=fetch(session,catalog_url)
+            catalog_statuses.append({"url":catalog_url,"status":status})
+            if page:urls.extend(discover(page,catalog_url))
+        status="reachable" if any(x["status"]=="reachable" for x in catalog_statuses) else catalog_statuses[0]["status"]
         urls=list(dict.fromkeys(urls+target.get("seed_urls",[])))
         result={"project_id":project["id"],"catalog_status":status,
+                "catalog_scope":target.get("catalog_scope","publisher-project-category"),
+                "catalogs":catalog_statuses,
                 "detail_checked":0,"qualified":0,"reasons":{}}
         for url in urls[:MAX_LISTINGS]:
             body,state=fetch(session,url,True)
             if body:
-                row,state=parse_detail(body,url,project,now)
+                row,state=parse_detail(body,url,project,now,target.get("publisher_project_name"))
                 if row:
                     candidates.append(row)
                     result["qualified"]+=1
