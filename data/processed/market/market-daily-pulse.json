@@ -1,0 +1,41 @@
+{
+  "schema_version": 1,
+  "build_status": "bootstrap-article-index-pending-workflow",
+  "generated_at": null,
+  "description": "Derived market article-to-project index and evidence freshness; not live price or transactions.",
+  "source_scope": "existing publisher articles + dated project and market JSON",
+  "project_count": 18,
+  "articles_screened_30d": null,
+  "inferred_headline_associations_30d": null,
+  "projects_with_articles_30d": null,
+  "project_updates": [],
+  "article_index": [],
+  "data_freshness": {
+    "listing_aggregate": {
+      "observation_date": "2026-10-09",
+      "age_days": 24,
+      "stale": true,
+      "record_count": 18,
+      "metric_basis": "historical portal asking ranges, not transactions"
+    },
+    "supply_sales_research": {
+      "latest_source_date": "2026-08-12",
+      "age_days": 82,
+      "stale": false,
+      "record_count": 26,
+      "metric_basis": "publisher quarterly/annual reports, NOT daily statistics"
+    },
+    "unit_listing_monitor": {
+      "last_checked_at": "2026-11-01T15:23:12.635688+00:00",
+      "projects_monitored": 8,
+      "projects_with_current_verified_offers": 3,
+      "current_verified_unit_ads": 9,
+      "scope": "individual apartment listings only; not project average"
+    },
+    "listing_collector": {
+      "last_checked_at": "2026-10-30T08:41:00.786597+00:00",
+      "access_status": "blocked",
+      "new_candidates": 0
+    }
+  }
+}
