@@ -1,9 +1,189 @@
 {
   "schema_version": 1,
-  "build_id": "market-news-rss-20261101T125136Z",
-  "generated_at": "2026-11-01T12:51:36.479173+00:00",
-  "record_count": 1298,
+  "build_id": "market-news-rss-20261102T005145Z",
+  "generated_at": "2026-11-02T00:51:45.530929+00:00",
+  "record_count": 1305,
   "data": [
+    {
+      "id": "article-market-rss-864cd5fc15a92c0f261a",
+      "title": "Lo thị trường tắc thanh khoản nếu siết chuyển nhượng nhà trên giấy",
+      "url": "https://vnexpress.net/lo-thi-truong-tac-thanh-khoan-neu-siet-chuyen-nhuong-nha-tren-giay-5139436.html",
+      "category": "market",
+      "module_ids": [
+        "market"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-11-02T00:05:00+00:00",
+      "source_id": "vnexpress-real-estate",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "Nhiều chuyên gia cho rằng đề xuất cấm chuyển nhượng nhà hình thành trong tương lai (nhà trên giấy) có thể ảnh hưởng đến quyền lợi của người mua, gây hệ lụy \"đóng băng\" thị trường.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://vnexpress.net/rss/bat-dong-san.rss",
+        "publisher_host": "vnexpress.net",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-46db62387991f17a6c17",
+      "title": "Giá vàng đồng loạt lao dốc mạnh",
+      "url": "https://dantri.com.vn/kinh-doanh/gia-vang-dong-loat-lao-doc-manh-20261102014706902.htm",
+      "category": "macro",
+      "module_ids": [
+        "macro"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-11-01T23:19:16+00:00",
+      "source_id": "dantri-business",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "(Dân trí) - Giá vàng miếng SJC giảm 2,7 triệu đồng/lượng trong tuần qua, mất tới 4 triệu đồng/lượng so với mức cao nhất tuần. Giá vàng thế giới cũng giảm 3,5%.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://dantri.com.vn/rss/kinh-doanh.rss",
+        "publisher_host": "dantri.com.vn",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-238c65351e3c2965ac69",
+      "title": "Giá xăng, điện đồng loạt giảm: Cần thêm giải pháp dài hạn hạ nhiệt lạm phát",
+      "url": "https://dantri.com.vn/kinh-doanh/gia-xang-dien-dong-loat-giam-can-them-giai-phap-dai-han-ha-nhiet-lam-phat-20261101221548465.htm",
+      "category": "macro",
+      "module_ids": [
+        "macro"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-11-01T23:15:00+00:00",
+      "source_id": "dantri-business",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [
+        "pricing",
+        "sales"
+      ],
+      "importance": 2,
+      "summary": "(Dân trí) - Giá xăng giảm khi thuế tiêu thụ đặc biệt được đưa về 0%, giá bán lẻ điện bình quân cũng đi xuống. Theo chuyên gia, cần thêm giải pháp điều hành đồng bộ để chính sách hiệu quả thực chất trong dài hạn.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://dantri.com.vn/rss/kinh-doanh.rss",
+        "publisher_host": "dantri.com.vn",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-1da0f54653539ec713a0",
+      "title": "Hà Nội xuất hiện nhà ở xã hội giá từ 880 triệu đồng/căn",
+      "url": "https://dantri.com.vn/bat-dong-san/ha-noi-xuat-hien-nha-o-xa-hoi-gia-tu-880-trieu-dongcan-20261101231347729.htm",
+      "category": "market",
+      "module_ids": [
+        "market"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-11-01T23:00:00+00:00",
+      "source_id": "dantri-real-estate",
+      "region_ids": [
+        "ha-noi"
+      ],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "(Dân trí) - Hai dự án nhà ở xã hội tại khu vực Thạch Thất (Hà Nội) chuẩn bị tiếp nhận hồ sơ đăng ký mua, thuê và thuê mua, trong đó có căn hộ giá khoảng 880 triệu đồng.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://dantri.com.vn/rss/bat-dong-san.rss",
+        "publisher_host": "dantri.com.vn",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-d0c24e8e96c444e89dec",
+      "title": "Bài toán 300 tỷ USD mỗi năm để GDP tăng hai chữ số",
+      "url": "https://vnexpress.net/bai-toan-300-ty-usd-moi-nam-de-gdp-tang-hai-chu-so-5137690.html",
+      "category": "macro",
+      "module_ids": [
+        "macro"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-11-01T22:00:00+00:00",
+      "source_id": "vnexpress-economy",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "Mục tiêu tăng trưởng hai chữ số của Việt Nam phụ thuộc khả năng huy động và dùng hiệu quả 300 tỷ USD mỗi năm đi kèm với tăng năng suất, theo chuyên gia.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://vnexpress.net/rss/kinh-doanh.rss",
+        "publisher_host": "vnexpress.net",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-36e2fd039000ccd9466e",
+      "title": "Giá vàng có thể giảm tiếp sau khi chạm đáy một năm",
+      "url": "https://vnexpress.net/gia-vang-co-the-giam-tiep-sau-khi-cham-day-mot-nam-5139438.html",
+      "category": "macro",
+      "module_ids": [
+        "macro"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-11-01T17:00:00+00:00",
+      "source_id": "vnexpress-economy",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "Phần lớn chuyên gia Phố Wall dự báo giá vàng tuần này tiếp tục lao dốc bởi áp lực xả hàng vẫn hiện hữu sau phiên bán tháo cuối tháng 10.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://vnexpress.net/rss/kinh-doanh.rss",
+        "publisher_host": "vnexpress.net",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-1b7ed89000d3841da3ab",
+      "title": "Nhà ba mặt giáp hàng xóm vẫn thoáng nhờ những khoảng sân xanh",
+      "url": "https://vnexpress.net/nha-ba-mat-giap-hang-xom-van-thoang-nho-nhung-khoang-san-xanh-5139315.html",
+      "category": "market",
+      "module_ids": [
+        "market"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-11-01T17:00:00+00:00",
+      "source_id": "vnexpress-real-estate",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "Hệ cửa kính lớn, giếng trời và các khoảng vườn xen kẽ giúp không gian sinh hoạt đón ánh sáng, gió tự nhiên.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://vnexpress.net/rss/bat-dong-san.rss",
+        "publisher_host": "vnexpress.net",
+        "publication_date_from_feed": true
+      }
+    },
     {
       "id": "article-market-rss-7b4813112c9fdfe22448",
       "title": "Khách sạn ở TPHCM vào mùa cao điểm, giá phòng neo cao",
