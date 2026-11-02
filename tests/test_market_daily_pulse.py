@@ -79,5 +79,23 @@ class PulseTests(unittest.TestCase):
         self.assertEqual(project["matched_articles_30d"], 1)
 
 
+    def test_newer_source_published_quarter_flags_quantitative_gap(self):
+        briefing = [{
+            "period": "2026-Q3", "period_type": "quarter",
+            "source_date": "2026-10-15",
+            "data_basis": "qualitative-publisher-report",
+        }]
+        numeric = [{"scope_type": "region-segment", "period_type": "quarter",
+                    "period": "2026-Q2", "source_date": "2026-08-12"}]
+        result = pulse.build(PROJECTS, [], numeric, LISTINGS, ACTIVE, SOURCE,
+                             now=NOW, research_briefs=briefing)
+        research = result["data_freshness"]["supply_sales_research"]
+        self.assertEqual(research["latest_quantitative_quarter"], "2026-Q2")
+        self.assertEqual(research["latest_published_qualitative_report_quarter"], "2026-Q3")
+        self.assertTrue(research["newer_research_report_pending_verified_metrics"])
+        self.assertTrue(research["stale"])
+        self.assertIsNone(result["project_updates"][0]["last_article_at"])
+
+
 if __name__ == "__main__":
     unittest.main()
