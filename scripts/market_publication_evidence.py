@@ -52,4 +52,22 @@ def extract_publication_date(html: str) -> dict:
             return {"date": d.isoformat(), "method": "heading-adjacent-date", "evidence": m.group(0)}
         except ValueError:
             pass
+    # Savills and other research publishers use day-month-year rather than
+    # the US month-day-year format. Search only the bounded headline-adjacent
+    # section; never accept an unrelated footer or the HTTP check date.
+    for m in re.finditer(
+        r"\\b([0-3]?\\d)\\s+(January|February|March|April|May|June|July|August|September|October|November|December)\\s+(20\\d{2})\\b",
+        text, re.I,
+    ):
+        try:
+            d = date(int(m.group(3)), MONTHS[m.group(2).lower()], int(m.group(1)))
+            return {"date": d.isoformat(), "method": "day-month-year-near-heading", "evidence": m.group(0)}
+        except ValueError:
+            pass
+    for m in re.finditer(r"\\b([0-3]?\\d)\\s+Tháng\\s+(0?[1-9]|1[0-2])\\s+Năm\\s+(20\\d{2})\\b", text, re.I):
+        try:
+            d = date(int(m.group(3)), int(m.group(2)), int(m.group(1)))
+            return {"date": d.isoformat(), "method": "vietnamese-publication-near-heading", "evidence": m.group(0)}
+        except ValueError:
+            pass
     return {"date": None, "method": "missing", "evidence": None}
