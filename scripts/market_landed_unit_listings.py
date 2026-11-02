@@ -186,7 +186,7 @@ def fetch(session,url,detail=False):
 def fingerprint(row):
     fields=("source_id","project_id","listing_id","asset_type","product_type",
             "listed_land_area_sqm","listing_price_vnd","value_vnd_per_land_m2",
-            "source_updated_date","source_url")
+            "source_updated_date","source_expiration_date","source_url")
     payload=json.dumps([row.get(k) for k in fields],ensure_ascii=False,separators=(",",":"))
     return hashlib.sha256(payload.encode()).hexdigest()
 
@@ -213,7 +213,7 @@ def evaluate(old,existing,offers,now,run_id):
             continue
         if same:
             published.append({
-                **row,"id":"landed-nhatot-"+row["listing_id"]+"-"+digest[:12],
+                **row,"id":"landed-"+row["source_id"].replace("-vn","")+"-"+row["listing_id"]+"-"+digest[:12],
                 "review_status":"automated-two-hosted-dated-checks",
                 "verification_run_ids":[prior["run_id"],run_id],
                 "verified_at":now.isoformat(),
