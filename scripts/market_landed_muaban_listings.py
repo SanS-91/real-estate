@@ -223,7 +223,21 @@ def run(config,registry,previous,already,session,now,run_id):
     new_state,new,decisions=evaluate(previous,already.get("data",[]),candidates,now,run_id)
     # Never release/retain an expired offer as currently live. Keep its history
     # but expiry must be checked at display time.
-    saved={x["id"]:x for x in already.get("data",[])+new}
+    # Refresh proof recency ONLY for a listing directly re-read with its
+    # current publisher details. A blocked or missing source must never renew
+    # a previously released offer.
+    observed={(x["source_id"],x["listing_id"]):x for x in candidates}
+    saved={}
+    for record in already.get("data",[])+new:
+        item=dict(record)
+        matching=observed.get((item.get("source_id"),item.get("listing_id")))
+        if matching and all(item.get(key)==matching.get(key) for key in
+            ("project_id","product_type","listed_land_area_sqm","listing_price_vnd",
+             "value_vnd_per_land_m2","source_listed_date","source_expiration_date","source_url")):
+            item["last_source_verified_at"]=now.isoformat()
+        elif "last_source_verified_at" not in item:
+            item["last_source_verified_at"]=item.get("verified_at")
+        saved[item["id"]]=item
     out={"schema_version":1,"collection_mode":"dated-unexpired-individual-landed-asking-only",
          "record_count":len(saved),"data":list(saved.values())}
     health={"schema_version":1,"generated_at":now.isoformat(),
