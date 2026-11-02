@@ -799,20 +799,76 @@
     }
   }
 
+
+  // Derived client-side from source-dated canonical datasets; no invented live prices.
+  const HOME_WATCHLIST_IDS = ['izumi-city','aqua-city','springville','mizuki-park','akari-city','waterpoint','nam-long-ii-central-lake','kita-airport-city'];
+  const homeEscape = value => Components.escapeHTML(String(value ?? ''));
+  const homeVn = () => document.documentElement.lang !== 'en';
+  const fmtMoney = n => (Number(n)/1000000).toLocaleString('vi-VN',{maximumFractionDigits:1});
+  const validAsking = row => Number.isFinite(Number(row.asking_price_low_vnd_per_m2)) &&
+    Number.isFinite(Number(row.asking_price_high_vnd_per_m2)) &&
+    Number(row.asking_price_low_vnd_per_m2)>0 && Number(row.asking_price_high_vnd_per_m2)>=Number(row.asking_price_low_vnd_per_m2) &&
+    row.market_layer === 'listing-asking' && row.source_url && !String(row.source_id||'').startsWith('demo-');
+  function latestAsking(rows) {
+    const map=new Map();
+    (rows||[]).filter(validAsking).forEach(row=>{
+      const last=map.get(row.project_id);
+      if(!last || String(row.observation_date||'')>String(last.observation_date||'')) map.set(row.project_id,row);
+    });
+    return map;
+  }
+  function watchCard(project, evidence) {
+    const vi=homeVn(), date=evidence?.source_data_as_of||evidence?.observation_date;
+    const price=evidence ? fmtMoney(evidence.asking_price_low_vnd_per_m2)+'–'+fmtMoney(evidence.asking_price_high_vnd_per_m2)+' '+(vi?'triệu đ/m²':'mn VND/m²') : (vi?'Chưa có giá đủ điều kiện':'No qualified price');
+    const source=evidence?.source_id||project.primary_source_id||'';
+    const href=typeof project.official_url==='string' && /^https:\/\//.test(project.official_url) ? project.official_url : 'market.html?view=projects';
+    return '<article class="home-intelligence-card"><div class="home-intelligence-card__meta"><span>'+homeEscape(project.location_text||project.region_ids?.[0]||'')+'</span><span>'+homeEscape(date||project.source_date||'')+'</span></div>'+
+      '<h3>'+homeEscape(project.name)+'</h3><strong class="home-intelligence-card__value">'+homeEscape(price)+'</strong>'+
+      '<p>'+homeEscape(evidence ? (vi?'Giá chào bán tham khảo · Không phải giá giao dịch':'Historical asking range · Not a transacted price') : (vi?'Theo dõi dự án; chưa đủ dữ liệu giá bán xác minh':'Project tracked; qualified price unavailable'))+'</p>'+
+      '<div class="home-intelligence-card__footer"><span>'+homeEscape(source)+'</span><a href="'+homeEscape(evidence?.source_url||href)+'" target="_blank" rel="noopener noreferrer">'+(vi?'Xem nguồn':'Source')+'</a></div></article>';
+  }
+  async function renderMarketSnapshot() {
+    try {
+      const [observations,listings]=await Promise.all([DataStore.getMarketObservations(),DataStore.getListingObservations()]);
+      const vi=homeVn(), all=payloadData(observations).filter(x=>x.source_url && x.source_date && !String(x.source_id||'').startsWith('demo-'));
+      const regions=all.filter(x=>x.region_ids?.includes('hcmc') && x.segment_ids?.includes('apartment') && x.period_type==='quarter' && x.scope_type!=='project');
+      const metricDefs=[['new_supply',vi?'Nguồn cung căn hộ':'Apartment new supply','căn / units'],['sales_units',vi?'Lượng tiêu thụ ghi nhận':'Reported sales','căn / units']];
+      const cards=metricDefs.map(([field,label,unit])=>{
+        const row=[...regions].filter(x=>Number.isFinite(Number(x[field])) && x[field]!==null).sort((a,b)=>String(b.period).localeCompare(String(a.period)))[0];
+        if(!row)return null;
+        return '<article class="home-intelligence-card"><div class="home-intelligence-card__meta"><span>HCMC · '+homeEscape(row.period)+'</span><span>'+homeEscape(row.source_date)+'</span></div><h3>'+homeEscape(label)+'</h3><strong class="home-intelligence-card__value">'+Number(row[field]).toLocaleString(vi?'vi-VN':'en-US')+'</strong><p>'+homeEscape(vi?'Theo định nghĩa và địa giới của nguồn gốc; không suy ra tỷ lệ hấp thụ':'Original publisher geography and definition; not an absorption rate')+'</p><div class="home-intelligence-card__footer"><span>'+homeEscape(row.source_id)+'</span><a href="'+homeEscape(row.source_url)+'" target="_blank" rel="noopener noreferrer">'+(vi?'Xem nguồn':'Source')+'</a></div></article>';
+      }).filter(Boolean);
+      const ask=[...latestAsking(payloadData(listings)).values()].sort((a,b)=>String(b.observation_date).localeCompare(String(a.observation_date)))[0];
+      if(ask) cards.push('<article class="home-intelligence-card"><div class="home-intelligence-card__meta"><span>'+homeEscape(ask.project_id)+'</span><span>'+homeEscape(ask.source_data_as_of||ask.observation_date)+'</span></div><h3>'+(vi?'Khoảng giá chào bán tham khảo':'Asking price reference')+'</h3><strong class="home-intelligence-card__value">'+homeEscape(fmtMoney(ask.asking_price_low_vnd_per_m2)+'–'+fmtMoney(ask.asking_price_high_vnd_per_m2))+' <small>triệu đ/m²</small></strong><p>'+(vi?'Giá niêm yết, không phải giá giao dịch':'Listing ask, not achieved transaction price')+'</p><div class="home-intelligence-card__footer"><span>'+homeEscape(ask.source_id)+'</span><a href="'+homeEscape(ask.source_url)+'" target="_blank" rel="noopener noreferrer">'+(vi?'Xem nguồn':'Source')+'</a></div></article>');
+      setHTML('[data-home-market-snapshot]',cards.join('')||Components.stateBox(vi?'Chưa có dữ liệu thị trường đủ điều kiện.':'No qualified market metrics.'));
+    }catch(error){console.warn('[home] market snapshot',error);setHTML('[data-home-market-snapshot]',Components.stateBox('Market evidence unavailable.'));}
+  }
+  async function renderProjectsWatchlist() {
+    try {
+      const [projects,listings]=await Promise.all([DataStore.getProjects(),DataStore.getListingObservations()]);
+      const catalog=new Map(payloadData(projects).map(row=>[row.id,row]));
+      const asks=latestAsking(payloadData(listings));
+      const cards=HOME_WATCHLIST_IDS.map(id=>catalog.get(id)).filter(Boolean).map(project=>watchCard(project,asks.get(project.id)));
+      setHTML('[data-home-projects-watchlist]',cards.join('')||Components.stateBox('No watchlist projects available.'));
+    }catch(error){console.warn('[home] watchlist',error);setHTML('[data-home-projects-watchlist]',Components.stateBox('Project evidence unavailable.'));}
+  }
+
   document.addEventListener('DOMContentLoaded', () => {
-    renderDataHealth();
     renderMeta();
     renderToday();
+    renderMarketSnapshot();
+    renderProjectsWatchlist();
     renderIndicators();
     renderChanges();
     renderTopDevelopments();
     renderWeekly();
     document.addEventListener('app:language-changed', () => {
       renderToday();
+      renderMarketSnapshot();
+      renderProjectsWatchlist();
       renderChanges();
       renderTopDevelopments();
       renderWeekly();
-      renderDataHealth();
     });
   });
 })();
