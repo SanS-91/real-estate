@@ -12,7 +12,7 @@ from bs4 import BeautifulSoup
 from market_period_evidence import extract_period_evidence
 from market_publication_evidence import extract_publication_date
 
-REPORT_PATH = re.compile(r"^/research_articles/\\d+/\\d+-\\d+(?:/[^?#]+)?/?$", re.I)
+REPORT_PATH = re.compile(r"^/research_articles/\d+/\d+-\d+(?:/[^?#]+)?/?$", re.I)
 
 
 def parse_article(html: str, source_url: str, fetched_at: str):
@@ -26,7 +26,7 @@ def parse_article(html: str, source_url: str, fetched_at: str):
     soup = BeautifulSoup(html, "lxml")
     heading = soup.find("h1")
     title = heading.get_text(" ", strip=True) if heading else ""
-    if not (re.search(r"(?:Viet\\s*Nam\\s+Real\\s+Estate\\s+Market\\s+Brief|Báo\\s+cáo\\s+Thị\\s+trường\\s+Bất\\s+động\\s+sản\\s+Việt\\s+Nam)", title, re.I) and re.search(r"Q[1-4]\\s*[/\\- ]\\s*20\\d{2}", title, re.I)):
+    if not (re.search(r"(?:Viet\s*Nam\s+Real\s+Estate\s+Market\s+Brief|Báo\s+cáo\s+Thị\s+trường\s+Bất\s+động\s+sản\s+Việt\s+Nam)", title, re.I) and re.search(r"Q[1-4]\s*[/\- ]\s*20\d{2}", title, re.I)):
         raise ValueError("not-a-vietnam-quarterly-market-brief")
     period = extract_period_evidence(html, source_url)
     if period["status"] != "single-period":
@@ -42,7 +42,7 @@ def parse_article(html: str, source_url: str, fetched_at: str):
     sections = []
     for tag in soup.find_all(["h2", "h3"]):
         label = tag.get_text(" ", strip=True)
-        if re.search(r"(?:HCMC|TP\\.?HCM|HỒ CHÍ MINH|HO CHI MINH).{0,28}(?:OVERVIEW|TỔNG QUAN)", label, re.I):
+        if re.search(r"(?:HCMC|TP\.?HCM|HỒ CHÍ MINH|HO CHI MINH).{0,28}(?:OVERVIEW|TỔNG QUAN)", label, re.I):
             sections.append(label)
     return {
         "title": title,
