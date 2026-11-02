@@ -1793,6 +1793,7 @@
       ${projectCoverageStatusHTML(filteredProjects, true)}
       ${marketCoverageNoteHTML()}
       ${state.priceLayer==='listing' ? landedSourceProgressHTML(filteredProjects) : ''}
+      ${state.priceLayer==='listing' ? landedProjectCoverageHTML(filteredProjects) : ''}
       ${state.priceLayer==='listing' ? priceFreshnessNote(listingRows.map(item=>item.row),'Dữ liệu giá chào bán theo dự án') : '<p class="market-data-freshness">Chỉ hiển thị giá công bố có chứng cứ trực tiếp, không thay thế bằng giá rao hoặc giá từng căn.</p>'}
       <section class="section">
         <div class="section-header"><div><h2 class="section-title">${state.priceLayer === 'listing' ? 'Listing Market Asking Ranges' : 'Verified Project Pricing'}</h2></div>${priceLayerControls()}</div>
