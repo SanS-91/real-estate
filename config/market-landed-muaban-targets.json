@@ -35,6 +35,19 @@
       ],
       "catalog_scope": "publisher-project-category",
       "seed_urls": []
+    },
+    {
+      "project_id": "aqua-city",
+      "project_name": "Aqua City",
+      "publisher_project_name": "Aqua City",
+      "catalog_url": "https://muaban.net/bat-dong-san/ban-nha-mat-tien-du-an-aqua-city-tp-bien-hoa-dong-nai",
+      "catalog_urls": [
+        "https://muaban.net/bat-dong-san/ban-biet-thu-villa-penthouse-du-an-aqua-city-tp-bien-hoa-dong-nai"
+      ],
+      "catalog_scope": "publisher-project-category-with-unrelated-suggestions",
+      "seed_urls": [
+        "https://muaban.net/bat-dong-san/ban-nha-mat-tien-tp-bien-hoa-dong-nai/ban-shophouse-aquacity-truc-duong-chinh-45m-khu-stella-id69617830"
+      ]
     }
   ]
 }
