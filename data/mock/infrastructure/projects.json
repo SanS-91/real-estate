@@ -1,8 +1,8 @@
 {
   "schema_version": 1,
-  "build_id": "phase4.3b-infrastructure-registry-20261007",
+  "build_id": "infrastructure-coverage-expansion-20261102",
   "generated_at": "2026-10-08T15:08:55.288Z",
-  "record_count": 8,
+  "record_count": 13,
   "data": [
     {
       "id": "long-thanh-airport",
@@ -200,6 +200,111 @@
         "izumi-city"
       ],
       "summary": "Dự án mở rộng tuyến kết nối chính giữa TPHCM và sân bay Long Thành. Registry sử dụng Q1/2027 làm mốc hoàn tất tổng thể do cầu Long Thành là hạng mục kết thúc sau phần đường."
+    },
+    {
+      "id": "chau-doc-can-tho-soc-trang-expressway",
+      "name": "Cao tốc Châu Đốc – Cần Thơ – Sóc Trăng",
+      "infrastructure_type": "expressway",
+      "region_ids": [
+        "can-tho"
+      ],
+      "status": "under-construction",
+      "location_text": "An Giang – Cần Thơ – khu vực Sóc Trăng cũ",
+      "scale_text": "Tuyến dài 188,2 km, gồm 4 dự án thành phần; mục tiêu khai thác đồng bộ năm 2027.",
+      "length_km": 188.2,
+      "current_expected_completion": "2027",
+      "completion_date_precision": "year",
+      "current_progress_percent": null,
+      "current_progress_note": "Báo cáo Chính phủ tháng 09/2026: tiến độ các dự án thành phần không đồng đều; chưa có tỷ lệ hoàn thành đồng nhất toàn tuyến.",
+      "related_real_estate_project_ids": [
+        "nam-long-ii-central-lake",
+        "kita-airport-city"
+      ],
+      "summary": "Trục kết nối Đông–Tây vùng ĐBSCL. Mốc 2027 là mục tiêu khai thác đồng bộ, chưa phải ngày hoàn thành được xác nhận.",
+      "source_date": "2026-09-12",
+      "source_url": "https://cms.baochinhphu.vn/pho-thu-tuong-thuong-truc-pham-gia-tuc-lam-viec-ve-tinh-hinh-trien-khai-cac-du-an-giao-thong-trong-diem-tai-dong-bang-song-cuu-long-10226091212330151.htm"
+    },
+    {
+      "id": "can-tho-ca-mau-expressway",
+      "name": "Cao tốc Cần Thơ – Cà Mau",
+      "infrastructure_type": "expressway",
+      "region_ids": [
+        "can-tho"
+      ],
+      "status": "partially-operational",
+      "location_text": "Cần Thơ – Cà Mau",
+      "scale_text": "Dài 110,85 km, 4 làn xe; tuyến chính đã khai thác, một số nút giao và hạng mục phụ trợ đang hoàn thiện.",
+      "length_km": 110.85,
+      "current_expected_completion": "2026",
+      "completion_date_precision": "year",
+      "current_progress_percent": null,
+      "current_progress_note": "Tháng 09/2026: báo cáo giá trị thực hiện 94,5% theo phạm vi hợp đồng được nêu trong nguồn; không dùng làm % toàn bộ tuyến.",
+      "related_real_estate_project_ids": [
+        "nam-long-ii-central-lake"
+      ],
+      "summary": "Trục kết nối phía Nam ĐBSCL; tiến độ phụ trợ khác với trạng thái vận hành tuyến chính.",
+      "source_date": "2026-09-12",
+      "source_url": "https://cms.baochinhphu.vn/pho-thu-tuong-thuong-truc-pham-gia-tuc-lam-viec-ve-tinh-hinh-trien-khai-cac-du-an-giao-thong-trong-diem-tai-dong-bang-song-cuu-long-10226091212330151.htm"
+    },
+    {
+      "id": "hcmc-metro-line-2",
+      "name": "Metro số 2 Bến Thành – Tham Lương",
+      "infrastructure_type": "metro",
+      "region_ids": [
+        "hcmc"
+      ],
+      "status": "planning",
+      "location_text": "TPHCM",
+      "scale_text": "Tuyến đường sắt đô thị trọng điểm, kết nối trung tâm với Tây Bắc TPHCM.",
+      "current_expected_completion": null,
+      "completion_date_precision": null,
+      "current_progress_percent": null,
+      "current_progress_note": "Nguồn Chính phủ ngày 20/07/2026 đề cập dự án trong danh mục hạ tầng trọng điểm; chưa xác minh mốc hoàn thành hiện hành.",
+      "related_real_estate_project_ids": [],
+      "summary": "Theo dõi mốc khởi công, triển khai và điều chỉnh vốn; không hiển thị tỷ lệ tiến độ chưa được xác nhận.",
+      "source_date": "2026-07-20",
+      "source_url": "https://tphcm.baochinhphu.vn/tphcm-tim-loi-giai-de-tang-toc-dot-pha-ha-tang-giao-thong-101260720094147879.htm"
+    },
+    {
+      "id": "hcmc-trung-luong-my-thuan-expansion",
+      "name": "Mở rộng cao tốc TPHCM – Trung Lương – Mỹ Thuận",
+      "infrastructure_type": "expressway",
+      "region_ids": [
+        "hcmc",
+        "long-an"
+      ],
+      "status": "land-clearance",
+      "location_text": "TPHCM – khu vực Long An cũ – Mỹ Thuận",
+      "scale_text": "Dự án mở rộng hành lang cao tốc kết nối TPHCM và ĐBSCL; phạm vi chi tiết cần đối chiếu các dự án thành phần.",
+      "current_expected_completion": null,
+      "completion_date_precision": null,
+      "current_progress_percent": null,
+      "current_progress_note": "Bộ Xây dựng tháng 08/2026 cho biết phần diện tích bổ sung đang triển khai thu hồi, bàn giao; chưa xác minh % xây dựng tổng thể.",
+      "related_real_estate_project_ids": [
+        "waterpoint"
+      ],
+      "summary": "Theo dõi GPMB, thủ tục và lịch thi công; chưa dùng ngày hoàn thành suy đoán.",
+      "source_date": "2026-08-12",
+      "source_url": "https://baochinhphu.vn/no-luc-hoan-thanh-3-du-an-cao-toc-quan-trong-khu-vuc-phia-nam-trong-nam-2026-102260812110115023.htm"
+    },
+    {
+      "id": "thu-dau-mot-chon-thanh-expressway",
+      "name": "Cao tốc Thủ Dầu Một – Chơn Thành",
+      "infrastructure_type": "expressway",
+      "region_ids": [
+        "binh-duong"
+      ],
+      "status": "under-construction",
+      "location_text": "Khu vực Bình Dương cũ – Bình Phước cũ",
+      "scale_text": "Hành lang cao tốc hướng Đông Bắc vùng TPHCM; theo dõi theo dự án thành phần.",
+      "current_expected_completion": null,
+      "completion_date_precision": null,
+      "current_progress_percent": null,
+      "current_progress_note": "Dự án được nêu trong danh mục trọng điểm TPHCM ngày 20/07/2026; chưa có % tổng thể đủ điều kiện.",
+      "related_real_estate_project_ids": [],
+      "summary": "Theo dõi kết nối vùng công nghiệp và khu đô thị phía Bắc TPHCM.",
+      "source_date": "2026-07-20",
+      "source_url": "https://tphcm.baochinhphu.vn/tphcm-tim-loi-giai-de-tang-toc-dot-pha-ha-tang-giao-thong-101260720094147879.htm"
     }
   ]
 }
