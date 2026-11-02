@@ -512,10 +512,15 @@
   // A scoped product reference is visible but never treated as full-project ASP.
   function projectPriceCell(coverage, listing) {
     if (!coverage || coverage.tier === 'no-price') return '<span class="table-muted">Chưa có giá tham chiếu</span>';
-    if (coverage.tier === 'aggregate-asking')
-      return '<strong class="market-asking-range">' + esc(formatListingRange(listing || coverage.row)) +
-        '</strong><span class="table-subtext">Khoảng rao · ' + esc(coverage.product === 'apartment' ? 'Căn hộ' : 'Thấp tầng') +
-        ' · ' + esc(coverage.as_of || '—') + '</span>';
+    if (coverage.tier === 'aggregate-asking') {
+      const date=String(coverage.as_of||'');
+      const days=/^\\d{4}-\\d{2}-\\d{2}$/.test(date)
+        ? Math.floor((Date.now()-Date.parse(date+'T00:00:00+07:00'))/86400000) : null;
+      const historic=days!==null&&days>14;
+      return '<strong class="market-asking-range">' + esc(formatListingRange(coverage.row)) +
+        '</strong><span class="table-subtext">Khoảng giá rao · ' + esc(coverage.product === 'apartment' ? 'Căn hộ' : 'Thấp tầng') +
+        ' · ' + esc(coverage.as_of || '—') + (historic?' · <strong>Giá lịch sử</strong>':'') + '</span>';
+    }
     if (coverage.tier === 'scoped-asking')
       return '<strong class="market-asking-range">' + esc(formatListingRange(coverage.row)) +
         '</strong><span class="table-subtext">' + esc(coverage.product === 'landed' ? 'Chỉ thấp tầng' :
@@ -1634,9 +1639,15 @@
     const cards=data.developers.map(dev=>{
       const projects=data.projects.filter(project=>(project.developer_ids||[]).includes(dev.id));
       const selling=projects.filter(project=>project.status==='selling').length;
-      const article=recent.find(row=>Array.isArray(row.developer_ids)&&row.developer_ids.includes(dev.id));
+      const linked=(data.marketDailyPulse?.article_index||[]).filter(row=>
+        projects.some(project=>project.id===row.project_id) &&
+        Number.isFinite(Date.parse(row.published_at||'')) &&
+        Date.parse(row.published_at)>=Date.now()-30*86400000 &&
+        /^https:\/\//i.test(String(row.url||'')))
+        .sort((a,b)=>String(b.published_at).localeCompare(String(a.published_at)))[0];
+      const article=linked || recent.find(row=>Array.isArray(row.developer_ids)&&row.developer_ids.includes(dev.id));
       const activity=article
-        ? '<div class="market-developer-activity"><small>Tin liên quan · '+esc(App.formatDate(article.published_at))+'</small><a href="'+esc(article.url)+'" target="_blank" rel="noopener noreferrer">'+esc(article.title)+'</a></div>'
+        ? '<div class="market-developer-activity"><small>'+(linked?'Tin dự án trong danh mục':'Tin liên quan')+' · '+esc(App.formatDate(article.published_at))+'</small><a href="'+esc(article.url)+'" target="_blank" rel="noopener noreferrer">'+esc(article.title)+'</a></div>'
         : '';
       return '<article class="developer-card"><div><span class="eyebrow">Chủ đầu tư</span><h3>'+esc(dev.name)+'</h3><p>'+esc(dev.summary)+'</p><div>'+sourceRef(dev.primary_source_id,{sourceUrl:dev.official_url})+'</div>'+activity+'</div>'+
         '<div class="developer-card__stats"><span><strong>'+projects.length+'</strong> dự án theo dõi</span><span><strong>'+selling+'</strong> đang bán</span></div>'+
