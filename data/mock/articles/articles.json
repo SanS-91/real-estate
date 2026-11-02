@@ -1,9 +1,140 @@
 {
   "schema_version": 1,
-  "build_id": "market-news-rss-20261102T085146Z",
-  "generated_at": "2026-11-02T08:51:46.781478+00:00",
-  "record_count": 1325,
+  "build_id": "market-news-rss-20261102T105136Z",
+  "generated_at": "2026-11-02T10:51:36.272231+00:00",
+  "record_count": 1331,
   "data": [
+    {
+      "id": "article-market-rss-cf14173fb6f616414b27",
+      "title": "Gần 3.800 căn hộ bỏ trống ở Thủ Thiêm có giá khởi điểm gần 18.300 tỷ đồng",
+      "url": "https://vnexpress.net/gan-3-800-can-ho-bo-trong-o-thu-thiem-co-gia-khoi-diem-gan-18-300-ty-dong-5139763.html",
+      "category": "market",
+      "module_ids": [
+        "market"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-11-02T09:38:52+00:00",
+      "source_id": "vnexpress-real-estate",
+      "region_ids": [
+        "hcmc"
+      ],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "Năm lô đất với 3.790 căn hộ thuộc khu đô thị mới Thủ Thiêm (phường An Khánh) vừa được TP HCM duyệt mức khởi điểm để đấu giá khoảng 18.253 tỷ đồng.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://vnexpress.net/rss/bat-dong-san.rss",
+        "publisher_host": "vnexpress.net",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-36929297334051b8d686",
+      "title": "Hà Nội chuyển hơn 6ha đất tại Hoàng Mai làm trung tâm thương mại",
+      "url": "https://dantri.com.vn/bat-dong-san/ha-noi-chuyen-hon-6ha-dat-tai-hoang-mai-lam-trung-tam-thuong-mai-20261102161644973.htm",
+      "category": "market",
+      "module_ids": [
+        "market"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-11-02T09:24:50+00:00",
+      "source_id": "dantri-real-estate",
+      "region_ids": [
+        "ha-noi"
+      ],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "(Dân trí) - Hà Nội cho phép một doanh nghiệp chuyển mục đích sử dụng và thuê hơn 6ha đất tại phường Định Công để thực hiện dự án bãi đỗ xe kết hợp trung tâm thương mại.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://dantri.com.vn/rss/bat-dong-san.rss",
+        "publisher_host": "dantri.com.vn",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-5c61121c7719836d302b",
+      "title": "Nhà đầu tư ngoại tăng 'bắt tay' doanh nghiệp Việt làm dự án",
+      "url": "https://vnexpress.net/nha-dau-tu-ngoai-tang-bat-tay-doanh-nghiep-viet-lam-du-an-5139617.html",
+      "category": "market",
+      "module_ids": [
+        "market"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-11-02T09:03:37+00:00",
+      "source_id": "vnexpress-real-estate",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "Thay vì mua lại dự án, nhà đầu tư ngoại ngày càng chuộng cách góp vốn, hợp tác với doanh nghiệp Việt để tiếp cận quỹ đất, mở rộng hoạt động phát triển bất động sản.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://vnexpress.net/rss/bat-dong-san.rss",
+        "publisher_host": "vnexpress.net",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-f9f2e40f79161e4f48f5",
+      "title": "Gia Lai rót hơn 860 tỷ mở rộng đường nối với sân bay Phù Cát",
+      "url": "https://vnexpress.net/gia-lai-rot-hon-860-ty-mo-rong-duong-noi-voi-san-bay-phu-cat-5139457.html",
+      "category": "infrastructure",
+      "module_ids": [
+        "infrastructure"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-11-02T09:00:00+00:00",
+      "source_id": "vnexpress-current-affairs",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [
+        "infrastructure"
+      ],
+      "importance": 2,
+      "summary": "Tuyến đường dài khoảng 18 km, có điểm đầu tại đường tránh phía Nam thị trấn Phú Phong cũ, điểm cuối giao quốc lộ 19B, dự kiến triển khai trong giai đoạn 2028-2031.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://vnexpress.net/rss/thoi-su.rss",
+        "publisher_host": "vnexpress.net",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-0d63951ea362a62764b4",
+      "title": "Hạn chót nộp thuế đất phi nông nghiệp, người dân lưu ý tránh bị phạt",
+      "url": "https://dantri.com.vn/bat-dong-san/han-chot-nop-thue-dat-phi-nong-nghiep-nguoi-dan-luu-y-tranh-bi-phat-20261102141420344.htm",
+      "category": "market",
+      "module_ids": [
+        "market"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-11-02T08:26:40+00:00",
+      "source_id": "dantri-real-estate",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "(Dân trí) - Hôm nay (2/11) là hạn cuối nộp thuế sử dụng đất phi nông nghiệp năm. Người dân tìm đến các chi nhánh ngân hàng để hoàn tất thủ tục, tránh phát sinh tiền chậm nộp từ ngày mai.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://dantri.com.vn/rss/bat-dong-san.rss",
+        "publisher_host": "dantri.com.vn",
+        "publication_date_from_feed": true
+      }
+    },
     {
       "id": "article-market-rss-7b2a8d086f6afbaeb4f1",
       "title": "Giá đất cao, hệ lụy lớn",
@@ -30,6 +161,33 @@
         "method": "official-rss",
         "feed_url": "https://thanhnien.vn/rss/kinh-te/dia-oc.rss",
         "publisher_host": "thanhnien.vn",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-047b90499cd62c5c837a",
+      "title": "Phê bình Ban Quản lý các Khu công nghiệp Lâm Đồng vì chậm tiến độ quy hoạch",
+      "url": "https://dantri.com.vn/thoi-su/phe-binh-ban-quan-ly-cac-khu-cong-nghiep-lam-dong-vi-cham-tien-do-quy-hoach-20261102140053802.htm",
+      "category": "market",
+      "module_ids": [
+        "market"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-11-02T07:55:15+00:00",
+      "source_id": "dantri-current-affairs",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [
+        "legal"
+      ],
+      "importance": 2,
+      "summary": "(Dân trí) - Ban Quản lý các Khu công nghiệp tỉnh Lâm Đồng vừa bị lãnh đạo tỉnh phê bình do chậm trễ trong việc thực hiện quy hoạch.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://dantri.com.vn/rss/thoi-su.rss",
+        "publisher_host": "dantri.com.vn",
         "publication_date_from_feed": true
       }
     },
