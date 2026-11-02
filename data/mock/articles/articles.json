@@ -1,9 +1,92 @@
 {
   "schema_version": 1,
-  "build_id": "market-news-rss-20261102T105136Z",
-  "generated_at": "2026-11-02T10:51:36.272231+00:00",
-  "record_count": 1331,
+  "build_id": "market-news-rss-20261102T125142Z",
+  "generated_at": "2026-11-02T12:51:42.843573+00:00",
+  "record_count": 1334,
   "data": [
+    {
+      "id": "article-market-rss-f0348325130578cff76d",
+      "title": "Người dân Hà Nội mang va li đi nhận tiền bồi thường mở rộng quốc lộ 1A",
+      "url": "https://dantri.com.vn/thoi-su/nguoi-dan-ha-noi-mang-va-li-di-nhan-tien-boi-thuong-mo-rong-quoc-lo-1a-20261102183701446.htm",
+      "category": "market",
+      "module_ids": [
+        "infrastructure"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-11-02T12:19:41+00:00",
+      "source_id": "dantri-real-estate",
+      "region_ids": [
+        "ha-noi"
+      ],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [
+        "infrastructure"
+      ],
+      "importance": 2,
+      "summary": "(Dân trí) - Chiều 2/11, 32 hộ dân ở xã Ngọc Hồi (Hà Nội) nhận tiền bồi thường mở rộng quốc lộ 1A. Nhiều gia đình mang va li, túi lớn để đựng số tiền hàng tỷ đồng, có hộ nhận hàng chục tỷ đồng.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://dantri.com.vn/rss/bat-dong-san.rss",
+        "publisher_host": "dantri.com.vn",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-579c445e2091caa172d5",
+      "title": "5 lô đất tại Thủ Thiêm được TPHCM định giá hơn 18.253 tỷ đồng",
+      "url": "https://dantri.com.vn/bat-dong-san/5-lo-dat-tai-thu-thiem-duoc-tphcm-dinh-gia-hon-18253-ty-dong-20261102172218420.htm",
+      "category": "market",
+      "module_ids": [
+        "market"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-11-02T12:10:43+00:00",
+      "source_id": "dantri-real-estate",
+      "region_ids": [
+        "hcmc"
+      ],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [
+        "infrastructure"
+      ],
+      "importance": 2,
+      "summary": "(Dân trí) - TPHCM xác định tổng giá trị 5 lô đất tại Thủ Thiêm là hơn 18.253 tỷ đồng, gồm quyền sử dụng đất và hạ tầng đã hình thành. Đây là cơ sở để thành phố xác định mức khởi điểm khi đấu giá các lô đất.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://dantri.com.vn/rss/bat-dong-san.rss",
+        "publisher_host": "dantri.com.vn",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-c1a4f89cc75fd3d6fa3e",
+      "title": "Sun Group chính thức bàn giao phân khu Casa Villa thuộc đại đô thị Blanca City",
+      "url": "https://dantri.com.vn/bat-dong-san/sun-group-chinh-thuc-ban-giao-phan-khu-casa-villa-thuoc-dai-do-thi-blanca-city-20261102175401944.htm",
+      "category": "market",
+      "module_ids": [
+        "market"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-11-02T12:00:00+00:00",
+      "source_id": "dantri-real-estate",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "(Dân trí) - Sáng 31/10, Sun Property (thành viên Tập đoàn Sun Group) tổ chức lễ bàn giao phân khu thấp tầng Casa Villa thuộc đại đô thị Blanca City - Vũng Tàu với chủ đề “Chạm khoảnh khắc, mở tương lai”.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://dantri.com.vn/rss/bat-dong-san.rss",
+        "publisher_host": "dantri.com.vn",
+        "publication_date_from_feed": true
+      }
+    },
     {
       "id": "article-market-rss-cf14173fb6f616414b27",
       "title": "Gần 3.800 căn hộ bỏ trống ở Thủ Thiêm có giá khởi điểm gần 18.300 tỷ đồng",
