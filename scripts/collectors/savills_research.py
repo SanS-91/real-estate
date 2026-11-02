@@ -26,7 +26,7 @@ def parse_article(html: str, source_url: str, fetched_at: str):
     soup = BeautifulSoup(html, "lxml")
     heading = soup.find("h1")
     title = heading.get_text(" ", strip=True) if heading else ""
-    if not re.search(r"(?:Viet\\s*Nam|Vietnam|Việt Nam).{0,60}(?:Market Brief|Bất Động Sản).{0,35}Q[1-4]\\s*[/\\- ]\\s*20\\d{2}", title, re.I):
+    if not (re.search(r"(?:Viet\\s*Nam\\s+Real\\s+Estate\\s+Market\\s+Brief|Báo\\s+cáo\\s+Thị\\s+trường\\s+Bất\\s+động\\s+sản\\s+Việt\\s+Nam)", title, re.I) and re.search(r"Q[1-4]\\s*[/\\- ]\\s*20\\d{2}", title, re.I)):
         raise ValueError("not-a-vietnam-quarterly-market-brief")
     period = extract_period_evidence(html, source_url)
     if period["status"] != "single-period":
