@@ -1,0 +1,79 @@
+{
+  "schema_version": 1,
+  "generated_at": "2026-11-02T09:38:07+00:00",
+  "sources_checked": 3,
+  "qualified_offers": 3,
+  "published_new_offers": 0,
+  "historical_offers": 0,
+  "no_project_asp_or_deals": true,
+  "sources": [
+    {
+      "project_id": "izumi-city",
+      "catalog_status": "reachable",
+      "catalog_scope": "publisher-project-category",
+      "catalogs": [
+        {
+          "url": "https://muaban.net/bat-dong-san/ban-nha-mat-tien-du-an-izumi-city-tp-bien-hoa-dong-nai",
+          "status": "reachable"
+        }
+      ],
+      "detail_checked": 4,
+      "qualified": 3,
+      "reasons": {
+        "qualified-unexpired-landed-offer": 3,
+        "multiple-units-in-one-ad": 1
+      }
+    },
+    {
+      "project_id": "waterpoint",
+      "catalog_status": "reachable",
+      "catalog_scope": "regional-broad-only",
+      "catalogs": [
+        {
+          "url": "https://muaban.net/bat-dong-san/ban-nha-mat-tien-huyen-ben-luc-long-an",
+          "status": "reachable"
+        }
+      ],
+      "detail_checked": 6,
+      "qualified": 0,
+      "reasons": {
+        "missing-or-ambiguous-header-total": 1,
+        "project-not-explicit-in-basic-info": 5
+      }
+    },
+    {
+      "project_id": "the-global-city",
+      "catalog_status": "reachable",
+      "catalog_scope": "publisher-project-category",
+      "catalogs": [
+        {
+          "url": "https://muaban.net/bat-dong-san/ban-nha-mat-tien-du-an-the-global-city-quan-2-ho-chi-minh",
+          "status": "reachable"
+        },
+        {
+          "url": "https://muaban.net/bat-dong-san/ban-biet-thu-villa-penthouse-du-an-the-global-city-quan-2-ho-chi-minh",
+          "status": "reachable"
+        }
+      ],
+      "detail_checked": 1,
+      "qualified": 0,
+      "reasons": {
+        "publisher-expired": 1
+      }
+    }
+  ],
+  "decisions": [
+    {
+      "listing_id": "70636156",
+      "decision": "awaiting-independent-source-check"
+    },
+    {
+      "listing_id": "71272223",
+      "decision": "awaiting-independent-source-check"
+    },
+    {
+      "listing_id": "71283160",
+      "decision": "awaiting-independent-source-check"
+    }
+  ]
+}

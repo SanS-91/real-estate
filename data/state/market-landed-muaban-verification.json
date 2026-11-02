@@ -1,0 +1,21 @@
+{
+  "schema_version": 1,
+  "checked_at": "2026-11-02T09:38:07+00:00",
+  "proofs": {
+    "muaban-vn:70636156": {
+      "fingerprint": "825322f437c18de954d9d892da0e0112288ed6b4e704a1ba22865d0efc59bed9",
+      "checked_at": "2026-11-02T09:38:07+00:00",
+      "run_id": "41422248521"
+    },
+    "muaban-vn:71272223": {
+      "fingerprint": "1138262d8a84104dd266912b77e4ae1c78a3ae96f200916149b2bed162cd32e7",
+      "checked_at": "2026-11-02T09:38:07+00:00",
+      "run_id": "41422248521"
+    },
+    "muaban-vn:71283160": {
+      "fingerprint": "b19981724d1e8fb97502919cd0f2369e557502b57e923dcc5d18ac0a5530376f",
+      "checked_at": "2026-11-02T09:38:07+00:00",
+      "run_id": "41422248521"
+    }
+  }
+}
