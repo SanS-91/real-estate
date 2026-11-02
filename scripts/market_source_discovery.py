@@ -98,3 +98,67 @@ def discover_cbre_hcmc_reports(html: str, index_url: str, max_items: int = 8) ->
         if len(found) >= max_items:
             break
     return found
+
+
+def discover_savills_reports(html: str, index_url: str, max_items: int = 6) -> list[dict]:
+    """Find publisher-linked Vietnam quarterly briefs; validate article later.
+
+    A title/quarter appears next to an individual research link in a scoped
+    card. Discovery is a candidate operation, never a market observation.
+    """
+    import re
+    root = urlsplit(index_url)
+    if root.scheme != "https" or (root.hostname or "").lower() not in (
+        "www.savills.com.vn", "savills.com.vn", "vn.savills.com.vn"
+    ):
+        return []
+    brief = re.compile(
+        r"(?:Viet\\s*Nam\\s+Real\\s+Estate\\s+Market\\s+Brief|"
+        r"Báo\\s+cáo\\s+Thị\\s+trường\\s+Bất\\s+động\\s+sản\\s+Việt\\s+Nam)"
+        r"\\s*Q([1-4])\\s*[/\\- ]?\\s*(20\\d{2})", re.I)
+    article = re.compile(r"^/research_articles/\\d+/\\d+-\\d+(?:/[^?#]*)?/?$", re.I)
+    soup = BeautifulSoup(html, "lxml")
+    found = []
+    seen = set()
+    for a in soup.select("a[href]"):
+        target = urlsplit(urljoin(index_url, a.get("href", "").strip()))
+        if target.scheme != "https" or target.username or target.password or target.query or target.fragment:
+            continue
+        if (target.hostname or "").lower() not in (
+            "www.savills.com.vn", "savills.com.vn", "vn.savills.com.vn"
+        ) or not article.fullmatch(target.path):
+            continue
+        # Keep title association within the smallest nearby content group.
+        card = a
+        match = None
+        for _ in range(4):
+            sample = card.get_text(" ", strip=True)
+            if len(sample) > 1100:
+                break
+            match = brief.search(sample)
+            if match:
+                break
+            card = card.parent
+            if card is None:
+                break
+        if not match:
+            continue
+        period = f"{match.group(2)}-Q{match.group(1)}"
+        identity = (target.path.split("/")[2], period)
+        if identity in seen:
+            continue
+        seen.add(identity)
+        url = urlunsplit(("https", target.netloc, target.path.rstrip("/"), "", ""))
+        found.append({
+            "target_id": "savills-discovered-" + hashlib.sha256(url.encode()).hexdigest()[:16],
+            "source_id": "savills-vietnam",
+            "observation_source_id": "savills-vietnam-market",
+            "url": url, "period": period, "period_type": "quarter",
+            "scope": "vietnam-quarterly-residential-research",
+            "collector": "savills_research", "enabled": True,
+            "auto_discovered": True, "discovery_url": index_url,
+            "review_policy": "report-candidate-only; no numeric promotion",
+        })
+        if len(found) >= max_items:
+            break
+    return found
