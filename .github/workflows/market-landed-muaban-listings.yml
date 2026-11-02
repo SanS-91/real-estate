@@ -2,8 +2,11 @@ name: Market Landed Muaban Dated Offers
 on:
   workflow_dispatch:
   schedule:
-    # 10:45 and 16:45 Vietnam (UTC+7)
+    # First checks: 10:45 and 16:45 Vietnam (UTC+7).
     - cron: '45 3,9 * * *'
+    # Independent follow-up checks >= 60m later, with slack for Actions.
+    - cron: '55 4 * * *'  # 11:55 Vietnam
+    - cron: '15 11 * * *' # 18:15 Vietnam
   push:
     branches: [main]
     paths:
@@ -53,6 +56,8 @@ jobs:
               assert row['review_status']=='automated-two-hosted-dated-checks'
               assert len(set(row['verification_run_ids']))==2
               assert row['source_expiration_date']>=row['source_listed_date']
+              assert row.get('source_status')=='confirmed-match'
+              assert row.get('last_source_verified_at')
               assert row['value_vnd_per_land_m2']>0 and row['listed_land_area_sqm']>0
               assert 'average_asp' not in row and 'sales_units' not in row
           print('PASS: Muaban landed source evidence isolated and dated')
