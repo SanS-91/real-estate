@@ -14,7 +14,7 @@
     priceLayer: 'listing',
     benchmarkProduct: ''
   };
-  let data = { regions: [], developers: [], projects: [], phases: [], observations: [], listingObservations: [], listingScopeEvidence: [], alternativePriceEvidence: [], secondaryListingEvidence: [], oneHousingSubprojectEvidence: [], oneHousingSubprojectHistory: [], oneHousingProjectHistory: [], peerMonthlyVerified: [], peerMonthlyTargets: [], peerMonthlyHealth: null, developerProjectEvidence: [], productComparables: null, salesPolicyReadiness: null, commercialOfferReview: null, reverVerifiedUnitListings: [], muabanVerifiedUnitListings: [], listingSourceCoverage: null, activeListingCoverage: null, listingComparables: [], articles: [], allArticles: [], infrastructureProjects: [], infrastructureSchedules: [], legalTopics: [], legalDocuments: [], events: [], macroIndicators: [], macroRows: [] };
+  let data = { regions: [], developers: [], projects: [], phases: [], observations: [], listingObservations: [], listingScopeEvidence: [], alternativePriceEvidence: [], secondaryListingEvidence: [], oneHousingSubprojectEvidence: [], oneHousingSubprojectHistory: [], oneHousingProjectHistory: [], peerMonthlyVerified: [], peerMonthlyTargets: [], peerMonthlyHealth: null, marketDailyPulse:null, developerProjectEvidence: [], productComparables: null, salesPolicyReadiness: null, commercialOfferReview: null, reverVerifiedUnitListings: [], muabanVerifiedUnitListings: [], listingSourceCoverage: null, activeListingCoverage: null, listingComparables: [], articles: [], allArticles: [], infrastructureProjects: [], infrastructureSchedules: [], legalTopics: [], legalDocuments: [], events: [], macroIndicators: [], macroRows: [] };
 
   function payloadData(payload) { return payload?.data || []; }
   function byId(records) { return new Map(records.map(item => [item.id, item])); }
@@ -651,23 +651,46 @@
     return '<section class="section market-pulse"><div class="section-header"><div><span class="eyebrow">Dữ liệu tin tức cập nhật</span><h2 class="section-title">Diễn biến thị trường · '+windowDays+' ngày</h2></div><a class="text-link" href="market.html?view=news">Xem tin tức</a></div><div class="section-body"><p class="market-pulse__note">'+recent.length+' tin đạt bộ lọc liên quan trong '+windowDays+' ngày · Dẫn đến bài gốc, không suy diễn thay đổi giá hoặc lượng giao dịch.</p><div class="market-pulse-grid">'+tiles+'</div></div></section>';
   }
 
+  function marketCoverageNoteHTML() {
+    const health=data.marketDailyPulse?.data_freshness;
+    if(!health)return '';
+    const ask=health.listing_aggregate || {};
+    const source=health.listing_collector || {};
+    const isOld=ask.stale===true;
+    return '<div class="market-coverage-note"><strong>Chất lượng dữ liệu giá: '+(isOld?'chỉ tham khảo lịch sử':'có kỳ nguồn đã ghi nhận')+'</strong>'+
+      '<span>Snapshot tổng hợp: '+esc(ask.observation_date||'chưa có')+
+      ' · Nguồn thu thập: '+esc(source.access_status||'không rõ')+
+      ' · Tin rao căn hộ đang theo dõi: '+esc(String(health.unit_listing_monitor?.projects_monitored??0))+' dự án</span>'+
+      '<a href="market.html?view=pricing">Chi tiết giá</a></div>';
+  }
+
   function projectNewsHTML(projects) {
-    const byProject=new Set(projects.map(p=>p.id));
-    if(!byProject.size)return '';
-    const articles=qualifiedMarketArticles(30)
-      .filter(row=>Array.isArray(row.project_ids)&&row.project_ids.some(id=>byProject.has(id)));
+    const projectMap=new Map(projects.map(p=>[p.id,p]));
+    if(!projectMap.size)return '';
+    const now=Date.now();
+    const pulseRows=Array.isArray(data.marketDailyPulse?.article_index)
+      ? data.marketDailyPulse.article_index.filter(row=>{
+          const time=Date.parse(row.published_at||'');
+          return projectMap.has(row.project_id) && Number.isFinite(time) &&
+            time<=now+3600000 && time>=now-30*86400000 &&
+            /^https:\/\//i.test(String(row.url||''));
+        })
+      : [];
+    const fallback=qualifiedMarketArticles(30).flatMap(row=>
+      (row.project_ids||[]).filter(id=>projectMap.has(id)).map(id=>({...row,project_id:id,match_method:'source-project-id'})));
+    const rows=pulseRows.length?pulseRows:fallback;
     const selected=[],seen=new Set();
-    articles.forEach(row=>{
-      const id=row.project_ids.find(id=>byProject.has(id)&&!seen.has(id));
-      if(!id||selected.length>=6)return;
-      const project=projects.find(p=>p.id===id);
+    rows.sort((x,y)=>String(y.published_at||'').localeCompare(String(x.published_at||'')));
+    rows.forEach(row=>{
+      if(seen.has(row.project_id)||selected.length>=6)return;
+      const project=projectMap.get(row.project_id);
       if(!project)return;
-      selected.push({row,project});seen.add(id);
+      selected.push({row,project});seen.add(row.project_id);
     });
     if(!selected.length)return '';
-    return '<section class="section market-project-news"><div class="section-header"><div><span class="eyebrow">Tin liên kết rõ dự án</span><h2 class="section-title">Dự án có cập nhật trong 30 ngày</h2></div><a class="text-link" href="market.html?view=news">Tin thị trường</a></div><div class="section-body"><div class="market-project-news-grid">'+
-      selected.map(({row,project})=>'<article class="market-project-news-card"><strong>'+esc(project.name)+'</strong><a href="'+esc(row.url)+'" target="_blank" rel="noopener noreferrer">'+esc(row.title)+'</a><small>'+esc(App.formatDate(row.published_at))+' · '+esc(String(row.source_id||'Nguồn báo').replaceAll('-',' '))+'</small></article>').join('')+
-      '</div><p class="chart-note">Chỉ liên kết bài có mã dự án trong dữ liệu; tin bài không xác nhận mức giá, giao dịch hoặc tiến độ của dự án.</p></div></section>';
+    return '<section class="section market-project-news"><div class="section-header"><div><span class="eyebrow">Tin có nguồn trong 30 ngày</span><h2 class="section-title">Dự án có tin tức gần đây</h2></div><a class="text-link" href="market.html?view=news">Tin thị trường</a></div><div class="section-body"><div class="market-project-news-grid">'+
+      selected.map(({row,project})=>'<article class="market-project-news-card"><strong>'+esc(project.name)+'</strong><a href="'+esc(row.url)+'" target="_blank" rel="noopener noreferrer">'+esc(row.title)+'</a><small>'+esc(App.formatDate(row.published_at))+' · '+esc(String(row.source_id||'Nguồn báo').replaceAll('-',' '))+(row.match_method==='exact-headline-name'?' · Khớp tên dự án trong tiêu đề':'')+'</small></article>').join('')+
+      '</div><p class="chart-note">Tự nhận diện tên dự án chỉ tạo liên kết bài báo để tra cứu, không xác nhận biến động giá, giao dịch hay tiến độ.</p></div></section>';
   }
 
   function priceFreshnessNote(rows, label) {
@@ -685,6 +708,8 @@
     const overviewPriceSource = data.observations.find(item => item.average_asp && item.source_id) || null;
     const html = `
       ${marketPulseHTML()}
+      ${marketCoverageNoteHTML()}
+      ${projectNewsHTML(data.projects)}
       <div class="market-metric-grid">${summaryMetrics().map(Components.compactMetric).join('')}</div>
       <div class="market-layout market-layout--overview">
         <section class="section market-panel market-panel--wide">
@@ -1569,6 +1594,7 @@
       <div class="view-intro"><div><span class="eyebrow">Evidence-backed price observations</span><h2>Pricing</h2><p>Verified project prices and listing-market asking ranges are shown as separate layers. Missing fields remain blank.</p></div></div>
       ${filterToolbar({ includeStatus:false })}
       ${projectCoverageStatusHTML(filteredProjects, true)}
+      ${marketCoverageNoteHTML()}
       ${state.priceLayer==='listing' ? priceFreshnessNote(listingRows.map(item=>item.row),'Dữ liệu giá chào bán theo dự án') : '<p class="market-data-freshness">Chỉ hiển thị giá công bố có chứng cứ trực tiếp, không thay thế bằng giá rao hoặc giá từng căn.</p>'}
       <section class="section">
         <div class="section-header"><div><h2 class="section-title">${state.priceLayer === 'listing' ? 'Listing Market Asking Ranges' : 'Verified Project Pricing'}</h2></div>${priceLayerControls()}</div>
@@ -1823,14 +1849,15 @@
   async function load() {
     try {
       await window.Provenance?.load?.();
-      const [commercialOfferReview, salesPolicyReadiness, productComparables, developerProjectEvidence, regions, developers, projects, phases, observations, listingObservations, listingScopeEvidence, alternativePriceEvidence, secondaryListingEvidence, oneHousingSubprojectEvidence, oneHousingSubprojectHistory, oneHousingProjectHistory, reverVerifiedUnitListings, muabanVerifiedUnitListings, listingSourceCoverage, activeListingCoverage, listingComparables, articles, infrastructureProjects, infrastructureSchedules, legalTopics, legalDocuments, events, macroIndicators, macroRows, meta, peerMonthlyVerified, peerMonthlyTargets, peerMonthlyHealth] = await Promise.all([
+      const [commercialOfferReview, salesPolicyReadiness, productComparables, developerProjectEvidence, regions, developers, projects, phases, observations, listingObservations, listingScopeEvidence, alternativePriceEvidence, secondaryListingEvidence, oneHousingSubprojectEvidence, oneHousingSubprojectHistory, oneHousingProjectHistory, reverVerifiedUnitListings, muabanVerifiedUnitListings, listingSourceCoverage, activeListingCoverage, listingComparables, articles, infrastructureProjects, infrastructureSchedules, legalTopics, legalDocuments, events, macroIndicators, macroRows, meta, peerMonthlyVerified, peerMonthlyTargets, peerMonthlyHealth, marketDailyPulse] = await Promise.all([
         DataStore.getCommercialOfferReview().catch(() => null), DataStore.getSalesPolicyReadiness().catch(() => null), DataStore.getProductComparables().catch(() => null), DataStore.getDeveloperProjectEvidence().catch(() => ({data:[]})), DataStore.getRegions(), DataStore.getDevelopers(), DataStore.getProjects(), DataStore.getProjectPhases(), DataStore.getMarketObservations(), DataStore.getListingObservations(), DataStore.getListingScopeEvidence(), DataStore.getAlternativePriceEvidence(), DataStore.getSecondaryListingEvidence(), DataStore.getOneHousingSubprojectEvidence(), DataStore.getOneHousingSubprojectHistory(), DataStore.getOneHousingProjectHistory().catch(() => ({data:[]})), DataStore.getReverVerifiedUnitListings().catch(() => ({data:[]})), DataStore.getMuabanVerifiedUnitListings().catch(() => ({data:[]})), DataStore.getListingSourceCoverage().catch(() => null), DataStore.getActiveListingCoverage().catch(() => null), DataStore.getListingComparables(), DataStore.getArticles(), DataStore.getInfrastructureProjects(), DataStore.getInfrastructureSchedules(), DataStore.getLegalTopics(), DataStore.getLegalDocuments(), DataStore.getEvents(), DataStore.getMacroIndicators(), DataStore.getProcessedMacroObservations(), DataStore.getMeta(),
         DataStore.getPeerMonthlyVerified().catch(() => ({data:[]})),
         DataStore.getPeerMonthlyTargets().catch(() => ({targets:[]})),
-        DataStore.getPeerMonthlySourceHealth().catch(() => null)
+        DataStore.getPeerMonthlySourceHealth().catch(() => null),
+        DataStore.getMarketDailyPulse().catch(() => null)
       ]);
       data = {
-        commercialOfferReview, salesPolicyReadiness, productComparables, developerProjectEvidence: payloadData(developerProjectEvidence), regions: payloadData(regions), developers: payloadData(developers), projects: payloadData(projects), phases: payloadData(phases), observations: payloadData(observations), listingObservations: payloadData(listingObservations), listingScopeEvidence: payloadData(listingScopeEvidence), alternativePriceEvidence: payloadData(alternativePriceEvidence), secondaryListingEvidence: payloadData(secondaryListingEvidence), oneHousingSubprojectEvidence: payloadData(oneHousingSubprojectEvidence), oneHousingSubprojectHistory: payloadData(oneHousingSubprojectHistory), oneHousingProjectHistory: payloadData(oneHousingProjectHistory), peerMonthlyVerified:payloadData(peerMonthlyVerified), peerMonthlyTargets:peerMonthlyTargets?.targets || [], peerMonthlyHealth, reverVerifiedUnitListings: payloadData(reverVerifiedUnitListings), muabanVerifiedUnitListings: payloadData(muabanVerifiedUnitListings), listingSourceCoverage, activeListingCoverage, listingComparables: payloadData(listingComparables), articles: payloadData(articles), allArticles: payloadData(articles), infrastructureProjects: payloadData(infrastructureProjects), infrastructureSchedules: payloadData(infrastructureSchedules), legalTopics: payloadData(legalTopics), legalDocuments: payloadData(legalDocuments), events: payloadData(events), macroIndicators: payloadData(macroIndicators), macroRows: payloadData(macroRows)
+        commercialOfferReview, salesPolicyReadiness, productComparables, developerProjectEvidence: payloadData(developerProjectEvidence), regions: payloadData(regions), developers: payloadData(developers), projects: payloadData(projects), phases: payloadData(phases), observations: payloadData(observations), listingObservations: payloadData(listingObservations), listingScopeEvidence: payloadData(listingScopeEvidence), alternativePriceEvidence: payloadData(alternativePriceEvidence), secondaryListingEvidence: payloadData(secondaryListingEvidence), oneHousingSubprojectEvidence: payloadData(oneHousingSubprojectEvidence), oneHousingSubprojectHistory: payloadData(oneHousingSubprojectHistory), oneHousingProjectHistory: payloadData(oneHousingProjectHistory), peerMonthlyVerified:payloadData(peerMonthlyVerified), peerMonthlyTargets:peerMonthlyTargets?.targets || [], peerMonthlyHealth, marketDailyPulse, reverVerifiedUnitListings: payloadData(reverVerifiedUnitListings), muabanVerifiedUnitListings: payloadData(muabanVerifiedUnitListings), listingSourceCoverage, activeListingCoverage, listingComparables: payloadData(listingComparables), articles: payloadData(articles), allArticles: payloadData(articles), infrastructureProjects: payloadData(infrastructureProjects), infrastructureSchedules: payloadData(infrastructureSchedules), legalTopics: payloadData(legalTopics), legalDocuments: payloadData(legalDocuments), events: payloadData(events), macroIndicators: payloadData(macroIndicators), macroRows: payloadData(macroRows)
       };
       Resolver.setData('region', data.regions);
       Resolver.setData('developer', data.developers);
