@@ -1158,10 +1158,10 @@
       </div>
       <div class="benchmark-summary-grid">
         <div><strong>${esc(String(filtered.length))}</strong><span>Tin rao có nguồn (lịch sử)</span></div>
-        <div><strong>${esc(String(currentCount))}</strong><span>Tin theo căn đủ điều kiện đối soát nguồn gần đây</span></div>
-        <div><strong>0</strong><span>Lịch thanh toán CĐT được xác minh</span></div>
         <div><strong>${esc(String(filteredWatch.length))}</strong><span>Dự án trong nhóm so sánh</span></div>
+        ${currentCount>0 ? '<div><strong>'+esc(String(currentCount))+'</strong><span>Tin theo căn đã xác minh còn hiệu lực</span></div>' : ''}
       </div>
+      ${currentCount===0 ? '<p class="market-data-freshness">Chưa có tin rao đang hiệu lực đủ chuẩn xác minh trong bộ benchmark này. Các mức giá dưới đây chỉ mang tính lịch sử, chưa đủ để xác định ASP hoặc tính PV.</p>' : ''}
       <section class="section"><div class="section-header"><div><span class="eyebrow">Không phải ASP dự án</span>
         <h2 class="section-title">Giá rao theo từng căn</h2></div></div>
         <div class="section-body">${status}${benchmarkRecordTable(filtered)}
@@ -1604,16 +1604,19 @@
     }
   }
   function renderDevelopers() {
-    const cards = data.developers.map(dev => {
-      const projects = data.projects.filter(project => (project.developer_ids || []).includes(dev.id));
-      const selling = projects.filter(project => project.status === 'selling').length;
-      return `<article class="developer-card">
-        <div><span class="eyebrow">Developer</span><h3>${esc(dev.name)}</h3><p>${esc(dev.summary)}</p><div>${sourceRef(dev.primary_source_id,{sourceUrl:dev.official_url})}</div></div>
-        <div class="developer-card__stats"><span><strong>${projects.length}</strong> tracked projects</span><span><strong>${selling}</strong> selling</span></div>
-        <div class="developer-card__links"><a class="text-link" href="market.html?view=projects&developer=${encodeURIComponent(dev.id)}">View projects</a></div>
-      </article>`;
+    const recent=qualifiedMarketArticles(30);
+    const cards=data.developers.map(dev=>{
+      const projects=data.projects.filter(project=>(project.developer_ids||[]).includes(dev.id));
+      const selling=projects.filter(project=>project.status==='selling').length;
+      const article=recent.find(row=>Array.isArray(row.developer_ids)&&row.developer_ids.includes(dev.id));
+      const activity=article
+        ? '<div class="market-developer-activity"><small>Tin liên quan · '+esc(App.formatDate(article.published_at))+'</small><a href="'+esc(article.url)+'" target="_blank" rel="noopener noreferrer">'+esc(article.title)+'</a></div>'
+        : '';
+      return '<article class="developer-card"><div><span class="eyebrow">Chủ đầu tư</span><h3>'+esc(dev.name)+'</h3><p>'+esc(dev.summary)+'</p><div>'+sourceRef(dev.primary_source_id,{sourceUrl:dev.official_url})+'</div>'+activity+'</div>'+
+        '<div class="developer-card__stats"><span><strong>'+projects.length+'</strong> dự án theo dõi</span><span><strong>'+selling+'</strong> đang bán</span></div>'+
+        '<div class="developer-card__links"><a class="text-link" href="market.html?view=projects&developer='+encodeURIComponent(dev.id)+'">Xem dự án</a></div></article>';
     }).join('');
-    setView(`<div class="view-intro"><div><span class="eyebrow">Developer registry</span><h2>${data.developers.length} developers</h2><p>Developer records resolve to project relationships instead of storing duplicate project lists.</p></div></div><div class="developer-grid">${cards}</div>`);
+    setView('<div class="view-intro"><div><span class="eyebrow">Danh mục chủ đầu tư</span><h2>'+data.developers.length+' chủ đầu tư</h2><p>Tin mới chỉ xuất hiện khi bài báo có mã chủ đầu tư được liên kết; không suy ra thông tin chỉ từ tên tương tự.</p></div></div><div class="developer-grid">'+cards+'</div>');
   }
 
   function renderNews() {
