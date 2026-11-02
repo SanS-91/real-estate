@@ -444,16 +444,15 @@
   }
 
   function summaryMetrics() {
-    const projects = data.projects;
-    const active = projects.filter(item => ['selling','ongoing','construction'].includes(item.status)).length;
-    const knownUnitProjects = projects.filter(item => Number.isFinite(item.planned_units));
-    const totalKnownUnits = knownUnitProjects.reduce((sum, item) => sum + item.planned_units, 0);
-    const verifiedPriceObs = data.observations.filter(item => item.scope_type === 'project' && Number.isFinite(item.average_asp));
+    const recentNews=qualifiedMarketArticles(7);
+    const priced=listingPriceRows(data.projects).length;
+    const knownHcmc=hcmcSeries();
+    const period=knownHcmc.at(-1)?.period||'—';
     return [
-      { label: 'Tracked Projects', value: String(projects.length), note: 'Curated first-party entities' },
-      { label: 'Active / Selling', value: String(active), note: 'Current disclosed status' },
-      { label: 'Known Product Units', value: formatCompact(totalKnownUnits), note: `${knownUnitProjects.length}/${projects.length} projects disclose comparable counts` },
-      { label: 'Verified Price Snapshots', value: String(verifiedPriceObs.length), note: 'No estimated project pricing' }
+      { label:'Dự án theo dõi',value:String(data.projects.length),note:'Danh mục dự án tham chiếu' },
+      { label:'Tin thị trường · 7 ngày',value:String(recentNews.length),note:'Tin qua bộ lọc nội dung, có ngày xuất bản' },
+      { label:'Dự án có giá chào tham chiếu',value:priced+'/'+data.projects.length,note:'Snapshot theo nguồn; không phải giá giao dịch' },
+      { label:'Kỳ cung / giao dịch mới nhất',value:period,note:'TP.HCM · căn hộ, số liệu từ báo cáo nghiên cứu' }
     ];
   }
 
@@ -1370,6 +1369,16 @@
     }
     const rows = state.source ? allRows.filter(item => item.source_id === state.source) : allRows;
     const latest = rows[rows.length - 1] || null;
+    if (!allRows.length) {
+      const related=qualifiedMarketArticles(30).filter(article=>(article.region_ids||[]).includes(region)).slice(0,4);
+      setView('<div class="view-intro"><div><span class="eyebrow">Nguồn cung và giao dịch</span><h2>Supply & Sales</h2><p>Chỉ trình bày chuỗi dữ liệu thị trường có kỳ và phạm vi công bố rõ ràng.</p></div></div>'+
+        filterToolbar({includeDeveloper:false,includeSegment:true,includeStatus:false})+
+        '<section class="section"><div class="section-body"><div class="state-box">Chưa có chuỗi nguồn cung / giao dịch đủ điều kiện cho khu vực và phân khúc này. Không dùng số liệu TP.HCM thay thế.</div>'+
+        (related.length?'<div class="market-project-news-grid">'+related.map(article=>'<article class="market-project-news-card"><a href="'+esc(article.url)+'" target="_blank" rel="noopener noreferrer">'+esc(article.title)+'</a><small>'+esc(App.formatDate(article.published_at))+'</small></article>').join('')+'</div>':'')+
+        '</div></section>');
+      bindFilters();
+      return;
+    }
     const history = MarketHistorySeries.expandQuarterHistory(rows);
     const coverage = MarketHistorySeries.coverageSummary(history);
     const benchmarkRows = data.observations
@@ -1560,7 +1569,7 @@
       <div class="view-intro"><div><span class="eyebrow">Evidence-backed price observations</span><h2>Pricing</h2><p>Verified project prices and listing-market asking ranges are shown as separate layers. Missing fields remain blank.</p></div></div>
       ${filterToolbar({ includeStatus:false })}
       ${projectCoverageStatusHTML(filteredProjects, true)}
-      ${state.priceLayer==='listing' ? priceFreshnessNote(listingRows.map(item=>item.row),'Dữ liệu giá chào bán theo dự án') : ''}
+      ${state.priceLayer==='listing' ? priceFreshnessNote(listingRows.map(item=>item.row),'Dữ liệu giá chào bán theo dự án') : '<p class="market-data-freshness">Chỉ hiển thị giá công bố có chứng cứ trực tiếp, không thay thế bằng giá rao hoặc giá từng căn.</p>'}
       <section class="section">
         <div class="section-header"><div><h2 class="section-title">${state.priceLayer === 'listing' ? 'Listing Market Asking Ranges' : 'Verified Project Pricing'}</h2></div>${priceLayerControls()}</div>
         <div class="section-body">${chartBody}</div>
@@ -1827,7 +1836,12 @@
       Resolver.setData('legal-topic', data.legalTopics);
       parseState();
       const updated = document.querySelector('[data-market-updated]');
-      if (updated) updated.textContent = `Curated registry · ${data.projects.length} projects`;
+      if (updated) {
+        const article=qualifiedMarketArticles(7)[0];
+        updated.textContent = article
+          ? 'Tin thị trường '+App.formatDate(article.published_at)+' · '+data.projects.length+' dự án trong danh mục'
+          : 'Danh mục '+data.projects.length+' dự án · Tin mới xem tại tab Tin tức';
+      }
       render();
       const projectId = App.getQueryParam('project');
       if (projectId) openProject(projectId, { push:false });
