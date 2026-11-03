@@ -1,9 +1,217 @@
 {
   "schema_version": 1,
-  "build_id": "market-news-rss-20261103T045142Z",
-  "generated_at": "2026-11-03T04:51:42.329131+00:00",
-  "record_count": 1358,
+  "build_id": "market-news-rss-20261103T065140Z",
+  "generated_at": "2026-11-03T06:51:40.242110+00:00",
+  "record_count": 1367,
   "data": [
+    {
+      "id": "article-market-rss-37b5999eb835b3668c16",
+      "title": "35.000 căn chung cư có thể được mở bán tại Hà Nội năm sau",
+      "url": "https://vnexpress.net/35-000-can-chung-cu-co-the-duoc-mo-ban-tai-ha-noi-nam-sau-5140096.html",
+      "category": "market",
+      "module_ids": [
+        "market"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-11-03T06:22:20+00:00",
+      "source_id": "vnexpress-real-estate",
+      "region_ids": [
+        "ha-noi"
+      ],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [
+        "supply"
+      ],
+      "importance": 2,
+      "summary": "Nguồn cung căn hộ dự báo tiếp tục tăng mạnh trong 2027 với khoảng 35.000 căn mở bán, tập trung ở khu vực ngoại thành, theo Knight Frank.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://vnexpress.net/rss/bat-dong-san.rss",
+        "publisher_host": "vnexpress.net",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-91bf9247e917157ed29b",
+      "title": "Lợi thế đưa Hưng Yên thành điểm đến của nhà xưởng xây sẵn",
+      "url": "https://vnexpress.net/loi-the-dua-hung-yen-thanh-diem-den-cua-nha-xuong-xay-san-5140034.html",
+      "category": "market",
+      "module_ids": [
+        "market"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-11-03T06:00:00+00:00",
+      "source_id": "vnexpress-real-estate",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "Dòng vốn FDI vào công nghệ cao thúc đẩy nhu cầu nhà xưởng xây sẵn tại Hưng Yên, nơi có lợi thế về vị trí, giao thông và kết nối logistics.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://vnexpress.net/rss/bat-dong-san.rss",
+        "publisher_host": "vnexpress.net",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-5fecb62ba9fd70d62a77",
+      "title": "Lãi suất tiết kiệm giảm, có 1 tỷ đồng gửi ngân hàng nào sinh lời cao nhất?",
+      "url": "https://dantri.com.vn/kinh-doanh/lai-suat-tiet-kiem-giam-co-1-ty-dong-gui-ngan-hang-nao-sinh-loi-cao-nhat-20261103095248024.htm",
+      "category": "macro",
+      "module_ids": [
+        "macro"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-11-03T05:55:00+00:00",
+      "source_id": "dantri-business",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "(Dân trí) - Làn sóng điều chỉnh lãi suất huy động tiếp tục diễn ra trong tháng 11 với mức giảm tại nhiều nhà băng. Những khách hàng có dòng tiền nhàn rỗi cần tính toán kỹ để tối ưu hóa mức sinh lời.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://dantri.com.vn/rss/kinh-doanh.rss",
+        "publisher_host": "dantri.com.vn",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-b8213f51544fe864c50e",
+      "title": "Hải Phòng đấu giá khu đất hơn 4.000 tỉ đồng tại Bắc Sông Cấm",
+      "url": "https://thanhnien.vn/hai-phong-dau-gia-khu-dat-hon-4000-ti-dong-tai-bac-song-cam-18526110309424564.htm",
+      "category": "market",
+      "module_ids": [
+        "market"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-11-03T05:46:00+00:00",
+      "source_id": "thanhnien-real-estate",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "TP.Hải Phòng chuẩn bị đấu giá khu đất rộng hơn 6,4 ha tại khu đô thị mới Bắc Sông Cấm, với tổng giá khởi điểm hơn 4.000 tỉ đồng. Phiên đấu giá dự kiến diễn ra trong tháng 11 này.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://thanhnien.vn/rss/kinh-te/dia-oc.rss",
+        "publisher_host": "thanhnien.vn",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-ef54896b6425a5c81186",
+      "title": "Tỷ giá ngân hàng lao dốc",
+      "url": "https://vnexpress.net/ty-gia-ngan-hang-lao-doc-5140148.html",
+      "category": "macro",
+      "module_ids": [
+        "macro"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-11-03T05:26:07+00:00",
+      "source_id": "vnexpress-economy",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "Các ngân hàng liên tục hạ giá mua bán USD xuống 25.560 - 25.970 đồng, xuống thấp nhất một năm rưỡi, dù tỷ giá trung tâm gần như đi ngang.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://vnexpress.net/rss/kinh-doanh.rss",
+        "publisher_host": "vnexpress.net",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-5d4fe62749dd71faff3a",
+      "title": "TPHCM đặt thời hạn giao mặt bằng 2 dự án chỉnh trang đô thị ven kênh, rạch",
+      "url": "https://dantri.com.vn/thoi-su/tphcm-dat-thoi-han-giao-mat-bang-2-du-an-chinh-trang-do-thi-ven-kenh-rach-20261103112854803.htm",
+      "category": "market",
+      "module_ids": [
+        "market"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-11-03T04:42:32+00:00",
+      "source_id": "dantri-current-affairs",
+      "region_ids": [
+        "hcmc"
+      ],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "(Dân trí) - TPHCM đặt mục tiêu hoàn thành bồi thường, hỗ trợ, tái định cư và bàn giao toàn bộ mặt bằng tại dự án rạch Ông Bé và bờ Nam kênh Đôi trước ngày 31/3/2027.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://dantri.com.vn/rss/thoi-su.rss",
+        "publisher_host": "dantri.com.vn",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-f02c09f9283e927a064c",
+      "title": "Australia tăng lãi suất lên cao nhất 18 năm",
+      "url": "https://vnexpress.net/australia-tang-lai-suat-len-cao-nhat-18-nam-5140080.html",
+      "category": "macro",
+      "module_ids": [
+        "macro"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-11-03T04:41:29+00:00",
+      "source_id": "vnexpress-economy",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "Để hạ nhiệt lạm phát hơn 4% hiện tại, Australia đã nâng lãi 5 lần năm nay, lên cao nhất kể từ 2008.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://vnexpress.net/rss/kinh-doanh.rss",
+        "publisher_host": "vnexpress.net",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-ad4949d008e269436986",
+      "title": "Chung cư TPHCM giảm giá hàng tỷ đồng: Cơ hội cho người cầm tiền mặt?",
+      "url": "https://dantri.com.vn/bat-dong-san/chung-cu-tphcm-giam-gia-hang-ty-dong-co-hoi-cho-nguoi-cam-tien-mat-20261103111509698.htm",
+      "category": "market",
+      "module_ids": [
+        "market"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-11-03T04:30:47+00:00",
+      "source_id": "dantri-real-estate",
+      "region_ids": [
+        "hcmc"
+      ],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "(Dân trí) - Giá chung cư TPHCM có nơi giảm hàng tỷ đồng, nhất là trên thị trường thứ cấp, tạo cơ hội cho người có tiền mặt nhưng cũng đòi hỏi cân nhắc kỹ trước khi xuống tiền.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://dantri.com.vn/rss/bat-dong-san.rss",
+        "publisher_host": "dantri.com.vn",
+        "publication_date_from_feed": true
+      }
+    },
     {
       "id": "article-market-rss-4a569e760919b3efebdc",
       "title": "Bổ sung điều kiện cấp sổ đỏ cho đất vi phạm thủ tục trong quá khứ",
@@ -28,6 +236,35 @@
         "method": "official-rss",
         "feed_url": "https://vnexpress.net/rss/thoi-su.rss",
         "publisher_host": "vnexpress.net",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-3503f9dc21993d005928",
+      "title": "Đồng Nai gặp khó khi xây Metro Suối Tiên - Long Thành theo diện cấp bách",
+      "url": "https://dantri.com.vn/thoi-su/dong-nai-gap-kho-khi-xay-metro-suoi-tien-long-thanh-theo-dien-cap-bach-20261103102928454.htm",
+      "category": "infrastructure",
+      "module_ids": [
+        "infrastructure"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-11-03T04:00:51+00:00",
+      "source_id": "dantri-current-affairs",
+      "region_ids": [
+        "dong-nai"
+      ],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [
+        "infrastructure"
+      ],
+      "importance": 2,
+      "summary": "(Dân trí) - Dù được Chính phủ cho triển khai theo diện cấp bách, dự án metro kết nối trung tâm hành chính TP Đồng Nai đến sân bay Long Thành vẫn gặp vướng mắc do chưa thống nhất việc áp dụng quy định pháp luật.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://dantri.com.vn/rss/thoi-su.rss",
+        "publisher_host": "dantri.com.vn",
         "publication_date_from_feed": true
       }
     },
