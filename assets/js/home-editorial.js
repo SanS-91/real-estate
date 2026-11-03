@@ -191,7 +191,10 @@
     const eligible=(articles||[]).map(article=>{
       const review=inspect({...article,category:module});
       const stamp=Date.parse(article.published_at||'');
-      return {...review,article,stamp,age:dayAge({date:article.published_at},referenceDate)};
+      // RSS timestamps are commonly UTC; Home groups dates in Vietnam time.
+      const vnDate=Number.isFinite(stamp)
+        ? new Date(stamp+7*3600000).toISOString().slice(0,10) : '';
+      return {...review,article,stamp,age:dayAge({date:vnDate},referenceDate)};
     }).filter(x=>x.eligible && x.article?.title &&
       /^https:\/\//i.test(String(x.article.url||'')) &&
       !String(x.article.source_id||'').startsWith('demo-') &&
