@@ -479,6 +479,22 @@
     ];
   }
 
+  function marketSourceLabel(sourceId) {
+    const labels = {
+      'cbre-vietnam-market': 'CBRE Vietnam Research',
+      'savills-vietnam-market': 'Savills Vietnam Research',
+      'jll-vietnam-market': 'JLL Vietnam Research',
+      'cushman-wakefield-vietnam-market': 'Cushman & Wakefield Vietnam Research'
+    };
+    return labels[sourceId] || String(sourceId || '—').replaceAll('-', ' ');
+  }
+
+  function preferredMarketSource(rows) {
+    // Select one source for a comparable quarterly series. Do not blend
+    // publishers with different survey methodologies or geographic scopes.
+    return window.MarketHistorySeries?.preferredQuarterlySource?.(rows) || '';
+  }
+
   function hcmcSeries(segment = 'apartment', sourceId = null) {
     const rows = data.observations
       .filter(item => item.scope_type === 'region-segment' && item.period_type === 'quarter' && (item.region_ids || []).includes('hcmc') && (item.segment_ids || []).includes(segment));
