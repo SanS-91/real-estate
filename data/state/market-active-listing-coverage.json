@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-11-02T18:40:28.209643+00:00",
+  "generated_at": "2026-11-03T09:28:41.429620+00:00",
   "scope": "individual-verified-apartment-asking-only",
   "project_registry_count": 18,
   "projects_monitored": 8,
@@ -12,7 +12,7 @@
       "source_id": "muaban-vn",
       "report_available": true,
       "report_fresh": true,
-      "checked_at": "2026-11-02T17:24:58.145291+00:00"
+      "checked_at": "2026-11-03T09:28:14.577965+00:00"
     },
     {
       "source_id": "rever-vn",
@@ -144,7 +144,7 @@
           "source_health_recent": true,
           "recent_eligible_ads": 0,
           "discovered_links": 0,
-          "last_checked_at": "2026-11-02T17:24:58.145291+00:00"
+          "last_checked_at": "2026-11-03T09:28:14.577965+00:00"
         },
         {
           "source_id": "rever-vn",
@@ -212,7 +212,7 @@
           "source_health_recent": true,
           "recent_eligible_ads": 0,
           "discovered_links": 0,
-          "last_checked_at": "2026-11-02T17:24:58.145291+00:00"
+          "last_checked_at": "2026-11-03T09:28:14.577965+00:00"
         },
         {
           "source_id": "rever-vn",
@@ -240,7 +240,7 @@
           "source_health_recent": true,
           "recent_eligible_ads": 0,
           "discovered_links": 1,
-          "last_checked_at": "2026-11-02T17:24:58.145291+00:00"
+          "last_checked_at": "2026-11-03T09:28:14.577965+00:00"
         },
         {
           "source_id": "rever-vn",
@@ -268,7 +268,7 @@
           "source_health_recent": true,
           "recent_eligible_ads": 2,
           "discovered_links": 2,
-          "last_checked_at": "2026-11-02T17:24:58.145291+00:00"
+          "last_checked_at": "2026-11-03T09:28:14.577965+00:00"
         },
         {
           "source_id": "rever-vn",
@@ -296,9 +296,9 @@
           "source_id": "muaban-vn",
           "access_status": "reachable",
           "source_health_recent": true,
-          "recent_eligible_ads": 5,
-          "discovered_links": 7,
-          "last_checked_at": "2026-11-02T17:24:58.145291+00:00"
+          "recent_eligible_ads": 6,
+          "discovered_links": 8,
+          "last_checked_at": "2026-11-03T09:28:14.577965+00:00"
         },
         {
           "source_id": "rever-vn",
@@ -309,7 +309,7 @@
           "last_checked_at": "2026-11-02T17:22:56.365191+00:00"
         }
       ],
-      "recent_eligible_ads": 5,
+      "recent_eligible_ads": 6,
       "current_verified_ads": 5,
       "published_source_ids": [
         "muaban-vn"
@@ -328,7 +328,7 @@
           "source_health_recent": true,
           "recent_eligible_ads": 2,
           "discovered_links": 4,
-          "last_checked_at": "2026-11-02T17:24:58.145291+00:00"
+          "last_checked_at": "2026-11-03T09:28:14.577965+00:00"
         },
         {
           "source_id": "rever-vn",
