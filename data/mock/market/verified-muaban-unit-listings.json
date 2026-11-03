@@ -407,7 +407,36 @@
         "40893443260"
       ],
       "verified_at": "2026-10-29T14:38:17.714592+00:00"
+    },
+    {
+      "project_id": "mizuki-park",
+      "project_name": "Mizuki Park",
+      "source_id": "muaban-vn",
+      "source_url": "https://muaban.net/bat-dong-san/ban-can-ho-chung-cu-du-an-mizuki-park-5598-huyen-binh-chanh-ho-chi-minh/ban-can-fp1-panora-huong-song-mizuki-park-da-co-so-hong-san-id71332506",
+      "listing_id": "71332506",
+      "listing_title": "Bán Căn FP1 Panora hướng Sông Mizuki Park đã có sổ hồng sẵn",
+      "asset_type": "apartment",
+      "market_layer": "individual-listing-asking",
+      "metric_type": "single-listing-asking-price-per-sqm",
+      "source_date_basis": "publisher-listing-start-not-update",
+      "source_listed_date": "2026-11-03",
+      "source_updated_date": "2026-11-03",
+      "source_expiration_date": "2026-11-17",
+      "listed_area_sqm": 86.0,
+      "listing_price_vnd": 5100000000,
+      "value_vnd_per_m2": 59302326,
+      "unit_price_basis": "derived-from-advertised-total-and-area",
+      "source_publication_date": null,
+      "methodology_note": "Individual Muaban asking advertisement only. The displayed rate is calculated from the listing's advertised total and usable area, not a publisher average, transaction, project ASP or project range. Date displayed is listing START date, NOT its relative update badge. Use only while the publisher's end date is unexpired.",
+      "id": "muaban-71332506-448d4ebfd720",
+      "review_status": "automated-two-hosted-checks",
+      "review_date": "2026-11-03",
+      "verification_run_ids": [
+        "41611229180",
+        "41664158799"
+      ],
+      "verified_at": "2026-11-03T15:28:07.379374+00:00"
     }
   ],
-  "record_count": 14
+  "record_count": 15
 }
