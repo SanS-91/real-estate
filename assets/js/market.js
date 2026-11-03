@@ -2175,8 +2175,9 @@
       const projectId = App.getQueryParam('project');
       if (projectId) openProject(projectId, { push:false });
     } catch (error) {
-      console.error(error);
-      setView(Components.stateBox('Unable to load Market registry data. Check that the site is running through a web server.', 'error'));
+      console.error('[Market] Data load or view rendering failed:', error);
+      setView(Components.stateBox('Không thể hiển thị dữ liệu Thị trường. Hãy tải lại trang; nếu lỗi tiếp tục, kiểm tra mục Maintenance hoặc thông báo quản trị viên.', 'error')+
+        '<p class="market-render-retry"><a class="text-link" href="market.html?view=overview">Tải lại Tổng quan</a> · <a class="text-link" href="maintenance.html">Trạng thái dữ liệu</a></p>');
     }
   }
 
