@@ -459,31 +459,24 @@
 
   function summaryMetrics() {
     const recentNews=qualifiedMarketArticles(7);
-    const priced=listingPriceRows(data.projects).length;
+    const pricedRows=listingPriceRows(data.projects);
+    const priced=pricedRows.length;
+    const latestPriceDate=pricedRows.map(item=>item.row.observation_date||'').sort().at(-1);
+    const priceAge=latestPriceDate?Math.floor((Date.now()-Date.parse(latestPriceDate+'T00:00:00+07:00'))/86400000):null;
     const knownHcmc=hcmcSeries();
     const period=knownHcmc.at(-1)?.period||'—';
     return [
-      { label:'Dự án theo dõi',value:String(data.projects.length),note:'Danh mục dự án tham chiếu' },
-      { label:'Tin thị trường · 7 ngày',value:String(recentNews.length),note:'Tin qua bộ lọc nội dung, có ngày xuất bản' },
-      { label:'Dự án có giá chào tham chiếu',value:priced+'/'+data.projects.length,note:'Snapshot theo nguồn; không phải giá giao dịch' },
-      { label:'Kỳ cung / giao dịch mới nhất',value:period,note:'TP.HCM · căn hộ, số liệu từ báo cáo nghiên cứu' }
+      {label:'Dự án có giá chào tham chiếu',value:priced+'/'+data.projects.length,
+        note:latestPriceDate
+          ?'Snapshot '+latestPriceDate+(priceAge>14?' · chỉ tham khảo lịch sử':' · không phải giá giao dịch')
+          :'Chưa có nguồn giá đã rà soát'},
+      {label:'Kỳ cung / giao dịch',value:period,
+        note:'Căn hộ TP.HCM · chuỗi định lượng đã xác minh'},
+      {label:'Dự án theo dõi',value:String(data.projects.length),
+        note:'Danh mục dự án và đối thủ cạnh tranh'},
+      {label:'Tin thị trường · 7 ngày',value:String(recentNews.length),
+        note:'Tin có nguồn và đã lọc nội dung'}
     ];
-  }
-
-  function marketSourceLabel(sourceId) {
-    const labels = {
-      'cbre-vietnam-market': 'CBRE Vietnam Research',
-      'savills-vietnam-market': 'Savills Vietnam Research',
-      'jll-vietnam-market': 'JLL Vietnam Research',
-      'cushman-wakefield-vietnam-market': 'Cushman & Wakefield Vietnam Research'
-    };
-    return labels[sourceId] || String(sourceId || '—').replaceAll('-', ' ');
-  }
-
-  function preferredMarketSource(rows) {
-    // Latest quarter first, then greatest metric coverage within that quarter.
-    // Never merge two publishers into a synthetic shared time series.
-    return window.MarketHistorySeries?.preferredQuarterlySource?.(rows) || '';
   }
 
   function hcmcSeries(segment = 'apartment', sourceId = null) {
@@ -650,7 +643,7 @@
     return screened.sort((a,b)=>String(b.published_at||'').localeCompare(String(a.published_at||'')));
   }
 
-  function marketPulseHTML() {
+  function marketPulseHTML(maxPerTopic = 2) {
     const last7=qualifiedMarketArticles(7);
     const recent=last7.length>=4?last7:qualifiedMarketArticles(30);
     const windowDays=last7.length>=4?7:30;
@@ -665,7 +658,7 @@
     const topic=row=>editorial?.topic?.('market',row.title||'')||'market-general';
     const used=new Set();
     const tiles=buckets.map(bucket=>{
-      const news=recent.filter(row=>bucket.topics.includes(topic(row))&&!used.has(row.url)).slice(0,2);
+      const news=recent.filter(row=>bucket.topics.includes(topic(row))&&!used.has(row.url)).slice(0,maxPerTopic);
       news.forEach(row=>used.add(row.url));
       if(!news.length)return '';
       return '<div class="market-pulse-card"><div class="market-pulse-card__top"><strong>'+esc(bucket.label)+'</strong><span>'+news.length+' tin</span></div>'+
