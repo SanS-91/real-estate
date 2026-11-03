@@ -815,7 +815,6 @@
       :priceSeries().length>0;
     const html=`
       <div class="market-overview">
-        <div class="market-metric-grid market-overview-metrics">${summaryMetrics().map(Components.compactMetric).join('')}</div>
         <div class="market-overview-primary">
           <section class="section market-overview-panel market-overview-panel--pricing">
             <div class="section-header"><div><span class="eyebrow">Giá bán & cạnh tranh</span><h2 class="section-title">Giá chào tham chiếu</h2></div>
@@ -848,6 +847,10 @@
         </div>
         ${marketOverviewProjectHighlightsHTML()}
         ${marketPulseHTML(1)}
+        <details class="market-overview-evidence">
+          <summary><strong>Thống kê danh mục & độ phủ</strong><span>Xem số lượng theo dõi</span></summary>
+          <div class="market-overview-evidence__body"><div class="market-metric-grid market-overview-metrics">${summaryMetrics().map(Components.compactMetric).join('')}</div></div>
+        </details>
         <details class="market-overview-evidence">
           <summary><strong>Báo cáo nghiên cứu & chất lượng dữ liệu</strong><span>Xem nguồn và phương pháp chi tiết</span></summary>
           <div class="market-overview-evidence__body">
@@ -1311,11 +1314,7 @@
           ${available.map(value=>option(benchmarkProductName(value),value,state.benchmarkProduct)).join('')}
         </select>
       </div>
-      <div class="benchmark-summary-grid">
-        <div><strong>${esc(String(filtered.length))}</strong><span>Tin rao có nguồn (lịch sử)</span></div>
-        <div><strong>${esc(String(filteredWatch.length))}</strong><span>Dự án trong nhóm so sánh</span></div>
-        ${currentCount>0 ? '<div><strong>'+esc(String(currentCount))+'</strong><span>Tin theo căn đã xác minh còn hiệu lực</span></div>' : ''}
-      </div>
+
       ${currentCount===0 ? '<p class="market-data-freshness">Chưa có tin rao đang hiệu lực đủ chuẩn xác minh trong bộ benchmark này. Các mức giá dưới đây chỉ mang tính lịch sử, chưa đủ để xác định ASP hoặc tính PV.</p>' : ''}
       <section class="section"><div class="section-header"><div><span class="eyebrow">Không phải ASP dự án</span>
         <h2 class="section-title">Giá rao theo từng căn</h2></div></div>
@@ -1328,6 +1327,11 @@
       <section class="section"><div class="section-header"><div><span class="eyebrow">FS readiness</span>
         <h2 class="section-title">Chính sách bán hàng &amp; kiểm tra Net Price / PV</h2></div></div>
         <div class="section-body">${marketSalesPolicyHTML()}</div></section>
+      <details class="market-overview-evidence"><summary><strong>Thống kê bộ mẫu benchmark</strong><span>Xem số lượng tin và dự án theo dõi</span></summary><div class="market-overview-evidence__body">      <div class="benchmark-summary-grid">
+        <div><strong>${esc(String(filtered.length))}</strong><span>Tin rao có nguồn (lịch sử)</span></div>
+        <div><strong>${esc(String(filteredWatch.length))}</strong><span>Dự án trong nhóm so sánh</span></div>
+        ${currentCount>0 ? '<div><strong>'+esc(String(currentCount))+'</strong><span>Tin theo căn đã xác minh còn hiệu lực</span></div>' : ''}
+      </div></div></details>
       <section class="section"><div class="section-header"><div><span class="eyebrow">Data gaps</span>
         <h2 class="section-title">Các dự án chưa có tin theo căn đạt chuẩn</h2></div></div>
         <div class="section-body">
@@ -1498,11 +1502,11 @@
   function renderProjects() {
     const records = projectFilter(data.projects);
     const html = `
-      <div class="view-intro"><div><span class="eyebrow">Project database</span><h2>${records.length} projects</h2><p>Filter structured project records, then open a project for metrics, phases and related market updates.</p></div></div>
+      <div class="view-intro"><div><span class="eyebrow">Project database</span><h2>Danh mục dự án</h2><p>Filter structured project records, then open a project for metrics, phases and related market updates.</p></div></div>
       ${filterToolbar()}
-      ${projectCoverageStatusHTML(records)}
       ${projectNewsHTML(records)}
-      <section class="section"><div class="section-body section-body--table">${projectTable(records)}</div></section>`;
+      <section class="section"><div class="section-body section-body--table">${projectTable(records)}</div></section>
+      <details class="market-overview-evidence"><summary><strong>Độ phủ dữ liệu dự án</strong><span>Xem thông tin nguồn và thống kê</span></summary><div class="market-overview-evidence__body">${projectCoverageStatusHTML(records)}</div></details>`;
     setView(html);
     bindFilters();
   }
@@ -1595,7 +1599,7 @@
       ${filterToolbar({ includeDeveloper:false, includeSegment:true, includeStatus:false })}
       ${marketResearchBriefsHTML(region,segment)}
       <div class="market-source-toolbar">${sourceControl}<p>Chart source: <strong>${esc(marketSourceLabel(state.source))}</strong>. Values from different research houses are not averaged or merged.</p></div>
-      <div class="market-history-coverage"><strong>Source-period coverage</strong><span>${coverage.observed} quý có số liệu · ${coverage.missing} quý còn thiếu ${history.missing.length ? '(' + esc(history.missing.join(', ')) + ')' : ''}</span><span>${coverage.supplyPeriods} quý có số nguồn cung báo cáo · ${coverage.lowerBoundSupplyPeriods || 0} quý nguồn cung cận dưới (&gt;)</span><span>${coverage.salesPeriods} quý có số bán · ${coverage.absorptionPeriods || 0} quý có tỷ lệ hấp thụ</span></div>
+
       <section class="section"><div class="section-header"><h2 class="section-title">${esc(regionObj?.name || 'Selected Region')} · ${esc(segment.replaceAll('-',' '))}</h2></div><div class="section-body"><div class="chart-frame chart-frame--large"><canvas id="market-supply-sales"></canvas></div><p class="chart-note">Selected source: ${latest ? sourceRef(latest.source_id,{sourceDate:latest.source_date,period:latest.period,sourceUrl:latest.source_url,methodology:latest.methodology_note}) : '—'}${hasApproximateMetrics ? ' · ≈ / > retain the wording precision published by the source. > bars represent lower bounds, not exact totals.' : ''}</p></div></section>
       <section class="section"><div class="section-header"><h2 class="section-title">Selected Source History</h2></div><div class="section-body section-body--table"><div class="table-wrap"><table class="data-table"><thead><tr><th>Period</th><th class="numeric">New Supply</th><th class="numeric">Sales</th><th class="numeric">Absorption</th><th class="numeric">Average ASP (VND)</th><th class="numeric">Reported price (USD/m²)</th><th>Source</th></tr></thead><tbody>${history.rows.map(row=>`<tr class="${row.data_missing ? 'market-history-gap' : ''}"><td>${esc(row.period)}</td><td class="numeric">${esc(formatMarketMetric(row,'new_supply'))}</td><td class="numeric">${esc(formatMarketMetric(row,'sales_units'))}</td><td class="numeric">${esc(formatMarketMetric(row,'absorption_rate'))}</td><td class="numeric">${esc(formatMarketMetric(row,'average_asp'))}</td><td class="numeric">${esc(MarketHistorySeries.originalUsdPrice(row))}</td><td>${row.data_missing ? 'Chưa có số liệu' : sourceRef(row.source_id,{sourceDate:row.source_date,period:row.period,methodology:row.methodology_note,sourceUrl:row.source_url})}</td></tr>`).join('') || '<tr><td colspan="7" class="table-empty">No observations for this source.</td></tr>'}</tbody></table></div></div></section>
       <section class="section"><div class="section-header"><div><span class="eyebrow">Cross-source evidence</span><h2 class="section-title">Source Comparison</h2></div></div><div class="section-body section-body--table"><div class="table-wrap"><table class="data-table data-table--market-source-comparison"><thead><tr><th>Period</th><th>Research Source</th><th class="numeric">New Supply</th><th class="numeric">Sales</th><th class="numeric">Absorption</th><th class="numeric">Average ASP (VND)</th><th class="numeric">Reported price (USD/m²)</th></tr></thead><tbody>${comparisonRows.map(row=>`<tr class="${row.source_id === state.source ? 'is-selected-source' : ''}"><td>${esc(row.period)}</td><td>${sourceRef(row.source_id,{sourceDate:row.source_date,period:row.period,methodology:row.methodology_note,sourceUrl:row.source_url})}</td><td class="numeric">${esc(formatMarketMetric(row,'new_supply'))}</td><td class="numeric">${esc(formatMarketMetric(row,'sales_units'))}</td><td class="numeric">${esc(formatMarketMetric(row,'absorption_rate'))}</td><td class="numeric">${esc(formatMarketMetric(row,'average_asp'))}</td><td class="numeric">${esc(MarketHistorySeries.originalUsdPrice(row))}</td></tr>`).join('') || '<tr><td colspan="7" class="table-empty">No comparable source observations for this region and segment.</td></tr>'}</tbody></table></div><p class="chart-note">Source methodologies may differ. Comparison is side-by-side only; no cross-source averaging is performed. Publisher-reported USD/m² is shown in its original currency and area basis; it is not converted to an assumed VND ASP.</p></div></section>
@@ -1603,6 +1607,7 @@
       <div class="section-body section-body--table"><p class="chart-note">These are annual totals, H1 cumulative figures, or combined apartment + landed units. They are kept separate from the quarterly chart and never added to an individual segment's quarterly supply.</p>
       <div class="table-wrap"><table class="data-table"><thead><tr><th>Period</th><th>Scope</th><th>Basis</th><th class="numeric">New Supply</th><th>Publisher</th></tr></thead>
       <tbody>${benchmarkRows.map(row=>`<tr><td>${esc(row.period)}</td><td>${esc((row.segment_ids || []).includes('residential') ? 'Residential (apartment + landed)' : (row.segment_ids || []).join(', '))}</td><td>${esc((row.reporting_basis || row.period_type).replaceAll('-', ' '))}</td><td class="numeric">${esc(formatMarketMetric(row,'new_supply'))}</td><td>${sourceRef(row.source_id,{sourceDate:row.source_date,period:row.period,sourceUrl:row.source_url,methodology:row.methodology_note})}</td></tr>`).join('')}</tbody></table></div></div></section>` : ''}
+      <details class="market-overview-evidence"><summary><strong>Độ phủ thống kê theo nguồn</strong><span>Xem số kỳ và phương pháp dữ liệu</span></summary><div class="market-overview-evidence__body"><div class="market-history-coverage"><strong>Source-period coverage</strong><span>${coverage.observed} quý có số liệu · ${coverage.missing} quý còn thiếu ${history.missing.length ? '(' + esc(history.missing.join(', ')) + ')' : ''}</span><span>${coverage.supplyPeriods} quý có số nguồn cung báo cáo · ${coverage.lowerBoundSupplyPeriods || 0} quý nguồn cung cận dưới (&gt;)</span><span>${coverage.salesPeriods} quý có số bán · ${coverage.absorptionPeriods || 0} quý có tỷ lệ hấp thụ</span></div></div></details>
       ${rows.some(row => row.source_discrepancy) ? '<p class="chart-note">Verification note: Cushman Q1/2025 website text and published MarketBeat PDF show different apartment launch figures. The official PDF statistics table is used (2,877); the discrepancy is retained in the source record.</p>' : ''}`;
     setView(html);
     bindFilters();
@@ -1878,10 +1883,6 @@
     const html = `
       <div class="view-intro"><div><span class="eyebrow">Evidence-backed price observations</span><h2>Pricing</h2><p>Verified project prices and listing-market asking ranges are shown as separate layers. Missing fields remain blank.</p></div></div>
       ${filterToolbar({ includeStatus:false })}
-      ${projectCoverageStatusHTML(filteredProjects, true)}
-      ${marketCoverageNoteHTML()}
-      ${state.priceLayer==='listing' ? landedSourceProgressHTML(filteredProjects) : ''}
-      ${state.priceLayer==='listing' ? landedProjectCoverageHTML(filteredProjects) : ''}
       ${state.priceLayer==='listing' ? priceFreshnessNote(listingRows.map(item=>item.row),'Dữ liệu giá chào bán theo dự án') : '<p class="market-data-freshness">Chỉ hiển thị giá công bố có chứng cứ trực tiếp, không thay thế bằng giá rao hoặc giá từng căn.</p>'}
       <section class="section">
         <div class="section-header"><div><h2 class="section-title">${state.priceLayer === 'listing' ? 'Listing Market Asking Ranges' : 'Verified Project Pricing'}</h2></div>${priceLayerControls()}</div>
@@ -1899,6 +1900,12 @@
       ${state.priceLayer === 'listing' ? verifiedLandedOffersHTML(filteredProjects) : ''}
       ${priceHistoryReadinessHTML(filteredProjects)}
       ${peerMonthlyComparablesHTML()}
+      <details class="market-overview-evidence"><summary><strong>Nguồn dữ liệu & độ phủ giá bán</strong><span>Xem chất lượng thu thập và phương pháp</span></summary><div class="market-overview-evidence__body">
+      ${projectCoverageStatusHTML(filteredProjects, true)}
+      ${marketCoverageNoteHTML()}
+      ${state.priceLayer==='listing' ? landedSourceProgressHTML(filteredProjects) : ''}
+      ${state.priceLayer==='listing' ? landedProjectCoverageHTML(filteredProjects) : ''}
+      </div></details>
       <section class="section"><div class="section-header"><div><h2 class="section-title">Benchmark toàn thị trường</h2><p class="chart-note">Số liệu cung, giao dịch và hấp thụ theo kỳ báo cáo của từng đơn vị nghiên cứu. Không phải giá bán từng dự án; không cộng gộp số liệu các nguồn.</p></div></div><div class="section-body section-body--table"><div class="table-wrap"><table class="data-table"><thead><tr><th>Thị trường</th><th>Kỳ báo cáo</th><th class="numeric">Nguồn cung mới</th><th class="numeric">Giao dịch</th><th class="numeric">Hấp thụ</th><th class="numeric">Giá TB theo nguồn</th><th>Nguồn</th></tr></thead><tbody>${benchmarkRows.map(row=>`<tr><td>HCMC · Apartment</td><td>${esc(row.period)}</td><td class="numeric">${esc(formatMarketMetric(row,'new_supply'))}</td><td class="numeric">${esc(formatMarketMetric(row,'sales_units'))}</td><td class="numeric">${esc(formatMarketMetric(row,'absorption_rate'))}</td><td class="numeric">${esc(formatMarketMetric(row,'average_asp'))}</td><td>${sourceRef(row.source_id,{sourceDate:row.source_date,period:row.period,methodology:row.methodology_note,sourceUrl:row.source_url})}</td></tr>`).join('') || '<tr><td colspan="7" class="table-empty">No market benchmark records.</td></tr>'}</tbody></table></div></div></section>`;
     setView(html);
     bindFilters();
@@ -1936,7 +1943,7 @@
         '<div class="developer-card__stats"><span><strong>'+projects.length+'</strong> dự án theo dõi</span><span><strong>'+selling+'</strong> đang bán</span></div>'+
         '<div class="developer-card__links"><a class="text-link" href="market.html?view=projects&developer='+encodeURIComponent(dev.id)+'">Xem dự án</a></div></article>';
     }).join('');
-    setView('<div class="view-intro"><div><span class="eyebrow">Danh mục chủ đầu tư</span><h2>'+data.developers.length+' chủ đầu tư</h2><p>Tin mới chỉ xuất hiện khi bài báo có mã chủ đầu tư được liên kết; không suy ra thông tin chỉ từ tên tương tự.</p></div></div><div class="developer-grid">'+cards+'</div>');
+    setView('<div class="view-intro"><div><span class="eyebrow">Danh mục chủ đầu tư</span><h2>Chủ đầu tư</h2><p>Tin mới chỉ xuất hiện khi bài báo có mã chủ đầu tư được liên kết; không suy ra thông tin chỉ từ tên tương tự.</p></div></div><div class="developer-grid">'+cards+'</div>');
   }
 
   function renderNews() {
