@@ -21,6 +21,7 @@ on:
       - "assets/js/market.js"
       - "assets/css/market-news.css"
       - "tests/test_market_overview_layout.cjs"
+      - "tests/test_market_overview_runtime.cjs"
       - "assets/js/data-store.js"
       - "scripts/check_market_web_integrity.py"
       - "data/state/market-active-listing-coverage.json"
@@ -61,6 +62,8 @@ jobs:
           node tests/test_home_latest_news.cjs
       - name: Prevent Overview layout regressions
         run: node tests/test_market_overview_layout.cjs
+      - name: Render real Market Overview with production registry
+        run: node tests/test_market_overview_runtime.cjs
       - name: Build derived market pulse (no price estimates)
         run: python scripts/build_market_daily_pulse.py
       - name: Publish changed index only
