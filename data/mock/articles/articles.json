@@ -1,9 +1,113 @@
 {
   "schema_version": 1,
-  "build_id": "market-news-rss-20261103T105143Z",
-  "generated_at": "2026-11-03T10:51:43.790701+00:00",
-  "record_count": 1382,
+  "build_id": "market-news-rss-20261103T125143Z",
+  "generated_at": "2026-11-03T12:51:43.802762+00:00",
+  "record_count": 1388,
   "data": [
+    {
+      "id": "article-market-rss-18a9cdf7d7a11301e3b2",
+      "title": "Căn hộ hạng sang Triton Crown 'may đo' nội thất từ cảm hứng hoa sen",
+      "url": "https://vnexpress.net/can-ho-hang-sang-triton-crown-may-do-noi-that-tu-cam-hung-hoa-sen-5131083.html",
+      "category": "market",
+      "module_ids": [
+        "market"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-11-03T12:00:00+00:00",
+      "source_id": "vnexpress-real-estate",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "Matrix Design, \"ông lớn\" thiết kế nội thất Trung Quốc, chọn lựa các vật liệu tự nhiên như đá, gỗ, kim loại, rồi chế tác thủ công để phục vụ từng nhu cầu đời thường cho cư dân căn hộ hạng sang Triton Crown.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://vnexpress.net/rss/bat-dong-san.rss",
+        "publisher_host": "vnexpress.net",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-1f7990d0e473034a8284",
+      "title": "Nhà ở xã hội tại Hạ Long mở bán từ 828 triệu đồng",
+      "url": "https://vnexpress.net/nha-o-xa-hoi-tai-ha-long-mo-ban-tu-828-trieu-dong-5140352.html",
+      "category": "market",
+      "module_ids": [
+        "market"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-11-03T11:49:16+00:00",
+      "source_id": "vnexpress-real-estate",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [
+        "supply"
+      ],
+      "importance": 2,
+      "summary": "Khu nhà xã hội nằm trên đường bao biển Hạ Long - Cẩm Phả chuẩn bị nhận hồ sơ với giá gần 23,3 triệu đồng một m2.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://vnexpress.net/rss/bat-dong-san.rss",
+        "publisher_host": "vnexpress.net",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-f8ee7cbae1a12a53d6c4",
+      "title": "Loạt mặt bằng cho thuê ở TPHCM vẫn bỏ trống trước cao điểm mua sắm",
+      "url": "https://dantri.com.vn/bat-dong-san/loat-mat-bang-cho-thue-o-tphcm-van-bo-trong-truoc-cao-diem-mua-sam-20261103171228309.htm",
+      "category": "market",
+      "module_ids": [
+        "market"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-11-03T11:40:52+00:00",
+      "source_id": "dantri-real-estate",
+      "region_ids": [
+        "hcmc"
+      ],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "(Dân trí) - Nhiều mặt bằng trên các tuyến phố thương mại sầm uất tại TPHCM bỏ trống hàng tháng. Giá thuê cao, mô hình kinh doanh thay đổi khiến chủ nhà khó tìm được khách phù hợp.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://dantri.com.vn/rss/bat-dong-san.rss",
+        "publisher_host": "dantri.com.vn",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-00ff70f00402be0ceb18",
+      "title": "Phát Đạt củng cố nội lực, mở rộng quy mô phát triển",
+      "url": "https://vnexpress.net/phat-dat-cung-co-noi-luc-mo-rong-quy-mo-phat-trien-5140280.html",
+      "category": "market",
+      "module_ids": [
+        "market"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-11-03T11:00:00+00:00",
+      "source_id": "vnexpress-real-estate",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "Phát Đạt mở rộng danh mục dự án, mạng lưới kinh doanh và hợp tác quốc tế, đồng thời củng cố nguồn lực tài chính cho chiến lược dài hạn.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://vnexpress.net/rss/bat-dong-san.rss",
+        "publisher_host": "vnexpress.net",
+        "publication_date_from_feed": true
+      }
+    },
     {
       "id": "article-market-rss-40ccff4ddc862750e65e",
       "title": "Sắp có 2 cầu vượt cho người đi bộ 'thoát ải' đường Tôn Đức Thắng",
@@ -28,6 +132,61 @@
         "method": "official-rss",
         "feed_url": "https://thanhnien.vn/rss/kinh-te/chinh-sach-phat-trien.rss",
         "publisher_host": "thanhnien.vn",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-f05f86c93a14766b1278",
+      "title": "Tranh luận về mức tiền đặt trước khi đấu giá đất",
+      "url": "https://vnexpress.net/tranh-luan-ve-muc-tien-dat-truoc-khi-dau-gia-dat-5140208.html",
+      "category": "market",
+      "module_ids": [
+        "market",
+        "legal"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-11-03T10:28:02+00:00",
+      "source_id": "vnexpress-current-affairs",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [
+        "pricing"
+      ],
+      "importance": 2,
+      "summary": "Đại biểu Tô Ái Vang cho rằng mức tiền đặt trước tối đa 20% khi đấu giá đất dự án chưa đủ ngăn thổi giá, bỏ cọc, trong khi ý kiến khác lo ngại tăng mức này sẽ làm giảm cạnh tranh.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://vnexpress.net/rss/thoi-su.rss",
+        "publisher_host": "vnexpress.net",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-ac6edff5d1543802e74a",
+      "title": "Masterise Group: Khi chuẩn mực trở thành lợi thế cạnh tranh cốt lõi của doanh nghiệp",
+      "url": "https://dantri.com.vn/bat-dong-san/masterise-group-khi-chuan-muc-tro-thanh-loi-the-canh-tranh-cot-loi-cua-doanh-nghiep-20261103164205490.htm",
+      "category": "market",
+      "module_ids": [
+        "market"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-11-03T10:00:00+00:00",
+      "source_id": "dantri-real-estate",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [
+        "masterise"
+      ],
+      "tags": [],
+      "importance": 2,
+      "summary": "(Dân trí) - Khi thị trường bước vào giai đoạn cạnh tranh dựa trên chất lượng thực và giá trị bền vững, chuẩn mực trở thành nền tảng để doanh nghiệp định hình tư duy phát triển sản phẩm, tổ chức vận hành và xây dựng lợi thế dài hạn.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://dantri.com.vn/rss/bat-dong-san.rss",
+        "publisher_host": "dantri.com.vn",
         "publication_date_from_feed": true
       }
     },
