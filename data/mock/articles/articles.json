@@ -1,9 +1,186 @@
 {
   "schema_version": 1,
-  "build_id": "market-news-rss-20261103T005149Z",
-  "generated_at": "2026-11-03T00:51:49.847427+00:00",
-  "record_count": 1344,
+  "build_id": "market-news-rss-20261103T025149Z",
+  "generated_at": "2026-11-03T02:51:49.215265+00:00",
+  "record_count": 1351,
   "data": [
+    {
+      "id": "article-market-rss-984c5f1c420e0f00860b",
+      "title": "Giá vàng hôm nay 3.11.2026: Tăng thêm 1,2 triệu đồng/lượng",
+      "url": "https://thanhnien.vn/gia-vang-hom-nay-3112026-tang-them-12-trieu-dong-luong-185261103084710023.htm",
+      "category": "macro",
+      "module_ids": [
+        "macro"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-11-03T02:03:00+00:00",
+      "source_id": "thanhnien-banking",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "Giá vàng miếng SJC và nhẫn 4 số 9 tiếp tục tăng thêm 1,2 triệu đồng mỗi lượng. Kim loại quý thế giới tăng khi lực mua trên thị trường xuất hiện.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://thanhnien.vn/rss/kinh-te/ngan-hang.rss",
+        "publisher_host": "thanhnien.vn",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-339aa40b4e2661ae416a",
+      "title": "5 mẹo vệ sinh nhà cửa cực đơn giản bạn ước biết sớm hơn",
+      "url": "https://dantri.com.vn/bat-dong-san/5-meo-ve-sinh-nha-cua-cuc-don-gian-ban-uoc-biet-som-hon-20261102205820555.htm",
+      "category": "market",
+      "module_ids": [
+        "market"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-11-03T01:41:00+00:00",
+      "source_id": "dantri-real-estate",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "(Dân trí) - Chỉ với vài vật dụng quen thuộc trong nhà, bạn có thể biến công việc dọn dẹp trở nên nhẹ nhàng, tiết kiệm thời gian mà không gian sống vẫn sạch sẽ, tinh tươm.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://dantri.com.vn/rss/bat-dong-san.rss",
+        "publisher_host": "dantri.com.vn",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-fde9e946f78898611117",
+      "title": "Dầu thô rớt giá hơn 7%, giá vàng lập tức quay đầu bật tăng",
+      "url": "https://dantri.com.vn/kinh-doanh/dau-tho-rot-gia-hon-7-gia-vang-lap-tuc-quay-dau-bat-tang-20261103080521754.htm",
+      "category": "macro",
+      "module_ids": [
+        "macro"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-11-03T01:13:04+00:00",
+      "source_id": "dantri-business",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "(Dân trí) - Tín hiệu ngoại giao hạ nhiệt căng thẳng vùng Vịnh khiến giá dầu lao dốc hơn 7%, mở đường cho dòng tiền bắt đáy quay lại kéo giá vàng và bạc phục hồi mạnh mẽ.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://dantri.com.vn/rss/kinh-doanh.rss",
+        "publisher_host": "dantri.com.vn",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-ae5b8a65b45f8d3f6279",
+      "title": "Van Phuc Group tặng căn hộ gần 8 tỷ đồng cho người mua Diamond Sky",
+      "url": "https://vnexpress.net/van-phuc-group-tang-can-ho-gan-8-ty-dong-cho-nguoi-mua-diamond-sky-5139676.html",
+      "category": "market",
+      "module_ids": [
+        "market"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-11-03T01:00:00+00:00",
+      "source_id": "vnexpress-real-estate",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "Người mua Diamond Sky có cơ hội nhận thêm một căn hộ trị giá gần 8 tỷ đồng trong chương trình \"Mua nhà trúng nhà - Nhân đôi tổ ấm\" của Van Phuc Group, diễn ra từ nay đến 1/11/2027.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://vnexpress.net/rss/bat-dong-san.rss",
+        "publisher_host": "vnexpress.net",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-066fc2ce133303d4de92",
+      "title": "Ưu đãi khi mua Diamond Sky: Cơ hội trúng căn hộ thứ hai gần 8 tỷ đồng",
+      "url": "https://dantri.com.vn/bat-dong-san/uu-dai-khi-mua-diamond-sky-co-hoi-trung-can-ho-thu-hai-gan-8-ty-dong-20261102151307364.htm",
+      "category": "market",
+      "module_ids": [
+        "market"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-11-03T01:00:00+00:00",
+      "source_id": "dantri-real-estate",
+      "region_ids": [
+        "hcmc"
+      ],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "(Dân trí) - Không chỉ sở hữu căn hộ cao cấp bên sông Sài Gòn, khách mua Diamond Sky còn có cơ hội nhận thêm căn hộ khác trị giá gần 8 tỷ đồng qua chương trình “Mua nhà trúng nhà - Nhân đôi tổ ấm” do Van Phuc Group triển khai từ ngày 1/11/2026 đến 1/11/2027.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://dantri.com.vn/rss/bat-dong-san.rss",
+        "publisher_host": "dantri.com.vn",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-0585af21c0f2c171d757",
+      "title": "Bàn giao phân khu thấp tầng Casa Villa thuộc Blanca City",
+      "url": "https://vnexpress.net/ban-giao-phan-khu-thap-tang-casa-villa-thuoc-blanca-city-5139900.html",
+      "category": "market",
+      "module_ids": [
+        "market"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-11-03T01:00:00+00:00",
+      "source_id": "vnexpress-real-estate",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "Chủ đầu tư Sun Property bàn giao những căn Casa Villa đầu tiên, hướng tới mục tiêu hoàn tất hơn 400 căn thấp tầng, hình thành nhịp sống mới tại Blanca City.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://vnexpress.net/rss/bat-dong-san.rss",
+        "publisher_host": "vnexpress.net",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-dbac2e260493b5e5b298",
+      "title": "Giá vàng SJC bốc hơi hơn 5 triệu đồng trong tháng 10",
+      "url": "https://dantri.com.vn/kinh-doanh/gia-vang-sjc-boc-hoi-hon-5-trieu-dong-trong-thang-10-20261103070657492.htm",
+      "category": "macro",
+      "module_ids": [
+        "macro"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-11-03T00:30:46+00:00",
+      "source_id": "dantri-business",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "(Dân trí) - Chỉ trong tháng 10, người nắm giữ vàng miếng SJC chứng kiến tài sản hao hụt 5 triệu đồng/lượng. Thị trường hiện đang nín thở chờ đợi tín hiệu từ cuộc bầu cử giữa nhiệm kỳ tại Mỹ.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://dantri.com.vn/rss/kinh-doanh.rss",
+        "publisher_host": "dantri.com.vn",
+        "publication_date_from_feed": true
+      }
+    },
     {
       "id": "article-market-rss-d7db94fe393ce4a7653d",
       "title": "Giá vàng thế giới tăng mạnh, thoát đáy một năm",
