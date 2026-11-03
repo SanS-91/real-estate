@@ -431,45 +431,42 @@
   }
 
   function buildTodayGroups(data) {
-    const ref = homeReferenceDate();
-    const ranked = rankedCandidates(data);
-    const vi = document.documentElement.lang !== 'en';
-    const metaByCategory = {
-      market: { label: vi ? 'Thị trường' : 'Market', href: 'market.html?view=news' },
-      legal: { label: vi ? 'Pháp lý' : 'Legal', href: 'legal.html?view=news' },
-      infrastructure: { label: vi ? 'Hạ tầng' : 'Infrastructure', href: 'infrastructure.html?view=news' },
-      macro: { label: vi ? 'Vĩ mô' : 'Macro', href: 'macro.html?view=news' }
+    const ref=homeReferenceDate();
+    const vi=document.documentElement.lang!=='en';
+    const metaByCategory={
+      market:{label:vi?'Thị trường':'Market',href:'market.html?view=news'},
+      legal:{label:vi?'Pháp lý':'Legal',href:'legal.html?view=news'},
+      infrastructure:{label:vi?'Hạ tầng':'Infrastructure',href:'infrastructure.html?view=news'},
+      macro:{label:vi?'Vĩ mô':'Macro',href:'macro.html?view=news'}
     };
-    // A qualified source headline beats an unrelated, newer one. Fill from
-    // the last 30 real publication days, never backfill 90/365 days with noise.
-    // Keep newestHomeCandidates for deterministic tie ordering and the
-    // legacy regression, but use an independent editorial quality/diversity pass.
-    return Object.keys(metaByCategory).map(category => {
-      const source = newestHomeCandidates(ranked.filter(row => row.category === category));
-      const chosen = window.HomeEditorial?.curated?.(source, ref, { max: 3, minWindow: 7, extendedWindow: 30 }) || [];
-      const items = chosen.map(({row, topic, age}) => {
-        const item = formatRankedItem(row, data);
-        const sourceIds = row.ranking_evidence?.source_ids || [];
-        return {
-          title: item.title,
-          date_label: item.date_label || App.formatDate(item.sort_date),
-          meta: sourceIds.length ? sourceName(data.sources, sourceIds[0])
-            : sourceName(data.sources, row.source_id),
-          href: item.href,
-          topic_label: window.HomeEditorial?.label?.(topic,vi ? 'vi' : 'en') || '',
-          older: age >= 7
-        };
-      });
-      const older = chosen.some(x=>x.age>=7);
-      const countLabel = !items.length
-        ? (vi ? 'Chưa có tin phù hợp trong 30 ngày' : 'No qualifying news in 30 days')
-        : vi
-          ? `${items.length} cập nhật chọn lọc · ${older?'30':'7'} ngày`
-          : `${items.length} curated updates · ${older?'30':'7'} days`;
+    // Reuse the SAME canonical article archive and cross-tab routing as the
+    // four news pages. Do not rely on unrelated project/macro API requests,
+    // historical event rankings or a frozen data/mock/home/today.json.
+    return Object.entries(metaByCategory).map(([category,meta])=>{
+      const articles=data.articles.filter(article=>
+        window.DataStore?.isNewsFor
+          ? DataStore.isNewsFor(article,category)
+          : article.category===category);
+      const chosen=window.HomeEditorial?.latestForHome?.(articles,category,ref,{
+        max:3,minWindow:7,extendedWindow:30
+      })||[];
+      const items=chosen.map(({article,topic,age})=>({
+        title:article.title,
+        date_label:App.formatDate(article.published_at),
+        meta:sourceName(data.sources,article.source_id),
+        href:article.url,
+        topic_label:window.HomeEditorial?.label?.(topic,vi?'vi':'en')||'',
+        older:age>=7
+      }));
+      const older=chosen.some(row=>row.age>=7);
       return {
-        category, label: metaByCategory[category].label,
-        count: items.length, count_label: countLabel,
-        href: metaByCategory[category].href, items
+        category,label:meta.label,count:items.length,
+        count_label:!items.length
+          ?(vi?'Chưa có tin phù hợp trong 30 ngày':'No relevant news in 30 days')
+          :(vi
+            ?items.length+' tin mới · '+(older?'30':'7')+' ngày'
+            :items.length+' latest news · '+(older?'30':'7')+' days'),
+        href:meta.href,items
       };
     });
   }
@@ -645,17 +642,36 @@
 
   async function renderToday() {
     try {
-      const data = await loadCanonicalHomeData();
-      setHTML('[data-home-today]', buildTodayGroups(data).map(Components.todayCard).join(''));
-    } catch (error) {
-      console.warn('[home] live Latest derivation failed; using snapshot fallback.', error);
-      try {
-        const payload = await DataStore.getHomeToday();
-        setHTML('[data-home-today]', (payload.data || []).map(Components.todayCard).join(''));
-      } catch (fallbackError) {
-        console.error(fallbackError);
-        setHTML('[data-home-today]', Components.stateBox('Unable to load Today data.', 'error'));
+      // News cards are independent from market observations, infrastructure,
+      // production macro and legal-document loads. A failure in any of those
+      // must never silently replace fresh RSS with a frozen Home snapshot.
+      const [payload,sourcePayload]=await Promise.all([
+        DataStore.getArticles(),
+        DataStore.getSources().catch(()=>({data:[]}))
+      ]);
+      if(!Array.isArray(payload?.data))throw new Error('Missing canonical article archive');
+      const sources=new Map(payloadData(sourcePayload).map(row=>[row.id,row]));
+      setHTML('[data-home-today]',buildTodayGroups({articles:payload.data,sources})
+        .map(Components.todayCard).join(''));
+      const vi=document.documentElement.lang!=='en';
+      const generated=Date.parse(payload.generated_at||'');
+      if(Number.isFinite(generated)) {
+        const stamp=new Intl.DateTimeFormat(vi?'vi-VN':'en-GB',{
+          timeZone:'Asia/Ho_Chi_Minh',
+          year:'numeric',month:'2-digit',day:'2-digit',
+          hour:'2-digit',minute:'2-digit',hour12:false
+        }).format(new Date(generated));
+        setText('[data-home-news-updated]',
+          (vi?'Kho tin đồng bộ: ':'News archive updated: ')+stamp+' (VN)');
+      }else{
+        setText('[data-home-news-updated]',
+          vi?'Tin tức lấy trực tiếp từ dữ liệu các tab':'Headlines sourced from module news');
       }
+    }catch(error) {
+      console.error('[home] Cannot load current module news; do not show stale snapshot.',error);
+      setHTML('[data-home-today]',Components.stateBox(
+        'Chưa tải được tin mới. Vui lòng mở từng tab Tin tức hoặc tải lại trang.','error'));
+      setText('[data-home-news-updated]','Không thể xác minh thời điểm cập nhật');
     }
   }
 
