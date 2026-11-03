@@ -1,9 +1,168 @@
 {
   "schema_version": 1,
-  "build_id": "market-news-rss-20261103T070032Z",
-  "generated_at": "2026-11-03T07:00:32.832619+00:00",
-  "record_count": 1368,
+  "build_id": "market-news-rss-20261103T085144Z",
+  "generated_at": "2026-11-03T08:51:44.150591+00:00",
+  "record_count": 1374,
   "data": [
+    {
+      "id": "article-market-rss-e488846dbe150a7b2768",
+      "title": "Khi chuẩn mực trở thành lợi thế cạnh tranh cốt lõi của doanh nghiệp",
+      "url": "https://thanhnien.vn/khi-chuan-muc-tro-thanh-loi-the-canh-tranh-cot-loi-cua-doanh-nghiep-185261103150533655.htm",
+      "category": "market",
+      "module_ids": [
+        "market"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-11-03T07:55:00+00:00",
+      "source_id": "thanhnien-real-estate",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "Trong bối cảnh thị trường bước vào giai đoạn cạnh tranh dựa trên chất lượng thực và năng lực tạo giá trị bền vững, chuẩn mực ngày càng trở thành nền tảng định hình cách doanh nghiệp phát triển sản phẩm, tổ chức vận hành và xây dựng lợi thế dài hạn.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://thanhnien.vn/rss/kinh-te/dia-oc.rss",
+        "publisher_host": "thanhnien.vn",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-9c8c8c1d4a7fc90a9845",
+      "title": "Hà Nội tập trung nguồn lực đầu tư phát triển đường sắt đô thị",
+      "url": "https://dantri.com.vn/thoi-su/ha-noi-tap-trung-nguon-luc-dau-tu-phat-trien-duong-sat-do-thi-20261103140800448.htm",
+      "category": "infrastructure",
+      "module_ids": [
+        "infrastructure"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-11-03T07:34:42+00:00",
+      "source_id": "dantri-current-affairs",
+      "region_ids": [
+        "ha-noi"
+      ],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [
+        "infrastructure"
+      ],
+      "importance": 2,
+      "summary": "(Dân trí) - Ông Nguyễn Trọng Đông yêu cầu điều hành ngân sách chặt chẽ, tiết kiệm, tập trung nguồn lực đầu tư phát triển các tuyến đường sắt đô thị và phát triển đô thị theo định hướng giao thông.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://dantri.com.vn/rss/thoi-su.rss",
+        "publisher_host": "dantri.com.vn",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-e4d6aae6a7e4c18cd448",
+      "title": "Nhiều địa phương có khả năng vượt chỉ tiêu làm nhà ở xã hội",
+      "url": "https://thanhnien.vn/nhieu-dia-phuong-co-kha-nang-vuot-chi-tieu-lam-nha-o-xa-hoi-185261103114220909.htm",
+      "category": "market",
+      "module_ids": [
+        "market"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-11-03T07:26:00+00:00",
+      "source_id": "thanhnien-real-estate",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "Báo cáo với Chính phủ về kết quả thực hiện chỉ tiêu phát triển nhà ở xã hội, nhà ở cho thuê, Bộ Xây dựng cho biết nhiều địa phương có khả năng hoàn thành và hoàn thành vượt chỉ tiêu được giao về nhà ở xã hội, nhà ở cho thuê trong năm nay.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://thanhnien.vn/rss/kinh-te/dia-oc.rss",
+        "publisher_host": "thanhnien.vn",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-69c3ba14586e8d9b6696",
+      "title": "Vì sao Bộ Tài chính đề xuất điều chỉnh bảng giá đất 3 năm một lần?",
+      "url": "https://vnexpress.net/vi-sao-bo-tai-chinh-de-xuat-dieu-chinh-bang-gia-dat-3-nam-mot-lan-5140066.html",
+      "category": "market",
+      "module_ids": [
+        "market",
+        "legal"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-11-03T07:12:45+00:00",
+      "source_id": "vnexpress-economy",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [
+        "pricing"
+      ],
+      "importance": 2,
+      "summary": "Theo Bộ Tài chính, bảng giá đất 3 năm sẽ bảo đảm cân bằng, ổn định chính sách và cập nhật kịp thời biến động thị trường địa ốc.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://vnexpress.net/rss/kinh-doanh.rss",
+        "publisher_host": "vnexpress.net",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-69cd86c6fb57f1b1f40a",
+      "title": "Giá vàng đồng loạt tăng trở lại",
+      "url": "https://dantri.com.vn/kinh-doanh/gia-vang-dong-loat-tang-tro-lai-20261103123140173.htm",
+      "category": "macro",
+      "module_ids": [
+        "macro"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-11-03T07:10:27+00:00",
+      "source_id": "dantri-business",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [
+        "pricing"
+      ],
+      "importance": 2,
+      "summary": "(Dân trí) - Giá vàng thế giới trên đà phục hồi sau đợt bán tháo mạnh tuần qua, cùng chiều, vàng trong nước bật tăng mạnh mẽ. Giá bán ra vàng miếng SJC đã vượt 141 triệu đồng/lượng.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://dantri.com.vn/rss/kinh-doanh.rss",
+        "publisher_host": "dantri.com.vn",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-6694c8b61f45b0e6f005",
+      "title": "Giá xăng tăng gần 7% kéo chỉ số giá tiêu dùng đi lên",
+      "url": "https://dantri.com.vn/kinh-doanh/gia-xang-tang-gan-7-keo-chi-so-gia-tieu-dung-di-len-20261103124452854.htm",
+      "category": "macro",
+      "module_ids": [
+        "macro"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-11-03T06:50:00+00:00",
+      "source_id": "dantri-business",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "(Dân trí) - Giá xăng tăng 6,86% trong tháng 10 khiến nhóm giao thông tăng mạnh, góp phần đẩy chỉ số giá tiêu dùng (CPI) tăng 0,2% so với tháng trước.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://dantri.com.vn/rss/kinh-doanh.rss",
+        "publisher_host": "dantri.com.vn",
+        "publication_date_from_feed": true
+      }
+    },
     {
       "id": "article-market-rss-d9b5458028568b436505",
       "title": "Đồng Nai quy hoạch khu đô thị 2.250 ha ven sông",
