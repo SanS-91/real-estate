@@ -54,7 +54,7 @@ function fixture({hasPrices=true,hasSupply=true,priceLayer='listing'}={}) {
     max=>'<section class="section market-pulse" data-news-max="'+max+'">Market pulse</section>',
     ()=>'<section class="section market-research-briefs">Q3 research details</section>',
     ()=>'<div class="market-coverage-note">Monitoring details</div>',
-    ()=>'<p class="market-data-freshness">09/10/2026 · lịch sử</p>',
+    (rows,label)=>'<p class="market-data-freshness">'+label+' · 09/10/2026 · lịch sử</p>',
     ()=>'<div class="segmented-control">Price layers</div>',
     ()=>'<span class="source-ref">Nguồn có ngày</span>',
     markup=>{html=markup},
