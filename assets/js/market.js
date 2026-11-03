@@ -736,46 +736,129 @@
       (age>14?' · <strong>Chỉ tham khảo lịch sử, chưa xác minh giá hiện tại</strong>':' · Không phải dữ liệu giao dịch thời gian thực')+'</p>';
   }
 
-  function renderOverview() {
-    const overviewMarketRows = hcmcSeries();
-    const overviewMarketSource = overviewMarketRows[overviewMarketRows.length - 1] || null;
-    const overviewPriceSource = data.observations.find(item => item.average_asp && item.source_id) || null;
-    const html = `
-      ${marketPulseHTML()}
-      ${marketResearchBriefsHTML("hcmc","apartment",90)}
-      ${marketCoverageNoteHTML()}
-      ${projectNewsHTML(data.projects)}
-      <div class="market-metric-grid">${summaryMetrics().map(Components.compactMetric).join('')}</div>
-      <div class="market-layout market-layout--overview">
-        <section class="section market-panel market-panel--wide">
-          <div class="section-header"><div><span class="eyebrow">HCMC apartment</span><h2 class="section-title">Supply &amp; Sales</h2></div><a class="text-link" href="market.html?view=supply-sales">Open view</a></div>
-          <div class="section-body"><p class="market-data-freshness">Chuỗi dữ liệu đã công bố theo quý · Kỳ gần nhất: <strong>${esc(overviewMarketSource?.period||'Chưa có số liệu')}</strong> · Không phải số liệu giao dịch cập nhật hằng ngày.</p><div class="chart-frame"><canvas id="market-overview-supply"></canvas></div><p class="chart-note">One publisher per chart; publisher lower bounds marked >; absorption uses right % axis, missing values remain blank · ${sourceRef(overviewMarketSource?.source_id,{sourceDate:overviewMarketSource?.source_date,period:overviewMarketSource?.period,sourceUrl:overviewMarketSource?.source_url})}</p></div>
-        </section>
+  function marketOverviewProjectHighlightsHTML() {
+    // A useful investment watchlist comes before the full 18-project grid.
+    // Newer linked updates are shown as context, never as price evidence.
+    const preferredIds=['izumi-city','aqua-city','waterpoint','the-global-city'];
+    const preferred=preferredIds.map(id=>data.projects.find(row=>row.id===id)).filter(Boolean);
+    const others=[...data.projects].filter(project=>!preferredIds.includes(project.id))
+      .sort((a,b)=>String(projectActivityDate(b.id)||'').localeCompare(String(projectActivityDate(a.id)||'')));
+    const selected=[...preferred,...others].slice(0,4);
+    if(!selected.length)return '';
+    const now=Date.now();
+    const byProject=new Map();
+    for(const row of data.marketDailyPulse?.article_index||[]) {
+      const time=Date.parse(row.published_at||'');
+      if(!selected.some(project=>project.id===row.project_id) ||
+          !Number.isFinite(time)||time>now+3600000||time<now-30*86400000 ||
+          !String(row.url||'').startsWith('https://'))continue;
+      const earlier=byProject.get(row.project_id);
+      if(!earlier||time>Date.parse(earlier.published_at))byProject.set(row.project_id,row);
+    }
+    return '<section class="section market-overview-projects"><div class="section-header"><div>'+
+      '<span class="eyebrow">Dự án trọng tâm</span><h2 class="section-title">Dự án & đối thủ cạnh tranh</h2></div>'+
+      '<a class="text-link" href="market.html?view=projects">Xem tất cả '+data.projects.length+' dự án</a></div>'+
+      '<div class="section-body"><div class="market-overview-project-grid">'+selected.map(project=>{
+        const news=byProject.get(project.id);
+        const detail='market.html?view=project-detail&id='+encodeURIComponent(project.id);
+        return '<article class="market-overview-project"><a class="market-overview-project__name" href="'+esc(detail)+'">'+
+          esc(project.name)+'</a><span>'+esc(regionNames(project))+'</span>'+
+          '<small>'+esc(developerName(project))+'</small>'+
+          '<div class="market-overview-project__activity">'+(news
+            ?'Tin liên kết '+esc(App.formatDate(news.published_at))
+            :'Chưa có tin dự án trong 30 ngày')+'</div></article>';
+      }).join('')+'</div></div></section>';
+  }
 
-      </div>
-      <section class="section">
-        <div class="section-header"><div><span class="eyebrow">Tracked projects</span><h2 class="section-title">Key Projects · ${Math.min(data.projects.length,8)}/${data.projects.length}</h2></div><a class="text-link" href="market.html?view=projects">View all ${data.projects.length} projects</a></div>
-        <div class="section-body section-body--table">${projectTable([...data.projects].sort((a,b)=>String(projectActivityDate(b.id)||'').localeCompare(String(projectActivityDate(a.id)||''))), 8)}</div>
-      </section>
-      <section class="section">
-        <div class="section-header"><div><span class="eyebrow">Project pricing</span><h2 class="section-title">Pricing Snapshot</h2></div><div class="section-header__actions">${priceLayerControls()}<a class="text-link" href="market.html?view=pricing">Open Pricing</a></div></div>
-        <div class="section-body">${priceFreshnessNote(data.listingObservations,'Khoảng giá chào bán từ nguồn đã lưu')}<div class="chart-frame"><canvas id="market-overview-price"></canvas></div><p class="chart-note">${state.priceLayer === 'listing' ? 'Listing-market asking ranges from mapped portal snapshots; not transaction prices.' : 'Only source-stated verified project pricing is shown; no synthetic history · ' + sourceRef(overviewPriceSource?.source_id,{sourceDate:overviewPriceSource?.source_date,period:overviewPriceSource?.period,sourceUrl:overviewPriceSource?.source_url})}</p></div>
-      </section>`;
+  function marketOverviewQuarterlyBriefHTML() {
+    const rows=(data.researchBriefs||[]).filter(row=>
+      row.period_type==='quarter' && (row.region_ids||[]).includes('hcmc') &&
+      (row.segment_ids||[]).includes('apartment') &&
+      String(row.source_url||'').startsWith('https://'))
+      .sort((a,b)=>String(b.period||'').localeCompare(String(a.period||''))||
+        String(b.source_date||'').localeCompare(String(a.source_date||'')));
+    const top=rows[0];
+    if(!top)return '';
+    const detail=top.data_basis==='press-attributed-secondary-confirmation-only'
+      ?'Số liệu báo chí dẫn nguồn; chưa nhập vào chuỗi thống kê chính.'
+      :'Bản tin nghiên cứu định tính, không phải chuỗi giao dịch xác minh.';
+    return '<p class="market-overview-quarter-brief"><span>Báo cáo mới: <strong>'+esc(top.period)+'</strong></span>'+
+      '<a href="'+esc(top.source_url)+'" target="_blank" rel="noopener noreferrer">'+esc(top.title)+'</a>'+
+      '<small>'+esc(detail)+'</small></p>';
+  }
+
+  function renderOverview() {
+    const overviewMarketRows=hcmcSeries();
+    const overviewMarketSource=overviewMarketRows.at(-1)||null;
+    const overviewPriceSource=[...data.observations]
+      .filter(item=>item.average_asp&&item.source_id)
+      .sort((a,b)=>String(b.source_date||b.period||'').localeCompare(String(a.source_date||a.period||'')))[0]||null;
+    const listingChart=state.priceLayer==='listing'?listingRangeChartData(data.projects):null;
+    const hasPricing=state.priceLayer==='listing'
+      ?Boolean(listingChart?.labels?.length)
+      :priceSeries().length>0;
+    const html=`
+      <div class="market-overview">
+        <div class="market-overview-intro">
+          <div><span class="eyebrow">Tổng quan có nguồn</span><h2>Toàn cảnh thị trường</h2>
+          <p>Ưu tiên giá chào, nguồn cung & giao dịch và các dự án trọng tâm. Tin tức và báo cáo mở rộng nằm bên dưới.</p></div>
+        </div>
+        <div class="market-metric-grid market-overview-metrics">${summaryMetrics().map(Components.compactMetric).join('')}</div>
+        <div class="market-overview-primary">
+          <section class="section market-overview-panel market-overview-panel--pricing">
+            <div class="section-header"><div><span class="eyebrow">Giá bán & cạnh tranh</span><h2 class="section-title">Giá chào tham chiếu</h2></div>
+              <div class="section-header__actions">${priceLayerControls()}<a class="text-link" href="market.html?view=pricing">Chi tiết giá</a></div></div>
+            <div class="section-body">
+              ${priceFreshnessNote(data.listingObservations.filter(row=>row.status==='reviewed'),
+                'Giá chào đã rà soát theo nguồn')}
+              ${hasPricing?'<div class="chart-frame market-overview-chart"><canvas id="market-overview-price"></canvas></div>'
+                :'<p class="market-overview-empty">Chưa có chuỗi giá phù hợp để biểu diễn. Xem tab Giá bán để tra cứu từng nguồn.</p>'}
+              <p class="chart-note">${state.priceLayer==='listing'
+                ?'Khoảng giá chào từ snapshot đã rà soát, không phải giá giao dịch hay ASP dự án.'
+                :'Chỉ hiển thị giá do nguồn công bố; không nội suy · '+
+                  sourceRef(overviewPriceSource?.source_id,{sourceDate:overviewPriceSource?.source_date,
+                    period:overviewPriceSource?.period,sourceUrl:overviewPriceSource?.source_url})}</p>
+            </div>
+          </section>
+          <section class="section market-overview-panel market-overview-panel--supply">
+            <div class="section-header"><div><span class="eyebrow">Căn hộ TP.HCM</span><h2 class="section-title">Nguồn cung & giao dịch</h2></div>
+              <a class="text-link" href="market.html?view=supply-sales">Xem dữ liệu</a></div>
+            <div class="section-body">
+              <p class="market-overview-period">Kỳ thống kê định lượng gần nhất: <strong>${esc(overviewMarketSource?.period||'Chưa có')}</strong> · Không phải dữ liệu hằng ngày.</p>
+              ${overviewMarketRows.length?'<div class="chart-frame market-overview-chart"><canvas id="market-overview-supply"></canvas></div>'
+                :'<p class="market-overview-empty">Chưa có chuỗi nguồn cung và giao dịch có thể so sánh.</p>'}
+              <p class="chart-note">Chuỗi theo cùng nhà cung cấp, không ghép kỳ/địa giới khác nhau ·
+                ${sourceRef(overviewMarketSource?.source_id,{sourceDate:overviewMarketSource?.source_date,
+                  period:overviewMarketSource?.period,sourceUrl:overviewMarketSource?.source_url})}</p>
+              ${marketOverviewQuarterlyBriefHTML()}
+            </div>
+          </section>
+        </div>
+        ${marketOverviewProjectHighlightsHTML()}
+        ${marketPulseHTML(1)}
+        <details class="market-overview-evidence">
+          <summary><strong>Báo cáo nghiên cứu & chất lượng dữ liệu</strong><span>Xem nguồn và phương pháp chi tiết</span></summary>
+          <div class="market-overview-evidence__body">
+            ${marketResearchBriefsHTML('hcmc','apartment',90)}
+            ${marketCoverageNoteHTML()}
+          </div>
+        </details>
+      </div>`;
     setView(html);
-    requestAnimationFrame(() => {
-      ChartTools.renderSupplySales('market-overview-supply', overviewMarketRows);
-      if (state.priceLayer === 'listing') {
-        const listingChart = listingRangeChartData(data.projects);
-        ChartTools.renderRangeSeries('market-overview-price', {
-          labels: listingChart.labels,
-          lowValues: listingChart.lowValues,
-          highValues: listingChart.highValues,
-          lowLabel: 'Asking low',
-          highLabel: 'Asking high',
-          yFormatter: value => Formatters.aspVndPerSqm(value, { short:true })
+    requestAnimationFrame(()=>{
+      if(overviewMarketRows.length)ChartTools.renderSupplySales('market-overview-supply',overviewMarketRows);
+      if(!hasPricing)return;
+      if(state.priceLayer==='listing') {
+        ChartTools.renderRangeSeries('market-overview-price',{
+          labels:listingChart.labels,
+          lowValues:listingChart.lowValues,
+          highValues:listingChart.highValues,
+          lowLabel:'Giá chào thấp',
+          highLabel:'Giá chào cao',
+          yFormatter:value=>Formatters.aspVndPerSqm(value,{short:true})
         });
-      } else {
-        ChartTools.renderPriceTrend('market-overview-price', priceSeries());
+      }else{
+        ChartTools.renderPriceTrend('market-overview-price',priceSeries());
       }
     });
   }
