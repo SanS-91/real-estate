@@ -799,10 +799,6 @@
       :priceSeries().length>0;
     const html=`
       <div class="market-overview">
-        <div class="market-overview-intro">
-          <div><span class="eyebrow">Tổng quan có nguồn</span><h2>Toàn cảnh thị trường</h2>
-          <p>Ưu tiên giá chào, nguồn cung & giao dịch và các dự án trọng tâm. Tin tức và báo cáo mở rộng nằm bên dưới.</p></div>
-        </div>
         <div class="market-metric-grid market-overview-metrics">${summaryMetrics().map(Components.compactMetric).join('')}</div>
         <div class="market-overview-primary">
           <section class="section market-overview-panel market-overview-panel--pricing">
