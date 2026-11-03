@@ -1,9 +1,198 @@
 {
   "schema_version": 1,
-  "build_id": "market-news-rss-20261103T085144Z",
-  "generated_at": "2026-11-03T08:51:44.150591+00:00",
-  "record_count": 1374,
+  "build_id": "market-news-rss-20261103T105143Z",
+  "generated_at": "2026-11-03T10:51:43.790701+00:00",
+  "record_count": 1382,
   "data": [
+    {
+      "id": "article-market-rss-40ccff4ddc862750e65e",
+      "title": "Sắp có 2 cầu vượt cho người đi bộ 'thoát ải' đường Tôn Đức Thắng",
+      "url": "https://thanhnien.vn/sap-co-2-cau-vuot-cho-nguoi-di-bo-thoat-ai-duong-ton-duc-thang-185261103172649566.htm",
+      "category": "infrastructure",
+      "module_ids": [
+        "infrastructure"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-11-03T10:49:00+00:00",
+      "source_id": "thanhnien-policy",
+      "region_ids": [
+        "hcmc"
+      ],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "Sở Xây dựng TP.HCM đang gấp rút xúc tiến việc thực hiện xây dựng 2 cầu bộ hành qua đường Tôn Đức Thắng và cải tạo, chỉnh trang cầu bến B, cầu bến C - Ba Son (phường Sài Gòn).",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://thanhnien.vn/rss/kinh-te/chinh-sach-phat-trien.rss",
+        "publisher_host": "thanhnien.vn",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-5576274a09d568dd4e7e",
+      "title": "Tây Ninh phát triển hạ tầng giao thông, mở rộng không gian đô thị",
+      "url": "https://vnexpress.net/tay-ninh-phat-trien-ha-tang-giao-thong-mo-rong-khong-gian-do-thi-5140281.html",
+      "category": "market",
+      "module_ids": [
+        "infrastructure"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-11-03T10:00:00+00:00",
+      "source_id": "vnexpress-real-estate",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [
+        "infrastructure"
+      ],
+      "importance": 2,
+      "summary": "Kế hoạch xây dựng các tuyến cao tốc, mở rộng quốc lộ và phát triển công nghiệp, dịch vụ tạo động lực kết nối vùng và mở rộng không gian đô thị tỉnh Tây Ninh.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://vnexpress.net/rss/bat-dong-san.rss",
+        "publisher_host": "vnexpress.net",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-7bc015233eb745ec8bc0",
+      "title": "Bộ trưởng Tư pháp lý giải đề xuất nâng tiền cọc đấu giá đất lên tới 50%",
+      "url": "https://dantri.com.vn/thoi-su/bo-truong-tu-phap-ly-giai-de-xuat-nang-tien-coc-dau-gia-dat-len-toi-50-20261103162504643.htm",
+      "category": "market",
+      "module_ids": [
+        "market",
+        "legal"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-11-03T09:58:39+00:00",
+      "source_id": "dantri-current-affairs",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [
+        "pricing",
+        "legal"
+      ],
+      "importance": 2,
+      "summary": "(Dân trí) - Trước lo ngại tiền đặt trước lên tới 50% gây khó cho người mua đất ở, Bộ trưởng Hoàng Thanh Tùng cho biết đây là khung linh hoạt, không bắt buộc áp dụng mức cao nhất.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://dantri.com.vn/rss/thoi-su.rss",
+        "publisher_host": "dantri.com.vn",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-18f5ce49b775c3482bc2",
+      "title": "Đề xuất chấm dứt dự án du lịch Thác Bà vì xây chui trong rừng đặc dụng",
+      "url": "https://dantri.com.vn/thoi-su/de-xuat-cham-dut-du-an-du-lich-thac-ba-vi-xay-chui-trong-rung-dac-dung-20261103142409517.htm",
+      "category": "market",
+      "module_ids": [
+        "market"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-11-03T09:49:39+00:00",
+      "source_id": "dantri-current-affairs",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [
+        "sales",
+        "legal"
+      ],
+      "importance": 2,
+      "summary": "(Dân trí) - Dự án Khu du lịch sinh thái Thác Bà được chấp thuận từ năm 2017, nhưng đến nay chưa hoàn tất các thủ tục pháp lý, nhiều công trình đã được xây dựng trong khu vực rừng đặc dụng.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://dantri.com.vn/rss/thoi-su.rss",
+        "publisher_host": "dantri.com.vn",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-9ed67c513a99095d791e",
+      "title": "EVN đẩy nhanh các dự án phục vụ Hội nghị APEC",
+      "url": "https://dantri.com.vn/kinh-doanh/evn-day-nhanh-cac-du-an-phuc-vu-hoi-nghi-apec-20261103160037680.htm",
+      "category": "market",
+      "module_ids": [
+        "market"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-11-03T09:06:10+00:00",
+      "source_id": "dantri-business",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "(Dân trí) - Sản lượng điện sản xuất và nhập khẩu toàn hệ thống tháng 10 đạt 31,58 tỷ kWh, tăng 14,3% so với cùng kỳ. Tập đoàn đốc thúc đơn vị thành viên đảm bảo tiến độ các dự án cấp điện cho phụ tải Phú Quốc, phục vụ Hội nghị APEC 2027.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://dantri.com.vn/rss/kinh-doanh.rss",
+        "publisher_host": "dantri.com.vn",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-3ee75ba7d3719dbd6e52",
+      "title": "Vốn FDI đăng ký lập đỉnh 17 năm, bất động sản đón dòng tiền mới",
+      "url": "https://dantri.com.vn/kinh-doanh/von-fdi-dang-ky-lap-dinh-17-nam-bat-dong-san-don-dong-tien-moi-20261103150813296.htm",
+      "category": "market",
+      "module_ids": [
+        "market"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-11-03T08:37:32+00:00",
+      "source_id": "dantri-business",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "(Dân trí) - Trong 10 tháng, tổng vốn đầu tư nước ngoài đăng ký vào Việt Nam đạt 54,85 tỷ USD, riêng lĩnh vực bất động sản đứng thứ hai khi thu hút 7,08 tỷ USD.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://dantri.com.vn/rss/kinh-doanh.rss",
+        "publisher_host": "dantri.com.vn",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-6a4ced85cc60efa6a522",
+      "title": "TPHCM thúc tiến độ khởi công nhà ở xã hội tại Khu công nghiệp Lê Minh Xuân",
+      "url": "https://dantri.com.vn/thoi-su/tphcm-thuc-tien-do-khoi-cong-nha-o-xa-hoi-tai-khu-cong-nghiep-le-minh-xuan-20261103151908571.htm",
+      "category": "market",
+      "module_ids": [
+        "market",
+        "infrastructure"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-11-03T08:32:54+00:00",
+      "source_id": "dantri-current-affairs",
+      "region_ids": [
+        "hcmc"
+      ],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "(Dân trí) - Lãnh đạo TPHCM yêu cầu các đơn vị đẩy nhanh thủ tục, phấn đấu khởi công dự án nhà xã hội tại Khu công nghiệp Lê Minh Xuân mở rộng và dự án nhà ở xã hội phục vụ tái định cư tại Nhà Bè trước ngày 31/12.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://dantri.com.vn/rss/thoi-su.rss",
+        "publisher_host": "dantri.com.vn",
+        "publication_date_from_feed": true
+      }
+    },
     {
       "id": "article-market-rss-e488846dbe150a7b2768",
       "title": "Khi chuẩn mực trở thành lợi thế cạnh tranh cốt lõi của doanh nghiệp",
@@ -54,6 +243,33 @@
       "source_verification": {
         "method": "official-rss",
         "feed_url": "https://dantri.com.vn/rss/thoi-su.rss",
+        "publisher_host": "dantri.com.vn",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-ca7ead2bf40925368053",
+      "title": "Vinhomes Hải Vân Bay: Cực tăng trưởng mới cho du lịch miền Trung",
+      "url": "https://dantri.com.vn/bat-dong-san/vinhomes-hai-van-bay-cuc-tang-truong-moi-cho-du-lich-mien-trung-20261103142339752.htm",
+      "category": "market",
+      "module_ids": [
+        "market"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-11-03T07:33:38+00:00",
+      "source_id": "dantri-real-estate",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [
+        "vinhomes"
+      ],
+      "tags": [],
+      "importance": 2,
+      "summary": "(Dân trí) - Tọa lạc tại vị trí cửa ngõ nối liền Huế và Đà Nẵng, đèo Hải Vân và vịnh Nam Chơn sở hữu cảnh quan thiên nhiên đặc sắc, góp phần tạo nên sức hấp dẫn của du lịch miền Trung.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://dantri.com.vn/rss/bat-dong-san.rss",
         "publisher_host": "dantri.com.vn",
         "publication_date_from_feed": true
       }
