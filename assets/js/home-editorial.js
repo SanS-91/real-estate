@@ -12,7 +12,7 @@
   const patterns = {
     market: {
       subject:['bat dong san','nha dat','nha o','can ho','chung cu','nha pho','biet thu','dat nen',
-        'khu do thi','thi truong nha','thi truong dia oc','chu dau tu bat dong san',
+        'khu do thi','phan khu','thi truong nha','thi truong dia oc','chu dau tu bat dong san',
         'du an nha','nha o xa hoi','gia ban nha','gia ban dat','gia can ho','gia nha dat',
         'van phong cho thue','bat dong san cong nghiep','phat trien do thi',
         'izumi','aqua city','springville','nam long','novaland','vinhomes','masterise',
@@ -43,7 +43,7 @@
       material:['du an','dau tu','khoi cong','thong xe','hoan thanh','thi cong',
         'tien do','quy hoach','phe duyet','bo tri von','giai ngan','ket noi',
         'mo rong','xay dung','thiet ke','dau thau','giai phong mat bang','nghiem thu',
-        'khoi dong','du kien','tu van'],
+        'khoi dong','du kien','tu van','khai thac','van hanh','dua vao su dung'],
       high:['khoi cong','thong xe','hoan thanh','tien do','phe duyet','xay dung',
         'giai ngan','ket noi','dau thau']
     },
@@ -182,6 +182,45 @@
     }
     return selected;
   }
+  // Home Latest is NOT the historical attention ranking. It follows the
+  // same content gate as the module archive, then orders by publisher time.
+  // Diversification is used only to suppress duplicated stories and repeated
+  // gold-market headlines, never to push an older story above newer news.
+  function latestForHome(articles,module,referenceDate,
+                         {max=3,minWindow=7,extendedWindow=30,now=Date.now()}={}) {
+    const eligible=(articles||[]).map(article=>{
+      const review=inspect({...article,category:module});
+      const stamp=Date.parse(article.published_at||'');
+      return {...review,article,stamp,age:dayAge({date:article.published_at},referenceDate)};
+    }).filter(x=>x.eligible && x.article?.title &&
+      /^https:\/\//i.test(String(x.article.url||'')) &&
+      !String(x.article.source_id||'').startsWith('demo-') &&
+      Number.isFinite(x.stamp) && x.stamp<=now+15*60000 &&
+      x.age!==null && x.age>=0 && x.age<extendedWindow)
+      .sort((a,b)=>b.stamp-a.stamp || b.score-a.score ||
+        String(a.article.id||'').localeCompare(String(b.article.id||'')));
+    const selected=[],seenUrls=new Set();
+    const isDuplicate=(a,b)=>{
+      if(normalize(a.article.title)===normalize(b.article.title))return true;
+      const aa=new Set(normalize(a.article.title).split(' ').filter(w=>w.length>2));
+      const bb=new Set(normalize(b.article.title).split(' ').filter(w=>w.length>2));
+      const common=[...aa].filter(word=>bb.has(word)).length;
+      return common>=6 && common/(aa.size+bb.size-common)>=0.82;
+    };
+    for(const group of [eligible.filter(x=>x.age<minWindow),
+                        eligible.filter(x=>x.age>=minWindow)]) {
+      for(const item of group) {
+        if(seenUrls.has(item.article.url))continue;
+        if(selected.some(x=>isDuplicate(x,item)))continue;
+        if(item.topic==='gold' && selected.some(x=>x.topic==='gold'))continue;
+        selected.push(item);
+        seenUrls.add(item.article.url);
+        if(selected.length>=max)return selected;
+      }
+    }
+    return selected;
+  }
+
   // Apply the same editorial eligibility to each module archive as to Home.
   // This never changes or deletes underlying RSS data. Duplicate copies
   // with the same normalized headline appear once, preferring first seen.
@@ -222,7 +261,7 @@
   function label(topicId,lang='vi') {
     const l=lang==='en'?'en':'vi';return topicNames[l][topicId]||topicId||'';
   }
-  const api={normalize,inspect,curated,filterArchive,featureArchive,label,topic};
+  const api={normalize,inspect,curated,latestForHome,filterArchive,featureArchive,label,topic};
   if(typeof module!=='undefined'&&module.exports)module.exports=api;
   root.HomeEditorial=api;
 })(typeof window!=='undefined' ? window : globalThis);
