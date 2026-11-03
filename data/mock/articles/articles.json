@@ -1,9 +1,40 @@
 {
   "schema_version": 1,
-  "build_id": "market-news-rss-20261103T065140Z",
-  "generated_at": "2026-11-03T06:51:40.242110+00:00",
-  "record_count": 1367,
+  "build_id": "market-news-rss-20261103T070032Z",
+  "generated_at": "2026-11-03T07:00:32.832619+00:00",
+  "record_count": 1368,
   "data": [
+    {
+      "id": "article-market-rss-d9b5458028568b436505",
+      "title": "Đồng Nai quy hoạch khu đô thị 2.250 ha ven sông",
+      "url": "https://vnexpress.net/dong-nai-quy-hoach-khu-do-thi-2-250-ha-ven-song-5140043.html",
+      "category": "market",
+      "module_ids": [
+        "market",
+        "infrastructure"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-11-03T06:34:25+00:00",
+      "source_id": "vnexpress-real-estate",
+      "region_ids": [
+        "dong-nai"
+      ],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [
+        "legal",
+        "infrastructure"
+      ],
+      "importance": 2,
+      "summary": "Khu đô thị tại An Phước và Tam Phước được định hướng phát triển thành không gian đa chức năng, kết hợp nhà ở, thương mại, giáo dục gắn với sân bay Long Thành.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://vnexpress.net/rss/bat-dong-san.rss",
+        "publisher_host": "vnexpress.net",
+        "publication_date_from_feed": true
+      }
+    },
     {
       "id": "article-market-rss-37b5999eb835b3668c16",
       "title": "35.000 căn chung cư có thể được mở bán tại Hà Nội năm sau",
