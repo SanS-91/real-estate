@@ -19,6 +19,8 @@ on:
       - "data/mock/market/research-briefs.json"
       - "market.html"
       - "assets/js/market.js"
+      - "assets/css/market-news.css"
+      - "tests/test_market_overview_layout.cjs"
       - "assets/js/data-store.js"
       - "scripts/check_market_web_integrity.py"
       - "data/state/market-active-listing-coverage.json"
@@ -57,6 +59,8 @@ jobs:
           node --check assets/js/home.js
           node --check assets/js/home-editorial.js
           node tests/test_home_latest_news.cjs
+      - name: Prevent Overview layout regressions
+        run: node tests/test_market_overview_layout.cjs
       - name: Build derived market pulse (no price estimates)
         run: python scripts/build_market_daily_pulse.py
       - name: Publish changed index only
