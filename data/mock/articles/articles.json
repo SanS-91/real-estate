@@ -1,9 +1,383 @@
 {
   "schema_version": 1,
-  "build_id": "market-news-rss-20261104T064212Z",
-  "generated_at": "2026-11-04T06:42:12.121165+00:00",
-  "record_count": 1408,
+  "build_id": "market-news-rss-20261104T085145Z",
+  "generated_at": "2026-11-04T08:51:45.399129+00:00",
+  "record_count": 1422,
   "data": [
+    {
+      "id": "article-market-rss-28c9a9d5477f0f9abd23",
+      "title": "Elite Island sở hữu không gian sống xanh gần trung tâm lễ hội",
+      "url": "https://vnexpress.net/elite-island-so-huu-khong-gian-song-xanh-gan-trung-tam-le-hoi-5140611.html",
+      "category": "market",
+      "module_ids": [
+        "macro"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-11-04T08:30:00+00:00",
+      "source_id": "vnexpress-real-estate",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "Elite Island tại Charmora City Nha Trang mang đến cho cư dân không gian an cư sinh thái cùng tiện ích khoáng nóng, đồng thời thuận tiện tiếp cận đảo lễ hội 24/7 ngay cạnh.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://vnexpress.net/rss/bat-dong-san.rss",
+        "publisher_host": "vnexpress.net",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-971bd2bea5afec33734f",
+      "title": "TP HCM dự kiến khởi công dự án nhà ở xã hội gần 110 ha cuối năm nay",
+      "url": "https://vnexpress.net/tp-hcm-du-kien-khoi-cong-du-an-nha-o-xa-hoi-gan-110-ha-cuoi-nam-nay-5140663.html",
+      "category": "market",
+      "module_ids": [
+        "market",
+        "infrastructure"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-11-04T08:21:31+00:00",
+      "source_id": "vnexpress-real-estate",
+      "region_ids": [
+        "hcmc"
+      ],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [
+        "legal"
+      ],
+      "importance": 2,
+      "summary": "Khu đất gần 110 ha tại Khu công nghiệp Lê Minh Xuân mở rộng được định hướng chuyển đổi, phát triển nhà ở xã hội, dự kiến khởi công ngày 30/12 sau khi hoàn tất pháp lý.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://vnexpress.net/rss/bat-dong-san.rss",
+        "publisher_host": "vnexpress.net",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-45c166e6b16156cddca4",
+      "title": "Lâm Đồng công bố tình huống khẩn cấp về thiên tai tại quốc lộ 28",
+      "url": "https://dantri.com.vn/thoi-su/lam-dong-cong-bo-tinh-huong-khan-cap-ve-thien-tai-tai-quoc-lo-28-20261104142934130.htm",
+      "category": "infrastructure",
+      "module_ids": [
+        "infrastructure"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-11-04T07:42:18+00:00",
+      "source_id": "dantri-current-affairs",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [
+        "infrastructure"
+      ],
+      "importance": 2,
+      "summary": "(Dân trí) - Tỉnh Lâm Đồng vừa công bố tình huống khẩn cấp về thiên tai tại đoạn đường xảy ra sạt trượt đất, lún nền do mưa lớn trên quốc lộ 28.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://dantri.com.vn/rss/thoi-su.rss",
+        "publisher_host": "dantri.com.vn",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-33c47ed6b356530fa095",
+      "title": "Đà Nẵng khảo sát tuyến đường dự kiến đặt tên ông Nguyễn Bá Thanh",
+      "url": "https://dantri.com.vn/thoi-su/da-nang-khao-sat-tuyen-duong-du-kien-dat-ten-ong-nguyen-ba-thanh-20261104132039096.htm",
+      "category": "infrastructure",
+      "module_ids": [
+        "infrastructure"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-11-04T07:39:15+00:00",
+      "source_id": "dantri-current-affairs",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "(Dân trí) - Lãnh đạo thành phố Đà Nẵng đã khảo sát các tuyến đường dự kiến mang tên cố Thủ tướng Phan Văn Khải và cố Bí thư Thành ủy Đà Nẵng Nguyễn Bá Thanh.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://dantri.com.vn/rss/thoi-su.rss",
+        "publisher_host": "dantri.com.vn",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-11b2d56d5aaba80dfcc6",
+      "title": "Công an Hải Phòng kiên quyết xử lý \"xe dù, xe chui\" ở sân bay Cát Bi",
+      "url": "https://dantri.com.vn/thoi-su/cong-an-hai-phong-kien-quyet-xu-ly-xe-du-xe-chui-o-san-bay-cat-bi-20261104142804230.htm",
+      "category": "infrastructure",
+      "module_ids": [
+        "infrastructure"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-11-04T07:37:46+00:00",
+      "source_id": "dantri-current-affairs",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [
+        "infrastructure"
+      ],
+      "importance": 2,
+      "summary": "(Dân trí) - Phòng Quản lý xuất nhập cảnh Công an TP Hải Phòng tăng cường tuần tra 24/7, xử lý xe dù, xe chui, dừng đỗ trái phép và tình trạng chèo kéo khách tại sân bay Cát Bi.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://dantri.com.vn/rss/thoi-su.rss",
+        "publisher_host": "dantri.com.vn",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-4f7c8b2a195c5f47c8fb",
+      "title": "Hà Nội định giá tối đa 120 triệu USD/km đường sắt đi ngầm",
+      "url": "https://vnexpress.net/ha-noi-dinh-gia-toi-da-120-trieu-usd-km-duong-sat-di-ngam-5140642.html",
+      "category": "infrastructure",
+      "module_ids": [
+        "infrastructure"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-11-04T07:35:52+00:00",
+      "source_id": "vnexpress-current-affairs",
+      "region_ids": [
+        "ha-noi"
+      ],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [
+        "infrastructure"
+      ],
+      "importance": 2,
+      "summary": "Thành phố thông qua thí điểm cơ chế đặc thù với đường sắt đô thị, trong đó nhà thầu phải cam kết giá trị hợp đồng bình quân cho đoạn đi ngầm không vượt quá 120 triệu USD/km.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://vnexpress.net/rss/thoi-su.rss",
+        "publisher_host": "vnexpress.net",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-b04631de1bf9a40f08ae",
+      "title": "Chi 400 triệu thuê \"thần đèn\" dời nhà 300 tấn nhường đất làm đường sân bay",
+      "url": "https://dantri.com.vn/thoi-su/chi-400-trieu-thue-than-den-doi-nha-300-tan-nhuong-dat-lam-duong-san-bay-20261104110433540.htm",
+      "category": "infrastructure",
+      "module_ids": [
+        "infrastructure"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-11-04T07:34:02+00:00",
+      "source_id": "dantri-current-affairs",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [
+        "infrastructure"
+      ],
+      "importance": 2,
+      "summary": "(Dân trí) - Ông Hỷ A Sáng đã chi hơn 400 triệu đồng thuê \"thần đèn\" di dời căn nhà 2 tầng nặng 300 tấn sang vị trí mới để nhường đất làm đường ĐT769 kết nối sân bay Long Thành.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://dantri.com.vn/rss/thoi-su.rss",
+        "publisher_host": "dantri.com.vn",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-02e399120f8cf3fe28cc",
+      "title": "Hơn 20 ngân hàng đồng loạt giảm lãi suất cho vay",
+      "url": "https://dantri.com.vn/kinh-doanh/hon-20-ngan-hang-dong-loat-giam-lai-suat-cho-vay-20261104135357116.htm",
+      "category": "macro",
+      "module_ids": [
+        "macro"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-11-04T07:31:32+00:00",
+      "source_id": "dantri-business",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "(Dân trí) - Đại diện Ngân hàng Nhà nước cho biết, hơn 20 ngân hàng triển khai tín dụng ưu đãi, trong khi lãi suất cho vay phát sinh mới giảm 0,2-0,5%/năm.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://dantri.com.vn/rss/kinh-doanh.rss",
+        "publisher_host": "dantri.com.vn",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-3e1afe592b933c14034e",
+      "title": "Bộ Xây dựng chỉ ra điểm nghẽn trong tiếp cận nhà ở xã hội",
+      "url": "https://dantri.com.vn/bat-dong-san/bo-xay-dung-chi-ra-diem-nghen-trong-tiep-can-nha-o-xa-hoi-20261104135056158.htm",
+      "category": "market",
+      "module_ids": [
+        "market",
+        "legal"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-11-04T07:24:14+00:00",
+      "source_id": "dantri-real-estate",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "(Dân trí) - Thứ trưởng Bộ Xây dựng Lê Hồng Vinh cho biết các giải pháp giúp người dân tiếp cận nhà ở xã hội còn manh mún, sự vụ. Bộ đang tham mưu sửa Luật Nhà ở để tháo gỡ.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://dantri.com.vn/rss/bat-dong-san.rss",
+        "publisher_host": "dantri.com.vn",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-a20287623e0ed0a48071",
+      "title": "Cầu vượt cửa biển dài nhất miền Trung chính thức có tên mới",
+      "url": "https://dantri.com.vn/thoi-su/cau-vuot-cua-bien-dai-nhat-mien-trung-chinh-thuc-co-ten-moi-20261104134807208.htm",
+      "category": "infrastructure",
+      "module_ids": [
+        "infrastructure"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-11-04T07:04:33+00:00",
+      "source_id": "dantri-current-affairs",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "(Dân trí) - Cầu vượt cửa biển Thuận An tại thành phố Huế chính thức được đặt tên mới, chứa đựng yếu tố lịch sử, văn hóa và những mong ước tốt đẹp.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://dantri.com.vn/rss/thoi-su.rss",
+        "publisher_host": "dantri.com.vn",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-a5c32e488633b0f540bb",
+      "title": "Bộ Tư pháp thẩm định dự án Luật Khí tượng thủy văn sửa đổi",
+      "url": "https://dantri.com.vn/thoi-su/bo-tu-phap-tham-dinh-du-an-luat-khi-tuong-thuy-van-sua-doi-20261104112738043.htm",
+      "category": "market",
+      "module_ids": [
+        "market"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-11-04T07:00:07+00:00",
+      "source_id": "dantri-current-affairs",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "(Dân trí) - Hồ sơ dự án Luật Khí tượng thủy văn (sửa đổi) vừa được Bộ Nông nghiệp và Môi trường gửi tới Bộ Tư pháp thẩm định.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://dantri.com.vn/rss/thoi-su.rss",
+        "publisher_host": "dantri.com.vn",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-d73182aa65169da7af84",
+      "title": "Đưa 2 con bò thả rông trên quốc lộ về trụ sở xã, tìm chủ sở hữu để xử lý",
+      "url": "https://dantri.com.vn/thoi-su/dua-2-con-bo-tha-rong-tren-quoc-lo-ve-tru-so-xa-tim-chu-so-huu-de-xu-ly-20261104123553200.htm",
+      "category": "infrastructure",
+      "module_ids": [
+        "infrastructure"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-11-04T06:53:09+00:00",
+      "source_id": "dantri-current-affairs",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [
+        "infrastructure"
+      ],
+      "importance": 2,
+      "summary": "(Dân trí) - Với thực trạng hàng chục con bò thả rông trên quốc lộ 29, tiềm ẩn nguy hiểm, chính quyền địa phương yêu cầu chấm dứt tình trạng này và khẳng định sẽ xử lý nghiêm chủ vật nuôi cố tình vi phạm.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://dantri.com.vn/rss/thoi-su.rss",
+        "publisher_host": "dantri.com.vn",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-03679a6bac36cd93b0e8",
+      "title": "Sân bay Cà Mau sau một năm nâng cấp",
+      "url": "https://vnexpress.net/san-bay-ca-mau-sau-mot-nam-nang-cap-5139743.html",
+      "category": "infrastructure",
+      "module_ids": [
+        "infrastructure"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-11-04T06:40:33+00:00",
+      "source_id": "vnexpress-current-affairs",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [
+        "infrastructure"
+      ],
+      "importance": 2,
+      "summary": "Cảng hàng không Cà Mau hoàn thiện những hạng mục cuối cùng để đón chuyến bay thương mại từ 29/11, sau một năm nâng cấp, giúp địa phương phát triển kinh tế, du lịch.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://vnexpress.net/rss/thoi-su.rss",
+        "publisher_host": "vnexpress.net",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-e4ab03904b658df0da01",
+      "title": "Hà Nội chốt giá 5 tuyến metro dài 253km, mỗi km không quá 120 triệu USD",
+      "url": "https://dantri.com.vn/thoi-su/ha-noi-chot-gia-5-tuyen-metro-dai-253km-moi-km-khong-qua-120-trieu-usd-20261104123128335.htm",
+      "category": "infrastructure",
+      "module_ids": [
+        "infrastructure"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-11-04T06:27:41+00:00",
+      "source_id": "dantri-current-affairs",
+      "region_ids": [
+        "ha-noi"
+      ],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [
+        "infrastructure"
+      ],
+      "importance": 2,
+      "summary": "(Dân trí) - 5 tuyến đường sắt đô thị số 1, 2, 8, 10 và 14 với tổng chiều dài khoảng 253km được Hà Nội khống chế mức giá 120 triệu USD/km. Nếu làm quá mức giá này, nhà thầu phải tự chịu chi phí.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://dantri.com.vn/rss/thoi-su.rss",
+        "publisher_host": "dantri.com.vn",
+        "publication_date_from_feed": true
+      }
+    },
     {
       "id": "article-market-rss-053194d00960095f2a3d",
       "title": "Một dự án 'khủng' được gỡ vướng cấp sổ hồng",
