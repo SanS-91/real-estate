@@ -1,9 +1,168 @@
 {
   "schema_version": 1,
-  "build_id": "market-news-rss-20261104T005142Z",
-  "generated_at": "2026-11-04T00:51:42.742030+00:00",
-  "record_count": 1397,
+  "build_id": "market-news-rss-20261104T025139Z",
+  "generated_at": "2026-11-04T02:51:39.123858+00:00",
+  "record_count": 1403,
   "data": [
+    {
+      "id": "article-market-rss-6f2276af20bdf63374f8",
+      "title": "Giá vàng hôm nay 4.11.2026: Vàng miếng SJC tăng nhẹ, cao hơn thế giới 17 triệu đồng/lượng",
+      "url": "https://thanhnien.vn/gia-vang-hom-nay-4112026-vang-mieng-sjc-tang-nhe-cao-hon-the-gioi-17-trieu-dong-luong-185261104084424697.htm",
+      "category": "macro",
+      "module_ids": [
+        "macro"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-11-04T02:11:00+00:00",
+      "source_id": "thanhnien-banking",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "Giá vàng trong nước tăng nhẹ, nâng tổng mức tăng trong tuần này lên 2,2 triệu đồng mỗi lượng. Dù vậy, giá vàng miếng SJC vẫn cao hơn thế giới từ 16 - 17 triệu đồng/lượng.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://thanhnien.vn/rss/kinh-te/ngan-hang.rss",
+        "publisher_host": "thanhnien.vn",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-f61af8f2a46a5d36c781",
+      "title": "Phòng tắm thơm hơn nhờ mẹo nhỏ với một viên bông gòn",
+      "url": "https://dantri.com.vn/bat-dong-san/phong-tam-thom-hon-nho-meo-nho-voi-mot-vien-bong-gon-20261102202727015.htm",
+      "category": "market",
+      "module_ids": [
+        "market"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-11-04T01:29:00+00:00",
+      "source_id": "dantri-real-estate",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "(Dân trí) - Chỉ cần nhỏ vài giọt tinh dầu lên một viên bông gòn rồi đặt dưới đáy thùng rác, bạn đã có thêm một cách đơn giản để giữ cho phòng tắm luôn phảng phất hương thơm dễ chịu.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://dantri.com.vn/rss/bat-dong-san.rss",
+        "publisher_host": "dantri.com.vn",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-8ea6a5f367696fe9929c",
+      "title": "Gần 3.300 căn hộ tại TP HCM đã bán cho người nước ngoài",
+      "url": "https://vnexpress.net/gan-3-300-can-ho-tai-tp-hcm-da-ban-cho-nguoi-nuoc-ngoai-5140484.html",
+      "category": "market",
+      "module_ids": [
+        "market",
+        "legal"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-11-04T01:27:51+00:00",
+      "source_id": "vnexpress-real-estate",
+      "region_ids": [
+        "hcmc"
+      ],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [
+        "legal"
+      ],
+      "importance": 2,
+      "summary": "Tổ chức, cá nhân nước ngoài đã mua 3.297 căn hộ tại các dự án thương mại trên địa bàn TP HCM, trong đó 316 căn được cấp sổ hồng.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://vnexpress.net/rss/bat-dong-san.rss",
+        "publisher_host": "vnexpress.net",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-7555335101384996c071",
+      "title": "Sức hút tiêu chuẩn WorldHotels và tiện ích all-in-one tại Lusso Saigon",
+      "url": "https://vnexpress.net/suc-hut-tieu-chuan-worldhotels-va-tien-ich-all-in-one-tai-lusso-saigon-5140036.html",
+      "category": "market",
+      "module_ids": [
+        "market"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-11-04T01:00:00+00:00",
+      "source_id": "vnexpress-real-estate",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "Tiện ích theo mô hình all-in-one cùng dịch vụ cá nhân hóa chuẩn vận hành WorldHotels tại Lusso Saigon giúp đáp ứng nhu cầu đa dạng của cư dân, chuyên gia hướng đến không gian sống hiện đại.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://vnexpress.net/rss/bat-dong-san.rss",
+        "publisher_host": "vnexpress.net",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-174f82ad013708851a18",
+      "title": "VinaLiving: 16 năm kiến tạo dấu ấn trên bản đồ bất động sản Việt Nam",
+      "url": "https://dantri.com.vn/bat-dong-san/vinaliving-16-nam-kien-tao-dau-an-tren-ban-do-bat-dong-san-viet-nam-20261103162143717.htm",
+      "category": "market",
+      "module_ids": [
+        "market"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-11-04T01:00:00+00:00",
+      "source_id": "dantri-real-estate",
+      "region_ids": [
+        "hcmc"
+      ],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "(Dân trí) - Từ Đà Nẵng, Quy Nhơn, Hồ Tràm đến TPHCM, hành trình 16 năm của VinaLiving ghi dấu qua các dự án nghỉ dưỡng và nhà ở phát triển trên nền tảng kinh nghiệm, tầm nhìn tiên phong, tư duy xuyên suốt: lấy trải nghiệm sống và giá trị dài hạn làm trọng tâm.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://dantri.com.vn/rss/bat-dong-san.rss",
+        "publisher_host": "dantri.com.vn",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-7dd11a7027b4459f3895",
+      "title": "TPHCM dự kiến điều chỉnh lộ trình hoàn thành hơn 181.000 căn nhà ở xã hội",
+      "url": "https://dantri.com.vn/thoi-su/tphcm-du-kien-dieu-chinh-lo-trinh-hoan-thanh-hon-181000-can-nha-o-xa-hoi-20261103195309065.htm",
+      "category": "market",
+      "module_ids": [
+        "market"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-11-04T00:23:18+00:00",
+      "source_id": "dantri-current-affairs",
+      "region_ids": [
+        "hcmc"
+      ],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "(Dân trí) - Giữ nguyên mục tiêu hoàn thành hơn 181.000 căn nhà ở xã hội vào năm 2030, Sở Xây dựng TPHCM đề xuất điều chỉnh lại tiến độ hoàn thành theo từng năm, dồn trọng tâm vào giai đoạn 2028-2030.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://dantri.com.vn/rss/thoi-su.rss",
+        "publisher_host": "dantri.com.vn",
+        "publication_date_from_feed": true
+      }
+    },
     {
       "id": "article-market-rss-ab1263e0a277d84e127a",
       "title": "'Gồng' lãi vay chờ thị trường bất động sản phục hồi",
