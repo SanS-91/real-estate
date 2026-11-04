@@ -1,9 +1,118 @@
 {
   "schema_version": 1,
-  "build_id": "market-news-rss-20261104T125134Z",
-  "generated_at": "2026-11-04T12:51:34.449108+00:00",
-  "record_count": 1435,
+  "build_id": "market-news-rss-20261104T145146Z",
+  "generated_at": "2026-11-04T14:51:46.255484+00:00",
+  "record_count": 1439,
   "data": [
+    {
+      "id": "article-market-rss-defd1c2db67ce8750108",
+      "title": "Ngân hàng Nhà nước dự kiến bơm gần 49.000 tỷ đồng qua hoán đổi ngoại tệ",
+      "url": "https://dantri.com.vn/kinh-doanh/ngan-hang-nha-nuoc-du-kien-bom-gan-49000-ty-dong-qua-hoan-doi-ngoai-te-20261104204139942.htm",
+      "category": "macro",
+      "module_ids": [
+        "macro"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-11-04T13:52:14+00:00",
+      "source_id": "dantri-business",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "(Dân trí) - Ngân hàng Nhà nước dự kiến hoán đổi tối đa 2 tỷ USD, tương đương 48.800 tỷ đồng, với kỳ hạn 182 ngày, dài hơn đáng kể so với các đợt trước.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://dantri.com.vn/rss/kinh-doanh.rss",
+        "publisher_host": "dantri.com.vn",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-165cb6288d34b9f8e20b",
+      "title": "Từng gây sốt, phiên đấu giá đất Thanh Oai nay chỉ có 47 người tham gia",
+      "url": "https://dantri.com.vn/bat-dong-san/tung-gay-sot-phien-dau-gia-dat-thanh-oai-nay-chi-co-47-nguoi-tham-gia-20261104202400995.htm",
+      "category": "market",
+      "module_ids": [
+        "market",
+        "legal"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-11-04T13:32:16+00:00",
+      "source_id": "dantri-real-estate",
+      "region_ids": [
+        "ha-noi"
+      ],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [
+        "pricing"
+      ],
+      "importance": 2,
+      "summary": "(Dân trí) - Phiên đấu giá 20 thửa đất tại xã Thanh Oai (Hà Nội) chỉ thu hút 47 người tham gia. Giá trúng cao nhất đạt 56,08 triệu đồng/m2, giảm gần 40% so với mức đỉnh từng ghi nhận tại khu vực.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://dantri.com.vn/rss/bat-dong-san.rss",
+        "publisher_host": "dantri.com.vn",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-34d57fd932bbf83e2f91",
+      "title": "Nghịch lý chủ nhà để mặt bằng trống chứ không hạ giá cho thuê",
+      "url": "https://dantri.com.vn/bat-dong-san/nghich-ly-chu-nha-de-mat-bang-trong-chu-khong-ha-gia-cho-thue-20261104171618995.htm",
+      "category": "market",
+      "module_ids": [
+        "market"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-11-04T12:19:54+00:00",
+      "source_id": "dantri-real-estate",
+      "region_ids": [
+        "hcmc"
+      ],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "(Dân trí) - Nhiều chủ nhà phố TPHCM chấp nhận để mặt bằng trống thay vì giảm sâu giá thuê. Trong khi đó, người kinh doanh cần giá thấp và hợp đồng dài hạn để mạnh dạn đầu tư.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://dantri.com.vn/rss/bat-dong-san.rss",
+        "publisher_host": "dantri.com.vn",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-f7b72db67ace7c7d46ca",
+      "title": "Số phận dự án công viên 456ha ở TPHCM sau hơn 20 năm chưa thành hình",
+      "url": "https://dantri.com.vn/bat-dong-san/so-phan-du-an-cong-vien-456ha-o-tphcm-sau-hon-20-nam-chua-thanh-hinh-20261104184328200.htm",
+      "category": "market",
+      "module_ids": [
+        "market"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-11-04T11:53:37+00:00",
+      "source_id": "dantri-real-estate",
+      "region_ids": [
+        "hcmc"
+      ],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "(Dân trí) - Dự án Sài Gòn Safari rộng 456ha tại TPHCM sau hơn 20 năm chưa thành hình tiếp tục được TPHCM đưa vào danh mục mời gọi đầu tư.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://dantri.com.vn/rss/bat-dong-san.rss",
+        "publisher_host": "dantri.com.vn",
+        "publication_date_from_feed": true
+      }
+    },
     {
       "id": "article-market-rss-f398c8b8a61e4d741fde",
       "title": "Giá vàng thế giới vượt mốc 4.000 USD/ounce",
