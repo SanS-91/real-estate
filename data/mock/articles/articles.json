@@ -1,9 +1,34 @@
 {
   "schema_version": 1,
-  "build_id": "market-news-rss-20261104T145146Z",
-  "generated_at": "2026-11-04T14:51:46.255484+00:00",
-  "record_count": 1439,
+  "build_id": "market-news-rss-20261104T162541Z",
+  "generated_at": "2026-11-04T16:25:41.390710+00:00",
+  "record_count": 1440,
   "data": [
+    {
+      "id": "article-market-rss-d29579406ad30afb910a",
+      "title": "Đồng Tháp khởi công 8 cầu Hy vọng trị giá 6,5 tỷ đồng",
+      "url": "https://vnexpress.net/dong-thap-khoi-cong-8-cau-hy-vong-tri-gia-6-5-ty-dong-5140775.html",
+      "category": "infrastructure",
+      "module_ids": [
+        "infrastructure"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-11-04T15:20:38+00:00",
+      "source_id": "vnexpress-current-affairs",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "8 cây cầu mới đồng loạt được xây dựng tại phường Sa Đéc, xã Tân Khánh Trung và Tân Nhuận Đông, giúp hàng nghìn học sinh và người dân đi lại an toàn.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://vnexpress.net/rss/thoi-su.rss",
+        "publisher_host": "vnexpress.net",
+        "publication_date_from_feed": true
+      }
+    },
     {
       "id": "article-market-rss-defd1c2db67ce8750108",
       "title": "Ngân hàng Nhà nước dự kiến bơm gần 49.000 tỷ đồng qua hoán đổi ngoại tệ",
