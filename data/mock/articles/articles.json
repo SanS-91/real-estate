@@ -1,9 +1,249 @@
 {
   "schema_version": 1,
-  "build_id": "market-news-rss-20261103T125143Z",
-  "generated_at": "2026-11-03T12:51:43.802762+00:00",
-  "record_count": 1388,
+  "build_id": "market-news-rss-20261104T005142Z",
+  "generated_at": "2026-11-04T00:51:42.742030+00:00",
+  "record_count": 1397,
   "data": [
+    {
+      "id": "article-market-rss-ab1263e0a277d84e127a",
+      "title": "'Gồng' lãi vay chờ thị trường bất động sản phục hồi",
+      "url": "https://vnexpress.net/gong-lai-vay-cho-thi-truong-bat-dong-san-phuc-hoi-5139736.html",
+      "category": "market",
+      "module_ids": [
+        "market",
+        "macro"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-11-04T00:00:00+00:00",
+      "source_id": "vnexpress-real-estate",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "Gánh lãi vay lên 12,4% mỗi năm nhưng anh Kiệt vẫn chọn giữ căn nhà liền kề, không bán lỗ với niềm tin năm sau thị trường khởi sắc.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://vnexpress.net/rss/bat-dong-san.rss",
+        "publisher_host": "vnexpress.net",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-97441cddce67575e840e",
+      "title": "Gần 43.000 căn hộ sắp ra thị trường TPHCM, giá bán bình quân gây chú ý",
+      "url": "https://dantri.com.vn/bat-dong-san/gan-43000-can-ho-sap-ra-thi-truong-tphcm-gia-ban-binh-quan-gay-chu-y-20261104062810431.htm",
+      "category": "market",
+      "module_ids": [
+        "market"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-11-03T23:45:52+00:00",
+      "source_id": "dantri-real-estate",
+      "region_ids": [
+        "hcmc"
+      ],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [
+        "pricing"
+      ],
+      "importance": 2,
+      "summary": "(Dân trí) - Gần 43.000 căn hộ dự kiến được bổ sung vào TPHCM đến cuối năm 2027, trong đó phần lớn tập trung ở vùng ven. Giá chào bán sơ cấp bình quân hiện hơn 100 triệu đồng/m2.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://dantri.com.vn/rss/bat-dong-san.rss",
+        "publisher_host": "dantri.com.vn",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-43dada39eb871a905d4b",
+      "title": "Giá vàng, bạc lao dốc, chuyên gia nêu yếu tố có thể đảo chiều",
+      "url": "https://dantri.com.vn/kinh-doanh/gia-vang-bac-lao-doc-chuyen-gia-neu-yeu-to-co-the-dao-chieu-20261103223556654.htm",
+      "category": "macro",
+      "module_ids": [
+        "macro"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-11-03T23:35:29+00:00",
+      "source_id": "dantri-business",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "(Dân trí) - Giá vàng giảm 29%; bạc mất tới 58% từ mốc đỉnh lịch sử gợi nhớ cú sụt mạnh năm 2008 nhưng chuyên gia phân tích những yếu tố có thể khiến kim loại quý đảo chiều từ dữ liệu lịch sử.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://dantri.com.vn/rss/kinh-doanh.rss",
+        "publisher_host": "dantri.com.vn",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-2eec0a0e1e882219615a",
+      "title": "Băn khoăn hệ số K làm đội tiền sử dụng đất",
+      "url": "https://thanhnien.vn/ban-khoan-he-so-k-lam-doi-tien-su-dung-dat-185261103202606583.htm",
+      "category": "market",
+      "module_ids": [
+        "market",
+        "legal"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-11-03T23:00:00+00:00",
+      "source_id": "thanhnien-real-estate",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [
+        "pricing",
+        "legal"
+      ],
+      "importance": 2,
+      "summary": "Dự thảo luật Đất đai (sửa đổi) định hướng sử dụng bảng giá đất nhân hệ số K để tính nghĩa vụ tài chính trong phần lớn trường hợp, thay cho việc xác định giá đất cụ thể. Cách làm này được kỳ vọng rút ngắn thời gian định giá và giảm chi phí thủ tục, nhưng có thể khiến tiền sử dụng đất tăng từ 2 - 2,6 ",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://thanhnien.vn/rss/kinh-te/dia-oc.rss",
+        "publisher_host": "thanhnien.vn",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-00badf430ff2d1a16475",
+      "title": "Tỷ giá hối đoái liên tục lao dốc",
+      "url": "https://thanhnien.vn/ty-gia-hoi-doai-lien-tuc-lao-doc-185261103211158712.htm",
+      "category": "macro",
+      "module_ids": [
+        "macro"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-11-03T23:00:00+00:00",
+      "source_id": "thanhnien-banking",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [
+        "pricing"
+      ],
+      "importance": 2,
+      "summary": "Giá bán USD tại các ngân hàng thương mại xuống dưới mốc 26.000 đồng giúp VN có thêm dư địa kéo giảm lạm phát, điều hành chính sách tiền tệ cuối năm.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://thanhnien.vn/rss/kinh-te/ngan-hang.rss",
+        "publisher_host": "thanhnien.vn",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-a8366fbf8a76dfb0582a",
+      "title": "Quảng Trị quy hoạch 8 đô thị với hai trung tâm phát triển",
+      "url": "https://vnexpress.net/quang-tri-quy-hoach-8-do-thi-voi-hai-trung-tam-phat-trien-5140436.html",
+      "category": "market",
+      "module_ids": [
+        "market"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-11-03T18:00:00+00:00",
+      "source_id": "vnexpress-current-affairs",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [
+        "legal"
+      ],
+      "importance": 2,
+      "summary": "Quảng Trị quy hoạch 8 đô thị đến năm 2050, trong đó Đồng Hới và Đông Hà được định hướng là hai đô thị loại II, giữ vai trò trung tâm phát triển phía Bắc và Nam tỉnh.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://vnexpress.net/rss/thoi-su.rss",
+        "publisher_host": "vnexpress.net",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-4afd9f7009a74c05f6e4",
+      "title": "Ngôi nhà hình hộp với thiết kế đan xen như mê cung",
+      "url": "https://vnexpress.net/ngoi-nha-hinh-hop-voi-thiet-ke-dan-xen-nhu-me-cung-5140232.html",
+      "category": "market",
+      "module_ids": [
+        "market"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-11-03T17:00:00+00:00",
+      "source_id": "vnexpress-real-estate",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "Công trình có hình thức khép kín bên ngoài, bên trong các khối phòng được xoay lệch để tạo những khoảng sân xen kẽ, giúp lấy sáng tự nhiên và mở tầm nhìn ra cảnh quan.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://vnexpress.net/rss/bat-dong-san.rss",
+        "publisher_host": "vnexpress.net",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-ea1022a305fd94bfd5c5",
+      "title": "Giá chung cư, đất nền giảm khắp nơi, vẫn quá sức người trẻ",
+      "url": "https://dantri.com.vn/kinh-doanh/gia-chung-cu-dat-nen-giam-khap-noi-van-qua-suc-nguoi-tre-20261103191502562.htm",
+      "category": "market",
+      "module_ids": [
+        "market"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-11-03T15:20:41+00:00",
+      "source_id": "dantri-business",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [
+        "pricing"
+      ],
+      "importance": 2,
+      "summary": "(Dân trí) - Giá nhà hiện bằng 23-25 năm thu nhập hộ gia đình, so với mức hợp lý quốc tế 4-6 năm, nên dù giảm vẫn xa tầm với, đặc biệt với người trẻ lần đầu mua nhà.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://dantri.com.vn/rss/kinh-doanh.rss",
+        "publisher_host": "dantri.com.vn",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-88f08e4fefa0b0e9e0bb",
+      "title": "Tối 3/11, giá vàng bất ngờ tăng mạnh, dầu thô giảm tiếp",
+      "url": "https://dantri.com.vn/kinh-doanh/toi-311-gia-vang-bat-ngo-tang-manh-dau-tho-giam-tiep-20261103212757643.htm",
+      "category": "macro",
+      "module_ids": [
+        "macro"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-11-03T14:34:35+00:00",
+      "source_id": "dantri-business",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "(Dân trí) - Sau khi giảm mạnh trong tháng 10, giá vàng thế giới bất ngờ đảo chiều đi lên trong bối cảnh giá dầu lùi sâu. Tuy nhiên, các chuyên gia cho rằng kim loại quý vẫn đối mặt nhiều sức ép trong ngắn hạn.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://dantri.com.vn/rss/kinh-doanh.rss",
+        "publisher_host": "dantri.com.vn",
+        "publication_date_from_feed": true
+      }
+    },
     {
       "id": "article-market-rss-18a9cdf7d7a11301e3b2",
       "title": "Căn hộ hạng sang Triton Crown 'may đo' nội thất từ cảm hứng hoa sen",
