@@ -1,13 +1,13 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-11-03T15:28:07.379374+00:00",
+  "generated_at": "2026-11-04T09:04:34.154598+00:00",
   "source_id": "muaban-vn",
   "targets_checked": 6,
-  "listing_urls_discovered": 15,
-  "details_checked": 15,
-  "valid_unexpired_project_ads": 10,
-  "newly_published": 1,
-  "published_current_individual_listings": 10,
+  "listing_urls_discovered": 14,
+  "details_checked": 14,
+  "valid_unexpired_project_ads": 9,
+  "newly_published": 0,
+  "published_current_individual_listings": 9,
   "sources": [
     {
       "project_id": "akari-city",
@@ -15,21 +15,22 @@
       "access": "reachable",
       "discovered": 2,
       "checked": 2,
-      "qualified": 2,
+      "qualified": 1,
       "reasons": {
-        "qualified-unexpired-listing": 2
+        "qualified-unexpired-listing": 1,
+        "publisher-expired": 1
       }
     },
     {
       "project_id": "vinhomes-grand-park",
       "source_url": "https://muaban.net/bat-dong-san/ban-can-ho-chung-cu-du-an-vinhomes-grand-park-quan-9-ho-chi-minh",
       "access": "reachable",
-      "discovered": 4,
-      "checked": 4,
+      "discovered": 3,
+      "checked": 3,
       "qualified": 2,
       "reasons": {
         "qualified-unexpired-listing": 2,
-        "publisher-expired": 2
+        "publisher-expired": 1
       }
     },
     {
