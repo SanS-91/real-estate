@@ -1,22 +1,22 @@
 {
   "schema_version": 1,
-  "checked_at": "2026-11-04T02:51:39.123858+00:00",
+  "checked_at": "2026-11-04T04:51:39.171231+00:00",
   "feeds_configured": 16,
   "feeds_fetched": 16,
-  "accepted_new": 6,
+  "accepted_new": 2,
   "production_written": true,
-  "article_total": 1403,
+  "article_total": 1405,
   "published_by_module": {
-    "market": 5,
-    "legal": 1,
+    "market": 2,
+    "legal": 0,
     "infrastructure": 0,
-    "macro": 1
+    "macro": 0
   },
   "recent_by_module_7d": {
-    "market": 219,
-    "legal": 45,
+    "market": 213,
+    "legal": 44,
     "infrastructure": 77,
-    "macro": 55
+    "macro": 53
   },
   "recent_by_module_30d": {
     "market": 862,
@@ -25,7 +25,7 @@
     "macro": 236
   },
   "latest_published_by_module": {
-    "market": "2026-11-04T01:29:00+00:00",
+    "market": "2026-11-04T04:00:00+00:00",
     "legal": "2026-11-04T01:27:51+00:00",
     "infrastructure": "2026-11-03T10:49:00+00:00",
     "macro": "2026-11-04T02:11:00+00:00"
@@ -35,9 +35,9 @@
       "source_id": "vnexpress-real-estate",
       "status": "parsed",
       "feed_items": 50,
-      "new": 2,
-      "skipped": 48,
-      "duplicates": 48,
+      "new": 1,
+      "skipped": 49,
+      "duplicates": 49,
       "filtered": 0
     },
     {
@@ -53,9 +53,9 @@
       "source_id": "dantri-real-estate",
       "status": "parsed",
       "feed_items": 50,
-      "new": 2,
-      "skipped": 48,
-      "duplicates": 48,
+      "new": 0,
+      "skipped": 50,
+      "duplicates": 50,
       "filtered": 0
     },
     {
@@ -64,8 +64,8 @@
       "feed_items": 50,
       "new": 0,
       "skipped": 50,
-      "duplicates": 9,
-      "filtered": 41
+      "duplicates": 8,
+      "filtered": 42
     },
     {
       "source_id": "vnexpress-current-affairs",
@@ -118,8 +118,8 @@
       "feed_items": 50,
       "new": 0,
       "skipped": 50,
-      "duplicates": 15,
-      "filtered": 35
+      "duplicates": 13,
+      "filtered": 37
     },
     {
       "source_id": "dantri-current-affairs",
@@ -152,9 +152,9 @@
       "source_id": "thanhnien-banking",
       "status": "parsed",
       "feed_items": 50,
-      "new": 1,
-      "skipped": 49,
-      "duplicates": 19,
+      "new": 0,
+      "skipped": 50,
+      "duplicates": 20,
       "filtered": 30
     },
     {
@@ -163,8 +163,8 @@
       "feed_items": 50,
       "new": 0,
       "skipped": 50,
-      "duplicates": 11,
-      "filtered": 39
+      "duplicates": 10,
+      "filtered": 40
     },
     {
       "source_id": "thanhnien-transport",
