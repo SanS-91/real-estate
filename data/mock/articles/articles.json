@@ -1,9 +1,268 @@
 {
   "schema_version": 1,
-  "build_id": "market-news-rss-20261104T085145Z",
-  "generated_at": "2026-11-04T08:51:45.399129+00:00",
-  "record_count": 1422,
+  "build_id": "market-news-rss-20261104T105147Z",
+  "generated_at": "2026-11-04T10:51:47.922397+00:00",
+  "record_count": 1433,
   "data": [
+    {
+      "id": "article-market-rss-030ebc2ff6770e3b64b6",
+      "title": "Newtown Diamond khai thác lợi thế ven biển Đà Nẵng",
+      "url": "https://vnexpress.net/newtown-diamond-khai-thac-loi-the-ven-bien-da-nang-5140803.html",
+      "category": "market",
+      "module_ids": [
+        "market"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-11-04T10:30:00+00:00",
+      "source_id": "vnexpress-real-estate",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "Nằm trên đường ven biển Trường Sa, Newtown Diamond có ba tòa căn hộ hướng biển, tạo sức hút nhờ kết nối các điểm du lịch, nghỉ dưỡng và sân golf tại Đà Nẵng.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://vnexpress.net/rss/bat-dong-san.rss",
+        "publisher_host": "vnexpress.net",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-fc1e68e3ea2267d39f54",
+      "title": "Loạt dự án đô thị nghìn tỷ ở phía nam Đà Nẵng chuẩn bị khởi công",
+      "url": "https://dantri.com.vn/bat-dong-san/loat-du-an-do-thi-nghin-ty-o-phia-nam-da-nang-chuan-bi-khoi-cong-20261104162146489.htm",
+      "category": "market",
+      "module_ids": [
+        "market",
+        "infrastructure"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-11-04T10:19:02+00:00",
+      "source_id": "dantri-real-estate",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "(Dân trí) - Lãnh đạo thành phố Đà Nẵng yêu cầu đẩy nhanh thủ tục, tháo gỡ vướng mắc để khởi công 3 dự án đô thị quy mô lớn tại Khu kinh tế mở Chu Lai, với tổng vốn đầu tư hơn 40.000 tỷ đồng.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://dantri.com.vn/rss/bat-dong-san.rss",
+        "publisher_host": "dantri.com.vn",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-d54f0093283aa3913a70",
+      "title": "2 bất động sản liên quan bà Trương Mỹ Lan tiếp tục giảm giá gần 15 tỷ đồng",
+      "url": "https://dantri.com.vn/bat-dong-san/2-bat-dong-san-lien-quan-ba-truong-my-lan-tiep-tuc-giam-gia-gan-15-ty-dong-20261104114319945.htm",
+      "category": "market",
+      "module_ids": [
+        "market"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-11-04T10:14:21+00:00",
+      "source_id": "dantri-real-estate",
+      "region_ids": [
+        "hcmc"
+      ],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "(Dân trí) - Do các phiên đấu giá trước không thành, 2 bất động sản trung tâm TPHCM liên quan bà Trương Mỹ Lan tiếp tục được cơ quan thi hành án thông báo hạ giá khởi điểm thêm gần 15 tỷ đồng.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://dantri.com.vn/rss/bat-dong-san.rss",
+        "publisher_host": "dantri.com.vn",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-1a4596be85b7bcf61f65",
+      "title": "Vành đai 3 TPHCM qua Tây Ninh đạt hơn 87% giá trị xây lắp",
+      "url": "https://dantri.com.vn/thoi-su/vanh-dai-3-tphcm-qua-tay-ninh-dat-hon-87-gia-tri-xay-lap-20261104111657421.htm",
+      "category": "infrastructure",
+      "module_ids": [
+        "infrastructure"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-11-04T10:01:36+00:00",
+      "source_id": "dantri-current-affairs",
+      "region_ids": [
+        "hcmc"
+      ],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "(Dân trí) - Dự án Vành đai 3 TPHCM đoạn qua tỉnh Tây Ninh đạt hơn 87% giá trị xây lắp, nhiều hạng mục cầu, đường cơ bản hoàn thành. Tuy nhiên, hệ thống giao thông thông minh vẫn chưa thể triển khai đồng bộ.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://dantri.com.vn/rss/thoi-su.rss",
+        "publisher_host": "dantri.com.vn",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-a7d060b9cdc94af27a52",
+      "title": "Dự án cao tốc Cao Lãnh - An Hữu được gỡ nút thắt về nguồn cung vật liệu",
+      "url": "https://dantri.com.vn/thoi-su/du-an-cao-toc-cao-lanh-an-huu-duoc-go-nut-that-ve-nguon-cung-vat-lieu-20261104162040527.htm",
+      "category": "market",
+      "module_ids": [
+        "market",
+        "infrastructure"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-11-04T09:50:53+00:00",
+      "source_id": "dantri-current-affairs",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [
+        "supply",
+        "infrastructure"
+      ],
+      "importance": 2,
+      "summary": "(Dân trí) - Sau nhiều tháng gặp khó về nguồn cung vật liệu, dự án cao tốc Cao Lãnh - An Hữu được An Giang thống nhất cho khai thác khoảng 267.000m3 đá, tạo điều kiện đẩy nhanh tiến độ thi công.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://dantri.com.vn/rss/thoi-su.rss",
+        "publisher_host": "dantri.com.vn",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-768a20f5666b4e712045",
+      "title": "Tập đoàn Lê Phong bàn giao căn hộ The Emerald 68",
+      "url": "https://vnexpress.net/tap-doan-le-phong-ban-giao-can-ho-the-emerald-68-5140612.html",
+      "category": "market",
+      "module_ids": [
+        "market"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-11-04T09:30:00+00:00",
+      "source_id": "vnexpress-real-estate",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "Tập đoàn Lê Phong bắt đầu bàn giao căn hộ The Emerald 68 từ cuối tháng 10, đón những cư dân đầu tiên về sinh sống.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://vnexpress.net/rss/bat-dong-san.rss",
+        "publisher_host": "vnexpress.net",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-0dac061176a35e4e2f83",
+      "title": "Ngân hàng Nhà nước dự kiến bơm gần 49.000 tỷ qua kênh hoán đổi ngoại tệ",
+      "url": "https://vnexpress.net/ngan-hang-nha-nuoc-du-kien-bom-gan-49-000-ty-qua-kenh-hoan-doi-ngoai-te-5140710.html",
+      "category": "macro",
+      "module_ids": [
+        "macro"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-11-04T09:14:00+00:00",
+      "source_id": "vnexpress-economy",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "Ngân hàng Nhà nước lần đầu thực hiện nghiệp vụ hoán đổi ngoại tệ kỳ hạn 6 tháng, qua đó có thể cung ứng tối đa 48.800 tỷ đồng cho hệ thống, nhằm hỗ trợ thanh khoản.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://vnexpress.net/rss/kinh-doanh.rss",
+        "publisher_host": "vnexpress.net",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-cec03629c2051934ddeb",
+      "title": "Giá vàng thế giới tăng vọt, vượt 4.000 USD",
+      "url": "https://vnexpress.net/gia-vang-the-gioi-tang-vot-vuot-4-000-usd-5140743.html",
+      "category": "macro",
+      "module_ids": [
+        "macro"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-11-04T08:59:53+00:00",
+      "source_id": "vnexpress-economy",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "Mỗi ounce vàng tăng 100 USD chiều nay, khi đảng Dân chủ giành quyền kiểm soát Quốc hội Mỹ sau cuộc bầu cử giữa nhiệm kỳ.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://vnexpress.net/rss/kinh-doanh.rss",
+        "publisher_host": "vnexpress.net",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-f9e4a375d5e710b822cc",
+      "title": "Phó thống đốc: Lãi suất cho vay mới giảm 0,2-0,5%",
+      "url": "https://vnexpress.net/pho-thong-doc-lai-suat-cho-vay-moi-giam-0-2-0-5-5140740.html",
+      "category": "macro",
+      "module_ids": [
+        "macro"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-11-04T08:45:00+00:00",
+      "source_id": "vnexpress-economy",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "Lãi suất các khoản vay mới cuối tháng 10 giảm 0,2-0,5 điểm phần trăm so với đầu tháng, theo Phó thống đốc Ngân hàng Nhà nước Phạm Thanh Hà.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://vnexpress.net/rss/kinh-doanh.rss",
+        "publisher_host": "vnexpress.net",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-74f66d6374bfe148b96c",
+      "title": "Cầu vượt cửa biển dài nhất miền Trung được đặt tên Cửa Thuận",
+      "url": "https://vnexpress.net/cau-vuot-cua-bien-dai-nhat-mien-trung-duoc-dat-ten-cua-thuan-5140657.html",
+      "category": "infrastructure",
+      "module_ids": [
+        "infrastructure"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-11-04T08:32:30+00:00",
+      "source_id": "vnexpress-current-affairs",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "HĐND TP Huế thông qua nghị quyết đặt tên cầu vượt cửa biển Thuận An là Cửa Thuận, sau hai tháng lấy ý kiến người dân qua ứng dụng Hue-S.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://vnexpress.net/rss/thoi-su.rss",
+        "publisher_host": "vnexpress.net",
+        "publication_date_from_feed": true
+      }
+    },
     {
       "id": "article-market-rss-28c9a9d5477f0f9abd23",
       "title": "Elite Island sở hữu không gian sống xanh gần trung tâm lễ hội",
@@ -56,6 +315,31 @@
         "method": "official-rss",
         "feed_url": "https://vnexpress.net/rss/bat-dong-san.rss",
         "publisher_host": "vnexpress.net",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-41a6d28218bcdff9274c",
+      "title": "Anh chi thêm 1,5 tỷ bảng xây nhà ở xã hội, hỗ trợ người mua nhà lần đầu",
+      "url": "https://dantri.com.vn/bat-dong-san/anh-chi-them-15-ty-bang-xay-nha-o-xa-hoi-ho-tro-nguoi-mua-nha-lan-dau-20261104143255615.htm",
+      "category": "market",
+      "module_ids": [
+        "market"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-11-04T08:01:35+00:00",
+      "source_id": "dantri-real-estate",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "(Dân trí) - Ngân sách 2026 của Anh bổ sung 1,5 tỷ bảng phát triển nhà ở xã hội, đồng thời dành 4,7 tỷ bảng cho chương trình hỗ trợ khoảng 70.000 hộ gia đình mua nhà lần đầu.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://dantri.com.vn/rss/bat-dong-san.rss",
+        "publisher_host": "dantri.com.vn",
         "publication_date_from_feed": true
       }
     },
