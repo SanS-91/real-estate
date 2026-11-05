@@ -436,7 +436,65 @@
         "41664158799"
       ],
       "verified_at": "2026-11-03T15:28:07.379374+00:00"
+    },
+    {
+      "project_id": "akari-city",
+      "project_name": "Akari City",
+      "source_id": "muaban-vn",
+      "source_url": "https://muaban.net/bat-dong-san/ban-can-ho-chung-cu-du-an-akari-city-quan-binh-tan-ho-chi-minh/so-san-nha-full-nt-thiet-ke-75m-chot-3-9ty-tai-akari-city-binh-ta-id71338771",
+      "listing_id": "71338771",
+      "listing_title": "🎉 Sổ Sẵn Nhà Full NT Thiết Kế 75M Chốt 3,9Tỷ tại Akari City Bình Tâ",
+      "asset_type": "apartment",
+      "market_layer": "individual-listing-asking",
+      "metric_type": "single-listing-asking-price-per-sqm",
+      "source_date_basis": "publisher-listing-start-not-update",
+      "source_listed_date": "2026-11-05",
+      "source_updated_date": "2026-11-05",
+      "source_expiration_date": "2026-11-19",
+      "listed_area_sqm": 75.0,
+      "listing_price_vnd": 3900000000,
+      "value_vnd_per_m2": 52000000,
+      "unit_price_basis": "derived-from-advertised-total-and-area",
+      "source_publication_date": null,
+      "methodology_note": "Individual Muaban asking advertisement only. The displayed rate is calculated from the listing's advertised total and usable area, not a publisher average, transaction, project ASP or project range. Date displayed is listing START date, NOT its relative update badge. Use only while the publisher's end date is unexpired.",
+      "id": "muaban-71338771-12056c9db56b",
+      "review_status": "automated-two-hosted-checks",
+      "review_date": "2026-11-05",
+      "verification_run_ids": [
+        "42002174425",
+        "42058405620"
+      ],
+      "verified_at": "2026-11-05T15:46:47.481805+00:00"
+    },
+    {
+      "project_id": "mizuki-park",
+      "project_name": "Mizuki Park",
+      "source_id": "muaban-vn",
+      "source_url": "https://muaban.net/bat-dong-san/ban-can-ho-chung-cu-du-an-mizuki-park-5598-huyen-binh-chanh-ho-chi-minh/ban-can-ho-2pn-59m2-binh-hung-nhan-nha-ngay-gia-4-444-ty-id71338724",
+      "listing_id": "71338724",
+      "listing_title": "Bán căn hộ 2PN 59m2 Bình Hưng nhận nhà ngay giá 4.444 tỷ",
+      "asset_type": "apartment",
+      "market_layer": "individual-listing-asking",
+      "metric_type": "single-listing-asking-price-per-sqm",
+      "source_date_basis": "publisher-listing-start-not-update",
+      "source_listed_date": "2026-11-05",
+      "source_updated_date": "2026-11-05",
+      "source_expiration_date": "2026-11-15",
+      "listed_area_sqm": 59.3,
+      "listing_price_vnd": 4444000000,
+      "value_vnd_per_m2": 74940978,
+      "unit_price_basis": "derived-from-advertised-total-and-area",
+      "source_publication_date": null,
+      "methodology_note": "Individual Muaban asking advertisement only. The displayed rate is calculated from the listing's advertised total and usable area, not a publisher average, transaction, project ASP or project range. Date displayed is listing START date, NOT its relative update badge. Use only while the publisher's end date is unexpired.",
+      "id": "muaban-71338724-35add0526b5b",
+      "review_status": "automated-two-hosted-checks",
+      "review_date": "2026-11-05",
+      "verification_run_ids": [
+        "42002174425",
+        "42058405620"
+      ],
+      "verified_at": "2026-11-05T15:46:47.481805+00:00"
     }
   ],
-  "record_count": 15
+  "record_count": 17
 }

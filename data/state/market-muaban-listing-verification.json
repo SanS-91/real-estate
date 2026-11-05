@@ -7,12 +7,6 @@
       "source_url": "https://muaban.net/bat-dong-san/ban-can-ho-chung-cu-du-an-vinhomes-grand-park-quan-9-ho-chi-minh/ban-hoac-cho-thue-can-ho-vinhomes-grand-park-quan-9-65m-full-nt-id70690658",
       "checks": [
         {
-          "run_id": "41316399603",
-          "checked_at": "2026-11-01T14:29:05.429224+00:00",
-          "fingerprint": "4b91fe2ce898aa7fafdb1662e30ed37bc92217f15a0a61da78e60a491e3b832b",
-          "expiry": "2026-11-22"
-        },
-        {
           "run_id": "41420371546",
           "checked_at": "2026-11-02T09:24:35.540171+00:00",
           "fingerprint": "4b91fe2ce898aa7fafdb1662e30ed37bc92217f15a0a61da78e60a491e3b832b",
@@ -51,6 +45,12 @@
         {
           "run_id": "42002174425",
           "checked_at": "2026-11-05T09:25:10.646456+00:00",
+          "fingerprint": "4b91fe2ce898aa7fafdb1662e30ed37bc92217f15a0a61da78e60a491e3b832b",
+          "expiry": "2026-11-22"
+        },
+        {
+          "run_id": "42058405620",
+          "checked_at": "2026-11-05T15:46:47.481805+00:00",
           "fingerprint": "4b91fe2ce898aa7fafdb1662e30ed37bc92217f15a0a61da78e60a491e3b832b",
           "expiry": "2026-11-22"
         }
@@ -62,12 +62,6 @@
       "source_url": "https://muaban.net/bat-dong-san/ban-can-ho-chung-cu-du-an-mizuki-park-5598-huyen-binh-chanh-ho-chi-minh/suat-noi-bo-cdt-nam-long-trellia-cove-mizuki-park-2pn-1wc-4-6-ty-id71070085",
       "checks": [
         {
-          "run_id": "41316399603",
-          "checked_at": "2026-11-01T14:29:05.429224+00:00",
-          "fingerprint": "7e702c4079ba616f27efa3d111c9c89da3724056117f2783636f22bf64b316aa",
-          "expiry": "2026-11-05"
-        },
-        {
           "run_id": "41420371546",
           "checked_at": "2026-11-02T09:24:35.540171+00:00",
           "fingerprint": "7e702c4079ba616f27efa3d111c9c89da3724056117f2783636f22bf64b316aa",
@@ -106,6 +100,12 @@
         {
           "run_id": "42002174425",
           "checked_at": "2026-11-05T09:25:10.646456+00:00",
+          "fingerprint": "7e702c4079ba616f27efa3d111c9c89da3724056117f2783636f22bf64b316aa",
+          "expiry": "2026-11-05"
+        },
+        {
+          "run_id": "42058405620",
+          "checked_at": "2026-11-05T15:46:47.481805+00:00",
           "fingerprint": "7e702c4079ba616f27efa3d111c9c89da3724056117f2783636f22bf64b316aa",
           "expiry": "2026-11-05"
         }
@@ -271,12 +271,6 @@
       "source_url": "https://muaban.net/bat-dong-san/ban-can-ho-chung-cu-du-an-mizuki-park-5598-huyen-binh-chanh-ho-chi-minh/can-ho-ven-song-trellia-vista-mizuki-park-moi-truong-song-xanh-id71287812",
       "checks": [
         {
-          "run_id": "41316399603",
-          "checked_at": "2026-11-01T14:29:05.429224+00:00",
-          "fingerprint": "89ac6e56d84abe224322a6e7c963af6b736bf1b0d997f82680859e39a0b836b0",
-          "expiry": "2026-11-25"
-        },
-        {
           "run_id": "41420371546",
           "checked_at": "2026-11-02T09:24:35.540171+00:00",
           "fingerprint": "89ac6e56d84abe224322a6e7c963af6b736bf1b0d997f82680859e39a0b836b0",
@@ -315,6 +309,12 @@
         {
           "run_id": "42002174425",
           "checked_at": "2026-11-05T09:25:10.646456+00:00",
+          "fingerprint": "89ac6e56d84abe224322a6e7c963af6b736bf1b0d997f82680859e39a0b836b0",
+          "expiry": "2026-11-25"
+        },
+        {
+          "run_id": "42058405620",
+          "checked_at": "2026-11-05T15:46:47.481805+00:00",
           "fingerprint": "89ac6e56d84abe224322a6e7c963af6b736bf1b0d997f82680859e39a0b836b0",
           "expiry": "2026-11-25"
         }
@@ -326,12 +326,6 @@
       "source_url": "https://muaban.net/bat-dong-san/ban-can-ho-chung-cu-du-an-akari-city-quan-binh-tan-ho-chi-minh/akari-city-nang-cap-muc-song-cua-ban-id71297776",
       "checks": [
         {
-          "run_id": "41316399603",
-          "checked_at": "2026-11-01T14:29:05.429224+00:00",
-          "fingerprint": "8f43fb9cba52c15f5c564465566d32b578118fa847d79b9d832e6aef486caef4",
-          "expiry": "2026-11-05"
-        },
-        {
           "run_id": "41420371546",
           "checked_at": "2026-11-02T09:24:35.540171+00:00",
           "fingerprint": "8f43fb9cba52c15f5c564465566d32b578118fa847d79b9d832e6aef486caef4",
@@ -370,6 +364,12 @@
         {
           "run_id": "42002174425",
           "checked_at": "2026-11-05T09:25:10.646456+00:00",
+          "fingerprint": "8f43fb9cba52c15f5c564465566d32b578118fa847d79b9d832e6aef486caef4",
+          "expiry": "2026-11-05"
+        },
+        {
+          "run_id": "42058405620",
+          "checked_at": "2026-11-05T15:46:47.481805+00:00",
           "fingerprint": "8f43fb9cba52c15f5c564465566d32b578118fa847d79b9d832e6aef486caef4",
           "expiry": "2026-11-05"
         }
@@ -436,12 +436,6 @@
       "source_url": "https://muaban.net/bat-dong-san/ban-can-ho-chung-cu-du-an-mizuki-park-5598-huyen-binh-chanh-ho-chi-minh/can-ban-can-ho-tai-thap-mp1-noi-that-day-du-so-hong-chinh-chu-id71316674",
       "checks": [
         {
-          "run_id": "41316399603",
-          "checked_at": "2026-11-01T14:29:05.429224+00:00",
-          "fingerprint": "6b1d6f0042f0b8c2ae028ff3dde98f271ac9d192e6fdf5895c33aae0d82c4190",
-          "expiry": "2026-11-11"
-        },
-        {
           "run_id": "41420371546",
           "checked_at": "2026-11-02T09:24:35.540171+00:00",
           "fingerprint": "6b1d6f0042f0b8c2ae028ff3dde98f271ac9d192e6fdf5895c33aae0d82c4190",
@@ -480,6 +474,12 @@
         {
           "run_id": "42002174425",
           "checked_at": "2026-11-05T09:25:10.646456+00:00",
+          "fingerprint": "6b1d6f0042f0b8c2ae028ff3dde98f271ac9d192e6fdf5895c33aae0d82c4190",
+          "expiry": "2026-11-11"
+        },
+        {
+          "run_id": "42058405620",
+          "checked_at": "2026-11-05T15:46:47.481805+00:00",
           "fingerprint": "6b1d6f0042f0b8c2ae028ff3dde98f271ac9d192e6fdf5895c33aae0d82c4190",
           "expiry": "2026-11-11"
         }
@@ -491,12 +491,6 @@
       "source_url": "https://muaban.net/bat-dong-san/ban-can-ho-chung-cu-du-an-mizuki-park-5598-huyen-binh-chanh-ho-chi-minh/ban-can-ho-san-vuon-mizuki-dau-an-thiet-ke-dac-biet-tu-nam-long-id71317516",
       "checks": [
         {
-          "run_id": "41316399603",
-          "checked_at": "2026-11-01T14:29:05.429224+00:00",
-          "fingerprint": "4ca662ae224b81910f4fa075eba958e920fa4c921cd40d3c9a856b043b35c5d2",
-          "expiry": "2026-11-11"
-        },
-        {
           "run_id": "41420371546",
           "checked_at": "2026-11-02T09:24:35.540171+00:00",
           "fingerprint": "4ca662ae224b81910f4fa075eba958e920fa4c921cd40d3c9a856b043b35c5d2",
@@ -535,6 +529,12 @@
         {
           "run_id": "42002174425",
           "checked_at": "2026-11-05T09:25:10.646456+00:00",
+          "fingerprint": "4ca662ae224b81910f4fa075eba958e920fa4c921cd40d3c9a856b043b35c5d2",
+          "expiry": "2026-11-11"
+        },
+        {
+          "run_id": "42058405620",
+          "checked_at": "2026-11-05T15:46:47.481805+00:00",
           "fingerprint": "4ca662ae224b81910f4fa075eba958e920fa4c921cd40d3c9a856b043b35c5d2",
           "expiry": "2026-11-11"
         }
@@ -574,6 +574,12 @@
           "checked_at": "2026-11-05T09:25:10.646456+00:00",
           "fingerprint": "448d4ebfd7200dc0746f59e26bc6ff9393e346bc1feee16b39c2b6309de307cc",
           "expiry": "2026-11-17"
+        },
+        {
+          "run_id": "42058405620",
+          "checked_at": "2026-11-05T15:46:47.481805+00:00",
+          "fingerprint": "448d4ebfd7200dc0746f59e26bc6ff9393e346bc1feee16b39c2b6309de307cc",
+          "expiry": "2026-11-17"
         }
       ]
     },
@@ -587,6 +593,12 @@
           "checked_at": "2026-11-05T09:25:10.646456+00:00",
           "fingerprint": "35add0526b5bc1a47a9c32c5e8d085192b7407f952ea8ba4e22fad4e06c1e8ee",
           "expiry": "2026-11-15"
+        },
+        {
+          "run_id": "42058405620",
+          "checked_at": "2026-11-05T15:46:47.481805+00:00",
+          "fingerprint": "35add0526b5bc1a47a9c32c5e8d085192b7407f952ea8ba4e22fad4e06c1e8ee",
+          "expiry": "2026-11-15"
         }
       ]
     },
@@ -598,6 +610,12 @@
         {
           "run_id": "42002174425",
           "checked_at": "2026-11-05T09:25:10.646456+00:00",
+          "fingerprint": "12056c9db56b8384b1ff232f9bcd4b5b2b08a58ca7756e29e00c4f2bef51fab4",
+          "expiry": "2026-11-19"
+        },
+        {
+          "run_id": "42058405620",
+          "checked_at": "2026-11-05T15:46:47.481805+00:00",
           "fingerprint": "12056c9db56b8384b1ff232f9bcd4b5b2b08a58ca7756e29e00c4f2bef51fab4",
           "expiry": "2026-11-19"
         }
