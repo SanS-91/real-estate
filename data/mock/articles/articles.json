@@ -1,9 +1,192 @@
 {
   "schema_version": 1,
-  "build_id": "market-news-rss-20261105T125140Z",
-  "generated_at": "2026-11-05T12:51:40.546740+00:00",
-  "record_count": 1483,
+  "build_id": "market-news-rss-20261105T145151Z",
+  "generated_at": "2026-11-05T14:51:51.082488+00:00",
+  "record_count": 1491,
   "data": [
+    {
+      "id": "article-market-rss-704f770936507f211165",
+      "title": "Đấu giá khu đất xây chung cư ở Long Biên từ 55 triệu một m2",
+      "url": "https://vnexpress.net/dau-gia-khu-dat-xay-chung-cu-o-long-bien-tu-55-trieu-mot-m2-5141289.html",
+      "category": "market",
+      "module_ids": [
+        "market"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-11-05T13:57:36+00:00",
+      "source_id": "vnexpress-real-estate",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "Lô đất rộng hơn 3.300 m2 nằm trong khu nhà ở Him Lam Thạch Bàn, dự kiến được đấu giá vào ngày 5/12.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://vnexpress.net/rss/bat-dong-san.rss",
+        "publisher_host": "vnexpress.net",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-197459511ac0743d2bbc",
+      "title": "Tỷ giá USD giảm mạnh nhất một tháng",
+      "url": "https://vnexpress.net/ty-gia-usd-giam-manh-nhat-mot-thang-5141334.html",
+      "category": "macro",
+      "module_ids": [
+        "macro"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-11-05T13:53:50+00:00",
+      "source_id": "vnexpress-economy",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "Chiều tối 5/11, nhiều ngân hàng trong nước đồng loạt hạ giá mua bán USD 150-200 đồng so với buổi sáng, mức giảm mạnh nhất một tháng qua.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://vnexpress.net/rss/kinh-doanh.rss",
+        "publisher_host": "vnexpress.net",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-a725e10d2776c1fa37d6",
+      "title": "Hơn 1.000 tỷ đồng xây 2 nút giao trên quốc lộ 1 ở Tây Ninh",
+      "url": "https://dantri.com.vn/thoi-su/hon-1000-ty-dong-xay-2-nut-giao-tren-quoc-lo-1-o-tay-ninh-20261105174423898.htm",
+      "category": "infrastructure",
+      "module_ids": [
+        "infrastructure"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-11-05T12:51:05+00:00",
+      "source_id": "dantri-current-affairs",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [
+        "infrastructure"
+      ],
+      "importance": 2,
+      "summary": "(Dân trí) - Bộ Xây dựng phê duyệt chủ trương đầu tư dự án xây dựng nút giao Long Kim và Bình Nhựt trên quốc lộ 1 qua tỉnh Tây Ninh, với tổng mức đầu tư sơ bộ hơn 1.087 tỷ đồng.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://dantri.com.vn/rss/thoi-su.rss",
+        "publisher_host": "dantri.com.vn",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-1bc178074ed36eca6783",
+      "title": "Hateco Group chuẩn bị ra mắt khu đô thị hạng sang",
+      "url": "https://dantri.com.vn/bat-dong-san/hateco-group-chuan-bi-ra-mat-khu-do-thi-hang-sang-20261105194447991.htm",
+      "category": "market",
+      "module_ids": [
+        "market"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-11-05T12:50:35+00:00",
+      "source_id": "dantri-real-estate",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [
+        "supply"
+      ],
+      "importance": 2,
+      "summary": "(Dân trí) - Bước sang dấu mốc 22 năm xây dựng và phát triển, tập đoàn chuẩn bị giới thiệu InterCentral - dự án khu đô thị được nghiên cứu, ấp ủ nhiều năm, hiện thực hóa khát vọng mang đến chuẩn mực sống và đầu tư bền vững tại cửa ngõ phía Bắc Thủ đô.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://dantri.com.vn/rss/bat-dong-san.rss",
+        "publisher_host": "dantri.com.vn",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-978d61ad37c64609e516",
+      "title": "Bộ Chính trị kết luận về Quy hoạch tổng thể TPHCM tầm nhìn 100 năm",
+      "url": "https://dantri.com.vn/bat-dong-san/bo-chinh-tri-ket-luan-ve-quy-hoach-tong-the-tphcm-tam-nhin-100-nam-20261105193609242.htm",
+      "category": "market",
+      "module_ids": [
+        "market"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-11-05T12:46:28+00:00",
+      "source_id": "dantri-real-estate",
+      "region_ids": [
+        "hcmc"
+      ],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [
+        "legal"
+      ],
+      "importance": 2,
+      "summary": "(Dân trí) - Bộ Chính trị yêu cầu Quy hoạch tổng thể TPHCM phải thực sự trở thành công cụ kiến tạo phát triển, tổ chức hiệu quả không gian, tạo động lực tăng trưởng mới, đáp ứng yêu cầu phát triển trước mắt và lâu dài của Thành phố.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://dantri.com.vn/rss/bat-dong-san.rss",
+        "publisher_host": "dantri.com.vn",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-1a25f830924b7fef4a82",
+      "title": "Dự kiến huy động hơn 8,2 triệu tỷ đồng vốn đầu tư công trong 5 năm tới",
+      "url": "https://dantri.com.vn/thoi-su/du-kien-huy-dong-hon-82-trieu-ty-dong-von-dau-tu-cong-trong-5-nam-toi-20261105191415814.htm",
+      "category": "infrastructure",
+      "module_ids": [
+        "infrastructure"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-11-05T12:37:20+00:00",
+      "source_id": "dantri-current-affairs",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "(Dân trí) - Dự kiến huy động hơn 8,2 triệu tỷ đồng vốn đầu tư công trong 5 năm tới, Bộ trưởng Tài chính Ngô Văn Tuấn nhấn mạnh yêu cầu đánh giá hiệu quả kinh tế - xã hội của các dự án sử dụng ngân sách.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://dantri.com.vn/rss/thoi-su.rss",
+        "publisher_host": "dantri.com.vn",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-c813e2a85d9e23a1d813",
+      "title": "Chủ tịch thành phố Huế: Không lấy lý do thời tiết để chậm tiến độ dự án",
+      "url": "https://dantri.com.vn/thoi-su/chu-tich-thanh-pho-hue-khong-lay-ly-do-thoi-tiet-de-cham-tien-do-du-an-20261105182848948.htm",
+      "category": "market",
+      "module_ids": [
+        "market"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-11-05T11:59:45+00:00",
+      "source_id": "dantri-current-affairs",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "(Dân trí) - Ông Lê Trí Thanh, Chủ tịch UBND thành phố Huế, yêu cầu các đơn vị có phương án thi công phù hợp, không lấy lý do thời tiết để lý giải cho việc chậm tiến độ tại những dự án trọng điểm.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://dantri.com.vn/rss/thoi-su.rss",
+        "publisher_host": "dantri.com.vn",
+        "publication_date_from_feed": true
+      }
+    },
     {
       "id": "article-market-rss-9524ba89b407c418b847",
       "title": "Gỡ điểm nghẽn thanh toán gần 9.000 tỷ đồng tại sân bay Long Thành",
@@ -27,6 +210,35 @@
       "source_verification": {
         "method": "official-rss",
         "feed_url": "https://dantri.com.vn/rss/thoi-su.rss",
+        "publisher_host": "dantri.com.vn",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-5c8a49c4299e92b1485c",
+      "title": "Gần 500 chuyên viên kinh doanh hội quân, \"tiếp lửa\" Cityview Signature",
+      "url": "https://dantri.com.vn/bat-dong-san/gan-500-chuyen-vien-kinh-doanh-hoi-quan-tiep-lua-cityview-signature-20261105170836194.htm",
+      "category": "market",
+      "module_ids": [
+        "market"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-11-05T10:18:12+00:00",
+      "source_id": "dantri-real-estate",
+      "region_ids": [
+        "dong-nai"
+      ],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [
+        "supply"
+      ],
+      "importance": 2,
+      "summary": "(Dân trí) - Sáng ngày 5/11, tại Đồng Nai, gần 500 chuyên viên kinh doanh thuộc hệ thống đối tác phân phối tham dự sự kiện \"Kick-off\" (ra mắt) Cityview Signature, chính thức bước vào chiến dịch kinh doanh tòa tháp căn hộ đô thị theo chuẩn Singapore.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://dantri.com.vn/rss/bat-dong-san.rss",
         "publisher_host": "dantri.com.vn",
         "publication_date_from_feed": true
       }
