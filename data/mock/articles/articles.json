@@ -1,9 +1,159 @@
 {
   "schema_version": 1,
-  "build_id": "market-news-rss-20261105T005141Z",
-  "generated_at": "2026-11-05T00:51:41.393547+00:00",
-  "record_count": 1448,
+  "build_id": "market-news-rss-20261105T025142Z",
+  "generated_at": "2026-11-05T02:51:42.223146+00:00",
+  "record_count": 1456,
   "data": [
+    {
+      "id": "article-market-rss-4bac42697b675e4f9464",
+      "title": "Giá vàng hôm nay 5.11.2026: Tăng vọt hơn 2 triệu sau một đêm, hướng đến 145 triệu",
+      "url": "https://thanhnien.vn/gia-vang-hom-nay-5112026-tang-vot-hon-2-trieu-sau-mot-dem-huong-den-145-trieu-185261105081515155.htm",
+      "category": "macro",
+      "module_ids": [
+        "macro"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-11-05T02:03:00+00:00",
+      "source_id": "thanhnien-banking",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "Giá vàng trong nước đã bật tăng cao đưa chiều bán ra lên 144,5 triệu đồng một lượng khi thế giới phục hồi.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://thanhnien.vn/rss/kinh-te/ngan-hang.rss",
+        "publisher_host": "thanhnien.vn",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-c621c58c50d765f6ce03",
+      "title": "Giá vàng thế giới vượt 4.000 USD, SJC lấy lại mốc 142 triệu đồng/lượng",
+      "url": "https://dantri.com.vn/kinh-doanh/gia-vang-the-gioi-vuot-4000-usd-sjc-lay-lai-moc-142-trieu-dongluong-20261105065854762.htm",
+      "category": "macro",
+      "module_ids": [
+        "macro"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-11-05T01:24:17+00:00",
+      "source_id": "dantri-business",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "(Dân trí) - Hưởng lợi từ sự suy yếu của đồng USD, thị trường kim loại quý trải qua phiên tăng thứ năm liên tiếp. Đáng chú ý, biên độ tăng của vàng nhẫn trong nước đang vượt trội hơn hẳn vàng miếng SJC.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://dantri.com.vn/rss/kinh-doanh.rss",
+        "publisher_host": "dantri.com.vn",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-f3cd242a41358c03c612",
+      "title": "Dự án điện gió tại Lào của bầu Hiển báo lãi gần 1.100 tỷ đồng",
+      "url": "https://vnexpress.net/du-an-dien-gio-tai-lao-cua-bau-hien-bao-lai-gan-1-100-ty-dong-5140755.html",
+      "category": "market",
+      "module_ids": [
+        "market"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-11-05T01:00:00+00:00",
+      "source_id": "vnexpress-economy",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "Dự án điện gió Savan 1 giai đoạn 1 tại Lào do T&T Group đầu tư, ghi nhận doanh thu hơn 1.200 tỷ đồng, lợi nhuận gộp gần 1.100 tỷ đồng sau 9 tháng.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://vnexpress.net/rss/kinh-doanh.rss",
+        "publisher_host": "vnexpress.net",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-b0bdfd8995668c598455",
+      "title": "Van Phuc Group triển khai chương trình tặng căn hộ thứ hai",
+      "url": "https://vnexpress.net/van-phuc-group-trien-khai-chuong-trinh-tang-can-ho-thu-hai-5140809.html",
+      "category": "market",
+      "module_ids": [
+        "market"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-11-05T01:00:00+00:00",
+      "source_id": "vnexpress-real-estate",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "Van Phuc Group triển khai chương trình tặng căn hộ trị giá gần 8 tỷ đồng cho người mua sản phẩm tại dự án Diamond Sky, áp dụng từ nay đến 1/11/2027.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://vnexpress.net/rss/bat-dong-san.rss",
+        "publisher_host": "vnexpress.net",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-87ed1761d9a4859aa63c",
+      "title": "Ba dòng sản phẩm thấp tầng tại phân khu trung tâm Eco Retreat",
+      "url": "https://vnexpress.net/ba-dong-san-pham-thap-tang-tai-phan-khu-trung-tam-eco-retreat-5140881.html",
+      "category": "market",
+      "module_ids": [
+        "market"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-11-05T01:00:00+00:00",
+      "source_id": "vnexpress-real-estate",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "304 sản phẩm thấp tầng tại Rừng Hồng bố trí ở những vị trí đông người qua lại như dọc đại lộ, quanh khối đế tòa nhà, sát quảng trường, tạo lợi thế khai thác kinh doanh.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://vnexpress.net/rss/bat-dong-san.rss",
+        "publisher_host": "vnexpress.net",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-077d108c69eef20b3c42",
+      "title": "Thương hiệu quốc tế góp phần tăng giá trị cho Lusso Saigon",
+      "url": "https://vnexpress.net/thuong-hieu-quoc-te-gop-phan-tang-gia-tri-cho-lusso-saigon-5140035.html",
+      "category": "market",
+      "module_ids": [
+        "market"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-11-05T01:00:00+00:00",
+      "source_id": "vnexpress-real-estate",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "WorldHotels đưa triết lý dịch vụ khách sạn vào vận hành tại Lusso Saigon, hướng đến nâng cao trải nghiệm cư dân và gia tăng sức hút của dự án trên thị trường cho thuê.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://vnexpress.net/rss/bat-dong-san.rss",
+        "publisher_host": "vnexpress.net",
+        "publication_date_from_feed": true
+      }
+    },
     {
       "id": "article-market-rss-3208c10d491b462fe656",
       "title": "Giá vàng thế giới tăng mạnh nhất 3 tháng",
@@ -81,6 +231,34 @@
         "method": "official-rss",
         "feed_url": "https://thanhnien.vn/rss/kinh-te/dia-oc.rss",
         "publisher_host": "thanhnien.vn",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-276375c660808559950f",
+      "title": "Giá nhà vượt tầm với, nhà cho thuê có thành trụ cột mới của thị trường?",
+      "url": "https://dantri.com.vn/bat-dong-san/gia-nha-vuot-tam-voi-nha-cho-thue-co-thanh-tru-cot-moi-cua-thi-truong-20261104225703381.htm",
+      "category": "market",
+      "module_ids": [
+        "market"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-11-04T23:00:00+00:00",
+      "source_id": "dantri-real-estate",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [
+        "supply",
+        "pricing"
+      ],
+      "importance": 2,
+      "summary": "(Dân trí) - Giá nhà vượt xa khả năng chi trả của nhiều người dân, mở ra tiềm năng phát triển phân khúc nhà cho thuê, nhưng cũng đặt ra bài toán về nguồn cung, giá thuê và cơ chế thu hút doanh nghiệp đầu tư.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://dantri.com.vn/rss/bat-dong-san.rss",
+        "publisher_host": "dantri.com.vn",
         "publication_date_from_feed": true
       }
     },
@@ -168,6 +346,31 @@
       "id": "article-market-rss-a7d67247ff0f1717f65e",
       "title": "Tổng vốn đầu tư khu nhà ở Thủ Thiêm hơn 39.800 tỷ đồng",
       "url": "https://vnexpress.net/tong-von-dau-tu-khu-nha-o-thu-thiem-hon-39-800-ty-dong-5140758.html",
+      "category": "market",
+      "module_ids": [
+        "market"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-11-04T17:00:41+00:00",
+      "source_id": "vnexpress-real-estate",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "Ngoài 18.253 tỷ đồng giá khởi điểm đất và tài sản hiện hữu, nhà đầu tư trúng đấu giá 3.790 căn hộ tại Thủ Thiêm dự kiến cần thêm gần 21.590 tỷ đồng cho đầu tư xây dựng.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://vnexpress.net/rss/bat-dong-san.rss",
+        "publisher_host": "vnexpress.net",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-a782dd292a6e85b597fe",
+      "title": "Khu gần 3.800 căn hộ Thủ Thiêm dự kiến có tổng vốn đầu tư hơn 39.800 tỷ đồng",
+      "url": "https://vnexpress.net/khu-gan-3-800-can-ho-thu-thiem-du-kien-co-tong-von-dau-tu-hon-39-800-ty-dong-5140758.html",
       "category": "market",
       "module_ids": [
         "market"
