@@ -1,9 +1,225 @@
 {
   "schema_version": 1,
-  "build_id": "market-news-rss-20261105T025142Z",
-  "generated_at": "2026-11-05T02:51:42.223146+00:00",
-  "record_count": 1456,
+  "build_id": "market-news-rss-20261105T045138Z",
+  "generated_at": "2026-11-05T04:51:38.860670+00:00",
+  "record_count": 1466,
   "data": [
+    {
+      "id": "article-market-rss-73df6e40548d09ff7741",
+      "title": "Chủ đầu tư ồ ạt bán lại dự án",
+      "url": "https://vnexpress.net/chu-dau-tu-o-at-ban-lai-du-an-5139588.html",
+      "category": "market",
+      "module_ids": [
+        "market"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-11-05T04:03:38+00:00",
+      "source_id": "vnexpress-real-estate",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "Nhiều chủ đầu tư tìm cách chuyển nhượng dự án để thu hồi vốn, giảm áp lực tài chính, trong khi bên mua chỉ ưu tiên những tài sản có thể sớm triển khai và tạo dòng tiền.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://vnexpress.net/rss/bat-dong-san.rss",
+        "publisher_host": "vnexpress.net",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-c0846a9954281d20708c",
+      "title": "Quy hoạch Vĩnh Hưng là bước ngoặt thiết lập mô hình 'đô thị 15 phút' cho Hà Nội",
+      "url": "https://thanhnien.vn/quy-hoach-vinh-hung-la-buoc-ngoat-thiet-lap-mo-hinh-do-thi-15-phut-cho-hanoi-185261105103142599.htm",
+      "category": "market",
+      "module_ids": [
+        "market"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-11-05T03:45:00+00:00",
+      "source_id": "thanhnien-policy",
+      "region_ids": [
+        "ha-noi"
+      ],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [
+        "legal"
+      ],
+      "importance": 2,
+      "summary": "Không đơn thuần là các chỉ số xây dựng hay mật độ, dự án hướng tới việc nâng cao chất lượng sống toàn diện cho người dân thông qua khung xương sống giao thông kết nối, phát triển không gian mở và áp dụng mô hình \"đô thị 15 phút\".",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://thanhnien.vn/rss/kinh-te/chinh-sach-phat-trien.rss",
+        "publisher_host": "thanhnien.vn",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-3476778e5c3359e4e0a2",
+      "title": "Cần hơn 5.260 tỷ đồng khôi phục sân bay ở Sơn La",
+      "url": "https://vnexpress.net/can-hon-5-260-ty-dong-khoi-phuc-san-bay-o-son-la-5140999.html",
+      "category": "market",
+      "module_ids": [
+        "market",
+        "infrastructure"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-11-05T03:27:40+00:00",
+      "source_id": "vnexpress-current-affairs",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [
+        "legal",
+        "infrastructure"
+      ],
+      "importance": 2,
+      "summary": "Cục Hàng không Việt Nam vừa trình Bộ Xây dựng thẩm định, phê duyệt Quy hoạch cảng hàng không Nà Sản với tổng vốn đầu tư sơ bộ giai đoạn đầu 5.260 tỷ đồng.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://vnexpress.net/rss/thoi-su.rss",
+        "publisher_host": "vnexpress.net",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-a1e6ecaf793b520e1348",
+      "title": "Bồi thường đất làm Metro số 2 ở phường Tam Bình dự kiến đến 77 triệu/m2",
+      "url": "https://dantri.com.vn/thoi-su/boi-thuong-dat-lam-metro-so-2-o-phuong-tam-binh-du-kien-den-77-trieum2-20261105094203139.htm",
+      "category": "infrastructure",
+      "module_ids": [
+        "infrastructure"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-11-05T03:21:39+00:00",
+      "source_id": "dantri-current-affairs",
+      "region_ids": [
+        "hcmc"
+      ],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [
+        "infrastructure"
+      ],
+      "importance": 2,
+      "summary": "(Dân trí) - Phường Tam Bình dự kiến thu hồi 24,6ha đất để triển khai tuyến đường sắt đô thị số 2 (Thủ Dầu Một - TPHCM), với mức bồi thường đất ở cao nhất hơn 77 triệu đồng/m2.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://dantri.com.vn/rss/thoi-su.rss",
+        "publisher_host": "dantri.com.vn",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-f2335d221630ea041d31",
+      "title": "Giá vàng miếng lên cao nhất gần một tháng",
+      "url": "https://vnexpress.net/gia-vang-moi-nhat-hom-nay-ngay-5-11-5141000.html",
+      "category": "macro",
+      "module_ids": [
+        "macro"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-11-05T03:09:04+00:00",
+      "source_id": "vnexpress-economy",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [
+        "pricing"
+      ],
+      "importance": 2,
+      "summary": "Theo đà đi lên của quốc tế, các thương hiệu tăng giá bán vàng miếng lên 144,5 triệu đồng một lượng, cao nhất kể từ ngày 10/10.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://vnexpress.net/rss/kinh-doanh.rss",
+        "publisher_host": "vnexpress.net",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-f842166b8ebe642998a3",
+      "title": "Diện mạo đô thị hơn 420 ha của Sun Group sau hơn hai năm",
+      "url": "https://vnexpress.net/dien-mao-do-thi-hon-420-ha-cua-sun-group-sau-hon-hai-nam-5140983.html",
+      "category": "market",
+      "module_ids": [
+        "market"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-11-05T03:00:00+00:00",
+      "source_id": "vnexpress-real-estate",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "Sun Urban City dần hình thành diện mạo với các khu căn hộ, nhà phố, hệ thống công viên và tiện ích giải trí sau hơn hai năm triển khai.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://vnexpress.net/rss/bat-dong-san.rss",
+        "publisher_host": "vnexpress.net",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-9addd0a382d48758df67",
+      "title": "Có thể làm căn hộ 3-4 tỷ đồng ở trung tâm, chuyên gia đưa lý giải bất ngờ",
+      "url": "https://dantri.com.vn/bat-dong-san/co-the-lam-can-ho-3-4-ty-dong-o-trung-tam-chuyen-gia-dua-ly-giai-bat-ngo-20261105084401671.htm",
+      "category": "market",
+      "module_ids": [
+        "market"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-11-05T02:42:31+00:00",
+      "source_id": "dantri-real-estate",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [
+        "pricing"
+      ],
+      "importance": 2,
+      "summary": "(Dân trí) - Bí quyết không phải tìm cách giảm giá đất hay giá bán mà là thay đổi tư duy thiết kế và sử dụng công năng.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://dantri.com.vn/rss/bat-dong-san.rss",
+        "publisher_host": "dantri.com.vn",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-784c58110e33a858b963",
+      "title": "Chuyên gia nêu quan điểm chọn tuyến đường 11,7km để đặt tên Nguyễn Bá Thanh",
+      "url": "https://dantri.com.vn/thoi-su/chuyen-gia-neu-quan-diem-chon-tuyen-duong-117km-de-dat-ten-nguyen-ba-thanh-20261105075830277.htm",
+      "category": "infrastructure",
+      "module_ids": [
+        "infrastructure"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-11-05T02:25:57+00:00",
+      "source_id": "dantri-current-affairs",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "(Dân trí) - Chuyên gia đồng tình chọn tuyến đường ĐT605, đi qua xã Hòa Tiến, để đặt tên cố Bí thư Thành ủy Đà Nẵng Nguyễn Bá Thanh và cho rằng phương án này có ý nghĩa về lịch sử và quê hương.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://dantri.com.vn/rss/thoi-su.rss",
+        "publisher_host": "dantri.com.vn",
+        "publication_date_from_feed": true
+      }
+    },
     {
       "id": "article-market-rss-4bac42697b675e4f9464",
       "title": "Giá vàng hôm nay 5.11.2026: Tăng vọt hơn 2 triệu sau một đêm, hướng đến 145 triệu",
@@ -50,6 +266,58 @@
       "source_verification": {
         "method": "official-rss",
         "feed_url": "https://dantri.com.vn/rss/kinh-doanh.rss",
+        "publisher_host": "dantri.com.vn",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-3178d9a255838e3c307d",
+      "title": "Bỏ tông trắng lạnh, màu sắc của năm 2027 đưa thiên nhiên vào nhà",
+      "url": "https://dantri.com.vn/bat-dong-san/bo-tong-trang-lanh-mau-sac-cua-nam-2027-dua-thien-nhien-vao-nha-20261104112634964.htm",
+      "category": "market",
+      "module_ids": [
+        "market"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-11-05T01:24:00+00:00",
+      "source_id": "dantri-real-estate",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "(Dân trí) - Thay vì xám trung tính hay trắng đơn điệu, xu hướng màu sơn năm 2027 tôn vinh sự ấm áp của nâu đất và xanh lá. Những gam màu này giúp tổ ấm thêm phần sang trọng, tĩnh lặng và an yên.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://dantri.com.vn/rss/bat-dong-san.rss",
+        "publisher_host": "dantri.com.vn",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-f47a9dc84916c132448c",
+      "title": "Cơ hội “trúng” căn hộ thứ 2 gần 8 tỷ đồng khi mua Diamond Sky",
+      "url": "https://dantri.com.vn/bat-dong-san/co-hoi-trung-can-ho-thu-2-gan-8-ty-dong-khi-mua-diamond-sky-20261104174642531.htm",
+      "category": "market",
+      "module_ids": [
+        "market"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-11-05T01:00:00+00:00",
+      "source_id": "dantri-real-estate",
+      "region_ids": [
+        "hcmc"
+      ],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "(Dân trí) - Không chỉ sở hữu căn hộ cao cấp bên sông Sài Gòn, khách hàng mua Diamond Sky còn có cơ hội nhận thêm căn hộ thứ hai trị giá gần 8 tỷ đồng qua chương trình “Mua nhà trúng nhà - Nhân đôi tổ ấm” do Van Phuc Group vừa mới tung ra thị trường.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://dantri.com.vn/rss/bat-dong-san.rss",
         "publisher_host": "dantri.com.vn",
         "publication_date_from_feed": true
       }
