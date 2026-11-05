@@ -1,9 +1,222 @@
 {
   "schema_version": 1,
-  "build_id": "market-news-rss-20261104T162541Z",
-  "generated_at": "2026-11-04T16:25:41.390710+00:00",
-  "record_count": 1440,
+  "build_id": "market-news-rss-20261105T005141Z",
+  "generated_at": "2026-11-05T00:51:41.393547+00:00",
+  "record_count": 1448,
   "data": [
+    {
+      "id": "article-market-rss-3208c10d491b462fe656",
+      "title": "Giá vàng thế giới tăng mạnh nhất 3 tháng",
+      "url": "https://vnexpress.net/gia-vang-the-gioi-tang-manh-nhat-3-thang-5140926.html",
+      "category": "macro",
+      "module_ids": [
+        "macro"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-11-05T00:26:15+00:00",
+      "source_id": "vnexpress-economy",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "Kim loại quý ghi nhận phiên tăng tốt nhất kể từ tháng 8, sau chiến thắng của đảng Dân chủ tại cuộc bầu cử tại Mỹ.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://vnexpress.net/rss/kinh-doanh.rss",
+        "publisher_host": "vnexpress.net",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-e21febb35633a9714e9c",
+      "title": "Đại lộ 8 làn xe xuyên rừng cao su kết nối sân bay Long Thành",
+      "url": "https://dantri.com.vn/thoi-su/dai-lo-8-lan-xe-xuyen-rung-cao-su-ket-noi-san-bay-long-thanh-20261104085147918.htm",
+      "category": "infrastructure",
+      "module_ids": [
+        "infrastructure"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-11-04T23:29:00+00:00",
+      "source_id": "dantri-current-affairs",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [
+        "infrastructure"
+      ],
+      "importance": 2,
+      "summary": "(Dân trí) - Hơn 6km nắn tuyến xuyên rừng cao su bạt ngàn trong dự án nâng cấp, mở rộng đường ĐT769 kết nối quốc lộ 20 với sân bay Long Thành dần thành hình.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://dantri.com.vn/rss/thoi-su.rss",
+        "publisher_host": "dantri.com.vn",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-e652df49af0f09c9f54e",
+      "title": "Mạnh tay với chủ đầu tư 'treo' sổ hồng của khách hàng",
+      "url": "https://thanhnien.vn/manh-tay-voi-chu-dau-tu-treo-so-hong-cua-khach-hang-185261104213627147.htm",
+      "category": "market",
+      "module_ids": [
+        "market",
+        "legal"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-11-04T23:00:00+00:00",
+      "source_id": "thanhnien-real-estate",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [
+        "legal"
+      ],
+      "importance": 2,
+      "summary": "Tại phiên thảo luận tại Quốc hội về các dự án luật Đất đai (sửa đổi), luật Nhà ở (sửa đổi) và luật Kinh doanh bất động sản (sửa đổi) mới đây, đại biểu Quốc hội đề xuất đối với các dự án chậm cấp sổ hồng cho khách hàng do lỗi của chủ đầu tư sai phạm quy hoạch hoặc vi phạm cam kết, cần cấm không cho t",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://thanhnien.vn/rss/kinh-te/dia-oc.rss",
+        "publisher_host": "thanhnien.vn",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-f2418df417ab4d87b36c",
+      "title": "Chung cư 63 năm tuổi chằng chịt cột sắt chống đỡ ở TP HCM",
+      "url": "https://vnexpress.net/chung-cu-63-nam-tuoi-chang-chit-cot-sat-chong-do-o-tp-hcm-5140294.html",
+      "category": "market",
+      "module_ids": [
+        "market"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-11-04T22:00:00+00:00",
+      "source_id": "vnexpress-current-affairs",
+      "region_ids": [
+        "hcmc"
+      ],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "Chung cư Vĩnh Hội (quận 4 cũ) xuống cấp nghiêm trọng, nhiều cột, dầm phải chống đỡ bằng sắt, trong khi 141 hộ dân vẫn bám trụ dù công trình có nguy cơ sập đổ.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://vnexpress.net/rss/thoi-su.rss",
+        "publisher_host": "vnexpress.net",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-bdf2dba2066dcd4263bd",
+      "title": "HoREA kiến nghị gỡ vướng quỹ đất cho hàng nghìn dự án nhà ở thương mại",
+      "url": "https://vnexpress.net/horea-kien-nghi-go-vuong-quy-dat-cho-hang-nghin-du-an-nha-o-thuong-mai-5140905.html",
+      "category": "market",
+      "module_ids": [
+        "market",
+        "legal"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-11-04T21:00:00+00:00",
+      "source_id": "vnexpress-real-estate",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [
+        "legal"
+      ],
+      "importance": 2,
+      "summary": "HoREA đề xuất đưa cơ chế nhà đầu tư tự thỏa thuận nhận quyền sử dụng đất vào dự thảo Luật Đất đai để khơi thông ách tắc cho hàng nghìn dự án nhà ở.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://vnexpress.net/rss/bat-dong-san.rss",
+        "publisher_host": "vnexpress.net",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-351c37a50a8959f38b2e",
+      "title": "Nhà vườn kết hợp mái ngói truyền thống và kiến trúc hiện đại",
+      "url": "https://vnexpress.net/nha-vuon-ket-hop-mai-ngoi-truyen-thong-va-kien-truc-hien-dai-5140754.html",
+      "category": "market",
+      "module_ids": [
+        "market"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-11-04T17:03:00+00:00",
+      "source_id": "vnexpress-real-estate",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "Hệ cửa kính lớn, không gian liên thông và các khoảng vườn bao quanh giúp công trình hướng tây tận dụng ánh sáng tự nhiên, thích ứng khí hậu địa phương.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://vnexpress.net/rss/bat-dong-san.rss",
+        "publisher_host": "vnexpress.net",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-a7d67247ff0f1717f65e",
+      "title": "Tổng vốn đầu tư khu nhà ở Thủ Thiêm hơn 39.800 tỷ đồng",
+      "url": "https://vnexpress.net/tong-von-dau-tu-khu-nha-o-thu-thiem-hon-39-800-ty-dong-5140758.html",
+      "category": "market",
+      "module_ids": [
+        "market"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-11-04T17:00:41+00:00",
+      "source_id": "vnexpress-real-estate",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "Ngoài 18.253 tỷ đồng giá khởi điểm đất và tài sản hiện hữu, nhà đầu tư trúng đấu giá 3.790 căn hộ tại Thủ Thiêm dự kiến cần thêm gần 21.590 tỷ đồng cho đầu tư xây dựng.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://vnexpress.net/rss/bat-dong-san.rss",
+        "publisher_host": "vnexpress.net",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-cc9733cd14bd17f7ce9b",
+      "title": "Quảng Trị đầu tư hơn 3.200 tỷ đồng cho 7 dự án giao thông",
+      "url": "https://vnexpress.net/quang-tri-dau-tu-hon-3-200-ty-dong-cho-7-du-an-giao-thong-5140667.html",
+      "category": "market",
+      "module_ids": [
+        "market",
+        "infrastructure"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-11-04T17:00:00+00:00",
+      "source_id": "vnexpress-current-affairs",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [
+        "infrastructure"
+      ],
+      "importance": 2,
+      "summary": "Tỉnh dành hơn 3.250 tỷ đồng nâng cấp, mở rộng và xây dựng 7 tuyến đường, kết nối các khu vực miền núi, đồng bằng, ven biển và sân bay.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://vnexpress.net/rss/thoi-su.rss",
+        "publisher_host": "vnexpress.net",
+        "publication_date_from_feed": true
+      }
+    },
     {
       "id": "article-market-rss-d29579406ad30afb910a",
       "title": "Đồng Tháp khởi công 8 cầu Hy vọng trị giá 6,5 tỷ đồng",
