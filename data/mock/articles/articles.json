@@ -1,8 +1,8 @@
 {
   "schema_version": 1,
-  "build_id": "market-news-rss-20261105T065136Z",
-  "generated_at": "2026-11-05T06:51:36.534844+00:00",
-  "record_count": 1471,
+  "build_id": "market-news-rss-20261105T070050Z",
+  "generated_at": "2026-11-05T07:00:50.484933+00:00",
+  "record_count": 1472,
   "data": [
     {
       "id": "article-market-rss-2868979c4501bce8caf9",
@@ -55,6 +55,33 @@
       "source_verification": {
         "method": "official-rss",
         "feed_url": "https://dantri.com.vn/rss/thoi-su.rss",
+        "publisher_host": "dantri.com.vn",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-0106971685f7c2bf07ec",
+      "title": "Nhịp sống bên những quầy hàng hành lang cư xá hơn 50 tuổi ở TPHCM",
+      "url": "https://dantri.com.vn/bat-dong-san/nhip-song-ben-nhung-quay-hang-hanh-lang-cu-xa-hon-50-tuoi-o-tphcm-20261105115114835.htm",
+      "category": "market",
+      "module_ids": [
+        "market"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-11-05T05:03:39+00:00",
+      "source_id": "dantri-real-estate",
+      "region_ids": [
+        "hcmc"
+      ],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "(Dân trí) - Từ bữa sáng đến bó rau, miếng thịt, cư dân cư xá Lý Thường Kiệt có thể mua ngay ngoài hành lang. Những quầy hàng nhỏ đã gắn với nếp sống nơi đây suốt hàng chục năm.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://dantri.com.vn/rss/bat-dong-san.rss",
         "publisher_host": "dantri.com.vn",
         "publication_date_from_feed": true
       }
