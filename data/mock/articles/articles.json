@@ -1,9 +1,117 @@
 {
   "schema_version": 1,
-  "build_id": "market-news-rss-20261105T085138Z",
-  "generated_at": "2026-11-05T08:51:38.115511+00:00",
-  "record_count": 1474,
+  "build_id": "market-news-rss-20261105T105140Z",
+  "generated_at": "2026-11-05T10:51:40.599893+00:00",
+  "record_count": 1480,
   "data": [
+    {
+      "id": "article-market-rss-23447ff991554458a783",
+      "title": "Tây Ninh yêu cầu xử lý dứt điểm trụ sở dôi dư trong tháng 12",
+      "url": "https://dantri.com.vn/thoi-su/tay-ninh-yeu-cau-xu-ly-dut-diem-tru-so-doi-du-trong-thang-12-20261105151047671.htm",
+      "category": "legal",
+      "module_ids": [
+        "legal"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-11-05T09:00:05+00:00",
+      "source_id": "dantri-current-affairs",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "(Dân trí) - Ban Thường vụ Tỉnh ủy Tây Ninh yêu cầu các cấp ủy, cơ quan, đơn vị và địa phương khẩn trương rà soát, hoàn thành xử lý và đưa vào khai thác 477 cơ sở nhà, đất dôi dư chậm nhất trong tháng 12.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://dantri.com.vn/rss/thoi-su.rss",
+        "publisher_host": "dantri.com.vn",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-2bb6b260823380298fba",
+      "title": "Eurowindow Light City kiến tạo Thành phố Ánh sáng bên sông Mã",
+      "url": "https://thanhnien.vn/eurowindow-light-city-kien-tao-thanh-pho-anh-sang-ben-song-ma-185261105160422411.htm",
+      "category": "market",
+      "module_ids": [
+        "market"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-11-05T08:58:00+00:00",
+      "source_id": "thanhnien-real-estate",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "Với quy mô gần 176 ha, kiến trúc đa phong cách, cảnh quan đặc sắc cùng những công nghệ hiện đại, Eurowindow Light City đang từng bước hiện thực hóa hình ảnh 'Thành phố Ánh sáng lung linh' bên sông Mã, hứa hẹn trở thành điểm đến mới về an cư, vui chơi, giải trí và giao thương tại Thanh Hóa.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://thanhnien.vn/rss/kinh-te/dia-oc.rss",
+        "publisher_host": "thanhnien.vn",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-b74c7aefd75566892cd1",
+      "title": "Giá USD xuống dưới 25.900 đồng, tỷ giá cuối năm được dự báo ra sao?",
+      "url": "https://dantri.com.vn/kinh-doanh/gia-usd-xuong-duoi-25900-dong-ty-gia-cuoi-nam-duoc-du-bao-ra-sao-20261105151735362.htm",
+      "category": "macro",
+      "module_ids": [
+        "macro"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-11-05T08:41:00+00:00",
+      "source_id": "dantri-business",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [
+        "supply"
+      ],
+      "importance": 2,
+      "summary": "(Dân trí) - Tỷ giá USD/VND giảm gần 500 đồng so với đầu năm. Nguồn cung ngoại tệ cải thiện, chênh lệch lãi suất duy trì trạng thái dương... được xem là những yếu tố hỗ trợ xu hướng tỷ giá hạ nhiệt.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://dantri.com.vn/rss/kinh-doanh.rss",
+        "publisher_host": "dantri.com.vn",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-0d78b7265a1e586ecc00",
+      "title": "TPHCM dự kiến thu về 37.500 tỷ đồng từ đấu giá đất và căn hộ ở Thủ Thiêm",
+      "url": "https://dantri.com.vn/thoi-su/tphcm-du-kien-thu-ve-37500-ty-dong-tu-dau-gia-dat-va-can-ho-o-thu-thiem-20261105150734751.htm",
+      "category": "market",
+      "module_ids": [
+        "market",
+        "legal"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-11-05T08:20:16+00:00",
+      "source_id": "dantri-current-affairs",
+      "region_ids": [
+        "hcmc"
+      ],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [
+        "pricing",
+        "sales"
+      ],
+      "importance": 2,
+      "summary": "(Dân trí) - Để đạt mục tiêu thu ngân sách 1 triệu tỷ đồng, TPHCM đang đẩy nhanh tiến độ đấu giá các lô đất cùng 3.790 căn hộ tại Thủ Thiêm. Việc này dự kiến giúp thành phố thu về hơn 37.500 tỷ đồng ngân sách.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://dantri.com.vn/rss/thoi-su.rss",
+        "publisher_host": "dantri.com.vn",
+        "publication_date_from_feed": true
+      }
+    },
     {
       "id": "article-market-rss-a742c96ed517ead1dd6c",
       "title": "Một người trúng 9 lô đất vùng ven từng ế đấu giá tại Hà Tĩnh",
@@ -26,6 +134,60 @@
         "method": "official-rss",
         "feed_url": "https://vnexpress.net/rss/bat-dong-san.rss",
         "publisher_host": "vnexpress.net",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-dcbc6781022a2a572f6c",
+      "title": "Vun đắp giá trị chung của di sản văn hóa dân tộc trong từng gia đình",
+      "url": "https://dantri.com.vn/thoi-su/vun-dap-gia-tri-chung-cua-di-san-van-hoa-dan-toc-trong-tung-gia-dinh-20261105144216386.htm",
+      "category": "market",
+      "module_ids": [
+        "market"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-11-05T07:43:38+00:00",
+      "source_id": "dantri-current-affairs",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "(Dân trí) - Đoàn kết giúp dân tộc ta vượt qua thử thách; văn hóa nuôi dưỡng lòng yêu nước, nghĩa tình và ý thức trách nhiệm để sự đoàn kết ấy ngày càng bền vững.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://dantri.com.vn/rss/thoi-su.rss",
+        "publisher_host": "dantri.com.vn",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-b93cb5d39bf15c27a166",
+      "title": "Chuyên gia quốc tế đánh giá cao mô hình đô thị tích hợp của Vinhomes",
+      "url": "https://dantri.com.vn/bat-dong-san/chuyen-gia-quoc-te-danh-gia-cao-mo-hinh-do-thi-tich-hop-cua-vinhomes-20261105141355416.htm",
+      "category": "market",
+      "module_ids": [
+        "market"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-11-05T07:31:42+00:00",
+      "source_id": "dantri-real-estate",
+      "region_ids": [
+        "hcmc"
+      ],
+      "project_ids": [],
+      "developer_ids": [
+        "vinhomes"
+      ],
+      "tags": [],
+      "importance": 2,
+      "summary": "(Dân trí) - Tại Hội nghị Fortune Southeast Asia 500, diễn ra tại TPHCM ngày 3/11, Giám đốc New7Wonders Jean-Paul de la Fuente đánh giá cao mô hình đô thị tích hợp của Vinhomes, mở ra cơ hội giới thiệu kinh nghiệm phát triển đô thị của Việt Nam ra quốc tế.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://dantri.com.vn/rss/bat-dong-san.rss",
+        "publisher_host": "dantri.com.vn",
         "publication_date_from_feed": true
       }
     },
