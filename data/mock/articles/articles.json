@@ -1,9 +1,89 @@
 {
   "schema_version": 1,
-  "build_id": "market-news-rss-20261105T105140Z",
-  "generated_at": "2026-11-05T10:51:40.599893+00:00",
-  "record_count": 1480,
+  "build_id": "market-news-rss-20261105T125140Z",
+  "generated_at": "2026-11-05T12:51:40.546740+00:00",
+  "record_count": 1483,
   "data": [
+    {
+      "id": "article-market-rss-9524ba89b407c418b847",
+      "title": "Gỡ điểm nghẽn thanh toán gần 9.000 tỷ đồng tại sân bay Long Thành",
+      "url": "https://dantri.com.vn/thoi-su/go-diem-nghen-thanh-toan-gan-9000-ty-dong-tai-san-bay-long-thanh-20261105165423928.htm",
+      "category": "infrastructure",
+      "module_ids": [
+        "infrastructure"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-11-05T10:57:24+00:00",
+      "source_id": "dantri-current-affairs",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [
+        "infrastructure"
+      ],
+      "importance": 2,
+      "summary": "(Dân trí) - Phó Thủ tướng Thường trực Phạm Gia Túc chỉ đạo 4 bộ chuyên ngành nghiên cứu, hỗ trợ ACV gỡ vướng khâu nghiệm thu, thanh toán các gói thầu tại dự án sân bay Long Thành.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://dantri.com.vn/rss/thoi-su.rss",
+        "publisher_host": "dantri.com.vn",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-4ff5f794708a434670d3",
+      "title": "Bất động sản đắt đỏ, nhiều cha mẹ Mỹ tính lập quỹ mua nhà cho con",
+      "url": "https://dantri.com.vn/bat-dong-san/bat-dong-san-dat-do-nhieu-cha-me-my-tinh-lap-quy-mua-nha-cho-con-20261105103929285.htm",
+      "category": "market",
+      "module_ids": [
+        "market",
+        "macro"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-11-05T09:33:29+00:00",
+      "source_id": "dantri-real-estate",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [
+        "infrastructure"
+      ],
+      "importance": 2,
+      "summary": "(Dân trí) - Giá bất động sản và lãi suất vay mua nhà tăng vọt đang đẩy thế hệ trẻ tại Mỹ vào thế khó. Để hiện thực hóa giấc mơ an cư, nhiều người phải nhờ cậy sự hậu thuẫn tài chính từ gia đình.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://dantri.com.vn/rss/bat-dong-san.rss",
+        "publisher_host": "dantri.com.vn",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-83b67ce044f1ee7ed50d",
+      "title": "Một người chi gần 21 tỷ đồng trúng đấu giá 9 lô đất nông thôn",
+      "url": "https://dantri.com.vn/bat-dong-san/mot-nguoi-chi-gan-21-ty-dong-trung-dau-gia-9-lo-dat-nong-thon-20261105151943412.htm",
+      "category": "market",
+      "module_ids": [
+        "market"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-11-05T09:21:41+00:00",
+      "source_id": "dantri-real-estate",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "(Dân trí) - Sau 2 lần đấu giá bất thành, 15 lô đất ở nông thôn Hà Tĩnh đã được bán hết. Đáng chú ý, một cá nhân chi gần 21 tỷ đồng để sở hữu 9 lô.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://dantri.com.vn/rss/bat-dong-san.rss",
+        "publisher_host": "dantri.com.vn",
+        "publication_date_from_feed": true
+      }
+    },
     {
       "id": "article-market-rss-23447ff991554458a783",
       "title": "Tây Ninh yêu cầu xử lý dứt điểm trụ sở dôi dư trong tháng 12",
