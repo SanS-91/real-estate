@@ -1,9 +1,146 @@
 {
   "schema_version": 1,
-  "build_id": "market-news-rss-20261105T045138Z",
-  "generated_at": "2026-11-05T04:51:38.860670+00:00",
-  "record_count": 1466,
+  "build_id": "market-news-rss-20261105T065136Z",
+  "generated_at": "2026-11-05T06:51:36.534844+00:00",
+  "record_count": 1471,
   "data": [
+    {
+      "id": "article-market-rss-2868979c4501bce8caf9",
+      "title": "Đề nghị kiểm tra an toàn cháy nổ chung cư trước khi bàn giao",
+      "url": "https://vnexpress.net/de-nghi-kiem-tra-an-toan-chay-no-chung-cu-truoc-khi-ban-giao-5141025.html",
+      "category": "market",
+      "module_ids": [
+        "market"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-11-05T06:11:25+00:00",
+      "source_id": "vnexpress-current-affairs",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "Đại biểu Cao Mạnh Linh đề nghị kiểm tra an toàn phòng cháy chữa cháy cùng với nghiệm thu xây dựng chung cư, bảo đảm khắc phục vi phạm trước khi bàn giao nhà cho người dân.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://vnexpress.net/rss/thoi-su.rss",
+        "publisher_host": "vnexpress.net",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-8506277bc7c2e3b7a856",
+      "title": "5 bộ chuyên ngành góp ý gì với Quy hoạch Tổng thể TPHCM tầm nhìn 100 năm?",
+      "url": "https://dantri.com.vn/thoi-su/5-bo-chuyen-nganh-gop-y-gi-voi-quy-hoach-tong-the-tphcm-tam-nhin-100-nam-20261105103633346.htm",
+      "category": "market",
+      "module_ids": [
+        "market"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-11-05T05:15:19+00:00",
+      "source_id": "dantri-current-affairs",
+      "region_ids": [
+        "hcmc"
+      ],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [
+        "legal",
+        "infrastructure"
+      ],
+      "importance": 2,
+      "summary": "(Dân trí) - Nhận góp ý từ 5 bộ, TPHCM đã bổ sung định hướng thiết kế lưỡng dụng cho hệ thống tàu điện ngầm, hạ tầng cảng biển để vừa phát triển kinh tế thời bình, vừa đáp ứng nhiệm vụ quốc phòng, an ninh.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://dantri.com.vn/rss/thoi-su.rss",
+        "publisher_host": "dantri.com.vn",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-58dbb93d326ccdfe6ba5",
+      "title": "Măng Đen đấu giá 16 thửa đất, khởi điểm cao nhất hơn 37 triệu đồng/m2",
+      "url": "https://dantri.com.vn/bat-dong-san/mang-den-dau-gia-16-thua-dat-khoi-diem-cao-nhat-hon-37-trieu-dongm2-20261105092300585.htm",
+      "category": "market",
+      "module_ids": [
+        "market"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-11-05T04:50:00+00:00",
+      "source_id": "dantri-real-estate",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "(Dân trí) - Xã Măng Đen (Quảng Ngãi) đưa 16 thửa đất ở nông thôn ra đấu giá để tạo nguồn thu ngân sách. Tổng giá khởi điểm của các thửa đất này gần 194 tỷ đồng.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://dantri.com.vn/rss/bat-dong-san.rss",
+        "publisher_host": "dantri.com.vn",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-9890d86a2c7f0d854efd",
+      "title": "Đấu giá 6 căn chung cư của cựu Chủ tịch AIC thu hồi được 42 tỷ đồng",
+      "url": "https://dantri.com.vn/thoi-su/dau-gia-6-can-chung-cu-cua-cuu-chu-tich-aic-thu-hoi-duoc-42-ty-dong-20261105114118910.htm",
+      "category": "market",
+      "module_ids": [
+        "market"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-11-05T04:46:49+00:00",
+      "source_id": "dantri-current-affairs",
+      "region_ids": [
+        "ha-noi"
+      ],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "(Dân trí) - 6 căn hộ chung cư cao cấp tại tòa nhà Pacific Place (Hà Nội) của bà Nguyễn Thị Thanh Nhàn, cựu Chủ tịch AIC, đã được bán đấu giá thành công với tổng số tiền 42 tỷ đồng.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://dantri.com.vn/rss/thoi-su.rss",
+        "publisher_host": "dantri.com.vn",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-f3dea028c82fbab627a2",
+      "title": "Các tuyến đường đi dưới lòng đất trong Quy hoạch TPHCM tầm nhìn 100 năm",
+      "url": "https://dantri.com.vn/thoi-su/cac-tuyen-duong-di-duoi-long-dat-trong-quy-hoach-tphcm-tam-nhin-100-nam-20261103160414375.htm",
+      "category": "market",
+      "module_ids": [
+        "market",
+        "infrastructure"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-11-05T04:44:30+00:00",
+      "source_id": "dantri-current-affairs",
+      "region_ids": [
+        "hcmc"
+      ],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [
+        "legal"
+      ],
+      "importance": 2,
+      "summary": "(Dân trí) - Bên cạnh các tuyến tàu điện ngầm sẽ triển khai, TPHCM định hướng 6 khu vực phát triển không gian lòng đất và tuyến đường đi ngầm ven sông Sài Gòn.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://dantri.com.vn/rss/thoi-su.rss",
+        "publisher_host": "dantri.com.vn",
+        "publication_date_from_feed": true
+      }
+    },
     {
       "id": "article-market-rss-73df6e40548d09ff7741",
       "title": "Chủ đầu tư ồ ạt bán lại dự án",
