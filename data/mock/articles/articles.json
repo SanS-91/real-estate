@@ -1,9 +1,34 @@
 {
   "schema_version": 1,
-  "build_id": "market-news-rss-20261106T025135Z",
-  "generated_at": "2026-11-06T02:51:35.769541+00:00",
-  "record_count": 1509,
+  "build_id": "market-news-rss-20261106T045133Z",
+  "generated_at": "2026-11-06T04:51:33.765777+00:00",
+  "record_count": 1515,
   "data": [
+    {
+      "id": "article-market-rss-e6b556d60eab5bf48c20",
+      "title": "Giá vàng giảm 3,5 triệu về sát 141 triệu đồng",
+      "url": "https://vnexpress.net/gia-vang-giam-3-5-trieu-ve-sat-141-trieu-dong-5141437.html",
+      "category": "macro",
+      "module_ids": [
+        "macro"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-11-06T03:02:38+00:00",
+      "source_id": "vnexpress-economy",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "Giá vàng miếng sáng nay nhanh chóng đảo chiều, giảm tổng cộng 3,5 triệu đồng trong 24 giờ, sau khi bật lên trên 144 triệu đồng vào đầu ngày hôm qua.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://vnexpress.net/rss/kinh-doanh.rss",
+        "publisher_host": "vnexpress.net",
+        "publication_date_from_feed": true
+      }
+    },
     {
       "id": "article-market-rss-ec24a3e0b592a781d865",
       "title": "Cục Hàng không bác đề xuất kéo một số gói thầu sân bay Long Thành sang 2027",
@@ -28,6 +53,60 @@
         "method": "official-rss",
         "feed_url": "https://thanhnien.vn/rss/kinh-te/chinh-sach-phat-trien.rss",
         "publisher_host": "thanhnien.vn",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-a3300548dbe415c45904",
+      "title": "TPHCM giao 4 lô đất Thủ Thiêm để thanh toán hợp đồng BT cầu Ba Son",
+      "url": "https://dantri.com.vn/bat-dong-san/tphcm-giao-4-lo-dat-thu-thiem-de-thanh-toan-hop-dong-bt-cau-ba-son-20261106081147886.htm",
+      "category": "market",
+      "module_ids": [
+        "market"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-11-06T02:34:05+00:00",
+      "source_id": "dantri-real-estate",
+      "region_ids": [
+        "hcmc"
+      ],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "(Dân trí) - 4 lô đất với tổng diện tích gần 43.000m2 tại Thủ Thiêm được TPHCM giao cho Công ty Đại Quang Minh để thanh toán hợp đồng BT dự án cầu Thủ Thiêm 2 (cầu Ba Son).",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://dantri.com.vn/rss/bat-dong-san.rss",
+        "publisher_host": "dantri.com.vn",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-bd97413d8eaf761287de",
+      "title": "Vạn Xuân Group sắp tổ chức sự kiện kết nối thị trường bất động sản Nam - Bắc",
+      "url": "https://dantri.com.vn/bat-dong-san/van-xuan-group-sap-to-chuc-su-kien-ket-noi-thi-truong-bat-dong-san-nam-bac-20261106091028542.htm",
+      "category": "market",
+      "module_ids": [
+        "market"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-11-06T02:30:00+00:00",
+      "source_id": "dantri-real-estate",
+      "region_ids": [
+        "hcmc"
+      ],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "(Dân trí) - Ngày 10/11, tại TPHCM, Vạn Xuân Group tổ chức sự kiện giới thiệu dự án Happy One Elite, dự kiến quy tụ hơn 2.000 người tham dự từ hai đầu cầu Nam - Bắc.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://dantri.com.vn/rss/bat-dong-san.rss",
+        "publisher_host": "dantri.com.vn",
         "publication_date_from_feed": true
       }
     },
@@ -80,6 +159,56 @@
         "method": "official-rss",
         "feed_url": "https://thanhnien.vn/rss/kinh-te/ngan-hang.rss",
         "publisher_host": "thanhnien.vn",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-6ffdecca6d33226a0374",
+      "title": "Những chi tiết đặc biệt trên tuyến đường dự kiến đặt tên Nguyễn Bá Thanh",
+      "url": "https://dantri.com.vn/thoi-su/nhung-chi-tiet-dac-biet-tren-tuyen-duong-du-kien-dat-ten-nguyen-ba-thanh-20261105192805456.htm",
+      "category": "infrastructure",
+      "module_ids": [
+        "infrastructure"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-11-06T01:44:08+00:00",
+      "source_id": "dantri-current-affairs",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "(Dân trí) - Tuyến đường dự kiến mang tên cố Bí thư Thành ủy Đà Nẵng Nguyễn Bá Thanh có nhiều điều đặc biệt, khi đi qua quê hương Hòa Tiến và gắn với những dấu ấn lịch sử, văn hóa của vùng đất Đà Nẵng - Quảng Nam.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://dantri.com.vn/rss/thoi-su.rss",
+        "publisher_host": "dantri.com.vn",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-b4ba63f5f6915a47058a",
+      "title": "3 mẹo trang trí giúp nhà bạn đẹp sang trọng với chi phí tiết kiệm",
+      "url": "https://dantri.com.vn/bat-dong-san/3-meo-trang-tri-giup-nha-ban-dep-sang-trong-voi-chi-phi-tiet-kiem-20261104110156428.htm",
+      "category": "market",
+      "module_ids": [
+        "market"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-11-06T01:19:59+00:00",
+      "source_id": "dantri-real-estate",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "(Dân trí) - Không cần cải tạo tốn kém hay mua sắm xa xỉ, bạn vẫn có thể nâng tầm không gian sống thêm sang trọng, tinh tế nhờ 3 thay đổi nhỏ nhưng đắt giá được gợi ý từ chuyên gia nội thất.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://dantri.com.vn/rss/bat-dong-san.rss",
+        "publisher_host": "dantri.com.vn",
         "publication_date_from_feed": true
       }
     },
@@ -389,6 +518,31 @@
         "method": "official-rss",
         "feed_url": "https://vnexpress.net/rss/kinh-doanh.rss",
         "publisher_host": "vnexpress.net",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-91592c3e4ac3b2419836",
+      "title": "Maison Privée: Chuẩn mực xa xỉ mới từ triết lý sống lấy sức khỏe làm trung tâm",
+      "url": "https://thanhnien.vn/maison-privee-chuan-muc-xa-xi-moi-tu-triet-ly-song-lay-suc-khoe-lam-trung-tam-185261106101444843.htm",
+      "category": "market",
+      "module_ids": [
+        "market"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-11-05T17:00:00+00:00",
+      "source_id": "thanhnien-real-estate",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "Giữa lòng thủ đô, Maison Privée, kiệt tác căn hộ cao cấp do CapitaLand Development hợp tác cùng hai tên tuổi lớn từ Nhật Bản là Mitsubishi Estate và Nomura Real Estate Development phát triển tại khu đô thị Ciputra đang tái định nghĩa chuẩn mực sống thượng lưu.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://thanhnien.vn/rss/kinh-te/dia-oc.rss",
+        "publisher_host": "thanhnien.vn",
         "publication_date_from_feed": true
       }
     },
