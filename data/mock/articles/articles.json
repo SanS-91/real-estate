@@ -1,9 +1,62 @@
 {
   "schema_version": 1,
-  "build_id": "market-news-rss-20261106T125136Z",
-  "generated_at": "2026-11-06T12:51:36.293268+00:00",
-  "record_count": 1537,
+  "build_id": "market-news-rss-20261106T145136Z",
+  "generated_at": "2026-11-06T14:51:36.615524+00:00",
+  "record_count": 1540,
   "data": [
+    {
+      "id": "article-market-rss-d7505162184023c19a37",
+      "title": "Sân bay Cà Mau lùi thời gian khai thác trở lại vào ngày 18.12",
+      "url": "https://thanhnien.vn/san-bay-ca-mau-lui-thoi-gian-khai-thac-tro-lai-vao-ngay-1812-185261106180923245.htm",
+      "category": "infrastructure",
+      "module_ids": [
+        "infrastructure"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-11-06T14:37:00+00:00",
+      "source_id": "thanhnien-policy",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [
+        "supply",
+        "infrastructure"
+      ],
+      "importance": 2,
+      "summary": "Tháng 10 mưa nhiều và nguồn cung một số vật liệu xây dựng ảnh hưởng tiến độ thi công nên sân bay Cà Mau phải lùi thời gian khai thác trở lại từ ngày 29.11 sang 18.12, chậm 19 ngày so với kế hoạch.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://thanhnien.vn/rss/kinh-te/chinh-sach-phat-trien.rss",
+        "publisher_host": "thanhnien.vn",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-c03bca0112737e581915",
+      "title": "Phú Long bàn giao tổ hợp Essensia Sky & Parkway Saigon WorldHotels Residences",
+      "url": "https://vnexpress.net/phu-long-ban-giao-to-hop-essensia-sky-parkway-saigon-worldhotels-residences-5141727.html",
+      "category": "market",
+      "module_ids": [
+        "market"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-11-06T14:00:00+00:00",
+      "source_id": "vnexpress-real-estate",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "Phú Long khánh thành và bàn giao tổ hợp căn hộ - nhà phố, biệt thự Essensia Sky & Parkway Saigon WorldHotels Residences tổng quy mô khoảng 3 ha với gần 500 sản phẩm, ngày 6/11.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://vnexpress.net/rss/bat-dong-san.rss",
+        "publisher_host": "vnexpress.net",
+        "publication_date_from_feed": true
+      }
+    },
     {
       "id": "article-market-rss-794f488829e4eb2907b6",
       "title": "Đề xuất lùi hạn hoàn thành 6 dự án tại sân bay Long Thành",
@@ -29,6 +82,31 @@
         "method": "official-rss",
         "feed_url": "https://vnexpress.net/rss/thoi-su.rss",
         "publisher_host": "vnexpress.net",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-27857b6a0ec466fecebc",
+      "title": "Phú Long khánh thành, bàn giao Essensia Sky and Parkway Saigon WorldHotels Residences",
+      "url": "https://dantri.com.vn/bat-dong-san/phu-long-khanh-thanh-ban-giao-essensia-sky-and-parkway-saigon-worldhotels-residences-20261106180851772.htm",
+      "category": "market",
+      "module_ids": [
+        "market"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-11-06T12:00:00+00:00",
+      "source_id": "dantri-real-estate",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "(Dân trí) - Ngày 6/11, Tập đoàn Phú Long tổ chức khánh thành và bàn giao Essensia Sky and Parkway Saigon WorldHotels Residences với chủ đề “Đất lành kết hoa - Hoan ca về nhà”.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://dantri.com.vn/rss/bat-dong-san.rss",
+        "publisher_host": "dantri.com.vn",
         "publication_date_from_feed": true
       }
     },
