@@ -1,9 +1,216 @@
 {
   "schema_version": 1,
-  "build_id": "market-news-rss-20261105T163418Z",
-  "generated_at": "2026-11-05T16:34:18.964880+00:00",
-  "record_count": 1493,
+  "build_id": "market-news-rss-20261106T005141Z",
+  "generated_at": "2026-11-06T00:51:41.459856+00:00",
+  "record_count": 1501,
   "data": [
+    {
+      "id": "article-market-rss-ebf07be95af7315b3a25",
+      "title": "Cảnh đìu hiu tại khu đô thị khiến cựu lãnh đạo tỉnh Bình Phước cũ bị bắt",
+      "url": "https://dantri.com.vn/thoi-su/canh-diu-hiu-tai-khu-do-thi-khien-cuu-lanh-dao-tinh-binh-phuoc-cu-bi-bat-20261105140722603.htm",
+      "category": "market",
+      "module_ids": [
+        "market"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-11-05T23:59:00+00:00",
+      "source_id": "dantri-current-affairs",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "(Dân trí) - Dự án Khu đô thị thương mại - dịch vụ Mỹ Lệ nằm ngay mặt tiền đường ĐT741 nay hoang tàn, cỏ mọc um tùm, nhiều hạng mục xuống cấp, hư hỏng sau nhiều năm để hoang.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://dantri.com.vn/rss/thoi-su.rss",
+        "publisher_host": "dantri.com.vn",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-e50885fe4de5404c53c1",
+      "title": "Hà Nội dự kiến di dời cư dân khỏi 246 căn hộ ở Kim Văn - Kim Lũ",
+      "url": "https://vnexpress.net/ha-noi-du-kien-di-doi-cu-dan-khoi-246-can-ho-o-kim-van-kim-lu-5141338.html",
+      "category": "market",
+      "module_ids": [
+        "market"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-11-05T23:00:00+00:00",
+      "source_id": "vnexpress-current-affairs",
+      "region_ids": [
+        "ha-noi"
+      ],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "Cư dân tại 246 căn hộ thuộc 4 tòa chung cư ở khu đô thị Kim Văn - Kim Lũ dự kiến phải chuyển đi do chủ đầu tư tự ý biến diện tích thương mại, nhà trẻ và sinh hoạt cộng đồng thành nhà ở.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://vnexpress.net/rss/thoi-su.rss",
+        "publisher_host": "vnexpress.net",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-d6e2dc2eedb48d3f43ea",
+      "title": "Chạy nước rút giải ngân đầu tư công",
+      "url": "https://thanhnien.vn/chay-nuoc-rut-giai-ngan-dau-tu-cong-185261105215210666.htm",
+      "category": "infrastructure",
+      "module_ids": [
+        "infrastructure"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-11-05T23:00:00+00:00",
+      "source_id": "thanhnien-policy",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "Giải ngân đầu tư công sau 10 tháng của năm nay tăng mạnh so với cùng kỳ năm trước nhưng với khối lượng vốn lớn nhất từ trước đến nay; để về đích, công tác giải ngân trong 2 tháng cuối năm vẫn còn rất thách thức.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://thanhnien.vn/rss/kinh-te/chinh-sach-phat-trien.rss",
+        "publisher_host": "thanhnien.vn",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-9af9c159ce2794280911",
+      "title": "Người trẻ ngại 'gánh nợ' vay mua nhà",
+      "url": "https://vnexpress.net/nguoi-tre-ngai-ganh-no-vay-mua-nha-5139826.html",
+      "category": "market",
+      "module_ids": [
+        "market",
+        "macro"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-11-05T23:00:00+00:00",
+      "source_id": "vnexpress-real-estate",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [
+        "pricing"
+      ],
+      "importance": 2,
+      "summary": "Giá căn hộ vượt xa khả năng tích lũy, trong khi lãi vay biến động khiến nhiều người trẻ dù muốn an cư vẫn chần chừ trước quyết định vay ngân hàng kéo dài hàng chục năm.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://vnexpress.net/rss/bat-dong-san.rss",
+        "publisher_host": "vnexpress.net",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-5c633885f7757967cfcc",
+      "title": "Hà Nội: Dự kiến di dời, phá dỡ 246 căn hộ khu Kim Văn - Kim Lũ",
+      "url": "https://dantri.com.vn/thoi-su/ha-noi-du-kien-di-doi-pha-do-246-can-ho-khu-kim-van-kim-lu-20261105220123041.htm",
+      "category": "market",
+      "module_ids": [
+        "market"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-11-05T23:00:00+00:00",
+      "source_id": "dantri-current-affairs",
+      "region_ids": [
+        "ha-noi"
+      ],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "(Dân trí) - Có 246 căn hộ từ tầng 2 đến tầng 4 tại các tòa CT11, CT12A, CT12B, CT12C khu Kim Văn - Kim Lũ thuộc diện phải di dời. Sau khi di dời dân, phường Định Công và chủ đầu tư sẽ phá dỡ các phần vi phạm.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://dantri.com.vn/rss/thoi-su.rss",
+        "publisher_host": "dantri.com.vn",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-24fe84d46f8153431775",
+      "title": "Mạnh tay hạ nhiệt lãi suất cuối năm",
+      "url": "https://thanhnien.vn/manh-tay-ha-nhiet-lai-suat-cuoi-nam-18526110521325871.htm",
+      "category": "macro",
+      "module_ids": [
+        "macro"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-11-05T23:00:00+00:00",
+      "source_id": "thanhnien-banking",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "Ngân hàng Nhà nước tiếp tục thực hiện hoán đổi ngoại tệ. Lượng tiền lớn ra thị trường góp phần giải quyết thanh khoản, kéo lãi suất đi xuống và cũng không gây áp lực lên tỷ giá ngoại tệ khi đến hạn.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://thanhnien.vn/rss/kinh-te/ngan-hang.rss",
+        "publisher_host": "thanhnien.vn",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-cf0f31379764e2a3b4be",
+      "title": "Ngộp lãi vay, xử lý thế nào để tránh gồng nợ?",
+      "url": "https://vnexpress.net/ngop-lai-vay-xu-ly-the-nao-de-tranh-gong-no-5138194.html",
+      "category": "macro",
+      "module_ids": [
+        "macro"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-11-05T17:00:00+00:00",
+      "source_id": "vnexpress-economy",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "Lãi suất tăng có thể khiến khoản vay trở thành gánh nặng. Bạn nên làm gì khi tiền trả nợ bắt đầu vượt quá khả năng tài chính?",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://vnexpress.net/rss/kinh-doanh.rss",
+        "publisher_host": "vnexpress.net",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-8dc7747061d9c27da064",
+      "title": "Nhà lệch tầng mở rộng không gian cho gia đình ba thế hệ",
+      "url": "https://vnexpress.net/nha-lech-tang-mo-rong-khong-gian-cho-gia-dinh-ba-the-he-5141066.html",
+      "category": "market",
+      "module_ids": [
+        "market"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-11-05T17:00:00+00:00",
+      "source_id": "vnexpress-real-estate",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "Công trình cải tạo trên nền đất 90 m2 sử dụng thiết kế lệch tầng, phân chia không gian sinh hoạt chung và riêng cho ba thế hệ.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://vnexpress.net/rss/bat-dong-san.rss",
+        "publisher_host": "vnexpress.net",
+        "publication_date_from_feed": true
+      }
+    },
     {
       "id": "article-market-rss-dd4159a94349b5642539",
       "title": "Cao tốc Bắc - Nam phía Đông thu hơn 3.500 tỷ đồng sau 8 tháng",
