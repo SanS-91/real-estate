@@ -1,9 +1,284 @@
 {
   "schema_version": 1,
-  "build_id": "market-news-rss-20261106T045133Z",
-  "generated_at": "2026-11-06T04:51:33.765777+00:00",
-  "record_count": 1515,
+  "build_id": "market-news-rss-20261106T065142Z",
+  "generated_at": "2026-11-06T06:51:42.295135+00:00",
+  "record_count": 1525,
   "data": [
+    {
+      "id": "article-market-rss-bea7ce813f55af0f5ee0",
+      "title": "Yêu cầu phủ trạm sạc xe điện ở tất cả trạm dừng nghỉ cao tốc",
+      "url": "https://thanhnien.vn/yeu-cau-phu-tram-sac-xe-dien-o-tat-ca-tram-dung-nghi-cao-toc-185261106132015178.htm",
+      "category": "infrastructure",
+      "module_ids": [
+        "infrastructure"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-11-06T06:41:00+00:00",
+      "source_id": "thanhnien-policy",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [
+        "infrastructure"
+      ],
+      "importance": 2,
+      "summary": "Cục Đường bộ Việt Nam yêu cầu các nhà đầu tư cần thực hiện hoàn thiện hệ thống hạ tầng trạm sạc điện, cung cấp nhiên liệu xanh tại các trạm dừng nghỉ trên các tuyến cao tốc nhằm đáp ứng nhu cầu của chủ phương tiện.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://thanhnien.vn/rss/kinh-te/chinh-sach-phat-trien.rss",
+        "publisher_host": "thanhnien.vn",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-ecf38c2ddd8aa3e6ff3a",
+      "title": "Đắk Lắk thu hút hơn 4.000 tỉ đồng vào các dự án chăn nuôi",
+      "url": "https://thanhnien.vn/dak-lak-thu-hut-hon-4000-ti-dong-vao-cac-du-an-chan-nuoi-185261106102028017.htm",
+      "category": "market",
+      "module_ids": [
+        "market"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-11-06T05:52:00+00:00",
+      "source_id": "thanhnien-policy",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "Hơn 4.000 tỉ đồng vốn đăng ký đầu tư vào lĩnh vực chăn nuôi đang góp phần thúc đẩy Đắk Lắk chuyển dịch sang mô hình trang trại tập trung, công nghệ cao.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://thanhnien.vn/rss/kinh-te/chinh-sach-phat-trien.rss",
+        "publisher_host": "thanhnien.vn",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-bedef222ed33960b51ac",
+      "title": "TP HCM giao 4,3 ha đất Thủ Thiêm cho Đại Quang Minh",
+      "url": "https://vnexpress.net/tp-hcm-giao-4-3-ha-dat-thu-thiem-cho-dai-quang-minh-5141508.html",
+      "category": "market",
+      "module_ids": [
+        "market"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-11-06T05:28:22+00:00",
+      "source_id": "vnexpress-real-estate",
+      "region_ids": [
+        "hcmc"
+      ],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "Bốn lô đất với tổng diện tích gần 4,3 ha tại Khu đô thị mới Thủ Thiêm được TP HCM giao cho Công ty Đại Quang Minh để thanh toán hợp đồng BT xây dựng cầu Ba Son.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://vnexpress.net/rss/bat-dong-san.rss",
+        "publisher_host": "vnexpress.net",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-011c7eccd954331784b6",
+      "title": "Phú Quốc khởi công xây dựng trụ sở Trung tâm hành chính cao 9 tầng",
+      "url": "https://thanhnien.vn/phu-quoc-khoi-cong-xay-dung-tru-so-trung-tam-hanh-chinh-cao-9-tang-185261106113230689.htm",
+      "category": "infrastructure",
+      "module_ids": [
+        "infrastructure"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-11-06T04:57:00+00:00",
+      "source_id": "thanhnien-policy",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "Trung tâm hành chính đặc khu Phú Quốc được đầu tư xây dựng nhằm hình thành một khu hành chính tập trung, hiện đại, văn minh, góp phần nâng cao hiệu lực, hiệu quả hoạt động của bộ máy chính quyền.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://thanhnien.vn/rss/kinh-te/chinh-sach-phat-trien.rss",
+        "publisher_host": "thanhnien.vn",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-5e0f8fc2db6eaa330731",
+      "title": "Hà Nội sẽ phá dỡ 10 tòa nhà tập thể cũ ở Trương Định",
+      "url": "https://dantri.com.vn/bat-dong-san/ha-noi-se-pha-do-10-toa-nha-tap-the-cu-o-truong-dinh-20261106105634287.htm",
+      "category": "market",
+      "module_ids": [
+        "market"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-11-06T04:27:38+00:00",
+      "source_id": "dantri-real-estate",
+      "region_ids": [
+        "ha-noi"
+      ],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "(Dân trí) - Khu tập thể Trương Định gồm 10 tòa nhà cao 2 tầng, khoảng 257 căn hộ, thuộc danh mục phải phá dỡ. Khu vực này dự kiến được xây dựng lại với công trình 30 tầng nổi và 3 tầng hầm.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://dantri.com.vn/rss/bat-dong-san.rss",
+        "publisher_host": "dantri.com.vn",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-01e30374fe16a37946b2",
+      "title": "Dự án mở rộng cao tốc TPHCM - Long Thành còn vướng mặt bằng 1 hộ dân",
+      "url": "https://dantri.com.vn/thoi-su/du-an-mo-rong-cao-toc-tphcm-long-thanh-con-vuong-mat-bang-1-ho-dan-20261106103115739.htm",
+      "category": "market",
+      "module_ids": [
+        "market",
+        "infrastructure"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-11-06T03:49:30+00:00",
+      "source_id": "dantri-current-affairs",
+      "region_ids": [
+        "hcmc"
+      ],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [
+        "infrastructure"
+      ],
+      "importance": 2,
+      "summary": "(Dân trí) - Dự án mở rộng cao tốc TPHCM - Long Thành còn 1 hộ dân tại nút giao quốc lộ 51 chưa di dời. Địa phương đang tích cực vận động và dự kiến tổ chức cưỡng chế trong tháng 11.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://dantri.com.vn/rss/thoi-su.rss",
+        "publisher_host": "dantri.com.vn",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-774bb0336e5498923dda",
+      "title": "Nhiều tuyến xe buýt TPHCM đổi lộ trình tránh công trường Metro số 2",
+      "url": "https://dantri.com.vn/thoi-su/nhieu-tuyen-xe-buyt-tphcm-doi-lo-trinh-tranh-cong-truong-metro-so-2-20261106100548385.htm",
+      "category": "infrastructure",
+      "module_ids": [
+        "infrastructure"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-11-06T03:45:12+00:00",
+      "source_id": "dantri-current-affairs",
+      "region_ids": [
+        "hcmc"
+      ],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [
+        "infrastructure"
+      ],
+      "importance": 2,
+      "summary": "(Dân trí) - Do rào chắn thi công ga Bảy Hiền và Nguyễn Hồng Đào của dự án Metro Bến Thành - Tham Lương, hai tuyến xe buýt số 23 và 64 phải tạm đổi lộ trình. Điểm dừng Bệnh viện Thống Nhất cũng ngưng phục vụ.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://dantri.com.vn/rss/thoi-su.rss",
+        "publisher_host": "dantri.com.vn",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-7dd5f0e99537637fb80e",
+      "title": "Loạt \"đất vàng\" của bà Trương Mỹ Lan ở trung tâm TPHCM được đưa ra đấu giá",
+      "url": "https://dantri.com.vn/bat-dong-san/loat-dat-vang-cua-ba-truong-my-lan-o-trung-tam-tphcm-duoc-dua-ra-dau-gia-20261104231353254.htm",
+      "category": "market",
+      "module_ids": [
+        "market",
+        "infrastructure"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-11-06T03:14:49+00:00",
+      "source_id": "dantri-real-estate",
+      "region_ids": [
+        "hcmc"
+      ],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "(Dân trí) - Hàng loạt bất động sản tại các tuyến đường đắc địa ở trung tâm TPHCM liên quan đến bà Trương Mỹ Lan được đưa ra đấu giá, với tổng giá khởi điểm lên đến hàng nghìn tỷ đồng",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://dantri.com.vn/rss/bat-dong-san.rss",
+        "publisher_host": "dantri.com.vn",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-fb6fda84dc231d7aaa8f",
+      "title": "Bộ trưởng Tài chính làm rõ cách xác định đất bỏ hoang để đánh thuế 0,2%",
+      "url": "https://dantri.com.vn/bat-dong-san/bo-truong-tai-chinh-lam-ro-cach-xac-dinh-dat-bo-hoang-de-danh-thue-02-20261106100003669.htm",
+      "category": "market",
+      "module_ids": [
+        "legal"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-11-06T03:09:51+00:00",
+      "source_id": "dantri-real-estate",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [
+        "legal"
+      ],
+      "importance": 2,
+      "summary": "(Dân trí) - Bộ trưởng Tài chính Ngô Văn Tuấn cho biết việc xác định đất bỏ hoang để đánh thuế phải căn cứ pháp luật đất đai, có sự phối hợp giữa cơ quan thuế và cơ quan quản lý đất đai.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://dantri.com.vn/rss/bat-dong-san.rss",
+        "publisher_host": "dantri.com.vn",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-c819957430b3b45cff2b",
+      "title": "Tiến độ mới nhất 6 dự án trọng điểm tại TPHCM",
+      "url": "https://dantri.com.vn/bat-dong-san/tien-do-moi-nhat-6-du-an-trong-diem-tai-tphcm-20261106094626166.htm",
+      "category": "market",
+      "module_ids": [
+        "market",
+        "infrastructure"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-11-06T03:07:45+00:00",
+      "source_id": "dantri-real-estate",
+      "region_ids": [
+        "hcmc"
+      ],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [
+        "infrastructure"
+      ],
+      "importance": 2,
+      "summary": "(Dân trí) - TPHCM đang đẩy nhanh giải ngân đầu tư công, đồng thời tăng tốc loạt dự án trọng điểm, trong đó có cao tốc Mộc Bài, Metro số 2, rạch Xuyên Tâm.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://dantri.com.vn/rss/bat-dong-san.rss",
+        "publisher_host": "dantri.com.vn",
+        "publication_date_from_feed": true
+      }
+    },
     {
       "id": "article-market-rss-e6b556d60eab5bf48c20",
       "title": "Giá vàng giảm 3,5 triệu về sát 141 triệu đồng",
