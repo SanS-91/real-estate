@@ -1,9 +1,89 @@
 {
   "schema_version": 1,
-  "build_id": "market-news-rss-20261106T105136Z",
-  "generated_at": "2026-11-06T10:51:36.718595+00:00",
-  "record_count": 1534,
+  "build_id": "market-news-rss-20261106T125136Z",
+  "generated_at": "2026-11-06T12:51:36.293268+00:00",
+  "record_count": 1537,
   "data": [
+    {
+      "id": "article-market-rss-794f488829e4eb2907b6",
+      "title": "Đề xuất lùi hạn hoàn thành 6 dự án tại sân bay Long Thành",
+      "url": "https://vnexpress.net/de-xuat-lui-han-hoan-thanh-6-du-an-tai-san-bay-long-thanh-5141701.html",
+      "category": "market",
+      "module_ids": [
+        "market",
+        "infrastructure"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-11-06T12:08:36+00:00",
+      "source_id": "vnexpress-current-affairs",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [
+        "infrastructure"
+      ],
+      "importance": 2,
+      "summary": "Sáu dự án dịch vụ hàng không tại sân bay Long Thành chậm tiến độ, được đề xuất gia hạn hoàn thành đến ngày 24/12 để kịp đưa vào khai thác cùng sân bay.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://vnexpress.net/rss/thoi-su.rss",
+        "publisher_host": "vnexpress.net",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-6ba5476eb4b0c83a219a",
+      "title": "Lãi suất đồng loạt giảm, chuyên gia dự báo sắp tới sẽ “dễ thở hơn”",
+      "url": "https://dantri.com.vn/kinh-doanh/lai-suat-dong-loat-giam-chuyen-gia-du-bao-sap-toi-se-de-tho-hon-20261106173811158.htm",
+      "category": "macro",
+      "module_ids": [
+        "macro"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-11-06T11:05:26+00:00",
+      "source_id": "dantri-business",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "(Dân trí) - Những diễn biến mới nhất từ thị trường quốc tế được kỳ vọng là yếu tố hỗ trợ lãi suất của Việt Nam sẽ bớt áp lực hơn dịp cuối năm và năm 2027.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://dantri.com.vn/rss/kinh-doanh.rss",
+        "publisher_host": "dantri.com.vn",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-b6956167c4d2c466f936",
+      "title": "Sân bay Cà Mau lùi ngày khai thác trở lại đến 18/12",
+      "url": "https://vnexpress.net/san-bay-ca-mau-lui-ngay-khai-thac-tro-lai-den-18-12-5141694.html",
+      "category": "infrastructure",
+      "module_ids": [
+        "infrastructure"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-11-06T10:38:33+00:00",
+      "source_id": "vnexpress-current-affairs",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [
+        "infrastructure"
+      ],
+      "importance": 2,
+      "summary": "Do mưa nhiều và thiếu một số vật liệu xây dựng, sân bay Cà Mau dự kiến hoạt động trở lại từ ngày 18/12, chậm gần ba tuần so với kế hoạch.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://vnexpress.net/rss/thoi-su.rss",
+        "publisher_host": "vnexpress.net",
+        "publication_date_from_feed": true
+      }
+    },
     {
       "id": "article-market-rss-6ae2fc0e56ac8934a2a4",
       "title": "Anh tăng lãi suất lần đầu tiên sau 3 năm",
