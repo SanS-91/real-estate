@@ -1,9 +1,188 @@
 {
   "schema_version": 1,
-  "build_id": "market-news-rss-20261106T005141Z",
-  "generated_at": "2026-11-06T00:51:41.459856+00:00",
-  "record_count": 1501,
+  "build_id": "market-news-rss-20261106T025135Z",
+  "generated_at": "2026-11-06T02:51:35.769541+00:00",
+  "record_count": 1509,
   "data": [
+    {
+      "id": "article-market-rss-ec24a3e0b592a781d865",
+      "title": "Cục Hàng không bác đề xuất kéo một số gói thầu sân bay Long Thành sang 2027",
+      "url": "https://thanhnien.vn/cuc-hang-khong-bac-de-xuat-keo-mot-so-goi-thau-san-bay-long-thanh-sang-2027-185261106094123213.htm",
+      "category": "infrastructure",
+      "module_ids": [
+        "infrastructure"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-11-06T02:47:00+00:00",
+      "source_id": "thanhnien-policy",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [
+        "infrastructure"
+      ],
+      "importance": 2,
+      "summary": "Cục Hàng không Việt Nam vừa có báo cáo kiến nghị Bộ Xây dựng cho phép điều chỉnh tiến độ hoàn thành các dự án thuộc Dự án thành phần 4 - Cảng hàng không quốc tế Long Thành.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://thanhnien.vn/rss/kinh-te/chinh-sach-phat-trien.rss",
+        "publisher_host": "thanhnien.vn",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-291f16eb67c065c5f244",
+      "title": "Phó thủ tướng chỉ đạo 'nóng' tiến độ siêu sân bay Long Thành",
+      "url": "https://thanhnien.vn/pho-thu-tuong-chi-dao-nong-tien-do-sieu-san-bay-long-thanh-185261106091825306.htm",
+      "category": "infrastructure",
+      "module_ids": [
+        "infrastructure"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-11-06T02:27:00+00:00",
+      "source_id": "thanhnien-policy",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [
+        "infrastructure"
+      ],
+      "importance": 2,
+      "summary": "Các bộ, ngành, địa phương và các cơ quan liên quan sẽ phải chịu trách nhiệm trước Chính phủ, Thủ tướng Chính phủ nếu để xảy ra chậm trễ trong quá trình thực hiện nhiệm vụ làm ảnh hưởng tới tiến độ triển khai, hoàn thành dự án sân bay Long Thành.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://thanhnien.vn/rss/kinh-te/chinh-sach-phat-trien.rss",
+        "publisher_host": "thanhnien.vn",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-16ad4449b8891ef5eebd",
+      "title": "Giá vàng hôm nay 6.11.2026: Quay đầu giảm 1,5 triệu đồng",
+      "url": "https://thanhnien.vn/gia-vang-hom-nay-6112026-quay-dau-giam-15-trieu-dong-185261106074218257.htm",
+      "category": "macro",
+      "module_ids": [
+        "macro"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-11-06T01:56:00+00:00",
+      "source_id": "thanhnien-banking",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "Giá vàng trong nước quay đầu giảm trở lại theo nhịp của thế giới sau khi đồng USD đi xuống.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://thanhnien.vn/rss/kinh-te/ngan-hang.rss",
+        "publisher_host": "thanhnien.vn",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-ced4bc9ceb4c1ec40378",
+      "title": "Rừng Hồng: Giá trị của mảnh ghép trung tâm Eco Retreat",
+      "url": "https://dantri.com.vn/bat-dong-san/rung-hong-gia-tri-cua-manh-ghep-trung-tam-eco-retreat-20261105202043242.htm",
+      "category": "market",
+      "module_ids": [
+        "market"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-11-06T01:00:00+00:00",
+      "source_id": "dantri-real-estate",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "(Dân trí) - Tọa lạc tại trung tâm Mùa Lễ Hội - phân khu năng động nhất Eco Retreat, Rừng Hồng nổi bật với lợi thế vị trí cùng sự kết hợp hài hòa giữa kiến trúc, cảnh quan và không gian công cộng, góp phần gia tăng giá trị cho 304 sản phẩm thấp tầng.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://dantri.com.vn/rss/bat-dong-san.rss",
+        "publisher_host": "dantri.com.vn",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-69d9003b2cec85b58c99",
+      "title": "Kinh nghiệm quốc tế của liên doanh Nhật tại TT Genesis",
+      "url": "https://vnexpress.net/kinh-nghiem-quoc-te-cua-lien-doanh-nhat-tai-tt-genesis-5141231.html",
+      "category": "market",
+      "module_ids": [
+        "market"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-11-06T01:00:00+00:00",
+      "source_id": "vnexpress-real-estate",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "Ba đối tác Nhật Cosmos Initia, Hinokiya Group và Koterasu Group cùng phát triển TT Genesis trên nền tảng kinh nghiệm thiết kế nhà ở, lựa chọn vị trí và hoạch định tài chính tại các thị trường quốc tế.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://vnexpress.net/rss/bat-dong-san.rss",
+        "publisher_host": "vnexpress.net",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-dd4e5c161ad44a13f8db",
+      "title": "Giá vàng thế giới tiếp tục tăng, chứng khoán Mỹ lao dốc",
+      "url": "https://vnexpress.net/gia-vang-the-gioi-tiep-tuc-tang-chung-khoan-my-lao-doc-5141385.html",
+      "category": "macro",
+      "module_ids": [
+        "macro"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-11-06T00:43:00+00:00",
+      "source_id": "vnexpress-economy",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "Mỗi ounce vàng vượt 4.100 USD, trong khi nhóm cổ phiếu công nghệ tại Wall Street giảm 10-17% chỉ trong một phiên.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://vnexpress.net/rss/kinh-doanh.rss",
+        "publisher_host": "vnexpress.net",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-fea40263d8cae9d772d4",
+      "title": "Giá vàng SJC giảm 2 triệu đồng/lượng sau khi chạm đỉnh một tháng",
+      "url": "https://dantri.com.vn/kinh-doanh/gia-vang-sjc-giam-2-trieu-dongluong-sau-khi-cham-dinh-mot-thang-20261106071316756.htm",
+      "category": "macro",
+      "module_ids": [
+        "macro"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-11-06T00:30:29+00:00",
+      "source_id": "dantri-business",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "(Dân trí) - Giá vàng miếng SJC chốt phiên 5/11 ở mức 139,5-142,5 triệu đồng/lượng, giảm 2 triệu đồng so với mức cao nhất ghi nhận trong phiên, trong khi giá vàng thế giới vẫn tăng lên 4.094 USD/ounce.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://dantri.com.vn/rss/kinh-doanh.rss",
+        "publisher_host": "dantri.com.vn",
+        "publication_date_from_feed": true
+      }
+    },
     {
       "id": "article-market-rss-ebf07be95af7315b3a25",
       "title": "Cảnh đìu hiu tại khu đô thị khiến cựu lãnh đạo tỉnh Bình Phước cũ bị bắt",
@@ -25,6 +204,33 @@
       "source_verification": {
         "method": "official-rss",
         "feed_url": "https://dantri.com.vn/rss/thoi-su.rss",
+        "publisher_host": "dantri.com.vn",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-f0f26b8d83093f6caab0",
+      "title": "Người vay mua nhà chịu áp lực bán cắt lỗ, chuyên gia nói lãi suất khó giảm nhanh",
+      "url": "https://dantri.com.vn/bat-dong-san/nguoi-vay-mua-nha-chiu-ap-luc-ban-cat-lo-chuyen-gia-noi-lai-suat-kho-giam-nhanh-20261105172751930.htm",
+      "category": "market",
+      "module_ids": [
+        "macro"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-11-05T23:00:00+00:00",
+      "source_id": "dantri-real-estate",
+      "region_ids": [
+        "ha-noi"
+      ],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "(Dân trí) - Khoản vay sắp hết ưu đãi trong khi lãi suất thả nổi còn cao khiến nhiều người mua nhà tính bán tài sản, có căn rao thấp hơn giá mua cả tỷ đồng. Chuyên gia khuyến cáo không nên kỳ vọng lãi suất giảm sâu hoặc đồng loạt.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://dantri.com.vn/rss/bat-dong-san.rss",
         "publisher_host": "dantri.com.vn",
         "publication_date_from_feed": true
       }
