@@ -1,11 +1,11 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-11-05T17:25:28.341081+00:00",
-  "record_count": 85,
+  "generated_at": "2026-11-06T03:45:35.392260+00:00",
+  "record_count": 86,
   "production_write": true,
   "repository_publish": true,
   "frontend_publish": false,
-  "source_run_id": "20261105T172519Z",
+  "source_run_id": "20261106T034527Z",
   "data": [
     {
       "indicator_id": "bank-funding-growth-ytd",
@@ -2399,10 +2399,38 @@
       "observation_status": "final",
       "promoted_at": "2026-11-03T06:52:24.466878+00:00",
       "promotion_run_id": "20261103T065213Z"
+    },
+    {
+      "indicator_id": "usd-vnd-central-rate",
+      "period": "2026-11-06",
+      "period_type": "day",
+      "data_date": "2026-11-06",
+      "value": 25615.0,
+      "unit": "vnd-per-usd",
+      "source_id": "vna-vietnamplus",
+      "source_url": "https://en.vietnamplus.vn/reference-exchange-rate-maintains-downward-trend-on-november-6-post354932.vnp",
+      "published_at": "2026-11-06",
+      "fetched_at": "2026-11-06T03:45:29.308569+00:00",
+      "evidence_status": "corroborated",
+      "methodology_note": "VNA/VietnamPlus report citing the State Bank of Vietnam daily reference rate; fallback evidence only.",
+      "id": "6a53ba9f2f54f97cbbb7",
+      "source_record_id": "6a53ba9f2f54f97cbbb7",
+      "corroboration_source_ids": [
+        "vna-vietnamplus",
+        "banking-times-vn"
+      ],
+      "corroboration_observation_ids": [
+        "6a53ba9f2f54f97cbbb7",
+        "88ea0829c0067e694aae"
+      ],
+      "corroboration_reason": "2 independent fallback sources agree for latest period 2026-11-06 within tolerance 1.0.",
+      "observation_status": "final",
+      "promoted_at": "2026-11-06T03:45:35.392260+00:00",
+      "promotion_run_id": "20261106T034527Z"
     }
   ],
-  "repository_published_at": "2026-11-05T17:25:48.125375+00:00",
-  "repository_source_run_number": 171,
-  "repository_source_run_database_id": "42074407368",
+  "repository_published_at": "2026-11-06T03:45:54.449243+00:00",
+  "repository_source_run_number": 172,
+  "repository_source_run_database_id": "42158417430",
   "repository_persistence_mode": "controlled-daily-auto-persistence-v1"
 }
