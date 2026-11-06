@@ -1,9 +1,148 @@
 {
   "schema_version": 1,
-  "build_id": "market-news-rss-20261106T085138Z",
-  "generated_at": "2026-11-06T08:51:38.813391+00:00",
-  "record_count": 1528,
+  "build_id": "market-news-rss-20261106T105136Z",
+  "generated_at": "2026-11-06T10:51:36.718595+00:00",
+  "record_count": 1534,
   "data": [
+    {
+      "id": "article-market-rss-6ae2fc0e56ac8934a2a4",
+      "title": "Anh tăng lãi suất lần đầu tiên sau 3 năm",
+      "url": "https://vnexpress.net/anh-tang-lai-suat-lan-dau-tien-sau-3-nam-5141653.html",
+      "category": "macro",
+      "module_ids": [
+        "macro"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-11-06T09:18:19+00:00",
+      "source_id": "vnexpress-economy",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "Nối gót các nền kinh tế lớn khác, Anh nâng lãi suất tham chiếu lần đầu kể từ năm 2023 để ghìm lạm phát do giá năng lượng.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://vnexpress.net/rss/kinh-doanh.rss",
+        "publisher_host": "vnexpress.net",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-3d3ae8cb3312a5ceb8dc",
+      "title": "Quỹ đất hạn chế thu hẹp nguồn cung căn hộ nội đô",
+      "url": "https://vnexpress.net/quy-dat-han-che-thu-hep-nguon-cung-can-ho-noi-do-5141631.html",
+      "category": "market",
+      "module_ids": [
+        "market",
+        "legal"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-11-06T09:00:00+00:00",
+      "source_id": "vnexpress-real-estate",
+      "region_ids": [
+        "ha-noi"
+      ],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [
+        "supply",
+        "legal"
+      ],
+      "importance": 2,
+      "summary": "Quy hoạch đô thị đa trung tâm thúc đẩy nguồn cung căn hộ mới dịch chuyển ra các khu vực mở rộng, trong khi dự án tại vùng lõi ngày càng khan hiếm, khiến thị trường căn hộ Hà Nội phân hóa.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://vnexpress.net/rss/bat-dong-san.rss",
+        "publisher_host": "vnexpress.net",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-9f7b094cb67ebf6072d8",
+      "title": "Mở thầu tư vấn lập báo cáo khả thi dự án đường sắt tốc độ cao Bắc Nam",
+      "url": "https://vnexpress.net/mo-thau-tu-van-lap-bao-cao-kha-thi-du-an-duong-sat-toc-do-cao-bac-nam-5141580.html",
+      "category": "market",
+      "module_ids": [
+        "market",
+        "infrastructure"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-11-06T08:29:50+00:00",
+      "source_id": "vnexpress-current-affairs",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [
+        "infrastructure"
+      ],
+      "importance": 2,
+      "summary": "Sáng 6/11, Ban Quản lý dự án Thăng Long (Bộ Xây dựng) mở thầu gói tư vấn TV02 bao gồm khảo sát, lập báo cáo nghiên cứu khả thi dự án trị giá 10.782 tỷ đồng.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://vnexpress.net/rss/thoi-su.rss",
+        "publisher_host": "vnexpress.net",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-255287baf4a4197ab748",
+      "title": "Phát Đạt khởi công dự án Qtopia",
+      "url": "https://vnexpress.net/phat-dat-khoi-cong-du-an-qtopia-5141600.html",
+      "category": "market",
+      "module_ids": [
+        "market",
+        "infrastructure"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-11-06T08:15:00+00:00",
+      "source_id": "vnexpress-real-estate",
+      "region_ids": [
+        "hcmc"
+      ],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "Phát Đạt khởi công 5 tòa tháp đầu tiên thuộc dự án Qtopia tại khu vực biển Phước Hải, TP HCM, ngày 6/11.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://vnexpress.net/rss/bat-dong-san.rss",
+        "publisher_host": "vnexpress.net",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-0e6ac56964b1c4346e6e",
+      "title": "Nhà xã hội của Sun Group ở Đà Nẵng có giá 6,4 triệu mỗi m2",
+      "url": "https://vnexpress.net/nha-xa-hoi-cua-sun-group-o-da-nang-co-gia-6-4-trieu-moi-m2-5141512.html",
+      "category": "market",
+      "module_ids": [
+        "market"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-11-06T08:07:45+00:00",
+      "source_id": "vnexpress-real-estate",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [
+        "supply"
+      ],
+      "importance": 2,
+      "summary": "Hơn trăm căn hộ Sun Home sắp mở bán với giá gần 6,4 triệu đồng mỗi m2, dành cho người dân thuộc diện di dời từ 3 khu chung cư cũ tại Đà Nẵng.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://vnexpress.net/rss/bat-dong-san.rss",
+        "publisher_host": "vnexpress.net",
+        "publication_date_from_feed": true
+      }
+    },
     {
       "id": "article-market-rss-35f6fb56681f7cb4db91",
       "title": "TP HCM không đánh đổi môi trường Cần Giờ để tăng trưởng kinh tế",
@@ -52,6 +191,33 @@
       "source_verification": {
         "method": "official-rss",
         "feed_url": "https://dantri.com.vn/rss/thoi-su.rss",
+        "publisher_host": "dantri.com.vn",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-418d2b5fb68ff8d6e015",
+      "title": "Central District: Sức hút của phân khu thấp tầng giữa lòng đô thị One Era",
+      "url": "https://dantri.com.vn/bat-dong-san/central-district-suc-hut-cua-phan-khu-thap-tang-giua-long-do-thi-one-era-20261106134107334.htm",
+      "category": "market",
+      "module_ids": [
+        "market"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-11-06T07:00:00+00:00",
+      "source_id": "dantri-real-estate",
+      "region_ids": [
+        "hcmc"
+      ],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "(Dân trí) - Với 357 sản phẩm townhouse và shophouse, Central District là phân khu thấp tầng đầu tiên được giới thiệu tại One Era - khu đô thị quy mô gần 50ha ở Đông Bắc TPHCM.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://dantri.com.vn/rss/bat-dong-san.rss",
         "publisher_host": "dantri.com.vn",
         "publication_date_from_feed": true
       }
