@@ -1,9 +1,36 @@
 {
   "schema_version": 1,
-  "build_id": "market-news-rss-20261107T131840Z",
-  "generated_at": "2026-11-07T13:18:40.867926+00:00",
-  "record_count": 1574,
+  "build_id": "market-news-rss-20261107T145142Z",
+  "generated_at": "2026-11-07T14:51:42.454607+00:00",
+  "record_count": 1577,
   "data": [
+    {
+      "id": "article-market-rss-dc4d36c1477733121327",
+      "title": "TPHCM tính ưu đãi thuế, tiền thuê đất trung tâm mua sắm hàng hiệu giảm giá",
+      "url": "https://dantri.com.vn/bat-dong-san/tphcm-tinh-uu-dai-thue-tien-thue-dat-trung-tam-mua-sam-hang-hieu-giam-gia-20261107194655222.htm",
+      "category": "market",
+      "module_ids": [
+        "market"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-11-07T13:10:48+00:00",
+      "source_id": "dantri-real-estate",
+      "region_ids": [
+        "hcmc"
+      ],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "(Dân trí) - TPHCM đề xuất miễn tiền thuê đất, ưu đãi thuế và rút ngắn thời gian xử lý thủ tục cho dự án trung tâm mua sắm hàng hiệu giảm giá (outlet), nhưng chỉ áp dụng với diện tích đáp ứng các tiêu chí cụ thể.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://dantri.com.vn/rss/bat-dong-san.rss",
+        "publisher_host": "dantri.com.vn",
+        "publication_date_from_feed": true
+      }
+    },
     {
       "id": "article-market-rss-a4feab35ef756776a01f",
       "title": "VN-Index phát tín hiệu tạo đáy, cổ phiếu bất động sản đảo chiều tăng",
@@ -25,6 +52,58 @@
       "source_verification": {
         "method": "official-rss",
         "feed_url": "https://dantri.com.vn/rss/bat-dong-san.rss",
+        "publisher_host": "dantri.com.vn",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-a79d5a83132c3c81e32e",
+      "title": "Starlake The Prime K8CT1 giãn tiến độ thanh toán thêm 5 tháng",
+      "url": "https://vnexpress.net/starlake-the-prime-k8ct1-gian-tien-do-thanh-toan-them-5-thang-5141948.html",
+      "category": "market",
+      "module_ids": [
+        "market"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-11-07T13:00:00+00:00",
+      "source_id": "vnexpress-real-estate",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "Người mua căn hộ Starlake The Prime K8CT1 được lùi đợt thanh toán thứ hai thêm 5 tháng, chỉ cần trả 50% giá trị căn hộ trước khi nhận bàn giao.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://vnexpress.net/rss/bat-dong-san.rss",
+        "publisher_host": "vnexpress.net",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-306ae768ceb90807feb8",
+      "title": "Cơ quan thẩm tra lưu ý về cây cầu cụt trên cao tốc Biên Hòa - Vũng Tàu",
+      "url": "https://dantri.com.vn/thoi-su/co-quan-tham-tra-luu-y-ve-cay-cau-cut-tren-cao-toc-bien-hoa-vung-tau-20261107180104313.htm",
+      "category": "infrastructure",
+      "module_ids": [
+        "infrastructure"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-11-07T11:25:42+00:00",
+      "source_id": "dantri-current-affairs",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [
+        "infrastructure"
+      ],
+      "importance": 2,
+      "summary": "(Dân trí) - Báo cáo thẩm tra của Ủy ban Kinh tế và Tài chính Quốc hội chỉ rõ cao tốc Biên Hòa - Vũng Tàu chưa thể khai thác đồng bộ do cầu vượt ĐT 770B và nhiều hạng mục liên quan vướng mặt bằng.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://dantri.com.vn/rss/thoi-su.rss",
         "publisher_host": "dantri.com.vn",
         "publication_date_from_feed": true
       }
