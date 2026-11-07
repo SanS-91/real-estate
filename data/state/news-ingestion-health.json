@@ -1,15 +1,15 @@
 {
   "schema_version": 1,
-  "checked_at": "2026-11-07T06:14:45.644102+00:00",
+  "checked_at": "2026-11-07T06:39:36.717094+00:00",
   "feeds_configured": 16,
   "feeds_fetched": 16,
   "accepted_new": 1,
   "production_written": true,
-  "article_total": 1561,
+  "article_total": 1562,
   "published_by_module": {
-    "market": 1,
+    "market": 0,
     "legal": 0,
-    "infrastructure": 0,
+    "infrastructure": 1,
     "macro": 0
   },
   "recent_by_module_7d": {
@@ -19,15 +19,15 @@
     "macro": 65
   },
   "recent_by_module_30d": {
-    "market": 884,
+    "market": 883,
     "legal": 155,
-    "infrastructure": 350,
+    "infrastructure": 351,
     "macro": 266
   },
   "latest_published_by_module": {
     "market": "2026-11-07T04:55:55+00:00",
     "legal": "2026-11-06T09:00:00+00:00",
-    "infrastructure": "2026-11-07T04:18:02+00:00",
+    "infrastructure": "2026-11-07T04:32:20+00:00",
     "macro": "2026-11-07T04:36:53+00:00"
   },
   "feed_status": [
@@ -71,9 +71,9 @@
       "source_id": "vnexpress-current-affairs",
       "status": "parsed",
       "feed_items": 50,
-      "new": 1,
-      "skipped": 49,
-      "duplicates": 9,
+      "new": 0,
+      "skipped": 50,
+      "duplicates": 10,
       "filtered": 40
     },
     {
@@ -118,17 +118,17 @@
       "feed_items": 50,
       "new": 0,
       "skipped": 50,
-      "duplicates": 4,
-      "filtered": 46
+      "duplicates": 5,
+      "filtered": 45
     },
     {
       "source_id": "dantri-current-affairs",
       "status": "parsed",
       "feed_items": 50,
-      "new": 0,
-      "skipped": 50,
+      "new": 1,
+      "skipped": 49,
       "duplicates": 5,
-      "filtered": 45
+      "filtered": 44
     },
     {
       "source_id": "dantri-legal",

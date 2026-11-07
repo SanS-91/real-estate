@@ -1,8 +1,8 @@
 {
   "schema_version": 1,
-  "build_id": "market-news-rss-20261107T061445Z",
-  "generated_at": "2026-11-07T06:14:45.644102+00:00",
-  "record_count": 1561,
+  "build_id": "market-news-rss-20261107T063936Z",
+  "generated_at": "2026-11-07T06:39:36.717094+00:00",
+  "record_count": 1562,
   "data": [
     {
       "id": "article-market-rss-033668791aa7082f8838",
@@ -50,6 +50,35 @@
       "source_verification": {
         "method": "official-rss",
         "feed_url": "https://dantri.com.vn/rss/kinh-doanh.rss",
+        "publisher_host": "dantri.com.vn",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-a5c0425a99f9c2a87e45",
+      "title": "Sau gần 1 năm, nhà thầu vẫn chờ mặt bằng mở rộng cao tốc TPHCM - Mỹ Thuận",
+      "url": "https://dantri.com.vn/thoi-su/sau-gan-1-nam-nha-thau-van-cho-mat-bang-mo-rong-cao-toc-tphcm-my-thuan-20261107110418226.htm",
+      "category": "infrastructure",
+      "module_ids": [
+        "infrastructure"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-11-07T04:32:20+00:00",
+      "source_id": "dantri-current-affairs",
+      "region_ids": [
+        "hcmc"
+      ],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [
+        "infrastructure"
+      ],
+      "importance": 2,
+      "summary": "(Dân trí) - Dự án mở rộng cao tốc TPHCM - Trung Lương - Mỹ Thuận được khởi công gần 1 năm, đến nay, khối lượng giải phóng mặt bằng mới đạt 0,13ha. Riêng TPHCM và Đồng Tháp chưa bàn giao mặt bằng.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://dantri.com.vn/rss/thoi-su.rss",
         "publisher_host": "dantri.com.vn",
         "publication_date_from_feed": true
       }
