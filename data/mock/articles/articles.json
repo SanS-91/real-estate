@@ -1,9 +1,137 @@
 {
   "schema_version": 1,
-  "build_id": "market-news-rss-20261107T005144Z",
-  "generated_at": "2026-11-07T00:51:44.855949+00:00",
-  "record_count": 1546,
+  "build_id": "market-news-rss-20261107T025144Z",
+  "generated_at": "2026-11-07T02:51:44.881141+00:00",
+  "record_count": 1551,
   "data": [
+    {
+      "id": "article-market-rss-c75267b05f7e667bbdff",
+      "title": "Tăng trưởng GDP trên 10%, chấm dứt xây sân bay theo phong trào ở địa phương",
+      "url": "https://dantri.com.vn/thoi-su/tang-truong-gdp-tren-10-cham-dut-xay-san-bay-theo-phong-trao-o-dia-phuong-20261107083921280.htm",
+      "category": "infrastructure",
+      "module_ids": [
+        "infrastructure",
+        "macro"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-11-07T01:46:00+00:00",
+      "source_id": "dantri-current-affairs",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [
+        "infrastructure"
+      ],
+      "importance": 2,
+      "summary": "(Dân trí) - Quốc hội chốt mục tiêu tăng trưởng năm 2027 từ 10% trở lên, đồng thời đưa ra nhiều giải pháp nhằm thúc đẩy tăng trưởng. Chính phủ sẽ tiếp tục nghiên cứu, điều chỉnh linh hoạt chính sách thuế, phí.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://dantri.com.vn/rss/thoi-su.rss",
+        "publisher_host": "dantri.com.vn",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-957dbcd4941fa5d5f629",
+      "title": "Giá vàng hôm nay 7.11.2026: Giậm chân tại mức 141 triệu đồng",
+      "url": "https://thanhnien.vn/gia-vang-hom-nay-7112026-dam-chan-tai-muc-141-trieu-dong-185261107070326918.htm",
+      "category": "macro",
+      "module_ids": [
+        "macro"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-11-07T01:45:00+00:00",
+      "source_id": "thanhnien-banking",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "Giá vàng trong nước đứng yên ở mức 141 triệu đồng một lượng khi thế giới giảm nhẹ.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://thanhnien.vn/rss/kinh-te/ngan-hang.rss",
+        "publisher_host": "thanhnien.vn",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-5ce3d8f23fa270966588",
+      "title": "Liên doanh Nhật của TT GENESIS: Hội tụ kinh nghiệm từ những thị trường khắt khe nhất",
+      "url": "https://dantri.com.vn/bat-dong-san/lien-doanh-nhat-cua-tt-genesis-hoi-tu-kinh-nghiem-tu-nhung-thi-truong-khat-khe-nhat-20261106192036053.htm",
+      "category": "market",
+      "module_ids": [
+        "market"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-11-07T01:00:00+00:00",
+      "source_id": "dantri-real-estate",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "(Dân trí) - Hơn 100.000 căn hộ tại Nhật Bản, dự án ở Sydney, Los Angeles và công nghệ nhà ở dẫn đầu thị phần là những gì ba đối tác Nhật mang đến TT GENESIS. Không chỉ góp vốn, họ là nhà phát triển bất động sản tại các thị trường khắt khe hàng đầu thế giới.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://dantri.com.vn/rss/bat-dong-san.rss",
+        "publisher_host": "dantri.com.vn",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-3e714e44fa251f2233d7",
+      "title": "Có nên mua chung cư 'cắt lỗ' tại dự án sắp bàn giao?",
+      "url": "https://vnexpress.net/co-nen-mua-chung-cu-cat-lo-tai-du-an-sap-ban-giao-5141463.html",
+      "category": "market",
+      "module_ids": [
+        "market"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-11-07T01:00:00+00:00",
+      "source_id": "vnexpress-real-estate",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "Mua nhà sắp bàn giao có thể dễ thương lượng về giá, song người mua cần lưu ý nghĩa vụ thanh toán còn lại khi ưu đãi ân hạn nợ gốc kết thúc, theo chuyên gia.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://vnexpress.net/rss/bat-dong-san.rss",
+        "publisher_host": "vnexpress.net",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-03d9e7defa1ce657a32c",
+      "title": "One Era giới thiệu 357 sản phẩm thấp tầng đa công năng đầu tiên",
+      "url": "https://vnexpress.net/one-era-gioi-thieu-357-san-pham-thap-tang-da-cong-nang-dau-tien-5141696.html",
+      "category": "market",
+      "module_ids": [
+        "market"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-11-07T01:00:00+00:00",
+      "source_id": "vnexpress-real-estate",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "357 sản phẩm thấp tầng tại phân khu Central District được thiết kế để vừa ở, vừa kinh doanh, nằm kề cận các tiện ích giáo dục, y tế, thương mại của đô thị One Era.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://vnexpress.net/rss/bat-dong-san.rss",
+        "publisher_host": "vnexpress.net",
+        "publication_date_from_feed": true
+      }
+    },
     {
       "id": "article-market-rss-698d5098523df19e4246",
       "title": "Giá vàng tiếp tục giảm khi thị trường dự báo Fed tăng lãi suất vào tháng 12",
