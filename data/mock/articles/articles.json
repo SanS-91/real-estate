@@ -1,9 +1,248 @@
 {
   "schema_version": 1,
-  "build_id": "market-news-rss-20261107T025144Z",
-  "generated_at": "2026-11-07T02:51:44.881141+00:00",
-  "record_count": 1551,
+  "build_id": "market-news-rss-20261107T045143Z",
+  "generated_at": "2026-11-07T04:51:43.193612+00:00",
+  "record_count": 1560,
   "data": [
+    {
+      "id": "article-market-rss-cf80b4a4abf51a871f17",
+      "title": "Lãi suất tăng mạnh, 3 nhà băng quốc doanh nắm hơn 6 triệu tỷ đồng",
+      "url": "https://dantri.com.vn/kinh-doanh/lai-suat-tang-manh-3-nha-bang-quoc-doanh-nam-hon-6-trieu-ty-dong-20261107103139449.htm",
+      "category": "macro",
+      "module_ids": [
+        "macro"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-11-07T04:36:53+00:00",
+      "source_id": "dantri-business",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "(Dân trí) - Tiền gửi khách hàng tại 28 ngân hàng tăng mạnh so với đầu năm. Trong đó, ba ngân hàng có vốn Nhà nước chi phối nắm hơn 6 triệu tỷ đồng",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://dantri.com.vn/rss/kinh-doanh.rss",
+        "publisher_host": "dantri.com.vn",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-2d69370ec3df8e32386b",
+      "title": "Quốc lộ 1 đoạn qua cửa ngõ phía Tây TPHCM được mở rộng lên 60m",
+      "url": "https://dantri.com.vn/dt360/quoc-lo-1-doan-qua-cua-ngo-phia-tay-tphcm-duoc-mo-rong-len-60m-20261107074032194.htm",
+      "category": "infrastructure",
+      "module_ids": [
+        "infrastructure"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-11-07T04:18:02+00:00",
+      "source_id": "dantri-current-affairs",
+      "region_ids": [
+        "hcmc"
+      ],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [
+        "infrastructure"
+      ],
+      "importance": 2,
+      "summary": "(Dân trí) - Nhiều nhà dân, hàng quán dọc quốc lộ 1 (đường Lê Khả Phiêu) ở cửa ngõ phía Tây TPHCM đang tất bật tháo dỡ, bàn giao mặt bằng phục vụ dự án mở rộng tuyến đường lên 10-12 làn xe.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://dantri.com.vn/rss/thoi-su.rss",
+        "publisher_host": "dantri.com.vn",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-998ada91d63e236d769a",
+      "title": "Trình Quốc hội đầu tư thêm ba dự án cao tốc",
+      "url": "https://vnexpress.net/trinh-quoc-hoi-dau-tu-them-ba-du-an-cao-toc-5141815.html",
+      "category": "market",
+      "module_ids": [
+        "market",
+        "infrastructure"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-11-07T03:18:58+00:00",
+      "source_id": "vnexpress-current-affairs",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [
+        "infrastructure"
+      ],
+      "importance": 2,
+      "summary": "Chính phủ trình Quốc hội chủ trương đầu tư ba dự án cao tốc Bảo Hà - Lai Châu, đoạn Bảo Hà - Tân Phong; cao tốc Quảng Ngãi - Kon Tum và cao tốc Mộc Châu - Sơn La - Điện Biên.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://vnexpress.net/rss/thoi-su.rss",
+        "publisher_host": "vnexpress.net",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-77f914385fb76ef30494",
+      "title": "Hải Phòng, Quảng Ninh, Hà Nội cần dẫn dắt tăng trưởng kinh tế năm sau",
+      "url": "https://vnexpress.net/hai-phong-quang-ninh-ha-noi-can-dan-dat-tang-truong-kinh-te-nam-sau-5141814.html",
+      "category": "macro",
+      "module_ids": [
+        "macro"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-11-07T03:17:35+00:00",
+      "source_id": "vnexpress-economy",
+      "region_ids": [
+        "ha-noi"
+      ],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "Quốc hội giao Hải Phòng tăng trưởng GRDP cao nhất cả nước năm 2027 với 13%, tiếp sau đó là Quảng Ninh 12% và Hà Nội 11,1%.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://vnexpress.net/rss/kinh-doanh.rss",
+        "publisher_host": "vnexpress.net",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-3c09b54cfb0d9e39ba28",
+      "title": "Chính phủ đề xuất làm 3 tuyến cao tốc miền núi, khai thác từ năm 2031",
+      "url": "https://dantri.com.vn/thoi-su/chinh-phu-de-xuat-lam-3-tuyen-cao-toc-mien-nui-khai-thac-tu-nam-2031-20261107092303117.htm",
+      "category": "infrastructure",
+      "module_ids": [
+        "infrastructure"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-11-07T03:00:28+00:00",
+      "source_id": "dantri-current-affairs",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [
+        "infrastructure"
+      ],
+      "importance": 2,
+      "summary": "(Dân trí) - Chính phủ trình Quốc hội chủ trương đầu tư 3 tuyến cao tốc dài hơn 430 km, tổng vốn gần 162.400 tỷ đồng, dự kiến cơ bản hoàn thành năm 2030 và khai thác từ năm 2031.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://dantri.com.vn/rss/thoi-su.rss",
+        "publisher_host": "dantri.com.vn",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-ffc3732fe3d7cc1e7703",
+      "title": "Ông lớn nội thất IKEA lao đao vì khách Âu - Mỹ thắt chặt chi tiêu",
+      "url": "https://dantri.com.vn/bat-dong-san/ong-lon-noi-that-ikea-lao-dao-vi-khach-au-my-that-chat-chi-tieu-20261107094429732.htm",
+      "category": "market",
+      "module_ids": [
+        "market"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-11-07T02:51:58+00:00",
+      "source_id": "dantri-real-estate",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [
+        "sales"
+      ],
+      "importance": 2,
+      "summary": "(Dân trí) - Dù chi đậm để hạ giá sản phẩm, IKEA vẫn ghi nhận doanh số sụt giảm năm thứ 3 liên tiếp khi người tiêu dùng thắt chặt hầu bao trước áp lực chi phí sinh hoạt.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://dantri.com.vn/rss/bat-dong-san.rss",
+        "publisher_host": "dantri.com.vn",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-a4c4f7ec8bcd5c93cf4b",
+      "title": "Trái phiếu bất động sản trả lãi 12,5%/năm, gần 47.000 tỷ đến hạn trong quý IV",
+      "url": "https://dantri.com.vn/bat-dong-san/trai-phieu-bat-dong-san-tra-lai-125nam-gan-47000-ty-den-han-trong-quy-iv-20261107091858679.htm",
+      "category": "market",
+      "module_ids": [
+        "market",
+        "macro"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-11-07T02:48:56+00:00",
+      "source_id": "dantri-real-estate",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "(Dân trí) - Lãi suất trái phiếu bất động sản lên 12,5%/năm, cao hơn ngân hàng, cùng 235.000 tỷ đồng trái phiếu đáo hạn trong 12 tháng tới, gây thêm sức ép tài chính lên doanh nghiệp.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://dantri.com.vn/rss/bat-dong-san.rss",
+        "publisher_host": "dantri.com.vn",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-4ecb3c002ba4ac45f23f",
+      "title": "Nên mở hay đóng cửa phòng tắm sau khi tắm để tránh ẩm mốc?",
+      "url": "https://dantri.com.vn/bat-dong-san/nen-mo-hay-dong-cua-phong-tam-sau-khi-tam-de-tranh-am-moc-20261106155258357.htm",
+      "category": "market",
+      "module_ids": [
+        "market"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-11-07T02:05:00+00:00",
+      "source_id": "dantri-real-estate",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "(Dân trí) - Nhiều người băn khoăn việc mở hay khép cửa phòng tắm sau khi dùng. Chuyên gia nội thất tiết lộ thói quen nhỏ này quyết định độ bền nội thất và chất lượng không khí trong nhà.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://dantri.com.vn/rss/bat-dong-san.rss",
+        "publisher_host": "dantri.com.vn",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-e52df0f022a578626892",
+      "title": "Quốc hội giao mục tiêu GDP 2027 tăng từ 10%",
+      "url": "https://vnexpress.net/quoc-hoi-giao-muc-tieu-gdp-2027-tang-tu-10-5141797.html",
+      "category": "macro",
+      "module_ids": [
+        "macro"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-11-07T01:59:53+00:00",
+      "source_id": "vnexpress-economy",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "Mục tiêu tăng trưởng kinh tế năm 2027 được Quốc hội giao từ 10% trở lên, GDP bình quân đầu người khoảng 6.100 USD.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://vnexpress.net/rss/kinh-doanh.rss",
+        "publisher_host": "vnexpress.net",
+        "publication_date_from_feed": true
+      }
+    },
     {
       "id": "article-market-rss-c75267b05f7e667bbdff",
       "title": "Tăng trưởng GDP trên 10%, chấm dứt xây sân bay theo phong trào ở địa phương",
