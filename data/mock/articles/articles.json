@@ -1,9 +1,165 @@
 {
   "schema_version": 1,
-  "build_id": "market-news-rss-20261106T145136Z",
-  "generated_at": "2026-11-06T14:51:36.615524+00:00",
-  "record_count": 1540,
+  "build_id": "market-news-rss-20261107T005144Z",
+  "generated_at": "2026-11-07T00:51:44.855949+00:00",
+  "record_count": 1546,
   "data": [
+    {
+      "id": "article-market-rss-698d5098523df19e4246",
+      "title": "Giá vàng tiếp tục giảm khi thị trường dự báo Fed tăng lãi suất vào tháng 12",
+      "url": "https://dantri.com.vn/kinh-doanh/gia-vang-tiep-tuc-giam-khi-thi-truong-du-bao-fed-tang-lai-suat-vao-thang-12-20261107063746937.htm",
+      "category": "macro",
+      "module_ids": [
+        "macro"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-11-06T23:50:33+00:00",
+      "source_id": "dantri-business",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "(Dân trí) - Giá vàng thế giới giảm sau khi số liệu việc làm Mỹ tháng 10 vượt xa dự báo, thúc đẩy kỳ vọng Fed có thể tăng lãi suất vào tháng 12. Trong nước, vàng miếng SJC giảm 1,5 triệu đồng/lượng từ chiều 6/11.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://dantri.com.vn/rss/kinh-doanh.rss",
+        "publisher_host": "dantri.com.vn",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-21745ae02e8ac2bd5394",
+      "title": "Lãi suất tăng, ngân hàng nào hút nhiều tiền gửi nhất?",
+      "url": "https://vnexpress.net/lai-suat-tang-ngan-hang-nao-hut-nhieu-tien-gui-nhat-5137948.html",
+      "category": "macro",
+      "module_ids": [
+        "macro"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-11-06T23:00:00+00:00",
+      "source_id": "vnexpress-economy",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "VPBank, Sacombank vượt các ngân hàng quốc doanh về lượng tiền gửi tăng trong 9 tháng, trong khi một số nhà băng nhỏ bứt tốc nhờ ưu đãi lãi suất.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://vnexpress.net/rss/kinh-doanh.rss",
+        "publisher_host": "vnexpress.net",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-a2e65b81f612f17160c4",
+      "title": "TP HCM tính ưu đãi thuế, miễn tiền thuê đất để hút dự án outlet",
+      "url": "https://vnexpress.net/tp-hcm-tinh-uu-dai-thue-mien-tien-thue-dat-de-hut-du-an-outlet-5141717.html",
+      "category": "market",
+      "module_ids": [
+        "market",
+        "macro"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-11-06T17:10:00+00:00",
+      "source_id": "vnexpress-real-estate",
+      "region_ids": [
+        "hcmc"
+      ],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "Nhà đầu tư dự án trung tâm outlet ở TP HCM có thể được miễn tiền thuê đất, giảm thuế, hỗ trợ lãi vay và rút ngắt 50% thời gian xử lý thủ tục hành chính.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://vnexpress.net/rss/bat-dong-san.rss",
+        "publisher_host": "vnexpress.net",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-d8da7814b5fc4e526731",
+      "title": "Bên trong du thuyền triệu USD cùng dòng chiếc của Cristiano Ronaldo",
+      "url": "https://vnexpress.net/ben-trong-du-thuyen-trieu-usd-cung-dong-chiec-cua-cristiano-ronaldo-5141604.html",
+      "category": "market",
+      "module_ids": [
+        "market"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-11-06T17:00:00+00:00",
+      "source_id": "vnexpress-real-estate",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "Du thuyền Grande 27 Metri cùng dòng với chiếc Cristiano Ronaldo mua năm 2020, có phòng ngủ nhìn toàn cảnh biển và nhiều tiện ích nghỉ dưỡng.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://vnexpress.net/rss/bat-dong-san.rss",
+        "publisher_host": "vnexpress.net",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-5794e8e643179e745f29",
+      "title": "Cục Hàng không bác đề xuất lùi tiến độ dự án ở sân bay Long Thành sang 2027",
+      "url": "https://dantri.com.vn/thoi-su/cuc-hang-khong-bac-de-xuat-lui-tien-do-du-an-o-san-bay-long-thanh-sang-2027-20261106214818773.htm",
+      "category": "market",
+      "module_ids": [
+        "market",
+        "infrastructure"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-11-06T15:22:48+00:00",
+      "source_id": "dantri-current-affairs",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [
+        "infrastructure"
+      ],
+      "importance": 2,
+      "summary": "(Dân trí) - Cục Hàng không Việt Nam đánh giá việc một số nhà đầu tư dự án thành phần 4 sân bay Long Thành đề xuất lùi tiến độ sang năm 2027 là không có cơ sở.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://dantri.com.vn/rss/thoi-su.rss",
+        "publisher_host": "dantri.com.vn",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-18a86568c82818f85680",
+      "title": "Việc làm Mỹ tăng vọt, Fed có thể tăng lãi suất trong tháng 12",
+      "url": "https://dantri.com.vn/kinh-doanh/viec-lam-my-tang-vot-fed-co-the-tang-lai-suat-trong-thang-12-20261106215411090.htm",
+      "category": "macro",
+      "module_ids": [
+        "macro"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-11-06T14:59:44+00:00",
+      "source_id": "dantri-business",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "(Dân trí) - Thị trường lao động Mỹ tháng 10 tạo thêm 165.000 việc làm, vượt xa mọi dự báo. Dữ liệu này làm dấy lên lo ngại Cục Dự trữ Liên bang Mỹ (Fed) sẽ sớm nâng tiếp lãi suất vào tháng 12.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://dantri.com.vn/rss/kinh-doanh.rss",
+        "publisher_host": "dantri.com.vn",
+        "publication_date_from_feed": true
+      }
+    },
     {
       "id": "article-market-rss-d7505162184023c19a37",
       "title": "Sân bay Cà Mau lùi thời gian khai thác trở lại vào ngày 18.12",
