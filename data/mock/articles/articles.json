@@ -1,9 +1,91 @@
 {
   "schema_version": 1,
-  "build_id": "market-news-rss-20261107T063936Z",
-  "generated_at": "2026-11-07T06:39:36.717094+00:00",
-  "record_count": 1562,
+  "build_id": "market-news-rss-20261107T085151Z",
+  "generated_at": "2026-11-07T08:51:51.956362+00:00",
+  "record_count": 1565,
   "data": [
+    {
+      "id": "article-market-rss-68d034c7f24910c76bf8",
+      "title": "Lộ thu nhập sếp doanh nghiệp địa ốc, cao nhất 800 triệu đồng mỗi tháng",
+      "url": "https://dantri.com.vn/bat-dong-san/lo-thu-nhap-sep-doanh-nghiep-dia-oc-cao-nhat-800-trieu-dong-moi-thang-20261107115614523.htm",
+      "category": "market",
+      "module_ids": [
+        "market"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-11-07T06:45:09+00:00",
+      "source_id": "dantri-real-estate",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "(Dân trí) - Lãnh đạo nhiều doanh nghiệp địa ốc nhận thu nhập hàng trăm triệu đồng mỗi tháng trong 9 tháng đầu năm, trong đó mức cao nhất 800 triệu đồng.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://dantri.com.vn/rss/bat-dong-san.rss",
+        "publisher_host": "dantri.com.vn",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-c86f6796973469b5843c",
+      "title": "The Privé cất nóc, từng bước định hình “Bán đảo Thịnh vượng” giữa lòng TPHCM",
+      "url": "https://dantri.com.vn/bat-dong-san/the-prive-cat-noc-tung-buoc-dinh-hinh-ban-dao-thinh-vuong-giua-long-tphcm-20261107114126927.htm",
+      "category": "market",
+      "module_ids": [
+        "market",
+        "infrastructure"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-11-07T06:29:00+00:00",
+      "source_id": "dantri-real-estate",
+      "region_ids": [
+        "hcmc"
+      ],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "(Dân trí) - Sự kiện cất nóc ngày 7/11 đánh dấu bước tiến quan trọng của The Privé, khi diện mạo khu căn hộ hạng sang tại trung tâm mới TPHCM ngày càng rõ nét. Tiến độ thi công đồng loạt góp phần định hình “Bán đảo Thịnh vượng” bên sông Giồng Ông Tố.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://dantri.com.vn/rss/bat-dong-san.rss",
+        "publisher_host": "dantri.com.vn",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-0e4d8d989d5704ba30f9",
+      "title": "Mua nhà, giữ được tài sản nhờ điểm tựa cố định lãi suất dài hạn của Vinhomes",
+      "url": "https://dantri.com.vn/bat-dong-san/mua-nha-giu-duoc-tai-san-nho-diem-tua-co-dinh-lai-suat-dai-han-cua-vinhomes-20261107114336912.htm",
+      "category": "market",
+      "module_ids": [
+        "macro"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-11-07T05:22:37+00:00",
+      "source_id": "dantri-real-estate",
+      "region_ids": [
+        "ha-noi"
+      ],
+      "project_ids": [],
+      "developer_ids": [
+        "vinhomes"
+      ],
+      "tags": [],
+      "importance": 2,
+      "summary": "(Dân trí) - Trong bối cảnh lãi suất thả nổi có thể vượt 13-14%/năm, gói hỗ trợ cố định lãi suất 9%/năm suốt 5 năm của Vinhomes tạo điểm tựa giúp người mua an tâm theo đuổi kế hoạch tích sản, đón cơ hội gia tăng giá trị khi đô thị ngày càng sầm uất.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://dantri.com.vn/rss/bat-dong-san.rss",
+        "publisher_host": "dantri.com.vn",
+        "publication_date_from_feed": true
+      }
+    },
     {
       "id": "article-market-rss-033668791aa7082f8838",
       "title": "Đề xuất ưu đãi lớn cho các dự án du lịch tỷ USD",
