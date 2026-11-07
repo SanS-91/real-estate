@@ -1,9 +1,111 @@
 {
   "schema_version": 1,
-  "build_id": "market-news-rss-20261107T145142Z",
-  "generated_at": "2026-11-07T14:51:42.454607+00:00",
-  "record_count": 1577,
+  "build_id": "market-news-rss-20261107T185308Z",
+  "generated_at": "2026-11-07T18:53:08.347121+00:00",
+  "record_count": 1581,
   "data": [
+    {
+      "id": "article-market-rss-53ef007f35578d4066a3",
+      "title": "Nhà mái chéo 350 m2 thiết kế không cần điều hòa",
+      "url": "https://vnexpress.net/nha-mai-cheo-350-m2-thiet-ke-khong-can-dieu-hoa-5140820.html",
+      "category": "market",
+      "module_ids": [
+        "market"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-11-07T17:41:16+00:00",
+      "source_id": "vnexpress-real-estate",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "Ngôi nhà sử dụng kết cấu bê tông, thép và gỗ, kết hợp hệ cửa kính để tận dụng ánh sáng, thông gió tự nhiên.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://vnexpress.net/rss/bat-dong-san.rss",
+        "publisher_host": "vnexpress.net",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-858eccd46c027ac7e0f2",
+      "title": "Novaland đặt mục tiêu doanh thu hơn 20 tỷ USD, gấp 8 lần dư nợ",
+      "url": "https://vnexpress.net/novaland-dat-muc-tieu-doanh-thu-hon-20-ty-usd-gap-8-lan-du-no-5142014.html",
+      "category": "market",
+      "module_ids": [
+        "market"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-11-07T17:23:58+00:00",
+      "source_id": "vnexpress-real-estate",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "Novaland lên kế hoạch ghi nhận hơn 516.800 tỷ đồng doanh thu từ các dự án trọng điểm đến năm 2030, gấp 8 lần tổng dư nợ 61.900 tỷ đồng.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://vnexpress.net/rss/bat-dong-san.rss",
+        "publisher_host": "vnexpress.net",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-b4bbb5542ecec49964a4",
+      "title": "Báo cáo Thủ tướng dự án luật về hiến, ghép mô và các vấn đề liên quan",
+      "url": "https://dantri.com.vn/thoi-su/bao-cao-thu-tuong-du-an-luat-ve-hien-ghep-mo-va-cac-van-de-lien-quan-20261107210702821.htm",
+      "category": "market",
+      "module_ids": [
+        "market"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-11-07T14:16:02+00:00",
+      "source_id": "dantri-current-affairs",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "(Dân trí) - Chính phủ yêu cầu Bộ Y tế báo cáo dự án Luật Hiến, lấy, ghép mô, bộ phận cơ thể người và hiến, lấy xác (sửa đổi) cùng các vấn đề có liên quan. Việc này cần hoàn thành trước ngày 10/11.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://dantri.com.vn/rss/thoi-su.rss",
+        "publisher_host": "dantri.com.vn",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-c7f64508c0356b1a0adc",
+      "title": "Đẩy nhanh thi công cao tốc dài gần 125km kết nối Tây Nguyên với biển",
+      "url": "https://dantri.com.vn/thoi-su/day-nhanh-thi-cong-cao-toc-dai-gan-125km-ket-noi-tay-nguyen-voi-bien-20261107181946217.htm",
+      "category": "infrastructure",
+      "module_ids": [
+        "infrastructure"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-11-07T13:17:54+00:00",
+      "source_id": "dantri-current-affairs",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [
+        "infrastructure"
+      ],
+      "importance": 2,
+      "summary": "(Dân trí) - Qua kiểm tra cao tốc Quy Nhơn - Pleiku (Gia Lai), Phó Thủ tướng Thường trực Chính phủ Phạm Gia Túc yêu cầu tập trung nguồn lực, bảo đảm tiến độ, chất lượng công trình.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://dantri.com.vn/rss/thoi-su.rss",
+        "publisher_host": "dantri.com.vn",
+        "publication_date_from_feed": true
+      }
+    },
     {
       "id": "article-market-rss-dc4d36c1477733121327",
       "title": "TPHCM tính ưu đãi thuế, tiền thuê đất trung tâm mua sắm hàng hiệu giảm giá",
