@@ -1,13 +1,13 @@
 {
   "schema_version": 1,
-  "checked_at": "2026-11-07T12:51:39.181367+00:00",
+  "checked_at": "2026-11-07T13:18:40.867926+00:00",
   "feeds_configured": 16,
   "feeds_fetched": 16,
-  "accepted_new": 0,
-  "production_written": false,
-  "article_total": 1573,
+  "accepted_new": 1,
+  "production_written": true,
+  "article_total": 1574,
   "published_by_module": {
-    "market": 0,
+    "market": 1,
     "legal": 0,
     "infrastructure": 0,
     "macro": 0
@@ -15,17 +15,17 @@
   "recent_by_module_7d": {
     "market": 186,
     "legal": 32,
-    "infrastructure": 79,
+    "infrastructure": 78,
     "macro": 65
   },
   "recent_by_module_30d": {
-    "market": 883,
+    "market": 884,
     "legal": 154,
     "infrastructure": 356,
     "macro": 267
   },
   "latest_published_by_module": {
-    "market": "2026-11-07T09:06:08+00:00",
+    "market": "2026-11-07T13:05:22+00:00",
     "legal": "2026-11-06T09:00:00+00:00",
     "infrastructure": "2026-11-07T10:24:53+00:00",
     "macro": "2026-11-07T05:22:37+00:00"
@@ -53,9 +53,9 @@
       "source_id": "dantri-real-estate",
       "status": "parsed",
       "feed_items": 50,
-      "new": 0,
-      "skipped": 50,
-      "duplicates": 50,
+      "new": 1,
+      "skipped": 49,
+      "duplicates": 49,
       "filtered": 0
     },
     {
