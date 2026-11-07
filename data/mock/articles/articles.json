@@ -1,9 +1,34 @@
 {
   "schema_version": 1,
-  "build_id": "market-news-rss-20261107T045143Z",
-  "generated_at": "2026-11-07T04:51:43.193612+00:00",
-  "record_count": 1560,
+  "build_id": "market-news-rss-20261107T061445Z",
+  "generated_at": "2026-11-07T06:14:45.644102+00:00",
+  "record_count": 1561,
   "data": [
+    {
+      "id": "article-market-rss-033668791aa7082f8838",
+      "title": "Đề xuất ưu đãi lớn cho các dự án du lịch tỷ USD",
+      "url": "https://vnexpress.net/de-xuat-uu-dai-lon-cho-cac-du-an-du-lich-ty-usd-5141836.html",
+      "category": "market",
+      "module_ids": [
+        "market"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-11-07T04:55:55+00:00",
+      "source_id": "vnexpress-current-affairs",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "Dự án du lịch quy mô từ 30.000 tỷ đồng có thể được miễn thuế thu nhập doanh nghiệp tối đa 4 năm, giảm 50% trong 9 năm tiếp theo và hoạt động đến 70 năm.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://vnexpress.net/rss/thoi-su.rss",
+        "publisher_host": "vnexpress.net",
+        "publication_date_from_feed": true
+      }
+    },
     {
       "id": "article-market-rss-cf80b4a4abf51a871f17",
       "title": "Lãi suất tăng mạnh, 3 nhà băng quốc doanh nắm hơn 6 triệu tỷ đồng",
