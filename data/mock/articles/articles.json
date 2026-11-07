@@ -1,9 +1,201 @@
 {
   "schema_version": 1,
-  "build_id": "market-news-rss-20261107T085151Z",
-  "generated_at": "2026-11-07T08:51:51.956362+00:00",
-  "record_count": 1565,
+  "build_id": "market-news-rss-20261107T105141Z",
+  "generated_at": "2026-11-07T10:51:41.722647+00:00",
+  "record_count": 1573,
   "data": [
+    {
+      "id": "article-market-rss-a90500ef0339d2621e91",
+      "title": "Hà Nội xén vỉa hè 7 tuyến đường để giảm ùn tắc",
+      "url": "https://vnexpress.net/ha-noi-xen-via-he-7-tuyen-duong-de-giam-un-tac-5141924.html",
+      "category": "infrastructure",
+      "module_ids": [
+        "infrastructure"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-11-07T10:24:53+00:00",
+      "source_id": "vnexpress-current-affairs",
+      "region_ids": [
+        "ha-noi"
+      ],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "Hơn 8 km đường trên trục Giảng Võ - Láng Hạ - Lê Văn Lương - Tố Hữu cùng các tuyến giao cắt sẽ được mở rộng bằng cách xén vỉa hè, điều chỉnh dải phân cách.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://vnexpress.net/rss/thoi-su.rss",
+        "publisher_host": "vnexpress.net",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-41e460f51c280a5aeb3e",
+      "title": "Phạt 3 tài xế ô tô chạy kiểu \"rùa bò\" trên cao tốc Pháp Vân - Cao Bồ",
+      "url": "https://dantri.com.vn/thoi-su/phat-3-tai-xe-o-to-chay-kieu-rua-bo-tren-cao-toc-phap-van-cao-bo-20261107150436113.htm",
+      "category": "infrastructure",
+      "module_ids": [
+        "infrastructure"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-11-07T10:09:01+00:00",
+      "source_id": "dantri-current-affairs",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [
+        "infrastructure"
+      ],
+      "importance": 2,
+      "summary": "(Dân trí) - Lực lượng chức năng vừa xử phạt với 3 tài xế ô tô có hành vi điều khiển xe chạy dưới tốc độ tối thiểu trên đường cao tốc Pháp Vân - Cao Bồ.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://dantri.com.vn/rss/thoi-su.rss",
+        "publisher_host": "dantri.com.vn",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-6519e5fee4f082f7b4ff",
+      "title": "VSIP đầu tư khu công nghiệp công nghệ cao nghìn tỷ ở Hà Nội",
+      "url": "https://vnexpress.net/vsip-dau-tu-khu-cong-nghiep-cong-nghe-cao-nghin-ty-o-ha-noi-5141890.html",
+      "category": "market",
+      "module_ids": [
+        "market"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-11-07T09:06:08+00:00",
+      "source_id": "vnexpress-real-estate",
+      "region_ids": [
+        "ha-noi"
+      ],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "Khu công nghiệp Phù Đổng giai đoạn 2 của VSIP Hà Nội có quy mô gần 100 ha, dự kiến vận hành từ quý III/2029.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://vnexpress.net/rss/bat-dong-san.rss",
+        "publisher_host": "vnexpress.net",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-8e58238a83bfe3fcf368",
+      "title": "Lai Châu có thể phải dừng xây 2 bệnh viện, 3 trường học để làm cao tốc?",
+      "url": "https://dantri.com.vn/thoi-su/lai-chau-co-the-phai-dung-xay-2-benh-vien-3-truong-hoc-de-lam-cao-toc-20261107143714145.htm",
+      "category": "infrastructure",
+      "module_ids": [
+        "infrastructure"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-11-07T08:14:54+00:00",
+      "source_id": "dantri-current-affairs",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [
+        "infrastructure"
+      ],
+      "importance": 2,
+      "summary": "(Dân trí) - Đại biểu Quốc hội Vũ Minh Đạo lo ngại Lai Châu có thể phải dừng hai dự án bệnh viện và ba trường liên cấp nếu bố trí hơn 2.000 tỷ đồng vốn đối ứng làm cao tốc.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://dantri.com.vn/rss/thoi-su.rss",
+        "publisher_host": "dantri.com.vn",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-12c0479081b0822d0d61",
+      "title": "Bộ trưởng Bộ Nội vụ kể chuyện từng từ chối làm chủ đầu tư đường cao tốc",
+      "url": "https://dantri.com.vn/thoi-su/bo-truong-bo-noi-vu-ke-chuyen-tung-tu-choi-lam-chu-dau-tu-duong-cao-toc-20261107140544113.htm",
+      "category": "market",
+      "module_ids": [
+        "market",
+        "infrastructure"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-11-07T07:58:43+00:00",
+      "source_id": "dantri-current-affairs",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [
+        "infrastructure"
+      ],
+      "importance": 2,
+      "summary": "(Dân trí) - Bộ trưởng Bộ Nội vụ Nguyễn Tiến Hải kể từng từ chối nhận làm chủ đầu tư tuyến cao tốc khi còn là Bí thư Cà Mau vì địa phương thiếu kinh nghiệm, năng lực quản lý dự án.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://dantri.com.vn/rss/thoi-su.rss",
+        "publisher_host": "dantri.com.vn",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-1d1757960bb63f6349ad",
+      "title": "Xử phạt tài xế xe tải đâm gãy cần chắn đường sắt ở Hà Nội",
+      "url": "https://dantri.com.vn/thoi-su/xu-phat-tai-xe-xe-tai-dam-gay-can-chan-duong-sat-o-ha-noi-20261107134540557.htm",
+      "category": "infrastructure",
+      "module_ids": [
+        "infrastructure"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-11-07T07:54:00+00:00",
+      "source_id": "dantri-current-affairs",
+      "region_ids": [
+        "ha-noi"
+      ],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [
+        "infrastructure"
+      ],
+      "importance": 2,
+      "summary": "(Dân trí) - Lực lượng CSGT Hà Nội vừa xác minh, xử phạt một tài xế ô tô tải có hành vi đâm gãy cần chắn đường ngang.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://dantri.com.vn/rss/thoi-su.rss",
+        "publisher_host": "dantri.com.vn",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-de5e7b36b6c75ed3474d",
+      "title": "Hà Nội xén vỉa hè và dải phân cách, mở rộng 7 tuyến đường phố",
+      "url": "https://dantri.com.vn/thoi-su/ha-noi-xen-via-he-va-dai-phan-cach-mo-rong-7-tuyen-duong-pho-20261107143323960.htm",
+      "category": "infrastructure",
+      "module_ids": [
+        "infrastructure"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-11-07T07:52:31+00:00",
+      "source_id": "dantri-current-affairs",
+      "region_ids": [
+        "ha-noi"
+      ],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "(Dân trí) - Lực lượng chức năng sẽ xén vỉa hè để mở rộng một số đường, phố gồm Giảng Võ, Láng Hạ, Lê Văn Lương, Tố Hữu, Hoàng Đạo Thúy, Hoàng Minh Giám, Khuất Duy Tiến.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://dantri.com.vn/rss/thoi-su.rss",
+        "publisher_host": "dantri.com.vn",
+        "publication_date_from_feed": true
+      }
+    },
     {
       "id": "article-market-rss-68d034c7f24910c76bf8",
       "title": "Lộ thu nhập sếp doanh nghiệp địa ốc, cao nhất 800 triệu đồng mỗi tháng",
@@ -83,6 +275,31 @@
         "method": "official-rss",
         "feed_url": "https://dantri.com.vn/rss/bat-dong-san.rss",
         "publisher_host": "dantri.com.vn",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-5828bd9c8a7c72d9bd6c",
+      "title": "Đề xuất ưu đãi lớn cho các dự án du lịch tỷ đô",
+      "url": "https://vnexpress.net/de-xuat-uu-dai-lon-cho-cac-du-an-du-lich-ty-do-5141836.html",
+      "category": "market",
+      "module_ids": [
+        "market"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-11-07T04:55:55+00:00",
+      "source_id": "vnexpress-current-affairs",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "Dự án du lịch quy mô từ 30.000 tỷ đồng có thể được miễn thuế thu nhập doanh nghiệp tối đa 4 năm, giảm 50% trong 9 năm tiếp theo và hoạt động đến 70 năm.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://vnexpress.net/rss/thoi-su.rss",
+        "publisher_host": "vnexpress.net",
         "publication_date_from_feed": true
       }
     },
