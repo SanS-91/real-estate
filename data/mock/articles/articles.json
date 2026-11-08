@@ -1,9 +1,226 @@
 {
   "schema_version": 1,
-  "build_id": "market-news-rss-20261107T185308Z",
-  "generated_at": "2026-11-07T18:53:08.347121+00:00",
-  "record_count": 1581,
+  "build_id": "market-news-rss-20261108T005140Z",
+  "generated_at": "2026-11-08T00:51:40.006731+00:00",
+  "record_count": 1589,
   "data": [
+    {
+      "id": "article-market-rss-4c69963255e71a2cf290",
+      "title": "Giá vàng hôm nay 8.11.2026: Bật tăng trong tuần nhưng người mua vẫn lỗ đến 2,5 triệu",
+      "url": "https://thanhnien.vn/gia-vang-hom-nay-8112026-bat-tang-trong-tuan-nhung-nguoi-mua-van-lo-den-25-trieu-185261108070655034.htm",
+      "category": "macro",
+      "module_ids": [
+        "macro"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-11-08T00:48:00+00:00",
+      "source_id": "thanhnien-banking",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "Giá vàng trong nước ghi nhận một tuần hồi phục nhưng người mua vàng nhẫn vẫn lỗ do chênh lệch giá mua bán cao.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://thanhnien.vn/rss/kinh-te/ngan-hang.rss",
+        "publisher_host": "thanhnien.vn",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-f235b70d8c3c6e61d109",
+      "title": "Nhà, đất giấy tay có thể được bồi thường 100%",
+      "url": "https://thanhnien.vn/nha-dat-giay-tay-co-the-duoc-boi-thuong-100-185261108063627592.htm",
+      "category": "market",
+      "module_ids": [
+        "legal"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-11-08T00:03:00+00:00",
+      "source_id": "thanhnien-real-estate",
+      "region_ids": [
+        "hcmc"
+      ],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "Sở Nông nghiệp và Môi trường TP.HCM vừa trình HĐND thành phố dự thảo Nghị quyết quy định cơ chế, chính sách bồi thường, hỗ trợ, tái định cư khi nhà nước thu hồi đất với mức bồi thường từ 40 - 100% giá trị cho những người mua nhà, đất bằng giấy tay.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://thanhnien.vn/rss/kinh-te/dia-oc.rss",
+        "publisher_host": "thanhnien.vn",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-84bf211b89c9a662b79c",
+      "title": "Cà Mau xây 29 cầu trong dự án giao thông hơn 2.200 tỉ đồng",
+      "url": "https://thanhnien.vn/ca-mau-xay-29-cau-trong-du-an-giao-thong-hon-2200-ti-dong-185261107151706926.htm",
+      "category": "market",
+      "module_ids": [
+        "market",
+        "infrastructure"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-11-07T23:54:00+00:00",
+      "source_id": "thanhnien-policy",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "Có 29 cầu được xây dựng trên hai tuyến đường Giá Rai - Phó Sinh và bờ tây kênh Láng Trâm tại Cà Mau. Các cầu rộng 12 m, thời hạn sử dụng theo thiết kế 100 năm, thuộc dự án giao thông có tổng vốn hơn 2.211 tỉ đồng.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://thanhnien.vn/rss/kinh-te/chinh-sach-phat-trien.rss",
+        "publisher_host": "thanhnien.vn",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-5f3da9534bec6b30895e",
+      "title": "Ưu tiên vốn xây đường sắt đô thị nối sân bay Gia Bình với trung tâm Hà Nội",
+      "url": "https://dantri.com.vn/thoi-su/uu-tien-von-xay-duong-sat-do-thi-noi-san-bay-gia-binh-voi-trung-tam-ha-noi-20261107224130268.htm",
+      "category": "infrastructure",
+      "module_ids": [
+        "infrastructure"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-11-07T23:20:00+00:00",
+      "source_id": "dantri-current-affairs",
+      "region_ids": [
+        "ha-noi"
+      ],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [
+        "legal",
+        "infrastructure"
+      ],
+      "importance": 2,
+      "summary": "(Dân trí) - Phó Thủ tướng yêu cầu ưu tiên bố trí vốn đầu tư đường sắt đô thị kết nối sân bay quốc tế Gia Bình, Nội Bài với trung tâm Hà Nội, trong đó quy hoạch các vị trí ga, đầu mối trung chuyển phù hợp.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://dantri.com.vn/rss/thoi-su.rss",
+        "publisher_host": "dantri.com.vn",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-2b7baea785e02eac6443",
+      "title": "Hà Nội dự kiến di dời, phá dỡ 136 căn hộ và nhà thấp tầng tại CT6 Kiến Hưng",
+      "url": "https://dantri.com.vn/thoi-su/ha-noi-du-kien-di-doi-pha-do-136-can-ho-va-nha-thap-tang-tai-ct6-kien-hung-20261107202308649.htm",
+      "category": "market",
+      "module_ids": [
+        "market"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-11-07T23:00:00+00:00",
+      "source_id": "dantri-current-affairs",
+      "region_ids": [
+        "ha-noi"
+      ],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "(Dân trí) - 3 tòa chung cư CT6A, CT6B, CT6C Kiến Hưng được xác định có nhiều sai phạm, dự kiến 126 căn hộ khối đế tầng 2-3 của 3 tòa này và 10 căn hộ thấp tầng thuộc diện phải di dời, phá dỡ.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://dantri.com.vn/rss/thoi-su.rss",
+        "publisher_host": "dantri.com.vn",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-57b02635c12dc964b64b",
+      "title": "Chính phủ đã làm gì để khắc phục \"giá nhà tăng cao\"?",
+      "url": "https://dantri.com.vn/thoi-su/chinh-phu-da-lam-gi-de-khac-phuc-gia-nha-tang-cao-20261107155841276.htm",
+      "category": "market",
+      "module_ids": [
+        "market"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-11-07T22:57:00+00:00",
+      "source_id": "dantri-current-affairs",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [
+        "pricing",
+        "infrastructure"
+      ],
+      "importance": 2,
+      "summary": "(Dân trí) - Đưa ra nhiều nguyên nhân khiến giá nhà tăng cao, Chính phủ cho biết đã chỉ đạo hàng loạt giải pháp, trong đó có phát triển nhà ở và nhà ở cho thuê; ngăn chặn đầu cơ, thổi giá, xử lý nghiêm vi phạm…",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://dantri.com.vn/rss/thoi-su.rss",
+        "publisher_host": "dantri.com.vn",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-b38fbc8955f6fe3e66ce",
+      "title": "Vì sao đất nền ngày càng khó bán?",
+      "url": "https://vnexpress.net/vi-sao-dat-nen-ngay-cang-kho-ban-5141047.html",
+      "category": "market",
+      "module_ids": [
+        "market"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-11-07T22:00:00+00:00",
+      "source_id": "vnexpress-real-estate",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "Dòng tiền đầu cơ rút lui, thiếu khả năng khai thác và rủi ro chôn vốn khiến đất nền ngày càng khó cạnh tranh với những loại bất động sản có thể tạo dòng tiền khác.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://vnexpress.net/rss/bat-dong-san.rss",
+        "publisher_host": "vnexpress.net",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-bcc23ead6b49fdce08de",
+      "title": "TP HCM đề xuất hỗ trợ bồi thường đến 100% cho nhà đất giấy tay",
+      "url": "https://vnexpress.net/tp-hcm-de-xuat-ho-tro-boi-thuong-den-100-cho-nha-dat-giay-tay-5142040.html",
+      "category": "market",
+      "module_ids": [
+        "market"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-11-07T20:00:00+00:00",
+      "source_id": "vnexpress-real-estate",
+      "region_ids": [
+        "hcmc"
+      ],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [
+        "pricing"
+      ],
+      "importance": 2,
+      "summary": "Người mua nhà, đất bằng giấy tay từ sau ngày 1/7/2014 đến trước ngày 1/8/2024 tại TP HCM có thể được hỗ trợ từ 28% đến 100% giá đất bồi thường.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://vnexpress.net/rss/bat-dong-san.rss",
+        "publisher_host": "vnexpress.net",
+        "publication_date_from_feed": true
+      }
+    },
     {
       "id": "article-market-rss-53ef007f35578d4066a3",
       "title": "Nhà mái chéo 350 m2 thiết kế không cần điều hòa",
