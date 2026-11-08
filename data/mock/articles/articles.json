@@ -1,9 +1,36 @@
 {
   "schema_version": 1,
-  "build_id": "market-news-rss-20261108T045136Z",
-  "generated_at": "2026-11-08T04:51:36.106158+00:00",
-  "record_count": 1596,
+  "build_id": "market-news-rss-20261108T061940Z",
+  "generated_at": "2026-11-08T06:19:40.563596+00:00",
+  "record_count": 1598,
   "data": [
+    {
+      "id": "article-market-rss-15b54d1d9f207e63fa63",
+      "title": "Làn sóng trung tâm dữ liệu: Động lực mới cho bất động sản Việt Nam",
+      "url": "https://dantri.com.vn/bat-dong-san/lan-song-trung-tam-du-lieu-dong-luc-moi-cho-bat-dong-san-viet-nam-20261108093348461.htm",
+      "category": "market",
+      "module_ids": [
+        "market"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-11-08T03:52:54+00:00",
+      "source_id": "dantri-real-estate",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [
+        "infrastructure"
+      ],
+      "importance": 2,
+      "summary": "(Dân trí) - Sự bùng nổ AI và điện toán đám mây đang thúc đẩy làn sóng đầu tư hạ tầng dữ liệu tại Việt Nam. Chi phí hấp dẫn cùng triển vọng tăng trưởng 5,6 lần biến nơi đây thành tâm điểm mới của khu vực.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://dantri.com.vn/rss/bat-dong-san.rss",
+        "publisher_host": "dantri.com.vn",
+        "publication_date_from_feed": true
+      }
+    },
     {
       "id": "article-market-rss-5a610b64c2d5e8d6f53b",
       "title": "Phó thủ tướng: Ưu tiên vốn xây đường sắt đô thị nối sân bay Gia Bình với Hà Nội",
@@ -84,6 +111,34 @@
         "method": "official-rss",
         "feed_url": "https://vnexpress.net/rss/thoi-su.rss",
         "publisher_host": "vnexpress.net",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-97bebafdbbb483dfad94",
+      "title": "Giá nhà tại Australia đối mặt đợt suy giảm mạnh nhất 40 năm",
+      "url": "https://dantri.com.vn/bat-dong-san/gia-nha-tai-australia-doi-mat-dot-suy-giam-manh-nhat-40-nam-20261108084347606.htm",
+      "category": "market",
+      "module_ids": [
+        "market",
+        "macro"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-11-08T02:10:19+00:00",
+      "source_id": "dantri-real-estate",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [
+        "pricing"
+      ],
+      "importance": 2,
+      "summary": "(Dân trí) - Thị trường bất động sản Australia đang trải qua giai đoạn ảm đạm nhất trong 4 thập kỷ. Lãi suất cao và thanh khoản đóng băng khiến nhiều căn nhà mất giá hàng tỷ đồng chỉ trong nửa năm.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://dantri.com.vn/rss/bat-dong-san.rss",
+        "publisher_host": "dantri.com.vn",
         "publication_date_from_feed": true
       }
     },
