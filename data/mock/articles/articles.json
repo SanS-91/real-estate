@@ -1,9 +1,36 @@
 {
   "schema_version": 1,
-  "build_id": "market-news-rss-20261108T125134Z",
-  "generated_at": "2026-11-08T12:51:34.632488+00:00",
-  "record_count": 1602,
+  "build_id": "market-news-rss-20261108T134159Z",
+  "generated_at": "2026-11-08T13:41:59.189446+00:00",
+  "record_count": 1603,
   "data": [
+    {
+      "id": "article-market-rss-e964bead8f7b3b974865",
+      "title": "Doanh thu bất động sản TP HCM tăng trưởng hai con số",
+      "url": "https://vnexpress.net/doanh-thu-bat-dong-san-tp-hcm-tang-truong-hai-con-so-5142198.html",
+      "category": "market",
+      "module_ids": [
+        "market"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-11-08T12:54:20+00:00",
+      "source_id": "vnexpress-real-estate",
+      "region_ids": [
+        "hcmc"
+      ],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "Mười tháng đầu năm, doanh thu dịch vụ kinh doanh bất động sản tại TP HCM ước đạt 373.011 tỷ đồng, tăng 10,8% so với cùng kỳ năm trước.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://vnexpress.net/rss/bat-dong-san.rss",
+        "publisher_host": "vnexpress.net",
+        "publication_date_from_feed": true
+      }
+    },
     {
       "id": "article-market-rss-c82822cf853b3b91fe28",
       "title": "Nhà giàu 121 nước rót gần 1,2 triệu tỷ đồng vào bất động sản Abu Dhabi",
