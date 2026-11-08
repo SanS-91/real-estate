@@ -1,9 +1,63 @@
 {
   "schema_version": 1,
-  "build_id": "market-news-rss-20261108T061940Z",
-  "generated_at": "2026-11-08T06:19:40.563596+00:00",
-  "record_count": 1598,
+  "build_id": "market-news-rss-20261108T085137Z",
+  "generated_at": "2026-11-08T08:51:37.423573+00:00",
+  "record_count": 1600,
   "data": [
+    {
+      "id": "article-market-rss-be136d475faf55880fac",
+      "title": "Tin vui cho người mua nhà, đất bằng giấy tay ở TPHCM",
+      "url": "https://dantri.com.vn/bat-dong-san/tin-vui-cho-nguoi-mua-nha-dat-bang-giay-tay-o-tphcm-20261108105350568.htm",
+      "category": "market",
+      "module_ids": [
+        "market"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-11-08T06:01:00+00:00",
+      "source_id": "dantri-real-estate",
+      "region_ids": [
+        "hcmc"
+      ],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "(Dân trí) - TPHCM đang đề xuất người mua nhà, đất bằng giấy tay từ sau 1/7/2014 đến trước 1/8/2024 có thể được hỗ trợ tương đương mức bồi thường về đất khi thu hồi.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://dantri.com.vn/rss/bat-dong-san.rss",
+        "publisher_host": "dantri.com.vn",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-5d6bd12db470324d3cbe",
+      "title": "Dự báo giá vàng sau tuần tăng vọt rồi lao dốc",
+      "url": "https://dantri.com.vn/kinh-doanh/du-bao-gia-vang-sau-tuan-tang-vot-roi-lao-doc-20261108115446707.htm",
+      "category": "macro",
+      "module_ids": [
+        "macro"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-11-08T05:52:27+00:00",
+      "source_id": "dantri-business",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [
+        "sales"
+      ],
+      "importance": 2,
+      "summary": "(Dân trí) - Giá vàng thế giới có tuần giao dịch đầy biến động, tăng lên mức cao nhất 4.147 USD/ounce trước khi quay đầu giảm. Giới phân tích đưa ra những dự báo trái chiều về tuần tới.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://dantri.com.vn/rss/kinh-doanh.rss",
+        "publisher_host": "dantri.com.vn",
+        "publication_date_from_feed": true
+      }
+    },
     {
       "id": "article-market-rss-15b54d1d9f207e63fa63",
       "title": "Làn sóng trung tâm dữ liệu: Động lực mới cho bất động sản Việt Nam",
