@@ -1,9 +1,92 @@
 {
   "schema_version": 1,
-  "build_id": "market-news-rss-20261108T025150Z",
-  "generated_at": "2026-11-08T02:51:50.300311+00:00",
-  "record_count": 1592,
+  "build_id": "market-news-rss-20261108T045136Z",
+  "generated_at": "2026-11-08T04:51:36.106158+00:00",
+  "record_count": 1596,
   "data": [
+    {
+      "id": "article-market-rss-5a610b64c2d5e8d6f53b",
+      "title": "Phó thủ tướng: Ưu tiên vốn xây đường sắt đô thị nối sân bay Gia Bình với Hà Nội",
+      "url": "https://vnexpress.net/pho-thu-tuong-uu-tien-von-xay-duong-sat-do-thi-noi-san-bay-gia-binh-voi-ha-noi-5142080.html",
+      "category": "infrastructure",
+      "module_ids": [
+        "infrastructure"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-11-08T03:07:38+00:00",
+      "source_id": "vnexpress-current-affairs",
+      "region_ids": [
+        "ha-noi"
+      ],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [
+        "infrastructure"
+      ],
+      "importance": 2,
+      "summary": "Phó thủ tướng Thường trực Phạm Gia Túc yêu cầu ưu tiên bố trí vốn đầu tư tuyến đường sắt đô thị kết nối sân bay Gia Bình, Nội Bài với trung tâm TP Hà Nội.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://vnexpress.net/rss/thoi-su.rss",
+        "publisher_host": "vnexpress.net",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-ad5863a1992798d0e93d",
+      "title": "Phát 30.000 tờ rơi tuyên truyền an toàn giao thông cho xe đi cao tốc, quốc lộ",
+      "url": "https://thanhnien.vn/phat-30000-to-roi-tuyen-truyen-an-toan-giao-thong-cho-xe-di-cao-toc-quoc-lo-185261108082311921.htm",
+      "category": "infrastructure",
+      "module_ids": [
+        "infrastructure"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-11-08T02:53:00+00:00",
+      "source_id": "thanhnien-policy",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [
+        "infrastructure"
+      ],
+      "importance": 2,
+      "summary": "Cục Đường bộ Việt Nam phân bổ 30.000 tờ rơi tuyên truyền an toàn giao thông đến lực lượng Cảnh sát giao thông và các Khu Quản lý đường bộ, đồng thời đề nghị các địa phương phối hợp phổ biến thông tin đến người tham gia giao thông trên các tuyến quốc lộ, đường cao tốc.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://thanhnien.vn/rss/kinh-te/chinh-sach-phat-trien.rss",
+        "publisher_host": "thanhnien.vn",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-3f9aaeab88b091e3644b",
+      "title": "Dự kiến di dời 136 căn hộ và nhà thấp tầng tại CT6 Kiến Hưng",
+      "url": "https://vnexpress.net/du-kien-di-doi-136-can-ho-va-nha-thap-tang-tai-ct6-kien-hung-5142028.html",
+      "category": "market",
+      "module_ids": [
+        "market"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-11-08T02:31:31+00:00",
+      "source_id": "vnexpress-current-affairs",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [
+        "legal"
+      ],
+      "importance": 2,
+      "summary": "Phường Kiến Hưng rà soát dự án chung cư CT6 - Bemes, xác định 126 căn hộ chung cư và 10 căn thấp tầng có thể phải di dời do không đúng quy hoạch.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://vnexpress.net/rss/thoi-su.rss",
+        "publisher_host": "vnexpress.net",
+        "publication_date_from_feed": true
+      }
+    },
     {
       "id": "article-market-rss-facdd86dcdbdb8c35c9a",
       "title": "Giá vàng biến động mạnh sau bầu cử Mỹ: Fed vẫn nắm quyền định đoạt",
@@ -25,6 +108,31 @@
       "source_verification": {
         "method": "official-rss",
         "feed_url": "https://dantri.com.vn/rss/kinh-doanh.rss",
+        "publisher_host": "dantri.com.vn",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-8953c1eff58f0b9d84a5",
+      "title": "Gợi ý loại cây giúp biến phòng tắm thành không gian xanh rực rỡ",
+      "url": "https://dantri.com.vn/bat-dong-san/goi-y-loai-cay-giup-bien-phong-tam-thanh-khong-gian-xanh-ruc-ro-20261106152248699.htm",
+      "category": "market",
+      "module_ids": [
+        "market"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-11-08T01:18:00+00:00",
+      "source_id": "dantri-real-estate",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "(Dân trí) - Phòng tắm thường là góc ít được chú ý nhất. Thay vì để không gian này đơn điệu, bạn hoàn toàn có thể biến nó thành góc chill nhiệt đới chỉ với một loài cây cảnh dễ trồng và đầy sức sống.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://dantri.com.vn/rss/bat-dong-san.rss",
         "publisher_host": "dantri.com.vn",
         "publication_date_from_feed": true
       }
