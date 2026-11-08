@@ -1,9 +1,34 @@
 {
   "schema_version": 1,
-  "build_id": "market-news-rss-20261108T134159Z",
-  "generated_at": "2026-11-08T13:41:59.189446+00:00",
-  "record_count": 1603,
+  "build_id": "market-news-rss-20261108T185403Z",
+  "generated_at": "2026-11-08T18:54:03.100992+00:00",
+  "record_count": 1604,
   "data": [
+    {
+      "id": "article-market-rss-defcb7aa69a2b194c129",
+      "title": "Chung cư CT6 Kiến Hưng - nơi dự kiến phải di dời 126 căn hộ",
+      "url": "https://vnexpress.net/chung-cu-ct6-kien-hung-noi-du-kien-phai-di-doi-126-can-ho-5142046.html",
+      "category": "market",
+      "module_ids": [
+        "market"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-11-08T17:00:00+00:00",
+      "source_id": "vnexpress-current-affairs",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "Dự án CT6 Kiến Hưng tồn tại nhiều vi phạm về đất đai và trật tự xây dựng nên dự kiến phải di dời 126 căn hộ và 10 căn thấp tầng.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://vnexpress.net/rss/thoi-su.rss",
+        "publisher_host": "vnexpress.net",
+        "publication_date_from_feed": true
+      }
+    },
     {
       "id": "article-market-rss-e964bead8f7b3b974865",
       "title": "Doanh thu bất động sản TP HCM tăng trưởng hai con số",
