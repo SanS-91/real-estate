@@ -523,7 +523,36 @@
         "42381053426"
       ],
       "verified_at": "2026-11-07T14:19:38.361743+00:00"
+    },
+    {
+      "project_id": "akari-city",
+      "project_name": "Akari City",
+      "source_id": "muaban-vn",
+      "source_url": "https://muaban.net/bat-dong-san/ban-can-ho-chung-cu-du-an-akari-city-quan-binh-tan-ho-chi-minh/phase-2-ha-gia-sau-dam-ch-80m-chot-4-3-ty-tai-akari-city-binh-tan-tp-id71347459",
+      "listing_id": "71347459",
+      "listing_title": "🎉 Phase 2 Hạ Giá Sâu Đậm CH 80M Chốt 4.3 Tỷ tại Akari City Bình Tân TP",
+      "asset_type": "apartment",
+      "market_layer": "individual-listing-asking",
+      "metric_type": "single-listing-asking-price-per-sqm",
+      "source_date_basis": "publisher-listing-start-not-update",
+      "source_listed_date": "2026-11-08",
+      "source_updated_date": "2026-11-08",
+      "source_expiration_date": "2026-11-22",
+      "listed_area_sqm": 80.0,
+      "listing_price_vnd": 4300000000,
+      "value_vnd_per_m2": 53750000,
+      "unit_price_basis": "derived-from-advertised-total-and-area",
+      "source_publication_date": null,
+      "methodology_note": "Individual Muaban asking advertisement only. The displayed rate is calculated from the listing's advertised total and usable area, not a publisher average, transaction, project ASP or project range. Date displayed is listing START date, NOT its relative update badge. Use only while the publisher's end date is unexpired.",
+      "id": "muaban-71347459-402b1b249952",
+      "review_status": "automated-two-hosted-checks",
+      "review_date": "2026-11-08",
+      "verification_run_ids": [
+        "42464986653",
+        "42490063134"
+      ],
+      "verified_at": "2026-11-08T14:29:48.408610+00:00"
     }
   ],
-  "record_count": 18
+  "record_count": 19
 }

@@ -7,12 +7,6 @@
       "source_url": "https://muaban.net/bat-dong-san/ban-can-ho-chung-cu-du-an-vinhomes-grand-park-quan-9-ho-chi-minh/ban-hoac-cho-thue-can-ho-vinhomes-grand-park-quan-9-65m-full-nt-id70690658",
       "checks": [
         {
-          "run_id": "41860859908",
-          "checked_at": "2026-11-04T15:44:36.911892+00:00",
-          "fingerprint": "4b91fe2ce898aa7fafdb1662e30ed37bc92217f15a0a61da78e60a491e3b832b",
-          "expiry": "2026-11-22"
-        },
-        {
           "run_id": "42002174425",
           "checked_at": "2026-11-05T09:25:10.646456+00:00",
           "fingerprint": "4b91fe2ce898aa7fafdb1662e30ed37bc92217f15a0a61da78e60a491e3b832b",
@@ -51,6 +45,12 @@
         {
           "run_id": "42464986653",
           "checked_at": "2026-11-08T08:55:55.117941+00:00",
+          "fingerprint": "4b91fe2ce898aa7fafdb1662e30ed37bc92217f15a0a61da78e60a491e3b832b",
+          "expiry": "2026-11-22"
+        },
+        {
+          "run_id": "42490063134",
+          "checked_at": "2026-11-08T14:29:48.408610+00:00",
           "fingerprint": "4b91fe2ce898aa7fafdb1662e30ed37bc92217f15a0a61da78e60a491e3b832b",
           "expiry": "2026-11-22"
         }
@@ -271,12 +271,6 @@
       "source_url": "https://muaban.net/bat-dong-san/ban-can-ho-chung-cu-du-an-mizuki-park-5598-huyen-binh-chanh-ho-chi-minh/can-ho-ven-song-trellia-vista-mizuki-park-moi-truong-song-xanh-id71287812",
       "checks": [
         {
-          "run_id": "41860859908",
-          "checked_at": "2026-11-04T15:44:36.911892+00:00",
-          "fingerprint": "89ac6e56d84abe224322a6e7c963af6b736bf1b0d997f82680859e39a0b836b0",
-          "expiry": "2026-11-25"
-        },
-        {
           "run_id": "42002174425",
           "checked_at": "2026-11-05T09:25:10.646456+00:00",
           "fingerprint": "89ac6e56d84abe224322a6e7c963af6b736bf1b0d997f82680859e39a0b836b0",
@@ -315,6 +309,12 @@
         {
           "run_id": "42464986653",
           "checked_at": "2026-11-08T08:55:55.117941+00:00",
+          "fingerprint": "89ac6e56d84abe224322a6e7c963af6b736bf1b0d997f82680859e39a0b836b0",
+          "expiry": "2026-11-25"
+        },
+        {
+          "run_id": "42490063134",
+          "checked_at": "2026-11-08T14:29:48.408610+00:00",
           "fingerprint": "89ac6e56d84abe224322a6e7c963af6b736bf1b0d997f82680859e39a0b836b0",
           "expiry": "2026-11-25"
         }
@@ -436,12 +436,6 @@
       "source_url": "https://muaban.net/bat-dong-san/ban-can-ho-chung-cu-du-an-mizuki-park-5598-huyen-binh-chanh-ho-chi-minh/can-ban-can-ho-tai-thap-mp1-noi-that-day-du-so-hong-chinh-chu-id71316674",
       "checks": [
         {
-          "run_id": "41860859908",
-          "checked_at": "2026-11-04T15:44:36.911892+00:00",
-          "fingerprint": "6b1d6f0042f0b8c2ae028ff3dde98f271ac9d192e6fdf5895c33aae0d82c4190",
-          "expiry": "2026-11-11"
-        },
-        {
           "run_id": "42002174425",
           "checked_at": "2026-11-05T09:25:10.646456+00:00",
           "fingerprint": "6b1d6f0042f0b8c2ae028ff3dde98f271ac9d192e6fdf5895c33aae0d82c4190",
@@ -480,6 +474,12 @@
         {
           "run_id": "42464986653",
           "checked_at": "2026-11-08T08:55:55.117941+00:00",
+          "fingerprint": "6b1d6f0042f0b8c2ae028ff3dde98f271ac9d192e6fdf5895c33aae0d82c4190",
+          "expiry": "2026-11-11"
+        },
+        {
+          "run_id": "42490063134",
+          "checked_at": "2026-11-08T14:29:48.408610+00:00",
           "fingerprint": "6b1d6f0042f0b8c2ae028ff3dde98f271ac9d192e6fdf5895c33aae0d82c4190",
           "expiry": "2026-11-11"
         }
@@ -491,12 +491,6 @@
       "source_url": "https://muaban.net/bat-dong-san/ban-can-ho-chung-cu-du-an-mizuki-park-5598-huyen-binh-chanh-ho-chi-minh/ban-can-ho-san-vuon-mizuki-dau-an-thiet-ke-dac-biet-tu-nam-long-id71317516",
       "checks": [
         {
-          "run_id": "41860859908",
-          "checked_at": "2026-11-04T15:44:36.911892+00:00",
-          "fingerprint": "4ca662ae224b81910f4fa075eba958e920fa4c921cd40d3c9a856b043b35c5d2",
-          "expiry": "2026-11-11"
-        },
-        {
           "run_id": "42002174425",
           "checked_at": "2026-11-05T09:25:10.646456+00:00",
           "fingerprint": "4ca662ae224b81910f4fa075eba958e920fa4c921cd40d3c9a856b043b35c5d2",
@@ -535,6 +529,12 @@
         {
           "run_id": "42464986653",
           "checked_at": "2026-11-08T08:55:55.117941+00:00",
+          "fingerprint": "4ca662ae224b81910f4fa075eba958e920fa4c921cd40d3c9a856b043b35c5d2",
+          "expiry": "2026-11-11"
+        },
+        {
+          "run_id": "42490063134",
+          "checked_at": "2026-11-08T14:29:48.408610+00:00",
           "fingerprint": "4ca662ae224b81910f4fa075eba958e920fa4c921cd40d3c9a856b043b35c5d2",
           "expiry": "2026-11-11"
         }
@@ -546,12 +546,6 @@
       "source_url": "https://muaban.net/bat-dong-san/ban-can-ho-chung-cu-du-an-mizuki-park-5598-huyen-binh-chanh-ho-chi-minh/ban-can-fp1-panora-huong-song-mizuki-park-da-co-so-hong-san-id71332506",
       "checks": [
         {
-          "run_id": "41860859908",
-          "checked_at": "2026-11-04T15:44:36.911892+00:00",
-          "fingerprint": "448d4ebfd7200dc0746f59e26bc6ff9393e346bc1feee16b39c2b6309de307cc",
-          "expiry": "2026-11-17"
-        },
-        {
           "run_id": "42002174425",
           "checked_at": "2026-11-05T09:25:10.646456+00:00",
           "fingerprint": "448d4ebfd7200dc0746f59e26bc6ff9393e346bc1feee16b39c2b6309de307cc",
@@ -590,6 +584,12 @@
         {
           "run_id": "42464986653",
           "checked_at": "2026-11-08T08:55:55.117941+00:00",
+          "fingerprint": "448d4ebfd7200dc0746f59e26bc6ff9393e346bc1feee16b39c2b6309de307cc",
+          "expiry": "2026-11-17"
+        },
+        {
+          "run_id": "42490063134",
+          "checked_at": "2026-11-08T14:29:48.408610+00:00",
           "fingerprint": "448d4ebfd7200dc0746f59e26bc6ff9393e346bc1feee16b39c2b6309de307cc",
           "expiry": "2026-11-17"
         }
@@ -641,6 +641,12 @@
           "checked_at": "2026-11-08T08:55:55.117941+00:00",
           "fingerprint": "35add0526b5bc1a47a9c32c5e8d085192b7407f952ea8ba4e22fad4e06c1e8ee",
           "expiry": "2026-11-15"
+        },
+        {
+          "run_id": "42490063134",
+          "checked_at": "2026-11-08T14:29:48.408610+00:00",
+          "fingerprint": "35add0526b5bc1a47a9c32c5e8d085192b7407f952ea8ba4e22fad4e06c1e8ee",
+          "expiry": "2026-11-15"
         }
       ]
     },
@@ -690,6 +696,12 @@
           "checked_at": "2026-11-08T08:55:55.117941+00:00",
           "fingerprint": "12056c9db56b8384b1ff232f9bcd4b5b2b08a58ca7756e29e00c4f2bef51fab4",
           "expiry": "2026-11-19"
+        },
+        {
+          "run_id": "42490063134",
+          "checked_at": "2026-11-08T14:29:48.408610+00:00",
+          "fingerprint": "12056c9db56b8384b1ff232f9bcd4b5b2b08a58ca7756e29e00c4f2bef51fab4",
+          "expiry": "2026-11-19"
         }
       ]
     },
@@ -715,6 +727,12 @@
           "checked_at": "2026-11-08T08:55:55.117941+00:00",
           "fingerprint": "2b7355150be853fdff0ce97a07b588d9aca588dbebecae22660e79121577ad8b",
           "expiry": "2026-11-21"
+        },
+        {
+          "run_id": "42490063134",
+          "checked_at": "2026-11-08T14:29:48.408610+00:00",
+          "fingerprint": "2b7355150be853fdff0ce97a07b588d9aca588dbebecae22660e79121577ad8b",
+          "expiry": "2026-11-21"
         }
       ]
     },
@@ -726,6 +744,12 @@
         {
           "run_id": "42464986653",
           "checked_at": "2026-11-08T08:55:55.117941+00:00",
+          "fingerprint": "402b1b249952eaba296be9260e746ec623da2f4445ef0a75823826076086e480",
+          "expiry": "2026-11-22"
+        },
+        {
+          "run_id": "42490063134",
+          "checked_at": "2026-11-08T14:29:48.408610+00:00",
           "fingerprint": "402b1b249952eaba296be9260e746ec623da2f4445ef0a75823826076086e480",
           "expiry": "2026-11-22"
         }
