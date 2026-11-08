@@ -1,9 +1,63 @@
 {
   "schema_version": 1,
-  "build_id": "market-news-rss-20261108T005140Z",
-  "generated_at": "2026-11-08T00:51:40.006731+00:00",
-  "record_count": 1589,
+  "build_id": "market-news-rss-20261108T025150Z",
+  "generated_at": "2026-11-08T02:51:50.300311+00:00",
+  "record_count": 1592,
   "data": [
+    {
+      "id": "article-market-rss-facdd86dcdbdb8c35c9a",
+      "title": "Giá vàng biến động mạnh sau bầu cử Mỹ: Fed vẫn nắm quyền định đoạt",
+      "url": "https://dantri.com.vn/kinh-doanh/gia-vang-bien-dong-manh-sau-bau-cu-my-fed-van-nam-quyen-dinh-doat-20261108082111299.htm",
+      "category": "macro",
+      "module_ids": [
+        "macro"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-11-08T01:27:31+00:00",
+      "source_id": "dantri-business",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "(Dân trí) - Sau khi bứt phá mạnh mẽ hậu bầu cử giữa nhiệm kỳ tại Mỹ, giá vàng nhanh chóng quay đầu giảm khi thị trường tài chính đối mặt với sức ép mới từ dữ liệu kinh tế Mỹ.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://dantri.com.vn/rss/kinh-doanh.rss",
+        "publisher_host": "dantri.com.vn",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-cab45ffba7ba015160cc",
+      "title": "Đồng Nai cho thuê hơn 438 ha đất làm Khu công nghiệp ở Tân Khai",
+      "url": "https://vnexpress.net/dong-nai-cho-thue-hon-438-ha-dat-lam-khu-cong-nghiep-o-tan-khai-5142050.html",
+      "category": "market",
+      "module_ids": [
+        "market"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-11-08T00:50:04+00:00",
+      "source_id": "vnexpress-real-estate",
+      "region_ids": [
+        "dong-nai"
+      ],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [
+        "infrastructure"
+      ],
+      "importance": 2,
+      "summary": "Công ty cổ phần Đầu tư Phát triển Ninh Phong được thuê hơn 438 ha đất để xây dựng và kinh doanh hạ tầng Khu công nghiệp Đông Nơ tại phường Tân Khai.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://vnexpress.net/rss/bat-dong-san.rss",
+        "publisher_host": "vnexpress.net",
+        "publication_date_from_feed": true
+      }
+    },
     {
       "id": "article-market-rss-4c69963255e71a2cf290",
       "title": "Giá vàng hôm nay 8.11.2026: Bật tăng trong tuần nhưng người mua vẫn lỗ đến 2,5 triệu",
@@ -135,6 +189,34 @@
       "source_verification": {
         "method": "official-rss",
         "feed_url": "https://dantri.com.vn/rss/thoi-su.rss",
+        "publisher_host": "dantri.com.vn",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-17fe8d6a9fb1b1bc3a39",
+      "title": "Chính phủ yêu cầu báo cáo \"sức khỏe\" thị trường bất động sản trong tháng 11",
+      "url": "https://dantri.com.vn/bat-dong-san/chinh-phu-yeu-cau-bao-cao-suc-khoe-thi-truong-bat-dong-san-trong-thang-11-20261107224728519.htm",
+      "category": "market",
+      "module_ids": [
+        "market"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-11-07T23:00:00+00:00",
+      "source_id": "dantri-real-estate",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [
+        "supply",
+        "sales"
+      ],
+      "importance": 2,
+      "summary": "(Dân trí) - Bộ Xây dựng được giao báo cáo Thủ tướng Chính phủ trong tháng 11 về nguồn cung, thanh khoản, giá cả, giao dịch và tồn kho bất động sản.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://dantri.com.vn/rss/bat-dong-san.rss",
         "publisher_host": "dantri.com.vn",
         "publication_date_from_feed": true
       }
