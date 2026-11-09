@@ -1,9 +1,109 @@
 {
   "schema_version": 1,
-  "build_id": "market-news-rss-20261109T025137Z",
-  "generated_at": "2026-11-09T02:51:37.543191+00:00",
-  "record_count": 1613,
+  "build_id": "market-news-rss-20261109T045141Z",
+  "generated_at": "2026-11-09T04:51:41.041097+00:00",
+  "record_count": 1618,
   "data": [
+    {
+      "id": "article-market-rss-105378477f8fd84683ba",
+      "title": "Giá vàng hôm nay 9.11.2026: Vàng miếng SJC tăng thêm 1 triệu đồng mỗi lượng",
+      "url": "https://thanhnien.vn/gia-vang-hom-nay-9112026-vang-mieng-sjc-tang-them-1-trieu-dong-moi-luong-185261109072343088.htm",
+      "category": "macro",
+      "module_ids": [
+        "macro"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-11-09T04:02:00+00:00",
+      "source_id": "thanhnien-banking",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "Giá vàng miếng SJC tăng thêm 1 triệu đồng mỗi lượng, tăng chậm hơn so với kim loại quý trên thị trường thế giới.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://thanhnien.vn/rss/kinh-te/ngan-hang.rss",
+        "publisher_host": "thanhnien.vn",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-08b385164550a42ef9f5",
+      "title": "Maison Privée đưa triết lý wellness vào không gian sống",
+      "url": "https://vnexpress.net/maison-privee-dua-triet-ly-wellness-vao-khong-gian-song-5141843.html",
+      "category": "market",
+      "module_ids": [
+        "market"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-11-09T03:15:00+00:00",
+      "source_id": "vnexpress-real-estate",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "Maison Privée tích hợp các giải pháp chăm sóc sức khỏe, cảnh quan và tiện ích wellness vào không gian sống nhằm đáp ứng nhu cầu thể chất, tinh thần của cư dân.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://vnexpress.net/rss/bat-dong-san.rss",
+        "publisher_host": "vnexpress.net",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-fca5c5b8f9a8d3b16069",
+      "title": "Ngộp lãi vay, chủ nhà phố, biệt thự phía Nam bán cắt lỗ vẫn ế khách",
+      "url": "https://vnexpress.net/ngop-lai-vay-chu-nha-pho-biet-thu-phia-nam-ban-cat-lo-van-e-khach-5140298.html",
+      "category": "market",
+      "module_ids": [
+        "macro"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-11-09T02:42:22+00:00",
+      "source_id": "vnexpress-real-estate",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "Nhiều người đầu tư nhà phố, biệt thự sử dụng đòn bẩy tài chính đang chấp nhận cắt lỗ hàng tỷ đồng để thu hồi vốn nhưng khó tìm được khách mua.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://vnexpress.net/rss/bat-dong-san.rss",
+        "publisher_host": "vnexpress.net",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-eb93b1eb94e670f6da65",
+      "title": "Sập mố cầu trên tuyến đường huyết mạch ở Thanh Hóa",
+      "url": "https://vnexpress.net/sap-mo-cau-tren-tuyen-duong-huyet-mach-o-thanh-hoa-5142319.html",
+      "category": "infrastructure",
+      "module_ids": [
+        "infrastructure"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-11-09T02:38:22+00:00",
+      "source_id": "vnexpress-current-affairs",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "Mưa lớn khiến một mố cầu Bái Sim trên đường Nghi Sơn - Bãi Trành bị sập, mặt đường nứt gãy, giao thông qua khu vực tê liệt.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://vnexpress.net/rss/thoi-su.rss",
+        "publisher_host": "vnexpress.net",
+        "publication_date_from_feed": true
+      }
+    },
     {
       "id": "article-market-rss-d0b0024293d4dbb36eb0",
       "title": "A&K Tower: Mở lối an cư tại sự kiện 'An cư như ý - Trọn giấc mơ nhà'",
@@ -28,6 +128,31 @@
         "method": "official-rss",
         "feed_url": "https://thanhnien.vn/rss/kinh-te/dia-oc.rss",
         "publisher_host": "thanhnien.vn",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-e485cd1989a85ee0ce12",
+      "title": "Có nên dùng giấm để vệ sinh sàn gạch?",
+      "url": "https://dantri.com.vn/bat-dong-san/co-nen-dung-giam-de-ve-sinh-san-gach-20261106153828928.htm",
+      "category": "market",
+      "module_ids": [
+        "market"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-11-09T01:13:00+00:00",
+      "source_id": "dantri-real-estate",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "(Dân trí) - Nhiều gia đình chuộng dùng giấm lau sàn vì tiết kiệm và an toàn. Tuy nhiên, nếu dùng sai loại gạch, thói quen dọn dẹp này có thể âm thầm phá hủy sàn nhà.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://dantri.com.vn/rss/bat-dong-san.rss",
+        "publisher_host": "dantri.com.vn",
         "publication_date_from_feed": true
       }
     },
