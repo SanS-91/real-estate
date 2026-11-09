@@ -1,8 +1,8 @@
 {
   "schema_version": 1,
-  "build_id": "market-news-rss-20261109T065138Z",
-  "generated_at": "2026-11-09T06:51:38.333622+00:00",
-  "record_count": 1624,
+  "build_id": "market-news-rss-20261109T065250Z",
+  "generated_at": "2026-11-09T06:52:50.416425+00:00",
+  "record_count": 1626,
   "data": [
     {
       "id": "article-market-rss-72a52e2c67875dd3ff5f",
@@ -26,6 +26,36 @@
         "method": "official-rss",
         "feed_url": "https://vnexpress.net/rss/bat-dong-san.rss",
         "publisher_host": "vnexpress.net",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-8911ba78cb05fd1c670e",
+      "title": "Chủ đầu tư lên tiếng vụ ô tô va trúng thanh sắt trên cao tốc ở TPHCM",
+      "url": "https://dantri.com.vn/thoi-su/chu-dau-tu-len-tieng-vu-o-to-va-trung-thanh-sat-tren-cao-toc-o-tphcm-20261108204811194.htm",
+      "category": "market",
+      "module_ids": [
+        "market",
+        "infrastructure"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-11-09T05:39:01+00:00",
+      "source_id": "dantri-current-affairs",
+      "region_ids": [
+        "hcmc"
+      ],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [
+        "infrastructure"
+      ],
+      "importance": 2,
+      "summary": "(Dân trí) - Đang lưu thông trên cao tốc TPHCM - Long Thành, ô tô bất ngờ bị một phụ nữ cầm thanh sắt va trúng. Chủ đầu tư dự án khẳng định người này không phải nhân viên công trường.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://dantri.com.vn/rss/thoi-su.rss",
+        "publisher_host": "dantri.com.vn",
         "publication_date_from_feed": true
       }
     },
@@ -55,6 +85,34 @@
         "method": "official-rss",
         "feed_url": "https://vnexpress.net/rss/bat-dong-san.rss",
         "publisher_host": "vnexpress.net",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-e4192486d7bd1d08f229",
+      "title": "Cần Thơ bổ sung loạt công trình giao thông, chống ngập vào dự án quốc lộ 91",
+      "url": "https://dantri.com.vn/thoi-su/can-tho-bo-sung-loat-cong-trinh-giao-thong-chong-ngap-vao-du-an-quoc-lo-91-20261109090747542.htm",
+      "category": "market",
+      "module_ids": [
+        "market",
+        "infrastructure"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-11-09T05:12:59+00:00",
+      "source_id": "dantri-current-affairs",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [
+        "infrastructure"
+      ],
+      "importance": 2,
+      "summary": "(Dân trí) - Dự án nâng cấp quốc lộ 91 tại Cần Thơ được bổ sung hàng loạt tuyến đường kết nối, cùng kè, cống kiểm soát triều và âu thuyền sông Bình Thủy nhằm tăng kết nối, giảm ngập đô thị.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://dantri.com.vn/rss/thoi-su.rss",
+        "publisher_host": "dantri.com.vn",
         "publication_date_from_feed": true
       }
     },
