@@ -1,10 +1,10 @@
 {
   "schema_version": 1,
   "module": "legal",
-  "generated_at": "2026-11-02T11:23:30.181435+00:00",
+  "generated_at": "2026-11-09T11:46:57.958700+00:00",
   "status": "checked-no-new-approved-data",
-  "source_watch_at": "2026-11-02T11:23:28.449699+00:00",
-  "candidate_report_at": "2026-11-02T11:23:28.674822+00:00",
+  "source_watch_at": "2026-11-09T11:46:56.372578+00:00",
+  "candidate_report_at": "2026-11-09T11:46:56.534627+00:00",
   "baseline_available": true,
   "canonical_record_count": 16,
   "source_targets_checked": 17,
