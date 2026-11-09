@@ -1,9 +1,34 @@
 {
   "schema_version": 1,
-  "build_id": "market-news-rss-20261109T145148Z",
-  "generated_at": "2026-11-09T14:51:48.760216+00:00",
-  "record_count": 1636,
+  "build_id": "market-news-rss-20261109T185612Z",
+  "generated_at": "2026-11-09T18:56:12.373357+00:00",
+  "record_count": 1637,
   "data": [
+    {
+      "id": "article-market-rss-1db490956548e8ab032d",
+      "title": "Tối 9/11, giá vàng, bạc cùng tăng nhanh",
+      "url": "https://dantri.com.vn/kinh-doanh/toi-911-gia-vang-bac-cung-tang-nhanh-20261109214417217.htm",
+      "category": "macro",
+      "module_ids": [
+        "macro"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-11-09T15:12:21+00:00",
+      "source_id": "dantri-business",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "(Dân trí) - Giá vàng đang vượt xa mốc 4.100 USD/ounce sau phiên bán tháo, bạc còn tăng nhanh hơn nhưng giới phân tích cho rằng kim loại quý đang đứng trước phép thử then chốt từ dữ liệu lạm phát Mỹ.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://dantri.com.vn/rss/kinh-doanh.rss",
+        "publisher_host": "dantri.com.vn",
+        "publication_date_from_feed": true
+      }
+    },
     {
       "id": "article-market-rss-dba608db4843df1e4b40",
       "title": "Mưa lớn gây sạt lở quốc lộ, nhiều tuyến đường ở Hà Tĩnh bị chia cắt",
