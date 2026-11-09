@@ -1,9 +1,36 @@
 {
   "schema_version": 1,
-  "build_id": "market-news-rss-20261109T065250Z",
-  "generated_at": "2026-11-09T06:52:50.416425+00:00",
-  "record_count": 1626,
+  "build_id": "market-news-rss-20261109T085137Z",
+  "generated_at": "2026-11-09T08:51:37.560837+00:00",
+  "record_count": 1628,
   "data": [
+    {
+      "id": "article-market-rss-af492a958cd0a572bca0",
+      "title": "Khu đô thị lớn nhất Việt Nam dự kiến tăng vốn lên hơn 1,2 triệu tỷ đồng",
+      "url": "https://vnexpress.net/khu-do-thi-lon-nhat-viet-nam-du-kien-tang-von-len-hon-1-2-trieu-ty-dong-5142478.html",
+      "category": "market",
+      "module_ids": [
+        "market"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-11-09T08:09:02+00:00",
+      "source_id": "vnexpress-real-estate",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [
+        "vinhomes"
+      ],
+      "tags": [],
+      "importance": 2,
+      "summary": "Khu đô thị thể thao quốc tế của Vinhomes dự kiến nâng vốn đầu tư lên hơn 1,2 triệu tỷ đồng, tăng hơn 32% so với kế hoạch trước đó.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://vnexpress.net/rss/bat-dong-san.rss",
+        "publisher_host": "vnexpress.net",
+        "publication_date_from_feed": true
+      }
+    },
     {
       "id": "article-market-rss-72a52e2c67875dd3ff5f",
       "title": "Biệt thự 38 triệu USD của gia đình CEO Nvidia",
@@ -26,6 +53,34 @@
         "method": "official-rss",
         "feed_url": "https://vnexpress.net/rss/bat-dong-san.rss",
         "publisher_host": "vnexpress.net",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-03b7d0a67241ac83b82e",
+      "title": "Quỹ bất động sản: Châu Á hút hàng tỷ USD, Việt Nam chật vật gỡ vướng",
+      "url": "https://dantri.com.vn/bat-dong-san/quy-bat-dong-san-chau-a-hut-hang-ty-usd-viet-nam-chat-vat-go-vuong-20261109080415414.htm",
+      "category": "market",
+      "module_ids": [
+        "market"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-11-09T05:53:37+00:00",
+      "source_id": "dantri-real-estate",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [
+        "supply",
+        "legal"
+      ],
+      "importance": 2,
+      "summary": "(Dân trí) - Quỹ đầu tư bất động sản (REIT) đang trở thành kênh dẫn vốn tỷ USD tại nhiều nước châu Á. Tại Việt Nam, mô hình này vẫn đối mặt nhiều nút thắt về pháp lý và nguồn cung tài sản chất lượng.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://dantri.com.vn/rss/bat-dong-san.rss",
+        "publisher_host": "dantri.com.vn",
         "publication_date_from_feed": true
       }
     },
