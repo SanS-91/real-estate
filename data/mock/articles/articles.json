@@ -1,9 +1,125 @@
 {
   "schema_version": 1,
-  "build_id": "market-news-rss-20261109T125155Z",
-  "generated_at": "2026-11-09T12:51:55.054111+00:00",
-  "record_count": 1632,
+  "build_id": "market-news-rss-20261109T145148Z",
+  "generated_at": "2026-11-09T14:51:48.760216+00:00",
+  "record_count": 1636,
   "data": [
+    {
+      "id": "article-market-rss-dba608db4843df1e4b40",
+      "title": "Mưa lớn gây sạt lở quốc lộ, nhiều tuyến đường ở Hà Tĩnh bị chia cắt",
+      "url": "https://dantri.com.vn/thoi-su/mua-lon-gay-sat-lo-quoc-lo-nhieu-tuyen-duong-o-ha-tinh-bi-chia-cat-20261109210924404.htm",
+      "category": "infrastructure",
+      "module_ids": [
+        "infrastructure"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-11-09T14:23:33+00:00",
+      "source_id": "dantri-current-affairs",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [
+        "infrastructure"
+      ],
+      "importance": 2,
+      "summary": "(Dân trí) - Mưa lớn kéo dài khiến quốc lộ 12C qua Hà Tĩnh xuất hiện nhiều điểm sạt lở, một số tuyến đường, cầu bị ngập. Cơ quan khí tượng cảnh báo nguy cơ lũ quét, sạt lở đất tại 20 xã, phường.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://dantri.com.vn/rss/thoi-su.rss",
+        "publisher_host": "dantri.com.vn",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-69a6ff12fa435b15cf62",
+      "title": "Nhà phố 50m² đất Vinhomes Sài Gòn Park dung hòa không gian sống và tài chính",
+      "url": "https://dantri.com.vn/bat-dong-san/nha-pho-50m-dat-vinhomes-sai-gon-park-dung-hoa-khong-gian-song-va-tai-chinh-20261109194319011.htm",
+      "category": "market",
+      "module_ids": [
+        "macro"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-11-09T12:57:27+00:00",
+      "source_id": "dantri-real-estate",
+      "region_ids": [
+        "hcmc"
+      ],
+      "project_ids": [],
+      "developer_ids": [
+        "vinhomes"
+      ],
+      "tags": [],
+      "importance": 2,
+      "summary": "(Dân trí) - Với gần 170m² sàn sử dụng trên diện tích đất 50m², cùng hệ tiện ích trên quy mô đại đô thị 1.080ha và chính sách cố định lãi suất dài hạn, Vinhomes Sài Gòn Park mở ra lựa chọn an cư tại phía Tây Bắc TPHCM.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://dantri.com.vn/rss/bat-dong-san.rss",
+        "publisher_host": "dantri.com.vn",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-ece66e801936a537e98f",
+      "title": "Khu đô thị thể thao lớn nhất nước dự kiến tăng vốn trên 1,2 triệu tỷ đồng",
+      "url": "https://dantri.com.vn/bat-dong-san/khu-do-thi-the-thao-lon-nhat-nuoc-du-kien-tang-von-tren-12-trieu-ty-dong-20261109190724119.htm",
+      "category": "market",
+      "module_ids": [
+        "market"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-11-09T12:15:59+00:00",
+      "source_id": "dantri-real-estate",
+      "region_ids": [
+        "ha-noi"
+      ],
+      "project_ids": [],
+      "developer_ids": [
+        "vinhomes"
+      ],
+      "tags": [],
+      "importance": 2,
+      "summary": "(Dân trí) - Vinhomes dự kiến nâng tổng vốn đầu tư Khu đô thị thể thao quốc tế Hà Nội lên 1.225.011 tỷ đồng, tăng 299.360 tỷ đồng, tương đương hơn 32% so với phương án trước đó.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://dantri.com.vn/rss/bat-dong-san.rss",
+        "publisher_host": "dantri.com.vn",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-957bd9cc8d6061160fcd",
+      "title": "Công ty con của Vingroup đứng đầu liên danh xây tổ hợp cảng biển 7,9 tỷ USD",
+      "url": "https://dantri.com.vn/bat-dong-san/cong-ty-con-cua-vingroup-dung-dau-lien-danh-xay-to-hop-cang-bien-79-ty-usd-20261109183516537.htm",
+      "category": "market",
+      "module_ids": [
+        "market"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-11-09T11:54:23+00:00",
+      "source_id": "dantri-real-estate",
+      "region_ids": [
+        "hcmc"
+      ],
+      "project_ids": [],
+      "developer_ids": [
+        "vinhomes"
+      ],
+      "tags": [
+        "legal"
+      ],
+      "importance": 2,
+      "summary": "(Dân trí) - Tổ hợp cảng Cái Mép Hạ hạ lưu ở TPHCM được quy hoạch loạt bến container cùng trung tâm logistics, khu công nghiệp... do doanh nghiệp trong hệ sinh thái Vingroup đứng đầu liên danh.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://dantri.com.vn/rss/bat-dong-san.rss",
+        "publisher_host": "dantri.com.vn",
+        "publication_date_from_feed": true
+      }
+    },
     {
       "id": "article-market-rss-a3040901f350ecfc60c2",
       "title": "Khởi công gói thầu đầu tiên của dự án cải tạo rạch Văn Thánh ở TPHCM",
