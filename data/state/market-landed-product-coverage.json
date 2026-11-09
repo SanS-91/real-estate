@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-11-08T09:59:49+00:00",
+  "generated_at": "2026-11-09T11:08:48+00:00",
   "scope": "official-product-labels-only-not-developer-price-or-transactions",
   "sources_checked": 4,
   "source_pages_available": 4,
@@ -13,7 +13,7 @@
       "project_id": "izumi-city",
       "subproject_name": "Izumi Gardenia",
       "source_url": "https://www.namlongvn.com/en/township-residential/izumi-gardenia/",
-      "checked_at": "2026-11-08T09:59:49+00:00",
+      "checked_at": "2026-11-09T11:08:48+00:00",
       "status": "source-checked",
       "product_labels": [
         {
@@ -40,7 +40,7 @@
       "project_id": "waterpoint",
       "subproject_name": "The Pearl",
       "source_url": "https://www.namlongvn.com/en/township-residential/the-pearl/",
-      "checked_at": "2026-11-08T09:59:49+00:00",
+      "checked_at": "2026-11-09T11:08:48+00:00",
       "status": "source-checked",
       "product_labels": [
         {
@@ -74,7 +74,7 @@
       "project_id": "elyse-island",
       "subproject_name": "Elyse Island",
       "source_url": "https://www.namlongvn.com/en/township-residential/elyse-island/",
-      "checked_at": "2026-11-08T09:59:49+00:00",
+      "checked_at": "2026-11-09T11:08:48+00:00",
       "status": "source-checked",
       "product_labels": [
         {
@@ -101,7 +101,7 @@
       "project_id": "springville",
       "subproject_name": "Springville",
       "source_url": "https://gamudaland.com.vn/en/developments/springville",
-      "checked_at": "2026-11-08T09:59:49+00:00",
+      "checked_at": "2026-11-09T11:08:48+00:00",
       "status": "source-checked",
       "product_labels": [
         {
