@@ -1,32 +1,32 @@
 {
   "schema_version": 1,
-  "checked_at": "2026-11-09T08:51:37.560837+00:00",
+  "checked_at": "2026-11-09T10:51:47.385309+00:00",
   "feeds_configured": 16,
   "feeds_fetched": 16,
   "accepted_new": 2,
   "production_written": true,
-  "article_total": 1628,
+  "article_total": 1630,
   "published_by_module": {
-    "market": 2,
-    "legal": 0,
+    "market": 1,
+    "legal": 1,
     "infrastructure": 0,
-    "macro": 0
+    "macro": 1
   },
   "recent_by_module_7d": {
-    "market": 194,
-    "legal": 33,
-    "infrastructure": 86,
-    "macro": 61
+    "market": 193,
+    "legal": 34,
+    "infrastructure": 85,
+    "macro": 62
   },
   "recent_by_module_30d": {
     "market": 869,
-    "legal": 156,
-    "infrastructure": 347,
+    "legal": 157,
+    "infrastructure": 345,
     "macro": 267
   },
   "latest_published_by_module": {
-    "market": "2026-11-09T08:09:02+00:00",
-    "legal": "2026-11-09T05:53:37+00:00",
+    "market": "2026-11-09T09:32:23+00:00",
+    "legal": "2026-11-09T09:32:23+00:00",
     "infrastructure": "2026-11-09T05:39:01+00:00",
     "macro": "2026-11-09T04:02:00+00:00"
   },
@@ -53,9 +53,9 @@
       "source_id": "dantri-real-estate",
       "status": "parsed",
       "feed_items": 50,
-      "new": 1,
-      "skipped": 49,
-      "duplicates": 49,
+      "new": 0,
+      "skipped": 50,
+      "duplicates": 50,
       "filtered": 0
     },
     {
@@ -118,8 +118,8 @@
       "feed_items": 50,
       "new": 0,
       "skipped": 50,
-      "duplicates": 5,
-      "filtered": 45
+      "duplicates": 4,
+      "filtered": 46
     },
     {
       "source_id": "dantri-current-affairs",
@@ -134,10 +134,10 @@
       "source_id": "dantri-legal",
       "status": "parsed",
       "feed_items": 50,
-      "new": 0,
-      "skipped": 50,
+      "new": 1,
+      "skipped": 49,
       "duplicates": 0,
-      "filtered": 50
+      "filtered": 49
     },
     {
       "source_id": "dantri-gold",

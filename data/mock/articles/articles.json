@@ -1,9 +1,35 @@
 {
   "schema_version": 1,
-  "build_id": "market-news-rss-20261109T085137Z",
-  "generated_at": "2026-11-09T08:51:37.560837+00:00",
-  "record_count": 1628,
+  "build_id": "market-news-rss-20261109T105147Z",
+  "generated_at": "2026-11-09T10:51:47.385309+00:00",
+  "record_count": 1630,
   "data": [
+    {
+      "id": "article-market-rss-eeb9a87814d1e8662936",
+      "title": "Thuê căn hộ chung cư để làm giả căn cước, sổ đỏ và bằng đại học",
+      "url": "https://dantri.com.vn/phap-luat/thue-can-ho-chung-cu-de-lam-gia-can-cuoc-so-do-va-bang-dai-hoc-20261109162248710.htm",
+      "category": "market",
+      "module_ids": [
+        "market",
+        "legal"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-11-09T09:32:23+00:00",
+      "source_id": "dantri-legal",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "(Dân trí) - Hai người đàn ông thuê căn hộ chung cư ở Bắc Ninh làm nơi sản xuất hàng loạt giấy tờ giả, sau đó tìm khách hàng qua mạng xã hội và gửi sản phẩm bằng đường bưu điện.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://dantri.com.vn/rss/phap-luat.rss",
+        "publisher_host": "dantri.com.vn",
+        "publication_date_from_feed": true
+      }
+    },
     {
       "id": "article-market-rss-af492a958cd0a572bca0",
       "title": "Khu đô thị lớn nhất Việt Nam dự kiến tăng vốn lên hơn 1,2 triệu tỷ đồng",
@@ -336,6 +362,31 @@
       "id": "article-market-rss-fca5c5b8f9a8d3b16069",
       "title": "Ngộp lãi vay, chủ nhà phố, biệt thự phía Nam bán cắt lỗ vẫn ế khách",
       "url": "https://vnexpress.net/ngop-lai-vay-chu-nha-pho-biet-thu-phia-nam-ban-cat-lo-van-e-khach-5140298.html",
+      "category": "market",
+      "module_ids": [
+        "macro"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-11-09T02:42:22+00:00",
+      "source_id": "vnexpress-real-estate",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "Nhiều người đầu tư nhà phố, biệt thự sử dụng đòn bẩy tài chính đang chấp nhận cắt lỗ hàng tỷ đồng để thu hồi vốn nhưng khó tìm được khách mua.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://vnexpress.net/rss/bat-dong-san.rss",
+        "publisher_host": "vnexpress.net",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-c98f0a1a3a34d814d38f",
+      "title": "Chủ nhà phố, biệt thự phía Nam bán cắt lỗ khi lãi vay tăng cao",
+      "url": "https://vnexpress.net/chu-nha-pho-biet-thu-phia-nam-ban-cat-lo-khi-lai-vay-tang-cao-5140298.html",
       "category": "market",
       "module_ids": [
         "macro"
