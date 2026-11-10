@@ -1,9 +1,138 @@
 {
   "schema_version": 1,
-  "build_id": "market-news-rss-20261109T185612Z",
-  "generated_at": "2026-11-09T18:56:12.373357+00:00",
-  "record_count": 1637,
+  "build_id": "market-news-rss-20261110T005137Z",
+  "generated_at": "2026-11-10T00:51:37.270838+00:00",
+  "record_count": 1642,
   "data": [
+    {
+      "id": "article-market-rss-19bc5e49b3e3217ce42d",
+      "title": "Giá tăng, vàng SJC đắt hơn giá thế giới 13 triệu đồng/lượng",
+      "url": "https://dantri.com.vn/kinh-doanh/gia-tang-vang-sjc-dat-hon-gia-the-gioi-13-trieu-dongluong-20261110070312366.htm",
+      "category": "macro",
+      "module_ids": [
+        "macro"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-11-10T00:41:22+00:00",
+      "source_id": "dantri-business",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "(Dân trí) - Giá vàng thế giới neo ở mức cao kéo theo đà tăng của thị trường trong nước. Cả vàng miếng và vàng nhẫn SJC đều duy trì mốc trên 141 triệu đồng/lượng dù chênh lệch mua bán vẫn rất lớn.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://dantri.com.vn/rss/kinh-doanh.rss",
+        "publisher_host": "dantri.com.vn",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-e4f7cd3f8262c2951708",
+      "title": "Cao tốc băng núi rừng kết nối Buôn Ma Thuột với Nha Trang",
+      "url": "https://vnexpress.net/cao-toc-bang-nui-rung-ket-noi-buon-ma-thuot-voi-nha-trang-5142237.html",
+      "category": "infrastructure",
+      "module_ids": [
+        "infrastructure"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-11-09T23:00:00+00:00",
+      "source_id": "vnexpress-current-affairs",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [
+        "infrastructure"
+      ],
+      "importance": 2,
+      "summary": "Cao tốc Khánh Hòa - Buôn Ma Thuột dài hơn 117 km, vốn đầu tư 22.000 tỷ đồng, khi hoàn thành rút ngắn hành trình giữ thủ phủ cà phê với phố biển du lịch nổi tiếng miền Trung.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://vnexpress.net/rss/thoi-su.rss",
+        "publisher_host": "vnexpress.net",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-cf4c808313d188d039c3",
+      "title": "Nhà đầu tư sẵn tiền 'săn' nhà đất giảm giá sâu",
+      "url": "https://vnexpress.net/nha-dau-tu-san-tien-san-nha-dat-giam-gia-sau-5142530.html",
+      "category": "market",
+      "module_ids": [
+        "market"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-11-09T23:00:00+00:00",
+      "source_id": "vnexpress-real-estate",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "Tranh thủ nhịp giảm mạnh của thị trường, nhiều nhà đầu tư sẵn tiền mặt săn lùng bất động sản giảm giá sâu, có khả năng cho thuê tạo dòng tiền.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://vnexpress.net/rss/bat-dong-san.rss",
+        "publisher_host": "vnexpress.net",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-a8d83c71210102b027a8",
+      "title": "Gỡ tạm hoãn xuất cảnh tại sân bay được không ?",
+      "url": "https://thanhnien.vn/go-tam-hoan-xuat-canh-tai-san-bay-duoc-khong-185261109215954951.htm",
+      "category": "infrastructure",
+      "module_ids": [
+        "infrastructure"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-11-09T23:00:00+00:00",
+      "source_id": "thanhnien-policy",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [
+        "infrastructure"
+      ],
+      "importance": 2,
+      "summary": "Thời gian gần đây, không ít người ra đến sân bay bị tạm hoãn xuất cảnh mới biết mình nợ thuế. Nhiều trường hợp thiệt hại hàng trăm triệu đồng vì lỡ việc. Thực tế đặt ra câu hỏi, làm sao để người nợ đóng thuế ngay tại sân bay và tiếp tục hành trình?",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://thanhnien.vn/rss/kinh-te/chinh-sach-phat-trien.rss",
+        "publisher_host": "thanhnien.vn",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-66dab9265944a813ab46",
+      "title": "Nhà 360 m2 giữa rừng thiết kế khu nuôi chim trong nơi ở",
+      "url": "https://vnexpress.net/nha-360-m2-giua-rung-thiet-ke-khu-nuoi-chim-trong-noi-o-5142562.html",
+      "category": "market",
+      "module_ids": [
+        "market"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-11-09T19:39:49+00:00",
+      "source_id": "vnexpress-real-estate",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "Ngôi nhà kết hợp không gian ở, làm việc và chăm sóc chim được giải cứu, sử dụng hệ cửa kính lớn cùng các khoảng mở để kết nối với cảnh quan xung quanh.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://vnexpress.net/rss/bat-dong-san.rss",
+        "publisher_host": "vnexpress.net",
+        "publication_date_from_feed": true
+      }
+    },
     {
       "id": "article-market-rss-1db490956548e8ab032d",
       "title": "Tối 9/11, giá vàng, bạc cùng tăng nhanh",
