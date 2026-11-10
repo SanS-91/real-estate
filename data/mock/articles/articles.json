@@ -1,9 +1,202 @@
 {
   "schema_version": 1,
-  "build_id": "market-news-rss-20261110T045150Z",
-  "generated_at": "2026-11-10T04:51:50.142441+00:00",
-  "record_count": 1660,
+  "build_id": "market-news-rss-20261110T065150Z",
+  "generated_at": "2026-11-10T06:51:50.671472+00:00",
+  "record_count": 1670,
   "data": [
+    {
+      "id": "article-market-rss-8b30e0c0d82ad78c9353",
+      "title": "Hà Nội mở bán loạt nhà xã hội giá từ 16 triệu đồng một m2",
+      "url": "https://vnexpress.net/ha-noi-mo-ban-loat-nha-xa-hoi-gia-tu-16-trieu-dong-mot-m2-5142775.html",
+      "category": "market",
+      "module_ids": [
+        "market"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-11-10T06:00:00+00:00",
+      "source_id": "vnexpress-real-estate",
+      "region_ids": [
+        "ha-noi"
+      ],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [
+        "supply"
+      ],
+      "importance": 2,
+      "summary": "Hơn 160 căn hộ ở Tố Hữu, Phương Canh thuộc diện chuyển bán sau thời gian cho thuê có giá 16-20 triệu đồng mỗi m2.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://vnexpress.net/rss/bat-dong-san.rss",
+        "publisher_host": "vnexpress.net",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-e169401b368b4d4e3881",
+      "title": "Cận cảnh 2 nút giao trên quốc lộ 1 qua Tây Ninh sắp xây hầm chui, cầu vượt",
+      "url": "https://dantri.com.vn/thoi-su/can-canh-2-nut-giao-tren-quoc-lo-1-qua-tay-ninh-sap-xay-ham-chui-cau-vuot-20261106224427764.htm",
+      "category": "infrastructure",
+      "module_ids": [
+        "infrastructure"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-11-10T05:30:00+00:00",
+      "source_id": "dantri-current-affairs",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [
+        "infrastructure"
+      ],
+      "importance": 2,
+      "summary": "(Dân trí) - Hai nút giao Long Kim và Bình Nhựt trên quốc lộ 1 qua Tây Ninh sẽ được đầu tư hơn 1.000 tỷ đồng để xây hầm chui, cầu vượt, góp phần giảm ùn tắc và hạn chế tai nạn giao thông.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://dantri.com.vn/rss/thoi-su.rss",
+        "publisher_host": "dantri.com.vn",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-52b7911a4fcd119a24e9",
+      "title": "Ngân hàng Nhà nước mua ngoại tệ: Kỳ vọng lãi suất giảm, chứng khoán tăng",
+      "url": "https://dantri.com.vn/kinh-doanh/ngan-hang-nha-nuoc-mua-ngoai-te-ky-vong-lai-suat-giam-chung-khoan-tang-20261110111759481.htm",
+      "category": "macro",
+      "module_ids": [
+        "macro"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-11-10T05:16:35+00:00",
+      "source_id": "dantri-business",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "(Dân trí) - Động thái mua ngoại tệ định kỳ của Ngân hàng Nhà nước được giới phân tích đánh giá là tín hiệu bơm thanh khoản chủ động, giúp hạ nhiệt mặt bằng lãi suất và kích thích thị trường chứng khoán.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://dantri.com.vn/rss/kinh-doanh.rss",
+        "publisher_host": "dantri.com.vn",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-58454ebf03f6716b21c5",
+      "title": "Đề xuất quy hoạch tổ hợp ga Ngọc Hồi 3 tầng, kết nối 5 tuyến metro",
+      "url": "https://vnexpress.net/de-xuat-quy-hoach-to-hop-ga-ngoc-hoi-3-tang-ket-noi-5-tuyen-metro-5142881.html",
+      "category": "market",
+      "module_ids": [
+        "market",
+        "infrastructure"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-11-10T05:06:05+00:00",
+      "source_id": "vnexpress-current-affairs",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [
+        "legal",
+        "infrastructure"
+      ],
+      "importance": 2,
+      "summary": "Tổ hợp ga Ngọc Hồi dự kiến rộng 267 ha, gồm khu ga 3 tầng và khu phát triển TOD, tích hợp đường sắt tốc độ cao Bắc Nam, đường sắt quốc gia và đường sắt đô thị.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://vnexpress.net/rss/thoi-su.rss",
+        "publisher_host": "vnexpress.net",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-613269011a180f7dc614",
+      "title": "Một làn cao tốc TPHCM - Trung Lương - Mỹ Thuận tạm dừng lưu thông ban đêm",
+      "url": "https://dantri.com.vn/thoi-su/mot-lan-cao-toc-tphcm-trung-luong-my-thuan-tam-dung-luu-thong-ban-dem-20261110111323565.htm",
+      "category": "infrastructure",
+      "module_ids": [
+        "infrastructure"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-11-10T05:02:34+00:00",
+      "source_id": "dantri-current-affairs",
+      "region_ids": [
+        "hcmc"
+      ],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [
+        "infrastructure"
+      ],
+      "importance": 2,
+      "summary": "(Dân trí) - Một làn cao tốc TPHCM - Trung Lương - Mỹ Thuận sẽ tạm dừng lưu thông ban đêm từ ngày 10 đến 30/11 để phục vụ thi công lắp đặt dầm cầu.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://dantri.com.vn/rss/thoi-su.rss",
+        "publisher_host": "dantri.com.vn",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-50bad032cc5dccaad6a5",
+      "title": "Địa ốc Đại Quang Minh của ông Trần Bá Dương lãi hơn 1.000 tỷ đồng",
+      "url": "https://dantri.com.vn/bat-dong-san/dia-oc-dai-quang-minh-cua-ong-tran-ba-duong-lai-hon-1000-ty-dong-20261110092410703.htm",
+      "category": "market",
+      "module_ids": [
+        "market"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-11-10T05:01:51+00:00",
+      "source_id": "dantri-real-estate",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "(Dân trí) - Địa ốc Đại Quang Minh báo lãi sau thuế hợp nhất 1.043 tỷ đồng trong nửa đầu năm, gấp hơn 6 lần cùng kỳ. Tuy nhiên, tổng nợ phải trả của doanh nghiệp đã vượt 51.500 tỷ đồng.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://dantri.com.vn/rss/bat-dong-san.rss",
+        "publisher_host": "dantri.com.vn",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-a7782b9e3f3a53571605",
+      "title": "Chủ đầu tư, sàn giao dịch phải cập nhật dữ liệu bất động sản ngay khi có biến động",
+      "url": "https://vnexpress.net/chu-dau-tu-san-giao-dich-phai-cap-nhat-du-lieu-bat-dong-san-ngay-khi-co-bien-dong-5142753.html",
+      "category": "market",
+      "module_ids": [
+        "market"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-11-10T04:56:53+00:00",
+      "source_id": "vnexpress-real-estate",
+      "region_ids": [
+        "hcmc"
+      ],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [
+        "sales"
+      ],
+      "importance": 2,
+      "summary": "Chủ đầu tư, sàn giao dịch và doanh nghiệp môi giới tại TP HCM phải cập nhật thông tin về dự án, mua bán ngay khi có thay đổi, thay vì chờ đến kỳ báo cáo.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://vnexpress.net/rss/bat-dong-san.rss",
+        "publisher_host": "vnexpress.net",
+        "publication_date_from_feed": true
+      }
+    },
     {
       "id": "article-market-rss-8d8ab6c13800999d9ffe",
       "title": "Ngân hàng Nhà nước sẽ định kỳ mua USD từ các nhà băng",
@@ -26,6 +219,84 @@
         "method": "official-rss",
         "feed_url": "https://vnexpress.net/rss/kinh-doanh.rss",
         "publisher_host": "vnexpress.net",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-2d1138e8aaef9317084c",
+      "title": "7 bước để dự án xanh nhận hỗ trợ lãi suất 2%/năm",
+      "url": "https://dantri.com.vn/kinh-doanh/7-buoc-de-du-an-xanh-nhan-ho-tro-lai-suat-2nam-20261110083258568.htm",
+      "category": "market",
+      "module_ids": [
+        "market",
+        "macro"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-11-10T04:15:51+00:00",
+      "source_id": "dantri-business",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "(Dân trí) - Lãi suất 2%/năm là cơ hội để doanh nghiệp có thêm động lực tăng trưởng các dự án xanh, dự án tuần hoàn. Nhưng làm thế nào để có thể nhận hỗ trợ này?",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://dantri.com.vn/rss/kinh-doanh.rss",
+        "publisher_host": "dantri.com.vn",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-63f7735aa0fac67216cc",
+      "title": "Xuất hiện thêm căn hộ giá hơn 700 triệu đồng tại Hà Nội",
+      "url": "https://dantri.com.vn/bat-dong-san/xuat-hien-them-can-ho-gia-hon-700-trieu-dong-tai-ha-noi-20261110101548697.htm",
+      "category": "market",
+      "module_ids": [
+        "market"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-11-10T03:30:18+00:00",
+      "source_id": "dantri-real-estate",
+      "region_ids": [
+        "ha-noi"
+      ],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "(Dân trí) - Hà Nội dự kiến tiếp nhận hồ sơ mua 164 căn nhà ở xã hội tại hai dự án NHS Trung Văn và NHS Phương Canh, giá từ 16,6 triệu đồng/m2. Tuy nhiên, không phải ai cũng được đăng ký mua.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://dantri.com.vn/rss/bat-dong-san.rss",
+        "publisher_host": "dantri.com.vn",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-8433d12100416fbbbe41",
+      "title": "Ngân hàng Nhà nước mua USD giao ngay, hỗ trợ thanh khoản hệ thống",
+      "url": "https://dantri.com.vn/kinh-doanh/ngan-hang-nha-nuoc-mua-usd-giao-ngay-ho-tro-thanh-khoan-he-thong-20261110100211695.htm",
+      "category": "macro",
+      "module_ids": [
+        "macro"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-11-10T03:16:02+00:00",
+      "source_id": "dantri-business",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "(Dân trí) - Ngân hàng Nhà nước triển khai mua USD giao ngay định kỳ với tỷ giá 25.500 đồng/USD nhằm hỗ trợ thanh khoản tiền đồng cho hệ thống ngân hàng.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://dantri.com.vn/rss/kinh-doanh.rss",
+        "publisher_host": "dantri.com.vn",
         "publication_date_from_feed": true
       }
     },
