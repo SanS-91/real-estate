@@ -1,9 +1,221 @@
 {
   "schema_version": 1,
-  "build_id": "market-news-rss-20261110T005137Z",
-  "generated_at": "2026-11-10T00:51:37.270838+00:00",
-  "record_count": 1642,
+  "build_id": "market-news-rss-20261110T025142Z",
+  "generated_at": "2026-11-10T02:51:42.885300+00:00",
+  "record_count": 1653,
   "data": [
+    {
+      "id": "article-market-rss-be9200a0ded44cf95baf",
+      "title": "Cao tốc từ TP HCM đi Cần Thơ điều chỉnh giao thông trong 20 ngày",
+      "url": "https://vnexpress.net/cao-toc-tu-tp-hcm-di-can-tho-dieu-chinh-giao-thong-trong-20-ngay-5142724.html",
+      "category": "infrastructure",
+      "module_ids": [
+        "infrastructure"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-11-10T02:10:33+00:00",
+      "source_id": "vnexpress-current-affairs",
+      "region_ids": [
+        "hcmc"
+      ],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [
+        "infrastructure"
+      ],
+      "importance": 2,
+      "summary": "Cao tốc TP HCM - Trung Lương - Mỹ Thuận tạm dừng khai thác làn số 1 hướng về miền Tây, đoạn qua xã Thủ Thừa, từ 22h đến 6h trong 20 ngày để lắp dầm cầu.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://vnexpress.net/rss/thoi-su.rss",
+        "publisher_host": "vnexpress.net",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-898422ebe884c79a0129",
+      "title": "Giá vàng hôm nay 10.11.2026: Vàng miếng SJC tăng chậm hơn thế giới",
+      "url": "https://thanhnien.vn/gia-vang-hom-nay-10112026-vang-mieng-sjc-tang-cham-hon-the-gioi-185261110084436622.htm",
+      "category": "macro",
+      "module_ids": [
+        "macro"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-11-10T01:50:00+00:00",
+      "source_id": "thanhnien-banking",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "Giá vàng trong nước tăng chậm hơn so với thế giới khiến mức đắt đỏ của vàng miếng SJC được rút ngắn còn 12 triệu đồng mỗi lượng.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://thanhnien.vn/rss/kinh-te/ngan-hang.rss",
+        "publisher_host": "thanhnien.vn",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-6fb401d789451c06aa63",
+      "title": "Ngân hàng Nhà nước mua USD giao ngay, tăng thanh khoản cho ngân hàng thương mại",
+      "url": "https://thanhnien.vn/ngan-hang-nha-nuoc-mua-usd-giao-ngay-tang-thanh-khoan-cho-ngan-hang-thuong-mai-185261110082613938.htm",
+      "category": "macro",
+      "module_ids": [
+        "macro"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-11-10T01:38:00+00:00",
+      "source_id": "thanhnien-banking",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "Ngân hàng Nhà nước sẽ thực hiện mua USD giao ngay để triển khai hỗ trợ thanh khoản cho hệ thống.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://thanhnien.vn/rss/kinh-te/ngan-hang.rss",
+        "publisher_host": "thanhnien.vn",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-9353c747ee8416bfbe1c",
+      "title": "Vị trí kết nối khu dân cư và du lịch của The Heritage Tay Ninh",
+      "url": "https://vnexpress.net/vi-tri-ket-noi-khu-dan-cu-va-du-lich-cua-the-heritage-tay-ninh-5142496.html",
+      "category": "market",
+      "module_ids": [
+        "market"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-11-10T01:00:00+00:00",
+      "source_id": "vnexpress-real-estate",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [
+        "legal"
+      ],
+      "importance": 2,
+      "summary": "Nằm giữa khu dân cư hiện hữu và điểm đến du lịch núi Bà Đen, The Heritage Tay Ninh được quy hoạch theo mô hình đô thị du lịch, kết hợp không gian an cư với hoạt động thương mại, dịch vụ.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://vnexpress.net/rss/bat-dong-san.rss",
+        "publisher_host": "vnexpress.net",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-85916d7a42e83889a20b",
+      "title": "Norton Park: Khi áp lực tỉ đô cần ‘trạm sạc’ xứng tầm",
+      "url": "https://thanhnien.vn/norton-park-khi-ap-luc-ti-do-can-tram-sac-xung-tam-185261109174939885.htm",
+      "category": "market",
+      "module_ids": [
+        "market"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-11-10T01:00:00+00:00",
+      "source_id": "thanhnien-real-estate",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "Được thiết kế dành cho những công dân toàn cầu thường xuyên dịch chuyển giữa các quốc gia, làm việc xuyên múi giờ và tham gia vào nhịp vận hành công nghiệp - công nghệ không ngơi nghỉ, Norton Park mang đến nhiều hơn một nơi để ở. Đó là một chốn an cư giao hòa giữa tiện nghi, kết nối và cảm giác thuộ",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://thanhnien.vn/rss/kinh-te/dia-oc.rss",
+        "publisher_host": "thanhnien.vn",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-77fc5362713718d68f6f",
+      "title": "Van Phuc Group ưu đãi 'mua nhà trúng nhà' tại TP HCM",
+      "url": "https://vnexpress.net/van-phuc-group-uu-dai-mua-nha-trung-nha-tai-tp-hcm-5142498.html",
+      "category": "market",
+      "module_ids": [
+        "market"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-11-10T01:00:00+00:00",
+      "source_id": "vnexpress-real-estate",
+      "region_ids": [
+        "hcmc"
+      ],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "Người mua căn hộ Diamond Sky tại Van Phuc City có cơ hội nhận thêm một căn hộ trị giá gần 8 tỷ đồng trong chương trình do Van Phuc Group tổ chức từ nay đến hết 1/11/2027.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://vnexpress.net/rss/bat-dong-san.rss",
+        "publisher_host": "vnexpress.net",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-745ea1a2fb43a00f6961",
+      "title": "A&K Tower: Giải pháp tài chính mở lối kế hoạch an cư",
+      "url": "https://dantri.com.vn/bat-dong-san/ak-tower-giai-phap-tai-chinh-mo-loi-ke-hoach-an-cu-20261110070613786.htm",
+      "category": "market",
+      "module_ids": [
+        "market"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-11-10T01:00:00+00:00",
+      "source_id": "dantri-real-estate",
+      "region_ids": [
+        "hcmc"
+      ],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [
+        "supply"
+      ],
+      "importance": 2,
+      "summary": "(Dân trí) - Sự kiện mở bán và tri ân khách hàng A&K Tower ngày 7/11 ghi nhận những kết quả tích cực tại khu vực Đông Bắc TPHCM trong quá trình triển khai giải pháp tài chính “May đo dòng tiền” với ưu đãi “Mua nhà 3 không” và đầu tư “Chốt ngay 3 có”.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://dantri.com.vn/rss/bat-dong-san.rss",
+        "publisher_host": "dantri.com.vn",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-d2913ccbbe178fbfc13f",
+      "title": "Giá vàng thế giới tăng mạnh, giá dầu lao dốc",
+      "url": "https://vnexpress.net/gia-vang-the-gioi-tang-manh-gia-dau-lao-doc-5142686.html",
+      "category": "macro",
+      "module_ids": [
+        "macro"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-11-10T00:41:58+00:00",
+      "source_id": "vnexpress-economy",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "Mỗi ounce vàng tăng gần 70 USD, nhờ đôla Mỹ yếu đi và giá dầu Brent giảm gần 6 USD một thùng.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://vnexpress.net/rss/kinh-doanh.rss",
+        "publisher_host": "vnexpress.net",
+        "publication_date_from_feed": true
+      }
+    },
     {
       "id": "article-market-rss-19bc5e49b3e3217ce42d",
       "title": "Giá tăng, vàng SJC đắt hơn giá thế giới 13 triệu đồng/lượng",
@@ -25,6 +237,56 @@
       "source_verification": {
         "method": "official-rss",
         "feed_url": "https://dantri.com.vn/rss/kinh-doanh.rss",
+        "publisher_host": "dantri.com.vn",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-82ddc4ac57534d30c580",
+      "title": "Cocobay từng được Ronaldo quảng bá có diễn biến mới sau nhiều năm bỏ hoang",
+      "url": "https://dantri.com.vn/bat-dong-san/cocobay-tung-duoc-ronaldo-quang-ba-co-dien-bien-moi-sau-nhieu-nam-bo-hoang-20261109185020943.htm",
+      "category": "market",
+      "module_ids": [
+        "market"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-11-09T23:19:37+00:00",
+      "source_id": "dantri-real-estate",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "(Dân trí) - Dự án Cocobay Đà Nẵng, từng được Cristiano Ronaldo quảng bá và gây chú ý với cam kết lợi nhuận 12%/năm, vừa được bổ sung vào danh mục áp dụng cơ chế đặc thù để tháo gỡ vướng mắc.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://dantri.com.vn/rss/bat-dong-san.rss",
+        "publisher_host": "dantri.com.vn",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-a8d00b9bfd11b36be60f",
+      "title": "Malaysia sắp đón đợt IPO bất động sản lớn nhất lịch sử",
+      "url": "https://dantri.com.vn/bat-dong-san/malaysia-sap-don-dot-ipo-bat-dong-san-lon-nhat-lich-su-20261109220820076.htm",
+      "category": "market",
+      "module_ids": [
+        "market"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-11-09T23:11:29+00:00",
+      "source_id": "dantri-real-estate",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "(Dân trí) - Tập đoàn IOI Properties vừa chào bán quỹ tín thác bất động sản để huy động hơn 515 triệu USD, mở đường cho đợt IPO kỷ lục sắp sửa lên sàn chứng khoán vào cuối tháng 11.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://dantri.com.vn/rss/bat-dong-san.rss",
         "publisher_host": "dantri.com.vn",
         "publication_date_from_feed": true
       }
@@ -105,6 +367,33 @@
         "method": "official-rss",
         "feed_url": "https://thanhnien.vn/rss/kinh-te/chinh-sach-phat-trien.rss",
         "publisher_host": "thanhnien.vn",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-2b843a64af91ef3c55ab",
+      "title": "Khung giá quản lý chung cư mới ở TPHCM: Nơi cao nhất không phải trung tâm",
+      "url": "https://dantri.com.vn/bat-dong-san/khung-gia-quan-ly-chung-cu-moi-o-tphcm-noi-cao-nhat-khong-phai-trung-tam-20261109214235887.htm",
+      "category": "market",
+      "module_ids": [
+        "market"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-11-09T23:00:00+00:00",
+      "source_id": "dantri-real-estate",
+      "region_ids": [
+        "hcmc"
+      ],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "(Dân trí) - Khung giá dịch vụ quản lý vận hành chung cư mới tại TPHCM dao động 600-13.700 đồng/m²/tháng ở các phường, xã và lên đến 24.700 đồng/m²/tháng tại Đặc khu Côn Đảo.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://dantri.com.vn/rss/bat-dong-san.rss",
+        "publisher_host": "dantri.com.vn",
         "publication_date_from_feed": true
       }
     },
