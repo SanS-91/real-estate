@@ -1,9 +1,116 @@
 {
   "schema_version": 1,
-  "build_id": "market-news-rss-20261110T125245Z",
-  "generated_at": "2026-11-10T12:52:45.784333+00:00",
-  "record_count": 1681,
+  "build_id": "market-news-rss-20261110T145134Z",
+  "generated_at": "2026-11-10T14:51:34.393947+00:00",
+  "record_count": 1685,
   "data": [
+    {
+      "id": "article-market-rss-1424073f78f2e720b4e3",
+      "title": "Lạm phát ở Mỹ vượt dự báo, quan chức Fed nêu khả năng tăng lãi suất",
+      "url": "https://dantri.com.vn/kinh-doanh/lam-phat-o-my-vuot-du-bao-quan-chuc-fed-neu-kha-nang-tang-lai-suat-20261110210555690.htm",
+      "category": "macro",
+      "module_ids": [
+        "macro"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-11-10T14:20:23+00:00",
+      "source_id": "dantri-business",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "(Dân trí) - Chỉ số giá tiêu dùng tháng 10 của Mỹ vừa công bố cao hơn kỳ vọng. Dữ liệu giá cả nóng trở lại củng cố mạnh mẽ khả năng Fed tiếp tục tăng lãi suất trong cuộc họp tháng 12 tới.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://dantri.com.vn/rss/kinh-doanh.rss",
+        "publisher_host": "dantri.com.vn",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-6441e0622cdfb6c8077e",
+      "title": "Đà Nẵng duyệt 113 khu đất làm nhà ở xã hội",
+      "url": "https://vnexpress.net/da-nang-duyet-113-khu-dat-lam-nha-o-xa-hoi-5143099.html",
+      "category": "market",
+      "module_ids": [
+        "market"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-11-10T13:01:04+00:00",
+      "source_id": "vnexpress-current-affairs",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "Đà Nẵng phê duyệt 113 khu đất rộng khoảng 390 ha để triển khai các dự án nhà ở xã hội, hướng tới mục tiêu hoàn thành gần 23.900 căn giai đoạn 2026-2030.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://vnexpress.net/rss/thoi-su.rss",
+        "publisher_host": "vnexpress.net",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-ef7c5e83a8b272e31d90",
+      "title": "TP HCM đề xuất cho tồn tại có điều kiện một số công trình sai phép",
+      "url": "https://vnexpress.net/tp-hcm-de-xuat-cho-ton-tai-co-dieu-kien-mot-so-cong-trinh-sai-phep-5143078.html",
+      "category": "market",
+      "module_ids": [
+        "market"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-11-10T12:25:57+00:00",
+      "source_id": "vnexpress-real-estate",
+      "region_ids": [
+        "hcmc"
+      ],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [
+        "legal"
+      ],
+      "importance": 2,
+      "summary": "Các công trình sai phép xây dựng nếu đáp ứng một loạt điều kiện, gồm đảm bảo quy hoạch, an toàn, đã khắc phục hậu quả, nộp phạt... có thể không phải tháo dỡ.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://vnexpress.net/rss/bat-dong-san.rss",
+        "publisher_host": "vnexpress.net",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-eeca42c1b3f0250e0027",
+      "title": "Bộ Xây dựng chốt thời hạn rà soát điều kiện khai thác sân bay Long Thành",
+      "url": "https://dantri.com.vn/bat-dong-san/bo-xay-dung-chot-thoi-han-ra-soat-dieu-kien-khai-thac-san-bay-long-thanh-20261110191145291.htm",
+      "category": "market",
+      "module_ids": [
+        "infrastructure"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-11-10T12:18:26+00:00",
+      "source_id": "dantri-real-estate",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [
+        "legal",
+        "infrastructure"
+      ],
+      "importance": 2,
+      "summary": "(Dân trí) - Bộ Xây dựng yêu cầu ACV rà soát toàn diện tiến độ công trình, thủ tục pháp lý, điều kiện vận hành sân bay Long Thành và báo cáo trước ngày 15/11, trong bối cảnh sân bay dự kiến khai thác từ 24/12.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://dantri.com.vn/rss/bat-dong-san.rss",
+        "publisher_host": "dantri.com.vn",
+        "publication_date_from_feed": true
+      }
+    },
     {
       "id": "article-market-rss-80f5fc225dd90eb6d353",
       "title": "12 ngân hàng cho vay bất động sản hơn 1,14 triệu tỷ đồng",
