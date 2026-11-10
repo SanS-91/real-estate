@@ -1,9 +1,90 @@
 {
   "schema_version": 1,
-  "build_id": "market-news-rss-20261110T105134Z",
-  "generated_at": "2026-11-10T10:51:34.308389+00:00",
-  "record_count": 1678,
+  "build_id": "market-news-rss-20261110T125245Z",
+  "generated_at": "2026-11-10T12:52:45.784333+00:00",
+  "record_count": 1681,
   "data": [
+    {
+      "id": "article-market-rss-80f5fc225dd90eb6d353",
+      "title": "12 ngân hàng cho vay bất động sản hơn 1,14 triệu tỷ đồng",
+      "url": "https://dantri.com.vn/bat-dong-san/12-ngan-hang-cho-vay-bat-dong-san-hon-114-trieu-ty-dong-20261110183216497.htm",
+      "category": "market",
+      "module_ids": [
+        "market"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-11-10T11:44:59+00:00",
+      "source_id": "dantri-real-estate",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "(Dân trí) - Tỷ trọng cho vay kinh doanh bất động sản tại một số ngân hàng vượt 20% tổng dư nợ. Dư nợ cho vay kinh doanh bất động sản tại 12 ngân hàng có công bố số liệu chi tiết đạt hơn 1,14 triệu tỷ đồng.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://dantri.com.vn/rss/bat-dong-san.rss",
+        "publisher_host": "dantri.com.vn",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-2f0cea0088f1d91c55d1",
+      "title": "Xây 3 cao tốc mới: ĐBQH lo áp lực, Bộ trưởng trấn an “không sợ thiếu vốn”",
+      "url": "https://dantri.com.vn/thoi-su/xay-3-cao-toc-moi-dbqh-lo-ap-luc-bo-truong-tran-an-khong-so-thieu-von-20261110175118500.htm",
+      "category": "infrastructure",
+      "module_ids": [
+        "infrastructure"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-11-10T10:58:05+00:00",
+      "source_id": "dantri-current-affairs",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [
+        "infrastructure"
+      ],
+      "importance": 2,
+      "summary": "(Dân trí) - Với 3 tuyến cao tốc đang trình Quốc hội, Bộ trưởng Xây dựng khẳng định có thể yên tâm về phương án đề xuất. “Nếu thiếu vốn, Chính phủ sẽ nghiên cứu cân đối, bố trí từ các nguồn khác”, ông nói.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://dantri.com.vn/rss/thoi-su.rss",
+        "publisher_host": "dantri.com.vn",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-1322fa0b7f7103b1676c",
+      "title": "Tây Ninh khởi công mở rộng quốc lộ 50 lên 6 làn xe",
+      "url": "https://dantri.com.vn/thoi-su/tay-ninh-khoi-cong-mo-rong-quoc-lo-50-len-6-lan-xe-20261110164725146.htm",
+      "category": "infrastructure",
+      "module_ids": [
+        "infrastructure"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-11-10T10:53:07+00:00",
+      "source_id": "dantri-current-affairs",
+      "region_ids": [
+        "hcmc"
+      ],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [
+        "infrastructure"
+      ],
+      "importance": 2,
+      "summary": "(Dân trí) - Dự án mở rộng quốc lộ 50, đoạn từ ranh TPHCM đến vòng xoay Khu công nghiệp Tân Kim mở rộng, có tổng vốn đầu tư 150 tỷ đồng, dự kiến thực hiện trong giai đoạn 2026-2028.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://dantri.com.vn/rss/thoi-su.rss",
+        "publisher_host": "dantri.com.vn",
+        "publication_date_from_feed": true
+      }
+    },
     {
       "id": "article-market-rss-dea41125351851251fd0",
       "title": "Keppel cùng Phú Long phát triển 420 căn hộ tại Nam TP HCM",
