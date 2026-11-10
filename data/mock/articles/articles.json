@@ -1,9 +1,91 @@
 {
   "schema_version": 1,
-  "build_id": "market-news-rss-20261110T085251Z",
-  "generated_at": "2026-11-10T08:52:51.447914+00:00",
-  "record_count": 1675,
+  "build_id": "market-news-rss-20261110T105134Z",
+  "generated_at": "2026-11-10T10:51:34.308389+00:00",
+  "record_count": 1678,
   "data": [
+    {
+      "id": "article-market-rss-dea41125351851251fd0",
+      "title": "Keppel cùng Phú Long phát triển 420 căn hộ tại Nam TP HCM",
+      "url": "https://vnexpress.net/keppel-cung-phu-long-phat-trien-420-can-ho-tai-nam-tp-hcm-5143014.html",
+      "category": "market",
+      "module_ids": [
+        "market"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-11-10T10:00:00+00:00",
+      "source_id": "vnexpress-real-estate",
+      "region_ids": [
+        "hcmc"
+      ],
+      "project_ids": [
+        "celesta-gold"
+      ],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "Celesta Gold gồm hai tòa tháp 25 tầng với 420 căn hộ ven sông, phát triển theo cảm hứng \"thành phố vàng El Dorado\", hướng đến đa tiện ích, riêng tư và bền vững.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://vnexpress.net/rss/bat-dong-san.rss",
+        "publisher_host": "vnexpress.net",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-42a013579cfae0825dae",
+      "title": "SetiaBecamex tri ân khách hàng mua nhà tại EcoLakes Mỹ Phước",
+      "url": "https://vnexpress.net/setiabecamex-tri-an-khach-hang-mua-nha-tai-ecolakes-my-phuoc-5143046.html",
+      "category": "market",
+      "module_ids": [
+        "market"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-11-10T10:00:00+00:00",
+      "source_id": "vnexpress-real-estate",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "SetiaBecamex tổ chức tri ân, tặng quà cho hơn 150 khách hàng mua The Glamour và Valley of Dreams II - Luxury ngày 8/11, đồng thời chia sẻ tiến độ, kế hoạch hoàn thiện hai phân khu.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://vnexpress.net/rss/bat-dong-san.rss",
+        "publisher_host": "vnexpress.net",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-9539ac2dd62aa08daeab",
+      "title": "HoREA kiến nghị giữ quyền bán nhà xã hội theo giá thị trường sau 5 năm",
+      "url": "https://vnexpress.net/horea-kien-nghi-giu-quyen-ban-nha-xa-hoi-theo-gia-thi-truong-sau-5-nam-5142956.html",
+      "category": "market",
+      "module_ids": [
+        "market",
+        "legal"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-11-10T09:16:36+00:00",
+      "source_id": "vnexpress-real-estate",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [
+        "pricing"
+      ],
+      "importance": 2,
+      "summary": "HoREA kiến nghị giữ nguyên quyền được bán lại nhà ở xã hội theo giá thị trường sau 5 năm, thay vì giới hạn người mua và giá bán như dự thảo Luật Nhà ở (sửa đổi).",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://vnexpress.net/rss/bat-dong-san.rss",
+        "publisher_host": "vnexpress.net",
+        "publication_date_from_feed": true
+      }
+    },
     {
       "id": "article-market-rss-ccf8ee42af70cd491dc4",
       "title": "Bộ Xây dựng ra 'deadline' báo cáo đầu việc chuẩn bị khai thác sân bay Long Thành",
