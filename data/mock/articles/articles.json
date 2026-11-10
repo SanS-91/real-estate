@@ -1,9 +1,113 @@
 {
   "schema_version": 1,
-  "build_id": "market-news-rss-20261110T065150Z",
-  "generated_at": "2026-11-10T06:51:50.671472+00:00",
-  "record_count": 1670,
+  "build_id": "market-news-rss-20261110T085251Z",
+  "generated_at": "2026-11-10T08:52:51.447914+00:00",
+  "record_count": 1675,
   "data": [
+    {
+      "id": "article-market-rss-ccf8ee42af70cd491dc4",
+      "title": "Bộ Xây dựng ra 'deadline' báo cáo đầu việc chuẩn bị khai thác sân bay Long Thành",
+      "url": "https://thanhnien.vn/bo-xay-dung-ra-deadline-bao-cao-dau-viec-chuan-bi-khai-thac-san-bay-longthanh-185261110154349636.htm",
+      "category": "infrastructure",
+      "module_ids": [
+        "infrastructure"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-11-10T08:46:00+00:00",
+      "source_id": "thanhnien-policy",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [
+        "infrastructure"
+      ],
+      "importance": 2,
+      "summary": "Bộ Xây dựng vừa có văn bản gửi Cục Hàng không Việt Nam và Tổng công ty Cảng hàng không Việt Nam - CTCP (ACV) về công tác chuẩn bị đưa Cảng hàng không quốc tế Long Thành giai đoạn 1 vào khai thác.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://thanhnien.vn/rss/kinh-te/chinh-sach-phat-trien.rss",
+        "publisher_host": "thanhnien.vn",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-968855d99438765031db",
+      "title": "Cần cơ chế cho phép nhà ở xã hội được tự do mua bán",
+      "url": "https://thanhnien.vn/can-co-che-cho-phep-nha-o-xa-hoi-duoc-tu-do-mua-ban-185261110140629671.htm",
+      "category": "market",
+      "module_ids": [
+        "market"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-11-10T07:45:00+00:00",
+      "source_id": "thanhnien-real-estate",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "Trong văn bản kiến nghị gửi đến Thủ tướng Chính phủ mới đây, HoREA tiếp tục đề nghị giữ nguyên chính sách cho phép bán lại nhà ở xã hội đã mua hoặc đã thuê mua sau thời hạn 5 năm.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://thanhnien.vn/rss/kinh-te/dia-oc.rss",
+        "publisher_host": "thanhnien.vn",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-bd7260ef86d5e974695a",
+      "title": "Từ “vùng đáy”, CEO kỳ cựu đúc kết bài học làm nghề môi giới bất động sản",
+      "url": "https://dantri.com.vn/bat-dong-san/tu-vung-day-ceo-ky-cuu-duc-ket-bai-hoc-lam-nghe-moi-gioi-bat-dong-san-20261110135831808.htm",
+      "category": "market",
+      "module_ids": [
+        "market"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-11-10T07:10:04+00:00",
+      "source_id": "dantri-real-estate",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "(Dân trí) - Gần 20 năm đi qua những chu kỳ thăng trầm của thị trường bất động sản, CEO Trần Bá Thùy cho rằng thời điểm khó khăn cũng là cơ hội để người làm nghề tích lũy kinh nghiệm, tạo lợi thế trước khi thị trường bước vào chu kỳ mới.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://dantri.com.vn/rss/bat-dong-san.rss",
+        "publisher_host": "dantri.com.vn",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-d95a6ffa40dc04fbb856",
+      "title": "Hà Nội tổng kiểm tra khu sạc xe điện tại nhà trọ, chung cư mini",
+      "url": "https://dantri.com.vn/bat-dong-san/ha-noi-tong-kiem-tra-khu-sac-xe-dien-tai-nha-tro-chung-cu-mini-20261110130714498.htm",
+      "category": "market",
+      "module_ids": [
+        "market"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-11-10T06:37:08+00:00",
+      "source_id": "dantri-real-estate",
+      "region_ids": [
+        "ha-noi"
+      ],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "(Dân trí) - Hà Nội sẽ kiểm tra an toàn điện, phòng cháy, chữa cháy tại các nhà ở, công trình trên địa bàn, trong đó tập trung vào khu vực để xe, sạc xe điện tại nhà trọ, nhà ở nhiều căn hộ.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://dantri.com.vn/rss/bat-dong-san.rss",
+        "publisher_host": "dantri.com.vn",
+        "publication_date_from_feed": true
+      }
+    },
     {
       "id": "article-market-rss-8b30e0c0d82ad78c9353",
       "title": "Hà Nội mở bán loạt nhà xã hội giá từ 16 triệu đồng một m2",
@@ -30,6 +134,34 @@
         "method": "official-rss",
         "feed_url": "https://vnexpress.net/rss/bat-dong-san.rss",
         "publisher_host": "vnexpress.net",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-df5a00ae3f7848f9ca5d",
+      "title": "Người mua nhà ở xã hội có thể chịu thiệt khi bán lại sau 5 năm",
+      "url": "https://dantri.com.vn/bat-dong-san/nguoi-mua-nha-o-xa-hoi-co-the-chiu-thiet-khi-ban-lai-sau-5-nam-20261110100624725.htm",
+      "category": "market",
+      "module_ids": [
+        "market",
+        "macro"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-11-10T05:55:00+00:00",
+      "source_id": "dantri-real-estate",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [
+        "pricing"
+      ],
+      "importance": 2,
+      "summary": "(Dân trí) - Sau 5 năm, người mua nhà ở xã hội có thể chịu thiệt khi bán lại do đã phát sinh lãi vay, chi phí sở hữu, trong khi giá bán vẫn bị giới hạn.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://dantri.com.vn/rss/bat-dong-san.rss",
+        "publisher_host": "dantri.com.vn",
         "publication_date_from_feed": true
       }
     },
