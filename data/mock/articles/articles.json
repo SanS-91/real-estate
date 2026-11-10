@@ -1,9 +1,36 @@
 {
   "schema_version": 1,
-  "build_id": "market-news-rss-20261110T145134Z",
-  "generated_at": "2026-11-10T14:51:34.393947+00:00",
-  "record_count": 1685,
+  "build_id": "market-news-rss-20261110T162903Z",
+  "generated_at": "2026-11-10T16:29:03.400721+00:00",
+  "record_count": 1687,
   "data": [
+    {
+      "id": "article-market-rss-6b69a04b8f15e60146db",
+      "title": "Hàng chục ôtô đậu trên cầu vượt ở Nha Trang tránh lũ",
+      "url": "https://vnexpress.net/hang-chuc-oto-dau-tren-cau-vuot-o-nha-trang-tranh-lu-5143129.html",
+      "category": "infrastructure",
+      "module_ids": [
+        "infrastructure"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-11-10T15:37:00+00:00",
+      "source_id": "vnexpress-current-affairs",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [
+        "infrastructure"
+      ],
+      "importance": 2,
+      "summary": "Lo ngại mưa lớn và các hồ chứa chuẩn bị điều tiết nước gây ngập, hàng chục chủ ôtô đưa xe lên cầu vượt đường sắt ở Nha Trang để bảo vệ tài sản, tối 10/11.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://vnexpress.net/rss/thoi-su.rss",
+        "publisher_host": "vnexpress.net",
+        "publication_date_from_feed": true
+      }
+    },
     {
       "id": "article-market-rss-1424073f78f2e720b4e3",
       "title": "Lạm phát ở Mỹ vượt dự báo, quan chức Fed nêu khả năng tăng lãi suất",
@@ -4135,6 +4162,33 @@
       "tags": [],
       "importance": 2,
       "summary": "Phát Đạt khởi công 5 tòa tháp đầu tiên thuộc dự án Qtopia tại khu vực biển Phước Hải, TP HCM, ngày 6/11.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://vnexpress.net/rss/bat-dong-san.rss",
+        "publisher_host": "vnexpress.net",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-2688d1b41c9e78421a96",
+      "title": "Sun Group mở bán nhà xã hội cho cư dân tái định cư",
+      "url": "https://vnexpress.net/sun-group-mo-ban-nha-xa-hoi-cho-cu-dan-tai-dinh-cu-5141512.html",
+      "category": "market",
+      "module_ids": [
+        "market"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-11-06T08:07:45+00:00",
+      "source_id": "vnexpress-real-estate",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [
+        "supply"
+      ],
+      "importance": 2,
+      "summary": "Hơn trăm căn hộ Sun Home sắp mở bán dành cho người dân thuộc diện di dời từ 3 khu chung cư cũ tại Đà Nẵng.",
       "source_verification": {
         "method": "official-rss",
         "feed_url": "https://vnexpress.net/rss/bat-dong-san.rss",
