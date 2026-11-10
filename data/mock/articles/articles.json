@@ -1,9 +1,115 @@
 {
   "schema_version": 1,
-  "build_id": "market-news-rss-20261110T025142Z",
-  "generated_at": "2026-11-10T02:51:42.885300+00:00",
-  "record_count": 1653,
+  "build_id": "market-news-rss-20261110T045150Z",
+  "generated_at": "2026-11-10T04:51:50.142441+00:00",
+  "record_count": 1660,
   "data": [
+    {
+      "id": "article-market-rss-8d8ab6c13800999d9ffe",
+      "title": "Ngân hàng Nhà nước sẽ định kỳ mua USD từ các nhà băng",
+      "url": "https://vnexpress.net/ngan-hang-nha-nuoc-se-dinh-ky-mua-usd-tu-cac-nha-bang-5142801.html",
+      "category": "macro",
+      "module_ids": [
+        "macro"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-11-10T04:34:06+00:00",
+      "source_id": "vnexpress-economy",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "Từ 11/11, Ngân hàng Nhà nước sẽ quay trở lại mua ngoại tệ giao ngay từ ngân hàng thương mại hai lần mỗi tuần, với giá 25.500 đồng một USD.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://vnexpress.net/rss/kinh-doanh.rss",
+        "publisher_host": "vnexpress.net",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-4b89d80f482c42dbcdd0",
+      "title": "TP HCM nâng trần khung phí quản lý chung cư lên tối đa 13.700 đồng mỗi m2",
+      "url": "https://vnexpress.net/tp-hcm-nang-tran-khung-phi-quan-ly-chung-cu-len-toi-da-13-700-dong-moi-m2-5142712.html",
+      "category": "market",
+      "module_ids": [
+        "market"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-11-10T03:09:19+00:00",
+      "source_id": "vnexpress-real-estate",
+      "region_ids": [
+        "hcmc"
+      ],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "Khung giá dịch vụ quản lý chung cư mới tại TP HCM dao động 600-13.700 đồng mỗi m2 một tháng, trong đó mức tối đa tăng gần gấp đôi so với quy định cũ.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://vnexpress.net/rss/bat-dong-san.rss",
+        "publisher_host": "vnexpress.net",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-3c7e90f19920d01154a1",
+      "title": "“Không có hàng rào, rất dễ sinh ra dự án bất động sản khoác áo văn hóa”",
+      "url": "https://dantri.com.vn/thoi-su/khong-co-hang-rao-rat-de-sinh-ra-du-an-bat-dong-san-khoac-ao-van-hoa-20261110091957096.htm",
+      "category": "market",
+      "module_ids": [
+        "market"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-11-10T02:29:27+00:00",
+      "source_id": "dantri-current-affairs",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [
+        "legal"
+      ],
+      "importance": 2,
+      "summary": "(Dân trí) - Đại biểu Lê Hoàng Anh đề nghị quy định ưu đãi thuế chỉ dành cho sản phẩm trọng điểm có tiêu chí luật định. Ông cảnh báo việc sinh ra dự án bất động sản khoác áo văn hóa nếu thiếu hàng rào pháp lý.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://dantri.com.vn/rss/thoi-su.rss",
+        "publisher_host": "dantri.com.vn",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-1c23754fa417acb0a47a",
+      "title": "Một hộ dân tại TPHCM có 3 thửa đất nằm trong diện thu hồi ở Phú Quốc",
+      "url": "https://dantri.com.vn/bat-dong-san/mot-ho-dan-tai-tphcm-co-3-thua-dat-nam-trong-dien-thu-hoi-o-phu-quoc-20261109105844974.htm",
+      "category": "market",
+      "module_ids": [
+        "market"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-11-10T02:17:00+00:00",
+      "source_id": "dantri-real-estate",
+      "region_ids": [
+        "hcmc"
+      ],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "(Dân trí) - Phú Quốc dự kiến thu hồi hơn 16.500m2 đất tại khu vực Bãi Trường để thực hiện dự án khu du lịch - dân cư Nam Bãi Trường. Diện tích đất này của một hộ dân có địa chỉ thường trú ở TPHCM.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://dantri.com.vn/rss/bat-dong-san.rss",
+        "publisher_host": "dantri.com.vn",
+        "publication_date_from_feed": true
+      }
+    },
     {
       "id": "article-market-rss-be9200a0ded44cf95baf",
       "title": "Cao tốc từ TP HCM đi Cần Thơ điều chỉnh giao thông trong 20 ngày",
@@ -30,6 +136,60 @@
         "method": "official-rss",
         "feed_url": "https://vnexpress.net/rss/thoi-su.rss",
         "publisher_host": "vnexpress.net",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-0f67978fda502636a46d",
+      "title": "Cao tốc từ TP HCM đi Cần Thơ điều chỉnh giao thông 20 ngày",
+      "url": "https://vnexpress.net/cao-toc-tu-tp-hcm-di-can-tho-dieu-chinh-giao-thong-20-ngay-5142724.html",
+      "category": "infrastructure",
+      "module_ids": [
+        "infrastructure"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-11-10T02:10:33+00:00",
+      "source_id": "vnexpress-current-affairs",
+      "region_ids": [
+        "hcmc"
+      ],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [
+        "infrastructure"
+      ],
+      "importance": 2,
+      "summary": "Cao tốc TP HCM - Trung Lương - Mỹ Thuận tạm dừng khai thác làn số 1 hướng về miền Tây, đoạn qua xã Thủ Thừa, từ 22h đến 6h trong 20 ngày để lắp dầm cầu.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://vnexpress.net/rss/thoi-su.rss",
+        "publisher_host": "vnexpress.net",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-54de049c4ff60fc9dac4",
+      "title": "Cơ hội trúng thêm căn hộ gần 8 tỷ đồng khi mua Diamond Sky",
+      "url": "https://dantri.com.vn/bat-dong-san/co-hoi-trung-them-can-ho-gan-8-ty-dong-khi-mua-diamond-sky-20261110082742679.htm",
+      "category": "market",
+      "module_ids": [
+        "market"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-11-10T02:00:00+00:00",
+      "source_id": "dantri-real-estate",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "(Dân trí) - Mua một căn nhà là quyết định quan trọng để an cư và tích lũy tài sản với nhiều người. Tại Van Phuc City, khách hàng mua Diamond Sky còn có cơ hội nhận thêm một căn hộ khác gần 8 tỷ đồng thông qua chương trình “Mua nhà trúng nhà - Nhân đôi tổ ấm”.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://dantri.com.vn/rss/bat-dong-san.rss",
+        "publisher_host": "dantri.com.vn",
         "publication_date_from_feed": true
       }
     },
@@ -80,6 +240,31 @@
         "method": "official-rss",
         "feed_url": "https://thanhnien.vn/rss/kinh-te/ngan-hang.rss",
         "publisher_host": "thanhnien.vn",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-8b30e27b125497a1ff76",
+      "title": "Đồ mùa đông lấy từ tủ ra có cần giặt lại trước khi mặc?",
+      "url": "https://dantri.com.vn/bat-dong-san/do-mua-dong-lay-tu-tu-ra-co-can-giat-lai-truoc-khi-mac-20261109153222490.htm",
+      "category": "market",
+      "module_ids": [
+        "market"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-11-10T01:22:00+00:00",
+      "source_id": "dantri-real-estate",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "(Dân trí) - Nhiều người phân vân liệu đống áo khoác, áo len cất kỹ từ năm ngoái có cần giặt lại trước khi diện đón rét. Câu trả lời phụ thuộc vào cách bạn dọn dẹp và bảo quản trước đó.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://dantri.com.vn/rss/bat-dong-san.rss",
+        "publisher_host": "dantri.com.vn",
         "publication_date_from_feed": true
       }
     },
