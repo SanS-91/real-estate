@@ -1,9 +1,115 @@
 {
   "schema_version": 1,
-  "build_id": "market-news-rss-20261111T025223Z",
-  "generated_at": "2026-11-11T02:52:23.669049+00:00",
-  "record_count": 1707,
+  "build_id": "market-news-rss-20261111T045225Z",
+  "generated_at": "2026-11-11T04:52:25.304570+00:00",
+  "record_count": 1712,
   "data": [
+    {
+      "id": "article-market-rss-25f467ddeda7a0858533",
+      "title": "Giá vàng miếng về dưới 140 triệu đồng",
+      "url": "https://vnexpress.net/gia-vang-mieng-ve-duoi-140-trieu-dong-5143259.html",
+      "category": "macro",
+      "module_ids": [
+        "macro"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-11-11T03:33:56+00:00",
+      "source_id": "vnexpress-economy",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "Giá vàng miếng giảm gần 1,5 triệu đồng mỗi lượng so với hôm qua, xuống dưới 140 triệu, mức thấp nhất từ đầu tháng.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://vnexpress.net/rss/kinh-doanh.rss",
+        "publisher_host": "vnexpress.net",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-0b12a8115b3f24c5557d",
+      "title": "Doanh nghiệp nhỏ, siêu nhỏ được ưu đãi tiền thuê trụ sở công dôi dư",
+      "url": "https://dantri.com.vn/bat-dong-san/doanh-nghiep-nho-sieu-nho-duoc-uu-dai-tien-thue-tru-so-cong-doi-du-20261110172438570.htm",
+      "category": "market",
+      "module_ids": [
+        "market"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-11-11T03:26:57+00:00",
+      "source_id": "dantri-real-estate",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "(Dân trí) - Tỉnh Nghệ An quy định đối tượng được hưởng ưu đãi khi thuê trụ sở công dôi dư, trong đó có doanh nghiệp nhỏ, siêu nhỏ, doanh nghiệp khởi nghiệp sáng tạo...",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://dantri.com.vn/rss/bat-dong-san.rss",
+        "publisher_host": "dantri.com.vn",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-280da7d36313e8372ed2",
+      "title": "Vinhomes và Mitsubishi hợp tác phát triển hạ tầng đô thị",
+      "url": "https://vnexpress.net/vinhomes-va-mitsubishi-hop-tac-phat-trien-ha-tang-do-thi-5143256.html",
+      "category": "market",
+      "module_ids": [
+        "market"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-11-11T03:15:00+00:00",
+      "source_id": "vnexpress-economy",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [
+        "vinhomes"
+      ],
+      "tags": [
+        "infrastructure"
+      ],
+      "importance": 2,
+      "summary": "Vinhomes và Mitsubishi Corporation ký biên bản ghi nhớ hợp tác trong ba lĩnh vực nhà ở, hạ tầng và phát triển bền vững tại Việt Nam.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://vnexpress.net/rss/kinh-doanh.rss",
+        "publisher_host": "vnexpress.net",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-a33de1b26dce28257805",
+      "title": "TP.HCM: Trần khung phí quản lý chung cư tăng rất mạnh",
+      "url": "https://thanhnien.vn/tphcm-tran-khung-phi-quan-ly-chung-cu-tang-rat-manh-185261111094544696.htm",
+      "category": "market",
+      "module_ids": [
+        "market"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-11-11T03:14:00+00:00",
+      "source_id": "thanhnien-real-estate",
+      "region_ids": [
+        "hcmc"
+      ],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "UBND TP.HCM đã ban hành quyết định ban hành khung giá dịch vụ quản lý vận hành nhà chung cư trên địa bàn TP.HCM, với mức giá thấp nhất là 600 đồng/m2/tháng và cao nhất lên đến 24.700 đồng/m2/tháng. Quyết định này có hiệu lực kể từ ngày 25.11.2026.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://thanhnien.vn/rss/kinh-te/dia-oc.rss",
+        "publisher_host": "thanhnien.vn",
+        "publication_date_from_feed": true
+      }
+    },
     {
       "id": "article-market-rss-1d65afd52b2427bd84e6",
       "title": "Mưa lớn ở Đà Nẵng, nước ngập và sạt lở chia cắt nhiều tuyến đường",
@@ -505,6 +611,33 @@
         "method": "official-rss",
         "feed_url": "https://dantri.com.vn/rss/kinh-doanh.rss",
         "publisher_host": "dantri.com.vn",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-ca0817cee0087bd2a440",
+      "title": "Ôtô xếp hàng dài trên cầu vượt ở Nha Trang tránh lũ",
+      "url": "https://vnexpress.net/oto-xep-hang-dai-tren-cau-vuot-o-nha-trang-tranh-lu-5143129.html",
+      "category": "infrastructure",
+      "module_ids": [
+        "infrastructure"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-11-10T15:37:00+00:00",
+      "source_id": "vnexpress-current-affairs",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [
+        "infrastructure"
+      ],
+      "importance": 2,
+      "summary": "Lo ngại mưa lớn và các hồ chứa chuẩn bị điều tiết nước gây ngập, hàng chục chủ ôtô đưa xe lên cầu vượt đường sắt ở Nha Trang để bảo vệ tài sản, tối 10/11.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://vnexpress.net/rss/thoi-su.rss",
+        "publisher_host": "vnexpress.net",
         "publication_date_from_feed": true
       }
     },
