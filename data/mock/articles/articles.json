@@ -1,9 +1,246 @@
 {
   "schema_version": 1,
-  "build_id": "market-news-rss-20261111T005137Z",
-  "generated_at": "2026-11-11T00:51:37.600648+00:00",
-  "record_count": 1696,
+  "build_id": "market-news-rss-20261111T025223Z",
+  "generated_at": "2026-11-11T02:52:23.669049+00:00",
+  "record_count": 1707,
   "data": [
+    {
+      "id": "article-market-rss-1d65afd52b2427bd84e6",
+      "title": "Mưa lớn ở Đà Nẵng, nước ngập và sạt lở chia cắt nhiều tuyến đường",
+      "url": "https://dantri.com.vn/thoi-su/mua-lon-o-da-nang-nuoc-ngap-va-sat-lo-chia-cat-nhieu-tuyen-duong-20261111083736947.htm",
+      "category": "infrastructure",
+      "module_ids": [
+        "infrastructure"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-11-11T02:17:42+00:00",
+      "source_id": "dantri-current-affairs",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [
+        "infrastructure"
+      ],
+      "importance": 2,
+      "summary": "(Dân trí) - Tại nhiều xã miền núi Đà Nẵng, từ tối 10/11 đến sáng nay trời mưa to đến rất to, nhiều tuyến đường và quốc lộ bị sạt lở, chia cắt, nhà dân bị đất đá trên núi sạt lở xuống gây hư hỏng.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://dantri.com.vn/rss/thoi-su.rss",
+        "publisher_host": "dantri.com.vn",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-f0459837fe5542addbb1",
+      "title": "Khải Hoàn Prime hưởng lợi kép từ hạ tầng và vị trí ven sông",
+      "url": "https://vnexpress.net/khai-hoan-prime-huong-loi-kep-tu-ha-tang-va-vi-tri-ven-song-5142851.html",
+      "category": "market",
+      "module_ids": [
+        "market",
+        "infrastructure"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-11-11T02:00:00+00:00",
+      "source_id": "vnexpress-real-estate",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [
+        "legal",
+        "infrastructure"
+      ],
+      "importance": 2,
+      "summary": "Khải Hoàn Prime kết hợp lợi thế ven sông Long Kiểng, sông Cầu Đạo cùng vị trí tiếp cận metro số 10 theo quy hoạch khoảng 300 m.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://vnexpress.net/rss/bat-dong-san.rss",
+        "publisher_host": "vnexpress.net",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-b17431bf3a812d9c08ec",
+      "title": "Lãi suất giảm, người trẻ nên vay mua nhà?",
+      "url": "https://dantri.com.vn/kinh-doanh/lai-suat-giam-nguoi-tre-nen-vay-mua-nha-20261110225411125.htm",
+      "category": "macro",
+      "module_ids": [
+        "macro"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-11-11T02:00:00+00:00",
+      "source_id": "dantri-business",
+      "region_ids": [
+        "ha-noi"
+      ],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "(Dân trí) - Lãi suất thả nổi neo ở 12-13%/năm khiến nhiều người lo khi vay mua nhà. Làm sao để cân bằng giữa việc có nhà mà không áp lực tài chính?",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://dantri.com.vn/rss/kinh-doanh.rss",
+        "publisher_host": "dantri.com.vn",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-bca8dbb9c8e40618c345",
+      "title": "Vinhomes và Mitsubishi hợp tác chiến lược toàn diện phát triển hạ tầng đô thị",
+      "url": "https://dantri.com.vn/kinh-doanh/vinhomes-va-mitsubishi-hop-tac-chien-luoc-toan-dien-phat-trien-ha-tang-do-thi-20261111085303054.htm",
+      "category": "market",
+      "module_ids": [
+        "market"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-11-11T01:59:56+00:00",
+      "source_id": "dantri-business",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [
+        "vinhomes"
+      ],
+      "tags": [
+        "infrastructure"
+      ],
+      "importance": 2,
+      "summary": "(Dân trí) - Thỏa thuận không chỉ nâng quan hệ hợp tác lâu năm giữa hai bên lên một tầm cao mới, mà còn góp phần tăng cường kết nối giữa cộng đồng doanh nghiệp hai nước.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://dantri.com.vn/rss/kinh-doanh.rss",
+        "publisher_host": "dantri.com.vn",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-b457ba759690eba8f42f",
+      "title": "Giá vàng hôm nay 11.11.2026: Đột ngột quay đầu giảm",
+      "url": "https://thanhnien.vn/gia-vang-hom-nay-11112026-dot-ngot-quay-dau-giam-185261111084545992.htm",
+      "category": "macro",
+      "module_ids": [
+        "macro"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-11-11T01:51:00+00:00",
+      "source_id": "thanhnien-banking",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "Giá vàng miếng SJC giảm xuống dưới 140 triệu đồng mỗi lượng, mất mốc 140 triệu đồng/lượng. Kim loại quý trên thị trường thế giới giảm sau đà tăng giá mạnh trước đó.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://thanhnien.vn/rss/kinh-te/ngan-hang.rss",
+        "publisher_host": "thanhnien.vn",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-f43100f80a24178a86f4",
+      "title": "Sức hút lễ hội tại Quảng trường Phố đi bộ trung tâm Thái Nguyên",
+      "url": "https://dantri.com.vn/bat-dong-san/suc-hut-le-hoi-tai-quang-truong-pho-di-bo-trung-tam-thai-nguyen-20261110182547642.htm",
+      "category": "market",
+      "module_ids": [
+        "market"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-11-11T01:00:00+00:00",
+      "source_id": "dantri-real-estate",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "(Dân trí) - Không chỉ trở thành tâm điểm của chuỗi hoạt động văn hóa, nghệ thuật tại Festival Trà Quốc tế 2026 và kỷ niệm 195 năm thành lập tỉnh, Phố đi bộ quảng trường trung tâm Central Square Thái Nguyên đang cho thấy sức hút của một không gian công cộng mới.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://dantri.com.vn/rss/bat-dong-san.rss",
+        "publisher_host": "dantri.com.vn",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-edda70897fe20ff3a18a",
+      "title": "Sức hút từ vị trí bên sông Hàn của Capital Square",
+      "url": "https://vnexpress.net/suc-hut-tu-vi-tri-ben-song-han-cua-capital-square-5142852.html",
+      "category": "market",
+      "module_ids": [
+        "market"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-11-11T01:00:00+00:00",
+      "source_id": "vnexpress-real-estate",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "Capital Square nằm tại bờ Đông sông Hàn, tạo kết nối thuận tiện tới trung tâm thành phố, khu vực thương mại, du lịch, cùng hệ tiện ích đáp ứng nhu cầu an cư, khai thác cho thuê.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://vnexpress.net/rss/bat-dong-san.rss",
+        "publisher_host": "vnexpress.net",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-62f6c2cced6bc5d84b36",
+      "title": "Giá vàng thế giới giảm mạnh, về sát 4.000 USD",
+      "url": "https://vnexpress.net/gia-vang-the-gioi-giam-manh-ve-sat-4-000-usd-5143168.html",
+      "category": "macro",
+      "module_ids": [
+        "macro"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-11-11T00:59:04+00:00",
+      "source_id": "vnexpress-economy",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "Mỗi ounce vàng có thời điểm mất gần 130 USD, sau khi Mỹ công bố số liệu lạm phát cao hơn dự kiến.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://vnexpress.net/rss/kinh-doanh.rss",
+        "publisher_host": "vnexpress.net",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-d3d0ed95a18809460d4d",
+      "title": "Người dân Nha Trang đưa ô tô lên cầu vượt tránh ngập lụt",
+      "url": "https://dantri.com.vn/thoi-su/nguoi-dan-nha-trang-dua-o-to-len-cau-vuot-tranh-ngap-lut-20261111062059840.htm",
+      "category": "infrastructure",
+      "module_ids": [
+        "infrastructure"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-11-11T00:53:32+00:00",
+      "source_id": "dantri-current-affairs",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "(Dân trí) - Lo ngại mưa lớn kết hợp với việc các hồ chứa thủy lợi điều tiết nước về hạ du, nhiều người dân ở Nha Trang (Khánh Hòa) đã đưa ô tô lên cầu vượt và các tuyến đường cao để tránh nguy cơ ngập lụt.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://dantri.com.vn/rss/thoi-su.rss",
+        "publisher_host": "dantri.com.vn",
+        "publication_date_from_feed": true
+      }
+    },
     {
       "id": "article-market-rss-9b454a8ca7f52305be74",
       "title": "Làm gì để đầu tư đất nền qua thời kỳ 'ngủ đông'?",
@@ -29,6 +266,56 @@
         "method": "official-rss",
         "feed_url": "https://vnexpress.net/rss/bat-dong-san.rss",
         "publisher_host": "vnexpress.net",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-59bdfb324031446db6c6",
+      "title": "Thị trường cược 100% khả năng Fed tăng lãi suất tháng 12",
+      "url": "https://dantri.com.vn/kinh-doanh/thi-truong-cuoc-100-kha-nang-fed-tang-lai-suat-thang-12-20261110220800853.htm",
+      "category": "macro",
+      "module_ids": [
+        "macro"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-11-11T00:00:00+00:00",
+      "source_id": "dantri-business",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "(Dân trí) - Sức nóng lạm phát dai dẳng cùng đà tăng trưởng kinh tế bền bỉ đang dồn Fed vào thế buộc phải tiếp tục nâng lãi suất trong tháng 12, thậm chí bỏ ngỏ kịch bản thắt chặt mạnh tay hơn.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://dantri.com.vn/rss/kinh-doanh.rss",
+        "publisher_host": "dantri.com.vn",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-1cc6d2b1ae62d83fc06b",
+      "title": "Giá vàng trong nước lao dốc, chênh lệch với giá thế giới gần 16 triệu đồng",
+      "url": "https://dantri.com.vn/kinh-doanh/gia-vang-trong-nuoc-lao-doc-chenh-lech-voi-gia-the-gioi-gan-16-trieu-dong-20261111003544443.htm",
+      "category": "macro",
+      "module_ids": [
+        "macro"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-11-10T23:28:16+00:00",
+      "source_id": "dantri-business",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "(Dân trí) - Giá vàng thế giới giảm mạnh, xuống sát 4.000 USD, trong khi vàng miếng SJC mất 600.000 đồng/lượng.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://dantri.com.vn/rss/kinh-doanh.rss",
+        "publisher_host": "dantri.com.vn",
         "publication_date_from_feed": true
       }
     },
