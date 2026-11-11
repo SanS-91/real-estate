@@ -1,9 +1,220 @@
 {
   "schema_version": 1,
-  "build_id": "market-news-rss-20261111T045225Z",
-  "generated_at": "2026-11-11T04:52:25.304570+00:00",
-  "record_count": 1712,
+  "build_id": "market-news-rss-20261111T064640Z",
+  "generated_at": "2026-11-11T06:46:40.592701+00:00",
+  "record_count": 1720,
   "data": [
+    {
+      "id": "article-market-rss-b4555c36582201fef9e6",
+      "title": "Hơn 500 căn nhà ở xã hội cho thuê từ 2,3 triệu đồng một tháng",
+      "url": "https://vnexpress.net/hon-500-can-nha-o-xa-hoi-cho-thue-tu-2-3-trieu-dong-mot-thang-5143336.html",
+      "category": "market",
+      "module_ids": [
+        "market"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-11-11T05:50:19+00:00",
+      "source_id": "vnexpress-real-estate",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "511 căn hộ tại dự án nhà ở xã hội Tràng Duệ (phường An Dương) sẽ được cho thuê từ 2,3 triệu đồng một tháng.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://vnexpress.net/rss/bat-dong-san.rss",
+        "publisher_host": "vnexpress.net",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-d33f4c297dfc794c2ae9",
+      "title": "Đà Nẵng Downtown và Sun Galaxy Complex: Dọc đúng đôi bờ sông Hàn",
+      "url": "https://thanhnien.vn/da-nang-downtown-va-sun-galaxy-complex-doc-dung-doi-bo-song-han-185261111124831285.htm",
+      "category": "market",
+      "module_ids": [
+        "market"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-11-11T05:43:00+00:00",
+      "source_id": "thanhnien-real-estate",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "Trên bản đồ Đà Nẵng, đoạn sông Hàn giữa cầu Trần Thị Lý và cầu Tiên Sơn đang thay đổi nhanh. Bờ tây có Đà Nẵng Downtown, bờ đông có Sun Galaxy Complex thuộc hệ sinh thái Sun Group. Hai dự án đứng đối diện nhau, nên người đọc dễ gộp làm một. Thực tế, mỗi dự án có vị trí, quy mô và hồ sơ riêng.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://thanhnien.vn/rss/kinh-te/dia-oc.rss",
+        "publisher_host": "thanhnien.vn",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-c2d4b98eeca603baad22",
+      "title": "Vay 2,2 tỷ đồng, người mua nhà sốc vì lãi vay tăng thêm 10 triệu đồng/tháng",
+      "url": "https://dantri.com.vn/bat-dong-san/vay-22-ty-dong-nguoi-mua-nha-soc-vi-lai-vay-tang-them-10-trieu-dongthang-20261111120030165.htm",
+      "category": "market",
+      "module_ids": [
+        "macro"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-11-11T05:09:37+00:00",
+      "source_id": "dantri-real-estate",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "(Dân trí) - Chỉ sau một tháng, khoản vay mua nhà được ngân hàng thông báo tiền lãi sẽ tăng tới 10 triệu đồng khiến người vay ngỡ ngàng, băn khoăn nên bán nhà để trả nợ hay \"gồng\" tiếp.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://dantri.com.vn/rss/bat-dong-san.rss",
+        "publisher_host": "dantri.com.vn",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-fcbbb1d8d5bd6b93c36a",
+      "title": "33 đại lý phân phối giai đoạn hai phân khu Izumi Gardenia",
+      "url": "https://vnexpress.net/33-dai-ly-phan-phoi-giai-doan-hai-phan-khu-izumi-gardenia-5143311.html",
+      "category": "market",
+      "module_ids": [
+        "market"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-11-11T04:50:00+00:00",
+      "source_id": "vnexpress-real-estate",
+      "region_ids": [],
+      "project_ids": [
+        "izumi-city"
+      ],
+      "developer_ids": [],
+      "tags": [
+        "supply"
+      ],
+      "importance": 2,
+      "summary": "Giai đoạn hai phân khu Izumi Gardenia thuộc đô thị Izumi City, ra mắt sáng 6/11 với sự đồng hành của 33 đại lý phân phối.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://vnexpress.net/rss/bat-dong-san.rss",
+        "publisher_host": "vnexpress.net",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-94ea523f291b78fe4141",
+      "title": "Quan chức ngân hàng trung ương lớn phát tín hiệu sẽ tiếp tục tăng lãi suất",
+      "url": "https://dantri.com.vn/kinh-doanh/quan-chuc-ngan-hang-trung-uong-lon-phat-tin-hieu-se-tiep-tuc-tang-lai-suat-20261111110422536.htm",
+      "category": "macro",
+      "module_ids": [
+        "macro"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-11-11T04:18:28+00:00",
+      "source_id": "dantri-business",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "(Dân trí) - Các nhà hoạch định chính sách của Anh, Mỹ và khu vực đồng euro nhóm họp tại London (Anh) đã dọn đường cho những đợt tăng lãi suất tiếp theo.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://dantri.com.vn/rss/kinh-doanh.rss",
+        "publisher_host": "dantri.com.vn",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-2db214fbd1e9ee09fa8f",
+      "title": "Doanh nghiệp đấu giá 3.790 căn hộ Thủ Thiêm phải có ít nhất 8.000 tỷ đồng",
+      "url": "https://dantri.com.vn/bat-dong-san/doanh-nghiep-dau-gia-3790-can-ho-thu-thiem-phai-co-it-nhat-8000-ty-dong-20261111101404152.htm",
+      "category": "market",
+      "module_ids": [
+        "market"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-11-11T04:10:10+00:00",
+      "source_id": "dantri-real-estate",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "(Dân trí) - Để tham gia đấu giá 5 lô đất và 3.790 căn hộ chung cư tái định cư tại Thủ Thiêm, doanh nghiệp phải có vốn chủ sở hữu tối thiểu bằng 20% tổng vốn đầu tư dự kiến, tương đương gần 8.000 tỷ đồng.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://dantri.com.vn/rss/bat-dong-san.rss",
+        "publisher_host": "dantri.com.vn",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-0217bfa3a090c9770a51",
+      "title": "Giá vàng trong nước giảm mạnh, \"bốc hơi\" 1,4 triệu đồng/lượng trong vài giờ",
+      "url": "https://dantri.com.vn/kinh-doanh/gia-vang-trong-nuoc-giam-manh-boc-hoi-14-trieu-dongluong-trong-vai-gio-20261111110403002.htm",
+      "category": "macro",
+      "module_ids": [
+        "macro"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-11-11T04:08:50+00:00",
+      "source_id": "dantri-business",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [
+        "sales"
+      ],
+      "importance": 2,
+      "summary": "(Dân trí) - Vàng miếng SJC giảm tổng 2 triệu đồng/lượng chỉ sau chưa đầy 2 phiên giao dịch, trong bối cảnh giá vàng thế giới lùi sát mốc 4.000 USD/ounce.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://dantri.com.vn/rss/kinh-doanh.rss",
+        "publisher_host": "dantri.com.vn",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-d8019dad91489cf7e726",
+      "title": "Giá đất bồi thường ven kênh Tẻ ở TPHCM được đề xuất hơn 210 triệu đồng/m2",
+      "url": "https://dantri.com.vn/bat-dong-san/gia-dat-boi-thuong-ven-kenh-te-o-tphcm-duoc-de-xuat-hon-210-trieu-dongm2-20261111095929268.htm",
+      "category": "market",
+      "module_ids": [
+        "market",
+        "legal"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-11-11T03:50:32+00:00",
+      "source_id": "dantri-real-estate",
+      "region_ids": [
+        "hcmc"
+      ],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [
+        "pricing"
+      ],
+      "importance": 2,
+      "summary": "(Dân trí) - Dự thảo đơn giá đất tính bồi thường, hỗ trợ, tái định cư dự án mở rộng đường Tôn Thất Thuyết và công viên dọc kênh Tẻ ở TPHCM được đề xuất cao hơn bảng giá đất, có nơi hơn 210 triệu đồng/m2.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://dantri.com.vn/rss/bat-dong-san.rss",
+        "publisher_host": "dantri.com.vn",
+        "publication_date_from_feed": true
+      }
+    },
     {
       "id": "article-market-rss-25f467ddeda7a0858533",
       "title": "Giá vàng miếng về dưới 140 triệu đồng",
