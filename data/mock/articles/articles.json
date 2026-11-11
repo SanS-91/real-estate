@@ -1,9 +1,120 @@
 {
   "schema_version": 1,
-  "build_id": "market-news-rss-20261111T085151Z",
-  "generated_at": "2026-11-11T08:51:51.012155+00:00",
-  "record_count": 1727,
+  "build_id": "market-news-rss-20261111T105143Z",
+  "generated_at": "2026-11-11T10:51:43.244647+00:00",
+  "record_count": 1731,
   "data": [
+    {
+      "id": "article-market-rss-cb6439ae89a6e375eac9",
+      "title": "TP.HCM đề xuất cho tồn tại một số dự án sai phép thay vì tháo dỡ",
+      "url": "https://thanhnien.vn/tphcm-de-xuat-cho-ton-tai-mot-so-du-an-sai-phep-thay-vi-thao-do-185261111135215138.htm",
+      "category": "market",
+      "module_ids": [
+        "market"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-11-11T09:29:00+00:00",
+      "source_id": "thanhnien-real-estate",
+      "region_ids": [
+        "hcmc"
+      ],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "Theo dự thảo nghị quyết quy định chính sách, biện pháp đặc biệt, khác với quy định của pháp luật để tháo gỡ khó khăn, vướng mắc cho các dự án chậm triển khai trên địa bàn TP.HCM theo quy định tại khoản 6 điều 34 luật Phát triển đô thị, TP.HCM đề xuất cho phép giữ lại một số công trình, phần công trì",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://thanhnien.vn/rss/kinh-te/dia-oc.rss",
+        "publisher_host": "thanhnien.vn",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-73d0b76df9419ddeef6a",
+      "title": "TP.HCM dự kiến công bố quy hoạch tầm nhìn 100 năm vào 16.11",
+      "url": "https://thanhnien.vn/tphcm-du-kien-cong-bo-quy-hoach-tam-nhin-100-nam-vao-1611-185261111140836923.htm",
+      "category": "market",
+      "module_ids": [
+        "market"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-11-11T09:29:00+00:00",
+      "source_id": "thanhnien-policy",
+      "region_ids": [
+        "hcmc"
+      ],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [
+        "legal"
+      ],
+      "importance": 2,
+      "summary": "UBND TP.HCM vừa ban hành Kế hoạch công bố Quy hoạch tổng thể TP thời kỳ 2025 - 2050, tầm nhìn 100 năm.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://thanhnien.vn/rss/kinh-te/chinh-sach-phat-trien.rss",
+        "publisher_host": "thanhnien.vn",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-b4e96a2891a10e06f4dd",
+      "title": "Ba bài toán hút người ở cho bất động sản Cần Giờ",
+      "url": "https://vnexpress.net/ba-bai-toan-hut-nguoi-o-cho-bat-dong-san-can-gio-5143343.html",
+      "category": "market",
+      "module_ids": [
+        "market",
+        "infrastructure"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-11-11T08:55:45+00:00",
+      "source_id": "vnexpress-real-estate",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [
+        "infrastructure"
+      ],
+      "importance": 2,
+      "summary": "Chuyên gia cho rằng để đón quy mô dân số dự kiến tăng 9-10 lần cùng siêu cảng và metro, thị trường bất động sản Cần Giờ cần thêm nhà ở trung lưu và hạ tầng đồng bộ.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://vnexpress.net/rss/bat-dong-san.rss",
+        "publisher_host": "vnexpress.net",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-b9edb7a5d48e495eff90",
+      "title": "Thua lỗ, một công ty bất động sản phía Nam lấn sang làm may mặc",
+      "url": "https://dantri.com.vn/kinh-doanh/thua-lo-mot-cong-ty-bat-dong-san-phia-nam-lan-sang-lam-may-mac-20261111145448818.htm",
+      "category": "market",
+      "module_ids": [
+        "market"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-11-11T08:13:49+00:00",
+      "source_id": "dantri-real-estate",
+      "region_ids": [
+        "hcmc"
+      ],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "(Dân trí) - Giữa bối cảnh kinh doanh ảm đạm và gánh khoản lỗ lũy kế lên tới gần 938 tỷ đồng, một doanh nghiệp địa ốc lâu năm tại TPHCM bất ngờ rẽ hướng sang mảng bán buôn vải, giày dép.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://dantri.com.vn/rss/bat-dong-san.rss",
+        "publisher_host": "dantri.com.vn",
+        "publication_date_from_feed": true
+      }
+    },
     {
       "id": "article-market-rss-4d6dd673a6977209ec35",
       "title": "Hai phó giám đốc Sở Xây dựng Cần Thơ bị cảnh cáo vì dự án đội vốn",
