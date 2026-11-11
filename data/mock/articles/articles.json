@@ -1,9 +1,123 @@
 {
   "schema_version": 1,
-  "build_id": "market-news-rss-20261111T105143Z",
-  "generated_at": "2026-11-11T10:51:43.244647+00:00",
-  "record_count": 1731,
+  "build_id": "market-news-rss-20261111T145139Z",
+  "generated_at": "2026-11-11T14:51:39.925959+00:00",
+  "record_count": 1735,
   "data": [
+    {
+      "id": "article-market-rss-aea713f414261d4ad765",
+      "title": "Yêu cầu sớm đóng đường dân sinh cắt ngang cao tốc Biên Hòa - Vũng Tàu",
+      "url": "https://dantri.com.vn/thoi-su/yeu-cau-som-dong-duong-dan-sinh-cat-ngang-cao-toc-bien-hoa-vung-tau-20261111182122415.htm",
+      "category": "infrastructure",
+      "module_ids": [
+        "infrastructure"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-11-11T13:08:04+00:00",
+      "source_id": "dantri-current-affairs",
+      "region_ids": [
+        "hcmc"
+      ],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [
+        "infrastructure"
+      ],
+      "importance": 2,
+      "summary": "(Dân trí) - Sở Xây dựng TPHCM yêu cầu Ban Giao thông khẩn trương hoàn thiện đường gom cao tốc Biên Hòa - Vũng Tàu sau khi Phòng CSGT thành phố có ý kiến về lối đi cắt ngang, tiềm ẩn nguy cơ tai nạn.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://dantri.com.vn/rss/thoi-su.rss",
+        "publisher_host": "dantri.com.vn",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-ad4a1e023511cf3f7430",
+      "title": "Vlasta Premier - Phú Thuận tập trung vào tiêu chuẩn bàn giao",
+      "url": "https://vnexpress.net/vlasta-premier-phu-thuan-tap-trung-vao-tieu-chuan-ban-giao-5143327.html",
+      "category": "market",
+      "module_ids": [
+        "market"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-11-11T13:00:00+00:00",
+      "source_id": "vnexpress-real-estate",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [
+        "supply"
+      ],
+      "importance": 2,
+      "summary": "Đơn vị phát triển dự án Vlasta Premier - Phú Thuận lựa chọn vật liệu, thiết bị từ các thương hiệu uy tín, đồng thời chú trọng công năng và tính đồng bộ trong thiết kế căn hộ.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://vnexpress.net/rss/bat-dong-san.rss",
+        "publisher_host": "vnexpress.net",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-7867ad44a0bfa2c5d02f",
+      "title": "Điểm sáng của Vinhomes Green Paradise trong bình chọn kỳ quan đô thị tương lai",
+      "url": "https://vnexpress.net/diem-sang-cua-vinhomes-green-paradise-trong-binh-chon-ky-quan-do-thi-tuong-lai-5143495.html",
+      "category": "market",
+      "module_ids": [
+        "market"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-11-11T12:45:00+00:00",
+      "source_id": "vnexpress-real-estate",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [
+        "vinhomes"
+      ],
+      "tags": [
+        "legal"
+      ],
+      "importance": 2,
+      "summary": "Vinhomes Green Paradise trở thành ứng viên chính thức trong chiến dịch tìm kiếm 7 Kỳ quan đô thị tương lai của New7Wonders với 7 nhóm giá trị về sinh thái, quy hoạch, tiện ích và công nghệ.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://vnexpress.net/rss/bat-dong-san.rss",
+        "publisher_host": "vnexpress.net",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-25a38be0781489f5d906",
+      "title": "Nhà mở bán ngày càng nhiều, vì sao người mua vẫn ngại xuống tiền?",
+      "url": "https://dantri.com.vn/bat-dong-san/nha-mo-ban-ngay-cang-nhieu-vi-sao-nguoi-mua-van-ngai-xuong-tien-20261111184224463.htm",
+      "category": "market",
+      "module_ids": [
+        "market"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-11-11T12:11:06+00:00",
+      "source_id": "dantri-real-estate",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [
+        "supply",
+        "pricing",
+        "sales"
+      ],
+      "importance": 2,
+      "summary": "(Dân trí) - Nguồn cung bất động sản 9 tháng năm 2026 tăng hơn 21% nhưng giao dịch sản phẩm mới chỉ bằng khoảng một nửa cùng kỳ. Giá nhà cao và chi phí vay vốn đang tạo sức ép lên sức mua.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://dantri.com.vn/rss/bat-dong-san.rss",
+        "publisher_host": "dantri.com.vn",
+        "publication_date_from_feed": true
+      }
+    },
     {
       "id": "article-market-rss-cb6439ae89a6e375eac9",
       "title": "TP.HCM đề xuất cho tồn tại một số dự án sai phép thay vì tháo dỡ",
