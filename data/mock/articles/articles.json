@@ -1,9 +1,201 @@
 {
   "schema_version": 1,
-  "build_id": "market-news-rss-20261112T025248Z",
-  "generated_at": "2026-11-12T02:52:48.736564+00:00",
-  "record_count": 1749,
+  "build_id": "market-news-rss-20261112T045204Z",
+  "generated_at": "2026-11-12T04:52:04.615895+00:00",
+  "record_count": 1757,
   "data": [
+    {
+      "id": "article-market-rss-e776557073333e656032",
+      "title": "Toàn cảnh tuyến cao tốc đô thị rút ngắn thời gian từ TPHCM ra biển Vũng Tàu",
+      "url": "https://dantri.com.vn/thoi-su/toan-canh-tuyen-cao-toc-do-thi-rut-ngan-thoi-gian-tu-tphcm-ra-bien-vung-tau-20261112105414750.htm",
+      "category": "infrastructure",
+      "module_ids": [
+        "infrastructure"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-11-12T04:11:48+00:00",
+      "source_id": "dantri-current-affairs",
+      "region_ids": [
+        "hcmc"
+      ],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [
+        "infrastructure"
+      ],
+      "importance": 2,
+      "summary": "(Dân trí) - Với tổng vốn gần 13.900 tỷ đồng, dự án đường nối dài hơn 16km đưa dòng xe từ điểm cuối cao tốc Biên Hòa - Vũng Tàu thẳng về trung tâm phố biển đang dần lộ diện.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://dantri.com.vn/rss/thoi-su.rss",
+        "publisher_host": "dantri.com.vn",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-d1b4abd13d458c04f382",
+      "title": "Kinh tế tăng trưởng tạo dư địa phát triển không gian đô thị Tây Ninh",
+      "url": "https://vnexpress.net/kinh-te-tang-truong-tao-du-dia-phat-trien-khong-gian-do-thi-tay-ninh-5143707.html",
+      "category": "market",
+      "module_ids": [
+        "market"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-11-12T04:00:00+00:00",
+      "source_id": "vnexpress-real-estate",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [
+        "infrastructure"
+      ],
+      "importance": 2,
+      "summary": "Động lực từ công nghiệp, logistics, du lịch và hạ tầng liên vùng đang mở rộng không gian phát triển đô thị, từ đó góp phần thúc đẩy nhu cầu nhà ở tại Tây Ninh.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://vnexpress.net/rss/bat-dong-san.rss",
+        "publisher_host": "vnexpress.net",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-656b5e3803e1da9a304e",
+      "title": "Kinh tế phát triển tạo động lực cho thị trường bất động sản Tây Ninh",
+      "url": "https://dantri.com.vn/bat-dong-san/kinh-te-phat-trien-tao-dong-luc-cho-thi-truong-bat-dong-san-tay-ninh-20261112095547699.htm",
+      "category": "market",
+      "module_ids": [
+        "market"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-11-12T04:00:00+00:00",
+      "source_id": "dantri-real-estate",
+      "region_ids": [
+        "hcmc",
+        "long-an"
+      ],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "(Dân trí) - Sau sáp nhập với Long An, tỉnh Tây Ninh mới có diện tích 8.536,44km² và dân số hơn 3,25 triệu người. Quỹ đất rộng cùng lợi thế liên kết vùng tạo thêm dư địa phát triển kinh tế, mở ra triển vọng trở thành cực tăng trưởng mới phía tây TPHCM.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://dantri.com.vn/rss/bat-dong-san.rss",
+        "publisher_host": "dantri.com.vn",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-520fe402ccf9612a3365",
+      "title": "Nhân viên bảo vệ rừng hợp sức đẩy xe vượt đường sạt lở",
+      "url": "https://dantri.com.vn/thoi-su/nhan-vien-bao-ve-rung-hop-suc-day-xe-vuot-duong-sat-lo-20261112102233895.htm",
+      "category": "infrastructure",
+      "module_ids": [
+        "infrastructure"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-11-12T03:54:56+00:00",
+      "source_id": "dantri-current-affairs",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [
+        "infrastructure"
+      ],
+      "importance": 2,
+      "summary": "(Dân trí) - Các nhân viên bảo vệ rừng đầu nguồn tại thành phố Huế phải hợp sức kéo, đẩy từng chiếc xe máy vượt qua những điểm sạt lở nặng trên tuyến đường 74.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://dantri.com.vn/rss/thoi-su.rss",
+        "publisher_host": "dantri.com.vn",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-dbb0b677e01c8af3abb6",
+      "title": "Cầu gần 5.000 tỷ đồng nối cao tốc Bến Lức - Long Thành với cụm cảng Cái Mép",
+      "url": "https://dantri.com.vn/thoi-su/cau-gan-5000-ty-dong-noi-cao-toc-ben-luc-long-thanh-voi-cum-cang-cai-mep-20261109160923296.htm",
+      "category": "infrastructure",
+      "module_ids": [
+        "infrastructure"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-11-12T03:54:00+00:00",
+      "source_id": "dantri-current-affairs",
+      "region_ids": [
+        "hcmc"
+      ],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [
+        "infrastructure"
+      ],
+      "importance": 2,
+      "summary": "(Dân trí) - Cầu Phước An nối cao tốc Bến Lức - Long Thành với cụm cảng Cái Mép - Thị Vải (TPHCM) đã hợp long 2 nhịp cầu chính, nhà thầu đang tăng tốc thi công các hạng mục quan trọng còn lại.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://dantri.com.vn/rss/thoi-su.rss",
+        "publisher_host": "dantri.com.vn",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-a22168a901c25ca5fadb",
+      "title": "Ba ô tô đâm liên hoàn trên cao tốc, 2 người bị thương",
+      "url": "https://dantri.com.vn/thoi-su/ba-o-to-dam-lien-hoan-tren-cao-toc-2-nguoi-bi-thuong-20261112103658360.htm",
+      "category": "infrastructure",
+      "module_ids": [
+        "infrastructure"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-11-12T03:48:33+00:00",
+      "source_id": "dantri-current-affairs",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [
+        "infrastructure"
+      ],
+      "importance": 2,
+      "summary": "(Dân trí) - 2 xe đầu kéo và một ô tô con gặp tai nạn liên hoàn trên cao tốc Nội Bài - Lào Cai, vào thời điểm trời có mưa. Vụ va chạm khiến giao thông trên cao tốc bị ùn ứ kéo dài.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://dantri.com.vn/rss/thoi-su.rss",
+        "publisher_host": "dantri.com.vn",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-ab5280b3349aa6377c85",
+      "title": "Bộ trưởng Xây dựng: Một số nhà thầu trúng nhiều dự án rồi 'bán thầu'",
+      "url": "https://vnexpress.net/bo-truong-xay-dung-mot-so-nha-thau-trung-nhieu-du-an-roi-ban-thau-5143697.html",
+      "category": "market",
+      "module_ids": [
+        "market"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-11-12T03:13:22+00:00",
+      "source_id": "vnexpress-current-affairs",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "Bộ trưởng Xây dựng Trần Hồng Minh cho biết một số nhà thầu trúng nhiều dự án nhưng không đủ năng lực thi công, dẫn đến tình trạng \"bán thầu\" và phải bị xử lý nghiêm.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://vnexpress.net/rss/thoi-su.rss",
+        "publisher_host": "vnexpress.net",
+        "publication_date_from_feed": true
+      }
+    },
     {
       "id": "article-market-rss-48561c97005c6a57a97a",
       "title": "Giá vàng hôm nay 12.11.2026: Quay đầu giảm 1 triệu đồng một lượng",
@@ -101,6 +293,31 @@
         "method": "official-rss",
         "feed_url": "https://dantri.com.vn/rss/bat-dong-san.rss",
         "publisher_host": "dantri.com.vn",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-b18ba4cebcfa627f9cea",
+      "title": "Người mua Diamond Sky có cơ hội nhận thêm nhà gần 8 tỷ đồng",
+      "url": "https://vnexpress.net/nguoi-mua-diamond-sky-co-co-hoi-nhan-them-nha-gan-8-ty-dong-5143483.html",
+      "category": "market",
+      "module_ids": [
+        "market"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-11-12T01:00:00+00:00",
+      "source_id": "vnexpress-real-estate",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "Van Phuc Group triển khai chương trình \"Mua nhà trúng nhà - Nhân đôi tổ ấm\", trao cơ hội sở hữu thêm căn hộ Diamond Sky trị giá gần 8 tỷ đồng cho khách hàng mua nhà tại dự án.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://vnexpress.net/rss/bat-dong-san.rss",
+        "publisher_host": "vnexpress.net",
         "publication_date_from_feed": true
       }
     },
