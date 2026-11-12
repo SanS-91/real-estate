@@ -1,9 +1,255 @@
 {
   "schema_version": 1,
-  "build_id": "market-news-rss-20261111T145139Z",
-  "generated_at": "2026-11-11T14:51:39.925959+00:00",
-  "record_count": 1735,
+  "build_id": "market-news-rss-20261112T005147Z",
+  "generated_at": "2026-11-12T00:51:47.071453+00:00",
+  "record_count": 1744,
   "data": [
+    {
+      "id": "article-market-rss-80290a9ce2ff0042d844",
+      "title": "Đất đá tràn xuống cao tốc Chí Thạnh - Vân Phong",
+      "url": "https://vnexpress.net/dat-da-tran-xuong-cao-toc-chi-thanh-van-phong-5143625.html",
+      "category": "infrastructure",
+      "module_ids": [
+        "infrastructure"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-11-12T00:21:40+00:00",
+      "source_id": "vnexpress-current-affairs",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [
+        "infrastructure"
+      ],
+      "importance": 2,
+      "summary": "Mưa lớn khiến đất đá từ taluy tràn xuống hai vị trí trên cao tốc Chí Thạnh - Vân Phong, gây ùn tắc hơn một km, sáng 12/11.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://vnexpress.net/rss/thoi-su.rss",
+        "publisher_host": "vnexpress.net",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-4dcac859ffe0d749eabe",
+      "title": "Thu nhập 40 triệu đồng/tháng, có nên vay ngân hàng 1,5 tỷ đồng mua nhà?",
+      "url": "https://dantri.com.vn/bat-dong-san/thu-nhap-40-trieu-dongthang-co-nen-vay-ngan-hang-15-ty-dong-mua-nha-20261112060549871.htm",
+      "category": "market",
+      "module_ids": [
+        "market"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-11-11T23:11:56+00:00",
+      "source_id": "dantri-real-estate",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "(Dân trí) - Theo chuyên gia, với mức thu nhập 40 triệu đồng/tháng và khoản tích lũy 1,5 tỷ đồng, người trẻ có thể vay ngân hàng mua nhà, nhưng cần chọn căn nhà vừa sức, có quỹ dự phòng ít nhất 6 tháng.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://dantri.com.vn/rss/bat-dong-san.rss",
+        "publisher_host": "dantri.com.vn",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-421a8339b38ec7166422",
+      "title": "Hà Nội chấp thuận đầu tư khu đô thị gần 100.000 tỷ đồng",
+      "url": "https://dantri.com.vn/bat-dong-san/ha-noi-chap-thuan-dau-tu-khu-do-thi-gan-100000-ty-dong-20261031211701034.htm",
+      "category": "market",
+      "module_ids": [
+        "market"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-11-11T23:00:00+00:00",
+      "source_id": "dantri-real-estate",
+      "region_ids": [
+        "ha-noi"
+      ],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [
+        "sales"
+      ],
+      "importance": 2,
+      "summary": "(Dân trí) - Hà Nội vừa chấp thuận chủ trương đầu tư khu đô thị Bắc Thăng Long Urban City với tổng vốn dự kiến gần 100.000 tỷ đồng, quy mô hơn 465ha, dân số khoảng 97.500 người.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://dantri.com.vn/rss/bat-dong-san.rss",
+        "publisher_host": "dantri.com.vn",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-415e4e21baf21514a8f2",
+      "title": "Đề xuất tăng mức bồi thường nhà đất giấy tay",
+      "url": "https://thanhnien.vn/de-xuat-tang-muc-boi-thuong-nha-dat-giay-tay-185261111212711363.htm",
+      "category": "market",
+      "module_ids": [
+        "market",
+        "legal"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-11-11T23:00:00+00:00",
+      "source_id": "thanhnien-real-estate",
+      "region_ids": [
+        "hcmc"
+      ],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [
+        "sales",
+        "legal"
+      ],
+      "importance": 2,
+      "summary": "Cả nước nói chung và TP.HCM đã và đang tồn tại một lượng khổng lồ nhà đất giao dịch qua giấy tay, phân lô bán nền tự phát hoặc chưa kịp hoàn thiện thủ tục cấp giấy chứng nhận (sổ đỏ/sổ hồng). Các trường hợp này trước đây khi thu hồi đất thường thiệt đơn thiệt kép. Tuy nhiên, trong dự thảo Nghị quyết",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://thanhnien.vn/rss/kinh-te/dia-oc.rss",
+        "publisher_host": "thanhnien.vn",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-4fb49eb8f3260330a809",
+      "title": "Tổng lực làm đường nối TPHCM - sân bay Long Thành trước ngày 24/12",
+      "url": "https://dantri.com.vn/thoi-su/tong-luc-lam-duong-noi-tphcm-san-bay-long-thanh-truoc-ngay-2412-20261110144727641.htm",
+      "category": "infrastructure",
+      "module_ids": [
+        "infrastructure"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-11-11T22:57:00+00:00",
+      "source_id": "dantri-current-affairs",
+      "region_ids": [
+        "hcmc"
+      ],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [
+        "infrastructure"
+      ],
+      "importance": 2,
+      "summary": "(Dân trí) - Dự án Mở rộng cao tốc TPHCM - Long Thành và đường 25C kết nối trực tiếp sân bay Long Thành đang được các nhà thầu tập trung tổng lực thi công nhằm kịp khai thác trước ngày 24/12.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://dantri.com.vn/rss/thoi-su.rss",
+        "publisher_host": "dantri.com.vn",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-a3873ba838bfa5673f0f",
+      "title": "Chuyên gia: Đầu tư 'lướt sóng' bất động sản ngày càng rủi ro",
+      "url": "https://vnexpress.net/chuyen-gia-dau-tu-luot-song-bat-dong-san-ngay-cang-rui-ro-5143545.html",
+      "category": "market",
+      "module_ids": [
+        "market"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-11-11T17:10:00+00:00",
+      "source_id": "vnexpress-real-estate",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "\"Lướt sóng\" nhà đất kiếm chênh lệch từng phổ biến giai đoạn trước, giờ đối diện nhiều rủi ro về thanh khoản và thắt chặt quản lý, theo Chủ tịch Hội Môi giới Nguyễn Văn Đính.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://vnexpress.net/rss/bat-dong-san.rss",
+        "publisher_host": "vnexpress.net",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-6617536ce160a508cbb2",
+      "title": "Lâm Đồng gỡ vướng cho 206 dự án",
+      "url": "https://vnexpress.net/lam-dong-go-vuong-cho-206-du-an-5143562.html",
+      "category": "market",
+      "module_ids": [
+        "market",
+        "macro"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-11-11T17:03:00+00:00",
+      "source_id": "vnexpress-real-estate",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "Tỉnh Lâm Đồng tháo gỡ khó khăn cho 206 dự án, khơi thông nguồn vốn đầu tư hơn 93.400 tỷ đồng, đóng góp vào tăng trưởng kinh tế địa phương.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://vnexpress.net/rss/bat-dong-san.rss",
+        "publisher_host": "vnexpress.net",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-d546f274eed00834c8b8",
+      "title": "Vì sao Hà Nội nhiều năm không triển khai được quy hoạch bãi đỗ xe?",
+      "url": "https://vnexpress.net/vi-sao-ha-noi-nhieu-nam-khong-trien-khai-duoc-quy-hoach-bai-do-xe-5143100.html",
+      "category": "market",
+      "module_ids": [
+        "market"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-11-11T17:00:00+00:00",
+      "source_id": "vnexpress-current-affairs",
+      "region_ids": [
+        "ha-noi"
+      ],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [
+        "legal"
+      ],
+      "importance": 2,
+      "summary": "Quỹ đất hạn chế, thủ tục kéo dài, hiệu quả đầu tư thấp, thiếu ưu đãi của nhà nước khiến nhiều khu đất dành cho giao thông tĩnh chưa được đầu tư làm bãi đỗ xe.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://vnexpress.net/rss/thoi-su.rss",
+        "publisher_host": "vnexpress.net",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-91cea25388885a2d98de",
+      "title": "Nhà liền kề với 'khu vườn' trong nhà",
+      "url": "https://vnexpress.net/nha-lien-ke-voi-khu-vuon-trong-nha-5143411.html",
+      "category": "market",
+      "module_ids": [
+        "market"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-11-11T17:00:00+00:00",
+      "source_id": "vnexpress-real-estate",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "Các khoảng sân vườn xen kẽ khu vực sinh hoạt giúp cân bằng không gian, đồng thời tăng khả năng tiếp cận ánh sáng tự nhiên.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://vnexpress.net/rss/bat-dong-san.rss",
+        "publisher_host": "vnexpress.net",
+        "publication_date_from_feed": true
+      }
+    },
     {
       "id": "article-market-rss-aea713f414261d4ad765",
       "title": "Yêu cầu sớm đóng đường dân sinh cắt ngang cao tốc Biên Hòa - Vũng Tàu",
