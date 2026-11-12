@@ -1,9 +1,90 @@
 {
   "schema_version": 1,
-  "build_id": "market-news-rss-20261112T065146Z",
-  "generated_at": "2026-11-12T06:51:46.383591+00:00",
-  "record_count": 1763,
+  "build_id": "market-news-rss-20261112T085140Z",
+  "generated_at": "2026-11-12T08:51:40.946301+00:00",
+  "record_count": 1766,
   "data": [
+    {
+      "id": "article-market-rss-b01de5777134d16c1846",
+      "title": "Doanh nghiệp xoay xở giữ giá nhà vừa túi tiền",
+      "url": "https://vnexpress.net/doanh-nghiep-xoay-xo-giu-gia-nha-vua-tui-tien-5142466.html",
+      "category": "market",
+      "module_ids": [
+        "market"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-11-12T08:21:05+00:00",
+      "source_id": "vnexpress-real-estate",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [
+        "pricing"
+      ],
+      "importance": 2,
+      "summary": "Thay vì đầu tư tiện ích cao cấp hay chạy theo quy mô lớn, nhiều chủ đầu tư tối ưu quỹ đất, thiết kế và thi công để giữ giá bán trong tầm chi trả của người thu nhập trung bình.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://vnexpress.net/rss/bat-dong-san.rss",
+        "publisher_host": "vnexpress.net",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-c9606fd44a58fa952e4e",
+      "title": "Happy One Elite ‘ra quân’ tạo sức nóng trên thị trường căn hộ khu đông TP.HCM",
+      "url": "https://thanhnien.vn/happy-one-elite-ra-quan-tao-suc-nong-tren-thi-truong-can-ho-khu-dong-tphcm-18526111214505361.htm",
+      "category": "market",
+      "module_ids": [
+        "market"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-11-12T08:00:00+00:00",
+      "source_id": "thanhnien-real-estate",
+      "region_ids": [
+        "hcmc"
+      ],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "Sự kiện giới thiệu dự án với chủ đề 'Come and Feel to Share' diễn ra ngày 10.11.2026 đã đánh dấu bước khởi động mạnh mẽ của Happy One Elite trên thị trường. Quy tụ gần 2.500 chuyên viên tư vấn từ 12 đại lý chiến lược, sự kiện mở ra hành trình kết nối nguồn lực, lan tỏa sức hút dự án.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://thanhnien.vn/rss/kinh-te/dia-oc.rss",
+        "publisher_host": "thanhnien.vn",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-228f14c7231bbe6c7c4d",
+      "title": "Phí quản lý chung cư có tăng sau khi TPHCM nâng khung giá mới?",
+      "url": "https://dantri.com.vn/bat-dong-san/phi-quan-ly-chung-cu-co-tang-sau-khi-tphcm-nang-khung-gia-moi-20261112105211767.htm",
+      "category": "market",
+      "module_ids": [
+        "market"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-11-12T07:22:22+00:00",
+      "source_id": "dantri-real-estate",
+      "region_ids": [
+        "hcmc"
+      ],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "(Dân trí) - UBND TPHCM vừa ban hành khung giá quản lý chung cư mới, có mức tối đa 13.700 đồng/m2/tháng. Quy định này khiến nhiều cư dân lo ngại phí sinh hoạt tăng.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://dantri.com.vn/rss/bat-dong-san.rss",
+        "publisher_host": "dantri.com.vn",
+        "publication_date_from_feed": true
+      }
+    },
     {
       "id": "article-market-rss-a1941e09b241311a543a",
       "title": "Gỡ vướng cấp sổ hồng cho căn hộ condotel",
