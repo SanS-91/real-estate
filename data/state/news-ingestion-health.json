@@ -1,39 +1,44 @@
 {
   "schema_version": 1,
-  "checked_at": "2026-11-12T14:52:21.998521+00:00",
+  "checked_at": "2026-11-12T16:54:14.123259+00:00",
   "feeds_configured": 16,
-  "feeds_fetched": 15,
+  "feeds_fetched": 16,
   "accepted_new": 2,
   "production_written": true,
-  "article_total": 1778,
+  "article_total": 1780,
   "published_by_module": {
-    "market": 0,
+    "market": 1,
     "legal": 0,
-    "infrastructure": 1,
+    "infrastructure": 0,
     "macro": 1
   },
   "recent_by_module_7d": {
-    "market": 177,
+    "market": 178,
     "legal": 29,
     "infrastructure": 91,
-    "macro": 59
+    "macro": 60
   },
   "recent_by_module_30d": {
-    "market": 862,
+    "market": 863,
     "legal": 160,
     "infrastructure": 358,
-    "macro": 278
+    "macro": 279
   },
   "latest_published_by_module": {
-    "market": "2026-11-12T12:39:09+00:00",
+    "market": "2026-11-12T15:16:30+00:00",
     "legal": "2026-11-12T08:06:20+00:00",
     "infrastructure": "2026-11-12T13:17:26+00:00",
-    "macro": "2026-11-12T13:32:44+00:00"
+    "macro": "2026-11-12T16:15:23+00:00"
   },
   "feed_status": [
     {
       "source_id": "vnexpress-real-estate",
-      "status": "fetch-error"
+      "status": "parsed",
+      "feed_items": 50,
+      "new": 1,
+      "skipped": 49,
+      "duplicates": 49,
+      "filtered": 0
     },
     {
       "source_id": "thanhnien-real-estate",
@@ -59,8 +64,8 @@
       "feed_items": 50,
       "new": 1,
       "skipped": 49,
-      "duplicates": 4,
-      "filtered": 45
+      "duplicates": 5,
+      "filtered": 44
     },
     {
       "source_id": "vnexpress-current-affairs",
@@ -113,17 +118,17 @@
       "feed_items": 50,
       "new": 0,
       "skipped": 50,
-      "duplicates": 6,
-      "filtered": 44
+      "duplicates": 5,
+      "filtered": 45
     },
     {
       "source_id": "dantri-current-affairs",
       "status": "parsed",
       "feed_items": 50,
-      "new": 1,
-      "skipped": 49,
+      "new": 0,
+      "skipped": 50,
       "duplicates": 10,
-      "filtered": 39
+      "filtered": 40
     },
     {
       "source_id": "dantri-legal",
@@ -171,10 +176,5 @@
       "filtered": 48
     }
   ],
-  "fetch_errors": [
-    {
-      "source_id": "vnexpress-real-estate",
-      "error": "HTTPError"
-    }
-  ]
+  "fetch_errors": []
 }
