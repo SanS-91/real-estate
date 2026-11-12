@@ -1,9 +1,117 @@
 {
   "schema_version": 1,
-  "build_id": "market-news-rss-20261112T085140Z",
-  "generated_at": "2026-11-12T08:51:40.946301+00:00",
-  "record_count": 1766,
+  "build_id": "market-news-rss-20261112T105133Z",
+  "generated_at": "2026-11-12T10:51:33.868198+00:00",
+  "record_count": 1772,
   "data": [
+    {
+      "id": "article-market-rss-dbd71d6bcfe30418fc23",
+      "title": "Giá mua USD của Ngân hàng Nhà nước cao hơn ngân hàng thương mại",
+      "url": "https://thanhnien.vn/gia-mua-usd-cua-ngan-hang-nha-nuoc-cao-hon-ngan-hang-thuong-mai-185261112163754735.htm",
+      "category": "macro",
+      "module_ids": [
+        "macro"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-11-12T09:57:00+00:00",
+      "source_id": "thanhnien-banking",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "Các ngân hàng thương mại tiếp tục tăng giá USD trong ngày 12.11 thêm 30 đồng, nâng tổng mức tăng so với đầu tuần lên 170 đồng. Dù vậy, giá mua USD của các ngân hàng thương mại đối với khách hàng đang ở mức thấp hơn giá mua vào của Ngân hàng Nhà nước (NHNN).",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://thanhnien.vn/rss/kinh-te/ngan-hang.rss",
+        "publisher_host": "thanhnien.vn",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-8897f04d6f3c5f1d4658",
+      "title": "Xoay xở nguồn nhựa đường cho sân bay Long Thành khi Singapore cạn hàng",
+      "url": "https://dantri.com.vn/thoi-su/xoay-xo-nguon-nhua-duong-cho-san-bay-long-thanh-khi-singapore-can-hang-20261112161234758.htm",
+      "category": "infrastructure",
+      "module_ids": [
+        "infrastructure"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-11-12T09:44:58+00:00",
+      "source_id": "dantri-current-affairs",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [
+        "infrastructure"
+      ],
+      "importance": 2,
+      "summary": "(Dân trí) - Hạng mục giao thông nội cảng sân bay Long Thành cần hơn 235.000 tấn bê tông nhựa, trong khi nguồn nhựa đường từ Singapore đã cạn, nguồn thay thế khan hiếm và giá tăng cao.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://dantri.com.vn/rss/thoi-su.rss",
+        "publisher_host": "dantri.com.vn",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-59f206497429d3271cd6",
+      "title": "Cách Vinhomes Green Paradise thu hút cư dân tới Cần Giờ",
+      "url": "https://vnexpress.net/cach-vinhomes-green-paradise-thu-hut-cu-dan-toi-can-gio-5143907.html",
+      "category": "market",
+      "module_ids": [
+        "market"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-11-12T09:30:00+00:00",
+      "source_id": "vnexpress-real-estate",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [
+        "vinhomes"
+      ],
+      "tags": [
+        "infrastructure"
+      ],
+      "importance": 2,
+      "summary": "Với lợi thế cảnh quan rừng - biển, mạng lưới hạ tầng liên vùng và hệ sinh thái theo mô hình đô thị tích hợp, Vinhomes Green Paradise hướng tới thu hút cộng đồng cư dân đến Cần Giờ.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://vnexpress.net/rss/bat-dong-san.rss",
+        "publisher_host": "vnexpress.net",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-01b3d1b8590ab9c7693e",
+      "title": "Sân bay Cát Bi đã sạch bóng \"xe dù, xe chui\"",
+      "url": "https://dantri.com.vn/thoi-su/san-bay-cat-bi-da-sach-bong-xe-du-xe-chui-20261112003726148.htm",
+      "category": "infrastructure",
+      "module_ids": [
+        "infrastructure"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-11-12T08:28:22+00:00",
+      "source_id": "dantri-current-affairs",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [
+        "infrastructure"
+      ],
+      "importance": 2,
+      "summary": "(Dân trí) - Sau phản ánh của báo Dân trí, Công an Hải Phòng cho biết tiếp tục tăng cường triển khai phương án xử lý, chấm dứt tình trạng xe dù, xe chui, cò mồi, chèo kéo khách tại sân bay Cát Bi.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://dantri.com.vn/rss/thoi-su.rss",
+        "publisher_host": "dantri.com.vn",
+        "publication_date_from_feed": true
+      }
+    },
     {
       "id": "article-market-rss-b01de5777134d16c1846",
       "title": "Doanh nghiệp xoay xở giữ giá nhà vừa túi tiền",
@@ -28,6 +136,32 @@
         "method": "official-rss",
         "feed_url": "https://vnexpress.net/rss/bat-dong-san.rss",
         "publisher_host": "vnexpress.net",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-cc634e8bc5259c2d557d",
+      "title": "Lạng Sơn thông qua 4 nghị quyết quan trọng về đầu tư công và thu hồi đất",
+      "url": "https://dantri.com.vn/thoi-su/lang-son-thong-qua-4-nghi-quyet-quan-trong-ve-dau-tu-cong-va-thu-hoi-dat-20261112143339045.htm",
+      "category": "legal",
+      "module_ids": [
+        "legal",
+        "infrastructure"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-11-12T08:06:20+00:00",
+      "source_id": "dantri-current-affairs",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "(Dân trí) - HĐND tỉnh Lạng Sơn đã thông qua 4 nghị quyết liên quan đến kế hoạch đầu tư công, phân bổ nguồn vốn và danh mục các dự án phải thu hồi đất trên địa bàn tỉnh.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://dantri.com.vn/rss/thoi-su.rss",
+        "publisher_host": "dantri.com.vn",
         "publication_date_from_feed": true
       }
     },
@@ -82,6 +216,31 @@
         "method": "official-rss",
         "feed_url": "https://dantri.com.vn/rss/bat-dong-san.rss",
         "publisher_host": "dantri.com.vn",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-e0015a08925a455b2db2",
+      "title": "Bộ trưởng Vũ Hải Quân: Đầu tư công nghệ cao phải song hành với công nghệ thiết yếu",
+      "url": "https://vnexpress.net/bo-truong-khoa-hoc-va-cong-nghe-vu-hai-quan-tiep-tuc-tra-loi-chat-van-5143668-tong-thuat.html",
+      "category": "infrastructure",
+      "module_ids": [
+        "infrastructure"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-11-12T07:00:00+00:00",
+      "source_id": "vnexpress-current-affairs",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "Bộ trưởng Khoa học và Công nghệ Vũ Hải Quân cho rằng Việt Nam cần đầu tư dài hạn để làm chủ công nghệ lõi, đồng thời phát triển các công nghệ thiết yếu, trực tiếp nâng năng suất sản xuất và cải thiện đời sống người dân.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://vnexpress.net/rss/thoi-su.rss",
+        "publisher_host": "vnexpress.net",
         "publication_date_from_feed": true
       }
     },
