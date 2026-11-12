@@ -1,9 +1,136 @@
 {
   "schema_version": 1,
-  "build_id": "market-news-rss-20261112T005147Z",
-  "generated_at": "2026-11-12T00:51:47.071453+00:00",
-  "record_count": 1744,
+  "build_id": "market-news-rss-20261112T025248Z",
+  "generated_at": "2026-11-12T02:52:48.736564+00:00",
+  "record_count": 1749,
   "data": [
+    {
+      "id": "article-market-rss-48561c97005c6a57a97a",
+      "title": "Giá vàng hôm nay 12.11.2026: Quay đầu giảm 1 triệu đồng một lượng",
+      "url": "https://thanhnien.vn/gia-vang-hom-nay-12112026-quay-dau-giam-1-trieu-dong-mot-luong-185261112063014448.htm",
+      "category": "macro",
+      "module_ids": [
+        "macro"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-11-12T02:06:00+00:00",
+      "source_id": "thanhnien-banking",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "Giá vàng trong nước quay đầu giảm khi thị trường thế giới lao dốc dưới mức 4.000 USD/ounce.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://thanhnien.vn/rss/kinh-te/ngan-hang.rss",
+        "publisher_host": "thanhnien.vn",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-fa6db30d0b4e95c26a75",
+      "title": "Giá vàng tiếp tục giảm, người mua vào lỗ 9 triệu đồng sau 1 tháng",
+      "url": "https://dantri.com.vn/kinh-doanh/gia-vang-tiep-tuc-giam-nguoi-mua-vao-lo-9-trieu-dong-sau-1-thang-20261112065901858.htm",
+      "category": "macro",
+      "module_ids": [
+        "macro"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-11-12T02:04:28+00:00",
+      "source_id": "dantri-business",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "(Dân trí) - Giá vàng thế giới và trong nước lại quay đầu giảm mạnh. Vàng thế giới đã mất mốc 4.000 USD/ounce, vàng trong nước cũng giảm về mức 136-139 triệu đồng/lượng.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://dantri.com.vn/rss/kinh-doanh.rss",
+        "publisher_host": "dantri.com.vn",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-17c2c45a9e6da9b6be81",
+      "title": "5 xu hướng nội thất dự báo lên ngôi năm 2027 cho nhà đẹp, ấm cúng",
+      "url": "https://dantri.com.vn/bat-dong-san/5-xu-huong-noi-that-du-bao-len-ngoi-nam-2027-cho-nha-dep-am-cung-20261111090731878.htm",
+      "category": "market",
+      "module_ids": [
+        "market"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-11-12T01:57:00+00:00",
+      "source_id": "dantri-real-estate",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "(Dân trí) - Tạm biệt phong cách tối giản đơn điệu, không gian sống năm 2027 hướng đến sự ấm cúng, linh hoạt và đậm dấu ấn cá nhân với những món đồ vừa tiện nghi vừa có chiều sâu cho gia đình.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://dantri.com.vn/rss/bat-dong-san.rss",
+        "publisher_host": "dantri.com.vn",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-fd8b37fc5a5327c4c414",
+      "title": "Diamond Sky tạo dấu ấn với chính sách mua nhà trúng nhà",
+      "url": "https://dantri.com.vn/bat-dong-san/diamond-sky-tao-dau-an-voi-chinh-sach-mua-nha-trung-nha-20261111160633201.htm",
+      "category": "market",
+      "module_ids": [
+        "market"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-11-12T01:00:00+00:00",
+      "source_id": "dantri-real-estate",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "(Dân trí) - Với chính sách ưu đãi được đánh giá là chưa từng có tiền lệ của chủ đầu tư, Van Phuc Group tiếp tục tạo điểm nhấn với chương trình “Mua nhà trúng nhà - Nhân đôi tổ ấm”, trao cơ hội sở hữu thêm một căn hộ trị giá gần 8 tỷ đồng khi mua Diamond Sky.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://dantri.com.vn/rss/bat-dong-san.rss",
+        "publisher_host": "dantri.com.vn",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-674d265a695ecac89107",
+      "title": "Sạt lở trên cao tốc Bắc - Nam, đất đá tràn xuống mặt đường",
+      "url": "https://dantri.com.vn/thoi-su/sat-lo-tren-cao-toc-bac-nam-dat-da-tran-xuong-mat-duong-20261112072238527.htm",
+      "category": "infrastructure",
+      "module_ids": [
+        "infrastructure"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-11-12T00:57:40+00:00",
+      "source_id": "dantri-current-affairs",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [
+        "infrastructure"
+      ],
+      "importance": 2,
+      "summary": "(Dân trí) - Mưa lớn kéo dài khiến taluy dương trên cao tốc Bắc - Nam đoạn Chí Thạnh - Vân Phong bị sạt lở. Nhiều đoạn đường bị đất đá tràn xuống khiến phương tiện gặp khó khăn khi lưu thông.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://dantri.com.vn/rss/thoi-su.rss",
+        "publisher_host": "dantri.com.vn",
+        "publication_date_from_feed": true
+      }
+    },
     {
       "id": "article-market-rss-80290a9ce2ff0042d844",
       "title": "Đất đá tràn xuống cao tốc Chí Thạnh - Vân Phong",
