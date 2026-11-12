@@ -1,9 +1,115 @@
 {
   "schema_version": 1,
-  "build_id": "market-news-rss-20261112T105133Z",
-  "generated_at": "2026-11-12T10:51:33.868198+00:00",
-  "record_count": 1772,
+  "build_id": "market-news-rss-20261112T125140Z",
+  "generated_at": "2026-11-12T12:51:40.713516+00:00",
+  "record_count": 1776,
   "data": [
+    {
+      "id": "article-market-rss-26af4ca12fd3c10c8559",
+      "title": "Chủ đầu tư dự án siêu cảng Cần Giờ 5 tỷ USD sắp chia cổ tức",
+      "url": "https://dantri.com.vn/kinh-doanh/chu-dau-tu-du-an-sieu-cang-can-gio-5-ty-usd-sap-chia-co-tuc-20261112191809021.htm",
+      "category": "market",
+      "module_ids": [
+        "market"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-11-12T12:39:09+00:00",
+      "source_id": "dantri-business",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "(Dân trí) - Doanh nghiệp đứng đầu liên danh nhà đầu tư dự án Cảng trung chuyển quốc tế Cần Giờ vừa được Chính phủ cho phép chia cổ tức bằng cổ phiếu, giúp công ty tăng vốn cho kế hoạch đầu tư sắp tới.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://dantri.com.vn/rss/kinh-doanh.rss",
+        "publisher_host": "dantri.com.vn",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-504021d33b502a987017",
+      "title": "Giá vàng tiếp tục rớt mạnh do áp lực lãi suất Fed",
+      "url": "https://dantri.com.vn/kinh-doanh/gia-vang-tiep-tuc-rot-manh-do-ap-luc-lai-suat-fed-20261112185127877.htm",
+      "category": "macro",
+      "module_ids": [
+        "macro"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-11-12T12:23:45+00:00",
+      "source_id": "dantri-business",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "(Dân trí) - Áp lực từ nguy cơ Cục Dự trữ Liên bang Mỹ (Fed) tăng mạnh lãi suất khiến giá vàng thế giới trượt dốc phiên thứ 3 liên tiếp, chính thức để mất mốc tâm lý 4.000 USD/ounce.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://dantri.com.vn/rss/kinh-doanh.rss",
+        "publisher_host": "dantri.com.vn",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-266d2b472f2794337f3e",
+      "title": "TPHCM phát hành trái phiếu huy động vốn cho dự án trọng điểm từ năm 2027",
+      "url": "https://dantri.com.vn/bat-dong-san/tphcm-phat-hanh-trai-phieu-huy-dong-von-cho-du-an-trong-diem-tu-nam-2027-20261112180810431.htm",
+      "category": "market",
+      "module_ids": [
+        "market"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-11-12T11:39:02+00:00",
+      "source_id": "dantri-real-estate",
+      "region_ids": [
+        "hcmc"
+      ],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [
+        "infrastructure"
+      ],
+      "importance": 2,
+      "summary": "(Dân trí) - TPHCM giao các đơn vị xây dựng đề án phát hành trái phiếu đô thị, trái phiếu công trình qua Trung tâm tài chính quốc tế, dự kiến huy động vốn cho các dự án hạ tầng trọng điểm từ năm 2027.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://dantri.com.vn/rss/bat-dong-san.rss",
+        "publisher_host": "dantri.com.vn",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-ce0e91e3f83e0ebca650",
+      "title": "Đảo Ngọc, Vinhomes Hải Vân Bay: Nhà hoàn thiện nội thất, ưu đãi 30%",
+      "url": "https://dantri.com.vn/bat-dong-san/dao-ngoc-vinhomes-hai-van-bay-nha-hoan-thien-noi-that-uu-dai-30-20261112181506026.htm",
+      "category": "market",
+      "module_ids": [
+        "market"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-11-12T11:22:15+00:00",
+      "source_id": "dantri-real-estate",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [
+        "vinhomes"
+      ],
+      "tags": [],
+      "importance": 2,
+      "summary": "(Dân trí) - Dòng sản phẩm hoàn thiện nội thất tại phân khu Đảo Ngọc - Vinhomes Hải Vân Bay (Đà Nẵng) giúp người mua giảm bớt thời gian và công sức chuẩn bị.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://dantri.com.vn/rss/bat-dong-san.rss",
+        "publisher_host": "dantri.com.vn",
+        "publication_date_from_feed": true
+      }
+    },
     {
       "id": "article-market-rss-dbd71d6bcfe30418fc23",
       "title": "Giá mua USD của Ngân hàng Nhà nước cao hơn ngân hàng thương mại",
