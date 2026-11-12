@@ -1,9 +1,144 @@
 {
   "schema_version": 1,
-  "build_id": "market-news-rss-20261112T045204Z",
-  "generated_at": "2026-11-12T04:52:04.615895+00:00",
-  "record_count": 1757,
+  "build_id": "market-news-rss-20261112T065146Z",
+  "generated_at": "2026-11-12T06:51:46.383591+00:00",
+  "record_count": 1763,
   "data": [
+    {
+      "id": "article-market-rss-a1941e09b241311a543a",
+      "title": "Gỡ vướng cấp sổ hồng cho căn hộ condotel",
+      "url": "https://thanhnien.vn/go-vuong-cap-so-hong-cho-can-ho-condotel-185261112095659623.htm",
+      "category": "market",
+      "module_ids": [
+        "market",
+        "legal"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-11-12T06:50:00+00:00",
+      "source_id": "thanhnien-real-estate",
+      "region_ids": [
+        "hcmc"
+      ],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [
+        "legal"
+      ],
+      "importance": 2,
+      "summary": "Những ngày qua, Tổ công tác 1645 do giám đốc Sở Nông nghiệp - Môi trường TP.HCM Nguyễn Toàn Thắng là Tổ trưởng cùng các thành viên đã có nhiều buổi làm việc với các doanh nghiệp để xem xét, tháo gỡ vướng mắc để cấp sổ hồng cho người mua căn hộ codotel.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://thanhnien.vn/rss/kinh-te/dia-oc.rss",
+        "publisher_host": "thanhnien.vn",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-345d6736b5ea4697f31a",
+      "title": "Lãi suất tăng, người Việt đang thay đổi cách giữ tiền ra sao?",
+      "url": "https://dantri.com.vn/kinh-doanh/lai-suat-tang-nguoi-viet-dang-thay-doi-cach-giu-tien-ra-sao-20261112130626935.htm",
+      "category": "macro",
+      "module_ids": [
+        "macro"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-11-12T06:25:03+00:00",
+      "source_id": "dantri-business",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "(Dân trí) - Lãi suất tăng khiến nhà đầu tư cân nhắc kỹ hơn khi lựa chọn bất động sản, vàng hay chứng khoán. Theo các chuyên gia, khả năng tạo dòng tiền và tính thanh khoản ngày càng được chú trọng.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://dantri.com.vn/rss/kinh-doanh.rss",
+        "publisher_host": "dantri.com.vn",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-051c36008b53d0d4c43a",
+      "title": "Chi tiết số seri 119 phôi sổ đỏ vừa bị mất ở Phú Thọ",
+      "url": "https://dantri.com.vn/thoi-su/chi-tiet-so-seri-119-phoi-so-do-vua-bi-mat-o-phu-tho-20261112111256755.htm",
+      "category": "legal",
+      "module_ids": [
+        "legal"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-11-12T04:41:51+00:00",
+      "source_id": "dantri-current-affairs",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "(Dân trí) - Sở Nông nghiệp và Môi trường tỉnh Phú Thọ thông báo mất 119 phôi Giấy chứng nhận quyền sử dụng đất, quyền sở hữu tài sản gắn liền với đất (sổ đỏ).",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://dantri.com.vn/rss/thoi-su.rss",
+        "publisher_host": "dantri.com.vn",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-ff7b83073d351286eb32",
+      "title": "Ba ôtô tông liên hoàn trên cao tốc Nội Bài - Lào Cai",
+      "url": "https://vnexpress.net/ba-oto-tong-lien-hoan-tren-cao-toc-noi-bai-lao-cai-5143771.html",
+      "category": "infrastructure",
+      "module_ids": [
+        "infrastructure"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-11-12T04:41:18+00:00",
+      "source_id": "vnexpress-current-affairs",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [
+        "infrastructure"
+      ],
+      "importance": 2,
+      "summary": "Ôtô 7 chỗ va chạm với hai xe container trên cao tốc Nội Bài - Lào Cai, đoạn qua xã Bảo Hà, tỉnh Lào Cai, khiến hai người bị thương, sáng 12/11.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://vnexpress.net/rss/thoi-su.rss",
+        "publisher_host": "vnexpress.net",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-0594fc229bfd3c41a839",
+      "title": "'Sẽ thí điểm đấu giá quyền thu phí một số đoạn cao tốc Bắc - Nam'",
+      "url": "https://vnexpress.net/se-thi-diem-dau-gia-quyen-thu-phi-mot-so-doan-cao-toc-bac-nam-5143742.html",
+      "category": "legal",
+      "module_ids": [
+        "legal",
+        "infrastructure"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-11-12T04:20:15+00:00",
+      "source_id": "vnexpress-economy",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [
+        "infrastructure"
+      ],
+      "importance": 2,
+      "summary": "Theo Phó thủ tướng Nguyễn Văn Thắng, Việt Nam dự kiến thí điểm đấu giá, đấu thầu quyền thu phí tại một số dự án, nhất là các đoạn trên cao tốc Bắc - Nam.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://vnexpress.net/rss/kinh-doanh.rss",
+        "publisher_host": "vnexpress.net",
+        "publication_date_from_feed": true
+      }
+    },
     {
       "id": "article-market-rss-e776557073333e656032",
       "title": "Toàn cảnh tuyến cao tốc đô thị rút ngắn thời gian từ TPHCM ra biển Vũng Tàu",
@@ -344,6 +479,31 @@
       "source_verification": {
         "method": "official-rss",
         "feed_url": "https://dantri.com.vn/rss/thoi-su.rss",
+        "publisher_host": "dantri.com.vn",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-1074850164b3bd69dbe5",
+      "title": "Chủ tịch Quốc hội: Kiên quyết điều chuyển vốn khỏi dự án chậm giải ngân",
+      "url": "https://dantri.com.vn/kinh-doanh/chu-tich-quoc-hoi-kien-quyet-dieu-chuyen-von-khoi-du-an-cham-giai-ngan-20261111204812848.htm",
+      "category": "market",
+      "module_ids": [
+        "market"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-11-12T00:32:58+00:00",
+      "source_id": "dantri-business",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "(Dân trí) - Nhấn mạnh kỷ luật đầu tư công, Chủ tịch Quốc hội Trần Thanh Mẫn yêu cầu kiểm soát chặt vốn tạm ứng và kiên quyết cắt vốn các dự án ì ạch để dồn lực cho công trình hiệu quả.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://dantri.com.vn/rss/kinh-doanh.rss",
         "publisher_host": "dantri.com.vn",
         "publication_date_from_feed": true
       }
