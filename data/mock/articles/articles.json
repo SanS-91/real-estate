@@ -1,9 +1,84 @@
 {
   "schema_version": 1,
-  "build_id": "market-news-rss-20261113T065743Z",
-  "generated_at": "2026-11-13T06:57:43.220960+00:00",
-  "record_count": 1802,
+  "build_id": "market-news-rss-20261113T085141Z",
+  "generated_at": "2026-11-13T08:51:41.550075+00:00",
+  "record_count": 1806,
   "data": [
+    {
+      "id": "article-market-rss-86524a95d37de08ff575",
+      "title": "Khi ánh sáng, mặt nước và cây xanh trở thành tài sản đô thị",
+      "url": "https://dantri.com.vn/bat-dong-san/khi-anh-sang-mat-nuoc-va-cay-xanh-tro-thanh-tai-san-do-thi-20261113150003794.htm",
+      "category": "market",
+      "module_ids": [
+        "market"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-11-13T08:04:00+00:00",
+      "source_id": "dantri-real-estate",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "(Dân trí) - Trong bối cảnh tốc độ đô thị hóa ngày càng nhanh, giá trị của một không gian sống không chỉ nằm ở vị trí hay tiện ích, mà còn được cảm nhận qua khả năng tiếp cận thiên nhiên và duy trì chất lượng môi trường trong quá trình sử dụng.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://dantri.com.vn/rss/bat-dong-san.rss",
+        "publisher_host": "dantri.com.vn",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-d3b70161d3e88e72da7a",
+      "title": "Cần Thơ: Tài sản công giảm giá lần 4 vẫn chưa có người thuê",
+      "url": "https://dantri.com.vn/bat-dong-san/can-tho-tai-san-cong-giam-gia-lan-4-van-chua-co-nguoi-thue-20261113112814710.htm",
+      "category": "market",
+      "module_ids": [
+        "market"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-11-13T07:56:17+00:00",
+      "source_id": "dantri-real-estate",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "(Dân trí) - TP Cần Thơ còn 366 cơ sở nhà, đất dôi dư chưa xử lý triệt để. Theo Trung tâm Phát triển quỹ đất, nhiều cơ sở đã thông báo giảm giá cho thuê đến lần thứ 4 nhưng vẫn chưa có người thuê.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://dantri.com.vn/rss/bat-dong-san.rss",
+        "publisher_host": "dantri.com.vn",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-947a530697fedc514817",
+      "title": "Dấu ấn Jensen Huang tại trụ sở Nvidia rộng hơn 116.000 m2",
+      "url": "https://vnexpress.net/dau-an-jensen-huang-tai-tru-so-nvidia-rong-hon-116-000-m2-5144289.html",
+      "category": "market",
+      "module_ids": [
+        "market"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-11-13T07:00:00+00:00",
+      "source_id": "vnexpress-real-estate",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "Jensen Huang định hướng thiết kế trụ sở Nvidia tại California theo mô hình mở, phản ánh bản sắc của hãng chip, và là nơi nhân viên gặp gỡ, làm việc cùng nhau.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://vnexpress.net/rss/bat-dong-san.rss",
+        "publisher_host": "vnexpress.net",
+        "publication_date_from_feed": true
+      }
+    },
     {
       "id": "article-market-rss-f55a5bd30e1fed61245c",
       "title": "Mặt bằng nhỏ hút khách nhờ xu hướng giải trí của Gen Z",
@@ -49,6 +124,33 @@
       "tags": [],
       "importance": 2,
       "summary": "(Dân trí) - Sau tiếng nổ, căn nhà số 81 đường Bùi Văn Ba, phường Tân Thuận (TPHCM) đổ sập. Hai căn nhà liền kề bị ảnh hưởng, 6 người bị thương.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://dantri.com.vn/rss/thoi-su.rss",
+        "publisher_host": "dantri.com.vn",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-8ed57e89cdff69543ddd",
+      "title": "Sập 2 căn nhà ở TPHCM sau tiếng nổ lớn, 8 người bị thương",
+      "url": "https://dantri.com.vn/thoi-su/sap-2-can-nha-o-tphcm-sau-tieng-no-lon-8-nguoi-bi-thuong-20261113120327802.htm",
+      "category": "market",
+      "module_ids": [
+        "market"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-11-13T05:07:13+00:00",
+      "source_id": "dantri-current-affairs",
+      "region_ids": [
+        "hcmc"
+      ],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "(Dân trí) - Sau tiếng nổ, căn nhà số 81 đường Bùi Văn Ba, phường Tân Thuận (TPHCM) đổ sập. Căn nhà liền kề bị ảnh hưởng nặng, 8 người bị thương.",
       "source_verification": {
         "method": "official-rss",
         "feed_url": "https://dantri.com.vn/rss/thoi-su.rss",
