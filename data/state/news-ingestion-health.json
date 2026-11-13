@@ -1,19 +1,19 @@
 {
   "schema_version": 1,
-  "checked_at": "2026-11-13T06:52:51.144890+00:00",
+  "checked_at": "2026-11-13T06:57:43.220960+00:00",
   "feeds_configured": 16,
-  "feeds_fetched": 15,
-  "accepted_new": 5,
+  "feeds_fetched": 16,
+  "accepted_new": 1,
   "production_written": true,
-  "article_total": 1801,
+  "article_total": 1802,
   "published_by_module": {
-    "market": 4,
+    "market": 1,
     "legal": 0,
     "infrastructure": 0,
-    "macro": 2
+    "macro": 0
   },
   "recent_by_module_7d": {
-    "market": 172,
+    "market": 173,
     "legal": 31,
     "infrastructure": 85,
     "macro": 59
@@ -21,7 +21,7 @@
   "recent_by_module_30d": {
     "market": 864,
     "legal": 162,
-    "infrastructure": 357,
+    "infrastructure": 356,
     "macro": 277
   },
   "latest_published_by_module": {
@@ -35,9 +35,9 @@
       "source_id": "vnexpress-real-estate",
       "status": "parsed",
       "feed_items": 50,
-      "new": 1,
-      "skipped": 49,
-      "duplicates": 49,
+      "new": 0,
+      "skipped": 50,
+      "duplicates": 50,
       "filtered": 0
     },
     {
@@ -53,9 +53,9 @@
       "source_id": "dantri-real-estate",
       "status": "parsed",
       "feed_items": 50,
-      "new": 1,
-      "skipped": 49,
-      "duplicates": 49,
+      "new": 0,
+      "skipped": 50,
+      "duplicates": 50,
       "filtered": 0
     },
     {
@@ -71,14 +71,19 @@
       "source_id": "vnexpress-current-affairs",
       "status": "parsed",
       "feed_items": 50,
-      "new": 1,
-      "skipped": 49,
-      "duplicates": 8,
+      "new": 0,
+      "skipped": 50,
+      "duplicates": 9,
       "filtered": 41
     },
     {
       "source_id": "vnexpress-legal",
-      "status": "fetch-error"
+      "status": "parsed",
+      "feed_items": 50,
+      "new": 0,
+      "skipped": 50,
+      "duplicates": 0,
+      "filtered": 50
     },
     {
       "source_id": "tuoitre-business",
@@ -111,9 +116,9 @@
       "source_id": "dantri-business",
       "status": "parsed",
       "feed_items": 50,
-      "new": 1,
-      "skipped": 49,
-      "duplicates": 6,
+      "new": 0,
+      "skipped": 50,
+      "duplicates": 7,
       "filtered": 43
     },
     {
@@ -171,10 +176,5 @@
       "filtered": 48
     }
   ],
-  "fetch_errors": [
-    {
-      "source_id": "vnexpress-legal",
-      "error": "ReadTimeout"
-    }
-  ]
+  "fetch_errors": []
 }

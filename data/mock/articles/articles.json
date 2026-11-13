@@ -1,8 +1,8 @@
 {
   "schema_version": 1,
-  "build_id": "market-news-rss-20261113T065251Z",
-  "generated_at": "2026-11-13T06:52:51.144890+00:00",
-  "record_count": 1801,
+  "build_id": "market-news-rss-20261113T065743Z",
+  "generated_at": "2026-11-13T06:57:43.220960+00:00",
+  "record_count": 1802,
   "data": [
     {
       "id": "article-market-rss-f55a5bd30e1fed61245c",
@@ -26,6 +26,33 @@
         "method": "official-rss",
         "feed_url": "https://vnexpress.net/rss/bat-dong-san.rss",
         "publisher_host": "vnexpress.net",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-a13d0666ddc295d4ba50",
+      "title": "Sập 3 căn nhà ở TPHCM sau tiếng nổ, 6 người bị thương",
+      "url": "https://dantri.com.vn/thoi-su/sap-3-can-nha-o-tphcm-sau-tieng-no-6-nguoi-bi-thuong-20261113120327802.htm",
+      "category": "market",
+      "module_ids": [
+        "market"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-11-13T05:07:13+00:00",
+      "source_id": "dantri-current-affairs",
+      "region_ids": [
+        "hcmc"
+      ],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "(Dân trí) - Sau tiếng nổ, căn nhà số 81 đường Bùi Văn Ba, phường Tân Thuận (TPHCM) đổ sập. Hai căn nhà liền kề bị ảnh hưởng, 6 người bị thương.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://dantri.com.vn/rss/thoi-su.rss",
+        "publisher_host": "dantri.com.vn",
         "publication_date_from_feed": true
       }
     },
