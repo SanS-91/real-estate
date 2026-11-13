@@ -1,9 +1,142 @@
 {
   "schema_version": 1,
-  "build_id": "market-news-rss-20261113T045131Z",
-  "generated_at": "2026-11-13T04:51:31.746822+00:00",
-  "record_count": 1796,
+  "build_id": "market-news-rss-20261113T065251Z",
+  "generated_at": "2026-11-13T06:52:51.144890+00:00",
+  "record_count": 1801,
   "data": [
+    {
+      "id": "article-market-rss-f55a5bd30e1fed61245c",
+      "title": "Mặt bằng nhỏ hút khách nhờ xu hướng giải trí của Gen Z",
+      "url": "https://vnexpress.net/mat-bang-nho-hut-khach-nho-xu-huong-giai-tri-cua-gen-z-5140293.html",
+      "category": "market",
+      "module_ids": [
+        "market"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-11-13T05:49:12+00:00",
+      "source_id": "vnexpress-real-estate",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "Trái ngược cảnh ế ẩm của mặt bằng lớn, nhà phố cho thuê diện tích nhỏ đang phục hồi, động lực chính đến từ các mô hình giải trí tinh gọn, hướng tới giới trẻ.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://vnexpress.net/rss/bat-dong-san.rss",
+        "publisher_host": "vnexpress.net",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-1cad613a60a082e0f67a",
+      "title": "Sau tiếng nổ lớn, căn nhà ở TPHCM đổ sập",
+      "url": "https://dantri.com.vn/thoi-su/sau-tieng-no-lon-can-nha-o-tphcm-do-sap-20261113120327802.htm",
+      "category": "market",
+      "module_ids": [
+        "market"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-11-13T05:07:13+00:00",
+      "source_id": "dantri-current-affairs",
+      "region_ids": [
+        "hcmc"
+      ],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "(Dân trí) - Sau tiếng nổ, căn nhà số 81 đường Bùi Văn Ba, phường Tân Thuận (TPHCM) đổ sập. Căn nhà liền kề bị ảnh hưởng, cảnh sát đang phong tỏa hiện trường.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://dantri.com.vn/rss/thoi-su.rss",
+        "publisher_host": "dantri.com.vn",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-138004b6e7f4c3245672",
+      "title": "Nổ cửa hàng gas làm sập dãy nhà ở TP HCM",
+      "url": "https://vnexpress.net/no-cua-hang-gas-lam-sap-day-nha-o-tp-hcm-5144277.html",
+      "category": "market",
+      "module_ids": [
+        "market"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-11-13T05:05:35+00:00",
+      "source_id": "vnexpress-current-affairs",
+      "region_ids": [
+        "hcmc"
+      ],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "Vụ nổ lớn làm sập dãy nhà trên đường Bùi Văn Ba, phường Tân Thuận (quận 7 cũ), nhiều người hoảng loạn, nguyên nhân ban đầu nghi rò rỉ bình ga, trưa 13/11.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://vnexpress.net/rss/thoi-su.rss",
+        "publisher_host": "vnexpress.net",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-e898b6e1a01941088371",
+      "title": "Ngân hàng Nhà nước thanh tra, xử lý nghiêm ngân hàng chây ì hạ lãi suất",
+      "url": "https://dantri.com.vn/kinh-doanh/ngan-hang-nha-nuoc-thanh-tra-xu-ly-nghiem-ngan-hang-chay-i-ha-lai-suat-20261113114701931.htm",
+      "category": "macro",
+      "module_ids": [
+        "macro"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-11-13T05:02:59+00:00",
+      "source_id": "dantri-business",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "(Dân trí) - Để chấn chỉnh tình trạng lãi suất huy động neo cao, Ngân hàng Nhà nước vừa có chỉ đạo khẩn yêu cầu thanh tra chuyên đề diện rộng ngay trong tháng 11. Các ngân hàng vi phạm sẽ bị xử lý nghiêm.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://dantri.com.vn/rss/kinh-doanh.rss",
+        "publisher_host": "dantri.com.vn",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-400bfd5d0a8df1adfafc",
+      "title": "Lãi suất neo cao, giao dịch nhà tại Mỹ xuống thấp nhất 16 năm",
+      "url": "https://dantri.com.vn/bat-dong-san/lai-suat-neo-cao-giao-dich-nha-tai-my-xuong-thap-nhat-16-nam-20261113082447786.htm",
+      "category": "market",
+      "module_ids": [
+        "market",
+        "macro"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-11-13T04:06:42+00:00",
+      "source_id": "dantri-real-estate",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [
+        "pricing",
+        "sales"
+      ],
+      "importance": 2,
+      "summary": "(Dân trí) - Giao dịch nhà ở đã qua sử dụng tại Mỹ giảm xuống thấp nhất kể từ năm 2010 khi lãi suất neo cao cản sức mua, còn giá nhà vẫn nhích lên.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://dantri.com.vn/rss/bat-dong-san.rss",
+        "publisher_host": "dantri.com.vn",
+        "publication_date_from_feed": true
+      }
+    },
     {
       "id": "article-market-rss-a00762891b6a66dbfbde",
       "title": "Giá vàng miếng lùi về 138 triệu đồng, thấp nhất 11 tháng",
