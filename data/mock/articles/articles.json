@@ -1,9 +1,87 @@
 {
   "schema_version": 1,
-  "build_id": "market-news-rss-20261113T105138Z",
-  "generated_at": "2026-11-13T10:51:38.670601+00:00",
-  "record_count": 1812,
+  "build_id": "market-news-rss-20261113T125146Z",
+  "generated_at": "2026-11-13T12:51:46.120851+00:00",
+  "record_count": 1815,
   "data": [
+    {
+      "id": "article-market-rss-43b6c2de8bf4ec41d28a",
+      "title": "Sân vận động Chi Lăng giảm hơn 1.500 tỷ đồng ở lần đấu giá thứ 8",
+      "url": "https://vnexpress.net/san-van-dong-chi-lang-giam-hon-1-500-ty-dong-o-lan-dau-gia-thu-8-5144418.html",
+      "category": "market",
+      "module_ids": [
+        "market"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-11-13T11:41:14+00:00",
+      "source_id": "vnexpress-real-estate",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "Quyền sử dụng đất khu phức hợp sân vận động Chi Lăng tiếp tục được đưa ra đấu giá lần thứ 8 với mức khởi điểm 8.190 tỷ đồng, giảm hơn 1.516 tỷ so với lần đầu.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://vnexpress.net/rss/bat-dong-san.rss",
+        "publisher_host": "vnexpress.net",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-cba136c55178782264cd",
+      "title": "Căn hộ bàn giao thô ven biển: Dấn ấn cá nhân, cơ hội đầu tư của người trẻ",
+      "url": "https://dantri.com.vn/bat-dong-san/can-ho-ban-giao-tho-ven-bien-dan-an-ca-nhan-co-hoi-dau-tu-cua-nguoi-tre-20261113182114080.htm",
+      "category": "market",
+      "module_ids": [
+        "market"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-11-13T11:37:11+00:00",
+      "source_id": "dantri-real-estate",
+      "region_ids": [
+        "hcmc",
+        "binh-duong"
+      ],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "(Dân trí) - Theo dữ liệu Batdongsan.com.vn chia sẻ tại một hội thảo diễn ra trong tháng 7, Vũng Tàu (cũ) là một trong những thị trường có lợi suất cho thuê căn hộ khoảng 4,2%, cao hơn TPHCM (3,2%) và Bình Dương cũ (2,9%).",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://dantri.com.vn/rss/bat-dong-san.rss",
+        "publisher_host": "dantri.com.vn",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-039b5b9f3602a3393b6a",
+      "title": "Giá vàng thế giới bất ngờ tăng nhẹ sau khi chạm đáy 13 tháng",
+      "url": "https://dantri.com.vn/kinh-doanh/gia-vang-the-gioi-bat-ngo-tang-nhe-sau-khi-cham-day-13-thang-20261113173826399.htm",
+      "category": "macro",
+      "module_ids": [
+        "macro"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-11-13T10:47:38+00:00",
+      "source_id": "dantri-business",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "(Dân trí) - Sau cú rơi tự do về đáy hơn một năm, giá vàng thế giới vừa bất ngờ đảo chiều tăng trở lại nhờ dòng tiền lớn nhảy vào gom hàng, dù áp lực từ chính sách tiền tệ vẫn đè nặng.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://dantri.com.vn/rss/kinh-doanh.rss",
+        "publisher_host": "dantri.com.vn",
+        "publication_date_from_feed": true
+      }
+    },
     {
       "id": "article-market-rss-f517a9c7e0afd13a4670",
       "title": "Lối ra cho công trình xây dựng sai phép",
