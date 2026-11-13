@@ -1,9 +1,142 @@
 {
   "schema_version": 1,
-  "build_id": "market-news-rss-20261113T005141Z",
-  "generated_at": "2026-11-13T00:51:41.198947+00:00",
-  "record_count": 1788,
+  "build_id": "market-news-rss-20261113T025222Z",
+  "generated_at": "2026-11-13T02:52:22.244343+00:00",
+  "record_count": 1793,
   "data": [
+    {
+      "id": "article-market-rss-531dc9387f2c1c35e6a4",
+      "title": "Townhouse One Era quy hoạch không gian sống đa thế hệ",
+      "url": "https://vnexpress.net/townhouse-one-era-quy-hoach-khong-gian-song-da-the-he-5144139.html",
+      "category": "market",
+      "module_ids": [
+        "market"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-11-13T02:30:00+00:00",
+      "source_id": "vnexpress-real-estate",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [
+        "legal"
+      ],
+      "importance": 2,
+      "summary": "Townhouse tại One Era có mặt tiền 5-6 m, diện tích lớn, gần trường học cho trẻ, trung tâm y tế và không gian xanh cho người cao tuổi.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://vnexpress.net/rss/bat-dong-san.rss",
+        "publisher_host": "vnexpress.net",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-9f8db4045c15910d0050",
+      "title": "Vườn quốc gia U Minh Hạ cho thuê hơn 1.300ha rừng làm du lịch sinh thái",
+      "url": "https://dantri.com.vn/bat-dong-san/vuon-quoc-gia-u-minh-ha-cho-thue-hon-1300ha-rung-lam-du-lich-sinh-thai-20261112153032501.htm",
+      "category": "market",
+      "module_ids": [
+        "market"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-11-13T02:24:43+00:00",
+      "source_id": "dantri-real-estate",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "(Dân trí) - Vườn quốc gia U Minh Hạ sẽ cho thuê môi trường rừng để các tổ chức, cá nhân kinh doanh du lịch sinh thái, nghỉ dưỡng, giải trí.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://dantri.com.vn/rss/bat-dong-san.rss",
+        "publisher_host": "dantri.com.vn",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-ece576b346f44f7443e3",
+      "title": "Giá vàng hôm nay 13.11.2026: SJC giảm 1 triệu vẫn cao hơn thế giới trên 17 triệu",
+      "url": "https://thanhnien.vn/gia-vang-hom-nay-13112026-sjc-giam-1-trieu-van-cao-hon-the-gioi-tren-17-trieu-185261113071026369.htm",
+      "category": "macro",
+      "module_ids": [
+        "macro"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-11-13T02:06:00+00:00",
+      "source_id": "thanhnien-banking",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "Giá vàng trong nước tiếp tục đi xuống nhưng đà giảm ít hơn thế giới.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://thanhnien.vn/rss/kinh-te/ngan-hang.rss",
+        "publisher_host": "thanhnien.vn",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-e78a7a911a8883e1baba",
+      "title": "5 nâng cấp phòng tắm hiện đại đáng tiền gia chủ nên biết",
+      "url": "https://dantri.com.vn/bat-dong-san/5-nang-cap-phong-tam-hien-dai-dang-tien-gia-chu-nen-biet-20261113002104250.htm",
+      "category": "market",
+      "module_ids": [
+        "market"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-11-13T01:26:00+00:00",
+      "source_id": "dantri-real-estate",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "(Dân trí) - Nhiều gia đình chi tiền triệu cải tạo phòng tắm nhưng dùng vẫn bất tiện. 5 gợi ý nâng cấp nội thất dưới đây được cộng đồng mạng khen nức nở vì giá trị mang lại xứng đáng từng đồng.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://dantri.com.vn/rss/bat-dong-san.rss",
+        "publisher_host": "dantri.com.vn",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-1133b5ebc262ebf2caa9",
+      "title": "Moonlight 2 - Đón nhịp phát triển từ quy hoạch TOD phía Tây Hà Nội",
+      "url": "https://dantri.com.vn/bat-dong-san/moonlight-2-don-nhip-phat-trien-tu-quy-hoach-tod-phia-tay-ha-noi-20261112141844664.htm",
+      "category": "market",
+      "module_ids": [
+        "market",
+        "infrastructure"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-11-13T01:00:00+00:00",
+      "source_id": "dantri-real-estate",
+      "region_ids": [
+        "ha-noi"
+      ],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [
+        "legal",
+        "infrastructure"
+      ],
+      "importance": 2,
+      "summary": "(Dân trí) - Sự bứt phá của hạ tầng giao thông công cộng, đặc biệt là hệ thống đường sắt đô thị (metro), đang tái định hình bản đồ đô thị và giá trị bất động sản tại Hà Nội.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://dantri.com.vn/rss/bat-dong-san.rss",
+        "publisher_host": "dantri.com.vn",
+        "publication_date_from_feed": true
+      }
+    },
     {
       "id": "article-market-rss-ce9202cd183e40d50b3f",
       "title": "Giá vàng rơi thẳng đứng, xuống đáy hơn một năm",
