@@ -1,9 +1,217 @@
 {
   "schema_version": 1,
-  "build_id": "market-news-rss-20261112T165414Z",
-  "generated_at": "2026-11-12T16:54:14.123259+00:00",
-  "record_count": 1780,
+  "build_id": "market-news-rss-20261113T005141Z",
+  "generated_at": "2026-11-13T00:51:41.198947+00:00",
+  "record_count": 1788,
   "data": [
+    {
+      "id": "article-market-rss-ce9202cd183e40d50b3f",
+      "title": "Giá vàng rơi thẳng đứng, xuống đáy hơn một năm",
+      "url": "https://dantri.com.vn/kinh-doanh/gia-vang-roi-thang-dung-xuong-day-hon-mot-nam-20261113002928420.htm",
+      "category": "macro",
+      "module_ids": [
+        "macro"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-11-12T23:22:17+00:00",
+      "source_id": "dantri-business",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "(Dân trí) - Giá vàng thế giới giảm phiên thứ 3 liên tiếp, xuống mức thấp nhất kể từ tháng 10/2025. Đồng USD mạnh lên, áp lực lạm phát và khả năng Fed tiếp tục tăng lãi suất gây sức ép lên kim loại quý.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://dantri.com.vn/rss/kinh-doanh.rss",
+        "publisher_host": "dantri.com.vn",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-dffbe0e9424418ea0e88",
+      "title": "Chuyên gia dự báo lãi suất vay mua nhà năm 2027",
+      "url": "https://dantri.com.vn/bat-dong-san/chuyen-gia-du-bao-lai-suat-vay-mua-nha-nam-2027-20261112195824211.htm",
+      "category": "market",
+      "module_ids": [
+        "macro"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-11-12T23:05:00+00:00",
+      "source_id": "dantri-real-estate",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "(Dân trí) - TS Cấn Văn Lực cho rằng dư địa giảm lãi suất không còn nhiều, việc giảm cần thực hiện từng bước. Trong khi đó, lãi vay mua nhà thực tế vẫn được ghi nhận ở mức cao, ảnh hưởng đến sức cầu thị trường.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://dantri.com.vn/rss/bat-dong-san.rss",
+        "publisher_host": "dantri.com.vn",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-785efde828fbbfc50d39",
+      "title": "Ra sân bay mới biết nợ thuế, làm sao chấm dứt?",
+      "url": "https://thanhnien.vn/ra-san-bay-moi-biet-no-thue-lam-sao-cham-dut-185261112192114092.htm",
+      "category": "infrastructure",
+      "module_ids": [
+        "infrastructure"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-11-12T23:00:00+00:00",
+      "source_id": "thanhnien-policy",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [
+        "infrastructure"
+      ],
+      "importance": 2,
+      "summary": "Để tránh trường hợp người dân khi ra đến sân bay xuất cảnh mới biết mình đang nợ thuế, một số chuyên gia kiến nghị giải pháp có thể triển khai ngay để người nộp thuế không bị gián đoạn hành trình.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://thanhnien.vn/rss/kinh-te/chinh-sach-phat-trien.rss",
+        "publisher_host": "thanhnien.vn",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-4b6bfa8e9f1a18cd0855",
+      "title": "Tiếp tục kéo giảm lãi suất, hỗ trợ thanh khoản",
+      "url": "https://thanhnien.vn/tiep-tuc-keo-giam-lai-suat-ho-tro-thanh-khoan-185261112191709347.htm",
+      "category": "macro",
+      "module_ids": [
+        "macro"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-11-12T23:00:00+00:00",
+      "source_id": "thanhnien-banking",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [
+        "sales"
+      ],
+      "importance": 2,
+      "summary": "Dù các nhà băng đã thực hiện giảm lãi suất nhưng Ngân hàng Nhà nước vẫn mạnh tay hỗ trợ thanh khoản nhằm giảm chi phí vốn, góp phần thực hiện mục tiêu thúc đẩy tăng trưởng cao.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://thanhnien.vn/rss/kinh-te/ngan-hang.rss",
+        "publisher_host": "thanhnien.vn",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-242ac391ee3cb906b7f4",
+      "title": "Đưa gần 5,7ha đất dự án khu đô thị Summerland đúng quy mô trúng đấu giá",
+      "url": "https://dantri.com.vn/bat-dong-san/dua-gan-57ha-dat-du-an-khu-do-thi-summerland-dung-quy-mo-trung-dau-gia-20261112140225843.htm",
+      "category": "market",
+      "module_ids": [
+        "market"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-11-12T23:00:00+00:00",
+      "source_id": "dantri-real-estate",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [
+        "pricing"
+      ],
+      "importance": 2,
+      "summary": "(Dân trí) - Cơ quan chức năng vừa quyết định điều chỉnh dự án Summerland, đưa gần 5,7ha đất về đúng quy mô trúng đấu giá ban đầu, khắc phục diện tích tăng sai quy định.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://dantri.com.vn/rss/bat-dong-san.rss",
+        "publisher_host": "dantri.com.vn",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-53f8f105d06f53657ee4",
+      "title": "Nvidia chi gần 4 triệu USD bảo vệ nơi ở và hoạt động cá nhân của Jensen Huang",
+      "url": "https://vnexpress.net/nvidia-chi-gan-4-trieu-usd-bao-ve-noi-o-va-hoat-dong-ca-nhan-cua-jensen-huang-5143908.html",
+      "category": "market",
+      "module_ids": [
+        "market"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-11-12T21:37:02+00:00",
+      "source_id": "vnexpress-real-estate",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "Gia đình CEO Nvidia Jensen Huang có ba biệt thự với tổng giá mua gần 53 triệu USD, trong khi tập đoàn chi hàng triệu USD mỗi năm cho các dịch vụ bảo vệ ông, gồm an ninh nhà ở.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://vnexpress.net/rss/bat-dong-san.rss",
+        "publisher_host": "vnexpress.net",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-3c46863bcb939e033de3",
+      "title": "Loạt 'ông lớn' xây dựng Trung Quốc muốn tăng đầu tư tại Việt Nam",
+      "url": "https://vnexpress.net/loat-ong-lon-xay-dung-trung-quoc-muon-tang-dau-tu-tai-viet-nam-5144057.html",
+      "category": "market",
+      "module_ids": [
+        "infrastructure"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-11-12T20:49:00+00:00",
+      "source_id": "vnexpress-real-estate",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [
+        "infrastructure"
+      ],
+      "importance": 2,
+      "summary": "Nhiều doanh nghiệp hàng đầu Trung Quốc muốn đẩy mạnh hợp tác đầu tư vào các lĩnh vực chiến lược của Việt Nam như đường sắt đô thị, năng lượng, khu công nghiệp.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://vnexpress.net/rss/bat-dong-san.rss",
+        "publisher_host": "vnexpress.net",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-af02c59919f7e604aab9",
+      "title": "Nhà ống 64 m2 bớt diện tích sàn để tăng không gian sinh hoạt",
+      "url": "https://vnexpress.net/nha-ong-64-m2-bot-dien-tich-san-de-tang-khong-gian-sinh-hoat-5143750.html",
+      "category": "market",
+      "module_ids": [
+        "market"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-11-12T17:00:00+00:00",
+      "source_id": "vnexpress-real-estate",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "Hai khoảng thông tầng ở giữa và cuối nhà giúp lấy sáng, đối lưu không khí, đồng thời tăng kết nối giữa các thành viên trong gia đình.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://vnexpress.net/rss/bat-dong-san.rss",
+        "publisher_host": "vnexpress.net",
+        "publication_date_from_feed": true
+      }
+    },
     {
       "id": "article-market-rss-c59077d2280c32bffd28",
       "title": "Giá vàng thế giới lao dốc, xuống thấp nhất hơn một năm",
