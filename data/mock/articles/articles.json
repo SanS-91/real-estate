@@ -1,9 +1,61 @@
 {
   "schema_version": 1,
-  "build_id": "market-news-rss-20261113T025222Z",
-  "generated_at": "2026-11-13T02:52:22.244343+00:00",
-  "record_count": 1793,
+  "build_id": "market-news-rss-20261113T045131Z",
+  "generated_at": "2026-11-13T04:51:31.746822+00:00",
+  "record_count": 1796,
   "data": [
+    {
+      "id": "article-market-rss-a00762891b6a66dbfbde",
+      "title": "Giá vàng miếng lùi về 138 triệu đồng, thấp nhất 11 tháng",
+      "url": "https://vnexpress.net/gia-vang-mieng-lui-ve-138-trieu-dong-thap-nhat-11-thang-5144160.html",
+      "category": "macro",
+      "module_ids": [
+        "macro"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-11-13T02:43:11+00:00",
+      "source_id": "vnexpress-economy",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "Mỗi lượng vàng miếng sáng nay giảm thêm 1 triệu đồng, xuống 138 triệu, người mua lỗ hơn một phần tư so với dịp Thần Tài.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://vnexpress.net/rss/kinh-doanh.rss",
+        "publisher_host": "vnexpress.net",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-66669e0febcdbce20e0c",
+      "title": "Hàng trăm mét khối đất đá đổ xuống quốc lộ lên cửa khẩu La Lay",
+      "url": "https://vnexpress.net/hang-tram-met-khoi-dat-da-do-xuong-quoc-lo-len-cua-khau-la-lay-5144159.html",
+      "category": "infrastructure",
+      "module_ids": [
+        "infrastructure"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-11-13T02:37:12+00:00",
+      "source_id": "vnexpress-current-affairs",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [
+        "infrastructure"
+      ],
+      "importance": 2,
+      "summary": "Hàng trăm m3 đất đá từ taluy dương sạt xuống, lấp kín khoảng 30 m quốc lộ 15D khiến giao thông lên cửa khẩu quốc tế La Lay tê liệt.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://vnexpress.net/rss/thoi-su.rss",
+        "publisher_host": "vnexpress.net",
+        "publication_date_from_feed": true
+      }
+    },
     {
       "id": "article-market-rss-531dc9387f2c1c35e6a4",
       "title": "Townhouse One Era quy hoạch không gian sống đa thế hệ",
@@ -53,6 +105,35 @@
         "method": "official-rss",
         "feed_url": "https://dantri.com.vn/rss/bat-dong-san.rss",
         "publisher_host": "dantri.com.vn",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-7d7cb20d2485137d26f7",
+      "title": "Hà Nội phê duyệt điều chỉnh quy hoạch phân khu sông Hồng",
+      "url": "https://vnexpress.net/ha-noi-phe-duyet-dieu-chinh-quy-hoach-phan-khu-song-hong-5144105.html",
+      "category": "market",
+      "module_ids": [
+        "market"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-11-13T02:08:42+00:00",
+      "source_id": "vnexpress-current-affairs",
+      "region_ids": [
+        "ha-noi"
+      ],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [
+        "legal"
+      ],
+      "importance": 2,
+      "summary": "Chủ tịch TP Hà Nội vừa ký phê duyệt Quy hoạch phân khu đô thị sông Hồng, tỷ lệ 1/5.000, đoạn từ cầu Hồng Hà đến cầu Mễ Sở, quy mô nghiên cứu trên 11.418 ha.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://vnexpress.net/rss/thoi-su.rss",
+        "publisher_host": "vnexpress.net",
         "publication_date_from_feed": true
       }
     },
