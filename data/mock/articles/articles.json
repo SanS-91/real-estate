@@ -1,9 +1,172 @@
 {
   "schema_version": 1,
-  "build_id": "market-news-rss-20261113T085141Z",
-  "generated_at": "2026-11-13T08:51:41.550075+00:00",
-  "record_count": 1806,
+  "build_id": "market-news-rss-20261113T105138Z",
+  "generated_at": "2026-11-13T10:51:38.670601+00:00",
+  "record_count": 1812,
   "data": [
+    {
+      "id": "article-market-rss-f517a9c7e0afd13a4670",
+      "title": "Lối ra cho công trình xây dựng sai phép",
+      "url": "https://thanhnien.vn/loi-ra-cho-cong-trinh-xay-dung-sai-phep-185261113081020091.htm",
+      "category": "market",
+      "module_ids": [
+        "market"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-11-13T10:39:00+00:00",
+      "source_id": "thanhnien-real-estate",
+      "region_ids": [
+        "hcmc"
+      ],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "Dự thảo nghị quyết quy định chính sách, biện pháp đặc biệt của TP.HCM đề xuất cho phép một số công trình xây dựng sai phép được tồn tại thay vì buộc tháo dỡ nếu tuân thủ một số điều kiện, cùng với việc phải nộp lại khoản tiền được xem là hướng đi mới tháo gỡ cho nhiều dự án nhà ở đang bị treo hàng c",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://thanhnien.vn/rss/kinh-te/dia-oc.rss",
+        "publisher_host": "thanhnien.vn",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-814d031e7e8b75caaa39",
+      "title": "Vụ nổ bình gas sập nhà ở TPHCM khiến 13 người bị thương",
+      "url": "https://dantri.com.vn/thoi-su/vu-no-binh-gas-sap-nha-o-tphcm-khien-13-nguoi-bi-thuong-20261113161956407.htm",
+      "category": "market",
+      "module_ids": [
+        "market"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-11-13T10:07:10+00:00",
+      "source_id": "dantri-current-affairs",
+      "region_ids": [
+        "hcmc"
+      ],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "(Dân trí) - Cơ quan chức năng xác định, vụ nổ tại cửa hàng kinh doanh gas trên đường Bùi Văn Ba (phường Tân Thuận TPHCM) khiến 2 căn nhà đổ sập hoàn toàn, 13 người bị thương.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://dantri.com.vn/rss/thoi-su.rss",
+        "publisher_host": "dantri.com.vn",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-ed54b5953c05eec8f483",
+      "title": "TTC Phú Quốc đánh dấu cột mốc quan trọng của dự án Selavia với chuỗi sự kiện",
+      "url": "https://thanhnien.vn/ttc-phu-quoc-danh-dau-cot-moc-quan-trong-cua-du-an-selavia-voi-chuoi-su-kien-185261113155425625.htm",
+      "category": "market",
+      "module_ids": [
+        "market",
+        "infrastructure"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-11-13T09:30:00+00:00",
+      "source_id": "thanhnien-real-estate",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "Ngày 12.11.2026, TTC Phú Quốc chính thức khởi công phân khu Selavia Aura 1, đồng thời khai trương Văn phòng bán hàng và nhà mẫu tại dự án Selavia, đặc khu Phú Quốc, tỉnh An Giang.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://thanhnien.vn/rss/kinh-te/dia-oc.rss",
+        "publisher_host": "thanhnien.vn",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-29d2031da3433441b531",
+      "title": "Tiết kiệm hơn 1.000 tỷ đồng nhờ điều chỉnh tuyến cao tốc Quy Nhơn - Pleiku",
+      "url": "https://dantri.com.vn/thoi-su/tiet-kiem-hon-1000-ty-dong-nho-dieu-chinh-tuyen-cao-toc-quy-nhon-pleiku-20261113130721503.htm",
+      "category": "infrastructure",
+      "module_ids": [
+        "infrastructure"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-11-13T09:17:02+00:00",
+      "source_id": "dantri-current-affairs",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [
+        "infrastructure"
+      ],
+      "importance": 2,
+      "summary": "(Dân trí) - Theo UBND tỉnh Gia Lai, việc điều chỉnh hướng tuyến qua đèo An Khê thuộc dự án cao tốc Quy Nhơn - Pleiku, giúp tiết kiệm hơn 1.000 tỷ đồng và cải thiện các thông số kỹ thuật.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://dantri.com.vn/rss/thoi-su.rss",
+        "publisher_host": "dantri.com.vn",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-185a086ae911e16e02eb",
+      "title": "Sông Mã trong quy hoạch đô thị Thanh Hóa",
+      "url": "https://dantri.com.vn/bat-dong-san/song-ma-trong-quy-hoach-do-thi-thanh-hoa-20261113154755441.htm",
+      "category": "market",
+      "module_ids": [
+        "market",
+        "legal",
+        "infrastructure"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-11-13T08:51:59+00:00",
+      "source_id": "dantri-real-estate",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [
+        "legal"
+      ],
+      "importance": 2,
+      "summary": "(Dân trí) - Quy hoạch chung đô thị Thanh Hóa, tỉnh Thanh Hóa đến năm 2040, trong đó đô thị được định hướng phát triển theo mô hình tập trung, đa tâm, điều chỉnh mô hình “vành đai - xuyên tâm” thành mô hình “vành đai mở kết hợp mạng lưới mềm”.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://dantri.com.vn/rss/bat-dong-san.rss",
+        "publisher_host": "dantri.com.vn",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-35510d0848c9c554176b",
+      "title": "Cảnh sát giải cứu 4 người mắc kẹt trong vụ nổ gây sập nhà ở TPHCM",
+      "url": "https://dantri.com.vn/thoi-su/canh-sat-giai-cuu-4-nguoi-mac-ket-trong-vu-no-gay-sap-nha-o-tphcm-20261113152327798.htm",
+      "category": "market",
+      "module_ids": [
+        "market"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-11-13T08:30:33+00:00",
+      "source_id": "dantri-current-affairs",
+      "region_ids": [
+        "hcmc"
+      ],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "(Dân trí) - Ngay sau khi nhận tin báo, Công an TPHCM đã huy động nhiều đơn vị đến hiện trường, giải cứu 4 người mắc kẹt trong đống đổ nát. Nhiều nạn nhân bị thương được đưa đến bệnh viện.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://dantri.com.vn/rss/thoi-su.rss",
+        "publisher_host": "dantri.com.vn",
+        "publication_date_from_feed": true
+      }
+    },
     {
       "id": "article-market-rss-86524a95d37de08ff575",
       "title": "Khi ánh sáng, mặt nước và cây xanh trở thành tài sản đô thị",
