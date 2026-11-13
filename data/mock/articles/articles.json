@@ -1,9 +1,59 @@
 {
   "schema_version": 1,
-  "build_id": "market-news-rss-20261113T125146Z",
-  "generated_at": "2026-11-13T12:51:46.120851+00:00",
-  "record_count": 1815,
+  "build_id": "market-news-rss-20261113T145147Z",
+  "generated_at": "2026-11-13T14:51:47.679255+00:00",
+  "record_count": 1818,
   "data": [
+    {
+      "id": "article-market-rss-8d4abaa5e5726ff919b2",
+      "title": "Xác định đơn vị trúng đấu giá khu đất “vàng” bên bờ sông Hương",
+      "url": "https://dantri.com.vn/bat-dong-san/xac-dinh-don-vi-trung-dau-gia-khu-dat-vang-ben-bo-song-huong-20261113183454665.htm",
+      "category": "market",
+      "module_ids": [
+        "market"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-11-13T13:46:55+00:00",
+      "source_id": "dantri-real-estate",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "(Dân trí) - Khu đất “vàng” nằm ở vị trí đắc địa dọc đường Lê Lợi, bên bờ Nam sông Hương (thành phố Huế) đã được đấu giá cho thuê quyền sử dụng thành công để làm khách sạn cao cấp.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://dantri.com.vn/rss/bat-dong-san.rss",
+        "publisher_host": "dantri.com.vn",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-65cfb84d127ff592cf67",
+      "title": "Tây Ninh gấp rút xử lý 477 trụ sở dôi dư trước ngày 15/12",
+      "url": "https://dantri.com.vn/thoi-su/tay-ninh-gap-rut-xu-ly-477-tru-so-doi-du-truoc-ngay-1512-20261113193603448.htm",
+      "category": "legal",
+      "module_ids": [
+        "legal"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-11-13T13:25:09+00:00",
+      "source_id": "dantri-current-affairs",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "(Dân trí) - Tây Ninh yêu cầu đẩy nhanh tiến độ xử lý 477 cơ sở nhà, đất dôi dư trước ngày 15/12 để khai thác hiệu quả tài sản công, tránh bỏ hoang và gây lãng phí.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://dantri.com.vn/rss/thoi-su.rss",
+        "publisher_host": "dantri.com.vn",
+        "publication_date_from_feed": true
+      }
+    },
     {
       "id": "article-market-rss-43b6c2de8bf4ec41d28a",
       "title": "Sân vận động Chi Lăng giảm hơn 1.500 tỷ đồng ở lần đấu giá thứ 8",
@@ -129,6 +179,33 @@
       "tags": [],
       "importance": 2,
       "summary": "(Dân trí) - Cơ quan chức năng xác định, vụ nổ tại cửa hàng kinh doanh gas trên đường Bùi Văn Ba (phường Tân Thuận TPHCM) khiến 2 căn nhà đổ sập hoàn toàn, 13 người bị thương.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://dantri.com.vn/rss/thoi-su.rss",
+        "publisher_host": "dantri.com.vn",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-29819e35dafd12f701e5",
+      "title": "Vụ nổ bình gas gây sập nhà ở TPHCM: 2 người chết, 10 người bị thương",
+      "url": "https://dantri.com.vn/thoi-su/vu-no-binh-gas-gay-sap-nha-o-tphcm-2-nguoi-chet-10-nguoi-bi-thuong-20261113161956407.htm",
+      "category": "market",
+      "module_ids": [
+        "market"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-11-13T10:07:10+00:00",
+      "source_id": "dantri-current-affairs",
+      "region_ids": [
+        "hcmc"
+      ],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "(Dân trí) - Cơ quan chức năng xác định, vụ nổ tại cửa hàng kinh doanh gas trên đường Bùi Văn Ba (phường Tân Thuận TPHCM) khiến 2 căn nhà đổ sập hoàn toàn, 2 người tử vong và 10 nạn nhân bị thương.",
       "source_verification": {
         "method": "official-rss",
         "feed_url": "https://dantri.com.vn/rss/thoi-su.rss",
