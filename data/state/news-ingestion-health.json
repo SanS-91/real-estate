@@ -1,52 +1,52 @@
 {
   "schema_version": 1,
-  "checked_at": "2026-11-14T10:51:36.690061+00:00",
+  "checked_at": "2026-11-14T12:51:44.949933+00:00",
   "feeds_configured": 16,
   "feeds_fetched": 16,
-  "accepted_new": 5,
+  "accepted_new": 1,
   "production_written": true,
-  "article_total": 1845,
+  "article_total": 1846,
   "published_by_module": {
-    "market": 4,
+    "market": 0,
     "legal": 0,
-    "infrastructure": 2,
-    "macro": 0
+    "infrastructure": 0,
+    "macro": 1
   },
   "recent_by_module_7d": {
     "market": 177,
     "legal": 34,
-    "infrastructure": 76,
-    "macro": 50
+    "infrastructure": 75,
+    "macro": 51
   },
   "recent_by_module_30d": {
-    "market": 860,
+    "market": 857,
     "legal": 162,
-    "infrastructure": 351,
-    "macro": 271
+    "infrastructure": 348,
+    "macro": 272
   },
   "latest_published_by_module": {
     "market": "2026-11-14T10:18:19+00:00",
     "legal": "2026-11-14T02:18:24+00:00",
     "infrastructure": "2026-11-14T09:03:00+00:00",
-    "macro": "2026-11-14T04:28:08+00:00"
+    "macro": "2026-11-14T11:30:00+00:00"
   },
   "feed_status": [
     {
       "source_id": "vnexpress-real-estate",
       "status": "parsed",
       "feed_items": 50,
-      "new": 1,
-      "skipped": 49,
-      "duplicates": 49,
+      "new": 0,
+      "skipped": 50,
+      "duplicates": 50,
       "filtered": 0
     },
     {
       "source_id": "thanhnien-real-estate",
       "status": "parsed",
       "feed_items": 50,
-      "new": 2,
-      "skipped": 48,
-      "duplicates": 48,
+      "new": 0,
+      "skipped": 50,
+      "duplicates": 50,
       "filtered": 0
     },
     {
@@ -118,16 +118,16 @@
       "feed_items": 50,
       "new": 1,
       "skipped": 49,
-      "duplicates": 5,
-      "filtered": 44
+      "duplicates": 6,
+      "filtered": 43
     },
     {
       "source_id": "dantri-current-affairs",
       "status": "parsed",
       "feed_items": 50,
-      "new": 1,
-      "skipped": 49,
-      "duplicates": 5,
+      "new": 0,
+      "skipped": 50,
+      "duplicates": 6,
       "filtered": 44
     },
     {
