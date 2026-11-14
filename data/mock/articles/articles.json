@@ -1,9 +1,84 @@
 {
   "schema_version": 1,
-  "build_id": "market-news-rss-20261113T163429Z",
-  "generated_at": "2026-11-13T16:34:29.570972+00:00",
-  "record_count": 1819,
+  "build_id": "market-news-rss-20261114T005144Z",
+  "generated_at": "2026-11-14T00:51:44.809601+00:00",
+  "record_count": 1822,
   "data": [
+    {
+      "id": "article-market-rss-834b5e190aa8abc2d4b4",
+      "title": "Cảnh hoang tàn bên trong dự án trại bò 4.500 tỷ đồng vừa bán đấu giá",
+      "url": "https://dantri.com.vn/kinh-doanh/canh-hoang-tan-ben-trong-du-an-trai-bo-4500-ty-dong-vua-ban-dau-gia-20261113102502676.htm",
+      "category": "market",
+      "module_ids": [
+        "market"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-11-13T23:00:00+00:00",
+      "source_id": "dantri-business",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "(Dân trí) - Tại dự án chăn nuôi bò hàng nghìn tỷ của Công ty cổ phần Chăn nuôi Bình Hà (Hà Tĩnh), nhiều dãy chuồng trại, máy móc hoang tàn. Số tài sản này mới đây đã được đấu giá thành công.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://dantri.com.vn/rss/kinh-doanh.rss",
+        "publisher_host": "dantri.com.vn",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-e439edc70facb8db2ec2",
+      "title": "Hơn 8.200 cơ sở nhà đất công dôi dư chưa được khai thác",
+      "url": "https://vnexpress.net/hon-8-200-co-so-nha-dat-cong-doi-du-chua-duoc-khai-thac-5141808.html",
+      "category": "market",
+      "module_ids": [
+        "market"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-11-13T21:00:00+00:00",
+      "source_id": "vnexpress-current-affairs",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "Cả nước còn 8.256 cơ sở nhà, đất dôi dư chưa hoàn thành xử lý, khai thác sau sắp xếp bộ máy; nhiều nơi gặp khó trong chuyển đổi công năng, cho thuê hoặc tìm đơn vị tiếp nhận.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://vnexpress.net/rss/thoi-su.rss",
+        "publisher_host": "vnexpress.net",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-7a3b3ea7f3a7bbe878e3",
+      "title": "Nhà 24 m2 đủ không gian cho gia đình 5 người",
+      "url": "https://vnexpress.net/nha-24-m2-du-khong-gian-cho-gia-dinh-5-nguoi-5144416.html",
+      "category": "market",
+      "module_ids": [
+        "market"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-11-13T17:00:00+00:00",
+      "source_id": "vnexpress-real-estate",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "Kiến trúc sư tận dụng tường làm nơi lưu trữ, bổ sung cửa sổ trên mái lấy sáng và bố trí các khu vực sinh hoạt riêng cho ba thế hệ.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://vnexpress.net/rss/bat-dong-san.rss",
+        "publisher_host": "vnexpress.net",
+        "publication_date_from_feed": true
+      }
+    },
     {
       "id": "article-market-rss-555e25b3dfd8da66cceb",
       "title": "IMF đánh giá Việt Nam kiểm soát tốt rủi ro lạm phát",
