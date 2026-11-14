@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "checked_at": "2026-11-13T09:48:42.593756+00:00",
+  "checked_at": "2026-11-14T09:12:02.057760+00:00",
   "source_type": "third-party-broker-candidate-only",
   "price_page_status": "fetched",
   "policy_page_status": "fetched",
@@ -10,8 +10,8 @@
   },
   "source_revision": "fe1f2081b9897979",
   "price_parser_diagnostics": {
-    "price_html_length": 468755,
-    "visible_text_length": 26447,
+    "price_html_length": 468821,
+    "visible_text_length": 26473,
     "html_table_rows": 5,
     "has_table_price_heading": true,
     "has_zone1_label": true,
