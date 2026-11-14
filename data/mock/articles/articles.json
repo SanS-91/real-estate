@@ -1,9 +1,145 @@
 {
   "schema_version": 1,
-  "build_id": "market-news-rss-20261114T064406Z",
-  "generated_at": "2026-11-14T06:44:06.499219+00:00",
-  "record_count": 1840,
+  "build_id": "market-news-rss-20261114T105136Z",
+  "generated_at": "2026-11-14T10:51:36.690061+00:00",
+  "record_count": 1845,
   "data": [
+    {
+      "id": "article-market-rss-2043a37040262c286581",
+      "title": "Công ty bất động sản giải trình cổ phiếu giảm sàn 6 phiên, mất 44% thị giá",
+      "url": "https://dantri.com.vn/kinh-doanh/cong-ty-bat-dong-san-giai-trinh-co-phieu-giam-san-6-phien-mat-44-thi-gia-20261114170955040.htm",
+      "category": "market",
+      "module_ids": [
+        "market"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-11-14T10:18:19+00:00",
+      "source_id": "dantri-business",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [
+        "sales"
+      ],
+      "importance": 2,
+      "summary": "(Dân trí) - Sau 6 phiên giảm sàn liên tiếp, cổ phiếu TIG mất gần 44% giá trị. Công ty bất động sản này vừa có giải trình về giao dịch bất thường của cổ phiếu.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://dantri.com.vn/rss/kinh-doanh.rss",
+        "publisher_host": "dantri.com.vn",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-0cc92824db2cfe9a03b4",
+      "title": "Ban quản lý chung cư không có quyền cắt điện, cắt nước của cư dân",
+      "url": "https://thanhnien.vn/ban-quan-ly-chung-cu-khong-co-quyen-cat-dien-cat-nuoc-cua-cu-dan-185261114151940644.htm",
+      "category": "market",
+      "module_ids": [
+        "market"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-11-14T09:09:00+00:00",
+      "source_id": "thanhnien-real-estate",
+      "region_ids": [
+        "hcmc"
+      ],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "Đó là khẳng định của UBND phường Bình Trưng (TP.HCM) liên quan đến việc Ban quản lý chung cư The Sun Avenue đã áp dụng biện pháp cắt điện nước của một số hộ dân tại chung cư này.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://thanhnien.vn/rss/kinh-te/dia-oc.rss",
+        "publisher_host": "thanhnien.vn",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-1b91d5074ff0ce004909",
+      "title": "Huế khởi công xây dựng 1.680 căn nhà ở xã hội ở đô thị phía bắc",
+      "url": "https://thanhnien.vn/hue-khoi-cong-xay-dung-1680-can-nha-o-xa-hoi-o-do-thi-phia-bac-185261114151236975.htm",
+      "category": "market",
+      "module_ids": [
+        "market",
+        "infrastructure"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-11-14T09:03:00+00:00",
+      "source_id": "thanhnien-real-estate",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "Các nhà đầu tư và chính quyền thành phố Huế đã khởi công xây dựng dự án nhà ở xã hội với quy mô 1.680 căn nhà ở để phục vụ công nhân viên, người lao động đang làm việc tại Khu công nghiệp Phong Điền.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://thanhnien.vn/rss/kinh-te/dia-oc.rss",
+        "publisher_host": "thanhnien.vn",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-6426ba7e0a2d45f6b695",
+      "title": "Nghiên cứu xoay lệch đường băng sân bay Côn Đảo 10 độ để tránh Hòn Cau",
+      "url": "https://dantri.com.vn/thoi-su/nghien-cuu-xoay-lech-duong-bang-san-bay-con-dao-10-do-de-tranh-hon-cau-20261114152534510.htm",
+      "category": "infrastructure",
+      "module_ids": [
+        "infrastructure"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-11-14T08:43:08+00:00",
+      "source_id": "dantri-current-affairs",
+      "region_ids": [
+        "hcmc"
+      ],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [
+        "infrastructure"
+      ],
+      "importance": 2,
+      "summary": "(Dân trí) - Đơn vị tư vấn đang nghiên cứu phương án xoay đường băng sân bay Côn Đảo (TPHCM) khoảng 10 độ để tránh đảo Hòn Cau, áp dụng khi đường băng được kéo dài trên 3km bằng cách lấn biển.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://dantri.com.vn/rss/thoi-su.rss",
+        "publisher_host": "dantri.com.vn",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-fc6ea1a904e20f307a36",
+      "title": "Cách kiến trúc sư Pháp sử dụng vật liệu đá trong thiết kế The Legatus",
+      "url": "https://vnexpress.net/cach-kien-truc-su-phap-su-dung-vat-lieu-da-trong-thiet-ke-the-legatus-5144695.html",
+      "category": "market",
+      "module_ids": [
+        "market"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-11-14T08:30:00+00:00",
+      "source_id": "vnexpress-real-estate",
+      "region_ids": [
+        "ha-noi"
+      ],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "Kiến trúc sư Jean-François Milou, nhà sáng lập studioMilou kết hợp đá tự nhiên với ánh sáng, hình khối và bảng màu nhằm tạo không gian sống vững chãi, ấm áp và riêng tư tại The Legatus, Hà Nội.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://vnexpress.net/rss/bat-dong-san.rss",
+        "publisher_host": "vnexpress.net",
+        "publication_date_from_feed": true
+      }
+    },
     {
       "id": "article-market-rss-33197906cecb7d4bcba6",
       "title": "Xây cầu vượt thép lớn nhất TP HCM chống ùn tắc cửa ngõ Cát Lái",
