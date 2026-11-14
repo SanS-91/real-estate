@@ -1,9 +1,187 @@
 {
   "schema_version": 1,
-  "build_id": "market-news-rss-20261114T005144Z",
-  "generated_at": "2026-11-14T00:51:44.809601+00:00",
-  "record_count": 1822,
+  "build_id": "market-news-rss-20261114T025143Z",
+  "generated_at": "2026-11-14T02:51:43.492697+00:00",
+  "record_count": 1829,
   "data": [
+    {
+      "id": "article-market-rss-66954601a3ae62d4e9d7",
+      "title": "Bí quyết biến nhà mới thành tổ ấm nhờ một món đồ quen thuộc",
+      "url": "https://dantri.com.vn/bat-dong-san/bi-quyet-bien-nha-moi-thanh-to-am-nho-mot-mon-do-quen-thuoc-20261113213814761.htm",
+      "category": "market",
+      "module_ids": [
+        "market"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-11-14T01:52:47+00:00",
+      "source_id": "dantri-real-estate",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "(Dân trí) - Chỉ khi trải tấm thảm trải sàn quen thuộc ở phòng khách, ngôi nhà mới thực sự ấm cúng và đem lại cảm giác gắn kết trọn vẹn cho mọi thành viên.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://dantri.com.vn/rss/bat-dong-san.rss",
+        "publisher_host": "dantri.com.vn",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-b626cfbd05097936fc9a",
+      "title": "Mở rộng tổ ấm thứ hai tại Diamond Sky: Một căn nhà cho đa thế hệ",
+      "url": "https://dantri.com.vn/bat-dong-san/mo-rong-to-am-thu-hai-tai-diamond-sky-mot-can-nha-cho-da-the-he-20261112182429142.htm",
+      "category": "market",
+      "module_ids": [
+        "market"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-11-14T01:00:00+00:00",
+      "source_id": "dantri-real-estate",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "(Dân trí) - Với chương trình “Mua nhà trúng nhà - Nhân đôi tổ ấm”, khách hàng mua Diamond Sky có cơ hội sở hữu thêm một căn hộ trị giá gần 8 tỷ đồng.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://dantri.com.vn/rss/bat-dong-san.rss",
+        "publisher_host": "dantri.com.vn",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-21e63bbf4ab7d0b5a295",
+      "title": "Van Phuc Group tặng căn hộ 8 tỷ đồng cho người mua nhà tại Diamond Sky",
+      "url": "https://vnexpress.net/van-phuc-group-tang-can-ho-8-ty-dong-cho-nguoi-mua-nha-tai-diamond-sky-5143482.html",
+      "category": "market",
+      "module_ids": [
+        "market"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-11-14T01:00:00+00:00",
+      "source_id": "vnexpress-real-estate",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "Van Phuc Group triển khai chương trình \"Mua nhà trúng nhà\" từ ngày 1/11/2026 đến ngày 1/11/2027, trao cơ hội nhận căn hộ gần 8 tỷ đồng cho khách mua nhà tại Diamond Sky.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://vnexpress.net/rss/bat-dong-san.rss",
+        "publisher_host": "vnexpress.net",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-20ee54b4273a4aef0a6a",
+      "title": "Phú Mỹ Hưng sắp ra mắt căn hộ cao cấp The Aristo",
+      "url": "https://vnexpress.net/phu-my-hung-sap-ra-mat-can-ho-cao-cap-the-aristo-5144487.html",
+      "category": "market",
+      "module_ids": [
+        "market"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-11-14T01:00:00+00:00",
+      "source_id": "vnexpress-real-estate",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [
+        "supply"
+      ],
+      "importance": 2,
+      "summary": "Phú Mỹ Hưng The Aristo tọa lạc trên mặt tiền đường Nguyễn Lương Bằng, thuộc khu Nam Viên, kết nối các tiện ích thương mại, dịch vụ với không gian xanh và trung tâm Hồ Bán Nguyệt.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://vnexpress.net/rss/bat-dong-san.rss",
+        "publisher_host": "vnexpress.net",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-3883404e459671f5b90c",
+      "title": "Huế tìm được nhà đầu tư trúng đấu giá khu đất vàng ven sông Hương",
+      "url": "https://vnexpress.net/hue-tim-duoc-nha-dau-tu-trung-dau-gia-khu-dat-vang-ven-song-huong-5144499.html",
+      "category": "market",
+      "module_ids": [
+        "market"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-11-14T00:14:10+00:00",
+      "source_id": "vnexpress-real-estate",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "Công ty TNHH Đầu tư Bất động sản Doji Land trúng đấu giá các khu đất tại đường Lê Lợi, rộng hơn 10.600 m2, để xây khách sạn cao cấp.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://vnexpress.net/rss/bat-dong-san.rss",
+        "publisher_host": "vnexpress.net",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-080eb7d059b345e5ae6b",
+      "title": "Chênh lệch giá vàng thế giới và trong nước giãn rộng 17 triệu đồng",
+      "url": "https://dantri.com.vn/kinh-doanh/chenh-lech-gia-vang-the-gioi-va-trong-nuoc-gian-rong-17-trieu-dong-20261114065806746.htm",
+      "category": "macro",
+      "module_ids": [
+        "macro"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-11-14T00:13:51+00:00",
+      "source_id": "dantri-business",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "(Dân trí) - Giá vàng thế giới giảm xuống dưới 3.900 USD/ounce, vàng SJC bán ra cũng lùi về mức 138 triệu đồng/lượng. Cách biệt giá vàng trong nước và thế giới giãn rộng lên tới 17 triệu đồng/lượng.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://dantri.com.vn/rss/kinh-doanh.rss",
+        "publisher_host": "dantri.com.vn",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-f6168cef040e78ca9546",
+      "title": "Lâm Đồng cho thuê 177 trụ sở dôi dư",
+      "url": "https://vnexpress.net/lam-dong-cho-thue-177-tru-so-doi-du-5144440.html",
+      "category": "market",
+      "module_ids": [
+        "market",
+        "legal"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-11-14T00:03:10+00:00",
+      "source_id": "vnexpress-real-estate",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "Tỉnh Lâm Đồng đã xử lý 938 cơ sở nhà đất công dôi dư, trong đó cho thuê 177 cơ sở, thu hơn 26 tỷ đồng vào ngân sách.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://vnexpress.net/rss/bat-dong-san.rss",
+        "publisher_host": "vnexpress.net",
+        "publication_date_from_feed": true
+      }
+    },
     {
       "id": "article-market-rss-834b5e190aa8abc2d4b4",
       "title": "Cảnh hoang tàn bên trong dự án trại bò 4.500 tỷ đồng vừa bán đấu giá",
