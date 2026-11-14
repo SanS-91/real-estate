@@ -1,18 +1,18 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-11-13T16:39:41.806804+00:00",
+  "generated_at": "2026-11-14T08:55:40.797586+00:00",
   "scope": "individual-verified-apartment-asking-only",
   "project_registry_count": 18,
   "projects_monitored": 8,
   "projects_with_current_verified_unit_offers": 3,
   "projects_with_recent_unpublished_source_candidates": 0,
-  "current_verified_unit_ads": 8,
+  "current_verified_unit_ads": 12,
   "source_data_health": [
     {
       "source_id": "muaban-vn",
       "report_available": true,
       "report_fresh": true,
-      "checked_at": "2026-11-13T15:40:32.982363+00:00"
+      "checked_at": "2026-11-14T08:55:15.637834+00:00"
     },
     {
       "source_id": "rever-vn",
@@ -144,7 +144,7 @@
           "source_health_recent": true,
           "recent_eligible_ads": 0,
           "discovered_links": 0,
-          "last_checked_at": "2026-11-13T15:40:32.982363+00:00"
+          "last_checked_at": "2026-11-14T08:55:15.637834+00:00"
         },
         {
           "source_id": "rever-vn",
@@ -212,7 +212,7 @@
           "source_health_recent": true,
           "recent_eligible_ads": 0,
           "discovered_links": 0,
-          "last_checked_at": "2026-11-13T15:40:32.982363+00:00"
+          "last_checked_at": "2026-11-14T08:55:15.637834+00:00"
         },
         {
           "source_id": "rever-vn",
@@ -240,7 +240,7 @@
           "source_health_recent": true,
           "recent_eligible_ads": 0,
           "discovered_links": 1,
-          "last_checked_at": "2026-11-13T15:40:32.982363+00:00"
+          "last_checked_at": "2026-11-14T08:55:15.637834+00:00"
         },
         {
           "source_id": "rever-vn",
@@ -268,7 +268,7 @@
           "source_health_recent": true,
           "recent_eligible_ads": 2,
           "discovered_links": 4,
-          "last_checked_at": "2026-11-13T15:40:32.982363+00:00"
+          "last_checked_at": "2026-11-14T08:55:15.637834+00:00"
         },
         {
           "source_id": "rever-vn",
@@ -298,7 +298,7 @@
           "source_health_recent": true,
           "recent_eligible_ads": 9,
           "discovered_links": 12,
-          "last_checked_at": "2026-11-13T15:40:32.982363+00:00"
+          "last_checked_at": "2026-11-14T08:55:15.637834+00:00"
         },
         {
           "source_id": "rever-vn",
@@ -310,11 +310,11 @@
         }
       ],
       "recent_eligible_ads": 9,
-      "current_verified_ads": 5,
+      "current_verified_ads": 9,
       "published_source_ids": [
         "muaban-vn"
       ],
-      "latest_source_listed_or_updated": "2026-11-09"
+      "latest_source_listed_or_updated": "2026-11-13"
     },
     {
       "project_id": "vinhomes-grand-park",
@@ -328,7 +328,7 @@
           "source_health_recent": true,
           "recent_eligible_ads": 1,
           "discovered_links": 3,
-          "last_checked_at": "2026-11-13T15:40:32.982363+00:00"
+          "last_checked_at": "2026-11-14T08:55:15.637834+00:00"
         },
         {
           "source_id": "rever-vn",
