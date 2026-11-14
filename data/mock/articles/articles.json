@@ -1,9 +1,199 @@
 {
   "schema_version": 1,
-  "build_id": "market-news-rss-20261114T025143Z",
-  "generated_at": "2026-11-14T02:51:43.492697+00:00",
-  "record_count": 1829,
+  "build_id": "market-news-rss-20261114T045137Z",
+  "generated_at": "2026-11-14T04:51:37.541120+00:00",
+  "record_count": 1836,
   "data": [
+    {
+      "id": "article-market-rss-8ab004cf5afabf7d3aba",
+      "title": "Lùi ô tô trên cao tốc Hà Nội - Thái Nguyên, tài xế bị phạt 35 triệu đồng",
+      "url": "https://dantri.com.vn/thoi-su/lui-o-to-tren-cao-toc-ha-noi-thai-nguyen-tai-xe-bi-phat-35-trieu-dong-20261114111548031.htm",
+      "category": "infrastructure",
+      "module_ids": [
+        "infrastructure"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-11-14T04:26:29+00:00",
+      "source_id": "dantri-current-affairs",
+      "region_ids": [
+        "ha-noi"
+      ],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [
+        "infrastructure"
+      ],
+      "importance": 2,
+      "summary": "(Dân trí) - Nam tài xế quê Bắc Ninh điều khiển ô tô đi lùi trên đường cao tốc Hà Nội - Thái Nguyên, bị lực lượng CSGT lập biên bản xử phạt 35 triệu đồng.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://dantri.com.vn/rss/thoi-su.rss",
+        "publisher_host": "dantri.com.vn",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-cde440bb1674814db1e2",
+      "title": "Cựu Chủ tịch Bamboo Airways gia nhập hãng bay của Bầu Hiển",
+      "url": "https://vnexpress.net/cuu-chu-tich-bamboo-airways-gia-nhap-hang-bay-cua-bau-hien-5144596.html",
+      "category": "market",
+      "module_ids": [
+        "market"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-11-14T03:08:49+00:00",
+      "source_id": "vnexpress-economy",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [
+        "pricing"
+      ],
+      "importance": 2,
+      "summary": "Ông Bùi Quang Dũng, cựu Chủ tịch HĐQT Bamboo Airways, vừa tham gia Vietravel Airlines với vai trò thành viên HĐQT.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://vnexpress.net/rss/kinh-doanh.rss",
+        "publisher_host": "vnexpress.net",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-2752fb6a365f653ec58d",
+      "title": "Giá vàng miếng xuống thấp nhất hơn một năm",
+      "url": "https://vnexpress.net/gia-vang-moi-nhat-hom-nay-ngay-14-11-5144582.html",
+      "category": "macro",
+      "module_ids": [
+        "macro"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-11-14T02:35:20+00:00",
+      "source_id": "vnexpress-economy",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [
+        "pricing"
+      ],
+      "importance": 2,
+      "summary": "Các thương hiệu hạ giá bán vàng miếng 500.000 đồng so với hôm qua, còn 137,5 triệu đồng một lượng, mức thấp nhất tính từ ngày 30/9.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://vnexpress.net/rss/kinh-doanh.rss",
+        "publisher_host": "vnexpress.net",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-ea4d9a7f2de25f1f6e45",
+      "title": "Cao tốc TP HCM - Trung Lương ùn tắc hơn 10 km do cháy ôtô",
+      "url": "https://vnexpress.net/cao-toc-tp-hcm-trung-luong-un-tac-hon-10-km-do-chay-oto-5144578.html",
+      "category": "infrastructure",
+      "module_ids": [
+        "infrastructure"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-11-14T02:34:32+00:00",
+      "source_id": "vnexpress-current-affairs",
+      "region_ids": [
+        "hcmc"
+      ],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [
+        "infrastructure"
+      ],
+      "importance": 2,
+      "summary": "Xe bán tải chạy trên cao tốc TP HCM - Trung Lương bốc cháy, khiến dòng phương tiện ùn ứ hơn 10 km trên đường về miền Tây dịp cuối tuần, sáng 14/11.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://vnexpress.net/rss/thoi-su.rss",
+        "publisher_host": "vnexpress.net",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-3cd62885575c2cc7939c",
+      "title": "Đấu giá hơn 2,5 ha đất làm khu nhà ở, thương mại dịch vụ tại Vỹ Dạ",
+      "url": "https://vnexpress.net/dau-gia-hon-2-5-ha-dat-lam-khu-nha-o-thuong-mai-dich-vu-tai-vy-da-5144503.html",
+      "category": "market",
+      "module_ids": [
+        "market"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-11-14T02:32:00+00:00",
+      "source_id": "vnexpress-real-estate",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "Khu đất rộng hơn 2,5 ha trước Nhà thi đấu Bà Triệu và sân bóng đá phường Vỹ Dạ sẽ được đấu giá để xây dựng tổ hợp nhà ở, thương mại - dịch vụ.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://vnexpress.net/rss/bat-dong-san.rss",
+        "publisher_host": "vnexpress.net",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-2de3a7314cd8b203337a",
+      "title": "Huế đấu giá khu sân bóng, trụ sở cũ làm tổ hợp nhà ở, khách sạn cao cấp",
+      "url": "https://dantri.com.vn/bat-dong-san/hue-dau-gia-khu-san-bong-tru-so-cu-lam-to-hop-nha-o-khach-san-cao-cap-20261114085007163.htm",
+      "category": "market",
+      "module_ids": [
+        "market"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-11-14T02:23:34+00:00",
+      "source_id": "dantri-real-estate",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "(Dân trí) - Các khu đất từng là sân bóng đá, khu thể thao và công sở cũ tại thành phố Huế sẽ được đưa ra đấu giá cho thuê quyền sử dụng để xây tổ hợp nhà ở, thương mại dịch vụ, khách sạn cao cấp.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://dantri.com.vn/rss/bat-dong-san.rss",
+        "publisher_host": "dantri.com.vn",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-7b36e09050ac10b2bcc1",
+      "title": "TPHCM chỉ đạo về việc cấp giấy tờ đất các khu phân lô tự phát",
+      "url": "https://dantri.com.vn/bat-dong-san/tphcm-chi-dao-ve-viec-cap-giay-to-dat-cac-khu-phan-lo-tu-phat-20261114090130953.htm",
+      "category": "market",
+      "module_ids": [
+        "legal"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-11-14T02:18:24+00:00",
+      "source_id": "dantri-real-estate",
+      "region_ids": [
+        "hcmc",
+        "binh-duong"
+      ],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "(Dân trí) - Lãnh đạo TPHCM giao các phường, xã thuộc khu vực Bình Dương (cũ) xem xét, giải quyết việc cấp giấy chứng nhận quyền sử dụng đất tại các khu phân lô tự phát hình thành trước ngày 10/1/2024.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://dantri.com.vn/rss/bat-dong-san.rss",
+        "publisher_host": "dantri.com.vn",
+        "publication_date_from_feed": true
+      }
+    },
     {
       "id": "article-market-rss-66954601a3ae62d4e9d7",
       "title": "Bí quyết biến nhà mới thành tổ ấm nhờ một món đồ quen thuộc",
