@@ -5,13 +5,6 @@
   "latest_status": "missing-or-ambiguous-apartment",
   "checks": [
     {
-      "run_id": "42488929938",
-      "checked_at": "2026-11-08T14:15:54.934578+00:00",
-      "status": "missing-or-ambiguous-apartment",
-      "period": null,
-      "signature": null
-    },
-    {
       "run_id": "42582199927",
       "checked_at": "2026-11-09T07:54:04.873022+00:00",
       "status": "missing-or-ambiguous-apartment",
@@ -98,6 +91,13 @@
     {
       "run_id": "43691550092",
       "checked_at": "2026-11-15T07:48:17.933503+00:00",
+      "status": "missing-or-ambiguous-apartment",
+      "period": null,
+      "signature": null
+    },
+    {
+      "run_id": "43725831901",
+      "checked_at": "2026-11-15T14:42:48.966268+00:00",
       "status": "missing-or-ambiguous-apartment",
       "period": null,
       "signature": null
