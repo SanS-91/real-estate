@@ -1,9 +1,146 @@
 {
   "schema_version": 1,
-  "build_id": "market-news-rss-20261115T005136Z",
-  "generated_at": "2026-11-15T00:51:36.198343+00:00",
-  "record_count": 1854,
+  "build_id": "market-news-rss-20261115T025144Z",
+  "generated_at": "2026-11-15T02:51:44.609944+00:00",
+  "record_count": 1859,
   "data": [
+    {
+      "id": "article-market-rss-95132904dcf46c47b2d1",
+      "title": "Giá vàng trải qua tuần lao dốc mạnh nhất nhiều tháng vì áp lực lãi suất",
+      "url": "https://dantri.com.vn/kinh-doanh/gia-vang-trai-qua-tuan-lao-doc-manh-nhat-nhieu-thang-vi-ap-luc-lai-suat-20261115081255817.htm",
+      "category": "macro",
+      "module_ids": [
+        "macro"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-11-15T01:54:15+00:00",
+      "source_id": "dantri-business",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [
+        "sales"
+      ],
+      "importance": 2,
+      "summary": "(Dân trí) - Khép lại tuần giao dịch tồi tệ nhất kể từ tháng 3, giá vàng thế giới bốc hơi gần 5% khi loạt dữ liệu kinh tế Mỹ phát đi tín hiệu nóng, củng cố kịch bản Fed tiếp tục tăng lãi suất.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://dantri.com.vn/rss/kinh-doanh.rss",
+        "publisher_host": "dantri.com.vn",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-b22eb6dd382ec3b225e6",
+      "title": "Cách vệ sinh ngăn kéo tủ lạnh sạch bóng và khử sạch mùi hôi hiệu quả",
+      "url": "https://dantri.com.vn/bat-dong-san/cach-ve-sinh-ngan-keo-tu-lanh-sach-bong-va-khu-sach-mui-hoi-hieu-qua-20261114160627386.htm",
+      "category": "market",
+      "module_ids": [
+        "market"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-11-15T01:53:00+00:00",
+      "source_id": "dantri-real-estate",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "(Dân trí) - Ngăn kéo tủ lạnh đọng nước và vụn bẩn dễ làm hỏng cả mớ rau tươi. Vài mẹo dọn dẹp đơn giản dưới đây sẽ giúp chiếc tủ lạnh luôn sạch bóng, ngăn nắp và bảo vệ sức khỏe cả nhà.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://dantri.com.vn/rss/bat-dong-san.rss",
+        "publisher_host": "dantri.com.vn",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-a753813240363309e013",
+      "title": "TP HCM đề xuất tăng thời gian miễn tiền thuê đất cho nhiều dự án",
+      "url": "https://vnexpress.net/tp-hcm-de-xuat-tang-thoi-gian-mien-tien-thue-dat-cho-nhieu-du-an-5144811.html",
+      "category": "market",
+      "module_ids": [
+        "market"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-11-15T01:43:36+00:00",
+      "source_id": "vnexpress-real-estate",
+      "region_ids": [
+        "hcmc"
+      ],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [
+        "infrastructure"
+      ],
+      "importance": 2,
+      "summary": "Nhiều nhóm dự án bất động sản, hạ tầng được TP HCM đề xuất miễn tiền thuê đất từ 5 năm đến hết thời hạn, cao hơn 3-5 năm so với hiện hành.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://vnexpress.net/rss/bat-dong-san.rss",
+        "publisher_host": "vnexpress.net",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-c7b2631c61a724409316",
+      "title": "Xe tải và xe đầu kéo dàn hàng 'bò chậm' trên cao tốc gây bức xúc",
+      "url": "https://thanhnien.vn/xe-tai-va-xe-dau-keo-dan-hang-bo-cham-tren-cao-toc-gay-buc-xuc-185261113195807008.htm",
+      "category": "infrastructure",
+      "module_ids": [
+        "infrastructure"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-11-15T01:43:00+00:00",
+      "source_id": "thanhnien-transport",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [
+        "infrastructure"
+      ],
+      "importance": 2,
+      "summary": "Bất chấp tuyến cao tốc chỉ có hai làn xe chính dành cho các phương tiện cùng chiều, tài xế xe tải và xe đầu kéo vẫn chạy song song với tốc độ chậm trên quãng đường dài, cản trở các phương tiện phía sau.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://thanhnien.vn/rss/xe/xe-giao-thong.rss",
+        "publisher_host": "thanhnien.vn",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-bff431366edda254597f",
+      "title": "Nam Long II Central Lake: Bất động sản giá trị thực từ 34 năm phát triển Nam Long",
+      "url": "https://dantri.com.vn/bat-dong-san/nam-long-ii-central-lake-bat-dong-san-gia-tri-thuc-tu-34-nam-phat-trien-nam-long-20261114191503648.htm",
+      "category": "market",
+      "module_ids": [
+        "market"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-11-15T01:14:00+00:00",
+      "source_id": "dantri-real-estate",
+      "region_ids": [],
+      "project_ids": [
+        "nam-long-ii-central-lake"
+      ],
+      "developer_ids": [
+        "nam-long"
+      ],
+      "tags": [],
+      "importance": 2,
+      "summary": "(Dân trí) - Với cộng đồng gần 2.000 cư dân, hệ thống tiện ích đã đi vào vận hành và các hoạt động thương mại hiện hữu, Nam Long II Central Lake đang góp phần định hình diện mạo của một khu đô thị tích hợp đáng sống tại Nam Cần Thơ.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://dantri.com.vn/rss/bat-dong-san.rss",
+        "publisher_host": "dantri.com.vn",
+        "publication_date_from_feed": true
+      }
+    },
     {
       "id": "article-market-rss-4ace102cac55d0e91ca4",
       "title": "Giá vàng hôm nay 15.11.2026: Giảm mạnh khiến người mua lỗ 7 triệu sau một tuần",
