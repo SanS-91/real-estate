@@ -1,9 +1,146 @@
 {
   "schema_version": 1,
-  "build_id": "market-news-rss-20261114T145144Z",
-  "generated_at": "2026-11-14T14:51:44.997775+00:00",
-  "record_count": 1848,
+  "build_id": "market-news-rss-20261115T005136Z",
+  "generated_at": "2026-11-15T00:51:36.198343+00:00",
+  "record_count": 1854,
   "data": [
+    {
+      "id": "article-market-rss-4ace102cac55d0e91ca4",
+      "title": "Giá vàng hôm nay 15.11.2026: Giảm mạnh khiến người mua lỗ 7 triệu sau một tuần",
+      "url": "https://thanhnien.vn/gia-vang-hom-nay-15112026-giam-manh-khien-nguoi-mua-lo-7-trieu-sau-mot-tuan-185261114183335073.htm",
+      "category": "macro",
+      "module_ids": [
+        "macro"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-11-15T00:48:00+00:00",
+      "source_id": "thanhnien-banking",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "Giá vàng trong nước và thế giới đều giảm mạnh trong tuần khiến người mua lỗ nặng.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://thanhnien.vn/rss/kinh-te/ngan-hang.rss",
+        "publisher_host": "thanhnien.vn",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-605007e81d91868e2bf7",
+      "title": "Đất đá bất ngờ sạt xuống quốc lộ 4D, một cô giáo bị thương",
+      "url": "https://dantri.com.vn/dt360/dat-da-bat-ngo-sat-xuong-quoc-lo-4d-mot-co-giao-bi-thuong-20261114222943605.htm",
+      "category": "infrastructure",
+      "module_ids": [
+        "infrastructure"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-11-14T23:34:00+00:00",
+      "source_id": "dantri-current-affairs",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [
+        "infrastructure"
+      ],
+      "importance": 2,
+      "summary": "(Dân trí) - Một vụ sạt lở đất đá bất ngờ xảy ra trên quốc lộ 4D, đoạn qua xã Mường Khương, tỉnh Lào Cai, khiến một nữ giáo viên bị thương.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://dantri.com.vn/rss/thoi-su.rss",
+        "publisher_host": "dantri.com.vn",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-3227e4b27f9eafbc7bbe",
+      "title": "Diễn biến mới tại khu đô thị thể thao lớn nhất Việt Nam",
+      "url": "https://dantri.com.vn/bat-dong-san/dien-bien-moi-tai-khu-do-thi-the-thao-lon-nhat-viet-nam-20261115002028652.htm",
+      "category": "market",
+      "module_ids": [
+        "market"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-11-14T23:20:04+00:00",
+      "source_id": "dantri-real-estate",
+      "region_ids": [
+        "ha-noi"
+      ],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "(Dân trí) - Khu đô thị thể thao quốc tế Hà Nội dự kiến tăng vốn trên 1,2 triệu tỷ đồng, thêm dự án nhà ở giá dưới.1 tỷ đồng tại Hà Nội… là những tin nóng bất động sản tuần qua.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://dantri.com.vn/rss/bat-dong-san.rss",
+        "publisher_host": "dantri.com.vn",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-8c2b151e7d50acb9f50c",
+      "title": "Bồi thường đất giấy tay thế nào cho công bằng?",
+      "url": "https://thanhnien.vn/boi-thuong-dat-giay-tay-the-nao-cho-cong-bang-185261114214246758.htm",
+      "category": "market",
+      "module_ids": [
+        "market",
+        "legal"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-11-14T23:18:00+00:00",
+      "source_id": "thanhnien-real-estate",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [
+        "sales"
+      ],
+      "importance": 2,
+      "summary": "Đánh giá cao đề xuất hỗ trợ, bồi thường nhà đất giao dịch bằng giấy tay khi nhà nước thu hồi đất, nhưng theo các chuyên gia, cần phải thiết kế chính sách tối ưu và công bằng hơn.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://thanhnien.vn/rss/kinh-te/dia-oc.rss",
+        "publisher_host": "thanhnien.vn",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-094b0db81dd016558956",
+      "title": "Gần 30 km Vành đai 3 TP HCM trước thời điểm thông xe",
+      "url": "https://vnexpress.net/gan-30-km-vanh-dai-3-tp-hcm-truoc-thoi-diem-thong-xe-5143737.html",
+      "category": "infrastructure",
+      "module_ids": [
+        "infrastructure"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-11-14T23:00:00+00:00",
+      "source_id": "vnexpress-current-affairs",
+      "region_ids": [
+        "hcmc",
+        "dong-nai"
+      ],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [
+        "infrastructure"
+      ],
+      "importance": 2,
+      "summary": "Khoảng 28 km đường Vành đai 3 qua Đồng Nai, TP HCM đã hoàn thiện căn bản, nhà thầu đang tăng tốc thi công để thông xe cuối năm nay.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://vnexpress.net/rss/thoi-su.rss",
+        "publisher_host": "vnexpress.net",
+        "publication_date_from_feed": true
+      }
+    },
     {
       "id": "article-market-rss-bd15997751a96338e08d",
       "title": "Nhiều phường ở TPHCM họp dân, thông báo kế hoạch thu hồi đất làm Metro số 2",
@@ -31,6 +168,33 @@
         "method": "official-rss",
         "feed_url": "https://dantri.com.vn/rss/thoi-su.rss",
         "publisher_host": "dantri.com.vn",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-d654aa7209c6eb2e0f64",
+      "title": "Thủ tướng đề xuất lập danh mục dự án hạ tầng ưu tiên của ASEAN đến 2040",
+      "url": "https://vnexpress.net/thu-tuong-de-xuat-lap-danh-muc-du-an-ha-tang-uu-tien-cua-asean-den-2040-5144751.html",
+      "category": "market",
+      "module_ids": [
+        "market"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-11-14T14:22:11+00:00",
+      "source_id": "vnexpress-economy",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [
+        "infrastructure"
+      ],
+      "importance": 2,
+      "summary": "Thủ tướng Lê Minh Hưng đề xuất ASEAN chọn các dự án hạ tầng ưu tiên đến năm 2040, tập trung vào giao thông xuyên biên giới, logistics, lưới điện, hạ tầng số và đô thị thông minh.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://vnexpress.net/rss/kinh-doanh.rss",
+        "publisher_host": "vnexpress.net",
         "publication_date_from_feed": true
       }
     },
