@@ -1,15 +1,15 @@
 {
   "schema_version": 1,
-  "checked_at": "2026-11-15T14:52:23.305999+00:00",
+  "checked_at": "2026-11-15T15:43:45.168296+00:00",
   "feeds_configured": 16,
-  "feeds_fetched": 15,
-  "accepted_new": 1,
-  "production_written": true,
+  "feeds_fetched": 16,
+  "accepted_new": 0,
+  "production_written": false,
   "article_total": 1876,
   "published_by_module": {
     "market": 0,
     "legal": 0,
-    "infrastructure": 1,
+    "infrastructure": 0,
     "macro": 0
   },
   "recent_by_module_7d": {
@@ -19,7 +19,7 @@
     "macro": 51
   },
   "recent_by_module_30d": {
-    "market": 847,
+    "market": 845,
     "legal": 162,
     "infrastructure": 342,
     "macro": 267
@@ -78,7 +78,12 @@
     },
     {
       "source_id": "vnexpress-legal",
-      "status": "fetch-error"
+      "status": "parsed",
+      "feed_items": 50,
+      "new": 0,
+      "skipped": 50,
+      "duplicates": 0,
+      "filtered": 50
     },
     {
       "source_id": "tuoitre-business",
@@ -120,9 +125,9 @@
       "source_id": "dantri-current-affairs",
       "status": "parsed",
       "feed_items": 50,
-      "new": 1,
-      "skipped": 49,
-      "duplicates": 7,
+      "new": 0,
+      "skipped": 50,
+      "duplicates": 8,
       "filtered": 42
     },
     {
@@ -171,10 +176,5 @@
       "filtered": 47
     }
   ],
-  "fetch_errors": [
-    {
-      "source_id": "vnexpress-legal",
-      "error": "HTTPError"
-    }
-  ]
+  "fetch_errors": []
 }
