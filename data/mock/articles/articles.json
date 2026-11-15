@@ -1,9 +1,167 @@
 {
   "schema_version": 1,
-  "build_id": "market-news-rss-20261115T025144Z",
-  "generated_at": "2026-11-15T02:51:44.609944+00:00",
-  "record_count": 1859,
+  "build_id": "market-news-rss-20261115T045143Z",
+  "generated_at": "2026-11-15T04:51:43.830466+00:00",
+  "record_count": 1865,
   "data": [
+    {
+      "id": "article-market-rss-260103531cb0da72b7d7",
+      "title": "Đồng Nai khởi công nhà máy điện rác hơn 2.600 tỷ đồng",
+      "url": "https://vnexpress.net/dong-nai-khoi-cong-nha-may-dien-rac-hon-2-600-ty-dong-5144848.html",
+      "category": "infrastructure",
+      "module_ids": [
+        "infrastructure"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-11-15T04:06:03+00:00",
+      "source_id": "vnexpress-current-affairs",
+      "region_ids": [
+        "dong-nai"
+      ],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "Nhà máy điện rác Định Quán được đầu tư hơn 2.600 tỷ đồng, có khả năng xử lý 950 tấn chất thải mỗi ngày, công suất phát điện 18,5 MW.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://vnexpress.net/rss/thoi-su.rss",
+        "publisher_host": "vnexpress.net",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-a2a3d5bad45fdb3d469a",
+      "title": "Cháy căn hộ tại tầng 10 tòa chung cư ở Hà Nội",
+      "url": "https://dantri.com.vn/thoi-su/chay-can-ho-tai-tang-10-toa-chung-cu-o-ha-noi-20261115104627502.htm",
+      "category": "market",
+      "module_ids": [
+        "market"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-11-15T03:48:05+00:00",
+      "source_id": "dantri-current-affairs",
+      "region_ids": [
+        "ha-noi"
+      ],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "(Dân trí) - Khói kèm lửa bốc ra từ một căn hộ chung cư ở tầng 10 tòa S4 khu chung cư Goldmark City 136 Hồ Tùng Mậu. Lực lượng chức năng sau đó đã khống chế được vụ cháy.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://dantri.com.vn/rss/thoi-su.rss",
+        "publisher_host": "dantri.com.vn",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-94771e44c002db9e7c47",
+      "title": "Quốc lộ 4D nứt sâu 5 m, nguy cơ đứt đường",
+      "url": "https://vnexpress.net/quoc-lo-4d-nut-sau-5-m-nguy-co-dut-duong-5144831.html",
+      "category": "infrastructure",
+      "module_ids": [
+        "infrastructure"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-11-15T03:44:26+00:00",
+      "source_id": "vnexpress-current-affairs",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [
+        "infrastructure"
+      ],
+      "importance": 2,
+      "summary": "Nền và mặt đường Quốc lộ 4D qua xã Bình Lư xuất hiện khe nứt dài khoảng 100 m, sâu tới 5 m, tiềm ẩn nguy cơ sạt lở, đứt đường, gây ách tắc giao thông.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://vnexpress.net/rss/thoi-su.rss",
+        "publisher_host": "vnexpress.net",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-c0d8ecdd824e28ec2b8d",
+      "title": "Biệt thự 500 m2 'giấu' bể bơi giữa nhà sau mặt tiền kín",
+      "url": "https://vnexpress.net/biet-thu-500-m2-giau-be-boi-giua-nha-sau-mat-tien-kin-5144827.html",
+      "category": "market",
+      "module_ids": [
+        "market"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-11-15T03:05:00+00:00",
+      "source_id": "vnexpress-real-estate",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "Kiến trúc sư hướng các không gian sinh hoạt về sân trong có bể bơi, đồng thời dùng lam ngang và hàng cây để hạn chế tầm nhìn từ bên ngoài.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://vnexpress.net/rss/bat-dong-san.rss",
+        "publisher_host": "vnexpress.net",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-4f944cf8635b7553aa96",
+      "title": "Công ty kiến trúc Việt đạt giải thưởng quốc tế",
+      "url": "https://vnexpress.net/cong-ty-kien-truc-viet-dat-giai-thuong-quoc-te-5144806.html",
+      "category": "market",
+      "module_ids": [
+        "market"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-11-15T03:00:00+00:00",
+      "source_id": "vnexpress-real-estate",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "VTN Architects - công ty do kiến trúc sư Võ Trọng Nghĩa giành giải thưởng AIA International Design Awards 2026, dành cho văn phòng kiến trúc, hạng mục mỗi năm chỉ vinh danh một đơn vị.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://vnexpress.net/rss/bat-dong-san.rss",
+        "publisher_host": "vnexpress.net",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-51ed1909bdb5cfc9ea4a",
+      "title": "'Hoa hồng cao' không còn là ưu tiên của môi giới bất động sản",
+      "url": "https://vnexpress.net/hoa-hong-cao-khong-con-la-uu-tien-cua-moi-gioi-bat-dong-san-5143938.html",
+      "category": "market",
+      "module_ids": [
+        "market"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-11-15T02:57:31+00:00",
+      "source_id": "vnexpress-real-estate",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [
+        "sales"
+      ],
+      "importance": 2,
+      "summary": "Khi thanh khoản suy yếu, môi giới bất động sản ngày càng coi trọng khả năng chốt giao dịch, uy tín chủ đầu tư và thời gian nhận phí hơn mức hoa hồng được quảng bá.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://vnexpress.net/rss/bat-dong-san.rss",
+        "publisher_host": "vnexpress.net",
+        "publication_date_from_feed": true
+      }
+    },
     {
       "id": "article-market-rss-95132904dcf46c47b2d1",
       "title": "Giá vàng trải qua tuần lao dốc mạnh nhất nhiều tháng vì áp lực lãi suất",
