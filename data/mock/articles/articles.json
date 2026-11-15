@@ -1,9 +1,86 @@
 {
   "schema_version": 1,
-  "build_id": "market-news-rss-20261115T064917Z",
-  "generated_at": "2026-11-15T06:49:17.450194+00:00",
-  "record_count": 1867,
+  "build_id": "market-news-rss-20261115T105233Z",
+  "generated_at": "2026-11-15T10:52:33.640267+00:00",
+  "record_count": 1870,
   "data": [
+    {
+      "id": "article-market-rss-527db681a1aad090aa7a",
+      "title": "Bàn cách để Ban quản trị chung cư không 'lộng quyền'",
+      "url": "https://thanhnien.vn/ban-cach-de-ban-quan-tri-chung-cu-khong-long-quyen-185261115162304769.htm",
+      "category": "market",
+      "module_ids": [
+        "market"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-11-15T09:54:00+00:00",
+      "source_id": "thanhnien-real-estate",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "Thời gian qua, tình trạng khiếu nại, khiếu kiện giữa chủ đầu tư với ban quản trị (BQT), giữa BQT và cư dân diễn ra tràn lan ở các chung cư. Thậm chí, tại nhiều chung cư đã xảy ra sai phạm dẫn đến các tội hình sự. Những bất ổn này bắt nguồn từ miếng bánh béo bở từ quỹ bảo trì chung cư và sự lộng quyề",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://thanhnien.vn/rss/kinh-te/dia-oc.rss",
+        "publisher_host": "thanhnien.vn",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-734beefd1e621ff894fd",
+      "title": "Những 'hành khách' đầu tiên trải nghiệm siêu sân bay Long Thành",
+      "url": "https://thanhnien.vn/nhung-hanh-khach-dau-tien-trai-nghiem-sieu-san-bay-long-thanh-185261115162801006.htm",
+      "category": "infrastructure",
+      "module_ids": [
+        "infrastructure"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-11-15T09:46:00+00:00",
+      "source_id": "thanhnien-policy",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [
+        "infrastructure"
+      ],
+      "importance": 2,
+      "summary": "Để chuẩn bị cho những chuyến bay thương mại thực tế sắp chính thức khai thác, những ngày qua, 50 cán bộ, nhân viên Cảng hàng không quốc tế Long Thành (LTIA) đã hào hứng hóa thân thành những \"hành khách\" đầu tiên, trực tiếp trải nghiệm toàn diện quy trình phục vụ và vận hành tại nhà ga siêu sân bay l",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://thanhnien.vn/rss/kinh-te/chinh-sach-phat-trien.rss",
+        "publisher_host": "thanhnien.vn",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-e719c069ff069d6dc83f",
+      "title": "Goldman Sachs hạ thêm 500 USD/ounce dự báo giá vàng cuối năm 2026",
+      "url": "https://dantri.com.vn/kinh-doanh/goldman-sachs-ha-them-500-usdounce-du-bao-gia-vang-cuoi-nam-2026-20261115144006994.htm",
+      "category": "macro",
+      "module_ids": [
+        "macro"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-11-15T08:30:39+00:00",
+      "source_id": "dantri-business",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "(Dân trí) - Việc Goldman Sachs bất ngờ cắt giảm mạnh mục tiêu giá vàng cuối năm 2026 đã đặt ra bài toán mới cho giới đầu tư.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://dantri.com.vn/rss/kinh-doanh.rss",
+        "publisher_host": "dantri.com.vn",
+        "publication_date_from_feed": true
+      }
+    },
     {
       "id": "article-market-rss-5fa073fcb7deb0054f5f",
       "title": "Giá vàng thế giới xuống đáy hơn một năm, giới chuyên gia dự báo gì cho tuần tới?",
