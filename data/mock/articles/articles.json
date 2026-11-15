@@ -1,9 +1,36 @@
 {
   "schema_version": 1,
-  "build_id": "market-news-rss-20261115T125143Z",
-  "generated_at": "2026-11-15T12:51:43.413145+00:00",
-  "record_count": 1875,
+  "build_id": "market-news-rss-20261115T145223Z",
+  "generated_at": "2026-11-15T14:52:23.305999+00:00",
+  "record_count": 1876,
   "data": [
+    {
+      "id": "article-market-rss-4f572d96a4f97dee51f3",
+      "title": "Xe máy chở 3 thiếu niên va chạm với ô tô trên quốc lộ, một người tử vong",
+      "url": "https://dantri.com.vn/thoi-su/xe-may-cho-3-thieu-nien-va-cham-voi-o-to-tren-quoc-lo-mot-nguoi-tu-vong-20261115160600775.htm",
+      "category": "infrastructure",
+      "module_ids": [
+        "infrastructure"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-11-15T12:57:03+00:00",
+      "source_id": "dantri-current-affairs",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [
+        "infrastructure"
+      ],
+      "importance": 2,
+      "summary": "(Dân trí) - Xe máy chở theo 3 thiếu niên đã tông thẳng vào ô tô tải đang từ đường nhánh để rẽ hướng ra quốc lộ 1, đoạn qua tỉnh Đắk Lắk, vụ tai nạn làm 1 người tử vong, 2 người bị thương.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://dantri.com.vn/rss/thoi-su.rss",
+        "publisher_host": "dantri.com.vn",
+        "publication_date_from_feed": true
+      }
+    },
     {
       "id": "article-market-rss-1d57ab61c403bd749670",
       "title": "The Aristo ra mắt 122 căn hộ đạt tiêu chuẩn công trình xanh",
