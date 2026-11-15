@@ -1,9 +1,61 @@
 {
   "schema_version": 1,
-  "build_id": "market-news-rss-20261115T045143Z",
-  "generated_at": "2026-11-15T04:51:43.830466+00:00",
-  "record_count": 1865,
+  "build_id": "market-news-rss-20261115T064917Z",
+  "generated_at": "2026-11-15T06:49:17.450194+00:00",
+  "record_count": 1867,
   "data": [
+    {
+      "id": "article-market-rss-5fa073fcb7deb0054f5f",
+      "title": "Giá vàng thế giới xuống đáy hơn một năm, giới chuyên gia dự báo gì cho tuần tới?",
+      "url": "https://dantri.com.vn/kinh-doanh/gia-vang-the-gioi-xuong-day-hon-mot-nam-gioi-chuyen-gia-du-bao-gi-cho-tuan-toi-20261115092857901.htm",
+      "category": "macro",
+      "module_ids": [
+        "macro"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-11-15T05:01:00+00:00",
+      "source_id": "dantri-business",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "(Dân trí) - Sau một tuần giảm hơn 4%, giá vàng thế giới đối mặt với triển vọng kém tích cực khi phần lớn chuyên gia dự báo kim loại quý tiếp tục đi xuống, thậm chí có thể lùi về vùng 3.200-3.500 USD/ounce.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://dantri.com.vn/rss/kinh-doanh.rss",
+        "publisher_host": "dantri.com.vn",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-550f35e48b8ee6a8370c",
+      "title": "Cô gái bị ô tô hất văng trên quốc lộ, tài xế bỏ mặc nạn nhân",
+      "url": "https://dantri.com.vn/thoi-su/co-gai-bi-o-to-hat-vang-tren-quoc-lo-tai-xe-bo-mac-nan-nhan-20261115111715511.htm",
+      "category": "infrastructure",
+      "module_ids": [
+        "infrastructure"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-11-15T05:00:55+00:00",
+      "source_id": "dantri-current-affairs",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [
+        "infrastructure"
+      ],
+      "importance": 2,
+      "summary": "(Dân trí) - Ô tô tông mạnh vào phía sau xe máy khiến cô gái văng xa hàng chục mét trên quốc lộ 1A. Sau tình huống va chạm, tài xế ô tô đã rời khỏi hiện trường, bỏ mặc nạn nhân.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://dantri.com.vn/rss/thoi-su.rss",
+        "publisher_host": "dantri.com.vn",
+        "publication_date_from_feed": true
+      }
+    },
     {
       "id": "article-market-rss-260103531cb0da72b7d7",
       "title": "Đồng Nai khởi công nhà máy điện rác hơn 2.600 tỷ đồng",
