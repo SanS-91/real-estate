@@ -1,9 +1,142 @@
 {
   "schema_version": 1,
-  "build_id": "market-news-rss-20261115T105233Z",
-  "generated_at": "2026-11-15T10:52:33.640267+00:00",
-  "record_count": 1870,
+  "build_id": "market-news-rss-20261115T125143Z",
+  "generated_at": "2026-11-15T12:51:43.413145+00:00",
+  "record_count": 1875,
   "data": [
+    {
+      "id": "article-market-rss-1d57ab61c403bd749670",
+      "title": "The Aristo ra mắt 122 căn hộ đạt tiêu chuẩn công trình xanh",
+      "url": "https://vnexpress.net/the-aristo-ra-mat-122-can-ho-dat-tieu-chuan-cong-trinh-xanh-5144941.html",
+      "category": "market",
+      "module_ids": [
+        "market"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-11-15T12:15:00+00:00",
+      "source_id": "vnexpress-real-estate",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [
+        "supply"
+      ],
+      "importance": 2,
+      "summary": "Phú Mỹ Hưng The Aristo tọa lạc tại khu Nam Viên, có kiến trúc lấy cảm hứng từ ruộng bậc thang, tích hợp tiện ích nghỉ dưỡng và đạt chứng nhận EDGE giai đoạn thiết kế.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://vnexpress.net/rss/bat-dong-san.rss",
+        "publisher_host": "vnexpress.net",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-20b600cf532467e6f31a",
+      "title": "Cuộc đua AI và nợ công gây sức ép lên thị trường bất động sản thế giới",
+      "url": "https://dantri.com.vn/bat-dong-san/cuoc-dua-ai-va-no-cong-gay-suc-ep-len-thi-truong-bat-dong-san-the-gioi-20261115153653888.htm",
+      "category": "market",
+      "module_ids": [
+        "market",
+        "infrastructure"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-11-15T11:11:00+00:00",
+      "source_id": "dantri-real-estate",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "(Dân trí) - Nghịch lý dòng tiền đang đẩy nhiều doanh nghiệp vào thế khó khi các ông lớn công nghệ và đầu tư công hút cạn nguồn vốn rẻ, biến việc đảo nợ thành cuộc chiến sinh tồn.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://dantri.com.vn/rss/bat-dong-san.rss",
+        "publisher_host": "dantri.com.vn",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-74a7e06ca67946be6f66",
+      "title": "Nhà ở xã hội dự kiến vẫn được bán lại theo giá thị trường sau 5 năm",
+      "url": "https://vnexpress.net/nha-o-xa-hoi-du-kien-van-duoc-ban-lai-theo-gia-thi-truong-sau-5-nam-5144920.html",
+      "category": "market",
+      "module_ids": [
+        "market"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-11-15T11:06:00+00:00",
+      "source_id": "vnexpress-real-estate",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "Nhà ở xã hội sau 5 năm dự kiến chỉ được chuyển nhượng cho đúng nhóm thụ hưởng, nhưng có thể vẫn được bán lại theo giá thị trường.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://vnexpress.net/rss/bat-dong-san.rss",
+        "publisher_host": "vnexpress.net",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-11994b97a79f2f15083c",
+      "title": "Xe tải lật, hàng tấn đá tảng đổ xuống quốc lộ",
+      "url": "https://vnexpress.net/xe-tai-lat-hang-tan-da-tang-do-xuong-quoc-lo-5144917.html",
+      "category": "infrastructure",
+      "module_ids": [
+        "infrastructure"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-11-15T10:58:45+00:00",
+      "source_id": "vnexpress-current-affairs",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [
+        "infrastructure"
+      ],
+      "importance": 2,
+      "summary": "Xe tải chở đá lật nghiêng trên quốc lộ 48, đoạn qua xã Quỳ Hợp, khiến nhiều tảng đá nặng hàng tấn văng xuống đường, cản trở giao thông.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://vnexpress.net/rss/thoi-su.rss",
+        "publisher_host": "vnexpress.net",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-f9a11ea43e467a5a2428",
+      "title": "TPHCM dành hơn 15,5ha đất khoáng sản làm vật liệu cho các dự án giao thông",
+      "url": "https://dantri.com.vn/thoi-su/tphcm-danh-hon-155ha-dat-khoang-san-lam-vat-lieu-cho-cac-du-an-giao-thong-20261115140223752.htm",
+      "category": "market",
+      "module_ids": [
+        "market",
+        "infrastructure"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-11-15T10:42:51+00:00",
+      "source_id": "dantri-current-affairs",
+      "region_ids": [
+        "hcmc"
+      ],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "(Dân trí) - Ba khu vực khoáng sản rộng hơn 15,5ha tại xã Bình Giã, Châu Pha và Hòa Hội (TPHCM) được phê duyệt không qua đấu giá quyền khai thác, nhằm cung cấp vật liệu cho loạt dự án giao thông.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://dantri.com.vn/rss/thoi-su.rss",
+        "publisher_host": "dantri.com.vn",
+        "publication_date_from_feed": true
+      }
+    },
     {
       "id": "article-market-rss-527db681a1aad090aa7a",
       "title": "Bàn cách để Ban quản trị chung cư không 'lộng quyền'",
