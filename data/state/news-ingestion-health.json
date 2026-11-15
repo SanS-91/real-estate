@@ -1,16 +1,16 @@
 {
   "schema_version": 1,
-  "checked_at": "2026-11-15T06:49:17.450194+00:00",
+  "checked_at": "2026-11-15T08:51:43.978078+00:00",
   "feeds_configured": 16,
   "feeds_fetched": 16,
-  "accepted_new": 2,
-  "production_written": true,
+  "accepted_new": 0,
+  "production_written": false,
   "article_total": 1867,
   "published_by_module": {
     "market": 0,
     "legal": 0,
-    "infrastructure": 1,
-    "macro": 1
+    "infrastructure": 0,
+    "macro": 0
   },
   "recent_by_module_7d": {
     "market": 169,
@@ -19,10 +19,10 @@
     "macro": 50
   },
   "recent_by_module_30d": {
-    "market": 851,
+    "market": 846,
     "legal": 163,
-    "infrastructure": 343,
-    "macro": 270
+    "infrastructure": 342,
+    "macro": 269
   },
   "latest_published_by_module": {
     "market": "2026-11-15T03:48:05+00:00",
@@ -116,18 +116,18 @@
       "source_id": "dantri-business",
       "status": "parsed",
       "feed_items": 50,
-      "new": 1,
-      "skipped": 49,
+      "new": 0,
+      "skipped": 50,
       "duplicates": 8,
-      "filtered": 41
+      "filtered": 42
     },
     {
       "source_id": "dantri-current-affairs",
       "status": "parsed",
       "feed_items": 50,
-      "new": 1,
-      "skipped": 49,
-      "duplicates": 6,
+      "new": 0,
+      "skipped": 50,
+      "duplicates": 7,
       "filtered": 43
     },
     {
