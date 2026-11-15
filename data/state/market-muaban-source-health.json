@@ -1,10 +1,10 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-11-14T14:28:06.450133+00:00",
+  "generated_at": "2026-11-15T09:16:13.814415+00:00",
   "source_id": "muaban-vn",
   "targets_checked": 6,
-  "listing_urls_discovered": 20,
-  "details_checked": 20,
+  "listing_urls_discovered": 19,
+  "details_checked": 19,
   "valid_unexpired_project_ads": 12,
   "newly_published": 0,
   "published_current_individual_listings": 12,
@@ -25,12 +25,12 @@
       "project_id": "vinhomes-grand-park",
       "source_url": "https://muaban.net/bat-dong-san/ban-can-ho-chung-cu-du-an-vinhomes-grand-park-quan-9-ho-chi-minh",
       "access": "reachable",
-      "discovered": 3,
-      "checked": 3,
+      "discovered": 2,
+      "checked": 2,
       "qualified": 1,
       "reasons": {
         "qualified-unexpired-listing": 1,
-        "publisher-expired": 2
+        "publisher-expired": 1
       }
     },
     {
