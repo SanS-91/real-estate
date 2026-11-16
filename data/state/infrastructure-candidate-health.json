@@ -1,10 +1,10 @@
 {
   "schema_version": 1,
   "module": "infrastructure",
-  "generated_at": "2026-11-09T12:03:49.082403+00:00",
+  "generated_at": "2026-11-16T11:59:44.166375+00:00",
   "status": "source-degraded",
-  "source_watch_at": "2026-11-09T12:03:45.213711+00:00",
-  "candidate_report_at": "2026-11-09T12:03:47.911124+00:00",
+  "source_watch_at": "2026-11-16T11:59:41.751013+00:00",
+  "candidate_report_at": "2026-11-16T11:59:43.157300+00:00",
   "baseline_available": true,
   "canonical_record_count": 18,
   "source_targets_checked": 13,
