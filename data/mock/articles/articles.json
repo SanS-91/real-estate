@@ -1,9 +1,231 @@
 {
   "schema_version": 1,
-  "build_id": "market-news-rss-20261116T085141Z",
-  "generated_at": "2026-11-16T08:51:41.692424+00:00",
-  "record_count": 1910,
+  "build_id": "market-news-rss-20261116T105141Z",
+  "generated_at": "2026-11-16T10:51:41.732185+00:00",
+  "record_count": 1919,
   "data": [
+    {
+      "id": "article-market-rss-1e23bdcdafe8bc7586b4",
+      "title": "Hà Nội duyệt dự án 111.000 tỷ đồng gần sân vận động VinFast - Trống Đồng",
+      "url": "https://dantri.com.vn/bat-dong-san/ha-noi-duyet-du-an-111000-ty-dong-gan-san-van-dong-vinfast-trong-dong-20261116162624931.htm",
+      "category": "market",
+      "module_ids": [
+        "market",
+        "infrastructure"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-11-16T10:05:00+00:00",
+      "source_id": "dantri-real-estate",
+      "region_ids": [
+        "ha-noi"
+      ],
+      "project_ids": [],
+      "developer_ids": [
+        "vinhomes"
+      ],
+      "tags": [],
+      "importance": 2,
+      "summary": "(Dân trí) - Dự án khu đô thị gần 600 ha tại hai xã Bình Minh và Tam Hưng có tổng vốn hơn 111.137 tỷ đồng do Vinhomes làm chủ đầu tư, dự kiến khởi công ngay trong quý IV.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://dantri.com.vn/rss/bat-dong-san.rss",
+        "publisher_host": "dantri.com.vn",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-9ec05e5f1b429daf93b9",
+      "title": "Tập đoàn SK muốn đặt trụ sở Đông Nam Á tại Hà Nội",
+      "url": "https://vnexpress.net/tap-doan-sk-muon-dat-tru-so-dong-nam-a-tai-ha-noi-5145331.html",
+      "category": "legal",
+      "module_ids": [
+        "legal"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-11-16T09:46:00+00:00",
+      "source_id": "vnexpress-economy",
+      "region_ids": [
+        "ha-noi"
+      ],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "Tập đoàn SK (Hàn Quốc) lên kế hoạch đặt trụ sở Đông Nam Á tại Hà Nội, đồng thời đẩy mạnh đầu tư các cụm năng lượng tại Việt Nam.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://vnexpress.net/rss/kinh-doanh.rss",
+        "publisher_host": "vnexpress.net",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-6d811b2960c3db2b87e1",
+      "title": "Người dân ngã xe giữa bùn lầy dưới gầm cao tốc, TPHCM cảnh báo nhà thầu",
+      "url": "https://dantri.com.vn/thoi-su/nguoi-dan-nga-xe-giua-bun-lay-duoi-gam-cao-toc-tphcm-canh-bao-nha-thau-20261116160554624.htm",
+      "category": "infrastructure",
+      "module_ids": [
+        "infrastructure"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-11-16T09:31:37+00:00",
+      "source_id": "dantri-current-affairs",
+      "region_ids": [
+        "hcmc"
+      ],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [
+        "infrastructure"
+      ],
+      "importance": 2,
+      "summary": "(Dân trí) - Sở Xây dựng TPHCM yêu cầu chấn chỉnh nhà thầu dự án mở rộng cao tốc TPHCM - Long Thành, nếu tiếp tục để bùn đất tràn ra đường sẽ xem xét thu hồi phép lưu thông của xe chở vật liệu.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://dantri.com.vn/rss/thoi-su.rss",
+        "publisher_host": "dantri.com.vn",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-13bf181fb52be1de06fa",
+      "title": "Lộ diện nhà đầu tư rót hơn 3.500 tỷ đồng vào Khu thương mại tự do Đà Nẵng",
+      "url": "https://dantri.com.vn/bat-dong-san/lo-dien-nha-dau-tu-rot-hon-3500-ty-dong-vao-khu-thuong-mai-tu-do-da-nang-20261116145931866.htm",
+      "category": "market",
+      "module_ids": [
+        "market"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-11-16T09:22:51+00:00",
+      "source_id": "dantri-real-estate",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [
+        "sales",
+        "infrastructure"
+      ],
+      "importance": 2,
+      "summary": "(Dân trí) - Công ty Liên doanh TNHH Khu công nghiệp Việt Nam - Singapore được chấp thuận đầu tư dự án hạ tầng khu chức năng rộng 276ha tại Khu thương mại tự do Đà Nẵng, với tổng vốn hơn 3.500 tỷ đồng.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://dantri.com.vn/rss/bat-dong-san.rss",
+        "publisher_host": "dantri.com.vn",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-27c8f40f2cce300c3465",
+      "title": "Hà Nội duyệt đầu tư khu đô thị đa mục tiêu 4,3 tỷ USD của Vinhomes",
+      "url": "https://vnexpress.net/ha-noi-duyet-dau-tu-khu-do-thi-da-muc-tieu-4-3-ty-usd-cua-vinhomes-5145312.html",
+      "category": "market",
+      "module_ids": [
+        "market"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-11-16T09:16:41+00:00",
+      "source_id": "vnexpress-real-estate",
+      "region_ids": [
+        "ha-noi"
+      ],
+      "project_ids": [],
+      "developer_ids": [
+        "vinhomes"
+      ],
+      "tags": [
+        "sales"
+      ],
+      "importance": 2,
+      "summary": "Khu đô thị đa mục tiêu Bình Minh - Tam Hưng ở phía nam Thủ đô được thành phố chấp thuận chủ trương đầu tư, với tổng diện tích gần 600 ha.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://vnexpress.net/rss/bat-dong-san.rss",
+        "publisher_host": "vnexpress.net",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-ca997c09c168e829c28a",
+      "title": "Vinhomes Riverside bổ sung tiện ích y tế sau hơn một thập kỷ vận hành",
+      "url": "https://vnexpress.net/vinhomes-riverside-bo-sung-tien-ich-y-te-sau-hon-mot-thap-ky-van-hanh-5145294.html",
+      "category": "market",
+      "module_ids": [
+        "market"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-11-16T09:15:00+00:00",
+      "source_id": "vnexpress-real-estate",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [
+        "vinhomes"
+      ],
+      "tags": [],
+      "importance": 2,
+      "summary": "Vinhomes Riverside tiếp tục hoàn thiện hệ tiện ích sau hơn 10 năm vận hành với bệnh viện quốc tế Vinmec trong khu đô thị, cùng các chương trình chăm sóc sức khỏe dành riêng cho cư dân.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://vnexpress.net/rss/bat-dong-san.rss",
+        "publisher_host": "vnexpress.net",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-d1bbc1966e89cc235f41",
+      "title": "Trái chủ Novaland sắp được chuyển nợ sang cổ phiếu NVL giá 34.000 đồng",
+      "url": "https://dantri.com.vn/kinh-doanh/trai-chu-novaland-sap-duoc-chuyen-no-sang-co-phieu-nvl-gia-34000-dong-20261116155420795.htm",
+      "category": "market",
+      "module_ids": [
+        "market"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-11-16T09:11:59+00:00",
+      "source_id": "dantri-real-estate",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "(Dân trí) - Thay vì nhận tiền mặt, các trái chủ quốc tế của Novaland chọn hoán đổi nợ sang gần 2,8 triệu cổ phiếu NVL ở mức giá 34.000 đồng, giúp doanh nghiệp giảm đáng kể áp lực dòng tiền.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://dantri.com.vn/rss/bat-dong-san.rss",
+        "publisher_host": "dantri.com.vn",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-d38b331e89f051c38da2",
+      "title": "Phó Thống đốc Ngân hàng Nhà nước Phạm Quang Dũng làm Chủ tịch VCCI",
+      "url": "https://dantri.com.vn/kinh-doanh/pho-thong-doc-ngan-hang-nha-nuoc-pham-quang-dung-lam-chu-tich-vcci-20261116152331527.htm",
+      "category": "macro",
+      "module_ids": [
+        "macro"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-11-16T08:41:32+00:00",
+      "source_id": "dantri-business",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "(Dân trí) - Phó Thống đốc Ngân hàng Nhà nước Phạm Quang Dũng được chỉ định giữ chức Bí thư Đảng ủy VCCI nhiệm kỳ 2025-2030 và được bầu giữ chức Chủ tịch VCCI.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://dantri.com.vn/rss/kinh-doanh.rss",
+        "publisher_host": "dantri.com.vn",
+        "publication_date_from_feed": true
+      }
+    },
     {
       "id": "article-market-rss-a7250c9497687853a1ca",
       "title": "Bất động sản Trung Quốc: Giá tiếp tục trượt, người mua né nhà trên giấy",
@@ -425,6 +647,35 @@
       ],
       "importance": 2,
       "summary": "Nút giao Mỹ Thủy vốn hơn 3.400 tỷ đồng, dự kiến hoàn thành quý I/2027, trở thành nút giao 4 tầng đầu tiên ở TP HCM, giảm ùn tắc cửa ngõ Cát Lái.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://vnexpress.net/rss/thoi-su.rss",
+        "publisher_host": "vnexpress.net",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-03064defaf2dc920475d",
+      "title": "Diện mạo nút giao 4 tầng với cầu vượt thép lớn nhất TP HCM",
+      "url": "https://vnexpress.net/dien-mao-nut-giao-4-tang-voi-cau-vuot-thep-lon-nhat-tp-hcm-5145043.html",
+      "category": "infrastructure",
+      "module_ids": [
+        "infrastructure"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-11-16T04:30:00+00:00",
+      "source_id": "vnexpress-current-affairs",
+      "region_ids": [
+        "hcmc"
+      ],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [
+        "infrastructure"
+      ],
+      "importance": 2,
+      "summary": "Nút giao Mỹ Thủy 4 tầng vốn hơn 3.400 tỷ đồng gồm cầu vượt thép quy mô lớn nhất thành phố dự kiến hoàn thành quý I/2027, giúp giảm ùn tắc cửa ngõ Cát Lái.",
       "source_verification": {
         "method": "official-rss",
         "feed_url": "https://vnexpress.net/rss/thoi-su.rss",
