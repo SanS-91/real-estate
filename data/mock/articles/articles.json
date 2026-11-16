@@ -1,9 +1,361 @@
 {
   "schema_version": 1,
-  "build_id": "market-news-rss-20261116T105141Z",
-  "generated_at": "2026-11-16T10:51:41.732185+00:00",
-  "record_count": 1919,
+  "build_id": "market-news-rss-20261116T125147Z",
+  "generated_at": "2026-11-16T12:51:47.636652+00:00",
+  "record_count": 1933,
   "data": [
+    {
+      "id": "article-market-rss-fc139cabb39f8b94959d",
+      "title": "Shake Shack sắp gia nhập thị trường ẩm thực Việt Nam",
+      "url": "https://vnexpress.net/shake-shack-sap-gia-nhap-thi-truong-am-thuc-viet-nam-5145373.html",
+      "category": "market",
+      "module_ids": [
+        "market"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-11-16T12:00:00+00:00",
+      "source_id": "vnexpress-economy",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [
+        "pricing"
+      ],
+      "importance": 2,
+      "summary": "Shake Shack, thương hiệu burger đến từ New York, vừa công bố địa điểm cửa hàng đầu tiên tại Việt Nam, tọa lạc tại phường An Khánh.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://vnexpress.net/rss/kinh-doanh.rss",
+        "publisher_host": "vnexpress.net",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-2b9b44c069c0abc285c1",
+      "title": "Cháy xe container trên quốc lộ 51, giao thông ùn tắc kéo dài",
+      "url": "https://dantri.com.vn/thoi-su/chay-xe-container-tren-quoc-lo-51-giao-thong-un-tac-keo-dai-20261116184036358.htm",
+      "category": "infrastructure",
+      "module_ids": [
+        "infrastructure"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-11-16T11:59:03+00:00",
+      "source_id": "dantri-current-affairs",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [
+        "infrastructure"
+      ],
+      "importance": 2,
+      "summary": "(Dân trí) - Đang lưu thông từ cao tốc Bến Lức - Long Thành vào quốc lộ 51, xe container bất ngờ bốc cháy dữ dội. Tài xế nhanh chóng điều khiển xe tấp vào lề đường rồi thoát ra ngoài.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://dantri.com.vn/rss/thoi-su.rss",
+        "publisher_host": "dantri.com.vn",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-8980bab80828488a73af",
+      "title": "SỐC: Lãi suất huy động tiền đồng bằng 0%",
+      "url": "https://thanhnien.vn/soc-lai-suat-huy-dong-tien-dong-bang-0-185261116184200478.htm",
+      "category": "macro",
+      "module_ids": [
+        "macro"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-11-16T11:50:00+00:00",
+      "source_id": "thanhnien-banking",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "Lãi suất huy động tiết kiệm của các ngân hàng (NH) đang có xu hướng đi xuống, đặc biệt xuất hiện NH áp dụng lãi suất 0% khi huy động tiền đồng.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://thanhnien.vn/rss/kinh-te/ngan-hang.rss",
+        "publisher_host": "thanhnien.vn",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-e246b42548cb022039ce",
+      "title": "Vì sao doanh thu từ bất động sản tăng, nhưng sức mua giảm?",
+      "url": "https://thanhnien.vn/vi-sao-doanh-thu-tu-bat-dong-san-tang-nhung-suc-mua-giam-185261116171313385.htm",
+      "category": "market",
+      "module_ids": [
+        "market"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-11-16T11:47:00+00:00",
+      "source_id": "thanhnien-real-estate",
+      "region_ids": [
+        "hcmc"
+      ],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [
+        "sales"
+      ],
+      "importance": 2,
+      "summary": "Báo cáo Thị trường bất động sản TP.HCM quý 3/2026 của Avison Young Việt Nam cho thấy, dù trong 10 tháng năm 2026, doanh thu dịch vụ kinh doanh bất động sản tăng, thu ngân sách nhà nước từ đất tăng nhưng sức mua nhà ở ngày càng yếu đi, tỷ lệ hấp thụ căn hộ sơ cấp giảm.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://thanhnien.vn/rss/kinh-te/dia-oc.rss",
+        "publisher_host": "thanhnien.vn",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-ac0737794b5f67e5d76d",
+      "title": "Phê duyệt dự án nối cao tốc với biển Quảng Ngãi",
+      "url": "https://thanhnien.vn/phe-duyet-du-an-noi-cao-toc-voi-bien-quang-ngai-185261116171809791.htm",
+      "category": "market",
+      "module_ids": [
+        "market",
+        "infrastructure"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-11-16T11:46:00+00:00",
+      "source_id": "thanhnien-policy",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [
+        "infrastructure"
+      ],
+      "importance": 2,
+      "summary": "UBND tỉnh Quảng Ngãi vừa phê duyệt dự án đường nối từ quốc lộ 1, nút giao cao tốc Đà Nẵng - Quảng Ngãi đến đường ven biển Dung Quất - Sa Huỳnh, với tổng vốn đầu tư 800 tỉ đồng.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://thanhnien.vn/rss/kinh-te/chinh-sach-phat-trien.rss",
+        "publisher_host": "thanhnien.vn",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-4eaf68e54f4dac194aa5",
+      "title": "TP HCM cho phép chuyển gần 192 ha đất nông nghiệp làm nhà ở xã hội",
+      "url": "https://vnexpress.net/tp-hcm-cho-phep-chuyen-gan-192-ha-dat-nong-nghiep-lam-nha-o-xa-hoi-5145379.html",
+      "category": "market",
+      "module_ids": [
+        "market"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-11-16T11:45:02+00:00",
+      "source_id": "vnexpress-real-estate",
+      "region_ids": [
+        "hcmc"
+      ],
+      "project_ids": [],
+      "developer_ids": [
+        "vinhomes"
+      ],
+      "tags": [],
+      "importance": 2,
+      "summary": "Công ty cổ phần Delta, doanh nghiệp thuộc hệ sinh thái Vinhomes, được chuyển đổi gần 192 ha đất nông nghiệp tại xã Bà Điểm để phát triển khu nhà ở xã hội, kết hợp nhà ở thương mại và các công trình dịch vụ.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://vnexpress.net/rss/bat-dong-san.rss",
+        "publisher_host": "vnexpress.net",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-776e5607166580285115",
+      "title": "Xe container cháy ngùn ngụt trên quốc lộ 51",
+      "url": "https://vnexpress.net/xe-container-chay-ngun-ngut-tren-quoc-lo-51-5145380.html",
+      "category": "infrastructure",
+      "module_ids": [
+        "infrastructure"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-11-16T11:42:19+00:00",
+      "source_id": "vnexpress-current-affairs",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [
+        "infrastructure"
+      ],
+      "importance": 2,
+      "summary": "Đang chạy trên quốc lộ 51, tài xế phát hiện lửa bùng lên liền tấp vào lề rồi rời cabin thoát thân, tuyến đường huyết mạch ùn tắc, chiều 16/11.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://vnexpress.net/rss/thoi-su.rss",
+        "publisher_host": "vnexpress.net",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-0262f9b296cbaff5b04d",
+      "title": "Quy hoạch 6 phường làm đô thị Phan Thiết hiện đại",
+      "url": "https://vnexpress.net/quy-hoach-6-phuong-lam-do-thi-phan-thiet-hien-dai-5145087.html",
+      "category": "market",
+      "module_ids": [
+        "market",
+        "legal"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-11-16T11:35:27+00:00",
+      "source_id": "vnexpress-real-estate",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [
+        "legal"
+      ],
+      "importance": 2,
+      "summary": "Lâm Đồng quy hoạch đô thị Phan Thiết rộng gần 28.700 ha theo mô hình đa cực, mở rộng về phía Tây và Bắc, hướng đến đô thị loại II vào năm 2030.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://vnexpress.net/rss/bat-dong-san.rss",
+        "publisher_host": "vnexpress.net",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-7bca539a937e1d1fece0",
+      "title": "Quảng Trị công bố danh mục 103 dự án ưu tiên kêu gọi đầu tư",
+      "url": "https://dantri.com.vn/bat-dong-san/quang-tri-cong-bo-danh-muc-103-du-an-uu-tien-keu-goi-dau-tu-20261116143536661.htm",
+      "category": "market",
+      "module_ids": [
+        "market"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-11-16T11:29:00+00:00",
+      "source_id": "dantri-real-estate",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "(Dân trí) - Từ khu nghỉ dưỡng ven biển Bắc Gianh đến nhà máy điện khí Mỹ Thủy, 103 dự án ưu tiên giai đoạn 2026-2030 đang mở ra dư địa thu hút vốn lớn cho tỉnh Quảng Trị.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://dantri.com.vn/rss/bat-dong-san.rss",
+        "publisher_host": "dantri.com.vn",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-fb91ea42535bfe1486a5",
+      "title": "Cơ bản hoàn thành mở rộng cao tốc TPHCM - Long Thành đoạn qua Đồng Nai",
+      "url": "https://dantri.com.vn/thoi-su/co-ban-hoan-thanh-mo-rong-cao-toc-tphcm-long-thanh-doan-qua-dong-nai-20261116180704266.htm",
+      "category": "infrastructure",
+      "module_ids": [
+        "infrastructure"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-11-16T11:17:54+00:00",
+      "source_id": "dantri-current-affairs",
+      "region_ids": [
+        "hcmc",
+        "dong-nai"
+      ],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [
+        "infrastructure"
+      ],
+      "importance": 2,
+      "summary": "(Dân trí) - Hơn 12km cao tốc TPHCM - Long Thành qua Đồng Nai đã cơ bản mở rộng hoàn thành. Phần làn đường mới mở rộng được nhà thầu thi công thảm nhựa xong 3 lớp, sẵn sàng đưa vào vận hành trong tháng 12.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://dantri.com.vn/rss/thoi-su.rss",
+        "publisher_host": "dantri.com.vn",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-124f8ea5b352f0d4e4c5",
+      "title": "Giá dầu thế giới quay đầu giảm, áp lực lạm phát toàn cầu hạ nhiệt",
+      "url": "https://dantri.com.vn/kinh-doanh/gia-dau-the-gioi-quay-dau-giam-ap-luc-lam-phat-toan-cau-ha-nhiet-20261116180326081.htm",
+      "category": "macro",
+      "module_ids": [
+        "macro"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-11-16T11:14:40+00:00",
+      "source_id": "dantri-business",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "(Dân trí) - Thị trường dầu mỏ thế giới ghi nhận sắc đỏ khi nguy cơ dư cung xuất hiện trở lại, trong khi giá dầu diesel tại Mỹ cũng rơi khỏi mốc 6 USD/gallon, giảm bớt gánh nặng chi phí.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://dantri.com.vn/rss/kinh-doanh.rss",
+        "publisher_host": "dantri.com.vn",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-d5361a47fcdde9fbf474",
+      "title": "Tập đoàn gần 200 tỷ USD của Hàn Quốc muốn đặt trụ sở Đông Nam Á ở Hà Nội",
+      "url": "https://dantri.com.vn/bat-dong-san/tap-doan-gan-200-ty-usd-cua-han-quoc-muon-dat-tru-so-dong-nam-a-o-ha-noi-20261116173618097.htm",
+      "category": "market",
+      "module_ids": [
+        "legal"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-11-16T11:09:20+00:00",
+      "source_id": "dantri-real-estate",
+      "region_ids": [
+        "ha-noi"
+      ],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "(Dân trí) - Tập đoàn SK của Hàn Quốc có kế hoạch xây dựng trụ sở khu vực Đông Nam Á tại Hà Nội, đồng thời muốn mở rộng đầu tư vào các lĩnh vực năng lượng, trí tuệ nhân tạo và trung tâm dữ liệu.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://dantri.com.vn/rss/bat-dong-san.rss",
+        "publisher_host": "dantri.com.vn",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-f64f61694a5083c49374",
+      "title": "Phó Thủ tướng yêu cầu báo cáo về quy định bán lại nhà ở xã hội sau 5 năm",
+      "url": "https://dantri.com.vn/thoi-su/pho-thu-tuong-yeu-cau-bao-cao-ve-quy-dinh-ban-lai-nha-o-xa-hoi-sau-5-nam-20261116173449469.htm",
+      "category": "market",
+      "module_ids": [
+        "market"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-11-16T10:43:19+00:00",
+      "source_id": "dantri-current-affairs",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "(Dân trí) - Với Luật Nhà ở sửa đổi, Phó Thủ tướng yêu cầu báo cáo nhiều nội dung liên quan, trong đó có quy định bán lại nhà ở xã hội sau 5 năm; ưu đãi nhà ở cho thuê không bằng vốn Nhà nước; nhà ở tái định cư...",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://dantri.com.vn/rss/thoi-su.rss",
+        "publisher_host": "dantri.com.vn",
+        "publication_date_from_feed": true
+      }
+    },
     {
       "id": "article-market-rss-1e23bdcdafe8bc7586b4",
       "title": "Hà Nội duyệt dự án 111.000 tỷ đồng gần sân vận động VinFast - Trống Đồng",
@@ -785,6 +1137,31 @@
       "source_verification": {
         "method": "official-rss",
         "feed_url": "https://vnexpress.net/rss/bat-dong-san.rss",
+        "publisher_host": "vnexpress.net",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-26132ac5dccddf52d19d",
+      "title": "Trụ sở dôi dư: Đà Nẵng dành 6.200 m2 làm bãi xe ngầm, Quảng Trị cải tạo thành trường học",
+      "url": "https://vnexpress.net/tru-so-doi-du-da-nang-danh-6-200-m2-lam-bai-xe-ngam-quang-tri-cai-tao-thanh-truong-hoc-5141841.html",
+      "category": "legal",
+      "module_ids": [
+        "legal"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-11-16T03:00:00+00:00",
+      "source_id": "vnexpress-current-affairs",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "Đà Nẵng dự kiến dành hơn 6.200 m2 đất trụ sở VTV8 làm bãi đỗ xe ngầm kết hợp công viên cây xanh, trong khi Quảng Trị đã cải tạo trụ sở công thành trường học cho học sinh.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://vnexpress.net/rss/thoi-su.rss",
         "publisher_host": "vnexpress.net",
         "publication_date_from_feed": true
       }
