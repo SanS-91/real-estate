@@ -1,9 +1,145 @@
 {
   "schema_version": 1,
-  "build_id": "market-news-rss-20261116T025141Z",
-  "generated_at": "2026-11-16T02:51:41.074219+00:00",
-  "record_count": 1888,
+  "build_id": "market-news-rss-20261116T045137Z",
+  "generated_at": "2026-11-16T04:51:37.880041+00:00",
+  "record_count": 1893,
   "data": [
+    {
+      "id": "article-market-rss-caff2dad7a2ec5c805de",
+      "title": "TP.HCM công bố 147 khu đất thí điểm làm nhà ở thương mại",
+      "url": "https://thanhnien.vn/tphcm-cong-bo-147-khu-dat-thi-diem-lam-nha-o-thuong-mai-185261116112846228.htm",
+      "category": "market",
+      "module_ids": [
+        "market"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-11-16T04:41:00+00:00",
+      "source_id": "thanhnien-real-estate",
+      "region_ids": [
+        "hcmc"
+      ],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [
+        "sales"
+      ],
+      "importance": 2,
+      "summary": "UBND TP.HCM đã có thông báo công bố chấp thuận cho tổ chức kinh doanh bất động sản được thực hiện dự án thí điểm nhà ở thương mại trên địa bàn TP.HCM năm 2026 (đợt 2).",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://thanhnien.vn/rss/kinh-te/dia-oc.rss",
+        "publisher_host": "thanhnien.vn",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-cc33e381fee04ff10edd",
+      "title": "Tài xế ô tô bị phạt 35 triệu đồng vì lùi xe trên cao tốc",
+      "url": "https://thanhnien.vn/tai-xe-o-to-bi-phat-35-trieu-dong-vi-lui-xe-tren-cao-toc-185261115191342043.htm",
+      "category": "infrastructure",
+      "module_ids": [
+        "infrastructure"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-11-16T03:58:00+00:00",
+      "source_id": "thanhnien-transport",
+      "region_ids": [
+        "ha-noi"
+      ],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [
+        "infrastructure"
+      ],
+      "importance": 2,
+      "summary": "Điều khiển ô tô đi lùi trên cao tốc Hà Nội - Thái Nguyên, một tài xế ở Bắc Ninh vừa bị lực lượng CSGT xử lý với mức phạt lên đến 35 triệu đồng, đồng thời trừ 10 điểm Giấy phép lái xe.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://thanhnien.vn/rss/xe/xe-giao-thong.rss",
+        "publisher_host": "thanhnien.vn",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-bbb9fa9297c18759ebf0",
+      "title": "TP HCM đưa 6 khu đất rộng gần 445 ha vào danh mục đấu thầu",
+      "url": "https://vnexpress.net/tp-hcm-dua-6-khu-dat-rong-gan-445-ha-vao-danh-muc-dau-thau-5145025.html",
+      "category": "market",
+      "module_ids": [
+        "market"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-11-16T03:05:46+00:00",
+      "source_id": "vnexpress-real-estate",
+      "region_ids": [
+        "hcmc"
+      ],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "Sáu khu đất tại TP HCM gồm các khu đô thị, dân cư, nhà máy điện mặt trời và trường học, dự kiến được đấu thầu chọn nhà đầu tư trong giai đoạn 2026-2027.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://vnexpress.net/rss/bat-dong-san.rss",
+        "publisher_host": "vnexpress.net",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-9a7db8c6ef9742b89660",
+      "title": "VSIP đầu tư khu chức năng 276 ha tại Đà Nẵng",
+      "url": "https://vnexpress.net/vsip-dau-tu-khu-chuc-nang-276-ha-tai-da-nang-5145042.html",
+      "category": "market",
+      "module_ids": [
+        "market"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-11-16T03:00:30+00:00",
+      "source_id": "vnexpress-real-estate",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "Dự án khu chức năng số 7 thuộc Khu thương mại tự do Đà Nẵng có quy mô 276 ha, tổng vốn 3.525 tỷ đồng, do VSIP đầu tư.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://vnexpress.net/rss/bat-dong-san.rss",
+        "publisher_host": "vnexpress.net",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-bb569e515e46579b8d3b",
+      "title": "Lãi vay mua nhà neo cao, người bán bất động sản tại Anh buộc phải hạ giá",
+      "url": "https://dantri.com.vn/bat-dong-san/lai-vay-mua-nha-neo-cao-nguoi-ban-bat-dong-san-tai-anh-buoc-phai-ha-gia-20261116085227521.htm",
+      "category": "market",
+      "module_ids": [
+        "market",
+        "macro"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-11-16T02:13:48+00:00",
+      "source_id": "dantri-real-estate",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "(Dân trí) - Giá chào bán nhà tại Anh giảm mạnh hơn mức thường thấy trong tháng 11, khi chi phí vay cao khiến người mua nhà thu hẹp ngân sách và người bán phải điều chỉnh kỳ vọng.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://dantri.com.vn/rss/bat-dong-san.rss",
+        "publisher_host": "dantri.com.vn",
+        "publication_date_from_feed": true
+      }
+    },
     {
       "id": "article-market-rss-51808da16115c5afb29f",
       "title": "Giá vàng hôm nay 16.11.2026: Thế giới đột ngột quay đầu giảm",
