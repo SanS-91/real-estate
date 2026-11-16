@@ -1,9 +1,91 @@
 {
   "schema_version": 1,
-  "build_id": "market-news-rss-20261116T125147Z",
-  "generated_at": "2026-11-16T12:51:47.636652+00:00",
-  "record_count": 1933,
+  "build_id": "market-news-rss-20261116T145143Z",
+  "generated_at": "2026-11-16T14:51:43.291596+00:00",
+  "record_count": 1937,
   "data": [
+    {
+      "id": "article-market-rss-ee6a8dd89923b210681d",
+      "title": "Phó Thủ tướng chỉ đạo ngành xây dựng giải bài toán ngập úng, ùn tắc",
+      "url": "https://dantri.com.vn/bat-dong-san/pho-thu-tuong-chi-dao-nganh-xay-dung-giai-bai-toan-ngap-ung-un-tac-20261116204823788.htm",
+      "category": "market",
+      "module_ids": [
+        "market"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-11-16T14:01:54+00:00",
+      "source_id": "dantri-real-estate",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [
+        "infrastructure"
+      ],
+      "importance": 2,
+      "summary": "(Dân trí) - Trước thực trạng ngập úng, ùn tắc giao thông và ô nhiễm đô thị, Phó Thủ tướng Thường trực Phạm Gia Túc yêu cầu ngành xây dựng đẩy mạnh ứng dụng công nghệ và làm chủ hạ tầng chiến lược.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://dantri.com.vn/rss/bat-dong-san.rss",
+        "publisher_host": "dantri.com.vn",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-dc8bb93d87fa78230fc7",
+      "title": "Ba tầng sinh thái rừng, biển, hồ tạo sức hút cho Vinhomes Green Paradise",
+      "url": "https://dantri.com.vn/bat-dong-san/ba-tang-sinh-thai-rung-bien-ho-tao-suc-hut-cho-vinhomes-green-paradise-20261116203559212.htm",
+      "category": "market",
+      "module_ids": [
+        "market"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-11-16T13:44:45+00:00",
+      "source_id": "dantri-real-estate",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [
+        "vinhomes"
+      ],
+      "tags": [],
+      "importance": 2,
+      "summary": "(Dân trí) - Tại Cần Giờ, Vinhomes Green Paradise hướng đến việc hình thành một không gian sống ven biển với dấu ấn riêng.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://dantri.com.vn/rss/bat-dong-san.rss",
+        "publisher_host": "dantri.com.vn",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-c2e08c6d41fe3885d101",
+      "title": "Gia Lai sắp khởi công 2 dự án năng lượng tái tạo hơn 2.181 tỷ đồng",
+      "url": "https://dantri.com.vn/kinh-doanh/gia-lai-sap-khoi-cong-2-du-an-nang-luong-tai-tao-hon-2181-ty-dong-20261116182425610.htm",
+      "category": "market",
+      "module_ids": [
+        "market",
+        "infrastructure"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-11-16T12:35:36+00:00",
+      "source_id": "dantri-business",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [
+        "sales"
+      ],
+      "importance": 2,
+      "summary": "(Dân trí) - UBND tỉnh Gia Lai đã có quyết định chấp thuận chủ trương đầu tư 2 dự án năng lượng tái tạo, với tổng vốn đầu tư hơn 2.181 tỷ đồng. Các dự án dự kiến khởi công vào ngày 18/11.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://dantri.com.vn/rss/kinh-doanh.rss",
+        "publisher_host": "dantri.com.vn",
+        "publication_date_from_feed": true
+      }
+    },
     {
       "id": "article-market-rss-fc139cabb39f8b94959d",
       "title": "Shake Shack sắp gia nhập thị trường ẩm thực Việt Nam",
@@ -600,6 +682,31 @@
         "method": "official-rss",
         "feed_url": "https://dantri.com.vn/rss/bat-dong-san.rss",
         "publisher_host": "dantri.com.vn",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-2a941646137306f3a470",
+      "title": "Phó thống đốc Ngân hàng Nhà nước giữ chức Chủ tịch VCCI",
+      "url": "https://vnexpress.net/pho-thong-doc-ngan-hang-nha-nuoc-giu-chuc-chu-tich-vcci-5145278.html",
+      "category": "macro",
+      "module_ids": [
+        "macro"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-11-16T08:03:11+00:00",
+      "source_id": "vnexpress-economy",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "Ông Phạm Quang Dũng, Phó thống đốc Ngân hàng Nhà nước được chỉ định giữ chức Bí thư Đảng ủy VCCI nhiệm kỳ 2025-2030, và được bầu làm Chủ tịch.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://vnexpress.net/rss/kinh-doanh.rss",
+        "publisher_host": "vnexpress.net",
         "publication_date_from_feed": true
       }
     },
