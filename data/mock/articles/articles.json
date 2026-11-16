@@ -1,9 +1,165 @@
 {
   "schema_version": 1,
-  "build_id": "market-news-rss-20261116T045137Z",
-  "generated_at": "2026-11-16T04:51:37.880041+00:00",
-  "record_count": 1893,
+  "build_id": "market-news-rss-20261116T064911Z",
+  "generated_at": "2026-11-16T06:49:11.581546+00:00",
+  "record_count": 1902,
   "data": [
+    {
+      "id": "article-market-rss-ed9e23a0794dfcba30f2",
+      "title": "SCB sẽ không trả lãi suất cho người gửi tiền online",
+      "url": "https://vnexpress.net/scb-se-khong-tra-lai-suat-cho-nguoi-gui-tien-online-5145221.html",
+      "category": "macro",
+      "module_ids": [
+        "macro"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-11-16T05:59:16+00:00",
+      "source_id": "vnexpress-economy",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "Từ hôm nay, SCB áp dụng biểu lãi suất tiết kiệm mới với mức 0% cho tất cả kỳ hạn gửi tiết kiệm trực tuyến.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://vnexpress.net/rss/kinh-doanh.rss",
+        "publisher_host": "vnexpress.net",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-cfd8aecb2e67057eda7d",
+      "title": "Các quỹ lớn gom cổ phiếu bất động sản sau nhịp giảm sâu",
+      "url": "https://vnexpress.net/cac-quy-lon-gom-co-phieu-bat-dong-san-sau-nhip-giam-sau-5145180.html",
+      "category": "market",
+      "module_ids": [
+        "market"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-11-16T05:53:13+00:00",
+      "source_id": "vnexpress-economy",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "VinaCapital, Dragon Capital cùng nhiều quỹ mở, ETF gia tăng nắm giữ cổ phiếu bất động sản trong bối cảnh nhiều mã đã mất nửa giá trị sau một năm.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://vnexpress.net/rss/kinh-doanh.rss",
+        "publisher_host": "vnexpress.net",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-fa0ce3c634ad6e4533b9",
+      "title": "Tài xế xe đầu kéo đối diện mức phạt 40 triệu đồng vì đi lùi trên cao tốc",
+      "url": "https://dantri.com.vn/thoi-su/tai-xe-xe-dau-keo-doi-dien-muc-phat-40-trieu-dong-vi-di-lui-tren-cao-toc-20261116120749163.htm",
+      "category": "infrastructure",
+      "module_ids": [
+        "infrastructure"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-11-16T05:48:38+00:00",
+      "source_id": "dantri-current-affairs",
+      "region_ids": [
+        "hcmc"
+      ],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [
+        "infrastructure"
+      ],
+      "importance": 2,
+      "summary": "(Dân trí) - Lùi xe trên cao tốc TPHCM - Trung Lương - Mỹ Thuận - Cần Thơ, tài xế xe đầu kéo đối diện mức phạt đến 40 triệu đồng và nguy cơ bị trừ hết điểm giấy phép lái xe.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://dantri.com.vn/rss/thoi-su.rss",
+        "publisher_host": "dantri.com.vn",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-4cf9b7553e648765b898",
+      "title": "Được coi là \"lá chắn\" lạm phát, sao giá vàng và bạc liên tục lao dốc?",
+      "url": "https://dantri.com.vn/kinh-doanh/duoc-coi-la-la-chan-lam-phat-sao-gia-vang-va-bac-lien-tuc-lao-doc-20261116111651700.htm",
+      "category": "macro",
+      "module_ids": [
+        "macro"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-11-16T05:03:33+00:00",
+      "source_id": "dantri-business",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "(Dân trí) - Sức ép từ đồng USD mạnh lên và nguy cơ Fed tăng tiếp lãi suất đang kích hoạt làn sóng bán tháo, đẩy giá vàng và bạc rơi sâu dưới các ngưỡng hỗ trợ then chốt.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://dantri.com.vn/rss/kinh-doanh.rss",
+        "publisher_host": "dantri.com.vn",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-61deb18375b70a3ceda1",
+      "title": "Quy hoạch Phan Thiết thành đô thị đa cực hướng biển",
+      "url": "https://dantri.com.vn/thoi-su/quy-hoach-phan-thiet-thanh-do-thi-da-cuc-huong-bien-20261116104301344.htm",
+      "category": "market",
+      "module_ids": [
+        "market"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-11-16T04:50:07+00:00",
+      "source_id": "dantri-current-affairs",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [
+        "legal"
+      ],
+      "importance": 2,
+      "summary": "(Dân trí) - Quy hoạch chung 6 phường tại Phan Thiết định hướng hình thành 4 cực động lực, mở rộng không gian đô thị về phía Tây, phía Bắc và phát triển các khu vực ven biển.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://dantri.com.vn/rss/thoi-su.rss",
+        "publisher_host": "dantri.com.vn",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-ea8aeb4d094ae1d4a34c",
+      "title": "Gia Lai tập trung tháo gỡ vướng mắc, thúc đẩy các dự án lớn",
+      "url": "https://vnexpress.net/gia-lai-tap-trung-thao-go-vuong-mac-thuc-day-cac-du-an-lon-5145170.html",
+      "category": "market",
+      "module_ids": [
+        "market"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-11-16T04:44:28+00:00",
+      "source_id": "vnexpress-real-estate",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "Chủ tịch UBND tỉnh Gia Lai Phạm Anh Tuấn trực tiếp khảo sát các dự án tại khu vực phía Tây, yêu cầu rà soát, xử lý khó khăn theo từng công đoạn, đẩy nhanh tiến độ triển khai.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://vnexpress.net/rss/bat-dong-san.rss",
+        "publisher_host": "vnexpress.net",
+        "publication_date_from_feed": true
+      }
+    },
     {
       "id": "article-market-rss-caff2dad7a2ec5c805de",
       "title": "TP.HCM công bố 147 khu đất thí điểm làm nhà ở thương mại",
@@ -30,6 +186,85 @@
         "method": "official-rss",
         "feed_url": "https://thanhnien.vn/rss/kinh-te/dia-oc.rss",
         "publisher_host": "thanhnien.vn",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-566c002e7283b67b1e82",
+      "title": "Đề xuất mới về nhà ở xã hội, chuyên gia lo người mua khó vay vốn",
+      "url": "https://dantri.com.vn/bat-dong-san/de-xuat-moi-ve-nha-o-xa-hoi-chuyen-gia-lo-nguoi-mua-kho-vay-von-20261116110242029.htm",
+      "category": "market",
+      "module_ids": [
+        "market"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-11-16T04:35:40+00:00",
+      "source_id": "dantri-real-estate",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "(Dân trí) - Đề xuất chỉ cho phép bán lại nhà ở xã hội sau 5 năm cho người đủ điều kiện mua nhằm hạn chế nguy cơ lợi dụng chính sách, song có thể phát sinh vướng mắc về tín dụng, định giá và thủ tục chuyển nhượng.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://dantri.com.vn/rss/bat-dong-san.rss",
+        "publisher_host": "dantri.com.vn",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-92b51d3294e3d8a811b3",
+      "title": "Diện mạo nút giao 4 tầng ở cửa ngõ phía đông TP HCM",
+      "url": "https://vnexpress.net/dien-mao-nut-giao-4-tang-o-cua-ngo-phia-dong-tp-hcm-5145043.html",
+      "category": "infrastructure",
+      "module_ids": [
+        "infrastructure"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-11-16T04:30:00+00:00",
+      "source_id": "vnexpress-current-affairs",
+      "region_ids": [
+        "hcmc"
+      ],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [
+        "infrastructure"
+      ],
+      "importance": 2,
+      "summary": "Nút giao Mỹ Thủy với hệ thống hầm chui và cầu vượt thép lớn nhất TP HCM đang dần thành hình, dự kiến hoàn thành quý I/2027 sau nhiều năm vướng mặt bằng.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://vnexpress.net/rss/thoi-su.rss",
+        "publisher_host": "vnexpress.net",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-3c928395ea0ae653952e",
+      "title": "Gần 25.000 khách hàng Vietcombank hưởng ưu đãi giảm lãi suất",
+      "url": "https://vnexpress.net/gan-25-000-khach-hang-vietcombank-huong-uu-dai-giam-lai-suat-5145172.html",
+      "category": "macro",
+      "module_ids": [
+        "macro"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-11-16T04:00:00+00:00",
+      "source_id": "vnexpress-economy",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "Vietcombank đã giải ngân khoảng 150.000 tỷ đồng cho gần 25.000 khách hàng trong chương trình ưu đãi giảm lãi suất, tính đến đầu tháng 11, theo Phó tổng giám đốc Bạch Thành Long.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://vnexpress.net/rss/kinh-doanh.rss",
+        "publisher_host": "vnexpress.net",
         "publication_date_from_feed": true
       }
     },
