@@ -1,9 +1,169 @@
 {
   "schema_version": 1,
-  "build_id": "market-news-rss-20261116T064911Z",
-  "generated_at": "2026-11-16T06:49:11.581546+00:00",
-  "record_count": 1902,
+  "build_id": "market-news-rss-20261116T085141Z",
+  "generated_at": "2026-11-16T08:51:41.692424+00:00",
+  "record_count": 1910,
   "data": [
+    {
+      "id": "article-market-rss-a7250c9497687853a1ca",
+      "title": "Bất động sản Trung Quốc: Giá tiếp tục trượt, người mua né nhà trên giấy",
+      "url": "https://dantri.com.vn/bat-dong-san/bat-dong-san-trung-quoc-gia-tiep-tuc-truot-nguoi-mua-ne-nha-tren-giay-20261116143427551.htm",
+      "category": "market",
+      "module_ids": [
+        "market"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-11-16T08:11:41+00:00",
+      "source_id": "dantri-real-estate",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "(Dân trí) - Dù liên tục được hỗ trợ, thị trường bất động sản Trung Quốc vẫn chưa thoát đà giảm giá. Người mua ngày càng ưu tiên nhà đã hoàn thiện để hạn chế rủi ro chậm bàn giao.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://dantri.com.vn/rss/bat-dong-san.rss",
+        "publisher_host": "dantri.com.vn",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-1f7b30be603cea580cad",
+      "title": "Phó thống đốc Ngân hàng Nhà nước giữ chức Bí thư Đảng ủy VCCI",
+      "url": "https://vnexpress.net/pho-thong-doc-ngan-hang-nha-nuoc-giu-chuc-bi-thu-dang-uy-vcci-5145278.html",
+      "category": "macro",
+      "module_ids": [
+        "macro"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-11-16T08:03:11+00:00",
+      "source_id": "vnexpress-economy",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "Ông Phạm Quang Dũng, Phó thống đốc Ngân hàng Nhà nước được chỉ định giữ chức Bí thư Đảng ủy VCCI nhiệm kỳ 2025-2030.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://vnexpress.net/rss/kinh-doanh.rss",
+        "publisher_host": "vnexpress.net",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-532635cb9962af784640",
+      "title": "Đề xuất chuyển ga Hà Nội, Giáp Bát về ga Phú Xuyên để mở rộng quốc lộ 1",
+      "url": "https://vnexpress.net/de-xuat-chuyen-ga-ha-noi-giap-bat-ve-ga-phu-xuyen-de-mo-rong-quoc-lo-1-5145263.html",
+      "category": "infrastructure",
+      "module_ids": [
+        "infrastructure"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-11-16T07:55:27+00:00",
+      "source_id": "vnexpress-current-affairs",
+      "region_ids": [
+        "ha-noi"
+      ],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [
+        "infrastructure"
+      ],
+      "importance": 2,
+      "summary": "UBND TP Hà Nội vừa đề xuất Chính phủ xem xét chuyển đón, trả khách, hàng hóa tại ga Hà Nội và Giáp Bát về ga Phú Xuyên để phục vụ giải phóng mặt bằng dự án Trục không gian quốc lộ 1.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://vnexpress.net/rss/thoi-su.rss",
+        "publisher_host": "vnexpress.net",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-adc7ab03bc88c2fd31f3",
+      "title": "SCB đưa lãi suất tiết kiệm về 0%, khách gửi mới hầu như không được nhận lãi",
+      "url": "https://dantri.com.vn/kinh-doanh/scb-dua-lai-suat-tiet-kiem-ve-0-khach-gui-moi-hau-nhu-khong-duoc-nhan-lai-20261116141012805.htm",
+      "category": "macro",
+      "module_ids": [
+        "macro"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-11-16T07:51:55+00:00",
+      "source_id": "dantri-business",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "(Dân trí) - Từ hôm nay (16/11), SCB áp dụng biểu lãi suất tiết kiệm mới, đưa lãi suất về 0%/năm tại hầu hết kỳ hạn, trong bối cảnh ngân hàng đang tái cơ cấu và thu hẹp mạnh mạng lưới.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://dantri.com.vn/rss/kinh-doanh.rss",
+        "publisher_host": "dantri.com.vn",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-c578433daac017d5873c",
+      "title": "Tài xế lùi xe trên cao tốc bị phạt 35 triệu đồng",
+      "url": "https://vnexpress.net/tai-xe-lui-xe-tren-cao-toc-bi-phat-35-trieu-dong-5145238.html",
+      "category": "infrastructure",
+      "module_ids": [
+        "infrastructure"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-11-16T07:15:50+00:00",
+      "source_id": "vnexpress-current-affairs",
+      "region_ids": [
+        "hcmc"
+      ],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [
+        "infrastructure"
+      ],
+      "importance": 2,
+      "summary": "Nam tài xế 48 tuổi bị phạt 35 triệu đồng, trừ 10 điểm giấy phép lái xe do lùi ôtô trên cao tốc TP HCM - Trung Lương - Mỹ Thuận.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://vnexpress.net/rss/thoi-su.rss",
+        "publisher_host": "vnexpress.net",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-f4953a914c5dd554bad2",
+      "title": "Bên trong khu tập thể Nghĩa Đô sau hơn một thập kỷ chờ xây mới ở Hà Nội",
+      "url": "https://dantri.com.vn/bat-dong-san/ben-trong-khu-tap-the-nghia-do-sau-hon-mot-thap-ky-cho-xay-moi-o-ha-noi-20261112235514782.htm",
+      "category": "market",
+      "module_ids": [
+        "market"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-11-16T07:03:50+00:00",
+      "source_id": "dantri-real-estate",
+      "region_ids": [
+        "ha-noi"
+      ],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "(Dân trí) - Nhiều căn hộ bỏ trống, đồ đạc nằm lại trong những dãy nhà xuống cấp tại khu tập thể Nghĩa Đô (Hà Nội), khi phần lớn cư dân đã chuyển đến nơi tạm cư.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://dantri.com.vn/rss/bat-dong-san.rss",
+        "publisher_host": "dantri.com.vn",
+        "publication_date_from_feed": true
+      }
+    },
     {
       "id": "article-market-rss-ed9e23a0794dfcba30f2",
       "title": "SCB sẽ không trả lãi suất cho người gửi tiền online",
@@ -236,6 +396,35 @@
       ],
       "importance": 2,
       "summary": "Nút giao Mỹ Thủy với hệ thống hầm chui và cầu vượt thép lớn nhất TP HCM đang dần thành hình, dự kiến hoàn thành quý I/2027 sau nhiều năm vướng mặt bằng.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://vnexpress.net/rss/thoi-su.rss",
+        "publisher_host": "vnexpress.net",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-8023d0f48f98247ace42",
+      "title": "Diện mạo nút giao 4 tầng đầu tiên ở TP HCM",
+      "url": "https://vnexpress.net/dien-mao-nut-giao-4-tang-dau-tien-o-tp-hcm-5145043.html",
+      "category": "infrastructure",
+      "module_ids": [
+        "infrastructure"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-11-16T04:30:00+00:00",
+      "source_id": "vnexpress-current-affairs",
+      "region_ids": [
+        "hcmc"
+      ],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [
+        "infrastructure"
+      ],
+      "importance": 2,
+      "summary": "Nút giao Mỹ Thủy vốn hơn 3.400 tỷ đồng, dự kiến hoàn thành quý I/2027, trở thành nút giao 4 tầng đầu tiên ở TP HCM, giảm ùn tắc cửa ngõ Cát Lái.",
       "source_verification": {
         "method": "official-rss",
         "feed_url": "https://vnexpress.net/rss/thoi-su.rss",
@@ -4426,6 +4615,33 @@
       "tags": [],
       "importance": 2,
       "summary": "Các khoảng sân vườn xen kẽ khu vực sinh hoạt giúp cân bằng không gian, đồng thời tăng khả năng tiếp cận ánh sáng tự nhiên.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://vnexpress.net/rss/bat-dong-san.rss",
+        "publisher_host": "vnexpress.net",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-6e9dd6d886f72fd1dc95",
+      "title": "Gia Lai chấp thuận đầu tư đô thị sinh thái hơn 11.400 tỷ",
+      "url": "https://vnexpress.net/gia-lai-chap-thuan-dau-tu-do-thi-sinh-thai-hon-11-400-ty-5145296.html",
+      "category": "market",
+      "module_ids": [
+        "market"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-11-11T17:00:00+00:00",
+      "source_id": "vnexpress-real-estate",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [
+        "sales"
+      ],
+      "importance": 2,
+      "summary": "UBND tỉnh Gia Lai vừa chấp thuận chủ trương đầu tư dự án Khu nhà ở sinh thái Thị Nại Eco Bay, quy mô gần 118 ha, tổng vốn hơn 11.433 tỷ đồng.",
       "source_verification": {
         "method": "official-rss",
         "feed_url": "https://vnexpress.net/rss/bat-dong-san.rss",
