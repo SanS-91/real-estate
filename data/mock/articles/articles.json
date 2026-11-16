@@ -1,9 +1,217 @@
 {
   "schema_version": 1,
-  "build_id": "market-news-rss-20261115T145223Z",
-  "generated_at": "2026-11-15T14:52:23.305999+00:00",
-  "record_count": 1876,
+  "build_id": "market-news-rss-20261116T005138Z",
+  "generated_at": "2026-11-16T00:51:38.721967+00:00",
+  "record_count": 1884,
   "data": [
+    {
+      "id": "article-market-rss-443056264559d952bb2d",
+      "title": "34 năm Nam Long: Bền bỉ với giá trị thực, kiến tạo đô thị đầy sức sống",
+      "url": "https://dantri.com.vn/bat-dong-san/34-nam-nam-long-ben-bi-voi-gia-tri-thuc-kien-tao-do-thi-day-suc-song-20261113203442747.htm",
+      "category": "market",
+      "module_ids": [
+        "market"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-11-16T00:00:00+00:00",
+      "source_id": "dantri-real-estate",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [
+        "nam-long"
+      ],
+      "tags": [],
+      "importance": 2,
+      "summary": "(Dân trí) - Hành trình 34 năm kiên định với triết lý “bất động sản giá trị thực” đã góp phần định hình dấu ấn khác biệt của Tập đoàn Nam Long trên thị trường bất động sản Việt Nam.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://dantri.com.vn/rss/bat-dong-san.rss",
+        "publisher_host": "dantri.com.vn",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-d44d2fa23bab0a7a3ab1",
+      "title": "Giá vàng lao dốc, chuyên gia nói mua lướt sóng tiềm ẩn rủi ro",
+      "url": "https://dantri.com.vn/kinh-doanh/gia-vang-lao-doc-chuyen-gia-noi-mua-luot-song-tiem-an-rui-ro-20261116014008983.htm",
+      "category": "macro",
+      "module_ids": [
+        "macro"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-11-15T23:44:01+00:00",
+      "source_id": "dantri-business",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "(Dân trí) - Giá vàng giảm mạnh, chuyên gia khuyến cáo nhà đầu tư cần thận trọng, tránh quyết định theo tâm lý đám đông và chú trọng quản trị rủi ro.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://dantri.com.vn/rss/kinh-doanh.rss",
+        "publisher_host": "dantri.com.vn",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-fa60d6f23d9b1ba4fbd2",
+      "title": "Hà Nội miễn phí vé xe buýt, metro cho người có tài năng và gia đình",
+      "url": "https://dantri.com.vn/thoi-su/ha-noi-mien-phi-ve-xe-buyt-metro-cho-nguoi-co-tai-nang-va-gia-dinh-20261115234703656.htm",
+      "category": "infrastructure",
+      "module_ids": [
+        "infrastructure"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-11-15T23:12:20+00:00",
+      "source_id": "dantri-current-affairs",
+      "region_ids": [
+        "ha-noi"
+      ],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [
+        "infrastructure"
+      ],
+      "importance": 2,
+      "summary": "(Dân trí) - Người có tài năng và thành viên gia đình gồm cha, mẹ đẻ; cha, mẹ của vợ hoặc chồng; vợ hoặc chồng; con đẻ, con nuôi dưới 18 tuổi được Hà Nội miễn phí tiền vé xe buýt có trợ giá và đường sắt đô thị.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://dantri.com.vn/rss/thoi-su.rss",
+        "publisher_host": "dantri.com.vn",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-87127a8dcf8af42afdb2",
+      "title": "Loạt giải pháp mạnh của Ngân hàng Nhà nước mở thêm cơ hội giảm lãi suất",
+      "url": "https://dantri.com.vn/kinh-doanh/loat-giai-phap-manh-cua-ngan-hang-nha-nuoc-mo-them-co-hoi-giam-lai-suat-20261115183445844.htm",
+      "category": "macro",
+      "module_ids": [
+        "macro"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-11-15T23:00:00+00:00",
+      "source_id": "dantri-business",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "(Dân trí) - Việc Ngân hàng Nhà nước mua USD giao ngay và hoán đổi ngoại tệ kỳ hạn 182 ngày được kỳ vọng bổ sung nguồn vốn VND, giảm áp lực thanh khoản trước cao điểm cuối năm, qua đó mở thêm dư địa giảm lãi suất.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://dantri.com.vn/rss/kinh-doanh.rss",
+        "publisher_host": "dantri.com.vn",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-13ac601bb7642e7c15a5",
+      "title": "Lãi suất trái phiếu ngân hàng neo cao dù tiết kiệm hạ nhiệt",
+      "url": "https://vnexpress.net/lai-suat-trai-phieu-ngan-hang-neo-cao-du-tiet-kiem-ha-nhiet-5144973.html",
+      "category": "macro",
+      "module_ids": [
+        "macro"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-11-15T23:00:00+00:00",
+      "source_id": "vnexpress-economy",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "Các ngân hàng trả lãi bình quân gần 9% một năm cho trái phiếu mới phát hành từ cuối tháng 10 đến nay, chưa có dấu hiệu giảm như lãi suất tiết kiệm.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://vnexpress.net/rss/kinh-doanh.rss",
+        "publisher_host": "vnexpress.net",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-14a8e17e076752a1b303",
+      "title": "Nhà trong hẻm với dải cửa kính ôm theo góc cong",
+      "url": "https://vnexpress.net/nha-trong-hem-voi-dai-cua-kinh-om-theo-goc-cong-5144929.html",
+      "category": "market",
+      "module_ids": [
+        "market"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-11-15T17:03:00+00:00",
+      "source_id": "vnexpress-real-estate",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "Trên khu đất 47 m2, nhóm thiết kế dùng đường cong làm nét chủ đạo cho mặt ngoài và bố trí khoảng thông tầng để kết nối không gian bên trong.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://vnexpress.net/rss/bat-dong-san.rss",
+        "publisher_host": "vnexpress.net",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-adaa929b86505b66fcc3",
+      "title": "Giá vàng thế giới có thể giảm tiếp tuần này",
+      "url": "https://vnexpress.net/gia-vang-the-gioi-co-the-giam-tiep-tuan-nay-5144856.html",
+      "category": "macro",
+      "module_ids": [
+        "macro"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-11-15T17:00:00+00:00",
+      "source_id": "vnexpress-economy",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "Sau khi xuống mức thấp nhất hơn một năm, giới phân tích cho rằng giá vàng có thể mất thêm 400-500 USD mỗi ounce nếu USD tiếp tục đi lên.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://vnexpress.net/rss/kinh-doanh.rss",
+        "publisher_host": "vnexpress.net",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-0b1ed8bbda38f8ec67ce",
+      "title": "Quy hoạch hơn 3.370 ha đất xây đô thị ven biển ở Phan Rí Cửa",
+      "url": "https://vnexpress.net/quy-hoach-hon-3-370-ha-dat-xay-do-thi-ven-bien-o-phan-ri-cua-5144934.html",
+      "category": "market",
+      "module_ids": [
+        "market"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-11-15T17:00:00+00:00",
+      "source_id": "vnexpress-real-estate",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [
+        "legal"
+      ],
+      "importance": 2,
+      "summary": "Xã Phan Rí Cửa sẽ mở rộng quỹ đất đô thị lên hơn 3.370 ha vào năm 2050, định hướng trở thành trung tâm kinh tế, du lịch nghỉ dưỡng ven biển.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://vnexpress.net/rss/bat-dong-san.rss",
+        "publisher_host": "vnexpress.net",
+        "publication_date_from_feed": true
+      }
+    },
     {
       "id": "article-market-rss-4f572d96a4f97dee51f3",
       "title": "Xe máy chở 3 thiếu niên va chạm với ô tô trên quốc lộ, một người tử vong",
