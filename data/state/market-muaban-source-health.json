@@ -1,11 +1,11 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-11-16T17:25:08.414131+00:00",
+  "generated_at": "2026-11-17T10:39:01.208642+00:00",
   "source_id": "muaban-vn",
   "targets_checked": 6,
-  "listing_urls_discovered": 19,
-  "details_checked": 19,
-  "valid_unexpired_project_ads": 11,
+  "listing_urls_discovered": 20,
+  "details_checked": 20,
+  "valid_unexpired_project_ads": 12,
   "newly_published": 0,
   "published_current_individual_listings": 11,
   "sources": [
@@ -46,11 +46,11 @@
       "project_id": "the-privia",
       "source_url": "https://muaban.net/bat-dong-san/ban-can-ho-du-an-the-privia-quan-binh-tan-ho-chi-minh",
       "access": "reachable",
-      "discovered": 1,
-      "checked": 1,
+      "discovered": 2,
+      "checked": 2,
       "qualified": 0,
       "reasons": {
-        "missing-numeric-total-sale-price": 1
+        "missing-numeric-total-sale-price": 2
       }
     },
     {
@@ -59,10 +59,10 @@
       "access": "reachable",
       "discovered": 12,
       "checked": 12,
-      "qualified": 8,
+      "qualified": 9,
       "reasons": {
-        "qualified-unexpired-listing": 8,
-        "publisher-expired": 4
+        "qualified-unexpired-listing": 9,
+        "publisher-expired": 3
       }
     },
     {
