@@ -697,7 +697,36 @@
         "43578046582"
       ],
       "verified_at": "2026-11-14T08:55:15.637834+00:00"
+    },
+    {
+      "project_id": "mizuki-park",
+      "project_name": "Mizuki Park",
+      "source_id": "muaban-vn",
+      "source_url": "https://muaban.net/bat-dong-san/ban-can-ho-chung-cu-du-an-mizuki-park-5598-huyen-binh-chanh-ho-chi-minh/ban-can-goc-mizuki-park-3pn-95m2-full-noi-that-view-dep-gia-5-3-ty-id71371323",
+      "listing_id": "71371323",
+      "listing_title": "Bán căn góc Mizuki Park 3PN 95m2, full nội thất, view đẹp. Giá 5,3 tỷ",
+      "asset_type": "apartment",
+      "market_layer": "individual-listing-asking",
+      "metric_type": "single-listing-asking-price-per-sqm",
+      "source_date_basis": "publisher-listing-start-not-update",
+      "source_listed_date": "2026-11-17",
+      "source_updated_date": "2026-11-17",
+      "source_expiration_date": "2026-12-01",
+      "listed_area_sqm": 95.0,
+      "listing_price_vnd": 5300000000,
+      "value_vnd_per_m2": 55789474,
+      "unit_price_basis": "derived-from-advertised-total-and-area",
+      "source_publication_date": null,
+      "methodology_note": "Individual Muaban asking advertisement only. The displayed rate is calculated from the listing's advertised total and usable area, not a publisher average, transaction, project ASP or project range. Date displayed is listing START date, NOT its relative update badge. Use only while the publisher's end date is unexpired.",
+      "id": "muaban-71371323-a07940e7e57b",
+      "review_status": "automated-two-hosted-checks",
+      "review_date": "2026-11-17",
+      "verification_run_ids": [
+        "44066741162",
+        "44132578102"
+      ],
+      "verified_at": "2026-11-17T17:02:51.441765+00:00"
     }
   ],
-  "record_count": 24
+  "record_count": 25
 }
