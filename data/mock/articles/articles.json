@@ -1,9 +1,144 @@
 {
   "schema_version": 1,
-  "build_id": "market-news-rss-20261116T184121Z",
-  "generated_at": "2026-11-16T18:41:21.415811+00:00",
-  "record_count": 1938,
+  "build_id": "market-news-rss-20261117T005150Z",
+  "generated_at": "2026-11-17T00:51:50.710313+00:00",
+  "record_count": 1943,
   "data": [
+    {
+      "id": "article-market-rss-51d10364f27f69dce3cc",
+      "title": "Giá vàng thế giới lùi về vùng đáy hơn một năm",
+      "url": "https://dantri.com.vn/kinh-doanh/gia-vang-the-gioi-lui-ve-vung-day-hon-mot-nam-20261117063826087.htm",
+      "category": "macro",
+      "module_ids": [
+        "macro"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-11-17T00:19:40+00:00",
+      "source_id": "dantri-business",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [
+        "sales"
+      ],
+      "importance": 2,
+      "summary": "(Dân trí) - Giá vàng thế giới giao dịch sát mức đáy hơn một năm vừa lập trong phiên trước, khi đồng USD mạnh lên và thị trường đặt cược Fed sẽ tăng lãi suất vào tháng 12.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://dantri.com.vn/rss/kinh-doanh.rss",
+        "publisher_host": "dantri.com.vn",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-cd37cbdf4807df877272",
+      "title": "Bất động sản Trung Quốc: Đà giảm giá nhà chậm lại",
+      "url": "https://dantri.com.vn/bat-dong-san/bat-dong-san-trung-quoc-da-giam-gia-nha-cham-lai-20261116142653875.htm",
+      "category": "market",
+      "module_ids": [
+        "market"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-11-17T00:02:35+00:00",
+      "source_id": "dantri-real-estate",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [
+        "pricing"
+      ],
+      "importance": 2,
+      "summary": "(Dân trí) - Giá nhà mới tại Trung Quốc trong tháng 10 giảm 2,4% so với cùng kỳ, mức giảm thấp nhất trong gần một năm. Tuy nhiên, tín hiệu ổn định mới chỉ xuất hiện ở một số thành phố lớn.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://dantri.com.vn/rss/bat-dong-san.rss",
+        "publisher_host": "dantri.com.vn",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-e17bc7457cc688b12cac",
+      "title": "Siêu sân bay Long Thành trước 'giờ G'",
+      "url": "https://thanhnien.vn/sieu-san-bay-long-thanh-truoc-gio-g-185261116221955755.htm",
+      "category": "infrastructure",
+      "module_ids": [
+        "infrastructure"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-11-16T23:03:00+00:00",
+      "source_id": "thanhnien-policy",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [
+        "infrastructure"
+      ],
+      "importance": 2,
+      "summary": "Chỉ hơn một tháng nữa, Cảng hàng không quốc tế Long Thành sẽ chính thức mở cửa khai thác thương mại. Ngay lúc này, toàn bộ đại công trường đang dồn tổng lực, chạy đua từng giờ để hoàn tất những công đoạn cuối cùng trước thời khắc lịch sử.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://thanhnien.vn/rss/kinh-te/chinh-sach-phat-trien.rss",
+        "publisher_host": "thanhnien.vn",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-61ee9abd31fe2a7eb919",
+      "title": "Giải phẫu sai phạm tại tổ hợp chung cư của Mường Thanh",
+      "url": "https://vnexpress.net/giai-phau-sai-pham-tai-to-hop-chung-cu-cua-muong-thanh-5143404.html",
+      "category": "market",
+      "module_ids": [
+        "market"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-11-16T22:00:00+00:00",
+      "source_id": "vnexpress-current-affairs",
+      "region_ids": [
+        "ha-noi"
+      ],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [
+        "legal"
+      ],
+      "importance": 2,
+      "summary": "Chỉ được phê duyệt 231 căn hộ trong quy hoạch chung cư CT6 Kiến Hưng, nhưng tập đoàn Mường Thanh đã xây trái phép thành 1.582 căn. Đây chỉ là một trong 12 dự án sai phạm của tập đoàn này tại Hà Nội.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://vnexpress.net/rss/thoi-su.rss",
+        "publisher_host": "vnexpress.net",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-68a1da8230b947408c6a",
+      "title": "Ngôi nhà ở Campuchia mở sân vườn đón gió sông Mekong",
+      "url": "https://vnexpress.net/ngoi-nha-o-campuchia-mo-san-vuon-don-gio-song-mekong-5144729.html",
+      "category": "market",
+      "module_ids": [
+        "market"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-11-16T21:00:00+00:00",
+      "source_id": "vnexpress-real-estate",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "Công trình tại Phnom Penh giữ lại cây xanh sẵn có, ưu tiên ánh sáng tự nhiên và chọn màu sắc, vật liệu theo cảnh quan ven sông.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://vnexpress.net/rss/bat-dong-san.rss",
+        "publisher_host": "vnexpress.net",
+        "publication_date_from_feed": true
+      }
+    },
     {
       "id": "article-market-rss-aead64aed4e603d6e8ed",
       "title": "TP HCM dự kiến chuyển hơn 341 ha đất lúa làm nhà ở thương mại",
