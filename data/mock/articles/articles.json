@@ -1,9 +1,194 @@
 {
   "schema_version": 1,
-  "build_id": "market-news-rss-20261117T005150Z",
-  "generated_at": "2026-11-17T00:51:50.710313+00:00",
-  "record_count": 1943,
+  "build_id": "market-news-rss-20261117T025154Z",
+  "generated_at": "2026-11-17T02:51:54.688147+00:00",
+  "record_count": 1950,
   "data": [
+    {
+      "id": "article-market-rss-2b08dbf7651769d36ff2",
+      "title": "Hàng trăm căn hộ tập thể cũ sắp giải tỏa để mở rộng quốc lộ 1A qua Hà Nội",
+      "url": "https://dantri.com.vn/bat-dong-san/hang-tram-can-ho-tap-the-cu-sap-giai-toa-de-mo-rong-quoc-lo-1a-qua-ha-noi-20261117000224666.htm",
+      "category": "market",
+      "module_ids": [
+        "market",
+        "infrastructure"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-11-17T02:21:57+00:00",
+      "source_id": "dantri-real-estate",
+      "region_ids": [
+        "ha-noi"
+      ],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [
+        "infrastructure"
+      ],
+      "importance": 2,
+      "summary": "(Dân trí) - Để phục vụ dự án mở rộng quốc lộ 1A, nhiều khu nhà ở tập thể cũ dọc trục đường Giải Phóng (TP Hà Nội) sẽ phải cắt xén một phần hoặc phá dỡ toàn bộ để thi công dự án.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://dantri.com.vn/rss/bat-dong-san.rss",
+        "publisher_host": "dantri.com.vn",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-56f8e9a85b356f2359e4",
+      "title": "5 lỗi trang trí phòng ngủ khiến không gian chật chội và bừa bộn",
+      "url": "https://dantri.com.vn/bat-dong-san/5-loi-trang-tri-phong-ngu-khien-khong-gian-chat-choi-va-bua-bon-20261117065241879.htm",
+      "category": "market",
+      "module_ids": [
+        "market"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-11-17T02:07:43+00:00",
+      "source_id": "dantri-real-estate",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "(Dân trí) - Dù chăm chỉ dọn dẹp mỗi ngày, phòng ngủ của bạn vẫn có thể trông bừa bộn và ngột ngạt nếu vô tình mắc phải những sai lầm sắp xếp đồ đạc tưởng chừng vô hại dưới đây.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://dantri.com.vn/rss/bat-dong-san.rss",
+        "publisher_host": "dantri.com.vn",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-dc2c0f7fd1b889c0afe7",
+      "title": "Giá vàng hôm nay 17.11.2026: Thấp nhất trong nhiều tháng qua",
+      "url": "https://thanhnien.vn/gia-vang-hom-nay-17112026-thap-nhat-trong-nhieu-thang-qua-185261117084459846.htm",
+      "category": "macro",
+      "module_ids": [
+        "macro"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-11-17T01:52:00+00:00",
+      "source_id": "thanhnien-banking",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "Giá vàng tiếp tục giảm xuống mức thấp nhất trong nhiều tháng trở lại đây. Chênh lệch giữa giá mua và bán duy trì ở mức 3 - 4 triệu đồng mỗi lượng.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://thanhnien.vn/rss/kinh-te/ngan-hang.rss",
+        "publisher_host": "thanhnien.vn",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-4514fd35a18628a54752",
+      "title": "ThS Nguyễn Hồng Nga: “Môi trường sống cũng là người thầy đồng hành cùng trẻ mỗi ngày”",
+      "url": "https://dantri.com.vn/bat-dong-san/ths-nguyen-hong-nga-moi-truong-song-cung-la-nguoi-thay-dong-hanh-cung-tre-moi-ngay-20261116174810397.htm",
+      "category": "market",
+      "module_ids": [
+        "market"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-11-17T01:00:00+00:00",
+      "source_id": "dantri-real-estate",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "(Dân trí) - Nhân Ngày Nhà giáo Việt Nam 20/11, ThS Nguyễn Hồng Nga - Giám đốc Chương trình Quốc tế Hệ thống Royal Schools chia sẻ những suy nghĩ về vai trò của môi trường sống trong hành trình trưởng thành của trẻ.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://dantri.com.vn/rss/bat-dong-san.rss",
+        "publisher_host": "dantri.com.vn",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-0a028355d8a15fc8e698",
+      "title": "Mua Diamond Sky, cơ hội trúng thưởng thêm căn hộ ngay trung tâm TPHCM",
+      "url": "https://dantri.com.vn/bat-dong-san/mua-diamond-sky-co-hoi-trung-thuong-them-can-ho-ngay-trung-tam-tphcm-20261116173516842.htm",
+      "category": "market",
+      "module_ids": [
+        "market"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-11-17T01:00:00+00:00",
+      "source_id": "dantri-real-estate",
+      "region_ids": [
+        "hcmc"
+      ],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "(Dân trí) - Mua nhà vốn là quyết định lớn với nhiều người, nhưng tại Diamond Sky, khách hàng có cơ hội “trúng” thưởng thêm một căn hộ gần 8 tỷ đồng từ chương trình “Mua nhà trúng nhà - Nhân đôi tổ ấm” do Van Phuc Group triển khai từ nay đến ngày 1/11/2027.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://dantri.com.vn/rss/bat-dong-san.rss",
+        "publisher_host": "dantri.com.vn",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-0608523d7877a460e570",
+      "title": "Van Phuc Group dành căn hộ gần 8 tỷ tặng người mua Diamond Sky",
+      "url": "https://vnexpress.net/van-phuc-group-danh-can-ho-gan-8-ty-tang-nguoi-mua-diamond-sky-5145271.html",
+      "category": "market",
+      "module_ids": [
+        "market"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-11-17T01:00:00+00:00",
+      "source_id": "vnexpress-real-estate",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "Người mua căn hộ Diamond Sky có cơ hội trúng thêm bất động sản gần 8 tỷ đồng, đồng thời tiếp cận hệ tiện ích tích hợp tại Van Phuc City.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://vnexpress.net/rss/bat-dong-san.rss",
+        "publisher_host": "vnexpress.net",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-a3771646ce22bbb4ef58",
+      "title": "Bố trí tái định cư hơn 3.000 hộ dân khi làm đường sắt tốc độ cao",
+      "url": "https://dantri.com.vn/bat-dong-san/bo-tri-tai-dinh-cu-hon-3000-ho-dan-khi-lam-duong-sat-toc-do-cao-20261116213816605.htm",
+      "category": "market",
+      "module_ids": [
+        "market",
+        "infrastructure"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-11-17T00:57:58+00:00",
+      "source_id": "dantri-real-estate",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [
+        "infrastructure"
+      ],
+      "importance": 2,
+      "summary": "(Dân trí) - Để triển khai dự án đường sắt tốc độ cao Bắc - Nam qua Đắk Lắk, tỉnh sẽ bố trí 18 khu tái định cư cho hơn 3.000 hộ dân. Dự kiến các khu tái định cư được khởi công cuối năm nay và đầu năm 2027.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://dantri.com.vn/rss/bat-dong-san.rss",
+        "publisher_host": "dantri.com.vn",
+        "publication_date_from_feed": true
+      }
+    },
     {
       "id": "article-market-rss-51d10364f27f69dce3cc",
       "title": "Giá vàng thế giới lùi về vùng đáy hơn một năm",
