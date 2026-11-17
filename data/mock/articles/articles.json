@@ -1,9 +1,221 @@
 {
   "schema_version": 1,
-  "build_id": "market-news-rss-20261117T065145Z",
-  "generated_at": "2026-11-17T06:51:45.012037+00:00",
-  "record_count": 1957,
+  "build_id": "market-news-rss-20261117T080839Z",
+  "generated_at": "2026-11-17T08:08:39.918060+00:00",
+  "record_count": 1965,
   "data": [
+    {
+      "id": "article-market-rss-199aa2f85da99889ed7e",
+      "title": "Khai trương văn phòng bán hàng và khu nhà mẫu dự án Maison Privée",
+      "url": "https://thanhnien.vn/khai-truong-van-phong-ban-hang-va-khu-nha-mau-du-an-maison-privee-185261117135242515.htm",
+      "category": "market",
+      "module_ids": [
+        "market"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-11-17T07:37:00+00:00",
+      "source_id": "thanhnien-real-estate",
+      "region_ids": [
+        "ha-noi"
+      ],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [
+        "supply"
+      ],
+      "importance": 2,
+      "summary": "Tiếp nối sự kiện ra mắt văn phòng bán hàng, ngày 14.11, Chủ đầu tư CapitaLand Development chính thức khai trương khu nhà mẫu Maison Privée tại Khu đô thị Ciputra, Hà Nội. Tại đây mở ra không gian trải nghiệm thực tế cho nhà đầu tư và khách hàng có nhu cầu ở thực.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://thanhnien.vn/rss/kinh-te/dia-oc.rss",
+        "publisher_host": "thanhnien.vn",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-09c9ad10a8ccf6bc4dff",
+      "title": "\"Đại gia điếu cày\" Lê Thanh Thản hầu tòa vụ 519 căn hộ không sổ đỏ",
+      "url": "https://dantri.com.vn/phap-luat/dai-gia-dieu-cay-le-thanh-than-hau-toa-vu-519-can-ho-khong-so-do-20261117141617635.htm",
+      "category": "market",
+      "module_ids": [
+        "market",
+        "legal"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-11-17T07:29:27+00:00",
+      "source_id": "dantri-legal",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "(Dân trí) - Ông Lê Thanh Thản, người được biết đến với biệt danh “đại gia điếu cày”, sắp hầu tòa trong vụ án liên quan 519 căn hộ không được cấp sổ đỏ, với số tiền thu lợi bất chính hơn 531 tỷ đồng.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://dantri.com.vn/rss/phap-luat.rss",
+        "publisher_host": "dantri.com.vn",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-917aa7e00f65dcf2b41d",
+      "title": "Chuyên gia đề xuất để chủ đầu tư mua lại nhà ở xã hội khi người dân cần bán",
+      "url": "https://dantri.com.vn/bat-dong-san/chuyen-gia-de-xuat-de-chu-dau-tu-mua-lai-nha-o-xa-hoi-khi-nguoi-dan-can-ban-20261116233636852.htm",
+      "category": "market",
+      "module_ids": [
+        "market"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-11-17T07:17:51+00:00",
+      "source_id": "dantri-real-estate",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "(Dân trí) - Trước phương án chỉ cho phép bán lại nhà ở xã hội sau 5 năm cho người đủ điều kiện, chuyên gia đề xuất người dân ưu tiên chuyển nhượng lại cho chủ đầu tư theo khung giá của Nhà nước, để chủ đầu tư bán tiếp cho đúng đối tượng.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://dantri.com.vn/rss/bat-dong-san.rss",
+        "publisher_host": "dantri.com.vn",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-95eedc42d14e8b2b47d0",
+      "title": "Gần 1.800 người tham dự hoạt động cuối tuần tại Qtopia Phước Hải",
+      "url": "https://vnexpress.net/gan-1-800-nguoi-tham-du-hoat-dong-cuoi-tuan-tai-qtopia-phuoc-hai-5145664.html",
+      "category": "market",
+      "module_ids": [
+        "market"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-11-17T07:00:00+00:00",
+      "source_id": "vnexpress-real-estate",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "Sự kiện “Hội ơi! Hội à” ngày 14/11 tại Trạm Quậy, Qtopia Phước Hải, thu hút gần 1.800 lượt khách với các hoạt động thả diều khổng lồ, biểu diễn đường phố, ẩm thực…",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://vnexpress.net/rss/bat-dong-san.rss",
+        "publisher_host": "vnexpress.net",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-aef2d44558e0909ebb7d",
+      "title": "Giá vàng thế giới tăng nhẹ: Dòng vốn sắp quay lại kim loại quý?",
+      "url": "https://dantri.com.vn/kinh-doanh/gia-vang-the-gioi-tang-nhe-dong-von-sap-quay-lai-kim-loai-quy-20261117103713980.htm",
+      "category": "macro",
+      "module_ids": [
+        "macro"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-11-17T06:51:01+00:00",
+      "source_id": "dantri-business",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "(Dân trí) - Giá vàng thế giới nhích lên trong bối cảnh giới đầu tư thận trọng ngóng đợi chính sách từ Cục dự trữ liên bang Mỹ (Fed).",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://dantri.com.vn/rss/kinh-doanh.rss",
+        "publisher_host": "dantri.com.vn",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-be2e830ae51a6e6f03d9",
+      "title": "Rà soát phương án đầu tư Tổ hợp công nghiệp đường sắt ở Hà Nội, tránh trùng lặp",
+      "url": "https://dantri.com.vn/bat-dong-san/ra-soat-phuong-an-dau-tu-to-hop-cong-nghiep-duong-sat-o-ha-noi-tranh-trung-lap-20261117131826398.htm",
+      "category": "market",
+      "module_ids": [
+        "infrastructure"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-11-17T06:46:25+00:00",
+      "source_id": "dantri-real-estate",
+      "region_ids": [
+        "ha-noi"
+      ],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [
+        "infrastructure"
+      ],
+      "importance": 2,
+      "summary": "(Dân trí) - Chiều 16/11, Ủy viên Bộ Chính trị, Phó Thủ tướng Thường trực Chính phủ Phạm Gia Túc chủ trì cuộc họp về Tổ hợp công nghiệp đường sắt.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://dantri.com.vn/rss/bat-dong-san.rss",
+        "publisher_host": "dantri.com.vn",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-d9c28f3a597bf90873c8",
+      "title": "Sửa Luật Đất đai: Quy định rõ ràng, không làm phát sinh thủ tục và chi phí",
+      "url": "https://dantri.com.vn/thoi-su/sua-luat-dat-dai-quy-dinh-ro-rang-khong-lam-phat-sinh-thu-tuc-va-chi-phi-20261117133448921.htm",
+      "category": "legal",
+      "module_ids": [
+        "legal",
+        "macro"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-11-17T06:43:23+00:00",
+      "source_id": "dantri-current-affairs",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [
+        "legal"
+      ],
+      "importance": 2,
+      "summary": "(Dân trí) - Yêu cầu đặt ra khi sửa các luật về đất đai, kinh doanh bất động sản, theo Phó Chủ tịch Quốc hội, là quy định rõ ràng, khả thi, không làm phát sinh thủ tục hành chính, chi phí tuân thủ không cần thiết.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://dantri.com.vn/rss/thoi-su.rss",
+        "publisher_host": "dantri.com.vn",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-cbae8b9c83a840cdf3b9",
+      "title": "Loạt ngân hàng giảm lãi tiền gửi, mặt bằng lãi suất hiện ra sao?",
+      "url": "https://dantri.com.vn/kinh-doanh/loat-ngan-hang-giam-lai-tien-gui-mat-bang-lai-suat-hien-ra-sao-20261117100956943.htm",
+      "category": "macro",
+      "module_ids": [
+        "macro"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-11-17T06:33:00+00:00",
+      "source_id": "dantri-business",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "(Dân trí) - Các ngân hàng VPBank và BIDV tiếp tục hạ lãi suất huy động. Trên thị trường, mức thấp nhất hiện nay là 0%/năm, mức lãi niêm yết cao nhất là 8,7%/năm cho kỳ hạn 13 tháng.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://dantri.com.vn/rss/kinh-doanh.rss",
+        "publisher_host": "dantri.com.vn",
+        "publication_date_from_feed": true
+      }
+    },
     {
       "id": "article-market-rss-60a7b1ad67ab80429137",
       "title": "Thêm 8 thang máy dẫn vào ga metro Bến Thành - Suối Tiên",
