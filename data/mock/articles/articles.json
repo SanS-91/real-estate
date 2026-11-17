@@ -1,9 +1,228 @@
 {
   "schema_version": 1,
-  "build_id": "market-news-rss-20261117T083432Z",
-  "generated_at": "2026-11-17T08:34:32.659545+00:00",
-  "record_count": 1967,
+  "build_id": "market-news-rss-20261117T105141Z",
+  "generated_at": "2026-11-17T10:51:41.488190+00:00",
+  "record_count": 1976,
   "data": [
+    {
+      "id": "article-market-rss-a2326c5eb2f5809c8abf",
+      "title": "Tin vui cho người dân khi đi công chứng bất động sản",
+      "url": "https://thanhnien.vn/tin-vui-cho-nguoi-dan-khi-di-cong-chung-bat-dong-san-185261117165349063.htm",
+      "category": "market",
+      "module_ids": [
+        "market",
+        "legal"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-11-17T10:34:00+00:00",
+      "source_id": "thanhnien-real-estate",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [
+        "sales"
+      ],
+      "importance": 2,
+      "summary": "Chính phủ ban hành Nghị định 413/2026, trong đó có quy định từ ngày 31.12.2028, công chứng viên có thể công chứng các giao dịch có đối tượng là bất động sản trên phạm vi toàn quốc, không còn bị giới hạn bởi địa giới hành chính cấp tỉnh như hiện nay.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://thanhnien.vn/rss/kinh-te/dia-oc.rss",
+        "publisher_host": "thanhnien.vn",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-4d188abb964fc3033ee5",
+      "title": "Công chứng viên được công chứng tất cả giao dịch bất động sản trên cả nước?",
+      "url": "https://dantri.com.vn/thoi-su/cong-chung-vien-duoc-cong-chung-tat-ca-giao-dich-bat-dong-san-tren-ca-nuoc-20261117163724274.htm",
+      "category": "market",
+      "module_ids": [
+        "market"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-11-17T09:40:34+00:00",
+      "source_id": "dantri-current-affairs",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [
+        "sales"
+      ],
+      "importance": 2,
+      "summary": "(Dân trí) - Theo lộ trình, công chứng viên của tổ chức hành nghề công chứng được công chứng tất cả các giao dịch có đối tượng là bất động sản trong phạm vi toàn quốc kể từ ngày 31/12/2028.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://dantri.com.vn/rss/thoi-su.rss",
+        "publisher_host": "dantri.com.vn",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-e0b9098137cfe6f4c4d2",
+      "title": "Về quê tết năm nay, bay chặng nào có thể chuyển qua sân bay Long Thành?",
+      "url": "https://thanhnien.vn/ve-que-tet-nam-nay-bay-chang-nao-co-the-chuyen-qua-san-bay-long-thanh-185261117152317476.htm",
+      "category": "infrastructure",
+      "module_ids": [
+        "infrastructure"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-11-17T09:21:00+00:00",
+      "source_id": "thanhnien-policy",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [
+        "infrastructure"
+      ],
+      "importance": 2,
+      "summary": "Trước thời điểm Cảng hàng không quốc tế Long Thành dự kiến chính thức đưa vào khai thác thương mại từ 0 giờ ngày 24.12 tới, một số đại lý vé máy bay đã bắt đầu hé lộ lịch bay dự thảo của các hãng nội địa đến và đi từ siêu sân bay này.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://thanhnien.vn/rss/kinh-te/chinh-sach-phat-trien.rss",
+        "publisher_host": "thanhnien.vn",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-7f11b442f9bd27299a6d",
+      "title": "Việt Nam cần hơn 136 tỷ USD đầu tư nguồn, lưới điện đến 2030",
+      "url": "https://vnexpress.net/viet-nam-can-hon-136-ty-usd-dau-tu-nguon-luoi-dien-den-2030-5145718.html",
+      "category": "market",
+      "module_ids": [
+        "market"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-11-17T09:16:22+00:00",
+      "source_id": "vnexpress-economy",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "Việt Nam cần khoảng 136,3 tỷ USD để phát triển nguồn điện và lưới truyền tải giai đoạn 2026-2030, theo Thứ trưởng Công Thương Trương Thanh Hoài.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://vnexpress.net/rss/kinh-doanh.rss",
+        "publisher_host": "vnexpress.net",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-62f74481d0a0becfefe3",
+      "title": "Elyse Island phát triển không gian sống bên sân golf Đại Phước",
+      "url": "https://vnexpress.net/elyse-island-phat-trien-khong-gian-song-ben-san-golf-dai-phuoc-5145720.html",
+      "category": "market",
+      "module_ids": [
+        "market"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-11-17T09:00:00+00:00",
+      "source_id": "vnexpress-real-estate",
+      "region_ids": [],
+      "project_ids": [
+        "elyse-island"
+      ],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "Elyse Island nằm kế cận sân golf 18 hố, có dịch vụ hỗ trợ khách hàng và không gian sinh hoạt chung, giúp cư dân duy trì sở thích, tiếp đón bạn bè và kết nối cộng đồng golfer.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://vnexpress.net/rss/bat-dong-san.rss",
+        "publisher_host": "vnexpress.net",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-6314f85499929cbca07d",
+      "title": "Tỷ giá trung tâm tăng, giá USD ngân hàng lên sát 26.000 đồng",
+      "url": "https://dantri.com.vn/kinh-doanh/ty-gia-trung-tam-tang-gia-usd-ngan-hang-len-sat-26000-dong-20261117150414690.htm",
+      "category": "macro",
+      "module_ids": [
+        "macro"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-11-17T08:43:14+00:00",
+      "source_id": "dantri-business",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "(Dân trí) - Sáng 17/11, Ngân hàng Nhà nước công bố tỷ giá trung tâm ở mức 25.652 đồng/USD, tăng 13 đồng so với phiên trước, qua đó thiết lập mức cao nhất từ trước đến nay.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://dantri.com.vn/rss/kinh-doanh.rss",
+        "publisher_host": "dantri.com.vn",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-b83d03697111c8ebd201",
+      "title": "Hà Nội sắp mở bán nhà xã hội gần 30 triệu một m2 ở Đông Anh",
+      "url": "https://vnexpress.net/ha-noi-sap-mo-ban-nha-xa-hoi-gan-30-trieu-mot-m2-o-dong-anh-5145689.html",
+      "category": "market",
+      "module_ids": [
+        "market"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-11-17T08:37:37+00:00",
+      "source_id": "vnexpress-real-estate",
+      "region_ids": [
+        "ha-noi"
+      ],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [
+        "supply",
+        "pricing"
+      ],
+      "importance": 2,
+      "summary": "Từ ngày 17/12, chủ đầu tư sẽ nhận hồ sơ hơn 300 căn nhà xã hội tại xã Phúc Thịnh, với giá bán từ 1,1 tỷ đồng một căn.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://vnexpress.net/rss/bat-dong-san.rss",
+        "publisher_host": "vnexpress.net",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-12e2a149f1e26dd1e229",
+      "title": "Thiết kế nút giao Tân Hiệp hé lộ hướng kéo dài cao tốc Bến Lức - Long Thành",
+      "url": "https://dantri.com.vn/thoi-su/thiet-ke-nut-giao-tan-hiep-he-lo-huong-keo-dai-cao-toc-ben-luc-long-thanh-20261117151826116.htm",
+      "category": "infrastructure",
+      "module_ids": [
+        "infrastructure"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-11-17T08:32:17+00:00",
+      "source_id": "dantri-current-affairs",
+      "region_ids": [
+        "hcmc"
+      ],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [
+        "legal",
+        "infrastructure"
+      ],
+      "importance": 2,
+      "summary": "(Dân trí) - Nút giao kết nối cao tốc Bến Lức - Long Thành và Biên Hòa - Vũng Tàu có sẵn đầu cầu chờ, trùng hướng tuyến cao tốc mới mà Quy hoạch tổng thể TPHCM tầm nhìn 100 năm đề cập.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://dantri.com.vn/rss/thoi-su.rss",
+        "publisher_host": "dantri.com.vn",
+        "publication_date_from_feed": true
+      }
+    },
     {
       "id": "article-market-rss-2d8bf454c504b127a44a",
       "title": "Tái khởi động siêu dự án lấn biển Đà Nẵng gần 55.000 tỷ đồng",
@@ -28,6 +247,34 @@
         "method": "official-rss",
         "feed_url": "https://dantri.com.vn/rss/bat-dong-san.rss",
         "publisher_host": "dantri.com.vn",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-b03e44c59c3da8371374",
+      "title": "TP HCM đề xuất thu 50% giá trị vi phạm để giữ chung cư sai phép",
+      "url": "https://vnexpress.net/tp-hcm-de-xuat-thu-50-gia-tri-vi-pham-de-giu-chung-cu-sai-phep-5145661.html",
+      "category": "market",
+      "module_ids": [
+        "market",
+        "infrastructure"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-11-17T07:59:04+00:00",
+      "source_id": "vnexpress-real-estate",
+      "region_ids": [
+        "hcmc"
+      ],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "TP HCM đề xuất cho chủ đầu tư công trình xây sai phép nộp 50% giá trị phần vi phạm để không phải tháo dỡ và giao đất không qua đấu giá cho dự án thành phần.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://vnexpress.net/rss/bat-dong-san.rss",
+        "publisher_host": "vnexpress.net",
         "publication_date_from_feed": true
       }
     },
