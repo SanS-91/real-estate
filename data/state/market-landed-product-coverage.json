@@ -1,11 +1,11 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-11-16T10:50:41+00:00",
+  "generated_at": "2026-11-17T11:36:46+00:00",
   "scope": "official-product-labels-only-not-developer-price-or-transactions",
   "sources_checked": 4,
-  "source_pages_available": 2,
+  "source_pages_available": 4,
   "product_types_catalogued": 9,
-  "product_types_verified": 5,
+  "product_types_verified": 9,
   "price_records_published": 0,
   "sources": [
     {
@@ -13,7 +13,7 @@
       "project_id": "izumi-city",
       "subproject_name": "Izumi Gardenia",
       "source_url": "https://www.namlongvn.com/en/township-residential/izumi-gardenia/",
-      "checked_at": "2026-11-16T10:50:41+00:00",
+      "checked_at": "2026-11-17T11:36:46+00:00",
       "status": "source-checked",
       "product_labels": [
         {
@@ -40,7 +40,7 @@
       "project_id": "waterpoint",
       "subproject_name": "The Pearl",
       "source_url": "https://www.namlongvn.com/en/township-residential/the-pearl/",
-      "checked_at": "2026-11-16T10:50:41+00:00",
+      "checked_at": "2026-11-17T11:36:46+00:00",
       "status": "source-checked",
       "product_labels": [
         {
@@ -74,24 +74,54 @@
       "project_id": "elyse-island",
       "subproject_name": "Elyse Island",
       "source_url": "https://www.namlongvn.com/en/township-residential/elyse-island/",
-      "checked_at": "2026-11-16T10:50:41+00:00",
-      "status": "network-error",
-      "product_labels": [],
+      "checked_at": "2026-11-17T11:36:46+00:00",
+      "status": "source-checked",
+      "product_labels": [
+        {
+          "id": "detached-villa",
+          "label": "Biệt thự đơn lập",
+          "source_phrase": "Detached Villas",
+          "source_verified": true,
+          "price_status": "no-source-verified-dated-offer"
+        },
+        {
+          "id": "semi-detached-villa",
+          "label": "Biệt thự song lập",
+          "source_phrase": "Semi-Detached Villas",
+          "source_verified": true,
+          "price_status": "no-source-verified-dated-offer"
+        }
+      ],
       "candidate_prices": 0,
       "published_prices": 0,
-      "error_class": "ReadTimeout"
+      "http_status": 200
     },
     {
       "source_id": "springville-lowrise",
       "project_id": "springville",
       "subproject_name": "Springville",
       "source_url": "https://gamudaland.com.vn/en/developments/springville",
-      "checked_at": "2026-11-16T10:50:41+00:00",
-      "status": "network-error",
-      "product_labels": [],
+      "checked_at": "2026-11-17T11:36:46+00:00",
+      "status": "source-checked",
+      "product_labels": [
+        {
+          "id": "townhouse",
+          "label": "Nhà phố",
+          "source_phrase": "Townhouse",
+          "source_verified": true,
+          "price_status": "no-source-verified-dated-offer"
+        },
+        {
+          "id": "shophouse",
+          "label": "Nhà phố thương mại",
+          "source_phrase": "Shophouse",
+          "source_verified": true,
+          "price_status": "no-source-verified-dated-offer"
+        }
+      ],
       "candidate_prices": 0,
       "published_prices": 0,
-      "error_class": "ConnectionError"
+      "http_status": 200
     }
   ]
 }
