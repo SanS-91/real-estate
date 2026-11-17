@@ -1,9 +1,90 @@
 {
   "schema_version": 1,
-  "build_id": "market-news-rss-20261117T045145Z",
-  "generated_at": "2026-11-17T04:51:45.088427+00:00",
-  "record_count": 1954,
+  "build_id": "market-news-rss-20261117T065145Z",
+  "generated_at": "2026-11-17T06:51:45.012037+00:00",
+  "record_count": 1957,
   "data": [
+    {
+      "id": "article-market-rss-60a7b1ad67ab80429137",
+      "title": "Thêm 8 thang máy dẫn vào ga metro Bến Thành - Suối Tiên",
+      "url": "https://vnexpress.net/them-8-thang-may-dan-vao-ga-metro-ben-thanh-suoi-tien-5145642.html",
+      "category": "infrastructure",
+      "module_ids": [
+        "infrastructure"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-11-17T05:45:39+00:00",
+      "source_id": "vnexpress-current-affairs",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [
+        "infrastructure"
+      ],
+      "importance": 2,
+      "summary": "8 thang máy tại 7 cầu bộ hành nối các ga trên cao được đưa vào sử dụng, giúp người già, người khuyết tật tiếp cận metro thuận tiện hơn.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://vnexpress.net/rss/thoi-su.rss",
+        "publisher_host": "vnexpress.net",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-8d5dc7986991c6628aab",
+      "title": "Ngân hàng Nhà nước nâng tỷ giá trung tâm lên kỷ lục",
+      "url": "https://vnexpress.net/ngan-hang-nha-nuoc-nang-ty-gia-trung-tam-len-ky-luc-5145650.html",
+      "category": "macro",
+      "module_ids": [
+        "macro"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-11-17T05:36:49+00:00",
+      "source_id": "vnexpress-economy",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "Ngân hàng Nhà nước nối dài chuỗi tăng tỷ giá trung tâm 5 phiên liên tiếp, lên 25.652 đồng mỗi USD, cao nhất từ trước đến nay.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://vnexpress.net/rss/kinh-doanh.rss",
+        "publisher_host": "vnexpress.net",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-65f593a82c664a1dd9a4",
+      "title": "7 nhà ga trên tuyến metro số 1 trang bị thang máy cho người dân TP.HCM",
+      "url": "https://thanhnien.vn/7-nha-ga-tren-tuyen-metro-so-1-trang-bi-thang-may-cho-nguoi-dan-tphcm-185261117121904966.htm",
+      "category": "infrastructure",
+      "module_ids": [
+        "infrastructure"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-11-17T05:36:00+00:00",
+      "source_id": "thanhnien-policy",
+      "region_ids": [
+        "hcmc"
+      ],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [
+        "infrastructure"
+      ],
+      "importance": 2,
+      "summary": "Ban Quản lý Đường sắt đô thị TP.HCM (MAUR) hôm nay tổ chức Lễ khánh thành Dự án Xây dựng và lắp đặt thang máy tại cầu vượt bộ hành các nhà ga trên cao thuộc tuyến metro số 1 (Bến Thành - Suối Tiên).",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://thanhnien.vn/rss/kinh-te/chinh-sach-phat-trien.rss",
+        "publisher_host": "thanhnien.vn",
+        "publication_date_from_feed": true
+      }
+    },
     {
       "id": "article-market-rss-a080fa7d199df74ef8e9",
       "title": "Metro số 1 TPHCM có thang máy cầu bộ hành tại 7 ga trên cao",
