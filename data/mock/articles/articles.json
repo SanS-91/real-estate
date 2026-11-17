@@ -1,9 +1,113 @@
 {
   "schema_version": 1,
-  "build_id": "market-news-rss-20261117T145145Z",
-  "generated_at": "2026-11-17T14:51:45.498084+00:00",
-  "record_count": 1981,
+  "build_id": "market-news-rss-20261117T174154Z",
+  "generated_at": "2026-11-17T17:41:54.426084+00:00",
+  "record_count": 1985,
   "data": [
+    {
+      "id": "article-market-rss-74e9f84fc7b22a11a91f",
+      "title": "Nhà 5,3 triệu USD của 'James Bond thế hệ mới' Robert Pattinson",
+      "url": "https://vnexpress.net/nha-5-3-trieu-usd-cua-james-bond-the-he-moi-robert-pattinson-5145648.html",
+      "category": "market",
+      "module_ids": [
+        "market"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-11-17T17:05:00+00:00",
+      "source_id": "vnexpress-real-estate",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "Căn nhà trên sườn đồi ở Los Angeles của Robert Pattinson mang phong cách Tây Ban Nha, với mái ngói đất nung, cửa vòm và các hiên mở ra vườn.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://vnexpress.net/rss/bat-dong-san.rss",
+        "publisher_host": "vnexpress.net",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-312ea848d788b463e927",
+      "title": "Giá vàng bật tăng từ đáy một năm: Chuyên gia phố Wall chia rẽ sâu sắc",
+      "url": "https://dantri.com.vn/kinh-doanh/gia-vang-bat-tang-tu-day-mot-nam-chuyen-gia-pho-wall-chia-re-sau-sac-20261117221043129.htm",
+      "category": "macro",
+      "module_ids": [
+        "macro"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-11-17T16:21:27+00:00",
+      "source_id": "dantri-business",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "(Dân trí) - Sau khi lao dốc xuống vùng đáy thấp nhất một năm, giá vàng vừa phát tín hiệu hồi phục nhẹ. Tuy nhiên, giới tài chính quốc tế đang chia rẽ sâu sắc về đường đi sắp tới của kim loại quý.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://dantri.com.vn/rss/kinh-doanh.rss",
+        "publisher_host": "dantri.com.vn",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-f8cfe1c7f7653b248e6c",
+      "title": "Hà Nội chốt hạn di dời cư dân tại 12 dự án Mường Thanh",
+      "url": "https://vnexpress.net/ha-noi-chot-han-di-doi-cu-dan-tai-12-du-an-muong-thanh-5145844.html",
+      "category": "market",
+      "module_ids": [
+        "market"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-11-17T16:08:42+00:00",
+      "source_id": "vnexpress-current-affairs",
+      "region_ids": [
+        "ha-noi"
+      ],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "Hà Nội yêu cầu hoàn thành di dời cư dân khỏi các căn hộ phải phá dỡ hoặc hoàn trả công năng công cộng tại 12 dự án liên quan Tập đoàn Mường Thanh trước 31/12/2027.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://vnexpress.net/rss/thoi-su.rss",
+        "publisher_host": "vnexpress.net",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-c9fa732ab886ad5a78f0",
+      "title": "Hà Nội chốt thời hạn di dân, xử lý xong 12 dự án của Tập đoàn Mường Thanh",
+      "url": "https://dantri.com.vn/thoi-su/ha-noi-chot-thoi-han-di-dan-xu-ly-xong-12-du-an-cua-tap-doan-muong-thanh-20261117220303777.htm",
+      "category": "market",
+      "module_ids": [
+        "market"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-11-17T15:08:17+00:00",
+      "source_id": "dantri-current-affairs",
+      "region_ids": [
+        "ha-noi"
+      ],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "(Dân trí) - Hà Nội đặt mục tiêu hoàn thành di dời cư dân ra khỏi các căn hộ được xác định phải phá dỡ hoặc hoàn trả công năng công cộng tại 12 dự án vi phạm của Tập đoàn Mường Thanh trước ngày 31/12/2027.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://dantri.com.vn/rss/thoi-su.rss",
+        "publisher_host": "dantri.com.vn",
+        "publication_date_from_feed": true
+      }
+    },
     {
       "id": "article-market-rss-1a315aba94518e97f6e8",
       "title": "Thứ trưởng Bộ Xây dựng yêu cầu đẩy nhanh tiến độ cao tốc Dầu Giây - Tân Phú",
