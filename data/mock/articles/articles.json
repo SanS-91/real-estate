@@ -1,9 +1,119 @@
 {
   "schema_version": 1,
-  "build_id": "market-news-rss-20261117T025154Z",
-  "generated_at": "2026-11-17T02:51:54.688147+00:00",
-  "record_count": 1950,
+  "build_id": "market-news-rss-20261117T045145Z",
+  "generated_at": "2026-11-17T04:51:45.088427+00:00",
+  "record_count": 1954,
   "data": [
+    {
+      "id": "article-market-rss-a080fa7d199df74ef8e9",
+      "title": "Metro số 1 TPHCM có thang máy cầu bộ hành tại 7 ga trên cao",
+      "url": "https://dantri.com.vn/thoi-su/metro-so-1-tphcm-co-thang-may-cau-bo-hanh-tai-7-ga-tren-cao-20261117111447195.htm",
+      "category": "infrastructure",
+      "module_ids": [
+        "infrastructure"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-11-17T04:25:56+00:00",
+      "source_id": "dantri-current-affairs",
+      "region_ids": [
+        "hcmc"
+      ],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [
+        "infrastructure"
+      ],
+      "importance": 2,
+      "summary": "(Dân trí) - Ngày 17/11, 8 thang máy tại 7 cầu vượt bộ hành kết nối các nhà ga trên cao của tuyến Metro số 1 TPHCM được khánh thành, giúp người cao tuổi, người khuyết tật đi metro thuận tiện hơn.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://dantri.com.vn/rss/thoi-su.rss",
+        "publisher_host": "dantri.com.vn",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-711d93b526eb405f39fa",
+      "title": "Người dân sẽ được công chứng nhà đất ở tỉnh khác",
+      "url": "https://vnexpress.net/nguoi-dan-se-duoc-cong-chung-nha-dat-o-tinh-khac-5145588.html",
+      "category": "market",
+      "module_ids": [
+        "market"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-11-17T04:14:40+00:00",
+      "source_id": "vnexpress-current-affairs",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [
+        "sales"
+      ],
+      "importance": 2,
+      "summary": "Người dân có thể công chứng giao dịch nhà đất tại bất kỳ tỉnh, thành nào, không còn bị giới hạn bởi địa phương nơi có bất động sản, từ ngày 31/12/2028.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://vnexpress.net/rss/thoi-su.rss",
+        "publisher_host": "vnexpress.net",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-1f22276443dfac54d6b5",
+      "title": "Kịch bản sân bay Long Thành vừa khai thác, vừa thi công đến năm 2027",
+      "url": "https://dantri.com.vn/thoi-su/kich-ban-san-bay-long-thanh-vua-khai-thac-vua-thi-cong-den-nam-2027-20261117100029450.htm",
+      "category": "infrastructure",
+      "module_ids": [
+        "infrastructure"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-11-17T04:03:40+00:00",
+      "source_id": "dantri-current-affairs",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [
+        "infrastructure"
+      ],
+      "importance": 2,
+      "summary": "(Dân trí) - Theo kế hoạch của ACV, nhà ga hành khách cánh Đông, một phần nhà ga hàng hóa và nhà để xe P1 sân bay Long Thành phải đến năm 2027 mới nghiệm thu hoàn thành.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://dantri.com.vn/rss/thoi-su.rss",
+        "publisher_host": "dantri.com.vn",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-9b1a108b62ab9fa15b81",
+      "title": "Mua bán nhà đất ở tỉnh này, có thể công chứng tại tỉnh khác từ khi nào?",
+      "url": "https://dantri.com.vn/bat-dong-san/mua-ban-nha-dat-o-tinh-nay-co-the-cong-chung-tai-tinh-khac-tu-khi-nao-20261117091511261.htm",
+      "category": "market",
+      "module_ids": [
+        "market"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-11-17T03:09:49+00:00",
+      "source_id": "dantri-real-estate",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [
+        "sales"
+      ],
+      "importance": 2,
+      "summary": "(Dân trí) - Từ ngày 31/12/2028, giao dịch nhà đất dự kiến được công chứng trên toàn quốc thay vì giới hạn theo địa bàn như hiện nay, với điều kiện các cơ sở dữ liệu liên quan vận hành đồng bộ.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://dantri.com.vn/rss/bat-dong-san.rss",
+        "publisher_host": "dantri.com.vn",
+        "publication_date_from_feed": true
+      }
+    },
     {
       "id": "article-market-rss-2b08dbf7651769d36ff2",
       "title": "Hàng trăm căn hộ tập thể cũ sắp giải tỏa để mở rộng quốc lộ 1A qua Hà Nội",
