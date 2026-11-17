@@ -1,9 +1,93 @@
 {
   "schema_version": 1,
-  "build_id": "market-news-rss-20261117T105141Z",
-  "generated_at": "2026-11-17T10:51:41.488190+00:00",
-  "record_count": 1976,
+  "build_id": "market-news-rss-20261117T125141Z",
+  "generated_at": "2026-11-17T12:51:41.372442+00:00",
+  "record_count": 1980,
   "data": [
+    {
+      "id": "article-market-rss-3f22865bc2deb0fc0816",
+      "title": "Loạt đất vàng ở TPHCM thanh toán cho dự án BT cao tốc Long Thành - Hồ Tràm",
+      "url": "https://dantri.com.vn/thoi-su/loat-dat-vang-o-tphcm-thanh-toan-cho-du-an-bt-cao-toc-long-thanh-ho-tram-20261117175730245.htm",
+      "category": "market",
+      "module_ids": [
+        "market",
+        "infrastructure"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-11-17T12:25:04+00:00",
+      "source_id": "dantri-current-affairs",
+      "region_ids": [
+        "hcmc"
+      ],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [
+        "infrastructure"
+      ],
+      "importance": 2,
+      "summary": "(Dân trí) - Sở Tài chính TPHCM đề xuất thanh toán một lần quỹ đất trị giá gần 35.000 tỷ đồng cho nhà đầu tư cao tốc Long Thành - Hồ Tràm. Tuyến đường dài khoảng 42km, tổng vốn hơn 40.800 tỷ đồng.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://dantri.com.vn/rss/thoi-su.rss",
+        "publisher_host": "dantri.com.vn",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-f936cfe45824c5158552",
+      "title": "Vinhomes Sài Gòn Park vinh danh đại sứ thương hiệu xuất sắc",
+      "url": "https://dantri.com.vn/bat-dong-san/vinhomes-sai-gon-park-vinh-danh-dai-su-thuong-hieu-xuat-sac-20261117185239891.htm",
+      "category": "market",
+      "module_ids": [
+        "market"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-11-17T12:12:23+00:00",
+      "source_id": "dantri-real-estate",
+      "region_ids": [
+        "hcmc"
+      ],
+      "project_ids": [],
+      "developer_ids": [
+        "vinhomes"
+      ],
+      "tags": [],
+      "importance": 2,
+      "summary": "(Dân trí) - Sau gần ba tháng đào tạo, tranh tài và trải nghiệm thực tế tại Singapore, Trung Quốc, cuộc thi \"Road to the Elite 2026 - Tìm kiếm Đại sứ thương hiệu\" của Vinhomes Sài Gòn Park đã khép lại với đêm Gala vinh danh những Đại sứ thương hiệu xuất sắc.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://dantri.com.vn/rss/bat-dong-san.rss",
+        "publisher_host": "dantri.com.vn",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-9cffee5f93ccdd1a43d1",
+      "title": "Khu đô thị 17.000 tỷ đồng ở Nha Trang được mở rộng thêm 16,22 ha",
+      "url": "https://vnexpress.net/khu-do-thi-17-000-ty-dong-o-nha-trang-duoc-mo-rong-them-16-22-ha-5145789.html",
+      "category": "market",
+      "module_ids": [
+        "market"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-11-17T10:54:16+00:00",
+      "source_id": "vnexpress-real-estate",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "Khu đô thị hỗn hợp thành phố Nha Trang với tổng đầu tư hơn 17.000 tỷ đồng được mở rộng thêm 16,22 ha, đồng thời điều chỉnh cơ cấu sản phẩm nhà ở và địa điểm thực hiện.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://vnexpress.net/rss/bat-dong-san.rss",
+        "publisher_host": "vnexpress.net",
+        "publication_date_from_feed": true
+      }
+    },
     {
       "id": "article-market-rss-a2326c5eb2f5809c8abf",
       "title": "Tin vui cho người dân khi đi công chứng bất động sản",
@@ -247,6 +331,33 @@
         "method": "official-rss",
         "feed_url": "https://dantri.com.vn/rss/bat-dong-san.rss",
         "publisher_host": "dantri.com.vn",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-cd783453fc170136b76d",
+      "title": "Vốn ngoại đổ hàng tỷ USD vào các siêu dự án ở TP HCM",
+      "url": "https://vnexpress.net/von-ngoai-do-hang-ty-usd-vao-cac-sieu-du-an-o-tp-hcm-5145661.html",
+      "category": "market",
+      "module_ids": [
+        "market"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-11-17T07:59:04+00:00",
+      "source_id": "vnexpress-real-estate",
+      "region_ids": [
+        "hcmc"
+      ],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "Dòng vốn ngoại và tín dụng vẫn chảy mạnh vào các đại đô thị lấn biển, trung tâm tài chính và khu công nghệ cao tại TP HCM.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://vnexpress.net/rss/bat-dong-san.rss",
+        "publisher_host": "vnexpress.net",
         "publication_date_from_feed": true
       }
     },
