@@ -1,9 +1,36 @@
 {
   "schema_version": 1,
-  "build_id": "market-news-rss-20261117T080839Z",
-  "generated_at": "2026-11-17T08:08:39.918060+00:00",
-  "record_count": 1965,
+  "build_id": "market-news-rss-20261117T083432Z",
+  "generated_at": "2026-11-17T08:34:32.659545+00:00",
+  "record_count": 1967,
   "data": [
+    {
+      "id": "article-market-rss-2d8bf454c504b127a44a",
+      "title": "Tái khởi động siêu dự án lấn biển Đà Nẵng gần 55.000 tỷ đồng",
+      "url": "https://dantri.com.vn/bat-dong-san/tai-khoi-dong-sieu-du-an-lan-bien-da-nang-gan-55000-ty-dong-20261117133659958.htm",
+      "category": "market",
+      "module_ids": [
+        "market"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-11-17T08:21:29+00:00",
+      "source_id": "dantri-real-estate",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [
+        "legal"
+      ],
+      "importance": 2,
+      "summary": "(Dân trí) - Sau nhiều năm đình trệ do vướng mắc pháp lý, dự án Khu đô thị quốc tế Đa Phước nằm ven vịnh Đà Nẵng, có tổng vốn đầu tư gần 55.000 tỷ đồng, đã được tổ chức lễ tái khởi động.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://dantri.com.vn/rss/bat-dong-san.rss",
+        "publisher_host": "dantri.com.vn",
+        "publication_date_from_feed": true
+      }
+    },
     {
       "id": "article-market-rss-199aa2f85da99889ed7e",
       "title": "Khai trương văn phòng bán hàng và khu nhà mẫu dự án Maison Privée",
@@ -30,6 +57,31 @@
         "method": "official-rss",
         "feed_url": "https://thanhnien.vn/rss/kinh-te/dia-oc.rss",
         "publisher_host": "thanhnien.vn",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-642692602bef27b157a1",
+      "title": "Giá vàng trong nước “lệch pha” thế giới: Người mua chịu rủi ro kép",
+      "url": "https://dantri.com.vn/kinh-doanh/gia-vang-trong-nuoc-lech-pha-the-gioi-nguoi-mua-chiu-rui-ro-kep-20261117140955500.htm",
+      "category": "macro",
+      "module_ids": [
+        "macro"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-11-17T07:32:05+00:00",
+      "source_id": "dantri-business",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "(Dân trí) - Người mua vàng trong nước đang chịu hai rủi ro, gồm phần chênh lệch với thế giới có thể bị thu hẹp và chênh lệch giữa giá vàng mua vào - bán ra, đang vào khoảng 3-4 triệu đồng/lượng.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://dantri.com.vn/rss/kinh-doanh.rss",
+        "publisher_host": "dantri.com.vn",
         "publication_date_from_feed": true
       }
     },
