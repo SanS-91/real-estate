@@ -1,9 +1,165 @@
 {
   "schema_version": 1,
-  "build_id": "market-news-rss-20261118T065143Z",
-  "generated_at": "2026-11-18T06:51:43.746840+00:00",
-  "record_count": 2021,
+  "build_id": "market-news-rss-20261118T085146Z",
+  "generated_at": "2026-11-18T08:51:46.427118+00:00",
+  "record_count": 2027,
   "data": [
+    {
+      "id": "article-market-rss-7c072777f531149c71e5",
+      "title": "BVBank phát hành trái phiếu lãi suất lên 9,5%/năm",
+      "url": "https://thanhnien.vn/bvbank-phat-hanh-trai-phieu-lai-suat-len-95-nam-185261118153717182.htm",
+      "category": "macro",
+      "module_ids": [
+        "macro"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-11-18T08:45:00+00:00",
+      "source_id": "thanhnien-banking",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "Ngày 19.11, Ngân hàng TMCP Bản Việt (BVBank) chính thức phát hành 13 triệu trái phiếu ra công chúng với tổng mệnh giá 1.300 tỉ đồng, lãi suất tham chiếu cộng biên độ 3,6% lên đến 9,5%/năm. Việc phát hành trái phiếu của BVBank nhằm mục tiêu gia tăng vốn cấp 2 và bổ sung nguồn vốn cho vay, đặc biệt tr",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://thanhnien.vn/rss/kinh-te/ngan-hang.rss",
+        "publisher_host": "thanhnien.vn",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-2b89dfe86ec30531fc2e",
+      "title": "Khu đô thị hơn 17.300 tỉ đồng ở Nha Trang tăng thêm 16 ha",
+      "url": "https://thanhnien.vn/khu-do-thi-hon-17300-ti-dong-o-nha-trang-tang-them-16-ha-185261118120341805.htm",
+      "category": "market",
+      "module_ids": [
+        "market"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-11-18T08:16:00+00:00",
+      "source_id": "thanhnien-policy",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "UBND tỉnh Khánh Hòa vừa điều chỉnh diện tích Khu đô thị hỗn hợp thành phố Nha Trang từ 226,71 ha lên 242,93 ha, trong đó 16,22 ha dành cải tạo không gian mặt nước, chống ngập.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://thanhnien.vn/rss/kinh-te/chinh-sach-phat-trien.rss",
+        "publisher_host": "thanhnien.vn",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-221157d3402224199869",
+      "title": "Gia Lai khởi công 2 nhà máy năng lượng tái tạo hơn 2.181 tỉ đồng",
+      "url": "https://thanhnien.vn/gia-lai-khoi-cong-2-nha-may-nang-luong-tai-tao-hon-2181-ti-dong-185261118120154821.htm",
+      "category": "infrastructure",
+      "module_ids": [
+        "infrastructure"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-11-18T08:15:00+00:00",
+      "source_id": "thanhnien-policy",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "Gia Lai khởi công 2 nhà máy năng lượng tái tạo có tổng vốn đầu tư hơn 2.181 tỉ đồng, dự kiến cung cấp gần 170 triệu kWh điện sạch mỗi năm khi đi vào vận hành năm 2028.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://thanhnien.vn/rss/kinh-te/chinh-sach-phat-trien.rss",
+        "publisher_host": "thanhnien.vn",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-948ca35b75d0b940e70c",
+      "title": "Sắp livestream vận hành thử nghiệm siêu dự án chống ngập 10.000 tỉ của TP.HCM",
+      "url": "https://thanhnien.vn/sap-livestream-van-hanh-thu-nghiem-sieu-du-an-chong-ngap-10000-ti-cua-tphcm-185261118144530162.htm",
+      "category": "market",
+      "module_ids": [
+        "market"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-11-18T07:54:00+00:00",
+      "source_id": "thanhnien-policy",
+      "region_ids": [
+        "hcmc"
+      ],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "Dự án Giải quyết ngập do triều khu vực TP.HCM có xét đến yếu tố biến đổi khí hậu (giai đoạn 1) - còn gọi là dự án chống ngập 10.000 tỉ đồng - đang bước vào giai đoạn hoàn thiện cuối cùng để chuẩn bị chính thức khánh thành, đưa vào khai thác, vận hành trong tháng 12.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://thanhnien.vn/rss/kinh-te/chinh-sach-phat-trien.rss",
+        "publisher_host": "thanhnien.vn",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-55f0127d2bd7e637c9e7",
+      "title": "Hơn 10.250 cơ sở nhà, đất công ở TP HCM cần sắp xếp, xử lý",
+      "url": "https://vnexpress.net/hon-10-250-co-so-nha-dat-cong-o-tp-hcm-can-sap-xep-xu-ly-5146088.html",
+      "category": "market",
+      "module_ids": [
+        "market"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-11-18T07:53:36+00:00",
+      "source_id": "vnexpress-real-estate",
+      "region_ids": [
+        "hcmc"
+      ],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "TP HCM hiện có 10.257 nhà, đất thuộc diện sắp xếp, xử lý, trong đó 320 cơ sở thuộc diện thu hồi, một số được chuyển đổi công năng cho lĩnh vực y tế, giáo dục, khoa học công nghệ.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://vnexpress.net/rss/bat-dong-san.rss",
+        "publisher_host": "vnexpress.net",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-7131a759dc3052e49969",
+      "title": "Phố Hiến Heritage Collection ra mắt: Tinh thần thương cảng xưa giữa đô thị hiện đại",
+      "url": "https://dantri.com.vn/bat-dong-san/pho-hien-heritage-collection-ra-mat-tinh-than-thuong-cang-xua-giua-do-thi-hien-dai-20261118143132740.htm",
+      "category": "market",
+      "module_ids": [
+        "market"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-11-18T07:36:05+00:00",
+      "source_id": "dantri-real-estate",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [
+        "supply"
+      ],
+      "importance": 2,
+      "summary": "(Dân trí) - Ngày 18/11, bộ sưu tập giới hạn 303 căn nhà phố thương mại Phố Hiến Heritage Collection thuộc khu Thịnh Vượng, dự án Happy Home Phố Hiến, Hưng Yên chính thức ra mắt thị trường.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://dantri.com.vn/rss/bat-dong-san.rss",
+        "publisher_host": "dantri.com.vn",
+        "publication_date_from_feed": true
+      }
+    },
     {
       "id": "article-market-rss-1171d02ca20b89b121ba",
       "title": "Cán bộ mang cơm vào rừng, giám sát việc khai thác gỗ trong dự án cao tốc",
