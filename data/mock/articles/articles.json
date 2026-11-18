@@ -1,9 +1,170 @@
 {
   "schema_version": 1,
-  "build_id": "market-news-rss-20261118T045143Z",
-  "generated_at": "2026-11-18T04:51:43.505250+00:00",
-  "record_count": 2015,
+  "build_id": "market-news-rss-20261118T065143Z",
+  "generated_at": "2026-11-18T06:51:43.746840+00:00",
+  "record_count": 2021,
   "data": [
+    {
+      "id": "article-market-rss-1171d02ca20b89b121ba",
+      "title": "Cán bộ mang cơm vào rừng, giám sát việc khai thác gỗ trong dự án cao tốc",
+      "url": "https://dantri.com.vn/thoi-su/can-bo-mang-com-vao-rung-giam-sat-viec-khai-thac-go-trong-du-an-cao-toc-20261117162445951.htm",
+      "category": "market",
+      "module_ids": [
+        "market",
+        "infrastructure"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-11-18T06:09:34+00:00",
+      "source_id": "dantri-current-affairs",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [
+        "infrastructure"
+      ],
+      "importance": 2,
+      "summary": "(Dân trí) - Để giải phóng mặt bằng cao tốc Vinh - Thanh Thủy, 8 cán bộ quản lý rừng ở Nghệ An luân phiên vượt hàng chục cây số, mang cơm vào rừng giám sát khai thác, tránh chặt hạ ngoài ranh giới dự án.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://dantri.com.vn/rss/thoi-su.rss",
+        "publisher_host": "dantri.com.vn",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-94d021c0a8af3911294b",
+      "title": "One Era và kỳ vọng về diện mạo đô thị mới tại Đông Bắc TPHCM",
+      "url": "https://dantri.com.vn/bat-dong-san/one-era-va-ky-vong-ve-dien-mao-do-thi-moi-tai-dong-bac-tphcm-20261117215701356.htm",
+      "category": "market",
+      "module_ids": [
+        "market"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-11-18T05:00:00+00:00",
+      "source_id": "dantri-real-estate",
+      "region_ids": [
+        "hcmc"
+      ],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [
+        "infrastructure"
+      ],
+      "importance": 2,
+      "summary": "(Dân trí) - Diện mạo đô thị TPHCM liên tục thay đổi cùng sự hình thành của nhiều đại đô thị quy mô lớn. Không chỉ bổ sung không gian sống mới, các dự án góp phần cải thiện hạ tầng, và tạo động lực phát triển cho các khu vực lân cận.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://dantri.com.vn/rss/bat-dong-san.rss",
+        "publisher_host": "dantri.com.vn",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-51af0b3596a27212dd96",
+      "title": "Căn hộ thứ cấp tại TP HCM đua nhau giảm giá",
+      "url": "https://vnexpress.net/can-ho-thu-cap-tai-tp-hcm-dua-nhau-giam-gia-5143920.html",
+      "category": "market",
+      "module_ids": [
+        "market",
+        "macro"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-11-18T04:53:45+00:00",
+      "source_id": "vnexpress-real-estate",
+      "region_ids": [
+        "hcmc",
+        "ha-noi"
+      ],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "Áp lực lãi vay thả nổi lên tới 15% mỗi năm sau thời gian ân hạn nợ gốc, nhiều chủ căn hộ thứ cấp (mua đi, bán lại) tại TP HCM đua nhau giảm giá chung cư để thoát hàng.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://vnexpress.net/rss/bat-dong-san.rss",
+        "publisher_host": "vnexpress.net",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-834e91b3b6d998b0a76a",
+      "title": "Giá vàng trong nước, thế giới quay đầu giảm mạnh",
+      "url": "https://dantri.com.vn/kinh-doanh/gia-vang-trong-nuoc-the-gioi-quay-dau-giam-manh-20261118113157233.htm",
+      "category": "macro",
+      "module_ids": [
+        "macro"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-11-18T04:42:06+00:00",
+      "source_id": "dantri-business",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "(Dân trí) - Giá vàng miếng SJC sáng 18/11 giảm 500.000 đồng/lượng ở cả hai chiều mua vào và bán ra, trong khi vàng thế giới mất gần 60 USD/ounce, lùi xuống dưới mốc 3.800 USD.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://dantri.com.vn/rss/kinh-doanh.rss",
+        "publisher_host": "dantri.com.vn",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-5fa484733cce5e4a8055",
+      "title": "Ba người được cứu khỏi căn hộ chung cư bốc cháy",
+      "url": "https://vnexpress.net/ba-nguoi-duoc-cuu-khoi-can-ho-chung-cu-boc-chay-5146053.html",
+      "category": "market",
+      "module_ids": [
+        "market"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-11-18T04:29:58+00:00",
+      "source_id": "vnexpress-current-affairs",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "Một người lớn và hai trẻ em mắc kẹt trong căn hộ tầng 8 chung cư được cảnh sát hướng dẫn thoát ra ngoài khi hỏa hoạn xảy ra, sáng 18/11.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://vnexpress.net/rss/thoi-su.rss",
+        "publisher_host": "vnexpress.net",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-38bb73095e66c2cb89d0",
+      "title": "Giá vàng trong nước giảm chậm hơn thế giới, neo quanh 137 triệu đồng",
+      "url": "https://vnexpress.net/gia-vang-trong-nuoc-giam-cham-hon-the-gioi-neo-quanh-137-trieu-dong-5146017.html",
+      "category": "macro",
+      "module_ids": [
+        "macro"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-11-18T04:22:16+00:00",
+      "source_id": "vnexpress-economy",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "Giá vàng thế giới lao dốc về thấp nhất một năm, trong nước sáng nay chỉ giảm nửa triệu đồng một lượng, xuống sát 137 triệu đồng.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://vnexpress.net/rss/kinh-doanh.rss",
+        "publisher_host": "vnexpress.net",
+        "publication_date_from_feed": true
+      }
+    },
     {
       "id": "article-market-rss-4a62501928b9e556f774",
       "title": "Giá vàng, bạc giảm không phanh, người mua lỗ cả trăm triệu đồng/lượng",
