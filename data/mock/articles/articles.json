@@ -1,9 +1,167 @@
 {
   "schema_version": 1,
-  "build_id": "market-news-rss-20261117T174154Z",
-  "generated_at": "2026-11-17T17:41:54.426084+00:00",
-  "record_count": 1985,
+  "build_id": "market-news-rss-20261118T005148Z",
+  "generated_at": "2026-11-18T00:51:48.947181+00:00",
+  "record_count": 1993,
   "data": [
+    {
+      "id": "article-market-rss-9408aaf44a905e9c553a",
+      "title": "TP HCM dự kiến dùng 7 khu đất đổi làm cao tốc kết nối sân bay Long Thành",
+      "url": "https://vnexpress.net/tp-hcm-du-kien-dung-7-khu-dat-doi-lam-cao-toc-ket-noi-san-bay-long-thanh-5145892.html",
+      "category": "infrastructure",
+      "module_ids": [
+        "infrastructure"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-11-18T00:21:35+00:00",
+      "source_id": "vnexpress-current-affairs",
+      "region_ids": [
+        "hcmc"
+      ],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [
+        "infrastructure"
+      ],
+      "importance": 2,
+      "summary": "TP HCM dự kiến dùng 7 khu đất rộng gần 179 ha, trị giá khoảng 35.000 tỷ đồng thuộc các phường Thủ Đức, Sài Gòn, Bến Thành… để thanh toán cho nhà đầu tư cao tốc Long Thành - Hồ Tràm.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://vnexpress.net/rss/thoi-su.rss",
+        "publisher_host": "vnexpress.net",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-793c37752f8fce5bd684",
+      "title": "Xe tải bốc cháy dữ dội trong đêm trên cao tốc Vĩnh Hảo - Phan Thiết",
+      "url": "https://dantri.com.vn/thoi-su/xe-tai-boc-chay-du-doi-trong-dem-tren-cao-toc-vinh-hao-phan-thiet-20261118063856163.htm",
+      "category": "infrastructure",
+      "module_ids": [
+        "infrastructure"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-11-18T00:10:27+00:00",
+      "source_id": "dantri-current-affairs",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [
+        "infrastructure"
+      ],
+      "importance": 2,
+      "summary": "(Dân trí) - Chiếc xe tải chở hàng đang lưu thông trên cao tốc Vĩnh Hảo - Phan Thiết bất ngờ bốc cháy. Người đi đường đã cùng tài xế dập lửa, không để đám cháy lan rộng.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://dantri.com.vn/rss/thoi-su.rss",
+        "publisher_host": "dantri.com.vn",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-43519ae0d1c887d0b42d",
+      "title": "Hà Nội công bố danh mục 135 căn hộ, nhà thấp tầng CT6 Kiến Hưng phải di dời",
+      "url": "https://dantri.com.vn/thoi-su/ha-noi-cong-bo-danh-muc-135-can-ho-nha-thap-tang-ct6-kien-hung-phai-di-doi-20261117233303291.htm",
+      "category": "market",
+      "module_ids": [
+        "market"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-11-17T23:18:00+00:00",
+      "source_id": "dantri-current-affairs",
+      "region_ids": [
+        "ha-noi"
+      ],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "(Dân trí) - 125 căn hộ khối đế tầng 2-3 của 3 tòa chung cư CT6A, CT6B, CT6C và 10 căn hộ thấp tầng tại tổ hợp chung cư cao cấp và thương mại Bemes (CT6 Kiến Hưng) thuộc diện phải di dời, phá dỡ.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://dantri.com.vn/rss/thoi-su.rss",
+        "publisher_host": "dantri.com.vn",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-db9b8c11503f8b22f9f6",
+      "title": "Giá vàng trong nước, quốc tế đồng loạt phục hồi",
+      "url": "https://dantri.com.vn/kinh-doanh/gia-vang-trong-nuoc-quoc-te-dong-loat-phuc-hoi-20261118001051666.htm",
+      "category": "macro",
+      "module_ids": [
+        "macro"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-11-17T23:00:00+00:00",
+      "source_id": "dantri-business",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "(Dân trí) - Giá vàng miếng SJC tăng 200.000 đồng/lượng trong bối cảnh vàng thế giới bật tăng trở lại. Dù vậy, người mua vàng ở vùng đỉnh lịch sử hiện vẫn có thể lỗ gần 56,6 triệu đồng/lượng nếu bán ra.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://dantri.com.vn/rss/kinh-doanh.rss",
+        "publisher_host": "dantri.com.vn",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-a0198db9619209836609",
+      "title": "Lãi vay khó giảm sâu",
+      "url": "https://thanhnien.vn/lai-vay-kho-giam-sau-185261117205404655.htm",
+      "category": "macro",
+      "module_ids": [
+        "macro"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-11-17T23:00:00+00:00",
+      "source_id": "thanhnien-banking",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "Đã có gần 50 nhà băng công bố giảm lãi suất đầu vào, vậy lãi vay hiện còn bao nhiêu? Đó là vấn đề mà thị trường đang quan tâm, nhất là trong bối cảnh nhu cầu vốn cuối năm vẫn rất căng.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://thanhnien.vn/rss/kinh-te/ngan-hang.rss",
+        "publisher_host": "thanhnien.vn",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-8a7a4a948a84ad3a77d8",
+      "title": "Áp trần giá chuyển nhượng nhà ở xã hội?",
+      "url": "https://thanhnien.vn/ap-tran-gia-chuyen-nhuong-nha-o-xa-hoi-185261117185411604.htm",
+      "category": "market",
+      "module_ids": [
+        "market"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-11-17T23:00:00+00:00",
+      "source_id": "thanhnien-real-estate",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "Sau khi nêu những khó khăn nếu áp dụng phương án kiểm soát giá chuyển nhượng đối với nhà ở xã hội, Bộ Xây dựng đề xuất sau 5 năm được bán cho người thuộc đối tượng đủ điều kiện với giá do các bên thỏa thuận.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://thanhnien.vn/rss/kinh-te/dia-oc.rss",
+        "publisher_host": "thanhnien.vn",
+        "publication_date_from_feed": true
+      }
+    },
     {
       "id": "article-market-rss-74e9f84fc7b22a11a91f",
       "title": "Nhà 5,3 triệu USD của 'James Bond thế hệ mới' Robert Pattinson",
@@ -25,6 +183,62 @@
       "source_verification": {
         "method": "official-rss",
         "feed_url": "https://vnexpress.net/rss/bat-dong-san.rss",
+        "publisher_host": "vnexpress.net",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-c84f59d09b865450973f",
+      "title": "Di dời cư dân 135 căn hộ và nhà thấp tầng tại CT6 Kiến Hưng",
+      "url": "https://vnexpress.net/di-doi-cu-dan-135-can-ho-va-nha-thap-tang-tai-ct6-kien-hung-5145855.html",
+      "category": "market",
+      "module_ids": [
+        "market"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-11-17T17:00:00+00:00",
+      "source_id": "vnexpress-current-affairs",
+      "region_ids": [
+        "ha-noi"
+      ],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [
+        "legal"
+      ],
+      "importance": 2,
+      "summary": "Hà Nội yêu cầu di dời cư dân khỏi 125 căn hộ tại khối đế ba tòa chung cư CT6 Kiến Hưng để hoàn trả hoặc chuyển đổi công năng; phá dỡ 10 nhà thấp tầng xây dựng sai quy hoạch.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://vnexpress.net/rss/thoi-su.rss",
+        "publisher_host": "vnexpress.net",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-8bb075a54bb270dee601",
+      "title": "Chung cư Mường Thanh ở Hà Nội quá tải, xuống cấp",
+      "url": "https://vnexpress.net/chung-cu-muong-thanh-o-ha-noi-qua-tai-xuong-cap-5144996.html",
+      "category": "market",
+      "module_ids": [
+        "market"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-11-17T17:00:00+00:00",
+      "source_id": "vnexpress-current-affairs",
+      "region_ids": [
+        "ha-noi"
+      ],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "Hầu hết chung cư nằm trong 12 dự án sai phạm của tập đoàn Mường Thanh quá tải, xe để tràn lên mặt đường, không gian công cộng; nhiều căn hộ không có ban công, cư dân phải phơi quần áo ở hành lang.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://vnexpress.net/rss/thoi-su.rss",
         "publisher_host": "vnexpress.net",
         "publication_date_from_feed": true
       }
