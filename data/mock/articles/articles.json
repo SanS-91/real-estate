@@ -1,9 +1,172 @@
 {
   "schema_version": 1,
-  "build_id": "market-news-rss-20261118T085146Z",
-  "generated_at": "2026-11-18T08:51:46.427118+00:00",
-  "record_count": 2027,
+  "build_id": "market-news-rss-20261118T105138Z",
+  "generated_at": "2026-11-18T10:51:38.797788+00:00",
+  "record_count": 2034,
   "data": [
+    {
+      "id": "article-market-rss-f8e3c574a5cc4874738a",
+      "title": "BIM Land khởi công khu nghỉ dưỡng InterContinental giữa cảnh quan rừng thông",
+      "url": "https://dantri.com.vn/bat-dong-san/bim-land-khoi-cong-khu-nghi-duong-intercontinental-giua-canh-quan-rung-thong-20261118165114414.htm",
+      "category": "market",
+      "module_ids": [
+        "infrastructure"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-11-18T10:01:21+00:00",
+      "source_id": "dantri-real-estate",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "(Dân trí) - Ngày 17/11, tại Phú Thọ, BIM Land khởi công InterContinental Thanh Xuan Valley Resort. Liền kề hồ Đại Lải, khu nghỉ dưỡng nằm ở trung tâm thung lũng, nơi những cánh rừng thông lâu năm trải dọc các sườn đồi, xen kẽ giữa hồ nước và suối tự nhiên.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://dantri.com.vn/rss/bat-dong-san.rss",
+        "publisher_host": "dantri.com.vn",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-5cd9d665b0dc856bb5f6",
+      "title": "Ông Lê Minh Trí: Nắm bắt lợi thế sân bay Long Thành nâng đời sống dân",
+      "url": "https://dantri.com.vn/thoi-su/ong-le-minh-tri-nam-bat-loi-the-san-bay-long-thanh-nang-doi-song-dan-20261118160358897.htm",
+      "category": "infrastructure",
+      "module_ids": [
+        "infrastructure"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-11-18T09:35:53+00:00",
+      "source_id": "dantri-current-affairs",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [
+        "infrastructure"
+      ],
+      "importance": 2,
+      "summary": "(Dân trí) - Dự Ngày hội Đại đoàn kết cùng dân tái định cư sân bay Long Thành, Trưởng ban Nội chính Trung ương Lê Minh Trí đề nghị địa phương hỗ trợ người dân thích ứng đô thị hóa, nâng cao đời sống.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://dantri.com.vn/rss/thoi-su.rss",
+        "publisher_host": "dantri.com.vn",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-af3bc588f2513d409b6f",
+      "title": "5 tuyến metro khoảng 1 triệu tỷ đồng của Hà Nội dự kiến chủ yếu đi ngầm",
+      "url": "https://dantri.com.vn/thoi-su/5-tuyen-metro-khoang-1-trieu-ty-dong-cua-ha-noi-du-kien-chu-yeu-di-ngam-20261118162422349.htm",
+      "category": "infrastructure",
+      "module_ids": [
+        "infrastructure"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-11-18T09:29:35+00:00",
+      "source_id": "dantri-current-affairs",
+      "region_ids": [
+        "ha-noi"
+      ],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [
+        "infrastructure"
+      ],
+      "importance": 2,
+      "summary": "(Dân trí) - 5 tuyến đường sắt đô thị số 1, 2, 8, 10 và 14 của Hà Nội dự kiến có khoảng 163 ga, 10 depot và chủ yếu đi ngầm, trừ phần tiếp cận depot.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://dantri.com.vn/rss/thoi-su.rss",
+        "publisher_host": "dantri.com.vn",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-23891be47f0c5c8bb5a1",
+      "title": "Gia Lai sắp có khu nhà ở sinh thái hơn 11.400 tỷ đồng ven đầm Thị Nại",
+      "url": "https://dantri.com.vn/bat-dong-san/gia-lai-sap-co-khu-nha-o-sinh-thai-hon-11400-ty-dong-ven-dam-thi-nai-20261118115450884.htm",
+      "category": "market",
+      "module_ids": [
+        "market"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-11-18T09:08:29+00:00",
+      "source_id": "dantri-real-estate",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "(Dân trí) - Dự án khu nhà ở sinh thái rộng gần 118ha, với gần 800 lô nhà ở thấp tầng cùng chung cư, trường học, công viên. Đáng chú ý, chủ đầu tư phải giữ lại và trồng mới gần 10ha rừng ngập mặn.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://dantri.com.vn/rss/bat-dong-san.rss",
+        "publisher_host": "dantri.com.vn",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-91f30c3bcbbf478aa8b0",
+      "title": "Vì sao giá nhà phố, biệt thự sơ cấp neo cao trong khi giá thứ cấp giảm 8%?",
+      "url": "https://dantri.com.vn/bat-dong-san/vi-sao-gia-nha-pho-biet-thu-so-cap-neo-cao-trong-khi-gia-thu-cap-giam-8-20261118140204835.htm",
+      "category": "market",
+      "module_ids": [
+        "market",
+        "macro"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-11-18T09:08:00+00:00",
+      "source_id": "dantri-real-estate",
+      "region_ids": [
+        "hcmc"
+      ],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [
+        "pricing"
+      ],
+      "importance": 2,
+      "summary": "(Dân trí) - Chủ đầu tư giữ giá niêm yết nhờ chiết khấu, hỗ trợ lãi suất và giãn tiến độ thanh toán, trong khi người bán lại nhà phố, biệt thự tại TPHCM và vùng phụ cận chịu áp lực lãi vay, phải hạ giá trung bình 8% trong tháng 10.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://dantri.com.vn/rss/bat-dong-san.rss",
+        "publisher_host": "dantri.com.vn",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-b76981cd5357fb543001",
+      "title": "Hải Phòng muốn làm hai khu lấn biển gần 300 ha ở Đồ Sơn",
+      "url": "https://vnexpress.net/hai-phong-muon-lam-hai-khu-lan-bien-gan-300-ha-o-do-son-5146147.html",
+      "category": "market",
+      "module_ids": [
+        "market"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-11-18T09:06:00+00:00",
+      "source_id": "vnexpress-real-estate",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [
+        "legal"
+      ],
+      "importance": 2,
+      "summary": "Tập đoàn BRG nghiên cứu phương án thiết kế quy hoạch kiến trúc tổng thể phường Đồ Sơn, trong đó có hai khu lấn biển phía đông và tây.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://vnexpress.net/rss/bat-dong-san.rss",
+        "publisher_host": "vnexpress.net",
+        "publication_date_from_feed": true
+      }
+    },
     {
       "id": "article-market-rss-7c072777f531149c71e5",
       "title": "BVBank phát hành trái phiếu lãi suất lên 9,5%/năm",
@@ -26,6 +189,33 @@
         "method": "official-rss",
         "feed_url": "https://thanhnien.vn/rss/kinh-te/ngan-hang.rss",
         "publisher_host": "thanhnien.vn",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-7112e3453a19b83df42d",
+      "title": "Chọn đợt triều cao nhất năm để vận hành thử dự án chống ngập 10.000 tỷ",
+      "url": "https://vnexpress.net/chon-dot-trieu-cao-nhat-nam-de-van-hanh-thu-du-an-chong-ngap-10-000-ty-5146163.html",
+      "category": "market",
+      "module_ids": [
+        "market"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-11-18T08:18:13+00:00",
+      "source_id": "vnexpress-current-affairs",
+      "region_ids": [
+        "hcmc"
+      ],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "Dự án ngăn triều 10.000 tỷ đồng ở TP HCM dự kiến vận hành thử đồng loạt các cống vào ngày 25/11, trong đợt triều dự báo cao nhất năm để đánh giá hiệu quả.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://vnexpress.net/rss/thoi-su.rss",
+        "publisher_host": "vnexpress.net",
         "publication_date_from_feed": true
       }
     },
