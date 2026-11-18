@@ -1,9 +1,292 @@
 {
   "schema_version": 1,
-  "build_id": "market-news-rss-20261118T005148Z",
-  "generated_at": "2026-11-18T00:51:48.947181+00:00",
-  "record_count": 1993,
+  "build_id": "market-news-rss-20261118T025138Z",
+  "generated_at": "2026-11-18T02:51:38.333345+00:00",
+  "record_count": 2004,
   "data": [
+    {
+      "id": "article-market-rss-96400389dd5772159d3f",
+      "title": "TPHCM sắp công bố, triển lãm quy hoạch tổng thể ở Thủ Thiêm",
+      "url": "https://dantri.com.vn/thoi-su/tphcm-sap-cong-bo-trien-lam-quy-hoach-tong-the-o-thu-thiem-20261118091434351.htm",
+      "category": "market",
+      "module_ids": [
+        "market"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-11-18T02:25:41+00:00",
+      "source_id": "dantri-current-affairs",
+      "region_ids": [
+        "hcmc"
+      ],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [
+        "legal"
+      ],
+      "importance": 2,
+      "summary": "(Dân trí) - TPHCM tổ chức triển lãm quy hoạch trong một tháng tại Trung tâm Triển lãm Quy hoạch thành phố để người dân tham quan. Thành phố dự kiến công bố và bắt đầu triển lãm từ ngày 23/11.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://dantri.com.vn/rss/thoi-su.rss",
+        "publisher_host": "dantri.com.vn",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-4acced66fac78c2f6bd1",
+      "title": "Ba giá trị hiếm có kiến tạo chuẩn sống thượng lưu tại Maison Privée",
+      "url": "https://thanhnien.vn/ba-gia-tri-hiem-co-kien-tao-chuan-song-thuong-luu-tai-maison-privee-185261118083308178.htm",
+      "category": "market",
+      "module_ids": [
+        "market"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-11-18T02:00:00+00:00",
+      "source_id": "thanhnien-real-estate",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "Được phát triển bởi CapitaLand Development, hợp tác cùng Mitsubishi Estate và Nomura Real Estate Development, Maison Privée theo đuổi triết lý 'Elegance is Refusal' - Nghệ thuật của sự khước từ, đề cao những lựa chọn có chiều sâu. Tinh thần ấy được thể hiện qua cách dự án kết hợp các lợi thế về quy ",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://thanhnien.vn/rss/kinh-te/dia-oc.rss",
+        "publisher_host": "thanhnien.vn",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-7843d8c5cecee52ca610",
+      "title": "Giá vàng hôm nay 18.11.2026: Lỗ hơn 10 triệu đồng/lượng trong 2 tuần qua",
+      "url": "https://thanhnien.vn/gia-vang-hom-nay-18112026-lo-hon-10-trieu-dong-luong-trong-2-tuan-qua-185261118084131793.htm",
+      "category": "macro",
+      "module_ids": [
+        "macro"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-11-18T01:53:00+00:00",
+      "source_id": "thanhnien-banking",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "Giá vàng miếng SJC giảm nhẹ trong bối cảnh kim loại quý thế giới trượt giảm không phanh.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://thanhnien.vn/rss/kinh-te/ngan-hang.rss",
+        "publisher_host": "thanhnien.vn",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-aac52b10d77b5ae4894d",
+      "title": "Dự án chống ngập 10.000 tỷ ở TPHCM dự kiến vận hành kỹ thuật cuối tháng 11",
+      "url": "https://dantri.com.vn/thoi-su/du-an-chong-ngap-10000-ty-o-tphcm-du-kien-van-hanh-ky-thuat-cuoi-thang-11-20261118072823582.htm",
+      "category": "market",
+      "module_ids": [
+        "market"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-11-18T01:17:09+00:00",
+      "source_id": "dantri-current-affairs",
+      "region_ids": [
+        "hcmc"
+      ],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "(Dân trí) - Sau 10 năm triển khai và nhiều lần đình trệ, dự án giải quyết ngập do triều khu vực TPHCM dự kiến đưa 6 cống ngăn triều lớn vào vận hành từ ngày 30/11.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://dantri.com.vn/rss/thoi-su.rss",
+        "publisher_host": "dantri.com.vn",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-bed1077cb38ee6ef32b0",
+      "title": "Lau nhà mãi vẫn bẩn: Chuyên gia chỉ rõ những sai lầm cần tránh",
+      "url": "https://dantri.com.vn/bat-dong-san/lau-nha-mai-van-ban-chuyen-gia-chi-ro-nhung-sai-lam-can-tranh-20261117223259802.htm",
+      "category": "market",
+      "module_ids": [
+        "market"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-11-18T01:08:00+00:00",
+      "source_id": "dantri-real-estate",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "(Dân trí) - Cảm giác dính nhớp ở lòng bàn chân dù vừa lau nhà kỹ lưỡng khiến nhiều người khó chịu. Chuyên gia làm sạch chỉ ra nguyên nhân và cách khắc phục để sàn nhà luôn sáng bóng.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://dantri.com.vn/rss/bat-dong-san.rss",
+        "publisher_host": "dantri.com.vn",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-f615084a965baf40eae5",
+      "title": "Maison Privée và ba giá trị tạo dấu ấn không gian sống thượng lưu",
+      "url": "https://dantri.com.vn/bat-dong-san/maison-privee-va-ba-gia-tri-tao-dau-an-khong-gian-song-thuong-luu-20261117190525138.htm",
+      "category": "market",
+      "module_ids": [
+        "market"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-11-18T01:00:00+00:00",
+      "source_id": "dantri-real-estate",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "(Dân trí) - Được phát triển bởi CapitaLand Development, hợp tác cùng Mitsubishi Estate và Nomura Real Estate Development, Maison Privée theo đuổi triết lý “Elegance is Refusal” - Nghệ thuật của sự khước từ, đề cao những lựa chọn có chiều sâu.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://dantri.com.vn/rss/bat-dong-san.rss",
+        "publisher_host": "dantri.com.vn",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-db95774d8d2d83384261",
+      "title": "Senturia An Phú: Từ tâm huyết thiết kế đến trải nghiệm Home Resort",
+      "url": "https://thanhnien.vn/senturia-an-phu-tu-tam-huyet-thiet-ke-den-trai-nghiem-home-resort-185261117204233421.htm",
+      "category": "market",
+      "module_ids": [
+        "market"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-11-18T01:00:00+00:00",
+      "source_id": "thanhnien-real-estate",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "Từ tầm nhìn khi ngồi trong vườn đến cách kết nối không gian trong và ngoài nhà, Senturia An Phú thể hiện tinh thần Home Resort qua những tính toán gần gũi với đời sống. Sự tinh tế nằm ở cách mỗi chi tiết góp phần tạo nên cảm giác thư thái, riêng tư và thuận tiện cho gia chủ.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://thanhnien.vn/rss/kinh-te/dia-oc.rss",
+        "publisher_host": "thanhnien.vn",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-773d146069ce790772a2",
+      "title": "Không gian sống cho gia đình nhiều thế hệ tại Sola",
+      "url": "https://vnexpress.net/khong-gian-song-cho-gia-dinh-nhieu-the-he-tai-sola-5145603.html",
+      "category": "market",
+      "module_ids": [
+        "macro"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-11-18T01:00:00+00:00",
+      "source_id": "vnexpress-real-estate",
+      "region_ids": [],
+      "project_ids": [
+        "the-global-city"
+      ],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "Bán đảo Sola tại The Global City phát triển các biệt thự với thiết kế chú trọng không gian sinh hoạt chung và riêng, kết hợp hệ thống công viên cùng tiện ích giáo dục, giải trí.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://vnexpress.net/rss/bat-dong-san.rss",
+        "publisher_host": "vnexpress.net",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-3691ee5eb87d4101ecbe",
+      "title": "Tập đoàn Sao Mai trao Giấy chứng nhận quyền sử dụng đất cho khách hàng mua đất nền",
+      "url": "https://dantri.com.vn/bat-dong-san/tap-doan-sao-mai-trao-giay-chung-nhan-quyen-su-dung-dat-cho-khach-hang-mua-dat-nen-20261117172332832.htm",
+      "category": "market",
+      "module_ids": [
+        "market"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-11-18T01:00:00+00:00",
+      "source_id": "dantri-real-estate",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "(Dân trí) - Chiều 15/11, tại trung tâm xã Triệu Sơn, tỉnh Thanh Hóa, Tập đoàn Sao Mai tổ chức lễ trao Giấy chứng nhận quyền sử dụng đất cho đại diện gần 300 khách hàng đã mua nền đất tại Khu đô thị mới Sao Mai Central Point trong giai đoạn 1.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://dantri.com.vn/rss/bat-dong-san.rss",
+        "publisher_host": "dantri.com.vn",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-2bcc46463a15e3e10203",
+      "title": "Bán đảo SOLA - Tư duy toàn cầu gặp gỡ giá trị gia đình Việt",
+      "url": "https://thanhnien.vn/ban-dao-sola-tu-duy-toan-cau-gap-go-gia-tri-gia-dinh-viet-18526111721051776.htm",
+      "category": "market",
+      "module_ids": [
+        "market"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-11-18T01:00:00+00:00",
+      "source_id": "thanhnien-real-estate",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "Dưới góc nhìn quản trị di sản gia đình, Truist Wealth Center for Family Legacy (Mỹ) đề cập đến vai trò của văn hóa gia đình trong việc duy trì và phát triển những giá trị qua nhiều thế hệ. Một di sản bền vững không chỉ được đo bằng những gì được trao lại, mà còn ở cách mỗi thế hệ tiếp nhận, chuyển h",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://thanhnien.vn/rss/kinh-te/dia-oc.rss",
+        "publisher_host": "thanhnien.vn",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-291ff0d5352a024ebf93",
+      "title": "Đà Nẵng đón dòng vốn ngoại, dư địa mới cho bất động sản cao cấp bên sông Hàn",
+      "url": "https://dantri.com.vn/bat-dong-san/da-nang-don-dong-von-ngoai-du-dia-moi-cho-bat-dong-san-cao-cap-ben-song-han-20261117160902968.htm",
+      "category": "market",
+      "module_ids": [
+        "market"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-11-18T01:00:00+00:00",
+      "source_id": "dantri-real-estate",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "(Dân trí) - Dòng vốn ngoại tăng mạnh cùng sự hình thành của Trung tâm Tài chính quốc tế mở ra triển vọng thu hút thêm doanh nghiệp và chuyên gia quốc tế đến Đà Nẵng. Nhu cầu an cư gắn với công việc và chất lượng sống tạo thêm dư địa cho phân khúc căn hộ cao cấp.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://dantri.com.vn/rss/bat-dong-san.rss",
+        "publisher_host": "dantri.com.vn",
+        "publication_date_from_feed": true
+      }
+    },
     {
       "id": "article-market-rss-9408aaf44a905e9c553a",
       "title": "TP HCM dự kiến dùng 7 khu đất đổi làm cao tốc kết nối sân bay Long Thành",
