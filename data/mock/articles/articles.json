@@ -1,9 +1,251 @@
 {
   "schema_version": 1,
-  "build_id": "market-news-rss-20261118T025138Z",
-  "generated_at": "2026-11-18T02:51:38.333345+00:00",
-  "record_count": 2004,
+  "build_id": "market-news-rss-20261118T045143Z",
+  "generated_at": "2026-11-18T04:51:43.505250+00:00",
+  "record_count": 2015,
   "data": [
+    {
+      "id": "article-market-rss-4a62501928b9e556f774",
+      "title": "Giá vàng, bạc giảm không phanh, người mua lỗ cả trăm triệu đồng/lượng",
+      "url": "https://thanhnien.vn/gia-vang-bac-giam-khong-phanh-nguoi-mua-lo-ca-tram-trieu-dong-luong-185261118105445301.htm",
+      "category": "macro",
+      "module_ids": [
+        "macro"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-11-18T04:17:00+00:00",
+      "source_id": "thanhnien-banking",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "Giá vàng, bạc đang ở mức thấp nhất kể từ đầu năm đến nay và đà đi xuống vẫn chưa có dấu hiệu dừng lại.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://thanhnien.vn/rss/kinh-te/ngan-hang.rss",
+        "publisher_host": "thanhnien.vn",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-75e6ab9183db31f2c542",
+      "title": "Cháy căn hộ chung cư cao cấp ở Hà Nội",
+      "url": "https://dantri.com.vn/thoi-su/chay-can-ho-chung-cu-cao-cap-o-ha-noi-20261118111111497.htm",
+      "category": "market",
+      "module_ids": [
+        "market"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-11-18T04:15:26+00:00",
+      "source_id": "dantri-current-affairs",
+      "region_ids": [
+        "ha-noi"
+      ],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "(Dân trí) - Tại hiện trường, lực lượng cảnh sát PCCC&CNCH nhanh chóng phá cửa tiếp cận căn hộ, triển khai chữa cháy và tổ chức hướng dẫn 3 người dân, gồm 1 người lớn và 2 trẻ em, thoát nạn theo cầu thang bộ.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://dantri.com.vn/rss/thoi-su.rss",
+        "publisher_host": "dantri.com.vn",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-4640a1297444efaf32a4",
+      "title": "Giá chung cư Hà Nội vượt 100 triệu đồng/m2, thanh khoản lao dốc",
+      "url": "https://dantri.com.vn/bat-dong-san/gia-chung-cu-ha-noi-vuot-100-trieu-dongm2-thanh-khoan-lao-doc-20261118110416220.htm",
+      "category": "market",
+      "module_ids": [
+        "market",
+        "macro"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-11-18T04:15:14+00:00",
+      "source_id": "dantri-real-estate",
+      "region_ids": [
+        "ha-noi"
+      ],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [
+        "supply",
+        "pricing",
+        "sales"
+      ],
+      "importance": 2,
+      "summary": "(Dân trí) - Giá căn hộ sơ cấp tại Hà Nội vẫn ở mức cao, trong khi lượng giao dịch quý III giảm mạnh. Nguồn cung cao cấp áp đảo, lãi suất vay mua nhà tiếp tục gây áp lực lên sức mua.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://dantri.com.vn/rss/bat-dong-san.rss",
+        "publisher_host": "dantri.com.vn",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-2349713478d47ddf5f20",
+      "title": "Hà Nội cấm triệt để nhiều tuyến đường khu vực hồ Hoàn Kiếm",
+      "url": "https://dantri.com.vn/thoi-su/ha-noi-cam-triet-de-nhieu-tuyen-duong-khu-vuc-ho-hoan-kiem-20261118105933455.htm",
+      "category": "infrastructure",
+      "module_ids": [
+        "infrastructure"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-11-18T04:12:31+00:00",
+      "source_id": "dantri-current-affairs",
+      "region_ids": [
+        "ha-noi"
+      ],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "(Dân trí) - Việc cấm, tạm cấm phương tiện tại nhiều tuyến đường trung tâm để phục vụ các hoạt động kỷ niệm Ngày Văn hóa Việt Nam 24/11.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://dantri.com.vn/rss/thoi-su.rss",
+        "publisher_host": "dantri.com.vn",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-edd461d4c62c2d57775c",
+      "title": "Tây Ninh đặt mục tiêu phát triển 76.500 căn nhà ở xã hội và nhà cho thuê",
+      "url": "https://dantri.com.vn/thoi-su/tay-ninh-dat-muc-tieu-phat-trien-76500-can-nha-o-xa-hoi-va-nha-cho-thue-20261118105540166.htm",
+      "category": "market",
+      "module_ids": [
+        "market"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-11-18T04:02:35+00:00",
+      "source_id": "dantri-current-affairs",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "(Dân trí) - Tây Ninh đặt mục tiêu đến năm 2030 phát triển 76.500 căn nhà ở xã hội và nhà cho thuê, trong đó năm 2026 phấn đấu đưa vào sử dụng 6.000 căn.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://dantri.com.vn/rss/thoi-su.rss",
+        "publisher_host": "dantri.com.vn",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-ef1ff43102673ba17ef7",
+      "title": "Khám phá 5 “vũ điệu” tại Sun Saphia Residence bên biển Đà Nẵng",
+      "url": "https://dantri.com.vn/bat-dong-san/kham-pha-5-vu-dieu-tai-sun-saphia-residence-ben-bien-da-nang-20261117171333965.htm",
+      "category": "market",
+      "module_ids": [
+        "market"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-11-18T03:00:00+00:00",
+      "source_id": "dantri-real-estate",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "(Dân trí) - Sun Group phát triển Sun Saphia Residence từ cảm hứng vẻ đẹp ánh dương, đại dương, tinh thần văn hóa Champa và kiến trúc đương đại, hướng đến phong cách sống nghỉ dưỡng mang dấu ấn bản địa bên biển Đà thành.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://dantri.com.vn/rss/bat-dong-san.rss",
+        "publisher_host": "dantri.com.vn",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-86754a97ea32b0e704ab",
+      "title": "Không gian nghỉ dưỡng chan hòa thiên nhiên tại Qtopia Phước Hải",
+      "url": "https://vnexpress.net/khong-gian-nghi-duong-chan-hoa-thien-nhien-tai-qtopia-phuoc-hai-5145983.html",
+      "category": "market",
+      "module_ids": [
+        "market"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-11-18T03:00:00+00:00",
+      "source_id": "vnexpress-real-estate",
+      "region_ids": [
+        "hcmc"
+      ],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "Qtopia Phước Hải (TP HCM) phát triển hệ tiện ích lấy cảm hứng từ đại dương, kết hợp các hồ bơi, vườn nhiệt đới và không gian giải trí ngoài trời trong tổ hợp căn hộ ven biển.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://vnexpress.net/rss/bat-dong-san.rss",
+        "publisher_host": "vnexpress.net",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-009b3b929c33f443fc8a",
+      "title": "Dự báo lãi suất Fed tháng 12 và kịch bản tăng lãi suất sang 2027",
+      "url": "https://dantri.com.vn/kinh-doanh/du-bao-lai-suat-fed-thang-12-va-kich-ban-tang-lai-suat-sang-2027-20261118083517082.htm",
+      "category": "macro",
+      "module_ids": [
+        "macro"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-11-18T02:32:00+00:00",
+      "source_id": "dantri-business",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "(Dân trí) - Lãnh đạo Fed bác bỏ khả năng tăng lãi suất 0,5 điểm phần trăm trong tháng 12, nhưng cảnh báo áp lực lạm phát và cơn sốt đầu tư AI có thể khiến đà thắt chặt kéo dài sang năm 2027.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://dantri.com.vn/rss/kinh-doanh.rss",
+        "publisher_host": "dantri.com.vn",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-dfc53e4c9c81d029cd0e",
+      "title": "TPHCM sắp công bố, triển lãm quy hoạch tầm nhìn 100 năm tại Thủ Thiêm",
+      "url": "https://dantri.com.vn/thoi-su/tphcm-sap-cong-bo-trien-lam-quy-hoach-tam-nhin-100-nam-tai-thu-thiem-20261118091434351.htm",
+      "category": "market",
+      "module_ids": [
+        "market"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-11-18T02:25:41+00:00",
+      "source_id": "dantri-current-affairs",
+      "region_ids": [
+        "hcmc"
+      ],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [
+        "legal"
+      ],
+      "importance": 2,
+      "summary": "(Dân trí) - TPHCM tổ chức triển lãm quy hoạch trong một tháng tại Trung tâm Triển lãm Quy hoạch thành phố để người dân tham quan. Thành phố dự kiến công bố và bắt đầu triển lãm từ ngày 23/11.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://dantri.com.vn/rss/thoi-su.rss",
+        "publisher_host": "dantri.com.vn",
+        "publication_date_from_feed": true
+      }
+    },
     {
       "id": "article-market-rss-96400389dd5772159d3f",
       "title": "TPHCM sắp công bố, triển lãm quy hoạch tổng thể ở Thủ Thiêm",
@@ -30,6 +272,60 @@
         "method": "official-rss",
         "feed_url": "https://dantri.com.vn/rss/thoi-su.rss",
         "publisher_host": "dantri.com.vn",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-988d32f2e99e60a78aa3",
+      "title": "River Terrace được chuyển hơn 2,5 ha đất nông nghiệp làm chung cư tại TP HCM",
+      "url": "https://vnexpress.net/river-terrace-duoc-chuyen-hon-2-5-ha-dat-nong-nghiep-lam-chung-cu-tai-tp-hcm-5145923.html",
+      "category": "market",
+      "module_ids": [
+        "market"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-11-18T02:17:15+00:00",
+      "source_id": "vnexpress-real-estate",
+      "region_ids": [
+        "hcmc"
+      ],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "Công ty River Terrace được chuyển mục đích hơn 2,5 ha đất nông nghiệp tại phường Long Trường để phát triển khu chung cư phức hợp cao tầng quy mô hơn 4.083 tỷ đồng.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://vnexpress.net/rss/bat-dong-san.rss",
+        "publisher_host": "vnexpress.net",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-b2bcff0f73f208d8a0d2",
+      "title": "Không gian đô thị tích hợp 50 ha tại đô thị One Era",
+      "url": "https://vnexpress.net/khong-gian-do-thi-tich-hop-50-ha-tai-do-thi-one-era-5145925.html",
+      "category": "market",
+      "module_ids": [
+        "market"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-11-18T02:00:00+00:00",
+      "source_id": "vnexpress-real-estate",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [
+        "legal"
+      ],
+      "importance": 2,
+      "summary": "One Era quy mô gần 50 ha kỳ vọng thành điểm đến mới tại khu Đông Bắc nhờ quy hoạch tích hợp nhà ở với thương mại, giáo dục, y tế, giải trí.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://vnexpress.net/rss/bat-dong-san.rss",
+        "publisher_host": "vnexpress.net",
         "publication_date_from_feed": true
       }
     },
