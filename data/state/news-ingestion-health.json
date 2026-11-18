@@ -1,31 +1,31 @@
 {
   "schema_version": 1,
-  "checked_at": "2026-11-18T12:51:47.240746+00:00",
+  "checked_at": "2026-11-18T14:51:45.112877+00:00",
   "feeds_configured": 16,
   "feeds_fetched": 16,
   "accepted_new": 3,
   "production_written": true,
-  "article_total": 2037,
+  "article_total": 2040,
   "published_by_module": {
     "market": 3,
     "legal": 0,
-    "infrastructure": 1,
+    "infrastructure": 0,
     "macro": 0
   },
   "recent_by_module_7d": {
-    "market": 188,
+    "market": 190,
     "legal": 33,
-    "infrastructure": 86,
+    "infrastructure": 85,
     "macro": 61
   },
   "recent_by_module_30d": {
     "market": 856,
-    "legal": 166,
+    "legal": 165,
     "infrastructure": 356,
-    "macro": 270
+    "macro": 268
   },
   "latest_published_by_module": {
-    "market": "2026-11-18T12:11:09+00:00",
+    "market": "2026-11-18T14:00:00+00:00",
     "legal": "2026-11-18T10:50:45+00:00",
     "infrastructure": "2026-11-18T10:50:45+00:00",
     "macro": "2026-11-18T09:08:00+00:00"
@@ -35,9 +35,9 @@
       "source_id": "vnexpress-real-estate",
       "status": "parsed",
       "feed_items": 50,
-      "new": 1,
-      "skipped": 49,
-      "duplicates": 49,
+      "new": 2,
+      "skipped": 48,
+      "duplicates": 48,
       "filtered": 0
     },
     {
@@ -64,16 +64,16 @@
       "feed_items": 50,
       "new": 0,
       "skipped": 50,
-      "duplicates": 6,
-      "filtered": 44
+      "duplicates": 5,
+      "filtered": 45
     },
     {
       "source_id": "vnexpress-current-affairs",
       "status": "parsed",
       "feed_items": 50,
-      "new": 1,
-      "skipped": 49,
-      "duplicates": 14,
+      "new": 0,
+      "skipped": 50,
+      "duplicates": 15,
       "filtered": 35
     },
     {
