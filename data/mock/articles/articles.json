@@ -1,9 +1,150 @@
 {
   "schema_version": 1,
-  "build_id": "market-news-rss-20261119T085143Z",
-  "generated_at": "2026-11-19T08:51:43.963626+00:00",
-  "record_count": 2078,
+  "build_id": "market-news-rss-20261119T105138Z",
+  "generated_at": "2026-11-19T10:51:38.599338+00:00",
+  "record_count": 2083,
   "data": [
+    {
+      "id": "article-market-rss-77180e0065ba2970e2e5",
+      "title": "Cuộn thép hơn 10 tấn rơi tại trạm thu phí cao tốc Bến Lức - Long Thành",
+      "url": "https://dantri.com.vn/thoi-su/cuon-thep-hon-10-tan-roi-tai-tram-thu-phi-cao-toc-ben-luc-long-thanh-20261119161715054.htm",
+      "category": "infrastructure",
+      "module_ids": [
+        "infrastructure"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-11-19T09:23:00+00:00",
+      "source_id": "dantri-current-affairs",
+      "region_ids": [
+        "dong-nai"
+      ],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [
+        "infrastructure"
+      ],
+      "importance": 2,
+      "summary": "(Dân trí) - Cuộn thép nặng hơn 10 tấn trên rơ-moóc bị đứt xích cố định, rơi xuống đường ngay trạm thu phí lối ra cao tốc Bến Lức - Long Thành tại xã Phước An, TP Đồng Nai.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://dantri.com.vn/rss/thoi-su.rss",
+        "publisher_host": "dantri.com.vn",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-989997b05289d3b34c64",
+      "title": "Hà Nội lập quy hoạch chuyên ngành quản lý chất thải rắn",
+      "url": "https://thanhnien.vn/ha-noi-lap-quy-hoach-chuyen-nganh-quan-ly-chat-thai-ran-185261119161113652.htm",
+      "category": "market",
+      "module_ids": [
+        "market"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-11-19T09:04:00+00:00",
+      "source_id": "thanhnien-policy",
+      "region_ids": [
+        "ha-noi"
+      ],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [
+        "legal"
+      ],
+      "importance": 2,
+      "summary": "Trước kiến nghị của cử tri về tình trạng ô nhiễm do rác thải sinh hoạt, sản xuất và làng nghề, Hà Nội cho biết đang giao Sở Nông nghiệp và Môi trường xây dựng quy hoạch chuyên ngành quản lý chất thải rắn, làm cơ sở hoàn thiện hệ thống thu gom, vận chuyển và xử lý.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://thanhnien.vn/rss/kinh-te/chinh-sach-phat-trien.rss",
+        "publisher_host": "thanhnien.vn",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-f36d4d92d21f61362893",
+      "title": "Đề xuất điều chỉnh tổng mức đầu tư, quy hoạch sân bay Gia Bình",
+      "url": "https://vnexpress.net/de-xuat-dieu-chinh-tong-muc-dau-tu-quy-hoach-san-bay-gia-binh-5146640.html",
+      "category": "market",
+      "module_ids": [
+        "market",
+        "infrastructure"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-11-19T09:01:46+00:00",
+      "source_id": "vnexpress-current-affairs",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [
+        "legal",
+        "infrastructure"
+      ],
+      "importance": 2,
+      "summary": "Chủ đầu tư sân bay Gia Bình đề xuất điều chỉnh tăng tổng mức đầu tư, điều chỉnh quy hoạch nhà ga hàng hóa phía Tây, tăng đường lăn tại sân bay quốc tế Gia Bình.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://vnexpress.net/rss/thoi-su.rss",
+        "publisher_host": "vnexpress.net",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-53daf3505f9a0e2028d8",
+      "title": "34 năm tạo 'đô thị sáng đèn' nhờ giá trị thực của Nam Long",
+      "url": "https://vnexpress.net/34-nam-tao-do-thi-sang-den-nho-gia-tri-thuc-cua-nam-long-5146622.html",
+      "category": "market",
+      "module_ids": [
+        "market"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-11-19T09:00:00+00:00",
+      "source_id": "vnexpress-real-estate",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [
+        "nam-long"
+      ],
+      "tags": [],
+      "importance": 2,
+      "summary": "Nam Long theo đuổi triết lý \"làm những gì xã hội cần\", cân bằng lợi ích kinh doanh và quyền lợi cư dân, tạo giá trị thực để hình thành những đô thị sáng đèn suốt 34 năm.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://vnexpress.net/rss/bat-dong-san.rss",
+        "publisher_host": "vnexpress.net",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-3a457c3ddf1958631c06",
+      "title": "Vạn Xuân Group ra mắt mô hình kiến trúc và sa bàn ảo Happy One Elite",
+      "url": "https://vnexpress.net/van-xuan-group-ra-mat-mo-hinh-kien-truc-va-sa-ban-ao-happy-one-elite-5146661.html",
+      "category": "market",
+      "module_ids": [
+        "market"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-11-19T09:00:00+00:00",
+      "source_id": "vnexpress-real-estate",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [
+        "supply"
+      ],
+      "importance": 2,
+      "summary": "Vạn Xuân Group vừa khai trương bộ đôi sa bàn (mô hình kiến trúc và sa bàn ảo) dự án Happy One Elite tại Sales Gallery Happy One và bắt đầu mở cửa đón khách tham quan từ ngày 15/11.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://vnexpress.net/rss/bat-dong-san.rss",
+        "publisher_host": "vnexpress.net",
+        "publication_date_from_feed": true
+      }
+    },
     {
       "id": "article-market-rss-d94385c9ab9a29be5450",
       "title": "Chủ đầu tư khó hạ giá nhà dù thanh khoản kém",
