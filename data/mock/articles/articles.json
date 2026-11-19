@@ -1,9 +1,300 @@
 {
   "schema_version": 1,
-  "build_id": "market-news-rss-20261119T025134Z",
-  "generated_at": "2026-11-19T02:51:34.172036+00:00",
-  "record_count": 2060,
+  "build_id": "market-news-rss-20261119T045149Z",
+  "generated_at": "2026-11-19T04:51:49.340049+00:00",
+  "record_count": 2071,
   "data": [
+    {
+      "id": "article-market-rss-cb378b1fabf2eb070983",
+      "title": "Phạt 6 tài xế ô tô chạy kiểu \"rùa bò\" trên cao tốc Pháp Vân - Cao Bồ",
+      "url": "https://dantri.com.vn/thoi-su/phat-6-tai-xe-o-to-chay-kieu-rua-bo-tren-cao-toc-phap-van-cao-bo-20261119103421678.htm",
+      "category": "infrastructure",
+      "module_ids": [
+        "infrastructure"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-11-19T03:43:30+00:00",
+      "source_id": "dantri-current-affairs",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [
+        "infrastructure"
+      ],
+      "importance": 2,
+      "summary": "(Dân trí) - Quá trình tuần tra, xử lý vi phạm trên tuyến cao tốc Pháp Vân - Cao Bồ, Đội CSGT đường bộ cao tốc số 3 đã phát hiện, xử lý 6 tài xế ô tô chạy dưới tốc độ tối thiểu tại làn 1.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://dantri.com.vn/rss/thoi-su.rss",
+        "publisher_host": "dantri.com.vn",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-51fde01180b73c0066c3",
+      "title": "Tháp 68 tầng dang dở của VietinBank về tay hệ sinh thái Sun Group",
+      "url": "https://dantri.com.vn/bat-dong-san/thap-68-tang-dang-do-cua-vietinbank-ve-tay-he-sinh-thai-sun-group-20261118161928443.htm",
+      "category": "market",
+      "module_ids": [
+        "market"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-11-19T03:40:15+00:00",
+      "source_id": "dantri-real-estate",
+      "region_ids": [
+        "ha-noi"
+      ],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "(Dân trí) - Sau nhiều năm dang dở, dự án VietinBank Tower quy mô gần 30.000m2 tại Khu đô thị Nam Thăng Long (Hà Nội) chính thức về tay Công ty TNHH Thành phố Mặt Trời, đơn vị thuộc hệ sinh thái Sun Group.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://dantri.com.vn/rss/bat-dong-san.rss",
+        "publisher_host": "dantri.com.vn",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-84602a3bdad59c1561af",
+      "title": "Vingroup khởi công dự án nhà ở xã hội lớn nhất Việt Nam",
+      "url": "https://vnexpress.net/vingroup-khoi-cong-du-an-nha-o-xa-hoi-lon-nhat-viet-nam-5146393.html",
+      "category": "market",
+      "module_ids": [
+        "market",
+        "infrastructure"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-11-19T03:23:05+00:00",
+      "source_id": "vnexpress-real-estate",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [
+        "vinhomes"
+      ],
+      "tags": [],
+      "importance": 2,
+      "summary": "Tập đoàn Vingroup khởi công khu nhà ở xã hội gần 192 ha tại xã Bà Điểm quy mô 45.000 căn hộ bán và cho thuê, đáp ứng chỗ ở khoảng 68.000 người, thuộc nhóm lớn nhất cả nước.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://vnexpress.net/rss/bat-dong-san.rss",
+        "publisher_host": "vnexpress.net",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-0b261a5ce34fbd9d60bc",
+      "title": "TPHCM khởi công dự án nhà ở xã hội lớn nhất cả nước",
+      "url": "https://dantri.com.vn/bat-dong-san/tphcm-khoi-cong-du-an-nha-o-xa-hoi-lon-nhat-ca-nuoc-20261119093044654.htm",
+      "category": "market",
+      "module_ids": [
+        "market",
+        "infrastructure"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-11-19T03:14:50+00:00",
+      "source_id": "dantri-real-estate",
+      "region_ids": [
+        "hcmc"
+      ],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "(Dân trí) - Dự án nhà ở xã hội tại xã Bà Điểm (TPHCM) có quy mô gần 192ha, dự kiến cung cấp 40.000 căn hộ để bán và 5.000 căn cho thuê, đáp ứng nhu cầu chỗ ở cho gần 68.000 người.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://dantri.com.vn/rss/bat-dong-san.rss",
+        "publisher_host": "dantri.com.vn",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-50cdcc4ed122933facfd",
+      "title": "Dư nợ cho vay nhà ở xã hội, KCN-KCX, du lịch tại TP.HCM đạt 112.600 tỉ đồng",
+      "url": "https://thanhnien.vn/du-no-cho-vay-nha-o-xa-hoi-kcn-kcx-du-lich-tai-tphcm-dat-112600-ti-dong-185261119091015536.htm",
+      "category": "market",
+      "module_ids": [
+        "market"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-11-19T03:12:00+00:00",
+      "source_id": "thanhnien-banking",
+      "region_ids": [
+        "hcmc"
+      ],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "Theo thông tin từ Ngân hàng Nhà nước (NHNN) chi nhánh khu vực 2, tính đến cuối tháng 10, dư nợ cho vay bất động sản 3 lĩnh vực nhà ở xã hội, khu công nghiệp - khu chế xuất (KCN-KCX) và du lịch (gồm nhà hàng, khách sạn, khu du lịch, sinh thái, nghỉ dưỡng) chiếm 7% trong tổng dư nợ tín dụng bất động s",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://thanhnien.vn/rss/kinh-te/ngan-hang.rss",
+        "publisher_host": "thanhnien.vn",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-7bd7c4097140286b2ef0",
+      "title": "Sun Group mua tòa tháp dang dở của VietinBank tại Ciputra",
+      "url": "https://vnexpress.net/sun-group-mua-toa-thap-dang-do-cua-vietinbank-tai-ciputra-5146435.html",
+      "category": "market",
+      "module_ids": [
+        "market"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-11-19T03:10:22+00:00",
+      "source_id": "vnexpress-real-estate",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "Sáng 19/11, Sun Group cho biết dự án VietinBank Tower đã được chuyển giao cho một đơn vị thuộc tập đoàn này.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://vnexpress.net/rss/bat-dong-san.rss",
+        "publisher_host": "vnexpress.net",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-014fcc3596e4eb8e9c84",
+      "title": "Phú Quốc xử lý hàng nghìn hồ sơ đất đai sau chỉ đạo của ông Đinh Văn Nơi",
+      "url": "https://dantri.com.vn/bat-dong-san/phu-quoc-xu-ly-hang-nghin-ho-so-dat-dai-sau-chi-dao-cua-ong-dinh-van-noi-20261119081925922.htm",
+      "category": "market",
+      "module_ids": [
+        "market"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-11-19T03:04:26+00:00",
+      "source_id": "dantri-real-estate",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "(Dân trí) - Thực hiện chỉ đạo của Bí thư Đảng ủy đặc khu Phú Quốc Đinh Văn Nơi, cơ quan chuyên môn đã giải quyết khoảng 3.000 trong tổng số 4.000 hồ sơ đất đai tồn đọng, phấn đấu hoàn tất trước tháng 12",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://dantri.com.vn/rss/bat-dong-san.rss",
+        "publisher_host": "dantri.com.vn",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-a4679d1ce1cc6ccfc159",
+      "title": "Hình hài 2 khu tái định cư nghìn tỷ phục vụ dự án điện hạt nhân",
+      "url": "https://dantri.com.vn/thoi-su/hinh-hai-2-khu-tai-dinh-cu-nghin-ty-phuc-vu-du-an-dien-hat-nhan-20261118103610108.htm",
+      "category": "market",
+      "module_ids": [
+        "market"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-11-19T03:00:00+00:00",
+      "source_id": "dantri-current-affairs",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "(Dân trí) - Hai khu tái định cư phục vụ dự án Nhà máy điện hạt nhân Ninh Thuận 1 và 2 đang được tỉnh Khánh Hòa khẩn trương xây dựng, với tổng mức đầu tư hơn 2.500 tỷ đồng.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://dantri.com.vn/rss/thoi-su.rss",
+        "publisher_host": "dantri.com.vn",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-950d080b6e91f175a895",
+      "title": "Giá vàng miếng xuống dưới 137 triệu đồng",
+      "url": "https://vnexpress.net/gia-vang-moi-nhat-hom-nay-ngay-19-11-5146410.html",
+      "category": "macro",
+      "module_ids": [
+        "macro"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-11-19T02:57:19+00:00",
+      "source_id": "vnexpress-economy",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [
+        "pricing"
+      ],
+      "importance": 2,
+      "summary": "Sau khi giá thế giới lao dốc, các thương hiệu trong nước cũng hạ giá bán vàng miếng 500.000 đồng so với hôm qua, còn 136,7 triệu đồng một lượng.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://vnexpress.net/rss/kinh-doanh.rss",
+        "publisher_host": "vnexpress.net",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-2105fda268c0e4744a5f",
+      "title": "Tiện ích đa trải nghiệm tại dự án nghỉ dưỡng Qtopia Phước Hải",
+      "url": "https://vnexpress.net/tien-ich-da-trai-nghiem-tai-du-an-nghi-duong-qtopia-phuoc-hai-5146416.html",
+      "category": "market",
+      "module_ids": [
+        "market"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-11-19T02:45:00+00:00",
+      "source_id": "vnexpress-real-estate",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [
+        "legal"
+      ],
+      "importance": 2,
+      "summary": "Qtopia Phước Hải quy hoạch các tổ hợp vui chơi, giải trí, chăm sóc sức khỏe kết hợp căn hộ du lịch, hướng đến đáp ứng nhu cầu nghỉ dưỡng của gia đình nhiều thế hệ và nhóm bạn.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://vnexpress.net/rss/bat-dong-san.rss",
+        "publisher_host": "vnexpress.net",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-0a314bf5feaad60b20ce",
+      "title": "Giá vàng về đáy một năm, người mua từ đỉnh lỗ gần 58 triệu đồng/lượng",
+      "url": "https://dantri.com.vn/kinh-doanh/gia-vang-ve-day-mot-nam-nguoi-mua-tu-dinh-lo-gan-58-trieu-dongluong-20261118230926646.htm",
+      "category": "macro",
+      "module_ids": [
+        "macro"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-11-19T02:31:52+00:00",
+      "source_id": "dantri-business",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "(Dân trí) - Áp lực lãi suất Mỹ và đà tăng của đồng USD kéo giá vàng thế giới lùi về 3.751 USD/ounce. Tại thị trường trong nước, vàng miếng SJC giảm về 136,7 triệu đồng/lượng, thấp nhất kể từ đầu năm.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://dantri.com.vn/rss/kinh-doanh.rss",
+        "publisher_host": "dantri.com.vn",
+        "publication_date_from_feed": true
+      }
+    },
     {
       "id": "article-market-rss-f56144815be559d97f2b",
       "title": "Giá vàng hôm nay 19.11.2026: Tiếp tục lao dốc, rớt khỏi mức 137 triệu đồng",
