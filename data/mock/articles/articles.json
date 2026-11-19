@@ -1,9 +1,319 @@
 {
   "schema_version": 1,
-  "build_id": "market-news-rss-20261118T145145Z",
-  "generated_at": "2026-11-18T14:51:45.112877+00:00",
-  "record_count": 2040,
+  "build_id": "market-news-rss-20261119T005142Z",
+  "generated_at": "2026-11-19T00:51:42.878206+00:00",
+  "record_count": 2052,
   "data": [
+    {
+      "id": "article-market-rss-34f72e5f03e90d09b663",
+      "title": "Giá vàng thế giới lao dốc, xuống thấp nhất 14 tháng",
+      "url": "https://vnexpress.net/gia-vang-the-gioi-lao-doc-xuong-thap-nhat-14-thang-5146332.html",
+      "category": "macro",
+      "module_ids": [
+        "macro"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-11-18T23:30:50+00:00",
+      "source_id": "vnexpress-economy",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "Mỗi ounce vàng mất hơn 120 USD một phiên, sau khi Fed công bố biên bản cuộc họp tháng 10.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://vnexpress.net/rss/kinh-doanh.rss",
+        "publisher_host": "vnexpress.net",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-17b9b3214d95460ffaab",
+      "title": "Xét xử ông Lê Thanh Thản: Căn hộ chưa có sổ đỏ được định giá như thế nào?",
+      "url": "https://dantri.com.vn/phap-luat/xet-xu-ong-le-thanh-than-can-ho-chua-co-so-do-duoc-dinh-gia-nhu-the-nao-20261119013229388.htm",
+      "category": "market",
+      "module_ids": [
+        "market",
+        "legal"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-11-18T23:26:41+00:00",
+      "source_id": "dantri-legal",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "(Dân trí) - Tại phiên xét \"đại gia điếu cày\" Lê Thanh Thản, đại diện Hội đồng định giá cho biết các căn hộ CT6 Kiến Hưng chưa có sổ đỏ được định giá như với căn đã có sổ.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://dantri.com.vn/rss/phap-luat.rss",
+        "publisher_host": "dantri.com.vn",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-84d3e6c52fa03d7d38cd",
+      "title": "Giá vàng lao dốc dưới 3.750 USD/ounce sau tín hiệu cứng rắn từ Fed",
+      "url": "https://dantri.com.vn/kinh-doanh/gia-vang-lao-doc-duoi-3750-usdounce-sau-tin-hieu-cung-ran-tu-fed-20261119055229106.htm",
+      "category": "macro",
+      "module_ids": [
+        "macro"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-11-18T23:21:36+00:00",
+      "source_id": "dantri-business",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "(Dân trí) - Làn sóng bán tháo lan rộng đẩy giá vàng xuyên thủng ngưỡng 3.750 USD/ounce, trong khi giá bạc bốc hơi gần 5% sau khi Fed phát tín hiệu tiếp tục ghì chặt lãi suất.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://dantri.com.vn/rss/kinh-doanh.rss",
+        "publisher_host": "dantri.com.vn",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-d48795ad3dbadd592f02",
+      "title": "Thế kẹt của nhiều người vay mua nhà ông Thản",
+      "url": "https://vnexpress.net/the-ket-cua-nhieu-nguoi-vay-mua-nha-ong-than-5145139.html",
+      "category": "market",
+      "module_ids": [
+        "market"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-11-18T23:00:00+00:00",
+      "source_id": "vnexpress-real-estate",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "Sau hơn 10 năm vay mua nhà ở HH Linh Đàm, chị Hiền thấp thỏm vì khoản nợ chưa tất toán nhưng nguy cơ phải di dời nếu căn hộ thuộc diện buộc phá dỡ.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://vnexpress.net/rss/bat-dong-san.rss",
+        "publisher_host": "vnexpress.net",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-c30afe7c106f117a35a5",
+      "title": "Cống ngăn triều lớn nhất dự án chống ngập 10.000 tỷ đồng ở TP HCM",
+      "url": "https://vnexpress.net/cong-ngan-trieu-lon-nhat-du-an-chong-ngap-10-000-ty-dong-o-tp-hcm-5146138.html",
+      "category": "market",
+      "module_ids": [
+        "market"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-11-18T23:00:00+00:00",
+      "source_id": "vnexpress-current-affairs",
+      "region_ids": [
+        "hcmc"
+      ],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "Cống Mương Chuối có quy mô lớn nhất và là nơi đặt \"đầu não\" của dự án 10.000 tỷ đồng, chống ngập cho khoảng 6,5 triệu dân, sẽ vận hành thử nghiệm ngày 25/11.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://vnexpress.net/rss/thoi-su.rss",
+        "publisher_host": "vnexpress.net",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-b0a9365377fd0655ebec",
+      "title": "Gấp rút đường kết nối TP.HCM tới sân bay Long Thành",
+      "url": "https://thanhnien.vn/gap-rut-duong-ket-noi-tphcm-toi-san-bay-long-thanh-18526111822105674.htm",
+      "category": "infrastructure",
+      "module_ids": [
+        "infrastructure"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-11-18T23:00:00+00:00",
+      "source_id": "thanhnien-policy",
+      "region_ids": [
+        "hcmc"
+      ],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [
+        "supply",
+        "infrastructure"
+      ],
+      "importance": 2,
+      "summary": "Trước thời điểm Cảng hàng không quốc tế Long Thành chính thức đưa vào khai thác thương mại, một số đại lý vé máy bay đã bắt đầu hé lộ lịch bay dự kiến của các hãng nội địa đến và đi từ siêu sân bay này. Song song với việc theo dõi lịch mở bán vé, người dân TP.HCM và các tỉnh lân cận đang quan tâm nh",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://thanhnien.vn/rss/kinh-te/chinh-sach-phat-trien.rss",
+        "publisher_host": "thanhnien.vn",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-8d62abfa08f560dc7c5c",
+      "title": "Biên bản họp Fed: Gần như tất cả quan chức dự kiến sẽ còn tăng lãi suất",
+      "url": "https://dantri.com.vn/kinh-doanh/bien-ban-hop-fed-gan-nhu-tat-ca-quan-chuc-du-kien-se-con-tang-lai-suat-20261119042803648.htm",
+      "category": "macro",
+      "module_ids": [
+        "macro"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-11-18T22:44:00+00:00",
+      "source_id": "dantri-business",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "(Dân trí) - Gần như tất cả quan chức Cục Dự trữ Liên bang Mỹ (Fed) đã nhất trí trong tháng 10 rằng nhiều khả năng họ sẽ phải tăng lãi suất “trong những tháng tới” để kịp thời đưa lạm phát trở lại mục tiêu 2%.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://dantri.com.vn/rss/kinh-doanh.rss",
+        "publisher_host": "dantri.com.vn",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-eb5c52c13ee9cb694c7e",
+      "title": "Trụ sở dôi dư giảm giá cho thuê 9 lần vẫn chưa có người đăng ký",
+      "url": "https://dantri.com.vn/bat-dong-san/tru-so-doi-du-giam-gia-cho-thue-9-lan-van-chua-co-nguoi-dang-ky-20261117195107817.htm",
+      "category": "market",
+      "module_ids": [
+        "legal"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-11-18T22:38:29+00:00",
+      "source_id": "dantri-real-estate",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "(Dân trí) - Trụ sở Viện kiểm sát nhân dân Cửa Lò (Nghệ An) đã được thông báo cho thuê lần thứ 10, tương ứng với 9 lần điều chỉnh giá nhưng vẫn chưa có ai thuê.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://dantri.com.vn/rss/bat-dong-san.rss",
+        "publisher_host": "dantri.com.vn",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-9656a6fadc97541ba3a9",
+      "title": "Knight Frank: Người Hàn Quốc dẫn đầu lượng mua căn hộ tại Việt Nam",
+      "url": "https://vnexpress.net/knight-frank-nguoi-han-quoc-dan-dau-luong-mua-can-ho-tai-viet-nam-5146201.html",
+      "category": "market",
+      "module_ids": [
+        "market"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-11-18T22:00:00+00:00",
+      "source_id": "vnexpress-real-estate",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "Trong hơn 6.180 căn hộ người nước ngoài mua tại Việt Nam tính đến tháng 10, Hàn Quốc chiếm 48%, Trung Quốc đại lục 31%, theo báo cáo của Knight Frank.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://vnexpress.net/rss/bat-dong-san.rss",
+        "publisher_host": "vnexpress.net",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-9e2dc99d8a9ff11a96e9",
+      "title": "'Việt Nam nên phát triển bất động sản dưỡng lão và quản lý gia sản tuổi già'",
+      "url": "https://vnexpress.net/viet-nam-nen-phat-trien-bat-dong-san-duong-lao-va-quan-ly-gia-san-tuoi-gia-5146255.html",
+      "category": "market",
+      "module_ids": [
+        "market"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-11-18T21:00:00+00:00",
+      "source_id": "vnexpress-current-affairs",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "GS.TS Giang Thanh Long cho rằng từ sau năm 2035, khi bước vào thời kỳ dân số già, Việt Nam cần ưu tiên phát triển bất động sản dưỡng lão, công nghệ chăm sóc người cao tuổi, tài chính, bảo hiểm và quản lý gia sản.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://vnexpress.net/rss/thoi-su.rss",
+        "publisher_host": "vnexpress.net",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-d727a5347e502ef92fb1",
+      "title": "Đà Nẵng tìm nhà đầu tư khu đô thị Tây Bắc sườn đồi 9.900 tỷ đồng",
+      "url": "https://vnexpress.net/da-nang-tim-nha-dau-tu-khu-do-thi-tay-bac-suon-doi-9-900-ty-dong-5146308.html",
+      "category": "market",
+      "module_ids": [
+        "market"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-11-18T17:00:00+00:00",
+      "source_id": "vnexpress-real-estate",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [
+        "sales"
+      ],
+      "importance": 2,
+      "summary": "Đà Nẵng chấp thuận chủ trương đầu tư dự án khu đô thị Tây Bắc sườn đồi tại xã Bà Nà và Hòa Vang, với tổng vốn khoảng 9.906 tỷ đồng.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://vnexpress.net/rss/bat-dong-san.rss",
+        "publisher_host": "vnexpress.net",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-4a738324c2d73600c052",
+      "title": "Nhà bê tông 400 m2 như phòng trưng bày nghệ thuật",
+      "url": "https://vnexpress.net/nha-be-tong-400-m2-nhu-phong-trung-bay-nghe-thuat-5145277.html",
+      "category": "market",
+      "module_ids": [
+        "market"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-11-18T17:00:00+00:00",
+      "source_id": "vnexpress-real-estate",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "Nội thất đơn sắc kết hợp bê tông với thép không gỉ, tạo nền cho các tác phẩm nghệ thuật đương đại mà gia chủ trưng bày trong nhà.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://vnexpress.net/rss/bat-dong-san.rss",
+        "publisher_host": "vnexpress.net",
+        "publication_date_from_feed": true
+      }
+    },
     {
       "id": "article-market-rss-30c338ca606c085c15d8",
       "title": "VietinBank hoàn tất chuyển nhượng tòa tháp tại Ciputra",
