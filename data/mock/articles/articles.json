@@ -1,9 +1,59 @@
 {
   "schema_version": 1,
-  "build_id": "market-news-rss-20261119T145145Z",
-  "generated_at": "2026-11-19T14:51:45.421034+00:00",
-  "record_count": 2089,
+  "build_id": "market-news-rss-20261119T172824Z",
+  "generated_at": "2026-11-19T17:28:24.581044+00:00",
+  "record_count": 2091,
   "data": [
+    {
+      "id": "article-market-rss-c4d8244e673de4739659",
+      "title": "Nhà 5 tầng rộng 50 m2 có nên lắp thang máy?",
+      "url": "https://vnexpress.net/nha-5-tang-rong-50-m2-co-nen-lap-thang-may-5146155.html",
+      "category": "market",
+      "module_ids": [
+        "market"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-11-19T17:00:00+00:00",
+      "source_id": "vnexpress-real-estate",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "Ngại bố mẹ tuổi cao phải leo cầu thang bộ, nhưng tôi lo lắp thang máy sẽ khiến căn nhà ngang 4 m thêm chật chội và đội chi phí vận hành.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://vnexpress.net/rss/bat-dong-san.rss",
+        "publisher_host": "vnexpress.net",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-cfe242cbfba822b07892",
+      "title": "Giá vàng giảm dưới 3.700 USD/ounce: Vì sao kim loại quý liên tục lao dốc?",
+      "url": "https://dantri.com.vn/kinh-doanh/gia-vang-giam-duoi-3700-usdounce-vi-sao-kim-loai-quy-lien-tuc-lao-doc-20261119222408576.htm",
+      "category": "macro",
+      "module_ids": [
+        "macro"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-11-19T15:51:32+00:00",
+      "source_id": "dantri-business",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "(Dân trí) - Sau khi bốc hơi gần 1/3 giá trị từ đỉnh lịch sử, giá vàng thế giới rơi sát mốc 3.700 USD/ounce giữa áp lực lãi suất neo cao và sự trỗi dậy mạnh mẽ của các kênh đầu tư tiền mặt.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://dantri.com.vn/rss/kinh-doanh.rss",
+        "publisher_host": "dantri.com.vn",
+        "publication_date_from_feed": true
+      }
+    },
     {
       "id": "article-market-rss-42bc2bb5162c5d4519b1",
       "title": "Phú Quốc cần hơn 14.000 nhân sự năm 2027 cho sự kiện lớn bậc nhất hành tinh",
