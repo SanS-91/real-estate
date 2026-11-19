@@ -1,9 +1,188 @@
 {
   "schema_version": 1,
-  "build_id": "market-news-rss-20261119T005142Z",
-  "generated_at": "2026-11-19T00:51:42.878206+00:00",
-  "record_count": 2052,
+  "build_id": "market-news-rss-20261119T025134Z",
+  "generated_at": "2026-11-19T02:51:34.172036+00:00",
+  "record_count": 2060,
   "data": [
+    {
+      "id": "article-market-rss-f56144815be559d97f2b",
+      "title": "Giá vàng hôm nay 19.11.2026: Tiếp tục lao dốc, rớt khỏi mức 137 triệu đồng",
+      "url": "https://thanhnien.vn/gia-vang-hom-nay-19112026-tiep-tuc-lao-doc-rot-khoi-muc-137-trieu-dong-185261119082401846.htm",
+      "category": "macro",
+      "module_ids": [
+        "macro"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-11-19T01:53:00+00:00",
+      "source_id": "thanhnien-banking",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "Giá vàng thế giới lẫn trong nước tiếp tục đà giảm khi kỳ vọng Mỹ tăng lãi suất lên cao.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://thanhnien.vn/rss/kinh-te/ngan-hang.rss",
+        "publisher_host": "thanhnien.vn",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-cda55ce95dd076ac3280",
+      "title": "Vì sao 34 hãng hàng không quốc tế muốn lùi thời gian khai thác tại sân bay Long Thành?",
+      "url": "https://thanhnien.vn/vi-sao-34-hang-hang-khong-quoc-te-muon-lui-khai-thac-tai-san-bay-long-thanh-185261119083658574.htm",
+      "category": "infrastructure",
+      "module_ids": [
+        "infrastructure"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-11-19T01:45:00+00:00",
+      "source_id": "thanhnien-policy",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [
+        "infrastructure"
+      ],
+      "importance": 2,
+      "summary": "Có 34 hãng hàng không quốc tế dự kiến chuyển đổi hoạt động khai thác sang siêu sân bay Long Thành từ lịch bay mùa Đông 2027 trong đó 10 hãng từ mùa Hè 2028 hoặc muộn hơn.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://thanhnien.vn/rss/kinh-te/chinh-sach-phat-trien.rss",
+        "publisher_host": "thanhnien.vn",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-0ddd1861d910b365378b",
+      "title": "Biến nhà thành nơi nghỉ dưỡng: 4 xu hướng cải tạo lên ngôi năm 2027",
+      "url": "https://dantri.com.vn/bat-dong-san/bien-nha-thanh-noi-nghi-duong-4-xu-huong-cai-tao-len-ngoi-nam-2027-20261119044659094.htm",
+      "category": "market",
+      "module_ids": [
+        "market"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-11-19T01:16:00+00:00",
+      "source_id": "dantri-real-estate",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "(Dân trí) - Thay vì đập đi xây lại tốn kém, nhiều gia đình chọn cách làm mới từng chi tiết nhỏ, tạo góc thư giãn và tối ưu công năng đa thế hệ cho tổ ấm trong năm 2027.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://dantri.com.vn/rss/bat-dong-san.rss",
+        "publisher_host": "dantri.com.vn",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-ff12188645945db6f399",
+      "title": "Cơ hội sở hữu cùng lúc hai căn hộ cao cấp Diamond Sky",
+      "url": "https://vnexpress.net/co-hoi-so-huu-cung-luc-hai-can-ho-cao-cap-diamond-sky-5146045.html",
+      "category": "market",
+      "module_ids": [
+        "market"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-11-19T01:00:00+00:00",
+      "source_id": "vnexpress-real-estate",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "Khách hàng mua nhà tại Diamond Sky có cơ hội nhận thêm căn hộ cao cấp cùng dự án trị giá gần 8 tỷ đồng, mở rộng lựa chọn an cư, cho thuê hoặc tích lũy tài sản dài hạn tại Van Phuc City.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://vnexpress.net/rss/bat-dong-san.rss",
+        "publisher_host": "vnexpress.net",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-d4a80f52cb679f552d90",
+      "title": "Khi kinh nghiệm quản lý trở thành tài sản chung của công ty",
+      "url": "https://dantri.com.vn/kinh-doanh/khi-kinh-nghiem-quan-ly-tro-thanh-tai-san-chung-cua-cong-ty-20261118192824432.htm",
+      "category": "market",
+      "module_ids": [
+        "market"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-11-19T01:00:00+00:00",
+      "source_id": "dantri-business",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "(Dân trí) - Tại GELEX, những kinh nghiệm quý được tích lũy qua quá trình giải quyết vấn đề, thử nghiệm cách làm mới và dẫn dắt đội ngũ được đúc kết, chia sẻ qua các chương trình đào tạo nội bộ, giúp đồng nghiệp cùng học hỏi và vận dụng vào công việc.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://dantri.com.vn/rss/kinh-doanh.rss",
+        "publisher_host": "dantri.com.vn",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-5827531e2f465d909d50",
+      "title": "Mua Diamond Sky, thêm cơ hội sở hữu căn hộ cao cấp thứ 2",
+      "url": "https://dantri.com.vn/bat-dong-san/mua-diamond-sky-them-co-hoi-so-huu-can-ho-cao-cap-thu-2-20261118102419196.htm",
+      "category": "market",
+      "module_ids": [
+        "market"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-11-19T01:00:00+00:00",
+      "source_id": "dantri-real-estate",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "(Dân trí) - Một căn hộ để an cư, một căn hộ khác để cho thuê - đó là điểm hấp dẫn khi mua Diamond Sky.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://dantri.com.vn/rss/bat-dong-san.rss",
+        "publisher_host": "dantri.com.vn",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-36f109cb5d8061dda9a1",
+      "title": "Siêu dự án chống ngập 10.000 tỷ sắp về đích, \"bộ não\" điều hành lộ diện",
+      "url": "https://dantri.com.vn/thoi-su/sieu-du-an-chong-ngap-10000-ty-sap-ve-dich-bo-nao-dieu-hanh-lo-dien-20261118144652282.htm",
+      "category": "market",
+      "module_ids": [
+        "market"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-11-19T01:00:00+00:00",
+      "source_id": "dantri-current-affairs",
+      "region_ids": [
+        "hcmc"
+      ],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "(Dân trí) - Siêu dự án chống ngập khoảng 10.000 tỷ đồng ở TPHCM đang hoàn tất những khâu cuối cùng trước khi vận hành. Bên trong trung tâm “đầu não”, toàn bộ hoạt động kiểm soát triều được giám sát và điều phối.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://dantri.com.vn/rss/thoi-su.rss",
+        "publisher_host": "dantri.com.vn",
+        "publication_date_from_feed": true
+      }
+    },
     {
       "id": "article-market-rss-34f72e5f03e90d09b663",
       "title": "Giá vàng thế giới lao dốc, xuống thấp nhất 14 tháng",
@@ -77,6 +256,31 @@
         "method": "official-rss",
         "feed_url": "https://dantri.com.vn/rss/kinh-doanh.rss",
         "publisher_host": "dantri.com.vn",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-ee838faa14a3176b683f",
+      "title": "Thế kẹt của nhiều người vay mua nhà ông Lê Thanh Thản",
+      "url": "https://vnexpress.net/the-ket-cua-nhieu-nguoi-vay-mua-nha-ong-le-thanh-than-5145139.html",
+      "category": "market",
+      "module_ids": [
+        "market"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-11-18T23:00:00+00:00",
+      "source_id": "vnexpress-real-estate",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "Sau hơn 10 năm vay mua nhà ở HH Linh Đàm, chị Hiền thấp thỏm vì khoản nợ chưa tất toán nhưng nguy cơ phải di dời nếu căn hộ thuộc diện buộc phá dỡ.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://vnexpress.net/rss/bat-dong-san.rss",
+        "publisher_host": "vnexpress.net",
         "publication_date_from_feed": true
       }
     },
