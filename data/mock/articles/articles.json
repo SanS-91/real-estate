@@ -1,9 +1,61 @@
 {
   "schema_version": 1,
-  "build_id": "market-news-rss-20261119T065145Z",
-  "generated_at": "2026-11-19T06:51:45.642367+00:00",
-  "record_count": 2073,
+  "build_id": "market-news-rss-20261119T074024Z",
+  "generated_at": "2026-11-19T07:40:24.468211+00:00",
+  "record_count": 2075,
   "data": [
+    {
+      "id": "article-market-rss-0c2b96999993d31a2721",
+      "title": "Siêu sân bay Long Thành sẽ có khu vực lưu trú 4 sao trở lên",
+      "url": "https://thanhnien.vn/sieu-san-bay-long-thanh-se-co-khu-vuc-luu-tru-4-sao-tro-len-185261119143628998.htm",
+      "category": "infrastructure",
+      "module_ids": [
+        "infrastructure"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-11-19T07:39:00+00:00",
+      "source_id": "thanhnien-policy",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [
+        "infrastructure"
+      ],
+      "importance": 2,
+      "summary": "Cảng hàng không quốc tế (HKQT) Long Thành được xác định là cảng hàng không cửa ngõ quốc gia, trung tâm trung chuyển hàng không mới, có tính cạnh tranh cao của khu vực, nên cần chất lượng phục vụ hành khách và dịch vụ hàng hóa theo chuẩn tương ứng.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://thanhnien.vn/rss/kinh-te/chinh-sach-phat-trien.rss",
+        "publisher_host": "thanhnien.vn",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-cdeff569492d75224833",
+      "title": "Cần Thơ đẩy nhanh dự án chống chịu khí hậu gần 3.000 tỷ đồng",
+      "url": "https://dantri.com.vn/thoi-su/can-tho-day-nhanh-du-an-chong-chiu-khi-hau-gan-3000-ty-dong-20261119113959467.htm",
+      "category": "market",
+      "module_ids": [
+        "market"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-11-19T06:59:23+00:00",
+      "source_id": "dantri-current-affairs",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "(Dân trí) - Lãnh đạo UBND TP Cần Thơ vừa có buổi làm việc với Ngân hàng Thế giới nhằm tháo gỡ vướng mắc, đẩy nhanh tiến độ dự án thủy lợi trọng điểm để bảo vệ sinh kế người dân trước biến đổi khí hậu.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://dantri.com.vn/rss/thoi-su.rss",
+        "publisher_host": "dantri.com.vn",
+        "publication_date_from_feed": true
+      }
+    },
     {
       "id": "article-market-rss-cc4c7fe1e9f54908a06e",
       "title": "Phú Mỹ Hưng hỗ trợ lãi suất 0% cho người mua The Aristo",
