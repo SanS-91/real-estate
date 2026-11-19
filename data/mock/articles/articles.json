@@ -1,9 +1,66 @@
 {
   "schema_version": 1,
-  "build_id": "market-news-rss-20261119T074024Z",
-  "generated_at": "2026-11-19T07:40:24.468211+00:00",
-  "record_count": 2075,
+  "build_id": "market-news-rss-20261119T085143Z",
+  "generated_at": "2026-11-19T08:51:43.963626+00:00",
+  "record_count": 2078,
   "data": [
+    {
+      "id": "article-market-rss-d94385c9ab9a29be5450",
+      "title": "Chủ đầu tư khó hạ giá nhà dù thanh khoản kém",
+      "url": "https://vnexpress.net/chu-dau-tu-kho-ha-gia-nha-du-thanh-khoan-kem-5141495.html",
+      "category": "market",
+      "module_ids": [
+        "market"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-11-19T08:14:18+00:00",
+      "source_id": "vnexpress-real-estate",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [
+        "supply",
+        "pricing"
+      ],
+      "importance": 2,
+      "summary": "Giá đất, nghĩa vụ tài chính, vốn và vật liệu xây dựng cùng đội lên trong quá trình phát triển dự án, khiến dư địa giảm giá nhà của chủ đầu tư thu hẹp.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://vnexpress.net/rss/bat-dong-san.rss",
+        "publisher_host": "vnexpress.net",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-2d5745a8e26843a1aad4",
+      "title": "Dự án 59.000 tỷ đồng của Vingroup được bán nhà cho người nước ngoài",
+      "url": "https://vnexpress.net/du-an-59-000-ty-dong-cua-vingroup-duoc-ban-nha-cho-nguoi-nuoc-ngoai-5146477.html",
+      "category": "market",
+      "module_ids": [
+        "market"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-11-19T07:47:27+00:00",
+      "source_id": "vnexpress-real-estate",
+      "region_ids": [
+        "hcmc"
+      ],
+      "project_ids": [],
+      "developer_ids": [
+        "vinhomes"
+      ],
+      "tags": [],
+      "importance": 2,
+      "summary": "TP HCM bổ sung Khu đô thị Đại học Quốc tế tại xã Xuân Thới Sơn của Tập đoàn Vingroup vào danh sách dự án nhà ở được phép bán cho tổ chức, cá nhân nước ngoài.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://vnexpress.net/rss/bat-dong-san.rss",
+        "publisher_host": "vnexpress.net",
+        "publication_date_from_feed": true
+      }
+    },
     {
       "id": "article-market-rss-0c2b96999993d31a2721",
       "title": "Siêu sân bay Long Thành sẽ có khu vực lưu trú 4 sao trở lên",
@@ -28,6 +85,33 @@
         "method": "official-rss",
         "feed_url": "https://thanhnien.vn/rss/kinh-te/chinh-sach-phat-trien.rss",
         "publisher_host": "thanhnien.vn",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-af61d29ba58d9d6893ae",
+      "title": "Hà Nội dự kiến hoàn thành 20.000 căn nhà xã hội năm sau",
+      "url": "https://vnexpress.net/ha-noi-du-kien-hoan-thanh-20-000-can-nha-xa-hoi-nam-sau-5146489.html",
+      "category": "market",
+      "module_ids": [
+        "market"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-11-19T07:00:00+00:00",
+      "source_id": "vnexpress-real-estate",
+      "region_ids": [
+        "ha-noi"
+      ],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "Năm 2027, TP Hà Nội đặt mục tiêu hoàn thành 20.000 căn nhà ở xã hội, 8 dự án nhà tái định cư.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://vnexpress.net/rss/bat-dong-san.rss",
+        "publisher_host": "vnexpress.net",
         "publication_date_from_feed": true
       }
     },
