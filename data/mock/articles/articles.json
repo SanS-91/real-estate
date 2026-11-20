@@ -1,9 +1,328 @@
 {
   "schema_version": 1,
-  "build_id": "market-news-rss-20261120T005148Z",
-  "generated_at": "2026-11-20T00:51:48.243988+00:00",
-  "record_count": 2098,
+  "build_id": "market-news-rss-20261120T025134Z",
+  "generated_at": "2026-11-20T02:51:34.840124+00:00",
+  "record_count": 2110,
   "data": [
+    {
+      "id": "article-market-rss-e1767712b94d9bb7b41d",
+      "title": "5 mẹo nội thất giúp nhà trần thấp trông cao và thoáng hơn",
+      "url": "https://dantri.com.vn/bat-dong-san/5-meo-noi-that-giup-nha-tran-thap-trong-cao-va-thoang-hon-20261119203714527.htm",
+      "category": "market",
+      "module_ids": [
+        "market"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-11-20T02:35:00+00:00",
+      "source_id": "dantri-real-estate",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "(Dân trí) - Trần nhà thấp dễ gây cảm giác bí bách, ngột ngạt. Áp dụng ngay 5 mẹo sắp đặt nội thất thông minh dưới đây để \"nâng\" trần nhà trực quan, giúp tổ ấm rộng thoáng tức thì.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://dantri.com.vn/rss/bat-dong-san.rss",
+        "publisher_host": "dantri.com.vn",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-8cca65c534b5270d6b67",
+      "title": "Người đấu giá đất ở phải đặt cọc 20-50% giá khởi điểm",
+      "url": "https://dantri.com.vn/thoi-su/nguoi-dau-gia-dat-o-phai-dat-coc-20-50-gia-khoi-diem-20261120084837189.htm",
+      "category": "market",
+      "module_ids": [
+        "market",
+        "legal"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-11-20T02:01:58+00:00",
+      "source_id": "dantri-current-affairs",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [
+        "pricing"
+      ],
+      "importance": 2,
+      "summary": "(Dân trí) - Luật Đấu giá tài sản (sửa đổi) quy định người tham gia đấu giá đất ở phải đặt trước 20-50% giá khởi điểm, nhằm hạn chế tình trạng trả giá cao rồi bỏ cọc.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://dantri.com.vn/rss/thoi-su.rss",
+        "publisher_host": "dantri.com.vn",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-55a189920276800943cd",
+      "title": "Quốc hội chốt tiền đặt trước đấu giá đất ở 20-50%",
+      "url": "https://vnexpress.net/quoc-hoi-chot-tien-dat-truoc-dau-gia-dat-o-20-50-5146875.html",
+      "category": "market",
+      "module_ids": [
+        "market",
+        "legal"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-11-20T02:00:21+00:00",
+      "source_id": "vnexpress-current-affairs",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [
+        "pricing"
+      ],
+      "importance": 2,
+      "summary": "Từ ngày 1/7/2027, người tham gia đấu giá đất ở phải nộp tiền đặt trước bằng 20-50% giá khởi điểm, thay vì 10-50% như hiện nay, nhằm hạn chế tình trạng trả giá cao rồi bỏ cọc.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://vnexpress.net/rss/thoi-su.rss",
+        "publisher_host": "vnexpress.net",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-d8611ab5f43d3d6055a1",
+      "title": "Giá vàng trong nước, quốc tế quay đầu giảm mạnh",
+      "url": "https://dantri.com.vn/kinh-doanh/gia-vang-trong-nuoc-quoc-te-quay-dau-giam-manh-20261120083339241.htm",
+      "category": "macro",
+      "module_ids": [
+        "macro"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-11-20T01:51:06+00:00",
+      "source_id": "dantri-business",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "(Dân trí) - Giá vàng miếng SJC sáng 20/11 giảm 1 triệu đồng/lượng, trong khi vàng thế giới lùi sâu dưới mốc 3.600 USD. Vàng trong nước đắt hơn thế giới trên 23 triệu đồng mỗi lượng.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://dantri.com.vn/rss/kinh-doanh.rss",
+        "publisher_host": "dantri.com.vn",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-16ae481000fcc74051ed",
+      "title": "Căn nhà ở Lâm Đồng bốc cháy sau tiếng nổ lớn, một người bị thương",
+      "url": "https://dantri.com.vn/thoi-su/can-nha-o-lam-dong-boc-chay-sau-tieng-no-lon-mot-nguoi-bi-thuong-20261120082013389.htm",
+      "category": "market",
+      "module_ids": [
+        "market"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-11-20T01:50:01+00:00",
+      "source_id": "dantri-current-affairs",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "(Dân trí) - Vụ nổ bình gas khiến ngọn lửa bùng phát tại căn nhà kinh doanh đồ điện dân dụng và sửa chữa xe máy ở xã Tân Thành (tỉnh Lâm Đồng), làm một người bị thương.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://dantri.com.vn/rss/thoi-su.rss",
+        "publisher_host": "dantri.com.vn",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-fb3902869ef6d594329e",
+      "title": "Giá vàng hôm nay 20.11.2026: Sầm sập lao dốc, xuống còn 134 triệu đồng/lượng",
+      "url": "https://thanhnien.vn/gia-vang-hom-nay-20112026-sam-sap-lao-doc-xuong-con-134-trieu-dong-luong-185261120082200977.htm",
+      "category": "macro",
+      "module_ids": [
+        "macro"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-11-20T01:49:00+00:00",
+      "source_id": "thanhnien-banking",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "Giá vàng thế giới lao dốc không phanh đẩy thị trường trong nước xuống sát 134 triệu đồng.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://thanhnien.vn/rss/kinh-te/ngan-hang.rss",
+        "publisher_host": "thanhnien.vn",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-add553ae6e344d2f9fea",
+      "title": "Va chạm giữa 2 xe đầu kéo khiến quốc lộ 1 ách tắc nhiều giờ",
+      "url": "https://dantri.com.vn/thoi-su/va-cham-giua-2-xe-dau-keo-khien-quoc-lo-1-ach-tac-nhieu-gio-20261120075029397.htm",
+      "category": "infrastructure",
+      "module_ids": [
+        "infrastructure"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-11-20T01:23:39+00:00",
+      "source_id": "dantri-current-affairs",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [
+        "infrastructure"
+      ],
+      "importance": 2,
+      "summary": "(Dân trí) - Sau vụ va chạm giữa 2 xe đầu kéo, tuyến đường tránh Huế (quốc lộ 1) bị ách tắc cục bộ trong nhiều giờ. Cùng thời điểm, cao tốc Cam Lộ - La Sơn đóng cửa nên lượng phương tiện đổ về quốc lộ 1 rất lớn.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://dantri.com.vn/rss/thoi-su.rss",
+        "publisher_host": "dantri.com.vn",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-4c64913447fc74ce7afb",
+      "title": "Mức độ quan tâm chung cư giảm, giá căn hộ năm 2027 có hạ nhiệt?",
+      "url": "https://dantri.com.vn/bat-dong-san/muc-do-quan-tam-chung-cu-giam-gia-can-ho-nam-2027-co-ha-nhiet-20261119220413878.htm",
+      "category": "market",
+      "module_ids": [
+        "market"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-11-20T01:23:00+00:00",
+      "source_id": "dantri-real-estate",
+      "region_ids": [
+        "hcmc",
+        "ha-noi"
+      ],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [
+        "supply",
+        "pricing",
+        "sales"
+      ],
+      "importance": 2,
+      "summary": "(Dân trí) - Mức độ quan tâm chung cư tại Hà Nội và TPHCM cũ giảm trong tháng 10, nguồn cung mới dự báo tăng mạnh, tạo thêm áp lực hấp thụ và có thể khiến đà tăng giá căn hộ chậm lại trong năm 2027.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://dantri.com.vn/rss/bat-dong-san.rss",
+        "publisher_host": "dantri.com.vn",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-c00ec1dc0eb169fafcfe",
+      "title": "Từ thuê mặt bằng đến nền tảng tăng trưởng: Bước chuyển của doanh nghiệp công nghiệp",
+      "url": "https://dantri.com.vn/bat-dong-san/tu-thue-mat-bang-den-nen-tang-tang-truong-buoc-chuyen-cua-doanh-nghiep-cong-nghiep-20261119213843845.htm",
+      "category": "market",
+      "module_ids": [
+        "market"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-11-20T01:00:00+00:00",
+      "source_id": "dantri-real-estate",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "(Dân trí) - Dịch chuyển chuỗi cung ứng và tiêu chuẩn xanh đang thúc đẩy bất động sản công nghiệp chuyển từ tư duy \"thuê xưởng thô\" sang \"nền tảng tăng trưởng\" tích hợp. MEYINPARK Hưng Yên là một trong những dự án phát triển theo định hướng này.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://dantri.com.vn/rss/bat-dong-san.rss",
+        "publisher_host": "dantri.com.vn",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-b091dd120e5bcbd6d2fa",
+      "title": "Người mua Destino Centro có thể nhận nhà với 30% vốn tự có",
+      "url": "https://vnexpress.net/nguoi-mua-destino-centro-co-the-nhan-nha-voi-30-von-tu-co-5146466.html",
+      "category": "market",
+      "module_ids": [
+        "market"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-11-20T01:00:00+00:00",
+      "source_id": "vnexpress-real-estate",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "Người mua căn hộ tại Destino Centro có thể nhận bàn giao nhà khi thanh toán 30% giá trị sản phẩm bằng vốn tự có, 70% còn lại thông qua khoản vay ngân hàng theo chính sách của Seaholdings.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://vnexpress.net/rss/bat-dong-san.rss",
+        "publisher_host": "vnexpress.net",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-1e18add087e87a3fc315",
+      "title": "TT GENESIS và chuẩn sống nghỉ dưỡng tại khu Nam TPHCM",
+      "url": "https://dantri.com.vn/bat-dong-san/tt-genesis-va-chuan-song-nghi-duong-tai-khu-nam-tphcm-20261119161036301.htm",
+      "category": "market",
+      "module_ids": [
+        "market"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-11-20T01:00:00+00:00",
+      "source_id": "dantri-real-estate",
+      "region_ids": [
+        "hcmc"
+      ],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [
+        "infrastructure"
+      ],
+      "importance": 2,
+      "summary": "(Dân trí) - Từ hai tầng hầm rộng hơn 4 sân bóng đến 88 tiện ích compound resort, TT GENESIS chú trọng cho trải nghiệm sống nội khu, trong bối cảnh hạ tầng đang bức tốc về đích.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://dantri.com.vn/rss/bat-dong-san.rss",
+        "publisher_host": "dantri.com.vn",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-7a40e74bd2368754ed5d",
+      "title": "Giá vàng thế giới mất mốc 3.600 USD",
+      "url": "https://vnexpress.net/gia-vang-the-gioi-mat-moc-3-600-usd-5146847.html",
+      "category": "macro",
+      "module_ids": [
+        "macro"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-11-20T00:49:44+00:00",
+      "source_id": "vnexpress-economy",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "Kim loại quý lao dốc phiên thứ ba liên tiếp vì sức ép từ lãi suất và đồng đôla Mỹ, có lúc về 3.589 USD.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://vnexpress.net/rss/kinh-doanh.rss",
+        "publisher_host": "vnexpress.net",
+        "publication_date_from_feed": true
+      }
+    },
     {
       "id": "article-market-rss-cec0418c5df986df8e29",
       "title": "Chênh lệch giá vàng trong nước và thế giới nới rộng lên 20 triệu đồng/lượng",
