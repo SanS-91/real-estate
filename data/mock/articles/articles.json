@@ -1,9 +1,285 @@
 {
   "schema_version": 1,
-  "build_id": "market-news-rss-20261120T025134Z",
-  "generated_at": "2026-11-20T02:51:34.840124+00:00",
-  "record_count": 2110,
+  "build_id": "market-news-rss-20261120T045150Z",
+  "generated_at": "2026-11-20T04:51:50.315242+00:00",
+  "record_count": 2120,
   "data": [
+    {
+      "id": "article-market-rss-6cd064b8367755a975e0",
+      "title": "Hà Nội tạm cấm, hạn chế phương tiện nhiều tuyến đường gần sân Mỹ Đình",
+      "url": "https://dantri.com.vn/thoi-su/ha-noi-tam-cam-han-che-phuong-tien-nhieu-tuyen-duong-gan-san-my-dinh-20261120110450973.htm",
+      "category": "infrastructure",
+      "module_ids": [
+        "infrastructure"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-11-20T04:20:50+00:00",
+      "source_id": "dantri-current-affairs",
+      "region_ids": [
+        "ha-noi"
+      ],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "(Dân trí) - Từ 17h đến 24h ngày 24/11, tạm cấm toàn bộ ô tô chở hàng có khối lượng hàng hóa chuyên chở từ 500kg trở lên, ô tô chở khách từ 9 chỗ trở lên tại nhiều tuyến đường gần sân vận động Quốc gia Mỹ Đình.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://dantri.com.vn/rss/thoi-su.rss",
+        "publisher_host": "dantri.com.vn",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-fc8b2d7e031cedb6b1ff",
+      "title": "Lập tổ 30 thành viên nghiên cứu huy động vốn cho đường sắt tốc độ cao",
+      "url": "https://dantri.com.vn/bat-dong-san/lap-to-30-thanh-vien-nghien-cuu-huy-dong-von-cho-duong-sat-toc-do-cao-20261120103548990.htm",
+      "category": "market",
+      "module_ids": [
+        "infrastructure"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-11-20T04:15:38+00:00",
+      "source_id": "dantri-real-estate",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [
+        "infrastructure"
+      ],
+      "importance": 2,
+      "summary": "(Dân trí) - Bộ Tài chính thành lập Tổ công tác gồm 30 thành viên để nghiên cứu, xây dựng cơ chế huy động nguồn lực phát triển đường sắt tốc độ cao và đường sắt đô thị, trình Thủ tướng xem xét.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://dantri.com.vn/rss/bat-dong-san.rss",
+        "publisher_host": "dantri.com.vn",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-ed9f8fda556b66942377",
+      "title": "Newtown Diamond đón nhịp hạ tầng mới trên trục Đà Nẵng - Hội An",
+      "url": "https://dantri.com.vn/bat-dong-san/newtown-diamond-don-nhip-ha-tang-moi-tren-truc-da-nang-hoi-an-20261120103657641.htm",
+      "category": "market",
+      "module_ids": [
+        "market"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-11-20T04:00:00+00:00",
+      "source_id": "dantri-real-estate",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [
+        "legal",
+        "infrastructure"
+      ],
+      "importance": 2,
+      "summary": "(Dân trí) - Nằm trên trục ven biển Trường Sa - tuyến giao thông quan trọng trong Quy hoạch chung của Đà Nẵng, kết nối đô thị biển với di sản Hội An, Newtown Diamond có lợi thế vị trí cùng khả năng tiếp cận những động lực phát triển mới của thành phố.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://dantri.com.vn/rss/bat-dong-san.rss",
+        "publisher_host": "dantri.com.vn",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-8e05e669efdfbf6ffb8c",
+      "title": "Metro Bến Thành - Suối Tiên đông khách, TP HCM tính tăng chuyến, thêm toa",
+      "url": "https://vnexpress.net/metro-ben-thanh-suoi-tien-dong-khach-tp-hcm-tinh-tang-chuyen-them-toa-5146936.html",
+      "category": "infrastructure",
+      "module_ids": [
+        "infrastructure"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-11-20T03:29:35+00:00",
+      "source_id": "vnexpress-current-affairs",
+      "region_ids": [
+        "hcmc"
+      ],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [
+        "infrastructure"
+      ],
+      "importance": 2,
+      "summary": "TP HCM sẽ tăng tần suất chạy tàu metro Bến Thành - Suối Tiên giờ cao điểm để đáp ứng nhu cầu đi lại, đồng thời xem xét bổ sung toa xe và đoàn tàu 6 toa về lâu dài.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://vnexpress.net/rss/thoi-su.rss",
+        "publisher_host": "vnexpress.net",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-84ec7040f54b4e6388b8",
+      "title": "Bị hại phản đối quan điểm 'hạnh phúc, hài lòng' ở chung cư không sổ đỏ của ông Thản",
+      "url": "https://vnexpress.net/bi-hai-phan-doi-quan-diem-hanh-phuc-hai-long-o-chung-cu-khong-so-do-cua-ong-than-5146867.html",
+      "category": "market",
+      "module_ids": [
+        "market",
+        "legal"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-11-20T03:27:07+00:00",
+      "source_id": "vnexpress-legal",
+      "region_ids": [
+        "ha-noi"
+      ],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "Cho rằng việc được ở lại CT6 Kiến Hưng là nhờ chính sách của Hà Nội, không phải ân huệ của ông Lê Thanh Thản, cư dân phản bác việc luật sư của bị cáo nói họ đang hạnh phúc, hài lòng với cuộc sống tiện nghi tại đây.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://vnexpress.net/rss/phap-luat.rss",
+        "publisher_host": "vnexpress.net",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-6122df6e3043160c6c45",
+      "title": "Vẫn chưa thể đánh giá đầy đủ năng lực kết nối giao thông tới sân bay Long Thành",
+      "url": "https://thanhnien.vn/van-chua-the-danh-gia-day-du-nang-luc-ket-noi-giao-thong-toi-san-bay-longthanh-185261120092229568.htm",
+      "category": "infrastructure",
+      "module_ids": [
+        "infrastructure"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-11-20T03:27:00+00:00",
+      "source_id": "thanhnien-policy",
+      "region_ids": [
+        "hcmc"
+      ],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [
+        "infrastructure"
+      ],
+      "importance": 2,
+      "summary": "Hiện nay, hệ thống giao thông kết nối giữa TP.HCM đến CHKQT Long Thành phụ thuộc hoàn toàn vào giao thông đường bộ, trong khi các tuyến đường cao tốc và nút giao An Phú vẫn đang trong quá trình thi công, theo kế hoạch thì dự kiến tới đầu quý 2/2027 mới cơ bản hoàn thành toàn bộ.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://thanhnien.vn/rss/kinh-te/chinh-sach-phat-trien.rss",
+        "publisher_host": "thanhnien.vn",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-cdba1098685572c09726",
+      "title": "Hình hài tuyến cao tốc gần 19.000 tỷ đồng nối Bảo Lộc với Đà Lạt",
+      "url": "https://dantri.com.vn/thoi-su/hinh-hai-tuyen-cao-toc-gan-19000-ty-dong-noi-bao-loc-voi-da-lat-20261120080934883.htm",
+      "category": "infrastructure",
+      "module_ids": [
+        "infrastructure"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-11-20T03:23:48+00:00",
+      "source_id": "dantri-current-affairs",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [
+        "infrastructure"
+      ],
+      "importance": 2,
+      "summary": "(Dân trí) - Cao tốc Bảo Lộc - Liên Khương có tổng vốn đầu tư gần 19.000 tỷ đồng đang được các đơn vị san ủi mặt bằng, xây dựng cầu, cống hộp. Nhiều đoạn, tuyến đường dần lộ diện.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://dantri.com.vn/rss/thoi-su.rss",
+        "publisher_host": "dantri.com.vn",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-b902144c7bbc13b453d5",
+      "title": "Tây Ninh khởi công trục đường kết nối Long An - Tân Ninh trong tháng 12",
+      "url": "https://dantri.com.vn/thoi-su/tay-ninh-khoi-cong-truc-duong-ket-noi-long-an-tan-ninh-trong-thang-12-20261119193025741.htm",
+      "category": "infrastructure",
+      "module_ids": [
+        "infrastructure"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-11-20T03:22:46+00:00",
+      "source_id": "dantri-current-affairs",
+      "region_ids": [
+        "long-an"
+      ],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "(Dân trí) - UBND tỉnh Tây Ninh đang tập trung tháo gỡ vướng mắc, đẩy nhanh giải phóng mặt bằng để khởi công dự án đường trục kết nối Long An - Tân Ninh trong tháng 12.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://dantri.com.vn/rss/thoi-su.rss",
+        "publisher_host": "dantri.com.vn",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-49160195d9b3f6dee327",
+      "title": "Cao tốc Khánh Hòa - Buôn Ma Thuột dự kiến có trạm dừng nghỉ gần 7ha",
+      "url": "https://dantri.com.vn/thoi-su/cao-toc-khanh-hoa-buon-ma-thuot-du-kien-co-tram-dung-nghi-gan-7ha-20261120093836668.htm",
+      "category": "infrastructure",
+      "module_ids": [
+        "infrastructure"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-11-20T03:09:53+00:00",
+      "source_id": "dantri-current-affairs",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [
+        "infrastructure"
+      ],
+      "importance": 2,
+      "summary": "(Dân trí) - Trạm dừng nghỉ km72+500 trên cao tốc Khánh Hòa - Buôn Ma Thuột qua tỉnh Đắk Lắk dự kiến rộng gần 7ha, đang được địa phương này hoàn thiện các thủ tục để triển khai.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://dantri.com.vn/rss/thoi-su.rss",
+        "publisher_host": "dantri.com.vn",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-f3779fe0f7c91ab14987",
+      "title": "Lập Tổ công tác huy động vốn cho đường sắt tốc độ cao",
+      "url": "https://vnexpress.net/lap-to-cong-tac-huy-dong-von-cho-duong-sat-toc-do-cao-5146887.html",
+      "category": "infrastructure",
+      "module_ids": [
+        "infrastructure"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-11-20T02:36:23+00:00",
+      "source_id": "vnexpress-current-affairs",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [
+        "infrastructure"
+      ],
+      "importance": 2,
+      "summary": "Tổ công tác gồm đại diện bộ, ngành, địa phương và doanh nghiệp để xây dựng cơ chế, chính sách huy động vốn phát triển đường sắt tốc độ cao và đường sắt đô thị.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://vnexpress.net/rss/thoi-su.rss",
+        "publisher_host": "vnexpress.net",
+        "publication_date_from_feed": true
+      }
+    },
     {
       "id": "article-market-rss-e1767712b94d9bb7b41d",
       "title": "5 mẹo nội thất giúp nhà trần thấp trông cao và thoáng hơn",
