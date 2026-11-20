@@ -1,9 +1,62 @@
 {
   "schema_version": 1,
-  "build_id": "market-news-rss-20261120T105145Z",
-  "generated_at": "2026-11-20T10:51:45.665587+00:00",
-  "record_count": 2134,
+  "build_id": "market-news-rss-20261120T125140Z",
+  "generated_at": "2026-11-20T12:51:40.634780+00:00",
+  "record_count": 2136,
   "data": [
+    {
+      "id": "article-market-rss-5dca21a52d376078ee57",
+      "title": "Bốc hơi 1.000 tỷ USD sau 6 giờ, giá vàng thế giới rơi về đâu?",
+      "url": "https://dantri.com.vn/kinh-doanh/boc-hoi-1000-ty-usd-sau-6-gio-gia-vang-the-gioi-roi-ve-dau-20261120163722939.htm",
+      "category": "macro",
+      "module_ids": [
+        "macro"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-11-20T10:50:23+00:00",
+      "source_id": "dantri-business",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "(Dân trí) - Cú bán tháo ồ ạt khiến 1.000 tỷ USD bốc hơi khỏi thị trường vàng và bạc chỉ sau 6 giờ. Giá vàng xuyên thủng hàng loạt mốc hỗ trợ kỹ thuật và lùi sâu dưới ngưỡng 3.600 USD/ounce.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://dantri.com.vn/rss/kinh-doanh.rss",
+        "publisher_host": "dantri.com.vn",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-0f8970669c633d37388f",
+      "title": "Nhà xã hội ở Bắc Ninh mở bán hơn 360 triệu đồng một căn",
+      "url": "https://vnexpress.net/nha-xa-hoi-o-bac-ninh-mo-ban-hon-360-trieu-dong-mot-can-5147049.html",
+      "category": "market",
+      "module_ids": [
+        "market"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-11-20T10:43:56+00:00",
+      "source_id": "vnexpress-real-estate",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [
+        "supply",
+        "pricing"
+      ],
+      "importance": 2,
+      "summary": "Khu nhà xã hội Sao Hồng ở phường Quế Võ sẽ nhận hồ sơ đăng ký từ ngày 16/12, với giá bán 9,3 triệu đồng mỗi m2.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://vnexpress.net/rss/bat-dong-san.rss",
+        "publisher_host": "vnexpress.net",
+        "publication_date_from_feed": true
+      }
+    },
     {
       "id": "article-market-rss-e7ed3eadb73cd588c06d",
       "title": "Cà Mau có 33 dự án được gỡ khó",
