@@ -1,9 +1,140 @@
 {
   "schema_version": 1,
-  "build_id": "market-news-rss-20261119T172824Z",
-  "generated_at": "2026-11-19T17:28:24.581044+00:00",
-  "record_count": 2091,
+  "build_id": "market-news-rss-20261120T005148Z",
+  "generated_at": "2026-11-20T00:51:48.243988+00:00",
+  "record_count": 2098,
   "data": [
+    {
+      "id": "article-market-rss-cec0418c5df986df8e29",
+      "title": "Chênh lệch giá vàng trong nước và thế giới nới rộng lên 20 triệu đồng/lượng",
+      "url": "https://dantri.com.vn/kinh-doanh/chenh-lech-gia-vang-trong-nuoc-va-the-gioi-noi-rong-len-20-trieu-dongluong-20261118224949710.htm",
+      "category": "macro",
+      "module_ids": [
+        "macro"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-11-19T23:30:00+00:00",
+      "source_id": "dantri-business",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "(Dân trí) - Đà giảm sâu của giá vàng thế giới xuống đáy 14 tháng trong khi vàng miếng SJC điều chỉnh chậm hơn đã đẩy mức chênh lệch giữa hai thị trường lên 20 triệu đồng/lượng, cao nhất từ đầu năm.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://dantri.com.vn/rss/kinh-doanh.rss",
+        "publisher_host": "dantri.com.vn",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-efeb66e6d066e10aa338",
+      "title": "Nhà ga hình hoa sen sân bay Long Thành trước ngày khai thác",
+      "url": "https://vnexpress.net/nha-ga-hinh-hoa-sen-san-bay-long-thanh-truoc-ngay-khai-thac-5146384.html",
+      "category": "infrastructure",
+      "module_ids": [
+        "infrastructure"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-11-19T23:00:00+00:00",
+      "source_id": "vnexpress-current-affairs",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [
+        "infrastructure"
+      ],
+      "importance": 2,
+      "summary": "Các quầy thủ tục, băng chuyền và ghế chờ của nhà ga sân bay Long Thành dần hoàn thiện trước chuyến bay thương mại đầu tiên, dự kiến ngày 24/12.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://vnexpress.net/rss/thoi-su.rss",
+        "publisher_host": "vnexpress.net",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-b574c080988b17bf6dc7",
+      "title": "Cao tốc, sân bay Long Thành thúc bất động sản công nghiệp tăng tốc",
+      "url": "https://dantri.com.vn/bat-dong-san/cao-toc-san-bay-long-thanh-thuc-bat-dong-san-cong-nghiep-tang-toc-20261119220843274.htm",
+      "category": "market",
+      "module_ids": [
+        "market",
+        "infrastructure"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-11-19T23:00:00+00:00",
+      "source_id": "dantri-real-estate",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [
+        "supply",
+        "infrastructure"
+      ],
+      "importance": 2,
+      "summary": "(Dân trí) - Loạt dự án hạ tầng từ sân bay Long Thành, tuyến cao tốc, Vành đai 3 từng bước hoàn thiện giúp tăng khả năng kết nối của khu vực, đi cùng nguồn cung tăng giúp bất động sản khu công nghiệp thêm sức hút.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://dantri.com.vn/rss/bat-dong-san.rss",
+        "publisher_host": "dantri.com.vn",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-4485d2d45db8eb6aae2e",
+      "title": "Quỹ bảo trì: Nguồn cơn xung đột ở chung cư",
+      "url": "https://thanhnien.vn/quy-bao-tri-nguon-con-xung-dot-o-chung-cu-185261119213547675.htm",
+      "category": "market",
+      "module_ids": [
+        "market"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-11-19T23:00:00+00:00",
+      "source_id": "thanhnien-real-estate",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "Được lập ra để bảo trì, sửa chữa khi chung cư xuống cấp nhưng quỹ bảo trì lên tới hàng trăm tỉ đồng lại là nguồn cơn của rất nhiều tranh chấp, khiếu kiện, đấu đá nội bộ trong ban quản trị, giữa cư dân với ban quản trị. Đáng lo ngại hơn, một số vụ việc đã chuyển từ tranh chấp dân sự sang án hình sự.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://thanhnien.vn/rss/kinh-te/dia-oc.rss",
+        "publisher_host": "thanhnien.vn",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-8637283b496b67a97de1",
+      "title": "'Bẫy cắt lỗ tiền tỷ' trên thị trường nhà đất",
+      "url": "https://vnexpress.net/bay-cat-lo-tien-ty-tren-thi-truong-nha-dat-5143224.html",
+      "category": "market",
+      "module_ids": [
+        "market"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-11-19T22:00:00+00:00",
+      "source_id": "vnexpress-real-estate",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "Loạt căn nhà được quảng cáo giảm 500 triệu đến cả tỷ đồng, nhưng mức giá sau giảm chưa chắc thấp hơn thị trường, thậm chí chỉ là chiêu nâng giá rồi hạ để hút khách.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://vnexpress.net/rss/bat-dong-san.rss",
+        "publisher_host": "vnexpress.net",
+        "publication_date_from_feed": true
+      }
+    },
     {
       "id": "article-market-rss-c4d8244e673de4739659",
       "title": "Nhà 5 tầng rộng 50 m2 có nên lắp thang máy?",
@@ -25,6 +156,63 @@
       "source_verification": {
         "method": "official-rss",
         "feed_url": "https://vnexpress.net/rss/bat-dong-san.rss",
+        "publisher_host": "vnexpress.net",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-a8d3cce6b0b7853fa691",
+      "title": "10 km cao tốc TP HCM - Long Thành hoàn thành mở rộng lên 10 làn",
+      "url": "https://vnexpress.net/10-km-cao-toc-tp-hcm-long-thanh-hoan-thanh-mo-rong-len-10-lan-5146798.html",
+      "category": "infrastructure",
+      "module_ids": [
+        "infrastructure"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-11-19T17:00:00+00:00",
+      "source_id": "vnexpress-current-affairs",
+      "region_ids": [
+        "hcmc",
+        "dong-nai"
+      ],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [
+        "infrastructure"
+      ],
+      "importance": 2,
+      "summary": "Gần 10 km cao tốc qua Đồng Nai đã hoàn thành phần mở rộng lên 10 làn, dự kiến cho xe lưu thông từ 22/11 để cải tạo đường hiện hữu.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://vnexpress.net/rss/thoi-su.rss",
+        "publisher_host": "vnexpress.net",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-b93a7e616f854e49dd2c",
+      "title": "Đà Nẵng hủy quy hoạch khu biệt thự 25,6 ha trên bán đảo Sơn Trà",
+      "url": "https://vnexpress.net/da-nang-huy-quy-hoach-khu-biet-thu-25-6-ha-tren-ban-dao-son-tra-5146783.html",
+      "category": "market",
+      "module_ids": [
+        "market"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-11-19T15:53:18+00:00",
+      "source_id": "vnexpress-current-affairs",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [
+        "legal"
+      ],
+      "importance": 2,
+      "summary": "Đà Nẵng hủy hai quyết định quy hoạch khu biệt thự rộng hơn 25,6 ha trên bán đảo Sơn Trà, từng được ông Văn Hữu Chiến ký phê duyệt vào năm 2011 và 2014.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://vnexpress.net/rss/thoi-su.rss",
         "publisher_host": "vnexpress.net",
         "publication_date_from_feed": true
       }
