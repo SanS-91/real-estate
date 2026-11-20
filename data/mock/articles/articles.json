@@ -1,9 +1,172 @@
 {
   "schema_version": 1,
-  "build_id": "market-news-rss-20261120T085143Z",
-  "generated_at": "2026-11-20T08:51:43.780232+00:00",
-  "record_count": 2128,
+  "build_id": "market-news-rss-20261120T105145Z",
+  "generated_at": "2026-11-20T10:51:45.665587+00:00",
+  "record_count": 2134,
   "data": [
+    {
+      "id": "article-market-rss-e7ed3eadb73cd588c06d",
+      "title": "Cà Mau có 33 dự án được gỡ khó",
+      "url": "https://thanhnien.vn/ca-mau-co-33-du-an-duoc-go-kho-185261120160424275.htm",
+      "category": "market",
+      "module_ids": [
+        "market"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-11-20T10:09:00+00:00",
+      "source_id": "thanhnien-policy",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "Trong 77 dự án của Cà Mau có 33 dự án đã hết vướng mắc, đủ điều kiện đưa ra khỏi hệ thống 751. Sở Tài chính cũng đề xuất chuyển nhóm 4 dự án có vướng mắc về đất đai vượt thẩm quyền của địa phương.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://thanhnien.vn/rss/kinh-te/chinh-sach-phat-trien.rss",
+        "publisher_host": "thanhnien.vn",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-6bd5db821790c2a7e970",
+      "title": "Kêu gọi đầu tư xây dựng sân golf, cáp treo, sân bay trên đảo Lý Sơn",
+      "url": "https://dantri.com.vn/thoi-su/keu-goi-dau-tu-xay-dung-san-golf-cap-treo-san-bay-tren-dao-ly-son-20261120113808033.htm",
+      "category": "infrastructure",
+      "module_ids": [
+        "infrastructure"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-11-20T09:21:26+00:00",
+      "source_id": "dantri-current-affairs",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [
+        "infrastructure"
+      ],
+      "importance": 2,
+      "summary": "(Dân trí) - UBND tỉnh Quảng Ngãi xác định có 14 dự án thuộc danh mục ưu tiên đầu tư nhằm thúc đẩy sự phát triển của đặc khu Lý Sơn, đưa hòn đảo này trở thành trung tâm du lịch biển đảo.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://dantri.com.vn/rss/thoi-su.rss",
+        "publisher_host": "dantri.com.vn",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-ad385a6f65dfe8d0411a",
+      "title": "Hà Nội rà soát phòng cháy chữa cháy toàn bộ trường học, bệnh viện, chung cư",
+      "url": "https://dantri.com.vn/thoi-su/ha-noi-ra-soat-phong-chay-chua-chay-toan-bo-truong-hoc-benh-vien-chung-cu-20261120153030467.htm",
+      "category": "market",
+      "module_ids": [
+        "market"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-11-20T08:58:34+00:00",
+      "source_id": "dantri-current-affairs",
+      "region_ids": [
+        "ha-noi"
+      ],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "(Dân trí) - Hà Nội yêu cầu rà soát, đánh giá thực chất điều kiện an toàn PCCC và CNCC tại các trường học, lớp học tạm, chung cư, bệnh viện, chợ... để có hướng xử lý.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://dantri.com.vn/rss/thoi-su.rss",
+        "publisher_host": "dantri.com.vn",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-a82c362bd472f9a2a87f",
+      "title": "Chi tiết các tuyến đường Hà Nội đang tạm cấm, hạn chế phương tiện",
+      "url": "https://dantri.com.vn/thoi-su/chi-tiet-cac-tuyen-duong-ha-noi-dang-tam-cam-han-che-phuong-tien-20261120153805063.htm",
+      "category": "infrastructure",
+      "module_ids": [
+        "infrastructure"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-11-20T08:56:05+00:00",
+      "source_id": "dantri-current-affairs",
+      "region_ids": [
+        "ha-noi"
+      ],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "(Dân trí) - Phục vụ các hoạt động kỷ niệm Ngày Văn hóa Việt Nam, Công an Hà Nội đã tổ chức cấm triệt để, tạm cấm nhiều tuyến đường khu vực hồ Hoàn Kiếm.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://dantri.com.vn/rss/thoi-su.rss",
+        "publisher_host": "dantri.com.vn",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-592e953db6994fa87a9c",
+      "title": "Kiến nghị đưa nghề quản lý vận hành nhà chung cư vào nhóm đặc thù",
+      "url": "https://thanhnien.vn/kien-nghi-dua-nghe-quan-ly-van-hanh-nha-chung-cu-vao-nhom-dac-thu-18526112015423441.htm",
+      "category": "market",
+      "module_ids": [
+        "market",
+        "legal"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-11-20T08:55:00+00:00",
+      "source_id": "thanhnien-real-estate",
+      "region_ids": [
+        "hcmc"
+      ],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "Hiệp hội Quản lý vận hành nhà chung cư TP.HCM (HCMO) đã hai lần gửi đến Bộ Tài chính, Cục Thuế, Thuế TP.HCM kiến nghị bổ sung ngành nghề quản lý vận hành nhà chung cư vào nhóm đặc thù về thời điểm lập hóa đơn điện tử theo Nghị định số 254/2026.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://thanhnien.vn/rss/kinh-te/dia-oc.rss",
+        "publisher_host": "thanhnien.vn",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-9a232fd13e8f83bd865b",
+      "title": "Ô tô lưu thông làn mở rộng cao tốc TPHCM - Long Thành từ ngày 22/11",
+      "url": "https://dantri.com.vn/thoi-su/o-to-luu-thong-lan-mo-rong-cao-toc-tphcm-long-thanh-tu-ngay-2211-20261120144714431.htm",
+      "category": "infrastructure",
+      "module_ids": [
+        "infrastructure"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-11-20T08:36:10+00:00",
+      "source_id": "dantri-current-affairs",
+      "region_ids": [
+        "hcmc"
+      ],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [
+        "infrastructure"
+      ],
+      "importance": 2,
+      "summary": "(Dân trí) - Từ ngày 22/11, ô tô lưu thông trên cao tốc TPHCM - Long Thành sẽ chuyển làn mở rộng vừa hoàn thiện để đơn vị thi công nâng cấp nền đường cao tốc hiện hữu.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://dantri.com.vn/rss/thoi-su.rss",
+        "publisher_host": "dantri.com.vn",
+        "publication_date_from_feed": true
+      }
+    },
     {
       "id": "article-market-rss-faf9c2f66b16e198fac6",
       "title": "D’. Diamant Bleu: Không có công thức chung cho không gian sống cao cấp",
