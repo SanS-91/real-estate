@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-11-20T16:20:12.849224+00:00",
+  "generated_at": "2026-11-20T16:21:35.973203+00:00",
   "scope": "individual-verified-apartment-asking-only",
   "project_registry_count": 18,
   "projects_monitored": 8,
@@ -12,7 +12,7 @@
       "source_id": "muaban-vn",
       "report_available": true,
       "report_fresh": true,
-      "checked_at": "2026-11-20T09:57:45.329812+00:00"
+      "checked_at": "2026-11-20T16:21:05.247678+00:00"
     },
     {
       "source_id": "rever-vn",
@@ -144,7 +144,7 @@
           "source_health_recent": true,
           "recent_eligible_ads": 0,
           "discovered_links": 0,
-          "last_checked_at": "2026-11-20T09:57:45.329812+00:00"
+          "last_checked_at": "2026-11-20T16:21:05.247678+00:00"
         },
         {
           "source_id": "rever-vn",
@@ -212,7 +212,7 @@
           "source_health_recent": true,
           "recent_eligible_ads": 0,
           "discovered_links": 0,
-          "last_checked_at": "2026-11-20T09:57:45.329812+00:00"
+          "last_checked_at": "2026-11-20T16:21:05.247678+00:00"
         },
         {
           "source_id": "rever-vn",
@@ -240,7 +240,7 @@
           "source_health_recent": true,
           "recent_eligible_ads": 0,
           "discovered_links": 2,
-          "last_checked_at": "2026-11-20T09:57:45.329812+00:00"
+          "last_checked_at": "2026-11-20T16:21:05.247678+00:00"
         },
         {
           "source_id": "rever-vn",
@@ -268,7 +268,7 @@
           "source_health_recent": true,
           "recent_eligible_ads": 1,
           "discovered_links": 4,
-          "last_checked_at": "2026-11-20T09:57:45.329812+00:00"
+          "last_checked_at": "2026-11-20T16:21:05.247678+00:00"
         },
         {
           "source_id": "rever-vn",
@@ -298,7 +298,7 @@
           "source_health_recent": true,
           "recent_eligible_ads": 8,
           "discovered_links": 12,
-          "last_checked_at": "2026-11-20T09:57:45.329812+00:00"
+          "last_checked_at": "2026-11-20T16:21:05.247678+00:00"
         },
         {
           "source_id": "rever-vn",
@@ -328,7 +328,7 @@
           "source_health_recent": true,
           "recent_eligible_ads": 1,
           "discovered_links": 2,
-          "last_checked_at": "2026-11-20T09:57:45.329812+00:00"
+          "last_checked_at": "2026-11-20T16:21:05.247678+00:00"
         },
         {
           "source_id": "rever-vn",
