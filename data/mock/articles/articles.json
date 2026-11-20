@@ -1,9 +1,61 @@
 {
   "schema_version": 1,
-  "build_id": "market-news-rss-20261120T145141Z",
-  "generated_at": "2026-11-20T14:51:41.811430+00:00",
-  "record_count": 2137,
+  "build_id": "market-news-rss-20261120T170228Z",
+  "generated_at": "2026-11-20T17:02:28.051110+00:00",
+  "record_count": 2139,
   "data": [
+    {
+      "id": "article-market-rss-6fcb33e120b363cf96d5",
+      "title": "Quảng Ngãi đề xuất chuyển hơn 125 ha rừng làm khu đô thị ở Măng Đen",
+      "url": "https://vnexpress.net/quang-ngai-de-xuat-chuyen-hon-125-ha-rung-lam-khu-do-thi-o-mang-den-5147077.html",
+      "category": "market",
+      "module_ids": [
+        "market"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-11-20T15:00:00+00:00",
+      "source_id": "vnexpress-real-estate",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "Quảng Ngãi đề xuất chuyển mục đích sử dụng hơn 125 ha rừng trồng sản xuất để triển khai khu đô thị tại Măng Đen, với tổng vốn đầu tư gần 9.600 tỷ đồng.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://vnexpress.net/rss/bat-dong-san.rss",
+        "publisher_host": "vnexpress.net",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-23092deb3c5b68394940",
+      "title": "Lâm Đồng quy hoạch khu đô thị lấn biển 400 ha",
+      "url": "https://vnexpress.net/lam-dong-quy-hoach-khu-do-thi-lan-bien-400-ha-5147215.html",
+      "category": "market",
+      "module_ids": [
+        "market"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-11-20T14:18:49+00:00",
+      "source_id": "vnexpress-real-estate",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [
+        "legal"
+      ],
+      "importance": 2,
+      "summary": "Tỉnh Lâm Đồng duyệt quy hoạch chung hai phường Phước Hội và La Gi đến năm 2050, trong đó dành 400 ha lấn biển để phát triển đô thị đa chức năng và kinh tế biển.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://vnexpress.net/rss/bat-dong-san.rss",
+        "publisher_host": "vnexpress.net",
+        "publication_date_from_feed": true
+      }
+    },
     {
       "id": "article-market-rss-a1fb6aac3aea5369f1e7",
       "title": "Giá vàng, bạc đồng loạt lao dốc mạnh",
