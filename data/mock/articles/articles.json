@@ -1,9 +1,122 @@
 {
   "schema_version": 1,
-  "build_id": "market-news-rss-20261121T072519Z",
-  "generated_at": "2026-11-21T07:25:19.001071+00:00",
-  "record_count": 2168,
+  "build_id": "market-news-rss-20261121T085140Z",
+  "generated_at": "2026-11-21T08:51:40.470494+00:00",
+  "record_count": 2172,
   "data": [
+    {
+      "id": "article-market-rss-5c6f832ff0fdc58b8559",
+      "title": "Đất không giấy tờ vẫn có cơ hội được cấp sổ hồng",
+      "url": "https://thanhnien.vn/dat-khong-giay-to-van-co-co-hoi-duoc-cap-so-hong-185261121144827799.htm",
+      "category": "market",
+      "module_ids": [
+        "market",
+        "legal"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-11-21T08:41:00+00:00",
+      "source_id": "thanhnien-real-estate",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [
+        "pricing",
+        "legal"
+      ],
+      "importance": 2,
+      "summary": "Sáng 21.11, Quốc hội đã thông qua luật Đất đai, luật Nhà ở, luật Kinh doanh bất động sản với nhiều thay đổi được đánh giá là có tác động sâu rộng đến người dân, doanh nghiệp và thị trường bất động sản trong giai đoạn tới. Luật sẽ có hiệu lực từ ngày 1.7.2027, riêng cơ chế bảng giá đất và hệ số điều ",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://thanhnien.vn/rss/kinh-te/dia-oc.rss",
+        "publisher_host": "thanhnien.vn",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-7e00e3c6db3290a3c5c3",
+      "title": "Đường bay ra Hà Nội sẽ 'mở hàng' siêu sân bay Long Thành ngày khai trương",
+      "url": "https://thanhnien.vn/duong-bay-ra-ha-noi-se-mo-hang-sieu-san-bay-long-thanh-ngay-khai-truong-185261121153105188.htm",
+      "category": "infrastructure",
+      "module_ids": [
+        "infrastructure"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-11-21T08:39:00+00:00",
+      "source_id": "thanhnien-policy",
+      "region_ids": [
+        "ha-noi"
+      ],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [
+        "infrastructure"
+      ],
+      "importance": 2,
+      "summary": "Dự kiến cả Vietnam Airlines và Vietjet sẽ cùng tổ chức chuyến bay chặng Long Thành - Hà Nội vào ngày đầu tiên siêu sân bay lớn nhất nước chính thức khai trương.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://thanhnien.vn/rss/kinh-te/chinh-sach-phat-trien.rss",
+        "publisher_host": "thanhnien.vn",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-c084c36f2423ce1893cb",
+      "title": "Diện mạo cao tốc TP HCM - Long Thành sau khi mở rộng 10 làn",
+      "url": "https://vnexpress.net/dien-mao-cao-toc-tp-hcm-long-thanh-sau-khi-mo-rong-10-lan-5147407.html",
+      "category": "infrastructure",
+      "module_ids": [
+        "infrastructure"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-11-21T07:50:00+00:00",
+      "source_id": "vnexpress-current-affairs",
+      "region_ids": [
+        "hcmc",
+        "dong-nai"
+      ],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [
+        "infrastructure"
+      ],
+      "importance": 2,
+      "summary": "Gần 10 km cao tốc TP HCM - Long Thành qua Đồng Nai đã hoàn thiện phần mở rộng, chuẩn bị đón xe lưu thông từ ngày 22/11.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://vnexpress.net/rss/thoi-su.rss",
+        "publisher_host": "vnexpress.net",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-bad8f2b30873a740e78c",
+      "title": "Nhà lưu trú công nhân ở Lâm Đồng cho thuê tối đa 113.100 đồng mỗi m2",
+      "url": "https://vnexpress.net/nha-luu-tru-cong-nhan-o-lam-dong-cho-thue-toi-da-113-100-dong-moi-m2-5147394.html",
+      "category": "market",
+      "module_ids": [
+        "market"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-11-21T06:40:33+00:00",
+      "source_id": "vnexpress-real-estate",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "Giá thuê nhà lưu trú công nhân trong các khu công nghiệp ở Lâm Đồng dao động 36.700-113.100 đồng mỗi m2 một tháng, tùy chiều cao công trình và số tầng hầm, áp dụng từ tháng 12.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://vnexpress.net/rss/bat-dong-san.rss",
+        "publisher_host": "vnexpress.net",
+        "publication_date_from_feed": true
+      }
+    },
     {
       "id": "article-market-rss-af9f04a402f6646bc7b2",
       "title": "Giá vàng thấp nhất 14 tháng, chênh lệch mua - bán lên kỷ lục 6 triệu đồng/lượng",
