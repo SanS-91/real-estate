@@ -1,9 +1,151 @@
 {
   "schema_version": 1,
-  "build_id": "market-news-rss-20261121T005145Z",
-  "generated_at": "2026-11-21T00:51:45.404685+00:00",
-  "record_count": 2148,
+  "build_id": "market-news-rss-20261121T025140Z",
+  "generated_at": "2026-11-21T02:51:40.680649+00:00",
+  "record_count": 2153,
   "data": [
+    {
+      "id": "article-market-rss-7611b92431ddaa497073",
+      "title": "Quốc hội thông qua Luật Đất đai sửa đổi",
+      "url": "https://vnexpress.net/quoc-hoi-thong-qua-luat-dat-dai-sua-doi-5147332.html",
+      "category": "legal",
+      "module_ids": [
+        "legal"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-11-21T02:24:12+00:00",
+      "source_id": "vnexpress-economy",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [
+        "legal"
+      ],
+      "importance": 2,
+      "summary": "Luật Đất đai (sửa đổi) vừa được Quốc hội thông qua với nhiều thay đổi quan trọng, với trên 97% đại biểu tham gia tán thành.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://vnexpress.net/rss/kinh-doanh.rss",
+        "publisher_host": "vnexpress.net",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-29157be271b243683ed9",
+      "title": "Giá vàng hôm nay 21.11.2026: Tiếp tục lao dốc, chênh lệch mua bán vàng nhẫn lên kỷ lục",
+      "url": "https://thanhnien.vn/gia-vang-hom-nay-21112026-tiep-tuc-lao-doc-chenh-lech-mua-ban-vang-nhan-len-ky-luc-185261121082006743.htm",
+      "category": "macro",
+      "module_ids": [
+        "macro"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-11-21T01:50:00+00:00",
+      "source_id": "thanhnien-banking",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [
+        "sales"
+      ],
+      "importance": 2,
+      "summary": "Giá vàng giảm mạnh trong khi chênh lệch mua bán được nới rộng lên mức kỷ lục khiến người mua lỗ nặng.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://thanhnien.vn/rss/kinh-te/ngan-hang.rss",
+        "publisher_host": "thanhnien.vn",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-c25b1bc3c250e6ba233a",
+      "title": "Đô thị 15 phút - thước đo mới cho các đô thị tiện ích \"all-in-one\"",
+      "url": "https://dantri.com.vn/bat-dong-san/do-thi-15-phut-thuoc-do-moi-cho-cac-do-thi-tien-ich-all-in-one-20261120215930784.htm",
+      "category": "market",
+      "module_ids": [
+        "market",
+        "infrastructure"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-11-21T01:30:00+00:00",
+      "source_id": "dantri-real-estate",
+      "region_ids": [
+        "ha-noi"
+      ],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [
+        "legal",
+        "infrastructure"
+      ],
+      "importance": 2,
+      "summary": "(Dân trí) - Hà Nội đang tổ chức lấy ý kiến cơ quan, tổ chức, cá nhân và cộng đồng dân cư về hồ sơ quy hoạch phương án tuyến và vị trí nhà ga tỷ lệ 1/500 của 5 tuyến đường sắt đô thị.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://dantri.com.vn/rss/bat-dong-san.rss",
+        "publisher_host": "dantri.com.vn",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-34ca773e7b0eb715db26",
+      "title": "8 sai lầm cần tránh khi chọn mua và sắp xếp sofa trong nhà",
+      "url": "https://dantri.com.vn/bat-dong-san/8-sai-lam-can-tranh-khi-chon-mua-va-sap-xep-sofa-trong-nha-20261121072427609.htm",
+      "category": "market",
+      "module_ids": [
+        "market"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-11-21T01:28:46+00:00",
+      "source_id": "dantri-real-estate",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "(Dân trí) - Chi tiền triệu mua sofa nhưng phòng khách vẫn bí bách và bất tiện khi dùng. Dưới đây là những sai lầm phổ biến nhiều người hay mắc phải cùng lời khuyên hữu ích từ chuyên gia nội thất.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://dantri.com.vn/rss/bat-dong-san.rss",
+        "publisher_host": "dantri.com.vn",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-7a59860c7fe532e2c763",
+      "title": "InterCentral hưởng lợi từ quy hoạch đô thị 15 phút của Hà Nội",
+      "url": "https://vnexpress.net/intercentral-huong-loi-tu-quy-hoach-do-thi-15-phut-cua-ha-noi-5147242.html",
+      "category": "market",
+      "module_ids": [
+        "market",
+        "legal",
+        "infrastructure"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-11-21T01:00:00+00:00",
+      "source_id": "vnexpress-real-estate",
+      "region_ids": [
+        "ha-noi"
+      ],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [
+        "legal",
+        "infrastructure"
+      ],
+      "importance": 2,
+      "summary": "Quy hoạch metro và định hướng phát triển đô thị 15 phút tại Hà Nội mở ra cơ hội để InterCentral khai thác lợi thế kết nối giao thông và hệ thống tiện ích đô thị.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://vnexpress.net/rss/bat-dong-san.rss",
+        "publisher_host": "vnexpress.net",
+        "publication_date_from_feed": true
+      }
+    },
     {
       "id": "article-market-rss-be596c4df789734c045f",
       "title": "Giá vàng thế giới về sát 3.500 USD",
