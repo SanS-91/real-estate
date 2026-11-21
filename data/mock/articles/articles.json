@@ -1,9 +1,275 @@
 {
   "schema_version": 1,
-  "build_id": "market-news-rss-20261121T025140Z",
-  "generated_at": "2026-11-21T02:51:40.680649+00:00",
-  "record_count": 2153,
+  "build_id": "market-news-rss-20261121T045137Z",
+  "generated_at": "2026-11-21T04:51:37.440889+00:00",
+  "record_count": 2163,
   "data": [
+    {
+      "id": "article-market-rss-aa906c8f2d72ecc1c95a",
+      "title": "The Art Of Living Well - Hành trình trải nghiệm thành phố đáng sống One Era",
+      "url": "https://dantri.com.vn/bat-dong-san/the-art-of-living-well-hanh-trinh-trai-nghiem-thanh-pho-dang-song-one-era-20261121102835762.htm",
+      "category": "market",
+      "module_ids": [
+        "market"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-11-21T03:50:54+00:00",
+      "source_id": "dantri-real-estate",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "(Dân trí) - Ngày 20/11, tại One Era Galleria, sự kiện The Art of Living Well - Hành trình khám phá thành phố đáng sống One Era đã diễn ra trong không gian sang trọng, quy tụ các khách mời, đối tác và cộng đồng doanh nhân.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://dantri.com.vn/rss/bat-dong-san.rss",
+        "publisher_host": "dantri.com.vn",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-cf14b67b495ad53effca",
+      "title": "Thêm trường hợp được chuyển nhượng hợp đồng mua bán nhà chưa có sổ",
+      "url": "https://dantri.com.vn/bat-dong-san/them-truong-hop-duoc-chuyen-nhuong-hop-dong-mua-ban-nha-chua-co-so-20261121092942432.htm",
+      "category": "market",
+      "module_ids": [
+        "market",
+        "legal"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-11-21T03:32:47+00:00",
+      "source_id": "dantri-real-estate",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "(Dân trí) - Luật Kinh doanh bất động sản mới bổ sung trường hợp được chuyển nhượng hợp đồng mua bán nhà ở có sẵn chưa được cấp sổ, nhưng phải đáp ứng các điều kiện theo quy định.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://dantri.com.vn/rss/bat-dong-san.rss",
+        "publisher_host": "dantri.com.vn",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-8c1e1ab9e4cf74fb1c08",
+      "title": "Nhà ở xã hội không được bán lại tự do từ 1/7/2027",
+      "url": "https://vnexpress.net/nha-o-xa-hoi-khong-duoc-ban-lai-tu-do-tu-1-7-2027-5147341.html",
+      "category": "market",
+      "module_ids": [
+        "market"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-11-21T03:24:47+00:00",
+      "source_id": "vnexpress-real-estate",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "Từ 1/7/2027, nhà ở xã hội đã trả đủ tiền sau 5 năm chỉ được bán lại cho đúng đối tượng, thay vì chuyển nhượng tự do như hiện nay.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://vnexpress.net/rss/bat-dong-san.rss",
+        "publisher_host": "vnexpress.net",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-0c549240ecfa64c08638",
+      "title": "Nhà nước quyết định giá đất, mở rộng một số trường hợp được cấp sổ đỏ",
+      "url": "https://dantri.com.vn/thoi-su/nha-nuoc-quyet-dinh-gia-dat-mo-rong-mot-so-truong-hop-duoc-cap-so-do-20261121095535639.htm",
+      "category": "market",
+      "module_ids": [
+        "market",
+        "legal"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-11-21T03:04:58+00:00",
+      "source_id": "dantri-current-affairs",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [
+        "pricing"
+      ],
+      "importance": 2,
+      "summary": "(Dân trí) - Nhiều chính sách mới quan trọng về đất đai sẽ có hiệu lực từ năm 2027, trong đó Nhà nước quyết định giá đất, quy định chặt chẽ hơn các trường hợp thu hồi đất và mở rộng trường hợp được cấp sổ đỏ.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://dantri.com.vn/rss/thoi-su.rss",
+        "publisher_host": "dantri.com.vn",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-5a8b3c2f232196266522",
+      "title": "Trụ sở 35 tầng của Tập đoàn Than - Khoáng sản Việt Nam chưa được cấp sổ đỏ",
+      "url": "https://dantri.com.vn/thoi-su/tru-so-35-tang-cua-tap-doan-than-khoang-san-viet-nam-chua-duoc-cap-so-do-20261121093052016.htm",
+      "category": "legal",
+      "module_ids": [
+        "legal"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-11-21T03:02:38+00:00",
+      "source_id": "dantri-current-affairs",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "(Dân trí) - Tập đoàn Công nghiệp Than - Khoáng sản Việt Nam đã hoàn thành nghĩa vụ tài chính, nộp tiền sử dụng đất 375 tỷ đồng nhưng trụ sở cao 35 tầng trên mảnh đất này chưa được cấp sổ đỏ.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://dantri.com.vn/rss/thoi-su.rss",
+        "publisher_host": "dantri.com.vn",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-45377c854daa36161e3e",
+      "title": "Giá vàng miếng xuống mức thấp nhất 15 tháng",
+      "url": "https://vnexpress.net/gia-vang-moi-nhat-hom-nay-ngay-21-11-5147347.html",
+      "category": "macro",
+      "module_ids": [
+        "macro"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-11-21T02:56:36+00:00",
+      "source_id": "vnexpress-economy",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "Theo đà giảm mạnh của giá thế giới, các thương hiệu sáng nay bán ra vàng miếng quanh 133,5 triệu đồng, mức thấp nhất tính từ tháng 9/2025.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://vnexpress.net/rss/kinh-doanh.rss",
+        "publisher_host": "vnexpress.net",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-629a76e4176602f767e1",
+      "title": "Thông qua Luật Đất đai sửa đổi, bổ sung quyền lợi người bị thu hồi đất",
+      "url": "https://vnexpress.net/thong-qua-luat-dat-dai-sua-doi-bo-sung-quyen-loi-nguoi-bi-thu-hoi-dat-5147331.html",
+      "category": "legal",
+      "module_ids": [
+        "legal"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-11-21T02:55:04+00:00",
+      "source_id": "vnexpress-current-affairs",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [
+        "legal"
+      ],
+      "importance": 2,
+      "summary": "Người bị thu hồi đất ở được hoán đổi đất trong cùng xã, hỗ trợ phục hồi sinh kế và hưởng thêm chính sách bồi thường, tái định cư, theo Luật Đất đai vừa được Quốc hội thông qua.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://vnexpress.net/rss/thoi-su.rss",
+        "publisher_host": "vnexpress.net",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-3c70b38037607c060052",
+      "title": "Hà Nội tổ chức lại giao thông nút giao Trương Định - Vành đai 2,5",
+      "url": "https://dantri.com.vn/thoi-su/ha-noi-to-chuc-lai-giao-thong-nut-giao-truong-dinh-vanh-dai-25-20261121094412179.htm",
+      "category": "infrastructure",
+      "module_ids": [
+        "infrastructure"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-11-21T02:51:05+00:00",
+      "source_id": "dantri-current-affairs",
+      "region_ids": [
+        "ha-noi"
+      ],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [
+        "infrastructure"
+      ],
+      "importance": 2,
+      "summary": "(Dân trí) - Hà Nội điều chỉnh tổ chức giao thông nút giao Trương Định - Đường vành đai 2,5 (Tân Mai) và một số đoạn trên đường Trường Sa.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://dantri.com.vn/rss/thoi-su.rss",
+        "publisher_host": "dantri.com.vn",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-83d02bc5df4ba1ce6bdd",
+      "title": "Mizuki Park đón lợi thế từ quy hoạch đa cực của TP HCM",
+      "url": "https://vnexpress.net/mizuki-park-don-loi-the-tu-quy-hoach-da-cuc-cua-tp-hcm-5147336.html",
+      "category": "market",
+      "module_ids": [
+        "market"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-11-21T02:45:00+00:00",
+      "source_id": "vnexpress-real-estate",
+      "region_ids": [
+        "hcmc"
+      ],
+      "project_ids": [
+        "mizuki-park"
+      ],
+      "developer_ids": [],
+      "tags": [
+        "legal"
+      ],
+      "importance": 2,
+      "summary": "Bình Chánh (cũ) xác định là trọng tâm của cực đô thị - giáo dục - y tế trong quy hoạch mới của TP HCM, mở thêm dư địa cho đô thị tích hợp hiện hữu như Mizuki Park.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://vnexpress.net/rss/bat-dong-san.rss",
+        "publisher_host": "vnexpress.net",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-e4559ef5e2254f004b45",
+      "title": "Sau 5 năm, nhà ở xã hội chỉ được bán cho người đủ điều kiện mua",
+      "url": "https://dantri.com.vn/thoi-su/sau-5-nam-nha-o-xa-hoi-chi-duoc-ban-cho-nguoi-du-dieu-kien-mua-20261121092159419.htm",
+      "category": "market",
+      "module_ids": [
+        "market"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-11-21T02:43:54+00:00",
+      "source_id": "dantri-current-affairs",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "(Dân trí) - Sau 5 năm kể từ ngày đã thanh toán đủ tiền, bên mua, bên thuê mua nhà ở xã hội được bán lại nhà ở này nhưng chỉ được bán cho đối tượng thuộc trường hợp được mua nhà ở xã hội.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://dantri.com.vn/rss/thoi-su.rss",
+        "publisher_host": "dantri.com.vn",
+        "publication_date_from_feed": true
+      }
+    },
     {
       "id": "article-market-rss-7611b92431ddaa497073",
       "title": "Quốc hội thông qua Luật Đất đai sửa đổi",
