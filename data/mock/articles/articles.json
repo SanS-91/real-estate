@@ -1,9 +1,60 @@
 {
   "schema_version": 1,
-  "build_id": "market-news-rss-20261121T085140Z",
-  "generated_at": "2026-11-21T08:51:40.470494+00:00",
-  "record_count": 2172,
+  "build_id": "market-news-rss-20261121T105141Z",
+  "generated_at": "2026-11-21T10:51:41.532155+00:00",
+  "record_count": 2176,
   "data": [
+    {
+      "id": "article-market-rss-74de1c0d08ce716a7113",
+      "title": "Khu đất vàng ven biển Quy Nhơn có giá khởi điểm gần 59 triệu đồng/m2",
+      "url": "https://dantri.com.vn/bat-dong-san/khu-dat-vang-ven-bien-quy-nhon-co-gia-khoi-diem-gan-59-trieu-dongm2-20261121115906114.htm",
+      "category": "market",
+      "module_ids": [
+        "market"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-11-21T09:42:57+00:00",
+      "source_id": "dantri-real-estate",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "(Dân trí) - Khu đất dịch vụ du lịch tại phường Quy Nhơn Nam, tỉnh Gia Lai, rộng hơn 2.200m2, có giá khởi điểm gần 132 tỷ đồng, tương đương gần 59 triệu đồng/m2.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://dantri.com.vn/rss/bat-dong-san.rss",
+        "publisher_host": "dantri.com.vn",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-fff69704bb04837445f4",
+      "title": "Chưa có sổ đỏ, chủ đầu tư không được thu hết tiền mua nhà",
+      "url": "https://dantri.com.vn/bat-dong-san/chua-co-so-do-chu-dau-tu-khong-duoc-thu-het-tien-mua-nha-20261121160032534.htm",
+      "category": "market",
+      "module_ids": [
+        "market",
+        "legal"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-11-21T09:22:24+00:00",
+      "source_id": "dantri-real-estate",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "(Dân trí) - Luật Kinh doanh bất động sản (sửa đổi) bổ sung nhiều quy định về đặt cọc, thanh toán, công khai thông tin và mã định danh điện tử đối với bất động sản, có hiệu lực từ ngày 1/7/2027.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://dantri.com.vn/rss/bat-dong-san.rss",
+        "publisher_host": "dantri.com.vn",
+        "publication_date_from_feed": true
+      }
+    },
     {
       "id": "article-market-rss-5c6f832ff0fdc58b8559",
       "title": "Đất không giấy tờ vẫn có cơ hội được cấp sổ hồng",
@@ -34,6 +85,33 @@
       }
     },
     {
+      "id": "article-market-rss-95df783fe0f0e6ddc718",
+      "title": "Hà Nội thông tin về tiến độ dự án hồi sinh các dòng sông nội đô",
+      "url": "https://thanhnien.vn/ha-noi-thong-tin-ve-tien-do-du-an-hoi-sinh-cac-dong-song-noi-do-185261121154756945.htm",
+      "category": "market",
+      "module_ids": [
+        "market"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-11-21T08:39:00+00:00",
+      "source_id": "thanhnien-policy",
+      "region_ids": [
+        "ha-noi"
+      ],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "UBND thành phố Hà Nội vừa có văn bản trả lời kiến nghị cử tri về việc triển khai đồng bộ các giải pháp xử lý ô nhiễm môi trường nước, cải tạo sông, hồ nội thành; tăng cường kiểm soát nguồn xả thải, nạo vét, khơi thông dòng chảy và bảo đảm tiêu thoát nước.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://thanhnien.vn/rss/kinh-te/chinh-sach-phat-trien.rss",
+        "publisher_host": "thanhnien.vn",
+        "publication_date_from_feed": true
+      }
+    },
+    {
       "id": "article-market-rss-7e00e3c6db3290a3c5c3",
       "title": "Đường bay ra Hà Nội sẽ 'mở hàng' siêu sân bay Long Thành ngày khai trương",
       "url": "https://thanhnien.vn/duong-bay-ra-ha-noi-se-mo-hang-sieu-san-bay-long-thanh-ngay-khai-truong-185261121153105188.htm",
@@ -59,6 +137,33 @@
         "method": "official-rss",
         "feed_url": "https://thanhnien.vn/rss/kinh-te/chinh-sach-phat-trien.rss",
         "publisher_host": "thanhnien.vn",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-46ea96d0006e642b38b7",
+      "title": "Hà Nội mở cơ chế giao chủ đầu tư nhà cho thuê không qua đấu giá, đấu thầu",
+      "url": "https://vnexpress.net/ha-noi-mo-co-che-giao-chu-dau-tu-nha-cho-thue-khong-qua-dau-gia-dau-thau-5147416.html",
+      "category": "market",
+      "module_ids": [
+        "market"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-11-21T08:31:28+00:00",
+      "source_id": "vnexpress-real-estate",
+      "region_ids": [
+        "ha-noi"
+      ],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "Hà Nội cho phép lựa chọn trực tiếp chủ đầu tư dự án nhà cho thuê với các tiêu chí ưu tiên gồm quyền sử dụng đất, năng lực tài chính và kinh nghiệm triển khai.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://vnexpress.net/rss/bat-dong-san.rss",
+        "publisher_host": "vnexpress.net",
         "publication_date_from_feed": true
       }
     },
