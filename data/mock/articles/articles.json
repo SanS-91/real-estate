@@ -1,9 +1,244 @@
 {
   "schema_version": 1,
-  "build_id": "market-news-rss-20261120T170228Z",
-  "generated_at": "2026-11-20T17:02:28.051110+00:00",
-  "record_count": 2139,
+  "build_id": "market-news-rss-20261121T005145Z",
+  "generated_at": "2026-11-21T00:51:45.404685+00:00",
+  "record_count": 2148,
   "data": [
+    {
+      "id": "article-market-rss-be596c4df789734c045f",
+      "title": "Giá vàng thế giới về sát 3.500 USD",
+      "url": "https://vnexpress.net/gia-vang-the-gioi-ve-sat-3-500-usd-5147287.html",
+      "category": "macro",
+      "module_ids": [
+        "macro"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-11-21T00:41:31+00:00",
+      "source_id": "vnexpress-economy",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "Giá kim loại quý giảm phiên thứ 4 liên tiếp, có thời điểm mất hơn 100 USD về 3.502 USD một ounce.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://vnexpress.net/rss/kinh-doanh.rss",
+        "publisher_host": "vnexpress.net",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-5c75f4c068e92554d5db",
+      "title": "Giá vàng thế giới tiếp tục lao dốc, vàng miếng SJC giảm tới 4 triệu đồng/lượng",
+      "url": "https://dantri.com.vn/kinh-doanh/gia-vang-the-gioi-tiep-tuc-lao-doc-vang-mieng-sjc-giam-toi-4-trieu-dongluong-20261121062407770.htm",
+      "category": "macro",
+      "module_ids": [
+        "macro"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-11-20T23:51:25+00:00",
+      "source_id": "dantri-business",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "(Dân trí) - Rạng sáng 21/11 (giờ Việt Nam), giá vàng thế giới chốt phiên cuối tuần ở mức 3.537,9 USD/ounce, giảm 86,3 USD/ounce (tương đương 2,4%) so với phiên trước.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://dantri.com.vn/rss/kinh-doanh.rss",
+        "publisher_host": "dantri.com.vn",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-d6adc569de5eb9bc0991",
+      "title": "Giá vàng rơi không phanh, rủi ro gia tăng",
+      "url": "https://thanhnien.vn/gia-vang-roi-khong-phanh-rui-ro-gia-tang-185261120214015873.htm",
+      "category": "macro",
+      "module_ids": [
+        "macro"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-11-20T23:00:00+00:00",
+      "source_id": "thanhnien-banking",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [
+        "sales"
+      ],
+      "importance": 2,
+      "summary": "Vàng lao dốc không phanh nhưng vùng giá thấp vẫn đầy rủi ro khi kim loại quý trong nước đắt hơn thế giới tăng cao 23 triệu đồng/lượng, cùng với chênh lệch giữa giá mua và bán được các công ty đẩy ra xa 5 - 6 triệu đồng/lượng.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://thanhnien.vn/rss/kinh-te/ngan-hang.rss",
+        "publisher_host": "thanhnien.vn",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-cdb22e4b7a20be8d7d6d",
+      "title": "Vì sao giá vàng thế giới liên tục giảm?",
+      "url": "https://vnexpress.net/vi-sao-gia-vang-the-gioi-lien-tuc-giam-5147111.html",
+      "category": "macro",
+      "module_ids": [
+        "macro"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-11-20T23:00:00+00:00",
+      "source_id": "vnexpress-economy",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "Việc giá vàng lập đỉnh lịch sử cuối tháng 1, sau đó đảo chiều mất hơn 35% giá trị, khiến nhà đầu tư kim loại quý choáng váng.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://vnexpress.net/rss/kinh-doanh.rss",
+        "publisher_host": "vnexpress.net",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-7f769c1d39dba5f275bc",
+      "title": "Có nên giao cho chủ đầu tư quản lý?",
+      "url": "https://thanhnien.vn/co-nen-giao-cho-chu-dau-tu-quan-ly-185261120200654986.htm",
+      "category": "market",
+      "module_ids": [
+        "market"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-11-20T23:00:00+00:00",
+      "source_id": "thanhnien-real-estate",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "Trước những tranh chấp, bất ổn xảy ra tại các chung cư liên quan đến quỹ bảo trì chung cư 2%, câu hỏi đặt ra là liệu có nên để ban quản trị các chung cư nắm nguồn tiền hàng trăm tỉ đồng hay giao cho chủ đầu tư quản lý dưới sự giám sát chặt chẽ của cư dân và cơ quan chức năng?",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://thanhnien.vn/rss/kinh-te/dia-oc.rss",
+        "publisher_host": "thanhnien.vn",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-27f7d637b350a829379a",
+      "title": "Mong chờ metro 'cứu' kẹt xe TP.HCM",
+      "url": "https://thanhnien.vn/mong-cho-metro-cuu-ket-xe-tphcm-1852611202204036.htm",
+      "category": "infrastructure",
+      "module_ids": [
+        "infrastructure"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-11-20T23:00:00+00:00",
+      "source_id": "thanhnien-policy",
+      "region_ids": [
+        "hcmc"
+      ],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [
+        "infrastructure"
+      ],
+      "importance": 2,
+      "summary": "Metro TP.HCM đang bước vào giai đoạn bùng nổ với hàng loạt tuyến đồng loạt tăng tốc triển khai, kéo theo những đại công trường rào chắn bủa vây gây áp lực lớn lên hầu khắp mọi tuyến đường.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://thanhnien.vn/rss/kinh-te/chinh-sach-phat-trien.rss",
+        "publisher_host": "thanhnien.vn",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-95346cda15a9c2859347",
+      "title": "Đề xuất tốc độ tối đa 90 km/h với cao tốc 4 làn xe chưa có làn dừng khẩn cấp",
+      "url": "https://vnexpress.net/de-xuat-toc-do-toi-da-90-km-h-voi-cao-toc-4-lan-xe-chua-co-lan-dung-khan-cap-5146183.html",
+      "category": "infrastructure",
+      "module_ids": [
+        "infrastructure"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-11-20T21:00:00+00:00",
+      "source_id": "vnexpress-current-affairs",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [
+        "infrastructure"
+      ],
+      "importance": 2,
+      "summary": "Trong dự thảo sửa đổi Thông tư 38/2024, Bộ Xây dựng đề xuất giới hạn tốc độ không quá 90 km/h đối với một số phương tiện chạy trên cao tốc 4 làn xe đầu tư phân kỳ.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://vnexpress.net/rss/thoi-su.rss",
+        "publisher_host": "vnexpress.net",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-f49cae12ba13cae53441",
+      "title": "Có nên ứng trước 80% tiền mua căn hộ để giải chấp cho chủ nhà?",
+      "url": "https://vnexpress.net/co-nen-ung-truoc-80-tien-mua-can-ho-de-giai-chap-cho-chu-nha-5146608.html",
+      "category": "market",
+      "module_ids": [
+        "market"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-11-20T17:02:00+00:00",
+      "source_id": "vnexpress-real-estate",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "Tôi phân vân có nên ứng trước 4 tỷ đồng để chủ nhà tất toán khoản vay với ngân hàng xong mới đi công chứng.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://vnexpress.net/rss/bat-dong-san.rss",
+        "publisher_host": "vnexpress.net",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-4a3e043e7b4938835b07",
+      "title": "Căn hộ 100 m2 bớt một phòng ngủ để làm studio chụp ảnh",
+      "url": "https://vnexpress.net/can-ho-100-m2-bot-mot-phong-ngu-de-lam-studio-chup-anh-5146175.html",
+      "category": "market",
+      "module_ids": [
+        "market"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-11-20T17:00:00+00:00",
+      "source_id": "vnexpress-real-estate",
+      "region_ids": [
+        "hcmc"
+      ],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "Căn nhà tại TP HCM có mặt bằng linh hoạt, đáp ứng nhu cầu sinh hoạt, tiếp khách và sáng tạo nội dung thời trang tại nhà.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://vnexpress.net/rss/bat-dong-san.rss",
+        "publisher_host": "vnexpress.net",
+        "publication_date_from_feed": true
+      }
+    },
     {
       "id": "article-market-rss-6fcb33e120b363cf96d5",
       "title": "Quảng Ngãi đề xuất chuyển hơn 125 ha rừng làm khu đô thị ở Măng Đen",
