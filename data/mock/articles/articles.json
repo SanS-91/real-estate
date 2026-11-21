@@ -1,9 +1,86 @@
 {
   "schema_version": 1,
-  "build_id": "market-news-rss-20261121T045137Z",
-  "generated_at": "2026-11-21T04:51:37.440889+00:00",
-  "record_count": 2163,
+  "build_id": "market-news-rss-20261121T065134Z",
+  "generated_at": "2026-11-21T06:51:34.765016+00:00",
+  "record_count": 2167,
   "data": [
+    {
+      "id": "article-market-rss-af9f04a402f6646bc7b2",
+      "title": "Giá vàng thấp nhất 14 tháng, chênh lệch mua - bán lên kỷ lục 6 triệu đồng/lượng",
+      "url": "https://dantri.com.vn/kinh-doanh/gia-vang-thap-nhat-14-thang-chenh-lech-mua-ban-len-ky-luc-6-trieu-dongluong-20261121123822503.htm",
+      "category": "macro",
+      "module_ids": [
+        "macro"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-11-21T06:04:17+00:00",
+      "source_id": "dantri-business",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "(Dân trí) - Chênh lệch mua - bán giá vàng đã tăng lên 6 triệu đồng/lượng. Đây là mức chênh lệch mua bán cao kỷ lục từ đầu năm đến nay, tăng gấp đôi so với khoảng cách 3 triệu đồng trước đó.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://dantri.com.vn/rss/kinh-doanh.rss",
+        "publisher_host": "dantri.com.vn",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-a8182f72b07c867c72f3",
+      "title": "Cấm thu tiền giữ chỗ mua nhà hình thành trong tương lai",
+      "url": "https://vnexpress.net/cam-thu-tien-giu-cho-mua-nha-hinh-thanh-trong-tuong-lai-5147383.html",
+      "category": "market",
+      "module_ids": [
+        "market"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-11-21T05:01:45+00:00",
+      "source_id": "vnexpress-real-estate",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "Theo luật mới vừa thông qua, chủ đầu tư không được thu tiền dưới mọi hình thức để bảo đảm việc ký hợp đồng mua trước khi dự án được phép kinh doanh.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://vnexpress.net/rss/bat-dong-san.rss",
+        "publisher_host": "vnexpress.net",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-446a4e0029ecea241352",
+      "title": "Cho phép áp dụng cơ chế đặc thù để đẩy nhanh 3 tuyến cao tốc miền núi",
+      "url": "https://dantri.com.vn/thoi-su/cho-phep-ap-dung-co-che-dac-thu-de-day-nhanh-3-tuyen-cao-toc-mien-nui-20261121103353252.htm",
+      "category": "infrastructure",
+      "module_ids": [
+        "infrastructure"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-11-21T04:41:06+00:00",
+      "source_id": "dantri-current-affairs",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [
+        "infrastructure"
+      ],
+      "importance": 2,
+      "summary": "(Dân trí) - Quốc hội cho phép áp dụng một số cơ chế đặc thù về điều chỉnh chủ trương đầu tư, chỉ định thầu, giải phóng mặt bằng để triển khai 3 tuyến cao tốc có tổng vốn gần 162.400 tỷ đồng.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://dantri.com.vn/rss/thoi-su.rss",
+        "publisher_host": "dantri.com.vn",
+        "publication_date_from_feed": true
+      }
+    },
     {
       "id": "article-market-rss-aa906c8f2d72ecc1c95a",
       "title": "The Art Of Living Well - Hành trình trải nghiệm thành phố đáng sống One Era",
@@ -52,6 +129,31 @@
         "method": "official-rss",
         "feed_url": "https://dantri.com.vn/rss/bat-dong-san.rss",
         "publisher_host": "dantri.com.vn",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-f2c21b7c9944d0c3a755",
+      "title": "Nhà ở xã hội được chuyển nhượng theo giá thị trường nhưng phải đúng đối tượng",
+      "url": "https://vnexpress.net/nha-o-xa-hoi-duoc-chuyen-nhuong-theo-gia-thi-truong-nhung-phai-dung-doi-tuong-5147341.html",
+      "category": "market",
+      "module_ids": [
+        "market"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-11-21T03:24:47+00:00",
+      "source_id": "vnexpress-real-estate",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "Từ 1/7/2027, nhà ở xã hội đã trả đủ tiền sau 5 năm được bán lại theo giá thị trường nhưng phải đúng đối tượng, thay vì chuyển nhượng tự do như hiện nay.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://vnexpress.net/rss/bat-dong-san.rss",
+        "publisher_host": "vnexpress.net",
         "publication_date_from_feed": true
       }
     },
