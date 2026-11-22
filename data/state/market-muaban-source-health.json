@@ -1,23 +1,23 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-11-21T15:35:16.875011+00:00",
+  "generated_at": "2026-11-22T09:42:13.965631+00:00",
   "source_id": "muaban-vn",
   "targets_checked": 6,
   "listing_urls_discovered": 20,
   "details_checked": 20,
   "valid_unexpired_project_ads": 10,
   "newly_published": 0,
-  "published_current_individual_listings": 10,
+  "published_current_individual_listings": 9,
   "sources": [
     {
       "project_id": "akari-city",
       "source_url": "https://muaban.net/bat-dong-san/ban-can-ho-chung-cu-du-an-akari-city-quan-binh-tan-ho-chi-minh",
       "access": "reachable",
-      "discovered": 4,
-      "checked": 4,
-      "qualified": 1,
+      "discovered": 5,
+      "checked": 5,
+      "qualified": 2,
       "reasons": {
-        "qualified-unexpired-listing": 1,
+        "qualified-unexpired-listing": 2,
         "publisher-expired": 3
       }
     },
@@ -46,11 +46,11 @@
       "project_id": "the-privia",
       "source_url": "https://muaban.net/bat-dong-san/ban-can-ho-du-an-the-privia-quan-binh-tan-ho-chi-minh",
       "access": "reachable",
-      "discovered": 2,
-      "checked": 2,
+      "discovered": 1,
+      "checked": 1,
       "qualified": 0,
       "reasons": {
-        "missing-numeric-total-sale-price": 2
+        "missing-numeric-total-sale-price": 1
       }
     },
     {
@@ -59,10 +59,10 @@
       "access": "reachable",
       "discovered": 12,
       "checked": 12,
-      "qualified": 8,
+      "qualified": 7,
       "reasons": {
-        "qualified-unexpired-listing": 8,
-        "publisher-expired": 4
+        "qualified-unexpired-listing": 7,
+        "publisher-expired": 5
       }
     },
     {
