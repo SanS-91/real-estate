@@ -1,9 +1,168 @@
 {
   "schema_version": 1,
-  "build_id": "market-news-rss-20261121T145141Z",
-  "generated_at": "2026-11-21T14:51:41.841332+00:00",
-  "record_count": 2178,
+  "build_id": "market-news-rss-20261122T005137Z",
+  "generated_at": "2026-11-22T00:51:37.501728+00:00",
+  "record_count": 2184,
   "data": [
+    {
+      "id": "article-market-rss-5daac02edc6270563d13",
+      "title": "Giá vàng hôm nay 22.11.2026: Giảm không phanh khiến người mua lỗ 10 triệu sau một tuần",
+      "url": "https://thanhnien.vn/gia-vang-hom-nay-22112026-giam-khong-phanh-khien-nguoi-mua-lo-10-trieu-sau-mot-tuan-185261121201352064.htm",
+      "category": "macro",
+      "module_ids": [
+        "macro"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-11-22T00:07:00+00:00",
+      "source_id": "thanhnien-banking",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "Giá vàng trên thế giới lẫn trong nước liên tục lao dốc trong tuần cùng với chênh lệch giá mua - bán lên cao khiến người mua lỗ nặng.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://thanhnien.vn/rss/kinh-te/ngan-hang.rss",
+        "publisher_host": "thanhnien.vn",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-dd41a53d78ad9cb6a2fa",
+      "title": "Lâm Đồng quy hoạch trung tâm hành chính mới ở Đức Trọng",
+      "url": "https://vnexpress.net/lam-dong-quy-hoach-trung-tam-hanh-chinh-moi-o-duc-trong-5147487.html",
+      "category": "market",
+      "module_ids": [
+        "market"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-11-22T00:00:00+00:00",
+      "source_id": "vnexpress-current-affairs",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [
+        "legal",
+        "infrastructure"
+      ],
+      "importance": 2,
+      "summary": "Xã Đức Trọng được định hướng hình thành trung tâm hành chính mới của Lâm Đồng, đồng thời là cửa ngõ giao thương quốc tế nhờ sân bay Liên Khương.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://vnexpress.net/rss/thoi-su.rss",
+        "publisher_host": "vnexpress.net",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-b37659acc413c89735c3",
+      "title": "TPHCM công khai 72 suất mua, thuê nhà ở xã hội, giá 14,9 triệu đồng/m2",
+      "url": "https://dantri.com.vn/bat-dong-san/tphcm-cong-khai-72-suat-mua-thue-nha-o-xa-hoi-gia-149-trieu-dongm2-20261121224359215.htm",
+      "category": "market",
+      "module_ids": [
+        "market"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-11-22T00:00:00+00:00",
+      "source_id": "dantri-real-estate",
+      "region_ids": [
+        "hcmc"
+      ],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [
+        "pricing"
+      ],
+      "importance": 2,
+      "summary": "(Dân trí) - Sở Xây dựng TPHCM công khai thông tin tiếp nhận hồ sơ mua, thuê 72 căn hộ nhà ở xã hội tại phường An Phú. Giá bán bình quân gần 14,9 triệu đồng/m2, giá thuê tối đa 282.000 đồng/m2/tháng.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://dantri.com.vn/rss/bat-dong-san.rss",
+        "publisher_host": "dantri.com.vn",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-7bd9e1b802062be57d98",
+      "title": "Những thay đổi quan trọng về thuế, đất đai, nhà ở sau kỳ họp Quốc hội",
+      "url": "https://dantri.com.vn/thoi-su/nhung-thay-doi-quan-trong-ve-thue-dat-dai-nha-o-sau-ky-hop-quoc-hoi-20261121183704358.htm",
+      "category": "market",
+      "module_ids": [
+        "market"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-11-21T23:37:00+00:00",
+      "source_id": "dantri-current-affairs",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "(Dân trí) - Cơ chế bồi thường khi thu hồi đất, chính sách phát triển nhà ở, đánh thuế đất bỏ hoang cùng nhiều ưu đãi về thuế với doanh nghiệp… là những nội dung quan trọng vừa được chốt tại kỳ họp Quốc hội.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://dantri.com.vn/rss/thoi-su.rss",
+        "publisher_host": "dantri.com.vn",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-f34954e640e10567ec37",
+      "title": "Xuất hiện siêu dự án 111.000 tỷ đồng gần sân vận động VinFast - Trống Đồng",
+      "url": "https://dantri.com.vn/bat-dong-san/xuat-hien-sieu-du-an-111000-ty-dong-gan-san-van-dong-vinfast-trong-dong-20261122012954320.htm",
+      "category": "market",
+      "module_ids": [
+        "market"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-11-21T23:20:09+00:00",
+      "source_id": "dantri-real-estate",
+      "region_ids": [
+        "ha-noi"
+      ],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "(Dân trí) - Hà Nội duyệt dự án khu đô thị 111.000 tỷ đồng; tháp 68 tầng dang dở của VietinBank về tay hệ sinh thái Sun Group là những tin nóng bất động sản tuần qua.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://dantri.com.vn/rss/bat-dong-san.rss",
+        "publisher_host": "dantri.com.vn",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-59d6c90ad9b1281743eb",
+      "title": "Biệt thự nghỉ dưỡng hướng biển của doanh nhân mê lướt sóng",
+      "url": "https://vnexpress.net/biet-thu-nghi-duong-huong-bien-cua-doanh-nhan-me-luot-song-5145733.html",
+      "category": "market",
+      "module_ids": [
+        "market"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-11-21T17:00:00+00:00",
+      "source_id": "vnexpress-real-estate",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "Lấy cảm hứng từ kiến trúc bản địa và cảnh quan đảo, biệt thự ở Indonesia bố trí không gian nghỉ dưỡng vừa có chỗ sinh hoạt chung hướng biển, vừa giữ sự riêng tư cho các phòng ngủ.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://vnexpress.net/rss/bat-dong-san.rss",
+        "publisher_host": "vnexpress.net",
+        "publication_date_from_feed": true
+      }
+    },
     {
       "id": "article-market-rss-a0e49fe44d305c6b810f",
       "title": "Giá vàng giảm hơn 2.000 USD/ounce từ đỉnh và kỳ vọng đảo chiều",
