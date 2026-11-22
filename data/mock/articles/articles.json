@@ -1,9 +1,116 @@
 {
   "schema_version": 1,
-  "build_id": "market-news-rss-20261122T025139Z",
-  "generated_at": "2026-11-22T02:51:39.890265+00:00",
-  "record_count": 2188,
+  "build_id": "market-news-rss-20261122T045142Z",
+  "generated_at": "2026-11-22T04:51:42.130893+00:00",
+  "record_count": 2192,
   "data": [
+    {
+      "id": "article-market-rss-66969c76283865a4c0b8",
+      "title": "Giá vàng miếng giảm mạnh, người mua lỗ gần 10 triệu đồng/lượng sau một tuần",
+      "url": "https://dantri.com.vn/kinh-doanh/gia-vang-mieng-giam-manh-nguoi-mua-lo-gan-10-trieu-dongluong-sau-mot-tuan-20261122102117729.htm",
+      "category": "macro",
+      "module_ids": [
+        "macro"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-11-22T03:40:40+00:00",
+      "source_id": "dantri-business",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "(Dân trí) - Giá vàng miếng SJC giảm mạnh nhất tới 6,5 triệu đồng/lượng trong một tuần, khiến người mua đầu tuần có thể lỗ gần 10 triệu đồng/lượng nếu bán ra lúc này.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://dantri.com.vn/rss/kinh-doanh.rss",
+        "publisher_host": "dantri.com.vn",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-e635e144a18798510127",
+      "title": "Giá bồi thường đất dự án rạch Ông Bé cao nhất 222 triệu đồng mỗi m2",
+      "url": "https://vnexpress.net/gia-boi-thuong-dat-du-an-rach-ong-be-cao-nhat-222-trieu-dong-moi-m2-5147562.html",
+      "category": "market",
+      "module_ids": [
+        "market",
+        "legal"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-11-22T03:15:55+00:00",
+      "source_id": "vnexpress-real-estate",
+      "region_ids": [
+        "hcmc"
+      ],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [
+        "pricing"
+      ],
+      "importance": 2,
+      "summary": "TP HCM chốt giá bồi thường đất dự án rạch Ông Bé cao nhất hơn 222 triệu đồng mỗi m2, cao hơn 138% so với bảng giá đất hiện hành.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://vnexpress.net/rss/bat-dong-san.rss",
+        "publisher_host": "vnexpress.net",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-82e695c4e6ed889dc87a",
+      "title": "Những dự án luật đặc biệt quan trọng vừa được Quốc hội thông qua",
+      "url": "https://dantri.com.vn/thoi-su/nhung-du-an-luat-dac-biet-quan-trong-vua-duoc-quoc-hoi-thong-qua-20261122070705379.htm",
+      "category": "market",
+      "module_ids": [
+        "market"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-11-22T02:31:00+00:00",
+      "source_id": "dantri-current-affairs",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [
+        "legal"
+      ],
+      "importance": 2,
+      "summary": "(Dân trí) - 38 luật và 18 nghị quyết được Quốc hội thông qua sau 27 ngày làm việc của kỳ họp thứ 2. Trong đó có nhiều luật quan trọng như Luật Đất đai, Luật Nhà ở, Bộ luật Hình sự, Luật Xử lý vi phạm hành chính…",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://dantri.com.vn/rss/thoi-su.rss",
+        "publisher_host": "dantri.com.vn",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-e840268e0bfbf386c0bf",
+      "title": "Xây nhà không rác thải, biến gạch vỡ và kính cũ thành nhà mới",
+      "url": "https://dantri.com.vn/kinh-doanh/xay-nha-khong-rac-thai-bien-gach-vo-va-kinh-cu-thanh-nha-moi-20261121192908241.htm",
+      "category": "market",
+      "module_ids": [
+        "market"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-11-22T02:20:43+00:00",
+      "source_id": "dantri-real-estate",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "(Dân trí) - Thay vì tốn tiền dọn xà bần và chôn lấp phế liệu, làn sóng xây dựng tuần hoàn đang biến gạch vỡ, kính cũ thành nhà mới, vừa hạ chi phí vừa mở ra cơ hội kinh doanh mới cho ngành bất động sản.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://dantri.com.vn/rss/bat-dong-san.rss",
+        "publisher_host": "dantri.com.vn",
+        "publication_date_from_feed": true
+      }
+    },
     {
       "id": "article-market-rss-e317cb5a5058f8984d5b",
       "title": "Mặt bếp đá cẩm thạch dần nhường chỗ cho vật liệu mới",
