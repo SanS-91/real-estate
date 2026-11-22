@@ -1,9 +1,114 @@
 {
   "schema_version": 1,
-  "build_id": "market-news-rss-20261122T005137Z",
-  "generated_at": "2026-11-22T00:51:37.501728+00:00",
-  "record_count": 2184,
+  "build_id": "market-news-rss-20261122T025139Z",
+  "generated_at": "2026-11-22T02:51:39.890265+00:00",
+  "record_count": 2188,
   "data": [
+    {
+      "id": "article-market-rss-e317cb5a5058f8984d5b",
+      "title": "Mặt bếp đá cẩm thạch dần nhường chỗ cho vật liệu mới",
+      "url": "https://dantri.com.vn/bat-dong-san/mat-bep-da-cam-thach-dan-nhuong-cho-cho-vat-lieu-moi-20261121073606521.htm",
+      "category": "market",
+      "module_ids": [
+        "market"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-11-22T01:49:00+00:00",
+      "source_id": "dantri-real-estate",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "(Dân trí) - Từng được ví như biểu tượng của sự sang trọng, mặt bếp đá cẩm thạch đang dần nhường chỗ cho các vật liệu mới thực tế hơn, phù hợp với thói quen nấu nướng của người Việt.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://dantri.com.vn/rss/bat-dong-san.rss",
+        "publisher_host": "dantri.com.vn",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-e0b8acbad55907ce333f",
+      "title": "Nhà thổ cư khó chốt giao dịch khi người mua ngại rủi ro quy hoạch",
+      "url": "https://vnexpress.net/nha-tho-cu-kho-chot-giao-dich-khi-nguoi-mua-ngai-rui-ro-quy-hoach-5146020.html",
+      "category": "market",
+      "module_ids": [
+        "market"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-11-22T01:10:00+00:00",
+      "source_id": "vnexpress-real-estate",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [
+        "sales",
+        "legal"
+      ],
+      "importance": 2,
+      "summary": "Chuẩn bị xuống tiền khi đã đi đến bước thương lượng giá, chị Hiền quay xe phút chót khi có thông tin căn nhà riêng nằm trong ranh quy hoạch đề xuất dự án TOD.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://vnexpress.net/rss/bat-dong-san.rss",
+        "publisher_host": "vnexpress.net",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-7ac07ba6824180a907f7",
+      "title": "Dự báo giá vàng sau tuần giảm sốc và động thái của \"cá mập\"",
+      "url": "https://dantri.com.vn/kinh-doanh/du-bao-gia-vang-sau-tuan-giam-soc-va-dong-thai-cua-ca-map-20261122074603446.htm",
+      "category": "macro",
+      "module_ids": [
+        "macro"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-11-22T01:03:26+00:00",
+      "source_id": "dantri-business",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "(Dân trí) - Giá vàng vừa có tuần giảm sốc về sát mốc 3.500 USD/ounce. Giới phân tích cảnh báo áp lực bán vẫn chiếm ưu thế, song các dòng tiền lớn bắt đầu tận dụng đợt điều chỉnh để tích lũy dài hạn.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://dantri.com.vn/rss/kinh-doanh.rss",
+        "publisher_host": "dantri.com.vn",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-4a2b37aa8d63dd310b3b",
+      "title": "HAUS Da Lat giành giải kiến trúc cảnh quan xuất sắc",
+      "url": "https://vnexpress.net/haus-da-lat-gianh-giai-kien-truc-canh-quan-xuat-sac-5147529.html",
+      "category": "market",
+      "module_ids": [
+        "market"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-11-22T01:00:00+00:00",
+      "source_id": "vnexpress-real-estate",
+      "region_ids": [
+        "binh-duong"
+      ],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "Dự án được vinh danh ở hạng mục \"Kiến trúc cảnh quan xuất sắc nhất châu Á – Thái Bình Dương\" tại International Property Awards 2026, đại diện khu vực tranh giải thế giới.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://vnexpress.net/rss/bat-dong-san.rss",
+        "publisher_host": "vnexpress.net",
+        "publication_date_from_feed": true
+      }
+    },
     {
       "id": "article-market-rss-5daac02edc6270563d13",
       "title": "Giá vàng hôm nay 22.11.2026: Giảm không phanh khiến người mua lỗ 10 triệu sau một tuần",
