@@ -1,16 +1,16 @@
 {
   "schema_version": 1,
-  "checked_at": "2026-11-22T12:51:42.437691+00:00",
+  "checked_at": "2026-11-22T14:52:54.620179+00:00",
   "feeds_configured": 16,
-  "feeds_fetched": 16,
+  "feeds_fetched": 15,
   "accepted_new": 1,
   "production_written": true,
-  "article_total": 2199,
+  "article_total": 2200,
   "published_by_module": {
     "market": 0,
     "legal": 0,
-    "infrastructure": 0,
-    "macro": 1
+    "infrastructure": 1,
+    "macro": 0
   },
   "recent_by_module_7d": {
     "market": 204,
@@ -19,15 +19,15 @@
     "macro": 64
   },
   "recent_by_module_30d": {
-    "market": 816,
+    "market": 815,
     "legal": 159,
-    "infrastructure": 347,
+    "infrastructure": 348,
     "macro": 244
   },
   "latest_published_by_module": {
     "market": "2026-11-22T10:17:03+00:00",
     "legal": "2026-11-22T10:17:03+00:00",
-    "infrastructure": "2026-11-22T09:42:41+00:00",
+    "infrastructure": "2026-11-22T13:47:24+00:00",
     "macro": "2026-11-22T10:56:00+00:00"
   },
   "feed_status": [
@@ -60,21 +60,16 @@
     },
     {
       "source_id": "vnexpress-economy",
-      "status": "parsed",
-      "feed_items": 50,
-      "new": 0,
-      "skipped": 50,
-      "duplicates": 5,
-      "filtered": 45
+      "status": "fetch-error"
     },
     {
       "source_id": "vnexpress-current-affairs",
       "status": "parsed",
       "feed_items": 50,
-      "new": 0,
-      "skipped": 50,
+      "new": 1,
+      "skipped": 49,
       "duplicates": 8,
-      "filtered": 42
+      "filtered": 41
     },
     {
       "source_id": "vnexpress-legal",
@@ -152,9 +147,9 @@
       "source_id": "thanhnien-banking",
       "status": "parsed",
       "feed_items": 50,
-      "new": 1,
-      "skipped": 49,
-      "duplicates": 22,
+      "new": 0,
+      "skipped": 50,
+      "duplicates": 23,
       "filtered": 27
     },
     {
@@ -176,5 +171,10 @@
       "filtered": 46
     }
   ],
-  "fetch_errors": []
+  "fetch_errors": [
+    {
+      "source_id": "vnexpress-economy",
+      "error": "HTTPError"
+    }
+  ]
 }

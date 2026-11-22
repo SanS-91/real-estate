@@ -1,9 +1,36 @@
 {
   "schema_version": 1,
-  "build_id": "market-news-rss-20261122T125142Z",
-  "generated_at": "2026-11-22T12:51:42.437691+00:00",
-  "record_count": 2199,
+  "build_id": "market-news-rss-20261122T145254Z",
+  "generated_at": "2026-11-22T14:52:54.620179+00:00",
+  "record_count": 2200,
   "data": [
+    {
+      "id": "article-market-rss-917abe63a880d53e9546",
+      "title": "Liên danh Việt - Pháp - Hàn trúng gói tư vấn lớn nhất đường sắt tốc độ cao Bắc Nam",
+      "url": "https://vnexpress.net/lien-danh-viet-phap-han-trung-goi-tu-van-lon-nhat-duong-sat-toc-do-cao-bac-nam-5147718.html",
+      "category": "infrastructure",
+      "module_ids": [
+        "infrastructure"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-11-22T13:47:24+00:00",
+      "source_id": "vnexpress-current-affairs",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [
+        "infrastructure"
+      ],
+      "importance": 2,
+      "summary": "Liên danh 8 doanh nghiệp Việt Nam, Pháp và Hàn Quốc trúng gói thầu tư vấn lớn nhất dự án đường sắt tốc độ cao Bắc Nam, trị giá hơn 10.243 tỷ đồng.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://vnexpress.net/rss/thoi-su.rss",
+        "publisher_host": "vnexpress.net",
+        "publication_date_from_feed": true
+      }
+    },
     {
       "id": "article-market-rss-b9ba1dc3bc09be3fe819",
       "title": "Ai được vay nhà, đất lãi suất 3%/năm?",
