@@ -1,9 +1,34 @@
 {
   "schema_version": 1,
-  "build_id": "market-news-rss-20261122T105137Z",
-  "generated_at": "2026-11-22T10:51:37.672928+00:00",
-  "record_count": 2198,
+  "build_id": "market-news-rss-20261122T125142Z",
+  "generated_at": "2026-11-22T12:51:42.437691+00:00",
+  "record_count": 2199,
   "data": [
+    {
+      "id": "article-market-rss-b9ba1dc3bc09be3fe819",
+      "title": "Ai được vay nhà, đất lãi suất 3%/năm?",
+      "url": "https://thanhnien.vn/ai-duoc-vay-nha-dat-lai-suat-3-nam-185261122175100981.htm",
+      "category": "macro",
+      "module_ids": [
+        "macro"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-11-22T10:56:00+00:00",
+      "source_id": "thanhnien-banking",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "Chính phủ vừa ban hành Nghị định số 416/2026 quy định về chính sách tín dụng ưu đãi hỗ trợ phát triển kinh tế - xã hội vùng đồng bào dân tộc thiểu số và miền núi. Trong đó quy định lãi suất cho vay ưu đãi 3%/năm đối với nhu cầu vay hỗ trợ đất ở, nhà ở… Nghị định có hiệu lực từ ngày 19.11.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://thanhnien.vn/rss/kinh-te/ngan-hang.rss",
+        "publisher_host": "thanhnien.vn",
+        "publication_date_from_feed": true
+      }
+    },
     {
       "id": "article-market-rss-7c51d245fd316be3af63",
       "title": "Khu kinh tế Vân Phong có gì đặc biệt?",
