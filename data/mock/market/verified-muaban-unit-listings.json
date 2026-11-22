@@ -726,7 +726,36 @@
         "44132578102"
       ],
       "verified_at": "2026-11-17T17:02:51.441765+00:00"
+    },
+    {
+      "project_id": "akari-city",
+      "project_name": "Akari City",
+      "source_id": "muaban-vn",
+      "source_url": "https://muaban.net/bat-dong-san/ban-can-ho-chung-cu-du-an-akari-city-quan-binh-tan-ho-chi-minh/sieu-pham-dupkey-121m-3pn-full-nt-chi-6-5-ty-tai-akari-city-binh-t-id71385971",
+      "listing_id": "71385971",
+      "listing_title": "🎉 Siêu Phẩm Dupkey 121m 3PN+ Full NT Chỉ 6,5 Tỷ tại Akari City Bình T",
+      "asset_type": "apartment",
+      "market_layer": "individual-listing-asking",
+      "metric_type": "single-listing-asking-price-per-sqm",
+      "source_date_basis": "publisher-listing-start-not-update",
+      "source_listed_date": "2026-11-22",
+      "source_updated_date": "2026-11-22",
+      "source_expiration_date": "2026-12-06",
+      "listed_area_sqm": 121.0,
+      "listing_price_vnd": 6500000000,
+      "value_vnd_per_m2": 53719008,
+      "unit_price_basis": "derived-from-advertised-total-and-area",
+      "source_publication_date": null,
+      "methodology_note": "Individual Muaban asking advertisement only. The displayed rate is calculated from the listing's advertised total and usable area, not a publisher average, transaction, project ASP or project range. Date displayed is listing START date, NOT its relative update badge. Use only while the publisher's end date is unexpired.",
+      "id": "muaban-71385971-7fcfc6b45791",
+      "review_status": "automated-two-hosted-checks",
+      "review_date": "2026-11-22",
+      "verification_run_ids": [
+        "45008795426",
+        "45039448899"
+      ],
+      "verified_at": "2026-11-22T15:38:49.429424+00:00"
     }
   ],
-  "record_count": 25
+  "record_count": 26
 }
