@@ -1,9 +1,121 @@
 {
   "schema_version": 1,
-  "build_id": "market-news-rss-20261122T065138Z",
-  "generated_at": "2026-11-22T06:51:38.318116+00:00",
-  "record_count": 2194,
+  "build_id": "market-news-rss-20261122T105137Z",
+  "generated_at": "2026-11-22T10:51:37.672928+00:00",
+  "record_count": 2198,
   "data": [
+    {
+      "id": "article-market-rss-7c51d245fd316be3af63",
+      "title": "Khu kinh tế Vân Phong có gì đặc biệt?",
+      "url": "https://dantri.com.vn/bat-dong-san/khu-kinh-te-van-phong-co-gi-dac-biet-20261122151332513.htm",
+      "category": "market",
+      "module_ids": [
+        "market"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-11-22T10:17:03+00:00",
+      "source_id": "dantri-real-estate",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [
+        "legal"
+      ],
+      "importance": 2,
+      "summary": "(Dân trí) - Bộ Chính trị vừa đồng ý chủ trương thành lập Khu kinh tế đặc biệt Vân Phong. Đây là khu kinh tế rộng khoảng 150.000ha, được quy hoạch phát triển cảng biển quốc tế, đô thị, du lịch, dịch vụ logistics..",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://dantri.com.vn/rss/bat-dong-san.rss",
+        "publisher_host": "dantri.com.vn",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-d32c42f7b92ab3f9f4e3",
+      "title": "Giá căn hộ Hà Nội vượt TPHCM, người mua nhà đứng trước lựa chọn khó",
+      "url": "https://dantri.com.vn/bat-dong-san/gia-can-ho-ha-noi-vuot-tphcm-nguoi-mua-nha-dung-truoc-lua-chon-kho-20261122160531515.htm",
+      "category": "market",
+      "module_ids": [
+        "market"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-11-22T09:44:18+00:00",
+      "source_id": "dantri-real-estate",
+      "region_ids": [
+        "hcmc",
+        "ha-noi"
+      ],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [
+        "supply",
+        "pricing"
+      ],
+      "importance": 2,
+      "summary": "(Dân trí) - Giá căn hộ Hà Nội tăng 122,8% sau 3 năm, vượt TPHCM, nhưng nguồn cung mới nghiêng về phân khúc giá cao, khiến người mua nhà thêm áp lực về khả năng chi trả. Tại TPHCM, mức độ quan tâm chung cư giảm.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://dantri.com.vn/rss/bat-dong-san.rss",
+        "publisher_host": "dantri.com.vn",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-23e105223c7cb356ea83",
+      "title": "Lấy ý kiến nâng tốc độ cao tốc Biên Hòa - Vũng Tàu lên 100km/h",
+      "url": "https://dantri.com.vn/thoi-su/lay-y-kien-nang-toc-do-cao-toc-bien-hoa-vung-tau-len-100kmh-20261122163320824.htm",
+      "category": "infrastructure",
+      "module_ids": [
+        "infrastructure"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-11-22T09:42:41+00:00",
+      "source_id": "dantri-current-affairs",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [
+        "infrastructure"
+      ],
+      "importance": 2,
+      "summary": "(Dân trí) - Cục Đường bộ Việt Nam đề nghị các đơn vị góp ý trước ngày 27/11 về việc nâng tốc độ tối đa một số đoạn cao tốc Biên Hòa - Vũng Tàu từ 80km/h lên 100km/h.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://dantri.com.vn/rss/thoi-su.rss",
+        "publisher_host": "dantri.com.vn",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-9868a7cbc3a77067e5cb",
+      "title": "Người bị thu hồi đất được bồi thường, tái định cư ra sao theo luật mới?",
+      "url": "https://dantri.com.vn/bat-dong-san/nguoi-bi-thu-hoi-dat-duoc-boi-thuong-tai-dinh-cu-ra-sao-theo-luat-moi-20261122144643680.htm",
+      "category": "market",
+      "module_ids": [
+        "legal"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-11-22T08:26:31+00:00",
+      "source_id": "dantri-real-estate",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [
+        "legal"
+      ],
+      "importance": 2,
+      "summary": "(Dân trí) - Luật Đất đai mới quy định các hình thức bồi thường, bố trí tái định cư khi Nhà nước thu hồi đất, đồng thời bổ sung cơ chế hỗ trợ phục hồi sinh kế cho người dân.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://dantri.com.vn/rss/bat-dong-san.rss",
+        "publisher_host": "dantri.com.vn",
+        "publication_date_from_feed": true
+      }
+    },
     {
       "id": "article-market-rss-6f90e6fa75cb853682f1",
       "title": "Gần 10 km cao tốc TP.HCM - Long Thành mở rộng lên 10 làn, xe di chuyển thế nào?",
