@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "checked_at": "2026-11-22T07:06:34.810750+00:00",
+  "checked_at": "2026-11-22T08:51:36.838243+00:00",
   "feeds_configured": 16,
   "feeds_fetched": 16,
   "accepted_new": 0,
@@ -16,12 +16,12 @@
     "market": 206,
     "legal": 45,
     "infrastructure": 85,
-    "macro": 64
+    "macro": 63
   },
   "recent_by_module_30d": {
-    "market": 819,
-    "legal": 160,
-    "infrastructure": 349,
+    "market": 815,
+    "legal": 158,
+    "infrastructure": 348,
     "macro": 246
   },
   "latest_published_by_module": {
