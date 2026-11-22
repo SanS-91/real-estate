@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-11-22T11:21:58.923843+00:00",
+  "generated_at": "2026-11-22T11:22:22.865203+00:00",
   "overall_status": "stale",
   "modules": [
     {
@@ -309,7 +309,7 @@
       "record_count": 18,
       "last_production_at": "2026-10-28T15:19:00+07:00",
       "last_data_change_at": "2026-10-28T15:19:00+07:00",
-      "age_hours": 603.0,
+      "age_hours": 603.1,
       "stale_after_hours": 192,
       "freshness": "stale",
       "latest_source_period": null,
@@ -460,7 +460,7 @@
       "record_count": 16,
       "last_production_at": "2026-10-07T21:55:00+07:00",
       "last_data_change_at": "2026-10-07T21:55:00+07:00",
-      "age_hours": 1100.4,
+      "age_hours": 1100.5,
       "stale_after_hours": 192,
       "freshness": "stale",
       "latest_source_period": null,
