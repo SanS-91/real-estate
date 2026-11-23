@@ -1,9 +1,180 @@
 {
   "schema_version": 1,
-  "build_id": "market-news-rss-20261123T025139Z",
-  "generated_at": "2026-11-23T02:51:39.732155+00:00",
-  "record_count": 2219,
+  "build_id": "market-news-rss-20261123T045150Z",
+  "generated_at": "2026-11-23T04:51:50.552823+00:00",
+  "record_count": 2226,
   "data": [
+    {
+      "id": "article-market-rss-1f3ae3fe6918ea800238",
+      "title": "Những quy định đáng chú ý về sổ đỏ, giá đất trong Luật Đất đai mới",
+      "url": "https://dantri.com.vn/bat-dong-san/nhung-quy-dinh-dang-chu-y-ve-so-do-gia-dat-trong-luat-dat-dai-moi-20261123105326799.htm",
+      "category": "market",
+      "module_ids": [
+        "market",
+        "legal"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-11-23T04:10:35+00:00",
+      "source_id": "dantri-real-estate",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [
+        "pricing",
+        "legal"
+      ],
+      "importance": 2,
+      "summary": "(Dân trí) - Luật Đất đai (sửa đổi) quy định nhiều nội dung liên quan đến cấp sổ đỏ, xác định giá đất, bồi thường khi thu hồi đất và xử lý dự án chậm triển khai, với các mốc áp dụng từ năm 2027-2028.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://dantri.com.vn/rss/bat-dong-san.rss",
+        "publisher_host": "dantri.com.vn",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-cdedc93c409be7525d82",
+      "title": "Quy hoạch TPHCM tầm nhìn 100 năm phải rõ hạn hoàn thành để người dân thụ hưởng",
+      "url": "https://dantri.com.vn/thoi-su/quy-hoach-tphcm-tam-nhin-100-nam-phai-ro-han-hoan-thanh-de-nguoi-dan-thu-huong-20261123103331272.htm",
+      "category": "market",
+      "module_ids": [
+        "market"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-11-23T04:08:43+00:00",
+      "source_id": "dantri-current-affairs",
+      "region_ids": [
+        "hcmc"
+      ],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [
+        "legal"
+      ],
+      "importance": 2,
+      "summary": "(Dân trí) - Phát biểu tại Hội nghị công bố Quy hoạch tổng thể TPHCM, Chủ tịch Quốc hội nhấn mạnh thành phố phải xác định rõ cách làm, người làm và thời hạn hoàn thành để người dân sớm được thụ hưởng.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://dantri.com.vn/rss/thoi-su.rss",
+        "publisher_host": "dantri.com.vn",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-47e58db4cf3b6f9a1401",
+      "title": "Giá vàng trong nước, thế giới đồng loạt tăng trở lại",
+      "url": "https://dantri.com.vn/kinh-doanh/gia-vang-trong-nuoc-the-gioi-dong-loat-tang-tro-lai-20261123105937874.htm",
+      "category": "macro",
+      "module_ids": [
+        "macro"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-11-23T04:05:54+00:00",
+      "source_id": "dantri-business",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "(Dân trí) - Sau tuần giảm tới 6,5 triệu đồng/lượng, giá vàng miếng sáng 23/11 đảo chiều tăng 1,5 triệu đồng. Trên thị trường quốc tế, kim loại quý cũng lấy lại mốc 3.600 USD/ounce sau cú lao dốc gần 9%.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://dantri.com.vn/rss/kinh-doanh.rss",
+        "publisher_host": "dantri.com.vn",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-aac7009fe8129b16ba0b",
+      "title": "Nhà đầu tư được kiểm chứng giá trị thực tại Nam Long II Central Lake",
+      "url": "https://dantri.com.vn/bat-dong-san/nha-dau-tu-duoc-kiem-chung-gia-tri-thuc-tai-nam-long-ii-central-lake-20261123100422034.htm",
+      "category": "market",
+      "module_ids": [
+        "market"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-11-23T04:00:00+00:00",
+      "source_id": "dantri-real-estate",
+      "region_ids": [],
+      "project_ids": [
+        "nam-long-ii-central-lake"
+      ],
+      "developer_ids": [
+        "nam-long"
+      ],
+      "tags": [
+        "legal"
+      ],
+      "importance": 2,
+      "summary": "(Dân trí) - Với hệ tiện ích đã vận hành, lợi thế pháp lý, gần 2.000 cư dân sinh sống và kinh doanh, Nam Long II Central Lake đang chứng minh giá trị thực của một khu đô thị tích hợp tại Nam Cần Thơ.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://dantri.com.vn/rss/bat-dong-san.rss",
+        "publisher_host": "dantri.com.vn",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-6881367fe624be393994",
+      "title": "Đấu giá một phần khu đất từng quy hoạch làm công viên Hello Kitty tại Tây Hồ",
+      "url": "https://vnexpress.net/dau-gia-mot-phan-khu-dat-tung-quy-hoach-lam-cong-vien-hello-kitty-tai-tay-ho-5147848.html",
+      "category": "market",
+      "module_ids": [
+        "market"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-11-23T03:26:13+00:00",
+      "source_id": "vnexpress-real-estate",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [
+        "legal"
+      ],
+      "importance": 2,
+      "summary": "Một phần khu đất tại phường Tây Hồ - nơi từng trong kế hoạch làm dự án công viên Hello Kitty, sẽ được đưa ra đấu giá với mức khởi điểm hơn 114 triệu đồng mỗi m2.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://vnexpress.net/rss/bat-dong-san.rss",
+        "publisher_host": "vnexpress.net",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-e5974e8413d9f829d2ca",
+      "title": "Quy hoạch TPHCM 100 năm: Kỳ vọng hút 7,7 tỷ USD vốn từ Trung tâm Tài chính",
+      "url": "https://dantri.com.vn/kinh-doanh/quy-hoach-tphcm-100-nam-ky-vong-hut-77-ty-usd-von-tu-trung-tam-tai-chinh-20261123093106766.htm",
+      "category": "market",
+      "module_ids": [
+        "market"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-11-23T02:59:52+00:00",
+      "source_id": "dantri-business",
+      "region_ids": [
+        "hcmc"
+      ],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [
+        "sales",
+        "legal"
+      ],
+      "importance": 2,
+      "summary": "(Dân trí) - Với sự góp mặt của 7 định chế mới trong lĩnh vực đầu tư, sàn giao dịch hàng hóa và công nghệ tài chính, tổng vốn dự kiến huy động vào VIFC-HCMC được nâng lên mức 7,7 tỷ USD.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://dantri.com.vn/rss/kinh-doanh.rss",
+        "publisher_host": "dantri.com.vn",
+        "publication_date_from_feed": true
+      }
+    },
     {
       "id": "article-market-rss-325002fc11a8ad94f035",
       "title": "Nhiều tổng công ty, dự án giao thông lớn vào diện thanh tra năm 2027",
@@ -421,6 +592,33 @@
       "source_verification": {
         "method": "official-rss",
         "feed_url": "https://vnexpress.net/rss/bat-dong-san.rss",
+        "publisher_host": "vnexpress.net",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-740a6e449c9ca45daefb",
+      "title": "12 dự án liên quan Tập đoàn Mường Thanh sẽ được xử lý thế nào?",
+      "url": "https://vnexpress.net/12-du-an-lien-quan-tap-doan-muong-thanh-se-duoc-xu-ly-the-nao-5147720.html",
+      "category": "market",
+      "module_ids": [
+        "market"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-11-22T17:00:12+00:00",
+      "source_id": "vnexpress-current-affairs",
+      "region_ids": [
+        "ha-noi"
+      ],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "TP Hà Nội đã thông qua nghị quyết về cơ chế, chính sách đặc thù để xử lý dứt điểm các vi phạm, nêu rõ 5 tiêu chí nhà bị phá dỡ; trước quý IV/2028 giải quyết xong.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://vnexpress.net/rss/thoi-su.rss",
         "publisher_host": "vnexpress.net",
         "publication_date_from_feed": true
       }
