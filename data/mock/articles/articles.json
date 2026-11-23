@@ -1,9 +1,247 @@
 {
   "schema_version": 1,
-  "build_id": "market-news-rss-20261122T162645Z",
-  "generated_at": "2026-11-22T16:26:45.732979+00:00",
-  "record_count": 2201,
+  "build_id": "market-news-rss-20261123T005142Z",
+  "generated_at": "2026-11-23T00:51:42.827410+00:00",
+  "record_count": 2210,
   "data": [
+    {
+      "id": "article-market-rss-8a7d89f707424f9f2b9b",
+      "title": "Căn hộ chung cư được cho thuê lưu trú",
+      "url": "https://vnexpress.net/can-ho-chung-cu-duoc-cho-thue-luu-tru-5147754.html",
+      "category": "market",
+      "module_ids": [
+        "market",
+        "legal"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-11-23T00:35:07+00:00",
+      "source_id": "vnexpress-real-estate",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [
+        "legal"
+      ],
+      "importance": 2,
+      "summary": "Luật Nhà ở sửa đổi cho phép sử dụng chung cư để cho thuê lưu trú, tạo hành lang pháp lý với hoạt động lưu trú ngắn hạn tại dự án căn hộ.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://vnexpress.net/rss/bat-dong-san.rss",
+        "publisher_host": "vnexpress.net",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-0432171aca8b1fcc76dd",
+      "title": "Giá vàng SJC lao dốc, mất gần 58 triệu đồng/lượng so với đỉnh",
+      "url": "https://dantri.com.vn/kinh-doanh/gia-vang-sjc-lao-doc-mat-gan-58-trieu-dongluong-so-voi-dinh-20261123011228458.htm",
+      "category": "macro",
+      "module_ids": [
+        "macro"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-11-22T23:13:29+00:00",
+      "source_id": "dantri-business",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "(Dân trí) - Sau khi lập đỉnh lịch sử 191,3 triệu đồng/lượng, giá vàng miếng SJC liên tục đi xuống, hiện thấp hơn gần 58 triệu đồng/lượng. Riêng tuần qua, mặt hàng này mất tới 6,5 triệu đồng/lượng ở chiều mua vào.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://dantri.com.vn/rss/kinh-doanh.rss",
+        "publisher_host": "dantri.com.vn",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-bb6294945ae4ccd84393",
+      "title": "Người bị thu hồi đất có thêm nhiều quyền lợi",
+      "url": "https://thanhnien.vn/nguoi-bi-thu-hoi-dat-co-them-nhieu-quyen-loi-185261122194514371.htm",
+      "category": "market",
+      "module_ids": [
+        "legal"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-11-22T23:00:00+00:00",
+      "source_id": "thanhnien-real-estate",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [
+        "legal"
+      ],
+      "importance": 2,
+      "summary": "Luật Đất đai (sửa đổi) có hiệu lực từ ngày 1.7.2027 bổ sung nhiều chính sách bảo vệ quyền lợi người bị thu hồi đất khi được hoán đổi đất trong cùng xã, hỗ trợ phục hồi sinh kế và hưởng thêm chính sách bồi thường, tái định cư.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://thanhnien.vn/rss/kinh-te/dia-oc.rss",
+        "publisher_host": "thanhnien.vn",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-0666334542dbe25f8143",
+      "title": "Giá vàng có thể giảm tiếp",
+      "url": "https://vnexpress.net/gia-vang-co-the-giam-tiep-5147695.html",
+      "category": "macro",
+      "module_ids": [
+        "macro"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-11-22T21:02:28+00:00",
+      "source_id": "vnexpress-economy",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "Kỳ vọng lạm phát giảm, đà bán tháo cổ phiếu Mỹ tiếp tục lan rộng cùng lãi suất neo cao có thể là những rủi ro của vàng tuần này, theo các chuyên gia.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://vnexpress.net/rss/kinh-doanh.rss",
+        "publisher_host": "vnexpress.net",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-7c86fd737a62bdb4f3e9",
+      "title": "Trái phiếu chính phủ lần đầu giảm lãi suất trong năm nay",
+      "url": "https://vnexpress.net/trai-phieu-chinh-phu-lan-dau-giam-lai-suat-trong-nam-nay-5147737.html",
+      "category": "macro",
+      "module_ids": [
+        "macro"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-11-22T20:55:09+00:00",
+      "source_id": "vnexpress-economy",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "Lãi suất trúng thầu trái phiếu chính phủ 10 năm, kỳ hạn chuẩn của thị trường, vừa giảm còn 4,41% sau gần 11 tháng liên tiếp đi ngang hoặc tăng.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://vnexpress.net/rss/kinh-doanh.rss",
+        "publisher_host": "vnexpress.net",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-439f1c0d20d728e326ca",
+      "title": "Nhà phố nhiều tầng với những khoảng mở đón nắng",
+      "url": "https://vnexpress.net/nha-pho-nhieu-tang-voi-nhung-khoang-mo-don-nang-5147684.html",
+      "category": "market",
+      "module_ids": [
+        "market"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-11-22T20:41:29+00:00",
+      "source_id": "vnexpress-real-estate",
+      "region_ids": [
+        "hcmc"
+      ],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "Công trình tại TP HCM bố trí khoảng thông tầng, sân sau và hệ cửa kính lớn để đưa ánh sáng tự nhiên vào các không gian.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://vnexpress.net/rss/bat-dong-san.rss",
+        "publisher_host": "vnexpress.net",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-928826b0aa1b8b763afa",
+      "title": "Hà Nội tìm nhà đầu tư khu đô thị gần 11.000 tỷ ở phía tây",
+      "url": "https://vnexpress.net/ha-noi-tim-nha-dau-tu-khu-do-thi-gan-11-000-ty-o-phia-tay-5147744.html",
+      "category": "market",
+      "module_ids": [
+        "market"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-11-22T20:37:16+00:00",
+      "source_id": "vnexpress-real-estate",
+      "region_ids": [
+        "ha-noi"
+      ],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "Khu đô thị Tây Thăng Long nằm ở xã Thạch Thất với quy mô vốn gần 11.000 tỷ đồng, dự kiến đấu thầu tìm nhà đầu tư.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://vnexpress.net/rss/bat-dong-san.rss",
+        "publisher_host": "vnexpress.net",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-33851f9926dd0ddce427",
+      "title": "12 dự án liên quan đến Tập đoàn Mường Thanh sẽ được xử lý thế nào?",
+      "url": "https://vnexpress.net/12-du-an-lien-quan-den-tap-doan-muong-thanh-se-duoc-xu-ly-the-nao-5147720.html",
+      "category": "market",
+      "module_ids": [
+        "market"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-11-22T17:00:12+00:00",
+      "source_id": "vnexpress-current-affairs",
+      "region_ids": [
+        "ha-noi"
+      ],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "Để xử lý sai phạm trong các dự án liên quan đến tập đoàn Mường Thanh trên địa bàn, HĐND TP Hà Nội đã thông qua nghị quyết về cơ chế, chính sách đặc thù.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://vnexpress.net/rss/thoi-su.rss",
+        "publisher_host": "vnexpress.net",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-bbcc1b6e782096d8029a",
+      "title": "Liên danh Việt - Pháp - Hàn trúng thầu tư vấn đường sắt cao tốc Bắc - Nam",
+      "url": "https://dantri.com.vn/thoi-su/lien-danh-viet-phap-han-trung-thau-tu-van-duong-sat-cao-toc-bac-nam-20261122231554812.htm",
+      "category": "infrastructure",
+      "module_ids": [
+        "infrastructure"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-11-22T17:00:00+00:00",
+      "source_id": "dantri-current-affairs",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [
+        "infrastructure"
+      ],
+      "importance": 2,
+      "summary": "(Dân trí) - Liên danh gồm 8 doanh nghiệp Việt Nam, Pháp và Hàn Quốc trúng gói thầu tư vấn quan trọng của dự án đường sắt tốc độ cao Bắc - Nam, với giá hơn 10.240 tỷ đồng.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://dantri.com.vn/rss/thoi-su.rss",
+        "publisher_host": "dantri.com.vn",
+        "publication_date_from_feed": true
+      }
+    },
     {
       "id": "article-market-rss-1b15d6203789b6adc627",
       "title": "Đối tượng nào được vay ưu đãi mua đất, xây nhà lãi suất 3%/năm?",
