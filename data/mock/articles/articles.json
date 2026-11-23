@@ -1,9 +1,170 @@
 {
   "schema_version": 1,
-  "build_id": "market-news-rss-20261123T045150Z",
-  "generated_at": "2026-11-23T04:51:50.552823+00:00",
-  "record_count": 2226,
+  "build_id": "market-news-rss-20261123T065135Z",
+  "generated_at": "2026-11-23T06:51:35.955951+00:00",
+  "record_count": 2233,
   "data": [
+    {
+      "id": "article-market-rss-85591f99233a351cb9f2",
+      "title": "Tỷ giá trung tâm lập kỷ lục mới",
+      "url": "https://vnexpress.net/ty-gia-trung-tam-lap-ky-luc-moi-5148005.html",
+      "category": "macro",
+      "module_ids": [
+        "macro"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-11-23T06:08:24+00:00",
+      "source_id": "vnexpress-economy",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "Tỷ giá trung tâm hôm nay tăng 9 đồng, lên mức kỷ lục mới, trong khi giá USD tại các ngân hàng thương mại tăng hơn 300 đồng sau hai tuần, vượt 26.000 đồng.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://vnexpress.net/rss/kinh-doanh.rss",
+        "publisher_host": "vnexpress.net",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-792e0a6cfa1b8222dd91",
+      "title": "Sun Group khởi công khu đô thị gần 6.700 tỷ đồng ở Măng Đen",
+      "url": "https://vnexpress.net/sun-group-khoi-cong-khu-do-thi-gan-6-700-ty-dong-o-mang-den-5147947.html",
+      "category": "market",
+      "module_ids": [
+        "market",
+        "infrastructure"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-11-23T05:48:19+00:00",
+      "source_id": "vnexpress-real-estate",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "Khu đô thị số 264 ha, vốn đầu tư gần 6.700 tỷ đồng, có khu nghỉ dưỡng, chăm sóc sức khỏe, thể thao, giải trí và nhà ở sinh thái được SunGroup khởi công, sáng 23/11.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://vnexpress.net/rss/bat-dong-san.rss",
+        "publisher_host": "vnexpress.net",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-3b1e733bf2e90b6b8530",
+      "title": "500 đại biểu dự hội nghị công bố quy hoạch TPHCM tầm nhìn 100 năm",
+      "url": "https://dantri.com.vn/thoi-su/500-dai-bieu-du-hoi-nghi-cong-bo-quy-hoach-tphcm-tam-nhin-100-nam-20261123113055619.htm",
+      "category": "market",
+      "module_ids": [
+        "market"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-11-23T05:16:01+00:00",
+      "source_id": "dantri-current-affairs",
+      "region_ids": [
+        "hcmc"
+      ],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [
+        "legal"
+      ],
+      "importance": 2,
+      "summary": "(Dân trí) - Sáng 23/11, lãnh đạo Trung ương và TPHCM cùng khoảng 500 đại biểu dự hội nghị công bố Quy hoạch tổng thể TPHCM thời kỳ 2025-2050, tầm nhìn 100 năm.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://dantri.com.vn/rss/thoi-su.rss",
+        "publisher_host": "dantri.com.vn",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-2aea8b7dd88e0d45e5de",
+      "title": "Hà Nội giao gần 6.700m2 đất triển khai 2 dự án nhà ở xã hội",
+      "url": "https://dantri.com.vn/bat-dong-san/ha-noi-giao-gan-6700m2-dat-trien-khai-2-du-an-nha-o-xa-hoi-20261123111243680.htm",
+      "category": "market",
+      "module_ids": [
+        "market"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-11-23T05:11:26+00:00",
+      "source_id": "dantri-real-estate",
+      "region_ids": [
+        "ha-noi"
+      ],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "(Dân trí) - Hà Nội vừa giao gần 6.700m2 đất tại hai xã Phúc Thịnh và Thiên Lộc để thực hiện các dự án nhà ở xã hội. Trong đó, một dự án được bố trí thêm diện tích xây dựng nhà ở thương mại.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://dantri.com.vn/rss/bat-dong-san.rss",
+        "publisher_host": "dantri.com.vn",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-7e59d7eb6af05a554907",
+      "title": "Sun Group khởi công khu đô thị gần 6.700 tỉ đồng tại Măng Đen",
+      "url": "https://thanhnien.vn/sun-group-khoi-cong-khu-do-thi-gan-6700-ti-dong-tai-mang-den-185261123113444536.htm",
+      "category": "market",
+      "module_ids": [
+        "market",
+        "infrastructure"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-11-23T04:53:00+00:00",
+      "source_id": "thanhnien-policy",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "Tập đoàn Sun Group tổ chức khởi công Khu đô thị số 1 xã Măng Đen (Quảng Ngãi), quy mô hơn 264 ha, tổng mức đầu tư gần 6.700 tỉ đồng.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://thanhnien.vn/rss/kinh-te/chinh-sach-phat-trien.rss",
+        "publisher_host": "thanhnien.vn",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-9bb2a2bc940d2e34843e",
+      "title": "Tìm thân nhân 5 ngôi mộ xưa trong phạm vi dự án kết nối sân bay Long Thành",
+      "url": "https://dantri.com.vn/thoi-su/tim-than-nhan-5-ngoi-mo-xua-trong-pham-vi-du-an-ket-noi-san-bay-long-thanh-20261123113458537.htm",
+      "category": "market",
+      "module_ids": [
+        "market",
+        "infrastructure"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-11-23T04:49:42+00:00",
+      "source_id": "dantri-current-affairs",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [
+        "infrastructure"
+      ],
+      "importance": 2,
+      "summary": "(Dân trí) - UBND phường Bình Lộc vừa thông báo tìm thân nhân 5 ngôi mộ xưa nằm giữa rừng cao su thuộc phạm vi xây dựng dự án đường ĐT770B kết nối sân bay Long Thành.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://dantri.com.vn/rss/thoi-su.rss",
+        "publisher_host": "dantri.com.vn",
+        "publication_date_from_feed": true
+      }
+    },
     {
       "id": "article-market-rss-1f3ae3fe6918ea800238",
       "title": "Những quy định đáng chú ý về sổ đỏ, giá đất trong Luật Đất đai mới",
@@ -115,6 +276,31 @@
         "method": "official-rss",
         "feed_url": "https://dantri.com.vn/rss/bat-dong-san.rss",
         "publisher_host": "dantri.com.vn",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-09e9de7207f88a98b192",
+      "title": "15 đại lý đồng hành đưa The Spark ra thị trường",
+      "url": "https://vnexpress.net/15-dai-ly-dong-hanh-dua-the-spark-ra-thi-truong-5147914.html",
+      "category": "market",
+      "module_ids": [
+        "market"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-11-23T04:00:00+00:00",
+      "source_id": "vnexpress-real-estate",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "Lễ ra quân phân khu The Spark thuộc dự án The Heritage Tay Ninh quy tụ hơn 500 chuyên viên kinh doanh từ 15 đại lý phân phối, đánh dấu bước khởi động kinh doanh tại Tây Ninh.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://vnexpress.net/rss/bat-dong-san.rss",
+        "publisher_host": "vnexpress.net",
         "publication_date_from_feed": true
       }
     },
