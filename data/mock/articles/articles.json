@@ -1,9 +1,90 @@
 {
   "schema_version": 1,
-  "build_id": "market-news-rss-20261123T125137Z",
-  "generated_at": "2026-11-23T12:51:37.587205+00:00",
-  "record_count": 2250,
+  "build_id": "market-news-rss-20261123T145143Z",
+  "generated_at": "2026-11-23T14:51:43.995531+00:00",
+  "record_count": 2253,
   "data": [
+    {
+      "id": "article-market-rss-c71288adfee0cf1a7f97",
+      "title": "Lật tẩy chiêu trò “cắt lỗ” gây nhiễu loạn thị trường bất động sản",
+      "url": "https://dantri.com.vn/bat-dong-san/lat-tay-chieu-tro-cat-lo-gay-nhieu-loan-thi-truong-bat-dong-san-20261123202233751.htm",
+      "category": "market",
+      "module_ids": [
+        "market"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-11-23T13:31:45+00:00",
+      "source_id": "dantri-real-estate",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "(Dân trí) - Những tin rao bán nhà đất gắn mác “cắt lỗ”, “ngộp ngân hàng” xuất hiện dày đặc. Tuy nhiên, theo các chuyên gia, không ít trường hợp chỉ là chiêu quảng cáo nhằm thu hút khách hàng.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://dantri.com.vn/rss/bat-dong-san.rss",
+        "publisher_host": "dantri.com.vn",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-14e580f44757864d272c",
+      "title": "Lâm Đồng siết quản lý dân số trong căn hộ chung cư",
+      "url": "https://vnexpress.net/lam-dong-siet-quan-ly-dan-so-trong-can-ho-chung-cu-5148162.html",
+      "category": "market",
+      "module_ids": [
+        "market"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-11-23T12:38:30+00:00",
+      "source_id": "vnexpress-real-estate",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [
+        "infrastructure"
+      ],
+      "importance": 2,
+      "summary": "Tỉnh Lâm Đồng quy định dân số trong căn hộ chung cư thương mại từ 32-45 m2 được tính 1 người, diện tích trên 160 m2 tính 6 người, nhằm kiểm soát quy mô dân số, tránh quá tải hạ tầng.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://vnexpress.net/rss/bat-dong-san.rss",
+        "publisher_host": "vnexpress.net",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-595b9c3fd86e9408163e",
+      "title": "Một phần khu đất từng quy hoạch dự án Hello Kitty sắp được đấu giá",
+      "url": "https://dantri.com.vn/bat-dong-san/mot-phan-khu-dat-tung-quy-hoach-du-an-hello-kitty-sap-duoc-dau-gia-20261123192722066.htm",
+      "category": "market",
+      "module_ids": [
+        "market"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-11-23T12:36:21+00:00",
+      "source_id": "dantri-real-estate",
+      "region_ids": [
+        "ha-noi"
+      ],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [
+        "legal"
+      ],
+      "importance": 2,
+      "summary": "(Dân trí) - Khu đất rộng 2.678m2 tại số 153 Yên Phụ, ven Hồ Tây, từng thuộc dự án công viên Sanrio Hello Kitty World Hanoi, đang được Hà Nội chuẩn bị đấu giá với giá khởi điểm khoảng 305,86 tỷ đồng.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://dantri.com.vn/rss/bat-dong-san.rss",
+        "publisher_host": "dantri.com.vn",
+        "publication_date_from_feed": true
+      }
+    },
     {
       "id": "article-market-rss-39957a0c111d6f7bac5b",
       "title": "Từ bãi đất trống đến siêu công trình: Phú Quốc lột xác ngoạn mục trước APEC 2027",
