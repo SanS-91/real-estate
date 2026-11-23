@@ -1,9 +1,59 @@
 {
   "schema_version": 1,
-  "build_id": "market-news-rss-20261123T145143Z",
-  "generated_at": "2026-11-23T14:51:43.995531+00:00",
-  "record_count": 2253,
+  "build_id": "market-news-rss-20261123T202116Z",
+  "generated_at": "2026-11-23T20:21:16.545411+00:00",
+  "record_count": 2255,
   "data": [
+    {
+      "id": "article-market-rss-ff61d723097cfdbbe40f",
+      "title": "Tối 23/11, giá vàng, bạc cùng tăng mạnh",
+      "url": "https://dantri.com.vn/kinh-doanh/toi-2311-gia-vang-bac-cung-tang-manh-20261123230603104.htm",
+      "category": "macro",
+      "module_ids": [
+        "macro"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-11-23T16:08:24+00:00",
+      "source_id": "dantri-business",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "(Dân trí) - Giá vàng, bạc trên thị trường quốc tế cùng tăng mạnh khi nhà đầu tư bắt đáy. Giá vàng vượt 3.670 USD/ounce trong khi bạc xấp xỉ 44 USD/ounce.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://dantri.com.vn/rss/kinh-doanh.rss",
+        "publisher_host": "dantri.com.vn",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-fe44d7767489d2ca6819",
+      "title": "Giá vàng thế giới tăng vọt",
+      "url": "https://vnexpress.net/gia-vang-the-gioi-tang-vot-5148251.html",
+      "category": "macro",
+      "module_ids": [
+        "macro"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-11-23T15:29:12+00:00",
+      "source_id": "vnexpress-economy",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "Mỗi ounce vàng tăng hơn 100 USD, tiến sát mốc 3.700 USD khi nhà đầu tư mua vào bắt đáy.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://vnexpress.net/rss/kinh-doanh.rss",
+        "publisher_host": "vnexpress.net",
+        "publication_date_from_feed": true
+      }
+    },
     {
       "id": "article-market-rss-c71288adfee0cf1a7f97",
       "title": "Lật tẩy chiêu trò “cắt lỗ” gây nhiễu loạn thị trường bất động sản",
