@@ -1,11 +1,11 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-11-22T03:45:44.707667+00:00",
-  "record_count": 125,
+  "generated_at": "2026-11-23T03:45:33.740257+00:00",
+  "record_count": 128,
   "production_write": true,
   "repository_publish": true,
   "frontend_publish": false,
-  "source_run_id": "20261122T034536Z",
+  "source_run_id": "20261123T034525Z",
   "data": [
     {
       "indicator_id": "bank-funding-growth-ytd",
@@ -1602,6 +1602,35 @@
       "promotion_run_id": "20261122T034536Z"
     },
     {
+      "period": "2026-11-23",
+      "period_type": "day",
+      "data_date": "2026-11-23",
+      "unit": "vnd-per-tael",
+      "source_id": "baonghean-gold",
+      "source_url": "https://baonghean.vn/gia-vang-hom-nay/gia-vang-sjc",
+      "published_at": "2026-11-23T10:37:00+07:00",
+      "fetched_at": "2026-11-23T03:45:28.707408+00:00",
+      "evidence_status": "corroborated",
+      "methodology_note": "Báo Nghệ An live SJC tracker aggregating public dealer quotes. Trusted-media fallback evidence; not a substitute for direct SJC verification.",
+      "indicator_id": "sjc-gold-buy",
+      "value": 130000000.0,
+      "id": "29e066a15fb5d86d7544",
+      "source_indicator_id": "sjc-gold-bar-buy",
+      "source_record_id": "29e066a15fb5d86d7544",
+      "corroboration_source_ids": [
+        "baonghean-gold",
+        "vietnamnet-gold"
+      ],
+      "corroboration_observation_ids": [
+        "29e066a15fb5d86d7544",
+        "bb8698a8886af7474d62"
+      ],
+      "corroboration_reason": "2 independent fallback sources agree for latest period 2026-11-23 within tolerance 500000.0.",
+      "observation_status": "final",
+      "promoted_at": "2026-11-23T03:45:33.740257+00:00",
+      "promotion_run_id": "20261123T034525Z"
+    },
+    {
       "period": "2026-10-05",
       "period_type": "day",
       "data_date": "2026-10-05",
@@ -2909,6 +2938,35 @@
       "promotion_run_id": "20261122T034536Z"
     },
     {
+      "period": "2026-11-23",
+      "period_type": "day",
+      "data_date": "2026-11-23",
+      "unit": "vnd-per-tael",
+      "source_id": "baonghean-gold",
+      "source_url": "https://baonghean.vn/gia-vang-hom-nay/gia-vang-sjc",
+      "published_at": "2026-11-23T10:37:00+07:00",
+      "fetched_at": "2026-11-23T03:45:28.707408+00:00",
+      "evidence_status": "corroborated",
+      "methodology_note": "Báo Nghệ An live SJC tracker aggregating public dealer quotes. Trusted-media fallback evidence; not a substitute for direct SJC verification.",
+      "indicator_id": "sjc-gold-sell",
+      "value": 135000000.0,
+      "id": "c51623a639689439d18a",
+      "source_indicator_id": "sjc-gold-bar-sell",
+      "source_record_id": "c51623a639689439d18a",
+      "corroboration_source_ids": [
+        "baonghean-gold",
+        "vietnamnet-gold"
+      ],
+      "corroboration_observation_ids": [
+        "c51623a639689439d18a",
+        "96cb5ed63f97a3a8dab1"
+      ],
+      "corroboration_reason": "2 independent fallback sources agree for latest period 2026-11-23 within tolerance 500000.0.",
+      "observation_status": "final",
+      "promoted_at": "2026-11-23T03:45:33.740257+00:00",
+      "promotion_run_id": "20261123T034525Z"
+    },
+    {
       "indicator_id": "usd-vnd-central-rate",
       "period": "2026-10-05",
       "period_type": "day",
@@ -3551,10 +3609,38 @@
       "observation_status": "final",
       "promoted_at": "2026-11-20T03:45:44.705324+00:00",
       "promotion_run_id": "20261120T034539Z"
+    },
+    {
+      "indicator_id": "usd-vnd-central-rate",
+      "period": "2026-11-23",
+      "period_type": "day",
+      "data_date": "2026-11-23",
+      "value": 25668.0,
+      "unit": "vnd-per-usd",
+      "source_id": "vna-vietnamplus",
+      "source_url": "https://en.vietnamplus.vn/reference-exchange-rate-increases-at-weeks-beginning-post355929.vnp",
+      "published_at": "2026-11-23",
+      "fetched_at": "2026-11-23T03:45:27.567724+00:00",
+      "evidence_status": "corroborated",
+      "methodology_note": "VNA/VietnamPlus report citing the State Bank of Vietnam daily reference rate; fallback evidence only.",
+      "id": "41a42dd9452f0ccf6d45",
+      "source_record_id": "41a42dd9452f0ccf6d45",
+      "corroboration_source_ids": [
+        "vna-vietnamplus",
+        "banking-times-vn"
+      ],
+      "corroboration_observation_ids": [
+        "41a42dd9452f0ccf6d45",
+        "f88cdfc3533f3c66655f"
+      ],
+      "corroboration_reason": "2 independent fallback sources agree for latest period 2026-11-23 within tolerance 1.0.",
+      "observation_status": "final",
+      "promoted_at": "2026-11-23T03:45:33.740257+00:00",
+      "promotion_run_id": "20261123T034525Z"
     }
   ],
-  "repository_published_at": "2026-11-22T03:46:05.195525+00:00",
-  "repository_source_run_number": 267,
-  "repository_source_run_database_id": "44982036892",
+  "repository_published_at": "2026-11-23T03:46:02.285678+00:00",
+  "repository_source_run_number": 270,
+  "repository_source_run_database_id": "45107806868",
   "repository_persistence_mode": "controlled-daily-auto-persistence-v1"
 }
