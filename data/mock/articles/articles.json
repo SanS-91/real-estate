@@ -1,9 +1,117 @@
 {
   "schema_version": 1,
-  "build_id": "market-news-rss-20261123T075400Z",
-  "generated_at": "2026-11-23T07:54:00.873752+00:00",
-  "record_count": 2237,
+  "build_id": "market-news-rss-20261123T085134Z",
+  "generated_at": "2026-11-23T08:51:34.111861+00:00",
+  "record_count": 2242,
   "data": [
+    {
+      "id": "article-market-rss-b439866f0ead914129fb",
+      "title": "Hải Phòng khởi công nhà máy vật liệu tinh khiết từ đất hiếm",
+      "url": "https://vnexpress.net/hai-phong-khoi-cong-nha-may-vat-lieu-tinh-khiet-tu-dat-hiem-5148076.html",
+      "category": "infrastructure",
+      "module_ids": [
+        "infrastructure"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-11-23T08:10:26+00:00",
+      "source_id": "vnexpress-current-affairs",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "Nhà máy vốn 1.580 tỷ đồng được khởi công sáng 23/11 tại đặc khu Cát Hải, hướng tới chế biến sâu đất hiếm với công suất thiết kế 10.000 tấn mỗi năm.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://vnexpress.net/rss/thoi-su.rss",
+        "publisher_host": "vnexpress.net",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-9d08f02dbc8158f2acb9",
+      "title": "Người mua Vinhomes Hải Vân Bay hưởng lợi từ chính sách voucher và kế hoạch bàn giao",
+      "url": "https://dantri.com.vn/bat-dong-san/nguoi-mua-vinhomes-hai-van-bay-huong-loi-tu-chinh-sach-voucher-va-ke-hoach-ban-giao-20261123150118486.htm",
+      "category": "market",
+      "module_ids": [
+        "market"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-11-23T08:08:26+00:00",
+      "source_id": "dantri-real-estate",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [
+        "vinhomes"
+      ],
+      "tags": [],
+      "importance": 2,
+      "summary": "(Dân trí) - Voucher đặc quyền hết hiệu lực vào ngày 31/12, trong khi quỹ nhà phố đầu tiên tại Bạch Vân, Vinhomes Hải Vân Bay dự kiến bàn giao từ tháng 1/2027. Người mua vừa giảm chi phí sở hữu, vừa sớm tiếp nhận tài sản để an cư hoặc khai thác kinh doanh.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://dantri.com.vn/rss/bat-dong-san.rss",
+        "publisher_host": "dantri.com.vn",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-757130ffde673896e773",
+      "title": "Khi nghỉ dưỡng trở thành nhịp sống thường nhật tại Elyse Island - đảo Đại Phước",
+      "url": "https://dantri.com.vn/bat-dong-san/khi-nghi-duong-tro-thanh-nhip-song-thuong-nhat-tai-elyse-island-dao-dai-phuoc-20261123143019668.htm",
+      "category": "market",
+      "module_ids": [
+        "market"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-11-23T08:00:00+00:00",
+      "source_id": "dantri-real-estate",
+      "region_ids": [],
+      "project_ids": [
+        "elyse-island"
+      ],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "(Dân trí) - Với giới thượng lưu, tài sản không chỉ nằm ở những gì có thể sở hữu, mà còn ở sức khỏe, thời gian và quyền chủ động chăm sóc chính mình ngày càng được xem là những giá trị quý giá.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://dantri.com.vn/rss/bat-dong-san.rss",
+        "publisher_host": "dantri.com.vn",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-704117cd164653930390",
+      "title": "CSGT trực tiếp ghi hình tài xế đi vào làn khẩn cấp đường Vành đai 3",
+      "url": "https://dantri.com.vn/thoi-su/csgt-truc-tiep-ghi-hinh-tai-xe-di-vao-lan-khan-cap-duong-vanh-dai-3-20261123121044173.htm",
+      "category": "infrastructure",
+      "module_ids": [
+        "infrastructure"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-11-23T07:59:18+00:00",
+      "source_id": "dantri-current-affairs",
+      "region_ids": [
+        "ha-noi"
+      ],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [
+        "infrastructure"
+      ],
+      "importance": 2,
+      "summary": "(Dân trí) - Cán bộ cảnh sát giao thông Hà Nội tuần tra lưu động trên tuyến đường Vành đai 3, sử dụng camera nghiệp vụ ghi hình, xử lý nghiêm các trường hợp tài xế ô tô đi vào làn dừng khẩn cấp.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://dantri.com.vn/rss/thoi-su.rss",
+        "publisher_host": "dantri.com.vn",
+        "publication_date_from_feed": true
+      }
+    },
     {
       "id": "article-market-rss-8b335d805c89e51329a5",
       "title": "Cấm đặt cọc mua bất động sản dưới mọi hình thức",
@@ -27,6 +135,33 @@
         "method": "official-rss",
         "feed_url": "https://thanhnien.vn/rss/kinh-te/dia-oc.rss",
         "publisher_host": "thanhnien.vn",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-9c58cdcab847a19ea1ad",
+      "title": "Tỷ giá trung tâm tiếp tục tăng, giá USD ngân hàng vượt 26.000 đồng",
+      "url": "https://dantri.com.vn/kinh-doanh/ty-gia-trung-tam-tiep-tuc-tang-gia-usd-ngan-hang-vuot-26000-dong-20261123134034948.htm",
+      "category": "macro",
+      "module_ids": [
+        "macro"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-11-23T07:24:48+00:00",
+      "source_id": "dantri-business",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [
+        "pricing"
+      ],
+      "importance": 2,
+      "summary": "(Dân trí) - Giá USD tại các ngân hàng thương mại tăng so với cuối tuần trước, đưa giá bán vượt mốc 26.000 đồng/USD trong bối cảnh tỷ giá trung tâm tiếp tục lập đỉnh mới.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://dantri.com.vn/rss/kinh-doanh.rss",
+        "publisher_host": "dantri.com.vn",
         "publication_date_from_feed": true
       }
     },
