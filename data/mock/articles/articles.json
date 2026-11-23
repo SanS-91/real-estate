@@ -1,9 +1,91 @@
 {
   "schema_version": 1,
-  "build_id": "market-news-rss-20261123T065135Z",
-  "generated_at": "2026-11-23T06:51:35.955951+00:00",
-  "record_count": 2233,
+  "build_id": "market-news-rss-20261123T075400Z",
+  "generated_at": "2026-11-23T07:54:00.873752+00:00",
+  "record_count": 2237,
   "data": [
+    {
+      "id": "article-market-rss-8b335d805c89e51329a5",
+      "title": "Cấm đặt cọc mua bất động sản dưới mọi hình thức",
+      "url": "https://thanhnien.vn/cam-dat-coc-mua-bat-dong-san-duoi-moi-hinh-thuc-185261123142446658.htm",
+      "category": "market",
+      "module_ids": [
+        "market",
+        "legal"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-11-23T07:47:00+00:00",
+      "source_id": "thanhnien-real-estate",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "Luật Kinh doanh bất động sản sửa đổi vừa được thông qua có hiệu lực từ ngày 1.7.2027 cấm chủ đầu tư thu tiền dưới mọi hình thức trước khi bất động sản đủ điều kiện đưa vào kinh doanh, nhằm bảo đảm việc ký hợp đồng mua bán.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://thanhnien.vn/rss/kinh-te/dia-oc.rss",
+        "publisher_host": "thanhnien.vn",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-305634d13762792dd58d",
+      "title": "Đồng Nai ưu tiên nguồn lực phát triển đô thị sân bay Long Thành",
+      "url": "https://dantri.com.vn/thoi-su/dong-nai-uu-tien-nguon-luc-phat-trien-do-thi-san-bay-long-thanh-20261123135308873.htm",
+      "category": "infrastructure",
+      "module_ids": [
+        "infrastructure"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-11-23T07:12:04+00:00",
+      "source_id": "dantri-current-affairs",
+      "region_ids": [
+        "dong-nai"
+      ],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [
+        "infrastructure"
+      ],
+      "importance": 2,
+      "summary": "(Dân trí) - Trưởng ban Nội chính Trung ương nhấn mạnh, trong giai đoạn hiện nay, TP Đồng Nai ưu tiên nguồn lực để đầu tư các công trình, dự án trọng điểm, đặc biệt đề án phát triển đô thị sân bay Long Thành.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://dantri.com.vn/rss/thoi-su.rss",
+        "publisher_host": "dantri.com.vn",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-b6b8cb514d482df8f8f5",
+      "title": "CSGT kịp thời cứu tài xế ô tô co giật trên quốc lộ 1",
+      "url": "https://dantri.com.vn/thoi-su/csgt-kip-thoi-cuu-tai-xe-o-to-co-giat-tren-quoc-lo-1-20261123121424173.htm",
+      "category": "infrastructure",
+      "module_ids": [
+        "infrastructure"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-11-23T06:59:26+00:00",
+      "source_id": "dantri-current-affairs",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [
+        "infrastructure"
+      ],
+      "importance": 2,
+      "summary": "(Dân trí) - Phát hiện tài xế ô tô gục đầu, co giật khi xe bất ngờ tấp vào lề quốc lộ 1, tổ CSGT nhanh chóng đưa người này đến bệnh viện cấp cứu.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://dantri.com.vn/rss/thoi-su.rss",
+        "publisher_host": "dantri.com.vn",
+        "publication_date_from_feed": true
+      }
+    },
     {
       "id": "article-market-rss-85591f99233a351cb9f2",
       "title": "Tỷ giá trung tâm lập kỷ lục mới",
@@ -675,6 +757,35 @@
         "method": "official-rss",
         "feed_url": "https://thanhnien.vn/rss/kinh-te/dia-oc.rss",
         "publisher_host": "thanhnien.vn",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-cb0568802aafbec32532",
+      "title": "'Vẽ lại' siêu đô thị TP HCM",
+      "url": "https://vnexpress.net/ve-lai-sieu-do-thi-tp-hcm-5139592.html",
+      "category": "market",
+      "module_ids": [
+        "market"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-11-22T22:00:00+00:00",
+      "source_id": "vnexpress-real-estate",
+      "region_ids": [
+        "hcmc"
+      ],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [
+        "legal"
+      ],
+      "importance": 2,
+      "summary": "Hơn 50 năm qua, TP HCM trải qua bốn lần lập và điều chỉnh quy hoạch chung vào năm 1993, 1998, 2010, 2025, nhưng đều chưa đạt được mục tiêu giãn dân và phát triển đô thị vệ tinh. Nhiệm vụ này một lần nữa được đặt ra trong bản quy hoạch 100 năm vừa được thông qua.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://vnexpress.net/rss/bat-dong-san.rss",
+        "publisher_host": "vnexpress.net",
         "publication_date_from_feed": true
       }
     },
