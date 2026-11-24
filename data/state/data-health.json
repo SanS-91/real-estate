@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-11-24T20:11:27.679987+00:00",
+  "generated_at": "2026-11-24T20:11:59.545952+00:00",
   "overall_status": "stale",
   "modules": [
     {
@@ -510,7 +510,7 @@
       "record_count": 18,
       "last_production_at": "2026-10-08T15:08:55.288Z",
       "last_data_change_at": "2026-10-08T15:08:55.288Z",
-      "age_hours": 1133.0,
+      "age_hours": 1133.1,
       "stale_after_hours": 192,
       "freshness": "stale",
       "latest_source_period": null,
