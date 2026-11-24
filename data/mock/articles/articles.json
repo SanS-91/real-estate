@@ -1,9 +1,220 @@
 {
   "schema_version": 1,
-  "build_id": "market-news-rss-20261124T005137Z",
-  "generated_at": "2026-11-24T00:51:37.396207+00:00",
-  "record_count": 2261,
+  "build_id": "market-news-rss-20261124T025148Z",
+  "generated_at": "2026-11-24T02:51:48.002870+00:00",
+  "record_count": 2269,
   "data": [
+    {
+      "id": "article-market-rss-cc7149bce2dbf83de670",
+      "title": "Giá vàng hôm nay 24.11.2026: Tăng nhưng người mua vẫn lỗ",
+      "url": "https://thanhnien.vn/gia-vang-hom-nay-24112026-tang-nhung-nguoi-mua-van-lo-185261124082334307.htm",
+      "category": "macro",
+      "module_ids": [
+        "macro"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-11-24T01:35:00+00:00",
+      "source_id": "thanhnien-banking",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "Giá vàng thế giới tiếp tục tăng cao sau đà giảm mạnh những ngày trước đó. Thị trường vàng trong nước biến động khá chậm chạp trong ngày nghỉ lễ nên những người mua vàng tuần trước vẫn lỗ.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://thanhnien.vn/rss/kinh-te/ngan-hang.rss",
+        "publisher_host": "thanhnien.vn",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-6a5eb19a324a6ba46496",
+      "title": "Quy hoạch siêu đô thị TPHCM 100 năm: Cơ hội lớn và phép thử cho doanh nghiệp Việt",
+      "url": "https://dantri.com.vn/kinh-doanh/quy-hoach-sieu-do-thi-tphcm-100-nam-co-hoi-lon-va-phep-thu-cho-doanh-nghiep-viet-20261124080723301.htm",
+      "category": "market",
+      "module_ids": [
+        "market"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-11-24T01:29:02+00:00",
+      "source_id": "dantri-business",
+      "region_ids": [
+        "hcmc"
+      ],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [
+        "legal"
+      ],
+      "importance": 2,
+      "summary": "(Dân trí) - Quy hoạch tổng thể TPHCM tầm nhìn 100 năm mở ra hàng loạt cơ hội, tuy nhiên theo chuyên gia, nếu không chủ động chuẩn bị, doanh nghiệp Việt có nguy cơ chỉ làm nhà thầu phụ hoặc đứng ngoài những chuỗi giá trị lớn nhất của siêu đô thị.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://dantri.com.vn/rss/kinh-doanh.rss",
+        "publisher_host": "dantri.com.vn",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-94483e98c0e3903d0893",
+      "title": "3 kiểu lát sàn không bao giờ lỗi mốt được chuyên gia khuyên chọn",
+      "url": "https://dantri.com.vn/bat-dong-san/3-kieu-lat-san-khong-bao-gio-loi-mot-duoc-chuyen-gia-khuyen-chon-20261123160613156.htm",
+      "category": "market",
+      "module_ids": [
+        "market"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-11-24T01:28:52+00:00",
+      "source_id": "dantri-real-estate",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "(Dân trí) - Thay sàn vừa tốn kém vừa bất tiện. Chọn 3 kiểu sàn kinh điển dưới đây giúp ngôi nhà của bạn luôn sang trọng, bền đẹp suốt nhiều năm mà không lo lỗi mốt.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://dantri.com.vn/rss/bat-dong-san.rss",
+        "publisher_host": "dantri.com.vn",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-218388b5d6f9c7711d4e",
+      "title": "Căn hộ mini vùng ven TP HCM nở rộ 'ăn theo' trường đại học",
+      "url": "https://vnexpress.net/can-ho-mini-vung-ven-tp-hcm-no-ro-an-theo-truong-dai-hoc-5142675.html",
+      "category": "market",
+      "module_ids": [
+        "market"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-11-24T01:04:53+00:00",
+      "source_id": "vnexpress-real-estate",
+      "region_ids": [
+        "hcmc"
+      ],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "Khu vực ngoại thành TP HCM xuất hiện nhiều căn hộ mini, phòng trọ cao tầng xây mới để đón sinh viên các trường đại học dời về.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://vnexpress.net/rss/bat-dong-san.rss",
+        "publisher_host": "vnexpress.net",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-eb15686bc1714ed27281",
+      "title": "Đề xuất giới hạn tốc độ xe khách, xe tải lớn trên cao tốc",
+      "url": "https://vnexpress.net/de-xuat-gioi-han-toc-do-xe-khach-xe-tai-lon-tren-cao-toc-5147911.html",
+      "category": "infrastructure",
+      "module_ids": [
+        "infrastructure"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-11-24T01:00:00+00:00",
+      "source_id": "vnexpress-current-affairs",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [
+        "infrastructure"
+      ],
+      "importance": 2,
+      "summary": "Bộ Xây dựng đề xuất xe khách từ 28 đến 45 chỗ được chạy tối đa 100 km/h, xe giường nằm và các phương tiện cơ giới khác không quá 90 km/h khi chạy trên cao tốc.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://vnexpress.net/rss/thoi-su.rss",
+        "publisher_host": "vnexpress.net",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-3e935fbd02a4cfcdd70e",
+      "title": "Mua một được hai: Cơ hội nhân đôi tài sản khi mua Diamond Sky",
+      "url": "https://dantri.com.vn/bat-dong-san/mua-mot-duoc-hai-co-hoi-nhan-doi-tai-san-khi-mua-diamond-sky-20261123180206274.htm",
+      "category": "market",
+      "module_ids": [
+        "market"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-11-24T01:00:00+00:00",
+      "source_id": "dantri-real-estate",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "(Dân trí) - Trong đầu tư bất động sản, giá trị tài sản không chỉ nằm ở khả năng sở hữu mà còn ở phương án khai thác, tiềm năng tích lũy trong dài hạn. Việc có thêm một căn hộ vì thế mở ra cơ hội đa dạng hóa tài sản và nguồn thu cho khách hàng.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://dantri.com.vn/rss/bat-dong-san.rss",
+        "publisher_host": "dantri.com.vn",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-2118a9841cd7eaa997b6",
+      "title": "Khách mua dự án Diamond Sky có cơ hội trúng căn hộ 8 tỷ đồng",
+      "url": "https://vnexpress.net/khach-mua-du-an-diamond-sky-co-co-hoi-trung-can-ho-8-ty-dong-5148266.html",
+      "category": "market",
+      "module_ids": [
+        "market"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-11-24T01:00:00+00:00",
+      "source_id": "vnexpress-real-estate",
+      "region_ids": [
+        "hcmc"
+      ],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "Van Phuc Group triển khai chương trình quay số rút thăm \"Mua nhà trúng nhà - Nhân đôi tổ ấm\", tặng căn hộ gần 8 tỷ đồng cho người mua nhà tại dự án Diamond Sky (TP HCM).",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://vnexpress.net/rss/bat-dong-san.rss",
+        "publisher_host": "vnexpress.net",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-78153bbc3958d1c3edcd",
+      "title": "Loạt quy định người dân cần lưu ý về mua bán nhà đất từ tháng 7/2027",
+      "url": "https://dantri.com.vn/bat-dong-san/loat-quy-dinh-nguoi-dan-can-luu-y-ve-mua-ban-nha-dat-tu-thang-72027-20261124073019712.htm",
+      "category": "market",
+      "module_ids": [
+        "market",
+        "legal"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-11-24T00:55:02+00:00",
+      "source_id": "dantri-real-estate",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "(Dân trí) - Luật Kinh doanh bất động sản mới quy định nhiều nội dung liên quan đến hợp đồng mua bán nhà đất, trách nhiệm của chủ đầu tư, quyền lợi người mua nhà và hoạt động môi giới.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://dantri.com.vn/rss/bat-dong-san.rss",
+        "publisher_host": "dantri.com.vn",
+        "publication_date_from_feed": true
+      }
+    },
     {
       "id": "article-market-rss-b471baf7a7f07f22de95",
       "title": "Giá vàng tăng mạnh sau tin ông Jensen Huang trở lại ghế CEO Nvidia",
