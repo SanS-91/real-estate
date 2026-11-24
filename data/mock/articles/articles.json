@@ -1,9 +1,38 @@
 {
   "schema_version": 1,
-  "build_id": "market-news-rss-20261124T025148Z",
-  "generated_at": "2026-11-24T02:51:48.002870+00:00",
-  "record_count": 2269,
+  "build_id": "market-news-rss-20261124T045140Z",
+  "generated_at": "2026-11-24T04:51:40.094068+00:00",
+  "record_count": 2270,
   "data": [
+    {
+      "id": "article-market-rss-e1cc082d1118f2a77531",
+      "title": "Quy hoạch TPHCM tầm nhìn 100 năm: Bộ khung cho \"cỗ xe tam mã\"",
+      "url": "https://dantri.com.vn/thoi-su/quy-hoach-tphcm-tam-nhin-100-nam-bo-khung-cho-co-xe-tam-ma-20261123192732829.htm",
+      "category": "market",
+      "module_ids": [
+        "market"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-11-24T02:22:36+00:00",
+      "source_id": "dantri-current-affairs",
+      "region_ids": [
+        "hcmc"
+      ],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [
+        "legal"
+      ],
+      "importance": 2,
+      "summary": "(Dân trí) - Từ 3 vùng đất với thế mạnh riêng, TPHCM định hình cấu trúc phát triển đa cực, đa trung tâm. Quy hoạch TPHCM tầm nhìn 100 năm hướng tới giải quyết việc kết nối nguồn lực, khơi thông các điểm nghẽn trước đây.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://dantri.com.vn/rss/thoi-su.rss",
+        "publisher_host": "dantri.com.vn",
+        "publication_date_from_feed": true
+      }
+    },
     {
       "id": "article-market-rss-cc7149bce2dbf83de670",
       "title": "Giá vàng hôm nay 24.11.2026: Tăng nhưng người mua vẫn lỗ",
