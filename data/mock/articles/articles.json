@@ -1,9 +1,84 @@
 {
   "schema_version": 1,
-  "build_id": "market-news-rss-20261124T045140Z",
-  "generated_at": "2026-11-24T04:51:40.094068+00:00",
-  "record_count": 2270,
+  "build_id": "market-news-rss-20261124T065221Z",
+  "generated_at": "2026-11-24T06:52:21.220469+00:00",
+  "record_count": 2273,
   "data": [
+    {
+      "id": "article-market-rss-296842810b553bf32ce5",
+      "title": "Gửi tiết kiệm 500 triệu đồng, lãi suất cao nhất ở ngân hàng bao nhiêu?",
+      "url": "https://dantri.com.vn/kinh-doanh/gui-tiet-kiem-500-trieu-dong-lai-suat-cao-nhat-o-ngan-hang-bao-nhieu-20261124114431139.htm",
+      "category": "macro",
+      "module_ids": [
+        "macro"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-11-24T05:39:01+00:00",
+      "source_id": "dantri-business",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "(Dân trí) - Mặt bằng lãi suất đang giảm tiếp. Riêng một số ngân hàng cộng ưu đãi theo chương trình hàng tháng, lãi suất gửi tiết kiệm thông thường có thể xấp xỉ 9%/năm.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://dantri.com.vn/rss/kinh-doanh.rss",
+        "publisher_host": "dantri.com.vn",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-560438666c3bb1587dfa",
+      "title": "Thông xe kỹ thuật cầu vòm thép mang dáng núi đá bên sông Nhật Lệ",
+      "url": "https://dantri.com.vn/thoi-su/thong-xe-ky-thuat-cau-vom-thep-mang-dang-nui-da-ben-song-nhat-le-20261124095439384.htm",
+      "category": "infrastructure",
+      "module_ids": [
+        "infrastructure"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-11-24T05:29:06+00:00",
+      "source_id": "dantri-current-affairs",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "(Dân trí) - Cầu Nhật Lệ 3 và đường dẫn 2 đầu cầu dài 2,8km, tổng vốn đầu tư hơn 1.300 tỷ đồng tại tỉnh Quảng Trị đã thông xe kỹ thuật.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://dantri.com.vn/rss/thoi-su.rss",
+        "publisher_host": "dantri.com.vn",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-563b135eab31db462b92",
+      "title": "Động lực nào định hình tăng trưởng kinh tế Việt Nam giai đoạn tới?",
+      "url": "https://dantri.com.vn/kinh-doanh/dong-luc-nao-dinh-hinh-tang-truong-kinh-te-viet-nam-giai-doan-toi-20261123090705661.htm",
+      "category": "macro",
+      "module_ids": [
+        "macro"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-11-24T04:58:23+00:00",
+      "source_id": "dantri-business",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "(Dân trí) - Trước mục tiêu bứt phá kinh tế đến năm 2030, các chuyên gia cho rằng Việt Nam cần thay đổi tư duy, chuyển từ khai thác nguồn lực thô sang kiến tạo năng lực công nghệ và phát triển bền vững.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://dantri.com.vn/rss/kinh-doanh.rss",
+        "publisher_host": "dantri.com.vn",
+        "publication_date_from_feed": true
+      }
+    },
     {
       "id": "article-market-rss-e1cc082d1118f2a77531",
       "title": "Quy hoạch TPHCM tầm nhìn 100 năm: Bộ khung cho \"cỗ xe tam mã\"",
