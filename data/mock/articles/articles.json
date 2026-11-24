@@ -1,9 +1,84 @@
 {
   "schema_version": 1,
-  "build_id": "market-news-rss-20261124T125136Z",
-  "generated_at": "2026-11-24T12:51:36.860259+00:00",
-  "record_count": 2283,
+  "build_id": "market-news-rss-20261124T145140Z",
+  "generated_at": "2026-11-24T14:51:40.837899+00:00",
+  "record_count": 2286,
   "data": [
+    {
+      "id": "article-market-rss-c6503e8bd3bc65ea71e9",
+      "title": "Giá vàng thế giới quay đầu giảm nhẹ",
+      "url": "https://dantri.com.vn/kinh-doanh/gia-vang-the-gioi-quay-dau-giam-nhe-20261124212309182.htm",
+      "category": "macro",
+      "module_ids": [
+        "macro"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-11-24T14:28:49+00:00",
+      "source_id": "dantri-business",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "(Dân trí) - Giá vàng giảm nhẹ sau phiên phục hồi mạnh mẽ đầu tuần khi nhà đầu tư cân nhắc số liệu lạm phát sắp công bố của Mỹ và liệu đà phục hồi nhanh của thị trường chứng khoán có thể duy trì được hay không.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://dantri.com.vn/rss/kinh-doanh.rss",
+        "publisher_host": "dantri.com.vn",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-364907967c3bb916b6bf",
+      "title": "Novaland muốn rút vốn khỏi doanh nghiệp liên quan diễn viên Chi Bảo",
+      "url": "https://dantri.com.vn/bat-dong-san/novaland-muon-rut-von-khoi-doanh-nghiep-lien-quan-dien-vien-chi-bao-20261124201151377.htm",
+      "category": "market",
+      "module_ids": [
+        "market"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-11-24T13:26:16+00:00",
+      "source_id": "dantri-real-estate",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "(Dân trí) - Novaland muốn chuyển nhượng toàn bộ vốn tại hai doanh nghiệp, tổng giá trị hơn 490 tỷ đồng, trong đó có công ty liên quan diễn viên Chi Bảo.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://dantri.com.vn/rss/bat-dong-san.rss",
+        "publisher_host": "dantri.com.vn",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-dd0cb932d449b882d305",
+      "title": "Taxi Mai Linh nợ quá hạn, ngân hàng thu giữ bất động sản",
+      "url": "https://vnexpress.net/taxi-mai-linh-no-qua-han-ngan-hang-thu-giu-bat-dong-san-5148449.html",
+      "category": "market",
+      "module_ids": [
+        "market"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-11-24T12:16:20+00:00",
+      "source_id": "vnexpress-economy",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "LPBank vừa thông báo thu giữ bất động sản hơn 700 m2 tại Hội An để thu hồi nợ vay của Tập đoàn Mai Linh.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://vnexpress.net/rss/kinh-doanh.rss",
+        "publisher_host": "vnexpress.net",
+        "publication_date_from_feed": true
+      }
+    },
     {
       "id": "article-market-rss-ee95521f9ee916477f53",
       "title": "Thái Nguyên đấu giá 137 ha đất làm khu đô thị, du lịch Hồ Núi Cốc",
