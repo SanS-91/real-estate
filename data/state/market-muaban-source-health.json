@@ -1,24 +1,23 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-11-23T19:27:48.761244+00:00",
+  "generated_at": "2026-11-24T12:24:00.240931+00:00",
   "source_id": "muaban-vn",
   "targets_checked": 6,
-  "listing_urls_discovered": 21,
-  "details_checked": 21,
-  "valid_unexpired_project_ads": 8,
+  "listing_urls_discovered": 22,
+  "details_checked": 22,
+  "valid_unexpired_project_ads": 10,
   "newly_published": 0,
-  "published_current_individual_listings": 8,
+  "published_current_individual_listings": 7,
   "sources": [
     {
       "project_id": "akari-city",
       "source_url": "https://muaban.net/bat-dong-san/ban-can-ho-chung-cu-du-an-akari-city-quan-binh-tan-ho-chi-minh",
       "access": "reachable",
-      "discovered": 6,
-      "checked": 6,
-      "qualified": 1,
+      "discovered": 7,
+      "checked": 7,
+      "qualified": 3,
       "reasons": {
-        "future-start": 1,
-        "qualified-unexpired-listing": 1,
+        "qualified-unexpired-listing": 3,
         "publisher-expired": 4
       }
     },
