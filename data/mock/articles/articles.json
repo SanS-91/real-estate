@@ -1,9 +1,118 @@
 {
   "schema_version": 1,
-  "build_id": "market-news-rss-20261124T065221Z",
-  "generated_at": "2026-11-24T06:52:21.220469+00:00",
-  "record_count": 2273,
+  "build_id": "market-news-rss-20261124T085138Z",
+  "generated_at": "2026-11-24T08:51:38.079370+00:00",
+  "record_count": 2277,
   "data": [
+    {
+      "id": "article-market-rss-ceb1c9644ce050d9fd4b",
+      "title": "Khu vực cấm bay thiết bị không người lái ở sân bay Long Thành",
+      "url": "https://dantri.com.vn/thoi-su/khu-vuc-cam-bay-thiet-bi-khong-nguoi-lai-o-san-bay-long-thanh-20261124143110957.htm",
+      "category": "infrastructure",
+      "module_ids": [
+        "infrastructure"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-11-24T07:49:48+00:00",
+      "source_id": "dantri-current-affairs",
+      "region_ids": [
+        "dong-nai"
+      ],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [
+        "infrastructure"
+      ],
+      "importance": 2,
+      "summary": "(Dân trí) - Đồng Nai thông tin khu vực cấm bay thiết bị không người lái ở sân bay Long Thành gồm các xã, phường: Long Thành, Long Phước, Nhơn Trạch, Xuân Quế, Phước An, Xuân Đường, Bình An và Dầu Giây.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://dantri.com.vn/rss/thoi-su.rss",
+        "publisher_host": "dantri.com.vn",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-46ab9e8d0990499e9c65",
+      "title": "Thông xe cầu vòm thép cao nhất Quảng Trị",
+      "url": "https://vnexpress.net/thong-xe-cau-vom-thep-cao-nhat-quang-tri-5148315.html",
+      "category": "infrastructure",
+      "module_ids": [
+        "infrastructure"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-11-24T07:05:33+00:00",
+      "source_id": "vnexpress-current-affairs",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [
+        "infrastructure"
+      ],
+      "importance": 2,
+      "summary": "Cầu Nhật Lệ 3 dài hơn 2,8 km, vốn đầu tư 1.325 tỷ đồng, nối quốc lộ 1 với đường Võ Nguyên Giáp, được thông xe kỹ thuật sáng 24/11.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://vnexpress.net/rss/thoi-su.rss",
+        "publisher_host": "vnexpress.net",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-10803aa20d95e0731217",
+      "title": "Sun Group sẽ làm khu đô thị lấn biển 2,8 tỷ USD ở Phú Quốc",
+      "url": "https://vnexpress.net/sun-group-se-lam-khu-do-thi-lan-bien-2-8-ty-usd-o-phu-quoc-5148364.html",
+      "category": "market",
+      "module_ids": [
+        "market"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-11-24T06:51:14+00:00",
+      "source_id": "vnexpress-real-estate",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "Khu đô thị hỗn hợp lấn biển Bãi Xếp có quy mô gần 84 ha, hiện trạng toàn bộ là mặt biển, do công ty thành viên Sun Group đầu tư.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://vnexpress.net/rss/bat-dong-san.rss",
+        "publisher_host": "vnexpress.net",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-bf843193b02a5d1fce7d",
+      "title": "Quy hoạch đô thị Hàm Thuận Nam gắn với bảo tồn thiên nhiên",
+      "url": "https://vnexpress.net/quy-hoach-do-thi-ham-thuan-nam-gan-voi-bao-ton-thien-nhien-5148309.html",
+      "category": "market",
+      "module_ids": [
+        "market",
+        "legal"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-11-24T06:33:55+00:00",
+      "source_id": "vnexpress-real-estate",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [
+        "legal"
+      ],
+      "importance": 2,
+      "summary": "Hàm Thuận Nam được định hướng trở thành “phường” đạt tiêu chí đô thị loại III trước năm 2030, phát triển mô hình đô thị xanh, gắn với nông nghiệp công nghệ cao, du lịch sinh thái và bảo tồn thiên nhiên.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://vnexpress.net/rss/bat-dong-san.rss",
+        "publisher_host": "vnexpress.net",
+        "publication_date_from_feed": true
+      }
+    },
     {
       "id": "article-market-rss-296842810b553bf32ce5",
       "title": "Gửi tiết kiệm 500 triệu đồng, lãi suất cao nhất ở ngân hàng bao nhiêu?",
