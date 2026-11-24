@@ -1,9 +1,120 @@
 {
   "schema_version": 1,
-  "build_id": "market-news-rss-20261124T100631Z",
-  "generated_at": "2026-11-24T10:06:31.102576+00:00",
-  "record_count": 2279,
+  "build_id": "market-news-rss-20261124T125136Z",
+  "generated_at": "2026-11-24T12:51:36.860259+00:00",
+  "record_count": 2283,
   "data": [
+    {
+      "id": "article-market-rss-ee95521f9ee916477f53",
+      "title": "Thái Nguyên đấu giá 137 ha đất làm khu đô thị, du lịch Hồ Núi Cốc",
+      "url": "https://vnexpress.net/thai-nguyen-dau-gia-137-ha-dat-lam-khu-do-thi-du-lich-ho-nui-coc-5148421.html",
+      "category": "market",
+      "module_ids": [
+        "market"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-11-24T11:00:50+00:00",
+      "source_id": "vnexpress-real-estate",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "Tỉnh Thái Nguyên sẽ đấu giá để tìm nhà đầu tư thực hiện dự án khu đô thị, du lịch hơn 173 ha ở Hồ Núi Cốc.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://vnexpress.net/rss/bat-dong-san.rss",
+        "publisher_host": "vnexpress.net",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-d37fcac206e2444b1a2d",
+      "title": "Chốt phương án kết nối giao thông từ TP.HCM, vùng ĐBSCL tới sân bay Long Thành",
+      "url": "https://thanhnien.vn/chot-phuong-an-ket-noi-giao-thong-tu-tphcm-vung-dbscl-toi-san-bay-long-thanh-18526112417423491.htm",
+      "category": "legal",
+      "module_ids": [
+        "legal",
+        "infrastructure"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-11-24T10:51:00+00:00",
+      "source_id": "thanhnien-policy",
+      "region_ids": [
+        "hcmc"
+      ],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [
+        "infrastructure"
+      ],
+      "importance": 2,
+      "summary": "Cục Đường bộ Việt Nam vừa có văn bản gửi Bộ Xây dựng báo cáo về công tác tổ chức, kết nối tuyến cao tốc Biên Hòa - Vũng Tàu cùng các tuyến đường bộ khác với Cảng hàng không quốc tế Long Thành để chuẩn bị đưa sân bay vào khai thác .",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://thanhnien.vn/rss/kinh-te/chinh-sach-phat-trien.rss",
+        "publisher_host": "thanhnien.vn",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-b6e5b4f4dde393a75d3c",
+      "title": "Hà Nội sắp mở bán nhà ở xã hội giá từ 14,95 triệu đồng/m2",
+      "url": "https://dantri.com.vn/bat-dong-san/ha-noi-sap-mo-ban-nha-o-xa-hoi-gia-tu-1495-trieu-dongm2-20261124170526991.htm",
+      "category": "market",
+      "module_ids": [
+        "market"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-11-24T10:34:32+00:00",
+      "source_id": "dantri-real-estate",
+      "region_ids": [
+        "ha-noi"
+      ],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [
+        "supply"
+      ],
+      "importance": 2,
+      "summary": "(Dân trí) - Sở Xây dựng Hà Nội vừa công bố kế hoạch tiếp nhận hồ sơ đăng ký mua 8 căn nhà ở xã hội tại hai dự án Ecohome 3 và Khu nhà ở xã hội tại xã Đông Anh, với mức giá từ gần 15 triệu đồng/m2.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://dantri.com.vn/rss/bat-dong-san.rss",
+        "publisher_host": "dantri.com.vn",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-ae8af783d2ab3ae0661b",
+      "title": "Gamuda Land giới thiệu Central Park - khu căn hộ 3,6ha cạnh công viên Yên Sở",
+      "url": "https://dantri.com.vn/bat-dong-san/gamuda-land-gioi-thieu-central-park-khu-can-ho-36ha-canh-cong-vien-yen-so-20261124170835088.htm",
+      "category": "market",
+      "module_ids": [
+        "market"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-11-24T10:18:29+00:00",
+      "source_id": "dantri-real-estate",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [
+        "gamuda-land"
+      ],
+      "tags": [],
+      "importance": 2,
+      "summary": "(Dân trí) - Gamuda Land vừa tổ chức sự kiện \"Kick-off\" dự án Central Park với chủ đề “The Epitome of Refined Living”, đánh dấu cột mốc quan trọng trong hành trình đưa phong cách sống hài hòa với thiên nhiên đến gần hơn với thị trường bất động sản Thủ đô.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://dantri.com.vn/rss/bat-dong-san.rss",
+        "publisher_host": "dantri.com.vn",
+        "publication_date_from_feed": true
+      }
+    },
     {
       "id": "article-market-rss-3e586d571acf0d88dce9",
       "title": "Cơ hội sở hữu bất động sản tại trung tâm kinh tế biển TPHCM",
