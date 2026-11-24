@@ -1,9 +1,166 @@
 {
   "schema_version": 1,
-  "build_id": "market-news-rss-20261123T202116Z",
-  "generated_at": "2026-11-23T20:21:16.545411+00:00",
-  "record_count": 2255,
+  "build_id": "market-news-rss-20261124T005137Z",
+  "generated_at": "2026-11-24T00:51:37.396207+00:00",
+  "record_count": 2261,
   "data": [
+    {
+      "id": "article-market-rss-b471baf7a7f07f22de95",
+      "title": "Giá vàng tăng mạnh sau tin ông Jensen Huang trở lại ghế CEO Nvidia",
+      "url": "https://dantri.com.vn/kinh-doanh/gia-vang-tang-manh-sau-tin-ong-jensen-huang-tro-lai-ghe-ceo-nvidia-20261124064131658.htm",
+      "category": "macro",
+      "module_ids": [
+        "macro"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-11-24T00:23:08+00:00",
+      "source_id": "dantri-business",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "(Dân trí) - Giá vàng thế giới và trong nước đang hồi phục sau một tuần giảm đáng kể. Thông tin ông Jensen Huang được phục chức CEO Nvidia tối 23/11 tác động tích cực lên giá kim loại quý.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://dantri.com.vn/rss/kinh-doanh.rss",
+        "publisher_host": "dantri.com.vn",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-f10394c67b5376ed657c",
+      "title": "Nhà cả tỷ đồng vẫn ngập nước và lý do bất động sản cần thay đổi theo chuẩn",
+      "url": "https://dantri.com.vn/kinh-doanh/nha-ca-ty-dong-van-ngap-nuoc-va-ly-do-bat-dong-san-can-thay-doi-theo-chuan-20261123081741591.htm",
+      "category": "market",
+      "module_ids": [
+        "market"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-11-24T00:19:00+00:00",
+      "source_id": "dantri-real-estate",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "(Dân trí) - Ngập lụt, sụt lún và nắng nóng cực đoan gia tăng áp lực lên thị trường bất động sản. ESG trở thành giải pháp giúp công trình thích ứng khí hậu, tiết kiệm chi phí và duy trì giá trị dài hạn.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://dantri.com.vn/rss/bat-dong-san.rss",
+        "publisher_host": "dantri.com.vn",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-07a8f5d2961bbb09cb84",
+      "title": "Ngôi nhà màu hồng với nội thất như trường mẫu giáo",
+      "url": "https://vnexpress.net/ngoi-nha-mau-hong-voi-noi-that-nhu-truong-mau-giao-5147005.html",
+      "category": "market",
+      "module_ids": [
+        "market"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-11-23T23:11:19+00:00",
+      "source_id": "vnexpress-real-estate",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "Công trình kết hợp kiến trúc cổ điển với màu sắc và họa tiết đa dạng, tạo sự khác biệt trong không gian sống.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://vnexpress.net/rss/bat-dong-san.rss",
+        "publisher_host": "vnexpress.net",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-c445e8dfde79a031e2fe",
+      "title": "Lý giải nguyên nhân giá vàng thế giới đảo chiều, tăng gần mốc 3.700 USD",
+      "url": "https://dantri.com.vn/kinh-doanh/ly-giai-nguyen-nhan-gia-vang-the-gioi-dao-chieu-tang-gan-moc-3700-usd-20261123224159963.htm",
+      "category": "macro",
+      "module_ids": [
+        "macro"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-11-23T23:00:00+00:00",
+      "source_id": "dantri-business",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "(Dân trí) - Sau đợt lao dốc vì làn sóng giải chấp cổ phiếu, giá vàng thế giới bất ngờ tăng vọt gần 4%, áp sát mốc 3.700 USD/ounce khi lực cầu săn hàng giá rẻ ồ ạt nhập cuộc.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://dantri.com.vn/rss/kinh-doanh.rss",
+        "publisher_host": "dantri.com.vn",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-b3668251d8d62f8a3c36",
+      "title": "Ngắm phối cảnh TPHCM với metro phủ khắp trong Quy hoạch tầm nhìn 100 năm",
+      "url": "https://dantri.com.vn/thoi-su/ngam-phoi-canh-tphcm-voi-metro-phu-khap-trong-quy-hoach-tam-nhin-100-nam-20261123175745383.htm",
+      "category": "market",
+      "module_ids": [
+        "market",
+        "infrastructure"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-11-23T23:00:00+00:00",
+      "source_id": "dantri-current-affairs",
+      "region_ids": [
+        "hcmc",
+        "binh-duong"
+      ],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [
+        "legal",
+        "infrastructure"
+      ],
+      "importance": 2,
+      "summary": "(Dân trí) - Bình Dương, Bàu Bàng, Phú Mỹ và hàng loạt đô thị vệ tinh của TPHCM được định hướng quy hoạch theo mô hình TOD với đường sắt đô thị là điểm quy tụ dân cư và các tiện ích xã hội.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://dantri.com.vn/rss/thoi-su.rss",
+        "publisher_host": "dantri.com.vn",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-0b1fb84b3500917ed21a",
+      "title": "Đại gia Trần Đăng Khoa làm Chủ tịch Thaco Agri, góp mặt loạt dự án nghìn tỷ",
+      "url": "https://dantri.com.vn/kinh-doanh/dai-gia-tran-dang-khoa-lam-chu-tich-thaco-agri-gop-mat-loat-du-an-nghin-ty-20261123160854689.htm",
+      "category": "market",
+      "module_ids": [
+        "market"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-11-23T23:00:00+00:00",
+      "source_id": "dantri-business",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "(Dân trí) - Trong thời gian gần đây, ông Trần Đăng Khoa đã thay thế ông Trần Bá Dương nắm vị trí Chủ tịch tại hai công ty.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://dantri.com.vn/rss/kinh-doanh.rss",
+        "publisher_host": "dantri.com.vn",
+        "publication_date_from_feed": true
+      }
+    },
     {
       "id": "article-market-rss-ff61d723097cfdbbe40f",
       "title": "Tối 23/11, giá vàng, bạc cùng tăng mạnh",
