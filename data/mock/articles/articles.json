@@ -1,9 +1,115 @@
 {
   "schema_version": 1,
-  "build_id": "market-news-rss-20261125T125141Z",
-  "generated_at": "2026-11-25T12:51:41.323985+00:00",
-  "record_count": 2340,
+  "build_id": "market-news-rss-20261125T145143Z",
+  "generated_at": "2026-11-25T14:51:43.206861+00:00",
+  "record_count": 2344,
   "data": [
+    {
+      "id": "article-market-rss-fa910c51ecdf5f14ade4",
+      "title": "Một chỉ số lạm phát của Fed lên 3,8%, củng cố đà tăng lãi suất",
+      "url": "https://dantri.com.vn/kinh-doanh/mot-chi-so-lam-phat-cua-fed-len-38-cung-co-da-tang-lai-suat-20261125210006543.htm",
+      "category": "macro",
+      "module_ids": [
+        "macro"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-11-25T14:09:44+00:00",
+      "source_id": "dantri-business",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "(Dân trí) - Chỉ số lạm phát ưa thích của Fed vừa tăng tốc lên 3,8% trong tháng 10, củng cố khả năng ngân hàng trung ương Mỹ sẽ tiếp tục nâng lãi suất điều hành tại cuộc họp chính sách diễn ra vào tháng 12 tới.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://dantri.com.vn/rss/kinh-doanh.rss",
+        "publisher_host": "dantri.com.vn",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-8489ff3a33d6505146f4",
+      "title": "T&T City Millennia kết nối cộng đồng cư dân qua sự kiện âm nhạc",
+      "url": "https://vnexpress.net/t-t-city-millennia-ket-noi-cong-dong-cu-dan-qua-su-kien-am-nhac-5148831.html",
+      "category": "market",
+      "module_ids": [
+        "market"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-11-25T13:00:00+00:00",
+      "source_id": "vnexpress-real-estate",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "Chương trình nghệ thuật \"Sóng nhạc phương Nam\" tại khu đô thị T&T City Millennia (Tây Ninh) thu hút hơn 30.000 cư dân và du khách tối 24/11.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://vnexpress.net/rss/bat-dong-san.rss",
+        "publisher_host": "vnexpress.net",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-2ff366b741626b16de7b",
+      "title": "Đường trên cao quốc lộ 51 có nhiều nút giao đa tầng, tường chống ồn",
+      "url": "https://dantri.com.vn/thoi-su/duong-tren-cao-quoc-lo-51-co-nhieu-nut-giao-da-tang-tuong-chong-on-20261125191944833.htm",
+      "category": "infrastructure",
+      "module_ids": [
+        "infrastructure"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-11-25T12:59:27+00:00",
+      "source_id": "dantri-current-affairs",
+      "region_ids": [
+        "dong-nai"
+      ],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [
+        "infrastructure"
+      ],
+      "importance": 2,
+      "summary": "(Dân trí) - Dự án đường trên cao quốc lộ 51 ở Đồng Nai sẽ có tường chống ồn kiêm chắn sáng cao khoảng 2,5m dọc hai bên cầu cạn toàn tuyến.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://dantri.com.vn/rss/thoi-su.rss",
+        "publisher_host": "dantri.com.vn",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-ce8ca3278dadc7bbdbdb",
+      "title": "Norton Park và định hướng phát triển không gian sống dành cho cộng đồng chuyên gia",
+      "url": "https://dantri.com.vn/bat-dong-san/norton-park-va-dinh-huong-phat-trien-khong-gian-song-danh-cho-cong-dong-chuyen-gia-20261125191508424.htm",
+      "category": "market",
+      "module_ids": [
+        "market"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-11-25T12:39:35+00:00",
+      "source_id": "dantri-real-estate",
+      "region_ids": [
+        "hcmc"
+      ],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "(Dân trí) - Từ tâm huyết và kinh nghiệm của các nhà phát triển quốc tế, Norton Park hướng đến kiến tạo miền sống mới tại phía Bắc TPHCM, nơi nhịp sống năng động hài hòa cùng thiên nhiên và cộng đồng chuyên gia quốc tế tìm thấy chốn an cư.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://dantri.com.vn/rss/bat-dong-san.rss",
+        "publisher_host": "dantri.com.vn",
+        "publication_date_from_feed": true
+      }
+    },
     {
       "id": "article-market-rss-927c32048c6087454c27",
       "title": "Công ty bất động sản đứng đầu danh sách nợ thuế ở Thanh Hóa",
