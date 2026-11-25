@@ -1,9 +1,189 @@
 {
   "schema_version": 1,
-  "build_id": "market-news-rss-20261125T005141Z",
-  "generated_at": "2026-11-25T00:51:41.065281+00:00",
-  "record_count": 2294,
+  "build_id": "market-news-rss-20261125T025133Z",
+  "generated_at": "2026-11-25T02:51:33.166598+00:00",
+  "record_count": 2301,
   "data": [
+    {
+      "id": "article-market-rss-05ed1f1658f9a69b786f",
+      "title": "TP.HCM thu hồi hàng loạt khu đất, dự án",
+      "url": "https://thanhnien.vn/tphcm-thu-hoi-hang-loat-khu-dat-du-an-185261125093353679.htm",
+      "category": "market",
+      "module_ids": [
+        "market"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-11-25T02:50:00+00:00",
+      "source_id": "thanhnien-real-estate",
+      "region_ids": [
+        "hcmc"
+      ],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "TP.HCM thông báo thu hồi nhiều khu đất do doanh nghiệp đã chấm dứt hoạt động, tự nguyện trả lại đất, không thực hiện đầy đủ nghĩa vụ tài chính về tiền thuê đất…",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://thanhnien.vn/rss/kinh-te/dia-oc.rss",
+        "publisher_host": "thanhnien.vn",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-654244b726e1beaedd3c",
+      "title": "Hải Phòng dùng mã QR 'soi' tiến độ từng dự án",
+      "url": "https://thanhnien.vn/hai-phong-dung-ma-qr-soi-tien-do-tung-du-an-18526112508305456.htm",
+      "category": "market",
+      "module_ids": [
+        "market"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-11-25T02:06:00+00:00",
+      "source_id": "thanhnien-policy",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "TP.Hải Phòng tiến hành gắn mã QR theo dõi tiến độ từng dự án, đồng thời thiết lập hệ thống cảnh báo tự động để kịp thời phát hiện, tháo gỡ vướng mắc tại các dự án chậm tiến độ.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://thanhnien.vn/rss/kinh-te/chinh-sach-phat-trien.rss",
+        "publisher_host": "thanhnien.vn",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-5a1ba85ea607bfcc4aad",
+      "title": "Giá USD hôm nay 25.11.2026: Tỷ giá trung tâm lập kỷ lục, ngân hàng giảm dưới 26.000 đồng",
+      "url": "https://thanhnien.vn/gia-usd-hom-nay-25112026ty-gia-trung-tam-lap-ky-luc-ngan-hang-giam-duoi-26000-dong-185261125075252841.htm",
+      "category": "macro",
+      "module_ids": [
+        "macro"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-11-25T01:57:00+00:00",
+      "source_id": "thanhnien-banking",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "Giá USD trong các ngân hàng đồng loạt giảm dưới 26.000 đồng dù tỷ giá trung tâm tiếp tục lập kỷ lục mới.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://thanhnien.vn/rss/kinh-te/ngan-hang.rss",
+        "publisher_host": "thanhnien.vn",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-41e85fcbf68745debea9",
+      "title": "Giá vàng hôm nay 25.11.2026: Quay đầu giảm mạnh",
+      "url": "https://thanhnien.vn/gia-vang-hom-nay-25112026-quay-dau-giam-manh-185261125084704524.htm",
+      "category": "macro",
+      "module_ids": [
+        "macro"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-11-25T01:56:00+00:00",
+      "source_id": "thanhnien-banking",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "Giá vàng thế giới quay đầu giảm mạnh hơn 100 USD/ounce đã kéo theo kim loại quý trong nước đi xuống.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://thanhnien.vn/rss/kinh-te/ngan-hang.rss",
+        "publisher_host": "thanhnien.vn",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-b8c003d0bf98f343a15b",
+      "title": "Destino Centro: Thanh toán linh hoạt, thêm lựa chọn an cư tại phía Tây TPHCM",
+      "url": "https://dantri.com.vn/bat-dong-san/destino-centro-thanh-toan-linh-hoat-them-lua-chon-an-cu-tai-phia-tay-tphcm-20261124105637719.htm",
+      "category": "market",
+      "module_ids": [
+        "market"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-11-25T01:00:00+00:00",
+      "source_id": "dantri-real-estate",
+      "region_ids": [
+        "hcmc"
+      ],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "(Dân trí) - Với số tiền thanh toán ban đầu từ 450 triệu đồng đến khi nhận nhà, khách hàng có thêm lựa chọn an cư tại Destino Centro - dự án căn hộ 4 hồ bơi ngay cửa ngõ phía Tây TPHCM.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://dantri.com.vn/rss/bat-dong-san.rss",
+        "publisher_host": "dantri.com.vn",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-c76b2a880e42ef426076",
+      "title": "Vì sao chưa hình sự hóa hành vi thao túng thị trường bất động sản?",
+      "url": "https://dantri.com.vn/thoi-su/vi-sao-chua-hinh-su-hoa-hanh-vi-thao-tung-thi-truong-bat-dong-san-20261125064242941.htm",
+      "category": "market",
+      "module_ids": [
+        "market"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-11-25T00:58:44+00:00",
+      "source_id": "dantri-current-affairs",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "(Dân trí) - Trước ý kiến đề nghị nghiên cứu hình sự hóa hành vi thao túng thị trường bất động sản, Chính phủ cho rằng bất động sản là tài sản đặc thù nên việc can thiệp bằng hình sự cần hết sức thận trọng.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://dantri.com.vn/rss/thoi-su.rss",
+        "publisher_host": "dantri.com.vn",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-f7ef767cd96c09f616a4",
+      "title": "Lãi suất huy động giảm, lãi vay bất động sản vẫn neo cao",
+      "url": "https://vnexpress.net/lai-suat-huy-dong-giam-lai-vay-bat-dong-san-van-neo-cao-5147943.html",
+      "category": "market",
+      "module_ids": [
+        "market",
+        "macro"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-11-25T00:30:00+00:00",
+      "source_id": "vnexpress-real-estate",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "Lãi suất huy động tại nhiều ngân hàng đã hạ nhiệt song lãi vay bất động sản kỳ hạn 12 tháng vẫn duy trì ở mức cao, phổ biến 9-12% một năm.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://vnexpress.net/rss/bat-dong-san.rss",
+        "publisher_host": "vnexpress.net",
+        "publication_date_from_feed": true
+      }
+    },
     {
       "id": "article-market-rss-f386e1b09bb4b32ee4b2",
       "title": "Giá vàng thế giới quay đầu giảm mạnh",
