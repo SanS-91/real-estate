@@ -1,9 +1,252 @@
 {
   "schema_version": 1,
-  "build_id": "market-news-rss-20261125T045148Z",
-  "generated_at": "2026-11-25T04:51:48.193469+00:00",
-  "record_count": 2309,
+  "build_id": "market-news-rss-20261125T065136Z",
+  "generated_at": "2026-11-25T06:51:36.965228+00:00",
+  "record_count": 2320,
   "data": [
+    {
+      "id": "article-market-rss-8bbd22e244f3f25100c4",
+      "title": "TPHCM miễn tiền thuê 30.203m2 đất trong 50 năm cho dự án trung tâm dữ liệu",
+      "url": "https://dantri.com.vn/bat-dong-san/tphcm-mien-tien-thue-30203m2-dat-trong-50-nam-cho-du-an-trung-tam-du-lieu-20261125100924486.htm",
+      "category": "market",
+      "module_ids": [
+        "market"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-11-25T05:57:16+00:00",
+      "source_id": "dantri-real-estate",
+      "region_ids": [
+        "hcmc"
+      ],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "(Dân trí) - TPHCM cho Công ty Cổ phần Tập đoàn Công nghệ CMC thuê 30.203m2 đất ở Khu Công nghệ cao để làm dự án Trung tâm dữ liệu siêu quy mô. Nhà đầu tư được miễn tiền thuê đất trong 50 năm.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://dantri.com.vn/rss/bat-dong-san.rss",
+        "publisher_host": "dantri.com.vn",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-389bee63442b1b53947f",
+      "title": "Dự kiến bay hiệu chuẩn đường băng thứ 2 sân bay Long Thành vào đầu tháng 12",
+      "url": "https://dantri.com.vn/thoi-su/du-kien-bay-hieu-chuan-duong-bang-thu-2-san-bay-long-thanh-vao-dau-thang-12-20261125113450310.htm",
+      "category": "infrastructure",
+      "module_ids": [
+        "infrastructure"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-11-25T05:44:20+00:00",
+      "source_id": "dantri-current-affairs",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [
+        "infrastructure"
+      ],
+      "importance": 2,
+      "summary": "(Dân trí) - Đường cất hạ cánh thứ 2 tại sân bay Long Thành sẽ được các đơn vị liên quan tổ chức công tác bay hiệu chuẩn vào đầu tháng 12 tới.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://dantri.com.vn/rss/thoi-su.rss",
+        "publisher_host": "dantri.com.vn",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-b6e4c4d59d9b53f86468",
+      "title": "Bí thư Đà Nẵng: Không để dân nhường đất dự án nhưng thiếu tiền làm nhà",
+      "url": "https://vnexpress.net/bi-thu-da-nang-khong-de-dan-nhuong-dat-du-an-nhung-thieu-tien-lam-nha-5148668.html",
+      "category": "market",
+      "module_ids": [
+        "market"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-11-25T05:32:51+00:00",
+      "source_id": "vnexpress-current-affairs",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "Bí thư Thành ủy Đà Nẵng Lê Ngọc Quang yêu cầu bảo đảm người dân nhường đất cho các dự án có cuộc sống ít nhất bằng hoặc tốt hơn nơi ở cũ, không phải vay mượn tiền làm nhà tái định cư.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://vnexpress.net/rss/thoi-su.rss",
+        "publisher_host": "vnexpress.net",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-dbdad81eee500caab220",
+      "title": "Đường sắt tốc độ cao Bắc - Nam: Hé lộ các mốc tiến độ quan trọng",
+      "url": "https://dantri.com.vn/bat-dong-san/duong-sat-toc-do-cao-bac-nam-he-lo-cac-moc-tien-do-quan-trong-20261125115054044.htm",
+      "category": "market",
+      "module_ids": [
+        "market",
+        "infrastructure"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-11-25T04:58:57+00:00",
+      "source_id": "dantri-real-estate",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [
+        "infrastructure"
+      ],
+      "importance": 2,
+      "summary": "(Dân trí) - Dự án đường sắt tốc độ cao Bắc - Nam phấn đấu khởi công cuối năm 2028, sau khi hoàn thành các bước khảo sát, lập báo cáo nghiên cứu khả thi và chuẩn bị đầu tư.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://dantri.com.vn/rss/bat-dong-san.rss",
+        "publisher_host": "dantri.com.vn",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-cf08b597dcd4e136fc91",
+      "title": "Lãi suất tiền đồng liên ngân hàng tăng trở lại mức 9%/năm",
+      "url": "https://thanhnien.vn/lai-suat-tien-dong-lien-ngan-hang-tang-tro-lai-muc-9-nam-185261125114719066.htm",
+      "category": "macro",
+      "module_ids": [
+        "macro"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-11-25T04:53:00+00:00",
+      "source_id": "thanhnien-banking",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "Lãi suất bình quân tiền đồng liên ngân hàng tăng trở lại, từ 0,5 - 2%/năm so với giữa tháng 11. Các ngân hàng chạy đua huy động vốn cuối năm qua các chương trình khuyến mãi.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://thanhnien.vn/rss/kinh-te/ngan-hang.rss",
+        "publisher_host": "thanhnien.vn",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-934632eb8d535bb21dbb",
+      "title": "PNJ hạ giá vàng nhẫn trơn xuống thấp hơn nhiều thương hiệu lớn",
+      "url": "https://vnexpress.net/pnj-ha-gia-vang-nhan-tron-xuong-thap-hon-nhieu-thuong-hieu-lon-5148658.html",
+      "category": "macro",
+      "module_ids": [
+        "macro"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-11-25T04:51:18+00:00",
+      "source_id": "vnexpress-economy",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "Từ chỗ thường bán vàng nhẫn đắt hơn SJC, gần đây PNJ giảm giá xuống thấp hơn vài triệu một lượng so với các thương hiệu lớn khác.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://vnexpress.net/rss/kinh-doanh.rss",
+        "publisher_host": "vnexpress.net",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-4f9ffa8677168de8bd04",
+      "title": "Khu vực người dân nườm nượp đi mua đất ở Nghệ An giờ ra sao?",
+      "url": "https://dantri.com.vn/bat-dong-san/khu-vuc-nguoi-dan-nuom-nuop-di-mua-dat-o-nghe-an-gio-ra-sao-20261123233521766.htm",
+      "category": "market",
+      "module_ids": [
+        "market"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-11-25T04:43:43+00:00",
+      "source_id": "dantri-real-estate",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [
+        "legal"
+      ],
+      "importance": 2,
+      "summary": "(Dân trí) - Gần một năm sau đợt tăng giá, đất quanh khu quy hoạch trung tâm hành chính tỉnh Nghệ An thưa người hỏi mua. Tại Nghi Phong cũ, có lô hạ giá rao xuống 15-20 triệu đồng/m2 vẫn khó bán.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://dantri.com.vn/rss/bat-dong-san.rss",
+        "publisher_host": "dantri.com.vn",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-56a11c036f59b784bfd9",
+      "title": "Nhà xã hội ở Dương Nội, Hà Nội có giá từ 32 triệu một m2",
+      "url": "https://vnexpress.net/nha-xa-hoi-o-duong-noi-ha-noi-co-gia-tu-32-trieu-mot-m2-5148656.html",
+      "category": "market",
+      "module_ids": [
+        "market"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-11-25T04:39:37+00:00",
+      "source_id": "vnexpress-real-estate",
+      "region_ids": [
+        "ha-noi"
+      ],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [
+        "pricing"
+      ],
+      "importance": 2,
+      "summary": "Dự án nhà ở cho công an nằm ở đường Lê Trọng Tấn có giá bán từ 32 triệu đồng mỗi m2, tương đương từ 2 tỷ đồng một căn.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://vnexpress.net/rss/bat-dong-san.rss",
+        "publisher_host": "vnexpress.net",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-5031af8327f23e1642c2",
+      "title": "TP HCM xây dựng hệ số điều chỉnh giá đất mới cho năm 2027",
+      "url": "https://vnexpress.net/tp-hcm-xay-dung-he-so-dieu-chinh-gia-dat-moi-cho-nam-2027-5148640.html",
+      "category": "market",
+      "module_ids": [
+        "market",
+        "legal"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-11-25T04:30:46+00:00",
+      "source_id": "vnexpress-real-estate",
+      "region_ids": [
+        "hcmc"
+      ],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [
+        "pricing"
+      ],
+      "importance": 2,
+      "summary": "TP HCM sẽ khảo sát giá đất thị trường, rà soát mức độ phù hợp của bảng giá đất để xây dựng hệ số K mới, dự kiến áp dụng từ ngày 1/1/2027.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://vnexpress.net/rss/bat-dong-san.rss",
+        "publisher_host": "vnexpress.net",
+        "publication_date_from_feed": true
+      }
+    },
     {
       "id": "article-market-rss-c047ee1d566a157ccf0e",
       "title": "Dự kiến khởi công đường sắt tốc độ cao Bắc Nam cuối năm 2028",
@@ -32,6 +275,32 @@
       }
     },
     {
+      "id": "article-market-rss-67a1a8ff8c58a10bdb68",
+      "title": "Nhiều quy định mới về nhà ở có hiệu lực từ tháng 7/2027",
+      "url": "https://dantri.com.vn/bat-dong-san/nhieu-quy-dinh-moi-ve-nha-o-co-hieu-luc-tu-thang-72027-20261125102841336.htm",
+      "category": "market",
+      "module_ids": [
+        "market",
+        "legal"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-11-25T03:42:20+00:00",
+      "source_id": "dantri-real-estate",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "(Dân trí) - Luật Nhà ở (sửa đổi) quy định nhiều nội dung liên quan đến chính sách mua nhà ở xã hội, quản lý sử dụng chung cư, kinh phí bảo trì và quyền sở hữu nhà ở của người nước ngoài.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://dantri.com.vn/rss/bat-dong-san.rss",
+        "publisher_host": "dantri.com.vn",
+        "publication_date_from_feed": true
+      }
+    },
+    {
       "id": "article-market-rss-16e4a4c8195543b1e483",
       "title": "Quy hoạch siêu đô thị TPHCM 100 năm: Chọn động lực nào cho tăng trưởng?",
       "url": "https://dantri.com.vn/kinh-doanh/quy-hoach-sieu-do-thi-tphcm-100-nam-chon-dong-luc-nao-cho-tang-truong-20261125101811387.htm",
@@ -56,6 +325,31 @@
       "source_verification": {
         "method": "official-rss",
         "feed_url": "https://dantri.com.vn/rss/kinh-doanh.rss",
+        "publisher_host": "dantri.com.vn",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-25bd08b8fa6f6557c029",
+      "title": "Vista Nam An Khánh vận hành bãi đỗ xe tích hợp trạm sạc",
+      "url": "https://dantri.com.vn/bat-dong-san/vista-nam-an-khanh-van-hanh-bai-do-xe-tich-hop-tram-sac-20261125103121925.htm",
+      "category": "market",
+      "module_ids": [
+        "market"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-11-25T03:39:00+00:00",
+      "source_id": "dantri-real-estate",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "(Dân trí) - Với mục tiêu phát triển dịch vụ, tiện ích chất lượng 5 sao cho cư dân, SJ Group tiếp tục hoàn thiện các hạng mục tại Vista Nam An Khánh, từ bãi đỗ xe kết hợp trạm sạc xe điện đến quán cà phê, sân pickleball và các không gian vận động, thư giãn.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://dantri.com.vn/rss/bat-dong-san.rss",
         "publisher_host": "dantri.com.vn",
         "publication_date_from_feed": true
       }
