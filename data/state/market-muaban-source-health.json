@@ -1,12 +1,12 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-11-24T19:04:22.654908+00:00",
+  "generated_at": "2026-11-25T11:11:51.964587+00:00",
   "source_id": "muaban-vn",
   "targets_checked": 6,
   "listing_urls_discovered": 23,
   "details_checked": 23,
-  "valid_unexpired_project_ads": 10,
-  "newly_published": 3,
+  "valid_unexpired_project_ads": 12,
+  "newly_published": 0,
   "published_current_individual_listings": 10,
   "sources": [
     {
@@ -28,9 +28,10 @@
       "access": "reachable",
       "discovered": 2,
       "checked": 2,
-      "qualified": 0,
+      "qualified": 1,
       "reasons": {
-        "publisher-expired": 2
+        "qualified-unexpired-listing": 1,
+        "publisher-expired": 1
       }
     },
     {
@@ -59,10 +60,10 @@
       "access": "reachable",
       "discovered": 12,
       "checked": 12,
-      "qualified": 7,
+      "qualified": 8,
       "reasons": {
-        "qualified-unexpired-listing": 7,
-        "publisher-expired": 5
+        "qualified-unexpired-listing": 8,
+        "publisher-expired": 4
       }
     },
     {
