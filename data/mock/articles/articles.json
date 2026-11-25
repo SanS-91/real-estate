@@ -1,9 +1,147 @@
 {
   "schema_version": 1,
-  "build_id": "market-news-rss-20261125T065136Z",
-  "generated_at": "2026-11-25T06:51:36.965228+00:00",
-  "record_count": 2320,
+  "build_id": "market-news-rss-20261125T085141Z",
+  "generated_at": "2026-11-25T08:51:41.889657+00:00",
+  "record_count": 2325,
   "data": [
+    {
+      "id": "article-market-rss-e1c995a377a1896dbadf",
+      "title": "TPHCM chốt tiến độ thu hồi đất metro Suối Tiên - thành phố mới Bình Dương",
+      "url": "https://dantri.com.vn/thoi-su/tphcm-chot-tien-do-thu-hoi-dat-metro-suoi-tien-thanh-pho-moi-binh-duong-20261125145128527.htm",
+      "category": "legal",
+      "module_ids": [
+        "legal",
+        "infrastructure"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-11-25T08:19:47+00:00",
+      "source_id": "dantri-current-affairs",
+      "region_ids": [
+        "hcmc",
+        "binh-duong"
+      ],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [
+        "infrastructure"
+      ],
+      "importance": 2,
+      "summary": "(Dân trí) - TPHCM yêu cầu các đơn vị phấn đấu bàn giao toàn bộ mặt bằng trước ngày 30/1/2027 cho dự án metro thành phố mới Bình Dương - Suối Tiên. Dự án đi qua địa bàn 7 phường thuộc Bình Dương cũ.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://dantri.com.vn/rss/thoi-su.rss",
+        "publisher_host": "dantri.com.vn",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-0b824472dc56f343704e",
+      "title": "Kho TP HCM kín chỗ, dòng vốn bất động sản logistics dồn về Đồng Nai, Tây Ninh",
+      "url": "https://vnexpress.net/kho-tp-hcm-kin-cho-dong-von-bat-dong-san-logistics-don-ve-dong-nai-tay-ninh-5148756.html",
+      "category": "market",
+      "module_ids": [
+        "market"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-11-25T08:06:20+00:00",
+      "source_id": "vnexpress-real-estate",
+      "region_ids": [
+        "hcmc",
+        "dong-nai"
+      ],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "Kho xây sẵn tại TP HCM lấp đầy hơn 99%, đẩy nhu cầu thuê và vốn bất động sản logistics hàng trăm triệu USD đổ về Đồng Nai, Tây Ninh.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://vnexpress.net/rss/bat-dong-san.rss",
+        "publisher_host": "vnexpress.net",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-83990eda349403b9cbbf",
+      "title": "Căn hộ hàng hiệu lõi trung tâm hút khách thuê",
+      "url": "https://thanhnien.vn/can-ho-hang-hieu-loi-trung-tam-hut-khach-thue-185261125143920645.htm",
+      "category": "market",
+      "module_ids": [
+        "market"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-11-25T07:24:00+00:00",
+      "source_id": "thanhnien-real-estate",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "Với giới doanh nhân, lãnh đạo và chuyên gia quốc tế, lựa chọn nơi ở không chỉ dựa trên vị trí hay diện tích căn hộ, mà còn được cân nhắc qua những tiêu chuẩn khắt khe về chất lượng dịch vụ, sự riêng tư và trải nghiệm sống.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://thanhnien.vn/rss/kinh-te/dia-oc.rss",
+        "publisher_host": "thanhnien.vn",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-8f1313280e5b46aff0a7",
+      "title": "Tái diễn sạt lở trên quốc lộ 15D, đường lên Cửa khẩu La Lay ách tắc",
+      "url": "https://dantri.com.vn/thoi-su/tai-dien-sat-lo-tren-quoc-lo-15d-duong-len-cua-khau-la-lay-ach-tac-20261125121847580.htm",
+      "category": "infrastructure",
+      "module_ids": [
+        "infrastructure"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-11-25T06:18:37+00:00",
+      "source_id": "dantri-current-affairs",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [
+        "infrastructure"
+      ],
+      "importance": 2,
+      "summary": "(Dân trí) - Sự cố sạt lở đất đá trên quốc lộ 15D ở tỉnh Quảng Trị khiến giao thông lên Cửa khẩu quốc tế La Lay ách tắc. Lực lượng chức năng đang đánh giá tình hình, xây dựng phương án khắc phục.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://dantri.com.vn/rss/thoi-su.rss",
+        "publisher_host": "dantri.com.vn",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-dd9a89dd9e524339aca4",
+      "title": "Tổng Bí thư, Chủ tịch nước thông tin tiến độ đường sắt tốc độ cao Bắc - Nam",
+      "url": "https://dantri.com.vn/thoi-su/tong-bi-thu-chu-tich-nuoc-thong-tin-tien-do-duong-sat-toc-do-cao-bac-nam-20261125130015028.htm",
+      "category": "infrastructure",
+      "module_ids": [
+        "infrastructure"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-11-25T06:16:30+00:00",
+      "source_id": "dantri-current-affairs",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [
+        "infrastructure"
+      ],
+      "importance": 2,
+      "summary": "(Dân trí) - Thực hiện đường sắt tốc độ cao Bắc - Nam, Tổng Bí thư, Chủ tịch nước cho rằng Chính phủ phải tính toán kỹ nguồn vốn từng giai đoạn, gắn chặt với việc lựa chọn công nghệ và chiến lược đào tạo nhân lực.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://dantri.com.vn/rss/thoi-su.rss",
+        "publisher_host": "dantri.com.vn",
+        "publication_date_from_feed": true
+      }
+    },
     {
       "id": "article-market-rss-8bbd22e244f3f25100c4",
       "title": "TPHCM miễn tiền thuê 30.203m2 đất trong 50 năm cho dự án trung tâm dữ liệu",
