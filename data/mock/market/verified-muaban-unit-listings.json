@@ -842,7 +842,65 @@
         "45466220204"
       ],
       "verified_at": "2026-11-24T19:04:22.654908+00:00"
+    },
+    {
+      "project_id": "vinhomes-grand-park",
+      "project_name": "Vinhomes Grand Park",
+      "source_id": "muaban-vn",
+      "source_url": "https://muaban.net/bat-dong-san/ban-can-ho-chung-cu-du-an-vinhomes-grand-park-quan-9-ho-chi-minh/ban-hoac-cho-thue-can-ho-vinhomes-grand-park-quan-9-65m-full-nt-id70690658",
+      "listing_id": "70690658",
+      "listing_title": "Bán Căn Hộ Vinhomes Grand Park Quận 9. DT 69m2, Full Nội Thất",
+      "asset_type": "apartment",
+      "market_layer": "individual-listing-asking",
+      "metric_type": "single-listing-asking-price-per-sqm",
+      "source_date_basis": "publisher-listing-start-not-update",
+      "source_listed_date": "2026-11-25",
+      "source_updated_date": "2026-11-25",
+      "source_expiration_date": "2026-12-25",
+      "listed_area_sqm": 69.0,
+      "listing_price_vnd": 3350000000,
+      "value_vnd_per_m2": 48550725,
+      "unit_price_basis": "derived-from-advertised-total-and-area",
+      "source_publication_date": null,
+      "methodology_note": "Individual Muaban asking advertisement only. The displayed rate is calculated from the listing's advertised total and usable area, not a publisher average, transaction, project ASP or project range. Date displayed is listing START date, NOT its relative update badge. Use only while the publisher's end date is unexpired.",
+      "id": "muaban-70690658-57bfdd829665",
+      "review_status": "automated-two-hosted-checks",
+      "review_date": "2026-11-25",
+      "verification_run_ids": [
+        "45602143741",
+        "45672300448"
+      ],
+      "verified_at": "2026-11-25T18:10:09.706679+00:00"
+    },
+    {
+      "project_id": "mizuki-park",
+      "project_name": "Mizuki Park",
+      "source_id": "muaban-vn",
+      "source_url": "https://muaban.net/bat-dong-san/ban-can-ho-chung-cu-du-an-mizuki-park-5598-huyen-binh-chanh-ho-chi-minh/chinh-chu-can-ban-nhanh-can-goc-mizuki-huong-mat-full-noi-that-cao-cap-id71393525",
+      "listing_id": "71393525",
+      "listing_title": "Chính chủ cần bán nhanh căn góc mizuki hướng mát full nội thất cao cấp",
+      "asset_type": "apartment",
+      "market_layer": "individual-listing-asking",
+      "metric_type": "single-listing-asking-price-per-sqm",
+      "source_date_basis": "publisher-listing-start-not-update",
+      "source_listed_date": "2026-11-25",
+      "source_updated_date": "2026-11-25",
+      "source_expiration_date": "2026-12-09",
+      "listed_area_sqm": 76.0,
+      "listing_price_vnd": 4600000000,
+      "value_vnd_per_m2": 60526316,
+      "unit_price_basis": "derived-from-advertised-total-and-area",
+      "source_publication_date": null,
+      "methodology_note": "Individual Muaban asking advertisement only. The displayed rate is calculated from the listing's advertised total and usable area, not a publisher average, transaction, project ASP or project range. Date displayed is listing START date, NOT its relative update badge. Use only while the publisher's end date is unexpired.",
+      "id": "muaban-71393525-af8a5853b36e",
+      "review_status": "automated-two-hosted-checks",
+      "review_date": "2026-11-25",
+      "verification_run_ids": [
+        "45602143741",
+        "45672300448"
+      ],
+      "verified_at": "2026-11-25T18:10:09.706679+00:00"
     }
   ],
-  "record_count": 29
+  "record_count": 31
 }
