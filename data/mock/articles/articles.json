@@ -1,9 +1,167 @@
 {
   "schema_version": 1,
-  "build_id": "market-news-rss-20261125T145143Z",
-  "generated_at": "2026-11-25T14:51:43.206861+00:00",
-  "record_count": 2344,
+  "build_id": "market-news-rss-20261125T195925Z",
+  "generated_at": "2026-11-25T19:59:25.610377+00:00",
+  "record_count": 2350,
   "data": [
+    {
+      "id": "article-market-rss-4e39dea4a0f53c56130e",
+      "title": "Tái hiện nét kiến trúc Chợ Lớn trong nhà phố hiện đại",
+      "url": "https://vnexpress.net/tai-hien-net-kien-truc-cho-lon-trong-nha-pho-hien-dai-5148741.html",
+      "category": "market",
+      "module_ids": [
+        "market"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-11-25T17:00:00+00:00",
+      "source_id": "vnexpress-real-estate",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "Các chi tiết kiến trúc truyền thống được chọn lọc, kết hợp vật liệu mới và cách tổ chức không gian phù hợp với nhu cầu sinh hoạt của gia chủ.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://vnexpress.net/rss/bat-dong-san.rss",
+        "publisher_host": "vnexpress.net",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-919ee40013301ed3383d",
+      "title": "Ký hợp đồng gói thầu tư vấn lớn nhất dự án đường sắt tốc độ cao Bắc - Nam",
+      "url": "https://dantri.com.vn/thoi-su/ky-hop-dong-goi-thau-tu-van-lon-nhat-du-an-duong-sat-toc-do-cao-bac-nam-20261125230315664.htm",
+      "category": "market",
+      "module_ids": [
+        "market",
+        "infrastructure"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-11-25T16:06:23+00:00",
+      "source_id": "dantri-current-affairs",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [
+        "infrastructure"
+      ],
+      "importance": 2,
+      "summary": "(Dân trí) - Lãnh đạo Bộ Xây dựng đánh giá việc ký kết hợp đồng gói thầu tư vấn TV-02 là dấu mốc chuyển sang giai đoạn triển khai thực chất dự án đường sắt tốc độ cao Bắc - Nam.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://dantri.com.vn/rss/thoi-su.rss",
+        "publisher_host": "dantri.com.vn",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-e990f7bb0890a8dacca4",
+      "title": "Tối 25/11, giá vàng, bạc quay đầu giảm nhanh sau tín hiệu từ Mỹ",
+      "url": "https://dantri.com.vn/kinh-doanh/toi-2511-gia-vang-bac-quay-dau-giam-nhanh-sau-tin-hieu-tu-my-20261125220731904.htm",
+      "category": "macro",
+      "module_ids": [
+        "macro"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-11-25T15:19:01+00:00",
+      "source_id": "dantri-business",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "(Dân trí) - Giá vàng và bạc đồng loạt đi xuống khi kinh tế Mỹ tăng trưởng vượt kỳ vọng và lạm phát dai dẳng, khiến áp lực lãi suất tiếp tục đè nặng lên tâm lý giới đầu tư.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://dantri.com.vn/rss/kinh-doanh.rss",
+        "publisher_host": "dantri.com.vn",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-89b7948e930999f18881",
+      "title": "Hà Nội tạm cấm nhiều tuyến đường phục vụ hội nghị cấp cao quốc tế",
+      "url": "https://dantri.com.vn/thoi-su/ha-noi-tam-cam-nhieu-tuyen-duong-phuc-vu-hoi-nghi-cap-cao-quoc-te-20261125221031848.htm",
+      "category": "infrastructure",
+      "module_ids": [
+        "infrastructure"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-11-25T15:17:11+00:00",
+      "source_id": "dantri-current-affairs",
+      "region_ids": [
+        "ha-noi"
+      ],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "(Dân trí) - Từ 6h đến 20h các ngày 27-28/11, Phòng CSGT Hà Nội sẽ tạm cấm, hạn chế phương tiện trên nhiều tuyến đường. Cảnh sát cũng tổ chức phân luồng, hướng đi cho các phương tiện.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://dantri.com.vn/rss/thoi-su.rss",
+        "publisher_host": "dantri.com.vn",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-4d925284b111dd3a61c9",
+      "title": "Ký hợp đồng tư vấn lớn nhất dự án đường sắt tốc độ cao Bắc Nam",
+      "url": "https://vnexpress.net/ky-hop-dong-tu-van-lon-nhat-du-an-duong-sat-toc-do-cao-bac-nam-5148913.html",
+      "category": "market",
+      "module_ids": [
+        "market",
+        "infrastructure"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-11-25T14:56:38+00:00",
+      "source_id": "vnexpress-current-affairs",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [
+        "infrastructure"
+      ],
+      "importance": 2,
+      "summary": "Chiều 25/11, Ban Quản lý dự án Thăng Long ký hợp đồng tư vấn đường sắt tốc độ cao Bắc Nam trị giá hơn 10.243 tỷ đồng với liên danh 8 nhà thầu Việt Nam, Pháp và Hàn Quốc.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://vnexpress.net/rss/thoi-su.rss",
+        "publisher_host": "vnexpress.net",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-fce6273ff90ef4a7d230",
+      "title": "Giá vàng thế giới mất mốc 3.500 USD",
+      "url": "https://vnexpress.net/gia-vang-the-gioi-mat-moc-3-500-usd-5148917.html",
+      "category": "macro",
+      "module_ids": [
+        "macro"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-11-25T14:50:35+00:00",
+      "source_id": "vnexpress-economy",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "Mỗi ounce vàng tiếp tục giảm hơn 100 USD, hiện xuống sát 3.450 USD, sau báo cáo lạm phát Mỹ.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://vnexpress.net/rss/kinh-doanh.rss",
+        "publisher_host": "vnexpress.net",
+        "publication_date_from_feed": true
+      }
+    },
     {
       "id": "article-market-rss-fa910c51ecdf5f14ade4",
       "title": "Một chỉ số lạm phát của Fed lên 3,8%, củng cố đà tăng lãi suất",

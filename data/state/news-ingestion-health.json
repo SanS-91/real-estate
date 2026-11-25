@@ -1,34 +1,34 @@
 {
   "schema_version": 1,
-  "checked_at": "2026-11-25T14:51:43.206861+00:00",
+  "checked_at": "2026-11-25T19:59:25.610377+00:00",
   "feeds_configured": 16,
   "feeds_fetched": 16,
-  "accepted_new": 4,
+  "accepted_new": 6,
   "production_written": true,
-  "article_total": 2344,
+  "article_total": 2350,
   "published_by_module": {
-    "market": 2,
+    "market": 3,
     "legal": 0,
-    "infrastructure": 1,
-    "macro": 1
+    "infrastructure": 3,
+    "macro": 2
   },
   "recent_by_module_7d": {
-    "market": 191,
+    "market": 192,
     "legal": 57,
-    "infrastructure": 85,
-    "macro": 52
+    "infrastructure": 88,
+    "macro": 54
   },
   "recent_by_module_30d": {
-    "market": 855,
+    "market": 856,
     "legal": 180,
-    "infrastructure": 372,
-    "macro": 246
+    "infrastructure": 375,
+    "macro": 247
   },
   "latest_published_by_module": {
-    "market": "2026-11-25T13:00:00+00:00",
+    "market": "2026-11-25T17:00:00+00:00",
     "legal": "2026-11-25T10:54:28+00:00",
-    "infrastructure": "2026-11-25T12:59:27+00:00",
-    "macro": "2026-11-25T14:09:44+00:00"
+    "infrastructure": "2026-11-25T16:06:23+00:00",
+    "macro": "2026-11-25T15:19:01+00:00"
   },
   "feed_status": [
     {
@@ -53,28 +53,28 @@
       "source_id": "dantri-real-estate",
       "status": "parsed",
       "feed_items": 50,
-      "new": 1,
-      "skipped": 49,
-      "duplicates": 49,
+      "new": 0,
+      "skipped": 50,
+      "duplicates": 50,
       "filtered": 0
     },
     {
       "source_id": "vnexpress-economy",
       "status": "parsed",
       "feed_items": 50,
-      "new": 0,
-      "skipped": 50,
+      "new": 1,
+      "skipped": 49,
       "duplicates": 4,
-      "filtered": 46
+      "filtered": 45
     },
     {
       "source_id": "vnexpress-current-affairs",
       "status": "parsed",
       "feed_items": 50,
-      "new": 0,
-      "skipped": 50,
+      "new": 1,
+      "skipped": 49,
       "duplicates": 8,
-      "filtered": 42
+      "filtered": 41
     },
     {
       "source_id": "vnexpress-legal",
@@ -125,10 +125,10 @@
       "source_id": "dantri-current-affairs",
       "status": "parsed",
       "feed_items": 50,
-      "new": 1,
-      "skipped": 49,
+      "new": 2,
+      "skipped": 48,
       "duplicates": 15,
-      "filtered": 34
+      "filtered": 33
     },
     {
       "source_id": "dantri-legal",
