@@ -1,9 +1,200 @@
 {
   "schema_version": 1,
-  "build_id": "market-news-rss-20261124T204323Z",
-  "generated_at": "2026-11-24T20:43:23.862340+00:00",
-  "record_count": 2287,
+  "build_id": "market-news-rss-20261125T005141Z",
+  "generated_at": "2026-11-25T00:51:41.065281+00:00",
+  "record_count": 2294,
   "data": [
+    {
+      "id": "article-market-rss-f386e1b09bb4b32ee4b2",
+      "title": "Giá vàng thế giới quay đầu giảm mạnh",
+      "url": "https://vnexpress.net/gia-vang-the-gioi-quay-dau-giam-manh-5148528.html",
+      "category": "macro",
+      "module_ids": [
+        "macro"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-11-24T23:38:39+00:00",
+      "source_id": "vnexpress-economy",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "Sau phiên tăng vọt, giá vàng giảm gần 80 USD một ounce vì chứng khoán Mỹ đi xuống và sức ép từ lãi suất cao.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://vnexpress.net/rss/kinh-doanh.rss",
+        "publisher_host": "vnexpress.net",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-9617e1697af2d557cdf2",
+      "title": "Cù lao hơn 500 hộ dân ở Tây Ninh vướng quy hoạch treo 17 năm",
+      "url": "https://dantri.com.vn/thoi-su/cu-lao-hon-500-ho-dan-o-tay-ninh-vuong-quy-hoach-treo-17-nam-20261124232146371.htm",
+      "category": "market",
+      "module_ids": [
+        "market"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-11-24T23:37:52+00:00",
+      "source_id": "dantri-current-affairs",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [
+        "legal"
+      ],
+      "importance": 2,
+      "summary": "(Dân trí) - Giữa sông Vàm Cỏ Tây, hơn 500 hộ dân cù lao Mỹ Phước (Tây Ninh) chỉ có một bến đò và một cây cầu treo cấm ô tô để ra vào. Dự án khu dân cư sinh thái tại đây vẫn chưa triển khai sau 17 năm.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://dantri.com.vn/rss/thoi-su.rss",
+        "publisher_host": "dantri.com.vn",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-0a749c9b7a06620bf841",
+      "title": "8 luồng xe kết nối sân bay Long Thành từ TPHCM, Đồng Nai",
+      "url": "https://dantri.com.vn/thoi-su/8-luong-xe-ket-noi-san-bay-long-thanh-tu-tphcm-dong-nai-20261124192142571.htm",
+      "category": "infrastructure",
+      "module_ids": [
+        "infrastructure"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-11-24T23:30:00+00:00",
+      "source_id": "dantri-current-affairs",
+      "region_ids": [
+        "hcmc",
+        "dong-nai"
+      ],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [
+        "infrastructure"
+      ],
+      "importance": 2,
+      "summary": "(Dân trí) - Phương tiện từ TPHCM, miền Tây, Đồng Nai và khu vực Bà Rịa - Vũng Tàu (cũ) sẽ vào sân bay Long Thành theo 8 luồng, qua các tuyến cao tốc và quốc lộ 51.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://dantri.com.vn/rss/thoi-su.rss",
+        "publisher_host": "dantri.com.vn",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-a9f005d1d222b8ea07ae",
+      "title": "Hàng không dịp tết 2027: Sân bay Long Thành giảm tải cho Tân Sơn Nhất",
+      "url": "https://thanhnien.vn/hang-khong-dip-tet-2027-san-bay-long-thanh-giam-tai-cho-tan-son-nhat-185261124210742166.htm",
+      "category": "infrastructure",
+      "module_ids": [
+        "infrastructure"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-11-24T23:00:00+00:00",
+      "source_id": "thanhnien-policy",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [
+        "supply",
+        "infrastructure"
+      ],
+      "importance": 2,
+      "summary": "Cảng hàng không quốc tế Long Thành dự kiến chính thức đưa vào khai thác thương mại từ 0 giờ ngày 24.12, ngay trước thềm cao điểm cuối năm. Kế hoạch tăng chuyến và mở loạt đường bay trục của các hãng hàng không nội địa được kỳ vọng sẽ \"chia lửa\" cho sân bay Tân Sơn Nhất, đồng thời bổ sung nguồn cung ",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://thanhnien.vn/rss/kinh-te/chinh-sach-phat-trien.rss",
+        "publisher_host": "thanhnien.vn",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-81811a9af80621b4c39e",
+      "title": "Dự án chống ngập 10.000 tỷ đồng ở TPHCM vận hành liên hoàn hôm nay",
+      "url": "https://dantri.com.vn/thoi-su/du-an-chong-ngap-10000-ty-dong-o-tphcm-van-hanh-lien-hoan-hom-nay-20261124213515863.htm",
+      "category": "market",
+      "module_ids": [
+        "market"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-11-24T23:00:00+00:00",
+      "source_id": "dantri-current-affairs",
+      "region_ids": [
+        "hcmc"
+      ],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "(Dân trí) - Dự án chống ngập gần 10.000 tỷ đồng tại TPHCM vận hành liên hoàn các cống kiểm soát triều nhằm đánh giá khả năng bảo vệ khu vực nội đô trước đợt triều cường cao, hướng tới mục tiêu đưa vào khai thác.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://dantri.com.vn/rss/thoi-su.rss",
+        "publisher_host": "dantri.com.vn",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-77cfb3a0fabcd84d6fb3",
+      "title": "Khu vực nào ở TP HCM giảm ngập nhờ dự án ngăn triều 10.000 tỷ đồng?",
+      "url": "https://vnexpress.net/khu-vuc-nao-o-tp-hcm-giam-ngap-nho-du-an-ngan-trieu-10-000-ty-dong-5148484.html",
+      "category": "market",
+      "module_ids": [
+        "market"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-11-24T23:00:00+00:00",
+      "source_id": "vnexpress-current-affairs",
+      "region_ids": [
+        "hcmc"
+      ],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "Dự án ngăn triều lớn nhất TP HCM được kỳ vọng giảm ngập cho 570 km2 khu nội đô, chiếm 1/4 diện tích thành phố trước sáp nhập, khoảng 6,5 triệu người hưởng lợi.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://vnexpress.net/rss/thoi-su.rss",
+        "publisher_host": "vnexpress.net",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-4ba223956ea66b009e4d",
+      "title": "Đã đến lúc xuống tiền mua nhà?",
+      "url": "https://thanhnien.vn/da-den-luc-xuong-tien-mua-nha-185261124194149095.htm",
+      "category": "market",
+      "module_ids": [
+        "market"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-11-24T23:00:00+00:00",
+      "source_id": "thanhnien-real-estate",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [
+        "pricing"
+      ],
+      "importance": 2,
+      "summary": "Trong khi giá căn hộ trên thị trường sơ cấp vẫn neo ở mức cao, trên thị trường thứ cấp, nhiều nhà đầu tư chấp nhận giảm giá sâu, thậm chí bán lỗ để thu hồi vốn, giảm áp lực trả nợ ngân hàng. Diễn biến này đang mở ra cơ hội cho những người có nhu cầu thật về nhà ở cũng như đầu tư dài hạn.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://thanhnien.vn/rss/kinh-te/dia-oc.rss",
+        "publisher_host": "thanhnien.vn",
+        "publication_date_from_feed": true
+      }
+    },
     {
       "id": "article-market-rss-f31d5f0eece1b5b62ad8",
       "title": "Nhà gỗ 335 m2 có phòng khách nằm trên mặt biển",
