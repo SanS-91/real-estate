@@ -1,9 +1,208 @@
 {
   "schema_version": 1,
-  "build_id": "market-news-rss-20261125T025133Z",
-  "generated_at": "2026-11-25T02:51:33.166598+00:00",
-  "record_count": 2301,
+  "build_id": "market-news-rss-20261125T045148Z",
+  "generated_at": "2026-11-25T04:51:48.193469+00:00",
+  "record_count": 2309,
   "data": [
+    {
+      "id": "article-market-rss-c047ee1d566a157ccf0e",
+      "title": "Dự kiến khởi công đường sắt tốc độ cao Bắc Nam cuối năm 2028",
+      "url": "https://vnexpress.net/du-kien-khoi-cong-duong-sat-toc-do-cao-bac-nam-cuoi-nam-2028-5148586.html",
+      "category": "infrastructure",
+      "module_ids": [
+        "infrastructure"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-11-25T04:01:31+00:00",
+      "source_id": "vnexpress-current-affairs",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [
+        "infrastructure"
+      ],
+      "importance": 2,
+      "summary": "Trong 30 tháng thực hiện hợp đồng lập báo cáo nghiên cứu khả thi, liên danh tư vấn thiết kế dự án sẽ lựa chọn hướng tuyến, công nghệ..., phấn đấu khởi công dự án cuối năm 2028.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://vnexpress.net/rss/thoi-su.rss",
+        "publisher_host": "vnexpress.net",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-16e4a4c8195543b1e483",
+      "title": "Quy hoạch siêu đô thị TPHCM 100 năm: Chọn động lực nào cho tăng trưởng?",
+      "url": "https://dantri.com.vn/kinh-doanh/quy-hoach-sieu-do-thi-tphcm-100-nam-chon-dong-luc-nao-cho-tang-truong-20261125101811387.htm",
+      "category": "market",
+      "module_ids": [
+        "market"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-11-25T03:40:25+00:00",
+      "source_id": "dantri-business",
+      "region_ids": [
+        "hcmc"
+      ],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [
+        "legal"
+      ],
+      "importance": 2,
+      "summary": "(Dân trí) - Để tăng trưởng hai con số, TPHCM cần nâng năng suất lao động, chọn đúng ngành ưu tiên và sử dụng hiệu quả dòng vốn đầu tư, thay vì chỉ mở rộng quy mô kinh tế.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://dantri.com.vn/rss/kinh-doanh.rss",
+        "publisher_host": "dantri.com.vn",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-0bc7e1b58a6c924412e9",
+      "title": "TP.HCM sắp khai trương khu công nghiệp đường sắt hiện đại đầu tiên của cả nước",
+      "url": "https://thanhnien.vn/tphcm-sap-khai-truong-khu-cong-nghiep-duong-sat-hien-dai-dau-tien-cua-ca-nuoc-185261125103410113.htm",
+      "category": "infrastructure",
+      "module_ids": [
+        "infrastructure"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-11-25T03:36:00+00:00",
+      "source_id": "thanhnien-policy",
+      "region_ids": [
+        "hcmc"
+      ],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [
+        "infrastructure"
+      ],
+      "importance": 2,
+      "summary": "Lãnh đạo Ban Quản lý Đường sắt đô thị TP.HCM (MAUR) vừa có buổi thị sát công trường tuyến metro số 2 (Bến Thành - Tham Lương) và khảo sát thực tế Tổ hợp Khu công nghiệp đường sắt, cơ khí đa dụng quy mô 320 ha tại phường Bình Cơ.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://thanhnien.vn/rss/kinh-te/chinh-sach-phat-trien.rss",
+        "publisher_host": "thanhnien.vn",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-7c648eeaf5a4c543a96d",
+      "title": "TPHCM xây dựng hệ số điều chỉnh giá đất mới để áp dụng cho năm 2027",
+      "url": "https://dantri.com.vn/bat-dong-san/tphcm-xay-dung-he-so-dieu-chinh-gia-dat-moi-de-ap-dung-cho-nam-2027-20261125094215389.htm",
+      "category": "market",
+      "module_ids": [
+        "market"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-11-25T03:10:39+00:00",
+      "source_id": "dantri-real-estate",
+      "region_ids": [
+        "hcmc"
+      ],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [
+        "pricing"
+      ],
+      "importance": 2,
+      "summary": "(Dân trí) - TPHCM xây dựng hệ số điều chỉnh giá đất năm 2027 trên địa bàn để làm cơ sở phục vụ quản lý Nhà nước về đất đai và xác định nghĩa vụ tài chính về đất theo quy định.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://dantri.com.vn/rss/bat-dong-san.rss",
+        "publisher_host": "dantri.com.vn",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-6644ac1ddbd4d9bd2faf",
+      "title": "Metro số 1 TPHCM quá tải sau màn pháo hoa, khách chen lấn lên tàu",
+      "url": "https://dantri.com.vn/thoi-su/metro-so-1-tphcm-qua-tai-sau-man-phao-hoa-khach-chen-lan-len-tau-20261125093310247.htm",
+      "category": "infrastructure",
+      "module_ids": [
+        "infrastructure"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-11-25T03:03:08+00:00",
+      "source_id": "dantri-current-affairs",
+      "region_ids": [
+        "hcmc"
+      ],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [
+        "infrastructure"
+      ],
+      "importance": 2,
+      "summary": "(Dân trí) - Lượng khách đổ về các ga tàu điện ngầm sau khi xem pháo hoa tối 24/11 khiến Metro số 1 TPHCM quá tải. HURC1 đã tăng thêm 4 chuyến, kéo dài giờ chạy đến 23h.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://dantri.com.vn/rss/thoi-su.rss",
+        "publisher_host": "dantri.com.vn",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-ba36986986e885315ac1",
+      "title": "Metro số 1 lập kỷ lục đón khách Ngày Văn hóa Việt Nam",
+      "url": "https://thanhnien.vn/metro-so-1-lap-ky-luc-don-khach-ngay-van-hoa-viet-nam-185261125095614025.htm",
+      "category": "infrastructure",
+      "module_ids": [
+        "infrastructure"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-11-25T02:57:00+00:00",
+      "source_id": "thanhnien-policy",
+      "region_ids": [
+        "hcmc"
+      ],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [
+        "infrastructure"
+      ],
+      "importance": 2,
+      "summary": "Trước lượng khách tăng cao đột biến trong ngày đầu tiên người dân được nghỉ lễ hưởng ứng Ngày Văn hóa Việt Nam (24.11), tuyến metro số 1 TP.HCM (Bến Thành - Suối Tiên) đã phải bổ sung 4 chuyến tàu, đồng thời kéo dài thời gian hoạt động đến 23 giờ, tạo điều kiện cho người dân di chuyển.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://thanhnien.vn/rss/kinh-te/chinh-sach-phat-trien.rss",
+        "publisher_host": "thanhnien.vn",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-512f23081703dd5c2edb",
+      "title": "3 dự án xử lý nước thải, môi trường ở Hà Nội được thanh tra năm 2027",
+      "url": "https://dantri.com.vn/thoi-su/3-du-an-xu-ly-nuoc-thai-moi-truong-o-ha-noi-duoc-thanh-tra-nam-2027-20261125094751208.htm",
+      "category": "market",
+      "module_ids": [
+        "market"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-11-25T02:55:57+00:00",
+      "source_id": "dantri-current-affairs",
+      "region_ids": [
+        "ha-noi"
+      ],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "(Dân trí) - Thanh tra Chính phủ sẽ thanh tra dự án xử lý nước thải Yên Xá, dự án đầu tư xây dựng Khu liên hợp xử lý chất thải Sóc Sơn và dự án xây dựng nhà máy xử lý nước thải Sơn Đồng.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://dantri.com.vn/rss/thoi-su.rss",
+        "publisher_host": "dantri.com.vn",
+        "publication_date_from_feed": true
+      }
+    },
     {
       "id": "article-market-rss-05ed1f1658f9a69b786f",
       "title": "TP.HCM thu hồi hàng loạt khu đất, dự án",
@@ -53,6 +252,33 @@
         "method": "official-rss",
         "feed_url": "https://thanhnien.vn/rss/kinh-te/chinh-sach-phat-trien.rss",
         "publisher_host": "thanhnien.vn",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-b81b764e1cc57f29f74d",
+      "title": "Frasers Property khai trương không gian trải nghiệm tại Hà Nội",
+      "url": "https://vnexpress.net/frasers-property-khai-truong-khong-gian-trai-nghiem-tai-ha-noi-5148557.html",
+      "category": "market",
+      "module_ids": [
+        "market"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-11-25T02:00:00+00:00",
+      "source_id": "vnexpress-real-estate",
+      "region_ids": [
+        "ha-noi"
+      ],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "Không gian trải nghiệm tại tòa nhà HCO, phường Cửa Nam giúp người mua, nhà đầu tư tìm hiểu danh mục bất động sản công nghiệp, nhà ở của tập đoàn.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://vnexpress.net/rss/bat-dong-san.rss",
+        "publisher_host": "vnexpress.net",
         "publication_date_from_feed": true
       }
     },
