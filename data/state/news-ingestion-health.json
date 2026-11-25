@@ -1,15 +1,15 @@
 {
   "schema_version": 1,
-  "checked_at": "2026-11-25T08:51:41.889657+00:00",
+  "checked_at": "2026-11-25T08:53:27.661559+00:00",
   "feeds_configured": 16,
-  "feeds_fetched": 16,
-  "accepted_new": 5,
-  "production_written": true,
+  "feeds_fetched": 15,
+  "accepted_new": 0,
+  "production_written": false,
   "article_total": 2325,
   "published_by_module": {
-    "market": 2,
-    "legal": 1,
-    "infrastructure": 3,
+    "market": 0,
+    "legal": 0,
+    "infrastructure": 0,
     "macro": 0
   },
   "recent_by_module_7d": {
@@ -35,18 +35,18 @@
       "source_id": "vnexpress-real-estate",
       "status": "parsed",
       "feed_items": 50,
-      "new": 1,
-      "skipped": 49,
-      "duplicates": 49,
+      "new": 0,
+      "skipped": 50,
+      "duplicates": 50,
       "filtered": 0
     },
     {
       "source_id": "thanhnien-real-estate",
       "status": "parsed",
       "feed_items": 50,
-      "new": 1,
-      "skipped": 49,
-      "duplicates": 49,
+      "new": 0,
+      "skipped": 50,
+      "duplicates": 50,
       "filtered": 0
     },
     {
@@ -78,12 +78,7 @@
     },
     {
       "source_id": "vnexpress-legal",
-      "status": "parsed",
-      "feed_items": 50,
-      "new": 0,
-      "skipped": 50,
-      "duplicates": 0,
-      "filtered": 50
+      "status": "fetch-error"
     },
     {
       "source_id": "tuoitre-business",
@@ -125,9 +120,9 @@
       "source_id": "dantri-current-affairs",
       "status": "parsed",
       "feed_items": 50,
-      "new": 3,
-      "skipped": 47,
-      "duplicates": 8,
+      "new": 0,
+      "skipped": 50,
+      "duplicates": 11,
       "filtered": 39
     },
     {
@@ -176,5 +171,10 @@
       "filtered": 47
     }
   ],
-  "fetch_errors": []
+  "fetch_errors": [
+    {
+      "source_id": "vnexpress-legal",
+      "error": "HTTPError"
+    }
+  ]
 }
