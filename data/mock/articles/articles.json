@@ -1,9 +1,251 @@
 {
   "schema_version": 1,
-  "build_id": "market-news-rss-20261125T105141Z",
-  "generated_at": "2026-11-25T10:51:41.346062+00:00",
-  "record_count": 2331,
+  "build_id": "market-news-rss-20261125T125141Z",
+  "generated_at": "2026-11-25T12:51:41.323985+00:00",
+  "record_count": 2340,
   "data": [
+    {
+      "id": "article-market-rss-927c32048c6087454c27",
+      "title": "Công ty bất động sản đứng đầu danh sách nợ thuế ở Thanh Hóa",
+      "url": "https://dantri.com.vn/kinh-doanh/cong-ty-bat-dong-san-dung-dau-danh-sach-no-thue-o-thanh-hoa-20261125165940221.htm",
+      "category": "market",
+      "module_ids": [
+        "market"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-11-25T12:16:47+00:00",
+      "source_id": "dantri-business",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "(Dân trí) - Thuế tỉnh Thanh Hóa công khai danh sách 66 doanh nghiệp còn nợ thuế với tổng số tiền hơn 1.285 tỷ đồng. Đáng chú ý, có doanh nghiệp đứng đầu danh sách nợ gần 400 tỷ đồng.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://dantri.com.vn/rss/kinh-doanh.rss",
+        "publisher_host": "dantri.com.vn",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-bd627edbd139e45186f4",
+      "title": "Quảng Ngãi mưa xối xả, nhiều tuyến đường bị ngập vào giờ tan tầm",
+      "url": "https://dantri.com.vn/thoi-su/quang-ngai-mua-xoi-xa-nhieu-tuyen-duong-bi-ngap-vao-gio-tan-tam-20261125180131226.htm",
+      "category": "infrastructure",
+      "module_ids": [
+        "infrastructure"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-11-25T11:20:42+00:00",
+      "source_id": "dantri-current-affairs",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "(Dân trí) - Trận mưa xối xả kéo dài khiến một số tuyến đường tại Quảng Ngãi ngập cục bộ. Theo Đài Khí tượng thủy văn tỉnh Quảng Ngãi, lượng mưa tại khu vực phía Đông của tỉnh có thể đạt 150mm",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://dantri.com.vn/rss/thoi-su.rss",
+        "publisher_host": "dantri.com.vn",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-49c5a09b0a32dd90fb1d",
+      "title": "Lộ trình triển khai dự án đường Vành đai 5 Vùng Thủ đô",
+      "url": "https://dantri.com.vn/bat-dong-san/lo-trinh-trien-khai-du-an-duong-vanh-dai-5-vung-thu-do-20261125174207563.htm",
+      "category": "market",
+      "module_ids": [
+        "market",
+        "infrastructure"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-11-25T11:13:18+00:00",
+      "source_id": "dantri-real-estate",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [
+        "infrastructure"
+      ],
+      "importance": 2,
+      "summary": "(Dân trí) - Chính phủ yêu cầu chuẩn bị đầu tư đường Vành đai 5 từ năm 2026, triển khai từ năm 2027 và phấn đấu hoàn thành toàn tuyến dài khoảng 349km trước năm 2035.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://dantri.com.vn/rss/bat-dong-san.rss",
+        "publisher_host": "dantri.com.vn",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-41e5c1268decba2dc8aa",
+      "title": "Sạt lở đất đá làm tê liệt tuyến quốc lộ 49 ở Huế",
+      "url": "https://dantri.com.vn/thoi-su/sat-lo-dat-da-lam-te-liet-tuyen-quoc-lo-49-o-hue-20261125174746280.htm",
+      "category": "infrastructure",
+      "module_ids": [
+        "infrastructure"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-11-25T11:13:08+00:00",
+      "source_id": "dantri-current-affairs",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [
+        "infrastructure"
+      ],
+      "importance": 2,
+      "summary": "(Dân trí) - Tuyến quốc lộ 49 nối trung tâm thành phố Huế với các xã miền núi A Lưới bị chia cắt, gây ách tắc giao thông do đất đá sạt lở vùi lấp mặt đường.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://dantri.com.vn/rss/thoi-su.rss",
+        "publisher_host": "dantri.com.vn",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-b9201f344473756f0097",
+      "title": "ACV đề xuất lùi thời hạn hoàn thành sân bay Long Thành đến 2027-2028",
+      "url": "https://vnexpress.net/acv-de-xuat-lui-thoi-han-hoan-thanh-san-bay-long-thanh-den-2027-2028-5148861.html",
+      "category": "infrastructure",
+      "module_ids": [
+        "infrastructure"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-11-25T11:01:41+00:00",
+      "source_id": "vnexpress-current-affairs",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [
+        "infrastructure"
+      ],
+      "importance": 2,
+      "summary": "Không thể hoàn thành các công trình thiết yếu trong năm 2026, Tổng công ty Cảng hàng không Việt Nam đề xuất kéo dài thời gian thực hiện giai đoạn một sân bay Long Thành đến năm 2027-2028.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://vnexpress.net/rss/thoi-su.rss",
+        "publisher_host": "vnexpress.net",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-5f1550368d4dcb5ef362",
+      "title": "Khởi công dự án nhà ở xã hội Parc Ville Hà Đông",
+      "url": "https://vnexpress.net/khoi-cong-du-an-nha-o-xa-hoi-parc-ville-ha-dong-5148849.html",
+      "category": "market",
+      "module_ids": [
+        "market",
+        "infrastructure"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-11-25T11:00:00+00:00",
+      "source_id": "vnexpress-real-estate",
+      "region_ids": [
+        "ha-noi"
+      ],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "Công ty cổ phần BV Land khởi công dự án nhà ở xã hội Parc Ville Hà Đông tại phường Phú Lương, Hà Nội, sáng 25/11.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://vnexpress.net/rss/bat-dong-san.rss",
+        "publisher_host": "vnexpress.net",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-69406513b5279e60d571",
+      "title": "Sân bay Long Thành chậm Dự án thành phần 3, Phó Thủ tướng yêu cầu tháo gỡ",
+      "url": "https://dantri.com.vn/bat-dong-san/san-bay-long-thanh-cham-du-an-thanh-phan-3-pho-thu-tuong-yeu-cau-thao-go-20261125171748383.htm",
+      "category": "market",
+      "module_ids": [
+        "market",
+        "infrastructure"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-11-25T10:58:53+00:00",
+      "source_id": "dantri-real-estate",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [
+        "infrastructure"
+      ],
+      "importance": 2,
+      "summary": "(Dân trí) - Phó Thủ tướng Thường trực Phạm Gia Túc yêu cầu khẩn trương tháo gỡ khó khăn, vướng mắc tại Dự án thành phần 3 sân bay Long Thành, có phương án khắc phục triệt để những tồn tại.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://dantri.com.vn/rss/bat-dong-san.rss",
+        "publisher_host": "dantri.com.vn",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-9c1beddcfca7261bc533",
+      "title": "Nóng: Một số gói thầu quan trọng của sân bay Long Thành trễ hẹn tới tháng 6.2027",
+      "url": "https://thanhnien.vn/nong-mot-so-goi-thau-quan-trong-cua-san-bay-long-thanh-tre-hen-toi-thang-62027-185261125174435525.htm",
+      "category": "infrastructure",
+      "module_ids": [
+        "infrastructure"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-11-25T10:56:00+00:00",
+      "source_id": "thanhnien-policy",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [
+        "infrastructure"
+      ],
+      "importance": 2,
+      "summary": "Do các nguyên nhân khách quan và chủ quan, chủ đầu tư đánh giá không thể hoàn thành toàn bộ Dự án thành phần 3 của dự án Cảng hàng không quốc tế Long Thành trong năm 2026 theo tiến độ hợp đồng. Một số gói thầu quan trọng như nhà ga hành khách, nhà ga hàng hóa số 1, nhà để xe và hệ thống quản lý sân ",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://thanhnien.vn/rss/kinh-te/chinh-sach-phat-trien.rss",
+        "publisher_host": "thanhnien.vn",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-332dd87c912146311947",
+      "title": "TPHCM thu hồi đất kéo dài đường Võ Văn Kiệt đến Tây Ninh",
+      "url": "https://dantri.com.vn/thoi-su/tphcm-thu-hoi-dat-keo-dai-duong-vo-van-kiet-den-tay-ninh-20261125172214668.htm",
+      "category": "legal",
+      "module_ids": [
+        "legal"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-11-25T10:54:28+00:00",
+      "source_id": "dantri-current-affairs",
+      "region_ids": [
+        "hcmc"
+      ],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "(Dân trí) - Dự án đường Võ Văn Kiệt nối dài qua xã Tân Nhựt dự kiến thu hồi gần 25ha đất, ảnh hưởng 370 hộ dân. TPHCM đặt mục tiêu cơ bản bàn giao mặt bằng trước ngày 30/4/2027.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://dantri.com.vn/rss/thoi-su.rss",
+        "publisher_host": "dantri.com.vn",
+        "publication_date_from_feed": true
+      }
+    },
     {
       "id": "article-market-rss-47080b6f94b3b3937913",
       "title": "TPHCM chuẩn bị danh mục 90 dự án PPP, cần hơn 1,27 triệu tỷ đồng",
