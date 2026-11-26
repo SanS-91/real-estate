@@ -1,9 +1,201 @@
 {
   "schema_version": 1,
-  "build_id": "market-news-rss-20261126T065241Z",
-  "generated_at": "2026-11-26T06:52:41.803677+00:00",
-  "record_count": 2378,
+  "build_id": "market-news-rss-20261126T083812Z",
+  "generated_at": "2026-11-26T08:38:12.682411+00:00",
+  "record_count": 2387,
   "data": [
+    {
+      "id": "article-market-rss-7812f8548b13f7c7014c",
+      "title": "Vay 1,5 tỷ mua nhà, người trẻ lo trả nợ gần 20 triệu đồng/tháng khi lãi thả nổi",
+      "url": "https://dantri.com.vn/bat-dong-san/vay-15-ty-mua-nha-nguoi-tre-lo-tra-no-gan-20-trieu-dongthang-khi-lai-tha-noi-20261126121857838.htm",
+      "category": "market",
+      "module_ids": [
+        "macro"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-11-26T08:14:20+00:00",
+      "source_id": "dantri-real-estate",
+      "region_ids": [
+        "hcmc",
+        "ha-noi"
+      ],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "(Dân trí) - Hưởng lãi cố định 6,5%/năm trong 2 năm đầu, khoản vay mua nhà 1,5 tỷ đồng của một người trẻ tại TPHCM sắp chuyển sang lãi thả nổi. Nếu lãi suất ở mức 12-14%/năm, số tiền phải trả mỗi tháng có thể lên gần 20 triệu đồng.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://dantri.com.vn/rss/bat-dong-san.rss",
+        "publisher_host": "dantri.com.vn",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-22d4c61b09eb13d36e96",
+      "title": "Lãi suất vay mua nhà vẫn cao, có ngân hàng chào mức gần 16%/năm",
+      "url": "https://dantri.com.vn/kinh-doanh/lai-suat-vay-mua-nha-van-cao-co-ngan-hang-chao-muc-gan-16nam-20261126115845731.htm",
+      "category": "market",
+      "module_ids": [
+        "market",
+        "macro"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-11-26T07:58:16+00:00",
+      "source_id": "dantri-real-estate",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "(Dân trí) - Trong bối cảnh loạt ngân hàng đã giảm lãi tiền gửi theo chỉ đạo, lãi vay mua nhà ở nhiều nhà băng vẫn ở mức hai con số, có nơi chào đến 15,7%/năm.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://dantri.com.vn/rss/bat-dong-san.rss",
+        "publisher_host": "dantri.com.vn",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-1509d5c2231ff3ee4b17",
+      "title": "Bước tiến mới của siêu dự án 111.000 tỷ đồng gần SVĐ VinFast - Trống Đồng",
+      "url": "https://dantri.com.vn/bat-dong-san/buoc-tien-moi-cua-sieu-du-an-111000-ty-dong-gan-svd-vinfast-trong-dong-20261126113156653.htm",
+      "category": "market",
+      "module_ids": [
+        "market",
+        "legal"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-11-26T07:33:39+00:00",
+      "source_id": "dantri-real-estate",
+      "region_ids": [
+        "ha-noi"
+      ],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [
+        "legal"
+      ],
+      "importance": 2,
+      "summary": "(Dân trí) - Khu đô thị đa mục tiêu gần 600ha, vốn đầu tư hơn 111.000 tỷ đồng tại phía nam Hà Nội vừa được công bố quy hoạch chi tiết 1/500. Người dân nêu nhiều kiến nghị về thu hồi đất, bồi thường và tái định cư.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://dantri.com.vn/rss/bat-dong-san.rss",
+        "publisher_host": "dantri.com.vn",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-c1c15048a3902dce7c03",
+      "title": "Đấu giá khu đất hơn 725 tỷ đồng liên quan bà Trương Mỹ Lan ở TPHCM",
+      "url": "https://dantri.com.vn/bat-dong-san/dau-gia-khu-dat-hon-725-ty-dong-lien-quan-ba-truong-my-lan-o-tphcm-20261126120418785.htm",
+      "category": "market",
+      "module_ids": [
+        "market"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-11-26T07:24:44+00:00",
+      "source_id": "dantri-real-estate",
+      "region_ids": [
+        "hcmc"
+      ],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "(Dân trí) - Khu đất rộng hơn 2.400m2 tại số 51-53A An Dương Vương, phường An Đông, liên quan đến bà Trương Mỹ Lan, sẽ được đấu giá trực tuyến vào ngày 25/12 với giá khởi điểm hơn 725 tỷ đồng.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://dantri.com.vn/rss/bat-dong-san.rss",
+        "publisher_host": "dantri.com.vn",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-ae96c8b55138a167ad40",
+      "title": "Q'Terra kết nối cộng đồng qua lễ hội khinh khí cầu Quy Nhơn",
+      "url": "https://vnexpress.net/q-terra-ket-noi-cong-dong-qua-le-hoi-khinh-khi-cau-quy-nhon-5149203.html",
+      "category": "market",
+      "module_ids": [
+        "market"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-11-26T07:15:00+00:00",
+      "source_id": "vnexpress-real-estate",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "Lễ hội Q'Terra Sky Fest do Phát Đạt tổ chức thu hút hơn 5.000 người dân và du khách tham gia các hoạt động vui chơi, giải trí tại trung tâm Quy Nhơn, từ ngày 20 đến 22/11.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://vnexpress.net/rss/bat-dong-san.rss",
+        "publisher_host": "vnexpress.net",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-8ab20de071dd2de9ed72",
+      "title": "Sắc màu Triển lãm Quốc phòng quốc tế dần lộ diện tại sân bay Gia Lâm",
+      "url": "https://dantri.com.vn/thoi-su/sac-mau-trien-lam-quoc-phong-quoc-te-dan-lo-dien-tai-san-bay-gia-lam-20261126133825499.htm",
+      "category": "infrastructure",
+      "module_ids": [
+        "infrastructure"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-11-26T06:59:35+00:00",
+      "source_id": "dantri-current-affairs",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [
+        "infrastructure"
+      ],
+      "importance": 2,
+      "summary": "(Dân trí) - Sân bay Gia Lâm đang khẩn trương hoàn thiện các hạng mục, sẵn sàng cho Triển lãm Quốc phòng quốc tế Việt Nam 2026 với quy mô lớn.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://dantri.com.vn/rss/thoi-su.rss",
+        "publisher_host": "dantri.com.vn",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-9bd0f65b348467b93da5",
+      "title": "Vinhomes đổi tên khu đô thị lớn nhất Việt Nam",
+      "url": "https://vnexpress.net/vinhomes-doi-ten-khu-do-thi-lon-nhat-viet-nam-5149167.html",
+      "category": "market",
+      "module_ids": [
+        "market"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-11-26T06:36:45+00:00",
+      "source_id": "vnexpress-real-estate",
+      "region_ids": [
+        "ha-noi"
+      ],
+      "project_ids": [],
+      "developer_ids": [
+        "vinhomes"
+      ],
+      "tags": [],
+      "importance": 2,
+      "summary": "Vinhomes vừa đổi tên dự án hơn 9.000 ha phía nam Hà Nội thành Khu đô thị trung tâm thể thao quốc tế.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://vnexpress.net/rss/bat-dong-san.rss",
+        "publisher_host": "vnexpress.net",
+        "publication_date_from_feed": true
+      }
+    },
     {
       "id": "article-market-rss-ac72fa78e2a7d4ea71d3",
       "title": "Giá vàng nhẫn PNJ thấp hơn lên đến 2 triệu đồng/lượng",
@@ -111,6 +303,31 @@
       "source_verification": {
         "method": "official-rss",
         "feed_url": "https://vnexpress.net/rss/kinh-doanh.rss",
+        "publisher_host": "vnexpress.net",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-70a82928a04cf6face1e",
+      "title": "Qtopia Phước Hải linh hoạt phương án bàn giao nội thất",
+      "url": "https://vnexpress.net/qtopia-phuoc-hai-linh-hoat-phuong-an-ban-giao-noi-that-5149103.html",
+      "category": "market",
+      "module_ids": [
+        "market"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-11-26T04:30:00+00:00",
+      "source_id": "vnexpress-real-estate",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "Qtopia Phước Hải cung cấp hai phương án bàn giao nội thất đầy đủ hoặc cơ bản, giúp chủ sở hữu cân đối ngân sách, đáp ứng nhu cầu nghỉ dưỡng và khai thác cho thuê.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://vnexpress.net/rss/bat-dong-san.rss",
         "publisher_host": "vnexpress.net",
         "publication_date_from_feed": true
       }
@@ -1183,6 +1400,34 @@
       "id": "article-market-rss-5f1550368d4dcb5ef362",
       "title": "Khởi công dự án nhà ở xã hội Parc Ville Hà Đông",
       "url": "https://vnexpress.net/khoi-cong-du-an-nha-o-xa-hoi-parc-ville-ha-dong-5148849.html",
+      "category": "market",
+      "module_ids": [
+        "market",
+        "infrastructure"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-11-25T11:00:00+00:00",
+      "source_id": "vnexpress-real-estate",
+      "region_ids": [
+        "ha-noi"
+      ],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "Công ty cổ phần BV Land khởi công dự án nhà ở xã hội Parc Ville Hà Đông tại phường Phú Lương, Hà Nội, sáng 25/11.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://vnexpress.net/rss/bat-dong-san.rss",
+        "publisher_host": "vnexpress.net",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-20a45eda2ec6ee3cc774",
+      "title": "BV Land khởi công dự án nhà ở xã hội Parc Ville Hà Đông",
+      "url": "https://vnexpress.net/bv-land-khoi-cong-du-an-nha-o-xa-hoi-parc-ville-ha-dong-5148849.html",
       "category": "market",
       "module_ids": [
         "market",
