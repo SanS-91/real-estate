@@ -1,9 +1,38 @@
 {
   "schema_version": 1,
-  "build_id": "market-news-rss-20261126T105144Z",
-  "generated_at": "2026-11-26T10:51:44.098335+00:00",
-  "record_count": 2391,
+  "build_id": "market-news-rss-20261126T125133Z",
+  "generated_at": "2026-11-26T12:51:33.883758+00:00",
+  "record_count": 2392,
   "data": [
+    {
+      "id": "article-market-rss-f4db1498670fc96bff25",
+      "title": "TP HCM khen thưởng cán bộ tích cực đi xe buýt, metro",
+      "url": "https://vnexpress.net/tp-hcm-khen-thuong-can-bo-tich-cuc-di-xe-buyt-metro-5149347.html",
+      "category": "infrastructure",
+      "module_ids": [
+        "infrastructure"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-11-26T11:56:13+00:00",
+      "source_id": "vnexpress-current-affairs",
+      "region_ids": [
+        "hcmc"
+      ],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [
+        "infrastructure"
+      ],
+      "importance": 2,
+      "summary": "Việc đi phương tiện công cộng ít nhất hai lần mỗi tuần được đưa vào tiêu chí đánh giá, xếp loại, khen thưởng cán bộ, công chức, viên chức TP HCM.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://vnexpress.net/rss/thoi-su.rss",
+        "publisher_host": "vnexpress.net",
+        "publication_date_from_feed": true
+      }
+    },
     {
       "id": "article-market-rss-12cab50ecd17af6f2625",
       "title": "“Đường sắt tốc độ cao là cơ hội nâng cao năng lực công nghệ của Việt Nam”",
