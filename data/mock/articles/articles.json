@@ -1,9 +1,289 @@
 {
   "schema_version": 1,
-  "build_id": "market-news-rss-20261125T195925Z",
-  "generated_at": "2026-11-25T19:59:25.610377+00:00",
-  "record_count": 2350,
+  "build_id": "market-news-rss-20261126T005234Z",
+  "generated_at": "2026-11-26T00:52:34.202370+00:00",
+  "record_count": 2361,
   "data": [
+    {
+      "id": "article-market-rss-16e378eeaf8dd0957f65",
+      "title": "Chênh lệch giá vàng thế giới và trong nước tăng lên 22 triệu đồng/lượng",
+      "url": "https://dantri.com.vn/kinh-doanh/chenh-lech-gia-vang-the-gioi-va-trong-nuoc-tang-len-22-trieu-dongluong-20261126064310590.htm",
+      "category": "macro",
+      "module_ids": [
+        "macro"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-11-26T00:29:26+00:00",
+      "source_id": "dantri-business",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [
+        "sales"
+      ],
+      "importance": 2,
+      "summary": "(Dân trí) - Sáng 26/11, vàng miếng SJC giao dịch quanh 134,1 triệu đồng/lượng, cao hơn giá thế giới quy đổi khoảng 22 triệu đồng/lượng trong bối cảnh thị trường chờ đợi tín hiệu lãi suất từ Fed.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://dantri.com.vn/rss/kinh-doanh.rss",
+        "publisher_host": "dantri.com.vn",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-20066694a7dc0f8343bd",
+      "title": "10 năm chờ đợi khép lại, dự án chống ngập 10.000 tỷ ở TPHCM về đích",
+      "url": "https://dantri.com.vn/dt360/10-nam-cho-doi-khep-lai-du-an-chong-ngap-10000-ty-o-tphcm-ve-dich-20261125181708148.htm",
+      "category": "market",
+      "module_ids": [
+        "market"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-11-26T00:25:00+00:00",
+      "source_id": "dantri-current-affairs",
+      "region_ids": [
+        "hcmc"
+      ],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "(Dân trí) - Dự án 10.000 tỷ đồng được kỳ vọng giúp TPHCM giảm ngập nhưng nhiều lần lỡ hẹn. Lãnh đạo Tập đoàn Trung Nam đã nói về những vướng mắc khiến công trình kéo dài, đồng thời xin lỗi người dân.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://dantri.com.vn/rss/thoi-su.rss",
+        "publisher_host": "dantri.com.vn",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-af5629ac482c3b9ac130",
+      "title": "Toàn cảnh đường vành đai Hà Nội: Tuyến đã khép kín, tuyến còn dang dở",
+      "url": "https://dantri.com.vn/bat-dong-san/toan-canh-duong-vanh-dai-ha-noi-tuyen-da-khep-kin-tuyen-con-dang-do-20261126014020516.htm",
+      "category": "market",
+      "module_ids": [
+        "infrastructure"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-11-25T23:44:35+00:00",
+      "source_id": "dantri-real-estate",
+      "region_ids": [
+        "ha-noi"
+      ],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [
+        "infrastructure"
+      ],
+      "importance": 2,
+      "summary": "(Dân trí) - Bên cạnh Vành đai 1 và 2 đã cơ bản hình thành, Hà Nội đang đẩy nhanh tiến độ Vành đai 3, 4, 5 cùng hai tuyến hỗ trợ 2,5 và 3,5 nhằm mở rộng không gian phát triển cho Thủ đô.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://dantri.com.vn/rss/bat-dong-san.rss",
+        "publisher_host": "dantri.com.vn",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-34ea90fbc4bd5bc2064d",
+      "title": "“Nếu Hà Nội có 500km đường sắt đô thị, dân sẵn sàng ra ngoại thành ở hết”",
+      "url": "https://dantri.com.vn/thoi-su/neu-ha-noi-co-500km-duong-sat-do-thi-dan-san-sang-ra-ngoai-thanh-o-het-20261125230706871.htm",
+      "category": "infrastructure",
+      "module_ids": [
+        "infrastructure"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-11-25T23:20:00+00:00",
+      "source_id": "dantri-current-affairs",
+      "region_ids": [
+        "ha-noi"
+      ],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [
+        "infrastructure"
+      ],
+      "importance": 2,
+      "summary": "(Dân trí) - Theo Tổng Bí thư, Chủ tịch nước, phải làm sao để thời gian di chuyển từ ngoại thành vào đến trung tâm thành phố không quá 30 phút. Khi đó, không có lý do gì người dân phải chen chúc sống trong nội đô.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://dantri.com.vn/rss/thoi-su.rss",
+        "publisher_host": "dantri.com.vn",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-e401734191522fb861b7",
+      "title": "Người dân thích thú khám phá quy hoạch TPHCM 100 năm",
+      "url": "https://dantri.com.vn/dt360/nguoi-dan-thich-thu-kham-pha-quy-hoach-tphcm-100-nam-20261125113158170.htm",
+      "category": "market",
+      "module_ids": [
+        "market"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-11-25T23:12:00+00:00",
+      "source_id": "dantri-current-affairs",
+      "region_ids": [
+        "hcmc"
+      ],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [
+        "legal"
+      ],
+      "importance": 2,
+      "summary": "(Dân trí) - Từ 23/11, người dân có thể đến Trung tâm Triển lãm Quy hoạch TPHCM xem bản đồ, bản vẽ, nghe thuyết minh về quy hoạch TPHCM thời kỳ 2025-2050, tầm nhìn 100 năm.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://dantri.com.vn/rss/thoi-su.rss",
+        "publisher_host": "dantri.com.vn",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-2d4ac55700251bda93fa",
+      "title": "Nhiều tuyến đường khu Nam TPHCM hết ngập trong ngày đóng cống ngăn triều",
+      "url": "https://dantri.com.vn/thoi-su/nhieu-tuyen-duong-khu-nam-tphcm-het-ngap-trong-ngay-dong-cong-ngan-trieu-20261125213156303.htm",
+      "category": "infrastructure",
+      "module_ids": [
+        "infrastructure"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-11-25T23:07:00+00:00",
+      "source_id": "dantri-current-affairs",
+      "region_ids": [
+        "hcmc"
+      ],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "(Dân trí) - Tối 25/11, dù triều cường trên sông Sài Gòn dâng cao vượt báo động 3, nhiều \"rốn ngập\" tại khu Nam TPHCM như Trần Xuân Soạn, Huỳnh Tấn Phát vẫn khô ráo nhờ cống ngăn triều đồng loạt vận hành.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://dantri.com.vn/rss/thoi-su.rss",
+        "publisher_host": "dantri.com.vn",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-bbad2e4be518e370e664",
+      "title": "Thị trường chung cư thay đổi ra sao khi căn hộ được cho thuê lưu trú?",
+      "url": "https://vnexpress.net/thi-truong-chung-cu-thay-doi-ra-sao-khi-can-ho-duoc-cho-thue-luu-tru-5148644.html",
+      "category": "market",
+      "module_ids": [
+        "market"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-11-25T23:00:00+00:00",
+      "source_id": "vnexpress-real-estate",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [
+        "pricing"
+      ],
+      "importance": 2,
+      "summary": "Cho thuê lưu trú từ giữa năm 2027 giúp căn hộ chung cư mở rộng tệp khách và cải thiện dòng tiền, song khó tạo sóng tăng giá bán đồng loạt, theo chuyên gia.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://vnexpress.net/rss/bat-dong-san.rss",
+        "publisher_host": "vnexpress.net",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-b86789911d94e34c0c4b",
+      "title": "Dự án chống ngập 10.000 tỉ chính thức vận hành",
+      "url": "https://thanhnien.vn/du-an-chong-ngap-10000-ti-chinh-thuc-van-hanh-185261125180459267.htm",
+      "category": "market",
+      "module_ids": [
+        "market"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-11-25T23:00:00+00:00",
+      "source_id": "thanhnien-policy",
+      "region_ids": [
+        "hcmc"
+      ],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [
+        "legal"
+      ],
+      "importance": 2,
+      "summary": "Không chỉ giữ khô ráo các \"rốn ngập\", đưa vào vận hành dự án chống ngập 10.000 tỉ đồng còn mở ra lời giải dài hạn về quy hoạch thích ứng biến đổi khí hậu cho siêu đô thị TP.HCM.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://thanhnien.vn/rss/kinh-te/chinh-sach-phat-trien.rss",
+        "publisher_host": "thanhnien.vn",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-9c50d274b1bd595b411f",
+      "title": "Ngân hàng vẫn chào lãi suất tiết kiệm tới 9,6% một năm",
+      "url": "https://vnexpress.net/ngan-hang-van-chao-lai-suat-tiet-kiem-toi-9-6-mot-nam-5148499.html",
+      "category": "macro",
+      "module_ids": [
+        "macro"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-11-25T23:00:00+00:00",
+      "source_id": "vnexpress-economy",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "Lãi suất niêm yết hạ nhiệt, song mức ưu đãi tại nhiều nhà băng vẫn trên 9% một năm, áp dụng kèm điều kiện hạn chế rút trước hạn.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://vnexpress.net/rss/kinh-doanh.rss",
+        "publisher_host": "vnexpress.net",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-695ca79e088bc506c3f6",
+      "title": "Quy hoạch siêu đô thị TPHCM 100 năm: Lấy đâu vốn làm 960km metro?",
+      "url": "https://dantri.com.vn/bat-dong-san/quy-hoach-sieu-do-thi-tphcm-100-nam-lay-dau-von-lam-960km-metro-20261125212057855.htm",
+      "category": "market",
+      "module_ids": [
+        "market",
+        "infrastructure"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-11-25T23:00:00+00:00",
+      "source_id": "dantri-real-estate",
+      "region_ids": [
+        "hcmc"
+      ],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [
+        "legal",
+        "infrastructure"
+      ],
+      "importance": 2,
+      "summary": "(Dân trí) - TPHCM đặt mục tiêu hoàn thành khoảng 960km metro vào năm 2050. Bài toán lớn là huy động vốn, trong đó có khai thác giá trị đất quanh nhà ga và chia sẻ rủi ro với nhà đầu tư.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://dantri.com.vn/rss/bat-dong-san.rss",
+        "publisher_host": "dantri.com.vn",
+        "publication_date_from_feed": true
+      }
+    },
     {
       "id": "article-market-rss-4e39dea4a0f53c56130e",
       "title": "Tái hiện nét kiến trúc Chợ Lớn trong nhà phố hiện đại",
@@ -155,6 +435,31 @@
       "tags": [],
       "importance": 2,
       "summary": "Mỗi ounce vàng tiếp tục giảm hơn 100 USD, hiện xuống sát 3.450 USD, sau báo cáo lạm phát Mỹ.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://vnexpress.net/rss/kinh-doanh.rss",
+        "publisher_host": "vnexpress.net",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-d466065f8d0bc82bb2bb",
+      "title": "Giá vàng thế giới tăng trở lại sau khi mất mốc 3.500 USD",
+      "url": "https://vnexpress.net/gia-vang-the-gioi-tang-tro-lai-sau-khi-mat-moc-3-500-usd-5148917.html",
+      "category": "macro",
+      "module_ids": [
+        "macro"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-11-25T14:50:35+00:00",
+      "source_id": "vnexpress-economy",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "Mỗi ounce vàng đảo chiều tăng hơn 30 USD, ngay sau khi xuống sát 3.420 USD vì báo cáo lạm phát Mỹ.",
       "source_verification": {
         "method": "official-rss",
         "feed_url": "https://vnexpress.net/rss/kinh-doanh.rss",
