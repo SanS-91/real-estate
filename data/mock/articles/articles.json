@@ -1,9 +1,199 @@
 {
   "schema_version": 1,
-  "build_id": "market-news-rss-20261126T005234Z",
-  "generated_at": "2026-11-26T00:52:34.202370+00:00",
-  "record_count": 2361,
+  "build_id": "market-news-rss-20261126T025140Z",
+  "generated_at": "2026-11-26T02:51:40.486144+00:00",
+  "record_count": 2368,
   "data": [
+    {
+      "id": "article-market-rss-fa2719696198832dca9a",
+      "title": "Mua nhà hoàn thiện Vịnh Bình Minh 1, bớt lo công trình, thêm thời gian cho gia đình",
+      "url": "https://dantri.com.vn/bat-dong-san/mua-nha-hoan-thien-vinh-binh-minh-1-bot-lo-cong-trinh-them-thoi-gian-cho-gia-dinh-20261126093008925.htm",
+      "category": "market",
+      "module_ids": [
+        "market"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-11-26T02:36:25+00:00",
+      "source_id": "dantri-real-estate",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [
+        "vinhomes"
+      ],
+      "tags": [],
+      "importance": 2,
+      "summary": "(Dân trí) - Không phải mất nhiều tháng theo sát công trường hay chờ đợi nội thất, chủ nhân những căn nhà phố hoàn thiện 70m² tại Vịnh Bình Minh 1, Vinhomes Global Gate Hạ Long có thể rút ngắn hành trình về nhà mới, dành nhiều thời gian hơn cho gia đình.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://dantri.com.vn/rss/bat-dong-san.rss",
+        "publisher_host": "dantri.com.vn",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-6e5a41b92c1ffdacf52b",
+      "title": "Hơn 1.400 tỷ đồng cải tạo đường băng sân bay Đà Nẵng",
+      "url": "https://vnexpress.net/hon-1-400-ty-dong-cai-tao-duong-bang-san-bay-da-nang-5148984.html",
+      "category": "infrastructure",
+      "module_ids": [
+        "infrastructure"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-11-26T02:07:55+00:00",
+      "source_id": "vnexpress-current-affairs",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [
+        "infrastructure"
+      ],
+      "importance": 2,
+      "summary": "Đường băng phía Tây sân bay Đà Nẵng dài hơn 3 km sẽ được cải tạo, xây thêm các đường lăn với tổng vốn đầu tư 1.427 tỷ đồng, dự kiến hoàn thành năm 2028.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://vnexpress.net/rss/thoi-su.rss",
+        "publisher_host": "vnexpress.net",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-0ef7520fcca0c28c692c",
+      "title": "CapitaLand bàn giao Orchard Hill và Orchard Mansion, hiện thực hóa tầm nhìn tổng dự án Sycamore",
+      "url": "https://thanhnien.vn/capitaland-ban-giao-orchard-hill-va-orchard-mansion-hien-thuc-hoa-tam-nhin-tong-du-an-sycamore-185261126090740655.htm",
+      "category": "market",
+      "module_ids": [
+        "market"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-11-26T02:00:00+00:00",
+      "source_id": "thanhnien-real-estate",
+      "region_ids": [
+        "hcmc",
+        "binh-duong"
+      ],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "TP.HCM, ngày 25.11.2026 - CapitaLand Development (CLD) Việt Nam chính thức khởi động bàn giao Orchard Hill và Orchard Mansion, hai phân khu nhà ở thuộc tổng dự án Sycamore quy mô 18,9 ha tại phường Bình Dương, TP.HCM. Cột mốc này tiếp tục khẳng định cam kết của CLD trong việc đảm bảo chất lượng và t",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://thanhnien.vn/rss/kinh-te/dia-oc.rss",
+        "publisher_host": "thanhnien.vn",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-932947e2634909c95586",
+      "title": "Giá vàng hôm nay 26.11.2027: Dậm chân tại chỗ nhưng người mua sẽ lỗ ngay 6 triệu",
+      "url": "https://thanhnien.vn/gia-vang-hom-nay-26112027-dam-chan-tai-cho-nhung-nguoi-mua-se-lo-ngay-6-trieu-185261126081456973.htm",
+      "category": "macro",
+      "module_ids": [
+        "macro"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-11-26T01:58:00+00:00",
+      "source_id": "thanhnien-banking",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "Giá vàng trong nước không thay đổi nhưng chênh lệch giá mua - bán vẫn ở mức kỷ lục khiến người mua lỗ ngay 6 triệu đồng một lượng.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://thanhnien.vn/rss/kinh-te/ngan-hang.rss",
+        "publisher_host": "thanhnien.vn",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-e7ae2c4d4cf857983c7f",
+      "title": "Cách khử mùi ẩm mốc phòng tắm tận gốc theo chuyên gia nhà cửa",
+      "url": "https://dantri.com.vn/bat-dong-san/cach-khu-mui-am-moc-phong-tam-tan-goc-theo-chuyen-gia-nha-cua-20261125161713219.htm",
+      "category": "market",
+      "module_ids": [
+        "market"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-11-26T01:32:00+00:00",
+      "source_id": "dantri-real-estate",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [
+        "pricing"
+      ],
+      "importance": 2,
+      "summary": "(Dân trí) - Độ ẩm đọng lại sau mỗi lần tắm là thủ phạm gây mùi khó chịu. Vài mẹo đơn giản dưới đây sẽ giúp không gian vệ sinh nhà bạn luôn khô ráo, thơm tho suốt cả tuần.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://dantri.com.vn/rss/bat-dong-san.rss",
+        "publisher_host": "dantri.com.vn",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-7609a6b6893adadb0079",
+      "title": "Tình thế hiện tại của sân bay Long Thành",
+      "url": "https://dantri.com.vn/thoi-su/tinh-the-hien-tai-cua-san-bay-long-thanh-20261125235932860.htm",
+      "category": "infrastructure",
+      "module_ids": [
+        "infrastructure"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-11-26T01:07:07+00:00",
+      "source_id": "dantri-current-affairs",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [
+        "infrastructure"
+      ],
+      "importance": 2,
+      "summary": "(Dân trí) - ACV đề xuất lùi thời hạn hoàn thành giai đoạn 1 sân bay Long Thành sang năm 2027-2028. Báo cáo của Cục Hàng không cho thấy khu bay cơ bản sẵn sàng, nhưng nhà ga còn nhiều hệ thống đang kiểm thử.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://dantri.com.vn/rss/thoi-su.rss",
+        "publisher_host": "dantri.com.vn",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-77bc7b045c44a8b18c67",
+      "title": "Hà Nội lần đầu có dự án nhà ở xã hội giá vượt 34 triệu đồng/m2",
+      "url": "https://dantri.com.vn/bat-dong-san/ha-noi-lan-dau-co-du-an-nha-o-xa-hoi-gia-vuot-34-trieu-dongm2-20261125234001068.htm",
+      "category": "market",
+      "module_ids": [
+        "market"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-11-26T00:36:36+00:00",
+      "source_id": "dantri-real-estate",
+      "region_ids": [
+        "ha-noi"
+      ],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [
+        "pricing"
+      ],
+      "importance": 2,
+      "summary": "(Dân trí) - Một dự án nhà ở xã hội tại phường Dương Nội, Hà Nội vừa được công khai giá bán dự kiến 34,28 triệu đồng/m2, mức cao nhất được ghi nhận tại Thủ đô đến nay.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://dantri.com.vn/rss/bat-dong-san.rss",
+        "publisher_host": "dantri.com.vn",
+        "publication_date_from_feed": true
+      }
+    },
     {
       "id": "article-market-rss-16e378eeaf8dd0957f65",
       "title": "Chênh lệch giá vàng thế giới và trong nước tăng lên 22 triệu đồng/lượng",
