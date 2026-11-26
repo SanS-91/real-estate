@@ -1,27 +1,27 @@
 {
   "schema_version": 1,
-  "checked_at": "2026-11-26T14:51:43.951519+00:00",
+  "checked_at": "2026-11-26T19:43:59.776421+00:00",
   "feeds_configured": 16,
-  "feeds_fetched": 16,
-  "accepted_new": 3,
-  "production_written": true,
+  "feeds_fetched": 15,
+  "accepted_new": 0,
+  "production_written": false,
   "article_total": 2395,
   "published_by_module": {
     "market": 0,
     "legal": 0,
-    "infrastructure": 1,
-    "macro": 2
+    "infrastructure": 0,
+    "macro": 0
   },
   "recent_by_module_7d": {
-    "market": 183,
-    "legal": 59,
-    "infrastructure": 95,
-    "macro": 58
+    "market": 181,
+    "legal": 58,
+    "infrastructure": 94,
+    "macro": 57
   },
   "recent_by_module_30d": {
-    "market": 852,
-    "legal": 184,
-    "infrastructure": 378,
+    "market": 850,
+    "legal": 183,
+    "infrastructure": 375,
     "macro": 250
   },
   "latest_published_by_module": {
@@ -33,12 +33,7 @@
   "feed_status": [
     {
       "source_id": "vnexpress-real-estate",
-      "status": "parsed",
-      "feed_items": 50,
-      "new": 0,
-      "skipped": 50,
-      "duplicates": 50,
-      "filtered": 0
+      "status": "fetch-error"
     },
     {
       "source_id": "thanhnien-real-estate",
@@ -53,9 +48,9 @@
       "source_id": "dantri-real-estate",
       "status": "parsed",
       "feed_items": 50,
-      "new": 1,
-      "skipped": 49,
-      "duplicates": 49,
+      "new": 0,
+      "skipped": 50,
+      "duplicates": 50,
       "filtered": 0
     },
     {
@@ -116,19 +111,19 @@
       "source_id": "dantri-business",
       "status": "parsed",
       "feed_items": 50,
-      "new": 1,
-      "skipped": 49,
-      "duplicates": 7,
+      "new": 0,
+      "skipped": 50,
+      "duplicates": 8,
       "filtered": 42
     },
     {
       "source_id": "dantri-current-affairs",
       "status": "parsed",
       "feed_items": 50,
-      "new": 1,
-      "skipped": 49,
+      "new": 0,
+      "skipped": 50,
       "duplicates": 6,
-      "filtered": 43
+      "filtered": 44
     },
     {
       "source_id": "dantri-legal",
@@ -176,5 +171,10 @@
       "filtered": 48
     }
   ],
-  "fetch_errors": []
+  "fetch_errors": [
+    {
+      "source_id": "vnexpress-real-estate",
+      "error": "ReadTimeout"
+    }
+  ]
 }
