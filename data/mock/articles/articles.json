@@ -1,9 +1,61 @@
 {
   "schema_version": 1,
-  "build_id": "market-news-rss-20261126T125133Z",
-  "generated_at": "2026-11-26T12:51:33.883758+00:00",
-  "record_count": 2392,
+  "build_id": "market-news-rss-20261126T145143Z",
+  "generated_at": "2026-11-26T14:51:43.951519+00:00",
+  "record_count": 2395,
   "data": [
+    {
+      "id": "article-market-rss-ddebdb5c44a74ac0ab6b",
+      "title": "Giá vàng lấy lại mốc 3.500 USD/ounce: Kịch bản giảm sâu có xảy ra?",
+      "url": "https://dantri.com.vn/kinh-doanh/gia-vang-lay-lai-moc-3500-usdounce-kich-ban-giam-sau-co-xay-ra-20261125150351991.htm",
+      "category": "macro",
+      "module_ids": [
+        "macro"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-11-26T12:51:32+00:00",
+      "source_id": "dantri-business",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "(Dân trí) - Vừa thủng mốc 3.500 USD/ounce, giá vàng lập tức bật tăng trở lại. Dù vậy, kịch bản kim loại quý lùi sâu về vùng 3.340 USD/ounce vẫn đang khiến giới đầu tư phải cân nhắc thận trọng.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://dantri.com.vn/rss/kinh-doanh.rss",
+        "publisher_host": "dantri.com.vn",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-b716a12766fee079b1c7",
+      "title": "Lâm Đồng rót 445 tỷ đồng xây 8 khu tái định cư đường sắt tốc độ cao",
+      "url": "https://dantri.com.vn/thoi-su/lam-dong-rot-445-ty-dong-xay-8-khu-tai-dinh-cu-duong-sat-toc-do-cao-20261126194111838.htm",
+      "category": "infrastructure",
+      "module_ids": [
+        "infrastructure"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-11-26T12:49:23+00:00",
+      "source_id": "dantri-current-affairs",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [
+        "infrastructure"
+      ],
+      "importance": 2,
+      "summary": "(Dân trí) - Lâm Đồng đang đẩy nhanh thi công 8 khu tái định cư với tổng vốn khoảng 445 tỷ đồng, bố trí chỗ ở cho 1.150 hộ dân bị ảnh hưởng bởi dự án đường sắt tốc độ cao Bắc - Nam.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://dantri.com.vn/rss/thoi-su.rss",
+        "publisher_host": "dantri.com.vn",
+        "publication_date_from_feed": true
+      }
+    },
     {
       "id": "article-market-rss-f4db1498670fc96bff25",
       "title": "TP HCM khen thưởng cán bộ tích cực đi xe buýt, metro",
@@ -141,6 +193,34 @@
       "source_verification": {
         "method": "official-rss",
         "feed_url": "https://dantri.com.vn/rss/thoi-su.rss",
+        "publisher_host": "dantri.com.vn",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-b053afee21269ed77f5d",
+      "title": "Vay 1,5 tỷ mua nhà: Bài toán cân đối dòng tiền giúp người trẻ sớm an cư",
+      "url": "https://dantri.com.vn/bat-dong-san/vay-15-ty-mua-nha-bai-toan-can-doi-dong-tien-giup-nguoi-tre-som-an-cu-20261126121857838.htm",
+      "category": "market",
+      "module_ids": [
+        "macro"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-11-26T08:14:20+00:00",
+      "source_id": "dantri-real-estate",
+      "region_ids": [
+        "hcmc",
+        "ha-noi"
+      ],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "(Dân trí) - Hưởng lãi cố định 6,5%/năm trong 2 năm đầu, khoản vay mua nhà 1,5 tỷ đồng của một người trẻ tại TPHCM sắp chuyển sang lãi thả nổi. Nếu lãi suất ở mức 12-14%/năm, số tiền phải trả mỗi tháng có thể lên gần 20 triệu đồng.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://dantri.com.vn/rss/bat-dong-san.rss",
         "publisher_host": "dantri.com.vn",
         "publication_date_from_feed": true
       }
