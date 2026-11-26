@@ -1,9 +1,121 @@
 {
   "schema_version": 1,
-  "build_id": "market-news-rss-20261126T083812Z",
-  "generated_at": "2026-11-26T08:38:12.682411+00:00",
-  "record_count": 2387,
+  "build_id": "market-news-rss-20261126T105144Z",
+  "generated_at": "2026-11-26T10:51:44.098335+00:00",
+  "record_count": 2391,
   "data": [
+    {
+      "id": "article-market-rss-12cab50ecd17af6f2625",
+      "title": "“Đường sắt tốc độ cao là cơ hội nâng cao năng lực công nghệ của Việt Nam”",
+      "url": "https://dantri.com.vn/thoi-su/duong-sat-toc-do-cao-la-co-hoi-nang-cao-nang-luc-cong-nghe-cua-viet-nam-20261126165648757.htm",
+      "category": "infrastructure",
+      "module_ids": [
+        "infrastructure"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-11-26T10:18:23+00:00",
+      "source_id": "dantri-current-affairs",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [
+        "infrastructure"
+      ],
+      "importance": 2,
+      "summary": "(Dân trí) - Theo bà Nguyễn Thanh Hải, dự án đường sắt tốc độ cao Bắc - Nam vừa là thách thức, vừa là cơ hội rất lớn để nâng cao năng lực khoa học, công nghệ và khả năng làm chủ công nghệ của Việt Nam.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://dantri.com.vn/rss/thoi-su.rss",
+        "publisher_host": "dantri.com.vn",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-f195ccf5c9292b537047",
+      "title": "Vành đai 3 TPHCM có kịp thông xe vào cuối năm nay?",
+      "url": "https://dantri.com.vn/thoi-su/vanh-dai-3-tphcm-co-kip-thong-xe-vao-cuoi-nam-nay-20261126164804531.htm",
+      "category": "infrastructure",
+      "module_ids": [
+        "infrastructure"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-11-26T10:07:22+00:00",
+      "source_id": "dantri-current-affairs",
+      "region_ids": [
+        "hcmc"
+      ],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [
+        "infrastructure"
+      ],
+      "importance": 2,
+      "summary": "(Dân trí) - Trong số 6 dự án giao thông dự kiến thông xe dịp cuối năm nay, Ban Giao thông TPHCM cho biết có 14,7km đường Vành đai 3 đoạn qua Thủ Đức.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://dantri.com.vn/rss/thoi-su.rss",
+        "publisher_host": "dantri.com.vn",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-dce4d6a2dc56aec76410",
+      "title": "Trí Dương Group sắp khai trương nhà mẫu The Sensia tại nội đô thành Vinh",
+      "url": "https://dantri.com.vn/bat-dong-san/tri-duong-group-sap-khai-truong-nha-mau-the-sensia-tai-noi-do-thanh-vinh-20261126150651732.htm",
+      "category": "market",
+      "module_ids": [
+        "market"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-11-26T10:00:00+00:00",
+      "source_id": "dantri-real-estate",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [
+        "supply"
+      ],
+      "importance": 2,
+      "summary": "(Dân trí) - Tọa lạc bên sông Vinh và sông Rào Máng, khu đô thị The Sensia tại phường Trường Vinh, Nghệ An do Trí Dương Group làm chủ đầu tư sẽ ra mắt nhà mẫu với thiết kế gợi dấu ấn kiến trúc Tân Đông Dương vào ngày 28/11.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://dantri.com.vn/rss/bat-dong-san.rss",
+        "publisher_host": "dantri.com.vn",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-6ecbd9de93f4aea885b1",
+      "title": "TPHCM tặng Bằng khen cho cán bộ, công chức thường xuyên đi metro, xe buýt",
+      "url": "https://dantri.com.vn/thoi-su/tphcm-tang-bang-khen-cho-can-bo-cong-chuc-thuong-xuyen-di-metro-xe-buyt-20261126155902383.htm",
+      "category": "infrastructure",
+      "module_ids": [
+        "infrastructure"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-11-26T09:46:46+00:00",
+      "source_id": "dantri-current-affairs",
+      "region_ids": [
+        "hcmc"
+      ],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [
+        "infrastructure"
+      ],
+      "importance": 2,
+      "summary": "(Dân trí) - TPHCM đưa tiêu chí sử dụng phương tiện giao thông công cộng tối thiểu 2 lần/tuần vào đánh giá thi đua hàng năm, đồng thời dự kiến khen thưởng các tập thể, cá nhân có thành tích tiêu biểu.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://dantri.com.vn/rss/thoi-su.rss",
+        "publisher_host": "dantri.com.vn",
+        "publication_date_from_feed": true
+      }
+    },
     {
       "id": "article-market-rss-7812f8548b13f7c7014c",
       "title": "Vay 1,5 tỷ mua nhà, người trẻ lo trả nợ gần 20 triệu đồng/tháng khi lãi thả nổi",
