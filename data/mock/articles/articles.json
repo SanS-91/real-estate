@@ -1,9 +1,221 @@
 {
   "schema_version": 1,
-  "build_id": "market-news-rss-20261127T065200Z",
-  "generated_at": "2026-11-27T06:52:00.523955+00:00",
-  "record_count": 2421,
+  "build_id": "market-news-rss-20261127T084900Z",
+  "generated_at": "2026-11-27T08:49:00.277388+00:00",
+  "record_count": 2429,
   "data": [
+    {
+      "id": "article-market-rss-6884d51735c03bed3ea3",
+      "title": "Chủ tịch An Giang kiểm tra 8 dự án trọng điểm phục vụ APEC 2027 ở Phú Quốc",
+      "url": "https://dantri.com.vn/thoi-su/chu-tich-an-giang-kiem-tra-8-du-an-trong-diem-phuc-vu-apec-2027-o-phu-quoc-20261127144309457.htm",
+      "category": "market",
+      "module_ids": [
+        "market"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-11-27T08:10:44+00:00",
+      "source_id": "dantri-current-affairs",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [
+        "infrastructure"
+      ],
+      "importance": 2,
+      "summary": "(Dân trí) - Kiểm tra 8 dự án trọng điểm phục vụ APEC 2027 tại Phú Quốc, Chủ tịch UBND tỉnh An Giang yêu cầu hoàn thành dự án ngầm hóa hạ tầng kỹ thuật khu vực An Thới trước ngày 25/12.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://dantri.com.vn/rss/thoi-su.rss",
+        "publisher_host": "dantri.com.vn",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-d9bec619cf2e1638bf12",
+      "title": "Công viên 23/9 được rào chắn, chuẩn bị xây ga đường sắt Bến Thành - Cần Giờ",
+      "url": "https://dantri.com.vn/dt360/cong-vien-239-duoc-rao-chan-chuan-bi-xay-ga-duong-sat-ben-thanh-can-gio-20261127143503307.htm",
+      "category": "infrastructure",
+      "module_ids": [
+        "infrastructure"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-11-27T08:09:06+00:00",
+      "source_id": "dantri-current-affairs",
+      "region_ids": [
+        "hcmc"
+      ],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [
+        "infrastructure"
+      ],
+      "importance": 2,
+      "summary": "(Dân trí) - Ghi nhận sáng 27/11, hàng rào tôn được bao quanh công viên 23/9 (TPHCM) để xây nhà ga tuyến đường sắt Bến Thành - Cần Giờ.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://dantri.com.vn/rss/thoi-su.rss",
+        "publisher_host": "dantri.com.vn",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-8d906886ee6d20bbd9f4",
+      "title": "VinEnergo khởi công dự án điện mặt trời tại Philippines",
+      "url": "https://vnexpress.net/vinenergo-khoi-cong-du-an-dien-mat-troi-tai-philippines-5149650.html",
+      "category": "market",
+      "module_ids": [
+        "market",
+        "infrastructure"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-11-27T08:00:00+00:00",
+      "source_id": "vnexpress-economy",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "Nhà máy điện mặt trời có công suất 126 MWp là bước đi cụ thể của VinEnergo trong kế hoạch phát triển năng lượng sạch ra thị trường nước ngoài.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://vnexpress.net/rss/kinh-doanh.rss",
+        "publisher_host": "vnexpress.net",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-edd2616c66dece0ccd4e",
+      "title": "Hạ giá hơn 1.500 tỷ đồng, sân Chi Lăng 8 lần đấu giá vẫn chưa có người mua",
+      "url": "https://dantri.com.vn/bat-dong-san/ha-gia-hon-1500-ty-dong-san-chi-lang-8-lan-dau-gia-van-chua-co-nguoi-mua-20261127113335969.htm",
+      "category": "market",
+      "module_ids": [
+        "market"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-11-27T07:50:39+00:00",
+      "source_id": "dantri-real-estate",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "(Dân trí) - Đã giảm tới 1.516 tỷ đồng so với mức khởi điểm hồi tháng 4 nhưng khu đất hơn 55.000 m2 tại Sân vận động Chi Lăng (Đà Nẵng) vẫn không có người đăng ký mua trong phiên đấu giá ngày 27/11.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://dantri.com.vn/rss/bat-dong-san.rss",
+        "publisher_host": "dantri.com.vn",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-89c8cacc78b3ce7f85be",
+      "title": "Bất động sản ở trung tâm TPHCM của bà Trương Mỹ Lan giảm giá hơn 34%",
+      "url": "https://dantri.com.vn/bat-dong-san/bat-dong-san-o-trung-tam-tphcm-cua-ba-truong-my-lan-giam-gia-hon-34-20261127134212214.htm",
+      "category": "market",
+      "module_ids": [
+        "market"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-11-27T07:06:04+00:00",
+      "source_id": "dantri-real-estate",
+      "region_ids": [
+        "hcmc"
+      ],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "(Dân trí) - Sau 4 lần đấu giá bất thành, nhà đất tại số 12-14 Nguyễn Thiệp liên quan bà Trương Mỹ Lan được giảm giá còn hơn 17,6 tỷ đồng, thấp hơn 34,4% so với mức khởi điểm ban đầu.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://dantri.com.vn/rss/bat-dong-san.rss",
+        "publisher_host": "dantri.com.vn",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-ec3ea8596af6de331fee",
+      "title": "Lợi thế tầm nhìn, tiện ích đa tầng tại Sun Glory Residence",
+      "url": "https://vnexpress.net/loi-the-tam-nhin-tien-ich-da-tang-tai-sun-glory-residence-5149581.html",
+      "category": "market",
+      "module_ids": [
+        "market"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-11-27T07:00:00+00:00",
+      "source_id": "vnexpress-real-estate",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [
+        "infrastructure"
+      ],
+      "importance": 2,
+      "summary": "Sun Glory Residence phát huy lợi thế tầm nhìn, sự riêng tư của căn hộ tầng cao, kết hợp hệ tiện ích đa tầng và hạ tầng kỹ thuật đồng bộ tại Vinh, Nghệ An.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://vnexpress.net/rss/bat-dong-san.rss",
+        "publisher_host": "vnexpress.net",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-c8a621f55aad89918d0f",
+      "title": "Khởi công đường nối Tây Ninh với Đồng Tháp Mười",
+      "url": "https://thanhnien.vn/khoi-cong-duong-noi-tay-ninh-voi-dong-thap-muoi-185261127115419759.htm",
+      "category": "infrastructure",
+      "module_ids": [
+        "infrastructure"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-11-27T06:57:00+00:00",
+      "source_id": "thanhnien-policy",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "Dự án đường Tân An - Bình Hiệp dài 62,7 km, với tổng vốn đầu tư 9.318 tỉ đồng, đã được UBND tỉnh Tây Ninh tổ chức khởi công.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://thanhnien.vn/rss/kinh-te/chinh-sach-phat-trien.rss",
+        "publisher_host": "thanhnien.vn",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-7241ec5ee3f3fef4ee2e",
+      "title": "VinEnergo khởi công dự án điện mặt trời 126MWp tại Philippines",
+      "url": "https://dantri.com.vn/kinh-doanh/vinenergo-khoi-cong-du-an-dien-mat-troi-126mwp-tai-philippines-20261127122537557.htm",
+      "category": "market",
+      "module_ids": [
+        "market",
+        "infrastructure"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-11-27T06:37:46+00:00",
+      "source_id": "dantri-business",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "(Dân trí) - Ngày 27/11, VinEnergo khởi công dự án nhà máy điện mặt trời công suất 126MWp tại thành phố Sagay, tỉnh Negros Occidental, Philippines.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://dantri.com.vn/rss/kinh-doanh.rss",
+        "publisher_host": "dantri.com.vn",
+        "publication_date_from_feed": true
+      }
+    },
     {
       "id": "article-market-rss-8f88d13d4eb1a4c9d136",
       "title": "3 lô \"đất vàng\" Thủ Thiêm không có người tham gia đấu giá",
