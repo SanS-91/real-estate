@@ -1,9 +1,167 @@
 {
   "schema_version": 1,
-  "build_id": "market-news-rss-20261126T145143Z",
-  "generated_at": "2026-11-26T14:51:43.951519+00:00",
-  "record_count": 2395,
+  "build_id": "market-news-rss-20261127T005141Z",
+  "generated_at": "2026-11-27T00:51:41.351576+00:00",
+  "record_count": 2401,
   "data": [
+    {
+      "id": "article-market-rss-23d9195724416d8f301d",
+      "title": "Nvidia dừng giao máy chủ AI tới Đông Nam Á: Các dự án tỷ USD ngưng trệ",
+      "url": "https://dantri.com.vn/kinh-doanh/nvidia-dung-giao-may-chu-ai-toi-dong-nam-a-cac-du-an-ty-usd-ngung-tre-20261127052427643.htm",
+      "category": "market",
+      "module_ids": [
+        "market"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-11-27T00:26:40+00:00",
+      "source_id": "dantri-business",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "(Dân trí) - Động thái dừng giao máy chủ tích hợp chip AI của Nvidia tới 4 nước Đông Nam Á đang khiến các dự án trung tâm dữ liệu hàng tỷ USD chững lại, thị trường đối mặt bài toán tuân thủ quy định mới.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://dantri.com.vn/rss/kinh-doanh.rss",
+        "publisher_host": "dantri.com.vn",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-8a61344bcb82ce90ae3b",
+      "title": "Giá vàng thế giới giảm hơn một phần ba từ vùng đỉnh",
+      "url": "https://dantri.com.vn/kinh-doanh/gia-vang-the-gioi-giam-hon-mot-phan-ba-tu-vung-dinh-20261126235039002.htm",
+      "category": "macro",
+      "module_ids": [
+        "macro"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-11-26T23:47:31+00:00",
+      "source_id": "dantri-business",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "(Dân trí) - Giá vàng miếng SJC tăng lên 134,5 triệu đồng/lượng, trong khi vàng thế giới tiếp tục giảm, mất hơn 1/3 giá trị so với đỉnh lịch sử hồi tháng 1.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://dantri.com.vn/rss/kinh-doanh.rss",
+        "publisher_host": "dantri.com.vn",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-f1b2715c43e2421e801d",
+      "title": "Quy hoạch siêu đô thị TPHCM 100 năm: Dòng vốn sẽ chảy vào đâu?",
+      "url": "https://dantri.com.vn/kinh-doanh/quy-hoach-sieu-do-thi-tphcm-100-nam-dong-von-se-chay-vao-dau-20261126225253553.htm",
+      "category": "market",
+      "module_ids": [
+        "market"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-11-26T23:00:00+00:00",
+      "source_id": "dantri-business",
+      "region_ids": [
+        "hcmc"
+      ],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [
+        "legal"
+      ],
+      "importance": 2,
+      "summary": "(Dân trí) - Việc quan trọng nhất sau khi TPHCM công bố quy hoạch là chuyển từ bản đồ phát triển sang danh mục cơ hội đầu tư có thể thực hiện; đất đủ điều kiện giao hay cho thuê chưa, quy hoạch chi tiết thế nào...",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://dantri.com.vn/rss/kinh-doanh.rss",
+        "publisher_host": "dantri.com.vn",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-e9580f79151fd86ee4b3",
+      "title": "Nhà ở xã hội: Minh bạch thông tin để triệt tiêu lừa đảo",
+      "url": "https://thanhnien.vn/nha-o-xa-hoi-minh-bach-thong-tin-de-triet-tieu-lua-dao-185261126232040085.htm",
+      "category": "market",
+      "module_ids": [
+        "market"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-11-26T23:00:00+00:00",
+      "source_id": "thanhnien-real-estate",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "Nhà ở xã hội được xây dựng để hỗ trợ những người gặp khó khăn về nhà ở nhưng lại trở thành mảnh đất màu mỡ cho kẻ xấu trục lợi. Đau lòng hơn, những người nghèo đang chật vật tìm một mái nhà để an cư lại là người hứng chịu thiệt hại nặng nề khi bị lừa hàng trăm triệu đồng.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://thanhnien.vn/rss/kinh-te/dia-oc.rss",
+        "publisher_host": "thanhnien.vn",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-46d170556d109e551928",
+      "title": "Metro TP HCM đông nghịt khách giờ cao điểm",
+      "url": "https://vnexpress.net/metro-tp-hcm-dong-nghit-khach-gio-cao-diem-5149216.html",
+      "category": "infrastructure",
+      "module_ids": [
+        "infrastructure"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-11-26T22:00:00+00:00",
+      "source_id": "vnexpress-current-affairs",
+      "region_ids": [
+        "hcmc"
+      ],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [
+        "infrastructure"
+      ],
+      "importance": 2,
+      "summary": "Sau gần hai năm vận hành, hành khách xếp hàng dài chờ lên tàu, các toa metro chật kín người vào giờ cao điểm, nhiều bãi gửi xe kín chỗ.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://vnexpress.net/rss/thoi-su.rss",
+        "publisher_host": "vnexpress.net",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-eb2aa4714d67ceddd675",
+      "title": "Căn nhà giữa rừng với bốn mặt tường kính trong suốt",
+      "url": "https://vnexpress.net/can-nha-giua-rung-voi-bon-mat-tuong-kinh-trong-suot-5149209.html",
+      "category": "market",
+      "module_ids": [
+        "market"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-11-26T19:37:03+00:00",
+      "source_id": "vnexpress-real-estate",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "Thiết kế căn nhà hướng đến trải nghiệm sống giữa thiên nhiên, nơi cảnh quan và ánh sáng thay đổi diện mạo không gian nội thất theo từng thời điểm trong ngày.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://vnexpress.net/rss/bat-dong-san.rss",
+        "publisher_host": "vnexpress.net",
+        "publication_date_from_feed": true
+      }
+    },
     {
       "id": "article-market-rss-ddebdb5c44a74ac0ab6b",
       "title": "Giá vàng lấy lại mốc 3.500 USD/ounce: Kịch bản giảm sâu có xảy ra?",
