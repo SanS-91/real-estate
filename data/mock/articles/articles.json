@@ -1,9 +1,117 @@
 {
   "schema_version": 1,
-  "build_id": "market-news-rss-20261127T084900Z",
-  "generated_at": "2026-11-27T08:49:00.277388+00:00",
-  "record_count": 2429,
+  "build_id": "market-news-rss-20261127T105135Z",
+  "generated_at": "2026-11-27T10:51:35.009770+00:00",
+  "record_count": 2433,
   "data": [
+    {
+      "id": "article-market-rss-bc97994766db691483fa",
+      "title": "Chỉ 1 trong 4 lô đất ở Thủ Thiêm được đấu giá thành công",
+      "url": "https://thanhnien.vn/chi-1-trong-4-lo-dat-o-thu-thiem-duoc-dau-gia-thanh-cong-185261127171218962.htm",
+      "category": "market",
+      "module_ids": [
+        "market"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-11-27T10:31:00+00:00",
+      "source_id": "thanhnien-real-estate",
+      "region_ids": [
+        "hcmc"
+      ],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "Ngày 27.11, nguồn tin từ Trung tâm dịch vụ đấu giá tài sản TPHCM cho biết, chỉ có 1 trong tổng số 4 lô đất được đưa ra đấu giá trong đợt này có người tham gia đấu giá thành công, với mức giá trúng tăng 27 tỉ đồng so với giá khởi điểm.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://thanhnien.vn/rss/kinh-te/dia-oc.rss",
+        "publisher_host": "thanhnien.vn",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-044a61bae38559f77b1d",
+      "title": "Người đàn ông tử vong sau tai nạn trên quốc lộ xuống cấp ở Tây Ninh",
+      "url": "https://dantri.com.vn/thoi-su/nguoi-dan-ong-tu-vong-sau-tai-nan-tren-quoc-lo-xuong-cap-o-tay-ninh-20261127162445006.htm",
+      "category": "infrastructure",
+      "module_ids": [
+        "infrastructure"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-11-27T09:46:32+00:00",
+      "source_id": "dantri-current-affairs",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [
+        "infrastructure"
+      ],
+      "importance": 2,
+      "summary": "(Dân trí) - Cú va chạm với xe tải trên quốc lộ 62, đoạn qua xã Mỹ An (Tây Ninh) khiến người đàn ông 45 tuổi tử vong. Đây là tuyến đường đang xuống cấp nghiêm trọng ở Tây Ninh.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://dantri.com.vn/rss/thoi-su.rss",
+        "publisher_host": "dantri.com.vn",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-c274c7a807ac74731db6",
+      "title": "CPTPP khởi động đàm phán gia nhập với UAE, Indonesia và Philippines",
+      "url": "https://dantri.com.vn/kinh-doanh/cptpp-khoi-dong-dam-phan-gia-nhap-voi-uae-indonesia-va-philippines-20261127154514700.htm",
+      "category": "market",
+      "module_ids": [
+        "market"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-11-27T09:34:08+00:00",
+      "source_id": "dantri-business",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [
+        "pricing"
+      ],
+      "importance": 2,
+      "summary": "(Dân trí) - Việt Nam cùng các thành viên CPTPP nhất trí khởi động đàm phán gia nhập với UAE, Indonesia và Philippines, đồng thời thúc đẩy sớm kết thúc đàm phán với Uruguay.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://dantri.com.vn/rss/kinh-doanh.rss",
+        "publisher_host": "dantri.com.vn",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-6a65ea730c3f0614d566",
+      "title": "Tiện ích tại Bcons Aria hướng tới nhu cầu an cư",
+      "url": "https://vnexpress.net/tien-ich-tai-bcons-aria-huong-toi-nhu-cau-an-cu-5149641.html",
+      "category": "market",
+      "module_ids": [
+        "infrastructure"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-11-27T09:00:00+00:00",
+      "source_id": "vnexpress-real-estate",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [
+        "infrastructure"
+      ],
+      "importance": 2,
+      "summary": "Bcons Aria nằm gần trường học, trung tâm thương mại, công viên và tuyến metro số 1, đáp ứng nhu cầu học tập, mua sắm, giải trí và di chuyển hàng ngày của cư dân.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://vnexpress.net/rss/bat-dong-san.rss",
+        "publisher_host": "vnexpress.net",
+        "publication_date_from_feed": true
+      }
+    },
     {
       "id": "article-market-rss-6884d51735c03bed3ea3",
       "title": "Chủ tịch An Giang kiểm tra 8 dự án trọng điểm phục vụ APEC 2027 ở Phú Quốc",
