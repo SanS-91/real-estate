@@ -1,9 +1,244 @@
 {
   "schema_version": 1,
-  "build_id": "market-news-rss-20261127T025144Z",
-  "generated_at": "2026-11-27T02:51:44.021195+00:00",
-  "record_count": 2407,
+  "build_id": "market-news-rss-20261127T045301Z",
+  "generated_at": "2026-11-27T04:53:01.172983+00:00",
+  "record_count": 2416,
   "data": [
+    {
+      "id": "article-market-rss-743e5b10c321be421941",
+      "title": "Căn hộ cho thuê ngắn hạn TP HCM nâng chuẩn 'đón sóng' APEC",
+      "url": "https://vnexpress.net/can-ho-cho-thue-ngan-han-tp-hcm-nang-chuan-don-song-apec-5149168.html",
+      "category": "market",
+      "module_ids": [
+        "market"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-11-27T03:51:00+00:00",
+      "source_id": "vnexpress-real-estate",
+      "region_ids": [
+        "hcmc"
+      ],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "Anh Trần Minh Đức, chủ căn hộ cho thuê ngắn hạn tại phường Sài Gòn, TP HCM đang cải tạo nội thất, lắp thêm bình chữa cháy, chuẩn hóa quy trình để đón khách APEC.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://vnexpress.net/rss/bat-dong-san.rss",
+        "publisher_host": "vnexpress.net",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-66a12e443697abbe4c5e",
+      "title": "Sai lầm cần tránh sau khi vệ sinh các thiết bị inox nhà bếp",
+      "url": "https://dantri.com.vn/bat-dong-san/sai-lam-can-tranh-sau-khi-ve-sinh-cac-thiet-bi-inox-nha-bep-20261125162740248.htm",
+      "category": "market",
+      "module_ids": [
+        "market"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-11-27T03:30:19+00:00",
+      "source_id": "dantri-real-estate",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "(Dân trí) - Nhiều người tốn công cọ rửa tủ lạnh, lò nướng hay máy hút mùi nhưng lại bỏ qua bước quyết định, khiến bề mặt inox loang lổ vết nước và mất hẳn vẻ sang trọng vốn có.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://dantri.com.vn/rss/bat-dong-san.rss",
+        "publisher_host": "dantri.com.vn",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-96e134199a0bd44ca186",
+      "title": "Nhà ở xã hội sẽ khó tăng giá mạnh sau 5 năm dù được bán theo thị trường",
+      "url": "https://vnexpress.net/nha-o-xa-hoi-se-kho-tang-gia-manh-sau-5-nam-du-duoc-ban-theo-thi-truong-5147867.html",
+      "category": "market",
+      "module_ids": [
+        "market"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-11-27T03:28:09+00:00",
+      "source_id": "vnexpress-real-estate",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "Sau 5 năm sở hữu, nhà ở xã hội được phép chuyển nhượng theo giá thị trường nhưng giới hạn người mua khiến phân khúc này khó tăng giá mạnh, theo chuyên gia.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://vnexpress.net/rss/bat-dong-san.rss",
+        "publisher_host": "vnexpress.net",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-7060d782455960c1dfc0",
+      "title": "Thị trường chứng khoán Việt Nam sau 30 năm: Vốn hóa vượt 82% GDP",
+      "url": "https://dantri.com.vn/kinh-doanh/thi-truong-chung-khoan-viet-nam-sau-30-nam-von-hoa-vuot-82-gdp-20261127095212288.htm",
+      "category": "macro",
+      "module_ids": [
+        "macro"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-11-27T03:23:53+00:00",
+      "source_id": "dantri-business",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "(Dân trí) - Sau 30 năm hình thành và phát triển, thị trường chứng khoán Việt Nam đạt vốn hóa gần 10,8 triệu tỷ đồng, tương đương hơn 82% GDP năm 2025, với trên 14 triệu tài khoản nhà đầu tư.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://dantri.com.vn/rss/kinh-doanh.rss",
+        "publisher_host": "dantri.com.vn",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-51e45888555ee3a26043",
+      "title": "Lợi thế gần cảnh quan tự nhiên của Qtopia Phước Hải",
+      "url": "https://vnexpress.net/loi-the-gan-canh-quan-tu-nhien-cua-qtopia-phuoc-hai-5149418.html",
+      "category": "market",
+      "module_ids": [
+        "market"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-11-27T03:15:00+00:00",
+      "source_id": "vnexpress-real-estate",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [
+        "legal"
+      ],
+      "importance": 2,
+      "summary": "Vị trí hướng biển Phước Hải, gần núi rừng Minh Đạm cùng quy hoạch mật độ xây dựng thấp giúp Qtopia Phước Hải phát triển mô hình nghỉ dưỡng \"thành phố cuối tuần\" gần gũi thiên nhiên.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://vnexpress.net/rss/bat-dong-san.rss",
+        "publisher_host": "vnexpress.net",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-4cf94f17958ad94065bd",
+      "title": "Ba lô đất Thủ Thiêm không có người tham gia đấu giá",
+      "url": "https://vnexpress.net/ba-lo-dat-thu-thiem-khong-co-nguoi-tham-gia-dau-gia-5149474.html",
+      "category": "market",
+      "module_ids": [
+        "market"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-11-27T03:00:51+00:00",
+      "source_id": "vnexpress-real-estate",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "Ba lô đất 3-5, 3-8 và 3-12 tại Thủ Thiêm không có hồ sơ tham dự đấu giá, chỉ lô 3-9 lên sàn trực tuyến chiều nay.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://vnexpress.net/rss/bat-dong-san.rss",
+        "publisher_host": "vnexpress.net",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-ef723e23f896f1711a20",
+      "title": "Tổ hợp cao tầng gần 50 ha giáp sông trên đảo Vũ Yên, Hải Phòng",
+      "url": "https://vnexpress.net/to-hop-cao-tang-gan-50-ha-giap-song-tren-dao-vu-yen-hai-phong-5149423.html",
+      "category": "market",
+      "module_ids": [
+        "market"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-11-27T03:00:00+00:00",
+      "source_id": "vnexpress-real-estate",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "The Harbor Skyline do MIK Group đầu tư trên đảo Vũ Yên, kết hợp căn hộ cao tầng với cảnh quan sông nước, hệ tiện ích đa dạng, hướng đến nhu cầu của nhiều nhóm cư dân.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://vnexpress.net/rss/bat-dong-san.rss",
+        "publisher_host": "vnexpress.net",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-d19e1dcf8c0cd8e07d7d",
+      "title": "Quy hoạch TPHCM 100 năm không dồn hết khách quốc tế về sân bay Long Thành",
+      "url": "https://dantri.com.vn/thoi-su/quy-hoach-tphcm-100-nam-khong-don-het-khach-quoc-te-ve-san-bay-long-thanh-20261126174928415.htm",
+      "category": "market",
+      "module_ids": [
+        "market",
+        "infrastructure"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-11-27T02:29:00+00:00",
+      "source_id": "dantri-current-affairs",
+      "region_ids": [
+        "hcmc"
+      ],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [
+        "legal",
+        "infrastructure"
+      ],
+      "importance": 2,
+      "summary": "(Dân trí) - Quy hoạch tổng thể TPHCM tầm nhìn 100 năm xác định đến năm 2050, sân bay Tân Sơn Nhất là một trong hai trung tâm hàng không trung chuyển quốc tế lớn nhất cả nước.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://dantri.com.vn/rss/thoi-su.rss",
+        "publisher_host": "dantri.com.vn",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-29231770010a177b1718",
+      "title": "Nghệ An cho thuê 29 khu đất, có nơi giá khởi điểm hơn 400 triệu đồng/năm",
+      "url": "https://dantri.com.vn/bat-dong-san/nghe-an-cho-thue-29-khu-dat-co-noi-gia-khoi-diem-hon-400-trieu-dongnam-20261127063635256.htm",
+      "category": "market",
+      "module_ids": [
+        "market"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-11-27T02:15:06+00:00",
+      "source_id": "dantri-real-estate",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "(Dân trí) - Khu đất có các mức giá cho thuê khác nhau, tùy vào mục đích sử dụng của người thuê và địa điểm. Trong đó, khu đất giá cho thuê khởi điểm cao nhất lên tới hơn 400 triệu đồng/năm.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://dantri.com.vn/rss/bat-dong-san.rss",
+        "publisher_host": "dantri.com.vn",
+        "publication_date_from_feed": true
+      }
+    },
     {
       "id": "article-market-rss-4df44aa175961ce1d2a9",
       "title": "Tiềm năng cho thuê căn hộ hàng hiệu tại trung tâm đô thị",
