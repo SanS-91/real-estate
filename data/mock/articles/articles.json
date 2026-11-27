@@ -1,9 +1,136 @@
 {
   "schema_version": 1,
-  "build_id": "market-news-rss-20261127T005141Z",
-  "generated_at": "2026-11-27T00:51:41.351576+00:00",
-  "record_count": 2401,
+  "build_id": "market-news-rss-20261127T025144Z",
+  "generated_at": "2026-11-27T02:51:44.021195+00:00",
+  "record_count": 2407,
   "data": [
+    {
+      "id": "article-market-rss-4df44aa175961ce1d2a9",
+      "title": "Tiềm năng cho thuê căn hộ hàng hiệu tại trung tâm đô thị",
+      "url": "https://vnexpress.net/tiem-nang-cho-thue-can-ho-hang-hieu-tai-trung-tam-do-thi-5149104.html",
+      "category": "market",
+      "module_ids": [
+        "market"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-11-27T02:00:00+00:00",
+      "source_id": "vnexpress-real-estate",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "Vị trí trung tâm, chất lượng vận hành và dịch vụ theo tiêu chuẩn quốc tế giúp căn hộ hàng hiệu tiếp cận nhóm khách thuê có khả năng chi trả cao.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://vnexpress.net/rss/bat-dong-san.rss",
+        "publisher_host": "vnexpress.net",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-96737570e86b41805c1a",
+      "title": "Giá USD hôm nay 27.11.2026: Tỷ giá trung tâm tăng lên mức cao nhất",
+      "url": "https://thanhnien.vn/gia-usd-hom-nay-27112026-ty-gia-trung-tam-tang-len-muc-cao-nhat-185261127084603804.htm",
+      "category": "macro",
+      "module_ids": [
+        "macro"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-11-27T01:50:00+00:00",
+      "source_id": "thanhnien-banking",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "Ngân hàng Nhà nước tăng tỷ giá trung tâm lên mức cao nhất từ trước đến nay. Giá USD tại các ngân hàng thương mại tăng giảm trái chiều.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://thanhnien.vn/rss/kinh-te/ngan-hang.rss",
+        "publisher_host": "thanhnien.vn",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-3a2e44f08dfa9c1611d5",
+      "title": "Giá vàng hôm nay 27.11.2026: Quay đầu giảm xuống sát 140 triệu đồng",
+      "url": "https://thanhnien.vn/gia-vang-hom-nay-27112026-quay-dau-giam-xuong-sat-140-trieu-dong-185261127081817052.htm",
+      "category": "macro",
+      "module_ids": [
+        "macro"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-11-27T01:49:00+00:00",
+      "source_id": "thanhnien-banking",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "Giá vàng trong nước lẫn thế giới quay đầu giảm khi nhà đầu tư tiếp tục kỳ vọng rằng Cục Dự trữ liên bang Mỹ (Fed) sẽ nâng lãi suất.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://thanhnien.vn/rss/kinh-te/ngan-hang.rss",
+        "publisher_host": "thanhnien.vn",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-daedc7a7ea5007dac489",
+      "title": "Cầu cảnh quan 100 tỷ giữa đô thị 50 ha phía Đông Bắc TP HCM",
+      "url": "https://vnexpress.net/cau-canh-quan-100-ty-giua-do-thi-50-ha-phia-dong-bac-tp-hcm-5149294.html",
+      "category": "market",
+      "module_ids": [
+        "market"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-11-27T01:00:00+00:00",
+      "source_id": "vnexpress-real-estate",
+      "region_ids": [
+        "hcmc"
+      ],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "Cầu Kén Vàng có vốn đầu tư 100 tỷ đồng, kỳ vọng trở thành điểm nhấn cảnh quan, hút dòng người đến đô thị One Era của Kim Oanh Group.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://vnexpress.net/rss/bat-dong-san.rss",
+        "publisher_host": "vnexpress.net",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-fc67adea2c3426c367c9",
+      "title": "Nguy cơ Fed duy trì lãi suất cao kéo dài do áp lực thuế quan mới",
+      "url": "https://dantri.com.vn/kinh-doanh/nguy-co-fed-duy-tri-lai-suat-cao-keo-dai-do-ap-luc-thue-quan-moi-20261127050510698.htm",
+      "category": "macro",
+      "module_ids": [
+        "macro"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-11-27T00:56:14+00:00",
+      "source_id": "dantri-business",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "(Dân trí) - Đề xuất áp thuế nhập khẩu mới đe dọa gia tăng lạm phát, khiến Fed nhiều khả năng phải ghì chặt lãi suất ở mức cao thay vì nới lỏng tiền tệ như kỳ vọng.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://dantri.com.vn/rss/kinh-doanh.rss",
+        "publisher_host": "dantri.com.vn",
+        "publication_date_from_feed": true
+      }
+    },
     {
       "id": "article-market-rss-23d9195724416d8f301d",
       "title": "Nvidia dừng giao máy chủ AI tới Đông Nam Á: Các dự án tỷ USD ngưng trệ",
@@ -105,6 +232,35 @@
         "method": "official-rss",
         "feed_url": "https://thanhnien.vn/rss/kinh-te/dia-oc.rss",
         "publisher_host": "thanhnien.vn",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-825bb1d81bbd41b7c407",
+      "title": "Metro TP HCM đông nghịt khách",
+      "url": "https://vnexpress.net/metro-tp-hcm-dong-nghit-khach-5149216.html",
+      "category": "infrastructure",
+      "module_ids": [
+        "infrastructure"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-11-26T22:00:00+00:00",
+      "source_id": "vnexpress-current-affairs",
+      "region_ids": [
+        "hcmc"
+      ],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [
+        "infrastructure"
+      ],
+      "importance": 2,
+      "summary": "Sau gần hai năm vận hành, hành khách xếp hàng dài chờ lên tàu, các toa metro chật kín người vào giờ cao điểm, nhiều bãi gửi xe kín chỗ.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://vnexpress.net/rss/thoi-su.rss",
+        "publisher_host": "vnexpress.net",
         "publication_date_from_feed": true
       }
     },
