@@ -1,9 +1,119 @@
 {
   "schema_version": 1,
-  "build_id": "market-news-rss-20261127T045301Z",
-  "generated_at": "2026-11-27T04:53:01.172983+00:00",
-  "record_count": 2416,
+  "build_id": "market-news-rss-20261127T065200Z",
+  "generated_at": "2026-11-27T06:52:00.523955+00:00",
+  "record_count": 2421,
   "data": [
+    {
+      "id": "article-market-rss-8f88d13d4eb1a4c9d136",
+      "title": "3 lô \"đất vàng\" Thủ Thiêm không có người tham gia đấu giá",
+      "url": "https://dantri.com.vn/bat-dong-san/3-lo-dat-vang-thu-thiem-khong-co-nguoi-tham-gia-dau-gia-20261127102604151.htm",
+      "category": "market",
+      "module_ids": [
+        "market"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-11-27T05:16:39+00:00",
+      "source_id": "dantri-real-estate",
+      "region_ids": [
+        "hcmc"
+      ],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "(Dân trí) - Trong 4 lô đất tại Khu đô thị mới Thủ Thiêm (TPHCM) được đưa ra đấu giá ngày 27/11, có 3 lô không có nhà đầu tư đăng ký. Lô còn lại có giá khởi điểm hơn 1.744 tỷ đồng.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://dantri.com.vn/rss/bat-dong-san.rss",
+        "publisher_host": "dantri.com.vn",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-8e4e6f9059e729e50c9d",
+      "title": "7 trường hợp bị Nhà nước thu hồi đất từ ngày 1/7/2027",
+      "url": "https://dantri.com.vn/bat-dong-san/7-truong-hop-bi-nha-nuoc-thu-hoi-dat-tu-ngay-172027-20261127110055232.htm",
+      "category": "market",
+      "module_ids": [
+        "legal"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-11-27T04:55:01+00:00",
+      "source_id": "dantri-real-estate",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [
+        "legal"
+      ],
+      "importance": 2,
+      "summary": "(Dân trí) - Luật Đất đai mới quy định 7 trường hợp thu hồi đất do vi phạm pháp luật. Đất nông nghiệp không sử dụng liên tục trong 24 tháng có thể bị thu hồi nếu người sử dụng không khắc phục vi phạm.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://dantri.com.vn/rss/bat-dong-san.rss",
+        "publisher_host": "dantri.com.vn",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-919b0d3fabc6f2818865",
+      "title": "Tây Ninh khởi công đường hơn 9.300 tỷ đồng kết nối vùng Đồng Tháp Mười",
+      "url": "https://dantri.com.vn/thoi-su/tay-ninh-khoi-cong-duong-hon-9300-ty-dong-ket-noi-vung-dong-thap-muoi-20261127113121527.htm",
+      "category": "infrastructure",
+      "module_ids": [
+        "infrastructure"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-11-27T04:50:34+00:00",
+      "source_id": "dantri-current-affairs",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "(Dân trí) - Tuyến đường Tân An - Bình Hiệp dài 62,7km, có tổng vốn đầu tư 9.318 tỷ đồng, kết nối vùng Đồng Tháp Mười, kỳ vọng tạo động lực phát triển liên vùng.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://dantri.com.vn/rss/thoi-su.rss",
+        "publisher_host": "dantri.com.vn",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-05acad1ab6aaec998d54",
+      "title": "Phó Thủ tướng chỉ đạo về Tổ hợp Công nghiệp đường sắt",
+      "url": "https://dantri.com.vn/bat-dong-san/pho-thu-tuong-chi-dao-ve-to-hop-cong-nghiep-duong-sat-20261127112140206.htm",
+      "category": "market",
+      "module_ids": [
+        "market",
+        "infrastructure"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-11-27T04:28:59+00:00",
+      "source_id": "dantri-real-estate",
+      "region_ids": [
+        "ha-noi"
+      ],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [
+        "legal",
+        "infrastructure"
+      ],
+      "importance": 2,
+      "summary": "(Dân trí) - Phó Thủ tướng Thường trực Phạm Gia Túc yêu cầu Bộ Xây dựng phối hợp với Hà Nội thống nhất phương án đầu tư khu công nghiệp đường sắt, bảo đảm quy hoạch và phục vụ chung các loại hình đường sắt.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://dantri.com.vn/rss/bat-dong-san.rss",
+        "publisher_host": "dantri.com.vn",
+        "publication_date_from_feed": true
+      }
+    },
     {
       "id": "article-market-rss-743e5b10c321be421941",
       "title": "Căn hộ cho thuê ngắn hạn TP HCM nâng chuẩn 'đón sóng' APEC",
@@ -27,6 +137,31 @@
       "source_verification": {
         "method": "official-rss",
         "feed_url": "https://vnexpress.net/rss/bat-dong-san.rss",
+        "publisher_host": "vnexpress.net",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-f8da7871a70a15f6fe02",
+      "title": "Tây Ninh khởi công đường hơn 9.300 tỷ đồng nối vùng Đồng Tháp Mười",
+      "url": "https://vnexpress.net/tay-ninh-khoi-cong-duong-hon-9-300-ty-dong-noi-vung-dong-thap-muoi-5149469.html",
+      "category": "infrastructure",
+      "module_ids": [
+        "infrastructure"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-11-27T03:47:32+00:00",
+      "source_id": "vnexpress-current-affairs",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "Đường Tân An - Bình Hiệp dài gần 63 km, mở thêm hướng từ trung tâm tỉnh Tây Ninh đến vùng Đồng Tháp Mười và cửa khẩu quốc tế Bình Hiệp.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://vnexpress.net/rss/thoi-su.rss",
         "publisher_host": "vnexpress.net",
         "publication_date_from_feed": true
       }
