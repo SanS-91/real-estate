@@ -1,9 +1,88 @@
 {
   "schema_version": 1,
-  "build_id": "market-news-rss-20261127T145141Z",
-  "generated_at": "2026-11-27T14:51:41.426541+00:00",
-  "record_count": 2437,
+  "build_id": "market-news-rss-20261127T193217Z",
+  "generated_at": "2026-11-27T19:32:17.857091+00:00",
+  "record_count": 2440,
   "data": [
+    {
+      "id": "article-market-rss-7aae3e24f5ff90ccf95f",
+      "title": "Thêm nhà xã hội ở Long Biên mở bán từ 950 triệu đồng",
+      "url": "https://vnexpress.net/them-nha-xa-hoi-o-long-bien-mo-ban-tu-950-trieu-dong-5149732.html",
+      "category": "market",
+      "module_ids": [
+        "market"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-11-27T17:09:00+00:00",
+      "source_id": "vnexpress-real-estate",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [
+        "supply"
+      ],
+      "importance": 2,
+      "summary": "Dự án Rice City Long Châu ở phường Bồ Đề chuẩn bị mở bán đợt 2 với giá trung bình 29,4 triệu đồng mỗi m2.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://vnexpress.net/rss/bat-dong-san.rss",
+        "publisher_host": "vnexpress.net",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-d9cad63df0cc9d89161e",
+      "title": "'Cắt lỗ' chung cư 500 triệu đồng vẫn ế, có nên tiếp tục giảm sâu?",
+      "url": "https://vnexpress.net/cat-lo-chung-cu-500-trieu-dong-van-e-co-nen-tiep-tuc-giam-sau-5149215.html",
+      "category": "market",
+      "module_ids": [
+        "market"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-11-27T17:03:00+00:00",
+      "source_id": "vnexpress-real-estate",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [
+        "sales"
+      ],
+      "importance": 2,
+      "summary": "Người mua cần cân đối dòng tiền, dư nợ và giá giao dịch thực tế để quyết định nên tiếp tục nắm giữ chờ thị trường phục hồi hay chấp nhận bán lỗ, theo chuyên gia.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://vnexpress.net/rss/bat-dong-san.rss",
+        "publisher_host": "vnexpress.net",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-170947d38433c2b824ed",
+      "title": "Cận cảnh biệt thự của The Weeknd giống nhà trong game GTA 6",
+      "url": "https://vnexpress.net/can-canh-biet-thu-cua-the-weeknd-giong-nha-trong-game-gta-6-5149552.html",
+      "category": "market",
+      "module_ids": [
+        "market"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-11-27T17:00:00+00:00",
+      "source_id": "vnexpress-real-estate",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "Công trình rộng gần 1.800 m2 của The Weeknd nằm trên bán đảo hình chữ V, thiết kế theo phong cách Địa Trung Hải hiện đại.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://vnexpress.net/rss/bat-dong-san.rss",
+        "publisher_host": "vnexpress.net",
+        "publication_date_from_feed": true
+      }
+    },
     {
       "id": "article-market-rss-d1b6a89ccf2119af94fb",
       "title": "Việt Nam có thể đạt GDP bình quân đầu người lên tới 30.000 USD vào 2045",
