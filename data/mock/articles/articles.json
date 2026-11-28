@@ -1,9 +1,63 @@
 {
   "schema_version": 1,
-  "build_id": "market-news-rss-20261128T125138Z",
-  "generated_at": "2026-11-28T12:51:38.975627+00:00",
-  "record_count": 2465,
+  "build_id": "market-news-rss-20261128T145228Z",
+  "generated_at": "2026-11-28T14:52:28.317770+00:00",
+  "record_count": 2467,
   "data": [
+    {
+      "id": "article-market-rss-32a2115f4186d776459d",
+      "title": "Xem xét kỷ luật cán bộ vụ 2 biển báo tốc độ cách nhau 5m trên cao tốc",
+      "url": "https://dantri.com.vn/thoi-su/xem-xet-ky-luat-can-bo-vu-2-bien-bao-toc-do-cach-nhau-5m-tren-cao-toc-20261128200436374.htm",
+      "category": "infrastructure",
+      "module_ids": [
+        "infrastructure"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-11-28T13:36:26+00:00",
+      "source_id": "dantri-current-affairs",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [
+        "infrastructure"
+      ],
+      "importance": 2,
+      "summary": "(Dân trí) - Đơn vị quản lý đường bộ khu vực tỉnh Khánh Hòa cho biết sẽ kiểm điểm, xem xét kỷ luật các cán bộ liên quan đến việc cắm 2 biển báo hạn chế tốc độ “đứng sát” nhau trên cao tốc Vân Phong - Nha Trang.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://dantri.com.vn/rss/thoi-su.rss",
+        "publisher_host": "dantri.com.vn",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-69292fb5de838f85e8bb",
+      "title": "Quốc lộ 1D ngập sâu, cấm phương tiện qua cửa ngõ phía Nam Quy Nhơn",
+      "url": "https://dantri.com.vn/thoi-su/quoc-lo-1d-ngap-sau-cam-phuong-tien-qua-cua-ngo-phia-nam-quy-nhon-20261128162511543.htm",
+      "category": "infrastructure",
+      "module_ids": [
+        "infrastructure"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-11-28T12:01:58+00:00",
+      "source_id": "dantri-current-affairs",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [
+        "infrastructure"
+      ],
+      "importance": 2,
+      "summary": "(Dân trí) - Mưa lớn kéo dài khiến nước từ thượng nguồn đổ về gây ngập sâu một số vị trí trên quốc lộ 1D, đoạn qua cửa ngõ phía Nam Quy Nhơn. Lực lượng chức năng phải chốt chặn, cấm phương tiện qua lại.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://dantri.com.vn/rss/thoi-su.rss",
+        "publisher_host": "dantri.com.vn",
+        "publication_date_from_feed": true
+      }
+    },
     {
       "id": "article-market-rss-ab69b5ae9ad7dce6cf64",
       "title": "Tân Á Đại Thành làm khu đô thị đa mục tiêu gần 300 ha tại Hà Nội",
