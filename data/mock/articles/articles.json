@@ -1,9 +1,63 @@
 {
   "schema_version": 1,
-  "build_id": "market-news-rss-20261128T065137Z",
-  "generated_at": "2026-11-28T06:51:37.156756+00:00",
-  "record_count": 2456,
+  "build_id": "market-news-rss-20261128T080441Z",
+  "generated_at": "2026-11-28T08:04:41.312070+00:00",
+  "record_count": 2458,
   "data": [
+    {
+      "id": "article-market-rss-15023e6fa7876c7612ae",
+      "title": "11 doanh nghiệp gia nhập VIFC Đà Nẵng, công bố cam kết vốn hơn 10 tỷ USD",
+      "url": "https://dantri.com.vn/kinh-doanh/11-doanh-nghiep-gia-nhap-vifc-da-nang-cong-bo-cam-ket-von-hon-10-ty-usd-20261128125842883.htm",
+      "category": "market",
+      "module_ids": [
+        "market"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-11-28T07:01:27+00:00",
+      "source_id": "dantri-business",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [
+        "pricing"
+      ],
+      "importance": 2,
+      "summary": "(Dân trí) - Ngày 28/11, Cơ quan điều hành Trung tâm Tài chính quốc tế Việt Nam tại Đà Nẵng (VIFC-DN) đã trao chứng nhận đăng ký thành viên cho 11 doanh nghiệp và công bố các sản phẩm mới.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://dantri.com.vn/rss/kinh-doanh.rss",
+        "publisher_host": "dantri.com.vn",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-7bbcda14c46566c6244e",
+      "title": "Đất chưa có sổ đỏ vẫn có thể tách thửa từ 1/7/2027",
+      "url": "https://vnexpress.net/dat-chua-co-so-do-van-co-the-tach-thua-tu-1-7-2027-5149954.html",
+      "category": "market",
+      "module_ids": [
+        "legal"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-11-28T06:28:47+00:00",
+      "source_id": "vnexpress-real-estate",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [
+        "legal"
+      ],
+      "importance": 2,
+      "summary": "Luật Đất đai sửa đổi mở rộng điều kiện tách, hợp thửa đất, yêu cầu đủ điều kiện cấp giấy chứng nhận thay vì phải có sổ như trước đây.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://vnexpress.net/rss/bat-dong-san.rss",
+        "publisher_host": "vnexpress.net",
+        "publication_date_from_feed": true
+      }
+    },
     {
       "id": "article-market-rss-c24b54fde288e1956ee0",
       "title": "TPHCM đặt mục tiêu tăng khoảng 200.000 căn nhà ở xã hội gần metro",
