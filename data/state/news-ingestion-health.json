@@ -1,34 +1,34 @@
 {
   "schema_version": 1,
-  "checked_at": "2026-11-28T00:51:39.311664+00:00",
+  "checked_at": "2026-11-28T02:51:37.066724+00:00",
   "feeds_configured": 16,
   "feeds_fetched": 16,
-  "accepted_new": 4,
+  "accepted_new": 5,
   "production_written": true,
-  "article_total": 2444,
+  "article_total": 2449,
   "published_by_module": {
-    "market": 2,
+    "market": 3,
     "legal": 0,
-    "infrastructure": 0,
-    "macro": 2
+    "infrastructure": 1,
+    "macro": 1
   },
   "recent_by_module_7d": {
-    "market": 187,
-    "legal": 58,
-    "infrastructure": 88,
+    "market": 185,
+    "legal": 54,
+    "infrastructure": 86,
     "macro": 53
   },
   "recent_by_module_30d": {
-    "market": 839,
-    "legal": 181,
-    "infrastructure": 375,
-    "macro": 248
+    "market": 833,
+    "legal": 178,
+    "infrastructure": 374,
+    "macro": 246
   },
   "latest_published_by_module": {
-    "market": "2026-11-27T23:00:00+00:00",
+    "market": "2026-11-28T01:33:00+00:00",
     "legal": "2026-11-27T11:05:56+00:00",
-    "infrastructure": "2026-11-27T09:46:32+00:00",
-    "macro": "2026-11-27T23:00:00+00:00"
+    "infrastructure": "2026-11-28T02:25:22+00:00",
+    "macro": "2026-11-28T01:53:00+00:00"
   },
   "feed_status": [
     {
@@ -71,10 +71,10 @@
       "source_id": "vnexpress-current-affairs",
       "status": "parsed",
       "feed_items": 50,
-      "new": 0,
-      "skipped": 50,
+      "new": 1,
+      "skipped": 49,
       "duplicates": 10,
-      "filtered": 40
+      "filtered": 39
     },
     {
       "source_id": "vnexpress-legal",
@@ -116,19 +116,19 @@
       "source_id": "dantri-business",
       "status": "parsed",
       "feed_items": 50,
-      "new": 1,
-      "skipped": 49,
-      "duplicates": 7,
+      "new": 0,
+      "skipped": 50,
+      "duplicates": 8,
       "filtered": 42
     },
     {
       "source_id": "dantri-current-affairs",
       "status": "parsed",
       "feed_items": 50,
-      "new": 0,
-      "skipped": 50,
+      "new": 1,
+      "skipped": 49,
       "duplicates": 4,
-      "filtered": 46
+      "filtered": 45
     },
     {
       "source_id": "dantri-legal",
