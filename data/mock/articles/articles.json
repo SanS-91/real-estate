@@ -1,9 +1,61 @@
 {
   "schema_version": 1,
-  "build_id": "market-news-rss-20261128T145228Z",
-  "generated_at": "2026-11-28T14:52:28.317770+00:00",
-  "record_count": 2467,
+  "build_id": "market-news-rss-20261128T165925Z",
+  "generated_at": "2026-11-28T16:59:25.053209+00:00",
+  "record_count": 2470,
   "data": [
+    {
+      "id": "article-market-rss-6eef560134184c50a8d8",
+      "title": "'Ông lớn' Agribank giảm mạnh lãi suất tiền gửi",
+      "url": "https://vnexpress.net/ong-lon-agribank-giam-manh-lai-suat-tien-gui-5150003.html",
+      "category": "macro",
+      "module_ids": [
+        "macro"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-11-28T15:21:34+00:00",
+      "source_id": "vnexpress-economy",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "Ngân hàng quốc doanh Agribank giảm lãi suất tiết kiệm trực tuyến tới 3 điểm phần trăm, kỳ hạn 6 và 9 tháng, xuống còn 3,5% một năm.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://vnexpress.net/rss/kinh-doanh.rss",
+        "publisher_host": "vnexpress.net",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-70a76f66c7efe697d16f",
+      "title": "Nước lũ xé toang nền đường sắt Bắc - Nam đoạn qua tỉnh Gia Lai",
+      "url": "https://dantri.com.vn/thoi-su/nuoc-lu-xe-toang-nen-duong-sat-bac-nam-doan-qua-tinh-gia-lai-20261128214646177.htm",
+      "category": "infrastructure",
+      "module_ids": [
+        "infrastructure"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-11-28T15:03:38+00:00",
+      "source_id": "dantri-current-affairs",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [
+        "infrastructure"
+      ],
+      "importance": 2,
+      "summary": "(Dân trí) - Mưa lớn kéo dài khiến một đoạn nền đường sắt Bắc - Nam, đoạn qua xã Canh Vinh (tỉnh Gia Lai) bị sạt lở, cuốn trôi.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://dantri.com.vn/rss/thoi-su.rss",
+        "publisher_host": "dantri.com.vn",
+        "publication_date_from_feed": true
+      }
+    },
     {
       "id": "article-market-rss-32a2115f4186d776459d",
       "title": "Xem xét kỷ luật cán bộ vụ 2 biển báo tốc độ cách nhau 5m trên cao tốc",
@@ -28,6 +80,33 @@
         "method": "official-rss",
         "feed_url": "https://dantri.com.vn/rss/thoi-su.rss",
         "publisher_host": "dantri.com.vn",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-7c5d1fa245bc49e6ffbe",
+      "title": "Sạt lở làm gián đoạn đường sắt Bắc - Nam qua Gia Lai",
+      "url": "https://vnexpress.net/sat-lo-lam-gian-doan-duong-sat-bac-nam-qua-gia-lai-5150070.html",
+      "category": "infrastructure",
+      "module_ids": [
+        "infrastructure"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-11-28T12:40:29+00:00",
+      "source_id": "vnexpress-current-affairs",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [
+        "infrastructure"
+      ],
+      "importance": 2,
+      "summary": "Mưa lớn khiến 10 m nền đường sắt qua xã Canh Vinh bị sạt lở, ngành đường sắt phải trung chuyển hành khách bằng ôtô, chiều 28/11.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://vnexpress.net/rss/thoi-su.rss",
+        "publisher_host": "vnexpress.net",
         "publication_date_from_feed": true
       }
     },
