@@ -1,9 +1,98 @@
 {
   "schema_version": 1,
-  "build_id": "market-news-rss-20261128T083045Z",
-  "generated_at": "2026-11-28T08:30:45.454077+00:00",
-  "record_count": 2460,
+  "build_id": "market-news-rss-20261128T105135Z",
+  "generated_at": "2026-11-28T10:51:35.063405+00:00",
+  "record_count": 2464,
   "data": [
+    {
+      "id": "article-market-rss-ab69b5ae9ad7dce6cf64",
+      "title": "Tân Á Đại Thành làm khu đô thị đa mục tiêu gần 300 ha tại Hà Nội",
+      "url": "https://vnexpress.net/tan-a-dai-thanh-lam-khu-do-thi-da-muc-tieu-gan-300-ha-tai-ha-noi-5150005.html",
+      "category": "market",
+      "module_ids": [
+        "market",
+        "infrastructure"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-11-28T09:58:24+00:00",
+      "source_id": "vnexpress-real-estate",
+      "region_ids": [
+        "ha-noi"
+      ],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [
+        "sales"
+      ],
+      "importance": 2,
+      "summary": "Chiều 28/11, Tân Á Đại Thành khởi công dự án gần 300 ha tại Bồ Đề, Long Biên, Bát Tràng - khu đô thị đa mục tiêu thứ 5 tại Hà Nội.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://vnexpress.net/rss/bat-dong-san.rss",
+        "publisher_host": "vnexpress.net",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-5a16efefdfdcba159138",
+      "title": "TP HCM muốn giãn dân, mỗi cực đô thị phải tạo việc làm",
+      "url": "https://vnexpress.net/tp-hcm-muon-gian-dan-moi-cuc-do-thi-phai-tao-viec-lam-5150008.html",
+      "category": "market",
+      "module_ids": [
+        "market"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-11-28T09:04:38+00:00",
+      "source_id": "vnexpress-real-estate",
+      "region_ids": [
+        "hcmc"
+      ],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [
+        "legal",
+        "infrastructure"
+      ],
+      "importance": 2,
+      "summary": "Quy hoạch đa cực chỉ hiệu quả khi mỗi khu vực mới có việc làm, dịch vụ và hạ tầng đủ sức giữ chân cư dân, thay vì chỉ tạo thêm nơi ở, theo chuyên gia.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://vnexpress.net/rss/bat-dong-san.rss",
+        "publisher_host": "vnexpress.net",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-a8b7b330e87fb91338ce",
+      "title": "Dự án nhà ở xã hội của doanh nghiệp thuộc Mường Thanh: giá tạm tính 25 triệu đồng/m2",
+      "url": "https://dantri.com.vn/bat-dong-san/du-an-nha-o-xa-hoi-cua-doanh-nghiep-thuoc-muong-thanh-gia-tam-tinh-25-trieu-dongm2-20261128151228361.htm",
+      "category": "market",
+      "module_ids": [
+        "market"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-11-28T08:32:50+00:00",
+      "source_id": "dantri-real-estate",
+      "region_ids": [
+        "ha-noi"
+      ],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [
+        "pricing"
+      ],
+      "importance": 2,
+      "summary": "(Dân trí) - Dự án nhà ở xã hội Thanh Hà B - Cienco 5 (Hà Nội) có quy mô 2.800 căn hộ, trong đó hơn 2.300 căn nhà ở xã hội. Giá bán bình quân tạm tính khoảng 25 triệu đồng/m2.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://dantri.com.vn/rss/bat-dong-san.rss",
+        "publisher_host": "dantri.com.vn",
+        "publication_date_from_feed": true
+      }
+    },
     {
       "id": "article-market-rss-857c9d0669361ae51245",
       "title": "Căn hộ được cho thuê lưu trú: Người cười, kẻ khóc",
@@ -27,6 +116,31 @@
         "method": "official-rss",
         "feed_url": "https://thanhnien.vn/rss/kinh-te/dia-oc.rss",
         "publisher_host": "thanhnien.vn",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-dbf0dd94545b126d885d",
+      "title": "Dự án ven biển dành 3 ha làm không gian công cộng",
+      "url": "https://vnexpress.net/du-an-ven-bien-danh-3-ha-lam-khong-gian-cong-cong-5149961.html",
+      "category": "market",
+      "module_ids": [
+        "market"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-11-28T08:01:52+00:00",
+      "source_id": "vnexpress-real-estate",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "Tổ hợp đô thị, du lịch biển DAP, DAP1 và DAP2 rộng 39 ha tại bãi biển Non Nước (Đà Nẵng) vừa tái khởi động sáng 28/11, bố trí 3 ha làm bãi tắm và công viên công cộng.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://vnexpress.net/rss/bat-dong-san.rss",
+        "publisher_host": "vnexpress.net",
         "publication_date_from_feed": true
       }
     },
