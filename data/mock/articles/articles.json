@@ -1,9 +1,84 @@
 {
   "schema_version": 1,
-  "build_id": "market-news-rss-20261128T025137Z",
-  "generated_at": "2026-11-28T02:51:37.066724+00:00",
-  "record_count": 2449,
+  "build_id": "market-news-rss-20261128T045135Z",
+  "generated_at": "2026-11-28T04:51:35.851929+00:00",
+  "record_count": 2455,
   "data": [
+    {
+      "id": "article-market-rss-1b82eaba3ccbebac5a2c",
+      "title": "Chủ căn hộ cũ có thể nhận tiền, đất khi chung cư bị phá dỡ",
+      "url": "https://dantri.com.vn/bat-dong-san/chu-can-ho-cu-co-the-nhan-tien-dat-khi-chung-cu-bi-pha-do-20261128104902494.htm",
+      "category": "market",
+      "module_ids": [
+        "market"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-11-28T04:36:35+00:00",
+      "source_id": "dantri-real-estate",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "(Dân trí) - Từ ngày 1/7/2027, chủ sở hữu nhà chung cư cũ được lựa chọn nhận nhà tái định cư, nhà ở xã hội, tiền hoặc quyền sử dụng đất khi cải tạo, xây dựng lại chung cư.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://dantri.com.vn/rss/bat-dong-san.rss",
+        "publisher_host": "dantri.com.vn",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-280b26ce5c053034557d",
+      "title": "Vì sao lãi suất cho vay mua nhà chưa giảm như kỳ vọng?",
+      "url": "https://dantri.com.vn/bat-dong-san/vi-sao-lai-suat-cho-vay-mua-nha-chua-giam-nhu-ky-vong-20261128102247428.htm",
+      "category": "market",
+      "module_ids": [
+        "macro"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-11-28T03:56:26+00:00",
+      "source_id": "dantri-real-estate",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "(Dân trí) - Lãi suất cho vay mua nhà tại nhiều ngân hàng thương mại vẫn neo ở mức cao. Các chuyên gia dự báo mặt bằng lãi suất cho vay gần như không còn dư địa để giảm sâu thêm.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://dantri.com.vn/rss/bat-dong-san.rss",
+        "publisher_host": "dantri.com.vn",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-f7afe59b66b6cab7fa8f",
+      "title": "Ngân hàng tăng lãi suất ưu đãi, kéo khách gửi tiết kiệm cuối năm",
+      "url": "https://dantri.com.vn/kinh-doanh/ngan-hang-tang-lai-suat-uu-dai-keo-khach-gui-tiet-kiem-cuoi-nam-20261128095649188.htm",
+      "category": "macro",
+      "module_ids": [
+        "macro"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-11-28T03:42:49+00:00",
+      "source_id": "dantri-business",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "(Dân trí) - Từ tháng 10, sau chỉ đạo của Ngân hàng Nhà nước, mặt bằng lãi suất đã hạ nhiệt. Một số ngân hàng cộng ưu đãi theo chương trình hàng tháng, lãi suất gửi tiết kiệm thông thường có thể trên 9%/năm.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://dantri.com.vn/rss/kinh-doanh.rss",
+        "publisher_host": "dantri.com.vn",
+        "publication_date_from_feed": true
+      }
+    },
     {
       "id": "article-market-rss-7773ab6ddd0d724a3865",
       "title": "Hơn 1.500 m3 đất đá bịt kín quốc lộ lên cửa khẩu La Lay",
@@ -27,6 +102,56 @@
       "source_verification": {
         "method": "official-rss",
         "feed_url": "https://vnexpress.net/rss/thoi-su.rss",
+        "publisher_host": "vnexpress.net",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-91dd7b113d62329ab79d",
+      "title": "Giá vàng miếng SJC, vàng nhẫn tăng trở lại",
+      "url": "https://dantri.com.vn/kinh-doanh/gia-vang-mieng-sjc-vang-nhan-tang-tro-lai-20261128062230566.htm",
+      "category": "macro",
+      "module_ids": [
+        "macro"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-11-28T02:20:11+00:00",
+      "source_id": "dantri-business",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "(Dân trí) - Sau nhịp giảm sâu, giá vàng đảo chiều hồi phục nhờ nhu cầu mua vào tại Trung Quốc và áp lực bán tháo hạ nhiệt. Song giới chuyên gia cảnh báo đà tăng bền vững vẫn phụ thuộc vào chính sách của Fed.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://dantri.com.vn/rss/kinh-doanh.rss",
+        "publisher_host": "dantri.com.vn",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-f6cf9d7439d3b6d45961",
+      "title": "Gần 26 triệu đồng mỗi m2 nhà xã hội ven vịnh Hạ Long",
+      "url": "https://vnexpress.net/gan-26-trieu-dong-moi-m2-nha-xa-hoi-ven-vinh-ha-long-5149789.html",
+      "category": "market",
+      "module_ids": [
+        "market"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-11-28T02:00:00+00:00",
+      "source_id": "vnexpress-real-estate",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "Hơn 600 căn nhà ở xã hội sát đường bao biển, ven vịnh Hạ Long có giá gần 26 triệu đồng mỗi m2, căn thấp nhất khoảng 856 triệu.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://vnexpress.net/rss/bat-dong-san.rss",
         "publisher_host": "vnexpress.net",
         "publication_date_from_feed": true
       }
@@ -255,6 +380,33 @@
       ],
       "importance": 2,
       "summary": "Dự án Rice City Long Châu ở phường Bồ Đề chuẩn bị mở bán đợt 2 với giá trung bình 29,4 triệu đồng mỗi m2.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://vnexpress.net/rss/bat-dong-san.rss",
+        "publisher_host": "vnexpress.net",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-e05a8bc5dfeb65d2f325",
+      "title": "'Cắt lỗ' chung cư 500 triệu đồng vẫn ế, có nên tiếp tục giảm thêm?",
+      "url": "https://vnexpress.net/cat-lo-chung-cu-500-trieu-dong-van-e-co-nen-tiep-tuc-giam-them-5149215.html",
+      "category": "market",
+      "module_ids": [
+        "market"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-11-27T17:03:00+00:00",
+      "source_id": "vnexpress-real-estate",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [
+        "sales"
+      ],
+      "importance": 2,
+      "summary": "Người mua cần cân đối dòng tiền, dư nợ và giá giao dịch thực tế để quyết định nên tiếp tục nắm giữ chờ thị trường phục hồi hay chấp nhận bán lỗ, theo chuyên gia.",
       "source_verification": {
         "method": "official-rss",
         "feed_url": "https://vnexpress.net/rss/bat-dong-san.rss",
