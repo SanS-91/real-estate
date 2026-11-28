@@ -1,9 +1,111 @@
 {
   "schema_version": 1,
-  "build_id": "market-news-rss-20261127T193217Z",
-  "generated_at": "2026-11-27T19:32:17.857091+00:00",
-  "record_count": 2440,
+  "build_id": "market-news-rss-20261128T005139Z",
+  "generated_at": "2026-11-28T00:51:39.311664+00:00",
+  "record_count": 2444,
   "data": [
+    {
+      "id": "article-market-rss-7c86e8e7151de09d3a07",
+      "title": "Giá vàng tăng mạnh: Gửi ở đâu vừa an toàn, vừa tránh bẫy thuế?",
+      "url": "https://dantri.com.vn/kinh-doanh/gia-vang-tang-manh-gui-o-dau-vua-an-toan-vua-tranh-bay-thue-20261127213959721.htm",
+      "category": "macro",
+      "module_ids": [
+        "macro"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-11-27T23:00:00+00:00",
+      "source_id": "dantri-business",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "(Dân trí) - Giá vàng vừa hồi phục ấn tượng sau khi chạm đáy hơn 1 năm. Dòng tiền rục rịch quay lại gom kim loại quý và bài toán gửi vàng ở đâu để tối ưu chi phí và thuế trở thành ưu tiên hàng đầu.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://dantri.com.vn/rss/kinh-doanh.rss",
+        "publisher_host": "dantri.com.vn",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-434ccae6d7ff29f7e17d",
+      "title": "Cải tạo chung cư cũ, chủ căn hộ được bồi thường thế nào từ giữa 2027",
+      "url": "https://vnexpress.net/cai-tao-chung-cu-cu-chu-can-ho-duoc-boi-thuong-the-nao-tu-giua-2027-5149304.html",
+      "category": "market",
+      "module_ids": [
+        "market"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-11-27T23:00:00+00:00",
+      "source_id": "vnexpress-real-estate",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "Từ 1/7/2027, chủ căn hộ chung cư xây trước năm 1994 không được tự góp tiền cải tạo, mà nhận bồi thường bằng nhà, đất hoặc tiền theo hệ số K.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://vnexpress.net/rss/bat-dong-san.rss",
+        "publisher_host": "vnexpress.net",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-1df94d7157fccedbad25",
+      "title": "Lãi suất chịu áp lực cuối năm",
+      "url": "https://thanhnien.vn/lai-suat-chiu-ap-luc-cuoi-nam-185261127211451758.htm",
+      "category": "macro",
+      "module_ids": [
+        "macro"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-11-27T23:00:00+00:00",
+      "source_id": "thanhnien-banking",
+      "region_ids": [],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "Nhu cầu vốn tăng cao vào những tháng cuối năm, tỷ giá USD/VND bật tăng trở lại, trong khi lãi suất huy động tại nhiều ngân hàng chịu áp lực ở mức cao. Bài toán cân đối nguồn vốn và ổn định mặt bằng lãi suất vẫn đặt ra nhiều thách thức trong giai đoạn cao điểm cuối năm.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://thanhnien.vn/rss/kinh-te/ngan-hang.rss",
+        "publisher_host": "thanhnien.vn",
+        "publication_date_from_feed": true
+      }
+    },
+    {
+      "id": "article-market-rss-008699c0fa96273831ef",
+      "title": "Đấu giá lại lô đất 3-9 Thủ Thiêm: Giảm hơn 3.254 tỷ đồng so với năm 2021",
+      "url": "https://dantri.com.vn/bat-dong-san/dau-gia-lai-lo-dat-3-9-thu-thiem-giam-hon-3254-ty-dong-so-voi-nam-2021-20261127220751366.htm",
+      "category": "market",
+      "module_ids": [
+        "market"
+      ],
+      "subcategory": "news",
+      "content_type": "publisher-rss",
+      "published_at": "2026-11-27T23:00:00+00:00",
+      "source_id": "dantri-real-estate",
+      "region_ids": [
+        "hcmc"
+      ],
+      "project_ids": [],
+      "developer_ids": [],
+      "tags": [],
+      "importance": 2,
+      "summary": "(Dân trí) - Lô đất 3-9 tại Khu đô thị mới Thủ Thiêm (TPHCM) vừa được đấu giá thành công với mức giá gần 1.772 tỷ đồng, cao hơn 27 tỷ đồng so với giá khởi điểm.",
+      "source_verification": {
+        "method": "official-rss",
+        "feed_url": "https://dantri.com.vn/rss/bat-dong-san.rss",
+        "publisher_host": "dantri.com.vn",
+        "publication_date_from_feed": true
+      }
+    },
     {
       "id": "article-market-rss-7aae3e24f5ff90ccf95f",
       "title": "Thêm nhà xã hội ở Long Biên mở bán từ 950 triệu đồng",
